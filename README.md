@@ -103,3 +103,19 @@ Alignment can run on the small pilot samples before full acquisition:
 ```bash
 lstm-data alignment --pilot-report reports/data_audit/task01_30min_pilot/sip_pilot.json
 ```
+
+## Offline evidence review (P0.2)
+
+```bash
+lstm-data evidence                         # Read-only metadata; no source rows or secrets
+lstm-data evidence --mode diagnose         # Synthetic F01 counterexample; expected exit 2
+lstm-data evidence --help
+```
+
+[CURRENT_PROTOCOL.json](configs/CURRENT_PROTOCOL.json) pins the five governing
+documents and existing evidence hashes. The [ledger](reports/audit/track_a_events.jsonl)
+preserves P0.1 blockers. Neither grants scientific approval. G0/G1/G2 remain blocked;
+the unchanged alignment diagnostic has the open F01 period-end freshness defect.
+See the [evidence contract](docs/track_a/p0_2_evidence_harness.md) for schemas, explicit
+append/report commands, failure handling and the confirmation lock. The evidence
+command never loads `.env`, calls a provider, or executes research jobs.

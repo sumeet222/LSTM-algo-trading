@@ -1,0 +1,31 @@
+{
+  "architecture": "arm64",
+  "commands": [
+    ".venv/bin/python -m pytest -q",
+    ".venv/bin/ruff check src tests",
+    ".venv/bin/lstm-data evidence"
+  ],
+  "dependency_spec": {
+    "path": "pyproject.toml",
+    "sha256": "a7565222ebeec2cce25333a30c107b25d341a68b57888ad9be3998aa4e43861e"
+  },
+  "limitations": "Version ranges plus local snapshot; no exact portable lock or clean-machine rehearsal",
+  "os": "Darwin",
+  "os_release": "25.6.0",
+  "packages": {
+    "exchange-calendars": "4.13.2",
+    "lstm-market-data": "0.1.0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "pip": "26.1.2",
+    "pyarrow": "23.0.1",
+    "pytest": "9.1.1",
+    "python-dotenv": "1.2.4",
+    "requests": "2.34.2",
+    "ruff": "0.17.0",
+    "setuptools": null
+  },
+  "python": "3.14.6",
+  "schema_version": 1,
+  "time_utc": "2026-10-10T23:32:36.437648+00:00"
+}

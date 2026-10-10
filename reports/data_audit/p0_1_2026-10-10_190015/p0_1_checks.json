@@ -1,0 +1,1652 @@
+{
+  "schema_version": 1,
+  "audit_run_id": "P0.1-2026-10-10-190015",
+  "stage": "P0.1 existing implementation review",
+  "recorded_at_utc": "2026-10-10T23:04:40.978142+00:00",
+  "protocol_status": "Five accessible documents read/hashed; pending source/shared-clock requirements preserved",
+  "code_git_sha": "92aecd1a382f93c1133f41b8ae2432bd9863ff70",
+  "config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+  "package_status": "INSPECTION_COMPLETE_AWAITING_HUMAN_REVIEW",
+  "research_preflight_status": "BLOCKED",
+  "next_package_autostart": false,
+  "next_package_recommendation": "P0.2 minimal offline evidence/ledger delta; not launched",
+  "protocol_documents": [
+    {
+      "path": "docs/track_a/Shared_Project_Specification.md",
+      "sha256": "12863e44efa2ca3c51d5f5c5033a3735b16b4a87a00158122d372db6ed9cdf32",
+      "bytes": 26107,
+      "version_line": "**Version:** 1.0 (pre-design working agreement)  "
+    },
+    {
+      "path": "docs/track_a/Track_A_Architecture_Experiment_Roadmap_First_Pass_FROZEN_v1.0.md",
+      "sha256": "7afb1d3fe6cd5bf68e1e9a1c8e6f19e200ce2c4cae6414b1b0b90e40365339ce",
+      "bytes": 50669,
+      "version_line": "## First-Pass Frozen Architecture Experiment Roadmap v1.0 (v2 state + lead\u2013lag roadmap, with MC2 added)"
+    },
+    {
+      "path": "docs/track_a/Track_A_Codex_Incremental_Implementation_and_Human_Review_Plan_v1_2026-10-10.md",
+      "sha256": "bf3459456b12c23942d99bd555cc66137cd6154c79119ae96eaa3bfdb88a202d",
+      "bytes": 34461,
+      "version_line": "**Version:** Planning v1, 2026-10-10  "
+    },
+    {
+      "path": "docs/track_a/Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md",
+      "sha256": "cf3f7531ecd52e47386e64035d5c86ab513acc3c1a6bbbee5e54ad325eb9a96c",
+      "bytes": 114997,
+      "version_line": "**Version:** Consolidation draft v1.2, 10 October 2026 (D13-C07 baselines; G0\u2013G9 audits; NEW post-run failure diagnosis and replay requirements)  "
+    },
+    {
+      "path": "docs/track_a/Track_A_Stage_Gated_Audit_and_Failure_Traceability_Plan_v1.1_2026-10-10.md",
+      "sha256": "a29309ef791f74f72443b2b66ad1d9cde5f46e54dfbcd072f5bda5da68d1878d",
+      "bytes": 82345,
+      "version_line": "**Version:** v1.1 audit design, 10 October 2026 (adds resource-conscious post-run model-failure diagnosis and boundary replay)  "
+    }
+  ],
+  "evidence_sha256": {
+    "src/lstm_data/pilot.py": "169ee3ac8ddf04505d4ea5629768086034e6994e624ead71ef22d97494f4487d",
+    "src/lstm_data/store.py": "dfaf21ff83caef15269724f30bbdfb62f7696febd682e233aefb97099010da94",
+    "src/lstm_data/aggregation.py": "b90629f6998c79eae1e39658e58d021ee93fd5ee8c592e3b1ea992bf93188c3f",
+    "src/lstm_data/config.py": "6eb750fa4e1eac2ff64057dcbad9a67f7afc3162dfdebb71682deb0db1f69f5f",
+    "src/lstm_data/course.py": "8f6a4394d86010773ba702c1be5e2d363406305c26bbf63581b245ae993d181c",
+    "src/lstm_data/alignment.py": "e4690828dde48dcc41b60c88b5f0e1d563092640ec003c8abf3dc65711000b8d",
+    "src/lstm_data/__init__.py": "28bda2b9838542bb4076f41fa2fe56fe475cbba031c122cfc12f6a3a5c6a5130",
+    "src/lstm_data/calendar.py": "1c59160f9cd6624f6fa104dffbfe3c81cf05ae01cfae51380e9f9f54e85cd67c",
+    "src/lstm_data/cli.py": "5092a5648844b2d6ecd183150184bf8880d2d71f551e9faabbeac8c679c885f0",
+    "src/lstm_data/alpaca.py": "dd90713193ad3a09d24a711cb8e65c4c9a1661f15d5a4241e643b8e15e2ff7de",
+    "src/lstm_data/validation.py": "7c57bbef0ea14ce457525e3ad15867e46493e40a0f0e2b3cabc253d4a431abdc",
+    "tests/conftest.py": "b6752298438905093353db410f063179fafeae7d60997c1d5dd35d82596531d2",
+    "tests/test_validation_course.py": "20e2479074178a01c7731e4b1298e7c841552fdb5ac0a1caea4b9158195a3540",
+    "tests/test_calendar_alignment.py": "a76b1b0b34d74c43a6710b84318c24978a72dce939276aa73ec9e289db77af2d",
+    "tests/test_store_cli.py": "54b100749effe7ec08e91da5203791c3e3652fccd81ed71a87e8c870dc32e805",
+    "tests/test_aggregation.py": "d08f56841a8148311a7262fdc15ca4671bdee995cca4e619dfccbd5d7cc198ab",
+    "tests/test_alpaca.py": "e685bf01ff286a2769bb8d86539980a32570dc2fc0f45fabb804722ea1aca10e",
+    "AGENTS.md": "abbc4929d7559bd08db1e33006568361dddc1f7ec530fc538b4a2a86ea12c05d",
+    "pyproject.toml": "a7565222ebeec2cce25333a30c107b25d341a68b57888ad9be3998aa4e43861e",
+    "README.md": "32105809c7039ddb4d74c599ad51bfa7a4405ec92880bdf426c3a4c1c41b1088",
+    "data/README.md": "764f845a7d5bf8e7f71798b90c6a3122370feced3f0aeb616bc0ce3baf1d946e",
+    ".gitignore": "6d08be8130e76962d653bf7388f450e150f6ec69f5bdfe80be624111f7a22e41",
+    ".env.example": "e8616061d9be6c1412f45c5849fc53a622e59b90d9602807b48fa7a2e6eebf8c",
+    "configs/track_a_data.json": "1ecf302c80b60b8f6f00e31d67ffae6825bebd39b07c49db81950479476ed795",
+    "configs/track_a_bulk_approval_2026-10-10.json": "9f02e66188160194ba9bf923bf9e8456420747bba4f4f8bd852733b01937dce2",
+    "reports/data_audit/task01_verified_resume_smoke.json": "cc67f3940d96578bdbfd8203784e7b8d6d5227c6c170fba56024fd0f041d48de",
+    "reports/data_audit/task01_download_plan.json": "686f258780eaab2996c27e33bbc68e6513909d7429a61573c78d8ee91423cb00",
+    "reports/data_audit/task01_gap_probe_jpm_20210419.json": "845873fbf8021f1fec9995064f311e11ebcfb69ab90ca91d3136c356f7733fe4",
+    "reports/data_audit/task01_download_plan_v2.json": "4387b20fce64a2cfd83f469fbd13754b28aaac7658ae0c0ce4f2c2db04d5f37a",
+    "reports/data_audit/task01_30min_download_plan.json": "e1d766573052e96a7672a55d190fef509e5aa5db91dcce4efb60b5e1c4e3684e",
+    "reports/data_audit/task01_stock_qa_compact/runtime.json": "47a0a992c4772f44d98ff109adad0927eabde14685f6fcb2dae6525eae08201c",
+    "reports/data_audit/task01_stock_qa_compact/stock_qa.json": "2f235f978e085c8de73bfab1d1cf9ef110e834c16837626fbdcf798473fb55fe",
+    "reports/data_audit/task01_sip_pilot_with_local_credentials/runtime.json": "e1f7de41e4ad4e4e8f7d6a3e9d98f1ccde5d3a3d8ad29143db50bbba4bd6b26e",
+    "reports/data_audit/task01_sip_pilot_with_local_credentials/sip_pilot.json": "4a0fc6a51c982543cf49314709ad8a044100d6856a8225f5ea592de669d402ae",
+    "reports/data_audit/task01_30min_pilot/runtime.json": "44d21143712a5dec506c73c393e70996fd72c6592d632494b10d3dbca185cfd0",
+    "reports/data_audit/task01_30min_pilot/sip_pilot.json": "33ee29e125e3c8f49a47c2fc9243cdf146bfed8e24ade614932c48bf8050f454",
+    "reports/data_audit/task01_live_followup/alignment_diagnostic.json": "8fb8683ddd934c272d0ff5bfb93edfc40f1eea57f3644e386a4bb2544bb4f92b",
+    "reports/data_audit/task01_bulk_download/runtime.json": "73aa1f202065ad53c27e859f914899e2c64bad3bbeb6f1032bcf0dba46c0e0a2",
+    "reports/data_audit/task01_bulk_download/failure.json": "1fd9931dfddbc30f89754acacceee6f22ff3f5012b501253c06b1ee7cc40e73c",
+    "reports/data_audit/task01_30min_alignment_verified/runtime.json": "b85596851da9e3e7003e62a1fd40e6044111b3a942a7e2d4332e2526ebb290b1",
+    "reports/data_audit/task01_30min_alignment_verified/alignment.json": "59859a06ff3abf09d8c06cc66492acadebfc0ac2927e99dfebb84114fae28516",
+    "reports/data_audit/task01_sip_pilot_network_retry/runtime.json": "62653d768279cb97f31d52201f0d6d4e6bbb3e85ac885a49c1e666f7316ea64c",
+    "reports/data_audit/task01_sip_pilot_network_retry/sip_pilot.json": "7da1c17eac7fef9fa9571a0f7f63466f1ed55e3af3d4dc2e035d102e025c8b47",
+    "reports/data_audit/task01_30min_alignment/runtime.json": "9e3183b0b54cb61430344617c4ff95231be43fbea56875b34ff059a72c31dfc1",
+    "reports/data_audit/task01_30min_alignment/failure.json": "8259e705bdf4d17b17079890a3f019672cdb34feaaeb42ad023385cad2dbf813",
+    "reports/data_audit/task01_sip_pilot/runtime.json": "47d7eaaf1e96a6fde48f60358e8e1dc9eaa202a7cd9fa68d59e2f7c1889d7141",
+    "reports/data_audit/task01_sip_pilot/sip_pilot.json": "c393306457253b6e696363b96af57b138f0d794e10ce6a5ca4f2d46ec66a7843",
+    "reports/data_audit/task01_full_stock_qa/runtime.json": "02697b2e8ea786d194de84a7b2379598ee8e76049cef10f66c507e16f130b2af",
+    "reports/data_audit/task01_full_stock_qa/stock_qa.json": "0972f3e578d3b557651204fc24a73915739dcd6ca290bd1cd65132e8114d5721",
+    "reports/data_audit/task01_full_alignment/runtime.json": "807071cd194a38bceb47748c1a2912757b0b21d9b53fad3f276dcc26df9788b8",
+    "reports/data_audit/task01_full_alignment/alignment.json": "d66201238c28087c4264c05a9ec2d8f123869c99363d8f019791616ef9c3e977",
+    "reports/data_audit/task01_bulk_resume/runtime.json": "1c9953f070b58137fa75f9fe6ff0c469baa62ea01ff07cd3ba1c733213ad2be9",
+    "reports/data_audit/task01_bulk_resume/download.json": "26aa80de8d645f2c54d38f10cd3f9e9094c1e583af539b60cdff3cf325c76ea1",
+    "reports/data_audit/task01_course/course_manifest.json": "d2113553c789e978d47b242375600453568320efeccd29a312720161c5300fd9",
+    "reports/data_audit/task01_course/runtime.json": "824534f25e28b2d6f3bcb556b307e44c4dd918e38cad5c5d96c3c941cb850198",
+    "reports/codex_sessions/2026-10-10_053128_feat-track-a-data-intake_task01-complete.md": "a876ed394cfac7269604e5210cb7fcf41477fca8ec41d94272bd61518225f0fa",
+    "reports/codex_sessions/2026-10-10_050256_feat-track-a-data-intake_task01.md": "dd57de8c3dcc90c7b5fa44c51bb63bbe63dfd1d148dc974fe643d339a11f6b03",
+    "reports/data_audit/task01_final_handoff.md": "f5c3c83492a28a4745c3b012b10606221eaf829512000578e136a1ef1f37899c"
+  },
+  "canonical_chunks": [
+    {
+      "file": "data/raw/alpaca/track_a/2020-07-aabdd641836090f410bd.parquet",
+      "manifest": "data/raw/alpaca/track_a/2020-07-aabdd641836090f410bd.manifest.json",
+      "sha256": "26b1890c7edbeffbbe21d98c1f50fcfbf92c4b6abf3ee9381d304f946411e44f",
+      "rows": 2943,
+      "size_bytes": 100858,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2020-08-6a9af5eaccb5c51fed33.parquet",
+      "manifest": "data/raw/alpaca/track_a/2020-08-6a9af5eaccb5c51fed33.manifest.json",
+      "sha256": "5a5cc85e9d4ff7a7dbe07e8c141a18e0758df62f6762d677535efe7dd027141d",
+      "rows": 2750,
+      "size_bytes": 98679,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2020-09-3e0140b39432b0182be9.parquet",
+      "manifest": "data/raw/alpaca/track_a/2020-09-3e0140b39432b0182be9.manifest.json",
+      "sha256": "51f9c62983acc64d84a7976980c8cab3df24490826c816017bff85b4396f37b9",
+      "rows": 2842,
+      "size_bytes": 102513,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2020-10-27d25211707694c49e00.parquet",
+      "manifest": "data/raw/alpaca/track_a/2020-10-27d25211707694c49e00.manifest.json",
+      "sha256": "44e6cd4c0bf6b107890e7c2040b931f307416ab304796038c52062438e2c80d5",
+      "rows": 2893,
+      "size_bytes": 104209,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2020-11-c08a26b2adc48a96eae7.parquet",
+      "manifest": "data/raw/alpaca/track_a/2020-11-c08a26b2adc48a96eae7.manifest.json",
+      "sha256": "538dc8306302af115d002b5de6a0df177c7fb8be4a88f97cae88e254345bc278",
+      "rows": 2714,
+      "size_bytes": 98182,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2020-12-6eaf67271f6d36a4f88e.parquet",
+      "manifest": "data/raw/alpaca/track_a/2020-12-6eaf67271f6d36a4f88e.manifest.json",
+      "sha256": "a3cf34a7a669140c14c0f45a99bae4ca6020279507ddd25dafeccae309301a1e",
+      "rows": 2812,
+      "size_bytes": 100209,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-01-db35eea7eac9f35d66a4.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-01-db35eea7eac9f35d66a4.manifest.json",
+      "sha256": "8f89c3411bd9ff2d03ef2592be9416402136b10505984cc74f9822472bb48d2a",
+      "rows": 2557,
+      "size_bytes": 93711,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-02-3a7cb14a35c09afc1965.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-02-3a7cb14a35c09afc1965.manifest.json",
+      "sha256": "1f4bdde5e4da37fb8dc96844bd7683ff969e4a5773f01ce711a51412649816d3",
+      "rows": 2525,
+      "size_bytes": 93469,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-03-4f77c070f79345b38823.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-03-4f77c070f79345b38823.manifest.json",
+      "sha256": "7ae79c43573dd83008b483ebfeb918bc91a77b24611077e6635a1593db28856b",
+      "rows": 3127,
+      "size_bytes": 110003,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-04-b17955fa37247cd31457.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-04-b17955fa37247cd31457.manifest.json",
+      "sha256": "12f59ab1fa5eb74941922b5e6d8ed2a430ccc06b448e2174df8f11fedc5e66dd",
+      "rows": 2618,
+      "size_bytes": 92983,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-05-a59101ced06c91998090.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-05-a59101ced06c91998090.manifest.json",
+      "sha256": "49b46a1967e61c3e02bf60d9ea0f24f73c8fe11015049ba02f3507dac6c71cb6",
+      "rows": 2496,
+      "size_bytes": 89699,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-06-5f732b30a27dfeb0c475.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-06-5f732b30a27dfeb0c475.manifest.json",
+      "sha256": "f0d7e22657dd7769466f75ab1fbfeee322cdad5d0d63d2efc14a376873abcd3f",
+      "rows": 2791,
+      "size_bytes": 98945,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-07-d01178f94b661de1405d.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-07-d01178f94b661de1405d.manifest.json",
+      "sha256": "3543441e61be37dbbdfaf01f48661ce977ab28b4c6d8c812ec42040d0c363e2b",
+      "rows": 2633,
+      "size_bytes": 93669,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-08-8749539bdc111049873c.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-08-8749539bdc111049873c.manifest.json",
+      "sha256": "3b2e5b1ee00f4c04f51f40ac2030341f9f72d822c0a0e43654fc1dfd68490fa4",
+      "rows": 2793,
+      "size_bytes": 99843,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-09-63664447330eba52319f.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-09-63664447330eba52319f.manifest.json",
+      "sha256": "752543ab5b78a182e23e44af20bfa1b0fa7345a26face91e4d28d82ded3f3d4d",
+      "rows": 2616,
+      "size_bytes": 95028,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-10-9ee36a7e418b48fe8d2f.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-10-9ee36a7e418b48fe8d2f.manifest.json",
+      "sha256": "869eb69a4bec59b12377650087d7d88004c9c0ae53adb705af23ed149d1363e5",
+      "rows": 2595,
+      "size_bytes": 94214,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-11-0bd78c1149b8068d0a60.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-11-0bd78c1149b8068d0a60.manifest.json",
+      "sha256": "d169386a96c316235e4ff27bff672a16edb0a58a25666f627101440e3235f501",
+      "rows": 2721,
+      "size_bytes": 96052,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2021-12-61d7c7aa1741e0e175f6.parquet",
+      "manifest": "data/raw/alpaca/track_a/2021-12-61d7c7aa1741e0e175f6.manifest.json",
+      "sha256": "d0a8b137ab22f68ba9c9551d26ba4cd73dac5499e8e4f4e4d39930fa6ff7c1b5",
+      "rows": 2790,
+      "size_bytes": 99692,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-01-13815b15b17b754157cc.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-01-13815b15b17b754157cc.manifest.json",
+      "sha256": "3834fcf3de80e080a678eb329c1b6878eef752fe4a1e39e53d9fb1f8e8c999fa",
+      "rows": 2614,
+      "size_bytes": 94873,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-02-b20fc98df78c4aefd71d.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-02-b20fc98df78c4aefd71d.manifest.json",
+      "sha256": "437dced7ab69dc0fe20918eaf8c72019d1a8be6712ba1e587d1bb0c4fb5375ce",
+      "rows": 2424,
+      "size_bytes": 88400,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-03-990ae9ebae693bc6643c.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-03-990ae9ebae693bc6643c.manifest.json",
+      "sha256": "db34c5169b0acdb39f52b7f85df0ff7903133c014a4817b4234e5c946b811d9a",
+      "rows": 2788,
+      "size_bytes": 103757,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-04-61c79bd15e78406e0c6f.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-04-61c79bd15e78406e0c6f.manifest.json",
+      "sha256": "b6dec83e944dddea3e85c78b36353f6b3030a607aff5cdc7b2893da7a56c4c10",
+      "rows": 2477,
+      "size_bytes": 92589,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-05-266c44b9a62e557cd75a.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-05-266c44b9a62e557cd75a.manifest.json",
+      "sha256": "48cab7b3af6b4bc2b0183d0fb8189c3065c231298e418a784ecb66da47824c81",
+      "rows": 2609,
+      "size_bytes": 98947,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-06-c099c6fa458f2106c730.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-06-c099c6fa458f2106c730.manifest.json",
+      "sha256": "4960642bc859e0679705e10af6d2c44a8c4632fbdd0b9dd1329360c9c55edd7d",
+      "rows": 2588,
+      "size_bytes": 95935,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-07-d0750ec2fa20bd53a12c.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-07-d0750ec2fa20bd53a12c.manifest.json",
+      "sha256": "26e5e78d4597bfc573dab4c54fe61c5ea268d8c48e5ab8b08107c6d2fbe12c35",
+      "rows": 2437,
+      "size_bytes": 90546,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-08-a8c782569462fe0d2d05.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-08-a8c782569462fe0d2d05.manifest.json",
+      "sha256": "7efad0af6002a42f03e013a0664e5c54e5aa6605c679a59550552eff189a2c01",
+      "rows": 2883,
+      "size_bytes": 104316,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-09-938142894b6b3aa4b9bf.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-09-938142894b6b3aa4b9bf.manifest.json",
+      "sha256": "c54c24e8f8503e514cadedc7ef2a9ccee0eb373f41f68ac568ddd06000b68f49",
+      "rows": 2550,
+      "size_bytes": 93103,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-10-a0c2890725fbbf8032b8.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-10-a0c2890725fbbf8032b8.manifest.json",
+      "sha256": "f4b2ace4a993852e65a0089e5e6b3896581223d86c879d0a639b3c5572a11c14",
+      "rows": 2584,
+      "size_bytes": 97756,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-11-c37852ec015e6756b60f.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-11-c37852ec015e6756b60f.manifest.json",
+      "sha256": "94d8c34e835d691165bd320e5b34c53c94b18929dd8d708c295105e9fd405023",
+      "rows": 2592,
+      "size_bytes": 95102,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2022-12-f3720dfff2a8c3ffbd89.parquet",
+      "manifest": "data/raw/alpaca/track_a/2022-12-f3720dfff2a8c3ffbd89.manifest.json",
+      "sha256": "8b4d7de380d8b8e391694695bdbf5d68e332487e515c36f9b317d025698d3444",
+      "rows": 2492,
+      "size_bytes": 90360,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-01-448a07442d69ce4a567b.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-01-448a07442d69ce4a567b.manifest.json",
+      "sha256": "bebdee2cb44431fcf5a39a0fe47cf2ac1fad6d22b315813aa0ee82f5a4d46aff",
+      "rows": 2488,
+      "size_bytes": 91700,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-02-940f01a66e3c47cc6995.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-02-940f01a66e3c47cc6995.manifest.json",
+      "sha256": "002a09b6a2e7e2cdf15114f7451bcee7e1df147d5cf42d2bf72a6f0c5a044dbe",
+      "rows": 2361,
+      "size_bytes": 86464,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-03-9c1ba3716ff047dc552f.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-03-9c1ba3716ff047dc552f.manifest.json",
+      "sha256": "945def50a446e175e1c5c0f5c5fe0cc31a532ce7c8aed641c5120f3a7637fe90",
+      "rows": 2933,
+      "size_bytes": 105174,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-04-488b167ae4c65881311f.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-04-488b167ae4c65881311f.manifest.json",
+      "sha256": "6174547e4ab567e399770ddd7183436a804a7851706fa7307823a20926d037a4",
+      "rows": 2385,
+      "size_bytes": 86075,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-05-399b7daff33eef78e25f.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-05-399b7daff33eef78e25f.manifest.json",
+      "sha256": "a4dcf664d097abaa3d369a9d925bb26c6d93e446db715dc134306878039ef9a2",
+      "rows": 2666,
+      "size_bytes": 96563,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-06-218d2f2b566f23f67721.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-06-218d2f2b566f23f67721.manifest.json",
+      "sha256": "0cc721b71e39fbde9fd06cc4649ead40f4c0c63725d28335d70acaa106eb41bd",
+      "rows": 2529,
+      "size_bytes": 93857,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-07-4861a466f379f35d29bf.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-07-4861a466f379f35d29bf.manifest.json",
+      "sha256": "9f18d4388f60c894e833e78501a40c81920ba89021ecf4aa2464b389ff8d0a4a",
+      "rows": 2471,
+      "size_bytes": 90398,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-08-5eb34ef6d011f11cefd6.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-08-5eb34ef6d011f11cefd6.manifest.json",
+      "sha256": "34b90ed84509942cb438cacbd3f53d9ef4b097371c8f12c75d5aa3dc064bc695",
+      "rows": 2866,
+      "size_bytes": 102538,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-09-8b87def2766c98935851.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-09-8b87def2766c98935851.manifest.json",
+      "sha256": "af3f812e1219ece3717d4331e5069dd99def8aaa14b563f3d62fb8c6a5b89ff3",
+      "rows": 2317,
+      "size_bytes": 85664,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-10-a9bde3b5d550766a5970.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-10-a9bde3b5d550766a5970.manifest.json",
+      "sha256": "f645bf43ea1e6276799e1e7017467ef934bc67859c601489d6ac35fe930e157b",
+      "rows": 2623,
+      "size_bytes": 96264,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-11-9dc209f57d833fafb61d.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-11-9dc209f57d833fafb61d.manifest.json",
+      "sha256": "3b3a983493b15d1894eac4b184eb1c148894b64bb9269009f85d182a73fd1128",
+      "rows": 2501,
+      "size_bytes": 92101,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2023-12-280986267dc45bcfc52b.parquet",
+      "manifest": "data/raw/alpaca/track_a/2023-12-280986267dc45bcfc52b.manifest.json",
+      "sha256": "6cc7ac4e65e49d3a1bb02c67f7c34fa96d7b52a37bda1521f3ef3fb0b2efbe6e",
+      "rows": 2468,
+      "size_bytes": 89177,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-01-ebd09723b1c277508172.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-01-ebd09723b1c277508172.manifest.json",
+      "sha256": "1a19cd10a7abf1897f1c06f089abcfce72ef50890dbd7a39e8286aaabeec418c",
+      "rows": 2594,
+      "size_bytes": 94005,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-02-b1658da1d50e7653aef6.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-02-b1658da1d50e7653aef6.manifest.json",
+      "sha256": "489ba790322c3a60e16c60f3088fef167725fdba0a3ad2e898a5d22669d5210b",
+      "rows": 2453,
+      "size_bytes": 89233,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-03-cf79566457dac30766bf.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-03-cf79566457dac30766bf.manifest.json",
+      "sha256": "94622af037e79514ced81bc5c99bccba4a49b406fd27b7b26f02a7d42a9614a3",
+      "rows": 2483,
+      "size_bytes": 92350,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-04-a52d2776747641685d4d.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-04-a52d2776747641685d4d.manifest.json",
+      "sha256": "021dfcb8d0606745e8b241e13e35853b8659716347bfc9b25e6fa918cea65ec9",
+      "rows": 2807,
+      "size_bytes": 103601,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-05-5192345d7f9df797b224.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-05-5192345d7f9df797b224.manifest.json",
+      "sha256": "f7abb4e2ad33c2df00b8d8556c96f0c4cc2a766d2ba41f84c0fe4cb4df0645d4",
+      "rows": 2735,
+      "size_bytes": 101465,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-06-04ba42fa82c161a685d1.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-06-04ba42fa82c161a685d1.manifest.json",
+      "sha256": "81c2920d33572f87f996fdcd9e594b752f0debe532fc70fa8b2418d982f04c45",
+      "rows": 2386,
+      "size_bytes": 88910,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-07-25b60e84e6834f4319de.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-07-25b60e84e6834f4319de.manifest.json",
+      "sha256": "1c8311360f43fb9c84f2e65d8960e55caff4f1a6e8b73e2049bdad3d097efe71",
+      "rows": 2759,
+      "size_bytes": 104699,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-08-088ed313af8cb243b67d.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-08-088ed313af8cb243b67d.manifest.json",
+      "sha256": "5024e7cfcd6cd944118cb12827f602ac17e9341b3b590c2b853618a299c73e07",
+      "rows": 2768,
+      "size_bytes": 106274,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-09-62f6a9b534f0d8ed7a70.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-09-62f6a9b534f0d8ed7a70.manifest.json",
+      "sha256": "c49dad490f7bf539ae92d5125028414a8dba36bec79c602137543981e3a53add",
+      "rows": 2582,
+      "size_bytes": 98247,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-10-9fb9745ef324aca72073.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-10-9fb9745ef324aca72073.manifest.json",
+      "sha256": "ce8a42b30117049a3937ed2efbdab533347b55b37b596e6b1eaebddf88f04b15",
+      "rows": 2921,
+      "size_bytes": 109317,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-11-7de63542e5a6e2335d61.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-11-7de63542e5a6e2335d61.manifest.json",
+      "sha256": "f11a7c00a819700a1f73f1f71bb8f12644668c479708ce310c732d4a592083da",
+      "rows": 2610,
+      "size_bytes": 100225,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2024-12-5470b44030514cb6d4a1.parquet",
+      "manifest": "data/raw/alpaca/track_a/2024-12-5470b44030514cb6d4a1.manifest.json",
+      "sha256": "99b8c9a62eac52b9b4382ff9aaaaf472bd0f28b5a3e78a3f61c29c9d803e9e86",
+      "rows": 2712,
+      "size_bytes": 101876,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2025-01-cd112ccfe1c172b0bcea.parquet",
+      "manifest": "data/raw/alpaca/track_a/2025-01-cd112ccfe1c172b0bcea.manifest.json",
+      "sha256": "a2e772e546d221837c106bfd637c24c8410049435b7bb3f21ebfdb5a08855c09",
+      "rows": 2727,
+      "size_bytes": 105692,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2025-02-e06fc57e371c3e938d41.parquet",
+      "manifest": "data/raw/alpaca/track_a/2025-02-e06fc57e371c3e938d41.manifest.json",
+      "sha256": "d08ac76d1127f559c5317186f04ece0cb02bee14932da86ae82d37e99a51b73e",
+      "rows": 2551,
+      "size_bytes": 99588,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2025-03-3384c26f2eacd931b018.parquet",
+      "manifest": "data/raw/alpaca/track_a/2025-03-3384c26f2eacd931b018.manifest.json",
+      "sha256": "71e507c7f028df46152606e30bb5d19ec900c880a1f3113681eea5e35897e000",
+      "rows": 2793,
+      "size_bytes": 108024,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2025-04-3f9dfde7768b9a36b994.parquet",
+      "manifest": "data/raw/alpaca/track_a/2025-04-3f9dfde7768b9a36b994.manifest.json",
+      "sha256": "1465fea42b0f4bee58f3a007cf5062c1b07be49dcc77f725ebfaa279950e24db",
+      "rows": 2929,
+      "size_bytes": 114431,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2025-05-9cf034ee4fbd3e585cab.parquet",
+      "manifest": "data/raw/alpaca/track_a/2025-05-9cf034ee4fbd3e585cab.manifest.json",
+      "sha256": "b80fe0df387ff253fda06afb188a50fdef06065668d59b6e1940b1d78e4cc6b3",
+      "rows": 2778,
+      "size_bytes": 106198,
+      "status": "PASS"
+    },
+    {
+      "file": "data/raw/alpaca/track_a/2025-06-f84199933d1cd44ae995.parquet",
+      "manifest": "data/raw/alpaca/track_a/2025-06-f84199933d1cd44ae995.manifest.json",
+      "sha256": "4e1c2f1e13491d26a5e402bc565fbb2c2c12259f7b49169293bb150073ae1bd0",
+      "rows": 2558,
+      "size_bytes": 97514,
+      "status": "PASS"
+    }
+  ],
+  "existing_alignment_summaries": [
+    {
+      "age_minutes_quantiles": {
+        "0.0": 0.0,
+        "0.5": 30.0,
+        "0.9": 30.0,
+        "1.0": 300.0
+      },
+      "audit_only": true,
+      "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+      "index_delay_minutes": 0,
+      "max_age_minutes": 90,
+      "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+      "rows": 159008,
+      "sample_policy": "all_native_source_bars",
+      "stale": 2434,
+      "stock_availability_policy": "start plus configured interval",
+      "stock_delay_minutes": 30,
+      "unmatched": 0,
+      "usable_candidate": 156574
+    },
+    {
+      "age_minutes_quantiles": {
+        "0.0": 0.0,
+        "0.5": 30.0,
+        "0.9": 30.0,
+        "1.0": 240.0
+      },
+      "audit_only": true,
+      "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+      "index_delay_minutes": 60,
+      "max_age_minutes": 90,
+      "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+      "rows": 159008,
+      "sample_policy": "all_native_source_bars",
+      "stale": 1123,
+      "stock_availability_policy": "start plus configured interval",
+      "stock_delay_minutes": 30,
+      "unmatched": 0,
+      "usable_candidate": 157885
+    },
+    {
+      "age_minutes_quantiles": {
+        "0.0": 0.0,
+        "0.5": 0.0,
+        "0.9": 30.0,
+        "1.0": 90.0
+      },
+      "audit_only": true,
+      "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+      "index_delay_minutes": 0,
+      "max_age_minutes": 90,
+      "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+      "rows": 81137,
+      "sample_policy": "native_source_bars_inside_rth",
+      "stale": 0,
+      "stock_availability_policy": "start plus configured interval",
+      "stock_delay_minutes": 30,
+      "unmatched": 0,
+      "usable_candidate": 81137
+    },
+    {
+      "age_minutes_quantiles": {
+        "0.0": 0.0,
+        "0.5": 0.0,
+        "0.9": 30.0,
+        "1.0": 90.0
+      },
+      "audit_only": true,
+      "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+      "index_delay_minutes": 60,
+      "max_age_minutes": 90,
+      "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+      "rows": 81137,
+      "sample_policy": "native_source_bars_inside_rth",
+      "stale": 0,
+      "stock_availability_policy": "start plus configured interval",
+      "stock_delay_minutes": 30,
+      "unmatched": 0,
+      "usable_candidate": 81137
+    },
+    {
+      "age_minutes_quantiles": {
+        "0.0": 0.0,
+        "0.5": 30.0,
+        "0.9": 30.0,
+        "1.0": 90.0
+      },
+      "audit_only": true,
+      "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+      "index_delay_minutes": 0,
+      "max_age_minutes": 90,
+      "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+      "rows": 43692,
+      "sample_policy": "session_anchored_hourly_with_stubs",
+      "stale": 0,
+      "stock_availability_policy": "explicit available_at",
+      "stock_delay_minutes": 30,
+      "unmatched": 0,
+      "usable_candidate": 43692
+    },
+    {
+      "age_minutes_quantiles": {
+        "0.0": 0.0,
+        "0.5": 30.0,
+        "0.9": 30.0,
+        "1.0": 90.0
+      },
+      "audit_only": true,
+      "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+      "index_delay_minutes": 60,
+      "max_age_minutes": 90,
+      "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+      "rows": 43692,
+      "sample_policy": "session_anchored_hourly_with_stubs",
+      "stale": 0,
+      "stock_availability_policy": "explicit available_at",
+      "stock_delay_minutes": 30,
+      "unmatched": 0,
+      "usable_candidate": 43692
+    }
+  ],
+  "disk_before_report_creation": {
+    ".venv": {
+      "files": 8214,
+      "logical_bytes": 282571065
+    },
+    "data": {
+      "files": 138,
+      "logical_bytes": 8682157
+    },
+    "reports": {
+      "files": 44,
+      "logical_bytes": 4844054
+    },
+    "src": {
+      "files": 28,
+      "logical_bytes": 177847
+    },
+    "tests": {
+      "files": 12,
+      "logical_bytes": 151857
+    },
+    ".git": {
+      "files": 190,
+      "logical_bytes": 590565
+    },
+    "docs": {
+      "files": 5,
+      "logical_bytes": 308579
+    }
+  },
+  "timing": {
+    "metadata_verification_seconds": 2.254,
+    "pytest_seconds": 5.06,
+    "synthetic_command_tool_wall_seconds": 1.597,
+    "end_to_end_review_seconds": null,
+    "end_to_end_note": "Not instrumented; do not infer review duration from check time."
+  },
+  "checks": [
+    {
+      "check_id": "AUTHORITY_INVENTORY",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "docs/track_a/Shared_Project_Specification.md",
+        "docs/track_a/Track_A_Architecture_Experiment_Roadmap_First_Pass_FROZEN_v1.0.md",
+        "docs/track_a/Track_A_Codex_Incremental_Implementation_and_Human_Review_Plan_v1_2026-10-10.md",
+        "docs/track_a/Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md",
+        "docs/track_a/Track_A_Stage_Gated_Audit_and_Failure_Traceability_Plan_v1.1_2026-10-10.md"
+      ],
+      "protocol_reference": "P0.1 \u00a71; S \u00a710",
+      "observed": {
+        "read_documents": 5,
+        "missing_required_documents": 0
+      },
+      "smallest_next_action": "Human acknowledge current authority hashes; pointer proposed only.",
+      "evidence_sha256": {}
+    },
+    {
+      "check_id": "AUTHORITY_INTERNAL_VERSION_WORDING",
+      "status": "WARN",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "docs/track_a/Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md",
+        "docs/track_a/Track_A_Stage_Gated_Audit_and_Failure_Traceability_Plan_v1.1_2026-10-10.md"
+      ],
+      "protocol_reference": "P \u00a77",
+      "observed": {
+        "design_header": "v1.2",
+        "design_internal_sections_20_21": "v1.1 wording",
+        "audit_introduction": "older consolidated filename"
+      },
+      "smallest_next_action": "P0.2 pointer references exact current files; do not rewrite authorities here.",
+      "evidence_sha256": {}
+    },
+    {
+      "check_id": "GIT_INVENTORY",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "reports/data_audit/task01_final_handoff.md"
+      ],
+      "protocol_reference": "AGENTS \u00a714; P0.1 \u00a73.1",
+      "observed": {
+        "branch": "feat/track-a-data-intake",
+        "sha": "92aecd1a382f93c1133f41b8ae2432bd9863ff70",
+        "start_tree": "clean",
+        "fetch_exit_code": 0,
+        "upstream_ahead_behind": [
+          0,
+          0
+        ],
+        "origin_main_ahead_behind": [
+          2,
+          0
+        ],
+        "existing_commits": [
+          "ccdd85a",
+          "92aecd1"
+        ],
+        "integration_operations": 0
+      },
+      "smallest_next_action": "Review only; no staging, commit, push or integration authorized.",
+      "evidence_sha256": {
+        "reports/data_audit/task01_final_handoff.md": "f5c3c83492a28a4745c3b012b10606221eaf829512000578e136a1ef1f37899c"
+      }
+    },
+    {
+      "check_id": "SOURCE_APPROVAL_BINDING",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "configs/track_a_data.json",
+        "configs/track_a_bulk_approval_2026-10-10.json",
+        "reports/data_audit/task01_30min_pilot/sip_pilot.json",
+        "src/lstm_data/store.py"
+      ],
+      "protocol_reference": "D \u00a73; human Task01 source amendment",
+      "observed": {
+        "check_approval_exit_code": 0,
+        "feed": "sip",
+        "timeframe": "30Min",
+        "adjustment": "split",
+        "config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "pilot_sha256": "33ee29e125e3c8f49a47c2fc9243cdf146bfed8e24ade614932c48bf8050f454"
+      },
+      "smallest_next_action": "Reuse existing approved source; no reauthorization/reversion needed for same choices.",
+      "evidence_sha256": {
+        "configs/track_a_data.json": "1ecf302c80b60b8f6f00e31d67ffae6825bebd39b07c49db81950479476ed795",
+        "configs/track_a_bulk_approval_2026-10-10.json": "9f02e66188160194ba9bf923bf9e8456420747bba4f4f8bd852733b01937dce2",
+        "reports/data_audit/task01_30min_pilot/sip_pilot.json": "33ee29e125e3c8f49a47c2fc9243cdf146bfed8e24ade614932c48bf8050f454",
+        "src/lstm_data/store.py": "dfaf21ff83caef15269724f30bbdfb62f7696febd682e233aefb97099010da94"
+      }
+    },
+    {
+      "check_id": "CANONICAL_FOOTERS_HASHES_MANIFESTS",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/store.py"
+      ],
+      "protocol_reference": "A G1 keys/provenance; P0.1 \u00a73.2",
+      "observed": {
+        "chunks": 60,
+        "rows": 159008,
+        "parquet_bytes": 5845266,
+        "manifest_bytes": 581833,
+        "symbol_rows": {
+          "AAPL": 39528,
+          "CAT": 26666,
+          "JNJ": 27982,
+          "JPM": 32898,
+          "WMT": 31934
+        },
+        "schema_count": 1,
+        "manifest_versions": {
+          "legacy_without_coverage_audit": 9,
+          "with_coverage_audit": 51
+        },
+        "missing_from_51_coverage_manifests": 168,
+        "incomplete_windows_from_51_coverage_manifests": 98,
+        "errors": [],
+        "unexpected_store_files": []
+      },
+      "smallest_next_action": "Reuse canonical store; row-level QA not rerun here.",
+      "evidence_sha256": {
+        "src/lstm_data/store.py": "dfaf21ff83caef15269724f30bbdfb62f7696febd682e233aefb97099010da94"
+      }
+    },
+    {
+      "check_id": "COURSE_INTEGRITY",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "reports/data_audit/task01_course/course_manifest.json",
+        "src/lstm_data/course.py"
+      ],
+      "protocol_reference": "D \u00a73.2; AGENTS \u00a77",
+      "observed": {
+        "rows": 29510,
+        "bytes": 2083715,
+        "sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "first_timestamp": "2020-07-01 04:00:00+00:00",
+        "last_timestamp": "2025-07-01 04:00:00+00:00",
+        "latest_new_york": "2025-07-01 00:00:00-04:00",
+        "outside_named_local_dates": 1
+      },
+      "smallest_next_action": "Keep original bytes; supply same source hash on another machine.",
+      "evidence_sha256": {
+        "reports/data_audit/task01_course/course_manifest.json": "d2113553c789e978d47b242375600453568320efeccd29a312720161c5300fd9",
+        "src/lstm_data/course.py": "8f6a4394d86010773ba702c1be5e2d363406305c26bbf63581b245ae993d181c"
+      }
+    },
+    {
+      "check_id": "COURSE_NAMED_WINDOW_BOUNDARY",
+      "status": "WARN",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "reports/data_audit/task01_course/course_manifest.json"
+      ],
+      "protocol_reference": "D \u00a72.1; S \u00a74",
+      "observed": {
+        "outside_named_local_dates": 1,
+        "last_local": "2025-07-01 00:00:00-04:00",
+        "raw_row_preserved": true,
+        "feature_window_guard": "NOT_STARTED"
+      },
+      "smallest_next_action": "Later feature/label builder enforces authorized windows, no raw truncation.",
+      "evidence_sha256": {
+        "reports/data_audit/task01_course/course_manifest.json": "d2113553c789e978d47b242375600453568320efeccd29a312720161c5300fd9"
+      }
+    },
+    {
+      "check_id": "SOURCE_GAPS_RECONCILIATION",
+      "status": "WARN",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "reports/data_audit/task01_stock_qa_compact/stock_qa.json",
+        "reports/data_audit/task01_gap_probe_jpm_20210419.json"
+      ],
+      "protocol_reference": "D \u00a75.4; A G1/G3",
+      "observed": {
+        "source_defects": {
+          "duplicate_keys": 0,
+          "fractional_volume_rows": 0,
+          "invalid_ohlc_rows": 0,
+          "negative_volume_rows": 0,
+          "nonfinite_ohlcv_rows": 0,
+          "nonpositive_price_rows": 0,
+          "null_fields": 0,
+          "out_of_order": false,
+          "zero_volume_rows": 0
+        },
+        "sessions_audited": 6275,
+        "missing_by_symbol": {
+          "AAPL": 0,
+          "CAT": 47,
+          "JNJ": 37,
+          "JPM": 36,
+          "WMT": 48
+        },
+        "gaps": [
+          {
+            "symbol": "JPM",
+            "session": "2021-04-19",
+            "missing_bars": 12
+          },
+          {
+            "symbol": "JPM",
+            "session": "2021-10-25",
+            "missing_bars": 12
+          },
+          {
+            "symbol": "JPM",
+            "session": "2022-03-08",
+            "missing_bars": 12
+          },
+          {
+            "symbol": "JNJ",
+            "session": "2021-04-19",
+            "missing_bars": 12
+          },
+          {
+            "symbol": "JNJ",
+            "session": "2021-10-25",
+            "missing_bars": 12
+          },
+          {
+            "symbol": "JNJ",
+            "session": "2022-03-08",
+            "missing_bars": 13
+          },
+          {
+            "symbol": "WMT",
+            "session": "2021-04-19",
+            "missing_bars": 12
+          },
+          {
+            "symbol": "WMT",
+            "session": "2021-10-25",
+            "missing_bars": 12
+          },
+          {
+            "symbol": "WMT",
+            "session": "2022-01-24",
+            "missing_bars": 10
+          },
+          {
+            "symbol": "WMT",
+            "session": "2022-01-26",
+            "missing_bars": 2
+          },
+          {
+            "symbol": "WMT",
+            "session": "2022-03-08",
+            "missing_bars": 12
+          },
+          {
+            "symbol": "CAT",
+            "session": "2021-04-19",
+            "missing_bars": 12
+          },
+          {
+            "symbol": "CAT",
+            "session": "2021-10-25",
+            "missing_bars": 12
+          },
+          {
+            "symbol": "CAT",
+            "session": "2022-01-24",
+            "missing_bars": 10
+          },
+          {
+            "symbol": "CAT",
+            "session": "2022-03-08",
+            "missing_bars": 13
+          }
+        ],
+        "missing_total": 168,
+        "incomplete_window_count_evidence": "51 post-amendment manifests sum to 98; 9 legacy chunks predate gaps"
+      },
+      "smallest_next_action": "Later stock warmth/validity audit; no filling or future-label eligibility filter.",
+      "evidence_sha256": {
+        "reports/data_audit/task01_stock_qa_compact/stock_qa.json": "2f235f978e085c8de73bfab1d1cf9ef110e834c16837626fbdcf798473fb55fe",
+        "reports/data_audit/task01_gap_probe_jpm_20210419.json": "845873fbf8021f1fec9995064f311e11ebcfb69ab90ca91d3136c356f7733fe4"
+      }
+    },
+    {
+      "check_id": "PRIOR_ALL_ROW_QA_EVIDENCE",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "reports/data_audit/task01_stock_qa_compact/stock_qa.json"
+      ],
+      "protocol_reference": "A G1 OHLCV",
+      "observed": {
+        "existing_required_defects": {
+          "duplicate_keys": 0,
+          "fractional_volume_rows": 0,
+          "invalid_ohlc_rows": 0,
+          "negative_volume_rows": 0,
+          "nonfinite_ohlcv_rows": 0,
+          "nonpositive_price_rows": 0,
+          "null_fields": 0,
+          "out_of_order": false,
+          "zero_volume_rows": 0
+        },
+        "bound_to_unchanged_source_hashes": true,
+        "all_row_numerical_rerun": false
+      },
+      "smallest_next_action": "Reuse evidence; rerun only on relevant source/code version change.",
+      "evidence_sha256": {
+        "reports/data_audit/task01_stock_qa_compact/stock_qa.json": "2f235f978e085c8de73bfab1d1cf9ef110e834c16837626fbdcf798473fb55fe"
+      }
+    },
+    {
+      "check_id": "FULL_PANEL_QA_RERUN",
+      "status": "NOT_RUN",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/store.py",
+        "src/lstm_data/calendar.py"
+      ],
+      "protocol_reference": "P0.1 \u00a72/\u00a73.5",
+      "observed": {
+        "reason": "Full table loading deliberately avoided; byte/footer checks and prior compact evidence used."
+      },
+      "smallest_next_action": "No full rerun needed for P0.1.",
+      "evidence_sha256": {
+        "src/lstm_data/store.py": "dfaf21ff83caef15269724f30bbdfb62f7696febd682e233aefb97099010da94",
+        "src/lstm_data/calendar.py": "1c59160f9cd6624f6fa104dffbfe3c81cf05ae01cfae51380e9f9f54e85cd67c"
+      }
+    },
+    {
+      "check_id": "AGGREGATION_SAMPLES",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/aggregation.py",
+        "tests/test_aggregation.py"
+      ],
+      "protocol_reference": "D \u00a73.1; A G1/G2",
+      "observed": {
+        "ordinary": {
+          "synthetic": true,
+          "source_rows": 13,
+          "output_rows": 7,
+          "missing_source_bars": 0,
+          "first_start": "2020-07-01T13:30:00+00:00",
+          "first_ohlcv": [
+            100.0,
+            103.0,
+            99.0,
+            102.0,
+            20.0
+          ],
+          "last_end": "2020-07-01T20:00:00+00:00",
+          "last_duration": 30,
+          "last_stub": true,
+          "first_window_complete": true
+        },
+        "missing": {
+          "synthetic": true,
+          "source_rows": 12,
+          "output_rows": 6,
+          "missing_source_bars": 1,
+          "first_start": "2020-07-01T14:30:00+00:00",
+          "first_ohlcv": [
+            102.0,
+            105.0,
+            101.0,
+            104.0,
+            20.0
+          ],
+          "last_end": "2020-07-01T20:00:00+00:00",
+          "last_duration": 30,
+          "last_stub": true,
+          "first_window_complete": false
+        },
+        "early_close": {
+          "synthetic": true,
+          "source_rows": 7,
+          "output_rows": 4,
+          "missing_source_bars": 0,
+          "first_start": "2020-11-27T14:30:00+00:00",
+          "first_ohlcv": [
+            100.0,
+            103.0,
+            99.0,
+            102.0,
+            20.0
+          ],
+          "last_end": "2020-11-27T18:00:00+00:00",
+          "last_duration": 30,
+          "last_stub": true,
+          "first_window_complete": true
+        }
+      },
+      "smallest_next_action": "Reuse observed-pair calculator; later exclude stubs from neural feature slots explicitly.",
+      "evidence_sha256": {
+        "src/lstm_data/aggregation.py": "b90629f6998c79eae1e39658e58d021ee93fd5ee8c592e3b1ea992bf93188c3f",
+        "tests/test_aggregation.py": "d08f56841a8148311a7262fdc15ca4671bdee995cca4e619dfccbd5d7cc198ab"
+      }
+    },
+    {
+      "check_id": "DST_CALENDAR_TESTS",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/calendar.py",
+        "tests/test_calendar_alignment.py",
+        "tests/test_aggregation.py"
+      ],
+      "protocol_reference": "D \u00a73.1; A G1/G2",
+      "observed": {
+        "suite_passed": true,
+        "spring_open_utc_before": "2021-03-12T14:30Z",
+        "spring_open_utc_after": "2021-03-15T13:30Z",
+        "both_local_open": "09:30"
+      },
+      "smallest_next_action": "Use schedule component; source publication/issuance still unverified.",
+      "evidence_sha256": {
+        "src/lstm_data/calendar.py": "1c59160f9cd6624f6fa104dffbfe3c81cf05ae01cfae51380e9f9f54e85cd67c",
+        "tests/test_calendar_alignment.py": "a76b1b0b34d74c43a6710b84318c24978a72dce939276aa73ec9e289db77af2d",
+        "tests/test_aggregation.py": "d08f56841a8148311a7262fdc15ca4671bdee995cca4e619dfccbd5d7cc198ab"
+      }
+    },
+    {
+      "check_id": "D2_PERIOD_END_FRESHNESS_EQUIVALENCE",
+      "status": "FAIL",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/alignment.py",
+        "reports/data_audit/task01_full_alignment/alignment.json"
+      ],
+      "protocol_reference": "D \u00a73.2 age from period end \u226490min; A G2",
+      "observed": {
+        "synthetic": true,
+        "course_timestamp_assumed_period_end": "2020-07-01T13:00:00+00:00",
+        "candidate_available_at": "2020-07-01T14:00:00+00:00",
+        "decision_time": "2020-07-01T15:00:00+00:00",
+        "observed_age_minutes": 60.0,
+        "period_end_age_minutes": 120.0,
+        "observed_usable_candidate": true,
+        "required_usable_under_D2_close_assumption": false,
+        "diagnostic_complies_with_period_end_freshness": false,
+        "stock_interval_start": "2020-07-01T14:00:00+00:00"
+      },
+      "smallest_next_action": "Hold production reuse; separately authorize explicit period_end/available_at timing correction; preserve diagnostic history.",
+      "evidence_sha256": {
+        "src/lstm_data/alignment.py": "e4690828dde48dcc41b60c88b5f0e1d563092640ec003c8abf3dc65711000b8d",
+        "reports/data_audit/task01_full_alignment/alignment.json": "d66201238c28087c4264c05a9ec2d8f123869c99363d8f019791616ef9c3e977"
+      }
+    },
+    {
+      "check_id": "COMPLETION_PUBLICATION_GUARD",
+      "status": "WARN",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/aggregation.py",
+        "src/lstm_data/alignment.py"
+      ],
+      "protocol_reference": "D \u00a73.1/\u00a74.1",
+      "observed": {
+        "synthetic": true,
+        "accepted_available_at_equal_interval_start": true,
+        "production_guard_verified": false,
+        "available_at_equal_start": "2020-07-01T14:00:00+00:00"
+      },
+      "smallest_next_action": "Do not treat start-only diagnostic guard or assumed interval-end availability as verified source publication.",
+      "evidence_sha256": {
+        "src/lstm_data/aggregation.py": "b90629f6998c79eae1e39658e58d021ee93fd5ee8c592e3b1ea992bf93188c3f",
+        "src/lstm_data/alignment.py": "e4690828dde48dcc41b60c88b5f0e1d563092640ec003c8abf3dc65711000b8d"
+      }
+    },
+    {
+      "check_id": "USA500_SOURCE_CONTRACT",
+      "status": "BLOCKED",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "configs/track_a_data.json",
+        "reports/data_audit/task01_course/course_manifest.json"
+      ],
+      "protocol_reference": "D \u00a73.2/\u00a79.2; S \u00a74",
+      "observed": {
+        "identity": "unverified",
+        "timestamp_semantics": "unknown",
+        "close_assumption": "human-approved provisional",
+        "compatible_hourly_ohlc_daily_close": "not verified",
+        "publication_history": "not verified"
+      },
+      "smallest_next_action": "P1.2 obtain course/provider source contract; no substitute or guessed new delay.",
+      "evidence_sha256": {
+        "configs/track_a_data.json": "1ecf302c80b60b8f6f00e31d67ffae6825bebd39b07c49db81950479476ed795",
+        "reports/data_audit/task01_course/course_manifest.json": "d2113553c789e978d47b242375600453568320efeccd29a312720161c5300fd9"
+      }
+    },
+    {
+      "check_id": "SHARED_CLOCK_SIGNOFF",
+      "status": "BLOCKED",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "docs/track_a/Shared_Project_Specification.md",
+        "docs/track_a/Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md"
+      ],
+      "protocol_reference": "S \u00a73.1/\u00a78.1; D \u00a74.1 C02",
+      "observed": {
+        "shared": "four complete trading-hour advances",
+        "track_a": "240 continuous regular-session minutes",
+        "joint_signoff": "pending"
+      },
+      "smallest_next_action": "Joint documented decision before target/trading/common comparison implementation.",
+      "evidence_sha256": {}
+    },
+    {
+      "check_id": "MINUTE_EXECUTION_ACTIONS",
+      "status": "BLOCKED",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "configs/track_a_data.json",
+        "data/README.md"
+      ],
+      "protocol_reference": "D \u00a73.1/\u00a74.1/\u00a77",
+      "observed": {
+        "minute_execution_source_files": 0,
+        "action_dividend_reference_files": 0,
+        "30Min_prices_establish_minute_fills": false
+      },
+      "smallest_next_action": "New scoped minute/action feasibility authorization; no full acquisition now.",
+      "evidence_sha256": {
+        "configs/track_a_data.json": "1ecf302c80b60b8f6f00e31d67ffae6825bebd39b07c49db81950479476ed795",
+        "data/README.md": "764f845a7d5bf8e7f71798b90c6a3122370feced3f0aeb616bc0ce3baf1d946e"
+      }
+    },
+    {
+      "check_id": "FORMATION_PREHISTORY",
+      "status": "BLOCKED",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "configs/track_a_data.json"
+      ],
+      "protocol_reference": "D \u00a72.2/\u00a75/\u00a710.3",
+      "observed": {
+        "preformation_stock_store_found": false,
+        "historical_membership": "not verified",
+        "trailing_60_session_dollar_volume": "not verified",
+        "FT0_M4_and_EMA_RSI_warmth": "not audited"
+      },
+      "smallest_next_action": "Separate formation/source warmth feasibility from retrospective coverage; no automatic backups.",
+      "evidence_sha256": {
+        "configs/track_a_data.json": "1ecf302c80b60b8f6f00e31d67ffae6825bebd39b07c49db81950479476ed795"
+      }
+    },
+    {
+      "check_id": "FT0_MARKET_TARGET_RETENTION",
+      "status": "NOT_RUN",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/__init__.py"
+      ],
+      "protocol_reference": "D \u00a7\u00a74/5/9; A G3",
+      "observed": {
+        "implementation": "NOT_STARTED",
+        "full_feature_or_future_label_validity_computed": false,
+        "strict_five_stock_retention": "not measured"
+      },
+      "smallest_next_action": "Later P2 packages only after source/clock prerequisites.",
+      "evidence_sha256": {
+        "src/lstm_data/__init__.py": "28bda2b9838542bb4076f41fa2fe56fe475cbba031c122cfc12f6a3a5c6a5130"
+      }
+    },
+    {
+      "check_id": "C01_PORTFOLIO_BASELINES",
+      "status": "NOT_RUN",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/__init__.py"
+      ],
+      "protocol_reference": "D \u00a74.3/\u00a77/\u00a717; A G4",
+      "observed": {
+        "implementation": "NOT_STARTED",
+        "models_trades_baselines_backtests_run": 0
+      },
+      "smallest_next_action": "Later P2.2/P3 with distinct forecast/entry/label/fill flags and synthetic accounting.",
+      "evidence_sha256": {
+        "src/lstm_data/__init__.py": "28bda2b9838542bb4076f41fa2fe56fe475cbba031c122cfc12f6a3a5c6a5130"
+      }
+    },
+    {
+      "check_id": "NEURAL_SELECTION_CONFIRMATION_REPLAY",
+      "status": "NOT_RUN",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/__init__.py"
+      ],
+      "protocol_reference": "D \u00a78/\u00a715/\u00a722; A G5\u2013G9/\u00a713",
+      "observed": {
+        "implementation": "NOT_STARTED",
+        "neural_fit_pairs": 0,
+        "confirmation_prediction_target_performance_read": false,
+        "confirmation_release": "not authorized",
+        "optional_branches_activated": 0
+      },
+      "smallest_next_action": "No fitting or confirmation; preserve later human/package gates.",
+      "evidence_sha256": {
+        "src/lstm_data/__init__.py": "28bda2b9838542bb4076f41fa2fe56fe475cbba031c122cfc12f6a3a5c6a5130"
+      }
+    },
+    {
+      "check_id": "ENVIRONMENT_REPRODUCIBILITY_LEDGER",
+      "status": "WARN",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "pyproject.toml",
+        "README.md",
+        "src/lstm_data/cli.py",
+        "src/lstm_data/config.py"
+      ],
+      "protocol_reference": "P P0.2; A \u00a71.2/\u00a714",
+      "observed": {
+        "python": "3.14.6",
+        "setup_route": "pyproject editable installation",
+        "runtime_snapshots_present": true,
+        "structured_run_ledger_present": false,
+        "session_archive_present": true,
+        "current_protocol_pointer_present": false,
+        "exact_lock_present": false,
+        "dirty_code_content_hash_in_old_runtime": false
+      },
+      "smallest_next_action": "P0.2 small offline infrastructure delta; reuse existing environment/hashes/manifests.",
+      "evidence_sha256": {
+        "pyproject.toml": "a7565222ebeec2cce25333a30c107b25d341a68b57888ad9be3998aa4e43861e",
+        "README.md": "32105809c7039ddb4d74c599ad51bfa7a4405ec92880bdf426c3a4c1c41b1088",
+        "src/lstm_data/cli.py": "5092a5648844b2d6ecd183150184bf8880d2d71f551e9faabbeac8c679c885f0",
+        "src/lstm_data/config.py": "6eb750fa4e1eac2ff64057dcbad9a67f7afc3162dfdebb71682deb0db1f69f5f"
+      }
+    },
+    {
+      "check_id": "OFFLINE_TEST_SUITE",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "tests/test_aggregation.py",
+        "tests/test_alpaca.py",
+        "tests/test_calendar_alignment.py",
+        "tests/test_store_cli.py",
+        "tests/test_validation_course.py"
+      ],
+      "protocol_reference": "AGENTS \u00a711; P0.1 \u00a73.5",
+      "observed": {
+        "command": ".venv/bin/python -m pytest -q",
+        "exit_code": 0,
+        "passed": 60,
+        "failed": 0,
+        "pytest_elapsed_seconds": 5.06,
+        "network": "mocked or absent"
+      },
+      "smallest_next_action": "No repairs; new D2 distinction not covered by existing tests.",
+      "evidence_sha256": {
+        "tests/test_aggregation.py": "d08f56841a8148311a7262fdc15ca4671bdee995cca4e619dfccbd5d7cc198ab",
+        "tests/test_alpaca.py": "e685bf01ff286a2769bb8d86539980a32570dc2fc0f45fabb804722ea1aca10e",
+        "tests/test_calendar_alignment.py": "a76b1b0b34d74c43a6710b84318c24978a72dce939276aa73ec9e289db77af2d",
+        "tests/test_store_cli.py": "54b100749effe7ec08e91da5203791c3e3652fccd81ed71a87e8c870dc32e805",
+        "tests/test_validation_course.py": "20e2479074178a01c7731e4b1298e7c841552fdb5ac0a1caea4b9158195a3540"
+      }
+    },
+    {
+      "check_id": "RUFF",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "pyproject.toml"
+      ],
+      "protocol_reference": "P0.1 \u00a73.5",
+      "observed": {
+        "command": ".venv/bin/ruff check src tests",
+        "exit_code": 0,
+        "output": "All checks passed!"
+      },
+      "smallest_next_action": "No formatting changes.",
+      "evidence_sha256": {
+        "pyproject.toml": "a7565222ebeec2cce25333a30c107b25d341a68b57888ad9be3998aa4e43861e"
+      }
+    },
+    {
+      "check_id": "COMPILATION",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/cli.py"
+      ],
+      "protocol_reference": "P0.1 \u00a73.5",
+      "observed": {
+        "method": "compile(p.read_text(),str(p),\"exec\") for src/tests Python files",
+        "files": 17,
+        "exit_code": 0,
+        "bytecode_writes": 0
+      },
+      "smallest_next_action": "No action.",
+      "evidence_sha256": {
+        "src/lstm_data/cli.py": "5092a5648844b2d6ecd183150184bf8880d2d71f551e9faabbeac8c679c885f0"
+      }
+    },
+    {
+      "check_id": "DEPENDENCY_AND_CLI_SMOKE",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "pyproject.toml",
+        "src/lstm_data/cli.py"
+      ],
+      "protocol_reference": "AGENTS \u00a75; P0.1 \u00a73.5",
+      "observed": {
+        "commands": [
+          ".venv/bin/python -m pip check",
+          ".venv/bin/lstm-data --help"
+        ],
+        "exit_codes": [
+          0,
+          0
+        ],
+        "pip_output": "No broken requirements found.",
+        "warning": "pip cache disabled due local permission; no installation",
+        "cli_commands": 5
+      },
+      "smallest_next_action": "No installation; clean-machine rehearsal remains not run.",
+      "evidence_sha256": {
+        "pyproject.toml": "a7565222ebeec2cce25333a30c107b25d341a68b57888ad9be3998aa4e43861e",
+        "src/lstm_data/cli.py": "5092a5648844b2d6ecd183150184bf8880d2d71f551e9faabbeac8c679c885f0"
+      }
+    },
+    {
+      "check_id": "PUBLIC_PATH_SECRET_HYGIENE",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        ".gitignore",
+        ".env.example",
+        "src/lstm_data/alpaca.py"
+      ],
+      "protocol_reference": "A G0 secrets; AGENTS \u00a713",
+      "observed": {
+        "scope": "24 tracked public code/config/setup files; current tracked-data and ignore inventory",
+        "machine_paths_or_credential_urls_found": 0,
+        "tracked_env_raw_venv_paths": 0,
+        "env_contents_opened_or_copied": false,
+        "raw_env_venv_ignored": true,
+        "comprehensive_history_secret_scan": false
+      },
+      "smallest_next_action": "Retain ignores; no guarantee of comprehensive secret detection inferred.",
+      "evidence_sha256": {
+        ".gitignore": "6d08be8130e76962d653bf7388f450e150f6ec69f5bdfe80be624111f7a22e41",
+        ".env.example": "e8616061d9be6c1412f45c5849fc53a622e59b90d9602807b48fa7a2e6eebf8c",
+        "src/lstm_data/alpaca.py": "dd90713193ad3a09d24a711cb8e65c4c9a1661f15d5a4241e643b8e15e2ff7de"
+      }
+    },
+    {
+      "check_id": "METADATA_HELPER_INITIAL_ATTEMPT",
+      "status": "WARN",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "src/lstm_data/store.py"
+      ],
+      "protocol_reference": "P0.1 honest failed-command reporting",
+      "observed": {
+        "exit_code": 1,
+        "error_class": "KeyError",
+        "missing_optional_key": "coverage_audit",
+        "repository_test_failure": false,
+        "followup_exit_code": 0,
+        "legacy_manifests": 9
+      },
+      "smallest_next_action": "None after schema-aware audit retry; leave legacy manifests unchanged.",
+      "evidence_sha256": {
+        "src/lstm_data/store.py": "dfaf21ff83caef15269724f30bbdfb62f7696febd682e233aefb97099010da94"
+      }
+    },
+    {
+      "check_id": "DIFF_AND_SCOPE_SAFETY",
+      "status": "PASS",
+      "timestamp_utc": "2026-10-10T23:04:40.978142+00:00",
+      "evidence_refs": [
+        "AGENTS.md"
+      ],
+      "protocol_reference": "P0.1 \u00a72; AGENTS \u00a716",
+      "observed": {
+        "git_diff_check_exit_code": 0,
+        "tracked_diff_exit_code": 0,
+        "staged_diff_exit_code": 0,
+        "downloads": 0,
+        "source_copies": 0,
+        "raw_edits": 0,
+        "source_rows_loaded_into_dataframes": 0,
+        "raw_csv_handling": "stream count; only one row at a time",
+        "destructive_git": 0,
+        "next_package_started": false
+      },
+      "smallest_next_action": "Stop awaiting human review; final report-file inventory verified separately.",
+      "evidence_sha256": {
+        "AGENTS.md": "abbc4929d7559bd08db1e33006568361dddc1f7ec530fc538b4a2a86ea12c05d"
+      }
+    }
+  ],
+  "gates": {
+    "G0": {
+      "status": "BLOCKED",
+      "subchecks": {
+        "authority": "WARN",
+        "conditional_scope": "PASS_SCOPED",
+        "source_identity_entitlement": "BLOCKED",
+        "common_clock_signoff": "BLOCKED",
+        "window_confirmation_inventory": "PASS_SCOPED",
+        "resource_ledger": "WARN",
+        "bounded_secret_handling": "PASS_SCOPED",
+        "repository_data_safety": "PASS"
+      }
+    },
+    "G1": {
+      "status": "BLOCKED",
+      "implemented_coverage": "PARTIAL; byte integrity/prior raw QA/calendar evidence only",
+      "minute_actions_formation_publication": "BLOCKED"
+    },
+    "G2": {
+      "status": "BLOCKED",
+      "implemented_coverage": "PARTIAL",
+      "period_end_freshness": "CONFLICT",
+      "target_issuance_execution": "NOT_STARTED"
+    },
+    "G3": {
+      "status": "NOT_RUN",
+      "implementation": "NOT_STARTED"
+    },
+    "G4": {
+      "status": "NOT_RUN",
+      "implementation": "NOT_STARTED"
+    },
+    "G5": {
+      "status": "NOT_RUN",
+      "implementation": "NOT_STARTED"
+    },
+    "G6": {
+      "status": "NOT_RUN",
+      "implementation": "NOT_STARTED"
+    },
+    "G7": {
+      "status": "NOT_RUN",
+      "implementation": "NOT_STARTED"
+    },
+    "G8": {
+      "status": "NOT_RUN",
+      "implementation": "NOT_STARTED"
+    },
+    "G9": {
+      "status": "NOT_RUN",
+      "implementation": "NOT_STARTED"
+    }
+  },
+  "session_archive_entry": "reports/codex_sessions/2026-10-10_190015_feat-track-a-data-intake_p0-1-review.md",
+  "new_file_inventory": [
+    {
+      "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+      "purpose": "machine-readable checks",
+      "bytes": 68353
+    },
+    {
+      "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_existing_work_review.md",
+      "purpose": "P0.1 review/session evidence",
+      "bytes": 12419
+    },
+    {
+      "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_human_review_card.md",
+      "purpose": "P0.1 review/session evidence",
+      "bytes": 5288
+    },
+    {
+      "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_protocol_coverage.md",
+      "purpose": "P0.1 review/session evidence",
+      "bytes": 18127
+    },
+    {
+      "path": "reports/codex_sessions/2026-10-10_190015_feat-track-a-data-intake_p0-1-review.md",
+      "purpose": "P0.1 review/session evidence",
+      "bytes": 12290
+    }
+  ],
+  "new_persistent_report_bytes": 116477,
+  "restart_state": "AWAITING HUMAN REVIEW \u2014 NO AUTOMATIC NEXT PACKAGE",
+  "final_validation": {
+    "timestamp_utc": "2026-10-10T23:06:23.659131+00:00",
+    "status": "PASS",
+    "existing_evidence_code_config_protocol_and_source_hashes_unchanged": true,
+    "tracked_diff": "none",
+    "staged_diff": "none",
+    "untracked_paths": [
+      "reports/codex_sessions/2026-10-10_190015_feat-track-a-data-intake_p0-1-review.md",
+      "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+      "reports/data_audit/p0_1_2026-10-10_190015/p0_1_existing_work_review.md",
+      "reports/data_audit/p0_1_2026-10-10_190015/p0_1_human_review_card.md",
+      "reports/data_audit/p0_1_2026-10-10_190015/p0_1_protocol_coverage.md"
+    ],
+    "report_links_whitespace_json_statuses": "PASS",
+    "git_diff_check_exit_code": 0,
+    "source_rows_loaded_into_dataframes": 0
+  }
+}

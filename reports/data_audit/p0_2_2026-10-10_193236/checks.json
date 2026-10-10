@@ -1,0 +1,814 @@
+{
+  "blockers": [
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "F01"
+      ],
+      "code_id": "e4690828dde48dcc41b60c88b5f0e1d563092640ec003c8abf3dc65711000b8d",
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-F01",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "F01",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G2",
+      "kind": "blocker",
+      "owner_action": "Separate reviewed repair plus source publication validation",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "D2 freshness uses available_at instead of market period end; 120 minutes reported as 60",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.452320+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "market_timing"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-USA500-source-clock",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "USA500-source-clock",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G1",
+      "kind": "blocker",
+      "owner_action": "Verify course/provider identity, period semantics and publication",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "USA500 identity and publication timing unverified; provisional close assumption is not verification",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.454540+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "market_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "stock_timing"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-stock-publication",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "stock-publication",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G1",
+      "kind": "blocker",
+      "owner_action": "Verify historical availability independently of aggregation",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "Stock publication timing/completed bar availability unverified",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.456980+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "economic_evaluation"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "minute_execution"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-minute-execution",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "minute-execution",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G1",
+      "kind": "blocker",
+      "owner_action": "Separately gated P1.1/P1.2 source feasibility",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "Minute entry/exit inputs and execution clock not verified",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.459970+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "economic_evaluation"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "corporate_actions"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-actions-dividends",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "actions-dividends",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G1",
+      "kind": "blocker",
+      "owner_action": "Verify corporate actions and approved economic policy",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "Actions/dividends and economic treatment unverified",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.463101+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "market_features",
+        "predictive_evaluation"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "formation"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-formation-prehistory",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "formation-prehistory",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G1",
+      "kind": "blocker",
+      "owner_action": "Verify point-in-time eligibility and prehistory",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "Formation membership/liquidity and pre-formation warmup unavailable",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.466767+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "market_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "shared_clock"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-shared-D3-clock",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "shared-D3-clock",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G0",
+      "kind": "blocker",
+      "owner_action": "Obtain explicit two-track collaborator decision",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "Shared 240-minute versus four-complete-hour clock sign-off pending",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.471101+00:00",
+      "track": "A"
+    }
+  ],
+  "checks": [
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "protocol-identity",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "issues": [],
+        "meaning": "Pinned document/reference identity only; no scientific or human approval",
+        "status": "PASS"
+      },
+      "example_ids": [],
+      "explanation": "Hashes do not establish provider truth or sign-off",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "ledger-schema",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "events": 7
+      },
+      "example_ids": [],
+      "explanation": "Valid append-only event history; not an approval",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "p0.1-F01",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "F01",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "example_ids": [],
+      "explanation": "D2 freshness uses available_at instead of market period end; 120 minutes reported as 60",
+      "gate_id": "G2",
+      "owner_action": "Separate reviewed repair plus source publication validation",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "p0.1-USA500-source-clock",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "USA500-source-clock",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "example_ids": [],
+      "explanation": "USA500 identity and publication timing unverified; provisional close assumption is not verification",
+      "gate_id": "G1",
+      "owner_action": "Verify course/provider identity, period semantics and publication",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "market_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "p0.1-stock-publication",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "stock-publication",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "example_ids": [],
+      "explanation": "Stock publication timing/completed bar availability unverified",
+      "gate_id": "G1",
+      "owner_action": "Verify historical availability independently of aggregation",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "p0.1-minute-execution",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "minute-execution",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "example_ids": [],
+      "explanation": "Minute entry/exit inputs and execution clock not verified",
+      "gate_id": "G1",
+      "owner_action": "Separately gated P1.1/P1.2 source feasibility",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "p0.1-actions-dividends",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "actions-dividends",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "example_ids": [],
+      "explanation": "Actions/dividends and economic treatment unverified",
+      "gate_id": "G1",
+      "owner_action": "Verify corporate actions and approved economic policy",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "market_features",
+        "predictive_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "p0.1-formation-prehistory",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "formation-prehistory",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "example_ids": [],
+      "explanation": "Formation membership/liquidity and pre-formation warmup unavailable",
+      "gate_id": "G1",
+      "owner_action": "Verify point-in-time eligibility and prehistory",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "market_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "p0.1-shared-D3-clock",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "shared-D3-clock",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "example_ids": [],
+      "explanation": "Shared 240-minute versus four-complete-hour clock sign-off pending",
+      "gate_id": "G0",
+      "owner_action": "Obtain explicit two-track collaborator decision",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md D2",
+        "max_period_age_minutes": 90
+      },
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "F01-D2",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "available_at": "2001-01-02T14:00:00+00:00",
+        "decision_time": "2001-01-02T15:00:00+00:00",
+        "hypothetical_delay_minutes": 60,
+        "market_period_end": "2001-01-02T13:00:00+00:00",
+        "meaning": "D2 counterexample; synthetic lag is not real publication evidence",
+        "observed_available_age_minutes": 60.0,
+        "observed_usable": true,
+        "required_period_end_age_minutes": 120.0,
+        "required_usable": false,
+        "status": "INVALID",
+        "synthetic_only": true
+      },
+      "example_ids": [
+        "synthetic-F01"
+      ],
+      "explanation": "Unchanged production code incorrectly accepts stale fake period",
+      "gate_id": "G2",
+      "owner_action": "Separate reviewed F01 repair and publication validation",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "INVALID",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "offline-infrastructure-tests",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "baseline_tests": 60,
+        "commands": [
+          ".venv/bin/python -m pytest -q",
+          ".venv/bin/python -m pytest -q tests/test_evidence.py",
+          ".venv/bin/ruff check src tests"
+        ],
+        "final_runtime_seconds": 5.75,
+        "final_tests": 94,
+        "focused_new_tests": 34,
+        "lint": "PASS"
+      },
+      "example_ids": [],
+      "explanation": "Offline software verification; does not resolve scientific prerequisites",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "preserved-existing-work",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "alignment_sha256": "e4690828dde48dcc41b60c88b5f0e1d563092640ec003c8abf3dc65711000b8d",
+        "changed_outside_authorized_shared_files": [],
+        "preexisting_untracked_preserved": [
+          "docs/track_a/Track_A_Research_Design_Mathematical_Appendix_2026-10-10.md",
+          "reports/codex_sessions/2026-10-10_190015_feat-track-a-data-intake_p0-1-review.md",
+          "reports/data_audit/p0_1_2026-10-10_190015/p0_1_existing_work_review.md",
+          "reports/data_audit/p0_1_2026-10-10_190015/p0_1_human_review_card.md",
+          "reports/data_audit/p0_1_2026-10-10_190015/p0_1_protocol_coverage.md",
+          "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+        ],
+        "raw_check_scope": "Manifest bytes and total data size only; no new Parquet row/hash QA"
+      },
+      "example_ids": [],
+      "explanation": "P0.1, appendix, protocols, raw manifests and existing production modules preserved",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p0.2-2026-10-10T23:32:35.899309+00:00",
+      "check_id": "environment-portability",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "architecture": "arm64",
+        "path": "reports/data_audit/p0_2_2026-10-10_193236/environment.json",
+        "python": "3.14.6"
+      },
+      "example_ids": [],
+      "explanation": "Local version snapshot only; no exact portable lock or clean-machine rehearsal",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "WARN",
+      "time_utc": "2026-10-10T23:32:35.899427+00:00"
+    }
+  ],
+  "gates": {
+    "G0": "BLOCKED",
+    "G1": "BLOCKED",
+    "G2": "BLOCKED",
+    "G3": "NOT_RUN",
+    "G4": "NOT_RUN",
+    "G5": "NOT_RUN",
+    "G6": "NOT_RUN",
+    "G7": "NOT_RUN",
+    "G8": "NOT_RUN",
+    "G9": "NOT_RUN"
+  },
+  "git": {
+    "branch": "feat/track-a-data-intake",
+    "commit": "92aecd1a382f93c1133f41b8ae2432bd9863ff70",
+    "dirty": true,
+    "tracked_diff": true
+  },
+  "infrastructure_status": "PASS",
+  "invocation": {
+    "entrypoint": "lstm-data evidence",
+    "ledger": "reports/audit/track_a_events.jsonl",
+    "mode": "diagnose",
+    "pointer": "configs/CURRENT_PROTOCOL.json"
+  },
+  "offline": true,
+  "operations": {
+    "confirmation_evaluation": {
+      "operation": "confirmation_evaluation",
+      "reasons": [
+        "research executor and reviewed human authorization unavailable in P0.2",
+        "G9 immutable manifest lock and human decision required; no metrics accessed"
+      ],
+      "status": "BLOCKED"
+    },
+    "economic_evaluation": {
+      "operation": "economic_evaluation",
+      "reasons": [
+        "unresolved:corporate_actions",
+        "unresolved:formation",
+        "unresolved:minute_execution",
+        "unresolved:shared_clock",
+        "unresolved:stock_timing",
+        "research executor and reviewed human authorization unavailable in P0.2"
+      ],
+      "status": "BLOCKED"
+    },
+    "market_features": {
+      "operation": "market_features",
+      "reasons": [
+        "unresolved:F01",
+        "unresolved:formation",
+        "unresolved:market_timing",
+        "unresolved:shared_clock",
+        "unresolved:stock_timing",
+        "research executor and reviewed human authorization unavailable in P0.2"
+      ],
+      "status": "BLOCKED"
+    },
+    "stock_administration": {
+      "operation": "stock_administration",
+      "reasons": [],
+      "status": "PASS"
+    }
+  },
+  "package": "P0.2",
+  "pair_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "research_status": "BLOCKED",
+  "run_fingerprint": "2344400706d042c19ab1ab227875eb881d65fc5a81b9f8dd3b0b61a34f6384fe",
+  "schema_version": 1,
+  "writes": false
+}

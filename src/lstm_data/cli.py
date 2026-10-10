@@ -18,6 +18,7 @@ from dotenv import load_dotenv
 from .aggregation import aggregate_session_hours
 from .alignment import asof_diagnostic
 from .alpaca import DataAccessError, HistoricalClient, credentials
+from .audit import add_parser, run_cli
 from .calendar import fully_inside_rth, schedule, stock_qa
 from .config import atomic_new, load_config, now, write_json
 from .course import audit_course, save_course_audit
@@ -61,6 +62,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--config", type=Path, default=Path("configs/track_a_data.json"))
     parser.add_argument("--env-file", type=Path, help="Explicit local ignored .env; never printed")
     sub = parser.add_subparsers(dest="command", required=True)
+    add_parser(sub)
     for name, help_text in (
         ("source-audit", "Inspect original USA500 CSV without modifying bytes"),
         ("sip-pilot", "Small SIP entitlement/DST/early-close/split probes"),
@@ -86,6 +88,8 @@ def main(argv: list[str] | None = None) -> int:
                 help="Audit sensitivity only; not an approved model rule",
             )
     args = parser.parse_args(argv)
+    if args.command == "evidence":
+        return run_cli(args)
     cfg = load_config(args.config)
     if args.dry_run:
         dry = plan(cfg)
