@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "attempt": 1,
+      "continued_page": false,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-20T03:59:59.999999999Z",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-19T04:00:00Z",
+        "symbols": "JPM",
+        "timeframe": "30Min"
+      },
+      "status": 200,
+      "time": "2026-10-10T09:27:37.528977+00:00"
+    }
+  ],
+  "params": {
+    "adjustment": "split",
+    "asof": "2025-06-30",
+    "currency": "USD",
+    "end": "2021-04-20T03:59:59.999999999Z",
+    "feed": "sip",
+    "limit": 10000,
+    "sort": "asc",
+    "start": "2021-04-19T04:00:00Z",
+    "symbols": "JPM",
+    "timeframe": "30Min"
+  },
+  "purpose": "Independent single-symbol check of apparent gap in multi-symbol store",
+  "rows": 1,
+  "timestamps_utc": [
+    "2021-04-19T13:30:00+00:00"
+  ]
+}

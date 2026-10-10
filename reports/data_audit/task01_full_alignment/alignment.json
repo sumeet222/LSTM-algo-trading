@@ -1,0 +1,122 @@
+[
+  {
+    "age_minutes_quantiles": {
+      "0.0": 0.0,
+      "0.5": 30.0,
+      "0.9": 30.0,
+      "1.0": 300.0
+    },
+    "audit_only": true,
+    "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+    "index_delay_minutes": 0,
+    "max_age_minutes": 90,
+    "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "rows": 159008,
+    "sample_policy": "all_native_source_bars",
+    "stale": 2434,
+    "stock_availability_policy": "start plus configured interval",
+    "stock_delay_minutes": 30,
+    "unmatched": 0,
+    "usable_candidate": 156574
+  },
+  {
+    "age_minutes_quantiles": {
+      "0.0": 0.0,
+      "0.5": 30.0,
+      "0.9": 30.0,
+      "1.0": 240.0
+    },
+    "audit_only": true,
+    "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+    "index_delay_minutes": 60,
+    "max_age_minutes": 90,
+    "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "rows": 159008,
+    "sample_policy": "all_native_source_bars",
+    "stale": 1123,
+    "stock_availability_policy": "start plus configured interval",
+    "stock_delay_minutes": 30,
+    "unmatched": 0,
+    "usable_candidate": 157885
+  },
+  {
+    "age_minutes_quantiles": {
+      "0.0": 0.0,
+      "0.5": 0.0,
+      "0.9": 30.0,
+      "1.0": 90.0
+    },
+    "audit_only": true,
+    "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+    "index_delay_minutes": 0,
+    "max_age_minutes": 90,
+    "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "rows": 81137,
+    "sample_policy": "native_source_bars_inside_rth",
+    "stale": 0,
+    "stock_availability_policy": "start plus configured interval",
+    "stock_delay_minutes": 30,
+    "unmatched": 0,
+    "usable_candidate": 81137
+  },
+  {
+    "age_minutes_quantiles": {
+      "0.0": 0.0,
+      "0.5": 0.0,
+      "0.9": 30.0,
+      "1.0": 90.0
+    },
+    "audit_only": true,
+    "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+    "index_delay_minutes": 60,
+    "max_age_minutes": 90,
+    "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "rows": 81137,
+    "sample_policy": "native_source_bars_inside_rth",
+    "stale": 0,
+    "stock_availability_policy": "start plus configured interval",
+    "stock_delay_minutes": 30,
+    "unmatched": 0,
+    "usable_candidate": 81137
+  },
+  {
+    "age_minutes_quantiles": {
+      "0.0": 0.0,
+      "0.5": 30.0,
+      "0.9": 30.0,
+      "1.0": 90.0
+    },
+    "audit_only": true,
+    "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+    "index_delay_minutes": 0,
+    "max_age_minutes": 90,
+    "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "rows": 43692,
+    "sample_policy": "session_anchored_hourly_with_stubs",
+    "stale": 0,
+    "stock_availability_policy": "explicit available_at",
+    "stock_delay_minutes": 30,
+    "unmatched": 0,
+    "usable_candidate": 43692
+  },
+  {
+    "age_minutes_quantiles": {
+      "0.0": 0.0,
+      "0.5": 30.0,
+      "0.9": 30.0,
+      "1.0": 90.0
+    },
+    "audit_only": true,
+    "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+    "index_delay_minutes": 60,
+    "max_age_minutes": 90,
+    "researcher_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "rows": 43692,
+    "sample_policy": "session_anchored_hourly_with_stubs",
+    "stale": 0,
+    "stock_availability_policy": "explicit available_at",
+    "stock_delay_minutes": 30,
+    "unmatched": 0,
+    "usable_candidate": 43692
+  }
+]

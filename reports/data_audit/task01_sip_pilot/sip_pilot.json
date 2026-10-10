@@ -1,0 +1,180 @@
+{
+  "adjustment_implications": "Split adjusts historical price and volume retrospectively. No dividend total-return adjustment. Levels are not point-in-time vintages. Corporate-action reference/event audit still needed.",
+  "config": {
+    "adjustment": "split",
+    "adjustment_status": "provisional split price AND volume adjustment; not point-in-time levels",
+    "asof": "2025-06-30",
+    "bar_convention_status": "provisional; pilot and human approval required before bulk",
+    "calendar": "XNYS",
+    "chunk_months": 1,
+    "course_availability_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "course_provider": "course-provided USA500.IDXUSD; upstream provider unverified",
+    "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+    "course_timestamp_semantics": "unknown",
+    "currency": "USD",
+    "end_date": "2025-06-30",
+    "feed": "sip",
+    "max_pages_per_request": 100,
+    "page_limit": 10000,
+    "report_dir": "reports/data_audit",
+    "retry": {
+      "base_seconds": 1.0,
+      "jitter_seconds": 0.5,
+      "max_attempts": 4,
+      "max_seconds": 60.0,
+      "requests_per_minute": 180,
+      "timeout_seconds": 30
+    },
+    "schema_version": 1,
+    "sectors": {
+      "AAPL": "Information Technology",
+      "CAT": "Industrials",
+      "JNJ": "Health Care",
+      "JPM": "Financials",
+      "WMT": "Consumer Staples"
+    },
+    "session_policy": "preserve provider observations; RTH classification in audit only",
+    "start_date": "2020-07-01",
+    "stock_store": "data/raw/alpaca/track_a",
+    "symbols": [
+      "AAPL",
+      "JPM",
+      "JNJ",
+      "WMT",
+      "CAT"
+    ],
+    "timeframe": "1Hour",
+    "timezone": "America/New_York",
+    "universe_status": "provisional candidates; fixed survivors may induce survivorship bias"
+  },
+  "config_fingerprint": "47652c29490101d2b6edbc76ff531d8d95249587d4729bcc19b5f76eea556f91",
+  "created_at": "2026-10-10T09:00:13.497228+00:00",
+  "diagnostic": "Missing APCA_API_KEY_ID / APCA_API_SECRET_KEY (or legacy aliases). Set locally; never paste credentials in chat.",
+  "events": [],
+  "probes": [],
+  "requests": [
+    {
+      "end_date": "2020-07-10",
+      "name": "historical_2020",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-11T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-07-01T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "1Hour"
+      },
+      "start_date": "2020-07-01"
+    },
+    {
+      "end_date": "2025-06-30",
+      "name": "historical_2025",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-07-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2025-06-23T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "1Hour"
+      },
+      "start_date": "2025-06-23"
+    },
+    {
+      "end_date": "2020-11-02",
+      "name": "fall_dst",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-11-03T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-10-30T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "1Hour"
+      },
+      "start_date": "2020-10-30"
+    },
+    {
+      "end_date": "2021-03-15",
+      "name": "spring_dst",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-03-16T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-03-12T05:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "1Hour"
+      },
+      "start_date": "2021-03-12"
+    },
+    {
+      "end_date": "2020-11-27",
+      "name": "early_close",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-11-28T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-11-27T05:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "1Hour"
+      },
+      "start_date": "2020-11-27"
+    },
+    {
+      "end_date": "2020-09-01",
+      "name": "aapl_split_window",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-09-02T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-08-28T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "1Hour"
+      },
+      "start_date": "2020-08-28"
+    },
+    {
+      "end_date": "2024-02-27",
+      "name": "wmt_split_window",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-02-28T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-02-23T05:00:00+00:00",
+        "symbols": "WMT",
+        "timeframe": "1Hour"
+      },
+      "start_date": "2024-02-23"
+    }
+  ],
+  "sample_storage_bytes": 0,
+  "sip_access_pass": false,
+  "status": "blocked_access_or_schema",
+  "timing_gate_pass": false
+}

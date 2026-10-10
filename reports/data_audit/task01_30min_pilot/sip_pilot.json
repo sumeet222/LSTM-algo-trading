@@ -1,0 +1,2858 @@
+{
+  "adjustment_implications": "Split adjusts historical price and volume retrospectively. No dividend total-return adjustment. Levels are not point-in-time vintages. Corporate-action reference/event audit still needed.",
+  "config": {
+    "adjustment": "split",
+    "adjustment_status": "provisional split price AND volume adjustment; not point-in-time levels",
+    "asof": "2025-06-30",
+    "bar_convention_status": "30Min source and session-anchored hourly aggregation researcher-approved 2026-10-10; new pilot required before bulk",
+    "calendar": "XNYS",
+    "chunk_months": 1,
+    "course_availability_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "course_provider": "course-provided USA500.IDXUSD; upstream provider unverified",
+    "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+    "course_timestamp_semantics": "unknown",
+    "currency": "USD",
+    "end_date": "2025-06-30",
+    "feed": "sip",
+    "max_pages_per_request": 100,
+    "page_limit": 10000,
+    "report_dir": "reports/data_audit",
+    "retry": {
+      "base_seconds": 1.0,
+      "jitter_seconds": 0.5,
+      "max_attempts": 4,
+      "max_seconds": 60.0,
+      "requests_per_minute": 180,
+      "timeout_seconds": 30
+    },
+    "schema_version": 1,
+    "sectors": {
+      "AAPL": "Information Technology",
+      "CAT": "Industrials",
+      "JNJ": "Health Care",
+      "JPM": "Financials",
+      "WMT": "Consumer Staples"
+    },
+    "session_policy": "preserve provider observations; RTH classification in audit only",
+    "start_date": "2020-07-01",
+    "stock_store": "data/raw/alpaca/track_a",
+    "symbols": [
+      "AAPL",
+      "JPM",
+      "JNJ",
+      "WMT",
+      "CAT"
+    ],
+    "timeframe": "30Min",
+    "timezone": "America/New_York",
+    "universe_status": "provisional candidates; fixed survivors may induce survivorship bias"
+  },
+  "config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+  "created_at": "2026-10-10T09:17:09.256530+00:00",
+  "events": [
+    {
+      "attempt": 1,
+      "continued_page": false,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-11T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-07-01T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "status": 200,
+      "time": "2026-10-10T09:17:09.394527+00:00"
+    },
+    {
+      "attempt": 1,
+      "continued_page": false,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-07-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2025-06-23T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "status": 200,
+      "time": "2026-10-10T09:17:09.909623+00:00"
+    },
+    {
+      "attempt": 1,
+      "continued_page": false,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-11-03T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-10-30T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "status": 200,
+      "time": "2026-10-10T09:17:10.317450+00:00"
+    },
+    {
+      "attempt": 1,
+      "continued_page": false,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-03-16T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-03-12T05:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "status": 200,
+      "time": "2026-10-10T09:17:10.701516+00:00"
+    },
+    {
+      "attempt": 1,
+      "continued_page": false,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-11-28T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-11-27T05:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "status": 200,
+      "time": "2026-10-10T09:17:11.025078+00:00"
+    },
+    {
+      "attempt": 1,
+      "continued_page": false,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-09-02T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-08-28T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "status": 200,
+      "time": "2026-10-10T09:17:11.384872+00:00"
+    },
+    {
+      "attempt": 1,
+      "continued_page": false,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-02-28T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-02-23T05:00:00+00:00",
+        "symbols": "WMT",
+        "timeframe": "30Min"
+      },
+      "status": 200,
+      "time": "2026-10-10T09:17:11.750634+00:00"
+    }
+  ],
+  "probes": [
+    {
+      "aggregation": {
+        "availability": "End of complete interval assumed; actual publication latency unknown",
+        "complete_windows": 49,
+        "expected_source_bars": 91,
+        "expected_stub_windows": 7,
+        "missing_source_bars": 0,
+        "output_kind": "session_anchored_hours",
+        "rows": 49,
+        "schema_version": 1,
+        "source_timeframe": "30Min",
+        "timing_gate_pass": true,
+        "vwap_policy": "Source VWAP retained in canonical store; aggregate VWAP intentionally omitted because provider VWAP volume basis can differ from bar volume.",
+        "windows": [
+          {
+            "complete": true,
+            "end_utc": "2020-07-01T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-01",
+            "start_utc": "2020-07-01T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-01T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-01",
+            "start_utc": "2020-07-01T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-01T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-01",
+            "start_utc": "2020-07-01T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-01T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-01",
+            "start_utc": "2020-07-01T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-01T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-01",
+            "start_utc": "2020-07-01T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-01T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-01",
+            "start_utc": "2020-07-01T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-01T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-01",
+            "start_utc": "2020-07-01T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-02T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-02",
+            "start_utc": "2020-07-02T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-02T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-02",
+            "start_utc": "2020-07-02T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-02T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-02",
+            "start_utc": "2020-07-02T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-02T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-02",
+            "start_utc": "2020-07-02T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-02T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-02",
+            "start_utc": "2020-07-02T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-02T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-02",
+            "start_utc": "2020-07-02T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-02T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-02",
+            "start_utc": "2020-07-02T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-06T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-06",
+            "start_utc": "2020-07-06T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-06T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-06",
+            "start_utc": "2020-07-06T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-06T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-06",
+            "start_utc": "2020-07-06T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-06T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-06",
+            "start_utc": "2020-07-06T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-06T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-06",
+            "start_utc": "2020-07-06T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-06T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-06",
+            "start_utc": "2020-07-06T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-06T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-06",
+            "start_utc": "2020-07-06T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-07T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-07",
+            "start_utc": "2020-07-07T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-07T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-07",
+            "start_utc": "2020-07-07T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-07T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-07",
+            "start_utc": "2020-07-07T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-07T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-07",
+            "start_utc": "2020-07-07T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-07T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-07",
+            "start_utc": "2020-07-07T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-07T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-07",
+            "start_utc": "2020-07-07T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-07T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-07",
+            "start_utc": "2020-07-07T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-08T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-08",
+            "start_utc": "2020-07-08T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-08T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-08",
+            "start_utc": "2020-07-08T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-08T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-08",
+            "start_utc": "2020-07-08T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-08T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-08",
+            "start_utc": "2020-07-08T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-08T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-08",
+            "start_utc": "2020-07-08T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-08T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-08",
+            "start_utc": "2020-07-08T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-08T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-08",
+            "start_utc": "2020-07-08T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-09T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-09",
+            "start_utc": "2020-07-09T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-09T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-09",
+            "start_utc": "2020-07-09T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-09T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-09",
+            "start_utc": "2020-07-09T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-09T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-09",
+            "start_utc": "2020-07-09T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-09T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-09",
+            "start_utc": "2020-07-09T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-09T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-09",
+            "start_utc": "2020-07-09T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-09T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-09",
+            "start_utc": "2020-07-09T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-10T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-10",
+            "start_utc": "2020-07-10T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-10T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-10",
+            "start_utc": "2020-07-10T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-10T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-10",
+            "start_utc": "2020-07-10T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-10T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-10",
+            "start_utc": "2020-07-10T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-10T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-10",
+            "start_utc": "2020-07-10T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-10T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-10",
+            "start_utc": "2020-07-10T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-07-10T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-07-10",
+            "start_utc": "2020-07-10T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          }
+        ]
+      },
+      "name": "historical_2020",
+      "qa": {
+        "daily": [
+          {
+            "close_utc": "2020-07-01T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-07-01T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-07-01",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2020-07-02T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-07-02T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-07-02",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2020-07-06T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-07-06T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-07-06",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2020-07-07T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-07-07T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-07-07",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2020-07-08T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-07-08T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-07-08",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2020-07-09T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-07-09T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-07-09",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2020-07-10T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-07-10T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-07-10",
+            "symbol": "AAPL"
+          }
+        ],
+        "defects": {
+          "duplicate_keys": 0,
+          "fractional_volume_rows": 0,
+          "invalid_ohlc_rows": 0,
+          "negative_volume_rows": 0,
+          "nonfinite_ohlcv_rows": 0,
+          "nonpositive_price_rows": 0,
+          "null_fields": 0,
+          "out_of_order": false,
+          "zero_volume_rows": 0
+        },
+        "native_session_anchored_gate_pass": true,
+        "source_interval_minutes": 30,
+        "symbols": {
+          "AAPL": {
+            "earliest_utc": "2020-07-01 08:00:00+00:00",
+            "latest_utc": "2020-07-10 21:30:00+00:00",
+            "local_start_minute_counts": {
+              "0": 110,
+              "30": 108
+            },
+            "missing_session_anchored_starts": 0,
+            "no_rth_overlap_sessions": 0,
+            "outside_session_bars": 127,
+            "partial_session_overlap_bars": 0,
+            "price_jump_candidates": [],
+            "price_range": {
+              "max": 96.35,
+              "min": 90.53
+            },
+            "rows": 218,
+            "volume_range": {
+              "max": 23473012.0,
+              "min": 476.0
+            }
+          }
+        },
+        "unexpected_symbols": [],
+        "warning": "Missing desired starts may reflect incompatible aggregation boundaries, not missing trades. Partial overlap bars cannot be truncated using aggregated OHLCV. No lunch break in XNYS. Native 60-minute closing bars cannot establish a 30-minute stub; gate is conservative."
+      },
+      "sample_path": "data/interim/alpaca_pilot/task01_30min_pilot/historical_2020.parquet",
+      "sample_sha256": "c8a679c9f167a07a7ed1b3cc674040713c7cd79664305c06f8a02dd8f3ef0837"
+    },
+    {
+      "aggregation": {
+        "availability": "End of complete interval assumed; actual publication latency unknown",
+        "complete_windows": 42,
+        "expected_source_bars": 78,
+        "expected_stub_windows": 6,
+        "missing_source_bars": 0,
+        "output_kind": "session_anchored_hours",
+        "rows": 42,
+        "schema_version": 1,
+        "source_timeframe": "30Min",
+        "timing_gate_pass": true,
+        "vwap_policy": "Source VWAP retained in canonical store; aggregate VWAP intentionally omitted because provider VWAP volume basis can differ from bar volume.",
+        "windows": [
+          {
+            "complete": true,
+            "end_utc": "2025-06-23T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-23",
+            "start_utc": "2025-06-23T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-23T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-23",
+            "start_utc": "2025-06-23T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-23T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-23",
+            "start_utc": "2025-06-23T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-23T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-23",
+            "start_utc": "2025-06-23T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-23T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-23",
+            "start_utc": "2025-06-23T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-23T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-23",
+            "start_utc": "2025-06-23T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-23T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-23",
+            "start_utc": "2025-06-23T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-24T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-24",
+            "start_utc": "2025-06-24T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-24T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-24",
+            "start_utc": "2025-06-24T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-24T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-24",
+            "start_utc": "2025-06-24T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-24T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-24",
+            "start_utc": "2025-06-24T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-24T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-24",
+            "start_utc": "2025-06-24T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-24T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-24",
+            "start_utc": "2025-06-24T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-24T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-24",
+            "start_utc": "2025-06-24T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-25T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-25",
+            "start_utc": "2025-06-25T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-25T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-25",
+            "start_utc": "2025-06-25T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-25T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-25",
+            "start_utc": "2025-06-25T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-25T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-25",
+            "start_utc": "2025-06-25T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-25T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-25",
+            "start_utc": "2025-06-25T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-25T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-25",
+            "start_utc": "2025-06-25T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-25T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-25",
+            "start_utc": "2025-06-25T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-26T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-26",
+            "start_utc": "2025-06-26T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-26T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-26",
+            "start_utc": "2025-06-26T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-26T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-26",
+            "start_utc": "2025-06-26T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-26T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-26",
+            "start_utc": "2025-06-26T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-26T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-26",
+            "start_utc": "2025-06-26T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-26T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-26",
+            "start_utc": "2025-06-26T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-26T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-26",
+            "start_utc": "2025-06-26T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-27T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-27",
+            "start_utc": "2025-06-27T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-27T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-27",
+            "start_utc": "2025-06-27T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-27T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-27",
+            "start_utc": "2025-06-27T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-27T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-27",
+            "start_utc": "2025-06-27T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-27T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-27",
+            "start_utc": "2025-06-27T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-27T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-27",
+            "start_utc": "2025-06-27T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-27T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-27",
+            "start_utc": "2025-06-27T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-30T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-30",
+            "start_utc": "2025-06-30T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-30T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-30",
+            "start_utc": "2025-06-30T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-30T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-30",
+            "start_utc": "2025-06-30T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-30T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-30",
+            "start_utc": "2025-06-30T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-30T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-30",
+            "start_utc": "2025-06-30T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-30T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-30",
+            "start_utc": "2025-06-30T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2025-06-30T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2025-06-30",
+            "start_utc": "2025-06-30T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          }
+        ]
+      },
+      "name": "historical_2025",
+      "qa": {
+        "daily": [
+          {
+            "close_utc": "2025-06-23T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2025-06-23T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2025-06-23",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2025-06-24T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2025-06-24T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2025-06-24",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2025-06-25T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2025-06-25T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2025-06-25",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2025-06-26T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2025-06-26T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2025-06-26",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2025-06-27T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2025-06-27T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2025-06-27",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2025-06-30T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2025-06-30T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2025-06-30",
+            "symbol": "AAPL"
+          }
+        ],
+        "defects": {
+          "duplicate_keys": 0,
+          "fractional_volume_rows": 0,
+          "invalid_ohlc_rows": 0,
+          "negative_volume_rows": 0,
+          "nonfinite_ohlcv_rows": 0,
+          "nonpositive_price_rows": 0,
+          "null_fields": 0,
+          "out_of_order": false,
+          "zero_volume_rows": 0
+        },
+        "native_session_anchored_gate_pass": true,
+        "source_interval_minutes": 30,
+        "symbols": {
+          "AAPL": {
+            "earliest_utc": "2025-06-23 08:00:00+00:00",
+            "latest_utc": "2025-06-30 23:30:00+00:00",
+            "local_start_minute_counts": {
+              "0": 96,
+              "30": 96
+            },
+            "missing_session_anchored_starts": 0,
+            "no_rth_overlap_sessions": 0,
+            "outside_session_bars": 114,
+            "partial_session_overlap_bars": 0,
+            "price_jump_candidates": [],
+            "price_range": {
+              "max": 207.39,
+              "min": 198.96
+            },
+            "rows": 192,
+            "volume_range": {
+              "max": 28842233.0,
+              "min": 4210.0
+            }
+          }
+        },
+        "unexpected_symbols": [],
+        "warning": "Missing desired starts may reflect incompatible aggregation boundaries, not missing trades. Partial overlap bars cannot be truncated using aggregated OHLCV. No lunch break in XNYS. Native 60-minute closing bars cannot establish a 30-minute stub; gate is conservative."
+      },
+      "sample_path": "data/interim/alpaca_pilot/task01_30min_pilot/historical_2025.parquet",
+      "sample_sha256": "28faaecf4fd5834225904aaaa52745204abe21fd0255a9d33446050c84f9de3d"
+    },
+    {
+      "aggregation": {
+        "availability": "End of complete interval assumed; actual publication latency unknown",
+        "complete_windows": 14,
+        "expected_source_bars": 26,
+        "expected_stub_windows": 2,
+        "missing_source_bars": 0,
+        "output_kind": "session_anchored_hours",
+        "rows": 14,
+        "schema_version": 1,
+        "source_timeframe": "30Min",
+        "timing_gate_pass": true,
+        "vwap_policy": "Source VWAP retained in canonical store; aggregate VWAP intentionally omitted because provider VWAP volume basis can differ from bar volume.",
+        "windows": [
+          {
+            "complete": true,
+            "end_utc": "2020-10-30T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-10-30",
+            "start_utc": "2020-10-30T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-10-30T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-10-30",
+            "start_utc": "2020-10-30T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-10-30T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-10-30",
+            "start_utc": "2020-10-30T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-10-30T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-10-30",
+            "start_utc": "2020-10-30T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-10-30T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-10-30",
+            "start_utc": "2020-10-30T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-10-30T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-10-30",
+            "start_utc": "2020-10-30T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-10-30T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-10-30",
+            "start_utc": "2020-10-30T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-11-02T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-02",
+            "start_utc": "2020-11-02T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-11-02T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-02",
+            "start_utc": "2020-11-02T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-11-02T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-02",
+            "start_utc": "2020-11-02T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-11-02T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-02",
+            "start_utc": "2020-11-02T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-11-02T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-02",
+            "start_utc": "2020-11-02T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-11-02T20:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-02",
+            "start_utc": "2020-11-02T19:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-11-02T21:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-02",
+            "start_utc": "2020-11-02T20:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          }
+        ]
+      },
+      "name": "fall_dst",
+      "qa": {
+        "daily": [
+          {
+            "close_utc": "2020-10-30T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-10-30T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-10-30",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2020-11-02T21:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-11-02T14:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-11-02",
+            "symbol": "AAPL"
+          }
+        ],
+        "defects": {
+          "duplicate_keys": 0,
+          "fractional_volume_rows": 0,
+          "invalid_ohlc_rows": 0,
+          "negative_volume_rows": 0,
+          "nonfinite_ohlcv_rows": 0,
+          "nonpositive_price_rows": 0,
+          "null_fields": 0,
+          "out_of_order": false,
+          "zero_volume_rows": 0
+        },
+        "native_session_anchored_gate_pass": true,
+        "source_interval_minutes": 30,
+        "symbols": {
+          "AAPL": {
+            "earliest_utc": "2020-10-30 08:00:00+00:00",
+            "latest_utc": "2020-11-03 00:30:00+00:00",
+            "local_start_minute_counts": {
+              "0": 30,
+              "30": 30
+            },
+            "missing_session_anchored_starts": 0,
+            "no_rth_overlap_sessions": 0,
+            "outside_session_bars": 34,
+            "partial_session_overlap_bars": 0,
+            "price_jump_candidates": [],
+            "price_range": {
+              "max": 111.99,
+              "min": 107.32
+            },
+            "rows": 60,
+            "volume_range": {
+              "max": 34070685.0,
+              "min": 15698.0
+            }
+          }
+        },
+        "unexpected_symbols": [],
+        "warning": "Missing desired starts may reflect incompatible aggregation boundaries, not missing trades. Partial overlap bars cannot be truncated using aggregated OHLCV. No lunch break in XNYS. Native 60-minute closing bars cannot establish a 30-minute stub; gate is conservative."
+      },
+      "sample_path": "data/interim/alpaca_pilot/task01_30min_pilot/fall_dst.parquet",
+      "sample_sha256": "4783be3e557dff11881e687b7ef22e6de036dbeae5f92f1368b00bb8f8167aca"
+    },
+    {
+      "aggregation": {
+        "availability": "End of complete interval assumed; actual publication latency unknown",
+        "complete_windows": 14,
+        "expected_source_bars": 26,
+        "expected_stub_windows": 2,
+        "missing_source_bars": 0,
+        "output_kind": "session_anchored_hours",
+        "rows": 14,
+        "schema_version": 1,
+        "source_timeframe": "30Min",
+        "timing_gate_pass": true,
+        "vwap_policy": "Source VWAP retained in canonical store; aggregate VWAP intentionally omitted because provider VWAP volume basis can differ from bar volume.",
+        "windows": [
+          {
+            "complete": true,
+            "end_utc": "2021-03-12T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-12",
+            "start_utc": "2021-03-12T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-12T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-12",
+            "start_utc": "2021-03-12T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-12T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-12",
+            "start_utc": "2021-03-12T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-12T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-12",
+            "start_utc": "2021-03-12T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-12T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-12",
+            "start_utc": "2021-03-12T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-12T20:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-12",
+            "start_utc": "2021-03-12T19:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-12T21:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-12",
+            "start_utc": "2021-03-12T20:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-15T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-15",
+            "start_utc": "2021-03-15T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-15T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-15",
+            "start_utc": "2021-03-15T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-15T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-15",
+            "start_utc": "2021-03-15T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-15T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-15",
+            "start_utc": "2021-03-15T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-15T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-15",
+            "start_utc": "2021-03-15T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-15T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-15",
+            "start_utc": "2021-03-15T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2021-03-15T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2021-03-15",
+            "start_utc": "2021-03-15T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          }
+        ]
+      },
+      "name": "spring_dst",
+      "qa": {
+        "daily": [
+          {
+            "close_utc": "2021-03-12T21:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2021-03-12T14:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2021-03-12",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2021-03-15T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2021-03-15T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2021-03-15",
+            "symbol": "AAPL"
+          }
+        ],
+        "defects": {
+          "duplicate_keys": 0,
+          "fractional_volume_rows": 0,
+          "invalid_ohlc_rows": 0,
+          "negative_volume_rows": 0,
+          "nonfinite_ohlcv_rows": 0,
+          "nonpositive_price_rows": 0,
+          "null_fields": 0,
+          "out_of_order": false,
+          "zero_volume_rows": 0
+        },
+        "native_session_anchored_gate_pass": true,
+        "source_interval_minutes": 30,
+        "symbols": {
+          "AAPL": {
+            "earliest_utc": "2021-03-12 09:00:00+00:00",
+            "latest_utc": "2021-03-15 23:30:00+00:00",
+            "local_start_minute_counts": {
+              "0": 30,
+              "30": 30
+            },
+            "missing_session_anchored_starts": 0,
+            "no_rth_overlap_sessions": 0,
+            "outside_session_bars": 34,
+            "partial_session_overlap_bars": 0,
+            "price_jump_candidates": [],
+            "price_range": {
+              "max": 124.56,
+              "min": 119.16
+            },
+            "rows": 60,
+            "volume_range": {
+              "max": 20512354.0,
+              "min": 10116.0
+            }
+          }
+        },
+        "unexpected_symbols": [],
+        "warning": "Missing desired starts may reflect incompatible aggregation boundaries, not missing trades. Partial overlap bars cannot be truncated using aggregated OHLCV. No lunch break in XNYS. Native 60-minute closing bars cannot establish a 30-minute stub; gate is conservative."
+      },
+      "sample_path": "data/interim/alpaca_pilot/task01_30min_pilot/spring_dst.parquet",
+      "sample_sha256": "fbc52acb7ed0ac92e6320eebcc7f16016e2ce834a93decf4ec49c5415670083e"
+    },
+    {
+      "aggregation": {
+        "availability": "End of complete interval assumed; actual publication latency unknown",
+        "complete_windows": 4,
+        "expected_source_bars": 7,
+        "expected_stub_windows": 1,
+        "missing_source_bars": 0,
+        "output_kind": "session_anchored_hours",
+        "rows": 4,
+        "schema_version": 1,
+        "source_timeframe": "30Min",
+        "timing_gate_pass": true,
+        "vwap_policy": "Source VWAP retained in canonical store; aggregate VWAP intentionally omitted because provider VWAP volume basis can differ from bar volume.",
+        "windows": [
+          {
+            "complete": true,
+            "end_utc": "2020-11-27T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-27",
+            "start_utc": "2020-11-27T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-11-27T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-27",
+            "start_utc": "2020-11-27T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-11-27T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-27",
+            "start_utc": "2020-11-27T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-11-27T18:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-11-27",
+            "start_utc": "2020-11-27T17:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          }
+        ]
+      },
+      "name": "early_close",
+      "qa": {
+        "daily": [
+          {
+            "close_utc": "2020-11-27T18:00:00+00:00",
+            "early_close": true,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30"
+            ],
+            "open_utc": "2020-11-27T14:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-11-27",
+            "symbol": "AAPL"
+          }
+        ],
+        "defects": {
+          "duplicate_keys": 0,
+          "fractional_volume_rows": 0,
+          "invalid_ohlc_rows": 0,
+          "negative_volume_rows": 0,
+          "nonfinite_ohlcv_rows": 0,
+          "nonpositive_price_rows": 0,
+          "null_fields": 0,
+          "out_of_order": false,
+          "zero_volume_rows": 0
+        },
+        "native_session_anchored_gate_pass": true,
+        "source_interval_minutes": 30,
+        "symbols": {
+          "AAPL": {
+            "earliest_utc": "2020-11-27 09:00:00+00:00",
+            "latest_utc": "2020-11-27 21:30:00+00:00",
+            "local_start_minute_counts": {
+              "0": 13,
+              "30": 13
+            },
+            "missing_session_anchored_starts": 0,
+            "no_rth_overlap_sessions": 0,
+            "outside_session_bars": 19,
+            "partial_session_overlap_bars": 0,
+            "price_jump_candidates": [],
+            "price_range": {
+              "max": 117.49,
+              "min": 116.22
+            },
+            "rows": 26,
+            "volume_range": {
+              "max": 11977540.0,
+              "min": 2952.0
+            }
+          }
+        },
+        "unexpected_symbols": [],
+        "warning": "Missing desired starts may reflect incompatible aggregation boundaries, not missing trades. Partial overlap bars cannot be truncated using aggregated OHLCV. No lunch break in XNYS. Native 60-minute closing bars cannot establish a 30-minute stub; gate is conservative."
+      },
+      "sample_path": "data/interim/alpaca_pilot/task01_30min_pilot/early_close.parquet",
+      "sample_sha256": "a321ecd713fef7f55c63aca927be9f5a707750f2dd0bd744c817081c8f7e5e41"
+    },
+    {
+      "aggregation": {
+        "availability": "End of complete interval assumed; actual publication latency unknown",
+        "complete_windows": 21,
+        "expected_source_bars": 39,
+        "expected_stub_windows": 3,
+        "missing_source_bars": 0,
+        "output_kind": "session_anchored_hours",
+        "rows": 21,
+        "schema_version": 1,
+        "source_timeframe": "30Min",
+        "timing_gate_pass": true,
+        "vwap_policy": "Source VWAP retained in canonical store; aggregate VWAP intentionally omitted because provider VWAP volume basis can differ from bar volume.",
+        "windows": [
+          {
+            "complete": true,
+            "end_utc": "2020-08-28T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-28",
+            "start_utc": "2020-08-28T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-28T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-28",
+            "start_utc": "2020-08-28T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-28T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-28",
+            "start_utc": "2020-08-28T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-28T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-28",
+            "start_utc": "2020-08-28T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-28T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-28",
+            "start_utc": "2020-08-28T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-28T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-28",
+            "start_utc": "2020-08-28T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-28T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-28",
+            "start_utc": "2020-08-28T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-31T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-31",
+            "start_utc": "2020-08-31T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-31T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-31",
+            "start_utc": "2020-08-31T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-31T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-31",
+            "start_utc": "2020-08-31T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-31T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-31",
+            "start_utc": "2020-08-31T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-31T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-31",
+            "start_utc": "2020-08-31T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-31T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-31",
+            "start_utc": "2020-08-31T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-08-31T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-08-31",
+            "start_utc": "2020-08-31T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-09-01T14:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-09-01",
+            "start_utc": "2020-09-01T13:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-09-01T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-09-01",
+            "start_utc": "2020-09-01T14:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-09-01T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-09-01",
+            "start_utc": "2020-09-01T15:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-09-01T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-09-01",
+            "start_utc": "2020-09-01T16:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-09-01T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-09-01",
+            "start_utc": "2020-09-01T17:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-09-01T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-09-01",
+            "start_utc": "2020-09-01T18:30:00+00:00",
+            "stub": false,
+            "symbol": "AAPL"
+          },
+          {
+            "complete": true,
+            "end_utc": "2020-09-01T20:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2020-09-01",
+            "start_utc": "2020-09-01T19:30:00+00:00",
+            "stub": true,
+            "symbol": "AAPL"
+          }
+        ]
+      },
+      "name": "aapl_split_window",
+      "qa": {
+        "daily": [
+          {
+            "close_utc": "2020-08-28T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-08-28T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-08-28",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2020-08-31T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-08-31T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-08-31",
+            "symbol": "AAPL"
+          },
+          {
+            "close_utc": "2020-09-01T20:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2020-09-01T13:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2020-09-01",
+            "symbol": "AAPL"
+          }
+        ],
+        "defects": {
+          "duplicate_keys": 0,
+          "fractional_volume_rows": 0,
+          "invalid_ohlc_rows": 0,
+          "negative_volume_rows": 0,
+          "nonfinite_ohlcv_rows": 0,
+          "nonpositive_price_rows": 0,
+          "null_fields": 0,
+          "out_of_order": false,
+          "zero_volume_rows": 0
+        },
+        "native_session_anchored_gate_pass": true,
+        "source_interval_minutes": 30,
+        "symbols": {
+          "AAPL": {
+            "earliest_utc": "2020-08-28 08:00:00+00:00",
+            "latest_utc": "2020-09-01 23:30:00+00:00",
+            "local_start_minute_counts": {
+              "0": 46,
+              "30": 46
+            },
+            "missing_session_anchored_starts": 0,
+            "no_rth_overlap_sessions": 0,
+            "outside_session_bars": 53,
+            "partial_session_overlap_bars": 0,
+            "price_jump_candidates": [],
+            "price_range": {
+              "max": 137.29,
+              "min": 124.58
+            },
+            "rows": 92,
+            "volume_range": {
+              "max": 53978932.0,
+              "min": 1928.0
+            }
+          }
+        },
+        "unexpected_symbols": [],
+        "warning": "Missing desired starts may reflect incompatible aggregation boundaries, not missing trades. Partial overlap bars cannot be truncated using aggregated OHLCV. No lunch break in XNYS. Native 60-minute closing bars cannot establish a 30-minute stub; gate is conservative."
+      },
+      "sample_path": "data/interim/alpaca_pilot/task01_30min_pilot/aapl_split_window.parquet",
+      "sample_sha256": "936166357cc5a98276885c2e69ce8bdc6b84dfcd867831f10c3df27fa280030a"
+    },
+    {
+      "aggregation": {
+        "availability": "End of complete interval assumed; actual publication latency unknown",
+        "complete_windows": 21,
+        "expected_source_bars": 39,
+        "expected_stub_windows": 3,
+        "missing_source_bars": 0,
+        "output_kind": "session_anchored_hours",
+        "rows": 21,
+        "schema_version": 1,
+        "source_timeframe": "30Min",
+        "timing_gate_pass": true,
+        "vwap_policy": "Source VWAP retained in canonical store; aggregate VWAP intentionally omitted because provider VWAP volume basis can differ from bar volume.",
+        "windows": [
+          {
+            "complete": true,
+            "end_utc": "2024-02-23T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-23",
+            "start_utc": "2024-02-23T14:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-23T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-23",
+            "start_utc": "2024-02-23T15:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-23T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-23",
+            "start_utc": "2024-02-23T16:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-23T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-23",
+            "start_utc": "2024-02-23T17:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-23T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-23",
+            "start_utc": "2024-02-23T18:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-23T20:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-23",
+            "start_utc": "2024-02-23T19:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-23T21:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-23",
+            "start_utc": "2024-02-23T20:30:00+00:00",
+            "stub": true,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-26T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-26",
+            "start_utc": "2024-02-26T14:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-26T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-26",
+            "start_utc": "2024-02-26T15:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-26T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-26",
+            "start_utc": "2024-02-26T16:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-26T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-26",
+            "start_utc": "2024-02-26T17:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-26T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-26",
+            "start_utc": "2024-02-26T18:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-26T20:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-26",
+            "start_utc": "2024-02-26T19:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-26T21:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-26",
+            "start_utc": "2024-02-26T20:30:00+00:00",
+            "stub": true,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-27T15:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-27",
+            "start_utc": "2024-02-27T14:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-27T16:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-27",
+            "start_utc": "2024-02-27T15:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-27T17:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-27",
+            "start_utc": "2024-02-27T16:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-27T18:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-27",
+            "start_utc": "2024-02-27T17:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-27T19:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-27",
+            "start_utc": "2024-02-27T18:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-27T20:30:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-27",
+            "start_utc": "2024-02-27T19:30:00+00:00",
+            "stub": false,
+            "symbol": "WMT"
+          },
+          {
+            "complete": true,
+            "end_utc": "2024-02-27T21:00:00+00:00",
+            "missing_source_starts": [],
+            "session": "2024-02-27",
+            "start_utc": "2024-02-27T20:30:00+00:00",
+            "stub": true,
+            "symbol": "WMT"
+          }
+        ]
+      },
+      "name": "wmt_split_window",
+      "qa": {
+        "daily": [
+          {
+            "close_utc": "2024-02-23T21:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2024-02-23T14:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2024-02-23",
+            "symbol": "WMT"
+          },
+          {
+            "close_utc": "2024-02-26T21:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2024-02-26T14:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2024-02-26",
+            "symbol": "WMT"
+          },
+          {
+            "close_utc": "2024-02-27T21:00:00+00:00",
+            "early_close": false,
+            "expected_stub_minutes": 30,
+            "extra_overlapping_starts_utc": [],
+            "missing_expected_starts_utc": [],
+            "native_rth_overlap_starts_local": [
+              "09:30",
+              "10:00",
+              "10:30",
+              "11:00",
+              "11:30",
+              "12:00",
+              "12:30",
+              "13:00",
+              "13:30",
+              "14:00",
+              "14:30",
+              "15:00",
+              "15:30"
+            ],
+            "open_utc": "2024-02-27T14:30:00+00:00",
+            "partial_overlap_count": 0,
+            "session": "2024-02-27",
+            "symbol": "WMT"
+          }
+        ],
+        "defects": {
+          "duplicate_keys": 0,
+          "fractional_volume_rows": 0,
+          "invalid_ohlc_rows": 0,
+          "negative_volume_rows": 0,
+          "nonfinite_ohlcv_rows": 0,
+          "nonpositive_price_rows": 0,
+          "null_fields": 0,
+          "out_of_order": false,
+          "zero_volume_rows": 0
+        },
+        "native_session_anchored_gate_pass": true,
+        "source_interval_minutes": 30,
+        "symbols": {
+          "WMT": {
+            "earliest_utc": "2024-02-23 12:00:00+00:00",
+            "latest_utc": "2024-02-28 00:30:00+00:00",
+            "local_start_minute_counts": {
+              "0": 45,
+              "30": 45
+            },
+            "missing_session_anchored_starts": 0,
+            "no_rth_overlap_sessions": 0,
+            "outside_session_bars": 51,
+            "partial_session_overlap_bars": 0,
+            "price_jump_candidates": [],
+            "price_range": {
+              "max": 59.9,
+              "min": 58.18
+            },
+            "rows": 90,
+            "volume_range": {
+              "max": 42389382.0,
+              "min": 201.0
+            }
+          }
+        },
+        "unexpected_symbols": [],
+        "warning": "Missing desired starts may reflect incompatible aggregation boundaries, not missing trades. Partial overlap bars cannot be truncated using aggregated OHLCV. No lunch break in XNYS. Native 60-minute closing bars cannot establish a 30-minute stub; gate is conservative."
+      },
+      "sample_path": "data/interim/alpaca_pilot/task01_30min_pilot/wmt_split_window.parquet",
+      "sample_sha256": "d8f6324da4a29e3c7b0c8a826550dce0224b185b9528d486ed00ceb28fc81195"
+    }
+  ],
+  "requests": [
+    {
+      "end_date": "2020-07-10",
+      "name": "historical_2020",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-11T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-07-01T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "start_date": "2020-07-01"
+    },
+    {
+      "end_date": "2025-06-30",
+      "name": "historical_2025",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-07-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2025-06-23T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "start_date": "2025-06-23"
+    },
+    {
+      "end_date": "2020-11-02",
+      "name": "fall_dst",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-11-03T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-10-30T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "start_date": "2020-10-30"
+    },
+    {
+      "end_date": "2021-03-15",
+      "name": "spring_dst",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-03-16T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-03-12T05:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "start_date": "2021-03-12"
+    },
+    {
+      "end_date": "2020-11-27",
+      "name": "early_close",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-11-28T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-11-27T05:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "start_date": "2020-11-27"
+    },
+    {
+      "end_date": "2020-09-01",
+      "name": "aapl_split_window",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-09-02T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-08-28T04:00:00+00:00",
+        "symbols": "AAPL",
+        "timeframe": "30Min"
+      },
+      "start_date": "2020-08-28"
+    },
+    {
+      "end_date": "2024-02-27",
+      "name": "wmt_split_window",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-02-28T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-02-23T05:00:00+00:00",
+        "symbols": "WMT",
+        "timeframe": "30Min"
+      },
+      "start_date": "2024-02-23"
+    }
+  ],
+  "sample_storage_bytes": 82237,
+  "sip_access_pass": true,
+  "status": "passed",
+  "timing_gate_pass": true
+}

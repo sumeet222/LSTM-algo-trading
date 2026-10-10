@@ -1,0 +1,78 @@
+[
+  {
+    "age_minutes_quantiles": {
+      "0.0": 0.0,
+      "0.5": 0.0,
+      "0.9": 6.000000000001364,
+      "1.0": 240.0
+    },
+    "audit_only": true,
+    "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+    "course_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "index_delay_minutes": 0,
+    "max_age_minutes": 90,
+    "rows": 370,
+    "sample_policy": "all_native_pilot_bars",
+    "stale": 13,
+    "stock_delay_minutes": 60,
+    "unmatched": 0,
+    "usable_candidate": 357
+  },
+  {
+    "age_minutes_quantiles": {
+      "0.0": 0.0,
+      "0.5": 0.0,
+      "0.9": 0.0,
+      "1.0": 180.0
+    },
+    "audit_only": true,
+    "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+    "course_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "index_delay_minutes": 60,
+    "max_age_minutes": 90,
+    "rows": 370,
+    "sample_policy": "all_native_pilot_bars",
+    "stale": 6,
+    "stock_delay_minutes": 60,
+    "unmatched": 0,
+    "usable_candidate": 364
+  },
+  {
+    "age_minutes_quantiles": {
+      "0.0": 0.0,
+      "0.5": 0.0,
+      "0.9": 0.0,
+      "1.0": 0.0
+    },
+    "audit_only": true,
+    "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+    "course_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "index_delay_minutes": 0,
+    "max_age_minutes": 90,
+    "rows": 141,
+    "sample_policy": "native_hours_fully_inside_rth",
+    "stale": 0,
+    "stock_delay_minutes": 60,
+    "unmatched": 0,
+    "usable_candidate": 141
+  },
+  {
+    "age_minutes_quantiles": {
+      "0.0": 0.0,
+      "0.5": 0.0,
+      "0.9": 0.0,
+      "1.0": 0.0
+    },
+    "audit_only": true,
+    "closure_policy": "Age bounded; overnight/weekend prices are never forward-filled. All source bars remain diagnostic; inspect RTH QA before interpretation.",
+    "course_assumption": "timestamp_as_close; provisional researcher approval 2026-10-10",
+    "index_delay_minutes": 60,
+    "max_age_minutes": 90,
+    "rows": 141,
+    "sample_policy": "native_hours_fully_inside_rth",
+    "stale": 0,
+    "stock_delay_minutes": 60,
+    "unmatched": 0,
+    "usable_candidate": 141
+  }
+]
