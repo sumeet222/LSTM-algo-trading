@@ -1,0 +1,282 @@
+{
+  "checks": [
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "exec-proxy-2026-10-11_010948",
+      "check_id": "EXEC-PROXY-REGISTRATION",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "code_implemented": false,
+        "collaborator_proxy_approval_verified": false,
+        "decision_id": "TA-D3-EXEC-PROXY-001",
+        "deferred_id": "TA-POSTPASS-OVERNIGHT-001",
+        "deferred_status": "DEFERRED_CONDITIONAL_RESEARCH / NOT_AUTHORIZED_TO_TRAIN_OR_TRADE",
+        "document_path": "docs/track_a/decisions/Track_A_Execution_Price_Proxy_Amendment_v1.0_2026-10-11.md",
+        "document_sha256": "1d6f7bc0b103e29a77aa3a8e2d6409936a359551dd64dc6c3440a88d4bcf870f",
+        "handoff_path": "reports/data_audit/exec_proxy_2026-10-11_010948/implementation_handoff.md",
+        "handoff_sha256": "9d3bd1aee93106d48c7045ff7c4c903daaf9de16eab23e89445da4ebc827f942",
+        "implementation_authorized": false,
+        "prior_shared_record_path": "docs/track_a/decisions/Shared_Cross_Track_Decisions_2026-10-11_v1.0.md",
+        "prior_shared_record_sha256": "11bfcf177dd8b0b5a98d01f2c394ae5f25d87e16f59bcec38e9f2d62e408725b",
+        "remaining_blocker_ids": [
+          "p0.1-F01",
+          "p0.1-USA500-source-clock",
+          "p0.1-stock-publication",
+          "p0.1-minute-execution",
+          "p0.1-actions-dividends",
+          "p0.1-formation-prehistory",
+          "p0.1-shared-D3-clock"
+        ],
+        "research_ready": false,
+        "submitted_handoff_sha256": "6d43b878d928a856bae3724ee520db81625e63f0417e1cfe146f824599780948",
+        "track_a_researcher_approved": true
+      },
+      "example_ids": [],
+      "explanation": "Technical registration and handoff only; mathematical substance of B1\u2013B6 preserved; no scientific approval inferred.",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T05:12:46.798145+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "exec-proxy-2026-10-11_010948",
+      "check_id": "EXEC-PROXY-PRESERVATION",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "documents": [
+          {
+            "path": "docs/track_a/Shared_Project_Specification.md",
+            "sha256": "12863e44efa2ca3c51d5f5c5033a3735b16b4a87a00158122d372db6ed9cdf32",
+            "version": "1.0"
+          },
+          {
+            "path": "docs/track_a/Track_A_Architecture_Experiment_Roadmap_First_Pass_FROZEN_v1.0.md",
+            "sha256": "7afb1d3fe6cd5bf68e1e9a1c8e6f19e200ce2c4cae6414b1b0b90e40365339ce",
+            "version": "1.0"
+          },
+          {
+            "path": "docs/track_a/Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md",
+            "sha256": "cf3f7531ecd52e47386e64035d5c86ab513acc3c1a6bbbee5e54ad325eb9a96c",
+            "version": "1.2"
+          },
+          {
+            "path": "docs/track_a/Track_A_Stage_Gated_Audit_and_Failure_Traceability_Plan_v1.1_2026-10-10.md",
+            "sha256": "a29309ef791f74f72443b2b66ad1d9cde5f46e54dfbcd072f5bda5da68d1878d",
+            "version": "1.1"
+          },
+          {
+            "path": "docs/track_a/Track_A_Codex_Incremental_Implementation_and_Human_Review_Plan_v1_2026-10-10.md",
+            "sha256": "bf3459456b12c23942d99bd555cc66137cd6154c79119ae96eaa3bfdb88a202d",
+            "version": "1"
+          }
+        ],
+        "head": "e1872f462c1a182bd3fda402af5bf5dc350da4cf",
+        "index_sha256": "9634a0830dd2b128cfc59ca1c8d4f4460fc68ec87f71af090af7df12a168c955",
+        "pointer_path": "configs/CURRENT_PROTOCOL.json",
+        "pointer_sha256": "1b83b2ef8f727618ef319c0c04b36056c5c8cb19857ebe40927851e3295ca600",
+        "protected_files": 67
+      },
+      "example_ids": [],
+      "explanation": "Five authorities/pointer, prior shared record, code/tests/config and index unchanged; historical minute implementation preserved.",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T05:12:46.798145+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "exec-proxy-2026-10-11_010948",
+      "check_id": "EXEC-PROXY-LEDGER",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "attempted_pairs": 0,
+        "blocks": [],
+        "event_id": "exec-proxy-2026-10-11-010948",
+        "events_after": 20,
+        "events_before": 19,
+        "old_prefix_bytes": 31167,
+        "old_prefix_sha256": "d25dff7c878849e292d559b4dde637367a9365c385da9092e3affc0f6c13335a",
+        "pair_ceiling": 40,
+        "path": "reports/audit/track_a_events.jsonl",
+        "remaining_blocker_ids": [
+          "p0.1-F01",
+          "p0.1-USA500-source-clock",
+          "p0.1-stock-publication",
+          "p0.1-minute-execution",
+          "p0.1-actions-dividends",
+          "p0.1-formation-prehistory",
+          "p0.1-shared-D3-clock"
+        ],
+        "supersedes": []
+      },
+      "example_ids": [],
+      "explanation": "One WARN decision event; exact prefix, seven blockers and zero training pairs preserved.",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T05:12:46.798145+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "exec-proxy-2026-10-11_010948",
+      "check_id": "EXEC-PROXY-SHARED-APPROVAL",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "cross_track_proxy_approval": "PENDING",
+        "prior_CT_decisions": "UNCHANGED",
+        "track_a_approval": "EXPLICIT_CURRENT_INSTRUCTION"
+      },
+      "example_ids": [],
+      "explanation": "Prior horizon/market agreement does not approve this distinct execution proxy; shared-rule comparability/approval remains pending.",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T05:12:46.798145+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "exec-proxy-2026-10-11_010948",
+      "check_id": "EXEC-PROXY-IMPLEMENTATION",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "G0_G1_G2_G4_globally_passed": false,
+        "benchmark_boundary": "FUTURE_APPROVAL_NEEDED",
+        "code_status": "NOT_IMPLEMENTED",
+        "market": "HOLD/BLOCKED",
+        "portfolio_exception_policy": "FUTURE_APPROVAL_NEEDED",
+        "raw_rows_read": 0,
+        "source_requests": 0,
+        "training_pairs": 0
+      },
+      "example_ids": [],
+      "explanation": "No revised P2.2A coding or labels/simulator; source/actions/availability and exception/benchmark requirements remain.",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T05:12:46.798145+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "exec-proxy-2026-10-11_010948",
+      "check_id": "POSTPASS-OVERNIGHT",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "activation_basis": "Separate preregistered development-only motivation and human approval",
+        "authorized_to_train_or_trade": false,
+        "idea_id": "TA-POSTPASS-OVERNIGHT-001"
+      },
+      "example_ids": [],
+      "explanation": "Deferred research note only; no datasets, labels, experiment or confirmation-based activation.",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "INACTIVE_CONDITIONAL",
+      "time_utc": "2026-10-11T05:12:46.798145+00:00"
+    }
+  ],
+  "package": "A-D3-EXEC-PROXY-001",
+  "registration_status": "COMPLETE",
+  "research_status": "BLOCKED"
+}
