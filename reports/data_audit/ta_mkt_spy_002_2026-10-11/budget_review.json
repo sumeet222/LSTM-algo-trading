@@ -1,0 +1,27 @@
+{
+  "actual_attempts": 13,
+  "actual_rows_observed_in_temporary_responses": 1384,
+  "calendar_day_envelope_pages": 280,
+  "canonical_journal": "data/raw/alpaca/track_a_spy_v1/transport_attempts.jsonl",
+  "diagnostic_attempts": 4,
+  "diagnostic_responses_replayed_actual": 0,
+  "exchange_session_48_bar_estimate_pages": 195,
+  "exchange_session_estimate_upper_without_cache": 598,
+  "in_process_upper_cumulative_with_four_cached_pages": 841,
+  "journal_prefix_sha256": "7807df1e62ac13d5e07d50b84446d35806e446c40c6eea55ce3521eb0bafaa08",
+  "maximum_authorized_attempts": 240,
+  "next_decision": {
+    "activation": "None; this decision concerns acquisition resources only.",
+    "alternative": "Keep 240: remain SOURCE_BLOCKED; no claimed full-period coverage.",
+    "justification": "Current calendar-day envelope needs 853 cumulative attempts on restart; 900 includes bounded metadata/headroom. No new diagnostic phase needed; use these four measured pages as evidence.",
+    "question": "Approve a separately versioned continuation policy of 900 cumulative Alpaca transports and at most 32 pages/partition, preserving three attempts/page, 11 fixed partitions, 256 MiB and scientific holds?",
+    "status": "PROPOSED_ONLY_NOT_AUTHORIZED"
+  },
+  "old_attempts": 9,
+  "original_journal_prefix_bytes": 607,
+  "partial_cache_retained": false,
+  "reason": "Even the smaller exchange-session envelope with three attempts/page exceeds 240; calendar-day envelope is more conservative. Density is observed, not guaranteed.",
+  "restart_upper_cumulative_without_cache": 853,
+  "same_session_go_no_go": "NO_GO; no bulk continuation request issued",
+  "status": "SOURCE_BLOCKED"
+}

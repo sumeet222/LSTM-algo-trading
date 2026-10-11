@@ -1,0 +1,30 @@
+{
+  "amendment_version": "1.0",
+  "changed_fields": [
+    "created_at",
+    "authority_scope",
+    "git",
+    "data_refs (five additions)",
+    "source_ids.market_source (new)",
+    "protocol_hash"
+  ],
+  "pointer_schema_version": 1,
+  "proposal_identity_check": {
+    "issues": [],
+    "meaning": "Pinned document/reference identity only; no scientific or human approval",
+    "status": "PASS"
+  },
+  "proposed_identity": "633f67267e78c6c4f26d798b8c6e1b54153f08fae0861ca515e733634fd7eb7d",
+  "proposed_path": "configs/PROPOSED_PROTOCOL_SPY_v1.json",
+  "protected_identity": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+  "protected_pointer": "configs/CURRENT_PROTOCOL.json",
+  "required_action": "Human review of additive SPY identity, shared/course proofs and a separately reviewed ledger migration. Do not copy this proposal over CURRENT_PROTOCOL or append mixed identities to the existing ledger. No activation now.",
+  "status": "REGISTERED_BUT_ACTIVATION_BLOCKED",
+  "unchanged": [
+    "schema_version",
+    "documents (exact five)",
+    "existing source_ids",
+    "pair_ceiling=40",
+    "research_status=BLOCKED"
+  ]
+}

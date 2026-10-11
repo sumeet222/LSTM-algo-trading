@@ -542,6 +542,16 @@ Do not finish with known failing tests unless the task is explicitly about an un
 
 ### Python
 
+- Keep the repository `.venv/bin/python` interpreter and installed Pylance basic severity.
+- Every Python package must end with zero reproducible error-level Pylance/Pyright
+  diagnostics over all project-owned Python, including new files. Check incrementally
+  after logical code batches and over the full project at completion.
+- Do not hide diagnostics using reduced severity, exclusions, ignore directives,
+  broad `Any`, unjustified casts, Ruff `noqa`, or weakened tests. Preserve runtime behavior.
+- Every session report must include the exact static-check command, zero-error summary
+  and editor verification instructions. Interpreter/stub parity failures or genuine
+  residual errors require HOLD; final editor Problems refresh is human-confirmed.
+
 - Prefer small testable functions.
 - Use type hints for public/reused interfaces where practical.
 - Add concise docstrings to reusable functions/classes.

@@ -5,6 +5,39 @@ cross-sectional equity prediction with broad-market conditioning.
 
 See `AGENTS.md` for repository and development guidelines.
 
+Future **Track A market-state source work uses Alpaca SIP SPY** under
+[TA-D2-MARKET-SPY-001](docs/track_a/decisions/Track_A_SPY_Market_Source_Amendment_v1.0_2026-10-11.md).
+SPY is an ETF information proxy, not a sixth target or traded instrument. Frozen D7
+USA500 headings and course commands below remain historical references. The protected
+protocol pointer, scientific gates and joint approvals remain pending; no model is activated.
+The typed source entry point is:
+
+```bash
+python -m lstm_data.market_source plan --report reports/data_audit/ta_mkt_spy_2026-10-11
+```
+
+The five-session pilot passed. TA-MKT-SPY-002 measured 336–354 returned bars/page;
+the conservative full-history plan exceeds its 240 cumulative transport ceiling.
+Acquisition is **SOURCE_BLOCKED**, with 13 attempts and 0/11 durable partitions.
+See the [continuation review card](reports/data_audit/ta_mkt_spy_002_2026-10-11/human_review_card.md)
+for the exact capacity calculation and required budget decision. The versioned v2
+config is the default; it keeps the original source version and request identities.
+The original v1 config and evidence remain available unchanged.
+
+```bash
+# Network-free selector inspection; this is not an acquisition approval.
+python -m lstm_data.market_source plan --report reports/data_audit/ta_mkt_spy_002_2026-10-11
+# After a separately approved feasible plan: SHA-verified complete partitions resume.
+python -m lstm_data.market_source acquire --env-file .env --report reports/data_audit/ta_mkt_spy_002_2026-10-11
+# Requires every canonical partition; emits source_qa_full_period.json, no fitting.
+python -m lstm_data.market_source qa --report <new-report-directory>
+```
+
+The current blocked plan resumes with zero GETs and remains blocked. No partial page
+cache survived the diagnostic process. [The API handoff](reports/data_audit/ta_mkt_spy_002_2026-10-11/market_api.md)
+documents `load_market_history` → `window_from_history`, with separate availability,
+certificate and scientific holds. Neither function fits empirical transforms.
+
 Task 01 implements data intake and audits only. No targets, features, model training,
 trading or final experiment definitions are implemented.
 

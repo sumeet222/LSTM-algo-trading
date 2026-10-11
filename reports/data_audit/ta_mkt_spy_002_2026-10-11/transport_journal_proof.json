@@ -1,0 +1,93 @@
+{
+  "bytes": 2980,
+  "canonical_path": "data/raw/alpaca/track_a_spy_v1/transport_attempts.jsonl",
+  "cumulative_attempts": 13,
+  "kind": "READ_ONLY_PROOF_NOT_A_SECOND_COUNTER",
+  "new_records": [
+    {
+      "attempt_id": 10,
+      "record_kind": "attempt",
+      "request_key": "2dd32657ac771cf4e1267212d8b9c274afb6c1153b64be96389d878b45a860fc",
+      "stage": "SPY002",
+      "time_utc": "2026-10-11T21:12:05.823135+00:00"
+    },
+    {
+      "attempt_id": 10,
+      "continued_request": false,
+      "has_continuation": true,
+      "record_kind": "result",
+      "request_key": "2dd32657ac771cf4e1267212d8b9c274afb6c1153b64be96389d878b45a860fc",
+      "response_bytes": 36975,
+      "response_sha256": "a650dd769ef78a995379f0953c40e05ef4c7c7a1bf4b69c77841fea85b912800",
+      "retry_after": null,
+      "returned_rows": 336,
+      "status": 200,
+      "time_utc": "2026-10-11T21:12:06.108364+00:00"
+    },
+    {
+      "attempt_id": 11,
+      "record_kind": "attempt",
+      "request_key": "e3f3e32fd8e5c6b78aae4a9af2140ef1e27ace97ed6719d0fe6b2bd7e609431e",
+      "stage": "SPY002",
+      "time_utc": "2026-10-11T21:12:06.158291+00:00"
+    },
+    {
+      "attempt_id": 11,
+      "continued_request": true,
+      "has_continuation": true,
+      "record_kind": "result",
+      "request_key": "e3f3e32fd8e5c6b78aae4a9af2140ef1e27ace97ed6719d0fe6b2bd7e609431e",
+      "response_bytes": 37652,
+      "response_sha256": "92a98b33c2aeab06b8f4380b916197358b1ca0131251cefdb1d468acb78b8921",
+      "retry_after": null,
+      "returned_rows": 344,
+      "status": 200,
+      "time_utc": "2026-10-11T21:12:06.434772+00:00"
+    },
+    {
+      "attempt_id": 12,
+      "record_kind": "attempt",
+      "request_key": "c497f695830593039aa48407acc3b998748841ec787d20aaefcaf7900aea5ba4",
+      "stage": "SPY002",
+      "time_utc": "2026-10-11T21:12:06.494633+00:00"
+    },
+    {
+      "attempt_id": 12,
+      "continued_request": true,
+      "has_continuation": true,
+      "record_kind": "result",
+      "request_key": "c497f695830593039aa48407acc3b998748841ec787d20aaefcaf7900aea5ba4",
+      "response_bytes": 38155,
+      "response_sha256": "b07a2129ed23df034d378c3a181e9376fd18ee0776ea4021f5f58f347dd2a910",
+      "retry_after": null,
+      "returned_rows": 350,
+      "status": 200,
+      "time_utc": "2026-10-11T21:12:06.851185+00:00"
+    },
+    {
+      "attempt_id": 13,
+      "record_kind": "attempt",
+      "request_key": "2816d9229dfc4565493cca3e6961f172938a4d3f099882f1991312b2e3e2ce66",
+      "stage": "SPY002",
+      "time_utc": "2026-10-11T21:12:06.853078+00:00"
+    },
+    {
+      "attempt_id": 13,
+      "continued_request": true,
+      "has_continuation": true,
+      "record_kind": "result",
+      "request_key": "2816d9229dfc4565493cca3e6961f172938a4d3f099882f1991312b2e3e2ce66",
+      "response_bytes": 38632,
+      "response_sha256": "5bc134134f75e8b7ba87350cef918c9d550124c00eea5bab43cb47d34ca6fb90",
+      "retry_after": null,
+      "returned_rows": 354,
+      "status": 200,
+      "time_utc": "2026-10-11T21:12:07.135501+00:00"
+    }
+  ],
+  "prior_evidence_ref": "reports/data_audit/ta_mkt_spy_2026-10-11/transport_attempts.jsonl",
+  "prior_prefix_bytes": 607,
+  "prior_prefix_sha256": "7807df1e62ac13d5e07d50b84446d35806e446c40c6eea55ce3521eb0bafaa08",
+  "reconstruction": "On a new machine only: verified inherited prefix plus each new_record serialized with json.dumps(record,sort_keys=True)+newline. Verify final SHA before adoption at the single canonical path. Never reset an existing journal or adopt a different count.",
+  "sha256": "5a0614076b6723260a62fd91d19f624ffff3feee473a64b9c5931cafa4703a1b"
+}

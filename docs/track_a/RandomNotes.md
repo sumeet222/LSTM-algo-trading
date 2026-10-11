@@ -14,6 +14,10 @@ M2_{i,t}=
 {\max\left(\operatorname{RMS}(\text{last 60 historical returns}),\epsilon\right)}
 }
 \]
+## Market features.py is where the market features are being calculated.
+
+Verify the formula and causal avaialbity later
+
 
 
 

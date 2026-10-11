@@ -1,0 +1,81 @@
+{
+  "baseline": {
+    "errorCount": 0,
+    "filesAnalyzed": 31,
+    "informationCount": 0,
+    "timeInSec": 4.673,
+    "warningCount": 0
+  },
+  "editor_status": "NOT_YET_REVIEWED; select repository .venv/bin/python, basic mode, restart Language Server and refresh Problems",
+  "final": {
+    "generalDiagnostics": [],
+    "summary": {
+      "errorCount": 0,
+      "filesAnalyzed": 36,
+      "informationCount": 0,
+      "timeInSec": 7.597,
+      "warningCount": 0
+    },
+    "time": "1791750837280",
+    "validation_profile": {
+      "interpreter": ".venv",
+      "mode": "basic",
+      "owned_files": [
+        "scripts/check_python_types.py",
+        "src/lstm_data/market_features.py",
+        "src/lstm_data/market_source.py",
+        "tests/test_market_features.py",
+        "tests/test_market_source.py",
+        "reports/data_audit/p0_p1_close_2026-10-10_230214/source_intake.py",
+        "src/lstm_data/__init__.py",
+        "src/lstm_data/aggregation.py",
+        "src/lstm_data/alignment.py",
+        "src/lstm_data/alpaca.py",
+        "src/lstm_data/audit.py",
+        "src/lstm_data/calendar.py",
+        "src/lstm_data/cli.py",
+        "src/lstm_data/clocks.py",
+        "src/lstm_data/config.py",
+        "src/lstm_data/corporate_actions.py",
+        "src/lstm_data/course.py",
+        "src/lstm_data/hourly_proxy.py",
+        "src/lstm_data/labels.py",
+        "src/lstm_data/ledger.py",
+        "src/lstm_data/m2.py",
+        "src/lstm_data/pilot.py",
+        "src/lstm_data/store.py",
+        "src/lstm_data/validation.py",
+        "tests/conftest.py",
+        "tests/test_aggregation.py",
+        "tests/test_alpaca.py",
+        "tests/test_calendar_alignment.py",
+        "tests/test_clocks.py",
+        "tests/test_corporate_actions.py",
+        "tests/test_evidence.py",
+        "tests/test_hourly_proxy.py",
+        "tests/test_labels.py",
+        "tests/test_m2.py",
+        "tests/test_store_cli.py",
+        "tests/test_validation_course.py"
+      ],
+      "pylance_dist_version": "ms-python.vscode-pylance-2026.4.1"
+    },
+    "version": "1.1.414"
+  },
+  "final_offline_tests": 264,
+  "incremental_batches": [
+    {
+      "final_errors": 0,
+      "source_files": 33,
+      "tests": 38
+    },
+    {
+      "feature_files": 35,
+      "final_errors": 0,
+      "tests": 43
+    }
+  ],
+  "note": "CLI Pyright 1.1.414 with Pylance2026.4.1 stubs/typeshed; tool versions are distinct. Human confirmed existing editor interpreter and prior cleanup, new editor Problems state still needs refresh.",
+  "skips": 0,
+  "static_command": ".venv/bin/python scripts/check_python_types.py --pylance-dist <installed-Pylance-extension>/dist"
+}

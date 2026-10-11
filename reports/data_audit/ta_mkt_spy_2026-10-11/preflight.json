@@ -1,0 +1,43 @@
+{
+  "RMS60_earliest_session": "2020-06-05",
+  "activation": "REGISTERED_BUT_ACTIVATION_BLOCKED; CURRENT_PROTOCOL retained",
+  "baseline_tests": {
+    "passed": 109,
+    "required_subset": 109
+  },
+  "baseline_types": {
+    "errorCount": 0,
+    "filesAnalyzed": 31,
+    "informationCount": 0,
+    "timeInSec": 4.673,
+    "warningCount": 0
+  },
+  "branch": "feat/track-a-data-intake",
+  "daily_64_close_earliest_session": "2020-03-19",
+  "disk_free_GiB": 67,
+  "end_date": "2025-06-30",
+  "estimated_max_extended_rows": 63696,
+  "estimated_uncompressed_bytes": 8153088,
+  "first_48_step_start": "2020-06-19T15:30:00Z",
+  "head": "7878614fce293f82a181a95d36d069bfb6fcb5d3",
+  "max_logical_partitions": 24,
+  "max_transport_attempts": 60,
+  "network_source_calls": 0,
+  "new_helpers_reason": "Versioned SPY-only selector, bounded semestral partitions, honest unknown-publication adapter; existing stock store remains monthly and split adjusted",
+  "package": "TA-MKT-SPY-001",
+  "partitions": 11,
+  "planned_pilot_requests": 5,
+  "reuse": [
+    "HistoricalClient",
+    "request_params",
+    "save_chunk/read_verified/chunk_paths",
+    "schedule/session_grid",
+    "aggregate_session_hours"
+  ],
+  "sessions": 1327,
+  "start_date": "2020-03-19",
+  "starting_tree": "clean",
+  "storage": "data/raw/alpaca/track_a_spy_v1",
+  "time_utc": "2026-10-11T20:14:02.395285+00:00",
+  "upstream": "0 ahead / 0 behind; fetched"
+}

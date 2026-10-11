@@ -1,0 +1,16 @@
+{
+  "bulk_attempts": 2,
+  "canonical_attempt_journal": "data/raw/alpaca/track_a_spy_v1/transport_attempts.jsonl",
+  "command": "acquire",
+  "complete_partitions": 0,
+  "journal_migration": "Exact nine-line attempt prefix copied from package evidence into canonical namespace to preserve the budget across report destinations; old evidence retained.",
+  "partial_response_saved": false,
+  "pilot_attempts": 7,
+  "reason": "Pagination exceeded the configured two-page per-partition allowance on the first 2020-03-19 to 2020-07-01 partition. No partial dataset saved. Revised paging plan requires human review before further acquisition.",
+  "response_status_evidence": "Control flow: page-budget exception follows two successful parsed responses with further continuation. Exact row counts/HTTP-body identities were not retained.",
+  "source_bytes_saved": 0,
+  "source_rows_saved": 0,
+  "status": "SOURCE_BLOCKED",
+  "timing_science": "PUBLICATION_UNKNOWN",
+  "transport_attempts": 9
+}

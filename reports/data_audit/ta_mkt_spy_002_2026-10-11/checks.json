@@ -1,0 +1,68 @@
+{
+  "AST_files": 38,
+  "Ruff": "PASS",
+  "baseline_snapshots_exact": true,
+  "baseline_tests": 264,
+  "blocked_resume": "RETURN_2_ZERO_GET",
+  "blocker_count": 7,
+  "checks": [
+    {
+      "component": "DATA_ACQUIRED",
+      "status": "SOURCE_BLOCKED_0_OF_11"
+    },
+    {
+      "component": "ARCHIVE_QA",
+      "status": "NOT_MEASURED"
+    },
+    {
+      "component": "PUBLICATION_VERIFIED",
+      "status": "HOLD_UNKNOWN"
+    },
+    {
+      "component": "ACTION_SCOPE",
+      "status": "HOLD_UNVERIFIED"
+    },
+    {
+      "component": "MARKET_FEATURE_ENGINEERING",
+      "status": "OFFLINE_IMPLEMENTATION_PASS_REAL_TRACE_DEFERRED"
+    },
+    {
+      "component": "SCIENTIFIC_GATES",
+      "status": "G0_G1_G2_G3_G4_HOLD"
+    },
+    {
+      "component": "POINTER_ACTIVATED",
+      "status": "PROPOSED_ONLY_FALSE"
+    },
+    {
+      "component": "FT0_MC0_MODELS",
+      "status": "NOT_BUILT_NOT_RUN"
+    },
+    {
+      "component": "NEURAL_PAIRS",
+      "status": "0_OF_40"
+    }
+  ],
+  "editor_pylance_problems": "HUMAN_REFRESH_CONFIRMATION_PENDING",
+  "engineering_complete": false,
+  "final_tests": 278,
+  "full_archive_complete": "EXPECTED_FAILURE_NO_FALLBACK",
+  "git_diff_check": "PASS",
+  "human_review": "NOT_YET_REVIEWED",
+  "journal_prefix_preserved": true,
+  "neural_pairs": "0/40",
+  "new_tests": 14,
+  "package": "TA-MKT-SPY-002",
+  "package_status": "SOURCE_BLOCKED_HUMAN_REVIEW_REQUIRED",
+  "scientific_status": "BLOCKED",
+  "source_attempts": 13,
+  "source_partitions": "0/11",
+  "source_plan_smoke": "PASS_NO_NETWORK",
+  "typing": {
+    "errorCount": 0,
+    "filesAnalyzed": 38,
+    "informationCount": 0,
+    "timeInSec": 12.085,
+    "warningCount": 0
+  }
+}

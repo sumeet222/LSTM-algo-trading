@@ -1,0 +1,83 @@
+{
+  "cumulative_attempts": 13,
+  "exhausted_first_partition": false,
+  "journal": "data/raw/alpaca/track_a_spy_v1/transport_attempts.jsonl",
+  "new_transport_attempts": 4,
+  "pages": [
+    {
+      "asof": "2025-06-30",
+      "first_timestamp": "2020-03-19T08:00:00Z",
+      "has_continuation": true,
+      "last_timestamp": "2020-04-02T19:30:00Z",
+      "page_index": 1,
+      "rate_limit_remaining": "199",
+      "request_key": "2dd32657ac771cf4e1267212d8b9c274afb6c1153b64be96389d878b45a860fc",
+      "requested_limit": 10000,
+      "response_bytes": 36975,
+      "response_sha256": "a650dd769ef78a995379f0953c40e05ef4c7c7a1bf4b69c77841fea85b912800",
+      "retrieved_at": "2026-10-11T21:12:06.110347+00:00",
+      "returned_rows": 336,
+      "status": 200
+    },
+    {
+      "asof": "2025-06-30",
+      "first_timestamp": "2020-04-02T20:00:00Z",
+      "has_continuation": true,
+      "last_timestamp": "2020-04-20T19:00:00Z",
+      "page_index": 2,
+      "rate_limit_remaining": "198",
+      "request_key": "e3f3e32fd8e5c6b78aae4a9af2140ef1e27ace97ed6719d0fe6b2bd7e609431e",
+      "requested_limit": 10000,
+      "response_bytes": 37652,
+      "response_sha256": "92a98b33c2aeab06b8f4380b916197358b1ca0131251cefdb1d468acb78b8921",
+      "retrieved_at": "2026-10-11T21:12:06.436370+00:00",
+      "returned_rows": 344,
+      "status": 200
+    },
+    {
+      "asof": "2025-06-30",
+      "first_timestamp": "2020-04-20T19:30:00Z",
+      "has_continuation": true,
+      "last_timestamp": "2020-05-05T22:00:00Z",
+      "page_index": 3,
+      "rate_limit_remaining": "199",
+      "request_key": "c497f695830593039aa48407acc3b998748841ec787d20aaefcaf7900aea5ba4",
+      "requested_limit": 10000,
+      "response_bytes": 38155,
+      "response_sha256": "b07a2129ed23df034d378c3a181e9376fd18ee0776ea4021f5f58f347dd2a910",
+      "retrieved_at": "2026-10-11T21:12:06.852399+00:00",
+      "returned_rows": 350,
+      "status": 200
+    },
+    {
+      "asof": "2025-06-30",
+      "first_timestamp": "2020-05-05T22:30:00Z",
+      "has_continuation": true,
+      "last_timestamp": "2020-05-21T11:00:00Z",
+      "page_index": 4,
+      "rate_limit_remaining": "199",
+      "request_key": "2816d9229dfc4565493cca3e6961f172938a4d3f099882f1991312b2e3e2ce66",
+      "requested_limit": 10000,
+      "response_bytes": 38632,
+      "response_sha256": "5bc134134f75e8b7ba87350cef918c9d550124c00eea5bab43cb47d34ca6fb90",
+      "retrieved_at": "2026-10-11T21:12:07.137382+00:00",
+      "returned_rows": 354,
+      "status": 200
+    }
+  ],
+  "params": {
+    "adjustment": "raw",
+    "asof": "2025-06-30",
+    "currency": "USD",
+    "end": "2020-07-01T03:59:59.999999999+00:00",
+    "feed": "sip",
+    "limit": 10000,
+    "sort": "asc",
+    "start": "2020-03-19T04:00:00+00:00",
+    "symbols": "SPY",
+    "timeframe": "30Min"
+  },
+  "response_storage": "Temporary in-memory genuine responses reused by original client; no durable partial-page recovery claimed",
+  "start_attempts": 9,
+  "time_utc": "2026-10-11T21:12:07.137406+00:00"
+}

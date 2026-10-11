@@ -1,0 +1,378 @@
+{
+  "checks": [
+    {
+      "audit_check": {
+        "affected_branches": [
+          "market_source"
+        ],
+        "approved_threshold": null,
+        "audit_run_id": "TA-MKT-SPY-001-2026-10-11",
+        "check_id": "registration",
+        "code_id": "fe5f5fb4953d9b12b87752b83ef097e2ae244f6539360eb91ac4d9b342ff5e48",
+        "config_id": "3aff02d73b9ba360143cad405ffff9c8c42a819a760d157709392bb2b5e23754",
+        "evidence": {
+          "decision_sha256": "d3e2b5a4be5f6f84f711c969fd16816526b81e678fc05494e4eb4cecc2015a30"
+        },
+        "example_ids": [],
+        "explanation": "Track A researcher SPY amendment and machine decision; no fabricated joint sign-off.",
+        "gate_id": "G0",
+        "owner_action": "Human review",
+        "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+        "protocol_version": "CURRENT_PROTOCOL schema1 / SPY amendment1.0 nonactivating",
+        "rerun_scope": "Affected code/protocol changes",
+        "schema_version": 1,
+        "source_ids": {
+          "market_source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+          "pilot_sha256": "42e81bb21b69bdecff4d0c97f5ebf2c21bf21ab6dfb2ccebe5966551340ff2e3"
+        },
+        "status": "PASS",
+        "time_utc": "2026-10-11T20:36:54.747951+00:00"
+      },
+      "formal_scientific_approval": "NOT_GRANTED",
+      "human_status": "NOT_YET_REVIEWED",
+      "id": "registration",
+      "implementation_status": "IMPLEMENTATION_PASS"
+    },
+    {
+      "audit_check": {
+        "affected_branches": [
+          "market_source"
+        ],
+        "approved_threshold": null,
+        "audit_run_id": "TA-MKT-SPY-001-2026-10-11",
+        "check_id": "selector",
+        "code_id": "fe5f5fb4953d9b12b87752b83ef097e2ae244f6539360eb91ac4d9b342ff5e48",
+        "config_id": "3aff02d73b9ba360143cad405ffff9c8c42a819a760d157709392bb2b5e23754",
+        "evidence": {
+          "partitions": 11,
+          "source_tests": 18,
+          "start_date": "2020-03-19"
+        },
+        "example_ids": [],
+        "explanation": "SPY/SIP/raw default, immutable namespace, no fallback; calendar-derived March19 warm-up and 11 partitions.",
+        "gate_id": "G1",
+        "owner_action": "Human review",
+        "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+        "protocol_version": "CURRENT_PROTOCOL schema1 / SPY amendment1.0 nonactivating",
+        "rerun_scope": "Affected code/protocol changes",
+        "schema_version": 1,
+        "source_ids": {
+          "market_source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+          "pilot_sha256": "42e81bb21b69bdecff4d0c97f5ebf2c21bf21ab6dfb2ccebe5966551340ff2e3"
+        },
+        "status": "PASS",
+        "time_utc": "2026-10-11T20:36:54.747951+00:00"
+      },
+      "formal_scientific_approval": "NOT_GRANTED",
+      "human_status": "NOT_YET_REVIEWED",
+      "id": "selector",
+      "implementation_status": "IMPLEMENTATION_PASS"
+    },
+    {
+      "audit_check": {
+        "affected_branches": [
+          "market_source"
+        ],
+        "approved_threshold": null,
+        "audit_run_id": "TA-MKT-SPY-001-2026-10-11",
+        "check_id": "source_archive",
+        "code_id": "fe5f5fb4953d9b12b87752b83ef097e2ae244f6539360eb91ac4d9b342ff5e48",
+        "config_id": "3aff02d73b9ba360143cad405ffff9c8c42a819a760d157709392bb2b5e23754",
+        "evidence": {
+          "partitions_saved": 0,
+          "pilot_pass": true,
+          "publication_verified": false,
+          "transport_attempts": 9
+        },
+        "example_ids": [],
+        "explanation": "Five-session pilot passed; first bulk partition exceeded planned two-page allowance. Publication and split scope unverified; no archive saved.",
+        "gate_id": "G1",
+        "owner_action": "Human review",
+        "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+        "protocol_version": "CURRENT_PROTOCOL schema1 / SPY amendment1.0 nonactivating",
+        "rerun_scope": "Affected code/protocol changes",
+        "schema_version": 1,
+        "source_ids": {
+          "market_source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+          "pilot_sha256": "42e81bb21b69bdecff4d0c97f5ebf2c21bf21ab6dfb2ccebe5966551340ff2e3"
+        },
+        "status": "BLOCKED",
+        "time_utc": "2026-10-11T20:36:54.747951+00:00"
+      },
+      "formal_scientific_approval": "NOT_GRANTED",
+      "human_status": "NOT_YET_REVIEWED",
+      "id": "source_archive",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "audit_check": {
+        "affected_branches": [
+          "market_source"
+        ],
+        "approved_threshold": null,
+        "audit_run_id": "TA-MKT-SPY-001-2026-10-11",
+        "check_id": "D7_math",
+        "code_id": "fe5f5fb4953d9b12b87752b83ef097e2ae244f6539360eb91ac4d9b342ff5e48",
+        "config_id": "3aff02d73b9ba360143cad405ffff9c8c42a819a760d157709392bb2b5e23754",
+        "evidence": {
+          "basis": "SYNTHETIC",
+          "example": [
+            1.0,
+            -3.912023005428146,
+            0.0,
+            2.23606797749979,
+            4.47213595499958
+          ]
+        },
+        "example_ids": [],
+        "explanation": "Independent U1\u2013U5, absolute U2, prior-session locking, RMS thresholds, train p05 and robust scaling.",
+        "gate_id": "G3",
+        "owner_action": "Human review",
+        "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+        "protocol_version": "CURRENT_PROTOCOL schema1 / SPY amendment1.0 nonactivating",
+        "rerun_scope": "Affected code/protocol changes",
+        "schema_version": 1,
+        "source_ids": {
+          "market_source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+          "pilot_sha256": "42e81bb21b69bdecff4d0c97f5ebf2c21bf21ab6dfb2ccebe5966551340ff2e3"
+        },
+        "status": "PASS",
+        "time_utc": "2026-10-11T20:36:54.747951+00:00"
+      },
+      "formal_scientific_approval": "NOT_GRANTED",
+      "human_status": "NOT_YET_REVIEWED",
+      "id": "D7_math",
+      "implementation_status": "IMPLEMENTATION_PASS"
+    },
+    {
+      "audit_check": {
+        "affected_branches": [
+          "market_source"
+        ],
+        "approved_threshold": null,
+        "audit_run_id": "TA-MKT-SPY-001-2026-10-11",
+        "check_id": "causal_masks",
+        "code_id": "fe5f5fb4953d9b12b87752b83ef097e2ae244f6539360eb91ac4d9b342ff5e48",
+        "config_id": "3aff02d73b9ba360143cad405ffff9c8c42a819a760d157709392bb2b5e23754",
+        "evidence": {
+          "new_package_tests": 44,
+          "research_ready": false
+        },
+        "example_ids": [],
+        "explanation": "UNKNOWN/late/stale rejection; exact consecutive48x5, endpoint and46/48, separate zero-fill masks; no empirical fits.",
+        "gate_id": "G2",
+        "owner_action": "Human review",
+        "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+        "protocol_version": "CURRENT_PROTOCOL schema1 / SPY amendment1.0 nonactivating",
+        "rerun_scope": "Affected code/protocol changes",
+        "schema_version": 1,
+        "source_ids": {
+          "market_source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+          "pilot_sha256": "42e81bb21b69bdecff4d0c97f5ebf2c21bf21ab6dfb2ccebe5966551340ff2e3"
+        },
+        "status": "PASS",
+        "time_utc": "2026-10-11T20:36:54.747951+00:00"
+      },
+      "formal_scientific_approval": "NOT_GRANTED",
+      "human_status": "NOT_YET_REVIEWED",
+      "id": "causal_masks",
+      "implementation_status": "IMPLEMENTATION_PASS"
+    },
+    {
+      "audit_check": {
+        "affected_branches": [
+          "market_source"
+        ],
+        "approved_threshold": null,
+        "audit_run_id": "TA-MKT-SPY-001-2026-10-11",
+        "check_id": "preservation",
+        "code_id": "fe5f5fb4953d9b12b87752b83ef097e2ae244f6539360eb91ac4d9b342ff5e48",
+        "config_id": "3aff02d73b9ba360143cad405ffff9c8c42a819a760d157709392bb2b5e23754",
+        "evidence": {
+          "neural_pairs": 0,
+          "old_events": 23,
+          "scientific_blockers": 7,
+          "stock_chunks": 60,
+          "stock_rows": 159008
+        },
+        "example_ids": [],
+        "explanation": "Original source and tests unchanged; exact snapshots, five frozen documents, CURRENT_PROTOCOL and seven blockers preserved,0/40.",
+        "gate_id": "G0",
+        "owner_action": "Human review",
+        "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+        "protocol_version": "CURRENT_PROTOCOL schema1 / SPY amendment1.0 nonactivating",
+        "rerun_scope": "Affected code/protocol changes",
+        "schema_version": 1,
+        "source_ids": {
+          "market_source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+          "pilot_sha256": "42e81bb21b69bdecff4d0c97f5ebf2c21bf21ab6dfb2ccebe5966551340ff2e3"
+        },
+        "status": "PASS",
+        "time_utc": "2026-10-11T20:36:54.747951+00:00"
+      },
+      "formal_scientific_approval": "NOT_GRANTED",
+      "human_status": "NOT_YET_REVIEWED",
+      "id": "preservation",
+      "implementation_status": "IMPLEMENTATION_PASS"
+    },
+    {
+      "audit_check": {
+        "affected_branches": [
+          "market_source"
+        ],
+        "approved_threshold": null,
+        "audit_run_id": "TA-MKT-SPY-001-2026-10-11",
+        "check_id": "zero_diagnostics",
+        "code_id": "fe5f5fb4953d9b12b87752b83ef097e2ae244f6539360eb91ac4d9b342ff5e48",
+        "config_id": "3aff02d73b9ba360143cad405ffff9c8c42a819a760d157709392bb2b5e23754",
+        "evidence": {
+          "all_tests": 264,
+          "errors": 0,
+          "files": 36,
+          "warnings": 0
+        },
+        "example_ids": [],
+        "explanation": "Dedicated typing check: basic profile36files0errors; Ruff and parser pass. Final editor Problems human refresh pending.",
+        "gate_id": "G0",
+        "owner_action": "Human review",
+        "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+        "protocol_version": "CURRENT_PROTOCOL schema1 / SPY amendment1.0 nonactivating",
+        "rerun_scope": "Affected code/protocol changes",
+        "schema_version": 1,
+        "source_ids": {
+          "market_source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+          "pilot_sha256": "42e81bb21b69bdecff4d0c97f5ebf2c21bf21ab6dfb2ccebe5966551340ff2e3"
+        },
+        "status": "PASS",
+        "time_utc": "2026-10-11T20:36:54.747951+00:00"
+      },
+      "formal_scientific_approval": "NOT_GRANTED",
+      "human_status": "NOT_YET_REVIEWED",
+      "id": "zero_diagnostics",
+      "implementation_status": "IMPLEMENTATION_PASS"
+    },
+    {
+      "audit_check": {
+        "affected_branches": [
+          "market_source"
+        ],
+        "approved_threshold": null,
+        "audit_run_id": "TA-MKT-SPY-001-2026-10-11",
+        "check_id": "activation",
+        "code_id": "fe5f5fb4953d9b12b87752b83ef097e2ae244f6539360eb91ac4d9b342ff5e48",
+        "config_id": "3aff02d73b9ba360143cad405ffff9c8c42a819a760d157709392bb2b5e23754",
+        "evidence": {
+          "boundary": "REGISTERED_BUT_ACTIVATION_BLOCKED",
+          "model_wiring": "END_TO_END_MODEL_NOT_BUILT",
+          "source_to_features": "SYNTHETIC_PATH_IMPLEMENTED_REAL_SOURCE_BLOCKED"
+        },
+        "example_ids": [],
+        "explanation": "Protected pointer remains original; proposal only. Shared/course/source/preparation gates and downstream FT0/model wiring pending.",
+        "gate_id": "G0",
+        "owner_action": "Human review",
+        "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+        "protocol_version": "CURRENT_PROTOCOL schema1 / SPY amendment1.0 nonactivating",
+        "rerun_scope": "Affected code/protocol changes",
+        "schema_version": 1,
+        "source_ids": {
+          "market_source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+          "pilot_sha256": "42e81bb21b69bdecff4d0c97f5ebf2c21bf21ab6dfb2ccebe5966551340ff2e3"
+        },
+        "status": "BLOCKED",
+        "time_utc": "2026-10-11T20:36:54.747951+00:00"
+      },
+      "formal_scientific_approval": "NOT_GRANTED",
+      "human_status": "NOT_YET_REVIEWED",
+      "id": "activation",
+      "implementation_status": "BLOCKED"
+    }
+  ],
+  "code_locations": {
+    "scripts/check_python_types.py": {
+      "main": 18
+    },
+    "src/lstm_data/market_features.py": {
+      "DailyScaleSample": 298,
+      "MarketClose": 59,
+      "MarketFitWindow": 253,
+      "MarketFloors": 274,
+      "MarketHistory": 134,
+      "MarketMeasures": 122,
+      "MarketObservation": 26,
+      "MarketScaler": 381,
+      "MarketVector": 338,
+      "MarketWindow": 456,
+      "__init__": 137,
+      "__post_init__": 391,
+      "_close": 165,
+      "_return": 158,
+      "contains": 269,
+      "fit_synthetic_floors": 303,
+      "fit_synthetic_scaler": 411,
+      "history_from_archive": 206,
+      "measures": 176,
+      "momentum": 189,
+      "observation_reason": 80,
+      "price": 226,
+      "rms": 100,
+      "standardized_window": 466,
+      "timestamp": 221,
+      "transform": 403,
+      "vector": 352
+    },
+    "src/lstm_data/market_source.py": {
+      "AttemptBudget": 87,
+      "MarketSource": 29,
+      "acquire_partition": 163,
+      "constituent_identity": 134,
+      "get": 103,
+      "hourly_archive": 113,
+      "identity": 67,
+      "interval": 70,
+      "load": 36,
+      "load_archive": 150,
+      "main": 204,
+      "partitions": 78,
+      "pilot": 176,
+      "store": 63,
+      "used": 94
+    },
+    "tests/test_market_features.py": {
+      "fit_window": 45,
+      "floor": 51,
+      "history": 31,
+      "scaler_rows": 178,
+      "test_48_by_5_endpoint_46_threshold_neutral_masks": 202,
+      "test_duplicate_hours_stubs_and_invented_publication_rejected": 223,
+      "test_fit_may_not_cross_training_prefix": 171,
+      "test_future_floor_information_cutoff_blocks": 234,
+      "test_gap_does_not_shift_and_momentum_chain_is_complete": 90,
+      "test_hand_computed_u1_u5_and_daily_lock": 58,
+      "test_late_hour_and_prior_daily_close_cannot_enter_history": 135,
+      "test_no_sixth_channel_or_gap_compression": 242,
+      "test_rms_scheduled_thresholds": 82,
+      "test_source_clock_rejections": 112,
+      "test_training_positive_p05_unique_daily_times_and_no_empirical_fitting": 147,
+      "test_unique_timestamp_scaler_fallbacks_constant_and_no_clipping": 186,
+      "test_unknown_archive_is_actual_feature_adapter_blocked": 126
+    },
+    "tests/test_market_source.py": {
+      "Response": 134,
+      "__init__": 106,
+      "coarse": 27,
+      "get": 141,
+      "json": 138,
+      "source_fixture": 18,
+      "test_anchored_hours_stubs_and_unknown_publication": 59,
+      "test_attempt_budget_exhaustion_and_truncation_are_offline": 153,
+      "test_hourly_rejects_policy_and_ohlc": 84,
+      "test_missing_constituent_invalidates_whole_hour": 73,
+      "test_partial_page_budget_never_checkpoints": 130,
+      "test_selector_and_missing_no_fallback": 35,
+      "test_selector_rejects_wrong_policy": 47,
+      "test_spy_short_page_retry_checkpoint_resume_and_hash": 92
+    }
+  },
+  "human_review": "NOT_YET_REVIEWED",
+  "package_status": "PARTIAL_SOURCE_BLOCKED_ACTIVATION_PENDING"
+}

@@ -1,0 +1,55 @@
+{
+  "branch": "feat/track-a-data-intake",
+  "canonical_journal_proof": "reports/data_audit/ta_mkt_spy_002_2026-10-11/transport_journal_proof.json",
+  "canonical_working_bytes": 2980,
+  "created_at": "2026-10-11T21:26:52.656705+00:00",
+  "file_identities": [
+    {
+      "path": "src/lstm_data/market_source.py",
+      "sha256": "a644029b4d3ec793c08ad2e78c9673717c669373caa99d669f9e97d7b2f3bf85"
+    },
+    {
+      "path": "src/lstm_data/market_features.py",
+      "sha256": "fa4048703a6606f9e818d41f9f1e6223a4a58ea651c9923f126a71c4b47622f6"
+    },
+    {
+      "path": "src/lstm_data/spy_completion.py",
+      "sha256": "b94be07e70fa37c3cce49465d69c9ac8d35e13fa3c73623f516c3a28a3ea622c"
+    },
+    {
+      "path": "tests/test_spy_completion.py",
+      "sha256": "ac53f674ae47fa8dac12e44cfac0e29df9192cdeeddb406baa7495f0980a3d37"
+    },
+    {
+      "path": "tests/test_market_features.py",
+      "sha256": "98a33bd82b41903b1ef8a19f12d4d439a037c95203b5d2c1134e6ee7d39e1d10"
+    },
+    {
+      "path": "configs/track_a_market_spy_v2.json",
+      "sha256": "c41924d88405015e3e57ff0920ca31ea77eef913b42993529d854f55244e1f6c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "9517cad5e2e92be6afbd008d32ce31231c7ac97a902220daedb51ddd525b5889"
+    }
+  ],
+  "files_created_this_continuation": [
+    "configs/track_a_market_spy_v2.json",
+    "src/lstm_data/spy_completion.py",
+    "tests/test_spy_completion.py"
+  ],
+  "head": "7878614fce293f82a181a95d36d069bfb6fcb5d3",
+  "inherited_files_modified": [
+    "README.md",
+    "src/lstm_data/market_features.py",
+    "src/lstm_data/market_source.py",
+    "tests/test_market_features.py"
+  ],
+  "session_report": "reports/codex_sessions/2026-10-11_172652_feat-track-a-data-intake_spy-continuation.md",
+  "source_archive_bytes": 0,
+  "source_attempts": 13,
+  "status": "SOURCE_BLOCKED_HUMAN_REVIEW_REQUIRED",
+  "temporary_response_bytes_sum": 151414,
+  "upstream": "0 ahead /0 behind; fetched successfully after sandbox FETCH_HEAD denial",
+  "working_tree": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M AGENTS.md\n M README.md\n M docs/track_a/RandomNotes.md\n M reports/audit/track_a_events.jsonl\n?? configs/PROPOSED_PROTOCOL_SPY_v1.json\n?? configs/track_a_market_spy_v1.json\n?? configs/track_a_market_spy_v2.json\n?? docs/track_a/decisions/TA_D2_MARKET_SPY_001_v1.json\n?? docs/track_a/decisions/Track_A_SPY_Market_Source_Amendment_v1.0_2026-10-11.md\n?? reports/codex_sessions/2026-10-11_163942_feat-track-a-data-intake_spy-source.md\n?? reports/data_audit/ta_mkt_spy_002_2026-10-11/\n?? reports/data_audit/ta_mkt_spy_2026-10-11/\n?? scripts/\n?? src/lstm_data/market_features.py\n?? src/lstm_data/market_source.py\n?? src/lstm_data/spy_completion.py\n?? tests/test_market_features.py\n?? tests/test_market_source.py\n?? tests/test_spy_completion.py\n"
+}
