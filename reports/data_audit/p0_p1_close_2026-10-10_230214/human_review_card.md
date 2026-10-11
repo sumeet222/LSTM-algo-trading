@@ -1,0 +1,10 @@
+# P0/P1 closeout — six review targets
+
+1. `docs/track_a/Track_A_P0_P1_Research_Assumptions_Addendum_v1.0.md:5`: approve/correct selected documentary retrospective proxy/vintage scope. AAPL recorded sum742420301239.5520/60=12,373,671,687.325866…USD; all five numerically clear50m, not PIT eligibility or approved D8 ranking. CURRENT_PROTOCOL unchanged.
+2. `closure_matrix.json:1` and `src/lstm_data/audit.py:276`: P0 infrastructure complete and F01 FIXED_VERIFIED vs seven scientific blockers. `.venv/bin/python -B -m pytest tests/test_evidence.py -k f01 -q` observed1 passed; no111-suite rerun. F01 earlier incident retained.
+3. `materialization_plan.json:1` / `source_storage_manifest.json:1`: exact17 scoped requests, unique canonical extension paths,52 transport attempts including4 failures,856147 source payload bytes; checkpoint/resume by key.505-page planning scenario blocks full minute acquisition. No original store replacement or duplicate per-model windows.
+4. `stock_source_qa.json:1`: warmup1736/1736 per name; old168 gaps remain. AAPL504.03/4=126.0075 vs stored126.01 (−0.0025 residual), raw volume6044631×4=24178524 exact. Price rounding/revision warning remains, no hand-edit. Half-hour98%/95% source floors are distinct from FT0 and minute completeness.
+5. `stock_source_qa.json:1` actions/dividend/minute edges: AAPL May8 ex-date/May11 record/May14 payable0.82; four cash events still missing dates.3 sessions complete for their RTH grids only. Nov27 is13:00 ET close, so14:33/15:33 source rows correctly absent. Do not credit acquirer stocks with cash-merger acquiree rates.
+6. `shared_clock_signoff_card.md:1`: actual two-party choice240 continuous minutes vs4 complete hourly advances; entries10:33/11:33 vs nominal anchors create237/240-minute distinction. Both joint approvals absent. Review future cash-index/ETF/futures checklist in closure_matrix; no source selected.
+
+**APPROVE/CORRECT documentary scoped policy; HOLD real labels/trades/market arms pending clock/data; separately authorize any next source/P2 implementation.** No scientific PASS, commit/push or automatic P2.

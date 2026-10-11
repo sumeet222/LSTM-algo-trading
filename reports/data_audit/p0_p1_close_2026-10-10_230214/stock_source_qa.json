@@ -1,0 +1,2564 @@
+{
+  "actions": {
+    "accounting_blocker": "ACTION_CASH_DATE_UNRESOLVED",
+    "cash_payment_dates_present": 106,
+    "cash_record_dates_present": 106,
+    "completeness_scope": "Returned API process-date-filtered history only, not independent economic event truth/effective-boundary coverage/publication",
+    "counts": {
+      "cash_dividends": 110,
+      "cash_mergers": 4,
+      "forward_splits": 2
+    },
+    "first_published_at": null,
+    "merger_role_warning": "Four acquired-company records match JNJ/WMT as ACQUIRER. Do not apply acquiree per-share cash rate to held JNJ/WMT shares. Mapping/role policy required.",
+    "missing_cash_dates": [
+      {
+        "ex_date": "2020-02-07",
+        "id": "23407e01-4eef-4c1e-a2dd-f585c7eabcd0",
+        "payment_date": null,
+        "record_date": null,
+        "symbol": "AAPL"
+      },
+      {
+        "ex_date": "2020-01-17",
+        "id": "c3b503fd-3d49-4da9-8934-c75beb9043b0",
+        "payment_date": null,
+        "record_date": null,
+        "symbol": "CAT"
+      },
+      {
+        "ex_date": "2020-02-24",
+        "id": "44ce8288-819e-48aa-80e2-e8ec518e9857",
+        "payment_date": null,
+        "record_date": null,
+        "symbol": "JNJ"
+      },
+      {
+        "ex_date": "2020-01-03",
+        "id": "c7ec5c17-0970-4262-9800-fbabde1e0aa2",
+        "payment_date": null,
+        "record_date": null,
+        "symbol": "JPM"
+      }
+    ],
+    "pagination_exhausted": true,
+    "path": "data/raw/alpaca/track_a_close_v1/actions-d7e39f2015b86602ac9c.json",
+    "query_pages": 1,
+    "requested_range": {
+      "data_quality": "all",
+      "end": "2025-06-30",
+      "limit": 1000,
+      "region": "us",
+      "sort": "asc",
+      "start": "2019-12-18",
+      "symbols": "AAPL,JPM,JNJ,WMT,CAT"
+    },
+    "rows": 116,
+    "sha256": "72f5432b84cd87a5941301b7ef05b81a377ca157bbb04c403fea3ebbcda63eb3",
+    "source_available_at": null,
+    "unique_ids": 116
+  },
+  "coverage_30min": {
+    "AAPL": {
+      "expected": 16261,
+      "floor_98_met": true,
+      "fraction": 1.0,
+      "missing": 0,
+      "present": 16261,
+      "years": {
+        "2020": {
+          "expected": 1652,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 1652,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2021": {
+          "expected": 3270,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3270,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2022": {
+          "expected": 3257,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3257,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2023": {
+          "expected": 3238,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3238,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2024": {
+          "expected": 3258,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3258,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2025": {
+          "expected": 1586,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 1586,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        }
+      }
+    },
+    "CAT": {
+      "expected": 16261,
+      "floor_98_met": true,
+      "fraction": 0.9971096488530841,
+      "missing": 47,
+      "present": 16214,
+      "years": {
+        "2020": {
+          "expected": 1652,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 1652,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2021": {
+          "expected": 3270,
+          "floor_95_met": true,
+          "fraction": 0.9926605504587156,
+          "present": 3246,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2022": {
+          "expected": 3257,
+          "floor_95_met": true,
+          "fraction": 0.9929382867669635,
+          "present": 3234,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2023": {
+          "expected": 3238,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3238,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2024": {
+          "expected": 3258,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3258,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2025": {
+          "expected": 1586,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 1586,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        }
+      }
+    },
+    "JNJ": {
+      "expected": 16261,
+      "floor_98_met": true,
+      "fraction": 0.9977246171822152,
+      "missing": 37,
+      "present": 16224,
+      "years": {
+        "2020": {
+          "expected": 1652,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 1652,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2021": {
+          "expected": 3270,
+          "floor_95_met": true,
+          "fraction": 0.9926605504587156,
+          "present": 3246,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2022": {
+          "expected": 3257,
+          "floor_95_met": true,
+          "fraction": 0.9960085968682837,
+          "present": 3244,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2023": {
+          "expected": 3238,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3238,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2024": {
+          "expected": 3258,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3258,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2025": {
+          "expected": 1586,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 1586,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        }
+      }
+    },
+    "JPM": {
+      "expected": 16261,
+      "floor_98_met": true,
+      "fraction": 0.9977861140151282,
+      "missing": 36,
+      "present": 16225,
+      "years": {
+        "2020": {
+          "expected": 1652,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 1652,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2021": {
+          "expected": 3270,
+          "floor_95_met": true,
+          "fraction": 0.9926605504587156,
+          "present": 3246,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2022": {
+          "expected": 3257,
+          "floor_95_met": true,
+          "fraction": 0.9963156278784158,
+          "present": 3245,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2023": {
+          "expected": 3238,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3238,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2024": {
+          "expected": 3258,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3258,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2025": {
+          "expected": 1586,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 1586,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        }
+      }
+    },
+    "WMT": {
+      "expected": 16261,
+      "floor_98_met": true,
+      "fraction": 0.9970481520201709,
+      "missing": 48,
+      "present": 16213,
+      "years": {
+        "2020": {
+          "expected": 1652,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 1652,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2021": {
+          "expected": 3270,
+          "floor_95_met": true,
+          "fraction": 0.9926605504587156,
+          "present": 3246,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2022": {
+          "expected": 3257,
+          "floor_95_met": true,
+          "fraction": 0.9926312557568314,
+          "present": 3233,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2023": {
+          "expected": 3238,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3238,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2024": {
+          "expected": 3258,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 3258,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        },
+        "2025": {
+          "expected": 1586,
+          "floor_95_met": true,
+          "fraction": 1.0,
+          "present": 1586,
+          "scope": "Within requested partial/full year, not feature retention or PIT"
+        }
+      }
+    }
+  },
+  "dividend_trace": {
+    "ex_date": "2020-05-08",
+    "id": "235946d4-2605-4e5c-9699-9bfd00452ec0",
+    "payable_date": "2020-05-14",
+    "process_date": "2020-05-14",
+    "rate": 0.82,
+    "record_date": "2020-05-11",
+    "symbol": "AAPL"
+  },
+  "edge_minute_checks": [
+    {
+      "day": "2020-08-31",
+      "defects": {
+        "duplicate_keys": 0,
+        "fractional_volume_rows": 0,
+        "invalid_ohlc_rows": 0,
+        "negative_volume_rows": 0,
+        "nonfinite_ohlcv_rows": 0,
+        "nonpositive_price_rows": 0,
+        "null_fields": 0,
+        "out_of_order": false,
+        "zero_volume_rows": 0
+      },
+      "expected_rows": 1950,
+      "path": "data/raw/alpaca/track_a_close_v1/edge_raw_minute-25d7ab3845944317259a.parquet",
+      "retry_stream_scope": "Every within-session minute observed in these3 sessions only. No full-window/next-session/terminal retry coverage or actual fillability claimed.",
+      "rows": 1950,
+      "sha256": "bd49da577863951229337b3bbfea69663a23bbf8ccb20c1855f5fdf578963ffe",
+      "slot_traces": [
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 128.33,
+          "requested_clock_ET": "10:33",
+          "symbol": "AAPL",
+          "time": "2020-08-31T14:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 128.18,
+          "requested_clock_ET": "11:33",
+          "symbol": "AAPL",
+          "time": "2020-08-31T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 130.2797,
+          "requested_clock_ET": "14:33",
+          "symbol": "AAPL",
+          "time": "2020-08-31T18:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 130.1009,
+          "requested_clock_ET": "15:33",
+          "symbol": "AAPL",
+          "time": "2020-08-31T19:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 101.365,
+          "requested_clock_ET": "10:33",
+          "symbol": "JPM",
+          "time": "2020-08-31T14:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 100.69,
+          "requested_clock_ET": "11:33",
+          "symbol": "JPM",
+          "time": "2020-08-31T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 100.435,
+          "requested_clock_ET": "14:33",
+          "symbol": "JPM",
+          "time": "2020-08-31T18:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 100.3,
+          "requested_clock_ET": "15:33",
+          "symbol": "JPM",
+          "time": "2020-08-31T19:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 153.76,
+          "requested_clock_ET": "10:33",
+          "symbol": "JNJ",
+          "time": "2020-08-31T14:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 153.92,
+          "requested_clock_ET": "11:33",
+          "symbol": "JNJ",
+          "time": "2020-08-31T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 153.6,
+          "requested_clock_ET": "14:33",
+          "symbol": "JNJ",
+          "time": "2020-08-31T18:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 153.59,
+          "requested_clock_ET": "15:33",
+          "symbol": "JNJ",
+          "time": "2020-08-31T19:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 136.4999,
+          "requested_clock_ET": "10:33",
+          "symbol": "WMT",
+          "time": "2020-08-31T14:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 135.7446,
+          "requested_clock_ET": "11:33",
+          "symbol": "WMT",
+          "time": "2020-08-31T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 137.38,
+          "requested_clock_ET": "14:33",
+          "symbol": "WMT",
+          "time": "2020-08-31T18:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 138.28,
+          "requested_clock_ET": "15:33",
+          "symbol": "WMT",
+          "time": "2020-08-31T19:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 143.31,
+          "requested_clock_ET": "10:33",
+          "symbol": "CAT",
+          "time": "2020-08-31T14:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 142.37,
+          "requested_clock_ET": "11:33",
+          "symbol": "CAT",
+          "time": "2020-08-31T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 142.52,
+          "requested_clock_ET": "14:33",
+          "symbol": "CAT",
+          "time": "2020-08-31T18:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 142.49,
+          "requested_clock_ET": "15:33",
+          "symbol": "CAT",
+          "time": "2020-08-31T19:33:00+00:00"
+        }
+      ],
+      "source": "SIP requested /raw/1Min; no publication inference",
+      "symbols": {
+        "AAPL": {
+          "expected": 390,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 390
+        },
+        "CAT": {
+          "expected": 390,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 390
+        },
+        "JNJ": {
+          "expected": 390,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 390
+        },
+        "JPM": {
+          "expected": 390,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 390
+        },
+        "WMT": {
+          "expected": 390,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 390
+        }
+      }
+    },
+    {
+      "day": "2020-11-27",
+      "defects": {
+        "duplicate_keys": 0,
+        "fractional_volume_rows": 0,
+        "invalid_ohlc_rows": 0,
+        "negative_volume_rows": 0,
+        "nonfinite_ohlcv_rows": 0,
+        "nonpositive_price_rows": 0,
+        "null_fields": 0,
+        "out_of_order": false,
+        "zero_volume_rows": 0
+      },
+      "expected_rows": 1050,
+      "path": "data/raw/alpaca/track_a_close_v1/edge_raw_minute-21ce448d86f6c91b78cd.parquet",
+      "retry_stream_scope": "Every within-session minute observed in these3 sessions only. No full-window/next-session/terminal retry coverage or actual fillability claimed.",
+      "rows": 1050,
+      "sha256": "74b42488c552903a66da57c5eeb662efe6163f572e784a9607653a33cc294c38",
+      "slot_traces": [
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 117.43,
+          "requested_clock_ET": "10:33",
+          "symbol": "AAPL",
+          "time": "2020-11-27T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 117.0941,
+          "requested_clock_ET": "11:33",
+          "symbol": "AAPL",
+          "time": "2020-11-27T16:33:00+00:00"
+        },
+        {
+          "genuine_row": false,
+          "inside_session": false,
+          "open": null,
+          "requested_clock_ET": "14:33",
+          "symbol": "AAPL",
+          "time": "2020-11-27T19:33:00+00:00"
+        },
+        {
+          "genuine_row": false,
+          "inside_session": false,
+          "open": null,
+          "requested_clock_ET": "15:33",
+          "symbol": "AAPL",
+          "time": "2020-11-27T20:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 121.44,
+          "requested_clock_ET": "10:33",
+          "symbol": "JPM",
+          "time": "2020-11-27T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 121.5162,
+          "requested_clock_ET": "11:33",
+          "symbol": "JPM",
+          "time": "2020-11-27T16:33:00+00:00"
+        },
+        {
+          "genuine_row": false,
+          "inside_session": false,
+          "open": null,
+          "requested_clock_ET": "14:33",
+          "symbol": "JPM",
+          "time": "2020-11-27T19:33:00+00:00"
+        },
+        {
+          "genuine_row": false,
+          "inside_session": false,
+          "open": null,
+          "requested_clock_ET": "15:33",
+          "symbol": "JPM",
+          "time": "2020-11-27T20:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 144.18,
+          "requested_clock_ET": "10:33",
+          "symbol": "JNJ",
+          "time": "2020-11-27T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 144.11,
+          "requested_clock_ET": "11:33",
+          "symbol": "JNJ",
+          "time": "2020-11-27T16:33:00+00:00"
+        },
+        {
+          "genuine_row": false,
+          "inside_session": false,
+          "open": null,
+          "requested_clock_ET": "14:33",
+          "symbol": "JNJ",
+          "time": "2020-11-27T19:33:00+00:00"
+        },
+        {
+          "genuine_row": false,
+          "inside_session": false,
+          "open": null,
+          "requested_clock_ET": "15:33",
+          "symbol": "JNJ",
+          "time": "2020-11-27T20:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 151.91,
+          "requested_clock_ET": "10:33",
+          "symbol": "WMT",
+          "time": "2020-11-27T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 151.26,
+          "requested_clock_ET": "11:33",
+          "symbol": "WMT",
+          "time": "2020-11-27T16:33:00+00:00"
+        },
+        {
+          "genuine_row": false,
+          "inside_session": false,
+          "open": null,
+          "requested_clock_ET": "14:33",
+          "symbol": "WMT",
+          "time": "2020-11-27T19:33:00+00:00"
+        },
+        {
+          "genuine_row": false,
+          "inside_session": false,
+          "open": null,
+          "requested_clock_ET": "15:33",
+          "symbol": "WMT",
+          "time": "2020-11-27T20:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 174.19,
+          "requested_clock_ET": "10:33",
+          "symbol": "CAT",
+          "time": "2020-11-27T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 174.25,
+          "requested_clock_ET": "11:33",
+          "symbol": "CAT",
+          "time": "2020-11-27T16:33:00+00:00"
+        },
+        {
+          "genuine_row": false,
+          "inside_session": false,
+          "open": null,
+          "requested_clock_ET": "14:33",
+          "symbol": "CAT",
+          "time": "2020-11-27T19:33:00+00:00"
+        },
+        {
+          "genuine_row": false,
+          "inside_session": false,
+          "open": null,
+          "requested_clock_ET": "15:33",
+          "symbol": "CAT",
+          "time": "2020-11-27T20:33:00+00:00"
+        }
+      ],
+      "source": "SIP requested /raw/1Min; no publication inference",
+      "symbols": {
+        "AAPL": {
+          "expected": 210,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 210
+        },
+        "CAT": {
+          "expected": 210,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 210
+        },
+        "JNJ": {
+          "expected": 210,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 210
+        },
+        "JPM": {
+          "expected": 210,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 210
+        },
+        "WMT": {
+          "expected": 210,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 210
+        }
+      }
+    },
+    {
+      "day": "2020-05-08",
+      "defects": {
+        "duplicate_keys": 0,
+        "fractional_volume_rows": 0,
+        "invalid_ohlc_rows": 0,
+        "negative_volume_rows": 0,
+        "nonfinite_ohlcv_rows": 0,
+        "nonpositive_price_rows": 0,
+        "null_fields": 0,
+        "out_of_order": false,
+        "zero_volume_rows": 0
+      },
+      "expected_rows": 1950,
+      "path": "data/raw/alpaca/track_a_close_v1/edge_raw_minute-43ae732789289a628bf0.parquet",
+      "retry_stream_scope": "Every within-session minute observed in these3 sessions only. No full-window/next-session/terminal retry coverage or actual fillability claimed.",
+      "rows": 1950,
+      "sha256": "18ec9ca3fbf84d1a3470973fbb02a1c1a774a5c7c285a2d06b964d21dfdd6e42",
+      "slot_traces": [
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 306.23,
+          "requested_clock_ET": "10:33",
+          "symbol": "AAPL",
+          "time": "2020-05-08T14:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 306.6358,
+          "requested_clock_ET": "11:33",
+          "symbol": "AAPL",
+          "time": "2020-05-08T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 307.8,
+          "requested_clock_ET": "14:33",
+          "symbol": "AAPL",
+          "time": "2020-05-08T18:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 309.91,
+          "requested_clock_ET": "15:33",
+          "symbol": "AAPL",
+          "time": "2020-05-08T19:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 92.87,
+          "requested_clock_ET": "10:33",
+          "symbol": "JPM",
+          "time": "2020-05-08T14:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 93.2187,
+          "requested_clock_ET": "11:33",
+          "symbol": "JPM",
+          "time": "2020-05-08T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 92.58,
+          "requested_clock_ET": "14:33",
+          "symbol": "JPM",
+          "time": "2020-05-08T18:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 92.77,
+          "requested_clock_ET": "15:33",
+          "symbol": "JPM",
+          "time": "2020-05-08T19:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 148.5877,
+          "requested_clock_ET": "10:33",
+          "symbol": "JNJ",
+          "time": "2020-05-08T14:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 149.14,
+          "requested_clock_ET": "11:33",
+          "symbol": "JNJ",
+          "time": "2020-05-08T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 148.39,
+          "requested_clock_ET": "14:33",
+          "symbol": "JNJ",
+          "time": "2020-05-08T18:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 148.56,
+          "requested_clock_ET": "15:33",
+          "symbol": "JNJ",
+          "time": "2020-05-08T19:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 122.05,
+          "requested_clock_ET": "10:33",
+          "symbol": "WMT",
+          "time": "2020-05-08T14:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 122.085,
+          "requested_clock_ET": "11:33",
+          "symbol": "WMT",
+          "time": "2020-05-08T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 122.425,
+          "requested_clock_ET": "14:33",
+          "symbol": "WMT",
+          "time": "2020-05-08T18:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 122.526,
+          "requested_clock_ET": "15:33",
+          "symbol": "WMT",
+          "time": "2020-05-08T19:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 110.76,
+          "requested_clock_ET": "10:33",
+          "symbol": "CAT",
+          "time": "2020-05-08T14:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 111.115,
+          "requested_clock_ET": "11:33",
+          "symbol": "CAT",
+          "time": "2020-05-08T15:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 110.78,
+          "requested_clock_ET": "14:33",
+          "symbol": "CAT",
+          "time": "2020-05-08T18:33:00+00:00"
+        },
+        {
+          "genuine_row": true,
+          "inside_session": true,
+          "open": 111.5932,
+          "requested_clock_ET": "15:33",
+          "symbol": "CAT",
+          "time": "2020-05-08T19:33:00+00:00"
+        }
+      ],
+      "source": "SIP requested /raw/1Min; no publication inference",
+      "symbols": {
+        "AAPL": {
+          "expected": 390,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 390
+        },
+        "CAT": {
+          "expected": 390,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 390
+        },
+        "JNJ": {
+          "expected": 390,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 390
+        },
+        "JPM": {
+          "expected": 390,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 390
+        },
+        "WMT": {
+          "expected": 390,
+          "missing": 0,
+          "outside_RTH": 0,
+          "present": 390
+        }
+      }
+    }
+  ],
+  "existing": {
+    "all_rows": 159008,
+    "defects": {
+      "duplicate_keys": 0,
+      "fractional_volume_rows": 0,
+      "invalid_ohlc_rows": 0,
+      "negative_volume_rows": 0,
+      "nonfinite_ohlcv_rows": 0,
+      "nonpositive_price_rows": 0,
+      "null_fields": 0,
+      "out_of_order": false,
+      "zero_volume_rows": 0
+    },
+    "manifests": [
+      {
+        "adjustment": "split",
+        "bytes": 100858,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2020-07-aabdd641836090f410bd.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2020-08-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2020-07-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2943,
+        "stored_sha256": "26b1890c7edbeffbbe21d98c1f50fcfbf92c4b6abf3ee9381d304f946411e44f"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 98679,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2020-08-6a9af5eaccb5c51fed33.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2020-09-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2020-08-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2750,
+        "stored_sha256": "5a5cc85e9d4ff7a7dbe07e8c141a18e0758df62f6762d677535efe7dd027141d"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 102513,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2020-09-3e0140b39432b0182be9.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2020-10-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2020-09-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2842,
+        "stored_sha256": "51f9c62983acc64d84a7976980c8cab3df24490826c816017bff85b4396f37b9"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 104209,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2020-10-27d25211707694c49e00.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2020-11-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2020-10-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2893,
+        "stored_sha256": "44e6cd4c0bf6b107890e7c2040b931f307416ab304796038c52062438e2c80d5"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 98182,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2020-11-c08a26b2adc48a96eae7.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2020-12-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2020-11-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2714,
+        "stored_sha256": "538dc8306302af115d002b5de6a0df177c7fb8be4a88f97cae88e254345bc278"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 100209,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2020-12-6eaf67271f6d36a4f88e.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-01-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2020-12-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2812,
+        "stored_sha256": "a3cf34a7a669140c14c0f45a99bae4ca6020279507ddd25dafeccae309301a1e"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 93711,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-01-db35eea7eac9f35d66a4.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-02-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-01-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2557,
+        "stored_sha256": "8f89c3411bd9ff2d03ef2592be9416402136b10505984cc74f9822472bb48d2a"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 93469,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-02-3a7cb14a35c09afc1965.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-03-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-02-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2525,
+        "stored_sha256": "1f4bdde5e4da37fb8dc96844bd7683ff969e4a5773f01ce711a51412649816d3"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 110003,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-03-4f77c070f79345b38823.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-04-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-03-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 3127,
+        "stored_sha256": "7ae79c43573dd83008b483ebfeb918bc91a77b24611077e6635a1593db28856b"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 92983,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-04-b17955fa37247cd31457.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-05-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-04-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2618,
+        "stored_sha256": "12f59ab1fa5eb74941922b5e6d8ed2a430ccc06b448e2174df8f11fedc5e66dd"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 89699,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-05-a59101ced06c91998090.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-06-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-05-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2496,
+        "stored_sha256": "49b46a1967e61c3e02bf60d9ea0f24f73c8fe11015049ba02f3507dac6c71cb6"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 98945,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-06-5f732b30a27dfeb0c475.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-07-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-06-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2791,
+        "stored_sha256": "f0d7e22657dd7769466f75ab1fbfeee322cdad5d0d63d2efc14a376873abcd3f"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 93669,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-07-d01178f94b661de1405d.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-08-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-07-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2633,
+        "stored_sha256": "3543441e61be37dbbdfaf01f48661ce977ab28b4c6d8c812ec42040d0c363e2b"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 99843,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-08-8749539bdc111049873c.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-09-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-08-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2793,
+        "stored_sha256": "3b2e5b1ee00f4c04f51f40ac2030341f9f72d822c0a0e43654fc1dfd68490fa4"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 95028,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-09-63664447330eba52319f.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-10-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-09-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2616,
+        "stored_sha256": "752543ab5b78a182e23e44af20bfa1b0fa7345a26face91e4d28d82ded3f3d4d"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 94214,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-10-9ee36a7e418b48fe8d2f.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-11-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-10-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2595,
+        "stored_sha256": "869eb69a4bec59b12377650087d7d88004c9c0ae53adb705af23ed149d1363e5"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 96052,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-11-0bd78c1149b8068d0a60.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-12-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-11-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2721,
+        "stored_sha256": "d169386a96c316235e4ff27bff672a16edb0a58a25666f627101440e3235f501"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 99692,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2021-12-61d7c7aa1741e0e175f6.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-01-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-12-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2790,
+        "stored_sha256": "d0a8b137ab22f68ba9c9551d26ba4cd73dac5499e8e4f4e4d39930fa6ff7c1b5"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 94873,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-01-13815b15b17b754157cc.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-02-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-01-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2614,
+        "stored_sha256": "3834fcf3de80e080a678eb329c1b6878eef752fe4a1e39e53d9fb1f8e8c999fa"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 88400,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-02-b20fc98df78c4aefd71d.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-03-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-02-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2424,
+        "stored_sha256": "437dced7ab69dc0fe20918eaf8c72019d1a8be6712ba1e587d1bb0c4fb5375ce"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 103757,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-03-990ae9ebae693bc6643c.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-04-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-03-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2788,
+        "stored_sha256": "db34c5169b0acdb39f52b7f85df0ff7903133c014a4817b4234e5c946b811d9a"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 92589,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-04-61c79bd15e78406e0c6f.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-05-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-04-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2477,
+        "stored_sha256": "b6dec83e944dddea3e85c78b36353f6b3030a607aff5cdc7b2893da7a56c4c10"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 98947,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-05-266c44b9a62e557cd75a.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-06-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-05-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2609,
+        "stored_sha256": "48cab7b3af6b4bc2b0183d0fb8189c3065c231298e418a784ecb66da47824c81"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 95935,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-06-c099c6fa458f2106c730.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-07-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-06-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2588,
+        "stored_sha256": "4960642bc859e0679705e10af6d2c44a8c4632fbdd0b9dd1329360c9c55edd7d"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 90546,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-07-d0750ec2fa20bd53a12c.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-08-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-07-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2437,
+        "stored_sha256": "26e5e78d4597bfc573dab4c54fe61c5ea268d8c48e5ab8b08107c6d2fbe12c35"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 104316,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-08-a8c782569462fe0d2d05.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-09-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-08-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2883,
+        "stored_sha256": "7efad0af6002a42f03e013a0664e5c54e5aa6605c679a59550552eff189a2c01"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 93103,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-09-938142894b6b3aa4b9bf.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-10-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-09-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2550,
+        "stored_sha256": "c54c24e8f8503e514cadedc7ef2a9ccee0eb373f41f68ac568ddd06000b68f49"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 97756,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-10-a0c2890725fbbf8032b8.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-11-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-10-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2584,
+        "stored_sha256": "f4b2ace4a993852e65a0089e5e6b3896581223d86c879d0a639b3c5572a11c14"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 95102,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-11-c37852ec015e6756b60f.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-12-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-11-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2592,
+        "stored_sha256": "94d8c34e835d691165bd320e5b34c53c94b18929dd8d708c295105e9fd405023"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 90360,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2022-12-f3720dfff2a8c3ffbd89.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-01-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-12-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2492,
+        "stored_sha256": "8b4d7de380d8b8e391694695bdbf5d68e332487e515c36f9b317d025698d3444"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 91700,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-01-448a07442d69ce4a567b.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-02-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-01-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2488,
+        "stored_sha256": "bebdee2cb44431fcf5a39a0fe47cf2ac1fad6d22b315813aa0ee82f5a4d46aff"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 86464,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-02-940f01a66e3c47cc6995.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-03-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-02-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2361,
+        "stored_sha256": "002a09b6a2e7e2cdf15114f7451bcee7e1df147d5cf42d2bf72a6f0c5a044dbe"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 105174,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-03-9c1ba3716ff047dc552f.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-04-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-03-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2933,
+        "stored_sha256": "945def50a446e175e1c5c0f5c5fe0cc31a532ce7c8aed641c5120f3a7637fe90"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 86075,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-04-488b167ae4c65881311f.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-05-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-04-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2385,
+        "stored_sha256": "6174547e4ab567e399770ddd7183436a804a7851706fa7307823a20926d037a4"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 96563,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-05-399b7daff33eef78e25f.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-06-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-05-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2666,
+        "stored_sha256": "a4dcf664d097abaa3d369a9d925bb26c6d93e446db715dc134306878039ef9a2"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 93857,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-06-218d2f2b566f23f67721.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-07-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-06-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2529,
+        "stored_sha256": "0cc721b71e39fbde9fd06cc4649ead40f4c0c63725d28335d70acaa106eb41bd"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 90398,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-07-4861a466f379f35d29bf.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-08-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-07-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2471,
+        "stored_sha256": "9f18d4388f60c894e833e78501a40c81920ba89021ecf4aa2464b389ff8d0a4a"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 102538,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-08-5eb34ef6d011f11cefd6.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-09-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-08-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2866,
+        "stored_sha256": "34b90ed84509942cb438cacbd3f53d9ef4b097371c8f12c75d5aa3dc064bc695"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 85664,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-09-8b87def2766c98935851.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-10-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-09-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2317,
+        "stored_sha256": "af3f812e1219ece3717d4331e5069dd99def8aaa14b563f3d62fb8c6a5b89ff3"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 96264,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-10-a9bde3b5d550766a5970.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-11-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-10-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2623,
+        "stored_sha256": "f645bf43ea1e6276799e1e7017467ef934bc67859c601489d6ac35fe930e157b"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 92101,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-11-9dc209f57d833fafb61d.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2023-12-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-11-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2501,
+        "stored_sha256": "3b3a983493b15d1894eac4b184eb1c148894b64bb9269009f85d182a73fd1128"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 89177,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2023-12-280986267dc45bcfc52b.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-01-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2023-12-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2468,
+        "stored_sha256": "6cc7ac4e65e49d3a1bb02c67f7c34fa96d7b52a37bda1521f3ef3fb0b2efbe6e"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 94005,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-01-ebd09723b1c277508172.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-02-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-01-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2594,
+        "stored_sha256": "1a19cd10a7abf1897f1c06f089abcfce72ef50890dbd7a39e8286aaabeec418c"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 89233,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-02-b1658da1d50e7653aef6.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-03-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-02-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2453,
+        "stored_sha256": "489ba790322c3a60e16c60f3088fef167725fdba0a3ad2e898a5d22669d5210b"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 92350,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-03-cf79566457dac30766bf.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-04-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-03-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2483,
+        "stored_sha256": "94622af037e79514ced81bc5c99bccba4a49b406fd27b7b26f02a7d42a9614a3"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 103601,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-04-a52d2776747641685d4d.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-05-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-04-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2807,
+        "stored_sha256": "021dfcb8d0606745e8b241e13e35853b8659716347bfc9b25e6fa918cea65ec9"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 101465,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-05-5192345d7f9df797b224.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-06-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-05-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2735,
+        "stored_sha256": "f7abb4e2ad33c2df00b8d8556c96f0c4cc2a766d2ba41f84c0fe4cb4df0645d4"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 88910,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-06-04ba42fa82c161a685d1.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-07-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-06-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2386,
+        "stored_sha256": "81c2920d33572f87f996fdcd9e594b752f0debe532fc70fa8b2418d982f04c45"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 104699,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-07-25b60e84e6834f4319de.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-08-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-07-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2759,
+        "stored_sha256": "1c8311360f43fb9c84f2e65d8960e55caff4f1a6e8b73e2049bdad3d097efe71"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 106274,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-08-088ed313af8cb243b67d.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-09-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-08-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2768,
+        "stored_sha256": "5024e7cfcd6cd944118cb12827f602ac17e9341b3b590c2b853618a299c73e07"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 98247,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-09-62f6a9b534f0d8ed7a70.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-10-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-09-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2582,
+        "stored_sha256": "c49dad490f7bf539ae92d5125028414a8dba36bec79c602137543981e3a53add"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 109317,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-10-9fb9745ef324aca72073.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-11-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-10-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2921,
+        "stored_sha256": "ce8a42b30117049a3937ed2efbdab533347b55b37b596e6b1eaebddf88f04b15"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 100225,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-11-7de63542e5a6e2335d61.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2024-12-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-11-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2610,
+        "stored_sha256": "f11a7c00a819700a1f73f1f71bb8f12644668c479708ce310c732d4a592083da"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 101876,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2024-12-5470b44030514cb6d4a1.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2025-01-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2024-12-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2712,
+        "stored_sha256": "99b8c9a62eac52b9b4382ff9aaaaf472bd0f28b5a3e78a3f61c29c9d803e9e86"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 105692,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2025-01-cd112ccfe1c172b0bcea.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2025-02-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2025-01-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2727,
+        "stored_sha256": "a2e772e546d221837c106bfd637c24c8410049435b7bb3f21ebfdb5a08855c09"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 99588,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2025-02-e06fc57e371c3e938d41.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2025-03-01T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2025-02-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2551,
+        "stored_sha256": "d08ac76d1127f559c5317186f04ece0cb02bee14932da86ae82d37e99a51b73e"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 108024,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2025-03-3384c26f2eacd931b018.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2025-04-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2025-03-01T05:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2793,
+        "stored_sha256": "71e507c7f028df46152606e30bb5d19ec900c880a1f3113681eea5e35897e000"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 114431,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2025-04-3f9dfde7768b9a36b994.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2025-05-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2025-04-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2929,
+        "stored_sha256": "1465fea42b0f4bee58f3a007cf5062c1b07be49dcc77f725ebfaa279950e24db"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 106198,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2025-05-9cf034ee4fbd3e585cab.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2025-06-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2025-05-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2778,
+        "stored_sha256": "b80fe0df387ff253fda06afb188a50fdef06065668d59b6e1940b1d78e4cc6b3"
+      },
+      {
+        "adjustment": "split",
+        "bytes": 97514,
+        "hash_recomputed": false,
+        "path": "data/raw/alpaca/track_a/2025-06-f84199933d1cd44ae995.parquet",
+        "request": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2025-07-01T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2025-06-01T04:00:00+00:00",
+          "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+          "timeframe": "30Min"
+        },
+        "rows": 2558,
+        "stored_sha256": "4e1c2f1e13491d26a5e402bc565fbb2c2c12259f7b49169293bb150073ae1bd0"
+      }
+    ],
+    "pairs": 60
+  },
+  "full_minute_coverage": "NOT_RUN;505-page planning scenario failed400-attempt preflight.3 edge streams do not establish annual usability or M2.",
+  "gap_recovery": {
+    "all_gaps_preserved": "Provider refetch produced no previously missing key; empty source artifacts contain no manufactured observations. Four empty selections have no data columns; use zero-row manifests, not those empties as input frames. Temporary selector corrected to explicit .loc before preserving reproduction helper; no raw rewrite/requery.",
+    "previous_missing_slots": 168,
+    "recovered_slots": 0,
+    "requested_days": 5
+  },
+  "gaps": [
+    {
+      "missing": [
+        "2021-04-19T14:00:00+00:00",
+        "2021-04-19T14:30:00+00:00",
+        "2021-04-19T15:00:00+00:00",
+        "2021-04-19T15:30:00+00:00",
+        "2021-04-19T16:00:00+00:00",
+        "2021-04-19T16:30:00+00:00",
+        "2021-04-19T17:00:00+00:00",
+        "2021-04-19T17:30:00+00:00",
+        "2021-04-19T18:00:00+00:00",
+        "2021-04-19T18:30:00+00:00",
+        "2021-04-19T19:00:00+00:00",
+        "2021-04-19T19:30:00+00:00"
+      ],
+      "session": "2021-04-19",
+      "symbol": "JPM"
+    },
+    {
+      "missing": [
+        "2021-10-25T14:00:00+00:00",
+        "2021-10-25T14:30:00+00:00",
+        "2021-10-25T15:00:00+00:00",
+        "2021-10-25T15:30:00+00:00",
+        "2021-10-25T16:00:00+00:00",
+        "2021-10-25T16:30:00+00:00",
+        "2021-10-25T17:00:00+00:00",
+        "2021-10-25T17:30:00+00:00",
+        "2021-10-25T18:00:00+00:00",
+        "2021-10-25T18:30:00+00:00",
+        "2021-10-25T19:00:00+00:00",
+        "2021-10-25T19:30:00+00:00"
+      ],
+      "session": "2021-10-25",
+      "symbol": "JPM"
+    },
+    {
+      "missing": [
+        "2022-03-08T15:00:00+00:00",
+        "2022-03-08T15:30:00+00:00",
+        "2022-03-08T16:00:00+00:00",
+        "2022-03-08T16:30:00+00:00",
+        "2022-03-08T17:00:00+00:00",
+        "2022-03-08T17:30:00+00:00",
+        "2022-03-08T18:00:00+00:00",
+        "2022-03-08T18:30:00+00:00",
+        "2022-03-08T19:00:00+00:00",
+        "2022-03-08T19:30:00+00:00",
+        "2022-03-08T20:00:00+00:00",
+        "2022-03-08T20:30:00+00:00"
+      ],
+      "session": "2022-03-08",
+      "symbol": "JPM"
+    },
+    {
+      "missing": [
+        "2021-04-19T14:00:00+00:00",
+        "2021-04-19T14:30:00+00:00",
+        "2021-04-19T15:00:00+00:00",
+        "2021-04-19T15:30:00+00:00",
+        "2021-04-19T16:00:00+00:00",
+        "2021-04-19T16:30:00+00:00",
+        "2021-04-19T17:00:00+00:00",
+        "2021-04-19T17:30:00+00:00",
+        "2021-04-19T18:00:00+00:00",
+        "2021-04-19T18:30:00+00:00",
+        "2021-04-19T19:00:00+00:00",
+        "2021-04-19T19:30:00+00:00"
+      ],
+      "session": "2021-04-19",
+      "symbol": "JNJ"
+    },
+    {
+      "missing": [
+        "2021-10-25T14:00:00+00:00",
+        "2021-10-25T14:30:00+00:00",
+        "2021-10-25T15:00:00+00:00",
+        "2021-10-25T15:30:00+00:00",
+        "2021-10-25T16:00:00+00:00",
+        "2021-10-25T16:30:00+00:00",
+        "2021-10-25T17:00:00+00:00",
+        "2021-10-25T17:30:00+00:00",
+        "2021-10-25T18:00:00+00:00",
+        "2021-10-25T18:30:00+00:00",
+        "2021-10-25T19:00:00+00:00",
+        "2021-10-25T19:30:00+00:00"
+      ],
+      "session": "2021-10-25",
+      "symbol": "JNJ"
+    },
+    {
+      "missing": [
+        "2022-03-08T14:30:00+00:00",
+        "2022-03-08T15:00:00+00:00",
+        "2022-03-08T15:30:00+00:00",
+        "2022-03-08T16:00:00+00:00",
+        "2022-03-08T16:30:00+00:00",
+        "2022-03-08T17:00:00+00:00",
+        "2022-03-08T17:30:00+00:00",
+        "2022-03-08T18:00:00+00:00",
+        "2022-03-08T18:30:00+00:00",
+        "2022-03-08T19:00:00+00:00",
+        "2022-03-08T19:30:00+00:00",
+        "2022-03-08T20:00:00+00:00",
+        "2022-03-08T20:30:00+00:00"
+      ],
+      "session": "2022-03-08",
+      "symbol": "JNJ"
+    },
+    {
+      "missing": [
+        "2021-04-19T14:00:00+00:00",
+        "2021-04-19T14:30:00+00:00",
+        "2021-04-19T15:00:00+00:00",
+        "2021-04-19T15:30:00+00:00",
+        "2021-04-19T16:00:00+00:00",
+        "2021-04-19T16:30:00+00:00",
+        "2021-04-19T17:00:00+00:00",
+        "2021-04-19T17:30:00+00:00",
+        "2021-04-19T18:00:00+00:00",
+        "2021-04-19T18:30:00+00:00",
+        "2021-04-19T19:00:00+00:00",
+        "2021-04-19T19:30:00+00:00"
+      ],
+      "session": "2021-04-19",
+      "symbol": "WMT"
+    },
+    {
+      "missing": [
+        "2021-10-25T14:00:00+00:00",
+        "2021-10-25T14:30:00+00:00",
+        "2021-10-25T15:00:00+00:00",
+        "2021-10-25T15:30:00+00:00",
+        "2021-10-25T16:00:00+00:00",
+        "2021-10-25T16:30:00+00:00",
+        "2021-10-25T17:00:00+00:00",
+        "2021-10-25T17:30:00+00:00",
+        "2021-10-25T18:00:00+00:00",
+        "2021-10-25T18:30:00+00:00",
+        "2021-10-25T19:00:00+00:00",
+        "2021-10-25T19:30:00+00:00"
+      ],
+      "session": "2021-10-25",
+      "symbol": "WMT"
+    },
+    {
+      "missing": [
+        "2022-01-24T16:00:00+00:00",
+        "2022-01-24T16:30:00+00:00",
+        "2022-01-24T17:00:00+00:00",
+        "2022-01-24T17:30:00+00:00",
+        "2022-01-24T18:00:00+00:00",
+        "2022-01-24T18:30:00+00:00",
+        "2022-01-24T19:00:00+00:00",
+        "2022-01-24T19:30:00+00:00",
+        "2022-01-24T20:00:00+00:00",
+        "2022-01-24T20:30:00+00:00"
+      ],
+      "session": "2022-01-24",
+      "symbol": "WMT"
+    },
+    {
+      "missing": [
+        "2022-01-26T20:00:00+00:00",
+        "2022-01-26T20:30:00+00:00"
+      ],
+      "session": "2022-01-26",
+      "symbol": "WMT"
+    },
+    {
+      "missing": [
+        "2022-03-08T15:00:00+00:00",
+        "2022-03-08T15:30:00+00:00",
+        "2022-03-08T16:00:00+00:00",
+        "2022-03-08T16:30:00+00:00",
+        "2022-03-08T17:00:00+00:00",
+        "2022-03-08T17:30:00+00:00",
+        "2022-03-08T18:00:00+00:00",
+        "2022-03-08T18:30:00+00:00",
+        "2022-03-08T19:00:00+00:00",
+        "2022-03-08T19:30:00+00:00",
+        "2022-03-08T20:00:00+00:00",
+        "2022-03-08T20:30:00+00:00"
+      ],
+      "session": "2022-03-08",
+      "symbol": "WMT"
+    },
+    {
+      "missing": [
+        "2021-04-19T14:00:00+00:00",
+        "2021-04-19T14:30:00+00:00",
+        "2021-04-19T15:00:00+00:00",
+        "2021-04-19T15:30:00+00:00",
+        "2021-04-19T16:00:00+00:00",
+        "2021-04-19T16:30:00+00:00",
+        "2021-04-19T17:00:00+00:00",
+        "2021-04-19T17:30:00+00:00",
+        "2021-04-19T18:00:00+00:00",
+        "2021-04-19T18:30:00+00:00",
+        "2021-04-19T19:00:00+00:00",
+        "2021-04-19T19:30:00+00:00"
+      ],
+      "session": "2021-04-19",
+      "symbol": "CAT"
+    },
+    {
+      "missing": [
+        "2021-10-25T14:00:00+00:00",
+        "2021-10-25T14:30:00+00:00",
+        "2021-10-25T15:00:00+00:00",
+        "2021-10-25T15:30:00+00:00",
+        "2021-10-25T16:00:00+00:00",
+        "2021-10-25T16:30:00+00:00",
+        "2021-10-25T17:00:00+00:00",
+        "2021-10-25T17:30:00+00:00",
+        "2021-10-25T18:00:00+00:00",
+        "2021-10-25T18:30:00+00:00",
+        "2021-10-25T19:00:00+00:00",
+        "2021-10-25T19:30:00+00:00"
+      ],
+      "session": "2021-10-25",
+      "symbol": "CAT"
+    },
+    {
+      "missing": [
+        "2022-01-24T16:00:00+00:00",
+        "2022-01-24T16:30:00+00:00",
+        "2022-01-24T17:00:00+00:00",
+        "2022-01-24T17:30:00+00:00",
+        "2022-01-24T18:00:00+00:00",
+        "2022-01-24T18:30:00+00:00",
+        "2022-01-24T19:00:00+00:00",
+        "2022-01-24T19:30:00+00:00",
+        "2022-01-24T20:00:00+00:00",
+        "2022-01-24T20:30:00+00:00"
+      ],
+      "session": "2022-01-24",
+      "symbol": "CAT"
+    },
+    {
+      "missing": [
+        "2022-03-08T14:30:00+00:00",
+        "2022-03-08T15:00:00+00:00",
+        "2022-03-08T15:30:00+00:00",
+        "2022-03-08T16:00:00+00:00",
+        "2022-03-08T16:30:00+00:00",
+        "2022-03-08T17:00:00+00:00",
+        "2022-03-08T17:30:00+00:00",
+        "2022-03-08T18:00:00+00:00",
+        "2022-03-08T18:30:00+00:00",
+        "2022-03-08T19:00:00+00:00",
+        "2022-03-08T19:30:00+00:00",
+        "2022-03-08T20:00:00+00:00",
+        "2022-03-08T20:30:00+00:00"
+      ],
+      "session": "2022-03-08",
+      "symbol": "CAT"
+    }
+  ],
+  "minute_bulk_preflight": {
+    "RTH_only_lower_bound_rows": 2439150,
+    "cap_attempts": 400,
+    "decision": "FULL_MINUTE_ACQUISITION_NOT_STARTED",
+    "dense_existing_halfhour_expansion_rows": 4770240,
+    "dense_monthly_pages": 505,
+    "not_actual_observed_minute_page_count": true,
+    "reason": "Documented bars API has no RTH/session filter. Conservative dense monthly expansion already exceeds 400 pages before warmup/actions/retries. Day-level RTH requests require1255+ calls. Full-source attempt would fail the preflight budget under this planning scenario; bounded traced streams can be acquired independently."
+  },
+  "new_chunks": {
+    "by_kind": {
+      "actions": {
+        "chunks": 1,
+        "rows": 116
+      },
+      "edge_raw_minute": {
+        "chunks": 3,
+        "rows": 4950
+      },
+      "gap_30min": {
+        "chunks": 5,
+        "rows": 0
+      },
+      "split_raw_30min_anchor": {
+        "chunks": 1,
+        "rows": 1
+      },
+      "warmup_30min": {
+        "chunks": 7,
+        "rows": 17550
+      }
+    },
+    "count": 17,
+    "new_hashes_verified": true,
+    "original_60_hashes_recomputed": false
+  },
+  "new_source_root": "data/raw/alpaca/track_a_close_v1",
+  "schema_version": 1,
+  "source_retention_FT0": "NOT_RUN, distinct from half-hour source coverage floors",
+  "split_anchor": {
+    "adjusted_chunk": "data/raw/alpaca/track_a/2020-08-6a9af5eaccb5c51fed33.parquet",
+    "event_id": "d209b6c2-9231-474c-a80e-1a79dacadbb2",
+    "exact_price_volume_match": false,
+    "meaning": "One pre-split source price-volume anchor only; no return/PnL or all-history factor reconciliation",
+    "price_residuals_raw_div4_minus_stored_split": {
+      "close": "-0.005",
+      "high": "0.00",
+      "low": "-0.0025",
+      "open": "-0.0025"
+    },
+    "ratio": 4,
+    "raw_chunk": "data/raw/alpaca/track_a_close_v1/split_raw_30min_anchor-bd736a895c52de2e7452.parquet",
+    "raw_open": 504.03,
+    "raw_volume": 6044631.0,
+    "split_adjusted_open": 126.01,
+    "split_adjusted_volume": 24178524.0,
+    "symbol": "AAPL",
+    "timestamp": "2020-08-28T13:30:00+00:00",
+    "volume_residual_raw_times4_minus_stored_split": "0.0"
+  },
+  "warmup": {
+    "EMA_seed_plus_360_updates_plus_47_other_closes": 408,
+    "M2_earliest_60_prior_session": "2020-03-25",
+    "M2_maturity_clock_unapproved": true,
+    "M4_earliest_daily_session": "2019-12-18",
+    "RSI_14_changes_plus_140_updates_plus_47_other_closes": 202,
+    "features_or_outcomes_built": false,
+    "first_cutoff": "2020-07-01T14:30Z",
+    "good_update_sufficiency": "Calendar/source reach acquired; full FT0 validity and retained48x16 inputs NOT_RUN, gaps can block particular origins. M2 full matured minute outcomes NOT_RUN.",
+    "oldest_48_step_end": "2020-06-19T15:30:00+00:00",
+    "oldest_48_step_session": "2020-06-19"
+  },
+  "warmup_30min_coverage": {
+    "AAPL": {
+      "expected": 1736,
+      "fraction": 1.0,
+      "missing": 0,
+      "missing_examples": [],
+      "present": 1736
+    },
+    "CAT": {
+      "expected": 1736,
+      "fraction": 1.0,
+      "missing": 0,
+      "missing_examples": [],
+      "present": 1736
+    },
+    "JNJ": {
+      "expected": 1736,
+      "fraction": 1.0,
+      "missing": 0,
+      "missing_examples": [],
+      "present": 1736
+    },
+    "JPM": {
+      "expected": 1736,
+      "fraction": 1.0,
+      "missing": 0,
+      "missing_examples": [],
+      "present": 1736
+    },
+    "WMT": {
+      "expected": 1736,
+      "fraction": 1.0,
+      "missing": 0,
+      "missing_examples": [],
+      "present": 1736
+    }
+  }
+}
