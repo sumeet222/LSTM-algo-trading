@@ -214,12 +214,14 @@ def test_narrow_failure_and_no_test_auto_approval(event):
     )
 
 
-def test_f01_production_counterexample_is_invalid():
+def test_f01_historical_counterexample_is_rejected_after_repair():
     example = f01_fixture()
     assert example["observed_available_age_minutes"] == 60
     assert example["required_period_end_age_minutes"] == 120
-    assert example["observed_usable"] and not example["required_usable"]
-    assert example["status"] == "INVALID"
+    assert example["period_end_age_minutes"] == 120
+    assert not example["observed_usable"] and not example["required_usable"]
+    assert example["status"] == "PASS" and example["reason"] == "STALE_PERIOD_END"
+    assert example["synthetic_only"] and not example["research_ready"]
 
 
 def test_external_blockers_and_confirmation_locked():
@@ -340,5 +342,7 @@ def test_default_cli_offline_no_writes_or_source_reads(monkeypatch, capsys):
     }
     assert before == after
     output = capsys.readouterr().out
-    assert '"status": "INVALID"' in output
+    assert '"reason": "STALE_PERIOD_END"' in output
+    assert '"research_status": "BLOCKED"' in output
+    assert '"meaning": "F01_REPAIRED_IN_CODE regression only;' in output
     assert "/Users/" not in output

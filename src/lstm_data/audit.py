@@ -274,7 +274,7 @@ def make_check(
 
 
 def f01_fixture() -> dict:
-    """Tiny synthetic counterexample against unchanged production alignment logic."""
+    """Live regression of historical F01; fake clocks do not verify any source."""
     import pandas as pd
 
     from .alignment import asof_diagnostic
@@ -283,24 +283,35 @@ def f01_fixture() -> dict:
     stocks = pd.DataFrame(
         [{**base, "symbol": "FAKE", "volume": 1, "timestamp": "2001-01-02T14:00:00Z"}]
     )
-    market = pd.DataFrame([{**base, "timestamp": "2001-01-02T13:00:00Z"}])
+    market = pd.DataFrame([{
+        **base, "timestamp": "2001-01-02T13:00:00Z",
+        "period_end": "2001-01-02T13:00:00Z",
+        "available_at": "2001-01-02T14:00:00Z", "timing_basis": "synthetic",
+    }])
     joined, _ = asof_diagnostic(
         stocks, market, index_delay_minutes=60, stock_delay_minutes=60, max_age_minutes=90
     )
     row = joined.iloc[0]
-    period_age = (row.decision_time - row.index_timestamp).total_seconds() / 60
     return {
         "synthetic_only": True,
         "hypothetical_delay_minutes": 60,
         "decision_time": row.decision_time.isoformat(),
-        "market_period_end": row.index_timestamp.isoformat(),
-        "available_at": row.candidate_available_at.isoformat(),
-        "observed_available_age_minutes": float(row.age_minutes),
-        "required_period_end_age_minutes": period_age,
+        "decision_cutoff": row.decision_cutoff.isoformat(),
+        "source_timestamp_label": row.index_timestamp.isoformat(),
+        "market_period_end": row.period_end.isoformat(),
+        "available_at": row.available_at.isoformat(),
+        "timing_basis": row.timing_basis,
+        "observed_available_age_minutes": float(row.availability_age_minutes),
+        "period_end_age_minutes": float(row.period_end_age_minutes),
+        "required_period_end_age_minutes": 120.0,
         "observed_usable": bool(row.usable_candidate),
         "required_usable": False,
-        "status": "INVALID" if bool(row.usable_candidate) else "INCONCLUSIVE",
-        "meaning": "D2 counterexample; synthetic lag is not real publication evidence",
+        "status": "PASS" if not bool(row.usable_candidate)
+        and row.reason == "STALE_PERIOD_END" and row.period_end_age_minutes == 120
+        else "INVALID",
+        "reason": row.reason,
+        "research_ready": False,
+        "meaning": "F01_REPAIRED_IN_CODE regression only; HISTORICAL_SOURCE_CLOCK_UNVERIFIED",
     }
 
 
@@ -368,8 +379,8 @@ def inspect(
                 gate="G2",
                 branches=["market_features"],
                 threshold={"max_period_age_minutes": 90, "authority": AUTHORITY[2][0] + " D2"},
-                explanation="Unchanged production code incorrectly accepts stale fake period",
-                action="Separate reviewed F01 repair and publication validation",
+                explanation="Corrected code rejects stale fake period; source gates remain blocked",
+                action="Review F01 repair; historical publication validation still required",
             )
         )
     operations = {

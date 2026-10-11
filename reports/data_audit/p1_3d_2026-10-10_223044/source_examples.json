@@ -1,0 +1,182 @@
+{
+  "attempts": [
+    {
+      "attempt_id": 1,
+      "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+      "error_class": "ConnectionError",
+      "params": {
+        "data_quality": "all",
+        "end": "2020-09-01",
+        "limit": 10,
+        "region": "us",
+        "sort": "asc",
+        "start": "2020-08-24",
+        "symbols": "AAPL",
+        "types": "forward_split"
+      },
+      "query_id": "split",
+      "requested_at": "2026-10-11T02:31:11.687418+00:00",
+      "retrieved_at": "2026-10-11T02:31:11.692551+00:00",
+      "retry": false,
+      "status": "TRANSPORT_ERROR"
+    },
+    {
+      "attempt_id": 2,
+      "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+      "examples": [
+        {
+          "clock_fields": {
+            "actual_payment_time": null,
+            "effective_time_intraday": null,
+            "first_published_at": null,
+            "observed_event_date": null,
+            "record_date": "2020-08-24",
+            "reported_ex_date": "2020-08-31",
+            "reported_payable_date": "2020-08-28",
+            "reported_payment_date": null,
+            "reported_process_date": "2020-08-31",
+            "retrieved_at": "2026-10-11T02:34:26.871435+00:00",
+            "source_available_at": null,
+            "source_status": null
+          },
+          "first_published_at": null,
+          "locator": {
+            "array_index": 0,
+            "category": "forward_splits",
+            "query_id": "split",
+            "response_sha256": "87bbcb58969ee80c3dbb0d29b6cc3216fdaade9d29e4ccf2a4bc7250f5aac9be"
+          },
+          "present_field_names": [
+            "cusip",
+            "due_bill_redemption_date",
+            "ex_date",
+            "id",
+            "new_rate",
+            "old_rate",
+            "payable_date",
+            "process_date",
+            "record_date",
+            "symbol"
+          ],
+          "reported_fields": {
+            "cusip": "037833100",
+            "ex_date": "2020-08-31",
+            "id": "d209b6c2-9231-474c-a80e-1a79dacadbb2",
+            "new_rate": 4,
+            "old_rate": 1,
+            "payable_date": "2020-08-28",
+            "process_date": "2020-08-31",
+            "record_date": "2020-08-24",
+            "symbol": "AAPL"
+          },
+          "retrieved_at": "2026-10-11T02:34:26.871435+00:00",
+          "source_available_at": null
+        }
+      ],
+      "fields_not_retained": {
+        "forward_splits": [
+          "due_bill_redemption_date"
+        ]
+      },
+      "has_next_page": false,
+      "params": {
+        "data_quality": "all",
+        "end": "2020-09-01",
+        "limit": 10,
+        "region": "us",
+        "sort": "asc",
+        "start": "2020-08-24",
+        "symbols": "AAPL",
+        "types": "forward_split"
+      },
+      "query_id": "split",
+      "requested_at": "2026-10-11T02:34:26.774402+00:00",
+      "response_bytes": 319,
+      "response_sha256": "87bbcb58969ee80c3dbb0d29b6cc3216fdaade9d29e4ccf2a4bc7250f5aac9be",
+      "retrieved_at": "2026-10-11T02:34:26.871435+00:00",
+      "retry": true,
+      "returned_records": 1,
+      "status": 200,
+      "top_level_fields": [
+        "corporate_actions",
+        "next_page_token"
+      ]
+    },
+    {
+      "attempt_id": 3,
+      "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+      "examples": [
+        {
+          "clock_fields": {
+            "actual_payment_time": null,
+            "effective_time_intraday": null,
+            "first_published_at": null,
+            "observed_event_date": null,
+            "record_date": null,
+            "reported_ex_date": "2020-02-07",
+            "reported_payable_date": null,
+            "reported_payment_date": null,
+            "reported_process_date": "2020-02-07",
+            "retrieved_at": "2026-10-11T02:39:14.371741+00:00",
+            "source_available_at": null,
+            "source_status": null
+          },
+          "first_published_at": null,
+          "locator": {
+            "array_index": 0,
+            "category": "cash_dividends",
+            "query_id": "dividend",
+            "response_sha256": "a0bfa5af787cad523ab18c04a9e0e1cef286b20ffa13e420c2b172c810f5e7e5"
+          },
+          "present_field_names": [
+            "cusip",
+            "ex_date",
+            "foreign",
+            "id",
+            "process_date",
+            "rate",
+            "special",
+            "symbol"
+          ],
+          "reported_fields": {
+            "cusip": "",
+            "ex_date": "2020-02-07",
+            "id": "23407e01-4eef-4c1e-a2dd-f585c7eabcd0",
+            "process_date": "2020-02-07",
+            "rate": 0.77,
+            "symbol": "AAPL"
+          },
+          "retrieved_at": "2026-10-11T02:39:14.371741+00:00",
+          "source_available_at": null
+        }
+      ],
+      "fields_not_retained": {
+        "cash_dividends": [
+          "foreign",
+          "special"
+        ]
+      },
+      "has_next_page": false,
+      "params": {
+        "ids": "23407e01-4eef-4c1e-a2dd-f585c7eabcd0",
+        "limit": 1
+      },
+      "query_id": "dividend",
+      "requested_at": "2026-10-11T02:39:14.138680+00:00",
+      "response_bytes": 233,
+      "response_sha256": "a0bfa5af787cad523ab18c04a9e0e1cef286b20ffa13e420c2b172c810f5e7e5",
+      "retrieved_at": "2026-10-11T02:39:14.371741+00:00",
+      "retry": false,
+      "returned_records": 1,
+      "status": 200,
+      "top_level_fields": [
+        "corporate_actions",
+        "next_page_token"
+      ]
+    }
+  ],
+  "limitations": "Sanitized examples only; original response bytes not persisted. Hashes bind received full response bytes, not a permanent vendor vintage. Omitted field names listed; no value inferred.",
+  "package": "P1.3D",
+  "plan_sha256": "26f33b736ec471c28b6eb2e0890f62da3a01720ac7fd65926da761f4c8253179",
+  "schema_version": 1
+}

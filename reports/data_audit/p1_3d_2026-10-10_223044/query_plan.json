@@ -1,0 +1,98 @@
+{
+  "budget": {
+    "pagination_allowed": false,
+    "records_retained_max": 100,
+    "retries_max": 1,
+    "sanitized_evidence_bytes_max": 250000,
+    "substantive_queries_max": 3,
+    "transport_attempts_max": 4
+  },
+  "client_policy": "Reuse existing credentials helper/requests transport; HistoricalClient is bars-only and auto-paginates/retries, inapplicable to action schema. Temporary single-GET wrapper, no production edits or fallback.",
+  "frozen_at": "2026-10-11T02:30:44.640845+00:00",
+  "official_docs": [
+    {
+      "fields": "types,start/end process dates,ids mutually exclusive filters,limit,data_quality; no publication guarantees",
+      "url": "https://docs.alpaca.markets/us/reference/corporateactions-1"
+    },
+    {
+      "fields": "asof mapping applies to bars, not publication vintage or an independent entity reference response",
+      "url": "https://docs.alpaca.markets/us/reference/stockbars"
+    }
+  ],
+  "package": "P1.3D",
+  "queries": [
+    {
+      "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+      "entitlement": "Existing market-data authentication only; stop on401/403, no plan purchase",
+      "expected_records_max": 10,
+      "id": "split",
+      "identifier": "AAPL 4-for-1 effective 2020-08-31, inherited issuer illustration",
+      "params": {
+        "data_quality": "all",
+        "end": "2020-09-01",
+        "limit": 10,
+        "region": "us",
+        "sort": "asc",
+        "start": "2020-08-24",
+        "symbols": "AAPL",
+        "types": "forward_split"
+      },
+      "purpose": "Representative split event metadata; no bar reconciliation",
+      "requested_fields": [
+        "id",
+        "symbol",
+        "process_date",
+        "ex_date",
+        "old_rate",
+        "new_rate",
+        "record_date",
+        "payable_date",
+        "status"
+      ],
+      "status": "PREDECLARED",
+      "time_bounds_semantics": "Inclusive process-date filter, not necessarily effective/ex date"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+      "entitlement": "Existing market-data authentication only; stop on401/403, no purchase",
+      "expected_records_max": 1,
+      "id": "dividend",
+      "identifier": "Inherited P1.1 AAPL cash dividend ex2020-02-07 rate0.77",
+      "params": {
+        "ids": "23407e01-4eef-4c1e-a2dd-f585c7eabcd0",
+        "limit": 1
+      },
+      "purpose": "Reinspect exact known cash-dividend record and missing date fields",
+      "requested_fields": [
+        "id",
+        "symbol",
+        "process_date",
+        "ex_date",
+        "record_date",
+        "payable_date",
+        "rate",
+        "status"
+      ],
+      "status": "PREDECLARED",
+      "time_bounds_semantics": "Exact event ID, mutually exclusive filter semantics; no start/end filters"
+    },
+    {
+      "endpoint": null,
+      "entitlement": "Not queried",
+      "expected_records_max": 0,
+      "id": "mapping",
+      "identifier": "AAPL formation2020-07-01",
+      "params": {},
+      "purpose": "Actual reference entity/symbol mapping with historical mode",
+      "reason": "No inherited documented reference endpoint with asof. Bars documents asof but unchanged AAPL bar key alone is not independent entity-mapping verification; no bars or speculative reference query issued",
+      "requested_fields": [
+        "entity_id",
+        "symbol",
+        "effective_dates",
+        "asof_mode"
+      ],
+      "status": "BLOCKED"
+    }
+  ],
+  "schema_version": 1
+}

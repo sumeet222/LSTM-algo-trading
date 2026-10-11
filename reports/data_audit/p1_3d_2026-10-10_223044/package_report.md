@@ -1,0 +1,19 @@
+# P1.3D — representative facts verified; research readiness BLOCKED
+
+| Query | Exact observed result | Boundary |
+|---|---|---|
+| AAPL split | HTTP200, one forward_splits record; ID `d209b6c2-9231-474c-a80e-1a79dacadbb2`. old_rate1/new_rate4, ex/process2020-08-31, record2020-08-24, payable2020-08-28. | Narrow present-day event facts PASS; dates do not establish intraday effective/publication times or real adjusted-bar/share reconciliation. Payable date is a split-record field, not dividend cash or publication time. |
+| Exact AAPL dividend ID | HTTP200, one cash_dividends record; inherited ID retained, ex/process2020-02-07, rate0.77. | Narrow ID/date/rate PASS. Record/pay/declaration dates and source status absent; CUSIP empty. Current payment-date completeness INCONCLUSIVE, not inferred from ex/process dates. |
+| Formation AAPL entity mapping | No query. | BLOCKED: no inherited independent reference endpoint with documented historical asof semantics. A bars asof query and unchanged ticker alone would not independently verify entity mapping. |
+
+Two substantive provider queries /three transport attempts, including one sandbox transport failure and one identical split-query retry; two source records and no pagination. Exact frozen [plan](query_plan.json), minimal [examples](source_examples.json), response hashes/retrieval times and [checks](checks.json) are retained. Only existing local access used; no entitlement purchase, code changes, bars/minutes, formation requery, broad action history, source replacement or training. Full pytest/Ruff not rerun.
+
+Current [Alpaca actions reference](https://docs.alpaca.markets/us/reference/corporateactions-1) supports process-date filters and exact-ID queries; ID filters exclude other filters, so the dividend query used ID+limit only. Default complete filtering does not guarantee processed records are fully populated; current API provides no guaranteed creation timing. Neither current documentation nor today's archive proves 2020 API behavior or unrevised vintage. [Bars reference](https://docs.alpaca.markets/us/reference/stockbars) supplies bars asof context only. No source AvailableAt/first-publication timestamp obtained.
+
+The split record corroborates4:1 event metadata but cannot certify transformation without genuine raw/adjusted bars and complete factors. Isolated inherited synthetic equality10×100+50=40×25+50=1050; paired feature adjustment100×200=25×800=20000. Dividend10×0.77=7.70 becomes a long ex-entitlement receivable or short liability, with pay-date cash transfer separately recorded; no immediate cash credit at ex-date or double-counted economic return. These are bookkeeping premises, not a simulator/trade check. Prior issuer Feb13 payment illustration remains separately inherited evidence, not a new API field or complete ledger.
+
+Formation remains BLOCKED: vendor close×extended-hours daily volume is diagnostic, not approved contemporaneous RTH turnover. Complete actions/mapping, historical stock publication, minute entry/exit/retries, USA500 clock/U1–U5 and unsigned D3 remain BLOCKED; G0–G2 BLOCKED and G3–G9 NOT_RUN. F01 code correctness does not clear its historic source-dependent blocker. Seven old blockers, zero fitting pairs and exact ledger prefix preserved; one non-clearing G1 audit added.
+
+**Human decisions:** review missing dividend event dates/status and the mapping-interface gap; keep vintage/formation and market joins on HOLD until a separately versioned evidence/assumption decision exists; authorize any next metadata closure scope separately. Cheapest next scientific action: resolve dividend pay/record-date provenance and a documented stable-entity mapping interface before proposing full five-name action coverage. No new query is authorized by this handoff. Future S&P500 replacement remains unimplemented.
+
+**STOP — AWAIT HUMAN REVIEW.** Exact Git manifest, timing and incremental bytes: session report/preservation.

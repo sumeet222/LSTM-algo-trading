@@ -1,0 +1,673 @@
+{
+  "blockers_preserved": [
+    "p0.1-F01",
+    "p0.1-USA500-source-clock",
+    "p0.1-stock-publication",
+    "p0.1-minute-execution",
+    "p0.1-actions-dividends",
+    "p0.1-formation-prehistory",
+    "p0.1-shared-D3-clock"
+  ],
+  "checks": [
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "protocol-binding",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "issues": [],
+        "meaning": "Pinned document/reference identity only; no scientific or human approval",
+        "status": "PASS"
+      },
+      "example_ids": [],
+      "explanation": "Pinned authority identities unchanged; no scientific G0 PASS.",
+      "gate_id": "G0",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "D2 section 3.2",
+        "max_period_end_age_minutes": 90
+      },
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "F01-D2",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "available_at": "2001-01-02T14:00:00+00:00",
+        "decision_cutoff": "2001-01-02T15:00:00+00:00",
+        "decision_time": "2001-01-02T15:00:00+00:00",
+        "hypothetical_delay_minutes": 60,
+        "market_period_end": "2001-01-02T13:00:00+00:00",
+        "meaning": "F01_REPAIRED_IN_CODE regression only; HISTORICAL_SOURCE_CLOCK_UNVERIFIED",
+        "observed_available_age_minutes": 60.0,
+        "observed_usable": false,
+        "period_end_age_minutes": 120.0,
+        "reason": "STALE_PERIOD_END",
+        "required_period_end_age_minutes": 120.0,
+        "required_usable": false,
+        "research_ready": false,
+        "source_timestamp_label": "2001-01-02T13:00:00+00:00",
+        "status": "PASS",
+        "synthetic_only": true,
+        "timing_basis": "synthetic"
+      },
+      "example_ids": [
+        "synthetic-F01"
+      ],
+      "explanation": "Synthetic code correctness only; no source or research approval.",
+      "gate_id": "G2",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "D2 section 3.2",
+        "max_period_end_age_minutes": 90
+      },
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "fresh-observed",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "availability_age_minutes": 30.0,
+        "available_at": "2001-01-02T14:30:00+00:00",
+        "decision_cutoff": "2001-01-02T15:00:00+00:00",
+        "expected": {
+          "reason": "ACCEPTED_DIAGNOSTIC_ONLY",
+          "usable_candidate": true
+        },
+        "observed": {
+          "reason": "ACCEPTED_DIAGNOSTIC_ONLY",
+          "usable_candidate": true
+        },
+        "period_end": "2001-01-02T14:00:00+00:00",
+        "period_end_age_minutes": 60.0,
+        "research_ready": false,
+        "source_timestamp_label": "2001-01-02T12:00:00+00:00",
+        "synthetic_only": true,
+        "test_id": "tests/test_calendar_alignment.py::test_period_freshness_and_publication_are_independent"
+      },
+      "example_ids": [],
+      "explanation": "Synthetic code correctness only; no source or research approval.",
+      "gate_id": "G2",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "D2 section 3.2",
+        "max_period_end_age_minutes": 90
+      },
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "late-publication",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "availability_age_minutes": -5.0,
+        "available_at": "2001-01-02T15:05:00+00:00",
+        "decision_cutoff": "2001-01-02T15:00:00+00:00",
+        "expected": {
+          "reason": "FUTURE_AVAILABILITY",
+          "usable_candidate": false
+        },
+        "observed": {
+          "reason": "FUTURE_AVAILABILITY",
+          "usable_candidate": false
+        },
+        "period_end": "2001-01-02T14:00:00+00:00",
+        "period_end_age_minutes": 60.0,
+        "research_ready": false,
+        "source_timestamp_label": "2001-01-02T12:00:00+00:00",
+        "synthetic_only": true,
+        "test_id": "tests/test_calendar_alignment.py::test_period_freshness_and_publication_are_independent"
+      },
+      "example_ids": [],
+      "explanation": "Synthetic code correctness only; no source or research approval.",
+      "gate_id": "G2",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "D2 section 3.2",
+        "max_period_end_age_minutes": 90
+      },
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "exact-90-boundary",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "availability_age_minutes": 30.0,
+        "available_at": "2001-01-02T14:30:00+00:00",
+        "decision_cutoff": "2001-01-02T15:00:00+00:00",
+        "expected": {
+          "reason": "ACCEPTED_DIAGNOSTIC_ONLY",
+          "usable_candidate": true
+        },
+        "observed": {
+          "reason": "ACCEPTED_DIAGNOSTIC_ONLY",
+          "usable_candidate": true
+        },
+        "period_end": "2001-01-02T13:30:00+00:00",
+        "period_end_age_minutes": 90.0,
+        "research_ready": false,
+        "source_timestamp_label": "2001-01-02T12:00:00+00:00",
+        "synthetic_only": true,
+        "test_id": "tests/test_calendar_alignment.py::test_period_freshness_and_publication_are_independent"
+      },
+      "example_ids": [],
+      "explanation": "Synthetic code correctness only; no source or research approval.",
+      "gate_id": "G2",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "D2 section 3.2",
+        "max_period_end_age_minutes": 90
+      },
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "over-90-boundary",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "availability_age_minutes": 30.0,
+        "available_at": "2001-01-02T14:30:00+00:00",
+        "decision_cutoff": "2001-01-02T15:00:00+00:00",
+        "expected": {
+          "reason": "STALE_PERIOD_END",
+          "usable_candidate": false
+        },
+        "observed": {
+          "reason": "STALE_PERIOD_END",
+          "usable_candidate": false
+        },
+        "period_end": "2001-01-02T13:29:59.400000+00:00",
+        "period_end_age_minutes": 90.01,
+        "research_ready": false,
+        "source_timestamp_label": "2001-01-02T12:00:00+00:00",
+        "synthetic_only": true,
+        "test_id": "tests/test_calendar_alignment.py::test_period_freshness_and_publication_are_independent"
+      },
+      "example_ids": [],
+      "explanation": "Synthetic code correctness only; no source or research approval.",
+      "gate_id": "G2",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "D2 section 3.2",
+        "max_period_end_age_minutes": 90
+      },
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "future-period",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "availability_age_minutes": -10.0,
+        "available_at": "2001-01-02T15:10:00+00:00",
+        "decision_cutoff": "2001-01-02T15:00:00+00:00",
+        "expected": {
+          "reason": "FUTURE_PERIOD_END",
+          "usable_candidate": false
+        },
+        "observed": {
+          "reason": "FUTURE_PERIOD_END",
+          "usable_candidate": false
+        },
+        "period_end": "2001-01-02T15:05:00+00:00",
+        "period_end_age_minutes": -5.0,
+        "research_ready": false,
+        "source_timestamp_label": "2001-01-02T12:00:00+00:00",
+        "synthetic_only": true,
+        "test_id": "tests/test_calendar_alignment.py::test_period_freshness_and_publication_are_independent"
+      },
+      "example_ids": [],
+      "explanation": "Synthetic code correctness only; no source or research approval.",
+      "gate_id": "G2",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "D2 section 3.2",
+        "max_period_end_age_minutes": 90
+      },
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "inconsistent-clock",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "availability_age_minutes": 70.0,
+        "available_at": "2001-01-02T13:50:00+00:00",
+        "decision_cutoff": "2001-01-02T15:00:00+00:00",
+        "expected": {
+          "reason": "AVAILABILITY_BEFORE_PERIOD_END",
+          "usable_candidate": false
+        },
+        "observed": {
+          "reason": "AVAILABILITY_BEFORE_PERIOD_END",
+          "usable_candidate": false
+        },
+        "period_end": "2001-01-02T14:00:00+00:00",
+        "period_end_age_minutes": 60.0,
+        "research_ready": false,
+        "source_timestamp_label": "2001-01-02T12:00:00+00:00",
+        "synthetic_only": true,
+        "test_id": "tests/test_calendar_alignment.py::test_period_freshness_and_publication_are_independent"
+      },
+      "example_ids": [],
+      "explanation": "Synthetic code correctness only; no source or research approval.",
+      "gate_id": "G2",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "D2 section 3.2",
+        "max_period_end_age_minutes": 90
+      },
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "unknown-clock-fail-closed",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "expected": "All six BLOCKED, non-usable, non-ready",
+        "observed": [
+          {
+            "basis": "synthetic",
+            "missing": "period_end",
+            "observed_status": "BLOCKED",
+            "reason": "UNKNOWN_PERIOD_END",
+            "research_ready": false
+          },
+          {
+            "basis": "synthetic",
+            "missing": "available_at",
+            "observed_status": "BLOCKED",
+            "reason": "UNKNOWN_AVAILABLE_AT",
+            "research_ready": false
+          },
+          {
+            "basis": "unverified",
+            "missing": null,
+            "observed_status": "BLOCKED",
+            "reason": "UNVERIFIED_TIMING_METADATA",
+            "research_ready": false
+          },
+          {
+            "basis": "ambiguous",
+            "missing": null,
+            "observed_status": "BLOCKED",
+            "reason": "UNVERIFIED_TIMING_METADATA",
+            "research_ready": false
+          },
+          {
+            "basis": "hypothetical",
+            "missing": null,
+            "observed_status": "BLOCKED",
+            "reason": "UNVERIFIED_TIMING_METADATA",
+            "research_ready": false
+          },
+          {
+            "basis": null,
+            "missing": "timing_basis",
+            "observed_status": "BLOCKED",
+            "reason": "UNVERIFIED_TIMING_METADATA",
+            "research_ready": false
+          }
+        ],
+        "test_id": "tests/test_calendar_alignment.py::test_unknown_clocks_fail_closed"
+      },
+      "example_ids": [],
+      "explanation": "Synthetic code correctness only; no source or research approval.",
+      "gate_id": "G2",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "D2 section 3.2",
+        "max_period_end_age_minutes": 90
+      },
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "per-step-cutoff-and-candidate-order",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "expected": "14:00 cutoff uses 13:00 end; 15:00 cutoff uses 14:00 end; recent old arrival cannot displace fresh period",
+        "observed": "Both deterministic assertions passed in focused and full suites",
+        "synthetic_only": true,
+        "test_ids": [
+          "tests/test_calendar_alignment.py::test_each_historical_step_uses_its_own_cutoff",
+          "tests/test_calendar_alignment.py::test_recent_arrival_of_old_period_does_not_displace_fresher_observation"
+        ]
+      },
+      "example_ids": [],
+      "explanation": "Synthetic code correctness only; no source or research approval.",
+      "gate_id": "G2",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "integration-tests",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "diff_check": "PASS",
+        "focused_final": {
+          "command": ".venv/bin/python -B -m pytest tests/test_calendar_alignment.py tests/test_aggregation.py tests/test_evidence.py -q",
+          "failed": 0,
+          "passed": 69,
+          "seconds": 4.34
+        },
+        "focused_first": {
+          "failed": 1,
+          "passed": 68,
+          "reason": "CLI test retained historical INVALID expectation"
+        },
+        "full_once": {
+          "command": ".venv/bin/python -B -m pytest -q",
+          "failed": 0,
+          "passed": 111,
+          "seconds": 6.93
+        },
+        "ruff_corrective_scoped": {
+          "command": ".venv/bin/ruff check src/lstm_data/alignment.py src/lstm_data/audit.py tests/test_calendar_alignment.py tests/test_aggregation.py tests/test_evidence.py",
+          "observed": "All checks passed"
+        },
+        "ruff_full_once": {
+          "command": ".venv/bin/ruff check .",
+          "initial_errors": 1,
+          "reason": "One 102-character action string; shortened without logic changes"
+        }
+      },
+      "example_ids": [],
+      "explanation": "Corrective code validation only. All unsuccessful attempts retained here.",
+      "gate_id": "G0",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1-f01-2026-10-10_212419",
+      "check_id": "HISTORICAL_SOURCE_CLOCK_UNVERIFIED",
+      "code_id": "ede66288fa417451fd0ce7aaf6431927d4c61428cc618081d7de94a3227da2ff",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "D3_shared_clock": "UNSIGNED",
+        "blockers": [
+          "p0.1-F01",
+          "p0.1-USA500-source-clock",
+          "p0.1-stock-publication",
+          "p0.1-minute-execution",
+          "p0.1-actions-dividends",
+          "p0.1-formation-prehistory",
+          "p0.1-shared-D3-clock"
+        ],
+        "full_model_replacement": "USER-REQUESTED FUTURE AMENDMENT; NOT IMPLEMENTED",
+        "raw_hashes_recomputed": false,
+        "source_calls": 0,
+        "source_clock": "STILL BLOCKED",
+        "stock_acquisition": "NOT AUTHORIZED",
+        "training_pairs": 0
+      },
+      "example_ids": [],
+      "explanation": "Neither actual publication history nor source compatibility nor joint clock approval established by synthetic tests.",
+      "gate_id": "G1",
+      "owner_action": "Human review; preserve all seven blockers and stop",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code or separately reviewed source-clock evidence",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T01:26:21.205885+00:00"
+    }
+  ],
+  "code_status": "F01_REPAIRED_IN_CODE",
+  "gates": {
+    "G0": "BLOCKED",
+    "G1": "BLOCKED",
+    "G2": "BLOCKED",
+    "G3": "NOT_RUN",
+    "G4": "NOT_RUN",
+    "G5": "NOT_RUN",
+    "G6": "NOT_RUN",
+    "G7": "NOT_RUN",
+    "G8": "NOT_RUN",
+    "G9": "NOT_RUN"
+  },
+  "package": "P1-F01",
+  "pair_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "research_status": "BLOCKED",
+  "schema_version": 1
+}

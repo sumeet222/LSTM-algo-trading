@@ -98,6 +98,9 @@ def test_stub_alignment_uses_its_actual_end_not_an_extra_half_hour():
     assert joined.iloc[0].decision_time == pd.Timestamp("2020-07-01T20:00Z")
     assert joined.iloc[0].index_timestamp == pd.Timestamp("2020-07-01T20:00Z")
     assert summary["stock_availability_policy"] == "explicit available_at"
+    # Session aggregation establishes stock completion, not a course source clock.
+    assert joined.iloc[0].reason == "UNKNOWN_PERIOD_END"
+    assert not joined.iloc[0].usable_candidate
 
 
 def test_pilot_sample_load_checks_hash(cfg):
