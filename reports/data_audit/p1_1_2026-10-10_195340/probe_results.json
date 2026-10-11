@@ -1,0 +1,1014 @@
+{
+  "actions": {
+    "has_next_page": true,
+    "http_status": 200,
+    "record": {
+      "ex_date": "2020-02-07",
+      "id": "23407e01-4eef-4c1e-a2dd-f585c7eabcd0",
+      "process_date": "2020-02-07",
+      "rate": 0.77,
+      "symbol": "AAPL",
+      "type": "cash_dividends"
+    },
+    "records_returned": 1,
+    "response_fields": [
+      "corporate_actions",
+      "next_page_token"
+    ],
+    "status": "PASS"
+  },
+  "adjustment_comparison": [
+    {
+      "meaning": "Matched-source adjustment diagnostic only; not a return or shares ledger",
+      "raw_to_split_price_ratios": {
+        "close": 4.0,
+        "high": 4.0,
+        "low": 4.0,
+        "open": 3.999893831616945
+      },
+      "split_to_raw_volume_ratio": 4.0,
+      "symbol": "AAPL"
+    },
+    {
+      "meaning": "Matched-source adjustment diagnostic only; not a return or shares ledger",
+      "raw_to_split_price_ratios": {
+        "close": 1.0,
+        "high": 1.0,
+        "low": 1.0,
+        "open": 1.0
+      },
+      "split_to_raw_volume_ratio": 1.0,
+      "symbol": "JPM"
+    }
+  ],
+  "canonical_comparison": [
+    {
+      "canonical_manifest": "data/raw/alpaca/track_a/2020-07-aabdd641836090f410bd.manifest.json",
+      "ohlcv_exact_match": true,
+      "sampling": "One predicate-selected row; matched SIP/split/30Min parameters",
+      "status": "PASS",
+      "symbol": "AAPL",
+      "timestamp_utc": "2020-07-08T13:30:00+00:00"
+    },
+    {
+      "canonical_manifest": "data/raw/alpaca/track_a/2020-07-aabdd641836090f410bd.manifest.json",
+      "ohlcv_exact_match": true,
+      "sampling": "One predicate-selected row; matched SIP/split/30Min parameters",
+      "status": "PASS",
+      "symbol": "JPM",
+      "timestamp_utc": "2020-07-08T13:30:00+00:00"
+    }
+  ],
+  "elapsed_probe_seconds": 30.123,
+  "historical_available_at": null,
+  "http_calls": 16,
+  "local_authentication": "available",
+  "package": "P1.1",
+  "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+  "queries": [
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        1
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2020-07-08T10:33:00-04:00",
+      "expected_timestamp_utc": "2020-07-08T14:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2020-07-08-10:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        2
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2020-07-08T11:33:00-04:00",
+      "expected_timestamp_utc": "2020-07-08T15:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2020-07-08-11:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        3
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2020-07-08T14:33:00-04:00",
+      "expected_timestamp_utc": "2020-07-08T18:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2020-07-08-14:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        4
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2020-07-08T15:33:00-04:00",
+      "expected_timestamp_utc": "2020-07-08T19:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2020-07-08-15:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        5
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2023-03-10T10:33:00-05:00",
+      "expected_timestamp_utc": "2023-03-10T15:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2023-03-10-10:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        6
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2023-03-10T11:33:00-05:00",
+      "expected_timestamp_utc": "2023-03-10T16:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2023-03-10-11:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        7
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2023-03-10T14:33:00-05:00",
+      "expected_timestamp_utc": "2023-03-10T19:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2023-03-10-14:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        8
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2023-03-10T15:33:00-05:00",
+      "expected_timestamp_utc": "2023-03-10T20:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2023-03-10-15:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        9
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2025-06-03T10:33:00-04:00",
+      "expected_timestamp_utc": "2025-06-03T14:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2025-06-03-10:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        10
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2025-06-03T11:33:00-04:00",
+      "expected_timestamp_utc": "2025-06-03T15:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2025-06-03-11:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        11
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2025-06-03T14:33:00-04:00",
+      "expected_timestamp_utc": "2025-06-03T18:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2025-06-03-14:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        12
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2025-06-03T15:33:00-04:00",
+      "expected_timestamp_utc": "2025-06-03T19:33:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "2025-06-03-15:33",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        13
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2020-07-08T09:30:00-04:00",
+      "expected_timestamp_utc": "2020-07-08T13:30:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "boundary-2020-07-08-raw",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        14
+      ],
+      "expected_rows": 2,
+      "expected_timestamp_et": "2020-07-08T09:30:00-04:00",
+      "expected_timestamp_utc": "2020-07-08T13:30:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "probe_id": "boundary-2020-07-08-split",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "available_at_if_evidenced": null,
+      "call_ids": [
+        15
+      ],
+      "expected_rows": 5,
+      "expected_timestamp_et": "2020-04-06T00:00:00-04:00",
+      "expected_timestamp_utc": "2020-04-06T04:00:00+00:00",
+      "meaning": "Physical current historical bar presence only",
+      "present_symbols": [
+        "AAPL",
+        "CAT",
+        "JNJ",
+        "JPM",
+        "WMT"
+      ],
+      "probe_id": "formation-first-of-60-2020-04-06",
+      "rows": 5,
+      "status": "PASS"
+    }
+  ],
+  "schema_version": 1,
+  "scientific_metrics_computed": false,
+  "scope": "Sampled stock access/presence only; no G1/G2 promotion",
+  "source_publication_status": "BLOCKED",
+  "status": "PASS",
+  "stopped_at": null,
+  "time_utc": "2026-10-10T23:56:01.760741+00:00",
+  "transport": [
+    {
+      "call_id": 1,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T14:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T14:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 264,
+      "response_feed_echo": null,
+      "response_sha256": "af9526199771fa39ecd9a860c5e098c9f2bf00dfc48ccecc39f6d611a2528590",
+      "retrieved_at_utc": "2026-10-10T23:55:31.638831+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:31 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676532",
+        "X-Request-ID": "6bb7224332540be428d737743b81c3f2"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 2,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T15:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T15:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 263,
+      "response_feed_echo": null,
+      "response_sha256": "dcacc9e13d248ee977c174af2ad079e54d9e1c83987184e77ab752c7709fa025",
+      "retrieved_at_utc": "2026-10-10T23:55:33.645347+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:33 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676534",
+        "X-Request-ID": "99c06d3865ae17d5f0c3c9b9039f5ce8"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 3,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T18:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T18:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 264,
+      "response_feed_echo": null,
+      "response_sha256": "baf2447385e62d1e21511f84de36a1ce2c885f35e53caf7727726f4e17926a84",
+      "retrieved_at_utc": "2026-10-10T23:55:35.645450+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:35 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676536",
+        "X-Request-ID": "20f860f53a6360270ecfce2652247ce2"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 4,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T19:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T19:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 262,
+      "response_feed_echo": null,
+      "response_sha256": "756097970859a2ad72b51d2182f909572a318e3fcbeab66f948f950cdec3756d",
+      "retrieved_at_utc": "2026-10-10T23:55:37.645787+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:37 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676538",
+        "X-Request-ID": "2081739df28bc2eba2045788404037ef"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 5,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-03-10T15:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2023-03-10T15:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 270,
+      "response_feed_echo": null,
+      "response_sha256": "c7881d7c24ff6b503d0bb7218cf4a9c6b89d1902b3349dd4af3d2491dd7ccf1d",
+      "retrieved_at_utc": "2026-10-10T23:55:39.646148+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:39 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676540",
+        "X-Request-ID": "a76e3f1e4824b8ca6449ea0ebe78ee34"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 6,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-03-10T16:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2023-03-10T16:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 266,
+      "response_feed_echo": null,
+      "response_sha256": "2fa52f7acca468a2b2c61a7174b499b9d5ec6322d747e6fc08e201230a41c1de",
+      "retrieved_at_utc": "2026-10-10T23:55:41.647174+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:41 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676542",
+        "X-Request-ID": "0614f122e9faf8f83a1b08e3d822421a"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 7,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-03-10T19:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2023-03-10T19:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 266,
+      "response_feed_echo": null,
+      "response_sha256": "e6dfc0db0ec78ad79287fae08939f5ef33a5b58f936b01da260619435f221709",
+      "retrieved_at_utc": "2026-10-10T23:55:43.647788+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:43 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676544",
+        "X-Request-ID": "b64d051d8046f467cdad9023a4676e10"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 8,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-03-10T20:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2023-03-10T20:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 266,
+      "response_feed_echo": null,
+      "response_sha256": "4f3e27fa8ab8294b5c45cdf4d935df8c11e4197ef40fa9bb7ac5c0cee597151e",
+      "retrieved_at_utc": "2026-10-10T23:55:45.653615+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:45 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676546",
+        "X-Request-ID": "76ae86725c4f389cd553a9fa85264d0e"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 9,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-06-03T14:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2025-06-03T14:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 263,
+      "response_feed_echo": null,
+      "response_sha256": "19ec9cec01e26e6321ca4a08432ad0b27b6d170c4e8523264332ba705698ecfe",
+      "retrieved_at_utc": "2026-10-10T23:55:47.657945+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:47 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676548",
+        "X-Request-ID": "b7035d96c3437e46c650515b50889350"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 10,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-06-03T15:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2025-06-03T15:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 266,
+      "response_feed_echo": null,
+      "response_sha256": "adf4f81238e720d7c17720c6eba00e88a95a057b56d3491d369a22fa20d90419",
+      "retrieved_at_utc": "2026-10-10T23:55:49.662913+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:49 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676550",
+        "X-Request-ID": "b0a49d2ed965c7e5e8a81bcb00dfc691"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 11,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-06-03T18:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2025-06-03T18:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 268,
+      "response_feed_echo": null,
+      "response_sha256": "f300d5af6d182d5f4dae2031cc4f6180dd8d46215e28ac7895fd9e64c78f7c1a",
+      "retrieved_at_utc": "2026-10-10T23:55:51.663509+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:51 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676552",
+        "X-Request-ID": "dec60ef865555d76409f7490c07eb841"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 12,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-06-03T19:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2025-06-03T19:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 265,
+      "response_feed_echo": null,
+      "response_sha256": "8148126fc951eeed5125d9232b90aa6fb373d427215e140f1ca6f332e41049a7",
+      "retrieved_at_utc": "2026-10-10T23:55:53.668524+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:53 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676554",
+        "X-Request-ID": "9ac996295163101f241a388ff6df6985"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 13,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T13:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T13:30:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "30Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 269,
+      "response_feed_echo": null,
+      "response_sha256": "5f606f328661b7462f332e4d5f590bdb85895ba382c23ce51fab14be311145ef",
+      "retrieved_at_utc": "2026-10-10T23:55:55.672284+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:55 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676556",
+        "X-Request-ID": "2a69d0ccda8beb732459ca4d10af9c8c"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 14,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T13:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T13:30:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "30Min"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 265,
+      "response_feed_echo": null,
+      "response_sha256": "37c0a3ffbe35ea657fb4b3ea17ccfd9707b46f713d6d32fb069a602d1f3fd4ea",
+      "retrieved_at_utc": "2026-10-10T23:55:57.673057+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:57 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676558",
+        "X-Request-ID": "706d7fb9c3592b889bf92f6627b9c965"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 15,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-04-07T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-04-06T04:00:00+00:00",
+        "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+        "timeframe": "1Day"
+      },
+      "provider_bar_fields": [
+        "c",
+        "h",
+        "l",
+        "n",
+        "o",
+        "t",
+        "v",
+        "vw"
+      ],
+      "response_bytes": 629,
+      "response_feed_echo": null,
+      "response_sha256": "92b0b8ad232e60327ad3c142b02864c6f78888fab5e86014ce002581aaad1aec",
+      "retrieved_at_utc": "2026-10-10T23:55:59.673007+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:55:59 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676560",
+        "X-Request-ID": "c82c84794e1004ca3c79c56a1bb0d5cd"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    },
+    {
+      "call_id": 16,
+      "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+      "has_next_page": true,
+      "http_status": 200,
+      "params": {
+        "data_quality": "complete",
+        "end": "2025-06-30",
+        "limit": 1,
+        "region": "us",
+        "sort": "asc",
+        "start": "2020-01-01",
+        "symbols": "AAPL",
+        "types": "forward_split,cash_dividend"
+      },
+      "provider_bar_fields": [],
+      "response_bytes": 303,
+      "response_feed_echo": null,
+      "response_sha256": "cf96be28badb718ece25018f8106712bd81dd8a4662e300ccc92c61412e2ae42",
+      "retrieved_at_utc": "2026-10-10T23:56:01.677820+00:00",
+      "safe_headers": {
+        "Date": "Sat, 10 Oct 2026 23:56:01 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791676562",
+        "X-Request-ID": "5387a260b1806ab4eea7d502e6c95642"
+      },
+      "top_level_fields": [
+        "corporate_actions",
+        "next_page_token"
+      ]
+    }
+  ]
+}

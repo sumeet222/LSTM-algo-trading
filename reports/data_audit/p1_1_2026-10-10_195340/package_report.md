@@ -1,0 +1,37 @@
+# P1.1 — historical SIP and minute-open feasibility
+
+**Sampled source feasibility PASS; research readiness BLOCKED.** All 24 designated raw minute records were present. No scientific gate was promoted. `CURRENT_PROTOCOL` matches all five authorities and pinned references: `119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843`. This proves binding identity, not approval. Source code, protocol, config and prior reports are unchanged.
+
+| Requirement | Verdict and scope |
+|---|---|
+| Canonical provenance | PASS for recorded SIP/split/30Min requests and successful HTTP metadata; stored feed fields are client-supplied, not an independent API echo. |
+| Historical SIP access | PASS for AAPL/JPM on three sampled sessions; billing SKU and continuing entitlement INCONCLUSIVE. No account/billing endpoint accessed. |
+| Genuine minute opens | PASS: 24/24 requested raw bars, positive validated OHLCV, exact timestamps. Physical source presence, not guaranteed fills. |
+| Minute label/timezone | PASS for documented left-boundary labeling and sampled ET/UTC conversion; underlying historical trade-clock detail INCONCLUSIVE. |
+| Historical publication | BLOCKED: no historical first-publication/`available_at` or vintage evidence. No fixed delay invented. |
+| Canonical compatibility | PASS for two matched SIP/split/30Min OHLCV rows only. Full-hour equivalence not certified. |
+| Adjustment conventions | PASS for distinct requested modes and sampled factors; WARN on AAPL open precision residual. No correction/tolerance invented. |
+| Full 2020–2025 coverage | NOT_RUN; minute completeness and annual thresholds not certified. |
+| Corporate actions | PASS for one cash-dividend metadata record; full splits/dividends and shares/cash accounting BLOCKED. |
+| Formation/prehistory | PASS for five raw daily records at the first preceding-60-session date; formation eligibility and full warmup BLOCKED. |
+| Resource estimate | PASS for offline arithmetic; compression, page fill, elapsed acquisition time remain estimates. |
+
+The predeclared plan queried AAPL/JPM at **10:33, 11:33, 14:33, 15:33 ET** on **2020-07-08, 2023-03-10, 2025-06-03** (12 calls), a matched raw/split 09:30 boundary pair (2), five-name 2020-04-06 daily preformation metadata (1), and one AAPL actions record (1). All 16 calls returned HTTP 200, with one attempt each; all 15 bar responses ended pagination. Actions had another page, deliberately not followed. Total: 33 bar rows inspected, eight persisted plus one action record; 4,649 response-body bytes; 30.123 seconds including rate spacing. Source QA in 2025 computed no confirmation returns, targets, ranks or portfolio metrics.
+
+`probe_plan.json` preserves explicit endpoint/parameters; `probe_results.json` preserves HTTP status, safe response metadata, hashes and row counts. `sample_records.json` contains the handful of sourced rows. AAPL 2020-07-08 10:33 ET open = **378.82**, interval start 14:33 UTC, derived end 14:34 UTC. JPM 2023-03-10 11:33 ET open = **135.11**, start 16:33 UTC. These are current historical API values, not point-in-time vintages.
+
+The provider describes a start-labeled minute and an open from the first qualifying trade. That open is an indicative reference, not an assured executable quote at minute zero. The current FAQ describes SIP timestamps, while the older minute-bar article describes participant timestamps; historical bucketing detail needs clarification. General emission/update descriptions cannot establish each historical aggregate's availability. See [current FAQ](https://docs.alpaca.markets/us/docs/market-data-faq) and [older provider article](https://alpaca.markets/learn/stock-minute-bars).
+
+The [bars API](https://docs.alpaca.markets/us/reference/stockbars) documents split-adjusted prices and volumes; `asof` concerns symbol mapping. AAPL boundary raw open 376.75 / 4 = 94.1875, supplied split open 94.19 (absolute residual 0.0025); close/high/low and inverse-share volume factors are 4. JPM factors are 1. Both live split OHLCV rows exactly match the existing July chunk. No raw price was replaced. The [actions API](https://docs.alpaca.markets/us/reference/corporateactions-1) yielded AAPL cash dividend 0.77, ex/process date 2020-02-07; its process-date filter and provider processing latency do not prove historical publication. No actual split record or complete ledger was retrieved.
+
+Prior evidence is reused from P0.1/P0.2 and Task 01: 60 canonical pairs / 159,008 rows, 168 missing RTH half-hours, 98 incomplete windows. One manifest/footer and two predicate-selected rows were inspected; no repeated whole-store hash/scan. No existing minute/actions/preformation assets were found in the local data inventory. Canonical schema is recorded in `checks.json`. Native hourly/session-grid failure and approved 30Min aggregation remain as previously reported. The closing stub was never used as a feature hour.
+
+`resource_estimate.json`: 1,255 XNYS sessions, nine early closes, 487,830 RTH minutes → **2,439,150 five-stock rows** before warmup. Resource-only 60/150-session warmup scenarios yield 2.56–2.73 million rows, 77–409 MB compressed, 256–546 MB response estimates, and 291–312 monthly paginated requests at a 10,000-row ceiling. Rate-only floors are 1.6–1.7 minutes at 180 rpm or 9.7–10.4 at 30 rpm; latency, smaller pages and retries add time. Observed limit header was 200/min; the [published plan limits](https://docs.alpaca.markets/us/docs/about-market-data-api) do not establish this account's SKU. Full RTH storage covers within-period retry minutes; four sparse slots cannot support arbitrary exit retries. Terminal-period extension needs separate review. Sixty formation sessions do not supply all FT0 context (M4: 126 daily endpoints plus 48 input observations); 150 is a sizing scenario, not a frozen warmup change.
+
+P0.2 has no managed source-feasibility operation. The current prompt authorized these standalone reads through the existing client, with network execution approval; no managed research executor/guard was changed. External scripts are technically outside managed enforcement. One scoped WARN audit event was appended through the existing contract, with no supersession or blocker closure: eight total events, seven original blockers, zero fits of the 40-pair ceiling. F01 remains INVALID; USA500 publication, stock publication and shared D3 clock remain blocked. G0–G2 BLOCKED, G3–G9 NOT_RUN.
+
+Created here: plan, results, samples, resource estimate, checks, this report, review card and preservation summary; additionally the mandatory session report. Only the central ledger changed among previously tracked files. Disk delta and duration are in `preservation.json` / the session report. Focused offline tests: **22 passed**; schema/clock/ledger/preservation checks passed. No production code changes, full-suite rerun or Ruff run.
+
+Human review must decide publication evidence/assumptions, trade-clock clarification, actions accounting, formation/warmup and whether a later P1.3 acquisition is warranted. Suggested single next package: separately authorized P1.2 USA500 provenance, after review; P1.3 still requires its own bounded approval. No next package executed. Starting tree was clean at `bf76774` (“P0 commit 1”), incorporating P0.1/P0.2 and the appendix; the prompt's earlier dirty-state warning is stale. These new changes are uncommitted; no staging/integration/push occurred.
+
+**AWAITING HUMAN REVIEW — NO AUTOMATIC NEXT PACKAGE**

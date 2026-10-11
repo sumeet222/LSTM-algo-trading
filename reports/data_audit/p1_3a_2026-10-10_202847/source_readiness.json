@@ -1,0 +1,352 @@
+{
+  "action_fields_needed": [
+    "source/event ID",
+    "symbol/entity mapping",
+    "type",
+    "split old/new ratio",
+    "effective/ex date",
+    "record/pay/declaration date as applicable",
+    "cash rate/currency/share basis",
+    "historical availability/revisions",
+    "status/completeness"
+  ],
+  "actual_live_marketdata_requests": 0,
+  "coverage": {
+    "RTH_missing_half_hours_by_year_symbol": {
+      "2020": {
+        "AAPL": 0,
+        "CAT": 0,
+        "JNJ": 0,
+        "JPM": 0,
+        "WMT": 0
+      },
+      "2021": {
+        "AAPL": 0,
+        "CAT": 24,
+        "JNJ": 24,
+        "JPM": 24,
+        "WMT": 24
+      },
+      "2022": {
+        "AAPL": 0,
+        "CAT": 23,
+        "JNJ": 13,
+        "JPM": 12,
+        "WMT": 24
+      },
+      "2023": {
+        "AAPL": 0,
+        "CAT": 0,
+        "JNJ": 0,
+        "JPM": 0,
+        "WMT": 0
+      },
+      "2024": {
+        "AAPL": 0,
+        "CAT": 0,
+        "JNJ": 0,
+        "JPM": 0,
+        "WMT": 0
+      },
+      "2025": {
+        "AAPL": 0,
+        "CAT": 0,
+        "JNJ": 0,
+        "JPM": 0,
+        "WMT": 0
+      }
+    },
+    "all_session_rows_by_year": {
+      "2020": 16954,
+      "2021": 32262,
+      "2022": 31038,
+      "2023": 30608,
+      "2024": 31810,
+      "2025": 16336
+    },
+    "basis": "P0.1 existing QA/chunk inventory, not new source scan",
+    "incomplete_windows_reported": 98,
+    "minute_coverage_certified": false,
+    "per_year_name_row_counts": "not present in reused summary; not invented",
+    "symbol_rows": {
+      "AAPL": 39528,
+      "CAT": 26666,
+      "JNJ": 27982,
+      "JPM": 32898,
+      "WMT": 31934
+    }
+  },
+  "formation_matrix": [
+    {
+      "USA500_membership": "UNKNOWN-BLOCKED: membership construct not defined",
+      "activated_backup": false,
+      "daily_probe_evidence": "5 original symbols present on 2020-04-06 in P1.1",
+      "formation_liquidity": "BLOCKED: no complete 60-session inputs or approved vintage/convention",
+      "paired_original": "AAPL",
+      "retrospective_source_qa": "existing 30Min summary only",
+      "role": "original",
+      "sector_label_historical_verification": "NOT_RUN",
+      "sector_policy_label": "Information Technology",
+      "symbol": "AAPL"
+    },
+    {
+      "USA500_membership": "UNKNOWN-BLOCKED: membership construct not defined",
+      "activated_backup": false,
+      "daily_probe_evidence": "5 original symbols present on 2020-04-06 in P1.1",
+      "formation_liquidity": "BLOCKED: no complete 60-session inputs or approved vintage/convention",
+      "paired_original": "JPM",
+      "retrospective_source_qa": "existing 30Min summary only",
+      "role": "original",
+      "sector_label_historical_verification": "NOT_RUN",
+      "sector_policy_label": "Financials",
+      "symbol": "JPM"
+    },
+    {
+      "USA500_membership": "UNKNOWN-BLOCKED: membership construct not defined",
+      "activated_backup": false,
+      "daily_probe_evidence": "5 original symbols present on 2020-04-06 in P1.1",
+      "formation_liquidity": "BLOCKED: no complete 60-session inputs or approved vintage/convention",
+      "paired_original": "JNJ",
+      "retrospective_source_qa": "existing 30Min summary only",
+      "role": "original",
+      "sector_label_historical_verification": "NOT_RUN",
+      "sector_policy_label": "Health Care",
+      "symbol": "JNJ"
+    },
+    {
+      "USA500_membership": "UNKNOWN-BLOCKED: membership construct not defined",
+      "activated_backup": false,
+      "daily_probe_evidence": "5 original symbols present on 2020-04-06 in P1.1",
+      "formation_liquidity": "BLOCKED: no complete 60-session inputs or approved vintage/convention",
+      "paired_original": "WMT",
+      "retrospective_source_qa": "existing 30Min summary only",
+      "role": "original",
+      "sector_label_historical_verification": "NOT_RUN",
+      "sector_policy_label": "Consumer Staples",
+      "symbol": "WMT"
+    },
+    {
+      "USA500_membership": "UNKNOWN-BLOCKED: membership construct not defined",
+      "activated_backup": false,
+      "daily_probe_evidence": "5 original symbols present on 2020-04-06 in P1.1",
+      "formation_liquidity": "BLOCKED: no complete 60-session inputs or approved vintage/convention",
+      "paired_original": "CAT",
+      "retrospective_source_qa": "existing 30Min summary only",
+      "role": "original",
+      "sector_label_historical_verification": "NOT_RUN",
+      "sector_policy_label": "Industrials",
+      "symbol": "CAT"
+    },
+    {
+      "USA500_membership": "UNKNOWN-BLOCKED: membership construct not defined",
+      "activated_backup": false,
+      "daily_probe_evidence": "NOT_RUN",
+      "formation_liquidity": "BLOCKED: no complete 60-session inputs or approved vintage/convention",
+      "paired_original": "AAPL",
+      "retrospective_source_qa": "NOT_RUN",
+      "role": "backup",
+      "sector_label_historical_verification": "NOT_RUN",
+      "sector_policy_label": "Information Technology",
+      "symbol": "MSFT"
+    },
+    {
+      "USA500_membership": "UNKNOWN-BLOCKED: membership construct not defined",
+      "activated_backup": false,
+      "daily_probe_evidence": "NOT_RUN",
+      "formation_liquidity": "BLOCKED: no complete 60-session inputs or approved vintage/convention",
+      "paired_original": "JPM",
+      "retrospective_source_qa": "NOT_RUN",
+      "role": "backup",
+      "sector_label_historical_verification": "NOT_RUN",
+      "sector_policy_label": "Financials",
+      "symbol": "BAC"
+    },
+    {
+      "USA500_membership": "UNKNOWN-BLOCKED: membership construct not defined",
+      "activated_backup": false,
+      "daily_probe_evidence": "NOT_RUN",
+      "formation_liquidity": "BLOCKED: no complete 60-session inputs or approved vintage/convention",
+      "paired_original": "JNJ",
+      "retrospective_source_qa": "NOT_RUN",
+      "role": "backup",
+      "sector_label_historical_verification": "NOT_RUN",
+      "sector_policy_label": "Health Care",
+      "symbol": "MRK"
+    },
+    {
+      "USA500_membership": "UNKNOWN-BLOCKED: membership construct not defined",
+      "activated_backup": false,
+      "daily_probe_evidence": "NOT_RUN",
+      "formation_liquidity": "BLOCKED: no complete 60-session inputs or approved vintage/convention",
+      "paired_original": "WMT",
+      "retrospective_source_qa": "NOT_RUN",
+      "role": "backup",
+      "sector_label_historical_verification": "NOT_RUN",
+      "sector_policy_label": "Consumer Staples",
+      "symbol": "COST"
+    },
+    {
+      "USA500_membership": "UNKNOWN-BLOCKED: membership construct not defined",
+      "activated_backup": false,
+      "daily_probe_evidence": "NOT_RUN",
+      "formation_liquidity": "BLOCKED: no complete 60-session inputs or approved vintage/convention",
+      "paired_original": "CAT",
+      "retrospective_source_qa": "NOT_RUN",
+      "role": "backup",
+      "sector_label_historical_verification": "NOT_RUN",
+      "sector_policy_label": "Industrials",
+      "symbol": "HON"
+    }
+  ],
+  "formation_window": {
+    "all_ten_if_approved": 600,
+    "first": "2020-04-06",
+    "last": "2020-06-30",
+    "minimum_original_observations": 300,
+    "sessions": 60
+  },
+  "future_bulk_estimate": {
+    "compressed_bytes_range": [
+      76684500,
+      409477500
+    ],
+    "existing_observed_limit_per_minute": 200,
+    "formation_request_and_action_pages_not_in_minute_page_estimate": true,
+    "monthly_bar_page_estimate_range": [
+      291,
+      312
+    ],
+    "network_bytes_range": [
+      255615000,
+      545970000
+    ],
+    "not_guaranteed": "page fill, compression, latency, retries, account SKU; action page count unknown",
+    "rate_only_floor_minutes_at_30rpm": [
+      9.7,
+      10.4
+    ],
+    "raw_minute_rows_in_sensitivity_range": [
+      2556150,
+      2729850
+    ]
+  },
+  "future_bulk_resource_reference": "reports/data_audit/p1_1_2026-10-10_195340/resource_estimate.json",
+  "local_authentication_files_accessed": false,
+  "minimal_future_formation_request": {
+    "approved_in_this_package": false,
+    "backup_extension_if_separately_approved": 600,
+    "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+    "expected_distinct_observations": 300,
+    "future_request_cap": 1,
+    "params": {
+      "adjustment": "raw",
+      "asof": "2025-06-30",
+      "currency": "USD",
+      "end": "2020-07-01T03:59:59.999999999Z",
+      "feed": "sip",
+      "limit": 1000,
+      "sort": "asc",
+      "start": "2020-04-06T04:00:00Z",
+      "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+      "timeframe": "1Day"
+    },
+    "price_volume_convention_decision": "approve a raw-close times matched raw daily-volume proxy and session definition, or require actual traded/RTH dollar-volume aggregation",
+    "purpose": "formation-only source inputs before any bulk expansion",
+    "status": "PROPOSED_REQUIRES_HUMAN_APPROVAL",
+    "unexpected_pagination": "stop and review, no automatic continuation",
+    "vintage_decision": "current historical activity evidence is not actual 2020 then-available data; explicit justified assumption/metadata required"
+  },
+  "optional_request_cap": 6,
+  "package": "P1.3A",
+  "planned_live_marketdata_requests": 0,
+  "preconditions": {
+    "F01": "INVALID",
+    "USA500": "BLOCKED per P1.2",
+    "actions_complete_and_accounting": "BLOCKED",
+    "annual_minute_coverage": "NOT_RUN",
+    "formation": "BLOCKED",
+    "historical_stock_publication": "BLOCKED",
+    "shared_clock": "BLOCKED"
+  },
+  "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+  "public_documentation": {
+    "actions": "https://docs.alpaca.markets/us/reference/corporateactions-1",
+    "bars": "https://docs.alpaca.markets/us/reference/stockbars",
+    "checked_at_utc": "2026-10-11T00:30:23.393130+00:00",
+    "issuer": "https://investor.apple.com/dividend-history/default.aspx",
+    "issuer_dividend": {
+      "declaration_date": "2020-01-28",
+      "payment_date": "2020-02-13",
+      "per_share": 0.77,
+      "record_date": "2020-02-10"
+    },
+    "issuer_split": {
+      "declaration_date": "2020-07-30",
+      "listed_split_date": "2020-08-31",
+      "ratio": "4-for-1",
+      "record_date": "2020-08-24"
+    }
+  },
+  "reused_action_record": {
+    "ex_date": "2020-02-07",
+    "id": "23407e01-4eef-4c1e-a2dd-f585c7eabcd0",
+    "process_date": "2020-02-07",
+    "rate": 0.77,
+    "symbol": "AAPL",
+    "type": "cash_dividends"
+  },
+  "schema_version": 1,
+  "source_files_opened": false,
+  "source_ids": {
+    "P0_1": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+    "P1_1": "reports/data_audit/p1_1_2026-10-10_195340/probe_results.json",
+    "P1_2": "reports/data_audit/p1_2_2026-10-10_201104/checks.json",
+    "stock_config_fingerprint_inherited": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+    "stock_manifest_inventory_sha256_inherited": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100"
+  },
+  "status": "BLOCKED",
+  "storage_plan": {
+    "daily_and_actions": "small canonical source records, keyed by source/symbol/session or event ID",
+    "derived_views": "compact keyed views/on-demand aggregation; never per-seed/model/48-window copies",
+    "existing_split_30Min_store": "reuse immutable data/raw/alpaca/track_a; no redownload",
+    "proposed_one_new_raw_minute_store": "data/raw/alpaca/track_a_minutes (proposal only; downloader/layout approval required)",
+    "terminal_retry_extension": "not approved; define final liquidation/retry coverage before acquiring beyond 2025-06-30",
+    "warmup_split_30Min": "only missing prehistory chunks once, separate from raw minute execution references"
+  },
+  "synthetic_dividend": {
+    "cash_paid_only_on_verified_pay_date": true,
+    "dividend_per_share": 0.77,
+    "illustrative_receivable": 7.7,
+    "not_assumed_actual_price_drop_or_provider_cash_treatment": true,
+    "shares": 10,
+    "short_dividend_liability_policy": "requires human/simulator review",
+    "synthetic_only": true
+  },
+  "synthetic_split": {
+    "cash_before_after": 50,
+    "dollar_volume_product_before_after": 20000,
+    "equity_before_after": 1050,
+    "fees_rounding_tax_and_other_events": "excluded from isolated synthetic premise",
+    "inverse_split_adjusted_pre_volume": 800,
+    "ratio": 4,
+    "raw_price_after": 25,
+    "raw_price_before": 100,
+    "raw_volume": 200,
+    "shares_after": 40,
+    "shares_before": 10,
+    "split_adjusted_post_price": 25,
+    "split_adjusted_pre_price": 25,
+    "synthetic_only": true
+  },
+  "warmup_dependencies": {
+    "M2": "60 matured prior origin-matched execution returns at each historical step need genuine minute references; no labels/returns built",
+    "M4_oldest_daily_endpoint_at_that_step": "2019-12-18",
+    "M4_rule": "d-21 and d-126: 105 separated sessions at each historical step",
+    "T3_T4_required_good_closes_including_48_step_context_no_missing": 408,
+    "T5_required_good_closes_including_48_step_context_no_missing": 202,
+    "example_only_not_approved_start": true,
+    "first_nominal_cutoff": "2020-07-01T14:30:00+00:00",
+    "missing_gaps_and_early_closes": "can extend required collection; not certified by nominal session count",
+    "oldest_of_48_scheduled_steps_session": "2020-06-19"
+  }
+}

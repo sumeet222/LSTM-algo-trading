@@ -1,0 +1,60 @@
+{
+  "api_limit_caution": "10000 is per page over all symbols; API can return fewer rows, so page counts are estimates and require pagination. Published 200/10000 rpm Basic/Plus is not a queried account plan.",
+  "compression_caution": "30Min empirical 36.762 bytes/row does not certify 1Min compression; one raw minute store, no duplicate adjusted/window/seed stores",
+  "early_close_sessions": 9,
+  "meaning": "Planning estimate only, not an approved acquisition or coverage certification",
+  "retry_caution": "Full RTH store covers within-period minute retries including next sessions. Sparse four-slot data do not cover arbitrary exits/overnight liquidations. No terminal date extension or future retrieval approved here.",
+  "scenarios": [
+    {
+      "compressed_bytes_range_30_to_150_per_row": [
+        76684500,
+        383422500
+      ],
+      "empirical_30Min_bytes_per_row_estimate": 93966194.69397767,
+      "first_session": "2020-04-06",
+      "full_rth_minute_rows_5_stocks": 2556150,
+      "ideal_pages_at_limit_10000": 256,
+      "monthly_chunks": 63,
+      "monthly_page_count_at_full_rth_presence": 291,
+      "rate_floor_minutes_at_180rpm": 1.6166666666666667,
+      "rate_floor_minutes_at_30rpm": 9.7,
+      "raw_network_bytes_range_100_to_200_per_row": [
+        255615000,
+        511230000
+      ],
+      "total_sessions": 1315,
+      "warmup_sessions_assumption": 60
+    },
+    {
+      "compressed_bytes_range_30_to_150_per_row": [
+        81895500,
+        409477500
+      ],
+      "empirical_30Min_bytes_per_row_estimate": 100351550.80310425,
+      "first_session": "2019-11-25",
+      "full_rth_minute_rows_5_stocks": 2729850,
+      "ideal_pages_at_limit_10000": 273,
+      "monthly_chunks": 68,
+      "monthly_page_count_at_full_rth_presence": 312,
+      "rate_floor_minutes_at_180rpm": 1.7333333333333334,
+      "rate_floor_minutes_at_30rpm": 10.4,
+      "raw_network_bytes_range_100_to_200_per_row": [
+        272985000,
+        545970000
+      ],
+      "total_sessions": 1405,
+      "warmup_sessions_assumption": 150
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    "reports/data_audit/p0_1_2026-10-10_190015/p0_1_existing_work_review.md",
+    "https://docs.alpaca.markets/us/reference/stockbars",
+    "https://docs.alpaca.markets/us/docs/about-market-data-api"
+  ],
+  "sparse_four_slots_upper_bound_without_eligibility": 25100,
+  "study_full_rth_rows_5_stocks": 2439150,
+  "study_regular_minutes": 487830,
+  "study_sessions": 1255,
+  "warmup_caution": "60-session formation liquidity is not full FT0 warmup; M4 uses 126 daily endpoints plus 48-step input context; 60/150 are resource sensitivity assumptions, not modified research parameters"
+}

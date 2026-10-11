@@ -1,0 +1,91 @@
+{
+  "authorized_changed_tracked_files": [
+    "reports/audit/track_a_events.jsonl"
+  ],
+  "basis": "Protected tracked-file SHA256 plus data file size/mtime/inode; not repeated raw-byte rehash",
+  "data_bytes": 8682157,
+  "data_stat_identity_unchanged": true,
+  "duplicated_raw_assets": false,
+  "fitting_attempts": 0,
+  "focused_tests": {
+    "full_suite_rerun": false,
+    "passed": 22,
+    "ruff_run": false,
+    "seconds": 4.66
+  },
+  "git": {
+    "agent_commits": 0,
+    "agent_pushes": 0,
+    "ahead_behind": "0\t0",
+    "branch": "feat/track-a-data-intake",
+    "head": "bf767746f6757c7e04a9abe86c45f043c906da31",
+    "staged_changes": false,
+    "upstream_head": "bf767746f6757c7e04a9abe86c45f043c906da31"
+  },
+  "inspection_to_handoff_seconds": 829.137,
+  "ledger_appended_bytes": 2007,
+  "ledger_events_after": 8,
+  "ledger_events_before": 7,
+  "ledger_old_byte_prefix_preserved": true,
+  "new_file_bytes": 122035,
+  "new_files": [
+    {
+      "bytes": 16741,
+      "path": "reports/codex_sessions/2026-10-10_195340_feat-track-a-data-intake_p1-1-sip-feasibility.md"
+    },
+    {
+      "bytes": 41049,
+      "path": "reports/data_audit/p1_1_2026-10-10_195340/checks.json"
+    },
+    {
+      "bytes": 3041,
+      "path": "reports/data_audit/p1_1_2026-10-10_195340/human_review_card.md"
+    },
+    {
+      "bytes": 7506,
+      "path": "reports/data_audit/p1_1_2026-10-10_195340/package_report.md"
+    },
+    {
+      "bytes": 2685,
+      "path": "reports/data_audit/p1_1_2026-10-10_195340/preservation.json"
+    },
+    {
+      "bytes": 10746,
+      "path": "reports/data_audit/p1_1_2026-10-10_195340/probe_plan.json"
+    },
+    {
+      "bytes": 28052,
+      "path": "reports/data_audit/p1_1_2026-10-10_195340/probe_results.json"
+    },
+    {
+      "bytes": 2681,
+      "path": "reports/data_audit/p1_1_2026-10-10_195340/resource_estimate.json"
+    },
+    {
+      "bytes": 9534,
+      "path": "reports/data_audit/p1_1_2026-10-10_195340/sample_records.json"
+    }
+  ],
+  "no_feature_or_label_or_performance_computation": true,
+  "no_historical_available_at_inferred": true,
+  "package": "P1.1",
+  "protected_start_tracked_files": 89,
+  "raw_and_pilot_data_files": 138,
+  "sample_ET_UTC_and_minute_end_assertions": "PASS in offline finish check",
+  "schema_checks_validated": 19,
+  "schema_version": 1,
+  "source_code_config_authorities_prior_reports_unchanged": true,
+  "status": "PASS",
+  "status_counts": {
+    "BLOCKED": 4,
+    "INCONCLUSIVE": 2,
+    "INVALID": 1,
+    "NOT_RUN": 1,
+    "PASS": 10,
+    "WARN": 1
+  },
+  "time_utc": "2026-10-11T00:04:11.002919+00:00",
+  "total_report_growth_bytes": 124042,
+  "unchanged_blocker_count": 7,
+  "unchanged_start_tracked_files": 88
+}

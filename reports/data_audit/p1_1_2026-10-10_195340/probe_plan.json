@@ -1,0 +1,366 @@
+{
+  "actions_probe": {
+    "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+    "params": {
+      "data_quality": "complete",
+      "end": "2025-06-30",
+      "limit": 1,
+      "region": "us",
+      "sort": "asc",
+      "start": "2020-01-01",
+      "symbols": "AAPL",
+      "types": "forward_split,cash_dividend"
+    },
+    "purpose": "one metadata record at most; process-date filters, no actions ledger or pagination"
+  },
+  "authorization_basis": "Current human P1.1 prompt authorizes bounded standalone nontrading feasibility reads; no managed research executor is invoked",
+  "bar_response_rows_expected": 33,
+  "corporate_records_persisted_max": 1,
+  "max_attempts_per_query": 1,
+  "max_http_calls": 16,
+  "max_pages_per_bar_query": 1,
+  "minute_source_rows_persisted_max": 5,
+  "no_publication_delay_assumed": true,
+  "no_scientific_metrics": true,
+  "output_dir": "reports/data_audit/p1_1_2026-10-10_195340",
+  "package": "P1.1",
+  "probe_order": [
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2020-07-08T14:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T14:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T14:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2020-07-08-10:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2020-07-08T15:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T15:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T15:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2020-07-08-11:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2020-07-08T18:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T18:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T18:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2020-07-08-14:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2020-07-08T19:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T19:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T19:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2020-07-08-15:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2023-03-10T15:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-03-10T15:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2023-03-10T15:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2023-03-10-10:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2023-03-10T16:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-03-10T16:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2023-03-10T16:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2023-03-10-11:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2023-03-10T19:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-03-10T19:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2023-03-10T19:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2023-03-10-14:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2023-03-10T20:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-03-10T20:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2023-03-10T20:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2023-03-10-15:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2025-06-03T14:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-06-03T14:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2025-06-03T14:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2025-06-03-10:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2025-06-03T15:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-06-03T15:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2025-06-03T15:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2025-06-03-11:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2025-06-03T18:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-06-03T18:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2025-06-03T18:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2025-06-03-14:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2025-06-03T19:33:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-06-03T19:33:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2025-06-03T19:33:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "1Min"
+      },
+      "probe_id": "2025-06-03-15:33",
+      "purpose": "minute-open source feasibility only"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2020-07-08T13:30:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T13:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T13:30:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "30Min"
+      },
+      "probe_id": "boundary-2020-07-08-raw",
+      "purpose": "matched 09:30 half-hour raw/split source comparison"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM"
+      ],
+      "expected_timestamp": "2020-07-08T13:30:00+00:00",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-08T13:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-07-08T13:30:00+00:00",
+        "symbols": "AAPL,JPM",
+        "timeframe": "30Min"
+      },
+      "probe_id": "boundary-2020-07-08-split",
+      "purpose": "matched 09:30 half-hour raw/split source comparison"
+    },
+    {
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "expected_symbols": [
+        "AAPL",
+        "JPM",
+        "JNJ",
+        "WMT",
+        "CAT"
+      ],
+      "expected_timestamp": "2020-04-06T04:00:00+00:00",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-04-07T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 16,
+        "sort": "asc",
+        "start": "2020-04-06T04:00:00+00:00",
+        "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+        "timeframe": "1Day"
+      },
+      "probe_id": "formation-first-of-60-2020-04-06",
+      "purpose": "one preformation daily bucket; no eligibility calculation"
+    }
+  ],
+  "requests_per_minute": 30,
+  "schema_version": 1,
+  "time_utc": "2026-10-10T23:53:40.639767+00:00",
+  "timeout_seconds": 10
+}

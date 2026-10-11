@@ -1,0 +1,608 @@
+{
+  "checks": [
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "protocol-identity",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "issues": [],
+        "meaning": "Pinned document/reference identity only; no scientific or human approval",
+        "status": "PASS"
+      },
+      "example_ids": [],
+      "explanation": "Five authorities and references match the pointer; identity only, not source or scientific approval.",
+      "gate_id": "G0",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "local-source-reference",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "header": [
+          "timestamp",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume"
+        ],
+        "manifest_sha256_matches_P0_1": true,
+        "original_upstream_filename_or_delivery_metadata": "not supplied",
+        "raw_hash_recomputed": false,
+        "rows": 29510,
+        "size_bytes": 2083715,
+        "source_stat_matches_P1_1_baseline": true
+      },
+      "example_ids": [],
+      "explanation": "Actual configured local source, header, size, timestamp count/range and prior metadata reference are consistent. Prior raw hash is inherited, not recomputed.",
+      "gate_id": "G1",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features",
+        "market_conditioned_ridge",
+        "MC0",
+        "MC1",
+        "MC2"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "provider-and-membership-identity",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "delivery_metadata": "not supplied in repository/source folder",
+        "membership": "not definable from supplied CSV alone",
+        "related_event_ids": [
+          "p0.1-USA500-source-clock"
+        ],
+        "sidecars": [],
+        "vendor_or_course_document_locator": null,
+        "web_identification_attempted": false
+      },
+      "example_ids": [],
+      "explanation": "Course label and instrument-like filename do not independently identify upstream vendor, instrument type, membership, calculation, adjustment or quote basis.",
+      "gate_id": "G1",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "timestamp-encoding",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "duplicate_stamps": 0,
+        "native_offsets": {
+          "0:00:00": 29510
+        },
+        "non_hour_labels": 0,
+        "out_of_order": 0,
+        "rows": 29510,
+        "sample_days": [
+          "2020-07-08",
+          "2023-03-10",
+          "2025-06-03"
+        ],
+        "source_aggregation_timezone": null
+      },
+      "example_ids": [],
+      "explanation": "All timestamp fields parse with explicit UTC offsets; ET conversion uses -04/-05 seasonally. This does not prove timezone of source aggregation.",
+      "gate_id": "G1",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features",
+        "market_conditioned_ridge",
+        "MC0",
+        "MC1",
+        "MC2"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "hourly-ohlc-interval-semantics",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "modal_stamp_spacing_hours": 1,
+        "period_start_end_documented": false,
+        "provisional_interpretation": "assume close for now; not empirical availability proof",
+        "sampled_ohlc_rows": 18
+      },
+      "example_ids": [],
+      "explanation": "OHLC columns and 18 valid sampled numeric records exist; duration, start/end labeling, bid/ask/trade construction and bar-completion rule are undocumented.",
+      "gate_id": "G1",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features",
+        "market_conditioned_ridge",
+        "MC0",
+        "MC1",
+        "MC2"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "stock-grid-and-source-calendar",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "actual_aggregation_or_fill_run": false,
+        "calendar_exceptions": "Task01 metadata reused; not classified as genuine missing bars",
+        "half_hour_exact_labels": 0,
+        "stamp_inside_xnys_rth": 7502,
+        "stamp_on_non_xnys_date": 2240,
+        "stamp_outside_xnys_rth": 22008
+      },
+      "example_ids": [],
+      "explanation": "Native whole-hour labels do not exactly match half-hour stock endpoints. RTH-only hypothesis is contradicted; actual source schedule and compatible hourly mapping remain unknown.",
+      "gate_id": "G1",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "WARN",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features",
+        "market_conditioned_ridge",
+        "MC0",
+        "MC1",
+        "MC2"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "daily-close-session-contract",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "U4_U5_constructed": false,
+        "daily_dataset_or_contract_supplied": false,
+        "source_16h_label_is_proven_daily_close": false
+      },
+      "example_ids": [],
+      "explanation": "No supplied daily-close/session definition, aggregation timezone or completion/publication rule; do not substitute the final row of a UTC/ET/XNYS date.",
+      "gate_id": "G1",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features",
+        "market_conditioned_ridge",
+        "MC0",
+        "MC1",
+        "MC2"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "historical-publication",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "assumed_delay_minutes": null,
+        "available_at": null,
+        "related_event_ids": [
+          "p0.1-USA500-source-clock"
+        ],
+        "source_owner_question": "Confirm original historical availability, revisions and completion for each hour/daily session"
+      },
+      "example_ids": [],
+      "explanation": "CSV has no historical publication/available_at/revision/vintage metadata. Period end and present-day file metadata are insufficient.",
+      "gate_id": "G1",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features",
+        "market_conditioned_ridge",
+        "MC0",
+        "MC1",
+        "MC2"
+      ],
+      "approved_threshold": {
+        "authority": "docs/track_a/Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md D2 \u00a73.2",
+        "max_period_age_minutes": 90
+      },
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "D2-independent-freshness",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "market_period_end_documented": false,
+        "timestamp_only_distances": {
+          "cutoffs": 2510,
+          "meaning": "latest source-stamp distance only; neither period age nor availability proven; not 46/48 retention",
+          "stamp_age_minutes_counts": {
+            "30.0": 2509,
+            "90.0": 1
+          }
+        }
+      },
+      "example_ids": [],
+      "explanation": "Timestamp-distance counts are not verified market period-end age. Both compatible completion and actual publication must be established before D2 freshness can pass.",
+      "gate_id": "G2",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "observed-study-date-span",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "first_stamp_utc": "2020-07-01T04:00:00+00:00",
+        "gaps_summary_reused_from_Task01": true,
+        "last_stamp_utc": "2025-07-01T04:00:00+00:00",
+        "stamp_after_study_local_date": 1,
+        "stamp_before_study_local_date": 0
+      },
+      "example_ids": [],
+      "explanation": "Observed stamps span proposed study dates and retain one next-local-date observation. This certifies label range only, not completed observation coverage.",
+      "gate_id": "G1",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features",
+        "market_conditioned_ridge",
+        "MC0",
+        "MC1",
+        "MC2"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "D7-warmup-and-48-step-retention",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "before_formation_course_stamps": 0,
+        "endpoint_or_46_of_48_certified": false,
+        "hourly_RMS12_RMS60_daily_RMS63_verified": false,
+        "model_retention_computed": false
+      },
+      "example_ids": [],
+      "explanation": "No U1\u2013U5 values, RMS histories or 48-step windows built. File begins at formation with no earlier course history; future approved QA must establish warmup and validity.",
+      "gate_id": "G1",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "NOT_RUN",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "volume-nonuse-and-source-preservation",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "network_calls": 0,
+        "sampled_ohlc_rows": 18,
+        "source_substitution": false,
+        "volume_values_parsed_or_used": false,
+        "whole_source_exported": false
+      },
+      "example_ids": [],
+      "explanation": "No USA500 volume value was parsed/interpreted/used; only original course timestamp/OHLC sample fields retained. No proxy/download/copy of full source.",
+      "gate_id": "G1",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [
+        "F01",
+        "market_features"
+      ],
+      "approved_threshold": {
+        "authority": "docs/track_a/Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md D2 \u00a73.2",
+        "max_period_age_minutes": 90
+      },
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "F01-D2",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "available_at": "2001-01-02T14:00:00+00:00",
+        "decision_time": "2001-01-02T15:00:00+00:00",
+        "hypothetical_delay_minutes": 60,
+        "market_period_end": "2001-01-02T13:00:00+00:00",
+        "meaning": "D2 counterexample; synthetic lag is not real publication evidence",
+        "observed_available_age_minutes": 60.0,
+        "observed_usable": true,
+        "required_period_end_age_minutes": 120.0,
+        "required_usable": false,
+        "status": "INVALID",
+        "synthetic_only": true
+      },
+      "example_ids": [
+        "synthetic-F01"
+      ],
+      "explanation": "Existing synthetic F01 fixture still accepts period age120 because availability age60; production alignment unchanged and blocked.",
+      "gate_id": "G2",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "INVALID",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "separate-asof-predicates",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "all_synthetic": true,
+        "case_ids": [
+          "synthetic-F01",
+          "synthetic-fresh-unpublished",
+          "synthetic-fresh-published"
+        ],
+        "fresh_published_conditional_example": true,
+        "fresh_unpublished_rejected": true
+      },
+      "example_ids": [
+        "synthetic-F01",
+        "synthetic-fresh-unpublished",
+        "synthetic-fresh-published"
+      ],
+      "explanation": "Three synthetic cases establish distinct freshness/publication predicates; third is stipulated eligible on those criteria only, never an empirical source PASS.",
+      "gate_id": "G2",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    },
+    {
+      "affected_branches": [
+        "shared_clock"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2-2026-10-10_201104",
+      "check_id": "shared-clock-signoff",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "new_signoff": false,
+        "related_event_ids": [
+          "p0.1-shared-D3-clock"
+        ]
+      },
+      "example_ids": [],
+      "explanation": "Shared complete-hour advances versus Track A 240 continuous RTH minutes remains unresolved; USA500 investigation does not reconcile either convention.",
+      "gate_id": "G0",
+      "owner_action": "Review P1.2 source-owner questions; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only on supplied source contract or separately approved focused repair/QA",
+      "schema_version": 1,
+      "source_ids": {
+        "course_path": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "evidence_path": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "metadata_path": "reports/data_audit/task01_course/course_manifest.json"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:14:15.495257+00:00"
+    }
+  ],
+  "code_identity_basis": "P1.1 code identity inherited; tracked production code/config unchanged and scoped hashes preserved",
+  "contract_status": "UNKNOWN-BLOCKED",
+  "gates": {
+    "G0": "BLOCKED",
+    "G1": "BLOCKED",
+    "G2": "BLOCKED",
+    "G3": "NOT_RUN",
+    "G4": "NOT_RUN",
+    "G5": "NOT_RUN",
+    "G6": "NOT_RUN",
+    "G7": "NOT_RUN",
+    "G8": "NOT_RUN",
+    "G9": "NOT_RUN"
+  },
+  "ledger_append": "PASS: one non-clearing event",
+  "ledger_event_id": "p1.2-usa500-source-contract-2026-10-10-201104",
+  "offline": true,
+  "package": "P1.2",
+  "pair_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "prior_blocker_ids": [
+    "p0.1-F01",
+    "p0.1-USA500-source-clock",
+    "p0.1-stock-publication",
+    "p0.1-minute-execution",
+    "p0.1-actions-dividends",
+    "p0.1-formation-prehistory",
+    "p0.1-shared-D3-clock"
+  ],
+  "research_status": "BLOCKED",
+  "schema_version": 1,
+  "stock_only_scope": "USA500 issue adds no stock-only restriction; existing stock/shared blockers remain independent"
+}
