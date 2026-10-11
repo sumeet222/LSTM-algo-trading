@@ -1,0 +1,326 @@
+{
+  "checks": [
+    {
+      "affected_branches": [
+        "stock_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.2a-2026-10-11_001359",
+      "check_id": "P2.2A-exact-minute-references",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "hashes": {
+          "README.md": "a3212a04926e7e949e83b7483f4215a5e77b0ceb8ba8653534b0225386f4fec5",
+          "reports/data_audit/p2_2a_2026-10-11_001359/target_trace_examples.md": "962edde89b09c63594991e8c39c8c91556f89278c563830c859a40028d51baa1",
+          "src/lstm_data/clocks.py": "c6bfe3954c4d7e9d24c3ee2f56cdf18df80847971b47975a56b3ef29b88d3bc0",
+          "src/lstm_data/labels.py": "00d233fc7cb5102b4feca0d5ddb70ee3cb69defe83c887b10b78857dc7dbe656",
+          "tests/test_labels.py": "e5a1ece720daa107604ee9bd8e9b46c5ce3872ef2eb7588652eb6f3d459faffe"
+        },
+        "raw_source_rows_read": 0,
+        "tests": [
+          "tests/test_labels.py::test_nominal_pairs_and_shifted_actual_issuance",
+          "tests/test_labels.py::test_exact_minute_symbol_and_duplicate_candidates",
+          "tests/test_labels.py::test_bad_source_fields_and_values_rejected",
+          "tests/test_labels.py::test_invalid_plans_rejected_without_prices",
+          "tests/test_labels.py::test_modified_plan_cannot_borrow_nominal_reference_prices"
+        ]
+      },
+      "example_ids": [
+        "synthetic-five-name",
+        "synthetic-maturity-purge",
+        "synthetic-C01"
+      ],
+      "explanation": "Exact raw-open candidate references and P2.1 plans, not actual fills or historical source certification.",
+      "gate_id": "G2",
+      "owner_action": "APPROVE / CORRECT / HOLD synthetic implementation; separate next-package authorization",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected label/source-contract/purge tests only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T04:22:58.331664+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.2a-2026-10-11_001359",
+      "check_id": "P2.2A-TG0-floor-math",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "epsilon": 0.0010000000000000675,
+        "floor_id": "a4d17c2c663ec26937429ca345040301b78f22da4626a7bb11cf090cdd9fec0c",
+        "synthetic_median": 0.0,
+        "tests": [
+          "tests/test_labels.py::test_five_log_returns_unscaled_mad_fitted_floor_and_tg0",
+          "tests/test_labels.py::test_zero_mad_has_nonzero_training_fitted_floor",
+          "tests/test_labels.py::test_actual_fit_timestamp_empty_duplicates_and_synthetic_guard"
+        ],
+        "training_keys": [
+          "2020-07-01:1:2020-07-01T14:30:00+00:00"
+        ],
+        "unscaled_MAD": 0.010000000000000675
+      },
+      "example_ids": [
+        "synthetic-five-name",
+        "synthetic-maturity-purge",
+        "synthetic-C01"
+      ],
+      "explanation": "Synthetic permitted training panel only; no production TG0 floor or empirically certified labels.",
+      "gate_id": "G2",
+      "owner_action": "APPROVE / CORRECT / HOLD synthetic implementation; separate next-package authorization",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected label/source-contract/purge tests only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T04:22:58.331664+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.2a-2026-10-11_001359",
+      "check_id": "P2.2A-C01-population-separation",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "entry_scope": "source/clock/reference only",
+        "execution_outcome": "NOT_EVALUATED",
+        "future_counterfactual_causal_flags_unchanged": true,
+        "tests": [
+          "tests/test_labels.py::test_future_exit_missing_or_later_publication_changes_only_label",
+          "tests/test_labels.py::test_missing_entry_blocks_that_name_and_five_name_label",
+          "tests/test_labels.py::test_upstream_full_five_population_and_f01_preserved"
+        ]
+      },
+      "example_ids": [
+        "synthetic-five-name",
+        "synthetic-maturity-purge",
+        "synthetic-C01"
+      ],
+      "explanation": "Upstream forecast evidence asserted; no FT0 completeness/risk/portfolio admission certified.",
+      "gate_id": "G2",
+      "owner_action": "APPROVE / CORRECT / HOLD synthetic implementation; separate next-package authorization",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected label/source-contract/purge tests only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T04:22:58.331664+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.2a-2026-10-11_001359",
+      "check_id": "P2.2A-maturity-and-purging",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "WF1_inner_train_stop": "2023-03-31T04:00:00+00:00",
+        "crossing_reason": "PURGED_SPLIT_BOUNDARY",
+        "no_lookback_embargo": true,
+        "tests": [
+          "tests/test_labels.py::test_unknown_maturity_and_entry_publication_fail_closed",
+          "tests/test_labels.py::test_maturity_delay_not_usable_before_latest_availability",
+          "tests/test_labels.py::test_chronological_inner_tail_and_no_fit_floor_on_validation",
+          "tests/test_labels.py::test_frozen_outer_boundaries_and_maturity_purging",
+          "tests/test_labels.py::test_unscheduled_origin_has_auditable_exclusion_key"
+        ],
+        "unknown_reason": "MATURITY_UNVERIFIED"
+      },
+      "example_ids": [
+        "synthetic-five-name",
+        "synthetic-maturity-purge",
+        "synthetic-C01"
+      ],
+      "explanation": "Pure chronological classification; actual source clocks and production split approval remain prerequisites.",
+      "gate_id": "G2",
+      "owner_action": "APPROVE / CORRECT / HOLD synthetic implementation; separate next-package authorization",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected label/source-contract/purge tests only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T04:22:58.331664+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.2a-2026-10-11_001359",
+      "check_id": "P2.2A-action-share-convention",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "dividend_cashbook": "NOT_IMPLEMENTED",
+        "synthetic_split": {
+          "entry": 100,
+          "exit": 25,
+          "log_return": 0,
+          "new_shares": 4,
+          "old_shares": 1
+        },
+        "tests": [
+          "tests/test_labels.py::test_split_share_conversion_requires_explicit_interval_facts"
+        ]
+      },
+      "example_ids": [
+        "synthetic-five-name",
+        "synthetic-maturity-purge",
+        "synthetic-C01"
+      ],
+      "explanation": "Documented/time-specific asserted split scope required; no economic action completeness or cashbook certificate.",
+      "gate_id": "G2",
+      "owner_action": "APPROVE / CORRECT / HOLD synthetic implementation; separate next-package authorization",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected label/source-contract/purge tests only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T04:22:58.331664+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.2a-2026-10-11_001359",
+      "check_id": "P2.2A-overall-G2",
+      "code_id": "1774fa3c00fd52fda2d2b8b034ff67828657efe68bd253ace44dc87a5ef4707f",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "focused_tests": {
+          "note": "Final two guard tests included in full integration",
+          "passed": 26,
+          "seconds": 4.11
+        },
+        "formal_registration_verified": false,
+        "implementation_status": "IMPLEMENTATION_COMPLETE",
+        "integration_tests": {
+          "passed": 157,
+          "seconds": 30.51
+        },
+        "lint": "PASS src tests",
+        "market": "HOLD",
+        "original_blocker_ids": [
+          "p0.1-F01",
+          "p0.1-USA500-source-clock",
+          "p0.1-stock-publication",
+          "p0.1-minute-execution",
+          "p0.1-actions-dividends",
+          "p0.1-formation-prehistory",
+          "p0.1-shared-D3-clock"
+        ],
+        "reported_agreement": true,
+        "research_ready_labels": 0,
+        "source_queries": 0,
+        "tests": [],
+        "training_pairs": 0
+      },
+      "example_ids": [
+        "synthetic-five-name",
+        "synthetic-maturity-purge",
+        "synthetic-C01"
+      ],
+      "explanation": "All deterministic acceptance tests pass; real publication/minute/action/mapping/formal-registration obligations and G0/G1/G2 blockers preserved.",
+      "gate_id": "G2",
+      "owner_action": "APPROVE / CORRECT / HOLD synthetic implementation; separate next-package authorization",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected label/source-contract/purge tests only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T04:22:58.331664+00:00"
+    }
+  ],
+  "implementation_status": "IMPLEMENTATION_COMPLETE",
+  "package": "P2.2A",
+  "research_status": "BLOCKED",
+  "schema_version": 1
+}

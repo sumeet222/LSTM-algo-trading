@@ -147,3 +147,34 @@ The researcher reports cross-track agreement on 240 continuous minutes and a fut
 conventional S&P 500 source. Formal versioned registration is pending. G0–G2 remain
 blocked, current USA500/U1–U5/MC0–MC2 joins remain HOLD, and P2.2 requires separate
 authorization plus its source/label prerequisites. No source replacement is installed.
+
+## Synthetic target interfaces (P2.2A)
+
+`lstm_data.labels` reuses P2.1 plans and the canonical AAPL/JPM/JNJ/WMT/CAT order.
+`MinuteReference` requires an exact one-minute raw `open`, source row ID and version;
+`minute_reference` never substitutes the next minute, another name or an adjusted price.
+`causal_eligibility` accepts upstream `ForecastEvidence` and entry references only.
+Its entry flags cover source/clock/reference eligibility; portfolio admission and fills
+remain P3 work. Future exits and action records are excluded from that interface.
+
+`label_sample` separately computes the five-name log-return median/unscaled MAD,
+preserves source IDs and maturity, and requires explicit `ActionScope` evidence for
+no-action or split/share conversion. Missing exits invalidate the label without
+changing causal entry flags. Unknown publication produces `MATURITY_UNVERIFIED`;
+no dividend cashflows or publication delays are invented. Reference availability
+describes when that open is supported, not an assumed completed-minute-bar latency.
+
+`fitting_window` supplies the frozen WF1/WF2/preconfirmation date boundaries and
+63-exchange-session inner tail. `fitting_membership` purges outcome/maturity crossings
+and enforces the actual fitting timestamp; historical input lookback is not embargoed.
+Date stops are exclusive next-period ET midnight, with UTC keys.
+`fit_tg0_floor` accepts only eligible inner-training/refit labels, fits
+`max(1e-4, 0.1 * median(training MAD))` once, and records fitting keys/exclusions.
+`apply_tg0_floor` reuses that frozen floor without clipping or refitting.
+
+Run `python -m pytest tests/test_labels.py -q` without data or secrets. Examples use
+explicit `test_scenario=True` and synthetic source/action/input evidence. Supported
+DOCUMENTED metadata remains a caller assertion requiring review. ASSUMED publication
+is retained but not activated. Every output has `research_ready=False`, execution
+is `NOT_EVALUATED`, and market branches remain HOLD. Production label integration,
+inner-tail adequacy checks and source/approval closure need separate authorization.
