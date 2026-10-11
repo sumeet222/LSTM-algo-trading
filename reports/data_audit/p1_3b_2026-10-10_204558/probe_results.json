@@ -1,0 +1,484 @@
+{
+  "D8_pair_activated": false,
+  "HTTP_responses_received": 1,
+  "authenticated_transport_attempts": 2,
+  "course_provenance_update": {
+    "basis": "User statement in P1.3B prompt",
+    "independently_verified": false,
+    "statement": "Instructor supplied course USA500 CSV as a Dukascopy export"
+  },
+  "daily_session_scope": "New York day: documented eligible extended-hours T/U trades update daily volume but not OHLC. Exact extended-hours contribution not measured; not D4 RTH-only volume.",
+  "diagnostic_rankings_high_to_low": {
+    "close": [
+      "AAPL",
+      "JPM",
+      "JNJ",
+      "WMT",
+      "CAT"
+    ],
+    "high": [
+      "AAPL",
+      "JPM",
+      "JNJ",
+      "WMT",
+      "CAT"
+    ],
+    "low": [
+      "AAPL",
+      "JPM",
+      "JNJ",
+      "WMT",
+      "CAT"
+    ],
+    "open": [
+      "AAPL",
+      "JPM",
+      "JNJ",
+      "WMT",
+      "CAT"
+    ]
+  },
+  "documentation_findings": {
+    "aggregation_reference": "https://docs.alpaca.markets/us/docs/market-data-faq",
+    "asof": "Entity mapping only; 2020-07-01 specified for this request, not a publication vintage",
+    "bars_reference": "https://docs.alpaca.markets/us/reference/stockbars",
+    "checked_at_utc": "2026-10-11T00:55:15.130914+00:00",
+    "daily_timestamp": "New York day left boundary, not first publication",
+    "extended_hours": "FAQ condition T daily and U minute/daily update volume but not OHLC; daily volume is not RTH-only",
+    "raw": "No split/dividend adjustment requested; no new split-adjusted comparison or complete action scan",
+    "turnover_interval": "OHLC extrema and normal volume differ in eligible trades. low*volume/high*volume is only a proxy sensitivity interval. VWAP uses another eligible-volume denominator, so VWAP*normal volume is not certified actual turnover."
+  },
+  "elapsed_probe_seconds_this_execution": 0.229,
+  "full_actions_ledger": "NOT_RUN",
+  "hand_recomputation": {
+    "AAPL": "55,182,629 * 26,247 / 100 = 14,483,784,633.63 USD",
+    "JPM": "31,402,576 * 8,946 / 100 = 2,809,274,448.96 USD",
+    "method": "Independent integer-cent multiplication from retained April 6 source examples",
+    "status": "PASS",
+    "synthetic_split_product": "100*200 = 25*800 = 20,000; isolated paired split price/inverse-volume only"
+  },
+  "historical_available_at": null,
+  "historical_vintage": "UNKNOWN",
+  "interval_semantics": "low*volume/high*volume sensitivity, not guaranteed bounds on actual traded dollar turnover; OHLC and volume eligibility differ",
+  "matrix": [
+    {
+      "action_events_in_window": "UNKNOWN: no complete actions ledger queried",
+      "adjustment": "raw",
+      "asof": "2020-07-01",
+      "daily_volume_RTH_only": "NO under documented aggregation rules; extended-hours eligible volume included, amount unmeasured",
+      "duplicate_session_records": 0,
+      "expected_sessions": 60,
+      "feed_requested": "sip",
+      "formation_eligibility": "BLOCKED",
+      "historical_available_at": null,
+      "mean_denominator_sessions": 60,
+      "mean_proxy_USD": {
+        "close": "12373671687.32586666666666667",
+        "high": "12527797680.79795833333333333",
+        "low": "12195573386.901345",
+        "open": "12347411083.02408333333333333"
+      },
+      "midnight_ET_labels": true,
+      "missing_sessions": [],
+      "present_unique_sessions": 60,
+      "price_volume_diagnostics": "WARN: retrospective daily-bar proxies only",
+      "proxy_relation_to_50m": {
+        "close": "ABOVE",
+        "high": "ABOVE",
+        "low": "ABOVE",
+        "open": "ABOVE"
+      },
+      "returned_records": 60,
+      "source_order_defects": {
+        "duplicate_keys": 0,
+        "fractional_volume_rows": 0,
+        "invalid_ohlc_rows": 0,
+        "negative_volume_rows": 0,
+        "nonfinite_ohlcv_rows": 0,
+        "nonpositive_price_rows": 0,
+        "null_fields": 0,
+        "out_of_order": false,
+        "zero_volume_rows": 0
+      },
+      "sum_proxy_USD": {
+        "close": "742420301239.5520",
+        "high": "751667860847.87750",
+        "low": "731734403214.08070",
+        "open": "740844664981.4450"
+      },
+      "symbol": "AAPL",
+      "unexpected_sessions": []
+    },
+    {
+      "action_events_in_window": "UNKNOWN: no complete actions ledger queried",
+      "adjustment": "raw",
+      "asof": "2020-07-01",
+      "daily_volume_RTH_only": "NO under documented aggregation rules; extended-hours eligible volume included, amount unmeasured",
+      "duplicate_session_records": 0,
+      "expected_sessions": 60,
+      "feed_requested": "sip",
+      "formation_eligibility": "BLOCKED",
+      "historical_available_at": null,
+      "mean_denominator_sessions": 60,
+      "mean_proxy_USD": {
+        "close": "2588086315.358666666666666667",
+        "high": "2644333004.870636666666666667",
+        "low": "2544334722.24617",
+        "open": "2602197812.086583333333333333"
+      },
+      "midnight_ET_labels": true,
+      "missing_sessions": [],
+      "present_unique_sessions": 60,
+      "price_volume_diagnostics": "WARN: retrospective daily-bar proxies only",
+      "proxy_relation_to_50m": {
+        "close": "ABOVE",
+        "high": "ABOVE",
+        "low": "ABOVE",
+        "open": "ABOVE"
+      },
+      "returned_records": 60,
+      "source_order_defects": {
+        "duplicate_keys": 0,
+        "fractional_volume_rows": 0,
+        "invalid_ohlc_rows": 0,
+        "negative_volume_rows": 0,
+        "nonfinite_ohlcv_rows": 0,
+        "nonpositive_price_rows": 0,
+        "null_fields": 0,
+        "out_of_order": false,
+        "zero_volume_rows": 0
+      },
+      "sum_proxy_USD": {
+        "close": "155285178921.520",
+        "high": "158659980292.23820",
+        "low": "152660083334.77020",
+        "open": "156131868725.1950"
+      },
+      "symbol": "JPM",
+      "unexpected_sessions": []
+    },
+    {
+      "action_events_in_window": "UNKNOWN: no complete actions ledger queried",
+      "adjustment": "raw",
+      "asof": "2020-07-01",
+      "daily_volume_RTH_only": "NO under documented aggregation rules; extended-hours eligible volume included, amount unmeasured",
+      "duplicate_session_records": 0,
+      "expected_sessions": 60,
+      "feed_requested": "sip",
+      "formation_eligibility": "BLOCKED",
+      "historical_available_at": null,
+      "mean_denominator_sessions": 60,
+      "mean_proxy_USD": {
+        "close": "1437483504.555166666666666667",
+        "high": "1453538039.977486666666666667",
+        "low": "1421427192.997595",
+        "open": "1439040803.244666666666666667"
+      },
+      "midnight_ET_labels": true,
+      "missing_sessions": [],
+      "present_unique_sessions": 60,
+      "price_volume_diagnostics": "WARN: retrospective daily-bar proxies only",
+      "proxy_relation_to_50m": {
+        "close": "ABOVE",
+        "high": "ABOVE",
+        "low": "ABOVE",
+        "open": "ABOVE"
+      },
+      "returned_records": 60,
+      "source_order_defects": {
+        "duplicate_keys": 0,
+        "fractional_volume_rows": 0,
+        "invalid_ohlc_rows": 0,
+        "negative_volume_rows": 0,
+        "nonfinite_ohlcv_rows": 0,
+        "nonpositive_price_rows": 0,
+        "null_fields": 0,
+        "out_of_order": false,
+        "zero_volume_rows": 0
+      },
+      "sum_proxy_USD": {
+        "close": "86249010273.310",
+        "high": "87212282398.64920",
+        "low": "85285631579.85570",
+        "open": "86342448194.680"
+      },
+      "symbol": "JNJ",
+      "unexpected_sessions": []
+    },
+    {
+      "action_events_in_window": "UNKNOWN: no complete actions ledger queried",
+      "adjustment": "raw",
+      "asof": "2020-07-01",
+      "daily_volume_RTH_only": "NO under documented aggregation rules; extended-hours eligible volume included, amount unmeasured",
+      "duplicate_session_records": 0,
+      "expected_sessions": 60,
+      "feed_requested": "sip",
+      "formation_eligibility": "BLOCKED",
+      "historical_available_at": null,
+      "mean_denominator_sessions": 60,
+      "mean_proxy_USD": {
+        "close": "1247123100.280333333333333333",
+        "high": "1262693235.662468333333333333",
+        "low": "1232920249.261056666666666667",
+        "open": "1249317770.370833333333333333"
+      },
+      "midnight_ET_labels": true,
+      "missing_sessions": [],
+      "present_unique_sessions": 60,
+      "price_volume_diagnostics": "WARN: retrospective daily-bar proxies only",
+      "proxy_relation_to_50m": {
+        "close": "ABOVE",
+        "high": "ABOVE",
+        "low": "ABOVE",
+        "open": "ABOVE"
+      },
+      "returned_records": 60,
+      "source_order_defects": {
+        "duplicate_keys": 0,
+        "fractional_volume_rows": 0,
+        "invalid_ohlc_rows": 0,
+        "negative_volume_rows": 0,
+        "nonfinite_ohlcv_rows": 0,
+        "nonpositive_price_rows": 0,
+        "null_fields": 0,
+        "out_of_order": false,
+        "zero_volume_rows": 0
+      },
+      "sum_proxy_USD": {
+        "close": "74827386016.820",
+        "high": "75761594139.74810",
+        "low": "73975214955.66340",
+        "open": "74959066222.250"
+      },
+      "symbol": "WMT",
+      "unexpected_sessions": []
+    },
+    {
+      "action_events_in_window": "UNKNOWN: no complete actions ledger queried",
+      "adjustment": "raw",
+      "asof": "2020-07-01",
+      "daily_volume_RTH_only": "NO under documented aggregation rules; extended-hours eligible volume included, amount unmeasured",
+      "duplicate_session_records": 0,
+      "expected_sessions": 60,
+      "feed_requested": "sip",
+      "formation_eligibility": "BLOCKED",
+      "historical_available_at": null,
+      "mean_denominator_sessions": 60,
+      "mean_proxy_USD": {
+        "close": "576226357.3836666666666666667",
+        "high": "586102938.20569",
+        "low": "565844193.094685",
+        "open": "577623159.9715"
+      },
+      "midnight_ET_labels": true,
+      "missing_sessions": [],
+      "present_unique_sessions": 60,
+      "price_volume_diagnostics": "WARN: retrospective daily-bar proxies only",
+      "proxy_relation_to_50m": {
+        "close": "ABOVE",
+        "high": "ABOVE",
+        "low": "ABOVE",
+        "open": "ABOVE"
+      },
+      "returned_records": 60,
+      "source_order_defects": {
+        "duplicate_keys": 0,
+        "fractional_volume_rows": 0,
+        "invalid_ohlc_rows": 0,
+        "negative_volume_rows": 0,
+        "nonfinite_ohlcv_rows": 0,
+        "nonpositive_price_rows": 0,
+        "null_fields": 0,
+        "out_of_order": false,
+        "zero_volume_rows": 0
+      },
+      "sum_proxy_USD": {
+        "close": "34573581443.020",
+        "high": "35166176292.34140",
+        "low": "33950651585.68110",
+        "open": "34657389598.290"
+      },
+      "symbol": "CAT",
+      "unexpected_sessions": []
+    }
+  ],
+  "package": "P1.3B",
+  "params": {
+    "adjustment": "raw",
+    "asof": "2020-07-01",
+    "currency": "USD",
+    "end": "2020-07-01T03:59:59.999999999Z",
+    "feed": "sip",
+    "limit": 1000,
+    "sort": "asc",
+    "start": "2020-04-06T04:00:00Z",
+    "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+    "timeframe": "1Day"
+  },
+  "response_symbols": [
+    "AAPL",
+    "CAT",
+    "JNJ",
+    "JPM",
+    "WMT"
+  ],
+  "returned_rows": 300,
+  "samples": [
+    {
+      "close_times_volume_USD": "14483784633.63",
+      "historical_available_at": null,
+      "raw_ohlcv": {
+        "c": 262.47,
+        "h": 263.11,
+        "l": 249.38,
+        "o": 250.9,
+        "v": 55182629
+      },
+      "response_row_index_zero_based": 0,
+      "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c",
+      "sample_id": "AAPL-2020-04-06",
+      "source_locator": "https://data.alpaca.markets/v2/stocks/bars?adjustment=raw&asof=2020-07-01&currency=USD&end=2020-07-01T03%3A59%3A59.999999999Z&feed=sip&limit=1000&sort=asc&start=2020-04-06T04%3A00%3A00Z&symbols=AAPL%2CJPM%2CJNJ%2CWMT%2CCAT&timeframe=1Day#AAPL@2020-04-06T04:00:00Z",
+      "source_timestamp_ET": "2020-04-06T00:00:00-04:00",
+      "source_timestamp_utc": "2020-04-06T04:00:00+00:00",
+      "symbol": "AAPL"
+    },
+    {
+      "close_times_volume_USD": "2809274448.96",
+      "historical_available_at": null,
+      "raw_ohlcv": {
+        "c": 89.46,
+        "h": 90.99,
+        "l": 87.7,
+        "o": 88.99,
+        "v": 31402576
+      },
+      "response_row_index_zero_based": 0,
+      "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c",
+      "sample_id": "JPM-2020-04-06",
+      "source_locator": "https://data.alpaca.markets/v2/stocks/bars?adjustment=raw&asof=2020-07-01&currency=USD&end=2020-07-01T03%3A59%3A59.999999999Z&feed=sip&limit=1000&sort=asc&start=2020-04-06T04%3A00%3A00Z&symbols=AAPL%2CJPM%2CJNJ%2CWMT%2CCAT&timeframe=1Day#JPM@2020-04-06T04:00:00Z",
+      "source_timestamp_ET": "2020-04-06T00:00:00-04:00",
+      "source_timestamp_utc": "2020-04-06T04:00:00+00:00",
+      "symbol": "JPM"
+    },
+    {
+      "close_times_volume_USD": "2421543673.68",
+      "historical_available_at": null,
+      "raw_ohlcv": {
+        "c": 139.76,
+        "h": 140.97,
+        "l": 135.54,
+        "o": 137.01,
+        "v": 17326443
+      },
+      "response_row_index_zero_based": 0,
+      "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c",
+      "sample_id": "JNJ-2020-04-06",
+      "source_locator": "https://data.alpaca.markets/v2/stocks/bars?adjustment=raw&asof=2020-07-01&currency=USD&end=2020-07-01T03%3A59%3A59.999999999Z&feed=sip&limit=1000&sort=asc&start=2020-04-06T04%3A00%3A00Z&symbols=AAPL%2CJPM%2CJNJ%2CWMT%2CCAT&timeframe=1Day#JNJ@2020-04-06T04:00:00Z",
+      "source_timestamp_ET": "2020-04-06T00:00:00-04:00",
+      "source_timestamp_utc": "2020-04-06T04:00:00+00:00",
+      "symbol": "JNJ"
+    },
+    {
+      "close_times_volume_USD": "2246945736.07",
+      "historical_available_at": null,
+      "raw_ohlcv": {
+        "c": 126.07,
+        "h": 126.39,
+        "l": 118.94,
+        "o": 119.05,
+        "v": 17823001
+      },
+      "response_row_index_zero_based": 0,
+      "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c",
+      "sample_id": "WMT-2020-04-06",
+      "source_locator": "https://data.alpaca.markets/v2/stocks/bars?adjustment=raw&asof=2020-07-01&currency=USD&end=2020-07-01T03%3A59%3A59.999999999Z&feed=sip&limit=1000&sort=asc&start=2020-04-06T04%3A00%3A00Z&symbols=AAPL%2CJPM%2CJNJ%2CWMT%2CCAT&timeframe=1Day#WMT@2020-04-06T04:00:00Z",
+      "source_timestamp_ET": "2020-04-06T00:00:00-04:00",
+      "source_timestamp_utc": "2020-04-06T04:00:00+00:00",
+      "symbol": "WMT"
+    },
+    {
+      "close_times_volume_USD": "809773006.02",
+      "historical_available_at": null,
+      "raw_ohlcv": {
+        "c": 120.43,
+        "h": 121.73,
+        "l": 118.13,
+        "o": 120.03,
+        "v": 6724014
+      },
+      "response_row_index_zero_based": 0,
+      "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c",
+      "sample_id": "CAT-2020-04-06",
+      "source_locator": "https://data.alpaca.markets/v2/stocks/bars?adjustment=raw&asof=2020-07-01&currency=USD&end=2020-07-01T03%3A59%3A59.999999999Z&feed=sip&limit=1000&sort=asc&start=2020-04-06T04%3A00%3A00Z&symbols=AAPL%2CJPM%2CJNJ%2CWMT%2CCAT&timeframe=1Day#CAT@2020-04-06T04:00:00Z",
+      "source_timestamp_ET": "2020-04-06T00:00:00-04:00",
+      "source_timestamp_utc": "2020-04-06T04:00:00+00:00",
+      "symbol": "CAT"
+    }
+  ],
+  "schema_version": 1,
+  "scientific_gate_pass": false,
+  "sensitivity_limitations": {
+    "D8": "AAPL high, CAT low under all four proxies, unapproved candidates only; no identity activated",
+    "dividend_adjustment": "Price-only dividend adjustment generally changes products; no empirical comparison or events verified",
+    "incorrect_mix": "Adjusted price times raw volume changes dollar proxy and can change ranking; prohibited",
+    "missing_records": "None in received 300 records; no imputation or shortened mean denominator",
+    "paired_split_adjustment": "Algebraically invariant if prices and volumes are reciprocally adjusted on each bar; no live adjusted request, no empirical adjustment tolerance chosen"
+  },
+  "status": "PASS",
+  "stop_reason": null,
+  "time_utc": "2026-10-11T00:53:53.027197+00:00",
+  "transport": [
+    {
+      "call_id": 1,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "http_status": "transport_error",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2020-07-01",
+        "currency": "USD",
+        "end": "2020-07-01T03:59:59.999999999Z",
+        "feed": "sip",
+        "limit": 1000,
+        "sort": "asc",
+        "start": "2020-04-06T04:00:00Z",
+        "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+        "timeframe": "1Day"
+      },
+      "requested_at_utc": "2026-10-11T00:46:38.022238+00:00"
+    },
+    {
+      "call_id": 2,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "feed_echo": null,
+      "has_next_page": false,
+      "http_status": 200,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2020-07-01",
+        "currency": "USD",
+        "end": "2020-07-01T03:59:59.999999999Z",
+        "feed": "sip",
+        "limit": 1000,
+        "sort": "asc",
+        "start": "2020-04-06T04:00:00Z",
+        "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+        "timeframe": "1Day"
+      },
+      "requested_at_utc": "2026-10-11T00:53:53.027226+00:00",
+      "response_bytes": 33288,
+      "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c",
+      "safe_headers": {
+        "Date": "Sun, 11 Oct 2026 00:53:53 GMT",
+        "X-RateLimit-Limit": "200",
+        "X-RateLimit-Remaining": "199",
+        "X-RateLimit-Reset": "1791680033",
+        "X-Request-ID": "aa72c84947db17a7f7612fabad3435c8"
+      },
+      "top_level_fields": [
+        "bars",
+        "next_page_token"
+      ]
+    }
+  ],
+  "unrequested_symbols": []
+}

@@ -1,0 +1,522 @@
+{
+  "checks": [
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "protocol-binding",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "issues": [],
+        "meaning": "Pinned document/reference identity only; no scientific or human approval",
+        "status": "PASS"
+      },
+      "example_ids": [],
+      "explanation": "Five authorities and pointer remain bound; not scientific sign-off.",
+      "gate_id": "G0",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "bounded-source-access",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "HTTP_responses": 1,
+        "next_page": false,
+        "raw_response_bytes": 33288,
+        "rows": 300,
+        "transport_attempts": 2
+      },
+      "example_ids": [],
+      "explanation": "One successful SIP/raw daily HTTP response; prior failed sandbox transport retained. No pagination or provider retry.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [
+        "formation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "formation-calendar-quality",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "examples": [
+          "AAPL-2020-04-06",
+          "JPM-2020-04-06",
+          "JNJ-2020-04-06",
+          "WMT-2020-04-06",
+          "CAT-2020-04-06"
+        ],
+        "records_per_name": 60,
+        "total": 300,
+        "window": [
+          "2020-04-06",
+          "2020-06-30"
+        ]
+      },
+      "example_ids": [],
+      "explanation": "All five have 60 unique expected records; no source order/key/numeric/calendar defects, no missing fills.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [
+        "formation"
+      ],
+      "approved_threshold": {
+        "authority": "docs/track_a/Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md D1",
+        "mean_daily_dollar_volume_USD": 50000000,
+        "sessions": 60
+      },
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "liquidity-proxy",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "all_above_reference": true,
+        "denominator": 60,
+        "mean_source": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json#matrix"
+      },
+      "example_ids": [],
+      "explanation": "All four retrospective price-volume proxies exceed fixed reference; convention unapproved and daily volume includes eligible extended hours.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "WARN",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "proxy-arithmetic",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "AAPL": "55,182,629 * 26,247 / 100 = 14,483,784,633.63 USD",
+        "JPM": "31,402,576 * 8,946 / 100 = 2,809,274,448.96 USD",
+        "method": "Independent integer-cent multiplication from retained April 6 source examples",
+        "status": "PASS",
+        "synthetic_split_product": "100*200 = 25*800 = 20,000; isolated paired split price/inverse-volume only"
+      },
+      "example_ids": [],
+      "explanation": "Two independently recomputed stock-day products and pure paired split invariant; no action simulator or historical event proof.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [
+        "formation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "formation-vintage",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "historical_available_at": null,
+        "prior_blocker": "p0.1-formation-prehistory",
+        "vintage": "UNKNOWN"
+      },
+      "example_ids": [],
+      "explanation": "Modern history and formation-date entity mapping do not establish then-published values or eligibility.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [
+        "formation",
+        "stock_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "daily-RTH-volume",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "aggregation_reference": "https://docs.alpaca.markets/us/docs/market-data-faq",
+        "asof": "Entity mapping only; 2020-07-01 specified for this request, not a publication vintage",
+        "bars_reference": "https://docs.alpaca.markets/us/reference/stockbars",
+        "checked_at_utc": "2026-10-11T00:55:15.130914+00:00",
+        "daily_timestamp": "New York day left boundary, not first publication",
+        "extended_hours": "FAQ condition T daily and U minute/daily update volume but not OHLC; daily volume is not RTH-only",
+        "raw": "No split/dividend adjustment requested; no new split-adjusted comparison or complete action scan",
+        "turnover_interval": "OHLC extrema and normal volume differ in eligible trades. low*volume/high*volume is only a proxy sensitivity interval. VWAP uses another eligible-volume denominator, so VWAP*normal volume is not certified actual turnover."
+      },
+      "example_ids": [],
+      "explanation": "Daily volume construction admits extended-hours trades; it is not D4 full-RTH volume. Amount unmeasured.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "WARN",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [
+        "peer_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "D8-pair",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "pair_activated": false,
+        "proxy_rankings": {
+          "close": [
+            "AAPL",
+            "JPM",
+            "JNJ",
+            "WMT",
+            "CAT"
+          ],
+          "high": [
+            "AAPL",
+            "JPM",
+            "JNJ",
+            "WMT",
+            "CAT"
+          ],
+          "low": [
+            "AAPL",
+            "JPM",
+            "JNJ",
+            "WMT",
+            "CAT"
+          ],
+          "open": [
+            "AAPL",
+            "JPM",
+            "JNJ",
+            "WMT",
+            "CAT"
+          ]
+        }
+      },
+      "example_ids": [],
+      "explanation": "Stable diagnostic AAPL/CAT extrema do not select or activate the approved directed pair.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "NOT_RUN",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [
+        "corporate_actions"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "corporate-actions",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "in_window_events": "UNKNOWN",
+        "prior_samples": "reports/data_audit/p1_1_2026-10-10_195340/probe_results.json#actions"
+      },
+      "example_ids": [],
+      "explanation": "No complete in-window actions or share/cash ledger; unidentified events unresolved. Raw setting is not event-vintage proof.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_timing",
+        "minute_execution"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "stock-publication",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "available_at": null,
+        "prior_blocker": "p0.1-stock-publication"
+      },
+      "example_ids": [],
+      "explanation": "Period timestamp and HTTP retrieval do not prove historical publication or fillability.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "USA500-contract",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "basis": "User statement in P1.3B prompt",
+        "independently_verified": false,
+        "statement": "Instructor supplied course USA500 CSV as a Dukascopy export"
+      },
+      "example_ids": [],
+      "explanation": "User reports instructor Dukascopy export; exact contract/basis/clock/publication/daily close/prehistory/membership still unverified.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [
+        "shared_clock"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "shared-clock",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "prior_blocker": "p0.1-shared-D3-clock"
+      },
+      "example_ids": [],
+      "explanation": "No collaborator sign-off; labels/trades not constructed.",
+      "gate_id": "G0",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [
+        "F01",
+        "market_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "F01",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "alignment_sha256": "e4690828dde48dcc41b60c88b5f0e1d563092640ec003c8abf3dc65711000b8d"
+      },
+      "example_ids": [],
+      "explanation": "Known availability-age versus period-end-age defect preserved and unused.",
+      "gate_id": "G2",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "INVALID",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.3b-2026-10-10_204558",
+      "check_id": "full-study-inputs",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "98_95_retrospective_qualification": "NOT_RUN",
+        "backup_queries": 0,
+        "fits": 0
+      },
+      "example_ids": [],
+      "explanation": "No minute/action/warmup/full-study source QA, FT0, labels, trading, training or confirmation outcomes.",
+      "gate_id": "G1",
+      "owner_action": "Human review of provisional proxy, vintage qualification and next source-contract scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only separately authorized affected source/protocol work",
+      "schema_version": 1,
+      "source_ids": {
+        "probe_plan": "reports/data_audit/p1_3b_2026-10-10_204558/probe_plan.json",
+        "probe_plan_sha256": "249b10d5f69a3a8f2f8c9f958517e3feffc4a6760eff8ccde75e99217f167b76",
+        "probe_result": "reports/data_audit/p1_3b_2026-10-10_204558/probe_results.json",
+        "probe_result_sha256": "621242751bc9234aa7c4194be010f86a3984235ca82df7fe1e94b0141de9b5f9",
+        "response_sha256": "d0fd39ba1fb4f3b96eea1305d419c61649da3319c3da68e6c9a23e8e73a98c6c"
+      },
+      "status": "NOT_RUN",
+      "time_utc": "2026-10-11T00:55:15.137733+00:00"
+    }
+  ],
+  "gates": {
+    "G0": "BLOCKED",
+    "G1": "BLOCKED",
+    "G2": "BLOCKED",
+    "G3": "NOT_RUN",
+    "G4": "NOT_RUN",
+    "G5": "NOT_RUN",
+    "G6": "NOT_RUN",
+    "G7": "NOT_RUN",
+    "G8": "NOT_RUN",
+    "G9": "NOT_RUN"
+  },
+  "next_package_approved": false,
+  "package": "P1.3B",
+  "pair_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "preservation": {
+    "baseline_data_file_count": 138,
+    "baseline_protected_file_count": 44,
+    "ledger_prefix_sha256": "978864266526805ae5c0979f7fedaaf202136fd0548efe9b87d27e4354e98d87",
+    "nonclearing_event_id": "p1.3b-formation-2026-10-10-204558",
+    "verification": "Final offline verifier and mandatory session report; no all-source rehash"
+  },
+  "research_status": "BLOCKED",
+  "schema_version": 1
+}
