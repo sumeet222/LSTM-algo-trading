@@ -2,6 +2,7 @@
 
 import math
 from dataclasses import replace
+from typing import cast
 
 import pandas as pd
 import pytest
@@ -33,8 +34,9 @@ def one_return(
     entry = HourlyCloseReference(
         symbol,
         f"{symbol}:{day}:{origin}:entry",
-        plan.cutoff - pd.Timedelta(hours=1),
-        plan.cutoff,
+        # The fixture selects complete normal-session plans; post-init normalizes rows.
+        cast(pd.Timestamp, plan.cutoff) - pd.Timedelta(hours=1),
+        cast(pd.Timestamp, plan.cutoff),
         100.0,
         "fake-raw-v1",
         "SYNTHETIC",
@@ -44,19 +46,22 @@ def one_return(
     exit = replace(
         entry,
         row_id=entry.row_id.replace("entry", "exit"),
-        period_start=entry.period_start + pd.Timedelta(hours=4),
-        period_end=entry.period_end + pd.Timedelta(hours=4),
-        available_at=delay or plan.cutoff + pd.Timedelta(hours=4),
+        period_start=cast(pd.Timestamp, entry.period_start) + pd.Timedelta(hours=4),
+        period_end=cast(pd.Timestamp, entry.period_end) + pd.Timedelta(hours=4),
+        available_at=delay or cast(pd.Timestamp, plan.cutoff) + pd.Timedelta(hours=4),
         availability_basis=basis,
         raw_close=100 * math.exp(value) / (2 if split else 1),
     )
     actions = ActionScope(
-        plan.cutoff,
-        plan.exit,
+        cast(pd.Timestamp, plan.cutoff),
+        cast(pd.Timestamp, plan.exit),
         UNIVERSE,
         "SYNTHETIC",
         "fake-complete-scope",
-        (SplitFact(symbol, plan.cutoff + pd.Timedelta(minutes=1), 2, 1, "fake-split", "SYNTHETIC"),)
+        (SplitFact(
+            symbol, cast(pd.Timestamp, plan.cutoff) + pd.Timedelta(minutes=1),
+            2, 1, "fake-split", "SYNTHETIC",
+        ),)
         if split
         else (),
     )
@@ -201,8 +206,8 @@ def test_split_lineage_and_unsupported_epoch(calendar):
     row = HourlyCloseReference(
         "AAPL",
         "fake",
-        plan.cutoff - pd.Timedelta(hours=1),
-        plan.cutoff,
+        cast(pd.Timestamp, plan.cutoff) - pd.Timedelta(hours=1),
+        cast(pd.Timestamp, plan.cutoff),
         100.0,
         "fake",
         "SYNTHETIC",
@@ -212,12 +217,13 @@ def test_split_lineage_and_unsupported_epoch(calendar):
     exit = replace(
         row,
         row_id="fake-exit",
-        period_start=row.period_start + pd.Timedelta(hours=4),
-        period_end=row.period_end + pd.Timedelta(hours=4),
-        available_at=row.available_at + pd.Timedelta(hours=4),
+        period_start=cast(pd.Timestamp, row.period_start) + pd.Timedelta(hours=4),
+        period_end=cast(pd.Timestamp, row.period_end) + pd.Timedelta(hours=4),
+        available_at=cast(pd.Timestamp, row.available_at) + pd.Timedelta(hours=4),
     )
     unsupported = ActionScope(
-        plan.cutoff, plan.exit, UNIVERSE, "SYNTHETIC", "fake", unsupported_action=True
+        cast(pd.Timestamp, plan.cutoff), cast(pd.Timestamp, plan.exit),
+        UNIVERSE, "SYNTHETIC", "fake", unsupported_action=True,
     )
     assert (
         historical_return(plan, "AAPL", (row, exit), unsupported, test_scenario=True).reason
@@ -249,7 +255,8 @@ def test_canonical_keys_deduplicate_and_balance(calendar, history, floor):
     weights = canonical_m2_keys((out, other, out))
     assert weights == ((out.key, 0.5), (other.key, 0.5))
     with pytest.raises(ValueError, match="CONFLICTING"):
-        canonical_m2_keys((out, replace(out, value=out.value + 1), other))
+        # calc's complete history produces M2_VALID with a numeric value.
+        canonical_m2_keys((out, replace(out, value=cast(float, out.value) + 1), other))
     with pytest.raises(ValueError, match="BOTH_ORIGIN"):
         canonical_m2_keys((out,))
 
@@ -275,7 +282,7 @@ def test_window_mask_missing_never_shifts_and_no_future_label_filter(calendar, h
     calc(calendar, history + (future,), floor)
     assert window_quality(calendar, steps, rows, test_scenario=True) == complete
     late = tuple(
-        replace(r, available_at=r.period_end + pd.Timedelta(minutes=1))
+        replace(r, available_at=cast(pd.Timestamp, r.period_end) + pd.Timedelta(minutes=1))
         if r.row_id == "AAPL:47"
         else r
         for r in rows

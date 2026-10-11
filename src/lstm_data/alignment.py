@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import cast
+
 import pandas as pd
 
 from .validation import normalize, parse_utc, require_valid
@@ -115,7 +117,8 @@ def asof_diagnostic(
     joined["usable_candidate"] = joined.reason == "ACCEPTED_DIAGNOSTIC_ONLY"
     joined["timing_status"] = joined.reason.map(
         lambda reason: "PASS" if reason == "ACCEPTED_DIAGNOSTIC_ONLY"
-        else "BLOCKED" if reason.startswith(("UNKNOWN", "UNVERIFIED", "NO_CANDIDATE"))
+        # Every reason was initialized or assigned a string above; no missing values.
+        else "BLOCKED" if cast(str, reason).startswith(("UNKNOWN", "UNVERIFIED", "NO_CANDIDATE"))
         else "INVALID"
     )
     joined["research_ready"] = False

@@ -12,7 +12,7 @@ import json
 import math
 from dataclasses import dataclass, replace
 from statistics import median
-from typing import Literal
+from typing import Literal, cast
 
 import pandas as pd
 
@@ -128,7 +128,10 @@ def resolve_reference(
         raise ValueError("HOURLY_REFERENCE_TYPE_REQUIRED")
     if not _valid_plan(plan):
         return ExecutionReference(symbol, side, None, None, None, None, False, "INVALID_PLAN")
-    end = plan.cutoff + (pd.Timedelta(hours=4) if event == "EXIT" else pd.Timedelta(0))
+    # _valid_plan established all clocks; row post-init normalizes its timestamp fields.
+    end = cast(pd.Timestamp, plan.cutoff) + (
+        pd.Timedelta(hours=4) if event == "EXIT" else pd.Timedelta(0)
+    )
     when = plan.exit if event == "EXIT" else plan.entry
     slot = next((hour for hour in session_clock(plan.session).hours if hour.end == end), None)
     if slot is None:
@@ -143,7 +146,7 @@ def resolve_reference(
         reason = "WRONG_SCHEDULED_SLOT"
     elif not _supported(row, test_scenario):
         reason = "AVAILABILITY_UNVERIFIED"
-    elif row.available_at > when:
+    elif cast(pd.Timestamp, row.available_at) > cast(pd.Timestamp, when):
         reason = "REFERENCE_NOT_AVAILABLE_AT_EVENT"
     else:
         reason = "REFERENCE_AVAILABLE_AT_EVENT"
@@ -153,7 +156,8 @@ def resolve_reference(
         when,
         end,
         row,
-        (when - row.period_end).total_seconds() if row else None,
+        (cast(pd.Timestamp, when) - cast(pd.Timestamp, row.period_end)).total_seconds()
+        if row else None,
         reason == "REFERENCE_AVAILABLE_AT_EVENT",
         reason,
     )
@@ -183,7 +187,10 @@ def proxy_causal_eligibility(
             reason = "FORECAST_NOT_ISSUABLE"
         elif not ref.valid_at_event:
             reason = ref.reason
-        elif ref.row.available_at > plan.cutoff:
+        # valid_at_event entails a supported, present row on the valid plan.
+        elif cast(pd.Timestamp, cast(HourlyCloseReference, ref.row).available_at) > cast(
+            pd.Timestamp, plan.cutoff
+        ):
             # This same close is the completed input endpoint, not later information.
             reason = "ENTRY_REFERENCE_NOT_AVAILABLE_BY_CUTOFF"
         else:
@@ -230,7 +237,9 @@ def proxy_label_sample(
     causal = proxy_causal_eligibility(plan, forecast, entries, test_scenario=test_scenario)
     observed = utc(observed_at)
     refs = tuple(
-        resolve_reference(rows, plan, symbol, event, test_scenario=test_scenario)
+        resolve_reference(
+            rows, plan, symbol, cast(Literal["ENTRY", "EXIT"], event), test_scenario=test_scenario
+        )
         for symbol in UNIVERSE
         for rows, event in ((entries, "ENTRY"), (exits, "EXIT"))
     )
@@ -243,10 +252,15 @@ def proxy_label_sample(
         reason = "WRONG_SCHEDULED_SLOT"
     factors = None
     if reason == "LABEL_VALID" and actions is not None:
-        if utc(actions.start) <= plan.cutoff and utc(actions.end) >= plan.exit:
+        # LABEL_VALID above establishes the validated plan and present references.
+        if (
+            utc(actions.start) <= cast(pd.Timestamp, plan.cutoff)
+            and utc(actions.end) >= cast(pd.Timestamp, plan.exit)
+        ):
             # Reuse accepted share-factor validation with explicit price boundaries.
             price_interval = replace(
-                plan, entry=plan.cutoff, exit=plan.cutoff + pd.Timedelta(hours=4)
+                plan, entry=plan.cutoff,
+                exit=cast(pd.Timestamp, plan.cutoff) + pd.Timedelta(hours=4),
             )
             factors = _split_factors(price_interval, actions, test_scenario)
     if reason == "LABEL_VALID" and factors is None:
@@ -264,15 +278,21 @@ def proxy_label_sample(
     returns = centered = m = mad = maturity = None
     maturity_basis = "MATURITY_UNVERIFIED"
     if reason == "LABEL_VALID":
+        # Present rows have positive raw_close prices, and factors passed the None gate.
         returns = tuple(
-            math.log(refs[2 * i + 1].price) + math.log(factors[i]) - math.log(refs[2 * i].price)
+            math.log(cast(float, refs[2 * i + 1].price))
+            + math.log(cast(tuple[float, ...], factors)[i])
+            - math.log(cast(float, refs[2 * i].price))
             for i in range(5)
         )
         m = median(returns)
         centered = tuple(r - m for r in returns)
         mad = median(abs(r) for r in centered)
         if all(_supported(row, test_scenario) for row in rows):
-            maturity = max(plan.exit, *(row.available_at for row in rows))
+            maturity = max(
+                cast(pd.Timestamp, plan.exit),
+                *(cast(pd.Timestamp, row.available_at) for row in rows),
+            )
             maturity_basis = "SYNTHETIC" if scenario else "DOCUMENTED_ASSERTION"
             if observed < maturity:
                 reason = "LABEL_NOT_MATURED"
@@ -314,13 +334,17 @@ def _require_proxy(sample: ProxyLabelSample) -> None:
             or ref.execution_version != EXECUTION_VERSION
             or ref.symbol != UNIVERSE[i // 2]
             or ref.row.symbol != ref.symbol
-            or ref.expected_period_end != sample.plan.cutoff + pd.Timedelta(hours=4 * (i % 2))
+            or ref.expected_period_end
+            != cast(pd.Timestamp, sample.plan.cutoff) + pd.Timedelta(hours=4 * (i % 2))
             or ref.row.period_end != ref.expected_period_end
             or ref.scheduled_event_at != (sample.plan.exit if i % 2 else sample.plan.entry)
             for i, ref in enumerate(sample.references)
         ):
             raise ValueError("PROXY_REFERENCE_LINEAGE_REQUIRED")
-        if sample.source_ids != tuple(r.row.row_id for r in sample.references):
+        # The preceding lineage guard checked every row's type.
+        if sample.source_ids != tuple(
+            cast(HourlyCloseReference, r.row).row_id for r in sample.references
+        ):
             raise ValueError("PROXY_SOURCE_LINEAGE_REQUIRED")
 
 
@@ -372,14 +396,22 @@ def fit_proxy_floor(
                 s.key,
                 tuple(
                     (
-                        r.row.row_id,
-                        r.row.source_version,
-                        r.row.period_start.isoformat(),
-                        r.row.period_end.isoformat(),
+                        # Fitting membership and _require_proxy establish present normalized rows.
+                        cast(HourlyCloseReference, r.row).row_id,
+                        cast(HourlyCloseReference, r.row).source_version,
+                        cast(
+                            pd.Timestamp, cast(HourlyCloseReference, r.row).period_start
+                        ).isoformat(),
+                        cast(
+                            pd.Timestamp, cast(HourlyCloseReference, r.row).period_end
+                        ).isoformat(),
                         r.price,
-                        r.row.available_at.isoformat() if r.row.available_at is not None else None,
-                        r.row.availability_basis,
-                        r.row.evidence_ref,
+                        cast(
+                            pd.Timestamp, cast(HourlyCloseReference, r.row).available_at
+                        ).isoformat()
+                        if cast(HourlyCloseReference, r.row).available_at is not None else None,
+                        cast(HourlyCloseReference, r.row).availability_basis,
+                        cast(HourlyCloseReference, r.row).evidence_ref,
                         r.lag_seconds,
                     )
                     for r in s.references

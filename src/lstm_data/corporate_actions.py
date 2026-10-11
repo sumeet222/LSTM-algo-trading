@@ -12,7 +12,7 @@ from collections import Counter
 from dataclasses import dataclass, replace
 from datetime import date, datetime
 from decimal import Decimal
-from typing import Mapping
+from typing import Mapping, cast
 from zoneinfo import ZoneInfo
 
 UNIVERSE = frozenset({"AAPL", "JPM", "JNJ", "WMT", "CAT"})
@@ -552,7 +552,8 @@ def snapshot(state: Account, marks: tuple[RawMark, ...], at: datetime) -> dict:
         "receivables": receivables,
         "dividend_liabilities": liabilities,
         "cash_only_equity": cash_nav,
-        "accrual_equity": None if missing else cash_nav + receivables - liabilities,
+        # cash_nav is a Decimal on this same not-missing branch.
+        "accrual_equity": None if missing else cast(Decimal, cash_nav) + receivables - liabilities,
         "status": "INCOMPLETE" if missing else "ASSUMPTION_DEPENDENT",
         "paid_cash_scope": "INCOMPLETE" if unknown else "MODELED_PAYABLE_DATES",
         "unknown_payment_claims": unknown,

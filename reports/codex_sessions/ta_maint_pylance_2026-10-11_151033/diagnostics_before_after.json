@@ -1,0 +1,5096 @@
+{
+  "status": "CLEANUP_COMPLETE \u2014 HUMAN_REVIEW_REQUIRED",
+  "measurement": "Pyright CLI with Pylance bundled stubs; actual post-edit VS Code Problems panel not captured",
+  "environment": {
+    "python": "3.14.6",
+    "interpreter": ".venv/bin/python, confirmed by user",
+    "pyright": "1.1.414",
+    "pylance": "2026.4.1",
+    "packages": {
+      "pandas": "3.0.6",
+      "numpy": "2.5.3",
+      "pyarrow": "23.0.1",
+      "pytest": "9.1.1",
+      "exchange-calendars": "4.13.2",
+      "ruff": "0.17.0"
+    },
+    "configuration": {
+      "typeCheckingMode": "basic",
+      "pythonVersion": "3.14",
+      "venvPath": "${PROJECT_ROOT}",
+      "venv": ".venv",
+      "extraPaths": [
+        "${PROJECT_ROOT}/src"
+      ],
+      "stubPath": "${PYLANCE_DIST}/bundled/stubs",
+      "typeshedPath": "${PYLANCE_DIST}/typeshed-fallback",
+      "executionEnvironments": [
+        {
+          "root": "${PROJECT_ROOT}",
+          "extraPaths": [
+            "${PROJECT_ROOT}/src"
+          ]
+        }
+      ],
+      "include": [
+        "reports/data_audit/p0_p1_close_2026-10-10_230214/source_intake.py",
+        "src/lstm_data/__init__.py",
+        "src/lstm_data/aggregation.py",
+        "src/lstm_data/alignment.py",
+        "src/lstm_data/alpaca.py",
+        "src/lstm_data/audit.py",
+        "src/lstm_data/calendar.py",
+        "src/lstm_data/cli.py",
+        "src/lstm_data/clocks.py",
+        "src/lstm_data/config.py",
+        "src/lstm_data/corporate_actions.py",
+        "src/lstm_data/course.py",
+        "src/lstm_data/hourly_proxy.py",
+        "src/lstm_data/labels.py",
+        "src/lstm_data/ledger.py",
+        "src/lstm_data/m2.py",
+        "src/lstm_data/pilot.py",
+        "src/lstm_data/store.py",
+        "src/lstm_data/validation.py",
+        "tests/conftest.py",
+        "tests/test_aggregation.py",
+        "tests/test_alpaca.py",
+        "tests/test_calendar_alignment.py",
+        "tests/test_clocks.py",
+        "tests/test_corporate_actions.py",
+        "tests/test_evidence.py",
+        "tests/test_hourly_proxy.py",
+        "tests/test_labels.py",
+        "tests/test_m2.py",
+        "tests/test_store_cli.py",
+        "tests/test_validation_course.py"
+      ],
+      "explanation": "Actual temporary configs contain real paths; include paths are relative to each temporary config, as Pyright requires. No diagnostic exclusions or severity overrides added. Same config used for final and frozen baseline except baseline source-root substitution."
+    }
+  },
+  "inclusion_rules": "All 31 Git-tracked project Python paths, including report source_intake.py; no untracked owned Python discovered. Inventory omits venv/node_modules/generated/vendored/raw/cache code; no new diagnostic settings exclusions.",
+  "python_files": [
+    "reports/data_audit/p0_p1_close_2026-10-10_230214/source_intake.py",
+    "src/lstm_data/__init__.py",
+    "src/lstm_data/aggregation.py",
+    "src/lstm_data/alignment.py",
+    "src/lstm_data/alpaca.py",
+    "src/lstm_data/audit.py",
+    "src/lstm_data/calendar.py",
+    "src/lstm_data/cli.py",
+    "src/lstm_data/clocks.py",
+    "src/lstm_data/config.py",
+    "src/lstm_data/corporate_actions.py",
+    "src/lstm_data/course.py",
+    "src/lstm_data/hourly_proxy.py",
+    "src/lstm_data/labels.py",
+    "src/lstm_data/ledger.py",
+    "src/lstm_data/m2.py",
+    "src/lstm_data/pilot.py",
+    "src/lstm_data/store.py",
+    "src/lstm_data/validation.py",
+    "tests/conftest.py",
+    "tests/test_aggregation.py",
+    "tests/test_alpaca.py",
+    "tests/test_calendar_alignment.py",
+    "tests/test_clocks.py",
+    "tests/test_corporate_actions.py",
+    "tests/test_evidence.py",
+    "tests/test_hourly_proxy.py",
+    "tests/test_labels.py",
+    "tests/test_m2.py",
+    "tests/test_store_cli.py",
+    "tests/test_validation_course.py"
+  ],
+  "before": {
+    "filesAnalyzed": 31,
+    "errorCount": 220,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 14.28
+  },
+  "after": {
+    "filesAnalyzed": 31,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 10.901
+  },
+  "per_file": {
+    "reports/data_audit/p0_p1_close_2026-10-10_230214/source_intake.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "src/lstm_data/__init__.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "src/lstm_data/aggregation.py": {
+      "errors_before": 2,
+      "errors_after": 0
+    },
+    "src/lstm_data/alignment.py": {
+      "errors_before": 1,
+      "errors_after": 0
+    },
+    "src/lstm_data/alpaca.py": {
+      "errors_before": 1,
+      "errors_after": 0
+    },
+    "src/lstm_data/audit.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "src/lstm_data/calendar.py": {
+      "errors_before": 2,
+      "errors_after": 0
+    },
+    "src/lstm_data/cli.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "src/lstm_data/clocks.py": {
+      "errors_before": 4,
+      "errors_after": 0
+    },
+    "src/lstm_data/config.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "src/lstm_data/corporate_actions.py": {
+      "errors_before": 1,
+      "errors_after": 0
+    },
+    "src/lstm_data/course.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "src/lstm_data/hourly_proxy.py": {
+      "errors_before": 27,
+      "errors_after": 0
+    },
+    "src/lstm_data/labels.py": {
+      "errors_before": 18,
+      "errors_after": 0
+    },
+    "src/lstm_data/ledger.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "src/lstm_data/m2.py": {
+      "errors_before": 14,
+      "errors_after": 0
+    },
+    "src/lstm_data/pilot.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "src/lstm_data/store.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "src/lstm_data/validation.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "tests/conftest.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "tests/test_aggregation.py": {
+      "errors_before": 1,
+      "errors_after": 0
+    },
+    "tests/test_alpaca.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "tests/test_calendar_alignment.py": {
+      "errors_before": 72,
+      "errors_after": 0
+    },
+    "tests/test_clocks.py": {
+      "errors_before": 18,
+      "errors_after": 0
+    },
+    "tests/test_corporate_actions.py": {
+      "errors_before": 2,
+      "errors_after": 0
+    },
+    "tests/test_evidence.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    },
+    "tests/test_hourly_proxy.py": {
+      "errors_before": 28,
+      "errors_after": 0
+    },
+    "tests/test_labels.py": {
+      "errors_before": 9,
+      "errors_after": 0
+    },
+    "tests/test_m2.py": {
+      "errors_before": 17,
+      "errors_after": 0
+    },
+    "tests/test_store_cli.py": {
+      "errors_before": 3,
+      "errors_after": 0
+    },
+    "tests/test_validation_course.py": {
+      "errors_before": 0,
+      "errors_after": 0
+    }
+  },
+  "editor_parity": {
+    "exported_m2_errors": 14,
+    "cli_m2_errors": 14,
+    "line_column_rule_and_error_severity_match": true,
+    "limitation": "Versions can differ; only supplied M2 editor diagnostics compared. Final editor refresh remains human confirmation.",
+    "artifact_recovery": "Discarded initial run with invalid absolute include paths scanned temporary files and overwrote the baseline JSON late. Recovered all 31 original source files from unchanged starting Git commit with byte-identical pre-edit hashes; regenerated 220-error baseline with same interpreter, mode and stubs."
+  },
+  "navigation_note": "After navigation points to matched unchanged line or changed hunk; no surviving diagnostic has an after error span.",
+  "diagnostics": [
+    {
+      "id": "D001",
+      "file": "src/lstm_data/aggregation.py",
+      "before": {
+        "line": 53,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"date\" for class \"Hashable\"\n\u00a0\u00a0Attribute \"date\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 55,
+        "changed_hunk_lines": [
+          55,
+          56
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "aggregate_session_hours",
+      "root_cause_and_preservation": "XNYS DatetimeIndex scalar identity casts; no conversion or grid change."
+    },
+    {
+      "id": "D002",
+      "file": "src/lstm_data/aggregation.py",
+      "before": {
+        "line": 68,
+        "column": 40,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"date\" for class \"Hashable\"\n\u00a0\u00a0Attribute \"date\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 71,
+        "changed_hunk_lines": [
+          71,
+          71
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "aggregate_session_hours",
+      "root_cause_and_preservation": "XNYS DatetimeIndex scalar identity casts; no conversion or grid change."
+    },
+    {
+      "id": "D003",
+      "file": "src/lstm_data/alignment.py",
+      "before": {
+        "line": 118,
+        "column": 34,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"startswith\" for class \"NAType\"\n\u00a0\u00a0Attribute \"startswith\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 120,
+        "changed_hunk_lines": [
+          120,
+          121
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "asof_diagnostic",
+      "root_cause_and_preservation": "Reason column initialized and overwritten exclusively with strings; preserve lambda branches."
+    },
+    {
+      "id": "D004",
+      "file": "src/lstm_data/alpaca.py",
+      "before": {
+        "line": 107,
+        "column": 40,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"json\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 108,
+        "changed_hunk_lines": [
+          108,
+          109
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "_request",
+      "root_cause_and_preservation": "HTTP 200 branch entails a returned response; transport failure sets transport_error. Identity cast preserves json invocation and exceptions."
+    },
+    {
+      "id": "D005",
+      "file": "src/lstm_data/calendar.py",
+      "before": {
+        "line": 118,
+        "column": 40,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"date\" for class \"Hashable\"\n\u00a0\u00a0Attribute \"date\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 120,
+        "changed_hunk_lines": [
+          120,
+          121
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "stock_qa",
+      "root_cause_and_preservation": "XNYS schedule index identity casts preserve date extraction."
+    },
+    {
+      "id": "D006",
+      "file": "src/lstm_data/calendar.py",
+      "before": {
+        "line": 141,
+        "column": 45,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"date\" for class \"Hashable\"\n\u00a0\u00a0Attribute \"date\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 144,
+        "changed_hunk_lines": [
+          144,
+          147
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "stock_qa",
+      "root_cause_and_preservation": "XNYS schedule index identity casts preserve date extraction."
+    },
+    {
+      "id": "D007",
+      "file": "src/lstm_data/clocks.py",
+      "before": {
+        "line": 208,
+        "column": 9,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | str | None\" cannot be assigned to parameter \"value\" of type \"Timestamp | str\" in function \"utc\"\n\u00a0\u00a0Type \"Timestamp | str | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 208,
+        "changed_hunk_lines": [
+          208,
+          209
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "observation_at_cutoff",
+      "root_cause_and_preservation": "Existing unknown-clock guard excludes None before utc; casts keep conversions and rejection order."
+    },
+    {
+      "id": "D008",
+      "file": "src/lstm_data/clocks.py",
+      "before": {
+        "line": 210,
+        "column": 13,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | str | None\" cannot be assigned to parameter \"value\" of type \"Timestamp | str\" in function \"utc\"\n\u00a0\u00a0Type \"Timestamp | str | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 211,
+        "changed_hunk_lines": [
+          211,
+          213
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "observation_at_cutoff",
+      "root_cause_and_preservation": "Existing unknown-clock guard excludes None before utc; casts keep conversions and rejection order."
+    },
+    {
+      "id": "D009",
+      "file": "src/lstm_data/clocks.py",
+      "before": {
+        "line": 211,
+        "column": 13,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | str | None\" cannot be assigned to parameter \"value\" of type \"Timestamp | str\" in function \"utc\"\n\u00a0\u00a0Type \"Timestamp | str | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 211,
+        "changed_hunk_lines": [
+          211,
+          213
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "observation_at_cutoff",
+      "root_cause_and_preservation": "Existing unknown-clock guard excludes None before utc; casts keep conversions and rejection order."
+    },
+    {
+      "id": "D010",
+      "file": "src/lstm_data/clocks.py",
+      "before": {
+        "line": 212,
+        "column": 13,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | str | None\" cannot be assigned to parameter \"value\" of type \"Timestamp | str\" in function \"utc\"\n\u00a0\u00a0Type \"Timestamp | str | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 211,
+        "changed_hunk_lines": [
+          211,
+          213
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "observation_at_cutoff",
+      "root_cause_and_preservation": "Existing unknown-clock guard excludes None before utc; casts keep conversions and rejection order."
+    },
+    {
+      "id": "D011",
+      "file": "src/lstm_data/corporate_actions.py",
+      "before": {
+        "line": 555,
+        "column": 48,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 555,
+        "changed_hunk_lines": [
+          555,
+          556
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "snapshot",
+      "root_cause_and_preservation": "cash_nav is Decimal on the same nonmissing-mark branch; unchanged signed arithmetic."
+    },
+    {
+      "id": "D012",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 131,
+        "column": 11,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 131,
+        "changed_hunk_lines": [
+          131,
+          134
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "resolve_reference",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D013",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 146,
+        "column": 10,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \">\" not supported for types \"Timestamp | str | None\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \">\" not supported for types \"Timestamp\" and \"None\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"Timestamp\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"None\"\n\u00a0\u00a0Operator \">\" not supported for types \"None\" and \"Timestamp\"\n\u00a0\u00a0Operator \">\" not supported for types \"None\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 149,
+        "changed_hunk_lines": [
+          149,
+          149
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "resolve_reference",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D014",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 156,
+        "column": 9,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"-\" not supported for types \"Timestamp | None\" and \"Timestamp | str\"\n\u00a0\u00a0Operator \"-\" not supported for types \"Timestamp\" and \"str\"\n\u00a0\u00a0Operator \"-\" not supported for types \"None\" and \"Timestamp\"\n\u00a0\u00a0Operator \"-\" not supported for types \"None\" and \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 159,
+        "changed_hunk_lines": [
+          159,
+          160
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "resolve_reference",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D015",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 186,
+        "column": 14,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \">\" not supported for types \"Timestamp | str | None\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \">\" not supported for types \"Timestamp\" and \"None\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"Timestamp\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"None\"\n\u00a0\u00a0Operator \">\" not supported for types \"None\" and \"Timestamp\"\n\u00a0\u00a0Operator \">\" not supported for types \"None\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 190,
+        "changed_hunk_lines": [
+          190,
+          193
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_causal_eligibility",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D016",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 186,
+        "column": 22,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"available_at\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 190,
+        "changed_hunk_lines": [
+          190,
+          193
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_causal_eligibility",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D017",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 233,
+        "column": 47,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"str\" cannot be assigned to parameter \"event\" of type \"Literal['ENTRY', 'EXIT']\" in function \"resolve_reference\"\n\u00a0\u00a0Type \"str\" is not assignable to type \"Literal['ENTRY', 'EXIT']\"\n\u00a0\u00a0\u00a0\u00a0\"str\" is not assignable to type \"Literal['ENTRY']\"\n\u00a0\u00a0\u00a0\u00a0\"str\" is not assignable to type \"Literal['EXIT']\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 240,
+        "changed_hunk_lines": [
+          240,
+          242
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_label_sample",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D018",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 246,
+        "column": 12,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"<=\" not supported for types \"Timestamp\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \"<=\" not supported for types \"Timestamp\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 255,
+        "changed_hunk_lines": [
+          255,
+          259
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_label_sample",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D019",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 246,
+        "column": 50,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \">=\" not supported for types \"Timestamp\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \">=\" not supported for types \"Timestamp\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 255,
+        "changed_hunk_lines": [
+          255,
+          259
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_label_sample",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D020",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 249,
+        "column": 47,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 262,
+        "changed_hunk_lines": [
+          262,
+          263
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_label_sample",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D021",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 268,
+        "column": 22,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"float | None\" cannot be assigned to parameter \"x\" of type \"_SupportsFloatOrIndex\" in function \"log\"\n\u00a0\u00a0Type \"float | None\" is not assignable to type \"_SupportsFloatOrIndex\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"_SupportsFloatOrIndex\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is incompatible with protocol \"SupportsFloat\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__float__\" is not present\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is incompatible with protocol \"SupportsIndex\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__index__\" is not present"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 283,
+        "changed_hunk_lines": [
+          283,
+          285
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_label_sample",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D022",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 268,
+        "column": 56,
+        "severity": "error",
+        "code": "reportOptionalSubscript",
+        "message": "Object of type \"None\" is not subscriptable"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 283,
+        "changed_hunk_lines": [
+          283,
+          285
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_label_sample",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D023",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 268,
+        "column": 79,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"float | None\" cannot be assigned to parameter \"x\" of type \"_SupportsFloatOrIndex\" in function \"log\"\n\u00a0\u00a0Type \"float | None\" is not assignable to type \"_SupportsFloatOrIndex\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"_SupportsFloatOrIndex\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is incompatible with protocol \"SupportsFloat\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__float__\" is not present\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is incompatible with protocol \"SupportsIndex\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__index__\" is not present"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 283,
+        "changed_hunk_lines": [
+          283,
+          285
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_label_sample",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D024",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 275,
+        "column": 24,
+        "severity": "error",
+        "code": "reportCallIssue",
+        "message": "No overloads for \"max\" match the provided arguments"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 292,
+        "changed_hunk_lines": [
+          292,
+          295
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_label_sample",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D025",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 275,
+        "column": 28,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"iterable\" of type \"Iterable[SupportsRichComparisonT@max]\" in function \"max\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Iterable[SupportsRichComparisonT@max]\"\n\u00a0\u00a0\u00a0\u00a0\"Timestamp\" is incompatible with protocol \"Iterable[SupportsRichComparisonT@max]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__iter__\" is not present"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 292,
+        "changed_hunk_lines": [
+          292,
+          295
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "proxy_label_sample",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D026",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 317,
+        "column": 43,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 337,
+        "changed_hunk_lines": [
+          337,
+          338
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "_require_proxy",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D027",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 323,
+        "column": 45,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"row_id\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 344,
+        "changed_hunk_lines": [
+          344,
+          347
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "_require_proxy",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D028",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 375,
+        "column": 31,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"row_id\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 399,
+        "changed_hunk_lines": [
+          399,
+          407
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D029",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 376,
+        "column": 31,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"source_version\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 399,
+        "changed_hunk_lines": [
+          399,
+          407
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D030",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 377,
+        "column": 31,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"period_start\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 399,
+        "changed_hunk_lines": [
+          399,
+          407
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D031",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 377,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"isoformat\" for class \"str\"\n\u00a0\u00a0Attribute \"isoformat\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 399,
+        "changed_hunk_lines": [
+          399,
+          407
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D032",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 378,
+        "column": 31,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"period_end\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 399,
+        "changed_hunk_lines": [
+          399,
+          407
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D033",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 378,
+        "column": 42,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"isoformat\" for class \"str\"\n\u00a0\u00a0Attribute \"isoformat\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 399,
+        "changed_hunk_lines": [
+          399,
+          407
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D034",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 380,
+        "column": 31,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"available_at\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 409,
+        "changed_hunk_lines": [
+          409,
+          414
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D035",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 380,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"isoformat\" for class \"str\"\n\u00a0\u00a0Attribute \"isoformat\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 409,
+        "changed_hunk_lines": [
+          409,
+          414
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D036",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 380,
+        "column": 65,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"available_at\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 409,
+        "changed_hunk_lines": [
+          409,
+          414
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D037",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 381,
+        "column": 31,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"availability_basis\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 409,
+        "changed_hunk_lines": [
+          409,
+          414
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D038",
+      "file": "src/lstm_data/hourly_proxy.py",
+      "before": {
+        "line": 382,
+        "column": 31,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"evidence_ref\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 409,
+        "changed_hunk_lines": [
+          409,
+          414
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fit_proxy_floor",
+      "root_cause_and_preservation": "Expose valid-plan, present-row, normalized timestamp, positive source-price and supported publication contracts; literal event pair stays ENTRY/EXIT. No price boundary, arithmetic, maturity or binding edits."
+    },
+    {
+      "id": "D039",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 159,
+        "column": 49,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"minute\" of type \"Timestamp | str\" in function \"minute_reference\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 159,
+        "changed_hunk_lines": [
+          159,
+          160
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "causal_eligibility",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D040",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 167,
+        "column": 14,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \">\" not supported for types \"Timestamp | str | None\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \">\" not supported for types \"Timestamp\" and \"None\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"Timestamp\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"None\"\n\u00a0\u00a0Operator \">\" not supported for types \"None\" and \"Timestamp\"\n\u00a0\u00a0Operator \">\" not supported for types \"None\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 168,
+        "changed_hunk_lines": [
+          168,
+          168
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "causal_eligibility",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D041",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 212,
+        "column": 8,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \">\" not supported for types \"Timestamp\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \">\" not supported for types \"Timestamp\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 213,
+        "changed_hunk_lines": [
+          213,
+          217
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "_split_factors",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D042",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 212,
+        "column": 43,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"<\" not supported for types \"Timestamp\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \"<\" not supported for types \"Timestamp\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 213,
+        "changed_hunk_lines": [
+          213,
+          217
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "_split_factors",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D043",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 229,
+        "column": 12,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"<\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 234,
+        "changed_hunk_lines": [
+          234,
+          237
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "_split_factors",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D044",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 229,
+        "column": 25,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"<=\" not supported for types \"Timestamp\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \"<=\" not supported for types \"Timestamp\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 234,
+        "changed_hunk_lines": [
+          234,
+          237
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "_split_factors",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D045",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 286,
+        "column": 55,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"minute\" of type \"Timestamp | str\" in function \"minute_reference\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 294,
+        "changed_hunk_lines": [
+          294,
+          295
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "label_sample",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D046",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 287,
+        "column": 56,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"minute\" of type \"Timestamp | str\" in function \"minute_reference\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 294,
+        "changed_hunk_lines": [
+          294,
+          295
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "label_sample",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D047",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 311,
+        "column": 24,
+        "severity": "error",
+        "code": "reportOptionalSubscript",
+        "message": "Object of type \"None\" is not subscriptable"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 320,
+        "changed_hunk_lines": [
+          320,
+          320
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "label_sample",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D048",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 319,
+        "column": 24,
+        "severity": "error",
+        "code": "reportCallIssue",
+        "message": "No overloads for \"max\" match the provided arguments"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 328,
+        "changed_hunk_lines": [
+          328,
+          332
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "label_sample",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D049",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 319,
+        "column": 28,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"iterable\" of type \"Iterable[SupportsRichComparisonT@max]\" in function \"max\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Iterable[SupportsRichComparisonT@max]\"\n\u00a0\u00a0\u00a0\u00a0\"Timestamp\" is incompatible with protocol \"Iterable[SupportsRichComparisonT@max]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__iter__\" is not present"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 328,
+        "changed_hunk_lines": [
+          328,
+          332
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "label_sample",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D050",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 390,
+        "column": 12,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"<=\" not supported for types \"Timestamp\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \"<=\" not supported for types \"Timestamp\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 403,
+        "changed_hunk_lines": [
+          403,
+          405
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fitting_membership",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D051",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 390,
+        "column": 28,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"<\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 403,
+        "changed_hunk_lines": [
+          403,
+          405
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fitting_membership",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D052",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 392,
+        "column": 8,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \">=\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 407,
+        "changed_hunk_lines": [
+          407,
+          410
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fitting_membership",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D053",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 392,
+        "column": 43,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \">=\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 407,
+        "changed_hunk_lines": [
+          407,
+          410
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fitting_membership",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D054",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 394,
+        "column": 8,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \">\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 412,
+        "changed_hunk_lines": [
+          412,
+          412
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fitting_membership",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D055",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 484,
+        "column": 20,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 502,
+        "changed_hunk_lines": [
+          502,
+          507
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "apply_tg0_floor",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D056",
+      "file": "src/lstm_data/labels.py",
+      "before": {
+        "line": 484,
+        "column": 66,
+        "severity": "error",
+        "code": "reportOptionalIterable",
+        "message": "Object of type \"None\" cannot be used as iterable value"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 502,
+        "changed_hunk_lines": [
+          502,
+          507
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "apply_tg0_floor",
+      "root_cause_and_preservation": "Validated plans, supported normalized publication clocks, split-factor None gate and LABEL_VALID producer contract are expressed to the checker. Malformed caller assertions retain original runtime failure behavior."
+    },
+    {
+      "id": "D057",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 53,
+        "column": 23,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"date\" for class \"Hashable\"\n\u00a0\u00a0Attribute \"date\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 54,
+        "changed_hunk_lines": [
+          54,
+          55
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "__init__",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D058",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 234,
+        "column": 13,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"<=\" not supported for types \"Timestamp\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \"<=\" not supported for types \"Timestamp\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 236,
+        "changed_hunk_lines": [
+          236,
+          238
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D059",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 235,
+        "column": 13,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \">=\" not supported for types \"Timestamp\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \">=\" not supported for types \"Timestamp\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 236,
+        "changed_hunk_lines": [
+          236,
+          238
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D060",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 238,
+        "column": 51,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 241,
+        "changed_hunk_lines": [
+          241,
+          244
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D061",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 250,
+        "column": 29,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"HourlyCloseReference | None\" cannot be assigned to parameter \"row\" of type \"HourlyCloseReference\" in function \"_supported\"\n\u00a0\u00a0Type \"HourlyCloseReference | None\" is not assignable to type \"HourlyCloseReference\"\n\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"HourlyCloseReference\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 256,
+        "changed_hunk_lines": [
+          256,
+          257
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D062",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 252,
+        "column": 10,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \">\" not supported for types \"Timestamp | str | None\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \">\" not supported for types \"Timestamp\" and \"None\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"Timestamp\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"None\"\n\u00a0\u00a0Operator \">\" not supported for types \"None\" and \"Timestamp\"\n\u00a0\u00a0Operator \">\" not supported for types \"None\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 259,
+        "changed_hunk_lines": [
+          259,
+          261
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D063",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 252,
+        "column": 22,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"available_at\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 259,
+        "changed_hunk_lines": [
+          259,
+          261
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D064",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 256,
+        "column": 22,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"float | None\" cannot be assigned to parameter \"x\" of type \"_SupportsFloatOrIndex\" in function \"log\"\n\u00a0\u00a0Type \"float | None\" is not assignable to type \"_SupportsFloatOrIndex\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"_SupportsFloatOrIndex\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is incompatible with protocol \"SupportsFloat\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__float__\" is not present\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is incompatible with protocol \"SupportsIndex\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__index__\" is not present"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 265,
+        "changed_hunk_lines": [
+          265,
+          265
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D065",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 258,
+        "column": 24,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"float | None\" cannot be assigned to parameter \"x\" of type \"_SupportsFloatOrIndex\" in function \"log\"\n\u00a0\u00a0Type \"float | None\" is not assignable to type \"_SupportsFloatOrIndex\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"_SupportsFloatOrIndex\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is incompatible with protocol \"SupportsFloat\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__float__\" is not present\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is incompatible with protocol \"SupportsIndex\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__index__\" is not present"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 267,
+        "changed_hunk_lines": [
+          267,
+          272
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D066",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 260,
+        "column": 20,
+        "severity": "error",
+        "code": "reportCallIssue",
+        "message": "No overloads for \"max\" match the provided arguments"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 267,
+        "changed_hunk_lines": [
+          267,
+          272
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D067",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 260,
+        "column": 24,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"iterable\" of type \"Iterable[SupportsRichComparisonT@max]\" in function \"max\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Iterable[SupportsRichComparisonT@max]\"\n\u00a0\u00a0\u00a0\u00a0\"Timestamp\" is incompatible with protocol \"Iterable[SupportsRichComparisonT@max]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__iter__\" is not present"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 267,
+        "changed_hunk_lines": [
+          267,
+          272
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D068",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 260,
+        "column": 43,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"available_at\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 267,
+        "changed_hunk_lines": [
+          267,
+          272
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "historical_return",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D069",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 409,
+        "column": 30,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"value\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 421,
+        "changed_hunk_lines": [
+          421,
+          423
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "evaluate_m2",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D070",
+      "file": "src/lstm_data/m2.py",
+      "before": {
+        "line": 410,
+        "column": 27,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"lineage_id\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 421,
+        "changed_hunk_lines": [
+          421,
+          423
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "evaluate_m2",
+      "root_cause_and_preservation": "XNYS index plus resolver plan validity, missing-row branch, supported publication, present positive-price and nonmissing RETURN_VALID record contracts; no M2 formula or floor-clock edits."
+    },
+    {
+      "id": "D071",
+      "file": "tests/test_aggregation.py",
+      "before": {
+        "line": 174,
+        "column": 27,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Client\" cannot be assigned to parameter \"client\" of type \"HistoricalClient\" in function \"acquire\"\n\u00a0\u00a0\"Client\" is not assignable to \"HistoricalClient\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 176,
+        "changed_hunk_lines": [
+          176,
+          177
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_bulk_preserves_real_gap_with_metadata_and_without_fill",
+      "root_cause_and_preservation": "Local callable parameter erasure for existing duck-typed events/bars offline client; no fabricated nominal client conversion."
+    },
+    {
+      "id": "D072",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"str\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D073",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"bytes\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D074",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"date\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D075",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"timedelta\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D076",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"datetime64[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D077",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"timedelta64[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D078",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"bool\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D079",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"int\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D080",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"float\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D081",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"Timedelta\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D082",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"complex\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D083",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"integer[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D084",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"floating[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D085",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 28,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"complexfloating[Any, Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D086",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"str\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D087",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"bytes\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D088",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"date\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D089",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"timedelta\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D090",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"datetime64[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D091",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"timedelta64[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D092",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"bool\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D093",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"int\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D094",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"float\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D095",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"Timedelta\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D096",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"complex\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D097",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"integer[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D098",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"floating[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D099",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 29,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"complexfloating[Any, Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D100",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"str\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D101",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"bytes\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D102",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"date\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D103",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"timedelta\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D104",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"datetime64[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D105",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"timedelta64[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D106",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"bool\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D107",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"int\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D108",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"float\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D109",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"Timedelta\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D110",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"complex\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D111",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"integer[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D112",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"floating[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D113",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 30,
+        "column": 44,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"complexfloating[Any, Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D114",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 33,
+        "column": 25,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Any | Series[Any]\" cannot be assigned to parameter \"open_time\" of type \"Timestamp\" in function \"session_grid\"\n\u00a0\u00a0Type \"Any | Series[Any]\" is not assignable to type \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\"Series[Any]\" is not assignable to \"Timestamp\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 36,
+        "changed_hunk_lines": [
+          36,
+          36
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D115",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 33,
+        "column": 37,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Any | Series[Any]\" cannot be assigned to parameter \"close_time\" of type \"Timestamp\" in function \"session_grid\"\n\u00a0\u00a0Type \"Any | Series[Any]\" is not assignable to type \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\"Series[Any]\" is not assignable to \"Timestamp\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 36,
+        "changed_hunk_lines": [
+          36,
+          36
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_calendar_dst_and_early_close",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D116",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"str\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D117",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"bytes\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D118",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"date\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D119",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"timedelta\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D120",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"datetime64[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D121",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"timedelta64[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D122",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"bool\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D123",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"int\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D124",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"float\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D125",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"Timedelta\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D126",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"complex\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D127",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"integer[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D128",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"floating[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D129",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 41,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"complexfloating[Any, Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D130",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"str\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D131",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"bytes\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D132",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"date\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D133",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"timedelta\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D134",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"datetime64[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D135",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"timedelta64[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D136",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"bool\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D137",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"int\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D138",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"float\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D139",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"Timedelta\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D140",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"complex\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D141",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"integer[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D142",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"floating[Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D143",
+      "file": "tests/test_calendar_alignment.py",
+      "before": {
+        "line": 42,
+        "column": 43,
+        "severity": "error",
+        "code": "reportAttributeAccessIssue",
+        "message": "Cannot access attribute \"hour\" for class \"complexfloating[Any, Any]\"\n\u00a0\u00a0Attribute \"hour\" is unknown"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 44,
+        "changed_hunk_lines": [
+          44,
+          45
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_spring_dst",
+      "root_cause_and_preservation": "Known XNYS timestamp cells and calendar row identity casts; identical assertions."
+    },
+    {
+      "id": "D144",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 60,
+        "column": 16,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"-\" not supported for types \"Timestamp | None\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \"-\" not supported for types \"Timestamp\" and \"None\"\n\u00a0\u00a0Operator \"-\" not supported for types \"None\" and \"Timestamp\"\n\u00a0\u00a0Operator \"-\" not supported for types \"None\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 62,
+        "changed_hunk_lines": [
+          62,
+          65
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_ordinary_slots_stub_and_two_exact_240_minute_pairs",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D145",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 63,
+        "column": 31,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"tz\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 68,
+        "changed_hunk_lines": [
+          68,
+          68
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_ordinary_slots_stub_and_two_exact_240_minute_pairs",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D146",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 71,
+        "column": 32,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"start\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 76,
+        "changed_hunk_lines": [
+          76,
+          78
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_real_early_close_rejects_both_origins",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D147",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 72,
+        "column": 32,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"end\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 76,
+        "changed_hunk_lines": [
+          76,
+          78
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_real_early_close_rejects_both_origins",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D148",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 81,
+        "column": 23,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"hour\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 87,
+        "changed_hunk_lines": [
+          87,
+          87
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_dst_local_events_stable_utc_changes",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D149",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 83,
+        "column": 12,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"-\" not supported for types \"Timestamp | None\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \"-\" not supported for types \"Timestamp\" and \"None\"\n\u00a0\u00a0Operator \"-\" not supported for types \"None\" and \"Timestamp\"\n\u00a0\u00a0Operator \"-\" not supported for types \"None\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 89,
+        "changed_hunk_lines": [
+          89,
+          91
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_dst_local_events_stable_utc_changes",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D150",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 122,
+        "column": 16,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \">=\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 130,
+        "changed_hunk_lines": [
+          130,
+          133
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_actual_issuance_inclusive_boundary_and_ceiling",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D151",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 123,
+        "column": 27,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"second\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 130,
+        "changed_hunk_lines": [
+          130,
+          133
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_actual_issuance_inclusive_boundary_and_ceiling",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D152",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 124,
+        "column": 29,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 130,
+        "changed_hunk_lines": [
+          130,
+          133
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_actual_issuance_inclusive_boundary_and_ceiling",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D153",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 200,
+        "column": 20,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 209,
+        "changed_hunk_lines": [
+          209,
+          210
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_later_issuance_never_admits_post_cutoff_observation_mutation",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D154",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 201,
+        "column": 22,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 209,
+        "changed_hunk_lines": [
+          209,
+          210
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_later_issuance_never_admits_post_cutoff_observation_mutation",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D155",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 209,
+        "column": 51,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"cutoff\" of type \"Timestamp | str\" in function \"observation_at_cutoff\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 218,
+        "changed_hunk_lines": [
+          218,
+          220
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "information_set",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D156",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 215,
+        "column": 53,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"cutoff\" of type \"Timestamp | str\" in function \"observation_at_cutoff\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 226,
+        "changed_hunk_lines": [
+          226,
+          228
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_later_issuance_never_admits_post_cutoff_observation_mutation",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D157",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 223,
+        "column": 39,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"cutoff\" of type \"Timestamp | str\" in function \"observation_at_cutoff\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 236,
+        "changed_hunk_lines": [
+          236,
+          238
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_d13_future_exit_not_an_origin_or_entry_input",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D158",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 226,
+        "column": 5,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"None\" cannot be assigned to parameter \"value\" of type \"int\" in function \"__setitem__\"\n\u00a0\u00a0\"None\" is not assignable to \"int\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 240,
+        "changed_hunk_lines": [
+          240,
+          240
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_d13_future_exit_not_an_origin_or_entry_input",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D159",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 232,
+        "column": 70,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"cutoff\" of type \"Timestamp | str\" in function \"observation_at_cutoff\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 246,
+        "changed_hunk_lines": [
+          246,
+          248
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_d13_future_exit_not_an_origin_or_entry_input",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D160",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 255,
+        "column": 40,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"cutoff\" of type \"Timestamp | str\" in function \"observation_at_cutoff\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 271,
+        "changed_hunk_lines": [
+          271,
+          271
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_trace_unknown_publication_and_invalid_inputs",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D161",
+      "file": "tests/test_clocks.py",
+      "before": {
+        "line": 261,
+        "column": 52,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"cutoff\" of type \"Timestamp | str\" in function \"observation_at_cutoff\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 277,
+        "changed_hunk_lines": [
+          277,
+          277
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_trace_unknown_publication_and_invalid_inputs",
+      "root_cause_and_preservation": "Known ordinary/DST/early-close fixture clocks and stub casts; future-outcome dictionary correctly admits None. Same fixture values and assertions."
+    },
+    {
+      "id": "D162",
+      "file": "tests/test_corporate_actions.py",
+      "before": {
+        "line": 93,
+        "column": 22,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"None\" cannot be assigned to parameter \"policy\" of type \"str\" in function \"split\"\n\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 93,
+        "changed_hunk_lines": [
+          93,
+          93
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_fractional_policy_explicit_and_no_favorable_cash_in_lieu",
+      "root_cause_and_preservation": "Fixture parameters pay and policy explicitly admit None, already exercised by negative tests; unchanged defaults."
+    },
+    {
+      "id": "D163",
+      "file": "tests/test_corporate_actions.py",
+      "before": {
+        "line": 137,
+        "column": 48,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"None\" cannot be assigned to parameter \"pay\" of type \"date\" in function \"dividend\"\n\u00a0\u00a0\"None\" is not assignable to \"date\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 137,
+        "changed_hunk_lines": [
+          137,
+          137
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_unknown_pay_date_persists_in_two_statements",
+      "root_cause_and_preservation": "Fixture parameters pay and policy explicitly admit None, already exercised by negative tests; unchanged defaults."
+    },
+    {
+      "id": "D164",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 38,
+        "column": 39,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"cutoff\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 39,
+        "changed_hunk_lines": [
+          39,
+          42
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D165",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 43,
+        "column": 13,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"-\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 47,
+        "changed_hunk_lines": [
+          47,
+          48
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D166",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 44,
+        "column": 13,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"period_end\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 47,
+        "changed_hunk_lines": [
+          47,
+          48
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D167",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 57,
+        "column": 26,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 61,
+        "changed_hunk_lines": [
+          61,
+          63
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D168",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 58,
+        "column": 24,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 61,
+        "changed_hunk_lines": [
+          61,
+          63
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D169",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 59,
+        "column": 26,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 61,
+        "changed_hunk_lines": [
+          61,
+          63
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D170",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 64,
+        "column": 27,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"start\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 68,
+        "changed_hunk_lines": [
+          68,
+          71
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D171",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 64,
+        "column": 40,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"end\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 68,
+        "changed_hunk_lines": [
+          68,
+          71
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D172",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 115,
+        "column": 12,
+        "severity": "error",
+        "code": "reportOptionalSubscript",
+        "message": "Object of type \"None\" is not subscriptable"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 122,
+        "changed_hunk_lines": [
+          122,
+          124
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_two_requested_single_stock_hand_returns",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D173",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 116,
+        "column": 12,
+        "severity": "error",
+        "code": "reportOptionalSubscript",
+        "message": "Object of type \"None\" is not subscriptable"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 122,
+        "changed_hunk_lines": [
+          122,
+          124
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_two_requested_single_stock_hand_returns",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D174",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 126,
+        "column": 34,
+        "severity": "error",
+        "code": "reportOptionalMemberAccess",
+        "message": "\"period_end\" is not a known attribute of \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 134,
+        "changed_hunk_lines": [
+          134,
+          136
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_delayed_issuance_keeps_original_source_boundaries_and_true_age",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D175",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 160,
+        "column": 43,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 170,
+        "changed_hunk_lines": [
+          170,
+          173
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_future_exit_counterfactual_does_not_change_causal_admission",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D176",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 174,
+        "column": 26,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 187,
+        "changed_hunk_lines": [
+          187,
+          189
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_exact_lookup_no_next_hour_and_duplicate_or_minute_fallback",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D177",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 175,
+        "column": 24,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 187,
+        "changed_hunk_lines": [
+          187,
+          189
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_exact_lookup_no_next_hour_and_duplicate_or_minute_fallback",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D178",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 176,
+        "column": 26,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str | None\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"None\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 187,
+        "changed_hunk_lines": [
+          187,
+          189
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_exact_lookup_no_next_hour_and_duplicate_or_minute_fallback",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D179",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 183,
+        "column": 46,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"minute_start\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 196,
+        "changed_hunk_lines": [
+          196,
+          198
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_exact_lookup_no_next_hour_and_duplicate_or_minute_fallback",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D180",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 185,
+        "column": 28,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"tuple[MinuteReference]\" cannot be assigned to parameter \"rows\" of type \"tuple[HourlyCloseReference, ...]\" in function \"resolve_reference\"\n\u00a0\u00a0\"MinuteReference\" is not assignable to \"HourlyCloseReference\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 200,
+        "changed_hunk_lines": [
+          200,
+          204
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_exact_lookup_no_next_hour_and_duplicate_or_minute_fallback",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D181",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 228,
+        "column": 42,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 247,
+        "changed_hunk_lines": [
+          247,
+          250
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_entry_close_must_be_available_at_original_input_cutoff",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D182",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 237,
+        "column": 30,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 259,
+        "changed_hunk_lines": [
+          259,
+          262
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_split_covers_reference_interval_even_before_scheduled_entry",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D183",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 239,
+        "column": 12,
+        "severity": "error",
+        "code": "reportOptionalSubscript",
+        "message": "Object of type \"None\" is not subscriptable"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 264,
+        "changed_hunk_lines": [
+          264,
+          264
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_split_covers_reference_interval_even_before_scheduled_entry",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D184",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 253,
+        "column": 9,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"start\" of type \"Timestamp\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 278,
+        "changed_hunk_lines": [
+          278,
+          278
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_purge_uses_actual_event_and_availability_not_hour_end",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D185",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 255,
+        "column": 9,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"fitted_at\" of type \"Timestamp\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 280,
+        "changed_hunk_lines": [
+          280,
+          280
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_purge_uses_actual_event_and_availability_not_hour_end",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D186",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 287,
+        "column": 13,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"minute_start\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 312,
+        "changed_hunk_lines": [
+          312,
+          312
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_version_bound_floor_determinism_and_minute_mix_rejection",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D187",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 305,
+        "column": 21,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"observed_at\" of type \"Timestamp | str\" in function \"label_sample\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 330,
+        "changed_hunk_lines": [
+          330,
+          330
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_version_bound_floor_determinism_and_minute_mix_rejection",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D188",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 312,
+        "column": 31,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"tuple[ProxyLabelSample, LabelSample]\" cannot be assigned to parameter \"samples\" of type \"tuple[ProxyLabelSample, ...]\" in function \"fit_proxy_floor\"\n\u00a0\u00a0\"LabelSample\" is not assignable to \"ProxyLabelSample\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 337,
+        "changed_hunk_lines": [
+          337,
+          338
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_version_bound_floor_determinism_and_minute_mix_rejection",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D189",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 314,
+        "column": 32,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"FittedFloor\" cannot be assigned to parameter \"floor\" of type \"ProxyFloor\" in function \"apply_proxy_floor\"\n\u00a0\u00a0\"FittedFloor\" is not assignable to \"ProxyFloor\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 340,
+        "changed_hunk_lines": [
+          340,
+          340
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_version_bound_floor_determinism_and_minute_mix_rejection",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D190",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 332,
+        "column": 64,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"observed_at\" of type \"Timestamp | str\" in function \"proxy_label_sample\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 358,
+        "changed_hunk_lines": [
+          358,
+          360
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_floor_train_only_zero_mad_no_refit_and_scenario_opt_in",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D191",
+      "file": "tests/test_hourly_proxy.py",
+      "before": {
+        "line": 338,
+        "column": 35,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 366,
+        "changed_hunk_lines": [
+          366,
+          366
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_early_close_invalid_and_tampered_plan_not_accepted",
+      "root_cause_and_preservation": "Known normal-session and normalized source-row fixtures. Three callable parameter erasures intentionally test invalid minute/proxy inputs; do not falsely type a minute object as hourly. Runtime rejection assertions unchanged."
+    },
+    {
+      "id": "D192",
+      "file": "tests/test_labels.py",
+      "before": {
+        "line": 29,
+        "column": 39,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"cutoff\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 30,
+        "changed_hunk_lines": [
+          30,
+          33
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Complete normal-session fixture plan clocks and populated return/maturity casts; unchanged expected mathematics and exceptions."
+    },
+    {
+      "id": "D193",
+      "file": "tests/test_labels.py",
+      "before": {
+        "line": 34,
+        "column": 13,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"minute_start\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 38,
+        "changed_hunk_lines": [
+          38,
+          38
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Complete normal-session fixture plan clocks and populated return/maturity casts; unchanged expected mathematics and exceptions."
+    },
+    {
+      "id": "D194",
+      "file": "tests/test_labels.py",
+      "before": {
+        "line": 49,
+        "column": 26,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 53,
+        "changed_hunk_lines": [
+          53,
+          53
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Complete normal-session fixture plan clocks and populated return/maturity casts; unchanged expected mathematics and exceptions."
+    },
+    {
+      "id": "D195",
+      "file": "tests/test_labels.py",
+      "before": {
+        "line": 53,
+        "column": 27,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"start\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 57,
+        "changed_hunk_lines": [
+          57,
+          60
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Complete normal-session fixture plan clocks and populated return/maturity casts; unchanged expected mathematics and exceptions."
+    },
+    {
+      "id": "D196",
+      "file": "tests/test_labels.py",
+      "before": {
+        "line": 53,
+        "column": 39,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"end\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 57,
+        "changed_hunk_lines": [
+          57,
+          60
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "fixture",
+      "root_cause_and_preservation": "Complete normal-session fixture plan clocks and populated return/maturity casts; unchanged expected mathematics and exceptions."
+    },
+    {
+      "id": "D197",
+      "file": "tests/test_labels.py",
+      "before": {
+        "line": 116,
+        "column": 47,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"minute\" of type \"Timestamp | str\" in function \"minute_reference\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 123,
+        "changed_hunk_lines": [
+          123,
+          123
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_nominal_pairs_and_shifted_actual_issuance",
+      "root_cause_and_preservation": "Complete normal-session fixture plan clocks and populated return/maturity casts; unchanged expected mathematics and exceptions."
+    },
+    {
+      "id": "D198",
+      "file": "tests/test_labels.py",
+      "before": {
+        "line": 149,
+        "column": 48,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \">\" not supported for types \"Timestamp | None\" and \"Timestamp | None\"\n\u00a0\u00a0Operator \">\" not supported for types \"Timestamp\" and \"None\"\n\u00a0\u00a0Operator \">\" not supported for types \"None\" and \"Timestamp\"\n\u00a0\u00a0Operator \">\" not supported for types \"None\" and \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 156,
+        "changed_hunk_lines": [
+          156,
+          159
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_future_exit_missing_or_later_publication_changes_only_label",
+      "root_cause_and_preservation": "Complete normal-session fixture plan clocks and populated return/maturity casts; unchanged expected mathematics and exceptions."
+    },
+    {
+      "id": "D199",
+      "file": "tests/test_labels.py",
+      "before": {
+        "line": 265,
+        "column": 43,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"-\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 275,
+        "changed_hunk_lines": [
+          275,
+          277
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_actual_fit_timestamp_empty_duplicates_and_synthetic_guard",
+      "root_cause_and_preservation": "Complete normal-session fixture plan clocks and populated return/maturity casts; unchanged expected mathematics and exceptions."
+    },
+    {
+      "id": "D200",
+      "file": "tests/test_labels.py",
+      "before": {
+        "line": 288,
+        "column": 38,
+        "severity": "error",
+        "code": "reportOptionalSubscript",
+        "message": "Object of type \"None\" is not subscriptable"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 300,
+        "changed_hunk_lines": [
+          300,
+          302
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_split_share_conversion_requires_explicit_interval_facts",
+      "root_cause_and_preservation": "Complete normal-session fixture plan clocks and populated return/maturity casts; unchanged expected mathematics and exceptions."
+    },
+    {
+      "id": "D201",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 36,
+        "column": 9,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"-\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 37,
+        "changed_hunk_lines": [
+          37,
+          39
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "one_return",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D202",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 37,
+        "column": 9,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"period_end\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 37,
+        "changed_hunk_lines": [
+          37,
+          39
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "one_return",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D203",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 47,
+        "column": 22,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 49,
+        "changed_hunk_lines": [
+          49,
+          51
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "one_return",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D204",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 48,
+        "column": 20,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 49,
+        "changed_hunk_lines": [
+          49,
+          51
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "one_return",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D205",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 49,
+        "column": 31,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 49,
+        "changed_hunk_lines": [
+          49,
+          51
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "one_return",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D206",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 54,
+        "column": 9,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"start\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 56,
+        "changed_hunk_lines": [
+          56,
+          57
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "one_return",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D207",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 55,
+        "column": 9,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"end\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 56,
+        "changed_hunk_lines": [
+          56,
+          57
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "one_return",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D208",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 59,
+        "column": 28,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 61,
+        "changed_hunk_lines": [
+          61,
+          64
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "one_return",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D209",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 204,
+        "column": 9,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"-\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 209,
+        "changed_hunk_lines": [
+          209,
+          210
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_split_lineage_and_unsupported_epoch",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D210",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 205,
+        "column": 9,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"period_end\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 209,
+        "changed_hunk_lines": [
+          209,
+          210
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_split_lineage_and_unsupported_epoch",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D211",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 215,
+        "column": 22,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 220,
+        "changed_hunk_lines": [
+          220,
+          222
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_split_lineage_and_unsupported_epoch",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D212",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 216,
+        "column": 20,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 220,
+        "changed_hunk_lines": [
+          220,
+          222
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_split_lineage_and_unsupported_epoch",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D213",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 217,
+        "column": 22,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str | None\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"None\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 220,
+        "changed_hunk_lines": [
+          220,
+          222
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_split_lineage_and_unsupported_epoch",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D214",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 220,
+        "column": 9,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"start\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 225,
+        "changed_hunk_lines": [
+          225,
+          226
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_split_lineage_and_unsupported_epoch",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D215",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 220,
+        "column": 22,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"Timestamp | None\" cannot be assigned to parameter \"end\" of type \"Timestamp | str\" in function \"__init__\"\n\u00a0\u00a0Type \"Timestamp | None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0Type \"None\" is not assignable to type \"Timestamp | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"Timestamp\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"None\" is not assignable to \"str\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 225,
+        "changed_hunk_lines": [
+          225,
+          226
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_split_lineage_and_unsupported_epoch",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D216",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 252,
+        "column": 52,
+        "severity": "error",
+        "code": "reportOptionalOperand",
+        "message": "Operator \"+\" not supported for \"None\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 258,
+        "changed_hunk_lines": [
+          258,
+          259
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_canonical_keys_deduplicate_and_balance",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D217",
+      "file": "tests/test_m2.py",
+      "before": {
+        "line": 278,
+        "column": 33,
+        "severity": "error",
+        "code": "reportOperatorIssue",
+        "message": "Operator \"+\" not supported for types \"Timestamp | str\" and \"Timedelta\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"Timedelta\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 285,
+        "changed_hunk_lines": [
+          285,
+          285
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_window_mask_missing_never_shifts_and_no_future_label_filter",
+      "root_cause_and_preservation": "Known valid-session and normalized row fixture clocks and numeric M2 value; same coverage, lineage and arithmetic assertions."
+    },
+    {
+      "id": "D218",
+      "file": "tests/test_store_cli.py",
+      "before": {
+        "line": 90,
+        "column": 25,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"NoNetwork\" cannot be assigned to parameter \"client\" of type \"HistoricalClient\" in function \"acquire\"\n\u00a0\u00a0\"NoNetwork\" is not assignable to \"HistoricalClient\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 91,
+        "changed_hunk_lines": [
+          91,
+          92
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_resume_verified_chunk_makes_no_request",
+      "root_cause_and_preservation": "Local callable parameter erasure for intentionally opaque/partial clients proves rejection or verified resume occurs before client use. Same exceptions and network prohibition."
+    },
+    {
+      "id": "D219",
+      "file": "tests/test_store_cli.py",
+      "before": {
+        "line": 101,
+        "column": 22,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"object\" cannot be assigned to parameter \"client\" of type \"HistoricalClient\" in function \"acquire\"\n\u00a0\u00a0\"object\" is not assignable to \"HistoricalClient\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 103,
+        "changed_hunk_lines": [
+          103,
+          104
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_interrupted_pair_stops_without_network",
+      "root_cause_and_preservation": "Local callable parameter erasure for intentionally opaque/partial clients proves rejection or verified resume occurs before client use. Same exceptions and network prohibition."
+    },
+    {
+      "id": "D220",
+      "file": "tests/test_store_cli.py",
+      "before": {
+        "line": 131,
+        "column": 22,
+        "severity": "error",
+        "code": "reportArgumentType",
+        "message": "Argument of type \"object\" cannot be assigned to parameter \"client\" of type \"HistoricalClient\" in function \"acquire\"\n\u00a0\u00a0\"object\" is not assignable to \"HistoricalClient\""
+      },
+      "after": {
+        "status": "RESOLVED",
+        "navigation_line": 134,
+        "changed_hunk_lines": [
+          134,
+          134
+        ],
+        "remaining_diagnostic": null
+      },
+      "function": "test_bulk_does_not_bypass_failed_pilot",
+      "root_cause_and_preservation": "Local callable parameter erasure for intentionally opaque/partial clients proves rejection or verified resume occurs before client use. Same exceptions and network prohibition."
+    }
+  ],
+  "remaining": []
+}

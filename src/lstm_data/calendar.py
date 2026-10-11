@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import cast
+
 import exchange_calendars as xcals
 import pandas as pd
 
@@ -115,7 +117,8 @@ def stock_qa(frame: pd.DataFrame, symbols: list[str], start: str, end: str) -> d
             result["daily"].append(
                 {
                     "symbol": symbol,
-                    "session": str(day.date()),
+                    # XNYS schedule has a DatetimeIndex, unlike generic DataFrame stubs.
+                    "session": str(cast(pd.Timestamp, day).date()),
                     "open_utc": row.open.isoformat(),
                     "close_utc": row.close.isoformat(),
                     "early_close": row.close.tz_convert("America/New_York").hour < 16,
@@ -138,7 +141,10 @@ def stock_qa(frame: pd.DataFrame, symbols: list[str], start: str, end: str) -> d
                 opening = float(current.iloc[0].open)
                 if previous_close is not None and abs(opening / previous_close - 1) > 0.2:
                     summary["price_jump_candidates"].append(
-                        {"session": str(day.date()), "ratio": opening / previous_close}
+                        {
+                            "session": str(cast(pd.Timestamp, day).date()),
+                            "ratio": opening / previous_close,
+                        }
                     )
                 previous_close = float(current.iloc[-1].close)
         summary["outside_session_bars"] = int((~in_any_session).sum())

@@ -8,7 +8,7 @@ from aggregation's legacy ``available_at`` field. Shared registration is pending
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal
+from typing import Literal, cast
 
 import pandas as pd
 
@@ -205,11 +205,12 @@ def observation_at_cutoff(
         return result("SCENARIO_NOT_AUTHORIZED")
     if not scenario and not (observation.evidence_ref and observation.evidence_ref.strip()):
         return result("SOURCE_CLOCK_UNKNOWN")
-    utc(observation.native_label)
+    # The SOURCE_CLOCK_UNKNOWN guard rejected None for each of these fields.
+    utc(cast(pd.Timestamp | str, observation.native_label))
     start, end, available = (
-        utc(observation.period_start),
-        utc(observation.period_end),
-        utc(observation.available_at),
+        utc(cast(pd.Timestamp | str, observation.period_start)),
+        utc(cast(pd.Timestamp | str, observation.period_end)),
+        utc(cast(pd.Timestamp | str, observation.available_at)),
     )
     if start >= end or available < end:
         return result("INVALID_SOURCE_INTERVAL")

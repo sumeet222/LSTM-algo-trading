@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from typing import Callable, cast
 
 import pandas as pd
 import pytest
@@ -87,7 +88,8 @@ def test_resume_verified_chunk_makes_no_request(cfg, monkeypatch):
         def bars(self, *_):
             raise AssertionError("Verified chunk must not be fetched again")
 
-    assert acquire(cfg, NoNetwork(), Path("unused"))[0]["resumed"]
+    # Deliberately partial client: verified resume must never inspect its network interface.
+    assert cast(Callable[..., list[dict]], acquire)(cfg, NoNetwork(), Path("unused"))[0]["resumed"]
     assert not (cfg["_stock_store"] / ".acquisition.lock").exists()
 
 
@@ -98,7 +100,8 @@ def test_interrupted_pair_stops_without_network(cfg, monkeypatch):
     path.write_bytes(b"unknown local work")
     monkeypatch.setattr("lstm_data.store.check_approval", lambda *_: {})
     with pytest.raises(ValueError, match="Interrupted"):
-        acquire(cfg, object(), Path("unused"))
+        # Opaque client intentionally proves rejection before any client operation.
+        cast(Callable[..., list[dict]], acquire)(cfg, object(), Path("unused"))
     assert path.read_bytes() == b"unknown local work"
 
 
@@ -128,7 +131,7 @@ def test_bulk_does_not_bypass_failed_pilot(cfg):
     with pytest.raises(ValueError, match="bulk blocked"):
         check_approval(cfg, approval_path)
     with pytest.raises(ValueError, match="bulk blocked"):
-        acquire(cfg, object(), approval_path)
+        cast(Callable[..., list[dict]], acquire)(cfg, object(), approval_path)
     assert not cfg["_stock_store"].exists()
 
 

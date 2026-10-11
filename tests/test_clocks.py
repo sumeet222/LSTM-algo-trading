@@ -2,12 +2,14 @@
 
 from dataclasses import replace
 from pathlib import Path
+from typing import cast
 
 import pandas as pd
 import pytest
 
 from lstm_data.audit import f01_fixture
 from lstm_data.clocks import (
+    HourSlot,
     SessionClock,
     SourceObservation,
     clock_trace,
@@ -57,10 +59,13 @@ def test_ordinary_slots_stub_and_two_exact_240_minute_pairs(ordinary):
         assert plan.issuance == et("2020-07-01", f"{hour}:32")
         assert plan.entry == et("2020-07-01", f"{hour}:33")
         assert plan.exit == et("2020-07-01", f"{hour + 4}:33")
-        assert plan.exit - plan.entry == pd.Timedelta(minutes=240)
+        # These ordinary-day plans have the finite times asserted immediately above.
+        assert cast(pd.Timestamp, plan.exit) - cast(pd.Timestamp, plan.entry) == pd.Timedelta(
+            minutes=240
+        )
         assert plan.issuance_kind == "PLANNED_SYNTHETIC"
         assert plan.reason == "SCHEDULE_VALID"
-        assert str(plan.entry.tz) == "UTC"
+        assert str(cast(pd.Timestamp, plan.entry).tz) == "UTC"
 
 
 def test_real_early_close_rejects_both_origins():
@@ -68,8 +73,9 @@ def test_real_early_close_rejects_both_origins():
     assert clock.close == et("2020-11-27", "13:00")
     assert len(clock.hours) == 3
     assert clock.hours[-1].end == et("2020-11-27", "12:30")
-    assert clock.terminal_stub.start == et("2020-11-27", "12:30")
-    assert clock.terminal_stub.end == et("2020-11-27", "13:00")
+    # This explicitly known early-close session has a terminal half-hour stub.
+    assert cast(HourSlot, clock.terminal_stub).start == et("2020-11-27", "12:30")
+    assert cast(HourSlot, clock.terminal_stub).end == et("2020-11-27", "13:00")
     assert [p.reason for p in forecast_origins(clock)] == ["EXIT_OUTSIDE_SESSION"] * 2
     assert forecast_origins(clock)[1].exit == et("2020-11-27", "15:33")
 
@@ -78,9 +84,11 @@ def test_real_early_close_rejects_both_origins():
 def test_dst_local_events_stable_utc_changes(day, utc_hour):
     plan = forecast_origins(session_clock(day))[0]
     assert plan.entry == et(day, "10:33")
-    assert plan.entry.hour == utc_hour
+    assert cast(pd.Timestamp, plan.entry).hour == utc_hour
     assert plan.exit == et(day, "14:33")
-    assert plan.exit - plan.entry == pd.Timedelta(minutes=240)
+    assert cast(pd.Timestamp, plan.exit) - cast(pd.Timestamp, plan.entry) == pd.Timedelta(
+        minutes=240
+    )
 
 
 def test_holiday_and_no_full_hour():
@@ -119,9 +127,10 @@ def test_actual_issuance_inclusive_boundary_and_ceiling(ordinary, seconds, entry
         assert plan.entry is None and plan.exit is None
     else:
         assert plan.entry == et("2020-07-01", entry_time)
-        assert plan.entry >= issued + pd.Timedelta(minutes=1)
-        assert plan.entry.second == 0
-        assert plan.exit == plan.entry + pd.Timedelta(minutes=240)
+        # This branch selects the parametrized finite entry_time cases.
+        assert cast(pd.Timestamp, plan.entry) >= issued + pd.Timedelta(minutes=1)
+        assert cast(pd.Timestamp, plan.entry).second == 0
+        assert plan.exit == cast(pd.Timestamp, plan.entry) + pd.Timedelta(minutes=240)
         assert plan.cutoff == cutoff
 
 
@@ -197,8 +206,8 @@ def test_later_issuance_never_admits_post_cutoff_observation_mutation(ordinary):
         bar,
         observation_id="future",
         period_start=plan.cutoff,
-        period_end=plan.cutoff + pd.Timedelta(minutes=2),
-        available_at=plan.cutoff + pd.Timedelta(minutes=2),
+        period_end=cast(pd.Timestamp, plan.cutoff) + pd.Timedelta(minutes=2),
+        available_at=cast(pd.Timestamp, plan.cutoff) + pd.Timedelta(minutes=2),
     )
     records = [(bar, 100), (post_cutoff, 101)]
 
@@ -206,13 +215,17 @@ def test_later_issuance_never_admits_post_cutoff_observation_mutation(ordinary):
         return [
             (observation.observation_id, price)
             for observation, price in items
-            if observation_at_cutoff(observation, plan.cutoff, test_scenario=True).usable
+            if observation_at_cutoff(
+                observation, cast(pd.Timestamp, plan.cutoff), test_scenario=True
+            ).usable
         ]
 
     before = information_set(records)
     records[1] = (post_cutoff, 99999)
     assert information_set(records) == before == [("synthetic-hour", 100)]
-    late_check = observation_at_cutoff(post_cutoff, plan.issuance, test_scenario=True)
+    late_check = observation_at_cutoff(
+        post_cutoff, cast(pd.Timestamp, plan.issuance), test_scenario=True
+    )
     assert late_check.usable  # Wrong cutoff would admit it; boundary independently rejects it.
     assert not origin_boundary(plan, (late_check,)).clock_and_information_issuable
 
@@ -220,8 +233,9 @@ def test_later_issuance_never_admits_post_cutoff_observation_mutation(ordinary):
 def test_d13_future_exit_not_an_origin_or_entry_input(ordinary):
     plan = execution_plan(ordinary, 1)
     bar = synthetic(ordinary.hours[0])
-    step = observation_at_cutoff(bar, plan.cutoff, test_scenario=True)
-    future = {"exit_observation": 100}
+    # These normal-session fixtures deliberately retain an optional future outcome.
+    step = observation_at_cutoff(bar, cast(pd.Timestamp, plan.cutoff), test_scenario=True)
+    future: dict[str, int | None] = {"exit_observation": 100}
     before = origin_boundary(plan, (step,))
     future["exit_observation"] = None
     assert origin_boundary(plan, (step,)) == before
@@ -229,7 +243,9 @@ def test_d13_future_exit_not_an_origin_or_entry_input(ordinary):
     assert not before.source_asof_verified
     assert before.entry_eligible is before.label_valid is before.execution_outcome is None
     assert not origin_boundary(plan, ()).clock_and_information_issuable
-    unknown = observation_at_cutoff(replace(bar, available_at=None), plan.cutoff)
+    unknown = observation_at_cutoff(
+        replace(bar, available_at=None), cast(pd.Timestamp, plan.cutoff)
+    )
     assert not origin_boundary(plan, (unknown,)).clock_and_information_issuable
 
 
@@ -252,13 +268,13 @@ def test_f01_existing_counterexample_and_research_blockers():
 def test_trace_unknown_publication_and_invalid_inputs(ordinary):
     plan = execution_plan(ordinary, 1)
     bar = replace(synthetic(ordinary.hours[0]), available_at=None, availability_basis="UNKNOWN")
-    check = observation_at_cutoff(bar, plan.cutoff)
+    check = observation_at_cutoff(bar, cast(pd.Timestamp, plan.cutoff))
     trace = clock_trace(plan, bar, check)
     assert trace["calendar_valid"] and not trace["source_asof_verified"]
     assert trace["G2_status"] == "BLOCKED" and trace["available_at"] is None
     assert trace["information_reason"] == "SOURCE_CLOCK_UNKNOWN"
     missing = replace(bar, available_at=pd.NaT)
-    missing_check = observation_at_cutoff(missing, plan.cutoff)
+    missing_check = observation_at_cutoff(missing, cast(pd.Timestamp, plan.cutoff))
     assert missing_check.reason == "SOURCE_CLOCK_UNKNOWN"
     assert clock_trace(plan, missing, missing_check)["available_at"] is None
     with pytest.raises(ValueError, match="identity"):

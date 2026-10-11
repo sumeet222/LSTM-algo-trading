@@ -1,3 +1,5 @@
+from typing import Callable, cast
+
 import pandas as pd
 import pytest
 
@@ -171,7 +173,8 @@ def test_bulk_preserves_real_gap_with_metadata_and_without_fill(cfg, monkeypatch
         def bars(self, _params):
             return source
 
-    result = acquire(cfg, Client(), cfg["_root"] / "unused")
+    # This duck-typed offline client implements the events/bars interface used here.
+    result = cast(Callable[..., list[dict]], acquire)(cfg, Client(), cfg["_root"] / "unused")
     assert result[0]["coverage_audit"]["missing_source_bars"] == 1
     assert len(result[0]["coverage_audit"]["incomplete_windows"]) == 1
     params = monthly_requests(cfg)[0]

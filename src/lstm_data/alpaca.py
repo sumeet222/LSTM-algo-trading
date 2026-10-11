@@ -7,6 +7,7 @@ import random
 import time
 from collections.abc import Callable
 from dataclasses import dataclass, field
+from typing import cast
 
 import pandas as pd
 import requests
@@ -104,7 +105,8 @@ class HistoricalClient:
             )
             if status == 200:
                 try:
-                    payload = response.json()
+                    # status=200 requires a returned response; transport failure sets a string.
+                    payload = cast(requests.Response, response).json()
                 except ValueError:
                     raise DataAccessError("Invalid JSON response; acquisition stopped") from None
                 if not isinstance(payload, dict) or not isinstance(payload.get("bars"), dict):

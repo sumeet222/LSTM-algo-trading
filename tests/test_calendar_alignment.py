@@ -1,3 +1,5 @@
+from typing import cast
+
 import pandas as pd
 import pytest
 
@@ -25,12 +27,13 @@ def synthetic_market(times, ends=None, availability=None):
 
 def test_calendar_dst_and_early_close():
     days = schedule("2020-10-30", "2020-11-27")
-    assert days.loc["2020-10-30", "open"].hour == 13
-    assert days.loc["2020-11-02", "open"].hour == 14
-    assert days.loc["2020-11-27", "close"].hour == 18
+    # XNYS open/close cells are timestamps; generic pandas scalar stubs are broader.
+    assert cast(pd.Timestamp, days.loc["2020-10-30", "open"]).hour == 13
+    assert cast(pd.Timestamp, days.loc["2020-11-02", "open"]).hour == 14
+    assert cast(pd.Timestamp, days.loc["2020-11-27", "close"]).hour == 18
     assert pd.Timestamp("2020-11-26") not in days.index
     early = days.loc["2020-11-27"]
-    grid = session_grid(early.open, early.close)
+    grid = session_grid(cast(pd.Timestamp, early.open), cast(pd.Timestamp, early.close))
     assert len(grid) == 4
     assert grid[-1]["stub"]
     assert grid[-1]["end"] - grid[-1]["start"] == pd.Timedelta(minutes=30)
@@ -38,8 +41,8 @@ def test_calendar_dst_and_early_close():
 
 def test_spring_dst():
     days = schedule("2021-03-12", "2021-03-15")
-    assert days.loc["2021-03-12", "open"].hour == 14
-    assert days.loc["2021-03-15", "open"].hour == 13
+    assert cast(pd.Timestamp, days.loc["2021-03-12", "open"]).hour == 14
+    assert cast(pd.Timestamp, days.loc["2021-03-15", "open"]).hour == 13
 
 
 def test_native_clock_hours_fail_gate_and_are_not_shifted():

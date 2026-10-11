@@ -2,6 +2,7 @@
 
 import math
 from dataclasses import replace
+from typing import cast
 
 import pandas as pd
 import pytest
@@ -26,12 +27,15 @@ from lstm_data.labels import (
 
 def fixture(day="2020-07-01", origin=1, issued_at=None, logs=(-0.02, -0.01, 0, 0.01, 0.03)):
     plan = execution_plan(session_clock(day), origin, issued_at=issued_at)
-    forecast = ForecastEvidence(True, plan.cutoff, UNIVERSE, "SYNTHETIC", "fake-inputs")
+    # This price fixture is used only with complete normal-session plans.
+    forecast = ForecastEvidence(
+        True, cast(pd.Timestamp, plan.cutoff), UNIVERSE, "SYNTHETIC", "fake-inputs"
+    )
     entries = tuple(
         MinuteReference(
             symbol,
             f"{day}:{symbol}:entry",
-            plan.entry,
+            cast(pd.Timestamp, plan.entry),
             100 + i * 10,
             "fake-v1",
             "SYNTHETIC",
@@ -46,11 +50,14 @@ def fixture(day="2020-07-01", origin=1, issued_at=None, logs=(-0.02, -0.01, 0, 0
             row_id=row.row_id.replace("entry", "exit"),
             minute_start=plan.exit,
             raw_open=row.raw_open * math.exp(r),
-            available_at=plan.exit + pd.Timedelta(minutes=2),
+            available_at=cast(pd.Timestamp, plan.exit) + pd.Timedelta(minutes=2),
         )
         for row, r in zip(entries, logs, strict=True)
     )
-    actions = ActionScope(plan.entry, plan.exit, UNIVERSE, "SYNTHETIC", "fake-no-actions")
+    actions = ActionScope(
+        cast(pd.Timestamp, plan.entry), cast(pd.Timestamp, plan.exit),
+        UNIVERSE, "SYNTHETIC", "fake-no-actions",
+    )
     return plan, forecast, entries, exits, actions
 
 
@@ -113,7 +120,7 @@ def test_nominal_pairs_and_shifted_actual_issuance(origin, entry, exit_time):
     assert shifted[0].entry == pd.Timestamp("2020-07-01T14:36Z")
     assert shifted[0].exit == pd.Timestamp("2020-07-01T18:36Z")
     assert sample(shifted).label_valid
-    assert minute_reference(parts[2], "AAPL", shifted[0].entry) is None
+    assert minute_reference(parts[2], "AAPL", cast(pd.Timestamp, shifted[0].entry)) is None
 
 
 @pytest.mark.parametrize(
@@ -146,7 +153,10 @@ def test_future_exit_missing_or_later_publication_changes_only_label(panel):
     )
     delayed = sample((*panel[:3], delayed_exits, panel[4]))
     assert delayed.reason == "LABEL_NOT_MATURED" and not delayed.label_valid
-    assert delayed.causal == before.causal and delayed.maturity > before.maturity
+    # Both constructed outcomes retain known publication clocks, asserted by their reasons.
+    assert delayed.causal == before.causal and cast(pd.Timestamp, delayed.maturity) > cast(
+        pd.Timestamp, before.maturity
+    )
     assert missing.execution_outcome == delayed.execution_outcome == "NOT_EVALUATED"
 
 
@@ -262,7 +272,9 @@ def test_frozen_outer_boundaries_and_maturity_purging(panel, stage, stop):
 
 def test_actual_fit_timestamp_empty_duplicates_and_synthetic_guard(panel, window):
     good = sample(panel)
-    too_early = replace(window, fitted_at=good.maturity - pd.Timedelta(seconds=1))
+    too_early = replace(
+        window, fitted_at=cast(pd.Timestamp, good.maturity) - pd.Timedelta(seconds=1)
+    )
     assert fitting_membership(good, too_early, test_scenario=True) == "NOT_MATURED_BY_FIT"
     assert fitting_membership(good, window) == "SYNTHETIC_NOT_RESEARCH_DATA"
     with pytest.raises(ValueError, match="NO_VALID_FLOOR"):
@@ -285,7 +297,9 @@ def test_split_share_conversion_requires_explicit_interval_facts(panel):
     actions = replace(panel[4], splits=(split,))
     exits = (replace(panel[3][0], raw_open=panel[2][0].raw_open / 4), *panel[3][1:])
     converted = sample((*panel[:3], exits, actions))
-    assert converted.label_valid and converted.raw_returns[0] == pytest.approx(0, abs=1e-14)
+    assert converted.label_valid and cast(
+        tuple[float, ...], converted.raw_returns
+    )[0] == pytest.approx(0, abs=1e-14)
     assert converted.split_ids == ("fake-split",)
     unresolved = sample((*panel[:3], exits, replace(actions, basis="UNKNOWN")))
     assert unresolved.reason == "ACTION_CONVENTION_UNVERIFIED"

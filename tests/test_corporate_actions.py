@@ -45,11 +45,11 @@ def account(q="100", cash="1000", opened=None, basis="before"):
     )
 
 
-def dividend(pay=date(2020, 3, 5), basis="before", sequence=1):
+def dividend(pay: date | None = date(2020, 3, 5), basis="before", sequence=1):
     return Action(source(), "AAPL", "DIVIDEND", time(), sequence, D(".77"), basis, payable_date=pay)
 
 
-def split(ratio="4", sequence=0, policy="INTEGER_ONLY"):
+def split(ratio="4", sequence=0, policy: str | None = "INTEGER_ONLY"):
     return Action(
         source("split"),
         "AAPL",

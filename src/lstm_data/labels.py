@@ -12,7 +12,7 @@ import json
 import math
 from dataclasses import dataclass
 from statistics import median
-from typing import Literal
+from typing import Literal, cast
 
 import pandas as pd
 
@@ -156,7 +156,8 @@ def causal_eligibility(
     )
     reasons, ids = [], []
     for symbol in UNIVERSE:
-        row = minute_reference(entries, symbol, plan.entry) if valid else None
+        # _valid_plan establishes finite plan clocks; _supported establishes publication.
+        row = minute_reference(entries, symbol, cast(pd.Timestamp, plan.entry)) if valid else None
         ids.append(row.row_id if row else None)
         if not issuable:
             reason = "FORECAST_NOT_ISSUABLE"
@@ -164,7 +165,7 @@ def causal_eligibility(
             reason = "ENTRY_REFERENCE_MISSING"
         elif not _supported(row, test_scenario):
             reason = "ENTRY_AVAILABILITY_UNVERIFIED"
-        elif row.available_at > plan.entry:
+        elif cast(pd.Timestamp, row.available_at) > cast(pd.Timestamp, plan.entry):
             reason = "ENTRY_REFERENCE_NOT_YET_AVAILABLE"
         else:
             reason = "ENTRY_REFERENCE_ELIGIBLE"
@@ -209,7 +210,11 @@ def _split_factors(
     accepted = {"DOCUMENTED"} | ({"SYNTHETIC"} if test_scenario else set())
     if actions.basis not in accepted or not actions.evidence_ref.strip():
         return None
-    if utc(actions.start) > plan.entry or utc(actions.end) < plan.exit:
+    # Callers pass a validated plan (or its explicit proxy price interval).
+    if (
+        utc(actions.start) > cast(pd.Timestamp, plan.entry)
+        or utc(actions.end) < cast(pd.Timestamp, plan.exit)
+    ):
         return None
     factors = dict.fromkeys(UNIVERSE, 1.0)
     ids = set()
@@ -226,7 +231,10 @@ def _split_factors(
         ):
             return None
         ids.add(split.event_id)
-        if plan.entry < utc(split.effective_at) <= plan.exit:
+        if (
+            cast(pd.Timestamp, plan.entry)
+            < utc(split.effective_at) <= cast(pd.Timestamp, plan.exit)
+        ):
             factors[split.symbol] *= split.new_shares / split.old_shares
     return tuple(factors[symbol] for symbol in UNIVERSE)
 
@@ -283,8 +291,8 @@ def label_sample(
         reason = plan.reason if not plan.calendar_valid else "INVALID_PLAN"
     else:
         for symbol in UNIVERSE:
-            entry = minute_reference(entries, symbol, plan.entry)
-            exit_row = minute_reference(exits, symbol, plan.exit)
+            entry = minute_reference(entries, symbol, cast(pd.Timestamp, plan.entry))
+            exit_row = minute_reference(exits, symbol, cast(pd.Timestamp, plan.exit))
             if entry is None or exit_row is None:
                 reason = "ENTRY_REFERENCE_MISSING" if entry is None else "EXIT_REFERENCE_MISSING"
                 break
@@ -305,10 +313,11 @@ def label_sample(
     m = mad = maturity = None
     maturity_basis = "MATURITY_UNVERIFIED"
     if reason == "LABEL_VALID":
+        # This reason requires a valid plan and non-None split factors above.
         # Log differences avoid overflow/underflow of a direct price ratio.
         returns = tuple(
             math.log(selected[2 * i + 1].raw_open)
-            + math.log(factors[i])
+            + math.log(cast(tuple[float, ...], factors)[i])
             - math.log(selected[2 * i].raw_open)
             for i in range(5)
         )
@@ -316,7 +325,11 @@ def label_sample(
         centered = tuple(r - m for r in returns)
         mad = median(abs(r) for r in centered)
         if all(_supported(row, test_scenario) for row in selected):
-            maturity = max(plan.exit, *(row.available_at for row in selected))
+            # Each publication was normalized by MinuteReference and checked by _supported.
+            maturity = max(
+                cast(pd.Timestamp, plan.exit),
+                *(cast(pd.Timestamp, row.available_at) for row in selected),
+            )
             maturity_basis = "SYNTHETIC" if scenario else "DOCUMENTED_ASSERTION"
             if observed < maturity:
                 reason = "LABEL_NOT_MATURED"
@@ -387,11 +400,16 @@ def fitting_membership(
         return sample.reason
     if sample.scenario_only and not test_scenario:
         return "SYNTHETIC_NOT_RESEARCH_DATA"
-    if not window.start <= sample.plan.cutoff < window.stop:
+    # label_valid is the existing caller contract for complete plan/maturity fields.
+    # Identity casts retain the previous failure behavior for malformed caller objects.
+    if not window.start <= cast(pd.Timestamp, sample.plan.cutoff) < window.stop:
         return "ORIGIN_OUTSIDE_FIT_WINDOW"
-    if sample.plan.exit >= window.stop or sample.maturity >= window.stop:
+    if (
+        cast(pd.Timestamp, sample.plan.exit) >= window.stop
+        or cast(pd.Timestamp, sample.maturity) >= window.stop
+    ):
         return "PURGED_SPLIT_BOUNDARY"
-    if sample.maturity > window.fitted_at:
+    if cast(pd.Timestamp, sample.maturity) > window.fitted_at:
         return "NOT_MATURED_BY_FIT"
     return "FIT_ELIGIBLE"
 
@@ -481,5 +499,9 @@ def apply_tg0_floor(
         sample,
         floor.floor_id,
         floor.epsilon,
-        tuple(r / (sample.unscaled_mad + floor.epsilon) for r in sample.centered_returns),
+        # LABEL_VALID construction supplies both MAD and centered returns.
+        tuple(
+            r / (cast(float, sample.unscaled_mad) + floor.epsilon)
+            for r in cast(tuple[float, ...], sample.centered_returns)
+        ),
     )

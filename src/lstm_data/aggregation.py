@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import cast
+
 import pandas as pd
 
 from .calendar import schedule, session_grid
@@ -50,7 +52,8 @@ def aggregate_session_hours(
                 windows.append(
                     {
                         "symbol": symbol,
-                        "session": str(day.date()),
+                        # schedule() returns the XNYS DatetimeIndex.
+                        "session": str(cast(pd.Timestamp, day).date()),
                         "start_utc": interval["start"].isoformat(),
                         "end_utc": interval["end"].isoformat(),
                         "stub": interval["stub"],
@@ -65,7 +68,7 @@ def aggregate_session_hours(
                     "symbol": symbol,
                     "timestamp": interval["start"],
                     "available_at": interval["end"],
-                    "session": str(day.date()),
+                    "session": str(cast(pd.Timestamp, day).date()),
                     "duration_minutes": int(
                         (interval["end"] - interval["start"]).total_seconds() / 60
                     ),

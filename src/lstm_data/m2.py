@@ -12,6 +12,7 @@ import json
 import math
 from dataclasses import dataclass, replace
 from statistics import fmean
+from typing import cast
 
 import pandas as pd
 
@@ -50,7 +51,8 @@ class ScheduledCalendar:
     def __init__(self, start: str, end: str):
         self._sessions: dict[str, SessionClock] = {}
         for day, row in schedule(start, end).iterrows():
-            key = day.date().isoformat()
+            # schedule() has the XNYS DatetimeIndex, narrowed from pandas Hashable.
+            key = cast(pd.Timestamp, day).date().isoformat()
             slots = tuple(
                 HourSlot(x["start"], x["end"], x["stub"]) for x in session_grid(row.open, row.close)
             )
@@ -231,11 +233,15 @@ def historical_return(
         all(r.reason != "INVALID_PLAN" for r in refs)
         and plan.calendar_valid
         and actions is not None
-        and utc(actions.start) <= plan.cutoff
-        and utc(actions.end) >= plan.exit
+        # Non-INVALID_PLAN references establish _valid_plan's finite clocks.
+        and utc(actions.start) <= cast(pd.Timestamp, plan.cutoff)
+        and utc(actions.end) >= cast(pd.Timestamp, plan.exit)
     ):
         factors = _split_factors(
-            replace(plan, entry=plan.cutoff, exit=plan.cutoff + pd.Timedelta(hours=4)),
+            replace(
+                plan, entry=plan.cutoff,
+                exit=cast(pd.Timestamp, plan.cutoff) + pd.Timedelta(hours=4),
+            ),
             actions,
             test_scenario,
         )
@@ -247,17 +253,23 @@ def historical_return(
         reason = "WRONG_SCHEDULED_SLOT"
     elif factors is None:
         reason = "ACTION_CONVENTION_UNVERIFIED"
-    elif not all(_supported(r.row, test_scenario) for r in refs):
+    # REFERENCE_MISSING above excluded None rows; _supported excludes unknown publication.
+    elif not all(_supported(cast(HourlyCloseReference, r.row), test_scenario) for r in refs):
         reason = "SOURCE_CLOCK_BLOCKED"
-    elif refs[0].row.available_at > plan.cutoff:
+    elif cast(pd.Timestamp, cast(HourlyCloseReference, refs[0].row).available_at) > cast(
+        pd.Timestamp, plan.cutoff
+    ):
         reason = "ENTRY_NOT_AVAILABLE_AT_ORIGINAL_CUTOFF"
     else:
         value = (
-            math.log(refs[1].price)
+            math.log(cast(float, refs[1].price))
             + math.log(factors[UNIVERSE.index(symbol)])
-            - math.log(refs[0].price)
+            - math.log(cast(float, refs[0].price))
         )
-        maturity = max(plan.exit, *(r.row.available_at for r in refs))
+        maturity = max(
+            cast(pd.Timestamp, plan.exit),
+            *(cast(pd.Timestamp, cast(HourlyCloseReference, r.row).available_at) for r in refs),
+        )
         reason = "RETURN_VALID"
     sources = tuple(r.row.row_id for r in refs if r.row)
     action_ids = tuple(s.event_id for s in actions.splits) if actions else ()
@@ -406,8 +418,9 @@ def evaluate_m2(
             reason = "NOT_MATURED_AT_STEP"
         else:
             reason = "RETURN_VALID"
-        values.append(record.value if reason == "RETURN_VALID" else None)
-        ids.append(record.lineage_id if reason == "RETURN_VALID" else None)
+        # RETURN_VALID is only retained after the missing-record branch was excluded.
+        values.append(cast(HistoricalReturn, record).value if reason == "RETURN_VALID" else None)
+        ids.append(cast(HistoricalReturn, record).lineage_id if reason == "RETURN_VALID" else None)
         missing.append(reason)
         run = run + 1 if values[-1] is None else 0
         longest = max(longest, run)
