@@ -16,30 +16,36 @@ The typed source entry point is:
 python -m lstm_data.market_source plan --report reports/data_audit/ta_mkt_spy_2026-10-11
 ```
 
-The five-session pilot passed. TA-MKT-SPY-002 measured 336–354 returned bars/page;
-the conservative full-history plan exceeds its 240 cumulative transport ceiling.
-Acquisition is **SOURCE_BLOCKED**, with 13 attempts and 0/11 durable partitions.
-See the [continuation review card](reports/data_audit/ta_mkt_spy_002_2026-10-11/human_review_card.md)
-for the exact capacity calculation and required budget decision. The versioned v2
-config is the default; it keeps the original source version and request identities.
-The original v1 config and evidence remain available unchanged.
+TA-MKT-SPY-003 completed the approved archive: **11/11 immutable partitions,
+41,861 native bars**, including all **17,197 expected RTH half-hour slots** across
+1,327 sessions. Both first-July 2020 market windows have the required warm-up.
+The canonical journal counts **129/900** cumulative attempts: 13 inherited,
+114 acquisition pages and two bounded corporate-action queries. SHA-verified
+resumption was tested with zero GETs. No partial diagnostic cache is claimed.
+
+[The review card](reports/data_audit/ta_mkt_spy_003_2026-10-11/human_review_card.md)
+separates completed engineering from publication/action and scientific HOLDs.
+The additive [v3 policy](configs/track_a_market_spy_v3.json) is the current
+source CLI default (900 attempts / 32 response pages / 3 attempts per page /
+256 MiB); original v1/v2 configs, source identity and reports remain unchanged.
+The prior 240-attempt blocked result is preserved in its original evidence.
 
 ```bash
-# Network-free selector inspection; this is not an acquisition approval.
-python -m lstm_data.market_source plan --report reports/data_audit/ta_mkt_spy_002_2026-10-11
-# After a separately approved feasible plan: SHA-verified complete partitions resume.
-python -m lstm_data.market_source acquire --env-file .env --report reports/data_audit/ta_mkt_spy_002_2026-10-11
-# Requires every canonical partition; emits source_qa_full_period.json, no fitting.
-python -m lstm_data.market_source qa --report <new-report-directory>
+# Read-only selector.
+python -m lstm_data.market_source plan --report reports/data_audit/ta_mkt_spy_003_2026-10-11
+# Approved acquisition / SHA-verified completed resumption.
+python -m lstm_data.spy_completion --env-file .env --report reports/data_audit/ta_mkt_spy_003_2026-10-11
+# Offline measured QA + canonical D7 traces; choose a NEW output directory.
+python -m lstm_data.spy_qa --report reports/data_audit/<new-report-directory>
 ```
 
-The current blocked plan resumes with zero GETs and remains blocked. No partial page
-cache survived the diagnostic process. [The API handoff](reports/data_audit/ta_mkt_spy_002_2026-10-11/market_api.md)
-documents `load_market_history` → `window_from_history`, with separate availability,
-certificate and scientific holds. Neither function fits empirical transforms.
-
-Task 01 implements data intake and audits only. No targets, features, model training,
-trading or final experiment definitions are implemented.
+[The API handoff](reports/data_audit/ta_mkt_spy_003_2026-10-11/market_api_handoff.md)
+documents `load_market_history` → `window_from_history`. Real historical source
+publication remains UNKNOWN; action certification and empirical floor/scaler
+approval remain pending. These functions preserve masks and each step's own
+cutoff, and do not fit empirical transforms. SPY has no portfolio position or
+dividend-cash leg. CURRENT_PROTOCOL and G0–G4 remain unchanged; no training,
+backtest or confirmation performance is activated.
 
 ## Setup
 

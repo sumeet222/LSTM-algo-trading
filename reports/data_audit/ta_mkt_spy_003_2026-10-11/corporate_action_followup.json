@@ -1,0 +1,50 @@
+{
+  "certified_no_splits": false,
+  "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+  "exhausted": true,
+  "issuer_evidence": {
+    "historical_sample": "https://www.ssga.com/library-content/announcements/etfs/au/20200320-SPY-Distribution-Announcement.pdf",
+    "quarterly_distributions": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+    "sample_ex_date": "2020-03-20",
+    "sample_rate_usd": 1.405559,
+    "sample_us_pay_date": "2020-04-30",
+    "scope": "Sample only, no exhaustive split or distribution certification"
+  },
+  "journal_sha256": "e6d51bffcdd8746e11cfa31a8aba1e740b5c46a076c1b27b7bcc86c2a8f775bc",
+  "new_metadata_attempts": 1,
+  "pages": [
+    {
+      "response_bytes": 300,
+      "status": 200
+    }
+  ],
+  "params": {
+    "data_quality": "all",
+    "end": "2025-08-01",
+    "limit": 1000,
+    "region": "us",
+    "sort": "asc",
+    "start": "2025-07-01",
+    "symbols": "SPY"
+  },
+  "process_date_filter_not_effective_date": true,
+  "provider_reference": "https://docs.alpaca.markets/us/reference/corporateactions-1",
+  "publication_verified": false,
+  "raw_price_basis": "Unadjusted prices include distribution effects; no cash/total return leg",
+  "reason": "CURRENT_PROCESS_DATE_METADATA_IS_NOT_COMPLETE_HISTORICAL_ACTION_SCOPE_OR_PUBLICATION",
+  "records": [
+    {
+      "ex_date": "2025-06-20",
+      "id": "35139828-107b-4ab0-ad9d-91e4328f5cfa",
+      "payable_date": "2025-07-31",
+      "process_date": "2025-07-31",
+      "rate": 1.761117,
+      "record_date": "2025-06-20",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    }
+  ],
+  "source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+  "status": "HOLD_UNVERIFIED_SCOPE",
+  "transport_attempts": 129
+}

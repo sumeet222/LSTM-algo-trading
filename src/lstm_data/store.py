@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import io
 import json
+from collections.abc import Callable
 from pathlib import Path
 
 import pandas as pd
@@ -99,6 +100,7 @@ def save_chunk(
     events: list[dict],
     cfg: dict,
     coverage_audit: dict | None = None,
+    *, before_publish: Callable[[int], None] | None = None,
 ) -> dict:
     """Atomically publish each new file; an interrupted pair is detected on resume."""
     data_path, manifest_path = chunk_paths(store, params)
@@ -139,6 +141,9 @@ def save_chunk(
         "coverage_status": "All API pages exhausted; market-calendar QA still required. "
         "Missing/partial sessions are diagnostic, never filled.",
     }
+    if before_publish:
+        before_publish(len(payload) + len((json.dumps(manifest, indent=2, sort_keys=True)
+                                          + "\n").encode()))
     atomic_new(data_path, payload)
     write_json(manifest_path, manifest)
     return manifest

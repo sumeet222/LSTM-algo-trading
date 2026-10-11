@@ -1,0 +1,250 @@
+{
+  "certified_no_splits": false,
+  "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+  "exhausted": true,
+  "issuer_evidence": {
+    "historical_sample": "https://www.ssga.com/library-content/announcements/etfs/au/20200320-SPY-Distribution-Announcement.pdf",
+    "quarterly_distributions": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+    "sample_ex_date": "2020-03-20",
+    "sample_rate_usd": 1.405559,
+    "sample_us_pay_date": "2020-04-30",
+    "scope": "Sample only, no exhaustive split or distribution certification"
+  },
+  "journal_sha256": "cef7d783e73dd43a57ab9dda98620cc00fa444744805704340cb99855678ebd7",
+  "new_metadata_attempts": 1,
+  "pages": [
+    {
+      "response_bytes": 4995,
+      "status": 200
+    }
+  ],
+  "params": {
+    "data_quality": "all",
+    "end": "2025-06-30",
+    "limit": 1000,
+    "region": "us",
+    "sort": "asc",
+    "start": "2020-03-19",
+    "symbols": "SPY"
+  },
+  "process_date_filter_not_effective_date": true,
+  "provider_reference": "https://docs.alpaca.markets/us/reference/corporateactions-1",
+  "publication_verified": false,
+  "raw_price_basis": "Unadjusted prices include distribution effects; no cash/total return leg",
+  "reason": "CURRENT_PROCESS_DATE_METADATA_IS_NOT_COMPLETE_HISTORICAL_ACTION_SCOPE_OR_PUBLICATION",
+  "records": [
+    {
+      "ex_date": "2020-03-20",
+      "id": "e06f1a82-04b5-4b90-9c7b-06d22b720db1",
+      "payable_date": "2020-04-30",
+      "process_date": "2020-04-30",
+      "rate": 1.405559,
+      "record_date": "2020-03-23",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2020-06-19",
+      "id": "a6587d80-e08a-4b1a-aa94-857549880c59",
+      "payable_date": "2020-07-31",
+      "process_date": "2020-07-31",
+      "rate": 1.3662419,
+      "record_date": "2020-06-22",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2020-09-18",
+      "id": "ffb8940e-53fe-4b3e-a475-e15e39561d3d",
+      "payable_date": "2020-10-30",
+      "process_date": "2020-10-30",
+      "rate": 1.339224,
+      "record_date": "2020-09-21",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2020-12-18",
+      "id": "4d35e709-773b-46d4-b292-34d14c46f287",
+      "payable_date": "2021-01-29",
+      "process_date": "2021-01-29",
+      "rate": 1.58,
+      "record_date": "2020-12-21",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2021-03-19",
+      "id": "f1ddda1e-b10c-4576-8253-4d8d5a149de6",
+      "payable_date": "2021-04-30",
+      "process_date": "2021-04-30",
+      "rate": 1.277788,
+      "record_date": "2021-03-22",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2021-06-18",
+      "id": "a06ac608-4210-4e4f-94f0-4fa342a8e1fd",
+      "payable_date": "2021-07-30",
+      "process_date": "2021-07-30",
+      "rate": 1.375875,
+      "record_date": "2021-06-21",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2021-09-17",
+      "id": "d2b09118-e4c0-4b93-9f46-10b211400773",
+      "payable_date": "2021-10-29",
+      "process_date": "2021-10-29",
+      "rate": 1.428117,
+      "record_date": "2021-09-20",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2021-12-17",
+      "id": "7cdc9442-1a32-4f40-9d2a-b721edfef9e9",
+      "payable_date": "2022-01-31",
+      "process_date": "2022-01-31",
+      "rate": 1.636431,
+      "record_date": "2021-12-20",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2022-03-18",
+      "id": "f5ca31fd-da0d-4651-be6b-6ac78542259e",
+      "payable_date": "2022-04-29",
+      "process_date": "2022-04-29",
+      "rate": 1.366009,
+      "record_date": "2022-03-21",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2022-06-17",
+      "id": "1f5b9849-96be-4d48-8c3a-b383dc2c544c",
+      "payable_date": "2022-07-29",
+      "process_date": "2022-07-29",
+      "rate": 1.576871,
+      "record_date": "2022-06-21",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2022-09-16",
+      "id": "377f7022-91cc-44da-9a8e-8bb00083d5a5",
+      "payable_date": "2022-10-31",
+      "process_date": "2022-10-31",
+      "rate": 1.596398,
+      "record_date": "2022-09-19",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2022-12-16",
+      "id": "0451d145-f55a-482f-9e11-8dad5910a801",
+      "payable_date": "2023-01-31",
+      "process_date": "2023-01-31",
+      "rate": 1.7814,
+      "record_date": "2022-12-19",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2023-03-17",
+      "id": "4bedbc95-3ce2-40fb-9a38-7d08717a69fc",
+      "payable_date": "2023-04-28",
+      "process_date": "2023-04-28",
+      "rate": 1.506204,
+      "record_date": "2023-03-20",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2023-06-16",
+      "id": "bbbff9be-c5e0-467e-87e0-396b636388b7",
+      "payable_date": "2023-07-31",
+      "process_date": "2023-07-31",
+      "rate": 1.638367,
+      "record_date": "2023-06-20",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2023-09-15",
+      "id": "774bf420-19e4-4ac1-b8b6-39e170496bd1",
+      "payable_date": "2023-10-31",
+      "process_date": "2023-10-31",
+      "rate": 1.583169,
+      "record_date": "2023-09-18",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2023-12-15",
+      "id": "0b715f27-57cc-4e72-975f-800ac009ecbd",
+      "payable_date": "2024-01-31",
+      "process_date": "2024-01-31",
+      "rate": 1.906073,
+      "record_date": "2023-12-18",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2024-03-15",
+      "id": "1788732d-92bc-47ba-89c8-dc3435a09b2a",
+      "payable_date": "2024-04-30",
+      "process_date": "2024-04-30",
+      "rate": 1.594937,
+      "record_date": "2024-03-18",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2024-06-21",
+      "id": "1eedcf06-a75b-4559-8215-2874546d6b80",
+      "payable_date": "2024-07-31",
+      "process_date": "2024-07-31",
+      "rate": 1.759024,
+      "record_date": "2024-06-21",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2024-09-20",
+      "id": "0429797e-504e-4571-855d-55d29cdb63d9",
+      "payable_date": "2024-10-31",
+      "process_date": "2024-10-31",
+      "rate": 1.745531,
+      "record_date": "2024-09-20",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2024-12-20",
+      "id": "24d33e88-e83b-467b-9832-821d2a97d4a5",
+      "payable_date": "2025-01-31",
+      "process_date": "2025-01-31",
+      "rate": 1.965548,
+      "record_date": "2024-12-20",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    },
+    {
+      "ex_date": "2025-03-21",
+      "id": "ed10c000-8a0b-44ba-a9d7-15f455b61d7a",
+      "payable_date": "2025-04-30",
+      "process_date": "2025-04-30",
+      "rate": 1.695528,
+      "record_date": "2025-03-21",
+      "symbol": "SPY",
+      "type": "cash_dividends"
+    }
+  ],
+  "source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+  "status": "HOLD_UNVERIFIED_SCOPE",
+  "transport_attempts": 128
+}

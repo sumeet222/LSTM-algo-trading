@@ -125,3 +125,24 @@ recompute the diagnostics without rewriting them.
   August 2020 4-for-1 split, trading date August 31.
 - [Walmart February 23, 2024 filing](https://stock.walmart.com/sec-filings/all-sec-filings/content/0000104169-24-000033/wmt-20240223.htm):
   split-adjusted trading from February 26, 2024.
+
+
+## Track A canonical SPY archive (TA-MKT-SPY-003)
+
+The ignored `data/raw/alpaca/track_a_spy_v1/` namespace contains one shared
+SIP/raw/30Min archive (11 immutable request keys, 2020-03-19–2025-06-30 ET,
+as-of 2025-06-30). Preserve native extended-session rows and the append-only
+`transport_attempts.jsonl`; no per-model copies or raw repairs.
+
+Use `configs/track_a_market_spy_v3.json` and the acquisition command in README.
+Local historical SIP credentials are required on another machine. The original
+13-attempt journal must be supplied and verified against the committed SPY-002
+proof before further source calls; the executor never creates a fresh zeroed
+budget. Existing complete chunks resume by SHA without GETs. Missing/corrupt
+pairs and missing/inconsistent historical journal evidence fail closed.
+
+The archive contains 41,861 rows and all 17,197 expected RTH half-hours.
+Completed closing stubs supply daily closes and stay outside hourly feature
+positions. Publication timing and complete historical action scope remain
+unverified; raw ETF distributions are price effects, not total-return or
+portfolio cash adjustments. See the TA-MKT-SPY-003 source QA and review card.

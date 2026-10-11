@@ -7,7 +7,7 @@ import hashlib
 import json
 import os
 from collections.abc import Callable
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import TYPE_CHECKING
 
@@ -28,7 +28,11 @@ if TYPE_CHECKING:
 
 DECISION_ID = "TA-D2-MARKET-SPY-001"
 SOURCE_VERSION = "ALPACA_SIP_SPY_RAW_30MIN_V1"
-DEFAULT_CONFIG = Path("configs/track_a_market_spy_v2.json")
+DEFAULT_CONFIG = Path("configs/track_a_market_spy_v3.json")
+ACTION_ENDPOINT = "https://data.alpaca.markets/v1/corporate-actions"
+ACTION_PARAMS = {"symbols": "SPY", "start": "2020-03-19", "end": "2025-06-30",
+                 "region": "us", "data_quality": "all", "sort": "asc", "limit": 1000}
+ACTION_FOLLOWUP_PARAMS = ACTION_PARAMS | {"start": "2025-07-01", "end": "2025-08-01"}
 PILOT_DATES = ("2020-03-19", "2020-03-20", "2020-07-01", "2020-11-27", "2021-01-04")
 
 
@@ -58,14 +62,21 @@ class MarketSource:
         if location != "data/raw/alpaca/track_a_spy_v1":
             raise ValueError("SPY_CANONICAL_NAMESPACE_REQUIRED")
         version = cfg.get("acquisition_policy_version", 1)
-        policy = (2, 24, 60, 2) if version == 1 else (12, 96, 240, 3)
-        if version not in (1, 2) or any(cfg.get(k) != v for k, v in zip(
+        policy = {1: (2, 24, 60, 2), 2: (12, 96, 240, 3),
+                  3: (32, 11, 900, 3)}.get(version)
+        if policy is None:
+            raise ValueError("SPY_VERSIONED_ACQUISITION_POLICY_REQUIRED")
+        if version not in (1, 2, 3) or any(cfg.get(k) != v for k, v in zip(
             ("max_pages_per_request", "max_partitions", "max_transport_attempts"), policy[:3]
         )):
             raise ValueError("SPY_VERSIONED_ACQUISITION_POLICY_REQUIRED")
-        if version == 2 and (cfg.get("max_additional_bytes") != 256 * 1024**2
-                             or cfg.get("authorization_package") != "TA-MKT-SPY-002"):
+        if version in (2, 3) and (cfg.get("max_additional_bytes") != 256 * 1024**2
+                             or cfg.get("authorization_package") != f"TA-MKT-SPY-00{version}"):
             raise ValueError("SPY_CONTINUATION_AUTHORIZATION_REQUIRED")
+        if version == 3 and cfg.get("authorization_basis") != (
+            "RESEARCHER_CONVERSATION_2026-10-11_OPERATIONAL_ONLY"
+        ):
+            raise ValueError("SPY_RESEARCHER_OPERATIONAL_AUTHORIZATION_REQUIRED")
         retry = cfg.get("retry")
         if not isinstance(retry, dict) or retry != {
             "max_attempts": policy[3], "base_seconds": 1, "max_seconds": 10,
@@ -105,6 +116,12 @@ class AttemptBudget:
     journal: Path
     stage: str
     ceiling: int = 60
+    fixed_requests: tuple[dict, ...] = ()
+    legacy_first_partition_pages: int = 0
+    legacy_initial_page_attempts: int = 0
+    legacy_unknown_continued_attempts: int = 0
+    expected_journal_sha256: str | None = field(default=None, repr=False)
+    before_write: Callable[[int], None] | None = field(default=None, repr=False)
 
     @property
     def used(self) -> int:
@@ -121,19 +138,58 @@ class AttemptBudget:
 
     def append(self, item: dict[str, object]) -> None:
         self.journal.parent.mkdir(parents=True, exist_ok=True)
+        if self.expected_journal_sha256 is not None and (
+            not self.journal.exists() or digest(self.journal) != self.expected_journal_sha256
+        ):
+            raise DataAccessError("SPY_CONCURRENT_OR_TAMPERED_JOURNAL")
+        payload = json.dumps(item, sort_keys=True).encode() + b"\n"
+        if self.before_write:
+            self.before_write(len(payload))
         with self.journal.open("ab") as stream:
-            stream.write(json.dumps(item, sort_keys=True).encode() + b"\n")
+            stream.write(payload)
             stream.flush()
             os.fsync(stream.fileno())
+        if self.expected_journal_sha256 is not None:
+            self.expected_journal_sha256 = digest(self.journal)
 
     def get(self, url: str, **kwargs) -> requests.Response:
-        if self.ceiling not in (60, 240) or url != ENDPOINT or self.used >= self.ceiling:
+        endpoint_allowed = url == ENDPOINT or (self.ceiling == 900 and url == ACTION_ENDPOINT)
+        if self.ceiling not in (60, 240, 900) or not endpoint_allowed or self.used >= self.ceiling:
             raise DataAccessError("SPY_TRANSPORT_BUDGET_EXHAUSTED_OR_UNEXPECTED_ENDPOINT")
         attempt = self.used + 1
         params = kwargs.get("params", {})
         request_key = fingerprint(params)
+        base = {k: v for k, v in params.items() if k != "page_token"}
+        fixed_key = fingerprint(base)
+        if self.ceiling == 900:
+            allowed = (base in self.fixed_requests if url == ENDPOINT
+                       else base in (ACTION_PARAMS, ACTION_FOLLOWUP_PARAMS))
+            if not allowed:
+                raise DataAccessError("SPY_FIXED_REQUEST_IDENTITY_REQUIRED")
+            records = [parse_json(line) for line in self.journal.read_bytes().splitlines()]
+            page_attempts = sum(r.get("record_kind") == "attempt"
+                                and r.get("request_key") == request_key for r in records)
+            if base == self.fixed_requests[0] and "page_token" not in params:
+                page_attempts += self.legacy_initial_page_attempts
+            if base == self.fixed_requests[0] and "page_token" in params:
+                # Legacy SPY001 second-page token was not retained. Reserve its possible attempt.
+                page_attempts += self.legacy_unknown_continued_attempts
+            if page_attempts >= 3:
+                raise DataAccessError("SPY_THREE_LIFETIME_ATTEMPTS_PER_PAGE_CEILING")
+            page_responses = sum(r.get("record_kind") == "result" and r.get("status") == 200
+                                 and r.get("fixed_request_key") == fixed_key for r in records)
+            # SPY002 recorded four successful diagnostic pages of the first fixed interval.
+            if base == self.fixed_requests[0]:
+                page_responses += self.legacy_first_partition_pages
+                page_responses += sum(r.get("record_kind") == "result"
+                                      and r.get("status") == 200
+                                      and r.get("attempt_id") in (10, 11, 12, 13) for r in records)
+            if page_responses >= 32:
+                raise DataAccessError("SPY_32_RESPONSE_PAGES_PER_FIXED_KEY_CEILING")
         self.append({"record_kind": "attempt", "attempt_id": attempt,
-                     "time_utc": now(), "stage": self.stage, "request_key": request_key})
+                     "time_utc": now(), "stage": self.stage, "request_key": request_key,
+                     "fixed_request_key": fixed_key, "endpoint": url,
+                     "continuation_sha256": fingerprint(params.get("page_token"))})
         try:
             response = requests.get(url, **kwargs)
         except requests.RequestException:
@@ -151,6 +207,7 @@ class AttemptBudget:
                      "status": response.status_code, "response_bytes": len(response.content),
                      "response_sha256": hashlib.sha256(response.content).hexdigest(),
                      "returned_rows": rows, "request_key": request_key,
+                     "fixed_request_key": fixed_key,
                      "continued_request": "page_token" in params,
                      "has_continuation": bool(payload.get("next_page_token"))
                          if isinstance(payload, dict) else False,
@@ -183,7 +240,7 @@ def hourly_archive(frame: pd.DataFrame, start: str, end: str) -> tuple[pd.DataFr
             if not isinstance(start, pd.Timestamp) or not isinstance(stop, pd.Timestamp):
                 raise ValueError("SPY_INTERVAL_TIMESTAMP_REQUIRED")
             expected = pd.date_range(start, stop, freq="30min", inclusive="left")
-            return fingerprint(ids.loc[expected].tolist())
+            return fingerprint([[ids.loc[stamp], stamp.isoformat()] for stamp in expected])
 
         result["evidence_id"] = [
             constituent_identity(row.period_start, row.period_end)
@@ -323,6 +380,7 @@ def archive_qa(source: MarketSource) -> dict:
 def acquire_partition(
     source: MarketSource, client: HistoricalClient, params: dict,
     *, completion_check: Callable[[], dict] | None = None,
+    before_publish: Callable[[int], None] | None = None,
 ) -> dict:
     """Reuse the stock checkpoint writer; six-month ranges need no second storage framework."""
     data, manifest = chunk_paths(source.store, params)
@@ -344,7 +402,7 @@ def acquire_partition(
                            "native_grid_complete": qa["timing_gate_pass"],
                            "publication": "UNKNOWN"})
     return save_chunk(source.store, frame, params, client.events[event_start:], source.config,
-                      coverage_audit=completion)
+                      coverage_audit=completion, before_publish=before_publish)
 
 
 def pilot(source: MarketSource, client: HistoricalClient) -> dict:
@@ -384,7 +442,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--report", type=Path, required=True)
     args = parser.parse_args(argv)
     source = MarketSource.load(args.config)
-    if args.command == "acquire" and source.config.get("acquisition_policy_version") == 2:
+    if args.command == "acquire" and source.config.get("acquisition_policy_version") in (2, 3):
         from .spy_completion import complete
 
         return complete(source, args.report, args.env_file)
@@ -396,6 +454,8 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "qa":
         write_json(args.report / "source_qa_full_period.json", archive_qa(source))
         return 0
+    if source.config.get("acquisition_policy_version") == 3:
+        raise ValueError("SPY_V3_REUSES_INHERITED_PILOT_NO_NEW_DIAGNOSTICS")
     if args.env_file:
         load_dotenv(args.env_file, override=False)
     key, secret = credentials()

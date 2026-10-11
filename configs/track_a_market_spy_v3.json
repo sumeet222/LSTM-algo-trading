@@ -1,0 +1,40 @@
+{
+  "acquisition_policy_version": 3,
+  "adjustment": "raw",
+  "asof": "2025-06-30",
+  "authorization_basis": "RESEARCHER_CONVERSATION_2026-10-11_OPERATIONAL_ONLY",
+  "authorization_package": "TA-MKT-SPY-003",
+  "available_at_basis": "UNKNOWN",
+  "calendar": "XNYS",
+  "currency": "USD",
+  "decision_id": "TA-D2-MARKET-SPY-001",
+  "end_date": "2025-06-30",
+  "feed": "sip",
+  "max_additional_bytes": 268435456,
+  "max_pages_per_request": 32,
+  "max_partitions": 11,
+  "max_transport_attempts": 900,
+  "page_limit": 10000,
+  "partition_months": 6,
+  "provider": "ALPACA",
+  "research_status": "BLOCKED",
+  "retry": {
+    "base_seconds": 1,
+    "jitter_seconds": 0.5,
+    "max_attempts": 3,
+    "max_seconds": 10,
+    "requests_per_minute": 180,
+    "timeout_seconds": 30
+  },
+  "schema_version": 1,
+  "selection_status": "SOURCE_SELECTED",
+  "source_kind": "ETF_PROXY",
+  "source_version": "ALPACA_SIP_SPY_RAW_30MIN_V1",
+  "start_date": "2020-03-19",
+  "stock_store": "data/raw/alpaca/track_a_spy_v1",
+  "symbols": [
+    "SPY"
+  ],
+  "timeframe": "30Min",
+  "timezone": "America/New_York"
+}
