@@ -1,0 +1,372 @@
+{
+  "checks": [
+    {
+      "affected_branches": [
+        "stock_features",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.1-2026-10-10_235813",
+      "check_id": "P2.1-calendar-grid",
+      "code_id": "a892085f2995bff17c41c6db5a3dfe541018a48d4a60383650578cc833267b08",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "hashes": {
+          "README.md": "638b495a60f4c5e6e4d25fbace6c858d1186d69408e6c5b63be811dba5076526",
+          "reports/data_audit/p2_1_2026-10-10_235813/clock_trace_examples.md": "bd41e9382e904118be424b31f6fc9f0cc3e004efc9d81c0a4092072fe445000b",
+          "reports/data_audit/p2_1_2026-10-10_235813/signoff_pending.md": "1a9a867e4006fb4bc766d20399178683a9f685fc61a22b25b3462159ff61e2bb",
+          "src/lstm_data/clocks.py": "c6bfe3954c4d7e9d24c3ee2f56cdf18df80847971b47975a56b3ef29b88d3bc0",
+          "tests/test_clocks.py": "d1e228cf38c6622775271e8049e0ba75248f581e26e957e8738c451456491605"
+        },
+        "tests": [
+          "test_ordinary_slots_stub_and_two_exact_240_minute_pairs",
+          "test_real_early_close_rejects_both_origins",
+          "test_dst_local_events_stable_utc_changes",
+          "test_holiday_and_no_full_hour"
+        ],
+        "trace_path": "reports/data_audit/p2_1_2026-10-10_235813/clock_trace_examples.md"
+      },
+      "example_ids": [
+        "ordinary-2020-07-01",
+        "early-2020-11-27",
+        "winter-2020-01-02",
+        "unknown-publication"
+      ],
+      "explanation": "Calendar arithmetic only, no source clock or execution certification.",
+      "gate_id": "G2",
+      "owner_action": "Human APPROVE / CORRECT / HOLD; no automatic P2.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected deterministic clock/contracts only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T04:03:18.414739+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.1-2026-10-10_235813",
+      "check_id": "P2.1-issuance-execution-plan",
+      "code_id": "a892085f2995bff17c41c6db5a3dfe541018a48d4a60383650578cc833267b08",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "issuance_max_minutes": 5,
+        "minutes": 240,
+        "nominal_ET_pairs": [
+          "10:33\u219214:33",
+          "11:33\u219215:33"
+        ],
+        "shifted_times_preserved": true,
+        "tests": [
+          "test_actual_issuance_inclusive_boundary_and_ceiling",
+          "test_minute_open_at_close_is_rejected"
+        ]
+      },
+      "example_ids": [
+        "ordinary-2020-07-01",
+        "early-2020-11-27",
+        "winter-2020-01-02",
+        "unknown-publication"
+      ],
+      "explanation": "Candidate ceil(issuance+1min) schedule, not actual price references/fills or target.",
+      "gate_id": "G2",
+      "owner_action": "Human APPROVE / CORRECT / HOLD; no automatic P2.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected deterministic clock/contracts only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T04:03:18.414739+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.1-2026-10-10_235813",
+      "check_id": "P2.1-source-contract",
+      "code_id": "a892085f2995bff17c41c6db5a3dfe541018a48d4a60383650578cc833267b08",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "actual_provider_availability": null,
+        "production_source_joins": false,
+        "tests": [
+          "test_publication_predicate_synthetic_only_unknowns_fail_closed",
+          "test_documented_contract_needs_evidence_and_never_derives_publication",
+          "test_completion_and_anchored_slot_compatibility",
+          "test_trace_unknown_publication_and_invalid_inputs"
+        ]
+      },
+      "example_ids": [
+        "ordinary-2020-07-01",
+        "early-2020-11-27",
+        "winter-2020-01-02",
+        "unknown-publication"
+      ],
+      "explanation": "Synthetic predicate correctness plus unknown rejection; real as-of verification remains BLOCKED.",
+      "gate_id": "G2",
+      "owner_action": "Human APPROVE / CORRECT / HOLD; no automatic P2.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected deterministic clock/contracts only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T04:03:18.414739+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.1-2026-10-10_235813",
+      "check_id": "P2.1-no-lookahead-C01",
+      "code_id": "a892085f2995bff17c41c6db5a3dfe541018a48d4a60383650578cc833267b08",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "entry_eligible": null,
+        "execution_outcome": null,
+        "label_valid": null,
+        "tests": [
+          "test_later_issuance_never_admits_post_cutoff_observation_mutation",
+          "test_d13_future_exit_not_an_origin_or_entry_input"
+        ]
+      },
+      "example_ids": [
+        "ordinary-2020-07-01",
+        "early-2020-11-27",
+        "winter-2020-01-02",
+        "unknown-publication"
+      ],
+      "explanation": "Only clock/information subclaim, not complete forecast/input cross-section/risk admission. No future records are interface inputs.",
+      "gate_id": "G2",
+      "owner_action": "Human APPROVE / CORRECT / HOLD; no automatic P2.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected deterministic clock/contracts only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T04:03:18.414739+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.1-2026-10-10_235813",
+      "check_id": "P2.1-F01-regression",
+      "code_id": "a892085f2995bff17c41c6db5a3dfe541018a48d4a60383650578cc833267b08",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "existing_fixture": {
+          "available_at": "2001-01-02T14:00:00+00:00",
+          "decision_cutoff": "2001-01-02T15:00:00+00:00",
+          "decision_time": "2001-01-02T15:00:00+00:00",
+          "hypothetical_delay_minutes": 60,
+          "market_period_end": "2001-01-02T13:00:00+00:00",
+          "meaning": "F01_REPAIRED_IN_CODE regression only; HISTORICAL_SOURCE_CLOCK_UNVERIFIED",
+          "observed_available_age_minutes": 60.0,
+          "observed_usable": false,
+          "period_end_age_minutes": 120.0,
+          "reason": "STALE_PERIOD_END",
+          "required_period_end_age_minutes": 120.0,
+          "required_usable": false,
+          "research_ready": false,
+          "source_timestamp_label": "2001-01-02T13:00:00+00:00",
+          "status": "PASS",
+          "synthetic_only": true,
+          "timing_basis": "synthetic"
+        },
+        "test": "test_f01_existing_counterexample_and_research_blockers"
+      },
+      "example_ids": [
+        "ordinary-2020-07-01",
+        "early-2020-11-27",
+        "winter-2020-01-02",
+        "unknown-publication"
+      ],
+      "explanation": "Reuse existing diagnostic; stale120min period rejected despite60min publication age; market conditioning still HOLD.",
+      "gate_id": "G2",
+      "owner_action": "Human APPROVE / CORRECT / HOLD; no automatic P2.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected deterministic clock/contracts only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T04:03:18.414739+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.1-2026-10-10_235813",
+      "check_id": "P2.1-reported-agreement",
+      "code_id": "a892085f2995bff17c41c6db5a3dfe541018a48d4a60383650578cc833267b08",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "formal_evidence_verified": false,
+        "path": "reports/data_audit/p2_1_2026-10-10_235813/signoff_pending.md",
+        "protocol_pointer_updated": false,
+        "reported_agreement": true
+      },
+      "example_ids": [
+        "ordinary-2020-07-01",
+        "early-2020-11-27",
+        "winter-2020-01-02",
+        "unknown-publication"
+      ],
+      "explanation": "Researcher-reported joint agreement supports candidate implementation, not scientific approval or source substitution.",
+      "gate_id": "G2",
+      "owner_action": "Human APPROVE / CORRECT / HOLD; no automatic P2.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected deterministic clock/contracts only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "WARN",
+      "time_utc": "2026-10-11T04:03:18.414739+00:00"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "economic_evaluation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p2.1-2026-10-10_235813",
+      "check_id": "P2.1-overall-G2",
+      "code_id": "a892085f2995bff17c41c6db5a3dfe541018a48d4a60383650578cc833267b08",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "action_cash_dates_missing": 4,
+        "actual_source_publication": "UNKNOWN",
+        "focused_tests": {
+          "passed": 18,
+          "seconds": 3.39
+        },
+        "full_minute_coverage": "BLOCKED",
+        "historical_half_hour_gaps": 168,
+        "implementation_status": "IMPLEMENTATION_COMPLETE",
+        "integration_tests": {
+          "passed": 129,
+          "seconds": 7.06
+        },
+        "label_entry_exit_references": "NOT_RUN",
+        "market_joins": "HOLD",
+        "next_package": "P2.2 separate authorization and source/registration prerequisites",
+        "old_blocker_ids": [
+          "p0.1-F01",
+          "p0.1-USA500-source-clock",
+          "p0.1-stock-publication",
+          "p0.1-minute-execution",
+          "p0.1-actions-dividends",
+          "p0.1-formation-prehistory",
+          "p0.1-shared-D3-clock"
+        ],
+        "ruff": "PASS src tests",
+        "training_pairs": 0
+      },
+      "example_ids": [
+        "ordinary-2020-07-01",
+        "early-2020-11-27",
+        "winter-2020-01-02",
+        "unknown-publication"
+      ],
+      "explanation": "All deterministic P2.1 acceptance checks pass; G0/G1/G2 scientific gates retain independent blockers.",
+      "gate_id": "G2",
+      "owner_action": "Human APPROVE / CORRECT / HOLD; no automatic P2.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected deterministic clock/contracts only",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T04:03:18.414739+00:00"
+    }
+  ],
+  "implementation_status": "IMPLEMENTATION_COMPLETE",
+  "package": "P2.1",
+  "research_status": "BLOCKED",
+  "schema_version": 1
+}

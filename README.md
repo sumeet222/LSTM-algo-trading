@@ -79,7 +79,7 @@ and data locations stay project-relative. A config's parent directory must there
 be the project's `configs/` directory. Invoke from the repository root or pass
 `--config /path/to/clone/configs/track_a_data.json`.
 
-The researcher approved a provisional **USA500 timestamp-as-close** assumption on
+During Task 01, the researcher approved a provisional **USA500 timestamp-as-close** assumption on
 2026-10-10. Provider semantics and publication latency remain unverified. Alignment
 compares that assumption with a one-hour-delay sensitivity scenario; the 90-minute
 staleness bound is diagnostic, not a frozen model rule.
@@ -115,7 +115,35 @@ lstm-data evidence --help
 [CURRENT_PROTOCOL.json](configs/CURRENT_PROTOCOL.json) pins the five governing
 documents and existing evidence hashes. The [ledger](reports/audit/track_a_events.jsonl)
 preserves P0.1 blockers. Neither grants scientific approval. G0/G1/G2 remain blocked;
-the unchanged alignment diagnostic has the open F01 period-end freshness defect.
+the alignment diagnostic's F01 period-end freshness defect is now repaired and
+verified by its existing synthetic regression. Actual source clocks remain unknown.
 See the [evidence contract](docs/track_a/p0_2_evidence_harness.md) for schemas, explicit
 append/report commands, failure handling and the confirmation lock. The evidence
 command never loads `.env`, calls a provider, or executes research jobs.
+
+## Candidate clocks (P2.1)
+
+`lstm_data.clocks.session_clock("2020-07-01")` reuses XNYS sessions, separates
+complete anchored hours from the terminal stub, and stores UTC keys.
+`forecast_origins(clock)` produces two candidate plans: nominal ET entries/exits
+10:33→14:33 and 11:33→15:33. These are planned timestamps, not fills.
+`execution_plan(clock, 1, issued_at=<aware timestamp>)` preserves actual issuance,
+rejects issuance outside cutoff through cutoff+5 minutes, and plans
+`ceil(issuance + 1 minute)` entry followed by a 240-minute same-session exit.
+Omitting `issued_at` explicitly marks nominal issuance `PLANNED_SYNTHETIC`.
+
+`SourceObservation` separates native labels, period boundaries and publication
+bases. `observation_at_cutoff` rejects unknown clocks and checks each historical
+step's own cutoff; issuance never expands its information set. Documented clocks
+require an evidence locator and remain caller assertions requiring source review.
+Synthetic/assumed records require `test_scenario=True`, are non-verified, and are
+for isolated tests only. Legacy aggregation's assumed `available_at` is insufficient
+for this contract. `OriginBoundary` leaves actual entry eligibility, label validity
+and execution outcome uncomputed (`None`). Callers must retain every scheduled
+history slot, including missing ones; no 48-step windows are built here.
+
+Run the offline acceptance tests with `python -m pytest tests/test_clocks.py -q`.
+The researcher reports cross-track agreement on 240 continuous minutes and a future
+conventional S&P 500 source. Formal versioned registration is pending. G0–G2 remain
+blocked, current USA500/U1–U5/MC0–MC2 joins remain HOLD, and P2.2 requires separate
+authorization plus its source/label prerequisites. No source replacement is installed.

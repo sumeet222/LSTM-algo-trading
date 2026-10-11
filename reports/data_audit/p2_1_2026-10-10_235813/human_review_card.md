@@ -1,0 +1,10 @@
+# P2.1 human review — APPROVE / CORRECT / HOLD
+
+1. `src/lstm_data/clocks.py:46` session_clock; `tests/test_clocks.py:66` actual Nov27,2020 close13:00ET:3 complete hours and12:30–13:00stub. Ordinary day6 full hours plus15:30–16:00stub. Existing calendar/aggregation APIs unchanged.
+2. `src/lstm_data/clocks.py:86` execution_plan; `tests/test_clocks.py:46`:10:33→14:33 and11:33→15:33 each240min. Actual10:34:30 issue→10:36 entry→14:36 exit, maximum5min inclusive; nominal issue is explicitly synthetic. Times do not certify fills.
+3. `src/lstm_data/clocks.py:156` observation_at_cutoff; `tests/test_clocks.py:193`:future completed observation at10:32 cannot enter10:30 information even with10:35issuance. Unknown/NaT clocks reject; documented assertions need evidence; synthetic/assumed records require opt-in and remain non-verified.
+4. `tests/test_clocks.py:78` winter vs summer10:33ET→15:33UTC vs14:33UTC; `clock_trace_examples.md` shows source_asof_verified=false/G2BLOCKED separately from calendar_valid, including early-close rejection.
+5. `src/lstm_data/clocks.py:241` origin_boundary; `tests/test_clocks.py:220` future-exit counterfactual cannot affect clock/information admission; entry_eligible,label_valid,execution_outcome remain null. Caller preserves scheduled missing slots; full cross-section/48-window/model/risk checks are later work. Existing f01_fixture120/60 counterexample PASS, all seven ledger blockers retained.
+6. `signoff_pending.md`:reported_agreement=true/formal_evidence_verified=false. Register exact attributable joint amendment separately. Full minute history, four cash-date records,168 half-hour gaps, entity/publication uncertainty and market HOLD remain. P2.2 is targets/eligibility, not yet started.
+
+**APPROVE** this deterministic candidate implementation; **CORRECT** exact clock/source-contract behavior; or **HOLD** pending review. Approval of this package alone does not supply missing source data, registration, fills or scientific G2 clearance. P2.2 requires a separately authorized prompt.
