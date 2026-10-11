@@ -1,0 +1,583 @@
+{
+  "checks": [
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "protocol-binding",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "issues": [],
+        "meaning": "Pinned document/reference identity only; no scientific or human approval",
+        "status": "PASS"
+      },
+      "example_ids": [],
+      "explanation": "Five pinned authorities/references unchanged; not G0 scientific approval.",
+      "gate_id": "G0",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "provider-general-documentation",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "classification": "OFFICIAL_PROVIDER_GENERAL",
+        "reference": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md#Official references"
+      },
+      "example_ids": [],
+      "explanation": "Official product/API/platform facts attributed to named references in delta; none proves the course configuration.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "provider-attestation",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "classification": "USER_ATTESTED",
+        "direct_export_metadata": null,
+        "provenance": "Current P1.2D prompt and P1.3B human statement"
+      },
+      "example_ids": [],
+      "explanation": "Dukascopy origin is researcher testimony; exact file/instrument/export not authenticated.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "WARN",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "export-settings",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "classification": "EXPORT_SETTING_UNVERIFIED",
+        "settings_received": false
+      },
+      "example_ids": [],
+      "explanation": "Selected side, transformations, label/timezone/anchor and session/daily-close remain unverified.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": {
+        "authority": "docs/track_a/Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md D2",
+        "period_end_freshness_minutes": 90
+      },
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "conditional-timestamp-arithmetic",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "examples": [
+          {
+            "conditional_only_not_course_contract": true,
+            "converted_ET": "2020-07-08T10:00:00-04:00",
+            "csv_line": 123,
+            "example_id": "course-line-123",
+            "existing_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json#source_samples/course-line-123",
+            "interpretations": {
+              "close_label": [
+                {
+                  "actual_observability": "UNKNOWN/BLOCKED",
+                  "conditional_period_end_ET": "2020-07-08T10:00:00-04:00",
+                  "cutoff_ET": "2020-07-08T10:30:00-04:00",
+                  "freshness_only": true,
+                  "period_end_age_minutes": 30.0
+                },
+                {
+                  "actual_observability": "UNKNOWN/BLOCKED",
+                  "conditional_period_end_ET": "2020-07-08T10:00:00-04:00",
+                  "cutoff_ET": "2020-07-08T11:30:00-04:00",
+                  "freshness_only": true,
+                  "period_end_age_minutes": 90.0
+                }
+              ],
+              "start_label": [
+                {
+                  "actual_observability": "UNKNOWN/BLOCKED",
+                  "conditional_period_end_ET": "2020-07-08T11:00:00-04:00",
+                  "cutoff_ET": "2020-07-08T10:30:00-04:00",
+                  "freshness_only": false,
+                  "period_end_age_minutes": -30.0
+                },
+                {
+                  "actual_observability": "UNKNOWN/BLOCKED",
+                  "conditional_period_end_ET": "2020-07-08T11:00:00-04:00",
+                  "cutoff_ET": "2020-07-08T11:30:00-04:00",
+                  "freshness_only": true,
+                  "period_end_age_minutes": 30.0
+                }
+              ]
+            },
+            "native_stamp_utc": "2020-07-08T14:00:00+00:00"
+          },
+          {
+            "conditional_only_not_course_contract": true,
+            "converted_ET": "2023-03-10T10:00:00-05:00",
+            "csv_line": 15929,
+            "example_id": "course-line-15929",
+            "existing_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json#source_samples/course-line-15929",
+            "interpretations": {
+              "close_label": [
+                {
+                  "actual_observability": "UNKNOWN/BLOCKED",
+                  "conditional_period_end_ET": "2023-03-10T10:00:00-05:00",
+                  "cutoff_ET": "2023-03-10T10:30:00-05:00",
+                  "freshness_only": true,
+                  "period_end_age_minutes": 30.0
+                },
+                {
+                  "actual_observability": "UNKNOWN/BLOCKED",
+                  "conditional_period_end_ET": "2023-03-10T10:00:00-05:00",
+                  "cutoff_ET": "2023-03-10T11:30:00-05:00",
+                  "freshness_only": true,
+                  "period_end_age_minutes": 90.0
+                }
+              ],
+              "start_label": [
+                {
+                  "actual_observability": "UNKNOWN/BLOCKED",
+                  "conditional_period_end_ET": "2023-03-10T11:00:00-05:00",
+                  "cutoff_ET": "2023-03-10T10:30:00-05:00",
+                  "freshness_only": false,
+                  "period_end_age_minutes": -30.0
+                },
+                {
+                  "actual_observability": "UNKNOWN/BLOCKED",
+                  "conditional_period_end_ET": "2023-03-10T11:00:00-05:00",
+                  "cutoff_ET": "2023-03-10T11:30:00-05:00",
+                  "freshness_only": true,
+                  "period_end_age_minutes": 30.0
+                }
+              ]
+            },
+            "native_stamp_utc": "2023-03-10T15:00:00+00:00"
+          }
+        ],
+        "source_rows_re_read": false
+      },
+      "example_ids": [],
+      "explanation": "Two inherited ordinary-session rows independently converted with summer/winter offsets and conditional period ages; no factual publication acceptance.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "historical-observability",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "classification": "UNKNOWN/BLOCKED",
+        "historical_available_at": null
+      },
+      "example_ids": [],
+      "explanation": "Provider completion, historical first publication, export generation and revision/vintage remain distinct.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "daily-close-and-prehistory",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "course_prehistory_added": false,
+        "reference": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md"
+      },
+      "example_ids": [],
+      "explanation": "Neither current schedule nor first-data lookup methods verifies the course daily close, historical session calendar or pre-July2020 history.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "native-hour-compatibility",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "U_features_constructed": false,
+        "historical_context": "each step own cutoff",
+        "label_shift_or_resampling": false
+      },
+      "example_ids": [],
+      "explanation": "Conditional freshness is necessary but not proof of compatible/session-matched U1-U5 OHLC at each historical cutoff.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "usage-and-exact-sample-query",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "price_HTTP_calls": 0,
+        "reference": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md#Field classifications"
+      },
+      "example_ids": [],
+      "explanation": "Free tool exists; checked material does not establish exact permitted credential-free candle request or course redistribution rights. No sampling attempted.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "INCONCLUSIVE",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "optional-source-comparison",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "actual_sample_calls": 0,
+        "retries": 0,
+        "selected_existing_examples": [
+          "course-line-123",
+          "course-line-15929"
+        ]
+      },
+      "example_ids": [],
+      "explanation": "Documentation-only stopping boundary reached; no undocumented URL or data-collection workaround.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "NOT_RUN",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [
+        "formation"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "conditional-membership",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "amendment": false,
+        "prior_blockers": [
+          "p0.1-USA500-source-clock",
+          "p0.1-formation-prehistory"
+        ]
+      },
+      "example_ids": [],
+      "explanation": "Candidate CFD status does not waive conditional D1 membership; exact instrument and joint interpretation still unresolved.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [
+        "F01",
+        "market_features"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "F01",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "alignment_sha256": "e4690828dde48dcc41b60c88b5f0e1d563092640ec003c8abf3dc65711000b8d",
+        "existing_fixture": {
+          "available_at": "2001-01-02T14:00:00+00:00",
+          "decision_time": "2001-01-02T15:00:00+00:00",
+          "hypothetical_delay_minutes": 60,
+          "market_period_end": "2001-01-02T13:00:00+00:00",
+          "meaning": "D2 counterexample; synthetic lag is not real publication evidence",
+          "observed_available_age_minutes": 60.0,
+          "observed_usable": true,
+          "required_period_end_age_minutes": 120.0,
+          "required_usable": false,
+          "status": "INVALID",
+          "synthetic_only": true
+        }
+      },
+      "example_ids": [],
+      "explanation": "Inherited 120-minute stale false acceptance preserved; production function unchanged and unused here.",
+      "gate_id": "G2",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "INVALID",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [
+        "shared_clock"
+      ],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "shared-clock",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "prior_blocker": "p0.1-shared-D3-clock"
+      },
+      "example_ids": [],
+      "explanation": "No collaborator sign-off or label/trade construction.",
+      "gate_id": "G0",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p1.2d-2026-10-10_210500",
+      "check_id": "stock-and-model-work",
+      "code_id": "ae3a13d10ffd23a222f65c4e34c8926b9e057e0c0f0f2960d122f1af62cefede",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "Alpaca_calls": 0,
+        "confirmation_metrics_opened": false,
+        "models": 0,
+        "stock_blockers_cleared": false
+      },
+      "example_ids": [],
+      "explanation": "P1.3B is source evidence only; stock formation/actions/publication, minute retries and all modeling remain separate.",
+      "gate_id": "G1",
+      "owner_action": "Review original export settings, explicit unknowns and separately authorized repair/membership scope; no automatic next package",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Only affected separately authorized contract/code changes",
+      "schema_version": 1,
+      "source_ids": {
+        "P1_2_evidence": "reports/data_audit/p1_2_2026-10-10_201104/evidence.json",
+        "P1_2_evidence_sha256": "68ae634230ab783d30df47646d45e5cc2232299363d52147315df21697bc226a",
+        "contract_delta": "reports/data_audit/p1_2d_2026-10-10_210500/dukascopy_contract_delta.md",
+        "contract_delta_sha256": "aa5c2b839f8d4f8fd805489e7a5346d01337fa81093a7c797bd8c6bc0a756afd",
+        "course_sha256_inherited": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "official_docs_checked_at_utc": "2026-10-11T01:07:35.506133+00:00"
+      },
+      "status": "NOT_RUN",
+      "time_utc": "2026-10-11T01:07:35.505623+00:00"
+    }
+  ],
+  "gates": {
+    "G0": "BLOCKED",
+    "G1": "BLOCKED",
+    "G2": "BLOCKED",
+    "G3": "NOT_RUN",
+    "G4": "NOT_RUN",
+    "G5": "NOT_RUN",
+    "G6": "NOT_RUN",
+    "G7": "NOT_RUN",
+    "G8": "NOT_RUN",
+    "G9": "NOT_RUN"
+  },
+  "next_package_approved": false,
+  "package": "P1.2D",
+  "pair_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "research_status": "BLOCKED",
+  "resources": {
+    "actual_document_wire_HTTP_count": "Not exposed by web tool; cached/search results may differ from wire calls",
+    "authenticated_calls": 0,
+    "document_open_click_find_operations": 24,
+    "historical_sample_HTTP_calls": 0,
+    "new_source_rows": 0,
+    "price_request_retries": 0,
+    "public_web_tool_calls": 7,
+    "search_operations": 6
+  },
+  "schema_version": 1
+}
