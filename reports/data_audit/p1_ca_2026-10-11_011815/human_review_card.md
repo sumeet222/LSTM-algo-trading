@@ -1,0 +1,7 @@
+# Human review — APPROVE / REVISE / HOLD
+
+1. `action_reconciliation.json`:116 unique source IDs,110/2/4 type totals, four exact missing-date IDs, native ABSENT versus NULL, acquirer role and no supported held-stock cash merger transformation. Compare canonical source/manifest SHA; pagination is not issuer completeness.
+2. `src/lstm_data/corporate_actions.py:365` and `tests/test_corporate_actions.py`:±100 split4:1→±400 at paired raw price25, cash unchanged and wealth invariant. AAPL observed residuals nonzero; WMT sample absent; explicit rounding/basis required.
+3. `corporate_actions.py:439` / `accounting_examples.md`:±100×$.77=±77 signed claim; cash settlement once removes claim without second NAV gain. Unknown payable date fails and retains claim; no ex-date payment fabricated or adjusted total-return plus cash double count.
+4. `corporate_actions.py:466` / `:506`: unavailable exit retains physical exposure through overnight split/dividend; absent marks→None NAV, future/incorrect-basis marks rejected. Causal timestamp is caller-evidenced, not vendor publication certification; no retry/phantom liquidation.
+5. Run `python -m pytest tests/test_corporate_actions.py -q` from README virtualenv;23expected passes with local archive (22passes+1skip if absent). Review `checks.json` technical PASS versus qualified/blocked facts; no full G0/G1/G2/G4 gate clearance, source/market or next-package activation.

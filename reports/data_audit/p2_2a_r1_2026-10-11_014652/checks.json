@@ -1,0 +1,234 @@
+{
+  "checks": [
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p2-2a-r1-2026-10-11_014652",
+      "check_id": "R1-SYNTHETIC-PROXY",
+      "code_id": "c71a9fce2e21c7aa1a1eeda35a6067574e73026a4037da4e2c3d49e524705ae6",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "artifact_hashes": {
+          "docs/track_a/P2_2A_R1_Hourly_Close_Proxy_API.md": "dea523cb6a629ce4152300be1a5394ee2ebaa341850e7d05f8f3720fae6d946e",
+          "reports/data_audit/p2_2a_r1_2026-10-11_014652/proxy_trace_examples.md": "2f77db8492e7a20927c7a571672e1dcd044b0a0a267d029f06c14a47c5892fcd",
+          "src/lstm_data/hourly_proxy.py": "a23bf1d7f69e84e567ade10f88cf74a047f5d87376ef43b7c688338316a2b6f0",
+          "tests/test_hourly_proxy.py": "918ae101734c3067d001c8c095449102d093dbdbd2698baee64e70b616b52771"
+        },
+        "focused_proxy_plus_minute_tests": 53,
+        "implementation_status": "IMPLEMENTATION_COMPLETE",
+        "integration_tests": 205,
+        "new_tests": 25,
+        "ruff": "PASS"
+      },
+      "example_ids": [],
+      "explanation": "Synthetic reference/TG0/causal/maturity/purge/version tests only; no scientific G2 PASS.",
+      "gate_id": "G2",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T05:53:50.193709+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p2-2a-r1-2026-10-11_014652",
+      "check_id": "R1-MINUTE-FOUNDATION-PRESERVED",
+      "code_id": "c71a9fce2e21c7aa1a1eeda35a6067574e73026a4037da4e2c3d49e524705ae6",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "all_preexisting_source_and_tests_unchanged": true,
+        "existing_CA_package_preserved": true,
+        "labels_sha256": "00d233fc7cb5102b4feca0d5ddb70ee3cb69defe83c887b10b78857dc7dbe656",
+        "minute_tests_sha256": "e5a1ece720daa107604ee9bd8e9b46c5ce3872ef2eb7588652eb6f3d459faffe"
+      },
+      "example_ids": [],
+      "explanation": "User accepted minute foundation; original implementations/defaults/tests and inherited uncommitted action package preserved byte-for-byte.",
+      "gate_id": "G2",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T05:53:50.193709+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p2-2a-r1-2026-10-11_014652",
+      "check_id": "R1-VERSION-AND-CAUSALITY",
+      "code_id": "c71a9fce2e21c7aa1a1eeda35a6067574e73026a4037da4e2c3d49e524705ae6",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "early_label_maturity": false,
+        "execution_version": "COMPLETED_HOURLY_CLOSE_PROXY:v1",
+        "future_exit_changes_entry": false,
+        "m2_version": "M2:HOURLY_CLOSE_PROXY:v1:REBUILD_REQUIRED",
+        "minute_proxy_mix_rejected": true,
+        "nominal_lag_seconds": 180,
+        "shifted_lag_seconds": 360,
+        "target_version": "TG0:HOURLY_CLOSE_PROXY:v1"
+      },
+      "example_ids": [],
+      "explanation": "Exact source intervals/event ages and accepted training/purge math; M2 rebuild requirement tagged, M2 calculation not implemented.",
+      "gate_id": "G2",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T05:53:50.193709+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p2-2a-r1-2026-10-11_014652",
+      "check_id": "R1-SCIENTIFIC-EXECUTION",
+      "code_id": "c71a9fce2e21c7aa1a1eeda35a6067574e73026a4037da4e2c3d49e524705ae6",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "full_portfolio": "NOT_IMPLEMENTED",
+        "market_status": "HOLD",
+        "proxy_shared_rule_approval": "PENDING",
+        "remaining_blocker_ids": [
+          "p0.1-F01",
+          "p0.1-USA500-source-clock",
+          "p0.1-stock-publication",
+          "p0.1-minute-execution",
+          "p0.1-actions-dividends",
+          "p0.1-formation-prehistory",
+          "p0.1-shared-D3-clock"
+        ],
+        "source_execution_approvals": "SEPARATE_PENDING",
+        "source_requests": 0,
+        "training_pairs": 0
+      },
+      "example_ids": [],
+      "explanation": "No genuine source/publication/action/fill certification or global G0/G1/G2/G4 clearance; hourly risk/retry/benchmark decisions separate.",
+      "gate_id": "G2",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "BLOCKED",
+      "time_utc": "2026-10-11T05:53:50.193709+00:00"
+    },
+    {
+      "affected_branches": [],
+      "approved_threshold": null,
+      "audit_run_id": "p2-2a-r1-2026-10-11_014652",
+      "check_id": "R1-AUTHORITY-PRESERVATION",
+      "code_id": "c71a9fce2e21c7aa1a1eeda35a6067574e73026a4037da4e2c3d49e524705ae6",
+      "config_id": "ce234e80f447b5824a7e2cf2b9ee761d90859b07a7d830ebef42779d18a67a6a",
+      "evidence": {
+        "authority_documents": [
+          {
+            "path": "docs/track_a/Shared_Project_Specification.md",
+            "sha256": "12863e44efa2ca3c51d5f5c5033a3735b16b4a87a00158122d372db6ed9cdf32",
+            "version": "1.0"
+          },
+          {
+            "path": "docs/track_a/Track_A_Architecture_Experiment_Roadmap_First_Pass_FROZEN_v1.0.md",
+            "sha256": "7afb1d3fe6cd5bf68e1e9a1c8e6f19e200ce2c4cae6414b1b0b90e40365339ce",
+            "version": "1.0"
+          },
+          {
+            "path": "docs/track_a/Track_A_Consolidated_Implementation_Design_Record_v1.2_2026-10-10.md",
+            "sha256": "cf3f7531ecd52e47386e64035d5c86ab513acc3c1a6bbbee5e54ad325eb9a96c",
+            "version": "1.2"
+          },
+          {
+            "path": "docs/track_a/Track_A_Stage_Gated_Audit_and_Failure_Traceability_Plan_v1.1_2026-10-10.md",
+            "sha256": "a29309ef791f74f72443b2b66ad1d9cde5f46e54dfbcd072f5bda5da68d1878d",
+            "version": "1.1"
+          },
+          {
+            "path": "docs/track_a/Track_A_Codex_Incremental_Implementation_and_Human_Review_Plan_v1_2026-10-10.md",
+            "sha256": "bf3459456b12c23942d99bd555cc66137cd6154c79119ae96eaa3bfdb88a202d",
+            "version": "1"
+          }
+        ],
+        "events_after": 22,
+        "events_before": 21,
+        "index_sha256": "4f902aae21996fb1b8cdfaf6d1d8d6f89c6211547503b452b50895d7d1aa320a",
+        "old_ledger_bytes": 36515,
+        "old_ledger_sha256": "bfd47db4742ab3570236e0af8837fa24b13c2b742b6f1065841b0e3dfad92a98",
+        "pointer_sha256": "1b83b2ef8f727618ef319c0c04b36056c5c8cb19857ebe40927851e3295ca600",
+        "training_pairs": 0
+      },
+      "example_ids": [],
+      "explanation": "Technical preservation only, not approval of scientific gates or pointer migration.",
+      "gate_id": "G0",
+      "owner_action": "Human review",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "protocol_version": "Track A pinned five-document contract",
+      "rerun_scope": "Affected code/protocol changes",
+      "schema_version": 1,
+      "source_ids": {
+        "basis": "P0.1 preserved evidence; raw files are not re-read by P0.2",
+        "course_rows": 29510,
+        "course_sha256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+        "course_source": "data/raw/course/USA500.IDXUSD_1h_2020-07-01_to_2025-06-30_UTC.csv",
+        "manifest_inventory_sha256": "6b6607a5173e2329916379917d23f2b8e69bf0f2868772237e288abb978b0100",
+        "manifest_pairs": 60,
+        "stock_config_fingerprint": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+        "stock_rows": 159008,
+        "stock_store": "data/raw/alpaca/track_a"
+      },
+      "status": "PASS",
+      "time_utc": "2026-10-11T05:53:50.193709+00:00"
+    }
+  ],
+  "implementation_status": "IMPLEMENTATION_COMPLETE",
+  "package": "P2.2A-R1",
+  "research_status": "BLOCKED"
+}
