@@ -1,0 +1,24 @@
+{
+  "command": ".venv/bin/python -B -m pytest -q",
+  "returncode": 0,
+  "elapsed_seconds": 223.3690070409939,
+  "peak_child_rss_bytes": 208961536,
+  "code_hashes_at_full_suite": {
+    "src/lstm_data/p3_accounting.py": "0ff93dd1159b3c07abf5a1d25d993a12c5166dffb4214ac271b0b30ac9e58e91",
+    "src/lstm_data/p3_audit.py": "50ef67a597c3b37c3cb723a66ddf527fd11c1469a06c84da13f3d18bd8c68720",
+    "src/lstm_data/p3_domain.py": "284c5cb124301cb32bd8019c379b0fe92c8eec6454a0fa391b6d2e81cf5a5f05",
+    "src/lstm_data/p3_engine.py": "04a1729da2f308d54852e38f89d95772c2d2e94d40c4981d18942d50e1a1bda1",
+    "src/lstm_data/p3_events.py": "1d2463e2bc0ca8ead7d76c6a9a84c5f5c4ee7d1bb92aca18f40af285ab46ed9f",
+    "src/lstm_data/p3_execution.py": "5ea3f299b20dbfd393a469c8b82912cc8f0fafe1839fcbce0eb654f536f4d32f",
+    "src/lstm_data/p3_financing.py": "d36ad2915366085a00f0f26c70a888bf93ae33c492b1b3240b2077b61c58a988",
+    "src/lstm_data/p3_policy.py": "c3f4bb8c16369fc2cbd509ef625d31ca0d114ba9ace32fa0f5ad451f0eb76b4e",
+    "src/lstm_data/p3_replay.py": "92ca59e2b428c4f301c780dced16108a1c13359cb8592d652693ca9954465490",
+    "src/lstm_data/p3_risk.py": "ec5581707448370c803eb13f144dfb0810c999def6072a453b14327952178765",
+    "tests/test_p3_accounting.py": "3159ef720b5caf32347138be3bdd5f6c33cdbc50229817dc12071d1cc28de831",
+    "tests/test_p3_audit.py": "0d6166aba799f604a99b2be641fea2738a42e6f9eb3499d4b433f44bd176e72e",
+    "tests/test_p3_exceptions.py": "c49f8ea0623de97fe564a0e67e741e854698f4844928136ec603b8b01293aebf",
+    "tests/test_p3_financing.py": "39592283ecace8ed7aef0db2c13e957534e2dea46124743be1c2db4886d9a45e",
+    "tests/test_p3_policy.py": "9d41067b89223873be76b1408afc8e5306588a7379eb89c49ded509b6fc471cb"
+  },
+  "final_patch_scope": "Cancellation reason correctly classifies an offered but ineligible reference as INELIGIBLE_REFERENCE. No fill/cash/share/admission mathematics changed; all P3 and old impacted tests rerun."
+}

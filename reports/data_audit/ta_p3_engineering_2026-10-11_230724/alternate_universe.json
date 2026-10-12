@@ -1,0 +1,2171 @@
+{
+  "matrix_trace_ids": [
+    "b4474d0f88cbfd8e2f7edc6d0811ed3e4535bf8dabcfe233f6dabc90d035479f",
+    "9e612cd661641b213c27ad86fd3b9d978aa1464538854bc2b6175720f249b7cb",
+    "89d05ba4564c5e1e3d8a0fd6c3213ec2d27cee0f8652ebd7ebc1f1e68bc955b2",
+    "4f3fe313b49814dad16ee738f38da7384708f7acf3212f9176fe2f17e0daef01",
+    "110041b8ccf2be947d5e319f4e400f7156991777d823351b16a0353c221112f9",
+    "7ffb7c9dc6e2453b6789cfb184e3afc39890515a849c38bc5417982cef57972b",
+    "85a23a2ba421990699971ce3ad56db76db4c02c061bf77cb0ec93b30d84c3c37",
+    "b8577fa3722ac67cd479381629e99d7a59481cf147d47f49fb5fbbea7c2b0641",
+    "f551e7a86a7f4b22362d2ed1eb828c173e7ad5538cd56f93ac7f6d6a8e50c513",
+    "5be363523302ae70c5de7eaf5430e3b09666af4f94d7966a874f56c60b38a26e",
+    "c521d8488e12c7075fc238086b2bf2f0ca0efc16062e6908def1d562185a50e9",
+    "5c15b9e8a91cd6e55fe6badd339df843822d2224329c6a7af5dcf64aecd71b7f",
+    "74e50273c8e4b403c688a8ccc680f8eee8d2e76168cfdac93acda20dee3e8073",
+    "c4e11965fb0f8e946766f25cf15710e9a3eedfff2b0c2f146f2ad9e58ea4c6a0",
+    "fd7e81c07ca3ff6e525e07e37bd645be9ce724efc6c78ba18eea1c36f95399c1",
+    "3e7fac35a7aeb1a61c247c8a5eb0af4e072d494cf01d64af50e35e5e4477de04",
+    "a0c0e382c29466549dbd957a270bc38b46988df4bb3818df34bc7c0cd967865f",
+    "29c8ae06083dbe08cf63d98e12e4f33a65fd242811385101a8726aab7b5b9e03",
+    "5a2174b8cda19a5a1147309ee2143dbdb6338d53a5857461026894b12ce8d2b5",
+    "2d361c1f1844b87182925947c4ac45f41e64fda6c5cd6ac58d3b69957ee50e01",
+    "0755ef449a2d0ab849fd445c4004522fdb0159d24c1c257fb748382a7a8229a7",
+    "2741a84c6bb3da0e2c59e83c3d86789a17e906785786099f0bd77fac7dd79877",
+    "ae8564b1994ae8ebe2f09714e49fd342c452ea6ef39b50ef5abb8800a87f7085",
+    "cff4e989d0d57302ad67b21940f62e6faf7f853fc7ac052b9f1d46dec1238d35"
+  ],
+  "offset_trace": {
+    "events": [
+      {
+        "at": "2020-08-03T13:30:00+00:00",
+        "event_id": "SYN:ACCOUNT",
+        "kind": "ACCOUNT",
+        "parent_id": null,
+        "payload": {
+          "arithmetic": "DECIMAL40_HALF_EVEN_EXACT_FRACTIONAL_ASSUMPTION",
+          "basis": "SYNTHETIC",
+          "cash": "10000",
+          "symbols": [
+            "FOX",
+            "ZEN",
+            "MAP",
+            "ORB",
+            "TIN"
+          ]
+        },
+        "research_ready": false,
+        "sequence": 1,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:ENTRY:1:MARK",
+        "kind": "MARK",
+        "parent_id": null,
+        "payload": {
+          "references": [
+            {
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "period_start": "2020-08-03T13:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:FOX2020-08-03T14:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "FOX",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "period_start": "2020-08-03T13:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:ZEN2020-08-03T14:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "ZEN",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "period_start": "2020-08-03T13:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:MAP2020-08-03T14:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "MAP",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "period_start": "2020-08-03T13:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:ORB2020-08-03T14:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "ORB",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "period_start": "2020-08-03T13:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:TIN2020-08-03T14:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "TIN",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            }
+          ]
+        },
+        "research_ready": false,
+        "sequence": 2,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:ENTRY:1:RISK",
+        "kind": "RISK",
+        "parent_id": "SYN:ENTRY:1:MARK",
+        "payload": {
+          "G": "0",
+          "emergency": false,
+          "equity": "10000",
+          "gross": "0",
+          "reason": "OBSERVED_PHYSICAL_GROSS",
+          "status": "VALID",
+          "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+        },
+        "research_ready": false,
+        "sequence": 3,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:PRE:MARK",
+        "kind": "MARK",
+        "parent_id": null,
+        "payload": {
+          "references": [
+            {
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "period_start": "2020-08-03T13:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:FOX2020-08-03T14:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "FOX",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "period_start": "2020-08-03T13:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:ZEN2020-08-03T14:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "ZEN",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "period_start": "2020-08-03T13:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:MAP2020-08-03T14:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "MAP",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "period_start": "2020-08-03T13:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:ORB2020-08-03T14:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "ORB",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "period_start": "2020-08-03T13:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:TIN2020-08-03T14:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "TIN",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            }
+          ]
+        },
+        "research_ready": false,
+        "sequence": 4,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:PRE:RISK",
+        "kind": "RISK",
+        "parent_id": "SYN:F:2020-08-03:1:PRE:MARK",
+        "payload": {
+          "G": "0",
+          "emergency": false,
+          "equity": "10000",
+          "gross": "0",
+          "reason": "OBSERVED_PHYSICAL_GROSS",
+          "status": "VALID",
+          "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+        },
+        "research_ready": false,
+        "sequence": 5,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1",
+        "kind": "FORECAST",
+        "parent_id": null,
+        "payload": {
+          "basis": "SYNTHETIC",
+          "input_version": "P3:SYNTHETIC_INPUT:v1",
+          "issuance": "2020-08-03T14:32:00+00:00",
+          "model_version": "P3:SYNTHETIC_SCORE_SCRIPT:v1",
+          "policy": "A",
+          "scores": [
+            2.0,
+            1.0,
+            0.0,
+            -1.0,
+            -2.0
+          ]
+        },
+        "research_ready": false,
+        "sequence": 6,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT",
+        "kind": "INTENT",
+        "parent_id": "SYN:F:2020-08-03:1",
+        "payload": {
+          "constant_scores": false,
+          "long": "FOX",
+          "short": "TIN"
+        },
+        "research_ready": false,
+        "sequence": 7,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE",
+        "kind": "SLEEVE",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT",
+        "payload": {
+          "expires_at": "2020-08-03T18:33:00+00:00",
+          "pre_entry_equity": "10000",
+          "projection": {
+            "accepted": true,
+            "post_cost_equity": "10000.0000",
+            "projected_fee": "0.0000",
+            "projected_gross": "4950.0000",
+            "reason": "ADMITTED"
+          },
+          "quantities": [
+            [
+              "FOX",
+              "24.7500"
+            ],
+            [
+              "ZEN",
+              "0"
+            ],
+            [
+              "MAP",
+              "0"
+            ],
+            [
+              "ORB",
+              "0"
+            ],
+            [
+              "TIN",
+              "-24.7500"
+            ]
+          ]
+        },
+        "research_ready": false,
+        "sequence": 8,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET",
+        "kind": "TARGET",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE",
+        "payload": {
+          "desired_physical": [
+            [
+              "FOX",
+              "24.7500"
+            ],
+            [
+              "ZEN",
+              "0"
+            ],
+            [
+              "MAP",
+              "0"
+            ],
+            [
+              "ORB",
+              "0"
+            ],
+            [
+              "TIN",
+              "-24.7500"
+            ]
+          ],
+          "physical_before": [
+            [
+              "FOX",
+              "0"
+            ],
+            [
+              "ZEN",
+              "0"
+            ],
+            [
+              "MAP",
+              "0"
+            ],
+            [
+              "ORB",
+              "0"
+            ],
+            [
+              "TIN",
+              "0"
+            ]
+          ]
+        },
+        "research_ready": false,
+        "sequence": 9,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:FOX",
+        "kind": "ORDER",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET",
+        "payload": {
+          "quantity": "24.7500",
+          "share_basis": "SYN:RAW_SHARES:v1",
+          "symbol": "FOX"
+        },
+        "research_ready": false,
+        "sequence": 10,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:TIN",
+        "kind": "ORDER",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET",
+        "payload": {
+          "quantity": "-24.7500",
+          "share_basis": "SYN:RAW_SHARES:v1",
+          "symbol": "TIN"
+        },
+        "research_ready": false,
+        "sequence": 11,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL",
+        "kind": "FILL",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:FOX",
+        "payload": {
+          "actual_fill_at": "2020-08-03T14:33:00+00:00",
+          "available_at": "2020-08-03T14:30:00+00:00",
+          "basis": "SYNTHETIC",
+          "fee": "0.0000",
+          "kind": "HOURLY_CLOSE_PROXY",
+          "observation_at": "2020-08-03T14:30:00+00:00",
+          "price": "100",
+          "proxy_age_seconds": 180.0,
+          "quantity": "24.7500",
+          "scheduled_order_at": "2020-08-03T14:33:00+00:00",
+          "share_basis": "SYN:RAW_SHARES:v1",
+          "source_id": "SYN:P:FOX2020-08-03T14:30:00+00:00",
+          "source_version": "P3:SYNTHETIC_PRICE:v1",
+          "symbol": "FOX"
+        },
+        "research_ready": false,
+        "sequence": 12,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL:CASH",
+        "kind": "CASH",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL",
+        "payload": {
+          "cash_after": "7525.0000",
+          "cash_before": "10000",
+          "movement": "-2475.0000"
+        },
+        "research_ready": false,
+        "sequence": 13,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL:POSITION",
+        "kind": "POSITION",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL",
+        "payload": {
+          "after": "24.7500",
+          "before": "0",
+          "symbol": "FOX"
+        },
+        "research_ready": false,
+        "sequence": 14,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL:FEE",
+        "kind": "FEE",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL",
+        "payload": {
+          "amount": "0.0000"
+        },
+        "research_ready": false,
+        "sequence": 15,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL",
+        "kind": "FILL",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:TIN",
+        "payload": {
+          "actual_fill_at": "2020-08-03T14:33:00+00:00",
+          "available_at": "2020-08-03T14:30:00+00:00",
+          "basis": "SYNTHETIC",
+          "fee": "0.0000",
+          "kind": "HOURLY_CLOSE_PROXY",
+          "observation_at": "2020-08-03T14:30:00+00:00",
+          "price": "100",
+          "proxy_age_seconds": 180.0,
+          "quantity": "-24.7500",
+          "scheduled_order_at": "2020-08-03T14:33:00+00:00",
+          "share_basis": "SYN:RAW_SHARES:v1",
+          "source_id": "SYN:P:TIN2020-08-03T14:30:00+00:00",
+          "source_version": "P3:SYNTHETIC_PRICE:v1",
+          "symbol": "TIN"
+        },
+        "research_ready": false,
+        "sequence": 16,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL:CASH",
+        "kind": "CASH",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL",
+        "payload": {
+          "cash_after": "10000.0000",
+          "cash_before": "7525.0000",
+          "movement": "2475.0000"
+        },
+        "research_ready": false,
+        "sequence": 17,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL:POSITION",
+        "kind": "POSITION",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL",
+        "payload": {
+          "after": "-24.7500",
+          "before": "0",
+          "symbol": "TIN"
+        },
+        "research_ready": false,
+        "sequence": 18,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL:FEE",
+        "kind": "FEE",
+        "parent_id": "SYN:F:2020-08-03:1:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL",
+        "payload": {
+          "amount": "0.0000"
+        },
+        "research_ready": false,
+        "sequence": 19,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T14:33:00+00:00",
+        "event_id": "SYN:ENTRY:1:VALUATION",
+        "kind": "VALUATION",
+        "parent_id": null,
+        "payload": {
+          "G4_scientific": "HOLD",
+          "NAV": "10000.0000",
+          "P2_handoff_sha": "6c24f84435e5c1a458d2950b605ed977d15d851fe7ec3829f39bac989da96e49",
+          "accrual_equity": "10000.0000",
+          "assumptions": [],
+          "cash": "10000.0000",
+          "cash_only_equity": "10000.0000",
+          "dividend_liabilities": "0",
+          "incomplete_reasons": [],
+          "long_assets": "2475.0000",
+          "mark_reasons": {
+            "FOX": "REFERENCE_ELIGIBLE",
+            "MAP": "REFERENCE_ELIGIBLE",
+            "ORB": "REFERENCE_ELIGIBLE",
+            "TIN": "REFERENCE_ELIGIBLE",
+            "ZEN": "REFERENCE_ELIGIBLE"
+          },
+          "marks": [
+            {
+              "age_seconds": 180.0,
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "source_id": "SYN:P:FOX2020-08-03T14:30:00+00:00",
+              "symbol": "FOX"
+            },
+            {
+              "age_seconds": 180.0,
+              "available_at": "2020-08-03T14:30:00+00:00",
+              "observation_at": "2020-08-03T14:30:00+00:00",
+              "source_id": "SYN:P:TIN2020-08-03T14:30:00+00:00",
+              "symbol": "TIN"
+            }
+          ],
+          "missing_marks": [],
+          "paid_cash_scope": "MODELED_PAYABLE_DATES",
+          "permission": "ENGINEERING_SYNTHETIC_ONLY",
+          "physical_balances": [
+            [
+              "FOX",
+              "24.7500"
+            ],
+            [
+              "ZEN",
+              "0"
+            ],
+            [
+              "MAP",
+              "0"
+            ],
+            [
+              "ORB",
+              "0"
+            ],
+            [
+              "TIN",
+              "-24.7500"
+            ]
+          ],
+          "receivables": "0",
+          "research_ready": false,
+          "short_liability": "2475.0000",
+          "status": "SYNTHETIC_ASSUMPTION_DEPENDENT",
+          "toy_accrual_equity": "10000.0000",
+          "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115",
+          "unknown_payment_claims": [],
+          "unresolved_exits": []
+        },
+        "research_ready": false,
+        "sequence": 20,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:ENTRY:2:MARK",
+        "kind": "MARK",
+        "parent_id": null,
+        "payload": {
+          "references": [
+            {
+              "available_at": "2020-08-03T15:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T15:30:00+00:00",
+              "period_start": "2020-08-03T14:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:FOX2020-08-03T15:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "FOX",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T15:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T15:30:00+00:00",
+              "period_start": "2020-08-03T14:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:ZEN2020-08-03T15:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "ZEN",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T15:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T15:30:00+00:00",
+              "period_start": "2020-08-03T14:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:MAP2020-08-03T15:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "MAP",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T15:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T15:30:00+00:00",
+              "period_start": "2020-08-03T14:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:ORB2020-08-03T15:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "ORB",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T15:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T15:30:00+00:00",
+              "period_start": "2020-08-03T14:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:TIN2020-08-03T15:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "TIN",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            }
+          ]
+        },
+        "research_ready": false,
+        "sequence": 21,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:ENTRY:2:RISK",
+        "kind": "RISK",
+        "parent_id": "SYN:ENTRY:2:MARK",
+        "payload": {
+          "G": "0.495",
+          "emergency": false,
+          "equity": "10000.0000",
+          "gross": "4950.0000",
+          "reason": "OBSERVED_PHYSICAL_GROSS",
+          "status": "VALID",
+          "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+        },
+        "research_ready": false,
+        "sequence": 22,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:PRE:MARK",
+        "kind": "MARK",
+        "parent_id": null,
+        "payload": {
+          "references": [
+            {
+              "available_at": "2020-08-03T15:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T15:30:00+00:00",
+              "period_start": "2020-08-03T14:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:FOX2020-08-03T15:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "FOX",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T15:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T15:30:00+00:00",
+              "period_start": "2020-08-03T14:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:ZEN2020-08-03T15:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "ZEN",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T15:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T15:30:00+00:00",
+              "period_start": "2020-08-03T14:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:MAP2020-08-03T15:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "MAP",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T15:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T15:30:00+00:00",
+              "period_start": "2020-08-03T14:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:ORB2020-08-03T15:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "ORB",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            },
+            {
+              "available_at": "2020-08-03T15:30:00+00:00",
+              "basis": "SYNTHETIC",
+              "kind": "HOURLY_CLOSE_PROXY",
+              "observation_at": "2020-08-03T15:30:00+00:00",
+              "period_start": "2020-08-03T14:30:00+00:00",
+              "price": "100",
+              "provider_fill_claim": false,
+              "share_basis": "SYN:RAW_SHARES:v1",
+              "source_id": "SYN:P:TIN2020-08-03T15:30:00+00:00",
+              "source_version": "P3:SYNTHETIC_PRICE:v1",
+              "symbol": "TIN",
+              "universe": {
+                "sectors": [],
+                "symbols": [
+                  "FOX",
+                  "ZEN",
+                  "MAP",
+                  "ORB",
+                  "TIN"
+                ],
+                "version": "P3_TOY_ALT_V1"
+              }
+            }
+          ]
+        },
+        "research_ready": false,
+        "sequence": 23,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:PRE:RISK",
+        "kind": "RISK",
+        "parent_id": "SYN:F:2020-08-03:2:PRE:MARK",
+        "payload": {
+          "G": "0.495",
+          "emergency": false,
+          "equity": "10000.0000",
+          "gross": "4950.0000",
+          "reason": "OBSERVED_PHYSICAL_GROSS",
+          "status": "VALID",
+          "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+        },
+        "research_ready": false,
+        "sequence": 24,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2",
+        "kind": "FORECAST",
+        "parent_id": null,
+        "payload": {
+          "basis": "SYNTHETIC",
+          "input_version": "P3:SYNTHETIC_INPUT:v1",
+          "issuance": "2020-08-03T15:32:00+00:00",
+          "model_version": "P3:SYNTHETIC_SCORE_SCRIPT:v1",
+          "policy": "A",
+          "scores": [
+            -2.0,
+            -1.0,
+            0.0,
+            1.0,
+            2.0
+          ]
+        },
+        "research_ready": false,
+        "sequence": 25,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT",
+        "kind": "INTENT",
+        "parent_id": "SYN:F:2020-08-03:2",
+        "payload": {
+          "constant_scores": false,
+          "long": "TIN",
+          "short": "FOX"
+        },
+        "research_ready": false,
+        "sequence": 26,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE",
+        "kind": "SLEEVE",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT",
+        "payload": {
+          "expires_at": "2020-08-03T19:33:00+00:00",
+          "pre_entry_equity": "10000.0000",
+          "projection": {
+            "accepted": true,
+            "post_cost_equity": "10000.00000000",
+            "projected_fee": "0E-8",
+            "projected_gross": "0",
+            "reason": "ADMITTED"
+          },
+          "quantities": [
+            [
+              "FOX",
+              "-24.75000000"
+            ],
+            [
+              "ZEN",
+              "0"
+            ],
+            [
+              "MAP",
+              "0"
+            ],
+            [
+              "ORB",
+              "0"
+            ],
+            [
+              "TIN",
+              "24.75000000"
+            ]
+          ]
+        },
+        "research_ready": false,
+        "sequence": 27,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET",
+        "kind": "TARGET",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE",
+        "payload": {
+          "desired_physical": [
+            [
+              "FOX",
+              "0E-8"
+            ],
+            [
+              "ZEN",
+              "0"
+            ],
+            [
+              "MAP",
+              "0"
+            ],
+            [
+              "ORB",
+              "0"
+            ],
+            [
+              "TIN",
+              "0E-8"
+            ]
+          ],
+          "physical_before": [
+            [
+              "FOX",
+              "24.7500"
+            ],
+            [
+              "ZEN",
+              "0"
+            ],
+            [
+              "MAP",
+              "0"
+            ],
+            [
+              "ORB",
+              "0"
+            ],
+            [
+              "TIN",
+              "-24.7500"
+            ]
+          ]
+        },
+        "research_ready": false,
+        "sequence": 28,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:FOX",
+        "kind": "ORDER",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET",
+        "payload": {
+          "quantity": "-24.75000000",
+          "share_basis": "SYN:RAW_SHARES:v1",
+          "symbol": "FOX"
+        },
+        "research_ready": false,
+        "sequence": 29,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:TIN",
+        "kind": "ORDER",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET",
+        "payload": {
+          "quantity": "24.75000000",
+          "share_basis": "SYN:RAW_SHARES:v1",
+          "symbol": "TIN"
+        },
+        "research_ready": false,
+        "sequence": 30,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL",
+        "kind": "FILL",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:FOX",
+        "payload": {
+          "actual_fill_at": "2020-08-03T15:33:00+00:00",
+          "available_at": "2020-08-03T15:30:00+00:00",
+          "basis": "SYNTHETIC",
+          "fee": "0E-8",
+          "kind": "HOURLY_CLOSE_PROXY",
+          "observation_at": "2020-08-03T15:30:00+00:00",
+          "price": "100",
+          "proxy_age_seconds": 180.0,
+          "quantity": "-24.75000000",
+          "scheduled_order_at": "2020-08-03T15:33:00+00:00",
+          "share_basis": "SYN:RAW_SHARES:v1",
+          "source_id": "SYN:P:FOX2020-08-03T15:30:00+00:00",
+          "source_version": "P3:SYNTHETIC_PRICE:v1",
+          "symbol": "FOX"
+        },
+        "research_ready": false,
+        "sequence": 31,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL:CASH",
+        "kind": "CASH",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL",
+        "payload": {
+          "cash_after": "12475.00000000",
+          "cash_before": "10000.0000",
+          "movement": "2475.00000000"
+        },
+        "research_ready": false,
+        "sequence": 32,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL:POSITION",
+        "kind": "POSITION",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL",
+        "payload": {
+          "after": "0E-8",
+          "before": "24.7500",
+          "symbol": "FOX"
+        },
+        "research_ready": false,
+        "sequence": 33,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL:FEE",
+        "kind": "FEE",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:FOX:FILL",
+        "payload": {
+          "amount": "0E-8"
+        },
+        "research_ready": false,
+        "sequence": 34,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL",
+        "kind": "FILL",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:TIN",
+        "payload": {
+          "actual_fill_at": "2020-08-03T15:33:00+00:00",
+          "available_at": "2020-08-03T15:30:00+00:00",
+          "basis": "SYNTHETIC",
+          "fee": "0E-8",
+          "kind": "HOURLY_CLOSE_PROXY",
+          "observation_at": "2020-08-03T15:30:00+00:00",
+          "price": "100",
+          "proxy_age_seconds": 180.0,
+          "quantity": "24.75000000",
+          "scheduled_order_at": "2020-08-03T15:33:00+00:00",
+          "share_basis": "SYN:RAW_SHARES:v1",
+          "source_id": "SYN:P:TIN2020-08-03T15:30:00+00:00",
+          "source_version": "P3:SYNTHETIC_PRICE:v1",
+          "symbol": "TIN"
+        },
+        "research_ready": false,
+        "sequence": 35,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL:CASH",
+        "kind": "CASH",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL",
+        "payload": {
+          "cash_after": "10000.00000000",
+          "cash_before": "12475.00000000",
+          "movement": "-2475.00000000"
+        },
+        "research_ready": false,
+        "sequence": 36,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL:POSITION",
+        "kind": "POSITION",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL",
+        "payload": {
+          "after": "0E-8",
+          "before": "-24.7500",
+          "symbol": "TIN"
+        },
+        "research_ready": false,
+        "sequence": 37,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL:FEE",
+        "kind": "FEE",
+        "parent_id": "SYN:F:2020-08-03:2:INTENT:SLEEVE:TARGET:ORDER:TIN:FILL",
+        "payload": {
+          "amount": "0E-8"
+        },
+        "research_ready": false,
+        "sequence": 38,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      },
+      {
+        "at": "2020-08-03T15:33:00+00:00",
+        "event_id": "SYN:ENTRY:2:VALUATION",
+        "kind": "VALUATION",
+        "parent_id": null,
+        "payload": {
+          "G4_scientific": "HOLD",
+          "NAV": "10000.00000000",
+          "P2_handoff_sha": "6c24f84435e5c1a458d2950b605ed977d15d851fe7ec3829f39bac989da96e49",
+          "accrual_equity": "10000.00000000",
+          "assumptions": [],
+          "cash": "10000.00000000",
+          "cash_only_equity": "10000.00000000",
+          "dividend_liabilities": "0",
+          "incomplete_reasons": [],
+          "long_assets": "0",
+          "mark_reasons": {
+            "FOX": "REFERENCE_ELIGIBLE",
+            "MAP": "REFERENCE_ELIGIBLE",
+            "ORB": "REFERENCE_ELIGIBLE",
+            "TIN": "REFERENCE_ELIGIBLE",
+            "ZEN": "REFERENCE_ELIGIBLE"
+          },
+          "marks": [],
+          "missing_marks": [],
+          "paid_cash_scope": "MODELED_PAYABLE_DATES",
+          "permission": "ENGINEERING_SYNTHETIC_ONLY",
+          "physical_balances": [
+            [
+              "FOX",
+              "0E-8"
+            ],
+            [
+              "ZEN",
+              "0"
+            ],
+            [
+              "MAP",
+              "0"
+            ],
+            [
+              "ORB",
+              "0"
+            ],
+            [
+              "TIN",
+              "0E-8"
+            ]
+          ],
+          "receivables": "0",
+          "research_ready": false,
+          "short_liability": "0",
+          "status": "SYNTHETIC_ASSUMPTION_DEPENDENT",
+          "toy_accrual_equity": "10000.00000000",
+          "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115",
+          "unknown_payment_claims": [],
+          "unresolved_exits": []
+        },
+        "research_ready": false,
+        "sequence": 39,
+        "universe_id": "6886d746e927f4f94c601e36e95f2521c858d176b82e03cba782a2b6bc84b115"
+      }
+    ],
+    "trace_id": "b74861f5d460937a668cf699202cf9dd62e4d9c2b0d5965a3d39d1333bf94e35"
+  },
+  "oracle_rows": [
+    {
+      "actual": "499.75",
+      "calculation": "1000 - signed 5*100 - .25",
+      "case": "BUY_SELL",
+      "expected": "499.75",
+      "field": "entry_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": "999.75",
+      "calculation": "Cash + long assets - short liability",
+      "case": "BUY_SELL",
+      "expected": "999.75",
+      "field": "entry_equity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1049.475",
+      "calculation": "Actual sale/cover notional and 5bps fee",
+      "case": "BUY_SELL",
+      "expected": "1049.475",
+      "field": "ending_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.525",
+      "calculation": "500*.0005 + exit notional*.0005",
+      "case": "BUY_SELL",
+      "expected": "0.525",
+      "field": "fee",
+      "status": "PASS"
+    },
+    {
+      "actual": "1049.475",
+      "calculation": "Cash movements in sequence",
+      "case": "BUY_SELL",
+      "expected": "1049.475",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "FOX",
+          "0"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "BUY_SELL",
+      "expected": [
+        [
+          "FOX",
+          "0"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "1499.75",
+      "calculation": "1000 - signed 5*100 - .25",
+      "case": "SHORT_COVER",
+      "expected": "1499.75",
+      "field": "entry_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": "999.75",
+      "calculation": "Cash + long assets - short liability",
+      "case": "SHORT_COVER",
+      "expected": "999.75",
+      "field": "entry_equity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1049.525",
+      "calculation": "Actual sale/cover notional and 5bps fee",
+      "case": "SHORT_COVER",
+      "expected": "1049.525",
+      "field": "ending_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.475",
+      "calculation": "500*.0005 + exit notional*.0005",
+      "case": "SHORT_COVER",
+      "expected": "0.475",
+      "field": "fee",
+      "status": "PASS"
+    },
+    {
+      "actual": "1049.525",
+      "calculation": "Cash movements in sequence",
+      "case": "SHORT_COVER",
+      "expected": "1049.525",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "FOX",
+          "0"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "SHORT_COVER",
+      "expected": [
+        [
+          "FOX",
+          "0"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4125000000",
+      "calculation": "2475 day-max * .03/360 per physically short name",
+      "case": "POLICY_A",
+      "expected": "0.4125",
+      "field": "borrow",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "calculation": "Policy B checks each active virtual leg",
+      "case": "POLICY_A",
+      "expected": [],
+      "field": "veto",
+      "status": "PASS"
+    },
+    {
+      "actual": "9999.5875000000",
+      "calculation": "Cash movements in sequence",
+      "case": "POLICY_A",
+      "expected": "9999.5875000000",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "FOX",
+          "0E-8"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0E-8"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "POLICY_A",
+      "expected": [
+        [
+          "FOX",
+          "0E-8"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0E-8"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.206250",
+      "calculation": "2475 day-max * .03/360 per physically short name",
+      "case": "POLICY_B",
+      "expected": "0.20625",
+      "field": "borrow",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "POLICY_B_VIRTUAL_CONFLICT"
+      ],
+      "calculation": "Policy B checks each active virtual leg",
+      "case": "POLICY_B",
+      "expected": [
+        "POLICY_B_VIRTUAL_CONFLICT"
+      ],
+      "field": "veto",
+      "status": "PASS"
+    },
+    {
+      "actual": "9999.793750",
+      "calculation": "Cash movements in sequence",
+      "case": "POLICY_B",
+      "expected": "9999.793750",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "FOX",
+          "0.0000"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0.0000"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "POLICY_B",
+      "expected": [
+        [
+          "FOX",
+          "0.0000"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0.0000"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "FOX",
+          "0E-8"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0E-8"
+        ]
+      ],
+      "calculation": "+24.75 and -24.75 virtual quantities sum to zero",
+      "case": "OFFSET",
+      "expected": [
+        [
+          "FOX",
+          "0"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0"
+        ]
+      ],
+      "field": "physical",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "calculation": "Both accepted sleeves persist",
+      "case": "OFFSET",
+      "expected": 2,
+      "field": "virtual_sleeves",
+      "status": "PASS"
+    },
+    {
+      "actual": "10000.00000000",
+      "calculation": "Cash movements in sequence",
+      "case": "OFFSET",
+      "expected": "10000.00000000",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "FOX",
+          "0E-8"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0E-8"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "OFFSET",
+      "expected": [
+        [
+          "FOX",
+          "0E-8"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0E-8"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": null,
+      "calculation": "Missing marks/exit: no artificial terminal sale",
+      "case": "MISSING_EXIT",
+      "expected": null,
+      "field": "terminal_NAV",
+      "status": "PASS"
+    },
+    {
+      "actual": "9995.0500",
+      "calculation": "10000 - 4950*.0005*2",
+      "case": "MISSING_EXIT",
+      "expected": "9995.05",
+      "field": "cash_after_retry",
+      "status": "PASS"
+    },
+    {
+      "actual": "9995.0500",
+      "calculation": "Cash movements in sequence",
+      "case": "MISSING_EXIT",
+      "expected": "9995.0500",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "FOX",
+          "0.0000"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0.0000"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "MISSING_EXIT",
+      "expected": [
+        [
+          "FOX",
+          "0.0000"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0.0000"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "7523.7625",
+      "calculation": "10000-2475-1.2375",
+      "case": "PARTIAL_PAIR",
+      "expected": "7523.7625",
+      "field": "cash_after_one_leg",
+      "status": "PASS"
+    },
+    {
+      "actual": "9997.5250",
+      "calculation": "Two actual 2475 notionals cost 2.475",
+      "case": "PARTIAL_PAIR",
+      "expected": "9997.525",
+      "field": "cash_after_flat",
+      "status": "PASS"
+    },
+    {
+      "actual": "9997.5250",
+      "calculation": "Cash movements in sequence",
+      "case": "PARTIAL_PAIR",
+      "expected": "9997.5250",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "FOX",
+          "0.0000"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "PARTIAL_PAIR",
+      "expected": [
+        [
+          "FOX",
+          "0.0000"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "12.37500",
+      "calculation": "24.75 minus actual half fill",
+      "case": "EMERGENCY",
+      "expected": "12.375",
+      "field": "residual_long",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.18750",
+      "calculation": "2.475 entry + 7425*.0005 partial liquidation",
+      "case": "EMERGENCY",
+      "expected": "6.1875",
+      "field": "paid_fee_after_half",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.90000",
+      "calculation": "2.475 + 14850*.0005",
+      "case": "EMERGENCY",
+      "expected": "9.90",
+      "field": "paid_fee_flat",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "calculation": "Terminate only when physical target is achieved",
+      "case": "EMERGENCY",
+      "expected": 0,
+      "field": "sleeves",
+      "status": "PASS"
+    },
+    {
+      "actual": "9990.10000",
+      "calculation": "Cash movements in sequence",
+      "case": "EMERGENCY",
+      "expected": "9990.10000",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "FOX",
+          "0.00000"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0.00000"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "EMERGENCY",
+      "expected": [
+        [
+          "FOX",
+          "0.00000"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "0.00000"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "-99.0000",
+      "calculation": "-24.75*4 split primitive",
+      "case": "OVERNIGHT",
+      "expected": "-99",
+      "field": "short_post_split",
+      "status": "PASS"
+    },
+    {
+      "actual": "-49.50000",
+      "calculation": "-99*.5 physical claim",
+      "case": "OVERNIGHT",
+      "expected": "-49.5",
+      "field": "dividend_liability",
+      "status": "PASS"
+    },
+    {
+      "actual": "9950.50000",
+      "calculation": "Split changes units only; unknown-pay-date dividend reduces accrual equity 49.5",
+      "case": "OVERNIGHT",
+      "expected": "9950.5",
+      "field": "toy_accrual_equity",
+      "status": "PASS"
+    },
+    {
+      "actual": null,
+      "calculation": "Real execution/overnight financing/pay date unresolved",
+      "case": "OVERNIGHT",
+      "expected": null,
+      "field": "NAV",
+      "status": "PASS"
+    },
+    {
+      "actual": "10000.0000",
+      "calculation": "Cash movements in sequence",
+      "case": "OVERNIGHT",
+      "expected": "10000.0000",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "FOX",
+          "24.7500"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "-99.0000"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "OVERNIGHT",
+      "expected": [
+        [
+          "FOX",
+          "24.7500"
+        ],
+        [
+          "ZEN",
+          "0"
+        ],
+        [
+          "MAP",
+          "0"
+        ],
+        [
+          "ORB",
+          "0"
+        ],
+        [
+          "TIN",
+          "-99.0000"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    }
+  ],
+  "scope": "SYNTHETIC_ACCOUNTING_ONLY",
+  "universe": {
+    "sectors": [],
+    "symbols": [
+      "FOX",
+      "ZEN",
+      "MAP",
+      "ORB",
+      "TIN"
+    ],
+    "version": "P3_TOY_ALT_V1"
+  }
+}

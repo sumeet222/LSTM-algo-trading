@@ -1,0 +1,57 @@
+{
+  "P3.1": {
+    "status": "PASS",
+    "focused_tests": 35,
+    "original_tests_included": 28,
+    "ruff": "PASS",
+    "basic_types": {
+      "filesAnalyzed": 67,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 5.4
+    },
+    "corrections": "Explicit string adapter inverse annotation; wrong initial test filename corrected before valid run"
+  },
+  "P3.2": {
+    "status": "PASS",
+    "focused_tests": 60,
+    "ruff": "PASS",
+    "basic_types": {
+      "filesAnalyzed": 71,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 6.64
+    },
+    "corrections": "Test narrowing and covariant price annotations; delayed issuance retains cutoff+4h proxy, not expiry-3m"
+  },
+  "P3.3": {
+    "status": "PASS",
+    "focused_tests": 67,
+    "ruff": "PASS",
+    "basic_types": {
+      "filesAnalyzed": 74,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 7.135
+    },
+    "corrections": "Normalize Decimal debit evidence before fingerprint; explicit Decimal helper boundary; full immutable script fingerprint"
+  },
+  "P3.4": {
+    "status": "PASS",
+    "focused_tests": 84,
+    "ruff": "PASS",
+    "basic_types": {
+      "filesAnalyzed": 78,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 8.538
+    },
+    "note": "Final stable full regression follows event reconstruction/report additions",
+    "final_corrections": "Explicit cash/position child events for borrow, settlement and splits; exact proxy publication cut distinction; typed-parent reconstruction and report oracles; strict simultaneous ordering; missing prior borrow-close and overnight funding holds",
+    "post_full_suite_patch": "Only ineligible-reference cancellation reason corrected; all84 P3/old impacted tests rerun PASS, all78 Python files basic0errors/0warnings, fullRuff PASS"
+  }
+}

@@ -1,0 +1,781 @@
+{
+  "rows": [
+    {
+      "actual": "499.75",
+      "calculation": "1000 - signed 5*100 - .25",
+      "case": "BUY_SELL",
+      "expected": "499.75",
+      "field": "entry_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": "999.75",
+      "calculation": "Cash + long assets - short liability",
+      "case": "BUY_SELL",
+      "expected": "999.75",
+      "field": "entry_equity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1049.475",
+      "calculation": "Actual sale/cover notional and 5bps fee",
+      "case": "BUY_SELL",
+      "expected": "1049.475",
+      "field": "ending_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.525",
+      "calculation": "500*.0005 + exit notional*.0005",
+      "case": "BUY_SELL",
+      "expected": "0.525",
+      "field": "fee",
+      "status": "PASS"
+    },
+    {
+      "actual": "1049.475",
+      "calculation": "Cash movements in sequence",
+      "case": "BUY_SELL",
+      "expected": "1049.475",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "AA",
+          "0"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "BUY_SELL",
+      "expected": [
+        [
+          "AA",
+          "0"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "1499.75",
+      "calculation": "1000 - signed 5*100 - .25",
+      "case": "SHORT_COVER",
+      "expected": "1499.75",
+      "field": "entry_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": "999.75",
+      "calculation": "Cash + long assets - short liability",
+      "case": "SHORT_COVER",
+      "expected": "999.75",
+      "field": "entry_equity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1049.525",
+      "calculation": "Actual sale/cover notional and 5bps fee",
+      "case": "SHORT_COVER",
+      "expected": "1049.525",
+      "field": "ending_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.475",
+      "calculation": "500*.0005 + exit notional*.0005",
+      "case": "SHORT_COVER",
+      "expected": "0.475",
+      "field": "fee",
+      "status": "PASS"
+    },
+    {
+      "actual": "1049.525",
+      "calculation": "Cash movements in sequence",
+      "case": "SHORT_COVER",
+      "expected": "1049.525",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "AA",
+          "0"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "SHORT_COVER",
+      "expected": [
+        [
+          "AA",
+          "0"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4125000000",
+      "calculation": "2475 day-max * .03/360 per physically short name",
+      "case": "POLICY_A",
+      "expected": "0.4125",
+      "field": "borrow",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "calculation": "Policy B checks each active virtual leg",
+      "case": "POLICY_A",
+      "expected": [],
+      "field": "veto",
+      "status": "PASS"
+    },
+    {
+      "actual": "9999.5875000000",
+      "calculation": "Cash movements in sequence",
+      "case": "POLICY_A",
+      "expected": "9999.5875000000",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "AA",
+          "0E-8"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0E-8"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "POLICY_A",
+      "expected": [
+        [
+          "AA",
+          "0E-8"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0E-8"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.206250",
+      "calculation": "2475 day-max * .03/360 per physically short name",
+      "case": "POLICY_B",
+      "expected": "0.20625",
+      "field": "borrow",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "POLICY_B_VIRTUAL_CONFLICT"
+      ],
+      "calculation": "Policy B checks each active virtual leg",
+      "case": "POLICY_B",
+      "expected": [
+        "POLICY_B_VIRTUAL_CONFLICT"
+      ],
+      "field": "veto",
+      "status": "PASS"
+    },
+    {
+      "actual": "9999.793750",
+      "calculation": "Cash movements in sequence",
+      "case": "POLICY_B",
+      "expected": "9999.793750",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "AA",
+          "0.0000"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0.0000"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "POLICY_B",
+      "expected": [
+        [
+          "AA",
+          "0.0000"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0.0000"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "AA",
+          "0E-8"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0E-8"
+        ]
+      ],
+      "calculation": "+24.75 and -24.75 virtual quantities sum to zero",
+      "case": "OFFSET",
+      "expected": [
+        [
+          "AA",
+          "0"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0"
+        ]
+      ],
+      "field": "physical",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "calculation": "Both accepted sleeves persist",
+      "case": "OFFSET",
+      "expected": 2,
+      "field": "virtual_sleeves",
+      "status": "PASS"
+    },
+    {
+      "actual": "10000.00000000",
+      "calculation": "Cash movements in sequence",
+      "case": "OFFSET",
+      "expected": "10000.00000000",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "AA",
+          "0E-8"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0E-8"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "OFFSET",
+      "expected": [
+        [
+          "AA",
+          "0E-8"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0E-8"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": null,
+      "calculation": "Missing marks/exit: no artificial terminal sale",
+      "case": "MISSING_EXIT",
+      "expected": null,
+      "field": "terminal_NAV",
+      "status": "PASS"
+    },
+    {
+      "actual": "9995.0500",
+      "calculation": "10000 - 4950*.0005*2",
+      "case": "MISSING_EXIT",
+      "expected": "9995.05",
+      "field": "cash_after_retry",
+      "status": "PASS"
+    },
+    {
+      "actual": "9995.0500",
+      "calculation": "Cash movements in sequence",
+      "case": "MISSING_EXIT",
+      "expected": "9995.0500",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "AA",
+          "0.0000"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0.0000"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "MISSING_EXIT",
+      "expected": [
+        [
+          "AA",
+          "0.0000"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0.0000"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "7523.7625",
+      "calculation": "10000-2475-1.2375",
+      "case": "PARTIAL_PAIR",
+      "expected": "7523.7625",
+      "field": "cash_after_one_leg",
+      "status": "PASS"
+    },
+    {
+      "actual": "9997.5250",
+      "calculation": "Two actual 2475 notionals cost 2.475",
+      "case": "PARTIAL_PAIR",
+      "expected": "9997.525",
+      "field": "cash_after_flat",
+      "status": "PASS"
+    },
+    {
+      "actual": "9997.5250",
+      "calculation": "Cash movements in sequence",
+      "case": "PARTIAL_PAIR",
+      "expected": "9997.5250",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "AA",
+          "0.0000"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "PARTIAL_PAIR",
+      "expected": [
+        [
+          "AA",
+          "0.0000"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "12.37500",
+      "calculation": "24.75 minus actual half fill",
+      "case": "EMERGENCY",
+      "expected": "12.375",
+      "field": "residual_long",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.18750",
+      "calculation": "2.475 entry + 7425*.0005 partial liquidation",
+      "case": "EMERGENCY",
+      "expected": "6.1875",
+      "field": "paid_fee_after_half",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.90000",
+      "calculation": "2.475 + 14850*.0005",
+      "case": "EMERGENCY",
+      "expected": "9.90",
+      "field": "paid_fee_flat",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "calculation": "Terminate only when physical target is achieved",
+      "case": "EMERGENCY",
+      "expected": 0,
+      "field": "sleeves",
+      "status": "PASS"
+    },
+    {
+      "actual": "9990.10000",
+      "calculation": "Cash movements in sequence",
+      "case": "EMERGENCY",
+      "expected": "9990.10000",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "AA",
+          "0.00000"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0.00000"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "EMERGENCY",
+      "expected": [
+        [
+          "AA",
+          "0.00000"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "0.00000"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    },
+    {
+      "actual": "-99.0000",
+      "calculation": "-24.75*4 split primitive",
+      "case": "OVERNIGHT",
+      "expected": "-99",
+      "field": "short_post_split",
+      "status": "PASS"
+    },
+    {
+      "actual": "-49.50000",
+      "calculation": "-99*.5 physical claim",
+      "case": "OVERNIGHT",
+      "expected": "-49.5",
+      "field": "dividend_liability",
+      "status": "PASS"
+    },
+    {
+      "actual": "9950.50000",
+      "calculation": "Split changes units only; unknown-pay-date dividend reduces accrual equity 49.5",
+      "case": "OVERNIGHT",
+      "expected": "9950.5",
+      "field": "toy_accrual_equity",
+      "status": "PASS"
+    },
+    {
+      "actual": null,
+      "calculation": "Real execution/overnight financing/pay date unresolved",
+      "case": "OVERNIGHT",
+      "expected": null,
+      "field": "NAV",
+      "status": "PASS"
+    },
+    {
+      "actual": "10000.0000",
+      "calculation": "Cash movements in sequence",
+      "case": "OVERNIGHT",
+      "expected": "10000.0000",
+      "field": "reconstructed_cash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "AA",
+          "24.7500"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "-99.0000"
+        ]
+      ],
+      "calculation": "Position deltas in sequence",
+      "case": "OVERNIGHT",
+      "expected": [
+        [
+          "AA",
+          "24.7500"
+        ],
+        [
+          "BB",
+          "0"
+        ],
+        [
+          "CC",
+          "0"
+        ],
+        [
+          "DD",
+          "0"
+        ],
+        [
+          "EE",
+          "-99.0000"
+        ]
+      ],
+      "field": "reconstructed_shares",
+      "status": "PASS"
+    }
+  ],
+  "scope": "SYNTHETIC_ACCOUNTING_ONLY"
+}

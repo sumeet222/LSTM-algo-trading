@@ -1,0 +1,245 @@
+{
+  "package": "TA-P3-ENGINEERING-001",
+  "classification": "P3_1_TO_P3_4_SYNTHETIC_ENGINEERING_COMPLETE \u2014 HUMAN_REVIEW_REQUIRED",
+  "permission": "ENGINEERING_SYNTHETIC_ONLY",
+  "base_branch": "feat/track-a-data-intake",
+  "base_HEAD": "1621fe21e4ff305a6c4699ea18679c4c4f1aa06f",
+  "upstream_ahead_behind": [
+    0,
+    0
+  ],
+  "integration_authorized": false,
+  "git_operations_performed": [],
+  "all_additions_untracked": true,
+  "tracked_modifications": [],
+  "exact_future_stage_paths": [
+    "docs/track_a/P3_DEFERRED_WORK_REGISTER_v1.md",
+    "docs/track_a/P3_SYNTHETIC_API_v1.md",
+    "reports/codex_sessions/2026-10-11_230724_ta-p3-engineering-001.md",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/alternate_universe.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/api_handoff.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/basic_pyright.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/checks.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/draft_correction.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/expected_vs_actual.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/focused_pytest.txt",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/full_pytest.txt",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/integration_manifest.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/p3_deferred_work_register_v1.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/phase_gates.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/preflight.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/preservation.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/regression_resources.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/scenario_matrix.json",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json",
+    "src/lstm_data/p3_accounting.py",
+    "src/lstm_data/p3_audit.py",
+    "src/lstm_data/p3_domain.py",
+    "src/lstm_data/p3_engine.py",
+    "src/lstm_data/p3_events.py",
+    "src/lstm_data/p3_execution.py",
+    "src/lstm_data/p3_financing.py",
+    "src/lstm_data/p3_policy.py",
+    "src/lstm_data/p3_replay.py",
+    "src/lstm_data/p3_risk.py",
+    "tests/test_p3_accounting.py",
+    "tests/test_p3_audit.py",
+    "tests/test_p3_exceptions.py",
+    "tests/test_p3_financing.py",
+    "tests/test_p3_policy.py"
+  ],
+  "files": [
+    {
+      "path": "docs/track_a/P3_DEFERRED_WORK_REGISTER_v1.md",
+      "bytes": 12196,
+      "sha256": "75b56dbdc84cfe5ffcaf21a5585034a1311ee0c2c0c186aa0eded0d6b6acb576"
+    },
+    {
+      "path": "docs/track_a/P3_SYNTHETIC_API_v1.md",
+      "bytes": 9457,
+      "sha256": "cef0b77a60be802c9e7f2ec07c00927ec79c5ec1365636ba910c1a0a01b1b1c1"
+    },
+    {
+      "path": "reports/codex_sessions/2026-10-11_230724_ta-p3-engineering-001.md",
+      "bytes": 19516,
+      "sha256": "099e210a24567c4b1e67fdf61cfb515269787e7d117562996630e4bf32a21f83"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/alternate_universe.json",
+      "bytes": 61798,
+      "sha256": "9a6461a2f6b2751b1cc7c9ee21be54947ec641ff4607d1526a053e74a409c08b"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/api_handoff.json",
+      "bytes": 15197,
+      "sha256": "fea2cf7b29a5f6f5954d5474d8dffe4b586b700c09e7eb882c60f3d428eda68a"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/basic_pyright.json",
+      "bytes": 3297,
+      "sha256": "7e390dc1bf3a72413f289876ac769dd218ab1853e7a5231f11f19d6d4cc3b80a"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/checks.json",
+      "bytes": 7630,
+      "sha256": "da71ce33c400d6fd7ad50dfba8265adfce3d3724fe5a6fd0227f6b1ad4a9714a"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/draft_correction.json",
+      "bytes": 2211,
+      "sha256": "c9227793f3ef3b0d376622fbbdf58e8da0d01844e4ad438034cbf1a8ea7c6a3d"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/expected_vs_actual.json",
+      "bytes": 14569,
+      "sha256": "b8900c598b1156664bd8427c0c94e0f42e40a8b3c1748d0115567e6db3335a9c"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/focused_pytest.txt",
+      "bytes": 180,
+      "sha256": "608cd9b0c6e3d130176c0491fa9efb14f34be4745a925f31a6a035fa39158586"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/full_pytest.txt",
+      "bytes": 512,
+      "sha256": "d6b783fa15dea3cae206e7f841c437faa49aea8f4af07cd64c60ecaf5a2e094d"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md",
+      "bytes": 9114,
+      "sha256": "eef98ce3b5a4493598ee0bfc2d9cbdc3e4aa7835ca7d86448d736486219e2195"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/p3_deferred_work_register_v1.json",
+      "bytes": 42181,
+      "sha256": "e9e10fa179810fa945fd4e562cdf54783cb9e99922ee0d93e09b250a4e2139f3"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/phase_gates.json",
+      "bytes": 1934,
+      "sha256": "18e46a891215aaee77632927ae0d12f9bd359a26d099397a0a68d2ca1ed07d57"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/preflight.json",
+      "bytes": 149602,
+      "sha256": "bdfb8d6dcbb0e1c994e82d5ac79bc58cf1f3dc9030db6a594db131399a216950"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/preservation.json",
+      "bytes": 77255,
+      "sha256": "9d34d60123d3fbc63aabbed014c7b490e035f53d7a1704962ad1d35401f76f0b"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/regression_resources.json",
+      "bytes": 1932,
+      "sha256": "4347a9b2f5af870b7af2d3c66ec09a9662c74bf8167e4dc4a16bf8b5dc05ee0c"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/scenario_matrix.json",
+      "bytes": 15493,
+      "sha256": "b5bb38510d7b95c306b047a4d5e451dc77c9a2074ca34d9fe12364c76fe39488"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json",
+      "bytes": 334861,
+      "sha256": "8999d5477941c33844d80add66e4910b05c96379d1914c72ac0fc21a5fa3cd3f"
+    },
+    {
+      "path": "src/lstm_data/p3_accounting.py",
+      "bytes": 19947,
+      "sha256": "0ff93dd1159b3c07abf5a1d25d993a12c5166dffb4214ac271b0b30ac9e58e91"
+    },
+    {
+      "path": "src/lstm_data/p3_audit.py",
+      "bytes": 16413,
+      "sha256": "50ef67a597c3b37c3cb723a66ddf527fd11c1469a06c84da13f3d18bd8c68720"
+    },
+    {
+      "path": "src/lstm_data/p3_domain.py",
+      "bytes": 9543,
+      "sha256": "284c5cb124301cb32bd8019c379b0fe92c8eec6454a0fa391b6d2e81cf5a5f05"
+    },
+    {
+      "path": "src/lstm_data/p3_engine.py",
+      "bytes": 19115,
+      "sha256": "b597c41193ba177526ab7874835e717950bc7a7a35a2970a1ae4b5ab94c92e20"
+    },
+    {
+      "path": "src/lstm_data/p3_events.py",
+      "bytes": 5541,
+      "sha256": "1d2463e2bc0ca8ead7d76c6a9a84c5f5c4ee7d1bb92aca18f40af285ab46ed9f"
+    },
+    {
+      "path": "src/lstm_data/p3_execution.py",
+      "bytes": 2645,
+      "sha256": "5ea3f299b20dbfd393a469c8b82912cc8f0fafe1839fcbce0eb654f536f4d32f"
+    },
+    {
+      "path": "src/lstm_data/p3_financing.py",
+      "bytes": 3929,
+      "sha256": "d36ad2915366085a00f0f26c70a888bf93ae33c492b1b3240b2077b61c58a988"
+    },
+    {
+      "path": "src/lstm_data/p3_policy.py",
+      "bytes": 6106,
+      "sha256": "c3f4bb8c16369fc2cbd509ef625d31ca0d114ba9ace32fa0f5ad451f0eb76b4e"
+    },
+    {
+      "path": "src/lstm_data/p3_replay.py",
+      "bytes": 5812,
+      "sha256": "92ca59e2b428c4f301c780dced16108a1c13359cb8592d652693ca9954465490"
+    },
+    {
+      "path": "src/lstm_data/p3_risk.py",
+      "bytes": 1634,
+      "sha256": "ec5581707448370c803eb13f144dfb0810c999def6072a453b14327952178765"
+    },
+    {
+      "path": "tests/test_p3_accounting.py",
+      "bytes": 9035,
+      "sha256": "3159ef720b5caf32347138be3bdd5f6c33cdbc50229817dc12071d1cc28de831"
+    },
+    {
+      "path": "tests/test_p3_audit.py",
+      "bytes": 1082,
+      "sha256": "0d6166aba799f604a99b2be641fea2738a42e6f9eb3499d4b433f44bd176e72e"
+    },
+    {
+      "path": "tests/test_p3_exceptions.py",
+      "bytes": 11508,
+      "sha256": "9f29672168570c549bbc1b62ccdac9f362839aa5f97020c47b92089d5909710e"
+    },
+    {
+      "path": "tests/test_p3_financing.py",
+      "bytes": 5311,
+      "sha256": "39592283ecace8ed7aef0db2c13e957534e2dea46124743be1c2db4886d9a45e"
+    },
+    {
+      "path": "tests/test_p3_policy.py",
+      "bytes": 8183,
+      "sha256": "9d41067b89223873be76b1408afc8e5306588a7379eb89c49ded509b6fc471cb"
+    }
+  ],
+  "manifest_self": {
+    "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/integration_manifest.json",
+    "sha256": "EXCLUDED_SELF_REFERENCE",
+    "reason": "Self digest cannot be embedded; all other delivered files are SHA-bound."
+  },
+  "delivered_payload_bytes_excluding_manifest": 904739,
+  "protected_original_bytes_reconstructed": 25944234,
+  "raw_bytes_unchanged": 12393384,
+  "disk_delta_scope": "Exact reviewable new-file payload; original files/raw unchanged. Interpreter/pytest caches are ignored, not stage candidates.",
+  "excluded_from_integration": [
+    ".env",
+    "data/raw",
+    "private scratch",
+    "existing ignored caches/source journals"
+  ],
+  "human_review": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md",
+  "stage_guidance": "After separate human integration approval, review each listed path and stage exactly exact_future_stage_paths; no git add . or broad staging. Include the session report.",
+  "scientific_gates": "HOLD",
+  "P3_5_P3_6_P4": "NOT_STARTED",
+  "blockers": 7,
+  "neural_pairs_used": 0
+}

@@ -1,0 +1,156 @@
+{
+  "classification": "P3_1_TO_P3_4_SYNTHETIC_ENGINEERING_COMPLETE \u2014 HUMAN_REVIEW_REQUIRED",
+  "package": "TA-P3-ENGINEERING-001",
+  "permission": "ENGINEERING_SYNTHETIC_ONLY",
+  "phase_gates": {
+    "P3.1": {
+      "status": "PASS",
+      "focused_tests": 35,
+      "original_tests_included": 28,
+      "ruff": "PASS",
+      "basic_types": {
+        "filesAnalyzed": 67,
+        "errorCount": 0,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 5.4
+      },
+      "corrections": "Explicit string adapter inverse annotation; wrong initial test filename corrected before valid run"
+    },
+    "P3.2": {
+      "status": "PASS",
+      "focused_tests": 60,
+      "ruff": "PASS",
+      "basic_types": {
+        "filesAnalyzed": 71,
+        "errorCount": 0,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 6.64
+      },
+      "corrections": "Test narrowing and covariant price annotations; delayed issuance retains cutoff+4h proxy, not expiry-3m"
+    },
+    "P3.3": {
+      "status": "PASS",
+      "focused_tests": 67,
+      "ruff": "PASS",
+      "basic_types": {
+        "filesAnalyzed": 74,
+        "errorCount": 0,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 7.135
+      },
+      "corrections": "Normalize Decimal debit evidence before fingerprint; explicit Decimal helper boundary; full immutable script fingerprint"
+    },
+    "P3.4": {
+      "status": "PASS",
+      "focused_tests": 84,
+      "ruff": "PASS",
+      "basic_types": {
+        "filesAnalyzed": 78,
+        "errorCount": 0,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 8.538
+      },
+      "note": "Final stable full regression follows event reconstruction/report additions",
+      "final_corrections": "Explicit cash/position child events for borrow, settlement and splits; exact proxy publication cut distinction; typed-parent reconstruction and report oracles; strict simultaneous ordering; missing prior borrow-close and overnight funding holds",
+      "post_full_suite_patch": "Only ineligible-reference cancellation reason corrected; all84 P3/old impacted tests rerun PASS, all78 Python files basic0errors/0warnings, fullRuff PASS"
+    }
+  },
+  "G0_to_G4_scientific": "HOLD",
+  "P3.5": "NOT_STARTED",
+  "P3.6": "NOT_STARTED",
+  "P4": "NOT_STARTED",
+  "neural_pairs_used": 0,
+  "neural_pair_ceiling": 40,
+  "historical_strategy_replay": false,
+  "provider_requests": 0,
+  "credentials_loaded": false,
+  "confirmation_accessed": false,
+  "original_baseline_tests": 384,
+  "final_full_tests": 422,
+  "new_tests": 38,
+  "focused_final_tests": 84,
+  "full_pytest_returncode": 0,
+  "basic_pyright": {
+    "filesAnalyzed": 78,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 8.538
+  },
+  "ruff": "PASS",
+  "ruff_format": "15 files formatted",
+  "AST_files": 78,
+  "diff_check": "PASS",
+  "preservation": "PASS",
+  "P2_register_entries": 16,
+  "P3_register_entries": 26,
+  "blockers_retained": 7,
+  "hand_oracle_rows": 44,
+  "hand_oracles": "PASS",
+  "independent_reconstruction": "PASS",
+  "canonical_trace_count": 9,
+  "fresh_scenarios": 24,
+  "alternate_universe": "PASS",
+  "C01_counterfactual": "PASS tests/test_p3_exceptions.py",
+  "full_regression_resource_measurement": {
+    "command": ".venv/bin/python -B -m pytest -q",
+    "returncode": 0,
+    "elapsed_seconds": 223.3690070409939,
+    "peak_child_rss_bytes": 208961536,
+    "code_hashes_at_full_suite": {
+      "src/lstm_data/p3_accounting.py": "0ff93dd1159b3c07abf5a1d25d993a12c5166dffb4214ac271b0b30ac9e58e91",
+      "src/lstm_data/p3_audit.py": "50ef67a597c3b37c3cb723a66ddf527fd11c1469a06c84da13f3d18bd8c68720",
+      "src/lstm_data/p3_domain.py": "284c5cb124301cb32bd8019c379b0fe92c8eec6454a0fa391b6d2e81cf5a5f05",
+      "src/lstm_data/p3_engine.py": "04a1729da2f308d54852e38f89d95772c2d2e94d40c4981d18942d50e1a1bda1",
+      "src/lstm_data/p3_events.py": "1d2463e2bc0ca8ead7d76c6a9a84c5f5c4ee7d1bb92aca18f40af285ab46ed9f",
+      "src/lstm_data/p3_execution.py": "5ea3f299b20dbfd393a469c8b82912cc8f0fafe1839fcbce0eb654f536f4d32f",
+      "src/lstm_data/p3_financing.py": "d36ad2915366085a00f0f26c70a888bf93ae33c492b1b3240b2077b61c58a988",
+      "src/lstm_data/p3_policy.py": "c3f4bb8c16369fc2cbd509ef625d31ca0d114ba9ace32fa0f5ad451f0eb76b4e",
+      "src/lstm_data/p3_replay.py": "92ca59e2b428c4f301c780dced16108a1c13359cb8592d652693ca9954465490",
+      "src/lstm_data/p3_risk.py": "ec5581707448370c803eb13f144dfb0810c999def6072a453b14327952178765",
+      "tests/test_p3_accounting.py": "3159ef720b5caf32347138be3bdd5f6c33cdbc50229817dc12071d1cc28de831",
+      "tests/test_p3_audit.py": "0d6166aba799f604a99b2be641fea2738a42e6f9eb3499d4b433f44bd176e72e",
+      "tests/test_p3_exceptions.py": "c49f8ea0623de97fe564a0e67e741e854698f4844928136ec603b8b01293aebf",
+      "tests/test_p3_financing.py": "39592283ecace8ed7aef0db2c13e957534e2dea46124743be1c2db4886d9a45e",
+      "tests/test_p3_policy.py": "9d41067b89223873be76b1408afc8e5306588a7379eb89c49ded509b6fc471cb"
+    },
+    "final_patch_scope": "Cancellation reason correctly classifies an offered but ineligible reference as INELIGIBLE_REFERENCE. No fill/cash/share/admission mathematics changed; all P3 and old impacted tests rerun."
+  },
+  "runtime_scope": "Peak child RSS measured for full regression only; overall Codex/other tool process peak not measured",
+  "source_module_hashes": {
+    "src/lstm_data/p3_accounting.py": "0ff93dd1159b3c07abf5a1d25d993a12c5166dffb4214ac271b0b30ac9e58e91",
+    "src/lstm_data/p3_audit.py": "50ef67a597c3b37c3cb723a66ddf527fd11c1469a06c84da13f3d18bd8c68720",
+    "src/lstm_data/p3_domain.py": "284c5cb124301cb32bd8019c379b0fe92c8eec6454a0fa391b6d2e81cf5a5f05",
+    "src/lstm_data/p3_engine.py": "b597c41193ba177526ab7874835e717950bc7a7a35a2970a1ae4b5ab94c92e20",
+    "src/lstm_data/p3_events.py": "1d2463e2bc0ca8ead7d76c6a9a84c5f5c4ee7d1bb92aca18f40af285ab46ed9f",
+    "src/lstm_data/p3_execution.py": "5ea3f299b20dbfd393a469c8b82912cc8f0fafe1839fcbce0eb654f536f4d32f",
+    "src/lstm_data/p3_financing.py": "d36ad2915366085a00f0f26c70a888bf93ae33c492b1b3240b2077b61c58a988",
+    "src/lstm_data/p3_policy.py": "c3f4bb8c16369fc2cbd509ef625d31ca0d114ba9ace32fa0f5ad451f0eb76b4e",
+    "src/lstm_data/p3_replay.py": "92ca59e2b428c4f301c780dced16108a1c13359cb8592d652693ca9954465490",
+    "src/lstm_data/p3_risk.py": "ec5581707448370c803eb13f144dfb0810c999def6072a453b14327952178765"
+  },
+  "synthetic_evidence_hashes": {
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json": "8999d5477941c33844d80add66e4910b05c96379d1914c72ac0fc21a5fa3cd3f",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/expected_vs_actual.json": "b8900c598b1156664bd8427c0c94e0f42e40a8b3c1748d0115567e6db3335a9c",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/scenario_matrix.json": "b5bb38510d7b95c306b047a4d5e451dc77c9a2074ca34d9fe12364c76fe39488",
+    "reports/data_audit/ta_p3_engineering_2026-10-11_230724/alternate_universe.json": "9a6461a2f6b2751b1cc7c9ee21be54947ec641ff4607d1526a053e74a409c08b"
+  },
+  "no_scientific_auto_clear": true,
+  "git_stage_commit_push": false,
+  "ending_time_ET": "2026-10-12T00:05:23.769063-04:00",
+  "session_elapsed_seconds": 3478.7716188330087,
+  "scientific_ledger_exact_sha": "4c2f0693aaaba9c29110881a0961b31a12195c126e4437830600b2a4b81e12e4",
+  "actual_blocker_count": 7,
+  "actual_pair_budget": {
+    "ceiling": 40,
+    "attempted_pairs": 0,
+    "prospective_pairs": 0,
+    "status": "PASS",
+    "duplicate_candidate": false
+  },
+  "deferred_dependencies_validated": true
+}

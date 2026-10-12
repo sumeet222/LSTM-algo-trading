@@ -1,0 +1,67 @@
+{
+  "reason": "Final debit arithmetic now preserves Decimal40 cash representation; regenerate scratch evidence after final source patches",
+  "first_divergences": [
+    {
+      "trace": "POLICY_A",
+      "first_old": {
+        "at": "2020-08-03T20:00:00+00:00",
+        "event_id": "SYN:BORROW:2020-08-03:CASH",
+        "kind": "CASH",
+        "parent_id": "SYN:BORROW:2020-08-03",
+        "payload": {
+          "cash_after": "9999.5875000000",
+          "cash_before": "10000.0000000000",
+          "movement": "-0.4125000000"
+        },
+        "research_ready": false,
+        "sequence": 73,
+        "universe_id": "47942e4bb25cfe927bc250243927e983c393df08e2ff82fd0fb552ade22c293f"
+      },
+      "first_new": {
+        "sequence": 73,
+        "event_id": "SYN:BORROW:2020-08-03:CASH",
+        "universe_id": "47942e4bb25cfe927bc250243927e983c393df08e2ff82fd0fb552ade22c293f",
+        "at": "2020-08-03T20:00:00+00:00",
+        "kind": "CASH",
+        "parent_id": "SYN:BORROW:2020-08-03",
+        "payload": {
+          "cash_after": "9999.5875000000",
+          "cash_before": "10000.00000000",
+          "movement": "-0.4125000000"
+        },
+        "research_ready": false
+      }
+    },
+    {
+      "trace": "POLICY_B",
+      "first_old": {
+        "at": "2020-08-03T20:00:00+00:00",
+        "event_id": "SYN:BORROW:2020-08-03:CASH",
+        "kind": "CASH",
+        "parent_id": "SYN:BORROW:2020-08-03",
+        "payload": {
+          "cash_after": "9999.793750",
+          "cash_before": "10000.000000",
+          "movement": "-0.206250"
+        },
+        "research_ready": false,
+        "sequence": 50,
+        "universe_id": "47942e4bb25cfe927bc250243927e983c393df08e2ff82fd0fb552ade22c293f"
+      },
+      "first_new": {
+        "sequence": 50,
+        "event_id": "SYN:BORROW:2020-08-03:CASH",
+        "universe_id": "47942e4bb25cfe927bc250243927e983c393df08e2ff82fd0fb552ade22c293f",
+        "at": "2020-08-03T20:00:00+00:00",
+        "kind": "CASH",
+        "parent_id": "SYN:BORROW:2020-08-03",
+        "payload": {
+          "cash_after": "9999.793750",
+          "cash_before": "10000.0000",
+          "movement": "-0.206250"
+        },
+        "research_ready": false
+      }
+    }
+  ]
+}
