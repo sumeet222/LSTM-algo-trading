@@ -1,0 +1,5 @@
+# Human review card
+
+1. **Supported conclusion:** 7/15 attempts, all HTTP 200 and exhausted. Target minute bars: 0 under both asof settings; known-present control: 1 identical minute under both; daily: 1; SIP raw trades: 0 for first 1 minute and expanded 5 minutes with mapping bypassed. No current mapping-dependent difference demonstrated.
+2. **Unresolved:** Successful empty responses do not prove no trades occurred in 2021. Trade windows do not cover 10:05–10:30. Sparse control and daily low/close/volume/trade_count cannot explain intraday availability or certify aggregation completeness/publication. Daily asof=- not tested because it was unnecessary to establish existence.
+3. **Next decision:** Further Alpaca support/data-quality clarification is worthwhile, using these exact requests/IDs and the sparse positive-control/daily records. No additional blind download, reconstruction or activation is supported here. Any new query/contact needs separate authority. Original data/universe/code/gates unchanged; scientific HOLD remains.

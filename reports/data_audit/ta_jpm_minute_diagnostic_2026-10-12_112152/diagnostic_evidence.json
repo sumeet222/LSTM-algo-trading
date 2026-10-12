@@ -1,0 +1,71 @@
+{
+  "attempt_count": 1,
+  "code_status": "NO_CODE_CHANGE",
+  "duplicate_count": 0,
+  "end_boundary": "API end inclusive; analysis excludes timestamp>=14:30Z",
+  "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+  "events": [
+    {
+      "attempt": 1,
+      "continued_page": false,
+      "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-19T14:30:00+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-19T14:00:00+00:00",
+        "symbols": "JPM",
+        "timeframe": "1Min"
+      },
+      "status": 200,
+      "time": "2026-10-12T15:22:50.008823+00:00"
+    }
+  ],
+  "expected_minutes": 30,
+  "invalid_count": 0,
+  "largest_run": 30,
+  "max_total_attempts": 10,
+  "minute_disposition_sha256": "92478a97c778755e22ad1dd05ebb1b2a13c7a88435a35fa37cb7f44253184070",
+  "missing_clusters": [
+    {
+      "count": 30,
+      "duration_minutes": 30,
+      "end_et_exclusive": "2021-04-19T10:30:00-04:00",
+      "end_utc_exclusive": "2021-04-19T14:30:00+00:00",
+      "start_et": "2021-04-19T10:00:00-04:00",
+      "start_utc": "2021-04-19T14:00:00+00:00"
+    }
+  ],
+  "missing_minutes": 30,
+  "missing_percentage": 100.0,
+  "original_source_hashes_unchanged": true,
+  "out_of_window_count": 0,
+  "page_count": 1,
+  "pagination_complete": true,
+  "params": {
+    "adjustment": "split",
+    "asof": "2025-06-30",
+    "currency": "USD",
+    "end": "2021-04-19T14:30:00+00:00",
+    "feed": "sip",
+    "limit": 10000,
+    "sort": "asc",
+    "start": "2021-04-19T14:00:00+00:00",
+    "symbols": "JPM",
+    "timeframe": "1Min"
+  },
+  "python_version": "3.14.6",
+  "raw_response_sha256": "c700148960d500511ad0040f8b1c3c6ebbac07572176aff49cfc66b69eec9aee",
+  "retry_policy": "one attempt per page; stop on any failed page",
+  "returned_csv_sha256": "d439edc05f866cf434a2dc79497ec9cadb729d76da7a81990b73f02d85432647",
+  "rows": 0,
+  "source_status": "NO_DATA_MODIFICATION; ORIGINAL_UNIVERSE_UNCHANGED; SCIENTIFIC_HOLD",
+  "success": true,
+  "timestamps_utc": [],
+  "valid_observed": 0,
+  "verdict": "SUCCESS_ZERO_BARS"
+}
