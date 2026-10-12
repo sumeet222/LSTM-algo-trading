@@ -1,0 +1,97 @@
+{
+  "P4_3": {
+    "operation": "training",
+    "reasons": [
+      "unresolved:formation",
+      "unresolved:shared_clock",
+      "unresolved:stock_timing",
+      "research executor and reviewed human authorization unavailable in P0.2"
+    ],
+    "status": "BLOCKED"
+  },
+  "actual_training": {
+    "calibration_steps": 180,
+    "refit_steps": 420,
+    "seed": 42,
+    "selected_status": "MAX_EPOCHS_REACHED"
+  },
+  "ast": "PASS",
+  "authority": {
+    "P2_entries": 16,
+    "P3_entries": 33,
+    "P3_sha": "c2b06e195dd37b16d873e4f2d67c0004d8e40955a75cf664b90ccdabcc3dccbe"
+  },
+  "confirmation_outcomes_accessed": false,
+  "credentials_read": false,
+  "current_audit": "synthetic_g5_release",
+  "diff_check": "PASS",
+  "early_failure": "Initial focused registry test exposed unreserved-pair KeyError; now explicit ValueError, retested. Scalar warning fixed with detach. No residual failure.",
+  "editor": "CLI basic parity 0/0; repository .venv; optional human Problems refresh, no restart requested",
+  "expected_actual": {
+    "chosen_epoch": 60,
+    "parameters": [
+      6433,
+      6433
+    ],
+    "refit_epochs": 60,
+    "refit_reload_max_error": 0,
+    "weighted_loss": [
+      7,
+      7
+    ]
+  },
+  "gate_ab_full": {
+    "passed": 473,
+    "seconds": 597.761109250001
+  },
+  "gate_cd_full": {
+    "passed": 484,
+    "seconds": 725.3403395409987
+  },
+  "gates": {
+    "A_MODEL": "PASS_ENGINEERING_SYNTHETIC_ONLY",
+    "B_LOSS_SAMPLER_OPTIMIZER": "PASS_ENGINEERING_SYNTHETIC_ONLY",
+    "C_D6G": "PASS_ENGINEERING_SYNTHETIC_ONLY",
+    "D_CHECKPOINT_REGISTRY": "PASS_ENGINEERING_SYNTHETIC_ONLY",
+    "E_INTEGRATION": "PASS_ENGINEERING_SYNTHETIC_ONLY"
+  },
+  "intended_modified_existing": [
+    "README.md",
+    "pyproject.toml"
+  ],
+  "package": "TA-P4-NEURAL-ENGINE-LIFECYCLE-001",
+  "protected_files": 1028,
+  "raw_source_protocol_ledger_unchanged": true,
+  "release_full": {
+    "checked_files_still_match": true,
+    "passed": 489,
+    "seconds": 704.2859127909906
+  },
+  "ruff": "PASS",
+  "scientific_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "scientific_status": "SCIENTIFIC_ACTIVATION_HOLD",
+  "source_or_empirical_calls": 0,
+  "starting_suite": {
+    "passed": 468,
+    "seconds": 648.1277297920024
+  },
+  "status": "P4_1_P4_2_SYNTHETIC_ENGINEERING_COMPLETE \u2014 HUMAN_REVIEW_REQUIRED",
+  "superseded_pre_clock_guard_full": {
+    "current_code_eligible": false,
+    "passed": 489
+  },
+  "supersedes": "synthetic_g5 and synthetic_g5_final; preserved intermediate code-version audits",
+  "types": {
+    "errorCount": 0,
+    "filesAnalyzed": 107,
+    "informationCount": 0,
+    "timeInSec": 38.056,
+    "warningCount": 0
+  }
+}

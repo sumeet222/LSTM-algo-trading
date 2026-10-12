@@ -5,6 +5,15 @@ cross-sectional equity prediction with broad-market conditioning.
 
 See `AGENTS.md` for repository and development guidelines.
 
+P4.1–P4.2 now provide a [synthetic-only PyTorch engine and lifecycle](docs/track_a/P4_NEURAL_ENGINE_API_v1.md).
+The approved `neural` extra pins PyTorch 2.10.0. Historical fitting and P4.3
+remain blocked; the scientific pair ledger stays at 0/40. Run a new fabricated
+G5 audit with no data credentials:
+
+```bash
+python -m lstm_data.neural_audit --mode ENGINEERING_SYNTHETIC_ONLY --out reports/data_audit/<new-synthetic-g5-directory>
+```
+
 Future **Track A market-state source work uses Alpaca SIP SPY** under
 [TA-D2-MARKET-SPY-001](docs/track_a/decisions/Track_A_SPY_Market_Source_Amendment_v1.0_2026-10-11.md).
 SPY is an ETF information proxy, not a sixth target or traded instrument. Frozen D7
@@ -94,7 +103,7 @@ Use Python 3.11–3.14 and run from the cloned repository root:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e '.[dev]'
+python -m pip install -e '.[dev,neural]'
 python -m pytest -q
 ruff check src tests
 ```

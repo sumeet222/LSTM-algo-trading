@@ -1,0 +1,38 @@
+{
+  "actual_loss": 7.0,
+  "actual_parameters": 6433,
+  "expected_loss": 7,
+  "model_input": [
+    5,
+    48,
+    16
+  ],
+  "named_shapes": {
+    "head.bias": [
+      1
+    ],
+    "head.weight": [
+      1,
+      32
+    ],
+    "lstm.bias_hh_l0": [
+      128
+    ],
+    "lstm.bias_ih_l0": [
+      128
+    ],
+    "lstm.weight_hh_l0": [
+      128,
+      32
+    ],
+    "lstm.weight_ih_l0": [
+      128,
+      16
+    ]
+  },
+  "output": [
+    5
+  ],
+  "parameter_formula": 6433,
+  "wrong_pooled_loss": 6
+}

@@ -1,0 +1,52 @@
+{
+  "entries": {
+    "0f146c835cfde66de36d72b931140da6733042477d0031a506505d5f12920b07": {
+      "checkpoint": "reports/data_audit/ta_p4_neural_2026-10-12_123619/synthetic_g5_final/seed42_pair/refit_final.pt",
+      "checkpoint_sha": "b487261e47eda4e960e9a80515deabb61d333b8bcbf02ac5a1576b6db1b090ff",
+      "history": [
+        {
+          "state": "RESERVED",
+          "time": "2026-10-12T17:25:50.886735+00:00"
+        },
+        {
+          "seconds": 60.0,
+          "state": "CALIBRATING",
+          "time": "2026-10-12T17:25:50.889120+00:00"
+        },
+        {
+          "seconds": 60.0,
+          "state": "CALIBRATED",
+          "time": "2026-10-12T17:25:59.615218+00:00"
+        },
+        {
+          "seconds": 60.0,
+          "state": "REFITTING",
+          "time": "2026-10-12T17:26:35.659246+00:00"
+        },
+        {
+          "seconds": 59.811282166003366,
+          "state": "COMPLETE",
+          "time": "2026-10-12T17:26:50.769403+00:00"
+        }
+      ],
+      "identity": {
+        "calendar_split_cutoff": "3b566b2a69759aa702c07be0b5ec05a8c0043175c11a89993bd634bb782f1edd",
+        "code": "7c543757e59f16efd1817fa1023513f13fb0650e6b91de2fe4f8e307048d4acf",
+        "experiment": "SYN:TM0:WF1",
+        "information": "FT0_STOCK_ONLY",
+        "mode": "ENGINEERING_SYNTHETIC_ONLY",
+        "model_optimizer_selection": "4601c2d1867b883fb1b152268f6778145bd082bb1c14cc5098d88338baf37926",
+        "preprocess": "d224d947d3f17cae19f76932a1cb0412a2d262a4eb95db312f7518b512e83315",
+        "seed": 42,
+        "source_features_data": "f74ba6c0fdac1344c40097fb93ffc6259aa9cafabd1d7cf42619d160d806316b",
+        "target": "TG0_HOURLY_PROXY",
+        "track": "A",
+        "universe": "2ba78c6fb9e4c2e7e6401f5983195d0e8b1e5ea60e71e0415b68ba30787b1fc7"
+      },
+      "seconds": 59.811282166003366,
+      "state": "COMPLETE"
+    }
+  },
+  "namespace": "ENGINEERING_SYNTHETIC_ONLY",
+  "schema": 1
+}

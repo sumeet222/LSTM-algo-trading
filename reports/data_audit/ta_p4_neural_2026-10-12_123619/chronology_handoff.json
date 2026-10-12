@@ -1,0 +1,32 @@
+{
+  "calibration_fitted_at": "2023-03-31T04:00:00+00:00",
+  "eligible_origin_counts": {
+    "10:30": 55,
+    "11:30": 55
+  },
+  "fixed_windows": [
+    {
+      "phase": "INNER_TRAIN",
+      "start": "2020-07-01T04:00:00+00:00",
+      "stop_exclusive": "2023-03-31T04:00:00+00:00",
+      "window_id": "WF1:INNER_TRAIN"
+    },
+    {
+      "phase": "INNER_VALIDATION",
+      "start": "2023-03-31T04:00:00+00:00",
+      "stop_exclusive": "2023-07-01T04:00:00+00:00",
+      "window_id": "WF1:INNER_VALIDATION"
+    },
+    {
+      "phase": "REFIT",
+      "start": "2020-07-01T04:00:00+00:00",
+      "stop_exclusive": "2023-07-01T04:00:00+00:00",
+      "window_id": "WF1:REFIT"
+    }
+  ],
+  "full_63_calendar_tail_preserved": true,
+  "initial_synthetic_evidence": "synthetic_g5 and synthetic_g5_final preserved; synthetic_g5_release is current after finite-clock guard",
+  "post_P2_ASOF_eligible_validation_sessions": 55,
+  "real_source_available_at": "UNKNOWN; not certified by synthetic clocks",
+  "refit_fitted_at": "2023-07-01T04:00:00+00:00"
+}

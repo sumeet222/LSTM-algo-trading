@@ -1,0 +1,256 @@
+{
+  "P4_3": {
+    "operation": "training",
+    "reasons": [
+      "unresolved:formation",
+      "unresolved:shared_clock",
+      "unresolved:stock_timing",
+      "research executor and reviewed human authorization unavailable in P0.2"
+    ],
+    "status": "BLOCKED"
+  },
+  "changed_data_identity": "91c9ee636ea8344f593d7766b42ccd0c0511aa0e25809bc70624c07163131572",
+  "cpu_threads": 1,
+  "cross_device_bitwise_claim": false,
+  "deterministic_algorithms": true,
+  "device": "cpu",
+  "elapsed_seconds": 134.60920770799567,
+  "forecast_id": "SYN:NEURAL_FORECAST:57803defa8d9387a9777b5ee0b682d6c36c7e6fb4970ddf487cba0d9ebc1e4a5",
+  "forecasts": [
+    0.25667545199394226,
+    0.13146351277828217,
+    -0.0001926720142364502,
+    -0.1289770007133484,
+    -0.24628517031669617
+  ],
+  "illustrative_1502_origin_row_scale": {
+    "factor": 7.51,
+    "pair_seconds_at_linear_scale": 178.07368198215235,
+    "warning": "Illustrative only: preprocessing, eligible counts, epoch selection, device load and actual real runtime are not established"
+  },
+  "mode": "ENGINEERING_SYNTHETIC_ONLY",
+  "mps_available_not_used": false,
+  "original_data_identity": "f74ba6c0fdac1344c40097fb93ffc6259aa9cafabd1d7cf42619d160d806316b",
+  "pair": {
+    "adequacy": {
+      "origins": {
+        "1": 55,
+        "2": 55
+      },
+      "sessions": 55
+    },
+    "calibration_checkpoint": {
+      "bytes": 72593,
+      "epoch": 60,
+      "fit_binding": "d224d947d3f17cae19f76932a1cb0412a2d262a4eb95db312f7518b512e83315",
+      "pair": "0f146c835cfde66de36d72b931140da6733042477d0031a506505d5f12920b07",
+      "path": "calibration_selected.pt",
+      "prediction_authoritative": false,
+      "schema": 1,
+      "sha256": "3054f8dd87edfa794db98038c384f40323699f4821a21d8a205ae46b5f1ae265",
+      "stage": "CALIBRATION_SELECTED"
+    },
+    "calibration_initial_hash": "079edbe32c7565824b359686e3eeb181ebe7986eba173d4af3ef78869a1ec836",
+    "calibration_preparation": "d224d947d3f17cae19f76932a1cb0412a2d262a4eb95db312f7518b512e83315",
+    "calibration_seconds": 8.72611550000147,
+    "calibration_selected_hash": "81d2b9b31a4ce9a5e0376ef6f9a9cfd01142a8abc3a8a3accc780d305da7be33",
+    "calibration_steps": 180,
+    "canonical_feature_rows": 3215,
+    "example_scores": [
+      -1.810368537902832,
+      -0.9042512774467468,
+      -0.00019265711307525635,
+      0.89860999584198,
+      1.7955546379089355
+    ],
+    "final_checkpoint": {
+      "bytes": 54737,
+      "epoch": 60,
+      "fit_binding": "3c87e262061fbd16c338a700e9ab4c01b291a96f072f60e29bfd6273bb236faa",
+      "pair": "0f146c835cfde66de36d72b931140da6733042477d0031a506505d5f12920b07",
+      "path": "refit_final.pt",
+      "prediction_authoritative": true,
+      "schema": 1,
+      "sha256": "b487261e47eda4e960e9a80515deabb61d333b8bcbf02ac5a1576b6db1b090ff",
+      "stage": "REFIT_FINAL"
+    },
+    "fitting_origin_dispositions": {
+      "inner_train": {
+        "ORIGIN_OUTSIDE_FIT_WINDOW": 126
+      },
+      "inner_validation": {
+        "ORIGIN_OUTSIDE_FIT_WINDOW": 74
+      },
+      "refit": {}
+    },
+    "fresh_optimizer_state_empty": true,
+    "indexed_origins": 200,
+    "mode": "ENGINEERING_SYNTHETIC_ONLY",
+    "pair": {
+      "calendar_split_cutoff": "3b566b2a69759aa702c07be0b5ec05a8c0043175c11a89993bd634bb782f1edd",
+      "code": "7c543757e59f16efd1817fa1023513f13fb0650e6b91de2fe4f8e307048d4acf",
+      "experiment": "SYN:TM0:WF1",
+      "information": "FT0_STOCK_ONLY",
+      "mode": "ENGINEERING_SYNTHETIC_ONLY",
+      "model_optimizer_selection": "4601c2d1867b883fb1b152268f6778145bd082bb1c14cc5098d88338baf37926",
+      "preprocess": "d224d947d3f17cae19f76932a1cb0412a2d262a4eb95db312f7518b512e83315",
+      "seed": 42,
+      "source_features_data": "f74ba6c0fdac1344c40097fb93ffc6259aa9cafabd1d7cf42619d160d806316b",
+      "target": "TG0_HOURLY_PROXY",
+      "track": "A",
+      "universe": "2ba78c6fb9e4c2e7e6401f5983195d0e8b1e5ea60e71e0415b68ba30787b1fc7"
+    },
+    "pair_key": "0f146c835cfde66de36d72b931140da6733042477d0031a506505d5f12920b07",
+    "purged_or_invalid_origins": [
+      126,
+      74,
+      0
+    ],
+    "refit_final_hash": "5b7707f7faa1dd609d36d73eea6f30ce4bb0ec49fd2a71e9c450f9af97920270",
+    "refit_initial_hash": "079edbe32c7565824b359686e3eeb181ebe7986eba173d4af3ef78869a1ec836",
+    "refit_preparation": "3c87e262061fbd16c338a700e9ab4c01b291a96f072f60e29bfd6273bb236faa",
+    "refit_seconds": 14.985426708008163,
+    "refit_steps": 420,
+    "refit_view": "SYN:NEURAL_DATA:b6a7bf74e01ad08f460ca1e28373f9624c78e9d2d0258e31b3c0643781abc93c",
+    "reload_max_error": 0.0,
+    "selector": {
+      "best": 0.00017044613222506912,
+      "epoch": 60,
+      "patience": 0,
+      "raw_epoch": 60,
+      "raw_min": 0.00017044613222506912,
+      "selected": 60,
+      "status": "MAX_EPOCHS_REACHED"
+    },
+    "train_view": "SYN:NEURAL_DATA:28ca635cca5975ee4f01ea1d5dfda46a29fa99bdd28e2079134f6f40689bb10a",
+    "validation_preprocess_exclusions": [
+      [
+        [
+          "2023-03-31",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-03-31",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-03",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-03",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-04",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-04",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-05",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-05",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-06",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-06",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-10",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-10",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-11",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-11",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-12",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-12",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ]
+    ],
+    "validation_view": "SYN:NEURAL_DATA:303ac200c6a14f77d555841e0d2e94c6cd91e0eac6b5a1ff284cbe8ec34b6afb"
+  },
+  "pair_cost_estimate": "Synthetic cost only; real benchmark remains P4.3 HOLD",
+  "peak_memory": {
+    "bytes": 433192960
+  },
+  "scientific_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "scientific_status": "SCIENTIFIC_ACTIVATION_HOLD",
+  "status": "P4_1_P4_2_SYNTHETIC_ENGINEERING_COMPLETE \u2014 HUMAN_REVIEW_REQUIRED",
+  "torch": "2.10.0"
+}
