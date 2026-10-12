@@ -1,0 +1,9 @@
+{
+  "package": "TA-DATA-REMED-FT0-001",
+  "policy": "One renewed validation attempt; only HTTP200 clears prior403 for continuation; all attempts remain cumulative and per-page lifetime max3; new access/rate denial or failed validation stops",
+  "prior_attempts": 1,
+  "prior_journal_sha256": "36b8a17d5ac5f17a5c96a083d2fe59d5bdddff6f5638848f16502ce9d26bd60b",
+  "reason": "Explicit user instruction to use newly supplied local .env key and continue existing authorized recovery",
+  "review_id": "USER_MASSIVE_ENV_RESUME_2026-10-11_212118",
+  "validation_request_hash": "96eead8418748675044768834774950a7e6c95b57cf275dfb27b58c94ac2b662"
+}

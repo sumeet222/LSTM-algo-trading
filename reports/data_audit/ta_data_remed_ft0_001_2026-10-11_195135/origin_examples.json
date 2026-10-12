@@ -1,0 +1,481 @@
+{
+  "all_original583_rejection_recovery_records": "retention_before_after.json::recovery::origin_changes",
+  "examples": [
+    {
+      "after": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [],
+        "first_bad": null,
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": true,
+        "missing_clusters": [],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2020-07-01",
+        "source_time_eligible": false
+      },
+      "baseline": {
+        "first_bad": {
+          "reason": "SCHEDULED_HISTORY_INSUFFICIENT"
+        },
+        "missing_clusters": [],
+        "origin": 1,
+        "origin_id": "1d530e789338f5eb82929a81b83417984700e9889d5b2304f8a9d6ec9c136405",
+        "session": "2020-07-01"
+      },
+      "source_evidence": "gap_cluster_reconciliation or warmup selection_manifest; absent keys have no invented source ID"
+    },
+    {
+      "after": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [],
+        "first_bad": null,
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": true,
+        "missing_clusters": [],
+        "origin": 2,
+        "scheduled_history": true,
+        "session": "2020-07-01",
+        "source_time_eligible": false
+      },
+      "baseline": {
+        "first_bad": {
+          "reason": "SCHEDULED_HISTORY_INSUFFICIENT"
+        },
+        "missing_clusters": [],
+        "origin": 2,
+        "origin_id": "e980d263b8ded0d8a2652ebc08ea1ec0d4401429eb788be521ef1529b5b7bf74",
+        "session": "2020-07-01"
+      },
+      "source_evidence": "gap_cluster_reconciliation or warmup selection_manifest; absent keys have no invented source ID"
+    },
+    {
+      "after": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [],
+        "first_bad": null,
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": true,
+        "missing_clusters": [],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2020-07-02",
+        "source_time_eligible": false
+      },
+      "baseline": {
+        "first_bad": {
+          "reason": "SCHEDULED_HISTORY_INSUFFICIENT"
+        },
+        "missing_clusters": [],
+        "origin": 1,
+        "origin_id": "7de175a3165652476a11fd52b2cc30f0f4a6d8122ba1767533b377a51db76240",
+        "session": "2020-07-02"
+      },
+      "source_evidence": "gap_cluster_reconciliation or warmup selection_manifest; absent keys have no invented source ID"
+    },
+    {
+      "after": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": false,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [
+          "M1",
+          "V1",
+          "V3",
+          "B1",
+          "B2",
+          "Q1",
+          "T1",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-19",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 1,
+          "symbol": "JPM"
+        },
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": false,
+        "missing_clusters": [
+          [
+            "CAT",
+            "2021-04-19"
+          ],
+          [
+            "JNJ",
+            "2021-04-19"
+          ],
+          [
+            "JPM",
+            "2021-04-19"
+          ],
+          [
+            "WMT",
+            "2021-04-19"
+          ]
+        ],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2021-04-19",
+        "source_time_eligible": false
+      },
+      "baseline": {
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-19",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 1,
+          "symbol": "JPM"
+        },
+        "missing_clusters": [
+          [
+            "CAT",
+            "2021-04-19"
+          ],
+          [
+            "JNJ",
+            "2021-04-19"
+          ],
+          [
+            "JPM",
+            "2021-04-19"
+          ],
+          [
+            "WMT",
+            "2021-04-19"
+          ]
+        ],
+        "origin": 1,
+        "origin_id": "996f07f0c93a7286fc2021bcae03619cffe459a6195c7ad08090a7404511b35c",
+        "session": "2021-04-19"
+      },
+      "source_evidence": "gap_cluster_reconciliation or warmup selection_manifest; absent keys have no invented source ID"
+    },
+    {
+      "after": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": false,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [
+          "M1",
+          "V1",
+          "V3",
+          "B1",
+          "B2",
+          "Q1",
+          "T1",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-19",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 1,
+          "symbol": "JPM"
+        },
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": false,
+        "missing_clusters": [
+          [
+            "CAT",
+            "2021-04-19"
+          ],
+          [
+            "JNJ",
+            "2021-04-19"
+          ],
+          [
+            "JPM",
+            "2021-04-19"
+          ],
+          [
+            "WMT",
+            "2021-04-19"
+          ]
+        ],
+        "origin": 2,
+        "scheduled_history": true,
+        "session": "2021-04-19",
+        "source_time_eligible": false
+      },
+      "baseline": {
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-19",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 1,
+          "symbol": "JPM"
+        },
+        "missing_clusters": [
+          [
+            "CAT",
+            "2021-04-19"
+          ],
+          [
+            "JNJ",
+            "2021-04-19"
+          ],
+          [
+            "JPM",
+            "2021-04-19"
+          ],
+          [
+            "WMT",
+            "2021-04-19"
+          ]
+        ],
+        "origin": 2,
+        "origin_id": "009ee580fd1926563ff53089947908542c40b6cbd0769f875b303030eafac605",
+        "session": "2021-04-19"
+      },
+      "source_evidence": "gap_cluster_reconciliation or warmup selection_manifest; absent keys have no invented source ID"
+    },
+    {
+      "after": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": false,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [
+          "M1",
+          "M3",
+          "V1",
+          "V2",
+          "V3",
+          "B1",
+          "B2",
+          "Q1",
+          "Q2",
+          "T1",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-19",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 1,
+          "symbol": "JPM"
+        },
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": false,
+        "missing_clusters": [
+          [
+            "CAT",
+            "2021-04-19"
+          ],
+          [
+            "JNJ",
+            "2021-04-19"
+          ],
+          [
+            "JPM",
+            "2021-04-19"
+          ],
+          [
+            "WMT",
+            "2021-04-19"
+          ]
+        ],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2021-04-20",
+        "source_time_eligible": false
+      },
+      "baseline": {
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-19",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 1,
+          "symbol": "JPM"
+        },
+        "missing_clusters": [
+          [
+            "CAT",
+            "2021-04-19"
+          ],
+          [
+            "JNJ",
+            "2021-04-19"
+          ],
+          [
+            "JPM",
+            "2021-04-19"
+          ],
+          [
+            "WMT",
+            "2021-04-19"
+          ]
+        ],
+        "origin": 1,
+        "origin_id": "3f235b0971dbd013b30129dcb4c26db2654731777da3ef066ba721327b37bb6d",
+        "session": "2021-04-20"
+      },
+      "source_evidence": "gap_cluster_reconciliation or warmup selection_manifest; absent keys have no invented source ID"
+    },
+    {
+      "after": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [
+          "M1",
+          "M3",
+          "V1",
+          "V2",
+          "V3",
+          "Q2",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-20",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 2,
+          "symbol": "JPM"
+        },
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": false,
+        "missing_clusters": [],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2021-04-30",
+        "source_time_eligible": false
+      },
+      "baseline": {
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-20",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 2,
+          "symbol": "JPM"
+        },
+        "missing_clusters": [],
+        "origin": 1,
+        "origin_id": "f41fff2f335aed7cce17329fafeb6d8023de8630ed9069d294882a365c05359b",
+        "session": "2021-04-30"
+      },
+      "source_evidence": "gap_cluster_reconciliation or warmup selection_manifest; absent keys have no invented source ID"
+    },
+    {
+      "after": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [
+          "M1",
+          "M3",
+          "V1",
+          "V2",
+          "V3",
+          "Q2",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-20",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 3,
+          "symbol": "JPM"
+        },
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": false,
+        "missing_clusters": [],
+        "origin": 2,
+        "scheduled_history": true,
+        "session": "2021-04-30",
+        "source_time_eligible": false
+      },
+      "baseline": {
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-20",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 3,
+          "symbol": "JPM"
+        },
+        "missing_clusters": [],
+        "origin": 2,
+        "origin_id": "80f8188fd8505dc6a373af4b0e37b44e1ba0fa041575e459b27e60b6b7facfde",
+        "session": "2021-04-30"
+      },
+      "source_evidence": "gap_cluster_reconciliation or warmup selection_manifest; absent keys have no invented source ID"
+    },
+    {
+      "after": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [
+          "M1",
+          "M3",
+          "V1",
+          "V2",
+          "V3",
+          "Q2",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-21",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 2,
+          "symbol": "JPM"
+        },
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": false,
+        "missing_clusters": [],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2021-05-03",
+        "source_time_eligible": false
+      },
+      "baseline": {
+        "first_bad": {
+          "channel": "M1",
+          "historical_session": "2021-04-21",
+          "reason": "WARMUP_OR_MISSING_REQUIRED_HISTORY",
+          "slot": 2,
+          "symbol": "JPM"
+        },
+        "missing_clusters": [],
+        "origin": 1,
+        "origin_id": "0ff6287ffdd263cdf798053b013fb133cdd4e2af7f190f1e1bcc5402417a8ced",
+        "session": "2021-05-03"
+      },
+      "source_evidence": "gap_cluster_reconciliation or warmup selection_manifest; absent keys have no invented source ID"
+    }
+  ],
+  "raw_source_shape_vs_actual_asof": "Mechanical completeness can improve; causal admission remains0",
+  "selection": "Predeclared first3 startup/first3 later direct/first3 propagated failures; no outcome selection"
+}

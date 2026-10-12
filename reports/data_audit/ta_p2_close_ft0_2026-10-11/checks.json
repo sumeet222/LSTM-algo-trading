@@ -1,0 +1,58 @@
+{
+  "baseline": {
+    "Ruff": "PASS",
+    "basic_Pyright_errors": 0,
+    "basic_Pyright_warnings": 0,
+    "owned_Python_files": 42,
+    "tests_passed": 291
+  },
+  "final": {
+    "AST": {
+      "files": 50,
+      "status": "PASS",
+      "syntax": "Python3.11"
+    },
+    "Pyright": {
+      "command": ".venv/bin/python scripts/check_python_types.py --pylance-dist <installed-Pylance-extension>/dist",
+      "errors": 0,
+      "files": 50,
+      "status": "PASS",
+      "warnings": 0
+    },
+    "Ruff": {
+      "command": ".venv/bin/ruff check .",
+      "status": "PASS"
+    },
+    "diff_check": "PASS",
+    "existing_D7_structural_market_intersection": "PASS_MEASURED_EXISTING_HELPER",
+    "focused_after_source_guards": {
+      "log": "focused_source.txt",
+      "passed": 6
+    },
+    "focused_feature_math_C01": {
+      "log": "focused_features.txt",
+      "passed": 31
+    },
+    "full_suite": {
+      "command": ".venv/bin/python -B -m pytest -q",
+      "log": "pytest_final.txt",
+      "passed": 322,
+      "result": "PASS",
+      "runtime_seconds": 237.95
+    },
+    "public_signature_dataclass_snapshot": "PASS",
+    "raw_immutability": "PASS",
+    "source_audit_smoke": "PASS_MECHANICAL_MEASUREMENT_CAUSAL_HOLD"
+  },
+  "human_editor_refresh": "No problems; separate self-report in diagnostics.json",
+  "new_GETs": 0,
+  "real_fits_models_predictions_backtests": 0,
+  "resolved_development_failures": [
+    "Wrong half-day fixture date corrected to genuine calendar half-day; original tests unchanged",
+    "Non-M2 fit lineage initially carried unrelated M2 origin references; removed to honor canonical key dedup",
+    "Repeated floor fingerprinting caused excessive synthetic runtime; immutable certificate identity memoized",
+    "C01 originally bound certificates to full future archive content; stable semantic contract binding and separate content SHA now preserve causal future-exit invariance"
+  ],
+  "source_audit_warning": "PyArrow CPU cache/NEON sysctl probes denied in sandbox; data reads/audit succeeded",
+  "superseded_full_suite": "An earlier run imported pre-fix code and had1 failure/320 passes; final322 passes supersedes it; no existing expected values changed"
+}

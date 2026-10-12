@@ -1,0 +1,36 @@
+{
+  "attempts": 5,
+  "interrupted": {
+    "error_class": "DataAccessError",
+    "kind": "WARMUP",
+    "reason": "Pagination exceeded bounded page budget; no partial dataset saved",
+    "request_hash": "26ac2e12be5ad6f36c78ec78e3a8389d4867014862acb0ea10d6179a4fd46426",
+    "status": "ACQUISITION_HOLD"
+  },
+  "journal": "data/raw/alpaca/track_a_remediation_v1/source_transport_journal.jsonl",
+  "journal_sha256": "460480aee999a32c8e79d527dad7867ea8e563f620ed77365dfbab5ded023d4e",
+  "no_SPY_calls": true,
+  "package": "TA-DATA-REMED-FT0-001",
+  "real_fits": 0,
+  "remaining": 175,
+  "results": [
+    {
+      "kind": "WARMUP",
+      "request_hash": "7467171f13034422e42afc5ba6e7757cac5f925d29b3cc567ab1b1d6b8d4c48a",
+      "resumed": false,
+      "rows": 992,
+      "sha256": "76380c285f96abc0eb48e746aca098c234aa2edd19e7a692b3d4204a95860998",
+      "status": "SHA_VERIFIED_TERMINAL"
+    }
+  ],
+  "scientific_activation": false,
+  "secondary": {
+    "Massive_key_present": true,
+    "Polygon_key_present": false,
+    "attempts": 0,
+    "remaining": 80,
+    "status": "SECONDARY_UNAVAILABLE_NO_REPOSITORY_PROVISIONED_VENDOR"
+  },
+  "status": "PARTIAL_HOLD",
+  "storage_bytes": 1538023
+}

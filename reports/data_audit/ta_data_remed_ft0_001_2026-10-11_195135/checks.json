@@ -1,0 +1,57 @@
+{
+  "access_failure": "Massive current .env key got HTTP403 on latest required historical date; one attempt, no retry/access purchase",
+  "actual_data_scope": "Source-only structural QA, no real fits/labels/performance",
+  "baseline": {
+    "basic_Pyright_errors_warnings": [
+      0,
+      0
+    ],
+    "full_tests": 322,
+    "owned_Python_files": 50,
+    "seconds": 240.1
+  },
+  "commands": [
+    ".venv/bin/python -B -m pytest -q",
+    ".venv/bin/ruff check .",
+    ".venv/bin/python scripts/check_python_types.py --pylance-dist <installed-extension>/dist",
+    "python -m lstm_data.ft0_audit --report <new-package>/original_replay",
+    "python -m lstm_data.remediation acquire --report <package> --env-file .env --authorization TA-DATA-REMED-FT0-001",
+    "python -m lstm_data.remediation audit --report <fresh-prepared-package>",
+    "python -m lstm_data.remediation_secondary --report <package> --env-file .env --authorization TA-DATA-REMED-FT0-001"
+  ],
+  "final": {
+    "AST_python3_11": "PASS",
+    "Ruff": "PASS",
+    "basic_Pyright_errors_warnings": [
+      0,
+      0
+    ],
+    "focused_seconds": 3.79,
+    "focused_tests": 18,
+    "full_tests": 340,
+    "git_diff_check": "PASS",
+    "owned_Python_files": 59,
+    "seconds": 218.86
+  },
+  "native_future_label_fill_selection": "NOT_USED",
+  "original_API_signature_dataclass_snapshots": "PASS",
+  "original_baseline_reproduced_exactly": true,
+  "resolved_code_diagnostics": "Typed pandas access/runtime timestamp validation; no ignores, severity/settings or original expected-value changes",
+  "resolved_operational_failure": "Initial3-page cap truncated January response traversal. No partial published; versioned operational amendment within180 budget, all7warmup chunks later completed.",
+  "stages": {
+    "Alpaca_gap_recovery": "FAIL",
+    "dependency_grid": "PASS",
+    "development_WF_mechanical": "PASS",
+    "fixed_retention_measurement": "PASS",
+    "neural_model_portfolio": "INACTIVE",
+    "origin85_guards": "FAIL",
+    "regime_mature_label_guards": "INCONCLUSIVE",
+    "secondary_historical_access": "HOLD",
+    "source_action_publication_formal_approval": "HOLD",
+    "train90_guard": "FAIL",
+    "warmup_acquisition_RTH": "PASS"
+  },
+  "status": "PASS",
+  "warnings": "Nonfatal PyArrow CPU sysctl probes denied during sandbox offline reads; data validation passed",
+  "zero_GET_resume": "PASS"
+}

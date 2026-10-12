@@ -1,0 +1,36 @@
+{
+  "Alpaca_new_attempts": 72,
+  "Alpaca_remaining": 108,
+  "attempts_by_phase": {
+    "BASIS_CONTROL": 1,
+    "CONDITIONAL_MINUTE_DIAGNOSTIC": 15,
+    "GAP_RETRY": 15,
+    "WARMUP": 41
+  },
+  "completed_minute_diagnostic_partitions": 15,
+  "completed_native30_partitions": 23,
+  "gaps_recovered": 0,
+  "journal": "data/raw/alpaca/track_a_remediation_v1/source_transport_journal.jsonl",
+  "journal_sha256": "34e03e60300f1c43c4108ce3fbb24ca41f0b57e0f90096eafbde6d3782a6f106",
+  "maximum_same_page_lifetime_attempts": 2,
+  "new_SPY_calls": 0,
+  "new_archive_bytes": 1033032,
+  "original_missing_keys": 168,
+  "original_overlap_comparisons": 92,
+  "overlap_conflicts": 0,
+  "partial_first_run": "January exceeded initial3-page operational cap;3 nonterminal response pages not published; resumed inside3-lifetime-per-page/180-global limits with additive10-page cap. All HTTP responses200; no transport failures.",
+  "real_fits": 0,
+  "response_status_counts": {
+    "200": 72
+  },
+  "science": "HOLD",
+  "secondary": "UNAVAILABLE_NO_EXISTING_REPOSITORY_KEY; no other supported authorized stock vendor in repository",
+  "secondary_attempts": 0,
+  "secondary_remaining": 80,
+  "source_publication": "UNKNOWN",
+  "status": "AUTHORIZED_PRIMARY_ACQUISITION_COMPLETED_REMEDIATION_PARTIAL",
+  "stubborn_gap_clusters": 15,
+  "warmup_expected_RTH_rows": 8680,
+  "warmup_raw_rows": 17550,
+  "warmup_selected_RTH_rows": 8680
+}

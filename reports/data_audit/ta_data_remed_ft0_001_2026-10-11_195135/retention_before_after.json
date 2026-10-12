@@ -1,0 +1,6091 @@
+{
+  "confirmation": "NO_FEATURE_TARGET_OR_PERFORMANCE",
+  "original": {
+    "WF1": {
+      "causal_eligible": 0,
+      "denominator": 248,
+      "eligible_sessions": 124,
+      "fraction": 1.0,
+      "mechanical_threshold": "PASS",
+      "minimum_retention": 0.85,
+      "numerator": 248,
+      "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+    },
+    "WF2": {
+      "causal_eligible": 0,
+      "denominator": 248,
+      "eligible_sessions": 124,
+      "fraction": 1.0,
+      "mechanical_threshold": "PASS",
+      "minimum_retention": 0.85,
+      "numerator": 248,
+      "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+    },
+    "development": {
+      "causal_eligible": 0,
+      "denominator": 496,
+      "eligible_sessions": 248,
+      "fraction": 1.0,
+      "mechanical_threshold": "PASS",
+      "minimum_retention": 0.9,
+      "numerator": 496,
+      "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+    },
+    "train": {
+      "causal_eligible": 0,
+      "denominator": 1502,
+      "eligible_sessions": 460,
+      "fraction": 0.6118508655126498,
+      "mechanical_threshold": "FAIL",
+      "minimum_retention": 0.9,
+      "numerator": 919,
+      "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+    }
+  },
+  "recovery": {
+    "disjoint_counts": {
+      "BASELINE_RETAINED919:RETAINED": 919,
+      "LATER319:STILL_REJECTED": 319,
+      "STARTUP264:HISTORY_ONLY_SUFFICIENT": 264
+    },
+    "no_fabricated_values": true,
+    "origin_changes": [
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-01"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-01"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-02"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-02"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-06"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-06"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-07"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-07"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-08"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-08"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-09"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-09"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-10"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-10"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-13"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-13"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-14"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-14"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-15"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-15"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-16"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-16"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-17"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-17"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-20"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-20"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-21"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-21"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-22"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-22"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-23"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-23"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-24"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-24"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-27"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-27"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-28"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-28"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-29"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-29"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-30"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-30"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-07-31"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-07-31"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-03"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-03"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-04"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-04"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-05"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-05"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-06"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-06"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-07"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-07"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-10"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-10"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-11"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-11"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-12"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-12"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-13"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-13"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-14"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-14"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-17"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-17"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-18"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-18"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-19"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-19"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-20"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-20"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-21"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-21"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-24"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-24"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-25"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-25"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-26"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-26"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-27"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-27"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-28"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-28"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-08-31"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-08-31"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-01"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-01"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-02"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-02"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-03"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-03"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-04"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-04"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-08"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-08"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-09"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-09"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-10"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-10"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-11"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-11"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-14"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-14"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-15"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-15"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-16"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-16"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-17"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-17"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-18"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-18"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-21"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-21"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-22"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-22"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-23"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-23"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-24"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-24"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-25"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-25"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-28"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-28"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-29"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-29"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-09-30"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-09-30"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-01"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-01"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-02"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-02"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-05"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-05"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-06"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-06"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-07"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-07"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-08"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-08"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-09"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-09"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-12"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-12"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-13"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-13"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-14"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-14"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-15"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-15"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-16"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-16"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-19"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-19"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-20"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-20"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-21"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-21"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-22"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-22"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-23"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-23"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-26"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-26"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-27"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-27"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-28"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-28"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-29"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-29"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-10-30"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-10-30"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-02"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-02"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-03"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-03"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-04"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-04"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-05"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-05"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-06"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-06"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-09"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-09"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-10"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-10"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-11"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-11"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-12"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-12"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-13"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-13"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-16"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-16"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-17"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-17"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-18"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-18"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-19"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-19"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-20"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-20"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-23"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-23"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-24"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-24"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-25"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-25"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-11-30"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-11-30"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-01"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-01"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-02"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-02"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-03"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-03"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-04"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-04"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-07"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-07"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-08"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-08"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-09"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-09"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-10"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-10"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-11"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-11"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-14"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-14"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-15"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-15"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-16"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-16"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-17"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-17"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-18"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-18"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-21"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-21"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-22"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-22"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-23"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-23"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-28"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-28"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-29"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-29"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-30"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-30"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2020-12-31"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2020-12-31"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2021-01-04"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2021-01-04"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2021-01-05"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2021-01-05"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2021-01-06"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2021-01-06"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2021-01-07"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2021-01-07"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2021-01-08"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2021-01-08"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 1,
+        "session": "2021-01-11"
+      },
+      {
+        "baseline": false,
+        "both": true,
+        "gap_only": false,
+        "history_only": true,
+        "mechanism": "HISTORY_ONLY_SUFFICIENT",
+        "origin": 2,
+        "session": "2021-01-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-04-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-04-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-04-20"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-04-20"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-04-21"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-04-21"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-04-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-04-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-04-23"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-04-23"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-04-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-04-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-04-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-04-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-04-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-04-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-04-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-04-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-04-30"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-04-30"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-05"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-05"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-06"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-06"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-10"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-10"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-12"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-12"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-13"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-13"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-14"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-14"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-17"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-17"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-20"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-20"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-21"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-21"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-24"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-24"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-05-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-05-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-15"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-15"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-20"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-20"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-21"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-21"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-10-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-10-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-05"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-05"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-10"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-10"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-12"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-12"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-15"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-15"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-16"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-16"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-17"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-17"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-23"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-23"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-24"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-24"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-11-30"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-11-30"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-12-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-12-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-12-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-12-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-12-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-12-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-12-06"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-12-06"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2021-12-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2021-12-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-01-24"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-01-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-01-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-01-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-01-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-01-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-01-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-01-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-01-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-01-31"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-01-31"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-10"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-10"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-14"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-14"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-15"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-15"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-16"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-16"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-17"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-17"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-23"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-23"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-24"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-24"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-02-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-02-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-10"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-10"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-14"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-14"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-15"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-15"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-16"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-16"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-17"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-17"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-21"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-21"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-23"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-23"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-24"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-24"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-30"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-30"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-03-31"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-03-31"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-05"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-05"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-06"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-06"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-11"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-12"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-12"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-13"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-13"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-14"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-14"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-18"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-20"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-20"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-21"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-21"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-22"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-25"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-04-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-04-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-05-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-05-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-05-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-05-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-05-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-05-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-05-05"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-05-05"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-05-06"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-05-06"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-05-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-05-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-07-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-07-26"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-07-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-07-27"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-07-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-07-28"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-07-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-07-29"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-08-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-08-01"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-08-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-08-02"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-08-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-08-03"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-08-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-08-04"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-08-05"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-08-05"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-08-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-08-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-08-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-08-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-09-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-09-07"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-09-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-09-08"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-09-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-09-09"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-09-12"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-09-12"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-09-13"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-09-13"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-09-14"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-09-14"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-09-15"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-09-15"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-09-16"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-09-16"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 1,
+        "session": "2022-09-19"
+      },
+      {
+        "baseline": false,
+        "both": false,
+        "gap_only": false,
+        "history_only": false,
+        "mechanism": "STILL_REJECTED",
+        "origin": 2,
+        "session": "2022-09-19"
+      }
+    ],
+    "original_train_rejections": 583,
+    "regressions": 0
+  },
+  "scientific_activation": false,
+  "secondary_candidate_view": "INACTIVE_SECONDARY_UNAVAILABLE",
+  "views": {
+    "ALPACA_ONLY_EXTENDED": {
+      "added_RTH_rows": 8680,
+      "by_origin": {
+        "WF1:origin1": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF1:origin2": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2:origin1": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2:origin2": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development:origin1": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development:origin2": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train:origin1": {
+          "causal_eligible": 0,
+          "denominator": 751,
+          "eligible_sessions": 592,
+          "fraction": 0.7882822902796272,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.85,
+          "numerator": 592,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train:origin2": {
+          "causal_eligible": 0,
+          "denominator": 751,
+          "eligible_sessions": 591,
+          "fraction": 0.7869507323568575,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.85,
+          "numerator": 591,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        }
+      },
+      "causal_admission": 0,
+      "feature_loss_counts": {
+        "B1": 75,
+        "B2": 75,
+        "M1": 151,
+        "M2": 26,
+        "M3": 202,
+        "M4": 236,
+        "Q1": 111,
+        "Q2": 108,
+        "T1": 111,
+        "T2": 220,
+        "T3": 167,
+        "T4": 167,
+        "T5": 167,
+        "V1": 91,
+        "V2": 144,
+        "V3": 151
+      },
+      "first_mechanical": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [],
+        "first_bad": null,
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": true,
+        "missing_clusters": [],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2020-07-01",
+        "source_time_eligible": false
+      },
+      "fold_100_distinct_session_guard": {
+        "WF1": {
+          "mechanical_pass": true,
+          "minimum": 100,
+          "observed": 124,
+          "scientific_status": "HOLD"
+        },
+        "WF2": {
+          "mechanical_pass": true,
+          "minimum": 100,
+          "observed": 124,
+          "scientific_status": "HOLD"
+        }
+      },
+      "inner_63_session_tails": {
+        "PRECONFIRMATION": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 63,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 63,
+            "2": 63
+          }
+        },
+        "WF1": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 63,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 63,
+            "2": 63
+          }
+        },
+        "WF2": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 62,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 62,
+            "2": 62
+          }
+        }
+      },
+      "market_intersection": {
+        "by_population": {
+          "WF1": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 248,
+            "market_structural": 248,
+            "matched_mechanical": 248,
+            "stock_only_mechanical": 248
+          },
+          "WF2": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 248,
+            "market_structural": 248,
+            "matched_mechanical": 248,
+            "stock_only_mechanical": 248
+          },
+          "development": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 496,
+            "market_structural": 496,
+            "matched_mechanical": 496,
+            "stock_only_mechanical": 496
+          },
+          "train": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 1502,
+            "market_structural": 1502,
+            "matched_mechanical": 1183,
+            "stock_only_mechanical": 1183
+          }
+        },
+        "causal_matched_origins": 0,
+        "market_rule": "EXISTING_D7_ENDPOINT_AND_46_OF_48_STRUCTURAL_VECTORS",
+        "status": "MECHANICAL_INTERSECTION_MEASURED_CAUSAL_HOLD"
+      },
+      "model_fits": 0,
+      "native_missing_in_full_view": 168,
+      "own_publication": "UNKNOWN",
+      "populations": {
+        "WF1": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development": {
+          "causal_eligible": 0,
+          "denominator": 496,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.9,
+          "numerator": 496,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train": {
+          "causal_eligible": 0,
+          "denominator": 1502,
+          "eligible_sessions": 592,
+          "fraction": 0.7876165113182424,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.9,
+          "numerator": 1183,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        }
+      },
+      "status": "CANDIDATE_NOT_ACTIVATED",
+      "volatility_regimes": {
+        "10_percentage_point_gap_guard": "INCONCLUSIVE",
+        "85_percent_guard": "INCONCLUSIVE",
+        "status": "UNVERIFIED_SPY_PUBLICATION"
+      }
+    },
+    "GAP_ONLY": {
+      "added_RTH_rows": 0,
+      "by_origin": {
+        "WF1:origin1": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF1:origin2": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2:origin1": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2:origin2": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development:origin1": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development:origin2": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train:origin1": {
+          "causal_eligible": 0,
+          "denominator": 751,
+          "eligible_sessions": 460,
+          "fraction": 0.6125166444740346,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.85,
+          "numerator": 460,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train:origin2": {
+          "causal_eligible": 0,
+          "denominator": 751,
+          "eligible_sessions": 459,
+          "fraction": 0.611185086551265,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.85,
+          "numerator": 459,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        }
+      },
+      "causal_admission": 0,
+      "feature_loss_counts": {
+        "B1": 75,
+        "B2": 75,
+        "M1": 171,
+        "M2": 146,
+        "M3": 330,
+        "M4": 484,
+        "Q1": 151,
+        "Q2": 228,
+        "T1": 151,
+        "T2": 262,
+        "T3": 287,
+        "T4": 287,
+        "T5": 219,
+        "V1": 95,
+        "V2": 164,
+        "V3": 171
+      },
+      "first_mechanical": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [],
+        "first_bad": null,
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": true,
+        "missing_clusters": [],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2021-01-12",
+        "source_time_eligible": false
+      },
+      "fold_100_distinct_session_guard": {
+        "WF1": {
+          "mechanical_pass": true,
+          "minimum": 100,
+          "observed": 124,
+          "scientific_status": "HOLD"
+        },
+        "WF2": {
+          "mechanical_pass": true,
+          "minimum": 100,
+          "observed": 124,
+          "scientific_status": "HOLD"
+        }
+      },
+      "inner_63_session_tails": {
+        "PRECONFIRMATION": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 63,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 63,
+            "2": 63
+          }
+        },
+        "WF1": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 63,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 63,
+            "2": 63
+          }
+        },
+        "WF2": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 62,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 62,
+            "2": 62
+          }
+        }
+      },
+      "market_intersection": {
+        "by_population": {
+          "WF1": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 248,
+            "market_structural": 248,
+            "matched_mechanical": 248,
+            "stock_only_mechanical": 248
+          },
+          "WF2": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 248,
+            "market_structural": 248,
+            "matched_mechanical": 248,
+            "stock_only_mechanical": 248
+          },
+          "development": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 496,
+            "market_structural": 496,
+            "matched_mechanical": 496,
+            "stock_only_mechanical": 496
+          },
+          "train": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 1502,
+            "market_structural": 1502,
+            "matched_mechanical": 919,
+            "stock_only_mechanical": 919
+          }
+        },
+        "causal_matched_origins": 0,
+        "market_rule": "EXISTING_D7_ENDPOINT_AND_46_OF_48_STRUCTURAL_VECTORS",
+        "status": "MECHANICAL_INTERSECTION_MEASURED_CAUSAL_HOLD"
+      },
+      "model_fits": 0,
+      "native_missing_in_full_view": 168,
+      "own_publication": "UNKNOWN",
+      "populations": {
+        "WF1": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development": {
+          "causal_eligible": 0,
+          "denominator": 496,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.9,
+          "numerator": 496,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train": {
+          "causal_eligible": 0,
+          "denominator": 1502,
+          "eligible_sessions": 460,
+          "fraction": 0.6118508655126498,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.9,
+          "numerator": 919,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        }
+      },
+      "status": "CANDIDATE_NOT_ACTIVATED",
+      "volatility_regimes": {
+        "10_percentage_point_gap_guard": "INCONCLUSIVE",
+        "85_percent_guard": "INCONCLUSIVE",
+        "status": "UNVERIFIED_SPY_PUBLICATION"
+      }
+    },
+    "HISTORY_ONLY": {
+      "added_RTH_rows": 8680,
+      "by_origin": {
+        "WF1:origin1": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF1:origin2": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2:origin1": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2:origin2": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development:origin1": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development:origin2": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train:origin1": {
+          "causal_eligible": 0,
+          "denominator": 751,
+          "eligible_sessions": 592,
+          "fraction": 0.7882822902796272,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.85,
+          "numerator": 592,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train:origin2": {
+          "causal_eligible": 0,
+          "denominator": 751,
+          "eligible_sessions": 591,
+          "fraction": 0.7869507323568575,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.85,
+          "numerator": 591,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        }
+      },
+      "causal_admission": 0,
+      "feature_loss_counts": {
+        "B1": 75,
+        "B2": 75,
+        "M1": 151,
+        "M2": 26,
+        "M3": 202,
+        "M4": 236,
+        "Q1": 111,
+        "Q2": 108,
+        "T1": 111,
+        "T2": 220,
+        "T3": 167,
+        "T4": 167,
+        "T5": 167,
+        "V1": 91,
+        "V2": 144,
+        "V3": 151
+      },
+      "first_mechanical": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [],
+        "first_bad": null,
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": true,
+        "missing_clusters": [],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2020-07-01",
+        "source_time_eligible": false
+      },
+      "fold_100_distinct_session_guard": {
+        "WF1": {
+          "mechanical_pass": true,
+          "minimum": 100,
+          "observed": 124,
+          "scientific_status": "HOLD"
+        },
+        "WF2": {
+          "mechanical_pass": true,
+          "minimum": 100,
+          "observed": 124,
+          "scientific_status": "HOLD"
+        }
+      },
+      "inner_63_session_tails": {
+        "PRECONFIRMATION": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 63,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 63,
+            "2": 63
+          }
+        },
+        "WF1": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 63,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 63,
+            "2": 63
+          }
+        },
+        "WF2": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 62,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 62,
+            "2": 62
+          }
+        }
+      },
+      "market_intersection": {
+        "by_population": {
+          "WF1": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 248,
+            "market_structural": 248,
+            "matched_mechanical": 248,
+            "stock_only_mechanical": 248
+          },
+          "WF2": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 248,
+            "market_structural": 248,
+            "matched_mechanical": 248,
+            "stock_only_mechanical": 248
+          },
+          "development": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 496,
+            "market_structural": 496,
+            "matched_mechanical": 496,
+            "stock_only_mechanical": 496
+          },
+          "train": {
+            "causal_matched": 0,
+            "causal_stock_only": 0,
+            "denominator": 1502,
+            "market_structural": 1502,
+            "matched_mechanical": 1183,
+            "stock_only_mechanical": 1183
+          }
+        },
+        "causal_matched_origins": 0,
+        "market_rule": "EXISTING_D7_ENDPOINT_AND_46_OF_48_STRUCTURAL_VECTORS",
+        "status": "MECHANICAL_INTERSECTION_MEASURED_CAUSAL_HOLD"
+      },
+      "model_fits": 0,
+      "native_missing_in_full_view": 168,
+      "own_publication": "UNKNOWN",
+      "populations": {
+        "WF1": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development": {
+          "causal_eligible": 0,
+          "denominator": 496,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.9,
+          "numerator": 496,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train": {
+          "causal_eligible": 0,
+          "denominator": 1502,
+          "eligible_sessions": 592,
+          "fraction": 0.7876165113182424,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.9,
+          "numerator": 1183,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        }
+      },
+      "status": "CANDIDATE_NOT_ACTIVATED",
+      "volatility_regimes": {
+        "10_percentage_point_gap_guard": "INCONCLUSIVE",
+        "85_percent_guard": "INCONCLUSIVE",
+        "status": "UNVERIFIED_SPY_PUBLICATION"
+      }
+    }
+  }
+}

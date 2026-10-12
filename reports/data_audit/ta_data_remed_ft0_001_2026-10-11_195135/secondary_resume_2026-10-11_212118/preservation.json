@@ -1,0 +1,54 @@
+{
+  "credentials_logged_or_committed": false,
+  "fits": 0,
+  "journals": {
+    "alpaca": {
+      "bytes": 67791,
+      "prior_prefix_preserved": true,
+      "sha256": "34e03e60300f1c43c4108ce3fbb24ca41f0b57e0f90096eafbde6d3782a6f106",
+      "unchanged": true
+    },
+    "ledger": {
+      "bytes": 42704,
+      "prior_prefix_preserved": true,
+      "sha256": "4c2f0693aaaba9c29110881a0961b31a12195c126e4437830600b2a4b81e12e4",
+      "unchanged": true
+    },
+    "massive": {
+      "bytes": 1936,
+      "prior_prefix_preserved": true,
+      "sha256": "1f3560d6d7b37817b4adc5f6f61e7daee81a4ed40e8796abb08c2b87e23e6707",
+      "unchanged": false
+    },
+    "spy": {
+      "bytes": 103188,
+      "prior_prefix_preserved": true,
+      "sha256": "e6d51bffcdd8746e11cfa31a8aba1e740b5c46a076c1b27b7bcc86c2a8f775bc",
+      "unchanged": true
+    }
+  },
+  "modified_files": {
+    "docs/track_a/REMEDIATION_API.md": {
+      "after": "bf694660c035ab5e8e3c97117d933cd99d830df919b2c732aec968f306377896",
+      "before": "120c5e7f24d0a7b2f46b42c325d5b12c60b293f7a660ca1ccf72c7991980e4a5"
+    },
+    "src/lstm_data/remediation_secondary.py": {
+      "after": "2ecb094e9996062e7cc7f06fc39c934ec3504d73cc70fc001df322643583e5be",
+      "before": "330b68485ee16f5f6875432f64eded7cd9af307b214817dca6aaf0eb3cb129a6"
+    },
+    "tests/test_remediation_secondary.py": {
+      "after": "cc633d5956365fcfd088b09c69ad964eba826cfbd4b62518ebac5f922f01417d",
+      "before": "fa850a95edad4d805a857001b0262b4fe1b28a54e69096ed1e001fa67fedef27"
+    }
+  },
+  "no_primary_or_SPY_requests": true,
+  "notes_preserved": true,
+  "original_pointers_protocols_ledger_unchanged": true,
+  "original_raw143_size_mtime_unchanged": true,
+  "original_raw_SHA_reference": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/preflight.json",
+  "protected_file_count": 432,
+  "scientific_source_activation": false,
+  "staging_commits_pushes": false,
+  "time_utc": "2026-10-12T01:26:06.854720+00:00",
+  "unchanged_except_reviewed_files": true
+}

@@ -47,6 +47,26 @@ cutoff, and do not fit empirical transforms. SPY has no portfolio position or
 dividend-cash leg. CURRENT_PROTOCOL and G0–G4 remain unchanged; no training,
 backtest or confirmation performance is activated.
 
+## Track A FT0
+
+The complete Track A FT0 engineering path now exposes all **16 stock channels**,
+training-only synthetic floor/scaler certificates and an exact **5×48×16** tensor.
+It joins the existing separate **48×5** SPY state through the same scheduled steps.
+See the [FT0 API](docs/track_a/FT0_API.md) and
+[human review card](reports/data_audit/ta_p2_close_ft0_2026-10-11/human_review_card.md).
+Measured mechanical training retention is **919/1502 (61.19%)**, below the frozen
+90% guard; development and both walk-forward folds have complete mechanical
+coverage. Historical publication/action evidence and actual fitted certificates
+remain pending. Scientific admission remains on HOLD.
+
+```bash
+# Offline source-only QA; requires the existing canonical archives, no API calls.
+# Choose a NEW output directory; reports are not overwritten.
+python -m lstm_data.ft0_audit --report reports/data_audit/<new-report-directory>
+```
+
+No real feature fitting, execution engine or model is activated by this command.
+
 ## Setup
 
 Use Python 3.11–3.14 and run from the cloned repository root:

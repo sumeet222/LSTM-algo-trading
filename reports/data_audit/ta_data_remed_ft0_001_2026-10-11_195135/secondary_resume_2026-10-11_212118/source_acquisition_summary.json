@@ -1,0 +1,40 @@
+{
+  "HTTP_status": 403,
+  "alpaca_cumulative_attempts": 72,
+  "alpaca_remaining": 108,
+  "key_source": ".env via existing dotenv.load_dotenv(..., override=False); effective match verified without recording values",
+  "new_secondary_attempts_this_continuation": 1,
+  "next_required_condition": "Genuinely resolved permitted historical access and explicit renewed validation authority; no automatic denial retries or access purchases",
+  "no_access_cause_inferred": "HTTP403 does not establish whether authentication, historical entitlement or another access policy caused rejection; response body not logged",
+  "original_failed_attempt_preserved": true,
+  "receipt": {
+    "attempts": 2,
+    "blocked": "MASSIVE_HTTP_403_NO_ACCESS_CHANGE_OR_RETRY",
+    "journal": "data/raw/massive/track_a_gap_candidate_v1/source_transport_journal.jsonl",
+    "journal_sha256": "1f3560d6d7b37817b4adc5f6f61e7daee81a4ed40e8796abb08c2b87e23e6707",
+    "key_presence_checked": true,
+    "no_purchase_contract_or_credential_created": true,
+    "original_and_Alpaca_source_activation": false,
+    "provider": "MASSIVE",
+    "remaining": 78,
+    "results": [],
+    "scientific_activation": false,
+    "status": "HOLD"
+  },
+  "scientific_activation": false,
+  "secondary_cumulative_attempts": 2,
+  "secondary_remaining": 78,
+  "secondary_rows_acquired": 0,
+  "status": "SOURCE_BLOCKED \u2014 HUMAN_REVIEW_REQUIRED",
+  "time_utc": "2026-10-12T01:26:06.856768+00:00",
+  "unchanged_completed_result": {
+    "baseline_train": "919/1502",
+    "causal_source_admission": 0,
+    "later_rejected_origins": 319,
+    "mechanical_90_percent_guard": "FAIL",
+    "remaining_original_missing_keys": 168,
+    "startup_recovered": 264,
+    "warmup_candidate_train": "1183/1502 (78.76%)"
+  },
+  "validation_window": "CAT 2022-03-08 regular trading session; frozen most recent gap request"
+}

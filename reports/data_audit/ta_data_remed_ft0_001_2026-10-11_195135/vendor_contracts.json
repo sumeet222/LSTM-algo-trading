@@ -1,0 +1,23 @@
+{
+  "Alpaca": {
+    "URL": "https://docs.alpaca.markets/us/reference/stockbars",
+    "adjustment": "split explicitly adjusts prices and volume",
+    "asof": "2025-06-30 entity mapping; not adjustment-vintage or publication timestamp",
+    "document_updated": "5 months ago as rendered",
+    "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+    "pagination": "symbol-first sorted; next_page_token must be exhausted; limit total per page",
+    "start_end": "both inclusive; planned upper boundary minus1ns",
+    "timeframe": "30Min; tight1Min diagnostic only"
+  },
+  "Massive": {
+    "URL": "https://www.massive.com/docs/rest/stocks/aggregates/custom-bars",
+    "access": "SECONDARY_UNAVAILABLE_NO_EXISTING_REPOSITORY_KEY",
+    "adjusted": "explicit split-adjusted vsraw; reference/vintage and volume equivalence not assumed",
+    "native_time": "ET aggregation; millisecond window-start labels per response contract",
+    "qualifying_trades": "No aggregate without eligible trades; cannot infer actualabsence merely fromAlpaca gaps",
+    "requests": 0
+  },
+  "available_at": "UNKNOWN for all retrospective retrievals",
+  "checked_date": "2026-10-11",
+  "matching_policy": "Original rows win; binary tolerance1e-9 price and1e-6 volume on same-key controls; discrepancies block symbol/cluster additions, never normalize to force agreement"
+}

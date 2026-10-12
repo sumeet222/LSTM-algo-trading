@@ -1,0 +1,15 @@
+{
+  "decision_id": "TA-P2-FT0-Q-VOLUME-001",
+  "version": "1.0",
+  "date": "2026-10-11",
+  "status": "APPROVED_BY_TRACK_A_RESEARCHER",
+  "authority": "Explicit researcher reply in this conversation: Approve these exact Q1/Q2 formulas",
+  "formal_joint_signoff": false,
+  "Q1": "log((current completed-hour volume + p_H)/(mean of valid volumes in the preceding 20 matching scheduled-slot sessions + p_H))",
+  "Q2": "log((mean of preceding 5 completed full-session volumes + p_D)/(mean of valid volumes in preceding 60 completed full sessions + p_D))",
+  "p_H": "0.01 * median strictly positive valid training hourly volume, per stock",
+  "p_D": "0.01 * median strictly positive valid training daily volume, per stock",
+  "coverage": "Q1 >=19/20; Q2 5/5 and >=57/60, maximum two consecutive missing; full-session daily volume includes genuine terminal stub",
+  "preserved": "Frozen documents, source identities, strict stock masks, split-share basis, training-only fitting, unknown publication and action holds",
+  "scientific_activation": "HOLD"
+}

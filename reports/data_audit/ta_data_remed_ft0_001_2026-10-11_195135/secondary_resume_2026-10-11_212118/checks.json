@@ -1,0 +1,47 @@
+{
+  "AST_python3_11": "PASS",
+  "dependencies_installed": false,
+  "editor_config_or_diagnostic_severity_changes": false,
+  "focused_pytest": {
+    "command": ".venv/bin/python -B -m pytest -q tests/test_remediation_secondary.py tests/test_remediation_transport.py",
+    "passed": 17
+  },
+  "full_pytest": {
+    "command": ".venv/bin/python -B -m pytest -q",
+    "passed": 349,
+    "seconds": 191.7
+  },
+  "git_diff_check": "PASS",
+  "global_secondary_ceiling": 80,
+  "live_HTTP_this_continuation": 1,
+  "models_or_real_fits": 0,
+  "original_audits_restarted": false,
+  "per_page_attempts_current": 2,
+  "per_page_lifetime_ceiling": 3,
+  "resolved_during_implementation": [
+    "Ruff import ordering corrected",
+    "A new negative test initially attempted overwrite through immutable write_json; corrected to publish a distinct bad-review fixture"
+  ],
+  "ruff": "PASS",
+  "scientific_activation": false,
+  "secondary_attempts_total": 2,
+  "secondary_remaining": 78,
+  "shared_storage_bytes_before_handoff": 14675090,
+  "shared_storage_ceiling_bytes": 268435456,
+  "stage_status": {
+    "Massive_history_access": "HOLD_HTTP403",
+    "engineering": "PASS",
+    "existing_candidate_train_guard": "FAIL_1183_OF_1502",
+    "new_secondary_data": "NONE",
+    "source_scientific_approvals": "HOLD"
+  },
+  "time_utc": "2026-10-12T01:29:49.522265+00:00",
+  "typing": {
+    "errorCount": 0,
+    "filesAnalyzed": 59,
+    "informationCount": 0,
+    "timeInSec": 6.31,
+    "warningCount": 0
+  },
+  "typing_command": ".venv/bin/python scripts/check_python_types.py --pylance-dist <installed-ms-python.vscode-pylance-2026.4.1>/dist"
+}

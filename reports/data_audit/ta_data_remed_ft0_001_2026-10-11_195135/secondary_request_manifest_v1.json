@@ -1,0 +1,392 @@
+{
+  "authentication": "Bearer header; no query credential or persisted token",
+  "contract_docs": [
+    "https://massive.com/docs/rest/quickstart",
+    "https://www.massive.com/docs/rest/stocks/aggregates/custom-bars"
+  ],
+  "historical_publication": "UNKNOWN",
+  "maximum_declared_attempt_envelope": 66,
+  "new_provider_attempt_ceiling": 80,
+  "package": "TA-DATA-REMED-FT0-001",
+  "requests": [
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/CAT/range/30/minute/1646749800000/1646773199999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "96eead8418748675044768834774950a7e6c95b57cf275dfb27b58c94ac2b662",
+      "session": "2022-03-08",
+      "start": "2022-03-08T14:30:00+00:00",
+      "stop_exclusive": "2022-03-08T21:00:00+00:00",
+      "symbol": "CAT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/JNJ/range/30/minute/1646749800000/1646773199999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "5cd8e0a60e8c850c6a81f65f3b5135bdcb10658cae0b56e6a27d6eeb43b283fd",
+      "session": "2022-03-08",
+      "start": "2022-03-08T14:30:00+00:00",
+      "stop_exclusive": "2022-03-08T21:00:00+00:00",
+      "symbol": "JNJ"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/JPM/range/30/minute/1646749800000/1646773199999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "f555844606a590ed782328a5a365db3a1cd0244a7963322b0485cce7b59e0fac",
+      "session": "2022-03-08",
+      "start": "2022-03-08T14:30:00+00:00",
+      "stop_exclusive": "2022-03-08T21:00:00+00:00",
+      "symbol": "JPM"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/WMT/range/30/minute/1646749800000/1646773199999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "08a7f608d360527d555635003eb871aa5c4649a09022bfabb8828cb515cb1497",
+      "session": "2022-03-08",
+      "start": "2022-03-08T14:30:00+00:00",
+      "stop_exclusive": "2022-03-08T21:00:00+00:00",
+      "symbol": "WMT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/WMT/range/30/minute/1646749800000/1646773199999",
+      "kind": "CONDITIONAL_RAW_BASIS_DIAGNOSTIC",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "false",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "4c15eccf44541aab654dc6b0ea27ff625ab855adf6a651a1a8fb5b2edaf9219e",
+      "session": "2022-03-08",
+      "start": "2022-03-08T14:30:00+00:00",
+      "stop_exclusive": "2022-03-08T21:00:00+00:00",
+      "symbol": "WMT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/CAT/range/30/minute/1646683200000/1646686799999",
+      "kind": "ADJACENT_CONTROL",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "a1f07a6f651803a8ce0426d0a7a4a5bdf5599e04dfc24eac154777666003e8c2",
+      "session": "2022-03-07",
+      "start": "2022-03-07T20:00:00+00:00",
+      "stop_exclusive": "2022-03-07T21:00:00+00:00",
+      "symbol": "CAT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/JNJ/range/30/minute/1646683200000/1646686799999",
+      "kind": "ADJACENT_CONTROL",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "99ee30dd6f7dc71e4493661bc97ab999bfe29503da56695cf34f29d36069e073",
+      "session": "2022-03-07",
+      "start": "2022-03-07T20:00:00+00:00",
+      "stop_exclusive": "2022-03-07T21:00:00+00:00",
+      "symbol": "JNJ"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/WMT/range/30/minute/1643207400000/1643230799999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "b189d38a1490eb0a6c8672b903f0701d556d9f199dd7b71b776fee45a0e315fd",
+      "session": "2022-01-26",
+      "start": "2022-01-26T14:30:00+00:00",
+      "stop_exclusive": "2022-01-26T21:00:00+00:00",
+      "symbol": "WMT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/WMT/range/30/minute/1643207400000/1643230799999",
+      "kind": "CONDITIONAL_RAW_BASIS_DIAGNOSTIC",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "false",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "87c1b0200d9f2d3fbbc91bd4ae3d33cbf8fc2d0d6fd195aba4ec316b6f830cd0",
+      "session": "2022-01-26",
+      "start": "2022-01-26T14:30:00+00:00",
+      "stop_exclusive": "2022-01-26T21:00:00+00:00",
+      "symbol": "WMT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/CAT/range/30/minute/1643034600000/1643057999999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "36eb00a0a86f3461b4a0a4be6d9950bbaf73d77cf5069d9a765ff9dee61fe216",
+      "session": "2022-01-24",
+      "start": "2022-01-24T14:30:00+00:00",
+      "stop_exclusive": "2022-01-24T21:00:00+00:00",
+      "symbol": "CAT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/WMT/range/30/minute/1643034600000/1643057999999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "26fc13309c1baa1eaaf2c2317231e1f2402dc2968d0990aa2ced6312c43a2591",
+      "session": "2022-01-24",
+      "start": "2022-01-24T14:30:00+00:00",
+      "stop_exclusive": "2022-01-24T21:00:00+00:00",
+      "symbol": "WMT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/WMT/range/30/minute/1643034600000/1643057999999",
+      "kind": "CONDITIONAL_RAW_BASIS_DIAGNOSTIC",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "false",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "ec1bd44aeada510fe9a7d9a6d7b74e06dc490b91712a4223e6c2133757179547",
+      "session": "2022-01-24",
+      "start": "2022-01-24T14:30:00+00:00",
+      "stop_exclusive": "2022-01-24T21:00:00+00:00",
+      "symbol": "WMT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/CAT/range/30/minute/1635168600000/1635191999999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "a53dcd05c537ecf8ca0040962b92f9b7f2dda6efea980972337b90203a7feeb7",
+      "session": "2021-10-25",
+      "start": "2021-10-25T13:30:00+00:00",
+      "stop_exclusive": "2021-10-25T20:00:00+00:00",
+      "symbol": "CAT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/JNJ/range/30/minute/1635168600000/1635191999999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "44e8fc559860f31bdd5ec4ce1e6bc4328d6954a1222784ba61bdcde14be5faa0",
+      "session": "2021-10-25",
+      "start": "2021-10-25T13:30:00+00:00",
+      "stop_exclusive": "2021-10-25T20:00:00+00:00",
+      "symbol": "JNJ"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/JPM/range/30/minute/1635168600000/1635191999999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "77998d7e62086eb67af724368ef70cb0066f3c17748dbcd2fc9315fea85fff07",
+      "session": "2021-10-25",
+      "start": "2021-10-25T13:30:00+00:00",
+      "stop_exclusive": "2021-10-25T20:00:00+00:00",
+      "symbol": "JPM"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/WMT/range/30/minute/1635168600000/1635191999999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "22d7f56fbc686cc4b49999a030f3305c1a44c120492bc310af73a5996d1fc3f3",
+      "session": "2021-10-25",
+      "start": "2021-10-25T13:30:00+00:00",
+      "stop_exclusive": "2021-10-25T20:00:00+00:00",
+      "symbol": "WMT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/WMT/range/30/minute/1635168600000/1635191999999",
+      "kind": "CONDITIONAL_RAW_BASIS_DIAGNOSTIC",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "false",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "668dcc2fe27888a51ff765e5bded3e8f5fc6c9a459c75820cd3dc40caa63ec40",
+      "session": "2021-10-25",
+      "start": "2021-10-25T13:30:00+00:00",
+      "stop_exclusive": "2021-10-25T20:00:00+00:00",
+      "symbol": "WMT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/CAT/range/30/minute/1618839000000/1618862399999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "c187073666075cca7bbb4cbb68f58aed29e4faacbad87afb1733843f0ef41a60",
+      "session": "2021-04-19",
+      "start": "2021-04-19T13:30:00+00:00",
+      "stop_exclusive": "2021-04-19T20:00:00+00:00",
+      "symbol": "CAT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/JNJ/range/30/minute/1618839000000/1618862399999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "321d54a62d626b8825391593de82359fc9fa8522bb9ea08e170a8950b2452bdd",
+      "session": "2021-04-19",
+      "start": "2021-04-19T13:30:00+00:00",
+      "stop_exclusive": "2021-04-19T20:00:00+00:00",
+      "symbol": "JNJ"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/JPM/range/30/minute/1618839000000/1618862399999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "ff697fda55bbe5b95da22f5087503c224a8e1895d74dfc3f25c9b98b11e300a4",
+      "session": "2021-04-19",
+      "start": "2021-04-19T13:30:00+00:00",
+      "stop_exclusive": "2021-04-19T20:00:00+00:00",
+      "symbol": "JPM"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/WMT/range/30/minute/1618839000000/1618862399999",
+      "kind": "GAP_CORROBORATION",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "true",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "16a0928f5e942279a8e79cca472f07342adf79c67cd92c323741691df7eae89f",
+      "session": "2021-04-19",
+      "start": "2021-04-19T13:30:00+00:00",
+      "stop_exclusive": "2021-04-19T20:00:00+00:00",
+      "symbol": "WMT"
+    },
+    {
+      "availability_basis": "UNKNOWN",
+      "available_at": null,
+      "endpoint": "https://api.massive.com/v2/aggs/ticker/WMT/range/30/minute/1618839000000/1618862399999",
+      "kind": "CONDITIONAL_RAW_BASIS_DIAGNOSTIC",
+      "provider": "MASSIVE",
+      "query": {
+        "adjusted": "false",
+        "limit": 50000,
+        "sort": "asc"
+      },
+      "request_hash": "2e918c81789c0c744348ad0efc2abe3b09eef40c603b96a8e945135c2f481f15",
+      "session": "2021-04-19",
+      "start": "2021-04-19T13:30:00+00:00",
+      "stop_exclusive": "2021-04-19T20:00:00+00:00",
+      "symbol": "WMT"
+    }
+  ],
+  "same_page_lifetime_attempts": 3,
+  "source_status": "SECONDARY_CANDIDATE_ONLY_NOT_ACTIVATED",
+  "storage_scope": "Shared256MiB with primary acquisition and QA",
+  "version": 1,
+  "volume_unit": "UNVERIFIED_UNTIL_RAW_ADJUSTED_CONTROLS_AND_CORPORATE_ACTION_EVIDENCE"
+}

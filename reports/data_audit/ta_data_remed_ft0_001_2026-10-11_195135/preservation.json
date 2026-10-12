@@ -1,0 +1,1061 @@
+{
+  "API_signature_field_order_status": "PASS_ALL13_MODULES",
+  "AST_python3_11": {
+    "owned_files": 59,
+    "status": "PASS"
+  },
+  "CURRENT_PROTOCOL_sha256": "1b83b2ef8f727618ef319c0c04b36056c5c8cb19857ebe40927851e3295ca600",
+  "SPY_attempts_before_after": 129,
+  "SPY_journal_sha256": "e6d51bffcdd8746e11cfa31a8aba1e740b5c46a076c1b27b7bcc86c2a8f775bc",
+  "branch": "feat/track-a-data-intake",
+  "concurrent_human_notes": {},
+  "course_SHA256": "ba78d6bf933f0aca4dfcdedb69454d19aa29bfed84481b6ba1bcccdaf7b1634a",
+  "formal_gate_or_source_activation": false,
+  "historical_blockers": 7,
+  "ledger_SHA256": "4c2f0693aaaba9c29110881a0961b31a12195c126e4437830600b2a4b81e12e4",
+  "ledger_events_before_after": 24,
+  "pair_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "prior_code_tests_docs_reports_SHA_unchanged_except_human_notes": true,
+  "prior_local_protected_files": 366,
+  "protected_public_signatures_and_dataclass_fields": {
+    "clocks": {
+      "AvailabilityCheck": {
+        "fields": [
+          "observation_id",
+          "symbol",
+          "cutoff",
+          "usable",
+          "source_asof_verified",
+          "scenario_only",
+          "reason"
+        ],
+        "signature": "(observation_id: 'str', symbol: 'str', cutoff: 'pd.Timestamp', usable: 'bool', source_asof_verified: 'bool', scenario_only: 'bool', reason: 'str') -> None"
+      },
+      "ExecutionPlan": {
+        "fields": [
+          "session",
+          "origin",
+          "cutoff",
+          "issuance",
+          "issuance_kind",
+          "entry",
+          "exit",
+          "reason"
+        ],
+        "signature": "(session: 'str', origin: 'int', cutoff: 'pd.Timestamp | None', issuance: 'pd.Timestamp | None', issuance_kind: 'IssuanceKind', entry: 'pd.Timestamp | None', exit: 'pd.Timestamp | None', reason: 'str') -> None"
+      },
+      "HourSlot": {
+        "fields": [
+          "start",
+          "end",
+          "is_stub"
+        ],
+        "signature": "(start: 'pd.Timestamp', end: 'pd.Timestamp', is_stub: 'bool' = False) -> None"
+      },
+      "OriginBoundary": {
+        "fields": [
+          "clock_and_information_issuable",
+          "source_asof_verified",
+          "entry_eligible",
+          "label_valid",
+          "execution_outcome"
+        ],
+        "signature": "(clock_and_information_issuable: 'bool', source_asof_verified: 'bool', entry_eligible: 'None' = None, label_valid: 'None' = None, execution_outcome: 'None' = None) -> None"
+      },
+      "SessionClock": {
+        "fields": [
+          "session",
+          "open",
+          "close",
+          "hours",
+          "terminal_stub",
+          "reason"
+        ],
+        "signature": "(session: 'str', open: 'pd.Timestamp | None', close: 'pd.Timestamp | None', hours: 'tuple[HourSlot, ...]', terminal_stub: 'HourSlot | None', reason: 'str') -> None"
+      },
+      "SourceObservation": {
+        "fields": [
+          "observation_id",
+          "symbol",
+          "native_label",
+          "native_basis",
+          "period_start",
+          "period_end",
+          "period_basis",
+          "available_at",
+          "availability_basis",
+          "evidence_ref"
+        ],
+        "signature": "(observation_id: 'str', symbol: 'str', native_label: 'pd.Timestamp | str | None', native_basis: 'Basis', period_start: 'pd.Timestamp | str | None', period_end: 'pd.Timestamp | str | None', period_basis: 'Basis', available_at: 'pd.Timestamp | str | None', availability_basis: 'Basis', evidence_ref: 'str | None' = None) -> None"
+      },
+      "clock_trace": {
+        "signature": "(plan: 'ExecutionPlan', observation: 'SourceObservation', check: 'AvailabilityCheck') -> 'dict'"
+      },
+      "execution_plan": {
+        "signature": "(clock: 'SessionClock', origin: 'int', *, issued_at: 'pd.Timestamp | str | None' = None) -> 'ExecutionPlan'"
+      },
+      "forecast_origins": {
+        "signature": "(clock: 'SessionClock') -> 'tuple[ExecutionPlan, ...]'"
+      },
+      "observation_at_cutoff": {
+        "signature": "(observation: 'SourceObservation', cutoff: 'pd.Timestamp | str', *, expected_slot: 'HourSlot | None' = None, test_scenario: 'bool' = False) -> 'AvailabilityCheck'"
+      },
+      "origin_boundary": {
+        "signature": "(plan: 'ExecutionPlan', steps: 'tuple[AvailabilityCheck, ...]') -> 'OriginBoundary'"
+      },
+      "session_clock": {
+        "signature": "(day: 'str') -> 'SessionClock'"
+      },
+      "utc": {
+        "signature": "(value: 'pd.Timestamp | str') -> 'pd.Timestamp'"
+      }
+    },
+    "corporate_actions": {
+      "Account": {
+        "fields": [
+          "cash",
+          "positions",
+          "as_of",
+          "claims",
+          "applied",
+          "last_action_key",
+          "unresolved_exits",
+          "assumptions"
+        ],
+        "signature": "(cash: 'Decimal', positions: 'tuple[Position, ...]', as_of: 'datetime', claims: 'tuple[DividendClaim, ...]' = (), applied: 'tuple[tuple[str, str], ...]' = (), last_action_key: 'tuple[datetime, int, str] | None' = None, unresolved_exits: 'tuple[str, ...]' = (), assumptions: 'tuple[str, ...]' = ()) -> None"
+      },
+      "Action": {
+        "fields": [
+          "source",
+          "symbol",
+          "kind",
+          "boundary",
+          "sequence",
+          "amount",
+          "share_basis",
+          "post_split_basis",
+          "payable_date",
+          "fractional_policy",
+          "convention"
+        ],
+        "signature": "(source: 'SourceEvidence', symbol: 'str', kind: 'str', boundary: 'datetime', sequence: 'int', amount: 'Decimal', share_basis: 'str', post_split_basis: 'str | None' = None, payable_date: 'date | None' = None, fractional_policy: 'str | None' = None, convention: 'str' = 'BEGINNING_OF_EX_SESSION_ASSUMPTION') -> None"
+      },
+      "DividendClaim": {
+        "fields": [
+          "claim_id",
+          "source",
+          "position_id",
+          "symbol",
+          "entitled_at",
+          "eligible_shares",
+          "rate",
+          "share_basis",
+          "payable_date",
+          "settled"
+        ],
+        "signature": "(claim_id: 'str', source: 'SourceEvidence', position_id: 'str', symbol: 'str', entitled_at: 'datetime', eligible_shares: 'Decimal', rate: 'Decimal', share_basis: 'str', payable_date: 'date | None', settled: 'bool' = False) -> None"
+      },
+      "Position": {
+        "fields": [
+          "symbol",
+          "position_id",
+          "quantity",
+          "held_since",
+          "share_basis"
+        ],
+        "signature": "(symbol: 'str', position_id: 'str', quantity: 'Decimal', held_since: 'datetime', share_basis: 'str') -> None"
+      },
+      "RawMark": {
+        "fields": [
+          "symbol",
+          "price",
+          "observation_at",
+          "available_at",
+          "share_basis",
+          "source_id",
+          "price_basis"
+        ],
+        "signature": "(symbol: 'str', price: 'Decimal', observation_at: 'datetime', available_at: 'datetime', share_basis: 'str', source_id: 'str', price_basis: 'str' = 'RAW') -> None"
+      },
+      "SourceEvidence": {
+        "fields": [
+          "event_id",
+          "sha256",
+          "retrieved_at",
+          "publication_at"
+        ],
+        "signature": "(event_id: 'str', sha256: 'str', retrieved_at: 'datetime', publication_at: 'datetime | None' = None) -> None"
+      },
+      "apply_action": {
+        "signature": "(state: 'Account', action: 'Action') -> 'Account'"
+      },
+      "apply_actions": {
+        "signature": "(state: 'Account', actions: 'tuple[Action, ...]') -> 'Account'"
+      },
+      "aware": {
+        "signature": "(value: 'datetime') -> 'None'"
+      },
+      "field_evidence": {
+        "signature": "(record: 'Mapping', key: 'str') -> 'dict'"
+      },
+      "identity": {
+        "signature": "(value: 'str') -> 'None'"
+      },
+      "normalize_action": {
+        "signature": "(record: 'Mapping', category: 'str', *, held_symbol: 'str', source: 'SourceEvidence', boundary: 'datetime', sequence: 'int', share_basis: 'str', post_split_basis: 'str | None' = None, fractional_policy: 'str | None' = None) -> 'Action'"
+      },
+      "number": {
+        "signature": "(value: 'object') -> 'Decimal'"
+      },
+      "raw_price_from_split_adjusted": {
+        "signature": "(price: 'object', raw_per_adjusted: 'object') -> 'Decimal'"
+      },
+      "reconcile_source": {
+        "signature": "(payload: 'Mapping', source_hash: 'str', retrieved_at: 'datetime') -> 'dict'"
+      },
+      "retain_missing_exit": {
+        "signature": "(state: 'Account', symbol: 'str', at: 'datetime') -> 'Account'"
+      },
+      "settle_dividend": {
+        "signature": "(state: 'Account', claim_id: 'str', at: 'datetime') -> 'Account'"
+      },
+      "snapshot": {
+        "signature": "(state: 'Account', marks: 'tuple[RawMark, ...]', at: 'datetime') -> 'dict'"
+      }
+    },
+    "ft0_audit": {
+      "group_summary": {
+        "signature": "(rows: 'list[dict]', *, minimum: 'float') -> 'dict'"
+      },
+      "main": {
+        "signature": "() -> 'int'"
+      },
+      "market_alignment": {
+        "signature": "(retention: 'dict', market: 'MarketHistory') -> 'dict'"
+      },
+      "mechanical_m2": {
+        "signature": "(history: 'StockHistory', symbol: 'str', session: 'str', origin: 'int') -> 'bool'"
+      },
+      "peak_memory_bytes": {
+        "signature": "() -> 'int | None'"
+      },
+      "retention_audit": {
+        "signature": "(history: 'StockHistory', qa: 'dict', calculator: 'FeatureCalculator | None' = None) -> 'dict'"
+      },
+      "timing_bridge": {
+        "signature": "(history: 'StockHistory', retention: 'dict') -> 'dict'"
+      }
+    },
+    "ft0_tensor": {
+      "CandidateJoin": {
+        "fields": [
+          "stock",
+          "market",
+          "stock_only_eligible",
+          "matched_market_eligible",
+          "status",
+          "future_mc0_width",
+          "model_wiring",
+          "research_ready"
+        ],
+        "signature": "(stock: 'StockTensor', market: 'MarketWindow | None', stock_only_eligible: 'bool', matched_market_eligible: 'bool', status: 'str', future_mc0_width: 'int' = 21, model_wiring: 'str' = 'NOT_BUILT', research_ready: 'bool' = False) -> None"
+      },
+      "StockTensor": {
+        "fields": [
+          "symbols",
+          "steps",
+          "channels",
+          "raw_values",
+          "values",
+          "mask",
+          "reasons",
+          "lineage",
+          "input_eligible",
+          "floor_ref",
+          "m2_floor_refs",
+          "scaler_ref",
+          "application_context",
+          "source_binding",
+          "action_binding",
+          "source_only",
+          "synthetic",
+          "research_ready"
+        ],
+        "signature": "(symbols: 'tuple[str, ...]', steps: 'tuple[ScheduledStep, ...]', channels: 'tuple[str, ...]', raw_values: 'Numbers', values: 'Numbers', mask: 'Masks', reasons: 'Reasons', lineage: 'tuple[tuple[tuple[str, ...], ...], ...]', input_eligible: 'bool', floor_ref: 'str | None', m2_floor_refs: 'tuple[str | None, ...]', scaler_ref: 'str | None', application_context: 'Context', source_binding: 'str', action_binding: 'str', source_only: 'bool', synthetic: 'bool', research_ready: 'bool' = False) -> None"
+      },
+      "fitting_observations": {
+        "signature": "(cells: 'tuple[FeatureCell, ...]') -> 'tuple[FitObservation, ...]'"
+      },
+      "forecast_bridge": {
+        "signature": "(stock: 'StockTensor', plan: 'ExecutionPlan') -> 'ForecastEvidence'"
+      },
+      "join_market": {
+        "signature": "(stock: 'StockTensor', history: 'MarketHistory | None', market_floors: 'MarketFloors | None' = None, market_scaler: 'MarketScaler | None' = None, *, origin: 'int') -> 'CandidateJoin'"
+      },
+      "stock_window": {
+        "signature": "(calculator: 'FeatureCalculator', session: 'str', origin: 'int', floors: 'FloorCertificate | None' = None, m2_floors: 'tuple[M2FloorCertificate | None, ...]' = (), scaler: 'ScalerCertificate | None' = None, *, context: 'Context' = 'ASOF', source_only: 'bool' = False) -> 'StockTensor'"
+      }
+    },
+    "ft0_transforms": {
+      "FitObservation": {
+        "fields": [
+          "symbol",
+          "timestamp",
+          "kind",
+          "key",
+          "value",
+          "source_id",
+          "source_binding",
+          "action_binding",
+          "basis",
+          "available_at",
+          "origin",
+          "label",
+          "source_version",
+          "dictionary_id"
+        ],
+        "signature": "(symbol: 'str', timestamp: 'pd.Timestamp', kind: 'str', key: 'tuple[str, str, int]', value: 'float', source_id: 'str', source_binding: 'str', action_binding: 'str', basis: \"Literal['SYNTHETIC', 'DOCUMENTED']\", available_at: 'pd.Timestamp', origin: 'int | None' = None, label: 'ProxyLabelSample | None' = None, source_version: 'str' = 'ALPACA_SIP_CORE5_SPLIT_30MIN_V1', dictionary_id: 'str' = 'f09ecd5ed58ced5804f3befd71980f5a58c8aa6e3fcd46e8df90e079bac2d163') -> None"
+      },
+      "FloorCertificate": {
+        "fields": [
+          "values",
+          "window",
+          "keys",
+          "source_binding",
+          "action_binding",
+          "evidence_ref",
+          "source_version",
+          "dictionary_id",
+          "basis",
+          "method"
+        ],
+        "signature": "(values: 'tuple[StockParameters, ...]', window: 'FitWindow', keys: 'tuple[tuple[str, tuple[str, str, int]], ...]', source_binding: 'str', action_binding: 'str', evidence_ref: 'str', source_version: 'str' = 'ALPACA_SIP_CORE5_SPLIT_30MIN_V1', dictionary_id: 'str' = 'f09ecd5ed58ced5804f3befd71980f5a58c8aa6e3fcd46e8df90e079bac2d163', basis: 'str' = 'SYNTHETIC', method: 'str' = 'POSITIVE_RMS_P05_VOLUME_POSITIVE_MEDIAN_1PCT') -> None"
+      },
+      "ScalerCertificate": {
+        "fields": [
+          "centers",
+          "scales",
+          "methods",
+          "window",
+          "keys",
+          "weights",
+          "source_binding",
+          "action_binding",
+          "evidence_ref",
+          "order",
+          "source_version",
+          "dictionary_id",
+          "basis"
+        ],
+        "signature": "(centers: 'tuple[float, ...]', scales: 'tuple[float, ...]', methods: 'tuple[str, ...]', window: 'FitWindow', keys: 'tuple[tuple[str, tuple[str, str, int]], ...]', weights: 'tuple[float, ...]', source_binding: 'str', action_binding: 'str', evidence_ref: 'str', order: 'tuple[str, ...]' = ('M1', 'M2', 'M3', 'M4', 'V1', 'V2', 'V3', 'B1', 'B2', 'Q1', 'Q2', 'T1', 'T2', 'T3', 'T4', 'T5'), source_version: 'str' = 'ALPACA_SIP_CORE5_SPLIT_30MIN_V1', dictionary_id: 'str' = 'f09ecd5ed58ced5804f3befd71980f5a58c8aa6e3fcd46e8df90e079bac2d163', basis: 'str' = 'SYNTHETIC') -> None"
+      },
+      "StockParameters": {
+        "fields": [
+          "symbol",
+          "hourly_floor",
+          "daily_floor",
+          "hourly_pseudocount",
+          "daily_pseudocount"
+        ],
+        "signature": "(symbol: 'str', hourly_floor: 'float', daily_floor: 'float', hourly_pseudocount: 'float', daily_pseudocount: 'float') -> None"
+      },
+      "check_window": {
+        "signature": "(window: 'FitWindow') -> 'None'"
+      },
+      "fit_floors": {
+        "signature": "(records: 'tuple[FitObservation, ...]', window: 'FitWindow', evidence_ref: 'str', *, allow_synthetic: 'bool' = False) -> 'FloorCertificate'"
+      },
+      "fit_m2_floor": {
+        "signature": "(results: 'tuple[M2Result, ...]', window: 'FitWindow', symbol: 'str', evidence_ref: 'str', *, allow_synthetic: 'bool' = False) -> 'M2FloorCertificate'"
+      },
+      "fit_scaler": {
+        "signature": "(records: 'tuple[FitObservation, ...]', window: 'FitWindow', evidence_ref: 'str', *, allow_synthetic: 'bool' = False) -> 'ScalerCertificate'"
+      },
+      "identity": {
+        "signature": "(value: 'object') -> 'str'"
+      },
+      "population": {
+        "signature": "(records: 'tuple[FitObservation, ...]', window: 'FitWindow', *, allow_synthetic: 'bool') -> 'tuple[FitObservation, ...]'"
+      },
+      "transform_reason": {
+        "signature": "(window: 'FitWindow', cutoff: 'pd.Timestamp', context: 'Context', training_origin: 'pd.Timestamp | None' = None) -> 'str'"
+      },
+      "weighted_quantile": {
+        "signature": "(values: 'np.ndarray', weights: 'np.ndarray', quantile: 'float') -> 'float'"
+      }
+    },
+    "hourly_proxy": {
+      "ExecutionReference": {
+        "fields": [
+          "symbol",
+          "side",
+          "scheduled_event_at",
+          "expected_period_end",
+          "row",
+          "lag_seconds",
+          "valid_at_event",
+          "reason",
+          "execution_version"
+        ],
+        "signature": "(symbol: 'str', side: \"Literal['LONG', 'SHORT'] | None\", scheduled_event_at: 'pd.Timestamp | None', expected_period_end: 'pd.Timestamp | None', row: 'HourlyCloseReference | None', lag_seconds: 'float | None', valid_at_event: 'bool', reason: 'str', execution_version: 'str' = 'COMPLETED_HOURLY_CLOSE_PROXY:v1') -> None"
+      },
+      "HourlyCloseReference": {
+        "fields": [
+          "symbol",
+          "row_id",
+          "period_start",
+          "period_end",
+          "raw_close",
+          "source_version",
+          "source",
+          "available_at",
+          "availability_basis",
+          "evidence_ref",
+          "price_field",
+          "adjustment"
+        ],
+        "signature": "(symbol: 'str', row_id: 'str', period_start: 'pd.Timestamp | str', period_end: 'pd.Timestamp | str', raw_close: 'float', source_version: 'str', source: \"Literal['ALPACA_SIP', 'SYNTHETIC']\", available_at: 'pd.Timestamp | str | None' = None, availability_basis: 'Basis' = 'UNKNOWN', evidence_ref: 'str | None' = None, price_field: 'str' = 'close', adjustment: 'str' = 'raw') -> None"
+      },
+      "ProxyFloor": {
+        "fields": [
+          "foundation",
+          "floor_id",
+          "execution_version",
+          "target_version",
+          "m2_version"
+        ],
+        "signature": "(foundation: 'FittedFloor', floor_id: 'str', execution_version: 'str' = 'COMPLETED_HOURLY_CLOSE_PROXY:v1', target_version: 'str' = 'TG0:HOURLY_CLOSE_PROXY:v1', m2_version: 'str' = 'M2:HOURLY_CLOSE_PROXY:v1:REBUILD_REQUIRED') -> None"
+      },
+      "ProxyLabelSample": {
+        "fields": [
+          "plan",
+          "causal",
+          "raw_returns",
+          "centered_returns",
+          "cross_median",
+          "unscaled_mad",
+          "maturity",
+          "maturity_basis",
+          "observed_at",
+          "label_valid",
+          "reason",
+          "source_ids",
+          "source_versions",
+          "action_evidence_ref",
+          "split_ids",
+          "scenario_only",
+          "execution_outcome",
+          "market_status",
+          "research_ready",
+          "references",
+          "execution_version",
+          "target_version",
+          "m2_version"
+        ],
+        "signature": "(plan: 'ExecutionPlan', causal: 'CausalEligibility', raw_returns: 'tuple[float, ...] | None', centered_returns: 'tuple[float, ...] | None', cross_median: 'float | None', unscaled_mad: 'float | None', maturity: 'pd.Timestamp | None', maturity_basis: 'str', observed_at: 'pd.Timestamp', label_valid: 'bool', reason: 'str', source_ids: 'tuple[str, ...]', source_versions: 'tuple[str, ...]', action_evidence_ref: 'str | None', split_ids: 'tuple[str, ...]', scenario_only: 'bool', execution_outcome: 'str' = 'NOT_EVALUATED', market_status: 'str' = 'HOLD', research_ready: 'bool' = False, references: 'tuple[ExecutionReference, ...]' = (), execution_version: 'str' = 'COMPLETED_HOURLY_CLOSE_PROXY:v1', target_version: 'str' = 'TG0:HOURLY_CLOSE_PROXY:v1', m2_version: 'str' = 'M2:HOURLY_CLOSE_PROXY:v1:REBUILD_REQUIRED') -> None"
+      },
+      "ProxyTG0Target": {
+        "fields": [
+          "sample",
+          "floor_id",
+          "epsilon",
+          "scores",
+          "research_ready",
+          "execution_version",
+          "target_version",
+          "m2_version"
+        ],
+        "signature": "(sample: 'LabelSample', floor_id: 'str', epsilon: 'float', scores: 'tuple[float, ...]', research_ready: 'bool' = False, execution_version: 'str' = 'COMPLETED_HOURLY_CLOSE_PROXY:v1', target_version: 'str' = 'TG0:HOURLY_CLOSE_PROXY:v1', m2_version: 'str' = 'M2:HOURLY_CLOSE_PROXY:v1:REBUILD_REQUIRED') -> None"
+      },
+      "apply_proxy_floor": {
+        "signature": "(sample: 'ProxyLabelSample', floor: 'ProxyFloor', *, test_scenario: 'bool' = False) -> 'ProxyTG0Target'"
+      },
+      "fit_proxy_floor": {
+        "signature": "(samples: 'tuple[ProxyLabelSample, ...]', window: 'FitWindow', *, test_scenario: 'bool' = False) -> 'ProxyFloor'"
+      },
+      "proxy_causal_eligibility": {
+        "signature": "(plan: 'ExecutionPlan', forecast: 'ForecastEvidence', entries: 'tuple[HourlyCloseReference, ...]', *, test_scenario: 'bool' = False) -> 'CausalEligibility'"
+      },
+      "proxy_fitting_membership": {
+        "signature": "(sample: 'ProxyLabelSample', window: 'FitWindow', *, test_scenario: 'bool' = False) -> 'str'"
+      },
+      "proxy_label_sample": {
+        "signature": "(plan: 'ExecutionPlan', forecast: 'ForecastEvidence', entries: 'tuple[HourlyCloseReference, ...]', exits: 'tuple[HourlyCloseReference, ...]', *, observed_at: 'pd.Timestamp | str', actions: 'ActionScope | None' = None, test_scenario: 'bool' = False) -> 'ProxyLabelSample'"
+      },
+      "resolve_reference": {
+        "signature": "(rows: 'tuple[HourlyCloseReference, ...]', plan: 'ExecutionPlan', symbol: 'str', event: \"Literal['ENTRY', 'EXIT']\", *, side: \"Literal['LONG', 'SHORT'] | None\" = None, test_scenario: 'bool' = False) -> 'ExecutionReference'"
+      }
+    },
+    "labels": {
+      "ActionScope": {
+        "fields": [
+          "start",
+          "end",
+          "symbols",
+          "basis",
+          "evidence_ref",
+          "splits",
+          "unsupported_action"
+        ],
+        "signature": "(start: 'pd.Timestamp | str', end: 'pd.Timestamp | str', symbols: 'tuple[str, ...]', basis: 'Basis', evidence_ref: 'str', splits: 'tuple[SplitFact, ...]' = (), unsupported_action: 'bool' = False) -> None"
+      },
+      "CausalEligibility": {
+        "fields": [
+          "forecast_issuable",
+          "entry_eligible",
+          "entry_reasons",
+          "forecast_evidence_ref",
+          "entry_source_ids",
+          "scope"
+        ],
+        "signature": "(forecast_issuable: 'bool', entry_eligible: 'tuple[bool, ...]', entry_reasons: 'tuple[str, ...]', forecast_evidence_ref: 'str', entry_source_ids: 'tuple[str | None, ...]', scope: 'str' = 'SOURCE_CLOCK_REFERENCE_ONLY; P3_ADMISSION_NOT_EVALUATED') -> None"
+      },
+      "FitWindow": {
+        "fields": [
+          "window_id",
+          "start",
+          "stop",
+          "fitted_at",
+          "phase"
+        ],
+        "signature": "(window_id: 'str', start: 'pd.Timestamp', stop: 'pd.Timestamp', fitted_at: 'pd.Timestamp', phase: \"Literal['INNER_TRAIN', 'INNER_VALIDATION', 'REFIT']\") -> None"
+      },
+      "FittedFloor": {
+        "fields": [
+          "floor_id",
+          "epsilon",
+          "window",
+          "fitting_keys",
+          "exclusions",
+          "scenario_only"
+        ],
+        "signature": "(floor_id: 'str', epsilon: 'float', window: 'FitWindow', fitting_keys: 'tuple[str, ...]', exclusions: 'tuple[tuple[str, str], ...]', scenario_only: 'bool') -> None"
+      },
+      "ForecastEvidence": {
+        "fields": [
+          "issuable",
+          "cutoff",
+          "input_symbols",
+          "basis",
+          "evidence_ref"
+        ],
+        "signature": "(issuable: 'bool', cutoff: 'pd.Timestamp | str', input_symbols: 'tuple[str, ...]', basis: 'Basis', evidence_ref: 'str') -> None"
+      },
+      "LabelSample": {
+        "fields": [
+          "plan",
+          "causal",
+          "raw_returns",
+          "centered_returns",
+          "cross_median",
+          "unscaled_mad",
+          "maturity",
+          "maturity_basis",
+          "observed_at",
+          "label_valid",
+          "reason",
+          "source_ids",
+          "source_versions",
+          "action_evidence_ref",
+          "split_ids",
+          "scenario_only",
+          "execution_outcome",
+          "market_status",
+          "research_ready"
+        ],
+        "signature": "(plan: 'ExecutionPlan', causal: 'CausalEligibility', raw_returns: 'tuple[float, ...] | None', centered_returns: 'tuple[float, ...] | None', cross_median: 'float | None', unscaled_mad: 'float | None', maturity: 'pd.Timestamp | None', maturity_basis: 'str', observed_at: 'pd.Timestamp', label_valid: 'bool', reason: 'str', source_ids: 'tuple[str, ...]', source_versions: 'tuple[str, ...]', action_evidence_ref: 'str | None', split_ids: 'tuple[str, ...]', scenario_only: 'bool', execution_outcome: 'str' = 'NOT_EVALUATED', market_status: 'str' = 'HOLD', research_ready: 'bool' = False) -> None"
+      },
+      "MinuteReference": {
+        "fields": [
+          "symbol",
+          "row_id",
+          "minute_start",
+          "raw_open",
+          "source_version",
+          "source",
+          "available_at",
+          "availability_basis",
+          "evidence_ref",
+          "duration_minutes",
+          "price_field",
+          "adjustment"
+        ],
+        "signature": "(symbol: 'str', row_id: 'str', minute_start: 'pd.Timestamp | str', raw_open: 'float', source_version: 'str', source: \"Literal['ALPACA_SIP', 'SYNTHETIC']\", available_at: 'pd.Timestamp | str | None' = None, availability_basis: 'Basis' = 'UNKNOWN', evidence_ref: 'str | None' = None, duration_minutes: 'int' = 1, price_field: 'str' = 'open', adjustment: 'str' = 'raw') -> None"
+      },
+      "SplitFact": {
+        "fields": [
+          "symbol",
+          "effective_at",
+          "new_shares",
+          "old_shares",
+          "event_id",
+          "basis"
+        ],
+        "signature": "(symbol: 'str', effective_at: 'pd.Timestamp | str', new_shares: 'int', old_shares: 'int', event_id: 'str', basis: 'Basis') -> None"
+      },
+      "TG0Target": {
+        "fields": [
+          "sample",
+          "floor_id",
+          "epsilon",
+          "scores",
+          "research_ready"
+        ],
+        "signature": "(sample: 'LabelSample', floor_id: 'str', epsilon: 'float', scores: 'tuple[float, ...]', research_ready: 'bool' = False) -> None"
+      },
+      "apply_tg0_floor": {
+        "signature": "(sample: 'LabelSample', floor: 'FittedFloor', *, test_scenario: 'bool' = False) -> 'TG0Target'"
+      },
+      "causal_eligibility": {
+        "signature": "(plan: 'ExecutionPlan', forecast: 'ForecastEvidence', entries: 'tuple[MinuteReference, ...]', *, test_scenario: 'bool' = False) -> 'CausalEligibility'"
+      },
+      "fit_tg0_floor": {
+        "signature": "(samples: 'tuple[LabelSample, ...]', window: 'FitWindow', *, test_scenario: 'bool' = False) -> 'FittedFloor'"
+      },
+      "fitting_membership": {
+        "signature": "(sample: 'LabelSample', window: 'FitWindow', *, test_scenario: 'bool' = False) -> 'str'"
+      },
+      "fitting_window": {
+        "signature": "(stage: \"Literal['WF1', 'WF2', 'PRECONFIRMATION']\", phase: \"Literal['INNER_TRAIN', 'INNER_VALIDATION', 'REFIT']\", *, fitted_at: 'pd.Timestamp | str') -> 'FitWindow'"
+      },
+      "label_sample": {
+        "signature": "(plan: 'ExecutionPlan', forecast: 'ForecastEvidence', entries: 'tuple[MinuteReference, ...]', exits: 'tuple[MinuteReference, ...]', *, observed_at: 'pd.Timestamp | str', actions: 'ActionScope | None' = None, test_scenario: 'bool' = False) -> 'LabelSample'"
+      },
+      "minute_reference": {
+        "signature": "(rows: 'tuple[MinuteReference, ...]', symbol: 'str', minute: 'pd.Timestamp | str') -> 'MinuteReference | None'"
+      }
+    },
+    "m2": {
+      "HistoricalReturn": {
+        "fields": [
+          "plan",
+          "symbol",
+          "value",
+          "maturity",
+          "reason",
+          "source_ids",
+          "action_ids",
+          "source_binding",
+          "synthetic",
+          "execution_version",
+          "m2_version"
+        ],
+        "signature": "(plan: 'ExecutionPlan', symbol: 'str', value: 'float | None', maturity: 'pd.Timestamp | None', reason: 'str', source_ids: 'tuple[str, ...]', action_ids: 'tuple[str, ...]', source_binding: 'str', synthetic: 'bool', execution_version: 'str' = 'COMPLETED_HOURLY_CLOSE_PROXY:v1', m2_version: 'str' = 'M2:HOURLY_CLOSE_PROXY:v1') -> None"
+      },
+      "M2FloorCertificate": {
+        "fields": [
+          "epsilon",
+          "window",
+          "fitting_keys",
+          "evidence_ref",
+          "basis",
+          "method",
+          "m2_version"
+        ],
+        "signature": "(epsilon: 'float', window: 'FitWindow', fitting_keys: 'tuple[tuple[str, str, int], ...]', evidence_ref: 'str', basis: 'str', method: 'str' = 'TRAINING_POSITIVE_VOLATILITY_P05', m2_version: 'str' = 'M2:HOURLY_CLOSE_PROXY:v1') -> None"
+      },
+      "M2Result": {
+        "fields": [
+          "key",
+          "step",
+          "value",
+          "reason",
+          "sessions",
+          "valid20",
+          "valid60",
+          "max_missing_run",
+          "reference_ids",
+          "missing_reasons",
+          "mean20",
+          "rms60",
+          "floor_id",
+          "m2_version",
+          "research_ready"
+        ],
+        "signature": "(key: 'tuple[str, str, int]', step: 'ScheduledStep', value: 'float | None', reason: 'str', sessions: 'tuple[str, ...]', valid20: 'int', valid60: 'int', max_missing_run: 'int', reference_ids: 'tuple[str | None, ...]', missing_reasons: 'tuple[str, ...]', mean20: 'float | None' = None, rms60: 'float | None' = None, floor_id: 'str | None' = None, m2_version: 'str' = 'M2:HOURLY_CLOSE_PROXY:v1', research_ready: 'bool' = False) -> None"
+      },
+      "ReturnIndex": {
+        "signature": "(records: 'tuple[HistoricalReturn, ...]')"
+      },
+      "ScheduledCalendar": {
+        "signature": "(start: 'str', end: 'str')"
+      },
+      "ScheduledStep": {
+        "fields": [
+          "session",
+          "slot",
+          "start",
+          "end"
+        ],
+        "signature": "(session: 'str', slot: 'int', start: 'pd.Timestamp', end: 'pd.Timestamp') -> None"
+      },
+      "WindowQuality": {
+        "fields": [
+          "steps",
+          "source_ids",
+          "mask",
+          "reasons",
+          "raw_window_eligible",
+          "full_ft0_eligible",
+          "research_ready"
+        ],
+        "signature": "(steps: 'tuple[ScheduledStep, ...]', source_ids: 'tuple[tuple[str | None, ...], ...]', mask: 'tuple[tuple[bool, ...], ...]', reasons: 'tuple[tuple[str, ...], ...]', raw_window_eligible: 'bool', full_ft0_eligible: 'bool' = False, research_ready: 'bool' = False) -> None"
+      },
+      "canonical_m2_keys": {
+        "signature": "(results: 'tuple[M2Result, ...]') -> 'tuple[tuple[tuple[str, str, int], float], ...]'"
+      },
+      "evaluate_m2": {
+        "signature": "(calendar: 'ScheduledCalendar', index: 'ReturnIndex', symbol: 'str', step: 'ScheduledStep', origin: 'int', floor: 'M2FloorCertificate | None' = None, *, test_scenario: 'bool' = False) -> 'M2Result'"
+      },
+      "historical_return": {
+        "signature": "(plan: 'ExecutionPlan', symbol: 'str', rows: 'tuple[HourlyCloseReference, ...]', actions: 'ActionScope | None', *, test_scenario: 'bool' = False) -> 'HistoricalReturn'"
+      },
+      "scheduled_window": {
+        "signature": "(calendar: 'ScheduledCalendar', session: 'str', origin: 'int') -> 'tuple[ScheduledStep, ...]'"
+      },
+      "window_quality": {
+        "signature": "(calendar: 'ScheduledCalendar', steps: 'tuple[ScheduledStep, ...]', rows: 'tuple[HourlyCloseReference, ...]', *, test_scenario: 'bool' = False) -> 'WindowQuality'"
+      }
+    },
+    "market_features": {
+      "DailyScaleSample": {
+        "fields": [
+          "timestamp",
+          "rms63"
+        ],
+        "signature": "(timestamp: 'pd.Timestamp', rms63: 'float | None') -> None"
+      },
+      "MarketClose": {
+        "fields": [
+          "period_end",
+          "close",
+          "available_at",
+          "basis",
+          "evidence_id",
+          "splits_verified",
+          "source_version"
+        ],
+        "signature": "(period_end: 'pd.Timestamp', close: 'float', available_at: 'pd.Timestamp | None', basis: 'Basis', evidence_id: 'str', splits_verified: 'bool', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1') -> None"
+      },
+      "MarketFitWindow": {
+        "fields": [
+          "start",
+          "stop",
+          "fitted_at",
+          "phase"
+        ],
+        "signature": "(start: 'pd.Timestamp', stop: 'pd.Timestamp', fitted_at: 'pd.Timestamp', phase: \"Literal['INNER_TRAIN', 'REFIT']\") -> None"
+      },
+      "MarketFloors": {
+        "fields": [
+          "hourly",
+          "daily",
+          "window",
+          "basis",
+          "evidence_ref",
+          "timestamps",
+          "daily_timestamps",
+          "source_version"
+        ],
+        "signature": "(hourly: 'float', daily: 'float', window: 'MarketFitWindow', basis: 'Basis', evidence_ref: 'str', timestamps: 'tuple[pd.Timestamp, ...]', daily_timestamps: 'tuple[pd.Timestamp, ...]', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1') -> None"
+      },
+      "MarketHistory": {
+        "signature": "(calendar: 'ScheduledCalendar', hours: 'tuple[MarketObservation, ...]', closes: 'dict[str, MarketClose]', *, allow_synthetic: 'bool' = False)"
+      },
+      "MarketMeasures": {
+        "fields": [
+          "timestamp",
+          "hourly_return",
+          "rms12",
+          "rms60",
+          "daily_rms63",
+          "momentum5",
+          "momentum20",
+          "reason",
+          "evidence_ids"
+        ],
+        "signature": "(timestamp: 'pd.Timestamp', hourly_return: 'float | None', rms12: 'float | None', rms60: 'float | None', daily_rms63: 'float | None', momentum5: 'float | None', momentum20: 'float | None', reason: 'str', evidence_ids: 'tuple[str, ...]') -> None"
+      },
+      "MarketObservation": {
+        "fields": [
+          "period_start",
+          "period_end",
+          "open",
+          "close",
+          "available_at",
+          "basis",
+          "evidence_id",
+          "splits_verified",
+          "source_version",
+          "adjustment"
+        ],
+        "signature": "(period_start: 'pd.Timestamp', period_end: 'pd.Timestamp', open: 'float', close: 'float', available_at: 'pd.Timestamp | None', basis: 'Basis', evidence_id: 'str', splits_verified: 'bool', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1', adjustment: 'str' = 'raw') -> None"
+      },
+      "MarketScaler": {
+        "fields": [
+          "centers",
+          "scales",
+          "methods",
+          "window",
+          "timestamps",
+          "evidence_ref",
+          "basis",
+          "source_version"
+        ],
+        "signature": "(centers: 'Vector', scales: 'Vector', methods: 'tuple[str, str, str, str, str]', window: 'MarketFitWindow', timestamps: 'tuple[pd.Timestamp, ...]', evidence_ref: 'str', basis: 'Basis' = 'SYNTHETIC', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1') -> None"
+      },
+      "MarketVector": {
+        "fields": [
+          "timestamp",
+          "values",
+          "reason",
+          "evidence_ids"
+        ],
+        "signature": "(timestamp: 'pd.Timestamp', values: 'Vector | None', reason: 'str', evidence_ids: 'tuple[str, ...]') -> None"
+      },
+      "MarketWindow": {
+        "fields": [
+          "values",
+          "valid_mask",
+          "reason",
+          "novel_constant_channels",
+          "research_ready",
+          "scheduled_ends",
+          "source_ids",
+          "step_reasons",
+          "source_version",
+          "floor_ref",
+          "scaler_ref"
+        ],
+        "signature": "(values: 'tuple[Vector, ...] | None', valid_mask: 'tuple[bool, ...]', reason: 'str', novel_constant_channels: 'tuple[int, ...]', research_ready: 'bool' = False, scheduled_ends: 'tuple[pd.Timestamp, ...]' = (), source_ids: 'tuple[tuple[str, ...], ...]' = (), step_reasons: 'tuple[str, ...]' = (), source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1', floor_ref: 'str | None' = None, scaler_ref: 'str | None' = None) -> None"
+      },
+      "fit_synthetic_floors": {
+        "signature": "(rows: 'tuple[MarketMeasures, ...]', daily_rows: 'tuple[DailyScaleSample, ...]', window: 'MarketFitWindow', evidence_ref: 'str', *, allow_synthetic: 'bool' = False) -> 'MarketFloors'"
+      },
+      "fit_synthetic_scaler": {
+        "signature": "(rows: 'tuple[MarketVector, ...]', window: 'MarketFitWindow', evidence_ref: 'str', *, allow_synthetic: 'bool' = False) -> 'MarketScaler'"
+      },
+      "history_from_archive": {
+        "signature": "(calendar: 'ScheduledCalendar', hourly: 'pd.DataFrame') -> 'MarketHistory'"
+      },
+      "observation_reason": {
+        "signature": "(row: 'MarketObservation | None', cutoff: 'pd.Timestamp', *, allow_synthetic: 'bool' = False) -> 'str'"
+      },
+      "rms": {
+        "signature": "(values: 'tuple[float | None, ...]', count: 'int', minimum: 'int') -> 'float | None'"
+      },
+      "standardized_window": {
+        "signature": "(steps: 'tuple[ScheduledStep, ...]', rows: 'tuple[MarketVector, ...]', scaler: 'MarketScaler', *, calendar: 'ScheduledCalendar', allow_synthetic: 'bool' = False) -> 'MarketWindow'"
+      },
+      "vector": {
+        "signature": "(row: 'MarketMeasures', floors: 'MarketFloors', *, allow_synthetic: 'bool' = False) -> 'MarketVector'"
+      },
+      "window_from_history": {
+        "signature": "(history: 'MarketHistory', session: 'str', origin: 'int', floors: 'MarketFloors | None' = None, scaler: 'MarketScaler | None' = None, *, allow_synthetic: 'bool' = False) -> 'MarketWindow'"
+      }
+    },
+    "market_source": {
+      "AttemptBudget": {
+        "fields": [
+          "journal",
+          "stage",
+          "ceiling",
+          "fixed_requests",
+          "legacy_first_partition_pages",
+          "legacy_initial_page_attempts",
+          "legacy_unknown_continued_attempts",
+          "expected_journal_sha256",
+          "before_write"
+        ],
+        "signature": "(journal: 'Path', stage: 'str', ceiling: 'int' = 60, fixed_requests: 'tuple[dict, ...]' = (), legacy_first_partition_pages: 'int' = 0, legacy_initial_page_attempts: 'int' = 0, legacy_unknown_continued_attempts: 'int' = 0, expected_journal_sha256: 'str | None' = None, before_write: 'Callable[[int], None] | None' = None) -> None"
+      },
+      "MarketSource": {
+        "fields": [
+          "root",
+          "config"
+        ],
+        "signature": "(root: 'Path', config: 'dict[str, object]') -> None"
+      },
+      "acquire_partition": {
+        "signature": "(source: 'MarketSource', client: 'HistoricalClient', params: 'dict', *, completion_check: 'Callable[[], dict] | None' = None, before_publish: 'Callable[[int], None] | None' = None) -> 'dict'"
+      },
+      "archive_qa": {
+        "signature": "(source: 'MarketSource') -> 'dict'"
+      },
+      "hourly_archive": {
+        "signature": "(frame: 'pd.DataFrame', start: 'str', end: 'str') -> 'tuple[pd.DataFrame, dict]'"
+      },
+      "load_archive": {
+        "signature": "(source: 'MarketSource') -> 'pd.DataFrame'"
+      },
+      "load_market_history": {
+        "signature": "(source: 'MarketSource') -> 'MarketHistory'"
+      },
+      "main": {
+        "signature": "(argv: 'list[str] | None' = None) -> 'int'"
+      },
+      "pilot": {
+        "signature": "(source: 'MarketSource', client: 'HistoricalClient') -> 'dict'"
+      }
+    },
+    "spy_qa": {
+      "canonical_integration": {
+        "signature": "(source: 'MarketSource') -> 'dict'"
+      },
+      "full_source_qa": {
+        "signature": "(source: 'MarketSource') -> 'dict'"
+      },
+      "main": {
+        "signature": "() -> 'int'"
+      },
+      "structural_history": {
+        "signature": "(history: 'MarketHistory', session: 'str', origin: 'int') -> 'dict'"
+      }
+    },
+    "stock_features": {
+      "Components": {
+        "fields": [
+          "symbol",
+          "step",
+          "values",
+          "coverage",
+          "source_binding",
+          "action_binding",
+          "source_ids",
+          "source_only",
+          "flags",
+          "lineage_id"
+        ],
+        "signature": "(symbol: 'str', step: 'ScheduledStep', values: 'dict[str, float | None]', coverage: 'dict[str, bool]', source_binding: 'str', action_binding: 'str', source_ids: 'tuple[str, ...]', source_only: 'bool', flags: 'tuple[str, ...]', lineage_id: 'str') -> None"
+      },
+      "FeatureCalculator": {
+        "signature": "(history: 'StockHistory', returns: 'ReturnIndex | None' = None)"
+      },
+      "FeatureCell": {
+        "fields": [
+          "feature",
+          "value",
+          "valid",
+          "reason",
+          "key",
+          "timestamp",
+          "source_ids",
+          "lineage_id",
+          "source_binding",
+          "action_binding",
+          "basis",
+          "floor_id",
+          "m2",
+          "feature_version",
+          "dictionary_id",
+          "research_ready"
+        ],
+        "signature": "(feature: 'str', value: 'float | None', valid: 'bool', reason: 'str', key: 'tuple[str, str, int]', timestamp: 'pd.Timestamp', source_ids: 'tuple[str, ...]', lineage_id: 'str', source_binding: 'str', action_binding: 'str', basis: 'str', floor_id: 'str | None' = None, m2: 'M2Result | None' = None, feature_version: 'str' = 'FT0:HOURLY_CLOSE_PROXY:v1', dictionary_id: 'str' = 'f09ecd5ed58ced5804f3befd71980f5a58c8aa6e3fcd46e8df90e079bac2d163', research_ready: 'bool' = False) -> None"
+      },
+      "IndicatorState": {
+        "fields": [
+          "emas",
+          "ema_updates",
+          "previous_close",
+          "initial_changes",
+          "average_gain",
+          "average_loss",
+          "wilder_updates"
+        ],
+        "signature": "(emas: 'dict[int, float]' = <factory>, ema_updates: 'int' = 0, previous_close: 'float | None' = None, initial_changes: 'list[float]' = <factory>, average_gain: 'float | None' = None, average_loss: 'float | None' = None, wilder_updates: 'int' = 0) -> None"
+      },
+      "covered": {
+        "signature": "(values: 'tuple[float | None, ...]', count: 'int', minimum: 'int', maximum_gap: 'int' = 2) -> 'bool'"
+      },
+      "mean": {
+        "signature": "(values: 'tuple[float | None, ...]') -> 'float | None'"
+      }
+    },
+    "stock_source": {
+      "StockBar": {
+        "fields": [
+          "symbol",
+          "session",
+          "slot",
+          "start",
+          "end",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "source_ids",
+          "source_version",
+          "available_at",
+          "basis",
+          "action_verified",
+          "action_ref",
+          "share_basis",
+          "price_basis",
+          "evidence_ref",
+          "action_known_at"
+        ],
+        "signature": "(symbol: 'str', session: 'str', slot: 'int', start: 'pd.Timestamp', end: 'pd.Timestamp', open: 'float', high: 'float', low: 'float', close: 'float', volume: 'float', source_ids: 'tuple[str, ...]', source_version: 'str' = 'ALPACA_SIP_CORE5_SPLIT_30MIN_V1', available_at: 'pd.Timestamp | None' = None, basis: 'Basis' = 'UNKNOWN', action_verified: 'bool' = False, action_ref: 'str' = 'VENDOR_SPLIT_PRICE_AND_INVERSE_VOLUME_ASOF_UNVERIFIED', share_basis: 'str' = 'VENDOR_SPLIT_ASOF_2025-06-30', price_basis: 'str' = 'SPLIT_CONSISTENT', evidence_ref: 'str' = '', action_known_at: 'pd.Timestamp | None' = None) -> None"
+      },
+      "StockCalendar": {
+        "signature": "(start: 'str', end: 'str')"
+      },
+      "StockDaily": {
+        "fields": [
+          "symbol",
+          "session",
+          "end",
+          "close",
+          "volume",
+          "open",
+          "high",
+          "low",
+          "source_ids",
+          "close_available_at",
+          "volume_available_at",
+          "basis",
+          "action_verified",
+          "share_basis",
+          "source_version",
+          "close_basis",
+          "close_action_verified",
+          "close_action_known_at",
+          "volume_action_known_at"
+        ],
+        "signature": "(symbol: 'str', session: 'str', end: 'pd.Timestamp', close: 'float | None', volume: 'float | None', open: 'float | None', high: 'float | None', low: 'float | None', source_ids: 'tuple[str, ...]', close_available_at: 'pd.Timestamp | None', volume_available_at: 'pd.Timestamp | None', basis: 'Basis', action_verified: 'bool', share_basis: 'str', source_version: 'str' = 'ALPACA_SIP_CORE5_SPLIT_30MIN_V1', close_basis: 'Basis' = 'UNKNOWN', close_action_verified: 'bool' = False, close_action_known_at: 'pd.Timestamp | None' = None, volume_action_known_at: 'pd.Timestamp | None' = None) -> None"
+      },
+      "StockHistory": {
+        "signature": "(calendar: 'StockCalendar', bars: 'tuple[StockBar, ...]', *, synthetic: 'bool' = False)"
+      },
+      "convert_split_basis": {
+        "signature": "(bar: 'StockBar', action: 'Action', cutoff: 'pd.Timestamp') -> 'StockBar'"
+      },
+      "load_stock_history": {
+        "signature": "(config: 'Path' = PosixPath('configs/track_a_data.json')) -> 'tuple[StockHistory, dict]'"
+      },
+      "numeric": {
+        "signature": "(value: 'object') -> 'float'"
+      },
+      "proxy_reference": {
+        "signature": "(bar: 'StockBar', raw_per_adjusted: 'float | None', conversion_evidence: 'str' = '', *, conversion_known_at: 'pd.Timestamp | None' = None) -> 'HourlyCloseReference | None'"
+      },
+      "source_reason": {
+        "signature": "(row: 'StockBar | None', cutoff: 'pd.Timestamp', *, synthetic: 'bool' = False) -> 'str'"
+      }
+    }
+  },
+  "raw143_size_mtime_unchanged": 143,
+  "raw_baseline_SHA_ref": "preflight.json::raw_baseline",
+  "raw_overwrites": 0,
+  "raw_reverification": "Original offline audit replay verified source SHA; final stat inventory unchanged, no needless full rehash",
+  "stage_commit_push_merge_rebase_stash_reset": false,
+  "staged_files": 0,
+  "starting_ending_HEAD": "15bb3b440918387ca14005960534045975dafd1e",
+  "status": "PASS"
+}

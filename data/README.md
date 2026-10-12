@@ -146,3 +146,16 @@ Completed closing stubs supply daily closes and stay outside hourly feature
 positions. Publication timing and complete historical action scope remain
 unverified; raw ETF distributions are price effects, not total-return or
 portfolio cash adjustments. See the TA-MKT-SPY-003 source QA and review card.
+
+## Track A FT0 offline audit
+
+The existing stock SIP/split/30Min store and SPY SIP/raw/30Min store feed
+`python -m lstm_data.ft0_audit --report reports/data_audit/<new-report-directory>`.
+The command verifies immutable manifests, retains all 168 stock source gaps and
+measures scheduled preconfirmation feature coverage. It makes no API calls and
+fits no real transforms. Stock adjusted prices and inverse split-adjusted volume
+are consumed without applying a second adjustment. Unknown publication and action
+vintages remain separate admission holds; adjusted prices are not relabeled as raw
+execution references. No source repair or pre-July stock warmup was acquired.
+See [FT0 API](../docs/track_a/FT0_API.md) and the
+[retention report](../reports/data_audit/ta_p2_close_ft0_2026-10-11/retention_and_attrition.md).

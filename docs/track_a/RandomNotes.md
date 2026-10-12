@@ -20,8 +20,16 @@ Verify the formula and causal avaialbity later
 
 
 
+## Investiagte further
+There is a Q1/Q2 that I selected. Need to investigate
+
+The data audit found 61.2% mechanical FT0 retention in training, below the frozen 90% guard,
 
 
+## Issue with data prep:
+
+Need some older data to start the warmup otherwise some data lost there
+Big chunck of data missing. Need to fix it.
 
 
 # Random Notes
