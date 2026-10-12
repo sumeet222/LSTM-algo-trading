@@ -1,0 +1,727 @@
+{
+  "package": "TA-P4-MC0-MC1-SYNTHETIC-001",
+  "report": "reports/codex_sessions/2026-10-12_190344_ta-p4-mc0-mc1-synthetic-001.md",
+  "files": [
+    {
+      "path": "README.md",
+      "operation": "MODIFIED",
+      "type": ".md",
+      "purpose": "Add one MC0/MC1 synthetic API link",
+      "bytes": 14745,
+      "sha256": "ce986c9f51fcb5ac97a9a7657004f0bc1c06bd211627eafacfe1624a3a37d0c2"
+    },
+    {
+      "path": "docs/track_a/P4_MC0_MC1_SYNTHETIC_API_v1.md",
+      "operation": "CREATED",
+      "type": ".md",
+      "purpose": "Portable typed API and scientific-boundary/future source handoff",
+      "bytes": 9372,
+      "sha256": "889086a3bbd3adb783f6318240e453be92a8ecc11043ac94a96d0b761a2edd91"
+    },
+    {
+      "path": "reports/codex_sessions/2026-10-12_190344_ta-p4-mc0-mc1-synthetic-001.md",
+      "operation": "CREATED",
+      "type": ".md",
+      "purpose": "Mandatory17-section coding-session report",
+      "bytes": 24340,
+      "sha256": "5345e47bc7b3b930f5079688bffe3fb531fcf8c26840671b16e9df322efd0b85"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/baseline_pytest.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 592,
+      "sha256": "c86f6dc8ef9f67254c69b44fd07e342b8a4a571d093c79e1a6763ef8d141ed26"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/baseline_pytest_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11238,
+      "sha256": "2655e2694519a4b2b98f57559cdff9189a510acd14dc1a500d7df48919ddeb2f"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/baseline_ruff.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/baseline_ruff_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11216,
+      "sha256": "a927a36193518b2cee0e9cc2278cff72bcbeb7e7520376c7e9111ee31f9367a2"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/baseline_types.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Basic Pylance-parity diagnostics and original include scope",
+      "bytes": 4511,
+      "sha256": "71cc533288759b41256c28342d5870acdeae649d9983cb4cfbf49a4b9b080435"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/baseline_types_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11339,
+      "sha256": "2f48307763a3ad0d2378ebba495155d6e41f2faddef67b7bf2706229dfa14f23"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/checkpoint.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Small current gate status and STOP/restart handoff",
+      "bytes": 219,
+      "sha256": "edb5970fe6fa1dcb9b7e1a4bc5b8a85e88bf4696e0b9c77b152a83a4df8cf05e"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/checks.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Consolidated engineering versus scientific status and validation",
+      "bytes": 25639,
+      "sha256": "6a148309d9e15e8fb004d347e017d071c4c2c38f2ce480207e296f88dcdd48b8"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/final_pytest.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 672,
+      "sha256": "61f6074f084bac80ef87ce3b62f82aeabdfc76b66195ae7e88aa6761a3f098a9"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/final_pytest_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11766,
+      "sha256": "fa13224a0c5d3b77ab66ce11cb6c08830c2c29c203022dd00b2adc7570b9d1fe"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/final_ruff.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/final_ruff_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11744,
+      "sha256": "de2696f0fe03989732279c7e77ea4e0600d059f217093f786293629b64b2df98"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/final_source_hashes.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "All112 project-owned Python SHAs bound to final parity",
+      "bytes": 11486,
+      "sha256": "2883a81801c0c71561427f033dae60921814b222733847b6b348006235266cae"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/final_types.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Basic Pylance-parity diagnostics and original include scope",
+      "bytes": 4709,
+      "sha256": "d84b79941e89948fcf0d3d2c3e0e99c4936b83ee050e92aa6462d6a02d72444c"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/final_types_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11867,
+      "sha256": "8080093df3e60930272a813629740f3bcccc34374c17ad3e661e90dd49890ae6"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_a.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "MC0 gate checkpoint and stabilized test/source hashes",
+      "bytes": 12616,
+      "sha256": "4a46c519096776e671401c23040b71a5ef2d8db0644d31b805fdc0e06e4007a2"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_a_focused.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 100,
+      "sha256": "8e1fce88280dedccf81dc7b3a6c5412dbb0ab1eb672abaf7d974d699c0f97bde"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_a_focused_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11519,
+      "sha256": "b3207b0ea8d5800e40aaaaac550cd55d81bedc055fd75c7eaca5bd0565253209"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_a_release.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 100,
+      "sha256": "2ffa8003e666994d9f814b94523bf67057835920853c40e6ee10a02b35cdbd51"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_a_release_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11518,
+      "sha256": "eec38ba39224ed98de6ba582e5bbf14d1da1c43a648196fdc76aa53e767bdccf"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_a_static.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Basic Pylance-parity diagnostics and original include scope",
+      "bytes": 4588,
+      "sha256": "fc7fe6ec586f36364d9754285de5af42a48ce48f34775cbf5792c2794983f165"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_a_static_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11548,
+      "sha256": "5d3f7df6b4b58d865f9bcdfbf2bbb5a0ef29f3855cee3be5d730501aa0d693e7"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_a_types.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Basic Pylance-parity diagnostics and original include scope",
+      "bytes": 4588,
+      "sha256": "3c9b88299d84b1f839dcbd112b35909c974823cb7e25b82c13c7b674e3dd43df"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_a_types_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11549,
+      "sha256": "02fcfc2efe956f0e2dbbac7dde8b5670170a8dbc67c65988e90d2e17883345b9"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_ab_full.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 672,
+      "sha256": "27227eee706ef5984f27231f5c9e598e5a42e463a6b1f7f613c394c65c105d96"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_ab_full_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11654,
+      "sha256": "57b94468b4c4eed8ff62827e67dfc57e0a7f231e1a2561a0cd2b6b905df5c473"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_b.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "MC1 gate checkpoint, corrected typing and numerical oracles",
+      "bytes": 13793,
+      "sha256": "6631af288f7f55947e06f483db03f16b0434bd600375ec843a38d2c4fdf5254c"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_b_focused.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 100,
+      "sha256": "4c3d954eae90c2873951ca8ea8217d8760a9b0cd68eb5bf8aaf60aa45dedaad5"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_b_focused_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11757,
+      "sha256": "85c557ced72522a13c50b1403d48a2334985299ed36d7b52cd8bb59c6473a108"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_b_release.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 98,
+      "sha256": "bc3b91a6f048f69c57240c0ca4429693983bb63a17e5ebefc6cc6b12d531e945"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_b_release_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11687,
+      "sha256": "17c045a577a2fada05865dd0b4e7365047653839eec82f0f8e5710432f0dfcfe"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_b_static.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Basic Pylance-parity diagnostics and original include scope",
+      "bytes": 6248,
+      "sha256": "136515225fb116735700780fdbc87c9aa878aa48b8b0e5bab7218db68ab3d46b"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_b_static_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11755,
+      "sha256": "78084b0b7922be92f0886c18b57cd451eccb007095e8242ca479f4d6592919ac"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_b_types_release.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Basic Pylance-parity diagnostics and original include scope",
+      "bytes": 4662,
+      "sha256": "783bcbfde0769bf5c022a677bdb37a91fd8db1099a22d0909750fdac8aaa80c5"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_b_types_release_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11754,
+      "sha256": "50ca340d5ade3d04489a6f7b132bb1737d4a94b9a2a4b1924e64129e2b5f5a55"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_c.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Current integrated gate evidence, corrections and scientific holds",
+      "bytes": 17240,
+      "sha256": "00d86f72d1e0123ca80c254bf55999dc208470147abe39c024a47e148b81dd78"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_c_focused.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 111,
+      "sha256": "d4e7d8ec500aad6292c78c200e576530dc2cddefd0a46482be649222dcd1e969"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_c_focused_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11986,
+      "sha256": "69329e9734d37686183f9c5d01bfe687cbf1ac5031b3f3c9e7d467eb53ede2dc"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_c_types.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Basic Pylance-parity diagnostics and original include scope",
+      "bytes": 4709,
+      "sha256": "58676eb27402e2b3fbbf8a1430bbb20c91fc27691f7880ca8d2a9abdf82461e4"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/gate_c_types_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11867,
+      "sha256": "f022f637314a83e96fec930a4893b90a746648e1906958f9a44c136da3ba766c"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/hand_oracles.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Independent arithmetic, loss/epoch, gate identity and real-gradient numerical outputs",
+      "bytes": 2991,
+      "sha256": "de24b7354b28b355ade19d391b004e14c8f3e15478b98ae01355828c3f8c0842"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/human_review_card.md",
+      "operation": "CREATED",
+      "type": ".md",
+      "purpose": "One14-check consolidated expected-versus-actual review",
+      "bytes": 3855,
+      "sha256": "f99920b76fd89c20bba5cc204b691232ea2e00aa558e390ebb2293ad03fb8f04"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/novelty_focused.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 114,
+      "sha256": "67648ac0fe67988aa2df7cde0d29c43b21949cfd71224c506b048d99eedeb373"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/novelty_focused_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11837,
+      "sha256": "de534c6a3e546019f7c4931aa807abc0343a58436f96b10dfcc9c8b71c213569"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/preflight.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Starting Git state and1134-file SHA/size conservation inventory",
+      "bytes": 226814,
+      "sha256": "c9f2a9db6e47d9739bac199013ca5cba2b573d8f20e6c96d2ccfbebc72bcb352"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/preservation.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Protected originals before/after SHA and unchanged scientific authority",
+      "bytes": 316635,
+      "sha256": "3c4d4e7996be939fc1eb6ca14e3a3f170e10fd749539e14125a1c9983fdbf74a"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/scope_and_oracle_plan.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Before-change authority, planned files and independent numerical checks",
+      "bytes": 1157,
+      "sha256": "9fbeb0ad1b8d61548ea8186a595f6604e2334b8038351416a1309200d55f036a"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/stock_only_conservation.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Original TM0 tensor reader and exact matched-layout scores",
+      "bytes": 967,
+      "sha256": "12bc210ddc3a4a0c2e1e57d7eef4737d70e990cbb93e8a893e06980479e16189"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/superseded_evidence.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Prior code-bound audit failure retained and explicitly superseded",
+      "bytes": 12519,
+      "sha256": "60c427b76f0cb00d7a525187e5a942ef4bc0a44ddd7061384642a09cc9fa749d"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC0/calibration_selected.manifest.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Immutable model SHA, stage, epoch, fit binding and authority metadata",
+      "bytes": 402,
+      "sha256": "f6ff8e76fbc6e7ec78d811b7b6440fe40b6387f21cf3292d8de082db4d5ab26e"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC0/calibration_selected.pt",
+      "operation": "CREATED",
+      "type": ".pt",
+      "purpose": "Small immutable synthetic selected/final model; no real data",
+      "bytes": 45265,
+      "sha256": "7f0814a21bc6d439f1978202f04472bf72bcb732c4a387061f1c62ac3c47896d"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC0/pair_result.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact synthetic source/cutoff/preprocess/architecture/checkpoint/seed/reload evidence",
+      "bytes": 5532,
+      "sha256": "7463408eab69d3380e45aa5339d0b192c5c6cf46a8a81c3909067cf4dcafabb2"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC0/refit_final.manifest.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Immutable model SHA, stage, epoch, fit binding and authority metadata",
+      "bytes": 383,
+      "sha256": "666322f2dcbbdf1107bc864944db2f2091e691d7d0aa0c6cc817dde5f4247873"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC0/refit_final.pt",
+      "operation": "CREATED",
+      "type": ".pt",
+      "purpose": "Small immutable synthetic selected/final model; no real data",
+      "bytes": 38097,
+      "sha256": "c6c4be4bdb86d9ffe941c9e12179a0b37a159f7ebcf2bbb8f6b71d266eb566db"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC0/refit_trace.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Bounded synthetic epoch/session/gradient/gate and selection/refit summaries",
+      "bytes": 928,
+      "sha256": "898183b01c92db8cbbbf2c1d21def2c7ae897fafbeef91f5822ec9a2c071a352"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC0/selection_trace.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Bounded synthetic epoch/session/gradient/gate and selection/refit summaries",
+      "bytes": 22270,
+      "sha256": "a6c5b2a581ae8c72ec5f226d352086f1c6e93613735d49db0c814a2959a8ba54"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC0/synthetic_pair_registry.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Private engineering lifecycle and time reservation, never scientific ledger",
+      "bytes": 1903,
+      "sha256": "65c7343c500214dd39c98adbf71813f636bcd01a2f0ca94b9cf5e4fffaf7bde3"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC1/calibration_selected.manifest.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Immutable model SHA, stage, epoch, fit binding and authority metadata",
+      "bytes": 402,
+      "sha256": "9b290f697f168c43ce409724d704bcd208eefcb28d14606d8a319aa6e50e8a4c"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC1/calibration_selected.pt",
+      "operation": "CREATED",
+      "type": ".pt",
+      "purpose": "Small immutable synthetic selected/final model; no real data",
+      "bytes": 58057,
+      "sha256": "7b667cd7033d0bfb374d2fa1f7c3da9870adf0495a67db755e55e0b3700220ea"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC1/pair_result.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact synthetic source/cutoff/preprocess/architecture/checkpoint/seed/reload evidence",
+      "bytes": 5532,
+      "sha256": "c0495a433ce7880ab0c8b56e4db5f8b54baf29c1d5352d950c3113b46dce3983"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC1/refit_final.manifest.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Immutable model SHA, stage, epoch, fit binding and authority metadata",
+      "bytes": 383,
+      "sha256": "c6b8743e4f72f14f3c7f21207825c8b7314e3b91a7c9d43868b6f9883c83747b"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC1/refit_final.pt",
+      "operation": "CREATED",
+      "type": ".pt",
+      "purpose": "Small immutable synthetic selected/final model; no real data",
+      "bytes": 39817,
+      "sha256": "430456d09f4df1329b88ae276599c64e6e9a8482f4687702fcc4f780e1603604"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC1/refit_trace.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Bounded synthetic epoch/session/gradient/gate and selection/refit summaries",
+      "bytes": 2854,
+      "sha256": "a83de117bced44cc8ed3c50d29d3cab7d26200984ee23e0aa06c273f61951ef4"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC1/selection_trace.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Bounded synthetic epoch/session/gradient/gate and selection/refit summaries",
+      "bytes": 63731,
+      "sha256": "79de90bbd3a9b60d21ceca276072a8d0b2fa060bdf820586e27ed416be4980af"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/MC1/synthetic_pair_registry.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Private engineering lifecycle and time reservation, never scientific ledger",
+      "bytes": 1903,
+      "sha256": "169fb73b7ce2ed59ab749968ab05976077a10adde7b20b0e83e9a49bdd9faad5"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final/synthetic_evidence.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Bounded two-architecture integration, same-information/source identities and resources",
+      "bytes": 15395,
+      "sha256": "f2d3dec233e1032b526bf3aa5df487a072cb669acc80159c55deef7e83352932"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 43,
+      "sha256": "08d719187d549839fb1a6d783f4cc84a378cacc39ddcc218ccffee21b901bf91"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_final_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11913,
+      "sha256": "dd32d78c7d58217d25dd17597e5ad042122efe607301cfb8e7f4ccf962ac7260"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_release/MC0/calibration_selected.manifest.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Immutable model SHA, stage, epoch, fit binding and authority metadata",
+      "bytes": 402,
+      "sha256": "ac5a9a502abdec6891fb352347950b45fd6b106755d047290e556b42bf68cbd8"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_release/MC0/calibration_selected.pt",
+      "operation": "CREATED",
+      "type": ".pt",
+      "purpose": "Small immutable synthetic selected/final model; no real data",
+      "bytes": 45265,
+      "sha256": "599c122b2242e3554351c57dab01a79d4bc5697dd65feeec16d85aa73ac5d8a9"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_release/MC0/pair_result.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact synthetic source/cutoff/preprocess/architecture/checkpoint/seed/reload evidence",
+      "bytes": 5532,
+      "sha256": "1c9867c6cfa0597073bc065c5f89dc84c08576ef353537c1cb33da7a863b9656"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_release/MC0/refit_final.manifest.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Immutable model SHA, stage, epoch, fit binding and authority metadata",
+      "bytes": 383,
+      "sha256": "01a97b73be76d6fdfe6e573191ea5db45fa0c1a42f56cd466c293c3e515b2f61"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_release/MC0/refit_final.pt",
+      "operation": "CREATED",
+      "type": ".pt",
+      "purpose": "Small immutable synthetic selected/final model; no real data",
+      "bytes": 38097,
+      "sha256": "d8180814a2f5597218dd5459119f06c723d30b322262dedc23b8a1c2e2a9015f"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_release/MC0/refit_trace.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Bounded synthetic epoch/session/gradient/gate and selection/refit summaries",
+      "bytes": 928,
+      "sha256": "898183b01c92db8cbbbf2c1d21def2c7ae897fafbeef91f5822ec9a2c071a352"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_release/MC0/selection_trace.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Bounded synthetic epoch/session/gradient/gate and selection/refit summaries",
+      "bytes": 22270,
+      "sha256": "a6c5b2a581ae8c72ec5f226d352086f1c6e93613735d49db0c814a2959a8ba54"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_release/MC0/synthetic_pair_registry.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Private engineering lifecycle and time reservation, never scientific ledger",
+      "bytes": 1903,
+      "sha256": "3160a4e306e6751d1dc55cb2f2ecdbd88c5015b36de0dd0ad2634c9c46708c97"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_release.txt",
+      "operation": "CREATED",
+      "type": ".txt",
+      "purpose": "Named regression/static/synthetic execution log or compact evidence",
+      "bytes": 903,
+      "sha256": "707872fffd154ddac1f22760a9f55675aea0cd5b258169de9ddb72e573a6061d"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/synthetic_release_status.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact command, exit/time and source/test SHA binding for named check",
+      "bytes": 11917,
+      "sha256": "8dd14be9409fec539340f206c2b27bfad920740d2998da91caaf9111d7b480c4"
+    },
+    {
+      "path": "src/lstm_data/neural_artifacts.py",
+      "operation": "MODIFIED",
+      "type": ".py",
+      "purpose": "Architecture-safe model versions, tensor schema and registry checkpoint factory",
+      "bytes": 12285,
+      "sha256": "cc21cd4e432f16e8292e4f1870ee12afa3536a578801e85295afb6e9a0c0b6c9"
+    },
+    {
+      "path": "src/lstm_data/neural_engine.py",
+      "operation": "MODIFIED",
+      "type": ".py",
+      "purpose": "Allow shared width21 batches; reusable module optimizer/clip; unchanged TM0/loss/sampler",
+      "bytes": 6133,
+      "sha256": "ad898fb3c4d0e8f575e2307824ed166fd8e1bbf7459d74c7373adbb01b7364f2"
+    },
+    {
+      "path": "src/lstm_data/neural_lifecycle.py",
+      "operation": "MODIFIED",
+      "type": ".py",
+      "purpose": "Backwards-compatible architecture/D7 dispatch, bounded gate summaries and scripted synthetic monitor",
+      "bytes": 20857,
+      "sha256": "a0cf512a34485430b25701a269569b10757ebf205ea3c6c3f0ded4ca25ab75ab"
+    },
+    {
+      "path": "src/lstm_data/neural_market.py",
+      "operation": "CREATED",
+      "type": ".py",
+      "purpose": "Typed D7 clock/provenance admission, canonical indexed market view and novelty flags",
+      "bytes": 12785,
+      "sha256": "524a73b4b70e752cb2383aadd368986636d9e4332962194e771294d73ee67b19"
+    },
+    {
+      "path": "src/lstm_data/neural_market_audit.py",
+      "operation": "CREATED",
+      "type": ".py",
+      "purpose": "Hermetic two-architecture scripted-selection audit CLI with fabricated states",
+      "bytes": 6102,
+      "sha256": "8aa9f8d3295dc1a6cc94c97f36aaa8a017c2a75ab65c5b1c821deb7799811ba3"
+    },
+    {
+      "path": "src/lstm_data/neural_models.py",
+      "operation": "CREATED",
+      "type": ".py",
+      "purpose": "MC0 factory, endpoint MC1 gate, architecture identity and bounded diagnostics",
+      "bytes": 6515,
+      "sha256": "e3d50f87bfe952ea92e3dea6627d82dbb7d33f6a8791e229cec66c6ef9043473"
+    },
+    {
+      "path": "tests/test_neural_gate.py",
+      "operation": "CREATED",
+      "type": ".py",
+      "purpose": "Independent MC1 algebra/identity/gradients/optimizer/shared-endpoint/seed tests",
+      "bytes": 5742,
+      "sha256": "f4b98d573699188b6b6e0a001988352b267f89ea5db422972deefe6b68b4c51a"
+    },
+    {
+      "path": "tests/test_neural_market.py",
+      "operation": "CREATED",
+      "type": ".py",
+      "purpose": "Independent MC0/D7/clocks/loss/integration/checkpoint/source-swap/novelty tests",
+      "bytes": 20971,
+      "sha256": "0196a90bb070feec0979e893f7460dbb5559f467340221e036a961787c0c3227"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_mc0_mc1_2026-10-12_143000/integration_manifest.json",
+      "operation": "CREATED",
+      "type": ".json",
+      "purpose": "Exact final inventory; own SHA/bytes excluded to avoid recursion",
+      "bytes": null,
+      "sha256": null
+    }
+  ],
+  "self_hash": "EXCLUDED_TO_AVOID_CYCLE"
+}

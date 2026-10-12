@@ -63,7 +63,8 @@ class SessionBatch:
         n = len(self.ids)
         if (
             not n or len(set(self.ids)) != n
-            or tuple(self.inputs.shape) != (n, 2, 5, 48, 16)
+            or self.inputs.ndim != 5 or tuple(self.inputs.shape[:4]) != (n, 2, 5, 48)
+            or self.inputs.shape[-1] not in (16, 21)
             or tuple(self.targets.shape) != (n, 2, 5)
             or tuple(self.origins.shape) != (n, 2) or self.origins.dtype != torch.bool
             or not bool(self.origins.any(dim=1).all())
@@ -74,6 +75,11 @@ class SessionBatch:
             or not bool(torch.isfinite(self.targets).all())
         ):
             raise ValueError("COMPLETE_FINITE_FIVE_STOCK_SESSION_BATCH_REQUIRED")
+
+        if self.inputs.shape[-1] == 21:
+            valid = self.inputs[self.origins][..., 16:]
+            if not torch.equal(valid, valid[:, :1].expand(-1, 5, -1, -1)):
+                raise ValueError("ONE_SHARED_D7_HISTORY_REQUIRED")
 
 
 def session_losses(prediction: Tensor, target: Tensor, origins: Tensor) -> Tensor:
@@ -90,10 +96,10 @@ def session_losses(prediction: Tensor, target: Tensor, origins: Tensor) -> Tenso
     return (by_origin * origins).sum(dim=1) / origins.sum(dim=1)
 
 
-def batch_prediction(model: SharedLSTM, batch: SessionBatch) -> Tensor:
+def batch_prediction(model: nn.Module, batch: SessionBatch) -> Tensor:
     batch.validate()
     valid = batch.inputs[batch.origins]  # (eligible origins, five, 48, 16)
-    values = model(valid.reshape(-1, 48, 16)).reshape(-1, 5)
+    values = model(valid.reshape(-1, 48, valid.shape[-1])).reshape(-1, 5)
     output = torch.zeros_like(batch.targets)
     output[batch.origins] = values
     return output
@@ -113,7 +119,7 @@ def session_batches(
         yield tuple(order[start:start + 16])
 
 
-def optimizer(model: SharedLSTM) -> torch.optim.AdamW:
+def optimizer(model: nn.Module) -> torch.optim.AdamW:
     """Exactly two disjoint exhaustive frozen AdamW parameter groups."""
     weights, biases = [], []
     for name, parameter in model.named_parameters():
@@ -125,7 +131,7 @@ def optimizer(model: SharedLSTM) -> torch.optim.AdamW:
     )
 
 
-def clip(model: SharedLSTM) -> float:
+def clip(model: nn.Module) -> float:
     """One direction-preserving global L2 clip; nonfinite norms fail closed."""
     return float(nn.utils.clip_grad_norm_(model.parameters(), 1.0, error_if_nonfinite=True))
 

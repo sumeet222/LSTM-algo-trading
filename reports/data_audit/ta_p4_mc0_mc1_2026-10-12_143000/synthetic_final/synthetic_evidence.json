@@ -1,0 +1,529 @@
+{
+  "code": "6df1271199ffb041285f2598e2f2c5d1cc1178e0dc19580c0ad0fa5b3090de10",
+  "cpu_threads": 1,
+  "fits": {
+    "MC0": {
+      "adequacy": {
+        "origins": {
+          "1": 55,
+          "2": 55
+        },
+        "sessions": 55
+      },
+      "architecture": "MC0",
+      "calibration_checkpoint": {
+        "bytes": 45265,
+        "epoch": 1,
+        "fit_binding": "61c7ffc7d9de1028c0dbd659b0cde8770294cd5cda86c1bf26fa8f15ea05f782",
+        "pair": "dd9ac38e9740e5c445f7fc1b8f76179b7ef366f87c394c069e9b31fb41242f10",
+        "path": "calibration_selected.pt",
+        "prediction_authoritative": false,
+        "schema": 1,
+        "sha256": "7f0814a21bc6d439f1978202f04472bf72bcb732c4a387061f1c62ac3c47896d",
+        "stage": "CALIBRATION_SELECTED"
+      },
+      "calibration_initial_hash": "304078d67e358f251f1d9f744ea25989f810a3339292a12121a16eaa63836f7e",
+      "calibration_preparation": "61c7ffc7d9de1028c0dbd659b0cde8770294cd5cda86c1bf26fa8f15ea05f782",
+      "calibration_seconds": 3.680908249996719,
+      "calibration_selected_hash": "60049c30f857a7b4f361743035ba30d4fb5a8bed195e9ca9bfd9be70e56da676",
+      "calibration_steps": 36,
+      "canonical_feature_rows": 3215,
+      "example_scores": [
+        -0.10222741961479187,
+        -0.04002021625638008,
+        0.03251396119594574,
+        0.11521953344345093,
+        0.20554189383983612
+      ],
+      "final_checkpoint": {
+        "bytes": 38097,
+        "epoch": 1,
+        "fit_binding": "8466756fced9c96ca61fbe56949f5133c566cf18500f9b1fa921670a1ded897a",
+        "pair": "dd9ac38e9740e5c445f7fc1b8f76179b7ef366f87c394c069e9b31fb41242f10",
+        "path": "refit_final.pt",
+        "prediction_authoritative": true,
+        "schema": 1,
+        "sha256": "c6c4be4bdb86d9ffe941c9e12179a0b37a159f7ebcf2bbb8f6b71d266eb566db",
+        "stage": "REFIT_FINAL"
+      },
+      "fitting_origin_dispositions": {
+        "inner_train": {
+          "ORIGIN_OUTSIDE_FIT_WINDOW": 126
+        },
+        "inner_validation": {
+          "ORIGIN_OUTSIDE_FIT_WINDOW": 74
+        },
+        "refit": {}
+      },
+      "fresh_optimizer_state_empty": true,
+      "indexed_origins": 200,
+      "mode": "ENGINEERING_SYNTHETIC_ONLY",
+      "pair": {
+        "calendar_split_cutoff": "3b566b2a69759aa702c07be0b5ec05a8c0043175c11a89993bd634bb782f1edd",
+        "code": "6df1271199ffb041285f2598e2f2c5d1cc1178e0dc19580c0ad0fa5b3090de10",
+        "experiment": "SYN:MC0:WF1",
+        "information": "FT0_D7_MC0",
+        "mode": "ENGINEERING_SYNTHETIC_ONLY",
+        "model_optimizer_selection": "5c2c5bf062e4af8b4fd191ca6cab2b548b46acf71e4eb78320e20a54157b6723",
+        "preprocess": "61c7ffc7d9de1028c0dbd659b0cde8770294cd5cda86c1bf26fa8f15ea05f782",
+        "seed": 42,
+        "source_features_data": "59661bf1639f0f99156600fbea3b635569d049698155e16da8940a860c02242c",
+        "target": "TG0_HOURLY_PROXY",
+        "track": "A",
+        "universe": "cf4d63082e78b2ded1a971fe98c31cf1f6a1be7e479b2e978e6ccf7434a5f2fc"
+      },
+      "pair_key": "dd9ac38e9740e5c445f7fc1b8f76179b7ef366f87c394c069e9b31fb41242f10",
+      "purged_or_invalid_origins": [
+        126,
+        74,
+        0
+      ],
+      "refit_final_hash": "e6e1ef792cb400ea7ebfc9273c0794341410cbcf1b5e8378af912d1abc9cd69d",
+      "refit_initial_hash": "304078d67e358f251f1d9f744ea25989f810a3339292a12121a16eaa63836f7e",
+      "refit_preparation": "8466756fced9c96ca61fbe56949f5133c566cf18500f9b1fa921670a1ded897a",
+      "refit_seconds": 0.8293493340024725,
+      "refit_steps": 7,
+      "refit_view": "SYN:NEURAL_MARKET_DATA:371ab0f48058f1bb9b46e50690a3f64c6a5172cc9f06afb84f9c791f39f567fe",
+      "reload_max_error": 0.0,
+      "selection_monitor": "SYNTHETIC_SCRIPTED_ORACLE",
+      "selector": {
+        "best": 1.0,
+        "epoch": 12,
+        "patience": 11,
+        "raw_epoch": 2,
+        "raw_min": 0.9995,
+        "selected": 1,
+        "status": "PATIENCE_STOP"
+      },
+      "train_view": "SYN:NEURAL_MARKET_DATA:8455f7b15e112c3d3176dcb8385d6d83a8390aa66aabe1eadfca15462f96df84",
+      "validation_preprocess_exclusions": [
+        [
+          [
+            "2023-03-31",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-03-31",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-03",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-03",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-04",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-04",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-05",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-05",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-06",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-06",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-10",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-10",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-11",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-11",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-12",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-12",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ]
+      ],
+      "validation_view": "SYN:NEURAL_MARKET_DATA:8bff14b08d5f88b7a2e6d037c243d6bc915b4a1b656ebd670d7531f8b84908b3"
+    },
+    "MC1": {
+      "adequacy": {
+        "origins": {
+          "1": 55,
+          "2": 55
+        },
+        "sessions": 55
+      },
+      "architecture": "MC1",
+      "calibration_checkpoint": {
+        "bytes": 58057,
+        "epoch": 1,
+        "fit_binding": "61c7ffc7d9de1028c0dbd659b0cde8770294cd5cda86c1bf26fa8f15ea05f782",
+        "pair": "687d50449ec1363e36089ed2ea1075ad8c2c2b374f091d39336212a6a3ce7a9d",
+        "path": "calibration_selected.pt",
+        "prediction_authoritative": false,
+        "schema": 1,
+        "sha256": "7b667cd7033d0bfb374d2fa1f7c3da9870adf0495a67db755e55e0b3700220ea",
+        "stage": "CALIBRATION_SELECTED"
+      },
+      "calibration_initial_hash": "62914de816eef5b28cfc9d45065a30f7063386848edb5f2d48131a828b348715",
+      "calibration_preparation": "61c7ffc7d9de1028c0dbd659b0cde8770294cd5cda86c1bf26fa8f15ea05f782",
+      "calibration_seconds": 2.567561417003162,
+      "calibration_selected_hash": "308def5511a389d9410f2e12476a1981b9b5ccc1407f70d12d24fafa055f408f",
+      "calibration_steps": 36,
+      "canonical_feature_rows": 3215,
+      "example_scores": [
+        -0.10424065589904785,
+        -0.0412910133600235,
+        0.032328758388757706,
+        0.11642172187566757,
+        0.20819495618343353
+      ],
+      "final_checkpoint": {
+        "bytes": 39817,
+        "epoch": 1,
+        "fit_binding": "8466756fced9c96ca61fbe56949f5133c566cf18500f9b1fa921670a1ded897a",
+        "pair": "687d50449ec1363e36089ed2ea1075ad8c2c2b374f091d39336212a6a3ce7a9d",
+        "path": "refit_final.pt",
+        "prediction_authoritative": true,
+        "schema": 1,
+        "sha256": "430456d09f4df1329b88ae276599c64e6e9a8482f4687702fcc4f780e1603604",
+        "stage": "REFIT_FINAL"
+      },
+      "fitting_origin_dispositions": {
+        "inner_train": {
+          "ORIGIN_OUTSIDE_FIT_WINDOW": 126
+        },
+        "inner_validation": {
+          "ORIGIN_OUTSIDE_FIT_WINDOW": 74
+        },
+        "refit": {}
+      },
+      "fresh_optimizer_state_empty": true,
+      "indexed_origins": 200,
+      "mode": "ENGINEERING_SYNTHETIC_ONLY",
+      "pair": {
+        "calendar_split_cutoff": "3b566b2a69759aa702c07be0b5ec05a8c0043175c11a89993bd634bb782f1edd",
+        "code": "6df1271199ffb041285f2598e2f2c5d1cc1178e0dc19580c0ad0fa5b3090de10",
+        "experiment": "SYN:MC1:WF1",
+        "information": "FT0_D7_MC1",
+        "mode": "ENGINEERING_SYNTHETIC_ONLY",
+        "model_optimizer_selection": "40d49aaf3e195243489adf5f1224a1502ee8edb655dbda074d7dbf00fa556fee",
+        "preprocess": "61c7ffc7d9de1028c0dbd659b0cde8770294cd5cda86c1bf26fa8f15ea05f782",
+        "seed": 42,
+        "source_features_data": "59661bf1639f0f99156600fbea3b635569d049698155e16da8940a860c02242c",
+        "target": "TG0_HOURLY_PROXY",
+        "track": "A",
+        "universe": "cf4d63082e78b2ded1a971fe98c31cf1f6a1be7e479b2e978e6ccf7434a5f2fc"
+      },
+      "pair_key": "687d50449ec1363e36089ed2ea1075ad8c2c2b374f091d39336212a6a3ce7a9d",
+      "purged_or_invalid_origins": [
+        126,
+        74,
+        0
+      ],
+      "refit_final_hash": "6dc1bcd2b28eb83763f770e50824f2fcde2dbcb0510f2f8a4ea1d83e17cf1738",
+      "refit_initial_hash": "62914de816eef5b28cfc9d45065a30f7063386848edb5f2d48131a828b348715",
+      "refit_preparation": "8466756fced9c96ca61fbe56949f5133c566cf18500f9b1fa921670a1ded897a",
+      "refit_seconds": 0.7461458750040038,
+      "refit_steps": 7,
+      "refit_view": "SYN:NEURAL_MARKET_DATA:371ab0f48058f1bb9b46e50690a3f64c6a5172cc9f06afb84f9c791f39f567fe",
+      "reload_max_error": 0.0,
+      "selection_monitor": "SYNTHETIC_SCRIPTED_ORACLE",
+      "selector": {
+        "best": 1.0,
+        "epoch": 12,
+        "patience": 11,
+        "raw_epoch": 2,
+        "raw_min": 0.9995,
+        "selected": 1,
+        "status": "PATIENCE_STOP"
+      },
+      "train_view": "SYN:NEURAL_MARKET_DATA:8455f7b15e112c3d3176dcb8385d6d83a8390aa66aabe1eadfca15462f96df84",
+      "validation_preprocess_exclusions": [
+        [
+          [
+            "2023-03-31",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-03-31",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-03",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-03",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-04",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-04",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-05",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-05",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-06",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-06",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-10",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-10",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-11",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-11",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-12",
+            1
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ],
+        [
+          [
+            "2023-04-12",
+            2
+          ],
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+        ]
+      ],
+      "validation_view": "SYN:NEURAL_MARKET_DATA:8bff14b08d5f88b7a2e6d037c243d6bc915b4a1b656ebd670d7531f8b84908b3"
+    }
+  },
+  "forecasts": {
+    "MC0": {
+      "checkpoint_sha": "c6c4be4bdb86d9ffe941c9e12179a0b37a159f7ebcf2bbb8f6b71d266eb566db",
+      "id": "SYN:NEURAL_FORECAST:6accde4cfcafde53c04ad4c61e4f8d18399a14d4afaa94c89dc70027e2419144",
+      "pair": "dd9ac38e9740e5c445f7fc1b8f76179b7ef366f87c394c069e9b31fb41242f10",
+      "scores": [
+        0.04856174439191818,
+        0.022202126681804657,
+        -0.003689635545015335,
+        -0.028184395283460617,
+        -0.050480347126722336
+      ],
+      "universe": "cf4d63082e78b2ded1a971fe98c31cf1f6a1be7e479b2e978e6ccf7434a5f2fc"
+    },
+    "MC1": {
+      "checkpoint_sha": "430456d09f4df1329b88ae276599c64e6e9a8482f4687702fcc4f780e1603604",
+      "id": "SYN:NEURAL_FORECAST:88c242d19c07579255bdfa4cc4ee0800575ea6a0f10baf559e3902d6186dcd53",
+      "pair": "687d50449ec1363e36089ed2ea1075ad8c2c2b374f091d39336212a6a3ce7a9d",
+      "scores": [
+        0.048889707773923874,
+        0.022272989153862,
+        -0.0038903020322322845,
+        -0.028648480772972107,
+        -0.05118244141340256
+      ],
+      "universe": "cf4d63082e78b2ded1a971fe98c31cf1f6a1be7e479b2e978e6ccf7434a5f2fc"
+    }
+  },
+  "historical_batches": "NOT_RUN/BLOCKED",
+  "identity_gate": {
+    "channel_mean": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "channel_sd": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "concentration_max": 0.0625,
+    "constant_gate_warning": true,
+    "entropy_mean": 2.7725887298583984,
+    "entropy_min": 2.7725887298583984,
+    "max": 1.0,
+    "min": 1.0,
+    "positive": true,
+    "quantiles": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "saturated_fraction": 0.0,
+    "sum16_max_error": 0.0
+  },
+  "identity_max_error": 0.0,
+  "matched_information": true,
+  "mode": "ENGINEERING_SYNTHETIC_ONLY",
+  "parameters": {
+    "MC0": 7073,
+    "MC1": 7169
+  },
+  "peak_memory": {
+    "bytes": 379224064
+  },
+  "scientific_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "scientific_status": "HOLD",
+  "seconds": 836.9624085830001,
+  "selection": "SCRIPTED_ORACLE; actual finite train/validation gradients also measured",
+  "status": "ENGINEERING_COMPLETE_HUMAN_REVIEW_REQUIRED",
+  "torch": "2.10.0"
+}

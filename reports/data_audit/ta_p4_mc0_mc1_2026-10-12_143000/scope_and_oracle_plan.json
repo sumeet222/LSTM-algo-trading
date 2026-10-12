@@ -1,0 +1,46 @@
+{
+  "package": "TA-P4-MC0-MC1-SYNTHETIC-001",
+  "status": "PRE_IMPLEMENTATION",
+  "changes_planned": [
+    "neural_engine SessionBatch dimension/general module annotations",
+    "new neural_market explicit clocks/indexed D7 adapter",
+    "new neural_models endpoint gate/factory",
+    "neural_artifacts architecture-safe dispatch",
+    "neural_lifecycle optional architecture/market evidence dispatch",
+    "new tests/docs/audit CLI"
+  ],
+  "independent_oracles": {
+    "MC0": 7073,
+    "MC1": 7169,
+    "identity_gate": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "sum": 16,
+    "loss": 7,
+    "epoch_19_sessions": 9,
+    "strict_selection": {
+      "qualifying": 1,
+      "raw_min": 2,
+      "stop": 12
+    },
+    "admission": "endpoint known/causal, >=46/48; 45 rejects"
+  },
+  "protected": "all sources/configs/scientific ledger/frozen docs/existing tests/previous evidence",
+  "science": "HOLD; historical batches NOT_RUN; no .env/provider or Git integration",
+  "dependency": "reuse approved torch2.10.0; no install or pyproject change"
+}

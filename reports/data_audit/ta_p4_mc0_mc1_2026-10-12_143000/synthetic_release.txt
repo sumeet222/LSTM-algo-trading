@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/neural_market_audit.py", line 161, in <module>
+    main()
+    ~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/neural_market_audit.py", line 157, in main
+    print(audit(args.out, args.mode)["status"])
+          ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/neural_market_audit.py", line 88, in audit
+    f = forecast_scores(run, row, permission, market_history=later)
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/neural_lifecycle.py", line 482, in forecast_scores
+    raise ValueError("NEURAL_FORECAST_ORDERED_UNIVERSE_REQUIRED")
+ValueError: NEURAL_FORECAST_ORDERED_UNIVERSE_REQUIRED
