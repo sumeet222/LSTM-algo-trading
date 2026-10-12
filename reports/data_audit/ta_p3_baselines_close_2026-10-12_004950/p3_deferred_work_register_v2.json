@@ -1,0 +1,2299 @@
+{
+  "version": "P3_DEFERRED_WORK_REGISTER_v2",
+  "package": "TA-P3-BASELINES-CLOSE-001",
+  "parent_v1": {
+    "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/p3_deferred_work_register_v1.json",
+    "sha256": "e9e10fa179810fa945fd4e562cdf54783cb9e99922ee0d93e09b250a4e2139f3"
+  },
+  "inherited_P2": 16,
+  "inherited_P3": 10,
+  "new_followups": 7,
+  "P4": "NOT_STARTED",
+  "neural_pairs_used": 0,
+  "neural_ceiling": 40,
+  "scientific_G0_G4": "HOLD",
+  "entries": [
+    {
+      "id": "P2-DEF-001",
+      "title": "Original native gaps",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "168 absent native half-hours in 15 clusters remain missing. Alpaca retries and tight minute probes recovered none; absence of qualifying trades is not established.",
+      "dependencies": [
+        "P2-DEF-001"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/gap_cluster_reconciliation.json",
+          "sha256": "d3b247f7df62fc2e3c2db9c72c4e1bae1bffae0e5c6b18c8d0225ec1b91931bc"
+        }
+      ],
+      "required_closure_action": "Separately authorize compatible genuine exact-key recovery; preserve original-first candidate lineage.",
+      "closure_verification": "Reconcile all 168 UTC keys, units, epochs and source hashes; deterministic repeated-window recomputation.",
+      "responsible_future_package": "P1/P2.3",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-001",
+        "title": "Original native gaps",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "168 absent native half-hours in 15 clusters remain missing. Alpaca retries and tight minute probes recovered none; absence of qualifying trades is not established.",
+        "dependencies": [
+          "P2-DEF-001"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/gap_cluster_reconciliation.json",
+            "sha256": "d3b247f7df62fc2e3c2db9c72c4e1bae1bffae0e5c6b18c8d0225ec1b91931bc"
+          }
+        ],
+        "required_closure_action": "Separately authorize compatible genuine exact-key recovery; preserve original-first candidate lineage.",
+        "closure_verification": "Reconcile all 168 UTC keys, units, epochs and source hashes; deterministic repeated-window recomputation.",
+        "responsible_future_package": "P1/P2.3",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Original native gaps",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-001"
+      ],
+      "proposed_closure_test": "Reconcile all 168 UTC keys, units, epochs and source hashes; deterministic repeated-window recomputation.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-002",
+      "title": "Training retention failure",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Baseline 919/1502; inactive candidate 1183/1502=78.76%, below required 1352. Deficit169. All264 startup rejects recover; 75 direct plus244 propagated later losses remain319. Both train origins below85%; regimes INCONCLUSIVE.",
+      "dependencies": [
+        "P2-DEF-002"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/retention_before_after.json",
+          "sha256": "f8b364372526152ce8093433f827294a3913cfd49b07e2d31052877a04f500d3"
+        }
+      ],
+      "required_closure_action": "Recover legitimate observations without dropping origins/features or relaxing thresholds.",
+      "closure_verification": "Train/development≥90%; each origin/fold/supported regime≥85%; regime gap≤10pp;≥100 eligible sessions per fold; actual mature-label tails separately audited.",
+      "responsible_future_package": "P2.3/G3",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-002",
+        "title": "Training retention failure",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Baseline 919/1502; inactive candidate 1183/1502=78.76%, below required 1352. Deficit169. All264 startup rejects recover; 75 direct plus244 propagated later losses remain319. Both train origins below85%; regimes INCONCLUSIVE.",
+        "dependencies": [
+          "P2-DEF-002"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/retention_before_after.json",
+            "sha256": "f8b364372526152ce8093433f827294a3913cfd49b07e2d31052877a04f500d3"
+          }
+        ],
+        "required_closure_action": "Recover legitimate observations without dropping origins/features or relaxing thresholds.",
+        "closure_verification": "Train/development≥90%; each origin/fold/supported regime≥85%; regime gap≤10pp;≥100 eligible sessions per fold; actual mature-label tails separately audited.",
+        "responsible_future_package": "P2.3/G3",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Training retention failure",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-002"
+      ],
+      "proposed_closure_test": "Train/development≥90%; each origin/fold/supported regime≥85%; regime gap≤10pp;≥100 eligible sessions per fold; actual mature-label tails separately audited.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-003",
+      "title": "Prehistory activation pending",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Authentic context begins2019-12-18:17550 native/8680 RTH rows. Overlay inactive; pretraining context is not fitting membership beforeJuly2020.",
+      "dependencies": [
+        "P2-DEF-003"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/source_extension_manifest_v2.json",
+          "sha256": "4635723df00b8c7985f1adaa57aa8df93e393133f48b04f34fbbfb6ea2bba961"
+        }
+      ],
+      "required_closure_action": "Review source/action/clock evidence and explicitly select a canonical candidate source.",
+      "closure_verification": "Original-first overlaps, native lineage, action/version and available_at evidence independently verified; activation explicitly authorized.",
+      "responsible_future_package": "P1/G1/P2.3",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-003",
+        "title": "Prehistory activation pending",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Authentic context begins2019-12-18:17550 native/8680 RTH rows. Overlay inactive; pretraining context is not fitting membership beforeJuly2020.",
+        "dependencies": [
+          "P2-DEF-003"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/source_extension_manifest_v2.json",
+            "sha256": "4635723df00b8c7985f1adaa57aa8df93e393133f48b04f34fbbfb6ea2bba961"
+          }
+        ],
+        "required_closure_action": "Review source/action/clock evidence and explicitly select a canonical candidate source.",
+        "closure_verification": "Original-first overlaps, native lineage, action/version and available_at evidence independently verified; activation explicitly authorized.",
+        "responsible_future_package": "P1/G1/P2.3",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Prehistory activation pending",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-003"
+      ],
+      "proposed_closure_test": "Original-first overlaps, native lineage, action/version and available_at evidence independently verified; activation explicitly authorized.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-004",
+      "title": "Historical publication unknown",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Actual stock/SPY available_at UNKNOWN. Period end, retrieval and original publication are separate; no assumed fixed lag is authorized.",
+      "dependencies": [
+        "P2-DEF-004"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p2_close_ft0_2026-10-11/g2_timing_label_bridge.json",
+          "sha256": "165d24a57d017e2659ebcdcedca64e310ed4d774355951e45bc81f6eba901b75"
+        }
+      ],
+      "required_closure_action": "Establish independently supported historical source timing for every own-step dependency.",
+      "closure_verification": "Unknown/late/stale sources fail closed; accepted source end/availability and age audited at every step cutoff.",
+      "responsible_future_package": "G1/G2/P2.1",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-004",
+        "title": "Historical publication unknown",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Actual stock/SPY available_at UNKNOWN. Period end, retrieval and original publication are separate; no assumed fixed lag is authorized.",
+        "dependencies": [
+          "P2-DEF-004"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p2_close_ft0_2026-10-11/g2_timing_label_bridge.json",
+            "sha256": "165d24a57d017e2659ebcdcedca64e310ed4d774355951e45bc81f6eba901b75"
+          }
+        ],
+        "required_closure_action": "Establish independently supported historical source timing for every own-step dependency.",
+        "closure_verification": "Unknown/late/stale sources fail closed; accepted source end/availability and age audited at every step cutoff.",
+        "responsible_future_package": "G1/G2/P2.1",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Historical publication unknown",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-004"
+      ],
+      "proposed_closure_test": "Unknown/late/stale sources fail closed; accepted source end/availability and age audited at every step cutoff.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — SOURCE/PROVENANCE"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-005",
+      "title": "Corporate actions and missing event dates",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Split/dividend and SPY ETF distribution completeness/vintage unverified. Four original preJuly2020 dividend payable/record dates remain missing. Supplemental issuer terms do not prove contemporaneous vendor publication.",
+      "dependencies": [
+        "P2-DEF-005"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/p1_ca_2026-10-11_011815/action_reconciliation.json",
+          "sha256": "62759ce880017c1810ad771b0423880cfbf33768c00a021effcf30020969346d"
+        }
+      ],
+      "required_closure_action": "Resolve exact event-field provenance, known-at timing, raw conversion and complete action scope.",
+      "closure_verification": "Genuine event IDs/dates, no guessed payment, reciprocal shares/prices and correct receivable/liability settlement; completeness/vintage independently supported.",
+      "responsible_future_package": "P1.CA/G1/G4",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-005",
+        "title": "Corporate actions and missing event dates",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Split/dividend and SPY ETF distribution completeness/vintage unverified. Four original preJuly2020 dividend payable/record dates remain missing. Supplemental issuer terms do not prove contemporaneous vendor publication.",
+        "dependencies": [
+          "P2-DEF-005"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/p1_ca_2026-10-11_011815/action_reconciliation.json",
+            "sha256": "62759ce880017c1810ad771b0423880cfbf33768c00a021effcf30020969346d"
+          }
+        ],
+        "required_closure_action": "Resolve exact event-field provenance, known-at timing, raw conversion and complete action scope.",
+        "closure_verification": "Genuine event IDs/dates, no guessed payment, reciprocal shares/prices and correct receivable/liability settlement; completeness/vintage independently supported.",
+        "responsible_future_package": "P1.CA/G1/G4",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Corporate actions and missing event dates",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-005"
+      ],
+      "proposed_closure_test": "Genuine event IDs/dates, no guessed payment, reciprocal shares/prices and correct receivable/liability settlement; completeness/vintage independently supported.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — SOURCE/PROVENANCE"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-006",
+      "title": "Execution/reference and maturity coverage",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — approval/policy",
+      "exact_blocker": "Proxy closes10:30/11:30→14:30/15:30 differ from nominal execution10:33/11:33→14:33/15:33.240 continuous minutes preserved; minute history incomplete; labels never prove fills.",
+      "dependencies": [
+        "P2-DEF-006"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p2_close_ft0_2026-10-11/g2_timing_label_bridge.json",
+          "sha256": "165d24a57d017e2659ebcdcedca64e310ed4d774355951e45bc81f6eba901b75"
+        }
+      ],
+      "required_closure_action": "Verify genuine reference, raw/action conversion, source availability and all-five outcome maturity.",
+      "closure_verification": "C01 admission unchanged under missing/later future exits; maturity after all scheduled exits/publications and exact chronological purge.",
+      "responsible_future_package": "P2.2/G2/P3",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-006",
+        "title": "Execution/reference and maturity coverage",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — approval/policy",
+        "exact_blocker": "Proxy closes10:30/11:30→14:30/15:30 differ from nominal execution10:33/11:33→14:33/15:33.240 continuous minutes preserved; minute history incomplete; labels never prove fills.",
+        "dependencies": [
+          "P2-DEF-006"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p2_close_ft0_2026-10-11/g2_timing_label_bridge.json",
+            "sha256": "165d24a57d017e2659ebcdcedca64e310ed4d774355951e45bc81f6eba901b75"
+          }
+        ],
+        "required_closure_action": "Verify genuine reference, raw/action conversion, source availability and all-five outcome maturity.",
+        "closure_verification": "C01 admission unchanged under missing/later future exits; maturity after all scheduled exits/publications and exact chronological purge.",
+        "responsible_future_package": "P2.2/G2/P3",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Execution/reference and maturity coverage",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-006"
+      ],
+      "proposed_closure_test": "C01 admission unchanged under missing/later future exits; maturity after all scheduled exits/publications and exact chronological purge.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY",
+        "NOT DONE — SOURCE/PROVENANCE"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-007",
+      "title": "Real empirical fitting deferred",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Synthetic interfaces complete; no real FT0/M2/D7/TG0 floors, pseudocounts or scalers fitted. True fitted_at and source/action population remain unproved.",
+      "dependencies": [
+        "P2-DEF-007"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p2_close_ft0_2026-10-11/ft0_floor_scaler_certificates.json",
+          "sha256": "a807986e5562906721ee646390957600016ea7d7f6ab826acc1753c4278be663"
+        }
+      ],
+      "required_closure_action": "After source/population/gate approval, separately authorize a real fitting executor; never relabel synthetic constants.",
+      "closure_verification": "Training-only unique observations, correct p05/medians/fallbacks and M2 50:50; labels mature/purged if defining population; each historical cutoff and factual fitting time enforced.",
+      "responsible_future_package": "P2.3/P2.4/G3",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-007",
+        "title": "Real empirical fitting deferred",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Synthetic interfaces complete; no real FT0/M2/D7/TG0 floors, pseudocounts or scalers fitted. True fitted_at and source/action population remain unproved.",
+        "dependencies": [
+          "P2-DEF-007"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p2_close_ft0_2026-10-11/ft0_floor_scaler_certificates.json",
+            "sha256": "a807986e5562906721ee646390957600016ea7d7f6ab826acc1753c4278be663"
+          }
+        ],
+        "required_closure_action": "After source/population/gate approval, separately authorize a real fitting executor; never relabel synthetic constants.",
+        "closure_verification": "Training-only unique observations, correct p05/medians/fallbacks and M2 50:50; labels mature/purged if defining population; each historical cutoff and factual fitting time enforced.",
+        "responsible_future_package": "P2.3/P2.4/G3",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Real empirical fitting deferred",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-007"
+      ],
+      "proposed_closure_test": "Training-only unique observations, correct p05/medians/fallbacks and M2 50:50; labels mature/purged if defining population; each historical cutoff and factual fitting time enforced.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — REAL FIT/EVALUATION"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-008",
+      "title": "Real tensor and matched population admission",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "5×48×16 stock complete-case and separate48×5 market implemented. Structural market coverage complete; real causal tensor/admission0. Matched evaluation population not scientifically accepted.",
+      "dependencies": [
+        "P2-DEF-008"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/alpaca_only_extended/retention.json",
+          "sha256": "13b48baa150c7143a0502a0990c13f287a38a69d37b492d3839afa80417745aa"
+        }
+      ],
+      "required_closure_action": "Resolve source/actions/certificates and audit original IDs for stock-only, market-only and intersection.",
+      "closure_verification": "Identical48 UTC steps; all stock cells; market endpoint and≥46/48 vectors; source age≤90min; own-step available certificates and frozen retention guard pass.",
+      "responsible_future_package": "P2.3/P2.4/G3",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-008",
+        "title": "Real tensor and matched population admission",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "5×48×16 stock complete-case and separate48×5 market implemented. Structural market coverage complete; real causal tensor/admission0. Matched evaluation population not scientifically accepted.",
+        "dependencies": [
+          "P2-DEF-008"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/alpaca_only_extended/retention.json",
+            "sha256": "13b48baa150c7143a0502a0990c13f287a38a69d37b492d3839afa80417745aa"
+          }
+        ],
+        "required_closure_action": "Resolve source/actions/certificates and audit original IDs for stock-only, market-only and intersection.",
+        "closure_verification": "Identical48 UTC steps; all stock cells; market endpoint and≥46/48 vectors; source age≤90min; own-step available certificates and frozen retention guard pass.",
+        "responsible_future_package": "P2.3/P2.4/G3",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Real tensor and matched population admission",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-008"
+      ],
+      "proposed_closure_test": "Identical48 UTC steps; all stock cells; market endpoint and≥46/48 vectors; source age≤90min; own-step available certificates and frozen retention guard pass.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — REAL FIT/EVALUATION"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-009",
+      "title": "Formal joint/course activation",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — approval/policy",
+      "exact_blocker": "Conceptual240-minute agreement and instructor substitution direction researcher-reported; attributable formal evidence pending. Exact SPY/proxy joint sign-off and pointer activation not supplied.",
+      "dependencies": [
+        "P2-DEF-009"
+      ],
+      "present_evidence": [
+        {
+          "path": "docs/track_a/decisions/Shared_Cross_Track_Decisions_2026-10-11_v1.0.md",
+          "sha256": "11bfcf177dd8b0b5a98d01f2c394ae5f25d87e16f59bcec38e9f2d62e408725b"
+        }
+      ],
+      "required_closure_action": "Obtain attributable scoped acknowledgments and a separately reviewed protocol amendment/migration.",
+      "closure_verification": "Exact decision keys, versions/hashes and owner evidence; separately authorized pointer and ledger transition.",
+      "responsible_future_package": "G0/P2/P3",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-009",
+        "title": "Formal joint/course activation",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — approval/policy",
+        "exact_blocker": "Conceptual240-minute agreement and instructor substitution direction researcher-reported; attributable formal evidence pending. Exact SPY/proxy joint sign-off and pointer activation not supplied.",
+        "dependencies": [
+          "P2-DEF-009"
+        ],
+        "present_evidence": [
+          {
+            "path": "docs/track_a/decisions/Shared_Cross_Track_Decisions_2026-10-11_v1.0.md",
+            "sha256": "11bfcf177dd8b0b5a98d01f2c394ae5f25d87e16f59bcec38e9f2d62e408725b"
+          }
+        ],
+        "required_closure_action": "Obtain attributable scoped acknowledgments and a separately reviewed protocol amendment/migration.",
+        "closure_verification": "Exact decision keys, versions/hashes and owner evidence; separately authorized pointer and ledger transition.",
+        "responsible_future_package": "G0/P2/P3",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Formal joint/course activation",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-009"
+      ],
+      "proposed_closure_test": "Exact decision keys, versions/hashes and owner evidence; separately authorized pointer and ledger transition.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-010",
+      "title": "Formation/entity and source rights",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Retrospective liquidity proxy accepted for educational scope, not PIT certification. As-of maps entities, not original vintage. Survivorship and source-use/redistribution restrictions remain disclosures.",
+      "dependencies": [
+        "P2-DEF-010"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/p1_3b_2026-10-10_204558/human_review_card.md",
+          "sha256": "19d35df9f640c011fd32f8da76b3b578878daeac3e6ef4e876e92a892be1e1e7"
+        }
+      ],
+      "required_closure_action": "Carry explicit retrospective limitations; obtain only separately authorized entity/rights evidence if certification required.",
+      "closure_verification": "Attributable scope/rights, stable entity mapping and no PIT claim from retrospective liquidity.",
+      "responsible_future_package": "P1/G0/G1",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-010",
+        "title": "Formation/entity and source rights",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Retrospective liquidity proxy accepted for educational scope, not PIT certification. As-of maps entities, not original vintage. Survivorship and source-use/redistribution restrictions remain disclosures.",
+        "dependencies": [
+          "P2-DEF-010"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/p1_3b_2026-10-10_204558/human_review_card.md",
+            "sha256": "19d35df9f640c011fd32f8da76b3b578878daeac3e6ef4e876e92a892be1e1e7"
+          }
+        ],
+        "required_closure_action": "Carry explicit retrospective limitations; obtain only separately authorized entity/rights evidence if certification required.",
+        "closure_verification": "Attributable scope/rights, stable entity mapping and no PIT claim from retrospective liquidity.",
+        "responsible_future_package": "P1/G0/G1",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Formation/entity and source rights",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-010"
+      ],
+      "proposed_closure_test": "Attributable scope/rights, stable entity mapping and no PIT claim from retrospective liquidity.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — SOURCE/PROVENANCE"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-011",
+      "title": "Scientific gates and inner populations",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — approval/policy",
+      "exact_blocker": "Seven historical scientific blockers remain;0/40 neural pairs. Mechanical63-session inner tails pass; genuine mature labels/regimes and scientific eligible-origin audits unavailable.",
+      "dependencies": [
+        "P2-DEF-011"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/audit/track_a_events.jsonl",
+          "sha256": "4c2f0693aaaba9c29110881a0961b31a12195c126e4437830600b2a4b81e12e4"
+        }
+      ],
+      "required_closure_action": "Resolve each real blocker with schema-valid evidence and separate approvals.",
+      "closure_verification": "G0–G3 evidence; inner63 calendar sessions≥50 eligible days and≥25 each origin; maturity/purge and regime audits; no engineering-implied science PASS.",
+      "responsible_future_package": "G0/G1/G2/G3",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-011",
+        "title": "Scientific gates and inner populations",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — approval/policy",
+        "exact_blocker": "Seven historical scientific blockers remain;0/40 neural pairs. Mechanical63-session inner tails pass; genuine mature labels/regimes and scientific eligible-origin audits unavailable.",
+        "dependencies": [
+          "P2-DEF-011"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/audit/track_a_events.jsonl",
+            "sha256": "4c2f0693aaaba9c29110881a0961b31a12195c126e4437830600b2a4b81e12e4"
+          }
+        ],
+        "required_closure_action": "Resolve each real blocker with schema-valid evidence and separate approvals.",
+        "closure_verification": "G0–G3 evidence; inner63 calendar sessions≥50 eligible days and≥25 each origin; maturity/purge and regime audits; no engineering-implied science PASS.",
+        "responsible_future_package": "G0/G1/G2/G3",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Scientific gates and inner populations",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-011"
+      ],
+      "proposed_closure_test": "G0–G3 evidence; inner63 calendar sessions≥50 eligible days and≥25 each origin; maturity/purge and regime audits; no engineering-implied science PASS.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-012",
+      "title": "Git integration and portability",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — approval/policy",
+      "exact_blocker": "Predecessor packages now committed at5393852; clean start. This closure remains uncommitted; raw/journal handoff and clean-machine rehearsal not certified.",
+      "dependencies": [
+        "P2-DEF-012"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/preflight.json",
+          "sha256": "685defc15efae65efc92cfb738041b8187cd2402fbb3497bff99c30529d3b69b"
+        }
+      ],
+      "required_closure_action": "Separately authorize reviewed explicit-path integration and legitimate data/journal handoff.",
+      "closure_verification": "Focused commit/PR with tests; actual clean-clone reproduction, canonical history hashes and documented data; no raw or secrets committed.",
+      "responsible_future_package": "P0/future integration",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-012",
+        "title": "Git integration and portability",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — approval/policy",
+        "exact_blocker": "Predecessor packages now committed at5393852; clean start. This closure remains uncommitted; raw/journal handoff and clean-machine rehearsal not certified.",
+        "dependencies": [
+          "P2-DEF-012"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/preflight.json",
+            "sha256": "685defc15efae65efc92cfb738041b8187cd2402fbb3497bff99c30529d3b69b"
+          }
+        ],
+        "required_closure_action": "Separately authorize reviewed explicit-path integration and legitimate data/journal handoff.",
+        "closure_verification": "Focused commit/PR with tests; actual clean-clone reproduction, canonical history hashes and documented data; no raw or secrets committed.",
+        "responsible_future_package": "P0/future integration",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Git integration and portability",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-012"
+      ],
+      "proposed_closure_test": "Focused commit/PR with tests; actual clean-clone reproduction, canonical history hashes and documented data; no raw or secrets committed.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY",
+        "NOT DONE — PORTABLE DATA HANDOFF"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-013",
+      "title": "Vendor branches blocked/inactive",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Massive403 twice;200 total permitted,198 remain, access still blocked. Databento disallowed; single-venue Tiingo IEX unsuitable. NYUWRDS unavailable under reported affiliation; RutgersWRDS/NYSETAQ only conditional on actual subscription/license.",
+      "dependencies": [
+        "P2-DEF-013"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/secondary_budget_2026-10-11_213121/checks.json",
+          "sha256": "23d037699bef49b5face64bac3d14eb72dd774035807782f94bb2300cbc9f791"
+        }
+      ],
+      "required_closure_action": "Wait for a separate sourcing request and legitimately resolved access. No inquiry, purchases, account access or403 retries here.",
+      "closure_verification": "Actual entitlement/license/provenance and exact-key compatible observations within cumulative and page budgets.",
+      "responsible_future_package": "P1/future remediation",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-013",
+        "title": "Vendor branches blocked/inactive",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Massive403 twice;200 total permitted,198 remain, access still blocked. Databento disallowed; single-venue Tiingo IEX unsuitable. NYUWRDS unavailable under reported affiliation; RutgersWRDS/NYSETAQ only conditional on actual subscription/license.",
+        "dependencies": [
+          "P2-DEF-013"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/secondary_budget_2026-10-11_213121/checks.json",
+            "sha256": "23d037699bef49b5face64bac3d14eb72dd774035807782f94bb2300cbc9f791"
+          }
+        ],
+        "required_closure_action": "Wait for a separate sourcing request and legitimately resolved access. No inquiry, purchases, account access or403 retries here.",
+        "closure_verification": "Actual entitlement/license/provenance and exact-key compatible observations within cumulative and page budgets.",
+        "responsible_future_package": "P1/future remediation",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Vendor branches blocked/inactive",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-013"
+      ],
+      "proposed_closure_test": "Actual entitlement/license/provenance and exact-key compatible observations within cumulative and page budgets.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-014",
+      "title": "M2 own-step floor check reconciled",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Existing fitted_at≤step.end is exactly own information_cutoff. Equality passes; a later nanosecond blocks. This is an engineering resolution, not a fake unresolved coding issue. Actual fitting remainsDEF007.",
+      "dependencies": [
+        "P2-DEF-014"
+      ],
+      "present_evidence": [
+        {
+          "path": "tests/test_m2.py",
+          "sha256": "fb4eaa1212868876040ae6a6341adf33e4d8d3973127faa5a244c7ff0a8c7249"
+        }
+      ],
+      "required_closure_action": "Preserve the tested own-step check; handle real certificate prerequisites throughDEF007.",
+      "closure_verification": "test_p2_floor_fitted_at_is_exact_own_information_cutoff and existing maturity/version tests.",
+      "responsible_future_package": "P2.3/G3",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-014",
+        "title": "M2 own-step floor check reconciled",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Existing fitted_at≤step.end is exactly own information_cutoff. Equality passes; a later nanosecond blocks. This is an engineering resolution, not a fake unresolved coding issue. Actual fitting remainsDEF007.",
+        "dependencies": [
+          "P2-DEF-014"
+        ],
+        "present_evidence": [
+          {
+            "path": "tests/test_m2.py",
+            "sha256": "fb4eaa1212868876040ae6a6341adf33e4d8d3973127faa5a244c7ff0a8c7249"
+          }
+        ],
+        "required_closure_action": "Preserve the tested own-step check; handle real certificate prerequisites throughDEF007.",
+        "closure_verification": "test_p2_floor_fitted_at_is_exact_own_information_cutoff and existing maturity/version tests.",
+        "responsible_future_package": "P2.3/G3",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "M2 own-step floor check reconciled",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-014"
+      ],
+      "proposed_closure_test": "test_p2_floor_fitted_at_is_exact_own_information_cutoff and existing maturity/version tests.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — REAL FIT/EVALUATION"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-015",
+      "title": "Hourly-only exception/benchmark policy",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — approval/policy",
+      "exact_blocker": "Hourly closes cannot prove exact minute retry/emergency/continuous risk or09:30/15:59 benchmark prices. Coarse-observation policy remains unapproved outsideP2.",
+      "dependencies": [
+        "P2-DEF-015"
+      ],
+      "present_evidence": [
+        {
+          "path": "docs/track_a/decisions/Track_A_Execution_Price_Proxy_Amendment_v1.0_2026-10-11.md",
+          "sha256": "1d6f7bc0b103e29a77aa3a8e2d6409936a359551dd64dc6c3440a88d4bcf870f"
+        }
+      ],
+      "required_closure_action": "Before affected P3 branches specify observed-bar retry/marks, outstanding physical holdings and benchmark boundary conventions.",
+      "closure_verification": "No phantom fill/valuation/flat position; explicit event/reference age; declared costs/exposure and separately specified benchmark opportunity.",
+      "responsible_future_package": "Future P3.4/P3.5 design",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-015",
+        "title": "Hourly-only exception/benchmark policy",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — approval/policy",
+        "exact_blocker": "Hourly closes cannot prove exact minute retry/emergency/continuous risk or09:30/15:59 benchmark prices. Coarse-observation policy remains unapproved outsideP2.",
+        "dependencies": [
+          "P2-DEF-015"
+        ],
+        "present_evidence": [
+          {
+            "path": "docs/track_a/decisions/Track_A_Execution_Price_Proxy_Amendment_v1.0_2026-10-11.md",
+            "sha256": "1d6f7bc0b103e29a77aa3a8e2d6409936a359551dd64dc6c3440a88d4bcf870f"
+          }
+        ],
+        "required_closure_action": "Before affected P3 branches specify observed-bar retry/marks, outstanding physical holdings and benchmark boundary conventions.",
+        "closure_verification": "No phantom fill/valuation/flat position; explicit event/reference age; declared costs/exposure and separately specified benchmark opportunity.",
+        "responsible_future_package": "Future P3.4/P3.5 design",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "Hourly-only exception/benchmark policy",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-015"
+      ],
+      "proposed_closure_test": "No phantom fill/valuation/flat position; explicit event/reference age; declared costs/exposure and separately specified benchmark opportunity.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY",
+        "NOT DONE — SOURCE/PROVENANCE"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P2-DEF-016",
+      "title": "D7 ASOF certificate context completed",
+      "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Retrospective training behavior preserved; joined inference passes stock context. ASOF rejects later fitted certificates even inside fitting interval. Source/feature/action versions and synthetic-to-real misuse checked. Real fitting remainsDEF007.",
+      "dependencies": [
+        "P2-DEF-016"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_4_market_trace.json",
+          "sha256": "debe9b6d7fdc046d4949e746e0b3e694d125f815ecff966ab14f31c1da723cda"
+        }
+      ],
+      "required_closure_action": "Keep explicit ASOF context in future inference callers; never present retrospective transforms as forecast state.",
+      "closure_verification": "Own-step floor/scaler negative cases, source misuse, full stock calculator→MC0 and C01 counterfactual tests.",
+      "responsible_future_package": "P2.4/G3",
+      "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "NO_AUTO_CLEAR": true,
+      "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "inherited_v1_record": {
+        "id": "P2-DEF-016",
+        "title": "D7 ASOF certificate context completed",
+        "engineering_status": "INHERITED_P2_ENGINEERING_COMPLETE",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Retrospective training behavior preserved; joined inference passes stock context. ASOF rejects later fitted certificates even inside fitting interval. Source/feature/action versions and synthetic-to-real misuse checked. Real fitting remainsDEF007.",
+        "dependencies": [
+          "P2-DEF-016"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_4_market_trace.json",
+            "sha256": "debe9b6d7fdc046d4949e746e0b3e694d125f815ecff966ab14f31c1da723cda"
+          }
+        ],
+        "required_closure_action": "Keep explicit ASOF context in future inference callers; never present retrospective transforms as forecast state.",
+        "closure_verification": "Own-step floor/scaler negative cases, source misuse, full stock calculator→MC0 and C01 counterfactual tests.",
+        "responsible_future_package": "P2.4/G3",
+        "research_risk": "Inherited P2 source/clock/population/fit/formal uncertainty; synthetic P3 PASS cannot clear it.",
+        "last_evidence_version": {
+          "package": "TA-P2-FINAL-CLOSE-001",
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+          "version": 1
+        },
+        "NO_AUTO_CLEAR": true,
+        "protected_parent_register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json"
+      },
+      "status": "DEFERRED",
+      "affected_component": "D7 ASOF certificate context completed",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-016"
+      ],
+      "proposed_closure_test": "Own-step floor/scaler negative cases, source misuse, full stock calculator→MC0 and C01 counterfactual tests.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — REAL FIT/EVALUATION"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-001",
+      "title": "Stock gaps, retention and eventual predeclared backup audit",
+      "engineering_status": "DEPENDENCY_PRESERVED",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "168 native gaps/15 clusters; inactive candidate1183/1502=78.76% vs90%. Current original five stocks unchanged; backups not selected.",
+      "dependencies": [
+        "P2-DEF-001",
+        "P2-DEF-002",
+        "P2-DEF-003",
+        "P2-DEF-010"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+        },
+        {
+          "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+        }
+      ],
+      "required_closure_action": "Obtain and audit genuine exact-key source recovery or separately approved predeclared-backup universe version; rerun preserved thresholds and sector/survivorship audit.",
+      "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "responsible_future_package": "P1/P2 source remediation",
+      "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+      "last_evidence_version": {
+        "package": "TA-P3-ENGINEERING-001",
+        "version": 1,
+        "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+      },
+      "NO_AUTO_CLEAR": true,
+      "inherited_v1_record": {
+        "id": "P3-DEF-001",
+        "title": "Stock gaps, retention and eventual predeclared backup audit",
+        "engineering_status": "DEPENDENCY_PRESERVED",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "168 native gaps/15 clusters; inactive candidate1183/1502=78.76% vs90%. Current original five stocks unchanged; backups not selected.",
+        "dependencies": [
+          "P2-DEF-001",
+          "P2-DEF-002",
+          "P2-DEF-003",
+          "P2-DEF-010"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+          },
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+          },
+          {
+            "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+          }
+        ],
+        "required_closure_action": "Obtain and audit genuine exact-key source recovery or separately approved predeclared-backup universe version; rerun preserved thresholds and sector/survivorship audit.",
+        "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+        "responsible_future_package": "P1/P2 source remediation",
+        "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+        "last_evidence_version": {
+          "package": "TA-P3-ENGINEERING-001",
+          "version": 1,
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+        },
+        "NO_AUTO_CLEAR": true
+      },
+      "status": "DEFERRED",
+      "affected_component": "Stock gaps, retention and eventual predeclared backup audit",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-001",
+        "P2-DEF-002",
+        "P2-DEF-003",
+        "P2-DEF-010"
+      ],
+      "proposed_closure_test": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-002",
+      "title": "Historical availability and action vintage",
+      "engineering_status": "DEPENDENCY_PRESERVED",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Historical publication, action timing/vintage, carry/dividend/borrow facts remain unproved. Synthetic ActionInstruction is no provider evidence.",
+      "dependencies": [
+        "P2-DEF-004",
+        "P2-DEF-005"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+        },
+        {
+          "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+        }
+      ],
+      "required_closure_action": "Retrieve independently verified as-of publication/action coverage and payment/unit metadata; audit no split P&L, no duplicate claims and actual unresolved holdings.",
+      "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "responsible_future_package": "G0/G1/P1.CA source audit",
+      "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+      "last_evidence_version": {
+        "package": "TA-P3-ENGINEERING-001",
+        "version": 1,
+        "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+      },
+      "NO_AUTO_CLEAR": true,
+      "inherited_v1_record": {
+        "id": "P3-DEF-002",
+        "title": "Historical availability and action vintage",
+        "engineering_status": "DEPENDENCY_PRESERVED",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Historical publication, action timing/vintage, carry/dividend/borrow facts remain unproved. Synthetic ActionInstruction is no provider evidence.",
+        "dependencies": [
+          "P2-DEF-004",
+          "P2-DEF-005"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+          },
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+          },
+          {
+            "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+          }
+        ],
+        "required_closure_action": "Retrieve independently verified as-of publication/action coverage and payment/unit metadata; audit no split P&L, no duplicate claims and actual unresolved holdings.",
+        "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+        "responsible_future_package": "G0/G1/P1.CA source audit",
+        "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+        "last_evidence_version": {
+          "package": "TA-P3-ENGINEERING-001",
+          "version": 1,
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+        },
+        "NO_AUTO_CLEAR": true
+      },
+      "status": "DEFERRED",
+      "affected_component": "Historical availability and action vintage",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-004",
+        "P2-DEF-005"
+      ],
+      "proposed_closure_test": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — SOURCE/PROVENANCE"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-003",
+      "title": "Hourly proxy and real minute retry/exception contract",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_AND_TESTED",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — approval/policy",
+      "exact_blocker": "PENDING_REAL_EXECUTION_SOURCE_OR_SHARED_EXCEPTION_AMENDMENT. Hourly closes cannot support intervening minute fill/risk claims; proxy lag/optimism not absorbed by assumed bps.",
+      "dependencies": [
+        "P2-DEF-006",
+        "P2-DEF-015"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+        },
+        {
+          "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+        }
+      ],
+      "required_closure_action": "Approve and validate real minute reference/fill source OR shared explicit hourly exception/risk amendment, including delayed issuance exact references and measured proxy age.",
+      "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "responsible_future_package": "Shared execution amendment/P3 execution source",
+      "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+      "last_evidence_version": {
+        "package": "TA-P3-ENGINEERING-001",
+        "version": 1,
+        "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+      },
+      "NO_AUTO_CLEAR": true,
+      "inherited_v1_record": {
+        "id": "P3-DEF-003",
+        "title": "Hourly proxy and real minute retry/exception contract",
+        "engineering_status": "SYNTHETIC_IMPLEMENTED_AND_TESTED",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — approval/policy",
+        "exact_blocker": "PENDING_REAL_EXECUTION_SOURCE_OR_SHARED_EXCEPTION_AMENDMENT. Hourly closes cannot support intervening minute fill/risk claims; proxy lag/optimism not absorbed by assumed bps.",
+        "dependencies": [
+          "P2-DEF-006",
+          "P2-DEF-015"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+          },
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+          },
+          {
+            "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+          }
+        ],
+        "required_closure_action": "Approve and validate real minute reference/fill source OR shared explicit hourly exception/risk amendment, including delayed issuance exact references and measured proxy age.",
+        "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+        "responsible_future_package": "Shared execution amendment/P3 execution source",
+        "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+        "last_evidence_version": {
+          "package": "TA-P3-ENGINEERING-001",
+          "version": 1,
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+        },
+        "NO_AUTO_CLEAR": true
+      },
+      "status": "DEFERRED",
+      "affected_component": "Hourly proxy and real minute retry/exception contract",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-006",
+        "P2-DEF-015"
+      ],
+      "proposed_closure_test": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY",
+        "NOT DONE — SOURCE/PROVENANCE"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-004",
+      "title": "Real stop, halt, partial fill and risk sampling evidence",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_AND_TESTED",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Scripted SYN fills, cancellations and halts are scenario facts. Historical no-trade classifications, actual paired fills and risk sampling are unknown.",
+      "dependencies": [
+        "P2-DEF-006",
+        "P2-DEF-015",
+        "P3-DEF-003"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+        },
+        {
+          "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+        }
+      ],
+      "required_closure_action": "Provide causal historical entry/exit marks and classifications; validate next permissible execution events, partial outcomes and exposure monitor coverage before replay.",
+      "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "responsible_future_package": "G4 empirical execution audit",
+      "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+      "last_evidence_version": {
+        "package": "TA-P3-ENGINEERING-001",
+        "version": 1,
+        "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+      },
+      "NO_AUTO_CLEAR": true,
+      "inherited_v1_record": {
+        "id": "P3-DEF-004",
+        "title": "Real stop, halt, partial fill and risk sampling evidence",
+        "engineering_status": "SYNTHETIC_IMPLEMENTED_AND_TESTED",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Scripted SYN fills, cancellations and halts are scenario facts. Historical no-trade classifications, actual paired fills and risk sampling are unknown.",
+        "dependencies": [
+          "P2-DEF-006",
+          "P2-DEF-015",
+          "P3-DEF-003"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+          },
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+          },
+          {
+            "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+          }
+        ],
+        "required_closure_action": "Provide causal historical entry/exit marks and classifications; validate next permissible execution events, partial outcomes and exposure monitor coverage before replay.",
+        "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+        "responsible_future_package": "G4 empirical execution audit",
+        "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+        "last_evidence_version": {
+          "package": "TA-P3-ENGINEERING-001",
+          "version": 1,
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+        },
+        "NO_AUTO_CLEAR": true
+      },
+      "status": "DEFERRED",
+      "affected_component": "Real stop, halt, partial fill and risk sampling evidence",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-006",
+        "P2-DEF-015",
+        "P3-DEF-003"
+      ],
+      "proposed_closure_test": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — SOURCE/PROVENANCE"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-005",
+      "title": "Borrow availability and overnight financing",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_AND_TESTED",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "0/.005/.03 annual rates and observed day max are synthetic assumptions; actual brokerage availability, long/short overnight funding and mark coverage are absent. Unresolved NAV stays None.",
+      "dependencies": [
+        "P2-DEF-005",
+        "P3-DEF-002",
+        "P3-DEF-004"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+        },
+        {
+          "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+        }
+      ],
+      "required_closure_action": "Approve documented borrow/funding conventions and audit real availability/coverage, once-per-session debit, unsettled claims and unknown-pay-date handling.",
+      "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "responsible_future_package": "P3 financing source/assumption review",
+      "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+      "last_evidence_version": {
+        "package": "TA-P3-ENGINEERING-001",
+        "version": 1,
+        "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+      },
+      "NO_AUTO_CLEAR": true,
+      "inherited_v1_record": {
+        "id": "P3-DEF-005",
+        "title": "Borrow availability and overnight financing",
+        "engineering_status": "SYNTHETIC_IMPLEMENTED_AND_TESTED",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "0/.005/.03 annual rates and observed day max are synthetic assumptions; actual brokerage availability, long/short overnight funding and mark coverage are absent. Unresolved NAV stays None.",
+        "dependencies": [
+          "P2-DEF-005",
+          "P3-DEF-002",
+          "P3-DEF-004"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+          },
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+          },
+          {
+            "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+          }
+        ],
+        "required_closure_action": "Approve documented borrow/funding conventions and audit real availability/coverage, once-per-session debit, unsettled claims and unknown-pay-date handling.",
+        "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+        "responsible_future_package": "P3 financing source/assumption review",
+        "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+        "last_evidence_version": {
+          "package": "TA-P3-ENGINEERING-001",
+          "version": 1,
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+        },
+        "NO_AUTO_CLEAR": true
+      },
+      "status": "DEFERRED",
+      "affected_component": "Borrow availability and overnight financing",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-005",
+        "P3-DEF-002",
+        "P3-DEF-004"
+      ],
+      "proposed_closure_test": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — SOURCE/PROVENANCE"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-006",
+      "title": "Formal activation, SPY and original USA500 archive",
+      "engineering_status": "DEPENDENCY_PRESERVED",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — approval/policy",
+      "exact_blocker": "Protected CURRENT_PROTOCOL pointer is unchanged. Source-complete SPY is scientifically inactive; original USA500 archived. Joint/course and market-source approvals remain separate.",
+      "dependencies": [
+        "P2-DEF-009",
+        "P2-DEF-011",
+        "P2-DEF-016"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+        },
+        {
+          "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+        }
+      ],
+      "required_closure_action": "Obtain documented joint/course/proxy/source/version signoffs through a new versioned protocol; verify protected pointer and as-of certificate context before activation.",
+      "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "responsible_future_package": "Shared research/source registration",
+      "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+      "last_evidence_version": {
+        "package": "TA-P3-ENGINEERING-001",
+        "version": 1,
+        "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+      },
+      "NO_AUTO_CLEAR": true,
+      "inherited_v1_record": {
+        "id": "P3-DEF-006",
+        "title": "Formal activation, SPY and original USA500 archive",
+        "engineering_status": "DEPENDENCY_PRESERVED",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — approval/policy",
+        "exact_blocker": "Protected CURRENT_PROTOCOL pointer is unchanged. Source-complete SPY is scientifically inactive; original USA500 archived. Joint/course and market-source approvals remain separate.",
+        "dependencies": [
+          "P2-DEF-009",
+          "P2-DEF-011",
+          "P2-DEF-016"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+          },
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+          },
+          {
+            "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+          }
+        ],
+        "required_closure_action": "Obtain documented joint/course/proxy/source/version signoffs through a new versioned protocol; verify protected pointer and as-of certificate context before activation.",
+        "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+        "responsible_future_package": "Shared research/source registration",
+        "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+        "last_evidence_version": {
+          "package": "TA-P3-ENGINEERING-001",
+          "version": 1,
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+        },
+        "NO_AUTO_CLEAR": true
+      },
+      "status": "DEFERRED",
+      "affected_component": "Formal activation, SPY and original USA500 archive",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-009",
+        "P2-DEF-011",
+        "P2-DEF-016"
+      ],
+      "proposed_closure_test": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-007",
+      "title": "Empirical FT0/M2/D7 fitting and matched populations",
+      "engineering_status": "DEPENDENCY_PRESERVED",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — missing data",
+      "exact_blocker": "Real training floors/scalers, maturity/eligible population and causal48x16/48x5 joins are unapproved/unavailable; synthetic toy equity is not train readiness.",
+      "dependencies": [
+        "P2-DEF-007",
+        "P2-DEF-008",
+        "P2-DEF-014",
+        "P2-DEF-016"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+        },
+        {
+          "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+        }
+      ],
+      "required_closure_action": "Validate mature training-only populations, derive/freeze floors/scalers and prove matching real causal stock/market tensor windows under source permissions.",
+      "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "responsible_future_package": "P2 empirical fitting/G2/G3",
+      "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+      "last_evidence_version": {
+        "package": "TA-P3-ENGINEERING-001",
+        "version": 1,
+        "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+      },
+      "NO_AUTO_CLEAR": true,
+      "inherited_v1_record": {
+        "id": "P3-DEF-007",
+        "title": "Empirical FT0/M2/D7 fitting and matched populations",
+        "engineering_status": "DEPENDENCY_PRESERVED",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — missing data",
+        "exact_blocker": "Real training floors/scalers, maturity/eligible population and causal48x16/48x5 joins are unapproved/unavailable; synthetic toy equity is not train readiness.",
+        "dependencies": [
+          "P2-DEF-007",
+          "P2-DEF-008",
+          "P2-DEF-014",
+          "P2-DEF-016"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+          },
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+          },
+          {
+            "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+          }
+        ],
+        "required_closure_action": "Validate mature training-only populations, derive/freeze floors/scalers and prove matching real causal stock/market tensor windows under source permissions.",
+        "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+        "responsible_future_package": "P2 empirical fitting/G2/G3",
+        "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+        "last_evidence_version": {
+          "package": "TA-P3-ENGINEERING-001",
+          "version": 1,
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+        },
+        "NO_AUTO_CLEAR": true
+      },
+      "status": "DEFERRED",
+      "affected_component": "Empirical FT0/M2/D7 fitting and matched populations",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-007",
+        "P2-DEF-008",
+        "P2-DEF-014",
+        "P2-DEF-016"
+      ],
+      "proposed_closure_test": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — REAL FIT/EVALUATION"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-008",
+      "title": "G4 science and later research phases",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_AND_TESTED",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — approval/policy",
+      "exact_blocker": "P3.1-P3.4 are synthetic engineering only, awaiting one human review. G0-G4 remain HOLD. P3.5/P3.6/P4 not started, confirmation untouched, neural pairs0/40.",
+      "dependencies": [
+        "P3-DEF-001",
+        "P3-DEF-002",
+        "P3-DEF-003",
+        "P3-DEF-004",
+        "P3-DEF-005",
+        "P3-DEF-006",
+        "P3-DEF-007"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+        },
+        {
+          "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+        }
+      ],
+      "required_closure_action": "Review this combined ledger/policy/friction/exception package; close dependencies independently. Authorize later baseline/training packages separately without confirmation selection.",
+      "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "responsible_future_package": "Human G4 review and separate P3.5/P3.6/P4",
+      "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+      "last_evidence_version": {
+        "package": "TA-P3-ENGINEERING-001",
+        "version": 1,
+        "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+      },
+      "NO_AUTO_CLEAR": true,
+      "inherited_v1_record": {
+        "id": "P3-DEF-008",
+        "title": "G4 science and later research phases",
+        "engineering_status": "SYNTHETIC_IMPLEMENTED_AND_TESTED",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — approval/policy",
+        "exact_blocker": "P3.1-P3.4 are synthetic engineering only, awaiting one human review. G0-G4 remain HOLD. P3.5/P3.6/P4 not started, confirmation untouched, neural pairs0/40.",
+        "dependencies": [
+          "P3-DEF-001",
+          "P3-DEF-002",
+          "P3-DEF-003",
+          "P3-DEF-004",
+          "P3-DEF-005",
+          "P3-DEF-006",
+          "P3-DEF-007"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+          },
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+          },
+          {
+            "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+          }
+        ],
+        "required_closure_action": "Review this combined ledger/policy/friction/exception package; close dependencies independently. Authorize later baseline/training packages separately without confirmation selection.",
+        "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+        "responsible_future_package": "Human G4 review and separate P3.5/P3.6/P4",
+        "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+        "last_evidence_version": {
+          "package": "TA-P3-ENGINEERING-001",
+          "version": 1,
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+        },
+        "NO_AUTO_CLEAR": true
+      },
+      "status": "DEFERRED",
+      "affected_component": "G4 science and later research phases",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P3-DEF-001",
+        "P3-DEF-002",
+        "P3-DEF-003",
+        "P3-DEF-004",
+        "P3-DEF-005",
+        "P3-DEF-006",
+        "P3-DEF-007"
+      ],
+      "proposed_closure_test": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-009",
+      "title": "Git integration and local-source portability",
+      "engineering_status": "DEPENDENCY_PRESERVED",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — approval/policy",
+      "exact_blocker": "All P3 work remains unstaged/uncommitted. Ignored raw data/journals stay canonical/local; portable synthetic code requires exact manifest review.",
+      "dependencies": [
+        "P2-DEF-012"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+        },
+        {
+          "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+        }
+      ],
+      "required_closure_action": "Approve exact integration_manifest, inspect secrets/size, stage only listed paths and session report, then use coordinated branch/PR workflow. Separately rehearse authorized empirical data recreation.",
+      "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "responsible_future_package": "Human Git integration/portability review",
+      "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+      "last_evidence_version": {
+        "package": "TA-P3-ENGINEERING-001",
+        "version": 1,
+        "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+      },
+      "NO_AUTO_CLEAR": true,
+      "inherited_v1_record": {
+        "id": "P3-DEF-009",
+        "title": "Git integration and local-source portability",
+        "engineering_status": "DEPENDENCY_PRESERVED",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — approval/policy",
+        "exact_blocker": "All P3 work remains unstaged/uncommitted. Ignored raw data/journals stay canonical/local; portable synthetic code requires exact manifest review.",
+        "dependencies": [
+          "P2-DEF-012"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+          },
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+          },
+          {
+            "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+          }
+        ],
+        "required_closure_action": "Approve exact integration_manifest, inspect secrets/size, stage only listed paths and session report, then use coordinated branch/PR workflow. Separately rehearse authorized empirical data recreation.",
+        "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+        "responsible_future_package": "Human Git integration/portability review",
+        "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+        "last_evidence_version": {
+          "package": "TA-P3-ENGINEERING-001",
+          "version": 1,
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+        },
+        "NO_AUTO_CLEAR": true
+      },
+      "status": "DEFERRED",
+      "affected_component": "Git integration and local-source portability",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-012"
+      ],
+      "proposed_closure_test": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY",
+        "NOT DONE — PORTABLE DATA HANDOFF"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-010",
+      "title": "Identical-time action/fill and competing entry/exit ordering",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_AND_TESTED",
+      "scientific_status": "HOLD",
+      "category": "NOT DONE — approval/policy",
+      "exact_blocker": "Undocumented action+fill ordering, competing new entry+outstanding correction and independent same-time frames fail closed. No advantageous priority guessed.",
+      "dependencies": [
+        "P2-DEF-005",
+        "P2-DEF-015",
+        "P3-DEF-003"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+        },
+        {
+          "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+        }
+      ],
+      "required_closure_action": "If needed by a future real replay, register explicit causally valid shared ordering and extend synthetic adversarial tests without changing current fail-closed behavior.",
+      "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "responsible_future_package": "Shared exception/order amendment",
+      "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+      "last_evidence_version": {
+        "package": "TA-P3-ENGINEERING-001",
+        "version": 1,
+        "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+      },
+      "NO_AUTO_CLEAR": true,
+      "inherited_v1_record": {
+        "id": "P3-DEF-010",
+        "title": "Identical-time action/fill and competing entry/exit ordering",
+        "engineering_status": "SYNTHETIC_IMPLEMENTED_AND_TESTED",
+        "scientific_status": "HOLD",
+        "category": "NOT DONE — approval/policy",
+        "exact_blocker": "Undocumented action+fill ordering, competing new entry+outstanding correction and independent same-time frames fail closed. No advantageous priority guessed.",
+        "dependencies": [
+          "P2-DEF-005",
+          "P2-DEF-015",
+          "P3-DEF-003"
+        ],
+        "present_evidence": [
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/human_review_card.md"
+          },
+          {
+            "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724/synthetic_ledger.json"
+          },
+          {
+            "path": "docs/track_a/P3_SYNTHETIC_API_v1.md"
+          }
+        ],
+        "required_closure_action": "If needed by a future real replay, register explicit causally valid shared ordering and extend synthetic adversarial tests without changing current fail-closed behavior.",
+        "closure_verification": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+        "responsible_future_package": "Shared exception/order amendment",
+        "research_risk": "Unvalidated causal execution/source/population or research authority could invalidate empirical conclusions.",
+        "last_evidence_version": {
+          "package": "TA-P3-ENGINEERING-001",
+          "version": 1,
+          "path": "reports/data_audit/ta_p3_engineering_2026-10-11_230724"
+        },
+        "NO_AUTO_CLEAR": true
+      },
+      "status": "DEFERRED",
+      "affected_component": "Identical-time action/fill and competing entry/exit ordering",
+      "scope": "Historical/scientific activity; synthetic-only engineering completion is not clearance.",
+      "consequence": "Empirical baseline/benchmark/P4 activation blocked until independently verified closure.",
+      "prerequisites": [
+        "P2-DEF-005",
+        "P2-DEF-015",
+        "P3-DEF-003"
+      ],
+      "proposed_closure_test": "Independently reviewed versioned evidence plus all named parent closure tests; no synthetic automatic promotion.",
+      "human_owner_authority": "Researcher A; joint/course authorization where specified by inherited record.",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY"
+      ],
+      "engineering_update": "P3.1-P3.4 human-approved foundation; P3.5-P3.6 synthetic implementation awaiting combined human review. Prior historical blocker unchanged."
+    },
+    {
+      "id": "P3-DEF-011",
+      "title": "Empirical momentum/ridge source and fit population",
+      "status": "DEFERRED",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_PENDING_HUMAN_REVIEW",
+      "scientific_status": "HOLD",
+      "NO_AUTO_CLEAR": true,
+      "affected_component": "Empirical momentum/ridge source and fit population",
+      "scope": "Real historical baseline/benchmark/fitting/P4 activation",
+      "categories": [
+        "NOT DONE — SOURCE/PROVENANCE",
+        "NOT DONE — REAL FIT/EVALUATION"
+      ],
+      "exact_blocker": "Synthetic scaled FT0/D7, TG0 epsilon, 63-session selection and refit do not certify historical source/target/scaler populations.",
+      "consequence": "No empirical result or scientific promotion permitted.",
+      "prerequisites": [
+        "P2-DEF-004",
+        "P2-DEF-007",
+        "P2-DEF-008",
+        "P3-DEF-007"
+      ],
+      "dependencies": [
+        "P2-DEF-004",
+        "P2-DEF-007",
+        "P2-DEF-008",
+        "P3-DEF-007"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/baseline_evidence.json"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/random_matrix/random_summary.json"
+        }
+      ],
+      "required_closure_action": "Audit genuine causal48x16/48x5 windows, maturity/purge and50-day/25-origin guards; training-only normalization, five-lambda MSE selection, one full-prefix refit and method-matched populations.",
+      "proposed_closure_test": "Audit genuine causal48x16/48x5 windows, maturity/purge and50-day/25-origin guards; training-only normalization, five-lambda MSE selection, one full-prefix refit and method-matched populations.",
+      "human_owner_authority": "Researcher A; collaborator/course joint decisions when applicable.",
+      "last_evidence_version": {
+        "package": "TA-P3-BASELINES-CLOSE-001",
+        "version": 2,
+        "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950"
+      }
+    },
+    {
+      "id": "P3-DEF-012",
+      "title": "Real contextual opening and terminal execution",
+      "status": "DEFERRED",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_PENDING_HUMAN_REVIEW",
+      "scientific_status": "HOLD",
+      "NO_AUTO_CLEAR": true,
+      "affected_component": "Real contextual opening and terminal execution",
+      "scope": "Real historical baseline/benchmark/fitting/P4 activation",
+      "categories": [
+        "NOT DONE — MISSING DATA",
+        "NOT DONE — SOURCE/PROVENANCE",
+        "NOT DONE — APPROVAL/POLICY"
+      ],
+      "exact_blocker": "09:30/15:59/12:59 synthetic opens are no real minute fill/borrow/funding evidence; failed terminal paths remain incomplete.",
+      "consequence": "No empirical result or scientific promotion permitted.",
+      "prerequisites": [
+        "P2-DEF-006",
+        "P2-DEF-015",
+        "P3-DEF-003",
+        "P3-DEF-005"
+      ],
+      "dependencies": [
+        "P2-DEF-006",
+        "P2-DEF-015",
+        "P3-DEF-003",
+        "P3-DEF-005"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/baseline_evidence.json"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/random_matrix/random_summary.json"
+        }
+      ],
+      "required_closure_action": "Obtain genuine eligible minute-open source/publication/unit evidence and approved actual retry/financing conventions; independently reconcile segment cash/shares/fees/claims without hourly surrogates.",
+      "proposed_closure_test": "Obtain genuine eligible minute-open source/publication/unit evidence and approved actual retry/financing conventions; independently reconcile segment cash/shares/fees/claims without hourly surrogates.",
+      "human_owner_authority": "Researcher A; collaborator/course joint decisions when applicable.",
+      "last_evidence_version": {
+        "package": "TA-P3-BASELINES-CLOSE-001",
+        "version": 2,
+        "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950"
+      }
+    },
+    {
+      "id": "P3-DEF-013",
+      "title": "Partial contextual entry restart and precision conventions",
+      "status": "DEFERRED",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_PENDING_HUMAN_REVIEW",
+      "scientific_status": "HOLD",
+      "NO_AUTO_CLEAR": true,
+      "affected_component": "Partial contextual entry restart and precision conventions",
+      "scope": "Real historical baseline/benchmark/fitting/P4 activation",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY"
+      ],
+      "exact_blocker": "After actual partial initial entry the adapter retains paid fills/fees and causally flattens; benchmark remains aborted/incomplete. Restarting original E0 after paid correction costs or inventing rounding cash is not approved.",
+      "consequence": "No empirical result or scientific promotion permitted.",
+      "prerequisites": [
+        "P3-DEF-010",
+        "P3-DEF-012"
+      ],
+      "dependencies": [
+        "P3-DEF-010",
+        "P3-DEF-012"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/baseline_evidence.json"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/random_matrix/random_summary.json"
+        }
+      ],
+      "required_closure_action": "If future empirical use requires restart, approve capital and timing semantics and audit new synthetic cases. Preserve exact fractional Decimal40 budgeting or separately approve a documented precision policy.",
+      "proposed_closure_test": "If future empirical use requires restart, approve capital and timing semantics and audit new synthetic cases. Preserve exact fractional Decimal40 budgeting or separately approve a documented precision policy.",
+      "human_owner_authority": "Researcher A; collaborator/course joint decisions when applicable.",
+      "last_evidence_version": {
+        "package": "TA-P3-BASELINES-CLOSE-001",
+        "version": 2,
+        "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950"
+      }
+    },
+    {
+      "id": "P3-DEF-014",
+      "title": "Empirical randomized reference and formal-null distinction",
+      "status": "DEFERRED",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_PENDING_HUMAN_REVIEW",
+      "scientific_status": "HOLD",
+      "NO_AUTO_CLEAR": true,
+      "affected_component": "Empirical randomized reference and formal-null distinction",
+      "scope": "Real historical baseline/benchmark/fitting/P4 activation",
+      "categories": [
+        "NOT DONE — REAL FIT/EVALUATION",
+        "NOT DONE — APPROVAL/POLICY"
+      ],
+      "exact_blocker": "1000 seeded synthetic paths/24 scenarios are descriptive software proof, not real Sharpe/alpha/distribution or a selection-adjusted permutation null.",
+      "consequence": "No empirical result or scientific promotion permitted.",
+      "prerequisites": [
+        "P3-DEF-004",
+        "P3-DEF-011",
+        "P3-DEF-012"
+      ],
+      "dependencies": [
+        "P3-DEF-004",
+        "P3-DEF-011",
+        "P3-DEF-012"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/baseline_evidence.json"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/random_matrix/random_summary.json"
+        }
+      ],
+      "required_closure_action": "After scientific source approval, freeze one genuine causal opportunity calendar/draw manifest and evaluate all predeclared paths fairly. Authorize any formal null/refitting procedure separately; never select/reseed favorable paths.",
+      "proposed_closure_test": "After scientific source approval, freeze one genuine causal opportunity calendar/draw manifest and evaluate all predeclared paths fairly. Authorize any formal null/refitting procedure separately; never select/reseed favorable paths.",
+      "human_owner_authority": "Researcher A; collaborator/course joint decisions when applicable.",
+      "last_evidence_version": {
+        "package": "TA-P3-BASELINES-CLOSE-001",
+        "version": 2,
+        "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950"
+      }
+    },
+    {
+      "id": "P3-DEF-015",
+      "title": "P4 activation remains unstarted",
+      "status": "DEFERRED",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_PENDING_HUMAN_REVIEW",
+      "scientific_status": "HOLD",
+      "NO_AUTO_CLEAR": true,
+      "affected_component": "P4 activation remains unstarted",
+      "scope": "Real historical baseline/benchmark/fitting/P4 activation",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY",
+        "NOT DONE — REAL FIT/EVALUATION"
+      ],
+      "exact_blocker": "P3 synthetic engineering cannot activate neural engines or confirmation;0/40 neural pairs unchanged.",
+      "consequence": "No empirical result or scientific promotion permitted.",
+      "prerequisites": [
+        "P3-DEF-001",
+        "P3-DEF-002",
+        "P3-DEF-003",
+        "P3-DEF-005",
+        "P3-DEF-006",
+        "P3-DEF-007",
+        "P3-DEF-011"
+      ],
+      "dependencies": [
+        "P3-DEF-001",
+        "P3-DEF-002",
+        "P3-DEF-003",
+        "P3-DEF-005",
+        "P3-DEF-006",
+        "P3-DEF-007",
+        "P3-DEF-011"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/baseline_evidence.json"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/random_matrix/random_summary.json"
+        }
+      ],
+      "required_closure_action": "Close genuine data/retention/publication/actions/fit/formal/execution requirements, obtain separate P4 scope and resource authorization, and preserve untouched confirmation before any training.",
+      "proposed_closure_test": "Close genuine data/retention/publication/actions/fit/formal/execution requirements, obtain separate P4 scope and resource authorization, and preserve untouched confirmation before any training.",
+      "human_owner_authority": "Researcher A; collaborator/course joint decisions when applicable.",
+      "last_evidence_version": {
+        "package": "TA-P3-BASELINES-CLOSE-001",
+        "version": 2,
+        "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950"
+      }
+    },
+    {
+      "id": "P3-DEF-016",
+      "title": "Upstream floor-dependent feature rebuild and source handoff",
+      "status": "DEFERRED",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_PENDING_HUMAN_REVIEW",
+      "scientific_status": "HOLD",
+      "NO_AUTO_CLEAR": true,
+      "affected_component": "Upstream floor-dependent feature rebuild and source handoff",
+      "scope": "Real historical baseline/benchmark/fitting/P4 activation",
+      "categories": [
+        "NOT DONE — SOURCE/PROVENANCE",
+        "NOT DONE — REAL FIT/EVALUATION",
+        "NOT DONE — PORTABLE DATA HANDOFF"
+      ],
+      "exact_blocker": "Synthetic features have explicitly stable numeric floor basis. If re-fitted floors change the supplied raw feature basis, preparation fails rather than silently reuse/recompute indicators. Ignored actual panels/certificates remain local and inactive.",
+      "consequence": "No empirical result or scientific promotion permitted.",
+      "prerequisites": [
+        "P2-DEF-005",
+        "P2-DEF-007",
+        "P2-DEF-012",
+        "P3-DEF-011"
+      ],
+      "dependencies": [
+        "P2-DEF-005",
+        "P2-DEF-007",
+        "P2-DEF-012",
+        "P3-DEF-011"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/baseline_evidence.json"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/random_matrix/random_summary.json"
+        }
+      ],
+      "required_closure_action": "Rebuild canonical floor-dependent features upstream under each permitted training prefix, preserve own-step source availability and hashes, and rehearse approved data recreation on a clean machine.",
+      "proposed_closure_test": "Rebuild canonical floor-dependent features upstream under each permitted training prefix, preserve own-step source availability and hashes, and rehearse approved data recreation on a clean machine.",
+      "human_owner_authority": "Researcher A; collaborator/course joint decisions when applicable.",
+      "last_evidence_version": {
+        "package": "TA-P3-BASELINES-CLOSE-001",
+        "version": 2,
+        "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950"
+      }
+    },
+    {
+      "id": "P3-DEF-017",
+      "title": "Combined human engineering review and exact Git integration",
+      "status": "DEFERRED",
+      "engineering_status": "SYNTHETIC_IMPLEMENTED_PENDING_HUMAN_REVIEW",
+      "scientific_status": "HOLD",
+      "NO_AUTO_CLEAR": true,
+      "affected_component": "Combined human engineering review and exact Git integration",
+      "scope": "Real historical baseline/benchmark/fitting/P4 activation",
+      "categories": [
+        "NOT DONE — APPROVAL/POLICY",
+        "NOT DONE — PORTABLE DATA HANDOFF"
+      ],
+      "exact_blocker": "P3.5/P3.6 engineering is reviewable, not self-approved or integrated. All original v1 files and scientific ledger stay protected.",
+      "consequence": "No empirical result or scientific promotion permitted.",
+      "prerequisites": [
+        "P2-DEF-012",
+        "P3-DEF-009"
+      ],
+      "dependencies": [
+        "P2-DEF-012",
+        "P3-DEF-009"
+      ],
+      "present_evidence": [
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/human_review_card.md"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/baseline_evidence.json"
+        },
+        {
+          "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/random_matrix/random_summary.json"
+        }
+      ],
+      "required_closure_action": "Review the consolidated card, exact manifest and source/test/evidence hashes; separately authorize focused staging/commit/PR. Return to stock-data adequacy investigation before empirical baselines or P4.",
+      "proposed_closure_test": "Review the consolidated card, exact manifest and source/test/evidence hashes; separately authorize focused staging/commit/PR. Return to stock-data adequacy investigation before empirical baselines or P4.",
+      "human_owner_authority": "Researcher A; collaborator/course joint decisions when applicable.",
+      "last_evidence_version": {
+        "package": "TA-P3-BASELINES-CLOSE-001",
+        "version": 2,
+        "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950"
+      }
+    }
+  ]
+}

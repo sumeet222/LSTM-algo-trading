@@ -1,0 +1,152 @@
+{
+  "baseline": {
+    "pytest": 422,
+    "resources": {
+      "peak_rss_bytes": 219774976,
+      "returncode": 0,
+      "seconds": 239.86247870900843
+    },
+    "types": {
+      "errorCount": 0,
+      "filesAnalyzed": 78,
+      "informationCount": 0,
+      "timeInSec": 12.772,
+      "warningCount": 0
+    }
+  },
+  "classification": "P3_1_TO_P3_6_SYNTHETIC_ENGINEERING_COMPLETE \u2014 HUMAN_REVIEW_REQUIRED; SCIENTIFIC_ACTIVATION_HOLD",
+  "final": {
+    "AST": 92,
+    "diff_check": "PASS",
+    "pytest": 457,
+    "pytest_seconds": 669.13,
+    "resources": {
+      "peak_child_rss_bytes": 235536384,
+      "returncode": 0,
+      "seconds": 670.1633221250086
+    },
+    "ruff": "PASS",
+    "stabilized_code_sha_unchanged": "PASS",
+    "types": {
+      "errorCount": 0,
+      "filesAnalyzed": 92,
+      "informationCount": 0,
+      "timeInSec": 18.655,
+      "warningCount": 0
+    }
+  },
+  "gates": {
+    "A_MOMENTUM": {
+      "ruff": "PASS",
+      "status": "PASS",
+      "tests": 27,
+      "types": {
+        "errorCount": 0,
+        "filesAnalyzed": 81,
+        "informationCount": 0,
+        "timeInSec": 9.335,
+        "warningCount": 0
+      }
+    },
+    "B_RIDGE": {
+      "focused": "48 passed + corrected candidate-clock fixture test1 passed",
+      "note": "Earlier corrected test-clock fixture subsequently covered by final full suite.",
+      "ruff": "PASS",
+      "status": "PASS",
+      "types": {
+        "errorCount": 0,
+        "filesAnalyzed": 87,
+        "informationCount": 0,
+        "timeInSec": 9.006,
+        "warningCount": 0
+      }
+    },
+    "C_CONTEXTUAL": {
+      "ruff": "PASS",
+      "status": "PASS",
+      "tests": 53,
+      "types": {
+        "errorCount": 0,
+        "filesAnalyzed": 88,
+        "informationCount": 0,
+        "timeInSec": 13.72,
+        "warningCount": 0
+      }
+    },
+    "D_RANDOM_UNIT": {
+      "full_matrix": "PASS_1000_PATHS_24000_FRESH_ACCOUNTS",
+      "ruff": "PASS",
+      "status": "PASS",
+      "tests": 21,
+      "types": {
+        "errorCount": 0,
+        "filesAnalyzed": 90,
+        "informationCount": 0,
+        "timeInSec": 10.366,
+        "warningCount": 0
+      }
+    },
+    "E_COMPOSITION": {
+      "additional_exported_full_random_reconstructions": 72,
+      "alternate": {
+        "sectors": [],
+        "symbols": [
+          "FOX",
+          "TIN",
+          "MAP",
+          "ZEN",
+          "ORB"
+        ],
+        "version": "SYN:ALTERNATE_BASELINES:v1"
+      },
+      "integrated_journals": 12,
+      "primary": {
+        "sectors": [],
+        "symbols": [
+          "AAPL",
+          "JPM",
+          "JNJ",
+          "WMT",
+          "CAT"
+        ],
+        "version": "SYN:PRIMARY_BASELINES:v1"
+      },
+      "sample_random_reconstructions_primary_and_alternate": 144,
+      "status": "PASS"
+    }
+  },
+  "pre_final_run": {
+    "note": "Not final: followed by explicit preparation permission/asof-history changes.",
+    "pytest": 456,
+    "resources": {
+      "peak_child_rss_bytes": 225509376,
+      "returncode": 0,
+      "seconds": 877.0834474580042
+    }
+  },
+  "preservation": {
+    "blockers": 7,
+    "ledger_sha": "4c2f0693aaaba9c29110881a0961b31a12195c126e4437830600b2a4b81e12e4",
+    "neural_pairs": "0/40",
+    "original_files": 524,
+    "original_interfaces_unchanged": true,
+    "raw_stat_files": 257,
+    "status": "PASS"
+  },
+  "random": {
+    "fresh_scenarios": 24000,
+    "paths": 1000,
+    "status": "PASS"
+  },
+  "reg_v2": "33 HOLDS:16 P2+10 P3+7 new; all NO_AUTO_CLEAR",
+  "scope_record": {
+    "Git_stage_commit_push": false,
+    "P4_started": false,
+    "confirmation_accessed": false,
+    "credentials_opened": false,
+    "empirical_fits": 0,
+    "historical_backtests": 0,
+    "historical_price_or_feature_or_label_panels_read": false,
+    "provider_requests": 0
+  }
+}
