@@ -1,0 +1,20 @@
+{
+  "status": "PROVISIONAL development experiment; not final test evidence",
+  "course_timestamp_convention": "start ASSUMED, not course-export verified",
+  "stock_feed": "Use audit_metadata.json to confirm downloaded feed",
+  "train_end_exclusive": "2023-01-01 00:00:00+00:00",
+  "validation_end_exclusive": "2024-01-01 00:00:00+00:00",
+  "ridge_alpha": 10.0,
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "NVDA",
+    "INTC",
+    "CSCO"
+  ],
+  "target": "4h same-session stock log return minus equal-weight five-stock mean log return",
+  "features": "Retained trading-observation lags; can span overnight gaps",
+  "market_interactions": "Each market feature times stock momentum_6 and volatility_24; fixed in advance",
+  "matching": "Exact full-hour intervals; no index forward-fill",
+  "execution": "Prediction audit only; no tradable fills, costs or profitability claimed"
+}

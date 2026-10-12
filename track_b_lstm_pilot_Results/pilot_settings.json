@@ -1,0 +1,32 @@
+{
+  "status": "exploratory shared-LSTM pilot, not canonical Track B implementation",
+  "timestamp": "course start-of-bar ASSUMED; complete bars only",
+  "universe": [
+    "AAPL",
+    "MSFT",
+    "NVDA",
+    "INTC",
+    "CSCO"
+  ],
+  "lookback": 48,
+  "hidden_width": 32,
+  "layers": 1,
+  "dropout": 0,
+  "seed": 42,
+  "max_epochs": 12,
+  "patience": 3,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "gradient_clip": 1.0,
+  "inner_end": "2022-10-01 00:00:00+00:00",
+  "train_end": "2023-01-01 00:00:00+00:00",
+  "validation_end": "2024-01-01 00:00:00+00:00",
+  "target": "same-session 4h stock log return minus five-stock mean log return",
+  "features": "6 stock / 4 USA500 / 4 USATECH; lags can include overnight gaps",
+  "preprocessing": "train-only standard scaling; final refit uses selected inner epoch count",
+  "stock_only_mask": "all arms use identical dates and complete windows including market availability",
+  "device": "cpu",
+  "torch_version": "2.11.0+cpu",
+  "pandas_version": "2.2.3",
+  "limitation": "one seed, no trading/execution/cost results; compare ridge only on matched samples"
+}
