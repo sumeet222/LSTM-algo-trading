@@ -1,0 +1,51 @@
+{
+  "action_version_is_scope_assertion_not_PIT_certification": true,
+  "application_contexts": [
+    "ASOF",
+    "HISTORICAL_TRAINING"
+  ],
+  "empirical_work_authorized": false,
+  "functions": {
+    "apply_action": "src/lstm_data/corporate_actions.py:365",
+    "assemble_market_inputs": "src/lstm_data/market_tensor.py:45",
+    "evaluate_m2": "src/lstm_data/m2.py:390",
+    "execution_plan": "src/lstm_data/clocks.py:86",
+    "forecast_bridge": "src/lstm_data/ft0_tensor.py:209",
+    "join_market": "src/lstm_data/ft0_tensor.py:176",
+    "load_deferred_work": "src/lstm_data/p2_closure.py:312",
+    "minute_causal_eligibility": "src/lstm_data/labels.py:132",
+    "observation_at_cutoff": "src/lstm_data/clocks.py:156",
+    "proxy_causal_eligibility": "src/lstm_data/hourly_proxy.py:166",
+    "proxy_label_sample": "src/lstm_data/hourly_proxy.py:220",
+    "resolve_reference": "src/lstm_data/hourly_proxy.py:113",
+    "settle_dividend": "src/lstm_data/corporate_actions.py:439",
+    "standardized_window": "src/lstm_data/market_features.py:538",
+    "stock_window": "src/lstm_data/ft0_tensor.py:59",
+    "vector": "src/lstm_data/market_features.py:395",
+    "window_from_history": "src/lstm_data/market_features.py:581"
+  },
+  "market_action_version": "SPY_SPLIT_SCOPE_ASSERTION_V1",
+  "market_feature_version": "D7:U1_U5:SPY:v1",
+  "model_wiring": "NOT_BUILT",
+  "package": "TA-P2-FINAL-CLOSE-001",
+  "shapes": {
+    "MC0_data": [
+      5,
+      48,
+      21
+    ],
+    "market": [
+      48,
+      5
+    ],
+    "market_mask": [
+      48,
+      5
+    ],
+    "stock": [
+      5,
+      48,
+      16
+    ]
+  }
+}

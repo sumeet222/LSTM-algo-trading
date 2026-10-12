@@ -350,3 +350,13 @@ def test_version_keys_timestamps_and_future_floor_fail_closed(calendar, history,
         )
     with pytest.raises(ValueError, match="CANONICAL_SESSION"):
         canonical_m2_keys((replace(out, key=("AAPL", "NaT", 1)),))
+
+
+def test_p2_floor_fitted_at_is_exact_own_information_cutoff(calendar, history, floor):
+    step = scheduled_window(calendar, "2021-03-15", 1)[-1]
+    assert step.information_cutoff == step.end
+    at_cutoff = replace(floor, window=replace(floor.window, fitted_at=step.information_cutoff))
+    after_cutoff = replace(at_cutoff, window=replace(
+        at_cutoff.window, fitted_at=step.information_cutoff + pd.Timedelta(nanoseconds=1)))
+    assert calc(calendar, history, at_cutoff, step=step).reason == "M2_VALID"
+    assert calc(calendar, history, after_cutoff, step=step).reason == "FLOOR_NOT_AVAILABLE_AT_STEP"

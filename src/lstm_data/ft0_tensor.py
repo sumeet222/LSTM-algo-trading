@@ -192,6 +192,7 @@ def join_market(
             market_floors,
             market_scaler,
             allow_synthetic=stock.synthetic and history.allow_synthetic,
+            context=stock.application_context,
         )
         if market.scheduled_ends != tuple(s.end for s in stock.steps):
             raise ValueError("STOCK_SPY_SCHEDULED_KEY_MISMATCH")

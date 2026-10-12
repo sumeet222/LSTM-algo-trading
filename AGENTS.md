@@ -1230,3 +1230,20 @@ Before final submission:
 8. Record the rehearsal in a Codex session report.
 
 The final submission must not depend on hidden manual steps known only to one group member.
+
+---
+
+## 25. Mandatory P2 handoff for P3/P4 and scientific gate work
+
+Before coding any P3, P4 or scientific-gate closure task, read
+`docs/track_a/P2_DEFERRED_WORK_REGISTER_v1.md` and the machine-readable register
+bound by `configs/track_a_p2_engineering_handoff_v1.json`, plus any separately
+authorized successor version. Verify their hashes with
+`lstm_data.p2_closure.load_deferred_work`. Preserve stable entry IDs and publish
+an append-only new version when evidence legitimately changes a status.
+
+P2 engineering completion does not clear scientific gates or authorize real fits,
+scoring, backtests, trading replay or confirmation outcomes. Explicitly authorized
+synthetic-only P3 engineering can proceed with scientific holds; this P2 package
+does not itself authorize starting P3. Keep later hourly-only exception and
+benchmark-policy decisions separate from completed P2 clocks and proxy math.

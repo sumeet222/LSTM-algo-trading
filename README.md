@@ -67,6 +67,26 @@ python -m lstm_data.ft0_audit --report reports/data_audit/<new-report-directory>
 
 No real feature fitting, execution engine or model is activated by this command.
 
+P2's engineering closure and future P3/P4 prerequisites are recorded in the
+[versioned deferred-work register](docs/track_a/P2_DEFERRED_WORK_REGISTER_v1.md).
+Read it before further phase work. Its
+[portable handoff config](configs/track_a_p2_engineering_handoff_v1.json) binds the
+readable and machine-readable evidence by SHA. D7 transforms now distinguish
+retrospective training from `ASOF` application; stock/SPY joins inherit the stock
+context. `market_tensor.assemble_market_inputs` exposes data-only 5×48×21 MC0
+inputs and the same direct market history for future MC1, with separate masks.
+No model, gate, portfolio replay or real empirical fit is enabled.
+
+```bash
+# Small offline evidence replay; use a NEW directory, existing archives required.
+python -m lstm_data.p2_closure --report reports/data_audit/<new-p2-report>
+```
+
+The authentic prehistory candidate improves mechanical training retention to
+1183/1502 (78.76%); the frozen 90% guard still fails. Original retention remains
+919/1502, publication/action/real-certificate evidence remains on HOLD, and the
+candidate overlay remains inactive.
+
 ## Setup
 
 Use Python 3.11–3.14 and run from the cloned repository root:

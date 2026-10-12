@@ -1,0 +1,220 @@
+{
+  "all_other_signatures_fields_unchanged": true,
+  "approved_additive_D7_interfaces": {
+    "DailyScaleSample": {
+      "after": "(timestamp: 'pd.Timestamp', rms63: 'float | None', basis: 'Basis' = 'SYNTHETIC', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1', action_version: 'str' = 'SPY_SPLIT_SCOPE_ASSERTION_V1') -> None",
+      "before": "(timestamp: 'pd.Timestamp', rms63: 'float | None') -> None",
+      "fields_after": [
+        "timestamp",
+        "rms63",
+        "basis",
+        "source_version",
+        "action_version"
+      ],
+      "fields_before": [
+        "timestamp",
+        "rms63"
+      ]
+    },
+    "MarketFloors": {
+      "after": "(hourly: 'float', daily: 'float', window: 'MarketFitWindow', basis: 'Basis', evidence_ref: 'str', timestamps: 'tuple[pd.Timestamp, ...]', daily_timestamps: 'tuple[pd.Timestamp, ...]', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1', feature_version: 'str' = 'D7:U1_U5:SPY:v1', action_version: 'str' = 'SPY_SPLIT_SCOPE_ASSERTION_V1') -> None",
+      "before": "(hourly: 'float', daily: 'float', window: 'MarketFitWindow', basis: 'Basis', evidence_ref: 'str', timestamps: 'tuple[pd.Timestamp, ...]', daily_timestamps: 'tuple[pd.Timestamp, ...]', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1') -> None",
+      "fields_after": [
+        "hourly",
+        "daily",
+        "window",
+        "basis",
+        "evidence_ref",
+        "timestamps",
+        "daily_timestamps",
+        "source_version",
+        "feature_version",
+        "action_version"
+      ],
+      "fields_before": [
+        "hourly",
+        "daily",
+        "window",
+        "basis",
+        "evidence_ref",
+        "timestamps",
+        "daily_timestamps",
+        "source_version"
+      ]
+    },
+    "MarketMeasures": {
+      "after": "(timestamp: 'pd.Timestamp', hourly_return: 'float | None', rms12: 'float | None', rms60: 'float | None', daily_rms63: 'float | None', momentum5: 'float | None', momentum20: 'float | None', reason: 'str', evidence_ids: 'tuple[str, ...]', basis: 'Basis' = 'SYNTHETIC', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1', feature_version: 'str' = 'D7:U1_U5:SPY:v1', action_version: 'str' = 'SPY_SPLIT_SCOPE_ASSERTION_V1') -> None",
+      "before": "(timestamp: 'pd.Timestamp', hourly_return: 'float | None', rms12: 'float | None', rms60: 'float | None', daily_rms63: 'float | None', momentum5: 'float | None', momentum20: 'float | None', reason: 'str', evidence_ids: 'tuple[str, ...]') -> None",
+      "fields_after": [
+        "timestamp",
+        "hourly_return",
+        "rms12",
+        "rms60",
+        "daily_rms63",
+        "momentum5",
+        "momentum20",
+        "reason",
+        "evidence_ids",
+        "basis",
+        "source_version",
+        "feature_version",
+        "action_version"
+      ],
+      "fields_before": [
+        "timestamp",
+        "hourly_return",
+        "rms12",
+        "rms60",
+        "daily_rms63",
+        "momentum5",
+        "momentum20",
+        "reason",
+        "evidence_ids"
+      ]
+    },
+    "MarketScaler": {
+      "after": "(centers: 'Vector', scales: 'Vector', methods: 'tuple[str, str, str, str, str]', window: 'MarketFitWindow', timestamps: 'tuple[pd.Timestamp, ...]', evidence_ref: 'str', basis: 'Basis' = 'SYNTHETIC', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1', feature_version: 'str' = 'D7:U1_U5:SPY:v1', action_version: 'str' = 'SPY_SPLIT_SCOPE_ASSERTION_V1') -> None",
+      "before": "(centers: 'Vector', scales: 'Vector', methods: 'tuple[str, str, str, str, str]', window: 'MarketFitWindow', timestamps: 'tuple[pd.Timestamp, ...]', evidence_ref: 'str', basis: 'Basis' = 'SYNTHETIC', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1') -> None",
+      "fields_after": [
+        "centers",
+        "scales",
+        "methods",
+        "window",
+        "timestamps",
+        "evidence_ref",
+        "basis",
+        "source_version",
+        "feature_version",
+        "action_version"
+      ],
+      "fields_before": [
+        "centers",
+        "scales",
+        "methods",
+        "window",
+        "timestamps",
+        "evidence_ref",
+        "basis",
+        "source_version"
+      ]
+    },
+    "MarketVector": {
+      "after": "(timestamp: 'pd.Timestamp', values: 'Vector | None', reason: 'str', evidence_ids: 'tuple[str, ...]', basis: 'Basis' = 'SYNTHETIC', source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1', feature_version: 'str' = 'D7:U1_U5:SPY:v1', action_version: 'str' = 'SPY_SPLIT_SCOPE_ASSERTION_V1') -> None",
+      "before": "(timestamp: 'pd.Timestamp', values: 'Vector | None', reason: 'str', evidence_ids: 'tuple[str, ...]') -> None",
+      "fields_after": [
+        "timestamp",
+        "values",
+        "reason",
+        "evidence_ids",
+        "basis",
+        "source_version",
+        "feature_version",
+        "action_version"
+      ],
+      "fields_before": [
+        "timestamp",
+        "values",
+        "reason",
+        "evidence_ids"
+      ]
+    },
+    "MarketWindow": {
+      "after": "(values: 'tuple[Vector, ...] | None', valid_mask: 'tuple[bool, ...]', reason: 'str', novel_constant_channels: 'tuple[int, ...]', research_ready: 'bool' = False, scheduled_ends: 'tuple[pd.Timestamp, ...]' = (), source_ids: 'tuple[tuple[str, ...], ...]' = (), step_reasons: 'tuple[str, ...]' = (), source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1', floor_ref: 'str | None' = None, scaler_ref: 'str | None' = None, application_context: 'ApplicationContext' = 'HISTORICAL_TRAINING', source_ages_seconds: 'tuple[float | None, ...]' = ()) -> None",
+      "before": "(values: 'tuple[Vector, ...] | None', valid_mask: 'tuple[bool, ...]', reason: 'str', novel_constant_channels: 'tuple[int, ...]', research_ready: 'bool' = False, scheduled_ends: 'tuple[pd.Timestamp, ...]' = (), source_ids: 'tuple[tuple[str, ...], ...]' = (), step_reasons: 'tuple[str, ...]' = (), source_version: 'str' = 'ALPACA_SIP_SPY_RAW_30MIN_V1', floor_ref: 'str | None' = None, scaler_ref: 'str | None' = None) -> None",
+      "fields_after": [
+        "values",
+        "valid_mask",
+        "reason",
+        "novel_constant_channels",
+        "research_ready",
+        "scheduled_ends",
+        "source_ids",
+        "step_reasons",
+        "source_version",
+        "floor_ref",
+        "scaler_ref",
+        "application_context",
+        "source_ages_seconds"
+      ],
+      "fields_before": [
+        "values",
+        "valid_mask",
+        "reason",
+        "novel_constant_channels",
+        "research_ready",
+        "scheduled_ends",
+        "source_ids",
+        "step_reasons",
+        "source_version",
+        "floor_ref",
+        "scaler_ref"
+      ]
+    },
+    "standardized_window": {
+      "after": "(steps: 'tuple[ScheduledStep, ...]', rows: 'tuple[MarketVector, ...]', scaler: 'MarketScaler', *, calendar: 'ScheduledCalendar', allow_synthetic: 'bool' = False, context: 'ApplicationContext' = 'HISTORICAL_TRAINING') -> 'MarketWindow'",
+      "before": "(steps: 'tuple[ScheduledStep, ...]', rows: 'tuple[MarketVector, ...]', scaler: 'MarketScaler', *, calendar: 'ScheduledCalendar', allow_synthetic: 'bool' = False) -> 'MarketWindow'",
+      "fields_after": null,
+      "fields_before": null
+    },
+    "vector": {
+      "after": "(row: 'MarketMeasures', floors: 'MarketFloors', *, allow_synthetic: 'bool' = False, context: 'ApplicationContext' = 'HISTORICAL_TRAINING') -> 'MarketVector'",
+      "before": "(row: 'MarketMeasures', floors: 'MarketFloors', *, allow_synthetic: 'bool' = False) -> 'MarketVector'",
+      "fields_after": null,
+      "fields_before": null
+    },
+    "window_from_history": {
+      "after": "(history: 'MarketHistory', session: 'str', origin: 'int', floors: 'MarketFloors | None' = None, scaler: 'MarketScaler | None' = None, *, allow_synthetic: 'bool' = False, context: 'ApplicationContext' = 'HISTORICAL_TRAINING') -> 'MarketWindow'",
+      "before": "(history: 'MarketHistory', session: 'str', origin: 'int', floors: 'MarketFloors | None' = None, scaler: 'MarketScaler | None' = None, *, allow_synthetic: 'bool' = False) -> 'MarketWindow'",
+      "fields_after": null,
+      "fields_before": null
+    }
+  },
+  "confirmation_features_targets_performance": false,
+  "frozen_docs_pointer_configs_and_decisions_unchanged": true,
+  "historical_blockers": 7,
+  "ledger_SHA": "4c2f0693aaaba9c29110881a0961b31a12195c126e4437830600b2a4b81e12e4",
+  "ledger_prefix_bytes": 42704,
+  "modified": {
+    "AGENTS.md": {
+      "after": "605de61de2eaa68ea83a2a3e7dcea83f576fb0feef4c75a4dfd6227e6deb1ca8",
+      "before": "7d46341df0ac94058c49c395c44a9eb233a987b50743b79c234bb5723e668566"
+    },
+    "README.md": {
+      "after": "feaa4e2e1d4d3a8b18ca9a1e1a4b99761070c62dc6246c260427bf75c2904bdf",
+      "before": "8ab7affad95fc5bc19e1b7ca71dcfdbd61362976b8a6fff5ea5b75869907a488"
+    },
+    "src/lstm_data/ft0_tensor.py": {
+      "after": "d84b18a3f0e0a2e2d22963c01f7301258ff92ba749fa49a7f56df198f1955cd6",
+      "before": "f08e492343912a21c3dac70bf0bfdc153bd624db56ab11b45e34bbf7b1bc5a1b"
+    },
+    "src/lstm_data/market_features.py": {
+      "after": "d00588214f0f624345e90d9dee0ebf0671a9b0098c6493a5fc7ddb8e962746ea",
+      "before": "fa4048703a6606f9e818d41f9f1e6223a4a58ea651c9923f126a71c4b47622f6"
+    },
+    "tests/test_m2.py": {
+      "after": "fb4eaa1212868876040ae6a6341adf33e4d8d3973127faa5a244c7ff0a8c7249",
+      "before": "937119ae780f1fd9bb629358381c052f3b6c463d29874475141e233970b8a411"
+    },
+    "tests/test_stock_features.py": {
+      "after": "a542695e23aced1be69617cb7cd0ef96006b33c97944b904d50a97b6efb47774",
+      "before": "23173841be8375fda818bb4c0249088d47479dc07862f4ba7d5f0d30a52faf5e"
+    }
+  },
+  "new_network_HTTP": 0,
+  "no_Git_mutation": true,
+  "notes_unchanged": true,
+  "original_files": 459,
+  "original_tests_intact": true,
+  "pair_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "raw257_stat_and_manifest_SHA_unchanged": true,
+  "raw_inventory_count": 257,
+  "secrets_read_or_used": false,
+  "source_activation": false,
+  "unchanged_except_authorized_changes": true
+}

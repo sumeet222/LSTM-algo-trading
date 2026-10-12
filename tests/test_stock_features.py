@@ -581,3 +581,21 @@ def test_later_batch_training_normalization_cannot_become_an_asof_forecast(
     assert not forecast_bridge(training, plan).issuable
     retrospective = stock_window(engine, day, 1, parameters, july_m2_floors(), normalizer)
     assert not retrospective.input_eligible
+
+
+def test_p2_4_actual_feature_calculator_to_causal_mc0_data_only(engine, parameters, normalizer):
+    from test_p2_market_closure import earlier_certificates, synthetic_market
+
+    from lstm_data.market_tensor import assemble_market_inputs
+
+    market = synthetic_market(engine.history.calendar)
+    floors, scaler = earlier_certificates(market)
+    stock = stock_window(engine, "2020-09-15", 1, parameters, july_m2_floors(), normalizer)
+    output = assemble_market_inputs(join_market(stock, market, floors, scaler, origin=1))
+    assert output.shape == (5, 48, 21) and not output.scientific_ready
+    assert output.scheduled_ends == tuple(s.information_cutoff for s in stock.steps)
+    assert output.stock_lineage == stock.lineage
+    for i, rows in enumerate(output.mc0_values):
+        for j, row in enumerate(rows):
+            assert row[:16] == stock.values[i][j]
+            assert row[16:] == output.direct_market[j]

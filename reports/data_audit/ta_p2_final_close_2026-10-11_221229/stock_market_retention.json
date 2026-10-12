@@ -1,0 +1,1897 @@
+{
+  "candidate_active": false,
+  "candidate_deficit": 169,
+  "causal_admitted": 0,
+  "cause_union": {
+    "channel_losses_overlap": true,
+    "later_direct48": 75,
+    "later_propagated": 244,
+    "later_union_remaining": 319,
+    "startup_original": 264,
+    "startup_recovered": 264
+  },
+  "classification": "STRUCTURAL_ONLY; SCIENTIFIC_CAUSAL_BLOCKED",
+  "evidence": [
+    {
+      "path": "reports/data_audit/ta_p2_close_ft0_2026-10-11/retention_and_attrition.json",
+      "sha256": "5f5df9f22b6a666f4108be3bef1ff3e7143fe89d6fdfebc821b11a2f499639ef"
+    },
+    {
+      "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/alpaca_only_extended/retention.json",
+      "sha256": "13b48baa150c7143a0502a0990c13f287a38a69d37b492d3839afa80417745aa"
+    },
+    {
+      "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/gap_cluster_reconciliation.json",
+      "sha256": "d3b247f7df62fc2e3c2db9c72c4e1bae1bffae0e5c6b18c8d0225ec1b91931bc"
+    }
+  ],
+  "gaps": [
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 12,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 14:30:00+00:00",
+          "start_UTC": "2021-04-19T14:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 15:00:00+00:00",
+          "start_UTC": "2021-04-19T14:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 15:30:00+00:00",
+          "start_UTC": "2021-04-19T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 16:00:00+00:00",
+          "start_UTC": "2021-04-19T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 16:30:00+00:00",
+          "start_UTC": "2021-04-19T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 17:00:00+00:00",
+          "start_UTC": "2021-04-19T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 17:30:00+00:00",
+          "start_UTC": "2021-04-19T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 18:00:00+00:00",
+          "start_UTC": "2021-04-19T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 18:30:00+00:00",
+          "start_UTC": "2021-04-19T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 19:00:00+00:00",
+          "start_UTC": "2021-04-19T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 19:30:00+00:00",
+          "start_UTC": "2021-04-19T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 20:00:00+00:00",
+          "start_UTC": "2021-04-19T19:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2021-04-19T14:00:00+00:00",
+        "2021-04-19T14:30:00+00:00",
+        "2021-04-19T15:00:00+00:00",
+        "2021-04-19T15:30:00+00:00",
+        "2021-04-19T16:00:00+00:00",
+        "2021-04-19T16:30:00+00:00",
+        "2021-04-19T17:00:00+00:00",
+        "2021-04-19T17:30:00+00:00",
+        "2021-04-19T18:00:00+00:00",
+        "2021-04-19T18:30:00+00:00",
+        "2021-04-19T19:00:00+00:00",
+        "2021-04-19T19:30:00+00:00"
+      ],
+      "session": "2021-04-19",
+      "symbol": "CAT"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 12,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 14:30:00+00:00",
+          "start_UTC": "2021-10-25T14:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 15:00:00+00:00",
+          "start_UTC": "2021-10-25T14:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 15:30:00+00:00",
+          "start_UTC": "2021-10-25T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 16:00:00+00:00",
+          "start_UTC": "2021-10-25T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 16:30:00+00:00",
+          "start_UTC": "2021-10-25T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 17:00:00+00:00",
+          "start_UTC": "2021-10-25T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 17:30:00+00:00",
+          "start_UTC": "2021-10-25T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 18:00:00+00:00",
+          "start_UTC": "2021-10-25T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 18:30:00+00:00",
+          "start_UTC": "2021-10-25T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 19:00:00+00:00",
+          "start_UTC": "2021-10-25T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 19:30:00+00:00",
+          "start_UTC": "2021-10-25T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 20:00:00+00:00",
+          "start_UTC": "2021-10-25T19:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2021-10-25T14:00:00+00:00",
+        "2021-10-25T14:30:00+00:00",
+        "2021-10-25T15:00:00+00:00",
+        "2021-10-25T15:30:00+00:00",
+        "2021-10-25T16:00:00+00:00",
+        "2021-10-25T16:30:00+00:00",
+        "2021-10-25T17:00:00+00:00",
+        "2021-10-25T17:30:00+00:00",
+        "2021-10-25T18:00:00+00:00",
+        "2021-10-25T18:30:00+00:00",
+        "2021-10-25T19:00:00+00:00",
+        "2021-10-25T19:30:00+00:00"
+      ],
+      "session": "2021-10-25",
+      "symbol": "CAT"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 10,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 16:30:00+00:00",
+          "start_UTC": "2022-01-24T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 17:00:00+00:00",
+          "start_UTC": "2022-01-24T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 17:30:00+00:00",
+          "start_UTC": "2022-01-24T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 18:00:00+00:00",
+          "start_UTC": "2022-01-24T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 18:30:00+00:00",
+          "start_UTC": "2022-01-24T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 19:00:00+00:00",
+          "start_UTC": "2022-01-24T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 19:30:00+00:00",
+          "start_UTC": "2022-01-24T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 20:00:00+00:00",
+          "start_UTC": "2022-01-24T19:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 20:30:00+00:00",
+          "start_UTC": "2022-01-24T20:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 21:00:00+00:00",
+          "start_UTC": "2022-01-24T20:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2022-01-24T16:00:00+00:00",
+        "2022-01-24T16:30:00+00:00",
+        "2022-01-24T17:00:00+00:00",
+        "2022-01-24T17:30:00+00:00",
+        "2022-01-24T18:00:00+00:00",
+        "2022-01-24T18:30:00+00:00",
+        "2022-01-24T19:00:00+00:00",
+        "2022-01-24T19:30:00+00:00",
+        "2022-01-24T20:00:00+00:00",
+        "2022-01-24T20:30:00+00:00"
+      ],
+      "session": "2022-01-24",
+      "symbol": "CAT"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 13,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 15:00:00+00:00",
+          "start_UTC": "2022-03-08T14:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 15:30:00+00:00",
+          "start_UTC": "2022-03-08T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 16:00:00+00:00",
+          "start_UTC": "2022-03-08T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 16:30:00+00:00",
+          "start_UTC": "2022-03-08T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 17:00:00+00:00",
+          "start_UTC": "2022-03-08T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 17:30:00+00:00",
+          "start_UTC": "2022-03-08T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 18:00:00+00:00",
+          "start_UTC": "2022-03-08T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 18:30:00+00:00",
+          "start_UTC": "2022-03-08T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 19:00:00+00:00",
+          "start_UTC": "2022-03-08T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 19:30:00+00:00",
+          "start_UTC": "2022-03-08T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 20:00:00+00:00",
+          "start_UTC": "2022-03-08T19:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 20:30:00+00:00",
+          "start_UTC": "2022-03-08T20:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 21:00:00+00:00",
+          "start_UTC": "2022-03-08T20:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2022-03-08T14:30:00+00:00",
+        "2022-03-08T15:00:00+00:00",
+        "2022-03-08T15:30:00+00:00",
+        "2022-03-08T16:00:00+00:00",
+        "2022-03-08T16:30:00+00:00",
+        "2022-03-08T17:00:00+00:00",
+        "2022-03-08T17:30:00+00:00",
+        "2022-03-08T18:00:00+00:00",
+        "2022-03-08T18:30:00+00:00",
+        "2022-03-08T19:00:00+00:00",
+        "2022-03-08T19:30:00+00:00",
+        "2022-03-08T20:00:00+00:00",
+        "2022-03-08T20:30:00+00:00"
+      ],
+      "session": "2022-03-08",
+      "symbol": "CAT"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 12,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 14:30:00+00:00",
+          "start_UTC": "2021-04-19T14:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 15:00:00+00:00",
+          "start_UTC": "2021-04-19T14:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 15:30:00+00:00",
+          "start_UTC": "2021-04-19T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 16:00:00+00:00",
+          "start_UTC": "2021-04-19T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 16:30:00+00:00",
+          "start_UTC": "2021-04-19T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 17:00:00+00:00",
+          "start_UTC": "2021-04-19T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 17:30:00+00:00",
+          "start_UTC": "2021-04-19T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 18:00:00+00:00",
+          "start_UTC": "2021-04-19T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 18:30:00+00:00",
+          "start_UTC": "2021-04-19T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 19:00:00+00:00",
+          "start_UTC": "2021-04-19T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 19:30:00+00:00",
+          "start_UTC": "2021-04-19T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 20:00:00+00:00",
+          "start_UTC": "2021-04-19T19:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2021-04-19T14:00:00+00:00",
+        "2021-04-19T14:30:00+00:00",
+        "2021-04-19T15:00:00+00:00",
+        "2021-04-19T15:30:00+00:00",
+        "2021-04-19T16:00:00+00:00",
+        "2021-04-19T16:30:00+00:00",
+        "2021-04-19T17:00:00+00:00",
+        "2021-04-19T17:30:00+00:00",
+        "2021-04-19T18:00:00+00:00",
+        "2021-04-19T18:30:00+00:00",
+        "2021-04-19T19:00:00+00:00",
+        "2021-04-19T19:30:00+00:00"
+      ],
+      "session": "2021-04-19",
+      "symbol": "JNJ"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 12,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 14:30:00+00:00",
+          "start_UTC": "2021-10-25T14:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 15:00:00+00:00",
+          "start_UTC": "2021-10-25T14:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 15:30:00+00:00",
+          "start_UTC": "2021-10-25T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 16:00:00+00:00",
+          "start_UTC": "2021-10-25T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 16:30:00+00:00",
+          "start_UTC": "2021-10-25T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 17:00:00+00:00",
+          "start_UTC": "2021-10-25T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 17:30:00+00:00",
+          "start_UTC": "2021-10-25T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 18:00:00+00:00",
+          "start_UTC": "2021-10-25T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 18:30:00+00:00",
+          "start_UTC": "2021-10-25T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 19:00:00+00:00",
+          "start_UTC": "2021-10-25T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 19:30:00+00:00",
+          "start_UTC": "2021-10-25T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 20:00:00+00:00",
+          "start_UTC": "2021-10-25T19:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2021-10-25T14:00:00+00:00",
+        "2021-10-25T14:30:00+00:00",
+        "2021-10-25T15:00:00+00:00",
+        "2021-10-25T15:30:00+00:00",
+        "2021-10-25T16:00:00+00:00",
+        "2021-10-25T16:30:00+00:00",
+        "2021-10-25T17:00:00+00:00",
+        "2021-10-25T17:30:00+00:00",
+        "2021-10-25T18:00:00+00:00",
+        "2021-10-25T18:30:00+00:00",
+        "2021-10-25T19:00:00+00:00",
+        "2021-10-25T19:30:00+00:00"
+      ],
+      "session": "2021-10-25",
+      "symbol": "JNJ"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 13,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 15:00:00+00:00",
+          "start_UTC": "2022-03-08T14:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 15:30:00+00:00",
+          "start_UTC": "2022-03-08T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 16:00:00+00:00",
+          "start_UTC": "2022-03-08T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 16:30:00+00:00",
+          "start_UTC": "2022-03-08T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 17:00:00+00:00",
+          "start_UTC": "2022-03-08T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 17:30:00+00:00",
+          "start_UTC": "2022-03-08T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 18:00:00+00:00",
+          "start_UTC": "2022-03-08T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 18:30:00+00:00",
+          "start_UTC": "2022-03-08T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 19:00:00+00:00",
+          "start_UTC": "2022-03-08T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 19:30:00+00:00",
+          "start_UTC": "2022-03-08T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 20:00:00+00:00",
+          "start_UTC": "2022-03-08T19:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 20:30:00+00:00",
+          "start_UTC": "2022-03-08T20:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 21:00:00+00:00",
+          "start_UTC": "2022-03-08T20:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2022-03-08T14:30:00+00:00",
+        "2022-03-08T15:00:00+00:00",
+        "2022-03-08T15:30:00+00:00",
+        "2022-03-08T16:00:00+00:00",
+        "2022-03-08T16:30:00+00:00",
+        "2022-03-08T17:00:00+00:00",
+        "2022-03-08T17:30:00+00:00",
+        "2022-03-08T18:00:00+00:00",
+        "2022-03-08T18:30:00+00:00",
+        "2022-03-08T19:00:00+00:00",
+        "2022-03-08T19:30:00+00:00",
+        "2022-03-08T20:00:00+00:00",
+        "2022-03-08T20:30:00+00:00"
+      ],
+      "session": "2022-03-08",
+      "symbol": "JNJ"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 12,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 14:30:00+00:00",
+          "start_UTC": "2021-04-19T14:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 15:00:00+00:00",
+          "start_UTC": "2021-04-19T14:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 15:30:00+00:00",
+          "start_UTC": "2021-04-19T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 16:00:00+00:00",
+          "start_UTC": "2021-04-19T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 16:30:00+00:00",
+          "start_UTC": "2021-04-19T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 17:00:00+00:00",
+          "start_UTC": "2021-04-19T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 17:30:00+00:00",
+          "start_UTC": "2021-04-19T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 18:00:00+00:00",
+          "start_UTC": "2021-04-19T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 18:30:00+00:00",
+          "start_UTC": "2021-04-19T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 19:00:00+00:00",
+          "start_UTC": "2021-04-19T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 19:30:00+00:00",
+          "start_UTC": "2021-04-19T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 20:00:00+00:00",
+          "start_UTC": "2021-04-19T19:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2021-04-19T14:00:00+00:00",
+        "2021-04-19T14:30:00+00:00",
+        "2021-04-19T15:00:00+00:00",
+        "2021-04-19T15:30:00+00:00",
+        "2021-04-19T16:00:00+00:00",
+        "2021-04-19T16:30:00+00:00",
+        "2021-04-19T17:00:00+00:00",
+        "2021-04-19T17:30:00+00:00",
+        "2021-04-19T18:00:00+00:00",
+        "2021-04-19T18:30:00+00:00",
+        "2021-04-19T19:00:00+00:00",
+        "2021-04-19T19:30:00+00:00"
+      ],
+      "session": "2021-04-19",
+      "symbol": "JPM"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 12,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 14:30:00+00:00",
+          "start_UTC": "2021-10-25T14:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 15:00:00+00:00",
+          "start_UTC": "2021-10-25T14:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 15:30:00+00:00",
+          "start_UTC": "2021-10-25T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 16:00:00+00:00",
+          "start_UTC": "2021-10-25T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 16:30:00+00:00",
+          "start_UTC": "2021-10-25T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 17:00:00+00:00",
+          "start_UTC": "2021-10-25T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 17:30:00+00:00",
+          "start_UTC": "2021-10-25T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 18:00:00+00:00",
+          "start_UTC": "2021-10-25T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 18:30:00+00:00",
+          "start_UTC": "2021-10-25T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 19:00:00+00:00",
+          "start_UTC": "2021-10-25T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 19:30:00+00:00",
+          "start_UTC": "2021-10-25T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 20:00:00+00:00",
+          "start_UTC": "2021-10-25T19:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2021-10-25T14:00:00+00:00",
+        "2021-10-25T14:30:00+00:00",
+        "2021-10-25T15:00:00+00:00",
+        "2021-10-25T15:30:00+00:00",
+        "2021-10-25T16:00:00+00:00",
+        "2021-10-25T16:30:00+00:00",
+        "2021-10-25T17:00:00+00:00",
+        "2021-10-25T17:30:00+00:00",
+        "2021-10-25T18:00:00+00:00",
+        "2021-10-25T18:30:00+00:00",
+        "2021-10-25T19:00:00+00:00",
+        "2021-10-25T19:30:00+00:00"
+      ],
+      "session": "2021-10-25",
+      "symbol": "JPM"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 12,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 15:30:00+00:00",
+          "start_UTC": "2022-03-08T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 16:00:00+00:00",
+          "start_UTC": "2022-03-08T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 16:30:00+00:00",
+          "start_UTC": "2022-03-08T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 17:00:00+00:00",
+          "start_UTC": "2022-03-08T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 17:30:00+00:00",
+          "start_UTC": "2022-03-08T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 18:00:00+00:00",
+          "start_UTC": "2022-03-08T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 18:30:00+00:00",
+          "start_UTC": "2022-03-08T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 19:00:00+00:00",
+          "start_UTC": "2022-03-08T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 19:30:00+00:00",
+          "start_UTC": "2022-03-08T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 20:00:00+00:00",
+          "start_UTC": "2022-03-08T19:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 20:30:00+00:00",
+          "start_UTC": "2022-03-08T20:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 21:00:00+00:00",
+          "start_UTC": "2022-03-08T20:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2022-03-08T15:00:00+00:00",
+        "2022-03-08T15:30:00+00:00",
+        "2022-03-08T16:00:00+00:00",
+        "2022-03-08T16:30:00+00:00",
+        "2022-03-08T17:00:00+00:00",
+        "2022-03-08T17:30:00+00:00",
+        "2022-03-08T18:00:00+00:00",
+        "2022-03-08T18:30:00+00:00",
+        "2022-03-08T19:00:00+00:00",
+        "2022-03-08T19:30:00+00:00",
+        "2022-03-08T20:00:00+00:00",
+        "2022-03-08T20:30:00+00:00"
+      ],
+      "session": "2022-03-08",
+      "symbol": "JPM"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 12,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 14:30:00+00:00",
+          "start_UTC": "2021-04-19T14:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 15:00:00+00:00",
+          "start_UTC": "2021-04-19T14:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 15:30:00+00:00",
+          "start_UTC": "2021-04-19T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 16:00:00+00:00",
+          "start_UTC": "2021-04-19T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 16:30:00+00:00",
+          "start_UTC": "2021-04-19T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 17:00:00+00:00",
+          "start_UTC": "2021-04-19T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 17:30:00+00:00",
+          "start_UTC": "2021-04-19T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 18:00:00+00:00",
+          "start_UTC": "2021-04-19T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 18:30:00+00:00",
+          "start_UTC": "2021-04-19T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 19:00:00+00:00",
+          "start_UTC": "2021-04-19T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 19:30:00+00:00",
+          "start_UTC": "2021-04-19T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-04-19 20:00:00+00:00",
+          "start_UTC": "2021-04-19T19:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2021-04-19T14:00:00+00:00",
+        "2021-04-19T14:30:00+00:00",
+        "2021-04-19T15:00:00+00:00",
+        "2021-04-19T15:30:00+00:00",
+        "2021-04-19T16:00:00+00:00",
+        "2021-04-19T16:30:00+00:00",
+        "2021-04-19T17:00:00+00:00",
+        "2021-04-19T17:30:00+00:00",
+        "2021-04-19T18:00:00+00:00",
+        "2021-04-19T18:30:00+00:00",
+        "2021-04-19T19:00:00+00:00",
+        "2021-04-19T19:30:00+00:00"
+      ],
+      "session": "2021-04-19",
+      "symbol": "WMT"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 12,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 14:30:00+00:00",
+          "start_UTC": "2021-10-25T14:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 15:00:00+00:00",
+          "start_UTC": "2021-10-25T14:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 15:30:00+00:00",
+          "start_UTC": "2021-10-25T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 16:00:00+00:00",
+          "start_UTC": "2021-10-25T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 16:30:00+00:00",
+          "start_UTC": "2021-10-25T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 17:00:00+00:00",
+          "start_UTC": "2021-10-25T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 17:30:00+00:00",
+          "start_UTC": "2021-10-25T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 18:00:00+00:00",
+          "start_UTC": "2021-10-25T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 18:30:00+00:00",
+          "start_UTC": "2021-10-25T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 19:00:00+00:00",
+          "start_UTC": "2021-10-25T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 19:30:00+00:00",
+          "start_UTC": "2021-10-25T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2021-10-25 20:00:00+00:00",
+          "start_UTC": "2021-10-25T19:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2021-10-25T14:00:00+00:00",
+        "2021-10-25T14:30:00+00:00",
+        "2021-10-25T15:00:00+00:00",
+        "2021-10-25T15:30:00+00:00",
+        "2021-10-25T16:00:00+00:00",
+        "2021-10-25T16:30:00+00:00",
+        "2021-10-25T17:00:00+00:00",
+        "2021-10-25T17:30:00+00:00",
+        "2021-10-25T18:00:00+00:00",
+        "2021-10-25T18:30:00+00:00",
+        "2021-10-25T19:00:00+00:00",
+        "2021-10-25T19:30:00+00:00"
+      ],
+      "session": "2021-10-25",
+      "symbol": "WMT"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 10,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 16:30:00+00:00",
+          "start_UTC": "2022-01-24T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 17:00:00+00:00",
+          "start_UTC": "2022-01-24T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 17:30:00+00:00",
+          "start_UTC": "2022-01-24T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 18:00:00+00:00",
+          "start_UTC": "2022-01-24T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 18:30:00+00:00",
+          "start_UTC": "2022-01-24T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 19:00:00+00:00",
+          "start_UTC": "2022-01-24T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 19:30:00+00:00",
+          "start_UTC": "2022-01-24T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 20:00:00+00:00",
+          "start_UTC": "2022-01-24T19:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 20:30:00+00:00",
+          "start_UTC": "2022-01-24T20:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-24 21:00:00+00:00",
+          "start_UTC": "2022-01-24T20:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2022-01-24T16:00:00+00:00",
+        "2022-01-24T16:30:00+00:00",
+        "2022-01-24T17:00:00+00:00",
+        "2022-01-24T17:30:00+00:00",
+        "2022-01-24T18:00:00+00:00",
+        "2022-01-24T18:30:00+00:00",
+        "2022-01-24T19:00:00+00:00",
+        "2022-01-24T19:30:00+00:00",
+        "2022-01-24T20:00:00+00:00",
+        "2022-01-24T20:30:00+00:00"
+      ],
+      "session": "2022-01-24",
+      "symbol": "WMT"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 2,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-26 20:30:00+00:00",
+          "start_UTC": "2022-01-26T20:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-01-26 21:00:00+00:00",
+          "start_UTC": "2022-01-26T20:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2022-01-26T20:00:00+00:00",
+        "2022-01-26T20:30:00+00:00"
+      ],
+      "session": "2022-01-26",
+      "symbol": "WMT"
+    },
+    {
+      "disposition": "UNRESOLVED_PROVIDER_OMISSION_MARKET_REASON_UNVERIFIED",
+      "missing_keys_now_returned": 0,
+      "original_missing_count": 12,
+      "original_missing_keys": [
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 15:30:00+00:00",
+          "start_UTC": "2022-03-08T15:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 16:00:00+00:00",
+          "start_UTC": "2022-03-08T15:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 16:30:00+00:00",
+          "start_UTC": "2022-03-08T16:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 17:00:00+00:00",
+          "start_UTC": "2022-03-08T16:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 17:30:00+00:00",
+          "start_UTC": "2022-03-08T17:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 18:00:00+00:00",
+          "start_UTC": "2022-03-08T17:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 18:30:00+00:00",
+          "start_UTC": "2022-03-08T18:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 19:00:00+00:00",
+          "start_UTC": "2022-03-08T18:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 19:30:00+00:00",
+          "start_UTC": "2022-03-08T19:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 20:00:00+00:00",
+          "start_UTC": "2022-03-08T19:30:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 20:30:00+00:00",
+          "start_UTC": "2022-03-08T20:00:00+00:00"
+        },
+        {
+          "availability_basis": "UNKNOWN",
+          "available_at": null,
+          "end_UTC": "2022-03-08 21:00:00+00:00",
+          "start_UTC": "2022-03-08T20:30:00+00:00"
+        }
+      ],
+      "original_missing_keys_still_absent": [
+        "2022-03-08T15:00:00+00:00",
+        "2022-03-08T15:30:00+00:00",
+        "2022-03-08T16:00:00+00:00",
+        "2022-03-08T16:30:00+00:00",
+        "2022-03-08T17:00:00+00:00",
+        "2022-03-08T17:30:00+00:00",
+        "2022-03-08T18:00:00+00:00",
+        "2022-03-08T18:30:00+00:00",
+        "2022-03-08T19:00:00+00:00",
+        "2022-03-08T19:30:00+00:00",
+        "2022-03-08T20:00:00+00:00",
+        "2022-03-08T20:30:00+00:00"
+      ],
+      "session": "2022-03-08",
+      "symbol": "WMT"
+    }
+  ],
+  "market_structural_first": "2020-07-01 origin1",
+  "market_structural_last": "2024-06-28 origin2",
+  "missing_native_by_stock": {
+    "AAPL": 0,
+    "CAT": 47,
+    "JNJ": 37,
+    "JPM": 36,
+    "WMT": 48
+  },
+  "source_only_no_confirmation_computation": true,
+  "train_minimum": 1352,
+  "views": {
+    "INACTIVE_PREHISTORY_CANDIDATE": {
+      "by_origin": {
+        "WF1:origin1": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF1:origin2": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2:origin1": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2:origin2": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development:origin1": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development:origin2": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train:origin1": {
+          "causal_eligible": 0,
+          "denominator": 751,
+          "eligible_sessions": 592,
+          "fraction": 0.7882822902796272,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.85,
+          "numerator": 592,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train:origin2": {
+          "causal_eligible": 0,
+          "denominator": 751,
+          "eligible_sessions": 591,
+          "fraction": 0.7869507323568575,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.85,
+          "numerator": 591,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        }
+      },
+      "by_population": {
+        "WF1": {
+          "causal_matched": 0,
+          "causal_stock_only": 0,
+          "denominator": 248,
+          "market_structural": 248,
+          "matched_mechanical": 248,
+          "stock_only_mechanical": 248
+        },
+        "WF2": {
+          "causal_matched": 0,
+          "causal_stock_only": 0,
+          "denominator": 248,
+          "market_structural": 248,
+          "matched_mechanical": 248,
+          "stock_only_mechanical": 248
+        },
+        "development": {
+          "causal_matched": 0,
+          "causal_stock_only": 0,
+          "denominator": 496,
+          "market_structural": 496,
+          "matched_mechanical": 496,
+          "stock_only_mechanical": 496
+        },
+        "train": {
+          "causal_matched": 0,
+          "causal_stock_only": 0,
+          "denominator": 1502,
+          "market_structural": 1502,
+          "matched_mechanical": 1183,
+          "stock_only_mechanical": 1183
+        }
+      },
+      "exact_origin_keys_sha256": "c4d15a4b76dbd7a9d92b276d3a0826dc2742fdbfcd2d136e50173a7dcf3df84d",
+      "first_divergence_by_stock_nonexhaustive": {
+        "JPM": 228,
+        "WMT": 91
+      },
+      "first_stock_structural": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [],
+        "first_bad": null,
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": true,
+        "missing_clusters": [],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2020-07-01",
+        "source_time_eligible": false
+      },
+      "inner_63_session_tails": {
+        "PRECONFIRMATION": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 63,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 63,
+            "2": 63
+          }
+        },
+        "WF1": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 63,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 63,
+            "2": 63
+          }
+        },
+        "WF2": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 62,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 62,
+            "2": 62
+          }
+        }
+      },
+      "last_stock_structural": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "failed_channels": [],
+        "first_bad": null,
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": true,
+        "missing_clusters": [],
+        "origin": 2,
+        "scheduled_history": true,
+        "session": "2024-06-28",
+        "source_time_eligible": false
+      },
+      "per_channel_overlapping_losses": {
+        "B1": 75,
+        "B2": 75,
+        "M1": 151,
+        "M2": 26,
+        "M3": 202,
+        "M4": 236,
+        "Q1": 111,
+        "Q2": 108,
+        "T1": 111,
+        "T2": 220,
+        "T3": 167,
+        "T4": 167,
+        "T5": 167,
+        "V1": 91,
+        "V2": 144,
+        "V3": 151
+      },
+      "per_stock_attribution_scope": "First divergence only; not full stock rejection unions",
+      "regimes": {
+        "10_percentage_point_gap_guard": "INCONCLUSIVE",
+        "85_percent_guard": "INCONCLUSIVE",
+        "status": "UNVERIFIED_SPY_PUBLICATION"
+      },
+      "stock_guard": {
+        "WF1": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development": {
+          "causal_eligible": 0,
+          "denominator": 496,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.9,
+          "numerator": 496,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train": {
+          "causal_eligible": 0,
+          "denominator": 1502,
+          "eligible_sessions": 592,
+          "fraction": 0.7876165113182424,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.9,
+          "numerator": 1183,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        }
+      }
+    },
+    "ORIGINAL": {
+      "by_origin": {
+        "WF1:origin1": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF1:origin2": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2:origin1": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2:origin2": {
+          "causal_eligible": 0,
+          "denominator": 124,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 124,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development:origin1": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development:origin2": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train:origin1": {
+          "causal_eligible": 0,
+          "denominator": 751,
+          "eligible_sessions": 460,
+          "fraction": 0.6125166444740346,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.85,
+          "numerator": 460,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train:origin2": {
+          "causal_eligible": 0,
+          "denominator": 751,
+          "eligible_sessions": 459,
+          "fraction": 0.611185086551265,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.85,
+          "numerator": 459,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        }
+      },
+      "by_population": {
+        "WF1": {
+          "causal_matched": 0,
+          "causal_stock_only": 0,
+          "denominator": 248,
+          "market_structural": 248,
+          "matched_mechanical": 248,
+          "stock_only_mechanical": 248
+        },
+        "WF2": {
+          "causal_matched": 0,
+          "causal_stock_only": 0,
+          "denominator": 248,
+          "market_structural": 248,
+          "matched_mechanical": 248,
+          "stock_only_mechanical": 248
+        },
+        "development": {
+          "causal_matched": 0,
+          "causal_stock_only": 0,
+          "denominator": 496,
+          "market_structural": 496,
+          "matched_mechanical": 496,
+          "stock_only_mechanical": 496
+        },
+        "train": {
+          "causal_matched": 0,
+          "causal_stock_only": 0,
+          "denominator": 1502,
+          "market_structural": 1502,
+          "matched_mechanical": 919,
+          "stock_only_mechanical": 919
+        }
+      },
+      "exact_origin_keys_sha256": "c4d15a4b76dbd7a9d92b276d3a0826dc2742fdbfcd2d136e50173a7dcf3df84d",
+      "first_divergence_by_stock_nonexhaustive": {
+        "AAPL": 248,
+        "JPM": 228,
+        "WMT": 91
+      },
+      "first_stock_structural": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "first_bad": null,
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": true,
+        "missing_clusters": [],
+        "origin": 1,
+        "scheduled_history": true,
+        "session": "2021-01-12",
+        "source_time_eligible": false
+      },
+      "inner_63_session_tails": {
+        "PRECONFIRMATION": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 63,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 63,
+            "2": 63
+          }
+        },
+        "WF1": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 63,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 63,
+            "2": 63
+          }
+        },
+        "WF2": {
+          "calendar_tail_sessions": 63,
+          "mature_label_sample": "INCONCLUSIVE_SOURCE_CLOCK_ACTION_HOLD",
+          "mechanical_guard": true,
+          "mechanically_eligible_sessions": 62,
+          "minimum_each_origin": 25,
+          "minimum_sessions": 50,
+          "origin_counts": {
+            "1": 62,
+            "2": 62
+          }
+        }
+      },
+      "last_stock_structural": {
+        "certificate_status": "FIT_PENDING_SOURCE_EVIDENCE",
+        "direct_48_source_complete": true,
+        "execution": "NOT_EVALUATED",
+        "first_bad": null,
+        "input_eligible": false,
+        "label_status": "HOLD_RAW_CONVERSION_ACTION_AND_PUBLICATION",
+        "mechanical_ft0": true,
+        "missing_clusters": [],
+        "origin": 2,
+        "scheduled_history": true,
+        "session": "2024-06-28",
+        "source_time_eligible": false
+      },
+      "per_channel_overlapping_losses": {
+        "B1": 75,
+        "B2": 75,
+        "M1": 171,
+        "M2": 146,
+        "M3": 330,
+        "M4": 484,
+        "Q1": 151,
+        "Q2": 228,
+        "T1": 151,
+        "T2": 262,
+        "T3": 287,
+        "T4": 287,
+        "T5": 219,
+        "V1": 95,
+        "V2": 164,
+        "V3": 171
+      },
+      "per_stock_attribution_scope": "First divergence only; not full stock rejection unions",
+      "regimes": {
+        "10_percentage_point_gap_guard": "INCONCLUSIVE",
+        "85_percent_guard": "INCONCLUSIVE",
+        "status": "UNVERIFIED_SPY_PUBLICATION"
+      },
+      "stock_guard": {
+        "WF1": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "WF2": {
+          "causal_eligible": 0,
+          "denominator": 248,
+          "eligible_sessions": 124,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.85,
+          "numerator": 248,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "development": {
+          "causal_eligible": 0,
+          "denominator": 496,
+          "eligible_sessions": 248,
+          "fraction": 1.0,
+          "mechanical_threshold": "PASS",
+          "minimum_retention": 0.9,
+          "numerator": 496,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        },
+        "train": {
+          "causal_eligible": 0,
+          "denominator": 1502,
+          "eligible_sessions": 460,
+          "fraction": 0.6118508655126498,
+          "mechanical_threshold": "FAIL",
+          "minimum_retention": 0.9,
+          "numerator": 919,
+          "scientific_threshold": "HOLD_SOURCE_ASOF_ACTION_AND_CERTIFICATES"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "P2_unimplemented_independent_engineering": [],
+  "future_out_of_scope": [
+    "real empirical fit executors",
+    "P3.1\u2013P3.4 engines",
+    "P3.4 hourly-only exception/benchmark policy",
+    "models/gating/scoring/backtests"
+  ],
+  "package": "TA-P2-FINAL-CLOSE-001",
+  "phases": [
+    {
+      "CODE_COMPLETE": true,
+      "DATA_PENDING": [
+        "P2-DEF-004",
+        "P2-DEF-009",
+        "P2-DEF-011"
+      ],
+      "ENGINEERING_STATUS": "P2_1_ENGINEERING_VERIFIED",
+      "NEXT_GATE": "Human engineering review; scientific prerequisites registered separately",
+      "SCIENTIFIC_STATUS": "HOLD",
+      "TEST_EVIDENCE": "tests/test_clocks.py; pinned summer/winter/early-close trace",
+      "interfaces": {
+        "execution_plan": "src/lstm_data/clocks.py:86",
+        "observation_at_cutoff": "src/lstm_data/clocks.py:156"
+      },
+      "phase": "P2.1",
+      "scientific_pass": false
+    },
+    {
+      "CODE_COMPLETE": true,
+      "DATA_PENDING": [
+        "P2-DEF-004",
+        "P2-DEF-005",
+        "P2-DEF-006",
+        "P2-DEF-009",
+        "P2-DEF-011"
+      ],
+      "ENGINEERING_STATUS": "P2_2_ENGINEERING_VERIFIED",
+      "NEXT_GATE": "Human engineering review; scientific prerequisites registered separately",
+      "SCIENTIFIC_STATUS": "HOLD",
+      "TEST_EVIDENCE": "tests/test_labels.py; tests/test_hourly_proxy.py (original test bodies intact)",
+      "interfaces": {
+        "minute_causal_eligibility": "src/lstm_data/labels.py:132",
+        "proxy_causal_eligibility": "src/lstm_data/hourly_proxy.py:166",
+        "proxy_label_sample": "src/lstm_data/hourly_proxy.py:220",
+        "resolve_reference": "src/lstm_data/hourly_proxy.py:113"
+      },
+      "phase": "P2.2",
+      "scientific_pass": false
+    },
+    {
+      "CODE_COMPLETE": true,
+      "DATA_PENDING": [
+        "P2-DEF-001",
+        "P2-DEF-002",
+        "P2-DEF-003",
+        "P2-DEF-004",
+        "P2-DEF-005",
+        "P2-DEF-007",
+        "P2-DEF-008",
+        "P2-DEF-014"
+      ],
+      "ENGINEERING_STATUS": "P2_3_FT0_ENGINEERING_VERIFIED",
+      "NEXT_GATE": "Human engineering review; scientific prerequisites registered separately",
+      "SCIENTIFIC_STATUS": "HOLD",
+      "TEST_EVIDENCE": "tests/test_stock_features.py; test_ft0_transforms.py; test_stock_source.py; test_m2.py",
+      "interfaces": {
+        "evaluate_m2": "src/lstm_data/m2.py:390",
+        "forecast_bridge": "src/lstm_data/ft0_tensor.py:209",
+        "stock_window": "src/lstm_data/ft0_tensor.py:59"
+      },
+      "phase": "P2.3",
+      "scientific_pass": false
+    },
+    {
+      "CODE_COMPLETE": true,
+      "DATA_PENDING": [
+        "P2-DEF-002",
+        "P2-DEF-004",
+        "P2-DEF-005",
+        "P2-DEF-007",
+        "P2-DEF-008",
+        "P2-DEF-009",
+        "P2-DEF-011",
+        "P2-DEF-016"
+      ],
+      "ENGINEERING_STATUS": "P2_4_MARKET_ENGINEERING_VERIFIED",
+      "NEXT_GATE": "Human engineering review; scientific prerequisites registered separately",
+      "SCIENTIFIC_STATUS": "HOLD",
+      "TEST_EVIDENCE": "tests/test_market_features.py; test_p2_market_closure.py; actual stock FeatureCalculator assembly test",
+      "interfaces": {
+        "assemble_market_inputs": "src/lstm_data/market_tensor.py:45",
+        "join_market": "src/lstm_data/ft0_tensor.py:176",
+        "standardized_window": "src/lstm_data/market_features.py:538",
+        "vector": "src/lstm_data/market_features.py:395",
+        "window_from_history": "src/lstm_data/market_features.py:581"
+      },
+      "phase": "P2.4",
+      "scientific_pass": false
+    }
+  ],
+  "register": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+  "status": "P2_ENGINEERING_CLOSED_WITH_SCIENTIFIC_HOLDS \u2014 HUMAN_REVIEW_REQUIRED"
+}

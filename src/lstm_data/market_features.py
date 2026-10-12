@@ -19,6 +19,9 @@ from .m2 import ScheduledCalendar, ScheduledStep, scheduled_window
 from .market_source import SOURCE_VERSION
 
 Basis = Literal["UNKNOWN", "SYNTHETIC", "DOCUMENTED"]
+ApplicationContext = Literal["ASOF", "HISTORICAL_TRAINING"]
+FEATURE_VERSION = "D7:U1_U5:SPY:v1"
+ACTION_VERSION = "SPY_SPLIT_SCOPE_ASSERTION_V1"
 Vector = tuple[float, float, float, float, float]
 
 
@@ -129,6 +132,17 @@ class MarketMeasures:
     momentum20: float | None
     reason: str
     evidence_ids: tuple[str, ...]
+    basis: Basis = "SYNTHETIC"
+    source_version: str = SOURCE_VERSION
+    feature_version: str = FEATURE_VERSION
+    action_version: str = ACTION_VERSION
+
+    def __post_init__(self) -> None:
+        if (self.basis not in {"UNKNOWN", "SYNTHETIC", "DOCUMENTED"}
+                or self.source_version != SOURCE_VERSION
+                or self.feature_version != FEATURE_VERSION
+                or self.action_version != ACTION_VERSION):
+            raise ValueError("MARKET_MEASURE_VERSION_REQUIRED")
 
 
 class MarketHistory:
@@ -199,8 +213,16 @@ class MarketHistory:
         reason = observation_reason(row, step.end, allow_synthetic=self.allow_synthetic)
         ids = tuple(self.hours[s.end].evidence_id for s in window if s.end in self.hours)
         ids += tuple(self.closes[d].evidence_id for d in previous if d in self.closes)
+        basis: Basis = "UNKNOWN"
+        dependencies: list[MarketObservation | MarketClose] = [
+            self.hours[s.end] for s in window if s.end in self.hours]
+        dependencies += [self.closes[d] for d in previous if d in self.closes]
+        if dependencies and all(r.basis == "SYNTHETIC" for r in dependencies):
+            basis = "SYNTHETIC"
+        elif dependencies and all(r.basis == "DOCUMENTED" for r in dependencies):
+            basis = "DOCUMENTED"
         return MarketMeasures(step.end, self._return(step), short, long, daily,
-                              momentum(5), momentum(20), reason, ids)
+                              momentum(5), momentum(20), reason, ids, basis)
 
 
 def history_from_archive(calendar: ScheduledCalendar, hourly: pd.DataFrame) -> MarketHistory:
@@ -265,6 +287,9 @@ class MarketFitWindow:
                 or start < pd.Timestamp("2020-07-01", tz="America/New_York")
                 or stop > pd.Timestamp(cap, tz="America/New_York")):
             raise ValueError("MARKET_PERMITTED_TRAINING_FIT_REQUIRED")
+        object.__setattr__(self, "start", start)
+        object.__setattr__(self, "stop", stop)
+        object.__setattr__(self, "fitted_at", fitted)
 
     def contains(self, timestamp: pd.Timestamp) -> bool:
         return self.start <= utc(timestamp) < self.stop
@@ -280,12 +305,15 @@ class MarketFloors:
     timestamps: tuple[pd.Timestamp, ...]
     daily_timestamps: tuple[pd.Timestamp, ...]
     source_version: str = SOURCE_VERSION
+    feature_version: str = FEATURE_VERSION
+    action_version: str = ACTION_VERSION
 
     def __post_init__(self) -> None:
         if (any(isinstance(x, bool) or not math.isfinite(x) or x <= 0
                 for x in (self.hourly, self.daily))
                 or self.basis not in {"SYNTHETIC", "DOCUMENTED"}
-                or self.source_version != SOURCE_VERSION or not self.evidence_ref.strip()
+                or self.source_version != SOURCE_VERSION or self.feature_version != FEATURE_VERSION
+                or self.action_version != ACTION_VERSION or not self.evidence_ref.strip()
                 or not self.timestamps or len(set(self.timestamps)) != len(self.timestamps)
                 or not self.daily_timestamps
                 or len(set(self.daily_timestamps)) != len(self.daily_timestamps)
@@ -298,6 +326,9 @@ class MarketFloors:
 class DailyScaleSample:
     timestamp: pd.Timestamp  # actual completed daily observation, not intraday copies
     rms63: float | None
+    basis: Basis = "SYNTHETIC"
+    source_version: str = SOURCE_VERSION
+    action_version: str = ACTION_VERSION
 
 
 def fit_synthetic_floors(
@@ -310,7 +341,9 @@ def fit_synthetic_floors(
     Daily RMS samples have their actual session-close timestamp, rather than an
     intraday timestamp that could wrongly admit a pre-training daily value.
     """
-    if not allow_synthetic:
+    if (not allow_synthetic or any(r.basis != "SYNTHETIC" for r in rows + daily_rows)
+            or any(r.source_version != SOURCE_VERSION or r.action_version != ACTION_VERSION
+                   for r in daily_rows)):
         raise ValueError("EMPIRICAL_MARKET_FITTING_NOT_AUTHORIZED")
     unique = {r.timestamp: r for r in rows}
     if (len(unique) != len(rows) or any(not window.contains(r.timestamp) for r in rows)
@@ -340,9 +373,19 @@ class MarketVector:
     values: Vector | None
     reason: str
     evidence_ids: tuple[str, ...]
+    basis: Basis = "SYNTHETIC"
+    source_version: str = SOURCE_VERSION
+    feature_version: str = FEATURE_VERSION
+    action_version: str = ACTION_VERSION
 
     def __post_init__(self) -> None:
         utc(self.timestamp)
+        if self.basis == "UNKNOWN" and self.values is not None:
+            raise ValueError("UNKNOWN_MARKET_PUBLICATION_CANNOT_HAVE_VALID_VALUES")
+        if (self.basis not in {"UNKNOWN", "SYNTHETIC", "DOCUMENTED"}
+                or self.source_version != SOURCE_VERSION or self.feature_version != FEATURE_VERSION
+                or self.action_version != ACTION_VERSION):
+            raise ValueError("MARKET_VECTOR_VERSION_REQUIRED")
         if self.values is not None and (
             len(self.values) != 5 or not all(math.isfinite(x) for x in self.values)
         ):
@@ -351,22 +394,33 @@ class MarketVector:
 
 def vector(
     row: MarketMeasures, floors: MarketFloors, *, allow_synthetic: bool = False,
+    context: ApplicationContext = "HISTORICAL_TRAINING",
 ) -> MarketVector:
     """D7 equations only. An implementation-valid vector is not research authorization."""
     reason = row.reason
+    if row.basis == "UNKNOWN":
+        reason = "PUBLICATION_UNKNOWN"
     if floors.basis == "SYNTHETIC" and not allow_synthetic:
         reason = "SYNTHETIC_FLOOR_NOT_AUTHORIZED"
+    if row.basis == "SYNTHETIC" and not allow_synthetic and floors.basis != "SYNTHETIC":
+        reason = "SYNTHETIC_SOURCE_NOT_AUTHORIZED"
+    if floors.basis == "SYNTHETIC" and row.basis != "SYNTHETIC":
+        reason = "SYNTHETIC_FLOOR_REAL_SOURCE_MISMATCH"
+    if context not in {"ASOF", "HISTORICAL_TRAINING"}:
+        raise ValueError("EXPLICIT_MARKET_APPLICATION_CONTEXT_REQUIRED")
     # A training observation may be retrospectively transformed within its fit set;
     # future observations require the fit to have completed by their own cutoff.
-    if not floors.window.contains(row.timestamp) and row.timestamp < floors.window.fitted_at:
+    if row.timestamp < floors.window.fitted_at and (
+        context == "ASOF" or not floors.window.contains(row.timestamp)
+    ):
         reason = "MARKET_FLOOR_NOT_AVAILABLE_AT_CUTOFF"
     r, short, long, daily, m5, m20 = (row.hourly_return, row.rms12, row.rms60,
                                     row.daily_rms63, row.momentum5, row.momentum20)
     if reason != "OBSERVATION_VALID":
-        return MarketVector(row.timestamp, None, reason, row.evidence_ids)
+        return MarketVector(row.timestamp, None, reason, row.evidence_ids, row.basis)
     if any(x is None for x in (r, short, long, daily, m5, m20)):
         return MarketVector(row.timestamp, None, "MARKET_ROLLING_OR_CHAIN_INCOMPLETE",
-                            row.evidence_ids)
+                            row.evidence_ids, row.basis)
     if r is None or short is None or long is None or daily is None or m5 is None or m20 is None:
         raise AssertionError("Unreachable incomplete vector")
     h, d = max(long, floors.hourly), max(daily, floors.daily)
@@ -374,7 +428,7 @@ def vector(
               m5 / (math.sqrt(5) * d), m20 / (math.sqrt(20) * d))
     if not all(math.isfinite(x) for x in values):
         raise ValueError("FINITE_MARKET_VECTOR_REQUIRED")
-    return MarketVector(row.timestamp, values, "VECTOR_VALID", row.evidence_ids)
+    return MarketVector(row.timestamp, values, "VECTOR_VALID", row.evidence_ids, row.basis)
 
 
 @dataclass(frozen=True)
@@ -387,6 +441,8 @@ class MarketScaler:
     evidence_ref: str
     basis: Basis = "SYNTHETIC"
     source_version: str = SOURCE_VERSION
+    feature_version: str = FEATURE_VERSION
+    action_version: str = ACTION_VERSION
 
     def __post_init__(self) -> None:
         if (len(self.centers) != 5 or len(self.scales) != 5 or len(self.methods) != 5
@@ -395,14 +451,19 @@ class MarketScaler:
                 or not set(self.methods) <= {
                     "MAD", "IQR_1.349", "AUDITED_POPULATION_SD", "CONSTANT"}
                 or self.basis not in {"SYNTHETIC", "DOCUMENTED"}
-                or self.source_version != SOURCE_VERSION or not self.evidence_ref.strip()
+                or self.source_version != SOURCE_VERSION or self.feature_version != FEATURE_VERSION
+                or self.action_version != ACTION_VERSION or not self.evidence_ref.strip()
                 or not self.timestamps or len(set(self.timestamps)) != len(self.timestamps)
                 or any(not self.window.contains(t) for t in self.timestamps)):
             raise ValueError("MARKET_SCALER_PROVENANCE_REQUIRED")
 
     def transform(self, values: Vector) -> tuple[Vector, tuple[int, ...]]:
+        if len(values) != 5 or not all(math.isfinite(x) for x in values):
+            raise ValueError("FIVE_FINITE_MARKET_VALUES_REQUIRED")
         result = tuple(0. if method == "CONSTANT" else (x - c) / s
                        for x, c, s, method in zip(values, self.centers, self.scales, self.methods))
+        if not all(math.isfinite(x) for x in result):
+            raise ValueError("FINITE_NORMALIZED_MARKET_VALUES_REQUIRED")
         novel = tuple(i for i, (x, c, m) in enumerate(zip(values, self.centers, self.methods))
                       if m == "CONSTANT" and x != c)
         return (result[0], result[1], result[2], result[3], result[4]), novel
@@ -413,7 +474,7 @@ def fit_synthetic_scaler(
     *, allow_synthetic: bool = False,
 ) -> MarketScaler:
     """Deduplicate identical repeated timestamps; reject conflicting five-stock copies."""
-    if not allow_synthetic or not evidence_ref.strip():
+    if not allow_synthetic or not evidence_ref.strip() or any(r.basis != "SYNTHETIC" for r in rows):
         raise ValueError("EMPIRICAL_MARKET_FITTING_NOT_AUTHORIZED")
     unique: dict[pd.Timestamp, Vector] = {}
     for row in rows:
@@ -467,11 +528,19 @@ class MarketWindow:
     source_version: str = SOURCE_VERSION
     floor_ref: str | None = None
     scaler_ref: str | None = None
+    application_context: ApplicationContext = "HISTORICAL_TRAINING"
+    source_ages_seconds: tuple[float | None, ...] = ()
+
+    @property
+    def cell_mask(self) -> tuple[tuple[bool, ...], ...]:
+        """All five channels share complete-vector validity; masks are not learned inputs."""
+        return tuple((valid and self.values is not None,) * 5 for valid in self.valid_mask)
 
 
 def standardized_window(
     steps: tuple[ScheduledStep, ...], rows: tuple[MarketVector, ...], scaler: MarketScaler,
     *, calendar: ScheduledCalendar, allow_synthetic: bool = False,
+    context: ApplicationContext = "HISTORICAL_TRAINING",
 ) -> MarketWindow:
     if (len(steps) != 48 or len(rows) != 48 or len(set(s.end for s in steps)) != 48
             or any(r.timestamp != s.end for s, r in zip(steps, rows))):
@@ -483,12 +552,24 @@ def standardized_window(
         raise ValueError("MARKET_HISTORY_MUST_KEEP_CONSECUTIVE_SCHEDULED_POSITIONS")
     mask = tuple(r.values is not None and r.reason == "VECTOR_VALID" for r in rows)
     if scaler.basis == "SYNTHETIC" and not allow_synthetic:
-        return MarketWindow(None, mask, "MARKET_SCALER_UNVERIFIED", ())
-    if any(not scaler.window.contains(r.timestamp) and r.timestamp < scaler.window.fitted_at
+        return MarketWindow(None, mask, "MARKET_SCALER_UNVERIFIED", (),
+                            application_context=context)
+    if not allow_synthetic and any(r.basis == "SYNTHETIC" for r in rows):
+        return MarketWindow(None, mask, "SYNTHETIC_SOURCE_NOT_AUTHORIZED", (),
+                            application_context=context)
+    if context not in {"ASOF", "HISTORICAL_TRAINING"}:
+        raise ValueError("EXPLICIT_MARKET_APPLICATION_CONTEXT_REQUIRED")
+    if scaler.basis == "SYNTHETIC" and any(r.basis != "SYNTHETIC" for r in rows):
+        return MarketWindow(None, mask, "SYNTHETIC_SCALER_REAL_SOURCE_MISMATCH", (),
+                            application_context=context)
+    if any((context == "ASOF" or not scaler.window.contains(r.timestamp))
+           and r.timestamp < scaler.window.fitted_at
            for r in rows):
-        return MarketWindow(None, mask, "MARKET_SCALER_NOT_AVAILABLE_AT_CUTOFF", ())
+        return MarketWindow(None, mask, "MARKET_SCALER_NOT_AVAILABLE_AT_CUTOFF", (),
+                            application_context=context)
     if not mask[-1] or sum(mask) < 46:
-        return MarketWindow(None, mask, "MARKET_ENDPOINT_OR_46_OF_48_REQUIRED", ())
+        return MarketWindow(None, mask, "MARKET_ENDPOINT_OR_46_OF_48_REQUIRED", (),
+                            application_context=context)
     output: list[Vector] = []
     novel: set[int] = set()
     for valid, row in zip(mask, rows):
@@ -499,13 +580,14 @@ def standardized_window(
         else:
             output.append((0., 0., 0., 0., 0.))
     return MarketWindow(tuple(output), mask, "IMPLEMENTATION_VALID_SCIENTIFIC_HOLD",
-                        tuple(sorted(novel)))
+                        tuple(sorted(novel)), application_context=context)
 
 
 def window_from_history(
     history: MarketHistory, session: str, origin: int,
     floors: MarketFloors | None = None, scaler: MarketScaler | None = None,
     *, allow_synthetic: bool = False,
+    context: ApplicationContext = "HISTORICAL_TRAINING",
 ) -> MarketWindow:
     """Stable downstream handoff using the existing exact schedule and D7 transforms.
 
@@ -515,11 +597,17 @@ def window_from_history(
     """
     steps = scheduled_window(history.calendar, session, origin)
     measures = tuple(history.measures(s) for s in steps)
+    vectors: tuple[MarketVector, ...] = ()
 
     def traced(output: MarketWindow) -> MarketWindow:
         return replace(output, scheduled_ends=tuple(s.end for s in steps),
                        source_ids=tuple(m.evidence_ids for m in measures),
-                       step_reasons=tuple(m.reason for m in measures),
+                       step_reasons=tuple(v.reason for v in vectors) if vectors else tuple(
+                           m.reason for m in measures),
+                       application_context=context,
+                       source_ages_seconds=tuple(
+                           (s.information_cutoff - history.hours[s.end].period_end).total_seconds()
+                           if s.end in history.hours else None for s in steps),
                        floor_ref=floors.evidence_ref if floors else None,
                        scaler_ref=scaler.evidence_ref if scaler else None)
 
@@ -528,9 +616,10 @@ def window_from_history(
         if reason == "OBSERVATION_VALID":
             reason = "MARKET_FLOOR_CERTIFICATE_REQUIRED"
         return traced(MarketWindow(None, (False,) * 48, reason, ()))
-    vectors = tuple(vector(m, floors, allow_synthetic=allow_synthetic) for m in measures)
+    vectors = tuple(vector(m, floors, allow_synthetic=allow_synthetic, context=context)
+                    for m in measures)
     if scaler is None:
         return traced(MarketWindow(None, tuple(v.values is not None for v in vectors),
                                    "MARKET_SCALER_CERTIFICATE_REQUIRED", ()))
     return traced(standardized_window(steps, vectors, scaler, calendar=history.calendar,
-                                     allow_synthetic=allow_synthetic))
+                                     allow_synthetic=allow_synthetic, context=context))
