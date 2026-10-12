@@ -1,0 +1,731 @@
+{
+  "archive": "data/raw/alpaca/track_a_backup_candidate_v1",
+  "attempts": 12,
+  "bytes": 5096645,
+  "chunks": [
+    {
+      "hash": "45f493e66dc982a25ffb152d91df68914bbfbce4dd9677a866c1ae55ce652807",
+      "kind": "FORMATION_DAILY",
+      "manifest": {
+        "action_vintage": "UNVERIFIED",
+        "availability_basis": "UNKNOWN",
+        "available_at": null,
+        "kind": "FORMATION_DAILY",
+        "missing_requested_symbols": [],
+        "params": {
+          "adjustment": "raw",
+          "asof": "2020-07-01",
+          "currency": "USD",
+          "end": "2020-07-01T03:59:59.999999999Z",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2020-04-06T04:00:00Z",
+          "symbols": "MSFT,BAC,MRK,COST,HON",
+          "timeframe": "1Day"
+        },
+        "provider": "ALPACA",
+        "receipts": [
+          {
+            "attempt_id": 4,
+            "continued_page": false,
+            "kind": "ATTEMPT",
+            "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+            "page_hash": "45f493e66dc982a25ffb152d91df68914bbfbce4dd9677a866c1ae55ce652807",
+            "params": {
+              "adjustment": "raw",
+              "asof": "2020-07-01",
+              "currency": "USD",
+              "end": "2020-07-01T03:59:59.999999999Z",
+              "feed": "sip",
+              "limit": 10000,
+              "sort": "asc",
+              "start": "2020-04-06T04:00:00Z",
+              "symbols": "MSFT,BAC,MRK,COST,HON",
+              "timeframe": "1Day"
+            },
+            "request_hash": "45f493e66dc982a25ffb152d91df68914bbfbce4dd9677a866c1ae55ce652807",
+            "time_utc": "2026-10-12T13:40:28.418498+00:00"
+          },
+          {
+            "attempt_id": 4,
+            "bytes": 32918,
+            "kind": "RESULT",
+            "request_hash": "45f493e66dc982a25ffb152d91df68914bbfbce4dd9677a866c1ae55ce652807",
+            "response_sha256": "03d6505e7f68e9d0884c1d595708faebc08135f22dbdefd6e9ba1fcf9c7c4727",
+            "returned_rows": 300,
+            "status": 200,
+            "terminal_page": true,
+            "time_utc": "2026-10-12T13:40:29.260339+00:00"
+          }
+        ],
+        "retrieved_at": "2026-10-12T13:40:29.349818+00:00",
+        "rows": 300,
+        "schema_version": 1,
+        "scientific_activation": false,
+        "sha256": "f7273c2925fddcdba09ada14cf5a3896db85dcb84f22c57533cd85154f6bb698",
+        "size_bytes": 20103,
+        "source_version": "ALPACA_SIP_SPLIT_REMED_NATIVE_V1",
+        "terminal_page_verified": true
+      },
+      "params": {
+        "adjustment": "raw",
+        "asof": "2020-07-01",
+        "currency": "USD",
+        "end": "2020-07-01T03:59:59.999999999Z",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-04-06T04:00:00Z",
+        "symbols": "MSFT,BAC,MRK,COST,HON",
+        "timeframe": "1Day"
+      },
+      "resumed": false,
+      "rows": 300
+    },
+    {
+      "hash": "cbeeec3f1c2b9c0b4e30e2b65c225edb95d4d033785edad9be87185cecefccf8",
+      "kind": "SIP_TIMING_GAP_PILOT",
+      "manifest": {
+        "action_vintage": "UNVERIFIED",
+        "availability_basis": "UNKNOWN",
+        "available_at": null,
+        "kind": "SIP_TIMING_GAP_PILOT",
+        "missing_requested_symbols": [],
+        "params": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-04-20T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-04-19T04:00:00+00:00",
+          "symbols": "MSFT,BAC,MRK,COST,HON",
+          "timeframe": "30Min"
+        },
+        "provider": "ALPACA",
+        "receipts": [
+          {
+            "attempt_id": 5,
+            "continued_page": false,
+            "kind": "ATTEMPT",
+            "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+            "page_hash": "cbeeec3f1c2b9c0b4e30e2b65c225edb95d4d033785edad9be87185cecefccf8",
+            "params": {
+              "adjustment": "split",
+              "asof": "2025-06-30",
+              "currency": "USD",
+              "end": "2021-04-20T03:59:59.999999999+00:00",
+              "feed": "sip",
+              "limit": 10000,
+              "sort": "asc",
+              "start": "2021-04-19T04:00:00+00:00",
+              "symbols": "MSFT,BAC,MRK,COST,HON",
+              "timeframe": "30Min"
+            },
+            "request_hash": "cbeeec3f1c2b9c0b4e30e2b65c225edb95d4d033785edad9be87185cecefccf8",
+            "time_utc": "2026-10-12T13:40:29.353975+00:00"
+          },
+          {
+            "attempt_id": 5,
+            "bytes": 5875,
+            "kind": "RESULT",
+            "request_hash": "cbeeec3f1c2b9c0b4e30e2b65c225edb95d4d033785edad9be87185cecefccf8",
+            "response_sha256": "3ee6a810d77d91036479667157fe009f6fb71aa9198d79f68c39fb65c4929c0d",
+            "returned_rows": 55,
+            "status": 200,
+            "terminal_page": true,
+            "time_utc": "2026-10-12T13:40:30.004354+00:00"
+          }
+        ],
+        "retrieved_at": "2026-10-12T13:40:30.031031+00:00",
+        "rows": 55,
+        "schema_version": 1,
+        "scientific_activation": false,
+        "sha256": "d3a11c122ad23bc7b795fec56a1b440235bd545ad845ba6d911a46f185d8ba81",
+        "size_bytes": 10820,
+        "source_version": "ALPACA_SIP_SPLIT_REMED_NATIVE_V1",
+        "terminal_page_verified": true
+      },
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-20T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-19T04:00:00+00:00",
+        "symbols": "MSFT,BAC,MRK,COST,HON",
+        "timeframe": "30Min"
+      },
+      "resumed": false,
+      "rows": 55
+    },
+    {
+      "hash": "40c3c88c5716763dcea0b6df6f03a793560a8d27b236ddcbcdd839dd440ff679",
+      "kind": "SIP_TIMING_GAP_PILOT",
+      "manifest": {
+        "action_vintage": "UNVERIFIED",
+        "availability_basis": "UNKNOWN",
+        "available_at": null,
+        "kind": "SIP_TIMING_GAP_PILOT",
+        "missing_requested_symbols": [],
+        "params": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-10-26T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-10-25T04:00:00+00:00",
+          "symbols": "MSFT,BAC,MRK,COST,HON",
+          "timeframe": "30Min"
+        },
+        "provider": "ALPACA",
+        "receipts": [
+          {
+            "attempt_id": 6,
+            "continued_page": false,
+            "kind": "ATTEMPT",
+            "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+            "page_hash": "40c3c88c5716763dcea0b6df6f03a793560a8d27b236ddcbcdd839dd440ff679",
+            "params": {
+              "adjustment": "split",
+              "asof": "2025-06-30",
+              "currency": "USD",
+              "end": "2021-10-26T03:59:59.999999999+00:00",
+              "feed": "sip",
+              "limit": 10000,
+              "sort": "asc",
+              "start": "2021-10-25T04:00:00+00:00",
+              "symbols": "MSFT,BAC,MRK,COST,HON",
+              "timeframe": "30Min"
+            },
+            "request_hash": "40c3c88c5716763dcea0b6df6f03a793560a8d27b236ddcbcdd839dd440ff679",
+            "time_utc": "2026-10-12T13:40:30.034950+00:00"
+          },
+          {
+            "attempt_id": 6,
+            "bytes": 8661,
+            "kind": "RESULT",
+            "request_hash": "40c3c88c5716763dcea0b6df6f03a793560a8d27b236ddcbcdd839dd440ff679",
+            "response_sha256": "3ea32ea8c65422e48528344b41d2041c36eb9631c8b5be831904558a45aec57a",
+            "returned_rows": 82,
+            "status": 200,
+            "terminal_page": true,
+            "time_utc": "2026-10-12T13:40:30.627937+00:00"
+          }
+        ],
+        "retrieved_at": "2026-10-12T13:40:30.653365+00:00",
+        "rows": 82,
+        "schema_version": 1,
+        "scientific_activation": false,
+        "sha256": "6e0c88894d08f0d42de2afcb02600e6068e2b66d1c71e770e239c58bf8f72c5b",
+        "size_bytes": 11948,
+        "source_version": "ALPACA_SIP_SPLIT_REMED_NATIVE_V1",
+        "terminal_page_verified": true
+      },
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-10-26T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-10-25T04:00:00+00:00",
+        "symbols": "MSFT,BAC,MRK,COST,HON",
+        "timeframe": "30Min"
+      },
+      "resumed": false,
+      "rows": 82
+    },
+    {
+      "hash": "e9f981ae944d6d10ca6b838077271830ffdcca9ead873674c284525f2f470129",
+      "kind": "SIP_TIMING_GAP_PILOT",
+      "manifest": {
+        "action_vintage": "UNVERIFIED",
+        "availability_basis": "UNKNOWN",
+        "available_at": null,
+        "kind": "SIP_TIMING_GAP_PILOT",
+        "missing_requested_symbols": [],
+        "params": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-03-09T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-03-08T05:00:00+00:00",
+          "symbols": "MSFT,BAC,MRK,COST,HON",
+          "timeframe": "30Min"
+        },
+        "provider": "ALPACA",
+        "receipts": [
+          {
+            "attempt_id": 7,
+            "continued_page": false,
+            "kind": "ATTEMPT",
+            "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+            "page_hash": "e9f981ae944d6d10ca6b838077271830ffdcca9ead873674c284525f2f470129",
+            "params": {
+              "adjustment": "split",
+              "asof": "2025-06-30",
+              "currency": "USD",
+              "end": "2022-03-09T04:59:59.999999999+00:00",
+              "feed": "sip",
+              "limit": 10000,
+              "sort": "asc",
+              "start": "2022-03-08T05:00:00+00:00",
+              "symbols": "MSFT,BAC,MRK,COST,HON",
+              "timeframe": "30Min"
+            },
+            "request_hash": "e9f981ae944d6d10ca6b838077271830ffdcca9ead873674c284525f2f470129",
+            "time_utc": "2026-10-12T13:40:30.657221+00:00"
+          },
+          {
+            "attempt_id": 7,
+            "bytes": 9724,
+            "kind": "RESULT",
+            "request_hash": "e9f981ae944d6d10ca6b838077271830ffdcca9ead873674c284525f2f470129",
+            "response_sha256": "e19c00b75060839753a301b647559b8642fc669cb3227f63439c9151225cea10",
+            "returned_rows": 92,
+            "status": 200,
+            "terminal_page": true,
+            "time_utc": "2026-10-12T13:40:31.246346+00:00"
+          }
+        ],
+        "retrieved_at": "2026-10-12T13:40:31.274492+00:00",
+        "rows": 92,
+        "schema_version": 1,
+        "scientific_activation": false,
+        "sha256": "4f4e666e57ec39da8a2cbc9dc3121b27131548267790d01ab047ccec49709395",
+        "size_bytes": 12396,
+        "source_version": "ALPACA_SIP_SPLIT_REMED_NATIVE_V1",
+        "terminal_page_verified": true
+      },
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-03-09T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-03-08T05:00:00+00:00",
+        "symbols": "MSFT,BAC,MRK,COST,HON",
+        "timeframe": "30Min"
+      },
+      "resumed": false,
+      "rows": 92
+    },
+    {
+      "hash": "89f79608a1e7c270118bb2b3f3847e318d62d0cb86d3aa23adc7e947233d3797",
+      "kind": "SIP_TIMING_GAP_PILOT",
+      "manifest": {
+        "action_vintage": "UNVERIFIED",
+        "availability_basis": "UNKNOWN",
+        "available_at": null,
+        "kind": "SIP_TIMING_GAP_PILOT",
+        "missing_requested_symbols": [],
+        "params": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2022-01-25T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2022-01-24T05:00:00+00:00",
+          "symbols": "MSFT,BAC,MRK,COST,HON",
+          "timeframe": "30Min"
+        },
+        "provider": "ALPACA",
+        "receipts": [
+          {
+            "attempt_id": 8,
+            "continued_page": false,
+            "kind": "ATTEMPT",
+            "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+            "page_hash": "89f79608a1e7c270118bb2b3f3847e318d62d0cb86d3aa23adc7e947233d3797",
+            "params": {
+              "adjustment": "split",
+              "asof": "2025-06-30",
+              "currency": "USD",
+              "end": "2022-01-25T04:59:59.999999999+00:00",
+              "feed": "sip",
+              "limit": 10000,
+              "sort": "asc",
+              "start": "2022-01-24T05:00:00+00:00",
+              "symbols": "MSFT,BAC,MRK,COST,HON",
+              "timeframe": "30Min"
+            },
+            "request_hash": "89f79608a1e7c270118bb2b3f3847e318d62d0cb86d3aa23adc7e947233d3797",
+            "time_utc": "2026-10-12T13:40:31.279892+00:00"
+          },
+          {
+            "attempt_id": 8,
+            "bytes": 12513,
+            "kind": "RESULT",
+            "request_hash": "89f79608a1e7c270118bb2b3f3847e318d62d0cb86d3aa23adc7e947233d3797",
+            "response_sha256": "cafa84ba26e05bc97fe5127947da290bf00cc0c832f716496efc3a088053c5ab",
+            "returned_rows": 119,
+            "status": 200,
+            "terminal_page": true,
+            "time_utc": "2026-10-12T13:40:31.848402+00:00"
+          }
+        ],
+        "retrieved_at": "2026-10-12T13:40:31.873143+00:00",
+        "rows": 119,
+        "schema_version": 1,
+        "scientific_activation": false,
+        "sha256": "671f210fea587ddcbfefcf5614761d0bdab688e6c553614a0c8085bdc55241dd",
+        "size_bytes": 13061,
+        "source_version": "ALPACA_SIP_SPLIT_REMED_NATIVE_V1",
+        "terminal_page_verified": true
+      },
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-25T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-24T05:00:00+00:00",
+        "symbols": "MSFT,BAC,MRK,COST,HON",
+        "timeframe": "30Min"
+      },
+      "resumed": false,
+      "rows": 119
+    },
+    {
+      "hash": "6ee47bd5d515ffef66d09e9b58bbb1c4f6b97bb50d8eddf4fbbc2fdb01cd1ae6",
+      "kind": "SIP_TIMING_GAP_PILOT",
+      "manifest": {
+        "action_vintage": "UNVERIFIED",
+        "availability_basis": "UNKNOWN",
+        "available_at": null,
+        "kind": "SIP_TIMING_GAP_PILOT",
+        "missing_requested_symbols": [],
+        "params": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2020-11-28T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2020-11-27T05:00:00+00:00",
+          "symbols": "MSFT,BAC,MRK,COST,HON",
+          "timeframe": "30Min"
+        },
+        "provider": "ALPACA",
+        "receipts": [
+          {
+            "attempt_id": 9,
+            "continued_page": false,
+            "kind": "ATTEMPT",
+            "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+            "page_hash": "6ee47bd5d515ffef66d09e9b58bbb1c4f6b97bb50d8eddf4fbbc2fdb01cd1ae6",
+            "params": {
+              "adjustment": "split",
+              "asof": "2025-06-30",
+              "currency": "USD",
+              "end": "2020-11-28T04:59:59.999999999+00:00",
+              "feed": "sip",
+              "limit": 10000,
+              "sort": "asc",
+              "start": "2020-11-27T05:00:00+00:00",
+              "symbols": "MSFT,BAC,MRK,COST,HON",
+              "timeframe": "30Min"
+            },
+            "request_hash": "6ee47bd5d515ffef66d09e9b58bbb1c4f6b97bb50d8eddf4fbbc2fdb01cd1ae6",
+            "time_utc": "2026-10-12T13:40:31.877212+00:00"
+          },
+          {
+            "attempt_id": 9,
+            "bytes": 10175,
+            "kind": "RESULT",
+            "request_hash": "6ee47bd5d515ffef66d09e9b58bbb1c4f6b97bb50d8eddf4fbbc2fdb01cd1ae6",
+            "response_sha256": "c6dbaa570cbed7a9bf4e13c8009dfb0cfbba306bb611ff1ef01b5db35abadcaf",
+            "returned_rows": 99,
+            "status": 200,
+            "terminal_page": true,
+            "time_utc": "2026-10-12T13:40:32.532195+00:00"
+          }
+        ],
+        "retrieved_at": "2026-10-12T13:40:32.557110+00:00",
+        "rows": 99,
+        "schema_version": 1,
+        "scientific_activation": false,
+        "sha256": "a61e8c4036a04b21d48894624c2bf97b367ed819705478727fd10d3db58ef6a8",
+        "size_bytes": 12252,
+        "source_version": "ALPACA_SIP_SPLIT_REMED_NATIVE_V1",
+        "terminal_page_verified": true
+      },
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-11-28T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-11-27T05:00:00+00:00",
+        "symbols": "MSFT,BAC,MRK,COST,HON",
+        "timeframe": "30Min"
+      },
+      "resumed": false,
+      "rows": 99
+    },
+    {
+      "hash": "a261965911ea3ce9e60ca6d4763ace2ce59ce17cee488f99b07196c0de413cab",
+      "kind": "SIP_TIMING_GAP_PILOT",
+      "manifest": {
+        "action_vintage": "UNVERIFIED",
+        "availability_basis": "UNKNOWN",
+        "available_at": null,
+        "kind": "SIP_TIMING_GAP_PILOT",
+        "missing_requested_symbols": [],
+        "params": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2021-03-16T03:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2021-03-15T04:00:00+00:00",
+          "symbols": "MSFT,BAC,MRK,COST,HON",
+          "timeframe": "30Min"
+        },
+        "provider": "ALPACA",
+        "receipts": [
+          {
+            "attempt_id": 10,
+            "continued_page": false,
+            "kind": "ATTEMPT",
+            "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+            "page_hash": "a261965911ea3ce9e60ca6d4763ace2ce59ce17cee488f99b07196c0de413cab",
+            "params": {
+              "adjustment": "split",
+              "asof": "2025-06-30",
+              "currency": "USD",
+              "end": "2021-03-16T03:59:59.999999999+00:00",
+              "feed": "sip",
+              "limit": 10000,
+              "sort": "asc",
+              "start": "2021-03-15T04:00:00+00:00",
+              "symbols": "MSFT,BAC,MRK,COST,HON",
+              "timeframe": "30Min"
+            },
+            "request_hash": "a261965911ea3ce9e60ca6d4763ace2ce59ce17cee488f99b07196c0de413cab",
+            "time_utc": "2026-10-12T13:40:32.561304+00:00"
+          },
+          {
+            "attempt_id": 10,
+            "bytes": 13911,
+            "kind": "RESULT",
+            "request_hash": "a261965911ea3ce9e60ca6d4763ace2ce59ce17cee488f99b07196c0de413cab",
+            "response_sha256": "ca20c45216bf7baeabb560852beef5e8329767fcf9906033488e98996ff0f6a5",
+            "returned_rows": 133,
+            "status": 200,
+            "terminal_page": true,
+            "time_utc": "2026-10-12T13:40:33.177784+00:00"
+          }
+        ],
+        "retrieved_at": "2026-10-12T13:40:33.202288+00:00",
+        "rows": 133,
+        "schema_version": 1,
+        "scientific_activation": false,
+        "sha256": "17b647ee667bc5200aff1574fa1a7387d44f9f5bbe9162f1fb054cf49b386e17",
+        "size_bytes": 13467,
+        "source_version": "ALPACA_SIP_SPLIT_REMED_NATIVE_V1",
+        "terminal_page_verified": true
+      },
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-03-16T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-03-15T04:00:00+00:00",
+        "symbols": "MSFT,BAC,MRK,COST,HON",
+        "timeframe": "30Min"
+      },
+      "resumed": false,
+      "rows": 133
+    },
+    {
+      "hash": "b4fc7fc7649275240b348478105504e1acf12d3d185a2e9d42c213feab29c947",
+      "kind": "SIP_TIMING_GAP_PILOT",
+      "manifest": {
+        "action_vintage": "UNVERIFIED",
+        "availability_basis": "UNKNOWN",
+        "available_at": null,
+        "kind": "SIP_TIMING_GAP_PILOT",
+        "missing_requested_symbols": [],
+        "params": {
+          "adjustment": "split",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2019-12-19T04:59:59.999999999+00:00",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2019-12-18T05:00:00+00:00",
+          "symbols": "MSFT,BAC,MRK,COST,HON",
+          "timeframe": "30Min"
+        },
+        "provider": "ALPACA",
+        "receipts": [
+          {
+            "attempt_id": 11,
+            "continued_page": false,
+            "kind": "ATTEMPT",
+            "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+            "page_hash": "b4fc7fc7649275240b348478105504e1acf12d3d185a2e9d42c213feab29c947",
+            "params": {
+              "adjustment": "split",
+              "asof": "2025-06-30",
+              "currency": "USD",
+              "end": "2019-12-19T04:59:59.999999999+00:00",
+              "feed": "sip",
+              "limit": 10000,
+              "sort": "asc",
+              "start": "2019-12-18T05:00:00+00:00",
+              "symbols": "MSFT,BAC,MRK,COST,HON",
+              "timeframe": "30Min"
+            },
+            "request_hash": "b4fc7fc7649275240b348478105504e1acf12d3d185a2e9d42c213feab29c947",
+            "time_utc": "2026-10-12T13:40:33.206329+00:00"
+          },
+          {
+            "attempt_id": 11,
+            "bytes": 12358,
+            "kind": "RESULT",
+            "request_hash": "b4fc7fc7649275240b348478105504e1acf12d3d185a2e9d42c213feab29c947",
+            "response_sha256": "49ec55d176b4dc27562bbfbbdb77a39ba5f212b1175cd8244ad2da9e27d7a40b",
+            "returned_rows": 118,
+            "status": 200,
+            "terminal_page": true,
+            "time_utc": "2026-10-12T13:40:33.871350+00:00"
+          }
+        ],
+        "retrieved_at": "2026-10-12T13:40:33.896362+00:00",
+        "rows": 118,
+        "schema_version": 1,
+        "scientific_activation": false,
+        "sha256": "c30afe9f4be933f5976b9392e9fadc6efa77cf5ef1e0bfc25e8163daa3e1cec4",
+        "size_bytes": 12954,
+        "source_version": "ALPACA_SIP_SPLIT_REMED_NATIVE_V1",
+        "terminal_page_verified": true
+      },
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2019-12-19T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2019-12-18T05:00:00+00:00",
+        "symbols": "MSFT,BAC,MRK,COST,HON",
+        "timeframe": "30Min"
+      },
+      "resumed": false,
+      "rows": 118
+    },
+    {
+      "hash": "06e20c221332eb43b69ba13e024672d4d516d85307cb940fa71b39b5157f943b",
+      "kind": "RAW_SPLIT_CONTROL",
+      "manifest": {
+        "action_vintage": "UNVERIFIED",
+        "availability_basis": "UNKNOWN",
+        "available_at": null,
+        "kind": "RAW_SPLIT_CONTROL",
+        "missing_requested_symbols": [],
+        "params": {
+          "adjustment": "raw",
+          "asof": "2025-06-30",
+          "currency": "USD",
+          "end": "2019-12-19T04:59:59.999999999Z",
+          "feed": "sip",
+          "limit": 10000,
+          "sort": "asc",
+          "start": "2019-12-18T05:00:00Z",
+          "symbols": "MSFT,BAC,MRK,COST,HON",
+          "timeframe": "30Min"
+        },
+        "provider": "ALPACA",
+        "receipts": [
+          {
+            "attempt_id": 12,
+            "continued_page": false,
+            "kind": "ATTEMPT",
+            "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+            "page_hash": "06e20c221332eb43b69ba13e024672d4d516d85307cb940fa71b39b5157f943b",
+            "params": {
+              "adjustment": "raw",
+              "asof": "2025-06-30",
+              "currency": "USD",
+              "end": "2019-12-19T04:59:59.999999999Z",
+              "feed": "sip",
+              "limit": 10000,
+              "sort": "asc",
+              "start": "2019-12-18T05:00:00Z",
+              "symbols": "MSFT,BAC,MRK,COST,HON",
+              "timeframe": "30Min"
+            },
+            "request_hash": "06e20c221332eb43b69ba13e024672d4d516d85307cb940fa71b39b5157f943b",
+            "time_utc": "2026-10-12T13:40:33.901749+00:00"
+          },
+          {
+            "attempt_id": 12,
+            "bytes": 12382,
+            "kind": "RESULT",
+            "request_hash": "06e20c221332eb43b69ba13e024672d4d516d85307cb940fa71b39b5157f943b",
+            "response_sha256": "24ce7a0e9aa927fdf7d00f5585683e8a95a24445bc893fc21c48512276be8166",
+            "returned_rows": 118,
+            "status": 200,
+            "terminal_page": true,
+            "time_utc": "2026-10-12T13:40:34.611415+00:00"
+          }
+        ],
+        "retrieved_at": "2026-10-12T13:40:34.636209+00:00",
+        "rows": 118,
+        "schema_version": 1,
+        "scientific_activation": false,
+        "sha256": "b4813f11057f9d87e36b56a63b266fcda25b4585262c7b0ab5d75f8db3944271",
+        "size_bytes": 12946,
+        "source_version": "ALPACA_SIP_SPLIT_REMED_NATIVE_V1",
+        "terminal_page_verified": true
+      },
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2019-12-19T04:59:59.999999999Z",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2019-12-18T05:00:00Z",
+        "symbols": "MSFT,BAC,MRK,COST,HON",
+        "timeframe": "30Min"
+      },
+      "resumed": false,
+      "rows": 118
+    }
+  ],
+  "journal": "data/raw/alpaca/track_a_backup_candidate_v1/transport_attempts.jsonl",
+  "journal_sha256": "aac92d8efc90455b0e5c8144c49ac885749db2ad86c4893f8bb9d711d8f314bb",
+  "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+  "scientific_activation": false
+}

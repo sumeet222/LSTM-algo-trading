@@ -1,0 +1,84 @@
+{
+  "P4": "NOT_STARTED",
+  "classification": "UNIVERSE_SCREEN_PARTIAL_RESOURCE_OR_SOURCE_BLOCKED \u2014 HUMAN_REVIEW_REQUIRED",
+  "data_source": "One immutable backup namespace; only nine pilot partitions, not full backup training history",
+  "downstream_if_a_future_substitution_is_approved": "Versioned universe amendment, genuine source/formation/action checks, new TG0 cross-sections, prefix-specific feature/certificate fits, matched P3.5 refits and D8 identities; original universe-injected P3 core need not be redesigned. No steps executed here.",
+  "interfaces": {
+    "src/lstm_data/universe_screen.py": {
+      "counterfactuals": {
+        "line": 246,
+        "signature": "(rows: 'list[dict]') -> 'list[dict]'"
+      },
+      "diagnostic_history": {
+        "line": 123,
+        "signature": "(frame: 'pd.DataFrame', symbols: 'tuple[str, ...]', start: 'str', stop: 'str') -> 'tuple[StockHistory, dict]'"
+      },
+      "gate_a": {
+        "line": 275,
+        "signature": "(out: 'Path') -> 'dict'"
+      },
+      "origin_masks": {
+        "line": 178,
+        "signature": "(history: 'StockHistory', symbols: 'tuple[str, ...]', *, first: 'str' = '2020-07-01', stop: 'str' = '2023-07-01') -> 'list[dict]'"
+      },
+      "panels": {
+        "line": 62,
+        "signature": "() -> 'tuple[tuple[str, ...], ...]'"
+      },
+      "primary_native": {
+        "line": 66,
+        "signature": "(*, stop: 'str' = '2023-07-01', warmup: 'bool' = False) -> 'tuple[pd.DataFrame, dict]'"
+      },
+      "t2_absence_bound": {
+        "line": 410,
+        "signature": "(calendar: 'StockCalendar', missing_daily_closes: 'tuple[str, ...]', *, stop: 'str' = '2023-07-01') -> 'list[dict]'"
+      },
+      "validate_panel": {
+        "line": 55,
+        "signature": "(symbols: 'tuple[str, ...]') -> 'None'"
+      },
+      "verify_screen_authority": {
+        "line": 32,
+        "signature": "() -> 'dict'"
+      }
+    },
+    "src/lstm_data/universe_screen_audit.py": {
+      "analyze_pilot": {
+        "line": 28,
+        "signature": "(report: 'Path') -> 'dict'"
+      }
+    },
+    "src/lstm_data/universe_screen_source.py": {
+      "ScreenTransport": {
+        "line": 71,
+        "signature": "(journal: 'Path', allowed_requests: 'tuple[dict, ...]', get: 'Callable' = <function get at 0x10ee8e820>, ceiling: 'int' = 1000, expected_sha: 'str | None' = None, before_append: 'Callable[[int], None] | None' = None, exception_ref: 'Path | None' = None) -> None"
+      },
+      "acquire_requests": {
+        "line": 251,
+        "signature": "(report: 'Path', plan: 'dict', *, env_file: 'Path' = PosixPath('.env'), get=<function get at 0x10ee8e820>) -> 'dict'"
+      },
+      "pilot_plan": {
+        "line": 187,
+        "signature": "() -> 'dict'"
+      },
+      "read_backup_chunk": {
+        "line": 25,
+        "signature": "(store: 'Path', params: 'dict') -> 'tuple[pd.DataFrame, dict] | None'"
+      }
+    }
+  },
+  "known_bound_condition": "Confirmed pilot omissions remain unresolved; legitimate later exact-key recovery can change bounds",
+  "main_command": "scripts/run_universe_screen.py --phase attribution|pilot|analysis --report <new-report-directory>",
+  "original_universe_unchanged": true,
+  "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+  "scientific_status": "HOLD",
+  "scope": "CANDIDATE_ONLY_NO_ACTIVATION",
+  "source_hashes": {
+    "scripts/run_universe_screen.py": "971a8601fb5e5e7d5ade55db981a472a97271c7e44291adfe4704eb4893d8b9b",
+    "src/lstm_data/universe_screen.py": "726982cf41a95b5538bbf3a7939037419c599b8d3561d72d331f23e0b921b06a",
+    "src/lstm_data/universe_screen_audit.py": "05a686e07cde82187e1e6334f2cdbef5b33fa87bac7325aa936ec2b5811bee6e",
+    "src/lstm_data/universe_screen_source.py": "223e935feadc799afdd057cb13181c53cb63518eaf6418d58182d576e41e0e4e",
+    "tests/test_universe_screen.py": "aad29831c00dc4c632904b74b03a2e02ce3445ee34534e9efd4acd8c83570071",
+    "tests/test_universe_screen_source.py": "0996458846b4761d442314bd92a14d7ea0e90ac77f73399fb7450b7b15c0cbe1"
+  }
+}

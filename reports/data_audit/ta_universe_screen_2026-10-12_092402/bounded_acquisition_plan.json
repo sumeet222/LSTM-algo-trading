@@ -1,0 +1,59 @@
+{
+  "SPY_reused_not_queried": true,
+  "bulk_status": "NOT_EXECUTED_STOP_RULE_C1_NO_PANEL_CAN_REACH90",
+  "hypothetical_envelope_if_needed": {
+    "adjustment": "split",
+    "entity_asof": "2025-06-30",
+    "feed": "sip",
+    "hard_max_pages_per_partition": 7,
+    "maximum_lifetime_attempts_per_page": 3,
+    "monthly_partitions": 43,
+    "native24h_calendar_row_bound": 247872,
+    "native_timeframe": "30Min",
+    "pages_are_hard_limits_not_density_claims": true,
+    "storage_ceiling": 268435456,
+    "symbols": [
+      "BAC",
+      "MRK",
+      "COST",
+      "HON"
+    ],
+    "total_with_pilot": 915,
+    "uncompressed_bound_at256_bytes_per_row": 63455232,
+    "worst_additional_attempts": 903
+  },
+  "minimum_calendar_prehistory": "2019-12-18",
+  "no_additional_acquisition_authorized_by_this_output": true,
+  "old_archives_read_only": true,
+  "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+  "pilot": {
+    "attempts_used": 12,
+    "observed_continuation_pages": 0,
+    "observed_returned_rows": [
+      300,
+      55,
+      82,
+      92,
+      119,
+      99,
+      133,
+      118,
+      118
+    ],
+    "queries": 9,
+    "source_rows_per_page_is_not_a_guaranteed_monthly_density": true,
+    "success_pages": 9
+  },
+  "prehistory_proof": "backup_pilot_plan.json::dependency_calendar",
+  "priority": [
+    "COST",
+    "HON",
+    "BAC",
+    "MRK",
+    "MSFT"
+  ],
+  "source_namespace": "data/raw/alpaca/track_a_backup_candidate_v1",
+  "stop_evidence": "backup_known_absence_bounds.json; candidate_universe_retention.json",
+  "training_end": "2023-06-30",
+  "stop_condition_qualification": "No full backup archive executed after pilot source/control HOLD and the conditional observed-gap failure. Genuine future exact-key recovery could change the bound; monthly page density and full retention are not measured."
+}

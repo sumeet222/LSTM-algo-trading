@@ -1,0 +1,239 @@
+{
+  "all_actual_bar_fields_equal": true,
+  "all_daily_fields_equal": true,
+  "all_scheduled_steps_equal": true,
+  "binding_is_distinct_candidate_identity": true,
+  "daily_rows": 4433,
+  "formula_implementation": "Same original FeatureCalculator and mechanical_m2; no copied feature math",
+  "hour_and_stub_rows": 30942,
+  "scope": "TRAIN_SOURCE_ONLY_NO_FITS",
+  "source": {
+    "sources": [
+      {
+        "path": "data/raw/alpaca/track_a/2020-07-aabdd641836090f410bd.parquet",
+        "rows": 2943,
+        "sha256": "26b1890c7edbeffbbe21d98c1f50fcfbf92c4b6abf3ee9381d304f946411e44f"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2020-08-6a9af5eaccb5c51fed33.parquet",
+        "rows": 2750,
+        "sha256": "5a5cc85e9d4ff7a7dbe07e8c141a18e0758df62f6762d677535efe7dd027141d"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2020-09-3e0140b39432b0182be9.parquet",
+        "rows": 2842,
+        "sha256": "51f9c62983acc64d84a7976980c8cab3df24490826c816017bff85b4396f37b9"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2020-10-27d25211707694c49e00.parquet",
+        "rows": 2893,
+        "sha256": "44e6cd4c0bf6b107890e7c2040b931f307416ab304796038c52062438e2c80d5"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2020-11-c08a26b2adc48a96eae7.parquet",
+        "rows": 2714,
+        "sha256": "538dc8306302af115d002b5de6a0df177c7fb8be4a88f97cae88e254345bc278"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2020-12-6eaf67271f6d36a4f88e.parquet",
+        "rows": 2812,
+        "sha256": "a3cf34a7a669140c14c0f45a99bae4ca6020279507ddd25dafeccae309301a1e"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-01-db35eea7eac9f35d66a4.parquet",
+        "rows": 2557,
+        "sha256": "8f89c3411bd9ff2d03ef2592be9416402136b10505984cc74f9822472bb48d2a"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-02-3a7cb14a35c09afc1965.parquet",
+        "rows": 2525,
+        "sha256": "1f4bdde5e4da37fb8dc96844bd7683ff969e4a5773f01ce711a51412649816d3"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-03-4f77c070f79345b38823.parquet",
+        "rows": 3127,
+        "sha256": "7ae79c43573dd83008b483ebfeb918bc91a77b24611077e6635a1593db28856b"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-04-b17955fa37247cd31457.parquet",
+        "rows": 2618,
+        "sha256": "12f59ab1fa5eb74941922b5e6d8ed2a430ccc06b448e2174df8f11fedc5e66dd"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-05-a59101ced06c91998090.parquet",
+        "rows": 2496,
+        "sha256": "49b46a1967e61c3e02bf60d9ea0f24f73c8fe11015049ba02f3507dac6c71cb6"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-06-5f732b30a27dfeb0c475.parquet",
+        "rows": 2791,
+        "sha256": "f0d7e22657dd7769466f75ab1fbfeee322cdad5d0d63d2efc14a376873abcd3f"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-07-d01178f94b661de1405d.parquet",
+        "rows": 2633,
+        "sha256": "3543441e61be37dbbdfaf01f48661ce977ab28b4c6d8c812ec42040d0c363e2b"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-08-8749539bdc111049873c.parquet",
+        "rows": 2793,
+        "sha256": "3b2e5b1ee00f4c04f51f40ac2030341f9f72d822c0a0e43654fc1dfd68490fa4"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-09-63664447330eba52319f.parquet",
+        "rows": 2616,
+        "sha256": "752543ab5b78a182e23e44af20bfa1b0fa7345a26face91e4d28d82ded3f3d4d"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-10-9ee36a7e418b48fe8d2f.parquet",
+        "rows": 2595,
+        "sha256": "869eb69a4bec59b12377650087d7d88004c9c0ae53adb705af23ed149d1363e5"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-11-0bd78c1149b8068d0a60.parquet",
+        "rows": 2721,
+        "sha256": "d169386a96c316235e4ff27bff672a16edb0a58a25666f627101440e3235f501"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2021-12-61d7c7aa1741e0e175f6.parquet",
+        "rows": 2790,
+        "sha256": "d0a8b137ab22f68ba9c9551d26ba4cd73dac5499e8e4f4e4d39930fa6ff7c1b5"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-01-13815b15b17b754157cc.parquet",
+        "rows": 2614,
+        "sha256": "3834fcf3de80e080a678eb329c1b6878eef752fe4a1e39e53d9fb1f8e8c999fa"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-02-b20fc98df78c4aefd71d.parquet",
+        "rows": 2424,
+        "sha256": "437dced7ab69dc0fe20918eaf8c72019d1a8be6712ba1e587d1bb0c4fb5375ce"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-03-990ae9ebae693bc6643c.parquet",
+        "rows": 2788,
+        "sha256": "db34c5169b0acdb39f52b7f85df0ff7903133c014a4817b4234e5c946b811d9a"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-04-61c79bd15e78406e0c6f.parquet",
+        "rows": 2477,
+        "sha256": "b6dec83e944dddea3e85c78b36353f6b3030a607aff5cdc7b2893da7a56c4c10"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-05-266c44b9a62e557cd75a.parquet",
+        "rows": 2609,
+        "sha256": "48cab7b3af6b4bc2b0183d0fb8189c3065c231298e418a784ecb66da47824c81"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-06-c099c6fa458f2106c730.parquet",
+        "rows": 2588,
+        "sha256": "4960642bc859e0679705e10af6d2c44a8c4632fbdd0b9dd1329360c9c55edd7d"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-07-d0750ec2fa20bd53a12c.parquet",
+        "rows": 2437,
+        "sha256": "26e5e78d4597bfc573dab4c54fe61c5ea268d8c48e5ab8b08107c6d2fbe12c35"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-08-a8c782569462fe0d2d05.parquet",
+        "rows": 2883,
+        "sha256": "7efad0af6002a42f03e013a0664e5c54e5aa6605c679a59550552eff189a2c01"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-09-938142894b6b3aa4b9bf.parquet",
+        "rows": 2550,
+        "sha256": "c54c24e8f8503e514cadedc7ef2a9ccee0eb373f41f68ac568ddd06000b68f49"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-10-a0c2890725fbbf8032b8.parquet",
+        "rows": 2584,
+        "sha256": "f4b2ace4a993852e65a0089e5e6b3896581223d86c879d0a639b3c5572a11c14"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-11-c37852ec015e6756b60f.parquet",
+        "rows": 2592,
+        "sha256": "94d8c34e835d691165bd320e5b34c53c94b18929dd8d708c295105e9fd405023"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2022-12-f3720dfff2a8c3ffbd89.parquet",
+        "rows": 2492,
+        "sha256": "8b4d7de380d8b8e391694695bdbf5d68e332487e515c36f9b317d025698d3444"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2023-01-448a07442d69ce4a567b.parquet",
+        "rows": 2488,
+        "sha256": "bebdee2cb44431fcf5a39a0fe47cf2ac1fad6d22b315813aa0ee82f5a4d46aff"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2023-02-940f01a66e3c47cc6995.parquet",
+        "rows": 2361,
+        "sha256": "002a09b6a2e7e2cdf15114f7451bcee7e1df147d5cf42d2bf72a6f0c5a044dbe"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2023-03-9c1ba3716ff047dc552f.parquet",
+        "rows": 2933,
+        "sha256": "945def50a446e175e1c5c0f5c5fe0cc31a532ce7c8aed641c5120f3a7637fe90"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2023-04-488b167ae4c65881311f.parquet",
+        "rows": 2385,
+        "sha256": "6174547e4ab567e399770ddd7183436a804a7851706fa7307823a20926d037a4"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2023-05-399b7daff33eef78e25f.parquet",
+        "rows": 2666,
+        "sha256": "a4dcf664d097abaa3d369a9d925bb26c6d93e446db715dc134306878039ef9a2"
+      },
+      {
+        "path": "data/raw/alpaca/track_a/2023-06-218d2f2b566f23f67721.parquet",
+        "rows": 2529,
+        "sha256": "0cc721b71e39fbde9fd06cc4649ead40f4c0c63725d28335d70acaa106eb41bd"
+      },
+      {
+        "path": "data/raw/alpaca/track_a_remediation_v1/native30/2019-12-7467171f13034422e42a.parquet",
+        "rows": 992,
+        "sha256": "76380c285f96abc0eb48e746aca098c234aa2edd19e7a692b3d4204a95860998"
+      },
+      {
+        "path": "data/raw/alpaca/track_a_remediation_v1/native30/2020-01-26ac2e12be5ad6f36c78.parquet",
+        "rows": 2563,
+        "sha256": "0025e96a2b8ae0ac27d8a926590c0f016529b4fe2cd331ede0dda4f1d74c47fc"
+      },
+      {
+        "path": "data/raw/alpaca/track_a_remediation_v1/native30/2020-02-1899b929cc78bc18f593.parquet",
+        "rows": 2353,
+        "sha256": "038ba3a9d055d754048c132c9e05caf9e128255a067241d9bfa5c6257f4578bb"
+      },
+      {
+        "path": "data/raw/alpaca/track_a_remediation_v1/native30/2020-03-adaee6ccb3b2e9444e9d.parquet",
+        "rows": 3112,
+        "sha256": "c28b3dd3cf7c01ae266a72cc0109911e0b42e2d1ba876885f7f330798e63f51f"
+      },
+      {
+        "path": "data/raw/alpaca/track_a_remediation_v1/native30/2020-04-3983d04b91aeee20163b.parquet",
+        "rows": 2926,
+        "sha256": "7aef70ac5a6152d4354a8930079d91dd6db4aefc05fce13e0fc30afff17370e8"
+      },
+      {
+        "path": "data/raw/alpaca/track_a_remediation_v1/native30/2020-05-7d293e8230de9d7f48f5.parquet",
+        "rows": 2646,
+        "sha256": "d954cacb1c476155610fff12aff84c30d9302cb6b700450b004e43eeef0434c0"
+      },
+      {
+        "path": "data/raw/alpaca/track_a_remediation_v1/native30/2020-06-da4f46b93c4fd589ec49.parquet",
+        "rows": 2958,
+        "sha256": "2d0322f9b35b0668812374e9b19f7b361f0b2bd9b96b6f9b8575cfe623817ec0"
+      }
+    ],
+    "stop_exclusive": "2023-07-01",
+    "warmup": true
+  },
+  "status": "PASS",
+  "symbols": [
+    "AAPL",
+    "JPM",
+    "JNJ",
+    "WMT",
+    "CAT"
+  ]
+}

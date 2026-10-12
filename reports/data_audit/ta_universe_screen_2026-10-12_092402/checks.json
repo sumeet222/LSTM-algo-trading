@@ -1,0 +1,63 @@
+{
+  "budget": {
+    "Alpaca_market_data_attempts": 12,
+    "Massive_Databento_Tiingo_Yahoo_attempts": 0,
+    "SPY_attempts": 0,
+    "additional_bytes_so_far": 6285835,
+    "all_other_pages_maximum_used": 1,
+    "credentials_printed": false,
+    "explicit_exception": true,
+    "first_page_lifetime_attempts": 4,
+    "maximum": 1000,
+    "remaining": 988,
+    "sandbox_failures": 3,
+    "storage_cap": 268435456,
+    "successes": 9,
+    "zero_GET_resume": "PASS9chunks"
+  },
+  "classification": "UNIVERSE_SCREEN_PARTIAL_RESOURCE_OR_SOURCE_BLOCKED \u2014 HUMAN_REVIEW_REQUIRED",
+  "forbidden_work": {
+    "Git_stage_commit_push_merge_pull_stash_reset_clean": false,
+    "P4": false,
+    "TG0_labels": false,
+    "confirmation_price_feature_label_performance_rows": false,
+    "historical_predictions_trading": false,
+    "real_feature_target_fitting": false,
+    "universe_switch": false
+  },
+  "gates": {
+    "A": "PASS:919/1502,1183/1502,168keys/15clusters,75direct+244propagated,all32diagnosticbounds",
+    "B": "SIP_ACCESS_TIMING_AND_RETROSPECTIVE_LIQUIDITY_PASS; PIT_FORMATION_AND_HON_ACTION_CONTROL_INCONCLUSIVE",
+    "C": "STOPPED_AT_SOURCE_QA_AND_OBSERVED_GAP_BOUND;31BACKUP_FULL_PANELS_NOT_MEASURED;ALL32CONDITIONAL_UPPER_BOUNDS_FAIL90",
+    "D": "ENGINEERING_VERIFICATION_PASS_SCIENTIFIC_HOLD"
+  },
+  "original_universe": "UNCHANGED",
+  "package": "TA-UNIVERSE-RETENTION-SCREEN-001",
+  "preliminary_QA_correction": "backup_source_qa_v2.json supersedes v1 HON control PASS; v1 retained with candidate_scope_notes.json correction",
+  "preservation": "PASS653trackedfiles/257rawfiles/temp.md;16P2/33P3holds;7blockers;0of40neuralpairs",
+  "scientific_status": "HOLD",
+  "tests": {
+    "AST": 98,
+    "code_sha_unchanged_after_final_functional_change": "PASS",
+    "editor_refresh": "Human review item; no reproducible mismatch found; no restart requested",
+    "final_full": 468,
+    "final_log": "final_pytest.txt",
+    "focused_correction": 1,
+    "focused_initial_impacted": 23,
+    "git_diff_check": "PASS",
+    "resources": {
+      "peak_child_rss_bytes": 239960064,
+      "returncode": 0,
+      "seconds": 643.0977537919971
+    },
+    "ruff": "PASS",
+    "static_command": ".venv/bin/python scripts/check_python_types.py --pylance-dist <installed-Pylance-extension>/dist",
+    "static_summary": {
+      "errorCount": 0,
+      "filesAnalyzed": 98,
+      "informationCount": 0,
+      "timeInSec": 11.799,
+      "warningCount": 0
+    }
+  }
+}
