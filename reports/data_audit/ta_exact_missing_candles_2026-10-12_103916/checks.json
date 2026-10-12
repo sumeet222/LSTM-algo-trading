@@ -1,0 +1,31 @@
+{
+  "conservation": "700 tracked files and 276 raw files unchanged during inventory",
+  "credentials_loaded": false,
+  "diff_check": "PASS",
+  "editor_verification": "No new Python files or editor configuration changes. For optional editor confirmation, refresh Problems with repository .venv selected; no new human editor count claimed.",
+  "full_suite": "Not run: no production code or repository Python helper changed; narrow task requests full suite only for production changes",
+  "inventory_validation": "168 unique CSV/JSON/Markdown rows; 168 exact prior keys; 60 original manifest/data pairs verified; all source hashes rechecked",
+  "network_calls": 0,
+  "parity": {
+    "actual_extension": "ms-python.vscode-pylance-2026.4.1",
+    "command": ".venv/bin/python scripts/check_python_types.py --pylance-dist <installed-Pylance-extension>/dist",
+    "errors": 0,
+    "filesAnalyzed": 98,
+    "mode": "basic",
+    "seconds": 7.067,
+    "version": "1.1.414",
+    "warnings": 0
+  },
+  "pytest": {
+    "command": ".venv/bin/python -m pytest -q tests/test_aggregation.py tests/test_calendar_alignment.py tests/test_stock_source.py",
+    "passed": 41,
+    "seconds": 4.69
+  },
+  "ruff": {
+    "command": ".venv/bin/ruff check .",
+    "result": "PASS"
+  },
+  "scientific_status": "HOLD; all 16 P2 and 33 P3 entries preserved",
+  "status": "MISSING_CANDLE_INVENTORY_COMPLETE \u2014 HUMAN_REVIEW_REQUIRED",
+  "task_id": "TA-DATA-GAP-INVENTORY-001"
+}
