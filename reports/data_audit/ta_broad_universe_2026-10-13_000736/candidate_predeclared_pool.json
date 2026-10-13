@@ -1,0 +1,105 @@
+{
+  "confirmation": "UNOPENED; resolve full-horizon D1 selection conflict before any later acquisition",
+  "controls_ineligible": [
+    "CSCO",
+    "MSFT",
+    "INTC",
+    "NVDA"
+  ],
+  "formation": "2020-07-01",
+  "groups": {
+    "Communication Services": [
+      "VZ",
+      "CMCSA",
+      "DIS"
+    ],
+    "Consumer Discretionary": [
+      "HD",
+      "MCD",
+      "LOW"
+    ],
+    "Consumer Staples": [
+      "WMT",
+      "COST",
+      "PG"
+    ],
+    "Energy": [
+      "XOM",
+      "CVX",
+      "COP"
+    ],
+    "Financials": [
+      "JPM",
+      "BAC",
+      "WFC"
+    ],
+    "Health Care": [
+      "JNJ",
+      "MRK",
+      "ABT"
+    ],
+    "Industrials": [
+      "CAT",
+      "HON",
+      "UPS",
+      "DE"
+    ],
+    "Materials": [
+      "LIN",
+      "APD"
+    ],
+    "Real Estate": [
+      "PLD",
+      "AMT"
+    ],
+    "Technology": [
+      "AAPL"
+    ],
+    "Utilities": [
+      "NEE",
+      "DUK"
+    ]
+  },
+  "package": "TA-BROAD-UNIVERSE-SCREEN-001",
+  "production_universe_unchanged": true,
+  "sector_status": "PROVISIONAL_2020_NOT_CERTIFIED",
+  "selection_rule": [
+    "formation_evidence",
+    "fewer_five_training_date_gaps",
+    "source_consistency",
+    "four_distinct_nontech_sectors",
+    "ticker_ascending"
+  ],
+  "symbols": [
+    "AAPL",
+    "JPM",
+    "BAC",
+    "WFC",
+    "JNJ",
+    "MRK",
+    "ABT",
+    "WMT",
+    "COST",
+    "PG",
+    "HD",
+    "MCD",
+    "LOW",
+    "CAT",
+    "HON",
+    "UPS",
+    "DE",
+    "XOM",
+    "CVX",
+    "COP",
+    "NEE",
+    "DUK",
+    "LIN",
+    "APD",
+    "VZ",
+    "CMCSA",
+    "DIS",
+    "PLD",
+    "AMT"
+  ],
+  "systemic_stop": "More than half of the28 nontech names have a verified targeted gap; stop full acquisition"
+}

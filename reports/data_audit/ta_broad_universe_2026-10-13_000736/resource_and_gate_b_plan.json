@@ -1,0 +1,47 @@
+{
+  "Gate_B_decision": "STOP before extensive acquisition:26/28 gaps and all candidate T2 ceilings below1352",
+  "actual_attempts": 8,
+  "attempt_cap": 1000,
+  "complete_new_chunks": 7,
+  "confirmation": "Only calendar counts used for resource projection; no confirmation rows parsed. Future full-horizon selection must get human guidance on D1/nonpeeking conflict.",
+  "density_caveat": "10000 is a limit, not achieved density; one nonterminal page has494 rows. No monthly-density claim.",
+  "existing_source_copies": 0,
+  "failed_attempts": 0,
+  "full_history_projections": [
+    {
+      "calendar_months": 67,
+      "calendar_session_source_row_bound_48_per_session": 533376,
+      "new_nontech_stocks": 8,
+      "nominal_10000row_page_estimate_not_guaranteed": 67,
+      "observed_494row_nonterminal_density_scenario": 1127,
+      "observed_density_with_3_attempts_per_page": 3381,
+      "status": "NOT_EXECUTED; SYSTEMIC_AND_T2_STOP; NO_SHORTLIST_APPROVED",
+      "uncompressed_bytes_at128_per_row": 68272128
+    },
+    {
+      "calendar_months": 67,
+      "calendar_session_source_row_bound_48_per_session": 800064,
+      "new_nontech_stocks": 12,
+      "nominal_10000row_page_estimate_not_guaranteed": 134,
+      "observed_494row_nonterminal_density_scenario": 1669,
+      "observed_density_with_3_attempts_per_page": 5007,
+      "status": "NOT_EXECUTED; SYSTEMIC_AND_T2_STOP; NO_SHORTLIST_APPROVED",
+      "uncompressed_bytes_at128_per_row": 102408192
+    }
+  ],
+  "lifetime_max_attempts_per_page_observed": 1,
+  "min_between_sends_seconds": 0.603762,
+  "new_archive_bytes": 197805,
+  "package": "TA-BROAD-UNIVERSE-SCREEN-001",
+  "pilot_predicted_worst_attempts": 84,
+  "prehistory_caveat": "calendar lower bound only; actions or actual gaps may require earlier context",
+  "prehistory_lower_bound": "2019-12-18",
+  "response_bytes": 335225,
+  "reused_source_chunks": 9,
+  "rows_new": 3152,
+  "sends_per_minute_cap": 100,
+  "storage_cap_bytes": 268435456,
+  "successful_pages": 8,
+  "successful_responses": 8,
+  "zero_get_resume": true
+}
