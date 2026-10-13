@@ -1,0 +1,100 @@
+{
+  "formation_path": "reports/data_audit/ta_sp500_greedy_approved_2026-10-13_022009/formation_amzn_v1.json",
+  "formation_sha256": "6876c964af5ed2dd2a6bb126c74d0a6c0ff011bec9e9a69ab105efd3d02a6bfe",
+  "liquidity_ref": "reports/data_audit/ta_sp500_greedy_approved_2026-10-13_022009/formation_amzn_liquidity.json",
+  "liquidity_sha256": "6c3d0913e8660569ccf8f1bc5c7a5927a2b429e9382c30ba16e33cbe49018678",
+  "maximum_calendar_rows": 240,
+  "maximum_source_bytes_at128": 30720,
+  "package": "TA-SP500-GREEDY-UNIVERSE-001",
+  "previous_matching_archive": "AMZN not present in canonical, backup or old broad namespaces",
+  "requests": [
+    {
+      "hash": "3ab8a22e9e8d3631beaed40289a14eb56fb7fa107a5d4041d831890511253dcf",
+      "kind": "TARGETED_30MIN",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-20T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-19T04:00:00+00:00",
+        "symbols": "AMZN",
+        "timeframe": "30Min"
+      }
+    },
+    {
+      "hash": "7f4a4ecc5cc301077468dcd2938ca2718cff1b06eeabc0e2663a38d8b156fc39",
+      "kind": "TARGETED_30MIN",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-10-26T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-10-25T04:00:00+00:00",
+        "symbols": "AMZN",
+        "timeframe": "30Min"
+      }
+    },
+    {
+      "hash": "e65d955899c1d4ba1c9f462261ad330d7e702c3de0a539fd059a5186c2f675ff",
+      "kind": "TARGETED_30MIN",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-25T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-24T05:00:00+00:00",
+        "symbols": "AMZN",
+        "timeframe": "30Min"
+      }
+    },
+    {
+      "hash": "58f659466ef865064e6945b1e6ba694336d6464ae53abdb59f9a6e8cc3573a62",
+      "kind": "TARGETED_30MIN",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-27T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-26T05:00:00+00:00",
+        "symbols": "AMZN",
+        "timeframe": "30Min"
+      }
+    },
+    {
+      "hash": "44f4beaaa73b806c5c5568f37c57c8b14f4367a5230b2ef8a987ede6f8c6d6be",
+      "kind": "TARGETED_30MIN",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-03-09T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-03-08T05:00:00+00:00",
+        "symbols": "AMZN",
+        "timeframe": "30Min"
+      }
+    }
+  ],
+  "requests_sha256": "bfe8c11e43f1b88dcd29f32df6bad13c2d83f9fc5036b4ff402b881b5cf6bb52",
+  "rule_sha256": "94cd0039907f7e3d8100fb83d137ec25ab435cb1f02351a0cbd67e5531b85ce9",
+  "worst_attempts": 15
+}

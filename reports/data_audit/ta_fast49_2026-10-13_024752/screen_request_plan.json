@@ -1,0 +1,117 @@
+{
+  "cache": {
+    "previous_manifest": "reports/data_audit/ta_broad_universe_2026-10-13_000736/immutable_source_manifest.json",
+    "sha256": "83a628ea84926484a3c853965f0e0b5072c7d8e81c5501f5ad9da0a9b7f81dce"
+  },
+  "calendar_max_rows": 6000,
+  "maximum_pages": 6,
+  "package": "TA-FAST-UNIVERSE-SELECT4-DOWNLOAD-QA-001",
+  "pool_sha256": "a730dca6b9cd367f88c62ab8eb133a5b4fb4ab235f31d9526629a94944284ae7",
+  "requests": [
+    {
+      "kind": "FORMATION_DAILY",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2020-07-01",
+        "currency": "USD",
+        "end": "2020-07-01T03:59:59.999999999Z",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-04-06T04:00:00Z",
+        "symbols": "GS,MS,C,BLK,PFE,UNH,BMY,KO,PEP,CL,GM,F,SBUX,LMT,RTX,GE,SLB,OXY,SO,D",
+        "timeframe": "1Day"
+      },
+      "request_hash": "ab0443c0b8a64c729120f76d2ace7383cdc273476f41a1474a29f387d6e26a3f"
+    },
+    {
+      "kind": "TARGETED_30MIN",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-20T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-19T04:00:00+00:00",
+        "symbols": "GS,MS,C,BLK,PFE,UNH,BMY,KO,PEP,CL,GM,F,SBUX,LMT,RTX,GE,SLB,OXY,SO,D",
+        "timeframe": "30Min"
+      },
+      "request_hash": "85ec4788eaf7e9027e2142c15846ee9a0ce85ff75e50719442e0ad942c7cc712"
+    },
+    {
+      "kind": "TARGETED_30MIN",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-10-26T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-10-25T04:00:00+00:00",
+        "symbols": "GS,MS,C,BLK,PFE,UNH,BMY,KO,PEP,CL,GM,F,SBUX,LMT,RTX,GE,SLB,OXY,SO,D",
+        "timeframe": "30Min"
+      },
+      "request_hash": "5a3ce77c52a57992c60234ca4e56d13e369f00acc42f808edea65aa873f6ea70"
+    },
+    {
+      "kind": "TARGETED_30MIN",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-25T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-24T05:00:00+00:00",
+        "symbols": "GS,MS,C,BLK,PFE,UNH,BMY,KO,PEP,CL,GM,F,SBUX,LMT,RTX,GE,SLB,OXY,SO,D",
+        "timeframe": "30Min"
+      },
+      "request_hash": "93e5dac5df181c7ab1c82c96a9e08e1acba88d6a179a1f18941573e9d2961308"
+    },
+    {
+      "kind": "TARGETED_30MIN",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-27T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-26T05:00:00+00:00",
+        "symbols": "GS,MS,C,BLK,PFE,UNH,BMY,KO,PEP,CL,GM,F,SBUX,LMT,RTX,GE,SLB,OXY,SO,D",
+        "timeframe": "30Min"
+      },
+      "request_hash": "4c3ed0928ff97e5fa3d1fe74efad2ecad8f78ea1b1994b3a8eafbfc748326209"
+    },
+    {
+      "kind": "TARGETED_30MIN",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-03-09T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-03-08T05:00:00+00:00",
+        "symbols": "GS,MS,C,BLK,PFE,UNH,BMY,KO,PEP,CL,GM,F,SBUX,LMT,RTX,GE,SLB,OXY,SO,D",
+        "timeframe": "30Min"
+      },
+      "request_hash": "1bb1670d01e591594a2f6228dbe2540100529fde248e6e0dda0fc53baf7cddd2"
+    }
+  ],
+  "requests_sha256": "0312fe86c532a454a4402a9c5c40cc663a4f7639e3e7f308fa29f77f5d44d6d8",
+  "uncompressed_byte_estimate_at128": 768000,
+  "worst_attempts": 18
+}

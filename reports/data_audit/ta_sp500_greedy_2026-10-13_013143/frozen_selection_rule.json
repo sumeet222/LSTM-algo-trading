@@ -1,0 +1,43 @@
+{
+  "AAPL_anchor": true,
+  "approved_candidate_rank_list_sha256": null,
+  "approved_rank_source": null,
+  "budget": {
+    "Alpaca_attempts": 1000,
+    "additional_bytes": 268435456,
+    "sends_per_minute": 100
+  },
+  "confirmation": "No labels/features/returns; any later full-period native counts separate from training-based selection; resolve governance before admission",
+  "gap_rules": {
+    "earlier_minor_vs_later_clean": "STOP_FOR_HUMAN_DECISION",
+    "major": "Any run>=3 or serious source exception; reject after authentic mapping verified",
+    "minor": "Only1\u20132 consecutive missing candles per run; candidate-only, no cleanup authority or inferred pass",
+    "native_clean": "Genuine complete source and measured frozen feature/formation checks",
+    "terminal": "Separate T2 blocker even when isolated"
+  },
+  "gate1": "HOLD",
+  "live_rank_led_acquisition_allowed": false,
+  "no_cleanup_or_canonical_switch": true,
+  "ordered_sector_rule": "Skip represented sector; accept first fully qualifying distinct-sector name; candidate failure advances rank; five distinct sectors",
+  "package": "TA-SP500-GREEDY-UNIVERSE-001",
+  "proposal_csv_sha256": "373c3f102d4b9a6f9e90c96f0a4ee2952f2f12fdb1c707df711738e15e03a49c",
+  "proposed_historical_fallback": {
+    "class_rule": "Retain class with largest disclosed value per explicitly named issuer; tie ascending name. Do not aggregate other classes into its weight.",
+    "human_approval_required": true,
+    "not_certified_float_cap_order": true,
+    "rank": "Descending disclosed fund holding USD value; exact ties ascending disclosed security name until verified stable IDs available",
+    "source_id": "SPY_MAR2020_SEC_N30D_HOLDING_WEIGHT_FALLBACK_PROPOSAL",
+    "weights": "value / full505-common-stock total; exclude duplicate classes without renormalizing remaining weights"
+  },
+  "scientific": "HOLD;0/40",
+  "source_evidence_sha256": "26c70f8ccb2b63bbee51f9d2b8115a620161c7dc08344db203219bdef6ab433f",
+  "thresholds": {
+    "dollar_volume_60sessions": 50000000,
+    "each_origin_fold_supported_regime": 0.85,
+    "native_overall": 0.98,
+    "native_year": 0.95,
+    "train_denominator": 1502,
+    "train_numerator": 1352
+  },
+  "version": 1
+}

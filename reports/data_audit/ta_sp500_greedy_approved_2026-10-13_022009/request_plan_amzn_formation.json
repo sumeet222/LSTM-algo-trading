@@ -1,0 +1,32 @@
+{
+  "additional_estimated_bytes": 15872,
+  "formation_path": "reports/data_audit/ta_sp500_greedy_approved_2026-10-13_022009/formation_amzn_v1.json",
+  "formation_sha256": "6876c964af5ed2dd2a6bb126c74d0a6c0ff011bec9e9a69ab105efd3d02a6bfe",
+  "maximum_daily_rows": 60,
+  "new_namespace": "data/raw/alpaca/track_a_sp500_greedy_candidate_v1",
+  "new_package_budget": 1000,
+  "package": "TA-SP500-GREEDY-UNIVERSE-001",
+  "prior_journals_not_changed": true,
+  "requests": [
+    {
+      "hash": "12aa019b996cb6987925062e895c9fc616a870dcb981a8f31303d7045cf1f758",
+      "kind": "FORMATION_DAILY",
+      "max_pages": 1,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2020-07-01",
+        "currency": "USD",
+        "end": "2020-07-01T03:59:59.999999999Z",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-04-06T04:00:00Z",
+        "symbols": "AMZN",
+        "timeframe": "1Day"
+      }
+    }
+  ],
+  "requests_sha256": "b774d6c996008cdc24dca24431ef31faad42be502238309e1b1cc157f499135a",
+  "rule_sha256": "94cd0039907f7e3d8100fb83d137ec25ab435cb1f02351a0cbd67e5531b85ce9",
+  "worst_attempts": 3
+}

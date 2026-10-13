@@ -1,0 +1,12 @@
+# Human-review card — FAST49 partial source QA
+
+**FAST_FIVE_STOCK_PARTIAL_SOURCE_OR_RESOURCE_BLOCKED — HUMAN_REVIEW_REQUIRED; SCIENTIFIC_HOLD.**
+
+1. Exact49 names,20 additions including GM; no restarted S&P ranking workflow. Pool/policy hashes precede new observations; no returns or later-year stock selection.
+2. All245 fixed TRAIN stock/date samples and all49 raw60-session liquidity proxies measured;145 inherited observations reconcile. Sector/membership/publication remain provisional/UNVERIFIED.
+3. Review frozen **AAPL,COST,CMCSA,SBUX,HON**: five provisional sectors. COST beats zero-gap PEP by measured formation liquidity; PEP cannot fill a fourth sector. HON beats the remaining sector alternatives by missingness. No post-bulk replacement.
+4. HON's12 consecutive absent half-hours10:00–16:00ET April19,2021 include the15:30 terminal close. It violates the1–2 preference. No fill, terminal reconstruction or source repair. No selected measured1–2-only runs.
+5. AAPL complete:16261/16261 five-year RTH keys and1736/1736 genuine prehistory keys. Other four:631/631 prehistory keys throughFebruary2020 and five screen days;1250 main-window sessions each remain unmeasured. Their full98%/95% gates are NOT_MEASURED.
+6. Bulk3/67 shared chunks completed; March2020 hasfour HTTP200 pages/2184 unpublished rows with continuation outstanding.64 remaining partitions are listed.20 FAST attempts+6 inherited=26/1000; new source store350095bytes. Ceiling not exhausted; do not silently reset journal or lifetime-page counts.
+7. Conditional T2-only ceiling1448/1502 (96.40%), not measured FT0 or a90% pass.16 P2/33 P3/seven blockers/0-40 unchanged. HON future split/action vintage and historical eligibility, publication, floors/scalers, execution, collaborator signoffs remain HOLD.
+8. Engineering:126 Python files0errors/0warnings; Ruff PASS;47 focused tests PASS; full pytest **PASS:597 tests**.1399 protected originals unchanged. Review [exact inventory](exact_missing_candle_inventory.md), [partial CSV](missing_candles_all_selected.csv), [remaining64 partitions](remaining_partitions.csv) and [session report](../../codex_sessions/2026-10-13_024752_ta-fast-universe-select4-download-qa-001-final.md). Next decision concerns [the unexecuted bounded capacity proposal](pagination_capacity_followup.md),794 worst cumulative attempts with no automatic retries, separately from D1 activation or cleanup. No Git integration.

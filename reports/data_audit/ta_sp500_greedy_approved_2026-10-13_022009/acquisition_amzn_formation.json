@@ -1,0 +1,32 @@
+{
+  "attempts_used": 1,
+  "chunks": [
+    {
+      "data": "data/raw/alpaca/track_a_sp500_greedy_candidate_v1/formation_daily/2020-04-12aa019b996cb6987925.parquet",
+      "kind": "FORMATION_DAILY",
+      "manifest": "data/raw/alpaca/track_a_sp500_greedy_candidate_v1/formation_daily/2020-04-12aa019b996cb6987925.manifest.json",
+      "manifest_sha256": "be2a0e24bb47f4ce8c7048f50b5a97ffb06031152b0ba990e179019216e8eabe",
+      "params": {
+        "adjustment": "raw",
+        "asof": "2020-07-01",
+        "currency": "USD",
+        "end": "2020-07-01T03:59:59.999999999Z",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-04-06T04:00:00Z",
+        "symbols": "AMZN",
+        "timeframe": "1Day"
+      },
+      "resumed_zero_GET": false,
+      "rows": 60,
+      "sha256": "f2cc3a1c03d07d0f26eef3816df2b8b0b535519adfdd7ddede8f9539a9725b14",
+      "terminal_page_verified": true
+    }
+  ],
+  "journal_sha256": "064fe85433b43d323d8cc50e5f142ee6b38b0f2426b5de8650601ba22c3d73eb",
+  "package": "TA-SP500-GREEDY-UNIVERSE-001",
+  "plan": "reports/data_audit/ta_sp500_greedy_approved_2026-10-13_022009/request_plan_amzn_formation.json",
+  "plan_sha256": "90a005fbc8c66b07fad667899084a3fd511395987c56254a56c93084d2e08471",
+  "scientific_activation": false
+}
