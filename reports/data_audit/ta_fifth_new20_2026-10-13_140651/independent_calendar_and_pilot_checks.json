@@ -1,0 +1,71 @@
+{
+  "calendar_controls": [
+    {
+      "close_utc": "2020-07-01T20:00:00+00:00",
+      "expected": 13,
+      "observed": 13,
+      "open_utc": "2020-07-01T13:30:00+00:00",
+      "session_et": "2020-07-01",
+      "source_sha256": "8c228fadf4b68e8bd1be643fae10b31f04dc4471238c901bfdf8ad51e30ee525",
+      "terminal_present": true,
+      "ticker": "CME"
+    },
+    {
+      "close_utc": "2020-11-27T18:00:00+00:00",
+      "expected": 7,
+      "observed": 7,
+      "open_utc": "2020-11-27T14:30:00+00:00",
+      "session_et": "2020-11-27",
+      "source_sha256": "c669410194d7c8a92a3a85751ac954ee752091d21667f2087af528948ad211a8",
+      "terminal_present": true,
+      "ticker": "CME"
+    },
+    {
+      "close_utc": "2021-03-12T21:00:00+00:00",
+      "expected": 13,
+      "observed": 13,
+      "open_utc": "2021-03-12T14:30:00+00:00",
+      "session_et": "2021-03-12",
+      "source_sha256": "a5dfe26180114074066f9795c06cc9a8e1d663c2d7805251c140d7bb076c2828",
+      "terminal_present": true,
+      "ticker": "CME"
+    },
+    {
+      "close_utc": "2021-03-15T20:00:00+00:00",
+      "expected": 13,
+      "observed": 13,
+      "open_utc": "2021-03-15T13:30:00+00:00",
+      "session_et": "2021-03-15",
+      "source_sha256": "a5dfe26180114074066f9795c06cc9a8e1d663c2d7805251c140d7bb076c2828",
+      "terminal_present": true,
+      "ticker": "CME"
+    },
+    {
+      "close_utc": "2025-06-30T20:00:00+00:00",
+      "expected": 13,
+      "observed": 13,
+      "open_utc": "2025-06-30T13:30:00+00:00",
+      "session_et": "2025-06-30",
+      "source_sha256": "65f71311c93ad8395f4c6cf96b9a207cdd5f8c0878fbf98d662ac51d6c148ce9",
+      "terminal_present": true,
+      "ticker": "CME"
+    }
+  ],
+  "fields": [
+    "symbol",
+    "timestamp",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "trade_count",
+    "vwap",
+    "feed",
+    "adjustment",
+    "source_timeframe"
+  ],
+  "pilot_bulk_identical_RTH_records": 65,
+  "returns_computed": false,
+  "source_integrity_only": true
+}

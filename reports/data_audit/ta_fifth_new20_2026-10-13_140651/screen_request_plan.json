@@ -1,0 +1,126 @@
+{
+  "bulk_lower_bound_calendar_rows": 97056,
+  "cache_overlap": "No pool name occurred in prior29/additional20/15 source acquisitions; exact matched names only, no archive copying",
+  "calendar_max_rows": 6000,
+  "conservative_screen_sends": 48,
+  "cumulative_max_screen_sends_with_legacy": 74,
+  "density_basis": "20-symbol prior formation1200rows and five-date batches<=10000; max8responsepages each protects nonterminal continuation",
+  "maximum_single_fifth_calendar_bytes_at128": 12423168,
+  "package": "TA-FIFTH-STOCK-20-NEW-FAST-QA-001",
+  "peak_RAM_preflight": "Single candidate native frame; existing small Parquet/source parser; conservative128MiB reading/normalization, actual resource measured in audits",
+  "pool_sha256": "61b888f55e4f1900b4bd77f89a3a9f6d67e1e185d46b0b75e426d079135dfb29",
+  "requests": [
+    {
+      "kind": "FORMATION_DAILY",
+      "max_attempts": 1,
+      "max_pages": 8,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2020-07-01",
+        "currency": "USD",
+        "end": "2020-07-01T03:59:59.999999999Z",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-04-06T04:00:00Z",
+        "symbols": "ETN,PH,ITW,EMR,USB,PNC,SCHW,AXP,CME,MDT,GILD,AMGN,CVS,EOG,MPC,PSX,AEP,EXC,SHW,ECL",
+        "timeframe": "1Day"
+      },
+      "request_hash": "b2dc2d770b0043f2c731497d6642add61e0b324eeb21fb1f92336771b0a510e4"
+    },
+    {
+      "kind": "TARGETED_30MIN",
+      "max_attempts": 1,
+      "max_pages": 8,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-20T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-19T04:00:00+00:00",
+        "symbols": "ETN,PH,ITW,EMR,USB,PNC,SCHW,AXP,CME,MDT,GILD,AMGN,CVS,EOG,MPC,PSX,AEP,EXC,SHW,ECL",
+        "timeframe": "30Min"
+      },
+      "request_hash": "87213427ded3caed8ff2dcc8695649a27936782e7a80397ad2f9f4b6c7590b71"
+    },
+    {
+      "kind": "TARGETED_30MIN",
+      "max_attempts": 1,
+      "max_pages": 8,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-10-26T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-10-25T04:00:00+00:00",
+        "symbols": "ETN,PH,ITW,EMR,USB,PNC,SCHW,AXP,CME,MDT,GILD,AMGN,CVS,EOG,MPC,PSX,AEP,EXC,SHW,ECL",
+        "timeframe": "30Min"
+      },
+      "request_hash": "acee5702201b371cbfb41092e67584fbcac1b44c6460f165fb23399e403b8b0f"
+    },
+    {
+      "kind": "TARGETED_30MIN",
+      "max_attempts": 1,
+      "max_pages": 8,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-25T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-24T05:00:00+00:00",
+        "symbols": "ETN,PH,ITW,EMR,USB,PNC,SCHW,AXP,CME,MDT,GILD,AMGN,CVS,EOG,MPC,PSX,AEP,EXC,SHW,ECL",
+        "timeframe": "30Min"
+      },
+      "request_hash": "fccfd40658c21e5d7d6f8f4ac4143064a9aa4289e6acacf7803217162d508795"
+    },
+    {
+      "kind": "TARGETED_30MIN",
+      "max_attempts": 1,
+      "max_pages": 8,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-27T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-26T05:00:00+00:00",
+        "symbols": "ETN,PH,ITW,EMR,USB,PNC,SCHW,AXP,CME,MDT,GILD,AMGN,CVS,EOG,MPC,PSX,AEP,EXC,SHW,ECL",
+        "timeframe": "30Min"
+      },
+      "request_hash": "064bf6c34072c4009e3431975b97a63af211d503259d5f2853ce5dcfb5098d08"
+    },
+    {
+      "kind": "TARGETED_30MIN",
+      "max_attempts": 1,
+      "max_pages": 8,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-03-09T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-03-08T05:00:00+00:00",
+        "symbols": "ETN,PH,ITW,EMR,USB,PNC,SCHW,AXP,CME,MDT,GILD,AMGN,CVS,EOG,MPC,PSX,AEP,EXC,SHW,ECL",
+        "timeframe": "30Min"
+      },
+      "request_hash": "95b9d1501f402e00c2c5c789e23f124532ab839df204181bb94732e29fa74d89"
+    }
+  ],
+  "requests_sha256": "37e93ba1bb311c76f61136a47caab5b9414aa4e5f0fc1a6d4e1483dd589e5907",
+  "retry_policy": "one transport send per page, zero automatic retries; lifetime<=3 remains binding",
+  "rough_runtime": "Six bounded requests/pages; target seconds/minutes, stop on provider/pagination/schema failure",
+  "uncompressed_bytes_at128": 768000
+}

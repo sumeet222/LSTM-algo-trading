@@ -1,0 +1,139 @@
+{
+  "HTTP200_results": 73,
+  "P2_entries_unchanged": 16,
+  "P3_entries_unchanged": 33,
+  "archive_bytes": 1798897,
+  "audit_bytes_before_final_report": 2681602,
+  "canonical_universe_unchanged": true,
+  "ceilings": {
+    "attempts": 1000,
+    "bytes": 268435456,
+    "lifetime_per_page": 3,
+    "plan_actual_per_page": 1,
+    "requests_per_minute": 100
+  },
+  "confirmation_access": "SOURCE_KEY_INTEGRITY_ONLY_AFTER_FROZEN_TRAINING_SELECTION",
+  "cumulative_attempts": 99,
+  "engineering": {
+    "all_current_code_hashes_match": true,
+    "calendar_and_source_controls": {
+      "calendar_controls": [
+        {
+          "close_utc": "2020-07-01T20:00:00+00:00",
+          "expected": 13,
+          "observed": 13,
+          "open_utc": "2020-07-01T13:30:00+00:00",
+          "session_et": "2020-07-01",
+          "source_sha256": "8c228fadf4b68e8bd1be643fae10b31f04dc4471238c901bfdf8ad51e30ee525",
+          "terminal_present": true,
+          "ticker": "CME"
+        },
+        {
+          "close_utc": "2020-11-27T18:00:00+00:00",
+          "expected": 7,
+          "observed": 7,
+          "open_utc": "2020-11-27T14:30:00+00:00",
+          "session_et": "2020-11-27",
+          "source_sha256": "c669410194d7c8a92a3a85751ac954ee752091d21667f2087af528948ad211a8",
+          "terminal_present": true,
+          "ticker": "CME"
+        },
+        {
+          "close_utc": "2021-03-12T21:00:00+00:00",
+          "expected": 13,
+          "observed": 13,
+          "open_utc": "2021-03-12T14:30:00+00:00",
+          "session_et": "2021-03-12",
+          "source_sha256": "a5dfe26180114074066f9795c06cc9a8e1d663c2d7805251c140d7bb076c2828",
+          "terminal_present": true,
+          "ticker": "CME"
+        },
+        {
+          "close_utc": "2021-03-15T20:00:00+00:00",
+          "expected": 13,
+          "observed": 13,
+          "open_utc": "2021-03-15T13:30:00+00:00",
+          "session_et": "2021-03-15",
+          "source_sha256": "a5dfe26180114074066f9795c06cc9a8e1d663c2d7805251c140d7bb076c2828",
+          "terminal_present": true,
+          "ticker": "CME"
+        },
+        {
+          "close_utc": "2025-06-30T20:00:00+00:00",
+          "expected": 13,
+          "observed": 13,
+          "open_utc": "2025-06-30T13:30:00+00:00",
+          "session_et": "2025-06-30",
+          "source_sha256": "65f71311c93ad8395f4c6cf96b9a207cdd5f8c0878fbf98d662ac51d6c148ce9",
+          "terminal_present": true,
+          "ticker": "CME"
+        }
+      ],
+      "fields": [
+        "symbol",
+        "timestamp",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "trade_count",
+        "vwap",
+        "feed",
+        "adjustment",
+        "source_timeframe"
+      ],
+      "pilot_bulk_identical_RTH_records": 65,
+      "returns_computed": false,
+      "source_integrity_only": true
+    },
+    "focused_pytest": "57 passed",
+    "full_command": [
+      ".venv/bin/python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "full_pytest": "613 passed in 1330.95s (0:22:10)",
+    "full_seconds": 1332.6847415829834,
+    "pyright_basic_errors": 0,
+    "pyright_basic_warnings": 0,
+    "python_files": 129,
+    "ruff": "PASS",
+    "ruff_command": [
+      ".venv/bin/ruff",
+      "check",
+      "."
+    ],
+    "types_command": [
+      ".venv/bin/python",
+      "scripts/check_python_types.py",
+      "--pylance-dist",
+      "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+    ],
+    "zero_GET_resume": {
+      "GET_delta": 0,
+      "all_source_hashes_verified": true,
+      "journal_sha256_after": "735c87bc5b6eff5e44749ffbb4942ddabf85dd843c84743998cbbe15fd472789",
+      "journal_sha256_before": "735c87bc5b6eff5e44749ffbb4942ddabf85dd843c84743998cbbe15fd472789",
+      "scientific": "HOLD",
+      "verified_cached_pairs": 73
+    }
+  },
+  "failed_sends": 0,
+  "full_FT0_retention": "NOT_MEASURED",
+  "human_review": "REQUIRED",
+  "inherited_attempts": 26,
+  "manual_editor_check": "OPTIONAL_NOT_CLAIMED",
+  "new_HTTP_attempts": 73,
+  "protected_files": 1527,
+  "real_neural_pairs": "0/40",
+  "retained_three_full_sources": "PARTIAL_NOT_DOWNLOADED",
+  "retries": 0,
+  "scientific": "HOLD",
+  "scientific_blockers_unchanged": 7,
+  "source_and_protocol_conservation": "PASS",
+  "status": "FIFTH_STOCK_FULL_SOURCE_QA_PASS",
+  "transient_failures": "One new test fixture initially omitted its StorageLimit argument; corrected. Five initial static diagnostics corrected by DatetimeIndex conversion and explicit heterogeneous-dict annotations, preserving behavior. Temporary report preparation key-name mistakes corrected before selection/acquisition; no source was overwritten."
+}

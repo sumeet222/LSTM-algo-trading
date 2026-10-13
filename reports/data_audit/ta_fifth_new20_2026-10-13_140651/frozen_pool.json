@@ -1,0 +1,257 @@
+{
+  "archive": "data/raw/alpaca/track_a_new20_fifth_candidate_v1",
+  "candidates": [
+    {
+      "company": "Eaton",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 1,
+      "sector_provisional": "Industrials",
+      "ticker": "ETN"
+    },
+    {
+      "company": "Parker-Hannifin",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 2,
+      "sector_provisional": "Industrials",
+      "ticker": "PH"
+    },
+    {
+      "company": "Illinois Tool Works",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 3,
+      "sector_provisional": "Industrials",
+      "ticker": "ITW"
+    },
+    {
+      "company": "Emerson Electric",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 4,
+      "sector_provisional": "Industrials",
+      "ticker": "EMR"
+    },
+    {
+      "company": "U.S. Bancorp",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 5,
+      "sector_provisional": "Financials",
+      "ticker": "USB"
+    },
+    {
+      "company": "PNC Financial Services",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 6,
+      "sector_provisional": "Financials",
+      "ticker": "PNC"
+    },
+    {
+      "company": "Charles Schwab",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 7,
+      "sector_provisional": "Financials",
+      "ticker": "SCHW"
+    },
+    {
+      "company": "American Express",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 8,
+      "sector_provisional": "Financials",
+      "ticker": "AXP"
+    },
+    {
+      "company": "CME Group",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 9,
+      "sector_provisional": "Financials",
+      "ticker": "CME"
+    },
+    {
+      "company": "Medtronic",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 10,
+      "sector_provisional": "Health Care",
+      "ticker": "MDT"
+    },
+    {
+      "company": "Gilead Sciences",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 11,
+      "sector_provisional": "Health Care",
+      "ticker": "GILD"
+    },
+    {
+      "company": "Amgen",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 12,
+      "sector_provisional": "Health Care",
+      "ticker": "AMGN"
+    },
+    {
+      "company": "CVS Health",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 13,
+      "sector_provisional": "Health Care",
+      "ticker": "CVS"
+    },
+    {
+      "company": "EOG Resources",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 14,
+      "sector_provisional": "Energy",
+      "ticker": "EOG"
+    },
+    {
+      "company": "Marathon Petroleum",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 15,
+      "sector_provisional": "Energy",
+      "ticker": "MPC"
+    },
+    {
+      "company": "Phillips66",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 16,
+      "sector_provisional": "Energy",
+      "ticker": "PSX"
+    },
+    {
+      "company": "American Electric Power",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 17,
+      "sector_provisional": "Utilities",
+      "ticker": "AEP"
+    },
+    {
+      "company": "Exelon",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 18,
+      "sector_provisional": "Utilities",
+      "ticker": "EXC"
+    },
+    {
+      "company": "Sherwin-Williams",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 19,
+      "sector_provisional": "Materials",
+      "ticker": "SHW"
+    },
+    {
+      "company": "Ecolab",
+      "historical_eligibility": "UNVERIFIED_UNTIL_INDEPENDENT_EVIDENCE",
+      "priority": 20,
+      "sector_provisional": "Materials",
+      "ticker": "ECL"
+    }
+  ],
+  "corporate_identity_cautions": {
+    "ALL_OTHER_SYMBOLS": "No 2020 rename independently identified yet; UNVERIFIED rather than invented stable mapping",
+    "EXC": "Exelon remains EXC after 2022 Constellation spin-off; not a stock split; publication/unit/action scope unverified",
+    "SCHW": "Postformation2020 Ameritrade acquisition requires action continuity review; not automatically a new formation symbol"
+  },
+  "created_at": "2026-10-13T14:13:00.446071-04:00",
+  "decision_rule": "Qualified historical identity+S&P membership+2020 sector+60-session$50m first; rank zero gaps/no terminal/maxrun<=2/missing count/fixed priority. Unknown historical eligibility not qualified. Full history only one frozen training-qualified fifth at a time.",
+  "excluded_overlap": [],
+  "inherited_attempts_charged": 26,
+  "inherited_journals": [
+    {
+      "attempts": 20,
+      "path": "data/raw/alpaca/track_a_fast49_candidate_v1/transport_attempts.jsonl",
+      "sha256": "2a6e6b3b3d52e2164c75540815aa32c403871a2dbe8b9a7736a076bd61b706cb"
+    },
+    {
+      "attempts": 6,
+      "path": "data/raw/alpaca/track_a_sp500_greedy_candidate_v1/transport_attempts.jsonl",
+      "sha256": "a13d7254f29fbdd12e6580c72496eb826ce5440195b36af07b3b28a806a84c29"
+    }
+  ],
+  "limits": {
+    "additional_bytes": 268435456,
+    "cumulative_attempts_including_inherited": 1000,
+    "page_lifetime_attempts": 3,
+    "sends_per_minute": 100
+  },
+  "no_confirmation_selection": true,
+  "package": "TA-FIFTH-STOCK-20-NEW-FAST-QA-001",
+  "prehistory_start": "2019-12-18",
+  "prior15_exclusions": [
+    "WFC",
+    "GS",
+    "MS",
+    "UNH",
+    "ABT",
+    "PFE",
+    "XOM",
+    "CVX",
+    "COP",
+    "CAT",
+    "DE",
+    "UPS",
+    "NEE",
+    "DUK",
+    "SO"
+  ],
+  "prior_pool_exclusions": [
+    "AAPL",
+    "JPM",
+    "BAC",
+    "WFC",
+    "JNJ",
+    "MRK",
+    "ABT",
+    "WMT",
+    "COST",
+    "PG",
+    "HD",
+    "MCD",
+    "LOW",
+    "CAT",
+    "HON",
+    "UPS",
+    "DE",
+    "XOM",
+    "CVX",
+    "COP",
+    "NEE",
+    "DUK",
+    "LIN",
+    "APD",
+    "VZ",
+    "CMCSA",
+    "DIS",
+    "PLD",
+    "AMT",
+    "GS",
+    "MS",
+    "C",
+    "BLK",
+    "PFE",
+    "UNH",
+    "BMY",
+    "KO",
+    "PEP",
+    "CL",
+    "GM",
+    "F",
+    "SBUX",
+    "LMT",
+    "RTX",
+    "GE",
+    "SLB",
+    "OXY",
+    "SO",
+    "D"
+  ],
+  "retained_four": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX"
+  ],
+  "scientific": "HOLD",
+  "training_dates": [
+    "2021-04-19",
+    "2021-10-25",
+    "2022-01-24",
+    "2022-01-26",
+    "2022-03-08"
+  ]
+}

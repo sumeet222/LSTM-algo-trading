@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "actual_RTH": 1,
+      "expected_RTH": 13,
+      "first_expected_utc": "2021-04-19T13:30:00+00:00",
+      "first_missing_start_utc": "2021-04-19T14:00:00+00:00",
+      "last_expected_utc": "2021-04-19T19:30:00+00:00",
+      "last_missing_start_utc": "2021-04-19T19:30:00+00:00",
+      "request_symbol_day_rows_including_extended": 2,
+      "response_status": "COMPLETED_HTTP200_SOURCE_PAIR",
+      "session_et": "2021-04-19",
+      "source": "data/raw/alpaca/track_a_broad_candidate_v1/targeted_30min/2021-04-b2e36d61eee1162d6ad6.parquet",
+      "source_sha256": "f9edc81e272977e4c3ea323673fd57a51656f939138936babea39acf8da81787",
+      "terminal_missing": true,
+      "ticker": "ABT",
+      "zero_RTH_keys_is_not_zero_trade_proof": true
+    },
+    {
+      "actual_RTH": 0,
+      "expected_RTH": 13,
+      "first_expected_utc": "2022-03-08T14:30:00+00:00",
+      "first_missing_start_utc": "2022-03-08T14:30:00+00:00",
+      "last_expected_utc": "2022-03-08T20:30:00+00:00",
+      "last_missing_start_utc": "2022-03-08T20:30:00+00:00",
+      "request_symbol_day_rows_including_extended": 13,
+      "response_status": "COMPLETED_HTTP200_SOURCE_PAIR",
+      "session_et": "2022-03-08",
+      "source": "data/raw/alpaca/track_a_fast49_candidate_v1/targeted_30min/2022-03-1bb1670d01e591594a2f.parquet",
+      "source_sha256": "1c9a0dab9c4c439e35a5bac5433311b64920f1e84b605fe2efd4c61f0fcfe96f",
+      "terminal_missing": true,
+      "ticker": "PFE",
+      "zero_RTH_keys_is_not_zero_trade_proof": true
+    },
+    {
+      "actual_RTH": 0,
+      "expected_RTH": 13,
+      "first_expected_utc": "2022-03-08T14:30:00+00:00",
+      "first_missing_start_utc": "2022-03-08T14:30:00+00:00",
+      "last_expected_utc": "2022-03-08T20:30:00+00:00",
+      "last_missing_start_utc": "2022-03-08T20:30:00+00:00",
+      "request_symbol_day_rows_including_extended": 9,
+      "response_status": "COMPLETED_HTTP200_SOURCE_PAIR",
+      "session_et": "2022-03-08",
+      "source": "data/raw/alpaca/track_a/2022-03-990ae9ebae693bc6643c.parquet",
+      "source_sha256": "db34c5169b0acdb39f52b7f85df0ff7903133c014a4817b4234e5c946b811d9a",
+      "terminal_missing": true,
+      "ticker": "CAT",
+      "zero_RTH_keys_is_not_zero_trade_proof": true
+    }
+  ],
+  "note": "response_state SUCCESSFUL_EMPTY in the stock-session table describes zero observed RTH keys, not an empty multi-symbol HTTP payload; exact symbol/day extended rows shown here. No trade query or no-trade inference."
+}

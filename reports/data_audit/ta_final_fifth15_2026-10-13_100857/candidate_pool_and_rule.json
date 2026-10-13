@@ -1,0 +1,82 @@
+{
+  "candidates": [
+    "WFC",
+    "GS",
+    "MS",
+    "UNH",
+    "ABT",
+    "PFE",
+    "XOM",
+    "CVX",
+    "COP",
+    "CAT",
+    "DE",
+    "UPS",
+    "NEE",
+    "DUK",
+    "SO"
+  ],
+  "excluded_previous_fifth": "HON",
+  "fixed_four": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX"
+  ],
+  "formation": {
+    "end": "2020-06-30",
+    "measure": "raw vendor daily close times matching raw share volume",
+    "minimum_mean_daily_dollar_volume_USD": 50000000,
+    "sessions": 60,
+    "start": "2020-04-06"
+  },
+  "full_history_access_for_selection": false,
+  "historical_eligibility": "HISTORICAL_ELIGIBILITY_UNVERIFIED unless independently supported; providerasof not original publication",
+  "known_prior_summaries": "Disclosed previously observed; rules supplied unchanged by current prompt; not a blinded original2020 selection",
+  "new_HTTP_before_rule": 0,
+  "package": "TA-FINAL-FIFTH-STOCK-15-CANDIDATES-FULL-SIP-QA-001",
+  "ranking_ascending": [
+    "any_missing",
+    "any_terminal_missing",
+    "any_run_gt2",
+    "total_missing",
+    "affected_sessions",
+    "negative_verified_formation_evidence_strength",
+    "negative_preformation_dollar_volume",
+    "ticker"
+  ],
+  "scientific": "HOLD",
+  "sectors_provisional": {
+    "ABT": "Health Care",
+    "CAT": "Industrials",
+    "COP": "Energy",
+    "CVX": "Energy",
+    "DE": "Industrials",
+    "DUK": "Utilities",
+    "GS": "Financials",
+    "MS": "Financials",
+    "NEE": "Utilities",
+    "PFE": "Health Care",
+    "SO": "Utilities",
+    "UNH": "Health Care",
+    "UPS": "Industrials",
+    "WFC": "Financials",
+    "XOM": "Energy"
+  },
+  "source_identity": {
+    "adjustment": "split",
+    "asof": "2025-06-30",
+    "currency": "USD",
+    "feed": "sip",
+    "sort": "asc",
+    "timeframe": "30Min"
+  },
+  "strict_candidate_rule": "Reject any3+ run. Prefer no-gap; else onlymax-run1-2 provisional cleanup queue. All15fail=>STOP; no16th ticker or large-run waiver.",
+  "training_dates": [
+    "2021-04-19",
+    "2021-10-25",
+    "2022-01-24",
+    "2022-01-26",
+    "2022-03-08"
+  ]
+}
