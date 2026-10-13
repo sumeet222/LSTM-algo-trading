@@ -1,0 +1,85 @@
+.........F......                                                         [100%]
+=================================== FAILURES ===================================
+_______________ test_required_peer_and_source_negatives[scaler] ________________
+
+case = (FitData(universe=UniverseSpec(version='SYN:E5_TEST', symbols=('AA', 'BB', 'CC', 'DD', 'EE'), sectors=()), origins=(Ri...793838319, 1791751014794105562, 67236801)), p2_sha='6c24f84435e5c1a458d2950b605ed977d15d851fe7ec3829f39bac989da96e49'))
+fault = 'scaler'
+
+    @pytest.mark.parametrize(
+        "fault", ["order", "unknown", "nat", "future", "mask", "source", "scaler", "market", "grid"]
+    )
+    def test_required_peer_and_source_negatives(case, fault):
+        data, history, prep, _, permission = case
+        row = data.origins[-1].inputs
+        if fault in {"unknown", "nat", "future"}:
+            at = (
+                None
+                if fault == "unknown"
+                else pd.NaT
+                if fault == "nat"
+                else row.stock.steps[0].end + pd.Timedelta(nanoseconds=1)
+            )
+            clocks = list(row.available_at)
+            stock = list(clocks[1])
+            cell = list(stock[0])
+            cell[M1_INDEX] = at
+            stock[0] = tuple(cell)
+            clocks[1] = tuple(stock)
+            row = replace(row, available_at=tuple(clocks))
+        elif fault == "order":
+            row = replace(row, universe=replace(row.universe, symbols=row.universe.symbols[::-1]))
+        elif fault == "mask":
+            masks = list(row.stock.mask)
+            stock = list(masks[2])
+            cell = list(stock[0])
+            cell[M1_INDEX] = False
+            stock[0] = tuple(cell)
+            masks[2] = tuple(stock)
+            row = replace(row, stock=replace(row.stock, mask=tuple(masks)))
+        elif fault == "source":
+            row = replace(row, stock=replace(row.stock, source_binding="SYN:OTHER"))
+        elif fault == "scaler":
+>           prep = replace(prep, stock_scaler=replace(prep.stock_scaler, source_binding="SYN:OTHER"))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_peer_inputs.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/dataclasses.py:1778: in replace
+    return _replace(obj, **changes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/dataclasses.py:1812: in _replace
+    return self.__class__(**changes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+<string>:16: in __init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ScalerCertificate(centers=(3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0), scales=(1.0, 1.0, 1.0, 1....5_SPLIT_30MIN_V1', dictionary_id='f09ecd5ed58ced5804f3befd71980f5a58c8aa6e3fcd46e8df90e079bac2d163', basis='SYNTHETIC')
+
+    def __post_init__(self) -> None:
+        check_window(self.window)
+        if (
+            self.order != ORDER
+            or len(self.centers) != 13
+            or len(self.scales) != 13
+            or len(self.methods) != 13
+            or any(not math.isfinite(x) for x in self.centers)
+            or any(not math.isfinite(x) or x <= 0 for x in self.scales)
+            or not set(self.methods) <= {"MAD", "IQR_1.349", "AUDITED_POPULATION_SD", "CONSTANT"}
+            or self.source_version != STOCK_VERSION
+            or self.dictionary_id != DICTIONARY_ID
+            or self.basis != "SYNTHETIC"
+            or not self.evidence_ref.strip()
+            or len(self.keys) != len(self.weights)
+            or len(set(self.keys)) != len(self.keys)
+            or not self.keys
+            or len(self.source_binding) != 64
+            or len(self.action_binding) != 64
+        ):
+>           raise ValueError("SCALER_CERTIFICATE_PROVENANCE_REQUIRED")
+E           ValueError: SCALER_CERTIFICATE_PROVENANCE_REQUIRED
+
+src/lstm_data/ft0_transforms.py:317: ValueError
+=========================== short test summary info ============================
+FAILED tests/test_peer_inputs.py::test_required_peer_and_source_negatives[scaler]
+1 failed, 15 passed, 1 deselected in 220.81s (0:03:40)

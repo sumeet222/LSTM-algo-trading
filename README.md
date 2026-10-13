@@ -7,6 +7,10 @@ See `AGENTS.md` for repository and development guidelines.
 
 P4.1–P4.2 now provide a [synthetic-only PyTorch engine and lifecycle](docs/track_a/P4_NEURAL_ENGINE_API_v1.md).
 MC0/MC1 now share this path with an [explicit D7 clock adapter and endpoint gate](docs/track_a/P4_MC0_MC1_SYNTHETIC_API_v1.md), for fabricated inputs only.
+Synthetic RS1/MC2 diagnostics and data-only E5 peer inputs now have a
+[typed API and matched ridge control](docs/track_a/P4_REGIME_PEER_SYNTHETIC_API_v1.md).
+Scientific activation and E5/MC2 neural fitting remain on HOLD.
+
 The approved `neural` extra pins PyTorch 2.10.0. Historical fitting and P4.3
 remain blocked; the scientific pair ledger stays at 0/40. Run a new fabricated
 G5 audit with no data credentials:

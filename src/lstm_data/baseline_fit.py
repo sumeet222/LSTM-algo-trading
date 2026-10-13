@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, replace
+from typing import Protocol
 
 import numpy as np
 import pandas as pd
@@ -14,6 +15,7 @@ from .baseline_ridge import (
     PENALTIES,
     RidgeModel,
     RidgeOrigin,
+    Solution,
     Stage,
     adequacy,
     bind_model,
@@ -260,6 +262,14 @@ def prepare(
     )
 
 
+class DesignAdapter(Protocol):
+    """Synthetic diagnostic adapter; canonical transformed input plus extra columns."""
+
+    def __call__(
+        self, row: BaselineInput, prep: Preparation, permission: Permission, context: str
+    ) -> tuple[BaselineInput, tuple[tuple[float, ...], ...]]: ...
+
+
 def design(
     rows: tuple[RidgeOrigin, ...],
     prep: Preparation,
@@ -268,16 +278,30 @@ def design(
     market: bool,
     context: str,
     matched_market: bool,
+    adapter: DesignAdapter | None = None,
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray, tuple, tuple]:
     features, targets, keys, accepted, failures = [], [], [], [], []
     for row in rows:
         try:
-            transformed = prep.apply(row.inputs, context)
+            extra = None
+            if adapter is None:
+                transformed = prep.apply(row.inputs, context)
+            else:
+                transformed, extra = adapter(row.inputs, prep, permission, context)
             x = lag_vectors(
                 transformed, permission, market=market, allow_synthetic=True, context=context
             )
             if matched_market:
                 transformed.validate_market(permission, allow_synthetic=True)
+            if extra is not None:
+                if (
+                    not market
+                    or len(extra) != 5
+                    or len({len(r) for r in extra}) != 1
+                    or len(extra[0]) not in {0, 14}
+                ):
+                    raise ValueError("EXACT_SYNTHETIC_PEER14_EXTENSION_REQUIRED")
+                x = tuple(base + tail for base, tail in zip(x, extra))
         except ValueError as exc:
             failures.append((row.label.key, str(exc)))
             continue
@@ -308,7 +332,7 @@ class Selection:
     evidence: dict
 
 
-def select_and_refit(
+def selection_fit(
     data: FitData,
     stage: Stage,
     permission: Permission,
@@ -316,7 +340,8 @@ def select_and_refit(
     market: bool,
     allow_synthetic: bool = False,
     matched_market: bool = True,
-) -> Selection:
+    adapter: DesignAdapter | None = None,
+) -> SelectionFit:
     data.validate(permission, allow_synthetic)
     # The authoritative constructors determine each cutoff; fit after the exclusive stop.
     provisional = {"WF1": "2023-07-01", "WF2": "2024-01-01", "PRECONFIRMATION": "2024-07-01"}[stage]
@@ -340,9 +365,16 @@ def select_and_refit(
         market=market,
         context="HISTORICAL_TRAINING",
         matched_market=matched_market,
+        adapter=adapter,
     )
     vx, vy, vw, evaluated, val_bad = design(
-        val, prep, permission, market=market, context="ASOF", matched_market=matched_market
+        val,
+        prep,
+        permission,
+        market=market,
+        context="ASOF",
+        matched_market=matched_market,
+        adapter=adapter,
     )
     guard = adequacy(evaluated)
     candidates = []
@@ -382,6 +414,7 @@ def select_and_refit(
         market=market,
         context="HISTORICAL_TRAINING",
         matched_market=matched_market,
+        adapter=adapter,
     )
     final = solve_weighted(fx, fy, fw, chosen)
     input_hash = identity(
@@ -391,16 +424,6 @@ def select_and_refit(
             fy.tolist(),
             fw.tolist(),
         ]
-    )
-    model = bind_model(
-        data.universe,
-        final,
-        market,
-        refit,
-        final_prep.stock_scaler.certificate_id,
-        identity(final_prep.market_scaler) if market else None,
-        final_prep.tg0_floor.floor_id,
-        input_hash,
     )
     evidence = {
         "scope": "SYNTHETIC_ONLY",
@@ -425,4 +448,49 @@ def select_and_refit(
         "criterion": "SESSION_WEIGHTED_TG0_MSE_EXACT_TIE_LARGER_LAMBDA",
         "scientific_status": "HOLD",
     }
-    return Selection(model, final_prep, tuple(candidates), chosen, evidence)
+    return SelectionFit(final, final_prep, tuple(candidates), chosen, evidence, refit, input_hash)
+
+
+@dataclass(frozen=True)
+class SelectionFit:
+    """Shared synthetic selection/refit kernel; does not confer forecast authority."""
+
+    solution: Solution
+    preparation: Preparation
+    candidates: tuple[dict, ...]
+    selected_penalty: float
+    evidence: dict
+    window: FitWindow
+    input_hash: str
+
+
+def select_and_refit(
+    data: FitData,
+    stage: Stage,
+    permission: Permission,
+    *,
+    market: bool,
+    allow_synthetic: bool = False,
+    matched_market: bool = True,
+) -> Selection:
+    """Original public112/147 model contract; delegates to unchanged selection math."""
+    fitted = selection_fit(
+        data,
+        stage,
+        permission,
+        market=market,
+        allow_synthetic=allow_synthetic,
+        matched_market=matched_market,
+    )
+    prep = fitted.preparation
+    model = bind_model(
+        data.universe,
+        fitted.solution,
+        market,
+        fitted.window,
+        prep.stock_scaler.certificate_id,
+        identity(prep.market_scaler) if market else None,
+        prep.tg0_floor.floor_id,
+        fitted.input_hash,
+    )
+    return Selection(model, prep, fitted.candidates, fitted.selected_penalty, fitted.evidence)

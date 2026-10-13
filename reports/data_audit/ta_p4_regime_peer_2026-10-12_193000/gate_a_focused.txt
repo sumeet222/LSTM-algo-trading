@@ -1,0 +1,63 @@
+.....................FF.                                                 [100%]
+=================================== FAILURES ===================================
+______ test_mc2_twenty_percent_and_sessions_no_activation_order_invariant ______
+
+    def test_mc2_twenty_percent_and_sessions_no_activation_order_invariant():
+        days = tuple(str(d.date()) for d in schedule("2020-08-03", "2020-12-31").index)[:100]
+>       windows = tuple(oracle_window(day, changes=12 if i < 20 else 0) for i, day in enumerate(days))
+                  ^^^^^
+
+tests/test_regime_diagnostics.py:192: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_regime_diagnostics.py:192: in <genexpr>
+    windows = tuple(oracle_window(day, changes=12 if i < 20 else 0) for i, day in enumerate(days))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_regime_diagnostics.py:38: in oracle_window
+    steps = scheduled_window(CALENDAR, day, origin)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+calendar = <lstm_data.m2.ScheduledCalendar object at 0x10e5296a0>
+session = '2020-11-27', origin = 1
+
+    def scheduled_window(
+        calendar: ScheduledCalendar, session: str, origin: int
+    ) -> tuple[ScheduledStep, ...]:
+        """48 scheduled slots ending at the forecast cutoff; missing rows cannot shift it."""
+        plan = execution_plan(calendar.clock(session), origin)
+        if not plan.calendar_valid:
+>           raise ValueError("STRUCTURALLY_INELIGIBLE_ORIGIN")
+E           ValueError: STRUCTURALLY_INELIGIBLE_ORIGIN
+
+src/lstm_data/m2.py:103: ValueError
+________________ test_calendar_dst_earlyclose_overnight_stamps _________________
+
+    def test_calendar_dst_earlyclose_overnight_stamps():
+        for day in ("2020-11-27", "2021-03-15", "2020-11-02"):
+>           w = oracle_window(day)
+                ^^^^^^^^^^^^^^^^^^
+
+tests/test_regime_diagnostics.py:214: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_regime_diagnostics.py:38: in oracle_window
+    steps = scheduled_window(CALENDAR, day, origin)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+calendar = <lstm_data.m2.ScheduledCalendar object at 0x10e5296a0>
+session = '2020-11-27', origin = 1
+
+    def scheduled_window(
+        calendar: ScheduledCalendar, session: str, origin: int
+    ) -> tuple[ScheduledStep, ...]:
+        """48 scheduled slots ending at the forecast cutoff; missing rows cannot shift it."""
+        plan = execution_plan(calendar.clock(session), origin)
+        if not plan.calendar_valid:
+>           raise ValueError("STRUCTURALLY_INELIGIBLE_ORIGIN")
+E           ValueError: STRUCTURALLY_INELIGIBLE_ORIGIN
+
+src/lstm_data/m2.py:103: ValueError
+=========================== short test summary info ============================
+FAILED tests/test_regime_diagnostics.py::test_mc2_twenty_percent_and_sessions_no_activation_order_invariant
+FAILED tests/test_regime_diagnostics.py::test_calendar_dst_earlyclose_overnight_stamps
+2 failed, 22 passed in 22.10s

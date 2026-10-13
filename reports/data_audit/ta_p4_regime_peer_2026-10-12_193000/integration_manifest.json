@@ -1,0 +1,503 @@
+{
+  "package": "TA-P4-E4R-MC2-READINESS-E5-PEER-SYNTHETIC-001",
+  "head": "6f5c19807fec29ee6fb021f91f0f731c45c2b073",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 14968,
+      "sha256": "03e2d227a3bf0f8a8b7f311db81208e37a9434a0b39fb254f038566f7e2b4a1a",
+      "purpose": "Narrow authorized integration/API documentation",
+      "change": "MODIFIED",
+      "type": "Markdown"
+    },
+    {
+      "path": "docs/track_a/P4_REGIME_PEER_SYNTHETIC_API_v1.md",
+      "bytes": 8283,
+      "sha256": "050ccd9c30aa844ad8679375768c19682d6b9dcaf771298e4f1f711808e708b4",
+      "purpose": "Typed API and portable synthetic-only reproduction guide",
+      "change": "CREATED",
+      "type": "Markdown"
+    },
+    {
+      "path": "reports/codex_sessions/2026-10-12_233801_ta-p4-regime-peer-synthetic-001.md",
+      "bytes": 16139,
+      "sha256": "3fe9e80a20b8c5ca338a379fe9eb23478b804a94e2938e25d6977ba52afdec8c",
+      "purpose": "Mandatory17-section session report",
+      "change": "CREATED",
+      "type": "Markdown"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/authority.json",
+      "bytes": 8984,
+      "sha256": "0870b0925b317fe59a347c386082b2e290b79124dc114c177a7e69450147cce4",
+      "purpose": "Hash-verified16/33 registers,seven blockers and0/40 ledger",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/baseline_pytest.txt",
+      "bytes": 672,
+      "sha256": "23eb76b92e3b5c10bafd534670a6d4e18aec37d46f9bb5905cbe1203206f71de",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/baseline_pytest_status.json",
+      "bytes": 23386,
+      "sha256": "3bb04760e7c3eab31d92b5777a779273efea925da482dad1b18614878c81bb9e",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/baseline_ruff.txt",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/baseline_ruff_status.json",
+      "bytes": 23363,
+      "sha256": "f34e4625d00fd145b0b13c050a9de284ffa4d2a30f9626f004d37da5b7b30c88",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/baseline_types.txt",
+      "bytes": 4709,
+      "sha256": "2f871fad4f7e6d091f0799e148205458c9e2a669b333fc389ffbc1a86775b3f9",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/baseline_types_status.json",
+      "bytes": 23487,
+      "sha256": "5d842ab16cd29bc7b0512e0b6b14384c346209d198b9025f6f2e5492fec3bfea",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/checks.json",
+      "bytes": 555520,
+      "sha256": "e3c31b02aed3896f84aa214418582fc09e592d3dd7247b5c70fedff2b87e2e2b",
+      "purpose": "Engineering/scientific separation and complete verification provenance",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/final_pytest.txt",
+      "bytes": 673,
+      "sha256": "21c58a0f06de5e1d38eae4a4b311e6d3a40aa3d9607d18f235dee27fbeaaca84",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/final_pytest_status.json",
+      "bytes": 24661,
+      "sha256": "4eb998e60b865175e7e8644ed5889818278899a21a44858b9ed2239a1d60d966",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/final_ruff.txt",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/final_ruff_status.json",
+      "bytes": 24636,
+      "sha256": "520059ab35a134e311eff9665e77353b24546eb6132829579e59dfb94f3549a3",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/final_types.txt",
+      "bytes": 4950,
+      "sha256": "8948ab24b18854dbf80d20a72b2d6d8700128153afe54cc69b9f7b40faaf7846",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/final_types_status.json",
+      "bytes": 24761,
+      "sha256": "a4b8f1fd9b21bf489ea2f3a610943a65895326b1ce0c3a3e757a933d7422cd0d",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_final_ruff.txt",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_final_ruff_status.json",
+      "bytes": 23800,
+      "sha256": "385568ddecf1afa159b88db0d45d723b26c7c6288939f14b24b23962a140e4bb",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_final_types.txt",
+      "bytes": 4795,
+      "sha256": "85f400bf002bb221d9c1a72875cd59591fe71f903a0b496891461eae3bdfcbf5",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_final_types_status.json",
+      "bytes": 23924,
+      "sha256": "15b964a27bcc5bcf80324dcc4de6740bcbd65bafd45bba15de7db95dff3ce076",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_focused.txt",
+      "bytes": 3210,
+      "sha256": "70a4e976b98d0a92d00bdd281b449fed9774f97fb8a82bb3ce1c0a2105ac42b1",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_focused_status.json",
+      "bytes": 23865,
+      "sha256": "972b36cd861f23132abedb03a857cb50ee8dbd8f3eb329626c74fa732c6cf941",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_full.txt",
+      "bytes": 672,
+      "sha256": "7b81e597048af15f447e10ec1e914853009d6447bc3e662391e9c7a696ab1591",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_full_status.json",
+      "bytes": 23824,
+      "sha256": "dc97a913d8a0b8d5695575495dd209c0e22b537b81350242ee9f7209cf09c0f5",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_release_focused.txt",
+      "bytes": 110,
+      "sha256": "fa6a7c73d2fa2f2657b0dbccdc50535d6057bbc41527242192be5a9061f41401",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_release_focused_status.json",
+      "bytes": 23864,
+      "sha256": "ab516fc8d1fa0da465dd87f40464292040fb20ce668b5cc47bc3ade78b90ff5a",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_release_ruff.txt",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_release_ruff_status.json",
+      "bytes": 23801,
+      "sha256": "617576394ab177068003bdae0785d54e4a8ea5fb2bffe32bbe2ba5f74f1de167",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_release_types.txt",
+      "bytes": 4796,
+      "sha256": "1a183379f5569688250c1d67ab1a83dc135094bad5ab99bd7a7ebad40af9b308",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_release_types_status.json",
+      "bytes": 23925,
+      "sha256": "ee522cff59697812d782f6a213f3189e8e142fbbb73686c4c4aa26c7fdaee270",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_ruff.txt",
+      "bytes": 1751,
+      "sha256": "f3fc6f10baef709ec3766fae12c5b328652d30cb48f8b5d40485cfcbf3039053",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_ruff_status.json",
+      "bytes": 23801,
+      "sha256": "c15d0c8facd5a5026892478bddbff41b2feb84239a0e2856ca096f12571f3198",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_types.txt",
+      "bytes": 5174,
+      "sha256": "bb8da7863d206bf7c803cd380b10ea92a25563e66c5f4ecca16118ffa330fefb",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_a_types_status.json",
+      "bytes": 23925,
+      "sha256": "8be8a70965f462780b8119aedbe27be64659f98b21beccc6883ef7aebd71220f",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_b_focused.txt",
+      "bytes": 4329,
+      "sha256": "5e947ce7ddf66bf8cf3b1940d2c483ba8d46dda68d6c61a8191b1524f0268d72",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_b_focused_status.json",
+      "bytes": 24735,
+      "sha256": "de732ca3c26d844f834c3d287ede536dca927c4e91dcc13dfdd9647a7c27baf5",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_b_release_focused.txt",
+      "bytes": 114,
+      "sha256": "6dd8f9c2b12e5e076f14d3838100fe1a68a5589762e4464d6bd0a9c584cc64a7",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_b_release_focused_status.json",
+      "bytes": 24733,
+      "sha256": "c8a1d52c95a1cd754e235960e55412920f8d7d82209214b43f518fc8eecbf489",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_b_release_ruff.txt",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_b_release_ruff_status.json",
+      "bytes": 24637,
+      "sha256": "01405dc6c876e6fd51c715e55081ad653667231f72482d02afbea0a6e31e5671",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_b_release_types.txt",
+      "bytes": 4950,
+      "sha256": "501efb760e2f4cc2a4d5490ee745da7415b32a5116ea2d055c73639e226e8f24",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_b_release_types_status.json",
+      "bytes": 24759,
+      "sha256": "885f6b042855bc4ee6e1dba66621b378b9dc93d6cf1afef6e2b8c97583e5a72e",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_b_types.txt",
+      "bytes": 6007,
+      "sha256": "84607849b0eec2f768457fc11f4779ec58f5d852daf74bd1c03ef8d9c968c45c",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/gate_b_types_status.json",
+      "bytes": 24761,
+      "sha256": "18010d1b784d7427d5cee985edcd7e1e0ecda5fb4bc857623d16005799a914ce",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/human_review_card.md",
+      "bytes": 3783,
+      "sha256": "dacafd461a3b5ad6b953490d998321deb9be512590d65e82051c7d2efb755dde",
+      "purpose": "Single14-check human engineering review with exact code/test anchors",
+      "change": "CREATED",
+      "type": "Markdown"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/package_report.md",
+      "bytes": 3663,
+      "sha256": "376474f28db85ea7af2cd6b367e1cc93f46461b2d8420d8f3a8be991f6a4e858",
+      "purpose": "Gate/results/resources/limits/handoff",
+      "change": "CREATED",
+      "type": "Markdown"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/preflight.json",
+      "bytes": 234215,
+      "sha256": "6f09958d62795c0d94c02ef7b0cbdc065004030957beb566172a8edcc3801c43",
+      "purpose": "Starting Git state and exact protected original SHA/bytes inventory",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/preservation.json",
+      "bytes": 607,
+      "sha256": "303165f6ce3d5c8aa2831157eec6db3011cd59cd2ccdce1f80d97bcf19ef334b",
+      "purpose": "Before/after immutable original conservation",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/runtime.json",
+      "bytes": 518,
+      "sha256": "1905d58024f8ec988d5b05aee2ba663f61384bad433cb62340d09a143d15bc4a",
+      "purpose": "Actual Python/package versions, platform and numeric dtype/permission contract",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/synthetic_evidence.json",
+      "bytes": 167047,
+      "sha256": "288e82fe0591b72063a42cb90f307ae796b356e7ec9f4958e12280cd5ff5b475",
+      "purpose": "Top-level review projection of fabricated source/clock/peer/ridge evidence; full weights linked below synthetic_run",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/synthetic_run/synthetic_evidence.json",
+      "bytes": 213856,
+      "sha256": "6350138e4602b6480894f5ad9795ec375b6d70a8d5a4f9a60038e9a1d200df0d",
+      "purpose": "Bound fabricated states/clocks/masks/peer/lag/fit arithmetic",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/synthetic_run.txt",
+      "bytes": 89,
+      "sha256": "bf265663e7d97be78d1ab4ab82d8d94b2d82b061f83e0e0a61217ad4319f4c0e",
+      "purpose": "Preserved named execution/diagnostic log (failed or passing as named)",
+      "change": "CREATED",
+      "type": "Text log"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/synthetic_run_status.json",
+      "bytes": 24798,
+      "sha256": "09af215097150cb0d9b61a65f0562356a1969ee707665b5079b99930fd9cbfdb",
+      "purpose": "Exact command,exit,duration,peak and before/after Python SHA binding",
+      "change": "CREATED",
+      "type": "JSON"
+    },
+    {
+      "path": "src/lstm_data/baseline_fit.py",
+      "bytes": 17135,
+      "sha256": "3c7ab2c0949b280030db69d9aade5f957f2896bb155a59edcb1d5e31a697b6b7",
+      "purpose": "Narrow authorized integration/API documentation",
+      "change": "MODIFIED",
+      "type": "Python"
+    },
+    {
+      "path": "src/lstm_data/peer_inputs.py",
+      "bytes": 6456,
+      "sha256": "e7a7241c8c1051f0b525db1af36368139897b2ffd5e88ae5d99dda0cbd494b66",
+      "purpose": "Four-peer M1 and indexed data-only23-channel input",
+      "change": "CREATED",
+      "type": "Python"
+    },
+    {
+      "path": "src/lstm_data/peer_ridge.py",
+      "bytes": 3581,
+      "sha256": "ae4be66dadd3e7ebf37c9022c15084a2e000d6b8dccab14010e7ef07892cd49f",
+      "purpose": "Matched147/161 fits through shared original P3 kernel",
+      "change": "CREATED",
+      "type": "Python"
+    },
+    {
+      "path": "src/lstm_data/regime_diagnostics.py",
+      "bytes": 18153,
+      "sha256": "ed496934f4addab77dbe17a1c1f9f45cf22598abd04fe0b59b23acd176445ba1",
+      "purpose": "RS1/MC2 and optional paired synthetic arithmetic",
+      "change": "CREATED",
+      "type": "Python"
+    },
+    {
+      "path": "src/lstm_data/regime_peer_audit.py",
+      "bytes": 7989,
+      "sha256": "d05e74ad9eec3c814bc19bfecd7b4057054b67f8113108b226e27eff246ee5f5",
+      "purpose": "Fabricated evidence CLI,zero neural fits/network",
+      "change": "CREATED",
+      "type": "Python"
+    },
+    {
+      "path": "tests/test_peer_inputs.py",
+      "bytes": 13839,
+      "sha256": "1b73cb37a7eb3f1880de3fbce3382351984e25b1d422bb0aba1e6c124e735531",
+      "purpose": "Peer/P2/P4/ridge equivalence and negative tests",
+      "change": "CREATED",
+      "type": "Python"
+    },
+    {
+      "path": "tests/test_regime_diagnostics.py",
+      "bytes": 12065,
+      "sha256": "8987021e87066a3e1021b661651d5cb4df4a016423182c085882bc760fda1f5b",
+      "purpose": "Independent RS1/MC2/maturity/clock oracles",
+      "change": "CREATED",
+      "type": "Python"
+    },
+    {
+      "path": "reports/data_audit/ta_p4_regime_peer_2026-10-12_193000/integration_manifest.json",
+      "bytes": 21360,
+      "sha256": null,
+      "purpose": "Exact inventory; own SHA excluded to avoid recursion",
+      "change": "CREATED",
+      "type": "JSON"
+    }
+  ],
+  "self": "integration_manifest.json; own SHA excluded to avoid recursion"
+}
