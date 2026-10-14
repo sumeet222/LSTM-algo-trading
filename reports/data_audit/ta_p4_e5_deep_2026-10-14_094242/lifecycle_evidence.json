@@ -1,0 +1,273 @@
+{
+  "cpu_threads": 1,
+  "device": "cpu",
+  "forecast": {
+    "cutoff": "2023-07-20T14:30:00+00:00",
+    "id": "SYN:NEURAL_FORECAST:4637da697b9026a897f0e18d04e037d8d753fd2b8a13e4264d2bbfa5b251e0e6",
+    "input": "SYN:E5_HEALTH_FIXTURE:v2:8051:SYN:INPUT:2023-07-20:1",
+    "label_or_exit_input": false,
+    "repeat_exact": true,
+    "scores": [
+      -0.09417596459388733,
+      -0.10255531966686249,
+      -0.08150960505008698,
+      -0.48761022090911865,
+      -0.05691016465425491
+    ],
+    "symbols": [
+      "NOVA",
+      "ORBIT",
+      "PULSE",
+      "QUARK",
+      "RUNE"
+    ],
+    "trading_replay": false,
+    "universe": "a24f43b9ace0552d1645aaf0dbde2df12dfc0d26a8de19a3b5a2ce65f87e0ce6"
+  },
+  "mps_used": false,
+  "negative_cases": {
+    "calibration_as_final": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+    "old_checkpoint_new_source": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+    "old_prep_new_source_forecast": "SCALER_FEATURE_SOURCE_ACTION_MISMATCH",
+    "stale_code": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+    "stale_model_optimizer_selection": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+    "stale_preprocess": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+    "stale_source_features_data": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+    "stale_universe": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+    "tampered": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+    "wrong_family": "PARSED_CHECKPOINT_SCHEMA_REQUIRED"
+  },
+  "pair": {
+    "adequacy": {
+      "origins": {
+        "1": 55,
+        "2": 55
+      },
+      "sessions": 55
+    },
+    "architecture": "E5",
+    "calibration_checkpoint": {
+      "bytes": 78417,
+      "epoch": 59,
+      "fit_binding": "01575255c4d4361e7bffdc9b100685ecc5367704668135d6ee47c0dd47c5a76e",
+      "pair": "09d4ae4b471767a73c3819bf0678131f3e55c80d3bc31fef64285c5061428aaf",
+      "path": "calibration_selected.pt",
+      "prediction_authoritative": false,
+      "schema": 1,
+      "sha256": "418570b7a219cadff22c630646288b4e270a5b3b9935b87ac04f01a1fe48783b",
+      "stage": "CALIBRATION_SELECTED"
+    },
+    "calibration_initial_hash": "6d61ced71dc5e5ad787fe134f4d32cda58f0b0f6cc6444a6a1825d643fc81521",
+    "calibration_preparation": "01575255c4d4361e7bffdc9b100685ecc5367704668135d6ee47c0dd47c5a76e",
+    "calibration_seconds": 20.249731499992777,
+    "calibration_selected_hash": "379baf668e5b287265e4ad851df89b27a0120b62f7601359a0aeb55caafd275d",
+    "calibration_steps": 180,
+    "canonical_feature_rows": 3215,
+    "example_scores": [
+      0.04565142095088959,
+      0.06164070963859558,
+      0.15471337735652924,
+      0.10003982484340668,
+      -0.05986697971820831
+    ],
+    "final_checkpoint": {
+      "bytes": 62289,
+      "epoch": 59,
+      "fit_binding": "80bbf7f8741be46553dc6c374e404aee553529efd939b5905484f4758ef2711e",
+      "pair": "09d4ae4b471767a73c3819bf0678131f3e55c80d3bc31fef64285c5061428aaf",
+      "path": "refit_final.pt",
+      "prediction_authoritative": true,
+      "schema": 1,
+      "sha256": "e659035fdbba2e39714d07ca42ae28d20683c89789f2dec551c11257da7c0c9d",
+      "stage": "REFIT_FINAL"
+    },
+    "fitting_origin_dispositions": {
+      "inner_train": {
+        "ORIGIN_OUTSIDE_FIT_WINDOW": 126
+      },
+      "inner_validation": {
+        "ORIGIN_OUTSIDE_FIT_WINDOW": 74
+      },
+      "refit": {}
+    },
+    "fresh_optimizer_state_empty": true,
+    "indexed_origins": 200,
+    "mode": "ENGINEERING_SYNTHETIC_ONLY",
+    "pair": {
+      "calendar_split_cutoff": "3b566b2a69759aa702c07be0b5ec05a8c0043175c11a89993bd634bb782f1edd",
+      "code": "0f7881a40db6b04d40e4b6c466e08bb9d67f4e09c2a67c6239bfae976183d049",
+      "experiment": "SYN:E5:WF1",
+      "information": "FT0_D7_E5",
+      "mode": "ENGINEERING_SYNTHETIC_ONLY",
+      "model_optimizer_selection": "1542c605c836b968944ce6b39831058f0d20d938882d01ce6d0d650bf8dbb746",
+      "preprocess": "01575255c4d4361e7bffdc9b100685ecc5367704668135d6ee47c0dd47c5a76e",
+      "seed": 42,
+      "source_features_data": "aee1b15498b0a9db59c7efbbb7ed3758a5b195ee294234e69a16dc7c44c1740f",
+      "target": "TG0_HOURLY_PROXY",
+      "track": "A",
+      "universe": "a24f43b9ace0552d1645aaf0dbde2df12dfc0d26a8de19a3b5a2ce65f87e0ce6"
+    },
+    "pair_key": "09d4ae4b471767a73c3819bf0678131f3e55c80d3bc31fef64285c5061428aaf",
+    "purged_or_invalid_origins": [
+      126,
+      74,
+      0
+    ],
+    "refit_final_hash": "825c6353228ba6f351d374313f4bcae7dabafe61f429495945f54f5e2193cabb",
+    "refit_initial_hash": "6d61ced71dc5e5ad787fe134f4d32cda58f0b0f6cc6444a6a1825d643fc81521",
+    "refit_preparation": "80bbf7f8741be46553dc6c374e404aee553529efd939b5905484f4758ef2711e",
+    "refit_seconds": 74.4067895420012,
+    "refit_steps": 413,
+    "refit_view": "6ed4eba6bcc4ed4492a8ae46f87adc6c1a94024f6f91bca66cd2e10e39ec05e0",
+    "reload_max_error": 0.0,
+    "selection_monitor": "ACTUAL_INNER_MSE",
+    "selector": {
+      "best": 0.04380061084573919,
+      "epoch": 60,
+      "patience": 1,
+      "raw_epoch": 59,
+      "raw_min": 0.04380061084573919,
+      "selected": 59,
+      "status": "MAX_EPOCHS_REACHED"
+    },
+    "train_view": "63b508de41adca1c3b4e676474d92c3fd38cbf48ac20750c912aaa90b09d3405",
+    "validation_preprocess_exclusions": [
+      [
+        [
+          "2023-03-31",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-03-31",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-03",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-03",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-04",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-04",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-05",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-05",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-06",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-06",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-10",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-10",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-11",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-11",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-12",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-12",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ]
+    ],
+    "validation_view": "dc44ec637740bbc4eb446fb441aa8a7ffe5a826612f2ec20112cb0fadce20eb5"
+  },
+  "peak_memory": {
+    "bytes": 537952256
+  },
+  "real_pairs": "0/40",
+  "replacement": {
+    "fresh_replacement_model": "NOT_FITTED; new source requires fresh pair",
+    "input_shape": [
+      5,
+      48,
+      23
+    ],
+    "new_input_identity": "66750e4281d04a099b9878a521b28998436e47313c8bf171504eaa55c1670c45",
+    "new_prep_and_input_built": true,
+    "new_preparation": "984f6d9f5884660034908420a5cc51030e4d74a114c78d89bb6ad77a2388545c",
+    "new_source_identity": "01c99d12947e0146973a78d1e972d432525ff4e06003a2e48c305b26293f8164",
+    "numerical_content_change_invalidates": true,
+    "raw_tuples_shared": true,
+    "source_version": "SYN:E5_HEALTH_FIXTURE:v2:8051:SOURCE_REPLACEMENT"
+  },
+  "seconds": 557.8941354159906,
+  "selected_audit_reload_epoch": 59,
+  "selected_reload_state_exact": true,
+  "status": "E5_ACTUAL_D6G_INTEGRATION_PASS"
+}

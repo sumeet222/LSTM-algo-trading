@@ -1,0 +1,377 @@
+{
+  "arms": {
+    "E5_NULL": {
+      "final_train_mse": 0.013445134608175707,
+      "gradient_summary": {
+        "clipped_fraction": 0.0,
+        "max": 0.7040491700172424,
+        "median": 0.06156926043331623,
+        "multiplier_median": 1.0,
+        "multiplier_min": 1.0,
+        "nonfinite_count": 0,
+        "p90": 0.14461914300918582,
+        "p95": 0.17863832190632817,
+        "p99": 0.29127730727195733,
+        "sustained_clipping_warning": false
+      },
+      "heldout_mse": 0.08145030564205213,
+      "initial_train_mse": 0.07420490047818906,
+      "min_peer_input_gradient": 0.00025138736236840487,
+      "min_peer_input_weight_gradient": 0.003057260997593403,
+      "parameter_count": 7329,
+      "peak_memory": {
+        "bytes": 440713216
+      },
+      "seconds": 47.27635770800407,
+      "seed": 42,
+      "state_sha": "59fa4cf46b03d93b1fa882af640f2aaef7a1fdf82ae0e9dd107c38899dc0de4e",
+      "updates": 1024,
+      "zero_reference_mse": 0.062082336470484736
+    },
+    "E5_PLANTED": {
+      "final_train_mse": 0.0003559006338921766,
+      "gradient_summary": {
+        "clipped_fraction": 0.0,
+        "max": 0.36556950211524963,
+        "median": 0.024552278220653534,
+        "multiplier_median": 1.0,
+        "multiplier_min": 1.0,
+        "nonfinite_count": 0,
+        "p90": 0.05270543135702615,
+        "p95": 0.06960098855197429,
+        "p99": 0.14351728960871682,
+        "sustained_clipping_warning": false
+      },
+      "heldout_mse": 0.00188212675195907,
+      "initial_train_mse": 0.07269971470373708,
+      "min_peer_input_gradient": 0.00025963844382204115,
+      "min_peer_input_weight_gradient": 0.002653472824022174,
+      "parameter_count": 7329,
+      "peak_memory": {
+        "bytes": 378093568
+      },
+      "seconds": 49.104943916987395,
+      "seed": 42,
+      "state_sha": "b2ff9eb1733a6fc8d00bc3a1249e98a8df5abb2c01ae344f0d220045e16d97c8",
+      "updates": 1024,
+      "zero_reference_mse": 0.056032079073007814
+    },
+    "E5_PLANTED_EXACT_REPEAT": {
+      "final_train_mse": 0.0003559006338921766,
+      "gradient_summary": {
+        "clipped_fraction": 0.0,
+        "max": 0.36556950211524963,
+        "median": 0.024552278220653534,
+        "multiplier_median": 1.0,
+        "multiplier_min": 1.0,
+        "nonfinite_count": 0,
+        "p90": 0.05270543135702615,
+        "p95": 0.06960098855197429,
+        "p99": 0.14351728960871682,
+        "sustained_clipping_warning": false
+      },
+      "heldout_mse": 0.00188212675195907,
+      "initial_train_mse": 0.07269971470373708,
+      "min_peer_input_gradient": 0.00025963844382204115,
+      "min_peer_input_weight_gradient": 0.002653472824022174,
+      "parameter_count": 7329,
+      "peak_memory": {
+        "bytes": 378093568
+      },
+      "seconds": 50.68586245799088,
+      "seed": 42,
+      "state_sha": "b2ff9eb1733a6fc8d00bc3a1249e98a8df5abb2c01ae344f0d220045e16d97c8",
+      "updates": 1024,
+      "zero_reference_mse": 0.056032079073007814
+    },
+    "MC0_PLANTED": {
+      "final_train_mse": 0.008016222685172752,
+      "gradient_summary": {
+        "clipped_fraction": 0.0,
+        "max": 0.8030518293380737,
+        "median": 0.059960244223475456,
+        "multiplier_median": 1.0,
+        "multiplier_min": 1.0,
+        "nonfinite_count": 0,
+        "p90": 0.13720017522573474,
+        "p95": 0.18031845837831464,
+        "p99": 0.2943167769908904,
+        "sustained_clipping_warning": false
+      },
+      "heldout_mse": 0.07504877413792366,
+      "initial_train_mse": 0.04827682179323322,
+      "min_peer_input_gradient": null,
+      "min_peer_input_weight_gradient": null,
+      "parameter_count": 7073,
+      "peak_memory": {
+        "bytes": 378093568
+      },
+      "seconds": 53.79697908301023,
+      "seed": 42,
+      "state_sha": "ed406d04dc223396a834d9fac9c9669016772bb7ae911ed7d5d97606cf42fcd5",
+      "updates": 1024,
+      "zero_reference_mse": 0.056032079073007814
+    }
+  },
+  "checks": {
+    "MC0_information_control": true,
+    "heldout_signal": true,
+    "null_not_spurious_learning": true,
+    "positive_peer_gradients": true,
+    "repeat_exact": true,
+    "train_reduction": true
+  },
+  "config_sha": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+  "diagnostic_updates": 4096,
+  "null_population": {
+    "epsilon": 0.0001,
+    "floor": "9edadb84a8deec4bf3dfbeb9b4a30de5a742314a9a594db21b1ec41615daa400",
+    "preparation": "868a25df321e40f2bedb421e633d6be5b55d9801d38828170c2988a7caa0e19a",
+    "train_origins": 74,
+    "train_sessions": 37,
+    "train_version": "8f605792b2329f23c4d54212e1d58bb6e631a49e87b089388039e860f693bc34",
+    "valid_excluded": [
+      [
+        [
+          "2023-03-31",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-03-31",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-03",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-03",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-04",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-04",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-05",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-05",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-06",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-06",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-10",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-10",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-11",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-11",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-12",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-12",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ]
+    ],
+    "valid_origins": 110,
+    "valid_sessions": 55,
+    "valid_version": "91903a1c39c89bda6558070a4e2552a9b8d4e42bac20dcb558733058f1e9ece1"
+  },
+  "population": {
+    "epsilon": 0.0001,
+    "floor": "cc09cb1e19c79db1dd0876cee39abde7d02658c6c74cbea757899e223f25452f",
+    "preparation": "01575255c4d4361e7bffdc9b100685ecc5367704668135d6ee47c0dd47c5a76e",
+    "train_origins": 74,
+    "train_sessions": 37,
+    "train_version": "63b508de41adca1c3b4e676474d92c3fd38cbf48ac20750c912aaa90b09d3405",
+    "valid_excluded": [
+      [
+        [
+          "2023-03-31",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-03-31",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-03",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-03",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-04",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-04",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-05",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-05",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-06",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-06",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-10",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-10",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-11",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-11",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-12",
+          1
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ],
+      [
+        [
+          "2023-04-12",
+          2
+        ],
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+      ]
+    ],
+    "valid_origins": 110,
+    "valid_sessions": 55,
+    "valid_version": "dc44ec637740bbc4eb446fb441aa8a7ffe5a826612f2ec20112cb0fadce20eb5"
+  },
+  "status": "PASS"
+}

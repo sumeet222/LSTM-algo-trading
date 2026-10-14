@@ -1,0 +1,344 @@
+{
+  "entries": [
+    {
+      "id": "SYN:E5_V1:8049:42",
+      "new_updates_this_task": 0,
+      "proof_path": "reports/data_audit/ta_p4_e5_e5l_2026-10-13_225047/failed_health_proof.json",
+      "proof_sha": "bdefd7800e17992fb629cfbee62df2ba9701a3e9cd4fae40a7ea9a6f9f3187df",
+      "runs": 2,
+      "seed": 42,
+      "status": "FAILED_PRESERVED",
+      "updates_per_run": 60
+    },
+    {
+      "attempt_wall_seconds_including_preprocessing": 530.0627658367157,
+      "code_at_reservation": {
+        "arms": [
+          "E5_PLANTED",
+          "MC0_PLANTED",
+          "E5_NULL",
+          "E5_PLANTED_EXACT_REPEAT"
+        ],
+        "code": "efc2cbaaa4589e5509cb0012e1acf5b7683454100523e956231c59be46c3235f",
+        "config_sha": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+        "diagnostic_updates_cap": 1024,
+        "fixture_code": "83a2885942885e5557982447bd07e0e21516b65aa88fdf37518c8a8e26d70fbd",
+        "forecast": {
+          "health": "four 256-step tiny CPU single-thread runs, estimated <5 minutes excluding P2 preparation",
+          "lifecycle": "only if Gate B passes: actual D6g at most60 calibration+60 fresh refit epochs; estimate <30 minutes including checked adapter hashes",
+          "suite": "one final full suite may take ~100 minutes due unchanged directed-ridge regressions; no standalone ridge fits"
+        },
+        "real_pairs": 0
+      },
+      "config_sha": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+      "final_train_mse": 0.027693042569365854,
+      "fixture": "SYN:E5_HEALTH_FIXTURE:v2:8051",
+      "heldout_mse": 0.0408048389733515,
+      "id": "SYN:E5_V2:256:E5_PLANTED:42",
+      "initial_train_mse": 0.07269971470373708,
+      "peak_memory": {
+        "bytes": 446627840
+      },
+      "purpose": "E5_PLANTED",
+      "reason": "prospective primary256; all controls retained",
+      "result_path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/E5_PLANTED.json",
+      "result_sha": "f86a72fe2038d0fb49e075810739c1ef424989f603ceb23ae9e21f726da4ca2a",
+      "seconds": 11.744926791987382,
+      "seed": 42,
+      "status": "FAILED",
+      "updates": 256
+    },
+    {
+      "attempt_wall_seconds_including_preprocessing": 530.0627658367157,
+      "code_at_reservation": {
+        "arms": [
+          "E5_PLANTED",
+          "MC0_PLANTED",
+          "E5_NULL",
+          "E5_PLANTED_EXACT_REPEAT"
+        ],
+        "code": "efc2cbaaa4589e5509cb0012e1acf5b7683454100523e956231c59be46c3235f",
+        "config_sha": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+        "diagnostic_updates_cap": 1024,
+        "fixture_code": "83a2885942885e5557982447bd07e0e21516b65aa88fdf37518c8a8e26d70fbd",
+        "forecast": {
+          "health": "four 256-step tiny CPU single-thread runs, estimated <5 minutes excluding P2 preparation",
+          "lifecycle": "only if Gate B passes: actual D6g at most60 calibration+60 fresh refit epochs; estimate <30 minutes including checked adapter hashes",
+          "suite": "one final full suite may take ~100 minutes due unchanged directed-ridge regressions; no standalone ridge fits"
+        },
+        "real_pairs": 0
+      },
+      "config_sha": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+      "final_train_mse": 0.042105325806030144,
+      "fixture": "SYN:E5_HEALTH_FIXTURE:v2:8051",
+      "heldout_mse": 0.058891975600272414,
+      "id": "SYN:E5_V2:256:MC0_PLANTED:42",
+      "initial_train_mse": 0.04827682179323322,
+      "peak_memory": {
+        "bytes": 446627840
+      },
+      "purpose": "MC0_PLANTED",
+      "reason": "prospective primary256; all controls retained",
+      "result_path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/MC0_PLANTED.json",
+      "result_sha": "1a1a8b41cd00e2170fcd27d8b8da915de6ecb474c03d3b433261c6a0bc3eb730",
+      "seconds": 10.8589082910039,
+      "seed": 42,
+      "status": "FAILED",
+      "updates": 256
+    },
+    {
+      "attempt_wall_seconds_including_preprocessing": 530.0627658367157,
+      "code_at_reservation": {
+        "arms": [
+          "E5_PLANTED",
+          "MC0_PLANTED",
+          "E5_NULL",
+          "E5_PLANTED_EXACT_REPEAT"
+        ],
+        "code": "efc2cbaaa4589e5509cb0012e1acf5b7683454100523e956231c59be46c3235f",
+        "config_sha": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+        "diagnostic_updates_cap": 1024,
+        "fixture_code": "83a2885942885e5557982447bd07e0e21516b65aa88fdf37518c8a8e26d70fbd",
+        "forecast": {
+          "health": "four 256-step tiny CPU single-thread runs, estimated <5 minutes excluding P2 preparation",
+          "lifecycle": "only if Gate B passes: actual D6g at most60 calibration+60 fresh refit epochs; estimate <30 minutes including checked adapter hashes",
+          "suite": "one final full suite may take ~100 minutes due unchanged directed-ridge regressions; no standalone ridge fits"
+        },
+        "real_pairs": 0
+      },
+      "config_sha": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+      "final_train_mse": 0.0448728590115049,
+      "fixture": "SYN:E5_HEALTH_FIXTURE:v2:8051",
+      "heldout_mse": 0.06595571555874565,
+      "id": "SYN:E5_V2:256:E5_NULL:42",
+      "initial_train_mse": 0.07420490047818906,
+      "peak_memory": {
+        "bytes": 446627840
+      },
+      "purpose": "E5_NULL",
+      "reason": "prospective primary256; all controls retained",
+      "result_path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/E5_NULL.json",
+      "result_sha": "d788af1d50248028a362afd9edfd8695e201acbd33e9d754d4b40d71add8745c",
+      "seconds": 25.43862270799582,
+      "seed": 42,
+      "status": "FAILED",
+      "updates": 256
+    },
+    {
+      "attempt_wall_seconds_including_preprocessing": 530.0627658367157,
+      "code_at_reservation": {
+        "arms": [
+          "E5_PLANTED",
+          "MC0_PLANTED",
+          "E5_NULL",
+          "E5_PLANTED_EXACT_REPEAT"
+        ],
+        "code": "efc2cbaaa4589e5509cb0012e1acf5b7683454100523e956231c59be46c3235f",
+        "config_sha": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+        "diagnostic_updates_cap": 1024,
+        "fixture_code": "83a2885942885e5557982447bd07e0e21516b65aa88fdf37518c8a8e26d70fbd",
+        "forecast": {
+          "health": "four 256-step tiny CPU single-thread runs, estimated <5 minutes excluding P2 preparation",
+          "lifecycle": "only if Gate B passes: actual D6g at most60 calibration+60 fresh refit epochs; estimate <30 minutes including checked adapter hashes",
+          "suite": "one final full suite may take ~100 minutes due unchanged directed-ridge regressions; no standalone ridge fits"
+        },
+        "real_pairs": 0
+      },
+      "config_sha": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+      "final_train_mse": 0.027693042569365854,
+      "fixture": "SYN:E5_HEALTH_FIXTURE:v2:8051",
+      "heldout_mse": 0.0408048389733515,
+      "id": "SYN:E5_V2:256:E5_PLANTED_EXACT_REPEAT:42",
+      "initial_train_mse": 0.07269971470373708,
+      "peak_memory": {
+        "bytes": 446627840
+      },
+      "purpose": "exact fixed-seed repeat, no selectable new seed",
+      "reason": "prospective primary256; all controls retained",
+      "result_path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/E5_PLANTED_EXACT_REPEAT.json",
+      "result_sha": "45cf0638f88083643982ca0e7b42ea5b73f0d880927352c6b7d93d4fe6ee67cd",
+      "seconds": 11.831997375003994,
+      "seed": 42,
+      "status": "FAILED",
+      "updates": 256
+    },
+    {
+      "attempt_wall_seconds_including_preprocessing": 616.6374413967133,
+      "code_at_reservation": {
+        "arms": [
+          "E5_PLANTED",
+          "MC0_PLANTED",
+          "E5_NULL",
+          "E5_PLANTED_EXACT_REPEAT"
+        ],
+        "code": "ca65c56a8dccbd4ffce3254b4cbf639a14798045ae143b7ed9fd32f244ec0c37",
+        "config_sha": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+        "diagnostic_updates_cap": 4096,
+        "fixture_code": "0969f3de0138e9e5320c300efeeb789a9f29f49329a843992ef67fa4fa7f061d",
+        "forecast": {
+          "health": "four 256-step tiny CPU single-thread runs, estimated <5 minutes excluding P2 preparation",
+          "lifecycle": "only if Gate B passes: actual D6g at most60 calibration+60 fresh refit epochs; estimate <30 minutes including checked adapter hashes",
+          "suite": "one final full suite may take ~100 minutes due unchanged directed-ridge regressions; no standalone ridge fits"
+        },
+        "real_pairs": 0
+      },
+      "config_sha": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+      "final_train_mse": 0.0003559006338921766,
+      "fixture": "SYN:E5_HEALTH_FIXTURE:v2:8051",
+      "heldout_mse": 0.00188212675195907,
+      "id": "SYN:E5_V2:1024:E5_PLANTED:42",
+      "initial_train_mse": 0.07269971470373708,
+      "peak_memory": {
+        "bytes": 378093568
+      },
+      "purpose": "E5_PLANTED",
+      "reason": "one preregistered horizon extension; same law/seed/thresholds/optimizer",
+      "result_path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/E5_PLANTED.json",
+      "result_sha": "b8517560caa6b342c9d02c7608787e5b8347e0a5784386937dd17378fd3f1342",
+      "seconds": 49.104943916987395,
+      "seed": 42,
+      "status": "PASS",
+      "updates": 1024
+    },
+    {
+      "attempt_wall_seconds_including_preprocessing": 616.6374413967133,
+      "code_at_reservation": {
+        "arms": [
+          "E5_PLANTED",
+          "MC0_PLANTED",
+          "E5_NULL",
+          "E5_PLANTED_EXACT_REPEAT"
+        ],
+        "code": "ca65c56a8dccbd4ffce3254b4cbf639a14798045ae143b7ed9fd32f244ec0c37",
+        "config_sha": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+        "diagnostic_updates_cap": 4096,
+        "fixture_code": "0969f3de0138e9e5320c300efeeb789a9f29f49329a843992ef67fa4fa7f061d",
+        "forecast": {
+          "health": "four 256-step tiny CPU single-thread runs, estimated <5 minutes excluding P2 preparation",
+          "lifecycle": "only if Gate B passes: actual D6g at most60 calibration+60 fresh refit epochs; estimate <30 minutes including checked adapter hashes",
+          "suite": "one final full suite may take ~100 minutes due unchanged directed-ridge regressions; no standalone ridge fits"
+        },
+        "real_pairs": 0
+      },
+      "config_sha": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+      "final_train_mse": 0.008016222685172752,
+      "fixture": "SYN:E5_HEALTH_FIXTURE:v2:8051",
+      "heldout_mse": 0.07504877413792366,
+      "id": "SYN:E5_V2:1024:MC0_PLANTED:42",
+      "initial_train_mse": 0.04827682179323322,
+      "peak_memory": {
+        "bytes": 378093568
+      },
+      "purpose": "MC0_PLANTED",
+      "reason": "one preregistered horizon extension; same law/seed/thresholds/optimizer",
+      "result_path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/MC0_PLANTED.json",
+      "result_sha": "284682edc6301c3b707b5855ac0df4dc8209903fe6db27b6adc3e9b987ce202d",
+      "seconds": 53.79697908301023,
+      "seed": 42,
+      "status": "PASS",
+      "updates": 1024
+    },
+    {
+      "attempt_wall_seconds_including_preprocessing": 616.6374413967133,
+      "code_at_reservation": {
+        "arms": [
+          "E5_PLANTED",
+          "MC0_PLANTED",
+          "E5_NULL",
+          "E5_PLANTED_EXACT_REPEAT"
+        ],
+        "code": "ca65c56a8dccbd4ffce3254b4cbf639a14798045ae143b7ed9fd32f244ec0c37",
+        "config_sha": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+        "diagnostic_updates_cap": 4096,
+        "fixture_code": "0969f3de0138e9e5320c300efeeb789a9f29f49329a843992ef67fa4fa7f061d",
+        "forecast": {
+          "health": "four 256-step tiny CPU single-thread runs, estimated <5 minutes excluding P2 preparation",
+          "lifecycle": "only if Gate B passes: actual D6g at most60 calibration+60 fresh refit epochs; estimate <30 minutes including checked adapter hashes",
+          "suite": "one final full suite may take ~100 minutes due unchanged directed-ridge regressions; no standalone ridge fits"
+        },
+        "real_pairs": 0
+      },
+      "config_sha": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+      "final_train_mse": 0.013445134608175707,
+      "fixture": "SYN:E5_HEALTH_FIXTURE:v2:8051",
+      "heldout_mse": 0.08145030564205213,
+      "id": "SYN:E5_V2:1024:E5_NULL:42",
+      "initial_train_mse": 0.07420490047818906,
+      "peak_memory": {
+        "bytes": 440713216
+      },
+      "purpose": "E5_NULL",
+      "reason": "one preregistered horizon extension; same law/seed/thresholds/optimizer",
+      "result_path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/E5_NULL.json",
+      "result_sha": "39bc986108330dd642b72eb3adebc2679fd8d0ec505591812e9f6564469564ae",
+      "seconds": 47.27635770800407,
+      "seed": 42,
+      "status": "PASS",
+      "updates": 1024
+    },
+    {
+      "attempt_wall_seconds_including_preprocessing": 616.6374413967133,
+      "code_at_reservation": {
+        "arms": [
+          "E5_PLANTED",
+          "MC0_PLANTED",
+          "E5_NULL",
+          "E5_PLANTED_EXACT_REPEAT"
+        ],
+        "code": "ca65c56a8dccbd4ffce3254b4cbf639a14798045ae143b7ed9fd32f244ec0c37",
+        "config_sha": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+        "diagnostic_updates_cap": 4096,
+        "fixture_code": "0969f3de0138e9e5320c300efeeb789a9f29f49329a843992ef67fa4fa7f061d",
+        "forecast": {
+          "health": "four 256-step tiny CPU single-thread runs, estimated <5 minutes excluding P2 preparation",
+          "lifecycle": "only if Gate B passes: actual D6g at most60 calibration+60 fresh refit epochs; estimate <30 minutes including checked adapter hashes",
+          "suite": "one final full suite may take ~100 minutes due unchanged directed-ridge regressions; no standalone ridge fits"
+        },
+        "real_pairs": 0
+      },
+      "config_sha": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+      "final_train_mse": 0.0003559006338921766,
+      "fixture": "SYN:E5_HEALTH_FIXTURE:v2:8051",
+      "heldout_mse": 0.00188212675195907,
+      "id": "SYN:E5_V2:1024:E5_PLANTED_EXACT_REPEAT:42",
+      "initial_train_mse": 0.07269971470373708,
+      "peak_memory": {
+        "bytes": 378093568
+      },
+      "purpose": "exact fixed-seed repeat, no selectable new seed",
+      "reason": "one preregistered horizon extension; same law/seed/thresholds/optimizer",
+      "result_path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/E5_PLANTED_EXACT_REPEAT.json",
+      "result_sha": "87176ebe3f77ec3dcf0ee23edde177f47792a2f960cf49a8d4f6e0cfe868c4f9",
+      "seconds": 50.68586245799088,
+      "seed": 42,
+      "status": "PASS",
+      "updates": 1024
+    },
+    {
+      "calibration_epochs": 60,
+      "calibration_updates": 180,
+      "evidence_sha": "d398997873e0766ab6e3c01c5eb3c078884523b58337dbd7252de08b621b8721",
+      "fit_passes": 2,
+      "id": "09d4ae4b471767a73c3819bf0678131f3e55c80d3bc31fef64285c5061428aaf",
+      "peak_memory": {
+        "bytes": 537952256
+      },
+      "purpose": "one actual E5 D6g pair, no scripted monitor",
+      "real_pairs": 0,
+      "refit_epochs": 59,
+      "refit_updates": 413,
+      "seconds_including_preprocessing_audits": 557.8941354159906,
+      "seed": 42,
+      "selected_epochs": 59,
+      "status": "E5_ACTUAL_D6G_INTEGRATION_PASS"
+    }
+  ],
+  "failed_attempts_preserved": true,
+  "further_horizon_extensions": false,
+  "new_D6g_updates": 593,
+  "new_health_updates": 5120,
+  "original_v1_updated": false,
+  "scientific_pairs": "0/40",
+  "scope": "ENGINEERING_SYNTHETIC_ONLY",
+  "seed_shopping": false
+}

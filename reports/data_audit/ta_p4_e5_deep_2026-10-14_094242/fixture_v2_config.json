@@ -1,0 +1,39 @@
+{
+  "architecture": "E5 one layer width32 dropout .10 final-hidden scalar head,7329 parameters",
+  "arms": [
+    "E5_PLANTED",
+    "MC0_PLANTED",
+    "E5_NULL",
+    "E5_PLANTED_EXACT_REPEAT"
+  ],
+  "compute_forecast": {
+    "health": "four 256-step tiny CPU single-thread runs, estimated <5 minutes excluding P2 preparation",
+    "lifecycle": "only if Gate B passes: actual D6g at most60 calibration+60 fresh refit epochs; estimate <30 minutes including checked adapter hashes",
+    "suite": "one final full suite may take ~100 minutes due unchanged directed-ridge regressions; no standalone ridge fits"
+  },
+  "extension": "none preauthorized; failed primary will retain gate C NOT_RUN pending measured diagnosis",
+  "fixture": "SYN:E5_HEALTH_FIXTURE:v2:8051",
+  "future_law": "r_i=1e-4*B2_i*mean(raw_M1_j,j!=i); other four r=0",
+  "history": "ridge_data WF1 final 100 XNYS calendar sessions, full 48-step prehistory",
+  "input_rng": 8051,
+  "model_seed": 42,
+  "null_rng": 8052,
+  "optimizer": "existing AdamW .001, matrix decay .01, biases zero, global clip1",
+  "partition": "existing WF1 chronological last63-calendar-session validation; first ASOF lookbacks excluded explicitly",
+  "primary_thresholds": {
+    "MC0_valid_gt_E5_multiple": 2.0,
+    "null_valid_gt_own_Bayes_reference_fraction": 0.5,
+    "oracle_target_atol": 2e-06,
+    "peer_gradient_min_gt": 0.0,
+    "same_cpu_repeat_max_error": 0.0,
+    "train_final_lt_initial_fraction": 0.2,
+    "valid_final_lt_zero_reference_fraction": 0.25
+  },
+  "scientific_pairs": "0/40",
+  "seed_shopping": false,
+  "stock_feature": "B2 unscaled bounded sensitivity, one random recipient per completed step",
+  "target": "actual matured proxy TG0; median=MAD=0; training epsilon=1e-4",
+  "threshold_revision": false,
+  "total_diagnostic_updates": 1024,
+  "updates_per_arm": 256
+}

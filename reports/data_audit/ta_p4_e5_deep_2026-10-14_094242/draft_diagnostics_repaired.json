@@ -1,0 +1,17 @@
+{
+  "first_fixture_valid_math_preserved": true,
+  "focused_complete": "focused_batch6.txt",
+  "initial_static_diagnostics": [
+    "torch dynamic weight attribute gradient indexing",
+    "fixed five-tuple annotation",
+    "nullable content mutation arithmetic",
+    "NaT negative-test static annotation"
+  ],
+  "last_type_summary_file": "types_batch6.json",
+  "module_sha_after_guard_and_type_repairs": {
+    "e5_deep_audit.py": "ca65c56a8dccbd4ffce3254b4cbf639a14798045ae143b7ed9fd32f244ec0c37",
+    "e5_fixture_v2.py": "0969f3de0138e9e5320c300efeeb789a9f29f49329a843992ef67fa4fa7f061d"
+  },
+  "repairs": "named Parameter gradient narrowing, literal five-tuple, explicit completeness check, Timestamp(NaT) negative value; no casts/Any/ignores/settings/severity changes",
+  "ruff_pass_file": "ruff_batch6.txt"
+}

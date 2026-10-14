@@ -1,0 +1,706 @@
+{
+  "all_authoritative_sources_preexisting_unchanged": true,
+  "branch": "feat/track-a-data-intake",
+  "created": [
+    {
+      "bytes": 4717,
+      "git_ignored": false,
+      "kind": "md",
+      "path": "docs/track_a/P4_E5_SYNTHETIC_CLOSURE_API_v3.md",
+      "purpose": "Additive portable API v3; proof, lifecycle and activation limitations; old APIs unchanged.",
+      "sha256": "b100bbb45aad27538eeeb92d5a2092114b14f36294cba170e112c985a84bee38",
+      "tracked_now": false
+    },
+    {
+      "bytes": 11324,
+      "git_ignored": false,
+      "kind": "md",
+      "path": "reports/codex_sessions/2026-10-14_094242_ta-p4-e5-deep-synthetic-closure.md",
+      "purpose": "Mandatory17-section technical handoff.",
+      "sha256": "697df7bd25132b072a69c99927846c29adeac58ea00c5302be7c3f9e5c255daf",
+      "tracked_now": false
+    },
+    {
+      "bytes": 4353,
+      "git_ignored": false,
+      "kind": "md",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/E5_HEALTH_FIXTURE_v2_DESIGN.md",
+      "purpose": "Prospective law/identifiability/TG0 proof, controls and threshold rationale.",
+      "sha256": "8e66d71508bdc3f805592374de59daf05684f3692fdaeab5fd606763681bb6f3",
+      "tracked_now": false
+    },
+    {
+      "bytes": 21680,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/E5_NULL.json",
+      "purpose": "Actual fixed-seed health arm losses/gradients/scores/state hash;256 or1024 immutable attempt.",
+      "sha256": "d788af1d50248028a362afd9edfd8695e201acbd33e9d754d4b40d71add8745c",
+      "tracked_now": false
+    },
+    {
+      "bytes": 21420,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/E5_PLANTED.json",
+      "purpose": "Actual fixed-seed health arm losses/gradients/scores/state hash;256 or1024 immutable attempt.",
+      "sha256": "f86a72fe2038d0fb49e075810739c1ef424989f603ceb23ae9e21f726da4ca2a",
+      "tracked_now": false
+    },
+    {
+      "bytes": 21420,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/E5_PLANTED_EXACT_REPEAT.json",
+      "purpose": "Actual fixed-seed health arm losses/gradients/scores/state hash;256 or1024 immutable attempt.",
+      "sha256": "45cf0638f88083643982ca0e7b42ea5b73f0d880927352c6b7d93d4fe6ee67cd",
+      "tracked_now": false
+    },
+    {
+      "bytes": 21561,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/MC0_PLANTED.json",
+      "purpose": "Actual fixed-seed health arm losses/gradients/scores/state hash;256 or1024 immutable attempt.",
+      "sha256": "1a1a8b41cd00e2170fcd27d8b8da915de6ecb474c03d3b433261c6a0bc3eb730",
+      "tracked_now": false
+    },
+    {
+      "bytes": 1959,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/P49_preservation.json",
+      "purpose": "References to unchanged completed P4.9 result SHAs and full-suite exception.",
+      "sha256": "4e732b5983f9b55a20096083e411b5893310dcfb97945576569000e585eb983c",
+      "tracked_now": false
+    },
+    {
+      "bytes": 15793,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/attempt_registry.json",
+      "purpose": "All preserved v1/v2 attempts, horizons, seeds, updates, metrics and resources; status per arm denotes bundle gate, not an optimizer exception.",
+      "sha256": "cee5233ca1682d3b18cc06c6a14446cbb57b682e0ac0b332133a7f0ac61112fa",
+      "tracked_now": false
+    },
+    {
+      "bytes": 99848,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/checks.json",
+      "purpose": "Final and focused command outcomes, code hashes and initial failure/cancellation disclosure.",
+      "sha256": "69d664e5f272d04cd3b823155e4a5b9a66d4b5b0b4611fd706a2678e2cf79d79",
+      "tracked_now": false
+    },
+    {
+      "bytes": 811,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/draft_diagnostics_repaired.json",
+      "purpose": "Initial static failures and suppression-free repairs, preserved hashes.",
+      "sha256": "d6366f17b92fec05e552a702a40ddb9c4015390956440a52bce24fbbce083203",
+      "tracked_now": false
+    },
+    {
+      "bytes": 1989,
+      "git_ignored": false,
+      "kind": "md",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/E5_HEALTH_FIXTURE_v2_DESIGN.md",
+      "purpose": "Prospective law/identifiability/TG0 proof, controls and threshold rationale.",
+      "sha256": "388ea887273488ac425a882c6e257f5fad2d5786e0faa32705bb318b149f611c",
+      "tracked_now": false
+    },
+    {
+      "bytes": 41161,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/E5_NULL.json",
+      "purpose": "Actual fixed-seed health arm losses/gradients/scores/state hash;256 or1024 immutable attempt.",
+      "sha256": "39bc986108330dd642b72eb3adebc2679fd8d0ec505591812e9f6564469564ae",
+      "tracked_now": false
+    },
+    {
+      "bytes": 41894,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/E5_PLANTED.json",
+      "purpose": "Actual fixed-seed health arm losses/gradients/scores/state hash;256 or1024 immutable attempt.",
+      "sha256": "b8517560caa6b342c9d02c7608787e5b8347e0a5784386937dd17378fd3f1342",
+      "tracked_now": false
+    },
+    {
+      "bytes": 41893,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/E5_PLANTED_EXACT_REPEAT.json",
+      "purpose": "Actual fixed-seed health arm losses/gradients/scores/state hash;256 or1024 immutable attempt.",
+      "sha256": "87176ebe3f77ec3dcf0ee23edde177f47792a2f960cf49a8d4f6e0cfe868c4f9",
+      "tracked_now": false
+    },
+    {
+      "bytes": 41125,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/MC0_PLANTED.json",
+      "purpose": "Actual fixed-seed health arm losses/gradients/scores/state hash;256 or1024 immutable attempt.",
+      "sha256": "284682edc6301c3b707b5855ac0df4dc8209903fe6db27b6adc3e9b987ce202d",
+      "tracked_now": false
+    },
+    {
+      "bytes": 2174,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/fixture_v2_config.json",
+      "purpose": "Immutable prospective fixture, controls, thresholds, update horizon and budget.",
+      "sha256": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+      "tracked_now": false
+    },
+    {
+      "bytes": 808,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/health_attempt_reservation.json",
+      "purpose": "Before-fit config/code SHA and arm/update reservation.",
+      "sha256": "b437c96b395e948bbb12baf418152fa7945adba3527e9deff5881dc55e068076",
+      "tracked_now": false
+    },
+    {
+      "bytes": 284,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/health_console.txt",
+      "purpose": "Captured verification/CLI stdout or stderr; retained failed/passing/running chronology.",
+      "sha256": "4520db785b3e68076b9e068f8583b9688fe88e2ee9a22cd6d502cdc8bc52f3bc",
+      "tracked_now": false
+    },
+    {
+      "bytes": 9473,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/health_v2_result.json",
+      "purpose": "Whole-attempt health bundle disposition; failed256 or passed1024.",
+      "sha256": "0232a6937572ed6b64ea9426b8fa96fc0d947623c11d22829e197094033bdde2",
+      "tracked_now": false
+    },
+    {
+      "bytes": 19,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/final_ruff.txt",
+      "purpose": "Captured verification/CLI stdout or stderr; retained failed/passing/running chronology.",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "tracked_now": false
+    },
+    {
+      "bytes": 31532,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/final_ruff_status.json",
+      "purpose": "Command exit/timing and exact source/test hash snapshot or preserved intentional cancellation.",
+      "sha256": "71b9f516ac1283a2344a0faa1dd4a25580fc61a833e0af4e9eed3680e260a499",
+      "tracked_now": false
+    },
+    {
+      "bytes": 6248,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/final_types.txt",
+      "purpose": "Captured verification/CLI stdout or stderr; retained failed/passing/running chronology.",
+      "sha256": "7cf8fac2129ad84bb54c2dc2a160857469a8ee08caf99f16c7606bd1745ffa10",
+      "tracked_now": false
+    },
+    {
+      "bytes": 31654,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/final_types_status.json",
+      "purpose": "Command exit/timing and exact source/test hash snapshot or preserved intentional cancellation.",
+      "sha256": "fcf005fecc11cad0f2782d8089b065b95edc57269ae8bd519f9a3487ef4918b2",
+      "tracked_now": false
+    },
+    {
+      "bytes": 1830,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/fixture_v2_config.json",
+      "purpose": "Immutable prospective fixture, controls, thresholds, update horizon and budget.",
+      "sha256": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+      "tracked_now": false
+    },
+    {
+      "bytes": 515,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/fixture_v2_oracle.json",
+      "purpose": "Finite independent conditional, normalization, order and maturity oracle.",
+      "sha256": "eef48b025631b6e845b6c9911f5b4e29bf70764c6b3cd10d5079709c4ba586bc",
+      "tracked_now": false
+    },
+    {
+      "bytes": 110,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/focused_batch2.txt",
+      "purpose": "Captured verification/CLI stdout or stderr; retained failed/passing/running chronology.",
+      "sha256": "9274257c24f4168186f1465dbdad3d49e73e485cc1e3d637f77c1a088a02894b",
+      "tracked_now": false
+    },
+    {
+      "bytes": 57,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/focused_batch3.txt",
+      "purpose": "Captured verification/CLI stdout or stderr; retained failed/passing/running chronology.",
+      "sha256": "bfb342e72945ba9dea4c2f8309e68a24d6db39822b7c1f6547d79f0e7e2809a1",
+      "tracked_now": false
+    },
+    {
+      "bytes": 418,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/focused_batch3_status.json",
+      "purpose": "Command exit/timing and exact source/test hash snapshot or preserved intentional cancellation.",
+      "sha256": "66c51a582cbdcfdfca9ab03b5a1c51c2daa69fb7ec7922f0b8161d4bfbdc3589",
+      "tracked_now": false
+    },
+    {
+      "bytes": 114,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/focused_batch6.txt",
+      "purpose": "Captured verification/CLI stdout or stderr; retained failed/passing/running chronology.",
+      "sha256": "e781d3c1d0b8301fde153f75b294026f8916a8a2e3bac9dd67255c51d3a67010",
+      "tracked_now": false
+    },
+    {
+      "bytes": 833,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/full_pytest.txt",
+      "purpose": "Captured verification/CLI stdout or stderr; retained failed/passing/running chronology.",
+      "sha256": "efec478e7d268a3d41687026635a85dfd7ae55c2173da92c41da064bae986d6c",
+      "tracked_now": false
+    },
+    {
+      "bytes": 31551,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/full_pytest_status.json",
+      "purpose": "Command exit/timing and exact source/test hash snapshot or preserved intentional cancellation.",
+      "sha256": "c0a99cb34dde3ee3523c5a871ca1f106e7e33a605ef15ee46c5a1514f04520c8",
+      "tracked_now": false
+    },
+    {
+      "bytes": 346585,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/full_suite_ridge_forward.json",
+      "purpose": "Actual authorized final-suite forward ridge result; no standalone rerun.",
+      "sha256": "9e9328b177bf64d9d98bd304e5bed89026cd0485d5c433421f875408f5b43c06",
+      "tracked_now": false
+    },
+    {
+      "bytes": 928,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/full_suite_ridge_forward_reconciliation.json",
+      "purpose": "Exact prior/current forward coefficients and cohort conservation.",
+      "sha256": "3786514e2e43ed61456fd71f109dcae501673e7ca209f272b37d226ac2016a79",
+      "tracked_now": false
+    },
+    {
+      "bytes": 342762,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/full_suite_ridge_null.json",
+      "purpose": "Actual final-suite ridge result or exact prior/current numerical and population reconciliation; no standalone fit.",
+      "sha256": "795b949cba753dbbbda3f37eee955790588d7c21f1b27683db384bd0e0f54d84",
+      "tracked_now": false
+    },
+    {
+      "bytes": 1140,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/full_suite_ridge_null_reconciliation.json",
+      "purpose": "Actual final-suite ridge result or exact prior/current numerical and population reconciliation; no standalone fit.",
+      "sha256": "391e404fdb5fa626bc9d5bf2b216a25c4058965d4102b1235618ff7c1e5bec20",
+      "tracked_now": false
+    },
+    {
+      "bytes": 346585,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/full_suite_ridge_reverse.json",
+      "purpose": "Actual final-suite ridge result or exact prior/current numerical and population reconciliation; no standalone fit.",
+      "sha256": "55bf9c9ee1cb66e26bdde21ca08a73c67dc3eb6ea742660df3551357466bc2c4",
+      "tracked_now": false
+    },
+    {
+      "bytes": 1146,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/full_suite_ridge_reverse_reconciliation.json",
+      "purpose": "Actual final-suite ridge result or exact prior/current numerical and population reconciliation; no standalone fit.",
+      "sha256": "75f7df1608be5ab30eba3c86e829560868e211feef6b738fce97a88b12479d4b",
+      "tracked_now": false
+    },
+    {
+      "bytes": 808,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/health_attempt_reservation.json",
+      "purpose": "Before-fit config/code SHA and arm/update reservation.",
+      "sha256": "d5475f8490d2277cdc427d0f2a16dc96ebfb1e74ecc969ae44b20f04592f5e5b",
+      "tracked_now": false
+    },
+    {
+      "bytes": 9464,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/health_v2_result.json",
+      "purpose": "Whole-attempt health bundle disposition; failed256 or passed1024.",
+      "sha256": "d2c968c81568646f9e3a0b96ba1921ecca6f6afb6974f494f1277285fbbde7ec",
+      "tracked_now": false
+    },
+    {
+      "bytes": 3675,
+      "git_ignored": false,
+      "kind": "md",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/human_review_card.md",
+      "purpose": "14 substantive independent human checks and separated scientific status.",
+      "sha256": "cc56ee417312433212163d3380e0d828bae8782e02a92945dfa7e1b6c17909b1",
+      "tracked_now": false
+    },
+    {
+      "bytes": 31,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/lifecycle_console.txt",
+      "purpose": "Captured verification/CLI stdout or stderr; retained failed/passing/running chronology.",
+      "sha256": "adebdcb5a0b999da79342488f30c746a60eca3ef95b6d1748f7eb05c67f071de",
+      "tracked_now": false
+    },
+    {
+      "bytes": 8214,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/lifecycle_evidence.json",
+      "purpose": "Actual selected/final reload, P3 forecast, new-source preparation and negative cases.",
+      "sha256": "d398997873e0766ab6e3c01c5eb3c078884523b58337dbd7252de08b621b8721",
+      "tracked_now": false
+    },
+    {
+      "bytes": 143857,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/lifecycle_profile.txt",
+      "purpose": "One-second owned-process performance profile; optional local diagnostic.",
+      "sha256": "d805a9182467296affbaf01c1edcbaf4c38ba9485cb8809c7da66bd687e4ddb7",
+      "tracked_now": false
+    },
+    {
+      "bytes": 597,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/lifecycle_reservation.json",
+      "purpose": "Before-fit actual E5 pair authorization/health/config/code binding and forecast.",
+      "sha256": "b162de360b427931390d9992f775d0f2134f6cbfc370c7c97bcc76ebd854bbaf",
+      "tracked_now": false
+    },
+    {
+      "bytes": 3028,
+      "git_ignored": false,
+      "kind": "md",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/original_failure_analysis.md",
+      "purpose": "Independent original failure/ranking/graph diagnosis and limits.",
+      "sha256": "333f76f2c8ff0fa3b1ff618a06b85f345efad70c440f813b511a91e0bbc94857",
+      "tracked_now": false
+    },
+    {
+      "bytes": 7011,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/original_failure_oracle.json",
+      "purpose": "No-update reconstruction, exact arithmetic, sensitivity and old inequality evidence.",
+      "sha256": "ab142c42a1c3756041671afd1bea1a565aad71fbabddc2421f331bb70fa8a74c",
+      "tracked_now": false
+    },
+    {
+      "bytes": 3921,
+      "git_ignored": false,
+      "kind": "md",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/package_report.md",
+      "purpose": "Concise outcome, attempts, cap warning, actual bridge and next decision.",
+      "sha256": "547de5154ae42e2cb103ef79e92e187018fdb379a215e3083e8b2933b30e44d0",
+      "tracked_now": false
+    },
+    {
+      "bytes": 216158,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/preflight.json",
+      "purpose": "Initial clean Git/authority state and protected tracked file hashes.",
+      "sha256": "39a4febc4545621a253ebca09b5619769fd8fc169037e710657c7be7c758bc0e",
+      "tracked_now": false
+    },
+    {
+      "bytes": 498929,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/preservation.json",
+      "purpose": "Final exact preexisting tracked/raw conservation and16/33/7/science0 guard.",
+      "sha256": "2500e8f97349c0ab19ebadb6473877359103ea6e9f9abad7fbaf4fb7177f246d",
+      "tracked_now": false
+    },
+    {
+      "bytes": 276,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/prior_raw_source_reconciliation.json",
+      "purpose": "All402 prior raw source references independently compared with their recorded SHAs.",
+      "sha256": "05962ae722a1ea2281172a03c4e28e34554775c1a64b037e66079159a297b59f",
+      "tracked_now": false
+    },
+    {
+      "bytes": 121867,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/raw_hashes_before.json",
+      "purpose": "Byte-hash-only original canonical source snapshot; no OHLCV deserialization.",
+      "sha256": "cc0df68fe3c89e94eec5fd6697189403e98d7e11c3377f78a6494ac4b88ed01b",
+      "tracked_now": false
+    },
+    {
+      "bytes": 1168,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/resource_summary.json",
+      "purpose": "Actual E5 CPU/RSS/updates/wall/storage and large-suite accounting.",
+      "sha256": "f10ea1fcb70986b937f30b51c01b01ebc69fc6e622418186f071ad3c14c947d9",
+      "tracked_now": false
+    },
+    {
+      "bytes": 19,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/ruff_batch2.txt",
+      "purpose": "Captured verification/CLI stdout or stderr; retained failed/passing/running chronology.",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "tracked_now": false
+    },
+    {
+      "bytes": 19,
+      "git_ignored": false,
+      "kind": "txt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/ruff_batch6.txt",
+      "purpose": "Captured verification/CLI stdout or stderr; retained failed/passing/running chronology.",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "tracked_now": false
+    },
+    {
+      "bytes": 403,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/seed42_pair/calibration_selected.manifest.json",
+      "purpose": "Selected checkpoint stage/epoch/bytes/SHA.",
+      "sha256": "3ad04a2582a6dd6f1e21fbd6020bff8194a15c0ed356e661b756009fb5f6dadc",
+      "tracked_now": false
+    },
+    {
+      "bytes": 78417,
+      "git_ignored": false,
+      "kind": "pt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/seed42_pair/calibration_selected.pt",
+      "purpose": "Audit-only selected E5 model; no prediction authority.",
+      "sha256": "418570b7a219cadff22c630646288b4e270a5b3b9935b87ac04f01a1fe48783b",
+      "tracked_now": false
+    },
+    {
+      "bytes": 5489,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/seed42_pair/pair_result.json",
+      "purpose": "Actual lifecycle populations, initialization/reset, preprocessing/checkpoint IDs and times.",
+      "sha256": "91b330c5c8ade88d20932c0620ce7b0654dc6b9a546b3ad8e1196f50309461ec",
+      "tracked_now": false
+    },
+    {
+      "bytes": 384,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/seed42_pair/refit_final.manifest.json",
+      "purpose": "Final stage/epoch/fit binding/SHA/bytes and prediction authority.",
+      "sha256": "e2fa154042cf3ddfa2909842fc6bd91f317307c9620162389232c86cbee5b243",
+      "tracked_now": false
+    },
+    {
+      "bytes": 62289,
+      "git_ignored": false,
+      "kind": "pt",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/seed42_pair/refit_final.pt",
+      "purpose": "Complete authoritative final E5 fabricated-data refit model.",
+      "sha256": "e659035fdbba2e39714d07ca42ae28d20683c89789f2dec551c11257da7c0c9d",
+      "tracked_now": false
+    },
+    {
+      "bytes": 67009,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/seed42_pair/refit_trace.json",
+      "purpose": "Fresh full-prefix fixed59-epoch telemetry and session/update conservation.",
+      "sha256": "e3dd48e096357f205d91b73a0cef6c093e219b15fed1d1ffb343332d1362b638",
+      "tracked_now": false
+    },
+    {
+      "bytes": 117572,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/seed42_pair/selection_trace.json",
+      "purpose": "Actual per-epoch D6g train/validation telemetry and qualifying selector.",
+      "sha256": "b81c67597f547363d8788e84caba92c5086be44d25e46099d368fd32c8e9bebe",
+      "tracked_now": false
+    },
+    {
+      "bytes": 1893,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/seed42_pair/synthetic_pair_registry.json",
+      "purpose": "Isolated synthetic lifecycle state history, complete final SHA; no science ledger write.",
+      "sha256": "54ff15dd86ecff908f80a4a7b1f01787007957b7cd49ccd9014fe1be02fe8596",
+      "tracked_now": false
+    },
+    {
+      "bytes": 9269,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/synthetic_evidence.json",
+      "purpose": "Compact consolidated v1/v2/D6g and scientific-scope evidence.",
+      "sha256": "af7208c488274d08160def54341529c344afb52bda449006e12c28e0363bdc14",
+      "tracked_now": false
+    },
+    {
+      "bytes": 6502,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/types_batch1.json",
+      "purpose": "Incremental comprehensive Pylance parity result, including preserved initial diagnostics.",
+      "sha256": "a64792287025fc05c1d88e1f81ba5f5e3f038d68839462d819044c2c5621e516",
+      "tracked_now": false
+    },
+    {
+      "bytes": 6161,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/types_batch3.json",
+      "purpose": "Incremental comprehensive Pylance parity result, including preserved initial diagnostics.",
+      "sha256": "bc2fe5e91b7295238730d1366dfda46719d5396ee2fd8f9a9787385d7d764628",
+      "tracked_now": false
+    },
+    {
+      "bytes": 7185,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/types_batch4.json",
+      "purpose": "Incremental comprehensive Pylance parity result, including preserved initial diagnostics.",
+      "sha256": "e10e640ccdb732e919f47d7a1d8782b5313f12e0c7e79fb04125a92a855c4469",
+      "tracked_now": false
+    },
+    {
+      "bytes": 6205,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/types_batch5.json",
+      "purpose": "Incremental comprehensive Pylance parity result, including preserved initial diagnostics.",
+      "sha256": "17adca4b3ad5875055730a66de9ea655032432f75a9cd8d532214bc5d9ce36bf",
+      "tracked_now": false
+    },
+    {
+      "bytes": 6248,
+      "git_ignored": false,
+      "kind": "json",
+      "path": "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/types_batch6.json",
+      "purpose": "Incremental comprehensive Pylance parity result, including preserved initial diagnostics.",
+      "sha256": "679fd432e947a3e665e9788166cef8d3540246f795453233e0359c5bc5045d7c",
+      "tracked_now": false
+    },
+    {
+      "bytes": 13797,
+      "git_ignored": false,
+      "kind": "py",
+      "path": "src/lstm_data/e5_deep_audit.py",
+      "purpose": "Independent v1/oracle graph and immutable fixed-horizon primary/MC0/null/repeat v2 proof CLI.",
+      "sha256": "ca65c56a8dccbd4ffce3254b4cbf639a14798045ae143b7ed9fd32f244ec0c37",
+      "tracked_now": false
+    },
+    {
+      "bytes": 6774,
+      "git_ignored": false,
+      "kind": "py",
+      "path": "src/lstm_data/e5_fixture_v2.py",
+      "purpose": "Hermetic timestamp-keyed upstream features, separate future TG0 references, normalization/forecast helpers; no data/provider input.",
+      "sha256": "0969f3de0138e9e5320c300efeeb789a9f29f49329a843992ef67fa4fa7f061d",
+      "tracked_now": false
+    },
+    {
+      "bytes": 9943,
+      "git_ignored": false,
+      "kind": "py",
+      "path": "src/lstm_data/e5_lifecycle_audit.py",
+      "purpose": "Actual gated E5 D6g, selected/final reload, five-score P3 bridge and source/checkpoint negative audit.",
+      "sha256": "de5c4db63e5faadf1834c312aaeffdf695a50b7aa070061be09d9bacd92e380a",
+      "tracked_now": false
+    },
+    {
+      "bytes": 4663,
+      "git_ignored": false,
+      "kind": "py",
+      "path": "tests/test_e5_fixture_v2.py",
+      "purpose": "Four independent arithmetic/information/affine normalization/order/clock/partial-population/gradient regressions.",
+      "sha256": "822999a26b86ddb2221fa0e79cb19654d88b91e46235a80de1ab40eb2bb96592",
+      "tracked_now": false
+    },
+    {
+      "bytes": 1234,
+      "git_ignored": false,
+      "kind": "py",
+      "path": "tests/test_e5_lifecycle_audit.py",
+      "purpose": "Three gate-blocking cases preventing a fit after failed health or config tampering.",
+      "sha256": "eb2b5c4baa2d2771226442f453a05f5dce55f1e4db590f73fd97dac5afc2a4b3",
+      "tracked_now": false
+    }
+  ],
+  "deleted_or_moved": [],
+  "ending_tree": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n?? docs/track_a/P4_E5_SYNTHETIC_CLOSURE_API_v3.md\n?? reports/codex_sessions/2026-10-14_094242_ta-p4-e5-deep-synthetic-closure.md\n?? reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/\n?? src/lstm_data/e5_deep_audit.py\n?? src/lstm_data/e5_fixture_v2.py\n?? src/lstm_data/e5_lifecycle_audit.py\n?? tests/test_e5_fixture_v2.py\n?? tests/test_e5_lifecycle_audit.py\n",
+  "frozen_protocol_unchanged": true,
+  "head": "a84bc677e304dad1313091cae1bd040ef40c0d56",
+  "local_orchestration_helpers": {
+    "/private/tmp/e5_deep_active.txt": {
+      "purpose": "Local check/report orchestration or locator; not a project runtime dependency",
+      "sha256": "9c30176798dc693c864110f99ecbd791a3b86e982fd33141ed86a3cffb04b70b"
+    },
+    "/private/tmp/e5_deep_check.py": {
+      "purpose": "Local check/report orchestration or locator; not a project runtime dependency",
+      "sha256": "ce265e579e092d80a0dc25bd3d3f6f30f11472f7c14486961f689973358268a5"
+    },
+    "/private/tmp/e5_deep_collect_ridge.py": {
+      "purpose": "Local check/report orchestration or locator; not a project runtime dependency",
+      "sha256": "d905d546bd5b5e044f8741e11ab417e5f36656459aacadbafc4660fcabcfa946"
+    },
+    "/private/tmp/e5_deep_finalize.py": {
+      "purpose": "Local check/report orchestration or locator; not a project runtime dependency",
+      "sha256": "5d22ed38db9a6a88fe5970bd88159d1b74709164d4a498a533033081d781e640"
+    },
+    "/private/tmp/e5_deep_lifecycle_profile.txt": {
+      "purpose": "Local check/report orchestration or locator; not a project runtime dependency",
+      "sha256": "d805a9182467296affbaf01c1edcbaf4c38ba9485cb8809c7da66bd687e4ddb7"
+    }
+  },
+  "modified_preexisting": [],
+  "no_Git_integration": true,
+  "payload_bytes": 2980193,
+  "payload_files": 74,
+  "scientific_holds_preserved": true,
+  "self_and_seal_excluded_from_payload_recursion": true,
+  "starting_tree": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n",
+  "status": "P4_8_SYNTHETIC_ENGINEERING_PASS"
+}

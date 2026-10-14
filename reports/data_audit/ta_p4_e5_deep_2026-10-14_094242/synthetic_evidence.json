@@ -1,0 +1,245 @@
+{
+  "P2_P3_deferrals": [
+    16,
+    33
+  ],
+  "P4_9": "UNCHANGED; existing regression fits repeated only within authorized final full suite",
+  "actual_D6g": {
+    "adequacy": {
+      "origins": {
+        "1": 55,
+        "2": 55
+      },
+      "sessions": 55
+    },
+    "calibration_updates": 180,
+    "cap_underfit_warning": true,
+    "checkpoint_SHAs": {
+      "calibration": "418570b7a219cadff22c630646288b4e270a5b3b9935b87ac04f01a1fe48783b",
+      "refit": "e659035fdbba2e39714d07ca42ae28d20683c89789f2dec551c11257da7c0c9d"
+    },
+    "evidence_sha": "d398997873e0766ab6e3c01c5eb3c078884523b58337dbd7252de08b621b8721",
+    "first_last_calibration_valid_mse": [
+      0.07125039046460932,
+      0.04380061084573919
+    ],
+    "first_last_refit_train_mse": [
+      0.06906609416007996,
+      0.01562798995524645
+    ],
+    "forecast": {
+      "cutoff": "2023-07-20T14:30:00+00:00",
+      "id": "SYN:NEURAL_FORECAST:4637da697b9026a897f0e18d04e037d8d753fd2b8a13e4264d2bbfa5b251e0e6",
+      "input": "SYN:E5_HEALTH_FIXTURE:v2:8051:SYN:INPUT:2023-07-20:1",
+      "label_or_exit_input": false,
+      "repeat_exact": true,
+      "scores": [
+        -0.09417596459388733,
+        -0.10255531966686249,
+        -0.08150960505008698,
+        -0.48761022090911865,
+        -0.05691016465425491
+      ],
+      "symbols": [
+        "NOVA",
+        "ORBIT",
+        "PULSE",
+        "QUARK",
+        "RUNE"
+      ],
+      "trading_replay": false,
+      "universe": "a24f43b9ace0552d1645aaf0dbde2df12dfc0d26a8de19a3b5a2ce65f87e0ce6"
+    },
+    "fresh_initialization_equal": true,
+    "fresh_optimizer_empty": true,
+    "max_calibration_refit_clipping_fraction": 0.0,
+    "negatives": {
+      "calibration_as_final": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+      "old_checkpoint_new_source": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+      "old_prep_new_source_forecast": "SCALER_FEATURE_SOURCE_ACTION_MISMATCH",
+      "stale_code": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+      "stale_model_optimizer_selection": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+      "stale_preprocess": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+      "stale_source_features_data": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+      "stale_universe": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+      "tampered": "CHECKPOINT_HASH_IDENTITY_STAGE_REQUIRED",
+      "wrong_family": "PARSED_CHECKPOINT_SCHEMA_REQUIRED"
+    },
+    "preparation_ids": [
+      "01575255c4d4361e7bffdc9b100685ecc5367704668135d6ee47c0dd47c5a76e",
+      "80bbf7f8741be46553dc6c374e404aee553529efd939b5905484f4758ef2711e"
+    ],
+    "refit_updates": 413,
+    "reload_error": 0.0,
+    "replacement": {
+      "fresh_replacement_model": "NOT_FITTED; new source requires fresh pair",
+      "input_shape": [
+        5,
+        48,
+        23
+      ],
+      "new_input_identity": "66750e4281d04a099b9878a521b28998436e47313c8bf171504eaa55c1670c45",
+      "new_prep_and_input_built": true,
+      "new_preparation": "984f6d9f5884660034908420a5cc51030e4d74a114c78d89bb6ad77a2388545c",
+      "new_source_identity": "01c99d12947e0146973a78d1e972d432525ff4e06003a2e48c305b26293f8164",
+      "numerical_content_change_invalidates": true,
+      "raw_tuples_shared": true,
+      "source_version": "SYN:E5_HEALTH_FIXTURE:v2:8051:SOURCE_REPLACEMENT"
+    },
+    "selector": {
+      "best": 0.04380061084573919,
+      "epoch": 60,
+      "patience": 1,
+      "raw_epoch": 59,
+      "raw_min": 0.04380061084573919,
+      "selected": 59,
+      "status": "MAX_EPOCHS_REACHED"
+    },
+    "status": "E5_ACTUAL_D6G_INTEGRATION_PASS",
+    "zero_constant_output_epochs": true
+  },
+  "code_and_config_files": {
+    "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/extension_1024/fixture_v2_config.json": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+    "reports/data_audit/ta_p4_e5_deep_2026-10-14_094242/fixture_v2_config.json": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+    "src/lstm_data/e5_deep_audit.py": "ca65c56a8dccbd4ffce3254b4cbf639a14798045ae143b7ed9fd32f244ec0c37",
+    "src/lstm_data/e5_fixture_v2.py": "0969f3de0138e9e5320c300efeeb789a9f29f49329a843992ef67fa4fa7f061d",
+    "src/lstm_data/e5_lifecycle_audit.py": "de5c4db63e5faadf1834c312aaeffdf695a50b7aa070061be09d9bacd92e380a"
+  },
+  "confirmation_analysis": false,
+  "ledger_blockers": 7,
+  "provider_attempts": 0,
+  "real_OHLCV_loaded_for_E5": false,
+  "scientific_pairs": "0/40",
+  "scientific_status": "G0_G4_HOLD",
+  "scope": "ENGINEERING_SYNTHETIC_ONLY",
+  "status": "P4_8_SYNTHETIC_ENGINEERING_PASS",
+  "trading_replay": false,
+  "upstream_review": "MC0/MC1/P4.6/P4.7 acceptance remains pending where recorded; current synthetic task authority permits this execution, not scientific approval",
+  "v1_failure": {
+    "criteria": {
+      "ablation_bound": 0.28782060742378235,
+      "actual_ablation": 0.21520401537418365,
+      "actual_final": 0.14391030371189117,
+      "both_failed": true,
+      "final_bound": 0.078973488509655
+    },
+    "final": 0.14391030371189117,
+    "initial": 0.22563853859901428,
+    "new_updates": 0,
+    "oracle": "original_failure_oracle.json",
+    "preserved": true,
+    "proof_sha": "bdefd7800e17992fb629cfbee62df2ba9701a3e9cd4fae40a7ea9a6f9f3187df",
+    "root_cause": "arithmetic fixture lacks mature TG0/chronology; its common-mean ranking algebra is own-dependent; no demonstrated production software defect; short optimization insufficient, not universal architecture failure",
+    "zero_peer": 0.21520401537418365
+  },
+  "v2_1024": {
+    "E5": {
+      "final_train_mse": 0.0003559006338921766,
+      "gradient_summary": {
+        "clipped_fraction": 0.0,
+        "max": 0.36556950211524963,
+        "median": 0.024552278220653534,
+        "multiplier_median": 1.0,
+        "multiplier_min": 1.0,
+        "nonfinite_count": 0,
+        "p90": 0.05270543135702615,
+        "p95": 0.06960098855197429,
+        "p99": 0.14351728960871682,
+        "sustained_clipping_warning": false
+      },
+      "heldout_mse": 0.00188212675195907,
+      "initial_train_mse": 0.07269971470373708,
+      "min_peer_input_gradient": 0.00025963844382204115,
+      "min_peer_input_weight_gradient": 0.002653472824022174,
+      "parameter_count": 7329,
+      "peak_memory": {
+        "bytes": 378093568
+      },
+      "seconds": 49.104943916987395,
+      "seed": 42,
+      "state_sha": "b2ff9eb1733a6fc8d00bc3a1249e98a8df5abb2c01ae344f0d220045e16d97c8",
+      "updates": 1024,
+      "zero_reference_mse": 0.056032079073007814
+    },
+    "MC0": {
+      "final_train_mse": 0.008016222685172752,
+      "gradient_summary": {
+        "clipped_fraction": 0.0,
+        "max": 0.8030518293380737,
+        "median": 0.059960244223475456,
+        "multiplier_median": 1.0,
+        "multiplier_min": 1.0,
+        "nonfinite_count": 0,
+        "p90": 0.13720017522573474,
+        "p95": 0.18031845837831464,
+        "p99": 0.2943167769908904,
+        "sustained_clipping_warning": false
+      },
+      "heldout_mse": 0.07504877413792366,
+      "initial_train_mse": 0.04827682179323322,
+      "min_peer_input_gradient": null,
+      "min_peer_input_weight_gradient": null,
+      "parameter_count": 7073,
+      "peak_memory": {
+        "bytes": 378093568
+      },
+      "seconds": 53.79697908301023,
+      "seed": 42,
+      "state_sha": "ed406d04dc223396a834d9fac9c9669016772bb7ae911ed7d5d97606cf42fcd5",
+      "updates": 1024,
+      "zero_reference_mse": 0.056032079073007814
+    },
+    "checks": {
+      "MC0_information_control": true,
+      "heldout_signal": true,
+      "null_not_spurious_learning": true,
+      "positive_peer_gradients": true,
+      "repeat_exact": true,
+      "train_reduction": true
+    },
+    "config_sha": "856dc579bd6ba4772014b54af91b32d646681cdd00011301dac3a5564b3abed6",
+    "null": {
+      "final_train_mse": 0.013445134608175707,
+      "gradient_summary": {
+        "clipped_fraction": 0.0,
+        "max": 0.7040491700172424,
+        "median": 0.06156926043331623,
+        "multiplier_median": 1.0,
+        "multiplier_min": 1.0,
+        "nonfinite_count": 0,
+        "p90": 0.14461914300918582,
+        "p95": 0.17863832190632817,
+        "p99": 0.29127730727195733,
+        "sustained_clipping_warning": false
+      },
+      "heldout_mse": 0.08145030564205213,
+      "initial_train_mse": 0.07420490047818906,
+      "min_peer_input_gradient": 0.00025138736236840487,
+      "min_peer_input_weight_gradient": 0.003057260997593403,
+      "parameter_count": 7329,
+      "peak_memory": {
+        "bytes": 440713216
+      },
+      "seconds": 47.27635770800407,
+      "seed": 42,
+      "state_sha": "59fa4cf46b03d93b1fa882af640f2aaef7a1fdf82ae0e9dd107c38899dc0de4e",
+      "updates": 1024,
+      "zero_reference_mse": 0.062082336470484736
+    },
+    "result_sha": "0232a6937572ed6b64ea9426b8fa96fc0d947623c11d22829e197094033bdde2",
+    "status": "PASS"
+  },
+  "v2_256": {
+    "checks": {
+      "MC0_information_control": false,
+      "heldout_signal": false,
+      "null_not_spurious_learning": true,
+      "positive_peer_gradients": true,
+      "repeat_exact": true,
+      "train_reduction": false
+    },
+    "config_sha": "24b27ce0f5727d2fde73b13506b10b2e41f5f3fb72c92ecdf5eb674be3a4f066",
+    "result_sha": "d2c968c81568646f9e3a0b96ba1921ecca6f6afb6974f494f1277285fbbde7ec",
+    "status": "FAILED"
+  }
+}

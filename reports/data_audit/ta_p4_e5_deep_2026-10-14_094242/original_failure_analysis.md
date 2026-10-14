@@ -1,0 +1,15 @@
+# Original E5 v1 failure — preserved
+
+The original arithmetic test remains FAILED. Initial MSE 0.225638538599, final 0.143910303712, same-final-weight peer-zero MSE 0.215204015374. Required final <0.078973488510 and ablation >0.287820607424. Loss declined 36.22%, while the ablation/final ratio was 1.495; neither original inequality passed. Two identical prior runs are retained; this task has0 v1 optimizer updates.
+
+The frozen target is endpoint peer mean itself, not TG0. It is identifiable for supervised arithmetic regression (own seven-lag OLS MSE 0.211986198031; with peer mean 2.97e-31), but has no independent future label source, maturity, train/validation partition, scaler fit or source clocks. It is unsuitable as the requested mature TG0 engineering proof. No original dataset/test/signature has been replaced or loosened.
+
+Algebra: mu_i=(sum_j z_j-z_i)/4. Hypothetically centering this quantity yields mu_i-median(mu)=-(z_i-median(z))/4, finite oracle error 0. MAD(mu)=MAD(z)/4. Rankings are exactly opposite own M1; the common sum cancels. This TG0 operation was NOT applied in v1. Thus v1 supervised peer-mean fit and incremental TG0 ranking are different questions.
+
+Peer dispersion varies (mean/dispersion standard deviations [0.50435870885849, 0.3285248279571533]); own/peer augmented designs have ranks 8/9. Endpoint target/peer correlation1 versus own correlation 0.005695. First21 numerical channels and complete5x48 geometry are independently checked. No imputation or mixed precision is involved (float32 primary, float64 diagnostic finite difference only).
+
+At seed 42 the independent initial pass reproduces MSE exactly. All6 parameter gradients and both input peer gradients are positive finite; gradients reach 48/48 steps. Autograd vs central finite difference at epsilon 1e-5 differs by 1.42e-12, tolerance1e-7. Eval repeats exactly; existing tests confirm stochastic final-hidden train dropout, independent zero state, exhaustive AdamW matrix/bias groups and global clipping. Initial global norm 0.198830, below clip1. Original historical clip fraction/trajectory are NOT_RECORDED; no backward reconstruction from nonexistent checkpoint is asserted.
+
+Peer-zero replacement is off-manifold for positive dispersion. Its loss difference shows dependence of those same weights on channels, not independent conditional importance. V2 uses a separately trained own+market MC0 and a population Bayes oracle rather than this ablation as its gate. No original fitted control existed, so none is invented.
+
+No software detach/broadcast/channel-index/loss/optimizer defect is demonstrated. Insufficient optimization under the fixed60 updates remains a plausible cause of the numerical failure, not proven from missing trajectory. Representational inadequacy is not established. The demonstrable fixture defect is lack of TG0/chronology and ranking identifiability for the original common-mean construction. The authorized v2 is a prospective replacement engineering proof, never retroactive PASS for v1.
