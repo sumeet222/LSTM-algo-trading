@@ -1,0 +1,1244 @@
+{
+  "archive": "data/raw/alpaca/track_a_provisional_three_completion_v1",
+  "carried_attempts": 99,
+  "conservative_extended_rows": 285696,
+  "conservative_uncompressed_bytes": 36569088,
+  "created_at": "2026-10-13T20:32:02.542653+00:00",
+  "cumulative_envelope": 867,
+  "effective_ceiling": 1000,
+  "estimated_native_RTH_rows": 52098,
+  "inherited_limits_sha256": "a176b45ed71bd793a1e2c9d534fd1069bddf0a3c09c9fdebb130034f7d545c0c",
+  "legacy_exception": "March2020 new three-symbol material identity; exclude obsolete HON, increase paginator guard4 to12; retain old four-name HOLD and all prior charges. This is an explicit scoped replacement, not clearing the original journal.",
+  "max_bytes": 268435456,
+  "max_new_attempts": 768,
+  "ordered_universe": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ],
+  "package": "TA-PROVISIONAL-FIVE-SOURCE-CLEANUP-001",
+  "policy": "One send/page in frozen envelope; lifetime cap3 preserved. Stop401/403/429/schema/loop/budget; atomic publication only after terminal page. No source copies or credentials in evidence.",
+  "requests": [
+    {
+      "authorization": "NEEDS_NARROW_LEGACY_HOLD_DISPOSITION",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2020-03",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-04-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-03-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "54436956fc608d3f45a8e1b4d5974678973947a176460ff69c1c896b15200954"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2020-04",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-05-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-04-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "87e45ee54526923d1e80a6a5934e3d9dbec04775f8209f9ccd49b136f95a0140"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2020-05",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-06-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-05-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "f5679eddec9798af36edd1e58ae976738d22a8231b477ee9980f8f58c1624ece"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2020-06",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-07-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-06-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "1411037d5773012f74558b342db80d866eba11bfd140ea0cbdd59ed219ed12ae"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2020-07",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-08-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-07-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "0957d733c4ba08766a4cefc69b4e5bf975205c2798cc124865746536ade13bf1"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2020-08",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-09-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-08-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "32dc86c60b087fe1790da0549fe5fe8849ea1051b939fecfabc28e6da3a9fdba"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2020-09",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-10-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-09-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "e09979f146ef4912575aedd9ef7288274612932cd0ae5971362a6bf0154d265b"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2020-10",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-11-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-10-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "5bef45db63564908ef2bd58c9bf4e6c732c1fb329989087ca9c012b9af7ba526"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2020-11",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-12-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-11-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "6c6811e336ce187da9c684789903bed1b07356151355a871be9fe8579fe37911"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2020-12",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-01-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-12-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "ca92b8e7d38c45959a70ebdd22039c8abc9299623a68f969a60a9c1c638cfaa9"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-01",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-02-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-01-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "29b5ce215ca29abb3fda7653a6bdc675c95594ab3d3770fc09569cd37a86d9f2"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-02",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-03-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-02-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "2c6f9394d5df9ad2ef43299dbb80341537b3a72bfe3f969170b7af506b49fe33"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-03",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-03-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "5cec20ef019a96fd046619a89143d950fefcde2818aee9fcb8125bc3356d3ba6"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-04",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-05-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "3c949bc60c872dd7c8b70fbd1dc63ac43d3332d599f2ca5777a1d4ea06377299"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-05",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-06-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-05-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "9a6dbfbd4f5c05fc1f463128f9a3c90062eab3b0797f5ec9a9a12074faf4724e"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-06",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-07-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-06-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "c19e0bd99a01953240c7294e62ac3bdc3c5db19dafe6ce820649021eb19c5655"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-07",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-08-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-07-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "bebf118ea309b60fe77e9d0358090e5790640b54fe5680aff15696f07f7d4379"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-08",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-09-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-08-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "c55a749b231a357068759f60d94d9b6b4010cd92243c05cfbf5a6c564e34a3fb"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-09",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-10-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-09-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "7db713b79321c13c4bc7a7ed15fa26cc69b0f02b244804601a750759e71130f7"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-10",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-11-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-10-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "ebba1c3b202ed18624e97554bd686e037d34b8bec09b3b96608dc286c94a4cbe"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-11",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-12-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-11-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "c1f2e46fff203e9f735fadba2f80a664d3099142b46349ad909249fa04ff92e2"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2021-12",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-12-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "c1f9bcd705c51ae8f75a1718ebfafdf8ead23762c851b31a69d6f6dbc3c337ee"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-01",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-02-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "66de9d123a652c8fae3edaec61921e4dedddc760efd37cc80e4b5a0059a88904"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-02",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-03-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-02-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "b67e7a0470764a419c6e1d346cd54ee18a70585f09e288e60e334b7c599c50f4"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-03",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-04-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-03-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "9faa328ef3d6156eaf000a52db7f8a2a66291d2c98409e369be7a81a7ec21504"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-04",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-05-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-04-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "22657c875bd2073d53571ed326c9f5b43bb993d876df9315f06b2d10295ec991"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-05",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-06-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-05-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "6aca3d446dd7dfe1ffe1af0e78e61e674f283cd60b72173d03c35cb909a36581"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-06",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-07-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-06-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "e81511d9430c13e42f2728b8d3896a36016b670a6bc3c3d59ca4d1a3b078809f"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-07",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-08-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-07-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "0b7050dc91b73fba7dd4464a95ac5a1cebdaadfa04d7124e7319840e70ffdc60"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-08",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-09-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-08-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "86e66a4330f84cc7d59c4fc1c285dcb6025c146bba55d33c8d4980dce340b533"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-09",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-10-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-09-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "e6cb7bcb7f2db664913741cbc4ecdfde74ec06a22f9471553da77d23156bb098"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-10",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-11-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-10-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "10eb6bbd3ea3ccb2ad9f11f099b51a779b93d5d7b28fce32ba33328e0c23e444"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-11",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-12-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-11-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "02ed6b620639f090786b70fd02e185465c4a420bbf7f8f500a50852e41875c6c"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2022-12",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-01-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-12-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "6b410998857d10a8beea4529ceaaa0f8e4ae32056b02456bb77cc34fc5687977"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-01",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-02-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-01-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "bf995983d57e4399f525cfce152d6d119e0a712fbb011145ec4af4b6ab8d3ab9"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-02",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-03-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-02-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "793080049ff47e23873deeabf241414eeded85c77e9e94b505f48222c2f03700"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-03",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-04-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-03-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "c6c652c9044d9fca8b79d3a38a530ca33d0dc3f8ecee8bb253f8d1f048cacee5"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-04",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-05-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-04-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "799cdddf30f701cd30ee570aeff594903c378ef3de82ffb95c1688aa726a2e3f"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-05",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-06-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-05-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "75e9d7681b17e1e2dc551b01df9981e4f01623c5c01adfb91d21e9c64f17062a"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-06",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-07-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-06-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "0d6b23ad3271a1480d97eaf0eba122bc9b221b8028a7876703129639699cca4f"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-07",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-08-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-07-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "e69a3404c568a6b66e42346d0d9418b5c1c64633f1e2d132b3d697d7ee9d7ba4"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-08",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-09-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-08-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "31ca134cd249f7b4deec26fe6e2d448f3d77235d1fd28b300a9d0428adb4d1e3"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-09",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-10-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-09-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "ee3ae6302ea7c20eb454d6e6b839a867b9f67e693e3ee3010dea76aa3bc9930f"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-10",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-11-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-10-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "55730c6d86dad0a3629e0c8b4bfbe72dc973e1f3df93e5ad3bd2f6e659d65207"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-11",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2023-12-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-11-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "67456fe95548be31b30726cb7d2ca07bab480bb247a2c88faf16b28e0630ee6c"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2023-12",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-01-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2023-12-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "1767bcff3786ecdba3b2335903c3d2eaf1c25bdbf2a953b2749cea58a1b33890"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-01",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-02-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-01-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "1f9fbc46bb4cb0b81122a0439d084944154cac21b32b0fd232f444d4d35bc355"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-02",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-03-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-02-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "34c48396f6180a62be0a632c84f123a80275cbd0705ec0ee2841b77f6e6146b7"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-03",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-04-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-03-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "db4046ee81736b9e6353bf868267619c3c1af97e83ee09808366d7ee1e2963cd"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-04",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-05-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-04-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "f9e89e91b29af530bbc656d71e164f24abdb2858d3e0f7590db100d33a99dce3"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-05",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-06-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-05-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "e2063dde408f79837ceb03e67493732f097878b0bcc3bee88c3734d3f8b90793"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-06",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-07-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-06-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "78122faa4838fc73383dd48c214784d05f03652f8bcaa3ae0fb20fb138bb7e55"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-07",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-08-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-07-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "dbf80b9371090bee5e3f9c8be14c2763573a706cd15c6fb0c1440f89f97f77ab"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-08",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-09-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-08-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "5513d3906384bd1458fea042994b4613e59fbdfcb89b9ecda9acadeb692757cf"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-09",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-10-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-09-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "55086eac66346592f4d1c41bfb420a3081435d6e3a9e155db15ebd6d2447b869"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-10",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-11-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-10-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "d8915ed1afe9e0b9708bc2340ed65f9c8c3ac654cc5eb1a7286a3b1d26763b28"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-11",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2024-12-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-11-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "0ba76c38ee7dab99dc4c27849bcf5d580e4f9515e39fa63cf06b11a4bc726bc3"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2024-12",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-01-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2024-12-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "faf1059c7aff9c17937e7bfd1861c527b5dd503dd36b261ce591d4b4a0483acd"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2025-01",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-02-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2025-01-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "aed3d096f83baef6b9b259dcaa3907727fcda948af6ac056a691b7710bc89c0d"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2025-02",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-03-01T04:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2025-02-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "44c96635188c3f687eebb469ebda88c146694ece00a853d29f34eed93db8a02e"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2025-03",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-04-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2025-03-01T05:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "36dd60e71d0b5613e24c2509b3b7e87accd58fa3ced0de184f572271d1c1e6c8"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2025-04",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-05-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2025-04-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "03b64247828db303b46df2c00aca36de77e9df145498ffe8477883a3b7824d3b"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2025-05",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-06-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2025-05-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "89725982f2292b423208e9ee70ff8f6cc4f4b6756f01394787b900c25e3d1d30"
+    },
+    {
+      "authorization": "CURRENT_TASK_SOURCE_SCOPE_BUT_SEQUENTIAL_GATE_WAIT",
+      "max_attempts": 1,
+      "max_pages": 12,
+      "month": "2025-06",
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2025-07-01T03:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2025-06-01T04:00:00+00:00",
+        "symbols": "COST,CMCSA,SBUX",
+        "timeframe": "30Min"
+      },
+      "request_hash": "e9ea239ecc8f8e09b5e1896372dfe4d32713b9e402b7ef4129c2adc66df966fb"
+    }
+  ],
+  "requests_sha256": "97f1432eb95e93c1e9348956fb80edf87cfbc5090cddf9f5de6fa6d3a9b5895c",
+  "reuse_inventory_sha256": "b05b76ed0bcfe5d1fe3e1f27760f9453fa3e374266800f1a20d62bf89bc779e6",
+  "status": "PLAN_ONLY_AUTHORIZATION_PENDING"
+}

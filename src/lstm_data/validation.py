@@ -64,6 +64,13 @@ def defects(frame: pd.DataFrame, *, stocks: bool = False) -> dict:
 
 
 def require_valid(frame: pd.DataFrame, *, stocks: bool = False) -> None:
+    # Engineering overlays must never be normalized into genuine source, daily
+    # evidence, hourly inputs or references, even when they contain zero fills.
+    if frame.attrs.get("engineering_only") or any(
+        column in frame and frame[column].eq(True).any()
+        for column in ("engineering_only", "is_synthetic")
+    ):
+        raise ValueError("ENGINEERING_CANDLE_VIEW_IS_NOT_GENUINE_SOURCE")
     checks = defects(frame, stocks=stocks)
     fatal = {
         key: value

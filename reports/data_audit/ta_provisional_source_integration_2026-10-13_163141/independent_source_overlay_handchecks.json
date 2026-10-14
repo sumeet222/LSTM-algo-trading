@@ -1,0 +1,54 @@
+{
+  "calendar_cases": [
+    {
+      "close_utc": "2020-11-27T18:00:00+00:00",
+      "each_stock": 7,
+      "open_utc": "2020-11-27T14:30:00+00:00",
+      "session": "2020-11-27"
+    },
+    {
+      "close_utc": "2021-03-12T21:00:00+00:00",
+      "each_stock": 13,
+      "open_utc": "2021-03-12T14:30:00+00:00",
+      "session": "2021-03-12"
+    },
+    {
+      "close_utc": "2021-03-15T20:00:00+00:00",
+      "each_stock": 13,
+      "open_utc": "2021-03-15T13:30:00+00:00",
+      "session": "2021-03-15"
+    }
+  ],
+  "main_arithmetic": {
+    "early_close_sessions": 9,
+    "expected": 16261,
+    "formula": "1255*13 - 9*6",
+    "sessions": 1255
+  },
+  "no_actual_gaps": true,
+  "no_real_features_labels_or_returns": true,
+  "prehistory_arithmetic": {
+    "early_close_sessions": 1,
+    "expected": 1736,
+    "formula": "134*13 - 1*6",
+    "sessions": 134
+  },
+  "raw_rows_unchanged": true,
+  "real_raw_numeric_records_compared": 89985,
+  "synthetic_full_early_session_case": {
+    "cross_session": true,
+    "fills": 7,
+    "first_wall_age_minutes": 2490,
+    "genuine_terminal_eligible": false,
+    "market_ages_minutes": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180
+    ],
+    "volume_and_trade_count": "UNKNOWN_NOT_ZERO"
+  }
+}

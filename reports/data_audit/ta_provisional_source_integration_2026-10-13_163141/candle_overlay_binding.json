@@ -1,0 +1,32 @@
+{
+  "action_vintage": "UNVERIFIED",
+  "cache_binding": "89164774b6d5ee731671915fd3851f7659cbb91c163b986f4566f3f6e2960bf8",
+  "cleanup_id": "9ad636ce2df08d8923562cd7e893727e57af89a790e56fadf84e8ae21118c549",
+  "code_bindings": [
+    {
+      "path": "src/lstm_data/candle_cleanup.py",
+      "sha256": "d342e2727da0e05d91250a36a2d0179753645170ffa2dd0ec2caa70f0fafbc75"
+    },
+    {
+      "path": "src/lstm_data/engineering_profile.py",
+      "sha256": "441c59fb7745d7c2a5f0c828c8a834e6f45dbcf6463f37d54e02fa703ccd2c2d"
+    },
+    {
+      "path": "src/lstm_data/validation.py",
+      "sha256": "3cf5ff76ce8090c15733df0db9c4fad2881a74893fbc14e3305c91d4d7de4f90"
+    }
+  ],
+  "fills_path": "reports/data_audit/ta_provisional_source_integration_2026-10-13_163141/candle_fills.csv",
+  "fills_sha256": "da0b9bf009d27654046feab238bf8bb0dd9ab6715db58f6662ccff8ec6ee3fff",
+  "mode": "ENGINEERING_CAUSAL_CANDLE_VIEW_ONLY",
+  "observed_rows_referenced": 89985,
+  "profile": "configs/track_a_provisional_engineering_v1.json",
+  "profile_sha256": "cead57e3c61d68881c4fa9318b1a5c7408dd1c91b9193b435054cf4c7b8c04fe",
+  "scientific_activation": false,
+  "source_available_at": "UNKNOWN",
+  "source_manifest": "reports/data_audit/ta_provisional_source_integration_2026-10-13_163141/complete_genuine_source_manifest.json",
+  "source_manifest_sha256": "45a91dd7aff21d9a0aecf3a94635fc4c7eccfbeb08d16c58ec5d196e2fe62aff",
+  "synthetic_rows": 0,
+  "unresolved_path": "reports/data_audit/ta_provisional_source_integration_2026-10-13_163141/unresolved_candle_gaps.csv",
+  "unresolved_sha256": "861d1b5e2764be256fa03f1476cdfcafab163911998d804ce7149ae427f12d5c"
+}

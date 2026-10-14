@@ -5,6 +5,12 @@ cross-sectional equity prediction with broad-market conditioning.
 
 See `AGENTS.md` for repository and development guidelines.
 
+An opt-in [provisional candle engineering profile](docs/track_a/PROVISIONAL_CANDLE_ENGINEERING_API_v1.md)
+now references complete native sources for AAPL/COST/CMCSA/SBUX/CME. Its separate
+all-gap placeholder API uses null unknown volume and rejects scientific consumers.
+The actual source grid needs zero inserted candles. Primary D1, scientific gates,
+empirical fitting and the 0/40 neural ledger remain unchanged.
+
 P4.1–P4.2 now provide a [synthetic-only PyTorch engine and lifecycle](docs/track_a/P4_NEURAL_ENGINE_API_v1.md).
 MC0/MC1 now share this path with an [explicit D7 clock adapter and endpoint gate](docs/track_a/P4_MC0_MC1_SYNTHETIC_API_v1.md), for fabricated inputs only.
 Synthetic RS1/MC2 diagnostics and data-only E5 peer inputs now have a

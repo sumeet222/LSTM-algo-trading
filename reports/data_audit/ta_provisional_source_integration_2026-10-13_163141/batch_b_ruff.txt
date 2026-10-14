@@ -1,0 +1,33 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> src/lstm_data/candle_cleanup.py:3:1
+   |
+ 1 |   """Sparse causal placeholders for engineering only; never genuine source evidence."""
+ 2 |
+ 3 | / from __future__ import annotations
+ 4 | |
+ 5 | | import math
+ 6 | | import hashlib
+ 7 | | from dataclasses import dataclass
+ 8 | |
+ 9 | | import numpy as np
+10 | | import pandas as pd
+11 | |
+12 | | from .calendar import schedule
+13 | | from .clocks import utc
+14 | | from .config import fingerprint
+15 | | from .validation import normalize, require_valid
+   | |________________________________________________^
+16 |
+17 |   POLICY = "ENGINEERING_CAUSAL_FLAT_ALL_GAPS_v1"
+   |
+help: Organize imports
+  |
+4 |
+5 + import hashlib
+6 | import math
+  - import hashlib
+7 | from dataclasses import dataclass
+  |
+
+Found 1 error.
+[*] 1 fixable with `--fix`.

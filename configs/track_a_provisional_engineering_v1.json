@@ -1,0 +1,119 @@
+{
+  "allowed_activities": [
+    "CANDLE_QA",
+    "DATA_SHAPE"
+  ],
+  "code_bindings": [
+    {
+      "path": "src/lstm_data/candle_cleanup.py",
+      "sha256": "d342e2727da0e05d91250a36a2d0179753645170ffa2dd0ec2caa70f0fafbc75"
+    },
+    {
+      "path": "src/lstm_data/engineering_profile.py",
+      "sha256": "441c59fb7745d7c2a5f0c828c8a834e6f45dbcf6463f37d54e02fa703ccd2c2d"
+    },
+    {
+      "path": "src/lstm_data/validation.py",
+      "sha256": "3cf5ff76ce8090c15733df0db9c4fad2881a74893fbc14e3305c91d4d7de4f90"
+    }
+  ],
+  "created_at": "2026-10-13T20:52:07.716865+00:00",
+  "fill_guard_note": "No actual gaps require anchoring. If later gaps exist, unknown compatible units fail closed; parameter signature alone is not independent split/action certification.",
+  "fit_objects": {
+    "checkpoints": null,
+    "floors": null,
+    "forecasts": null,
+    "preparation": null,
+    "scalers": null,
+    "targets": null
+  },
+  "formation": "RETROSPECTIVE_DATA_USABILITY_SELECTED; INDEPENDENT_SOURCE_ACTION_PUBLICATION_AND_FORMATION_APPROVALS_HOLD",
+  "mode": "ENGINEERING_CAUSAL_CANDLE_VIEW_ONLY",
+  "policy_id": "ENGINEERING_CAUSAL_FLAT_ALL_GAPS_v1",
+  "price_unit_segments": [
+    {
+      "evidence_ref": "",
+      "start": "2019-12-18T05:00:00+00:00",
+      "stop": "2025-07-01T04:00:00+00:00",
+      "symbol": "AAPL",
+      "unit_id": "ALPACA_VENDOR_SPLIT_ASOF_2025-06-30",
+      "verified": false
+    },
+    {
+      "evidence_ref": "",
+      "start": "2019-12-18T05:00:00+00:00",
+      "stop": "2025-07-01T04:00:00+00:00",
+      "symbol": "COST",
+      "unit_id": "ALPACA_VENDOR_SPLIT_ASOF_2025-06-30",
+      "verified": false
+    },
+    {
+      "evidence_ref": "",
+      "start": "2019-12-18T05:00:00+00:00",
+      "stop": "2025-07-01T04:00:00+00:00",
+      "symbol": "CMCSA",
+      "unit_id": "ALPACA_VENDOR_SPLIT_ASOF_2025-06-30",
+      "verified": false
+    },
+    {
+      "evidence_ref": "",
+      "start": "2019-12-18T05:00:00+00:00",
+      "stop": "2025-07-01T04:00:00+00:00",
+      "symbol": "SBUX",
+      "unit_id": "ALPACA_VENDOR_SPLIT_ASOF_2025-06-30",
+      "verified": false
+    },
+    {
+      "evidence_ref": "",
+      "start": "2019-12-18T05:00:00+00:00",
+      "stop": "2025-07-01T04:00:00+00:00",
+      "symbol": "CME",
+      "unit_id": "ALPACA_VENDOR_SPLIT_ASOF_2025-06-30",
+      "verified": false
+    }
+  ],
+  "primary_universe_unchanged": [
+    "AAPL",
+    "JPM",
+    "JNJ",
+    "WMT",
+    "CAT"
+  ],
+  "profile_id": "TA_PROVISIONAL_CORE5_ENGINEERING_v1",
+  "research_status": "G0_G4_HOLD",
+  "scientific_activation": false,
+  "sectors": [
+    {
+      "sector": "Information Technology",
+      "symbol": "AAPL"
+    },
+    {
+      "sector": "Consumer Staples",
+      "symbol": "COST"
+    },
+    {
+      "sector": "Communication Services",
+      "symbol": "CMCSA"
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "symbol": "SBUX"
+    },
+    {
+      "sector": "Financials",
+      "symbol": "CME"
+    }
+  ],
+  "source_manifest": "reports/data_audit/ta_provisional_source_integration_2026-10-13_163141/complete_genuine_source_manifest.json",
+  "source_manifest_sha256": "45a91dd7aff21d9a0aecf3a94635fc4c7eccfbeb08d16c58ec5d196e2fe62aff",
+  "start": "2019-12-18",
+  "stop": "2025-06-30",
+  "symbols": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ],
+  "universe_version": "ENG:TRACK_A_PROVISIONAL_CORE5:v1"
+}

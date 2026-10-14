@@ -1,0 +1,256 @@
+{
+  "blockers": [
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "F01"
+      ],
+      "code_id": "e4690828dde48dcc41b60c88b5f0e1d563092640ec003c8abf3dc65711000b8d",
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-F01",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "F01",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G2",
+      "kind": "blocker",
+      "owner_action": "Separate reviewed repair plus source publication validation",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "D2 freshness uses available_at instead of market period end; 120 minutes reported as 60",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.452320+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "market_features"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "market_timing"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-USA500-source-clock",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "USA500-source-clock",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G1",
+      "kind": "blocker",
+      "owner_action": "Verify course/provider identity, period semantics and publication",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "USA500 identity and publication timing unverified; provisional close assumption is not verification",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.454540+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "market_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "stock_timing"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-stock-publication",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "stock-publication",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G1",
+      "kind": "blocker",
+      "owner_action": "Verify historical availability independently of aggregation",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "Stock publication timing/completed bar availability unverified",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.456980+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "economic_evaluation"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "minute_execution"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-minute-execution",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "minute-execution",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G1",
+      "kind": "blocker",
+      "owner_action": "Separately gated P1.1/P1.2 source feasibility",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "Minute entry/exit inputs and execution clock not verified",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.459970+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "economic_evaluation"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "corporate_actions"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-actions-dividends",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "actions-dividends",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G1",
+      "kind": "blocker",
+      "owner_action": "Verify corporate actions and approved economic policy",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "Actions/dividends and economic treatment unverified",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.463101+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "market_features",
+        "predictive_evaluation"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "formation"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-formation-prehistory",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "formation-prehistory",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G1",
+      "kind": "blocker",
+      "owner_action": "Verify point-in-time eligibility and prehistory",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "Formation membership/liquidity and pre-formation warmup unavailable",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.466767+00:00",
+      "track": "A"
+    },
+    {
+      "affected_branches": [
+        "stock_features",
+        "market_features",
+        "predictive_evaluation",
+        "economic_evaluation"
+      ],
+      "artifact_refs": [
+        "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json"
+      ],
+      "blocks": [
+        "shared_clock"
+      ],
+      "code_id": null,
+      "config_id": "bcf0f99d5ac2dcd5a91889e477467096fbca960482d7ef40ddcdb5f600fe668e",
+      "event_id": "p0.1-shared-D3-clock",
+      "evidence": {
+        "basis": "P0.1 handoff, not a new source audit",
+        "finding_id": "shared-D3-clock",
+        "path": "reports/data_audit/p0_1_2026-10-10_190015/p0_1_checks.json",
+        "sha256": "b75457f18a9b37368e64dc342d1f5484ae9c1e1eec8787c89c7b6408318a1c5e"
+      },
+      "gate_id": "G0",
+      "kind": "blocker",
+      "owner_action": "Obtain explicit two-track collaborator decision",
+      "package": "P0.2",
+      "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843",
+      "rationale": "Shared 240-minute versus four-complete-hour clock sign-off pending",
+      "schema_version": 1,
+      "source_ids": null,
+      "status": "BLOCKED",
+      "supersedes": [],
+      "time_utc": "2026-10-10T23:28:42.471101+00:00",
+      "track": "A"
+    }
+  ],
+  "canonical_universe": [
+    "AAPL",
+    "JPM",
+    "JNJ",
+    "WMT",
+    "CAT"
+  ],
+  "pairs": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "registers": {
+    "P2_entries": 16,
+    "P3_entries": 33,
+    "P3_sha": "c2b06e195dd37b16d873e4f2d67c0004d8e40955a75cf664b90ccdabcc3dccbe"
+  },
+  "scientific": "HOLD"
+}
