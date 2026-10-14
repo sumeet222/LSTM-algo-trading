@@ -1,0 +1,64 @@
+F......................F..                                               [100%]
+=================================== FAILURES ===================================
+____ test_independent_parameter_mixer_gradient_permutation_and_peer_oracles ____
+
+    def test_independent_parameter_mixer_gradient_permutation_and_peer_oracles():
+>       proof = operator_oracles()
+                ^^^^^^^^^^^^^^^^^^
+
+tests/test_fullpeer_sp3.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def operator_oracles() -> dict:
+        """Deterministic no-update proof, assertions fixed by D9 and fixture_design.json."""
+        seed_all(42)
+        full = create_model("FULLPEER").eval()
+        spatial = create_model("SP3", universe=UNIVERSE).eval()
+        assert isinstance(spatial, SpatialLSTM)
+        mc0 = create_model("MC0").eval()
+        mc0.load_state_dict(spatial.core.state_dict(), strict=True)
+        assert sum(p.numel() for p in full.parameters()) == 15265
+        assert sum(p.numel() for p in spatial.parameters()) == 7093
+        assert sum(p.numel() for p in spatial.mixer.parameters()) == 20
+        assert not list(spatial.mixer.norm.parameters())
+        x = torch.randn(2, 5, 48, 21)
+        x[..., 16:] = x[:, :1, :, 16:]
+        h = spatial.encode_grouped(x.reshape(10, 48, 21))
+        identity_error = float((spatial.mixer(h) - h).abs().max())
+        score_error = float((spatial(x.reshape(10, 48, 21)) - mc0(x.reshape(10, 48, 21))).abs().max())
+        assert identity_error == score_error == 0
+        # Identity is per origin; a second origin never contributes to the first mixer.
+>       assert torch.equal(spatial(x.reshape(10, 48, 21))[:5], spatial(x[0]))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError
+
+src/lstm_data/fullpeer_sp3_audit.py:91: AssertionError
+_ test_grouped_origin_isolation_dropout_masks_clipping_and_factory_boundaries __
+
+    def test_grouped_origin_isolation_dropout_masks_clipping_and_factory_boundaries():
+        seed_all(42)
+        model = create_model("SP3", universe=UNIVERSE)
+        assert isinstance(model, SpatialLSTM)
+        planted(model.mixer)
+        model.eval()
+        x = torch.randn(2, 5, 48, 21)
+        x[..., 16:] = x[:, :1, :, 16:]
+        output = model(x.reshape(10, 48, 21))
+>       assert torch.equal(output[:5], model(x[0]))
+E       assert False
+E        +  where False = <built-in method equal of type object at 0x11b5533d0>(tensor([-0.0799, -0.0386,  0.0293,  0.0138,  0.0122], grad_fn=<SliceBackward0>), tensor([-0.0799, -0.0386,  0.0293,  0.0138,  0.0122],\n       grad_fn=<SqueezeBackward1>))
+E        +    where <built-in method equal of type object at 0x11b5533d0> = torch.equal
+E        +    and   tensor([-0.0799, -0.0386,  0.0293,  0.0138,  0.0122],\n       grad_fn=<SqueezeBackward1>) = SpatialLSTM(\n  (core): SharedLSTM(\n    (lstm): LSTM(21, 32, batch_first=True)\n    (dropout): Dropout(p=0.1, inplace=Fa...atures=1, bias=True)\n  )\n  (mixer): StockMixer(\n    (norm): LayerNorm((32,), eps=1e-05, elementwise_affine=False)\n  )\n)(tensor([[[-2.3951,  0.5810,  0.1594,  ...,  0.6117, -0.0194,  0.3895],\n         [ 1.3894, -1.4594,  0.7734,  ..., -0.9...81,  0.1156,  ..., -3.3669, -0.1506,  2.1911],\n         [ 1.2906, -0.5866,  0.9472,  ...,  1.5932,  0.8239,  0.1749]]]))
+
+tests/test_fullpeer_sp3.py:284: AssertionError
+=============================== warnings summary ===============================
+tests/test_fullpeer_sp3.py::test_independent_parameter_mixer_gradient_permutation_and_peer_oracles
+  /Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/fullpeer_sp3_audit.py:87: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+  Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
+    identity_error = float((spatial.mixer(h) - h).abs().max())
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_fullpeer_sp3.py::test_independent_parameter_mixer_gradient_permutation_and_peer_oracles
+FAILED tests/test_fullpeer_sp3.py::test_grouped_origin_isolation_dropout_masks_clipping_and_factory_boundaries
+2 failed, 24 passed, 1 warning in 53.81s

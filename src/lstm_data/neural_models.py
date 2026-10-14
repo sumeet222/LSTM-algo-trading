@@ -6,8 +6,10 @@ import torch
 from torch import Tensor, nn
 
 from .neural_engine import MODEL_VERSION, SharedLSTM
+from .p3_domain import MODE, UniverseSpec
+from .spatial_operator import SpatialLSTM
 
-ARCHITECTURES = ("TM0", "MC0", "MC1", "E5")
+ARCHITECTURES = ("TM0", "MC0", "MC1", "E5", "FULLPEER", "SP3")
 
 
 class EndpointGate(nn.Module):
@@ -78,25 +80,38 @@ class EndpointGatedLSTM(nn.Module):
         return self.core(values)
 
 
-NeuralModel = SharedLSTM | EndpointGatedLSTM
+NeuralModel = SharedLSTM | EndpointGatedLSTM | SpatialLSTM
 
 
-def create_model(architecture: str = "TM0") -> NeuralModel:
+def create_model(
+    architecture: str = "TM0",
+    *,
+    universe: UniverseSpec | None = None,
+    mode: str = MODE,
+) -> NeuralModel:
     """Fresh models only; copying MC0 tensors is never part of ordinary refit."""
     if architecture not in ARCHITECTURES:
         raise ValueError("DECLARED_TM0_MC0_MC1_E5_REQUIRED")
+    if mode != MODE:
+        raise ValueError("NEURAL_SCIENTIFIC_ACTIVATION_HOLD")
+    if architecture == "SP3":
+        if universe is None:
+            raise ValueError("SP3_EXPLICIT_ORDERED_UNIVERSE_REQUIRED")
+        return SpatialLSTM(universe, mode=mode)
     return (
         EndpointGatedLSTM()
         if architecture == "MC1"
-        else SharedLSTM({"TM0": 16, "MC0": 21, "E5": 23}[architecture])
+        else SharedLSTM({"TM0": 16, "MC0": 21, "E5": 23, "FULLPEER": 85}[architecture])
     )
 
 
 def architecture_of(model: NeuralModel) -> str:
+    if isinstance(model, SpatialLSTM):
+        return "SP3"
     return (
         "MC1"
         if isinstance(model, EndpointGatedLSTM)
-        else {16: "TM0", 21: "MC0", 23: "E5"}[model.input_dim]
+        else {16: "TM0", 21: "MC0", 23: "E5", 85: "FULLPEER"}[model.input_dim]
     )
 
 
@@ -106,9 +121,17 @@ def architecture_for_information(information: str) -> str:
         "FT0_D7_MC0",
         "FT0_D7_MC1",
         "FT0_D7_E5",
+        "FT0_D7_FULLPEER",
+        "FT0_D7_SP3",
     }:
         raise ValueError("UNAPPROVED_MARKET_ARCHITECTURE")
-    return {"FT0_D7_MC0": "MC0", "FT0_D7_MC1": "MC1", "FT0_D7_E5": "E5"}.get(information, "TM0")
+    return {
+        "FT0_D7_MC0": "MC0",
+        "FT0_D7_MC1": "MC1",
+        "FT0_D7_E5": "E5",
+        "FT0_D7_FULLPEER": "FULLPEER",
+        "FT0_D7_SP3": "SP3",
+    }.get(information, "TM0")
 
 
 def model_version(model: NeuralModel) -> str:

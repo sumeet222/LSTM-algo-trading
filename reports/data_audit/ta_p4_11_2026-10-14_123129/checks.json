@@ -1,0 +1,267 @@
+{
+  "commands": {
+    "collect_only": {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "--collect-only",
+        "-q"
+      ],
+      "child_peak_RSS_bytes": 325009408,
+      "code_test_sha_after": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "code_test_sha_before": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "ended_at": "2026-10-14T12:57:01.479893-04:00",
+      "exit_code": 0,
+      "seconds": 5.064536082994891,
+      "started_at": "2026-10-14T12:56:56.367212-04:00"
+    },
+    "focused_1": {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_fullpeer_sp3.py"
+      ],
+      "child_peak_RSS_bytes": 362250240,
+      "code_test_sha_after": "c57a3a33ad43dd594bfc0f5e30b659f0d5282053e27350b7f3978099ff69ae37",
+      "code_test_sha_before": "c57a3a33ad43dd594bfc0f5e30b659f0d5282053e27350b7f3978099ff69ae37",
+      "ended_at": "2026-10-14T12:39:47.212942-04:00",
+      "exit_code": 1,
+      "seconds": 55.52335500001209,
+      "started_at": "2026-10-14T12:38:51.648255-04:00"
+    },
+    "focused_2": {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_fullpeer_sp3.py",
+        "tests/test_neural_engine.py",
+        "tests/test_neural_artifacts.py",
+        "tests/test_neural_gate.py"
+      ],
+      "child_peak_RSS_bytes": 370016256,
+      "code_test_sha_after": "cd551c6c78fb4a6261890f973b3a18f579c9bbb4c77cbfc80a804b0cc96eda86",
+      "code_test_sha_before": "cd551c6c78fb4a6261890f973b3a18f579c9bbb4c77cbfc80a804b0cc96eda86",
+      "ended_at": "2026-10-14T12:41:29.486521-04:00",
+      "exit_code": 0,
+      "seconds": 50.70475437500863,
+      "started_at": "2026-10-14T12:40:38.719997-04:00"
+    },
+    "focused_3": {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_fullpeer_sp3.py",
+        "tests/test_neural_engine.py",
+        "tests/test_neural_artifacts.py",
+        "tests/test_neural_gate.py",
+        "tests/test_neural_market.py",
+        "tests/test_neural_integration.py",
+        "tests/test_e5_neural.py"
+      ],
+      "child_peak_RSS_bytes": 391774208,
+      "code_test_sha_after": "c78c3c1c28c89a2bfa0fa3d4c1ce2127ca9d32ccb13d8bfb8826dc18ddfdcc79",
+      "code_test_sha_before": "b89b6d97acb5be7c8b8ca6a7df8caeb0c6bb80b3333b95ff37e1fdd36dee44af",
+      "ended_at": "2026-10-14T12:47:14.901373-04:00",
+      "exit_code": 0,
+      "seconds": 283.456956332986,
+      "started_at": "2026-10-14T12:42:31.127518-04:00"
+    },
+    "focused_final": {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_fullpeer_sp3.py",
+        "tests/test_neural_engine.py",
+        "tests/test_neural_artifacts.py",
+        "tests/test_neural_gate.py"
+      ],
+      "child_peak_RSS_bytes": 384466944,
+      "code_test_sha_after": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "code_test_sha_before": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "ended_at": "2026-10-14T12:48:26.475405-04:00",
+      "exit_code": 0,
+      "seconds": 47.54621987498831,
+      "started_at": "2026-10-14T12:47:38.891718-04:00"
+    },
+    "full_pytest": {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "child_peak_RSS_bytes": 602324992,
+      "code_test_sha_after": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "code_test_sha_before": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "ended_at": "2026-10-14T14:35:14.129988-04:00",
+      "exit_code": 0,
+      "seconds": 6350.5714893330005,
+      "started_at": "2026-10-14T12:49:23.523161-04:00"
+    },
+    "operator_proof": {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.fullpeer_sp3_audit",
+        "--out",
+        "reports/data_audit/ta_p4_11_2026-10-14_123129/operator_proof"
+      ],
+      "child_peak_RSS_bytes": 357335040,
+      "code_test_sha_after": "c78c3c1c28c89a2bfa0fa3d4c1ce2127ca9d32ccb13d8bfb8826dc18ddfdcc79",
+      "code_test_sha_before": "133a6c355432c94bc4bd0a1990732d4c8a5be15a841510af54fe36a16baf088a",
+      "ended_at": "2026-10-14T12:45:28.751257-04:00",
+      "exit_code": 0,
+      "seconds": 89.11707829197985,
+      "started_at": "2026-10-14T12:43:59.617089-04:00"
+    },
+    "operator_release": {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.fullpeer_sp3_audit",
+        "--out",
+        "reports/data_audit/ta_p4_11_2026-10-14_123129/operator_release"
+      ],
+      "child_peak_RSS_bytes": 422510592,
+      "code_test_sha_after": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "code_test_sha_before": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "ended_at": "2026-10-14T12:48:56.913172-04:00",
+      "exit_code": 0,
+      "seconds": 45.774999624991324,
+      "started_at": "2026-10-14T12:48:10.976578-04:00"
+    },
+    "ruff_1": {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "child_peak_RSS_bytes": 22282240,
+      "code_test_sha_after": "c57a3a33ad43dd594bfc0f5e30b659f0d5282053e27350b7f3978099ff69ae37",
+      "code_test_sha_before": "c57a3a33ad43dd594bfc0f5e30b659f0d5282053e27350b7f3978099ff69ae37",
+      "ended_at": "2026-10-14T12:39:06.327984-04:00",
+      "exit_code": 0,
+      "seconds": 0.14963437500409782,
+      "started_at": "2026-10-14T12:39:06.137063-04:00"
+    },
+    "ruff_final": {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "child_peak_RSS_bytes": 22757376,
+      "code_test_sha_after": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "code_test_sha_before": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "ended_at": "2026-10-14T12:48:11.379103-04:00",
+      "exit_code": 0,
+      "seconds": 0.24428320801234804,
+      "started_at": "2026-10-14T12:48:10.977631-04:00"
+    },
+    "types_1": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "child_peak_RSS_bytes": 664207360,
+      "code_test_sha_after": "c57a3a33ad43dd594bfc0f5e30b659f0d5282053e27350b7f3978099ff69ae37",
+      "code_test_sha_before": "c57a3a33ad43dd594bfc0f5e30b659f0d5282053e27350b7f3978099ff69ae37",
+      "ended_at": "2026-10-14T12:39:36.208561-04:00",
+      "exit_code": 1,
+      "seconds": 30.029567582998425,
+      "started_at": "2026-10-14T12:39:06.137064-04:00"
+    },
+    "types_2": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "child_peak_RSS_bytes": 600621056,
+      "code_test_sha_after": "b89b6d97acb5be7c8b8ca6a7df8caeb0c6bb80b3333b95ff37e1fdd36dee44af",
+      "code_test_sha_before": "b89b6d97acb5be7c8b8ca6a7df8caeb0c6bb80b3333b95ff37e1fdd36dee44af",
+      "ended_at": "2026-10-14T12:43:26.340450-04:00",
+      "exit_code": 1,
+      "seconds": 23.10856037499616,
+      "started_at": "2026-10-14T12:43:03.188645-04:00"
+    },
+    "types_3": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "child_peak_RSS_bytes": 646053888,
+      "code_test_sha_after": "c78c3c1c28c89a2bfa0fa3d4c1ce2127ca9d32ccb13d8bfb8826dc18ddfdcc79",
+      "code_test_sha_before": "c78c3c1c28c89a2bfa0fa3d4c1ce2127ca9d32ccb13d8bfb8826dc18ddfdcc79",
+      "ended_at": "2026-10-14T12:45:53.193118-04:00",
+      "exit_code": 0,
+      "seconds": 83.64229308298673,
+      "started_at": "2026-10-14T12:44:29.457267-04:00"
+    },
+    "types_final": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "child_peak_RSS_bytes": 616480768,
+      "code_test_sha_after": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "code_test_sha_before": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+      "ended_at": "2026-10-14T12:48:38.781718-04:00",
+      "exit_code": 0,
+      "seconds": 27.64343970801565,
+      "started_at": "2026-10-14T12:48:10.987057-04:00"
+    }
+  },
+  "dependency_versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "pyright": "1.1.414",
+    "pytest": "9.1.1",
+    "python": "3.14.6",
+    "ruff": "0.17.0",
+    "torch": "2.10.0"
+  },
+  "diff_check": "PASS",
+  "editor": "Optional .venv Problems refresh; no restart/config change or unobserved confirmation claimed.",
+  "engineering": "PASS",
+  "final_code_test_sha256": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+  "full_suite_log": "full_pytest.txt",
+  "full_suite_once": true,
+  "initial_failures": "First focused24 PASS/2 FAIL: separate batch-layout float32 equality, not a mixer defect. Same-core MC0 error3.7e-9 measured; original tolerance1e-7 used for distinct GEMM layouts. Initial types3 then1 errors resolved by narrowing SharedLSTM/get_parameter and optional clock checks. No ignores/suppression.",
+  "intermediate_run_sha_changed": "focused_3 and operator_proof ran while additive audit diagnostics were finalized; retained as development evidence only, superseded by stable focused_final/operator_release. No threshold/law/seed/model/optimizer change.",
+  "mode": "ENGINEERING_SYNTHETIC_ONLY",
+  "no_test_exclusions": true,
+  "scientific": "HOLD",
+  "static_summary": {
+    "errorCount": 0,
+    "filesAnalyzed": 155,
+    "informationCount": 0,
+    "timeInSec": 25.63,
+    "warningCount": 0
+  },
+  "status": "P4_11_SYNTHETIC_ENGINEERING_PASS"
+}

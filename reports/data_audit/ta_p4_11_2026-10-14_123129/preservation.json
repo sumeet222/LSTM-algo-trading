@@ -1,0 +1,57 @@
+{
+  "Git_integration": false,
+  "P49": "Original code/tests/results and 163/198 once-flags/free-intercept decision byte-unchanged; existing actual regression cases executed only in final suite.",
+  "all_other_preexisting_tracked_unchanged": true,
+  "dependencies_changed": false,
+  "env_credential_reads": 0,
+  "old_lifecycle_code_binding": "Narrow common-code additions change lifecycle code identity; old weights/numerical records retained, metadata never rewritten as current.",
+  "old_models_exact": "old_models_before.json == old_models_after.json",
+  "old_reports_and_ignored_artifacts_preserved": true,
+  "original_and_proposed_universes_inactive_unchanged": true,
+  "original_protocol_unchanged": true,
+  "pair_budget": {
+    "attempted_pairs": 0,
+    "ceiling": 40,
+    "duplicate_candidate": false,
+    "prospective_pairs": 0,
+    "status": "PASS"
+  },
+  "permitted_modified": {
+    "src/lstm_data/neural_artifacts.py": {
+      "after": "13edfc610d2913db7d0148e44596c769fdfaa8f9121d17538c130488bd77bdf4",
+      "before": "cc21cd4e432f16e8292e4f1870ee12afa3536a578801e85295afb6e9a0c0b6c9"
+    },
+    "src/lstm_data/neural_engine.py": {
+      "after": "265f9bb9765e44454dc5c3aa2095f520ebff7e627a9d8fc66558f6915e79ec80",
+      "before": "b0fe54ebe0a4a30baaa2f0510755fbbbd8f9d6b72cea4cc9ce4e2150a91be7a2"
+    },
+    "src/lstm_data/neural_models.py": {
+      "after": "9d2323a45f337e7b437f727bc2604fb6d79a776a8338a85e16180bf55abe27ca",
+      "before": "5e6bfac87cfa3c4279a99c55f7de71f8569d93c7ea2b539de25c494b1fde7042"
+    }
+  },
+  "prior_e5_packet": "prior_artifact_reconciliation.json",
+  "provider_HTTP_attempts": 0,
+  "raw_all_sha_match": true,
+  "raw_bytes": 19232923,
+  "raw_file_count": 599,
+  "raw_hash_refs": "raw_hashes_before.json",
+  "real_OHLCV_or_confirmation_outcome_deserialization": false,
+  "registers": {
+    "P2_entries": 16,
+    "P3_entries": 33,
+    "P3_sha": "c2b06e195dd37b16d873e4f2d67c0004d8e40955a75cf664b90ccdabcc3dccbe"
+  },
+  "scientific_blockers": [
+    "p0.1-F01",
+    "p0.1-USA500-source-clock",
+    "p0.1-stock-publication",
+    "p0.1-minute-execution",
+    "p0.1-actions-dividends",
+    "p0.1-formation-prehistory",
+    "p0.1-shared-D3-clock"
+  ],
+  "source_hashing_only": true,
+  "status": "PASS",
+  "tracked_at_start": 1530
+}

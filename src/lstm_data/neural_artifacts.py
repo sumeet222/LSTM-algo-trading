@@ -82,6 +82,8 @@ def save_checkpoint(
     fit_binding: str | None = None,
 ) -> dict:
     """Boundary checkpoints include full optimizer/RNG; final weights are immutable."""
+    if architecture_of(model) in {"FULLPEER", "SP3"}:
+        raise ValueError("P4_11_OPERATOR_ARTIFACT_ONLY_NO_REFIT_AUTHORITY")
     if stage not in {
         "CALIBRATION_SELECTED",
         "REFIT_FINAL",
@@ -139,6 +141,8 @@ def load_checkpoint(
     fit_binding: str | None = None,
 ) -> tuple[int, tuple[dict, ...]]:
     """Reject corruption/stale identity before safe tensor deserialization or reuse."""
+    if architecture_of(model) in {"FULLPEER", "SP3"}:
+        raise ValueError("P4_11_OPERATOR_ARTIFACT_ONLY_NO_REFIT_AUTHORITY")
     manifest = json.loads(path.with_suffix(".manifest.json").read_text())
     if (
         manifest.get("schema") != 1

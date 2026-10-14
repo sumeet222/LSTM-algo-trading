@@ -1,0 +1,204 @@
+{
+  "MC0_PREFIX_EQUAL": true,
+  "canonical_market_rows": 49,
+  "canonical_stock_rows": 245,
+  "clock_trace": [
+    {
+      "market_available_at": "2023-06-20 16:30:00+00:00",
+      "market_period_end": "2023-06-20 16:30:00+00:00",
+      "market_source_ids": [
+        "SYN:MARKET:2023-06-20T16:30:00+00:00"
+      ],
+      "period_end": "2023-06-20T16:30:00+00:00",
+      "period_start": "2023-06-20T15:30:00+00:00",
+      "session": "2023-06-20",
+      "slot": 3,
+      "stock_available_at": "2023-06-20 16:30:00+00:00",
+      "stock_key": "SYN:FT0:BB:2023-06-20:3:M1"
+    },
+    {
+      "market_available_at": "2023-06-30 15:30:00+00:00",
+      "market_period_end": "2023-06-30 15:30:00+00:00",
+      "market_source_ids": [
+        "SYN:MARKET:2023-06-30T15:30:00+00:00"
+      ],
+      "period_end": "2023-06-30T15:30:00+00:00",
+      "period_start": "2023-06-30T14:30:00+00:00",
+      "session": "2023-06-30",
+      "slot": 2,
+      "stock_available_at": "2023-06-30 15:30:00+00:00",
+      "stock_key": "SYN:FT0:BB:2023-06-30:2:M1"
+    }
+  ],
+  "encoded_trace": {
+    "GELU_coordinate0": [
+      -0.0566600039601326,
+      0.0
+    ],
+    "H_coordinate0": [
+      -0.03944069519639015,
+      -0.018327154219150543,
+      0.0022478518076241016,
+      0.021737853065133095,
+      0.039524633437395096
+    ],
+    "H_row_norm": [
+      0.6863169074058533,
+      0.5368298292160034,
+      0.4312736690044403,
+      0.43978336453437805,
+      0.5779821276664734
+    ],
+    "H_tilde_coordinate0": [
+      -0.06210469454526901,
+      -0.018327154219150543,
+      0.0022478518076241016,
+      0.021737853065133095,
+      0.039524633437395096
+    ],
+    "LN_coordinate0": [
+      -0.24605520069599152,
+      -0.17991749942302704,
+      -0.07746472954750061,
+      0.044875141233205795,
+      0.10816264152526855
+    ],
+    "M1_LN_coordinate0": [
+      -0.12594224512577057,
+      0.0
+    ],
+    "financial_interpretation": "NONE; descriptive untrained operator values",
+    "initial_M2": "EXACT_ZERO",
+    "initial_cross_stock_sensitivity": 0,
+    "initial_message_norm": 0.0,
+    "manual_float64_to_float32_error": 6.557519527383704e-08,
+    "message_coordinate0": [
+      -0.02266400121152401,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "parameter_reference": "fixture_design.json fixed planted M1[0,1]/M2[0,0]",
+    "readout_scores": [
+      0.018436625599861145,
+      -0.11659286916255951,
+      -0.14412528276443481,
+      -0.17539969086647034,
+      -0.20761418342590332
+    ]
+  },
+  "forecast_trace_binding": "3ef3008deefaeef40fd609261b783e487d235edbf387e6afeec7124d673891f4",
+  "maturity_population": [
+    [
+      "2023-06-30",
+      1
+    ],
+    [
+      "2023-06-30",
+      2
+    ]
+  ],
+  "models": {
+    "FULLPEER": {
+      "artifact": {
+        "architecture": "FULLPEER",
+        "binding": "c599a8bc129d80ac46413c8564db1ebbd709b0f94d0b428ec08bddc10a796707",
+        "bytes": 64149,
+        "code": "4906c952f69b8c65448a352ed2cc63a2ad933e95aa04ac539d6bd3330d04d6c5",
+        "mode": "ENGINEERING_SYNTHETIC_ONLY",
+        "operator": "6a0b5719b66b24760095799cf31ff3663576146499c5c5bb8f8ffefcb858ac43",
+        "path": "fullpeer_operator.pt",
+        "prediction_authoritative": false,
+        "schema": 1,
+        "sha256": "fa3a175b216da3916715d289f12f92e15c145aa3a8f0ff9b9eed907354a02744",
+        "stage": "ENGINEERING_UNTRAINED_OR_OPERATOR_TEST"
+      },
+      "binding": "c599a8bc129d80ac46413c8564db1ebbd709b0f94d0b428ec08bddc10a796707",
+      "operator": "6a0b5719b66b24760095799cf31ff3663576146499c5c5bb8f8ffefcb858ac43",
+      "origin_mask": [
+        [
+          true,
+          true
+        ]
+      ],
+      "scores": [
+        [
+          [
+            -0.049228500574827194,
+            -0.10374054312705994,
+            -0.10232891887426376,
+            -0.1295374184846878,
+            -0.10190174728631973
+          ],
+          [
+            -0.049228500574827194,
+            -0.10374054312705994,
+            -0.10232891887426376,
+            -0.1295374184846878,
+            -0.10190174728631973
+          ]
+        ]
+      ],
+      "universe": [
+        "AA",
+        "BB",
+        "CC",
+        "DD",
+        "EE"
+      ]
+    },
+    "SP3": {
+      "artifact": {
+        "architecture": "SP3",
+        "binding": "c599a8bc129d80ac46413c8564db1ebbd709b0f94d0b428ec08bddc10a796707",
+        "bytes": 32013,
+        "code": "4906c952f69b8c65448a352ed2cc63a2ad933e95aa04ac539d6bd3330d04d6c5",
+        "mode": "ENGINEERING_SYNTHETIC_ONLY",
+        "operator": "83f4971ea7d0a9d470bf5aa5162d54785fb67cbc1e4c2cd4e7331ae75d54b573",
+        "path": "sp3_operator.pt",
+        "prediction_authoritative": false,
+        "schema": 1,
+        "sha256": "dc6ad54d78aa1c0274ec843169ea0702fe12c4d3c274e9aabf79d6216fd9d19f",
+        "stage": "ENGINEERING_UNTRAINED_OR_OPERATOR_TEST"
+      },
+      "binding": "c599a8bc129d80ac46413c8564db1ebbd709b0f94d0b428ec08bddc10a796707",
+      "operator": "83f4971ea7d0a9d470bf5aa5162d54785fb67cbc1e4c2cd4e7331ae75d54b573",
+      "origin_mask": [
+        [
+          true,
+          true
+        ]
+      ],
+      "scores": [
+        [
+          [
+            0.2217806726694107,
+            0.198786661028862,
+            0.17351162433624268,
+            0.1470058560371399,
+            0.11963756382465363
+          ],
+          [
+            0.2217806726694107,
+            0.198786661028862,
+            0.17351162433624268,
+            0.1470058560371399,
+            0.11963756382465363
+          ]
+        ]
+      ],
+      "universe": [
+        "AA",
+        "BB",
+        "CC",
+        "DD",
+        "EE"
+      ]
+    }
+  },
+  "persisted_dense_windows": 0,
+  "scope": "ENGINEERING_SYNTHETIC_ONLY",
+  "source_table_shared_by_object_identity": true,
+  "target_population_equal": true
+}

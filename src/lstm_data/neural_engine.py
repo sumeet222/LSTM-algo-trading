@@ -30,14 +30,15 @@ class SharedLSTM(nn.Module):
 
     def __init__(self, input_dim: int = 16) -> None:
         super().__init__()
-        if input_dim not in (16, 21, 23):
+        if type(input_dim) is not int or input_dim not in (16, 21, 23, 85):
             raise ValueError("DECLARED_INPUT_DIMENSION_REQUIRED")
         self.input_dim = input_dim
         self.lstm = nn.LSTM(input_dim, 32, num_layers=1, batch_first=True)
         self.dropout = nn.Dropout(0.10)
         self.head = nn.Linear(32, 1)
 
-    def forward(self, x: Tensor) -> Tensor:
+    def encode(self, x: Tensor) -> Tensor:
+        """The common zero-state encoder, also used by the grouped SP3 operator."""
         parameter = self.head.weight
         if (
             x.ndim != 3
@@ -50,7 +51,10 @@ class SharedLSTM(nn.Module):
             raise ValueError("FINITE_EXACT_48_STEP_DTYPE_DEVICE_REQUIRED")
         # Omitted h0/c0 are fresh zeros on every call; no persistent recurrent state.
         _, (hidden, _) = self.lstm(x)
-        return self.head(self.dropout(hidden[-1])).squeeze(-1)
+        return hidden[-1]
+
+    def forward(self, x: Tensor) -> Tensor:
+        return self.head(self.dropout(self.encode(x))).squeeze(-1)
 
 
 @dataclass(frozen=True)
@@ -69,7 +73,7 @@ class SessionBatch:
             or len(set(self.ids)) != n
             or self.inputs.ndim != 5
             or tuple(self.inputs.shape[:4]) != (n, 2, 5, 48)
-            or self.inputs.shape[-1] not in (16, 21, 23)
+            or self.inputs.shape[-1] not in (16, 21, 23, 85)
             or tuple(self.targets.shape) != (n, 2, 5)
             or tuple(self.origins.shape) != (n, 2)
             or self.origins.dtype != torch.bool
@@ -83,7 +87,7 @@ class SessionBatch:
         ):
             raise ValueError("COMPLETE_FINITE_FIVE_STOCK_SESSION_BATCH_REQUIRED")
 
-        if self.inputs.shape[-1] in (21, 23):
+        if self.inputs.shape[-1] in (21, 23, 85):
             valid = self.inputs[self.origins][..., 16:21]
             if not torch.equal(valid, valid[:, :1].expand(-1, 5, -1, -1)):
                 raise ValueError("ONE_SHARED_D7_HISTORY_REQUIRED")
@@ -98,6 +102,12 @@ class SessionBatch:
                 )
                 if not torch.equal(values[:, :, 21:], expected):
                     raise ValueError("EXACT_CANONICAL_E5_PEER_CHANNELS_REQUIRED")
+        if self.inputs.shape[-1] == 85:
+            from .fullpeer import fullpeer_values
+
+            valid = self.inputs[self.origins]
+            if not torch.equal(valid, fullpeer_values(valid[..., :21])):
+                raise ValueError("EXACT_CANONICAL_FULLPEER_CHANNELS_REQUIRED")
 
 
 def session_losses(prediction: Tensor, target: Tensor, origins: Tensor) -> Tensor:

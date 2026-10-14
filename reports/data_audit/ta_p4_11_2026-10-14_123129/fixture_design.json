@@ -1,0 +1,12 @@
+{
+  "LN_eps": 1e-05,
+  "M1_initializer": "torch.nn.init.kaiming_uniform_(a=sqrt(5)); bound=1/sqrt(5)",
+  "M2_initializer": "EXACT_ZERO",
+  "analytic_law": "H_tilde[recipient,0]-H[recipient,0] = 0.4*GELU(0.7*LN(H)[sender,0]); sender=1, recipient=0; other rank coordinate zero. Fixed planted M1[0,1]=0.7, M2[0,0]=0.4; shared head reads coordinate0. MC0 different-stock derivative exactly0.",
+  "mode": "ENGINEERING_SYNTHETIC_ONLY",
+  "oracle": "Independent Python population LN variance/epsilon and math.erf exact GELU, explicit scalar sums",
+  "scope": "Untrained operator test; no D6g or PairRegistry reservation",
+  "seed": 42,
+  "sensitivity_direction": "perturb sender coordinate0 only; fixed other hidden coordinates",
+  "tiny_update_count": 0
+}
