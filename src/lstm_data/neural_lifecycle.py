@@ -54,6 +54,7 @@ from .neural_models import (
     gate_diagnostics,
 )
 from .p3_domain import Forecast, Permission, synthetic_id
+from .peer_neural import E5View, e5_input, make_e5_view
 
 
 @dataclass
@@ -88,7 +89,7 @@ class EarlyStop:
 
 def epoch_pass(
     model: NeuralModel,
-    view: NeuralView | MarketNeuralView,
+    view: NeuralView | MarketNeuralView | E5View,
     epoch: int,
     seed: int,
     opt: torch.optim.AdamW | None = None,
@@ -97,9 +98,12 @@ def epoch_pass(
     model.train(opt is not None)
     total, count, norms, order, losses_by_day, scores, targets = 0.0, 0, [], [], [], [], []
     gate_weights, gate_norms, input_norms = [], [], []
+    peer_gradient_norms = []
     for positions in session_batches(len(view.sessions), seed, epoch, shuffle=opt is not None):
         batch = view.batch(positions)
         if opt is not None and isinstance(model, EndpointGatedLSTM):
+            batch.inputs.requires_grad_()
+        if opt is not None and isinstance(view, E5View):
             batch.inputs.requires_grad_()
         if isinstance(model, EndpointGatedLSTM):
             with torch.no_grad():
@@ -114,6 +118,10 @@ def epoch_pass(
             if opt is not None:
                 opt.zero_grad(set_to_none=True)
                 loss.backward()
+                if isinstance(view, E5View):
+                    if batch.inputs.grad is None:
+                        raise ValueError("E5_PEER_INPUT_GRADIENT_REQUIRED")
+                    peer_gradient_norms.append(float(batch.inputs.grad[..., 21:].norm()))
                 if isinstance(model, EndpointGatedLSTM):
                     gate_norms.append(
                         float(
@@ -165,6 +173,8 @@ def epoch_pass(
         result["gate"] = gate_diagnostics(torch.cat(gate_weights))
         result["gate_gradient_norms"] = gate_norms
         result["input_gradient_norms"] = input_norms
+    if peer_gradient_norms:
+        result["peer_gradient_norms"] = peer_gradient_norms
     return result
 
 
@@ -176,6 +186,8 @@ def state_hash(model: NeuralModel) -> str:
 
 def code_identity() -> str:
     modules = (
+        "peer_neural.py",
+        "peer_inputs.py",
         "neural_engine.py",
         "neural_data.py",
         "neural_artifacts.py",
@@ -236,7 +248,7 @@ def run_pair(
     """One bounded synthetic D6g pair. No empirical executor or source loader exists."""
     if mode != MODE or out.exists():
         raise ValueError("P4_3_BLOCKED_OR_IMMUTABLE_OUTPUT_EXISTS")
-    if architecture not in {"TM0", "MC0", "MC1"}:
+    if architecture not in {"TM0", "MC0", "MC1", "E5"}:
         raise ValueError("DECLARED_NEURAL_ARCHITECTURE_REQUIRED")
     if (architecture == "TM0") != (market_history is None):
         raise ValueError("ARCHITECTURE_INFORMATION_BINDING_REQUIRED")
@@ -280,12 +292,14 @@ def run_pair(
             else market_preparation_identity(value)
         )
 
-    def view(window: FitWindow, prep: Preparation) -> NeuralView | MarketNeuralView:
+    def view(window: FitWindow, prep: Preparation) -> NeuralView | MarketNeuralView | E5View:
         # Explicit fitting-window API; no source or empirical loader.
         if not isinstance(window, FitWindow):
             raise ValueError("EXPLICIT_FIT_WINDOW_REQUIRED")
         if market_history is None:
             return make_view(data, window, prep, guard, allow_synthetic=True)
+        if architecture == "E5":
+            return make_e5_view(data, window, prep, guard, market_history, allow_synthetic=True)
         return make_market_view(data, window, prep, guard, market_history, allow_synthetic=True)
 
     calibration_prep = preparation(inner, train_rows)
@@ -308,7 +322,7 @@ def run_pair(
         "width": 32,
         "layers": 1,
         "steps": 48,
-        "channels": 16 if architecture == "TM0" else 21,
+        "channels": {"TM0": 16, "MC0": 21, "MC1": 21, "E5": 23}[architecture],
         "stop": [60, 12, 10, 0.999],
     }
     if architecture != "TM0":
@@ -504,12 +518,15 @@ def forecast_scores(
         history = run.market_history.extend(market_history)
         binding = market_preparation_identity(prep)
         prep = prep.with_market_history(history.vectors, permission, allow_synthetic=True)
-        processed, trace = market_input(row, prep, history, permission)
-        m = processed.market
-        assert m is not None and m.values is not None
-        stock = torch.tensor(processed.stock.values)
-        market = torch.tensor(m.values)
-        x = torch.cat((stock, market[None].expand(5, -1, -1)), dim=-1)
+        if architecture == "E5":
+            x, trace = e5_input(row, prep, history, permission)
+        else:
+            processed, trace = market_input(row, prep, history, permission)
+            m = processed.market
+            assert m is not None and m.values is not None
+            stock = torch.tensor(processed.stock.values)
+            market = torch.tensor(m.values)
+            x = torch.cat((stock, market[None].expand(5, -1, -1)), dim=-1)
     if binding != run.evidence["refit_preparation"]:
         raise ValueError("EXACT_FINAL_PREPROCESS_BINDING_REQUIRED")
     model = create_model(architecture)

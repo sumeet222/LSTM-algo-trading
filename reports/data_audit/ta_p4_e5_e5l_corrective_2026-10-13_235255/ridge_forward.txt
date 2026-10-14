@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/directed_ridge_audit.py", line 123, in <module>
+    main()
+    ~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/directed_ridge_audit.py", line 117, in main
+    result = run_case(case, args.decision)
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/directed_ridge_audit.py", line 34, in run_case
+    fitted = fit_directed(
+        data, "WF1", history, archive, pair, permission, decision, allow_synthetic=True
+    )
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/directed_ridge.py", line 298, in fit_directed
+    """Three actual candidate/refit arms; never confers empirical forecast authority."""
+           ^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/directed_ridge.py", line 299, in <genexpr>
+    data.validate(permission, allow_synthetic)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        raise ValueError("EXACT_SYNTHETIC_FIT_SOURCE_REQUIRED")
+        ^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/baseline_fit.py", line 415, in selection_fit
+    fx, fy, fw, refitted, refit_bad = design(
+                                      ~~~~~~^
+        full,
+        ^^^^^
+    ...<5 lines>...
+        adapter=adapter,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/baseline_fit.py", line 291, in design
+    transformed, extra = adapter(row.inputs, prep, permission, context)
+                         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/directed_ridge.py", line 259, in apply
+    sham = replace(sham, binding=identity([sham.binding, applications, self.archive_id]))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/directed_ridge.py", line 166, in prepare
+    row.universe != self.archive.universe
+          ^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/ft0_transforms.py", line 46, in identity
+    return fingerprint(json.loads(json.dumps(value, default=str, sort_keys=True)))
+                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/reprlib.py", line 21, in wrapper
+    result = user_function(self)
+  File "<string>", line 15, in __repr__
+  File "pandas/_libs/tslibs/timestamps.pyx", line 1458, in pandas._libs.tslibs.timestamps._Timestamp.__repr__
+KeyboardInterrupt

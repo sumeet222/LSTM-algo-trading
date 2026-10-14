@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import torch; from lstm_data.e5_audit import planted_learning; torch.set_num_threads(1); print(planted_learning())
+                                                                                                   ~~~~~~~~~~~~~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/e5_audit.py", line 125, in planted_learning
+    raise ValueError(f"GATE_A_PLANTED_PEER_RELATION_NOT_LEARNED: initial={before}, "
+                     f"final={after}, peer_zero={without}, min_peer_grad={min(gradients)}")
+ValueError: GATE_A_PLANTED_PEER_RELATION_NOT_LEARNED: initial=0.22563853859901428, final=0.14391030371189117, peer_zero=0.21520401537418365, min_peer_grad=0.0005104650044813752

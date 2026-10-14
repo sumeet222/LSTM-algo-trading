@@ -1,0 +1,95 @@
+{
+  "conclusion": "No demonstrated tensor/loss/gradient/ablation defect. Data identifiable; fixed sixty-update acceptance unsupported, fixture not mature TG0 proof.",
+  "current_initial_MSE_no_updates": 0.22563853859901428,
+  "current_initial_zero_peer_MSE_same_weights": 0.2210177481174469,
+  "final_checkpoint": "NOT_CREATED",
+  "fixture_sha": "7076dea7782023c7a9b4f309f32507e8c36279da94c5bde6490f71c41a4a01fb",
+  "fixture_size": [
+    16,
+    2,
+    5,
+    48,
+    23
+  ],
+  "gradient_norms": {
+    "head.bias": 0.14916861057281494,
+    "head.weight": 0.10306048393249512,
+    "lstm.bias_hh_l0": 0.034933291375637054,
+    "lstm.bias_ih_l0": 0.034933287650346756,
+    "lstm.weight_hh_l0": 0.01640615426003933,
+    "lstm.weight_ih_l0": 0.06285679340362549
+  },
+  "historical_clipping_fraction": "NOT_RECORDED; no sixty-step repeat without defect",
+  "historical_runs": 2,
+  "historical_steps_per_run": 60,
+  "initial_global_preclip_norm": 0.19883044418702958,
+  "initial_session_MSE": [
+    0.5307139158248901,
+    0.1550350785255432,
+    0.055084601044654846,
+    0.17218634486198425,
+    0.17382928729057312,
+    0.46645018458366394,
+    0.2640027701854706,
+    0.13343225419521332,
+    0.2334921956062317,
+    0.2022007703781128,
+    0.4310070276260376,
+    0.1445397287607193,
+    0.19060295820236206,
+    0.10226132720708847,
+    0.07970147579908371,
+    0.2756769359111786
+  ],
+  "initial_would_clip": false,
+  "labels": "Direct same-input peer mean target; no ProxyLabelSample, TG0 centering/MAD/floor or maturity clocks",
+  "new_health_runs": 0,
+  "new_optimizer_steps": 0,
+  "optimizer_groups": [
+    {
+      "decay": 0.01,
+      "lr": 0.001
+    },
+    {
+      "decay": 0.0,
+      "lr": 0.001
+    }
+  ],
+  "original_measured_code_sha": "225992484d68fef9c6172b6a76416358297cf20a8fd71cee1785cba09ba1b80a",
+  "own_endpoint_target_corr": 0.005695255486983886,
+  "own_linear_projection_MSE": 0.21198619803086186,
+  "own_rank": 8,
+  "parameter_count": 7329,
+  "peer_augmented_rank": 9,
+  "peer_channel_std": [
+    0.50435870885849,
+    0.3285248279571533
+  ],
+  "peer_input_gradient_norms": [
+    0.000709700514562428,
+    0.0004050420830026269
+  ],
+  "peer_linear_projection_MSE": 2.9702976933780888e-31,
+  "peer_mean_target_corr": 1.0,
+  "peer_oracle_exact": true,
+  "prior_final_MSE": 0.14391030371189117,
+  "prior_final_zero_peer_MSE": 0.21520401537418365,
+  "proof_sha": "bdefd7800e17992fb629cfbee62df2ba9701a3e9cd4fae40a7ea9a6f9f3187df",
+  "real_pairs": "0/40",
+  "scope": "ENGINEERING_SYNTHETIC_ONLY",
+  "status": "E5_HEALTH_BLOCKED",
+  "target_is_endpoint_peer_mean": true,
+  "target_min_max": [
+    -1.1473562717437744,
+    1.0240390300750732
+  ],
+  "target_std": 0.46518414174531236,
+  "two_pass_fit": "NOT_RUN",
+  "unchanged_gate": {
+    "ablation_bound": 0.28782060742378235,
+    "actual_ablation": 0.21520401537418365,
+    "actual_final": 0.14391030371189117,
+    "both_failed": true,
+    "final_bound": 0.078973488509655
+  }
+}

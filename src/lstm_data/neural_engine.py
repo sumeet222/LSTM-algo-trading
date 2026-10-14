@@ -30,7 +30,7 @@ class SharedLSTM(nn.Module):
 
     def __init__(self, input_dim: int = 16) -> None:
         super().__init__()
-        if input_dim not in (16, 21):
+        if input_dim not in (16, 21, 23):
             raise ValueError("DECLARED_INPUT_DIMENSION_REQUIRED")
         self.input_dim = input_dim
         self.lstm = nn.LSTM(input_dim, 32, num_layers=1, batch_first=True)
@@ -40,8 +40,11 @@ class SharedLSTM(nn.Module):
     def forward(self, x: Tensor) -> Tensor:
         parameter = self.head.weight
         if (
-            x.ndim != 3 or tuple(x.shape[1:]) != (48, self.input_dim)
-            or x.shape[0] == 0 or x.dtype != parameter.dtype or x.device != parameter.device
+            x.ndim != 3
+            or tuple(x.shape[1:]) != (48, self.input_dim)
+            or x.shape[0] == 0
+            or x.dtype != parameter.dtype
+            or x.device != parameter.device
             or not bool(torch.isfinite(x).all())
         ):
             raise ValueError("FINITE_EXACT_48_STEP_DTYPE_DEVICE_REQUIRED")
@@ -62,13 +65,17 @@ class SessionBatch:
     def validate(self) -> None:
         n = len(self.ids)
         if (
-            not n or len(set(self.ids)) != n
-            or self.inputs.ndim != 5 or tuple(self.inputs.shape[:4]) != (n, 2, 5, 48)
-            or self.inputs.shape[-1] not in (16, 21)
+            not n
+            or len(set(self.ids)) != n
+            or self.inputs.ndim != 5
+            or tuple(self.inputs.shape[:4]) != (n, 2, 5, 48)
+            or self.inputs.shape[-1] not in (16, 21, 23)
             or tuple(self.targets.shape) != (n, 2, 5)
-            or tuple(self.origins.shape) != (n, 2) or self.origins.dtype != torch.bool
+            or tuple(self.origins.shape) != (n, 2)
+            or self.origins.dtype != torch.bool
             or not bool(self.origins.any(dim=1).all())
-            or self.inputs.dtype != torch.float32 or self.targets.dtype != torch.float32
+            or self.inputs.dtype != torch.float32
+            or self.targets.dtype != torch.float32
             or self.inputs.device != self.targets.device
             or self.inputs.device != self.origins.device
             or not bool(torch.isfinite(self.inputs).all())
@@ -76,20 +83,34 @@ class SessionBatch:
         ):
             raise ValueError("COMPLETE_FINITE_FIVE_STOCK_SESSION_BATCH_REQUIRED")
 
-        if self.inputs.shape[-1] == 21:
-            valid = self.inputs[self.origins][..., 16:]
+        if self.inputs.shape[-1] in (21, 23):
+            valid = self.inputs[self.origins][..., 16:21]
             if not torch.equal(valid, valid[:, :1].expand(-1, 5, -1, -1)):
                 raise ValueError("ONE_SHARED_D7_HISTORY_REQUIRED")
+        if self.inputs.shape[-1] == 23:
+            from .peer_inputs import peer_summaries
+
+            for values in self.inputs[self.origins]:
+                expected = torch.tensor(
+                    peer_summaries(values[:, :, :16].detach().cpu().numpy()),
+                    dtype=values.dtype,
+                    device=values.device,
+                )
+                if not torch.equal(values[:, :, 21:], expected):
+                    raise ValueError("EXACT_CANONICAL_E5_PEER_CHANNELS_REQUIRED")
 
 
 def session_losses(prediction: Tensor, target: Tensor, origins: Tensor) -> Tensor:
     """Mean over five stocks, then eligible origins; preserve equal session mass."""
     if (
-        prediction.shape != target.shape or prediction.ndim != 3
+        prediction.shape != target.shape
+        or prediction.ndim != 3
         or tuple(prediction.shape[1:]) != (2, 5)
         or tuple(origins.shape) != tuple(prediction.shape[:2])
-        or origins.dtype != torch.bool or not bool(origins.any(dim=1).all())
-        or not bool(torch.isfinite(prediction).all()) or not bool(torch.isfinite(target).all())
+        or origins.dtype != torch.bool
+        or not bool(origins.any(dim=1).all())
+        or not bool(torch.isfinite(prediction).all())
+        or not bool(torch.isfinite(target).all())
     ):
         raise ValueError("FINITE_COMPLETE_SESSION_LOSS_REQUIRED")
     by_origin = (prediction - target).square().mean(dim=2)
@@ -116,7 +137,7 @@ def session_batches(
         value = int.from_bytes(hashlib.sha256(f"{seed}:{epoch}".encode()).digest(), "big")
         random.Random(value).shuffle(order)
     for start in range(0, count, 16):
-        yield tuple(order[start:start + 16])
+        yield tuple(order[start : start + 16])
 
 
 def optimizer(model: nn.Module) -> torch.optim.AdamW:
@@ -127,7 +148,10 @@ def optimizer(model: nn.Module) -> torch.optim.AdamW:
             (weights if parameter.ndim == 2 else biases).append(parameter)
     return torch.optim.AdamW(
         [{"params": weights, "weight_decay": 0.01}, {"params": biases, "weight_decay": 0.0}],
-        lr=0.001, betas=(0.9, 0.999), eps=1e-8, amsgrad=False,
+        lr=0.001,
+        betas=(0.9, 0.999),
+        eps=1e-8,
+        amsgrad=False,
     )
 
 
@@ -142,10 +166,14 @@ def norm_summary(values: tuple[float, ...]) -> dict:
     array = np.asarray(values)
     multiplier = np.minimum(1.0, 1.0 / (array + 1e-6))
     return {
-        "median": float(np.median(array)), "p90": float(np.quantile(array, .90)),
-        "p95": float(np.quantile(array, .95)), "p99": float(np.quantile(array, .99)),
-        "max": float(array.max()), "clipped_fraction": float(np.mean(array > 1.0)),
+        "median": float(np.median(array)),
+        "p90": float(np.quantile(array, 0.90)),
+        "p95": float(np.quantile(array, 0.95)),
+        "p99": float(np.quantile(array, 0.99)),
+        "max": float(array.max()),
+        "clipped_fraction": float(np.mean(array > 1.0)),
         "multiplier_min": float(multiplier.min()),
-        "multiplier_median": float(np.median(multiplier)), "nonfinite_count": 0,
-        "sustained_clipping_warning": bool(np.mean(array > 1.0) > .5),
+        "multiplier_median": float(np.median(multiplier)),
+        "nonfinite_count": 0,
+        "sustained_clipping_warning": bool(np.mean(array > 1.0) > 0.5),
     }

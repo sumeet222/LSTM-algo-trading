@@ -7,7 +7,7 @@ from torch import Tensor, nn
 
 from .neural_engine import MODEL_VERSION, SharedLSTM
 
-ARCHITECTURES = ("TM0", "MC0", "MC1")
+ARCHITECTURES = ("TM0", "MC0", "MC1", "E5")
 
 
 class EndpointGate(nn.Module):
@@ -84,11 +84,11 @@ NeuralModel = SharedLSTM | EndpointGatedLSTM
 def create_model(architecture: str = "TM0") -> NeuralModel:
     """Fresh models only; copying MC0 tensors is never part of ordinary refit."""
     if architecture not in ARCHITECTURES:
-        raise ValueError("DECLARED_TM0_MC0_MC1_REQUIRED")
+        raise ValueError("DECLARED_TM0_MC0_MC1_E5_REQUIRED")
     return (
         EndpointGatedLSTM()
         if architecture == "MC1"
-        else SharedLSTM(16 if architecture == "TM0" else 21)
+        else SharedLSTM({"TM0": 16, "MC0": 21, "E5": 23}[architecture])
     )
 
 
@@ -96,15 +96,19 @@ def architecture_of(model: NeuralModel) -> str:
     return (
         "MC1"
         if isinstance(model, EndpointGatedLSTM)
-        else ("TM0" if model.input_dim == 16 else "MC0")
+        else {16: "TM0", 21: "MC0", 23: "E5"}[model.input_dim]
     )
 
 
 def architecture_for_information(information: str) -> str:
     # Legacy stock-only pair information strings remain loadable without migration.
-    if information.startswith("FT0_D7_") and information not in {"FT0_D7_MC0", "FT0_D7_MC1"}:
+    if information.startswith("FT0_D7_") and information not in {
+        "FT0_D7_MC0",
+        "FT0_D7_MC1",
+        "FT0_D7_E5",
+    }:
         raise ValueError("UNAPPROVED_MARKET_ARCHITECTURE")
-    return {"FT0_D7_MC0": "MC0", "FT0_D7_MC1": "MC1"}.get(information, "TM0")
+    return {"FT0_D7_MC0": "MC0", "FT0_D7_MC1": "MC1", "FT0_D7_E5": "E5"}.get(information, "TM0")
 
 
 def model_version(model: NeuralModel) -> str:

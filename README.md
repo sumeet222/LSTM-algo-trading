@@ -17,6 +17,11 @@ Synthetic RS1/MC2 diagnostics and data-only E5 peer inputs now have a
 [typed API and matched ridge control](docs/track_a/P4_REGIME_PEER_SYNTHETIC_API_v1.md).
 Scientific activation and E5/MC2 neural fitting remain on HOLD.
 
+The [E5/E5L synthetic prerequisite API](docs/track_a/P4_E5_E5L_SYNTHETIC_API_v1.md)
+adds the 23-channel model and causal directed-signal helpers. P4.8/P4.9 remain
+partial: the learning proof and ridge H/L flag layout require human review.
+No E5 calibration/refit or directed ridge fit was performed.
+
 The approved `neural` extra pins PyTorch 2.10.0. Historical fitting and P4.3
 remain blocked; the scientific pair ledger stays at 0/40. Run a new fabricated
 G5 audit with no data credentials:

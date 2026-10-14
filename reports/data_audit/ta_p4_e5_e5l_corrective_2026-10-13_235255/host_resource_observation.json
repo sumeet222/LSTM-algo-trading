@@ -1,0 +1,18 @@
+{
+  "commands": [
+    "ps -axo pid,etime,comm -o %cpu,rss,state",
+    "/usr/sbin/sysctl vm.swapusage"
+  ],
+  "focused_test_PID": 78932,
+  "focused_test_RSS_KiB": 17728,
+  "focused_test_cpu_pct": 13.1,
+  "no_process_or_host_configuration_changed": true,
+  "observed_ET": "2026-10-14 around00:32EDT; approximate observation time",
+  "process_state": "R",
+  "scope": "Shared-host diagnostic only; not model memory attribution",
+  "swap_total_MiB": 10240,
+  "swap_used_MiB": 9006.94,
+  "synthetic_fit_PID": 78649,
+  "synthetic_fit_RSS_KiB": 22848,
+  "synthetic_fit_cpu_pct": 12.6
+}

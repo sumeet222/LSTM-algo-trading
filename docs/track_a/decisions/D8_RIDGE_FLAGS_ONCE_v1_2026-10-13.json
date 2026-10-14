@@ -1,0 +1,72 @@
+{
+  "authority": "Current user corrective implementation prompt; subsequent explicit user reply confirms all163/198 slopes penalized plus separate free intercept",
+  "blocks": {
+    "directed_LL1": [
+      163,
+      198
+    ],
+    "flags": [
+      161,
+      163
+    ],
+    "market": [
+      112,
+      147
+    ],
+    "peer": [
+      147,
+      161
+    ],
+    "stock": [
+      0,
+      112
+    ]
+  },
+  "decision_date": "2026-10-13",
+  "decision_id": "D8-RIDGE-FLAGS-ONCE-v1",
+  "flag_occurrences": 1,
+  "flags": [
+    "TARGET_IS_H",
+    "TARGET_IS_L"
+  ],
+  "frozen_document_edit": false,
+  "intercept": "SEPARATE_UNPENALIZED",
+  "joint_signoff": "NOT_CLAIMED",
+  "lags": [
+    0,
+    1,
+    2,
+    5,
+    11,
+    23,
+    47
+  ],
+  "legacy_alternative": "175/210 is not approved; repeated flags change effective shrinkage tolambda/7",
+  "penalties": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "real_pairs": "0/40",
+  "science": "HOLD",
+  "scope": "ENGINEERING_SYNTHETIC_ONLY",
+  "signal_order": [
+    "H_TO_L_0",
+    "H_TO_L_1",
+    "L_TO_H_0",
+    "L_TO_H_1",
+    "PEER_MEAN_1"
+  ],
+  "slope_resolution": "ALL_FEATURE_SLOPES_PLUS_SEPARATE_INTERCEPT",
+  "slopes": {
+    "LL0_R": 163,
+    "LL1_R": 198
+  },
+  "widths": {
+    "LL0_R": 163,
+    "LL1_R": 198,
+    "SHAM_LL1_R": 198
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "E5_calibration_refit_pairs": 0,
+  "entries": [
+    {
+      "epochs": 60,
+      "id": "SYN:E5:HEALTH:INITIAL",
+      "purpose": "initial finite learning test; values unprinted",
+      "seed": 42,
+      "state": "HEALTH_CRITERION_FAILED"
+    },
+    {
+      "epochs": 60,
+      "id": "SYN:E5:HEALTH:EXACT_OBSERVABILITY_REPLAY",
+      "log": "reports/data_audit/ta_p4_e5_e5l_2026-10-13_225047/health_observability.txt",
+      "log_sha": "a090882699d0d22e5fa176ae6445757dabdb061571fbac05dac23554eb434149",
+      "purpose": "identical fixture and rules; added failure metric logging only",
+      "seed": 42,
+      "state": "HEALTH_CRITERION_FAILED"
+    }
+  ],
+  "future_model_training": "STOPPED_AFTER_HEALTH_FAILURE",
+  "real_pairs_consumed": 0,
+  "scope": "ENGINEERING_SYNTHETIC_ONLY"
+}

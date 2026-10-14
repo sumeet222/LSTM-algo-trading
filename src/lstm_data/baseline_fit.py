@@ -49,6 +49,7 @@ from .market_features import (
     fit_synthetic_scaler,
 )
 from .p3_domain import Permission, UniverseSpec
+from .ridge_extension import DirectedExtension
 
 
 @dataclass(frozen=True)
@@ -267,7 +268,7 @@ class DesignAdapter(Protocol):
 
     def __call__(
         self, row: BaselineInput, prep: Preparation, permission: Permission, context: str
-    ) -> tuple[BaselineInput, tuple[tuple[float, ...], ...]]: ...
+    ) -> tuple[BaselineInput, tuple[tuple[float, ...], ...] | DirectedExtension]: ...
 
 
 def design(
@@ -294,11 +295,15 @@ def design(
             if matched_market:
                 transformed.validate_market(permission, allow_synthetic=True)
             if extra is not None:
+                directed = isinstance(extra, DirectedExtension)
+                if isinstance(extra, DirectedExtension):
+                    extra.validate(transformed, prep, context)
+                    extra = extra.values
                 if (
                     not market
                     or len(extra) != 5
                     or len({len(r) for r in extra}) != 1
-                    or len(extra[0]) not in {0, 14}
+                    or len(extra[0]) not in ({16, 51} if directed else {0, 14})
                 ):
                     raise ValueError("EXACT_SYNTHETIC_PEER14_EXTENSION_REQUIRED")
                 x = tuple(base + tail for base, tail in zip(x, extra))

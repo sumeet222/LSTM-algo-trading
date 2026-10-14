@@ -207,8 +207,10 @@ def test_ephemeral23_indexed_view_mutation_order_no_model(case):
         replace(batch, inputs=forged)
     from lstm_data.neural_models import create_model
 
+    # P4.8 now explicitly authorizes the 23-channel synthetic model; LL neural stays closed.
+    assert create_model("E5").input_dim == 23
     with pytest.raises(ValueError):
-        create_model("E5")
+        create_model("LL1")
     view.market.values[0, 0] += 1
     with pytest.raises(ValueError, match="MUTATED"):
         view.batch((0,))

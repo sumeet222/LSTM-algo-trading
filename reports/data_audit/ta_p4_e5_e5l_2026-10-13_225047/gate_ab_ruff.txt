@@ -1,0 +1,36 @@
+F401 [*] `.directed_peers.CompletedM1` imported but unused
+  --> src/lstm_data/e5_audit.py:19:5
+   |
+17 | from .directed_peers import (
+18 |     Antecedent,
+19 |     CompletedM1,
+   |     ^^^^^^^^^^^
+20 |     FormationRow,
+21 |     directed_window,
+   |
+help: Remove unused import: `.directed_peers.CompletedM1`
+   |
+18 |     Antecedent,
+   -     CompletedM1,
+19 |     FormationRow,
+   |
+
+F401 [*] `lstm_data.directed_peers.CompletedM1` imported but unused
+  --> tests/test_directed_peers.py:12:5
+   |
+10 | from lstm_data.calendar import schedule
+11 | from lstm_data.directed_peers import (
+12 |     CompletedM1,
+   |     ^^^^^^^^^^^
+13 |     FormationRow,
+14 |     directed_ridge_fit,
+   |
+help: Remove unused import: `lstm_data.directed_peers.CompletedM1`
+   |
+11 | from lstm_data.directed_peers import (
+   -     CompletedM1,
+12 |     FormationRow,
+   |
+
+Found 2 errors.
+[*] 2 fixable with `--fix`.

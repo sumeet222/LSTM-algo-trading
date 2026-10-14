@@ -1,0 +1,24 @@
+{
+  "cancelled_by_agent": true,
+  "code_unchanged": false,
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "lstm_data.directed_ridge_audit",
+    "--case",
+    "FORWARD",
+    "--decision",
+    "docs/track_a/decisions/D8_RIDGE_FLAGS_ONCE_v1_2026-10-13.json",
+    "--output",
+    "reports/data_audit/ta_p4_e5_e5l_corrective_2026-10-13_235255/ridge_forward.json"
+  ],
+  "duration_basis": "Approximate wall time from OS profile launch to cancellation record",
+  "exit_code": 130,
+  "fit_metrics": "NOT_RECORDED; no pass or failure inference",
+  "initial_code_hashes": "NOT_DURABLY_RECORDED_BY_INTERRUPTED_HELPER",
+  "new_optimizer_steps": 0,
+  "provider_attempts": 0,
+  "reason": "Superseded code; profile shows timestamp repr hashing; stopped before final code verification",
+  "seconds": 3399.762973
+}

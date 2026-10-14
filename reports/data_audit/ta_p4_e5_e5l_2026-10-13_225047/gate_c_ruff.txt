@@ -1,0 +1,31 @@
+E501 Line too long (104 > 100)
+   --> src/lstm_data/e5_audit.py:124:101
+    |
+122 |         "scope": MODE,
+123 |         "passed": after < 0.35 * before and without > 2 * after and min(gradients) > 0,
+124 |         "proof_criterion": "final < .35 * initial AND peer_zero > 2 * final AND positive peer gradient",
+    |                                                                                                     ^^^^
+125 |         "fixture": "RANDOM_OTHER_STOCK_MEAN_ONLY",
+126 |         "epochs": 60,
+    |
+
+I001 [*] Import block is un-sorted or un-formatted
+   --> src/lstm_data/e5_audit.py:147:5
+    |
+145 |       repeating a completed failed fixture while reporting independent D8 math.
+146 |       """
+147 | /     import json
+148 | |     from .config import digest
+    | |______________________________^
+149 |
+150 |       if mode != MODE or out.exists() or "audit" in out.parts:
+    |
+help: Organize imports
+    |
+147 |     import json
+148 +
+149 |     from .config import digest
+    |
+
+Found 2 errors.
+[*] 1 fixable with `--fix`.

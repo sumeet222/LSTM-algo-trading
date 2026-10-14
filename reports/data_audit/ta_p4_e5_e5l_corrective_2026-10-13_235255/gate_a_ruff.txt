@@ -1,0 +1,34 @@
+E501 Line too long (102 > 100)
+   --> src/lstm_data/e5_health_diagnosis.py:113:101
+    |
+111 |         "initial_global_preclip_norm": float(norms.norm()),
+112 |         "initial_would_clip": bool(norms.norm() > 1),
+113 |         "historical_clipping_fraction": "NOT_RECORDED; no sixty-step repeat permitted without defect",
+    |                                                                                                     ^^
+114 |         "optimizer_groups": [{"lr": g["lr"], "decay": g["weight_decay"]} for g in opt.param_groups],
+115 |         "new_optimizer_steps": 0,
+    |
+
+E501 Line too long (131 > 100)
+   --> src/lstm_data/e5_health_diagnosis.py:119:101
+    |
+117 | …
+118 | …
+119 | …thmetic target; no ProxyLabelSample, TG0 centering/MAD/floor or maturity clocks",
+    |                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+120 | …/gradient/ablation defect. Data identifiable, but fixed sixty-update strong acceptance unsupported and fixture not mature TG0 readin…
+121 | …
+    |
+
+E501 Line too long (194 > 100)
+   --> src/lstm_data/e5_health_diagnosis.py:120:101
+    |
+118 | …
+119 | …mple, TG0 centering/MAD/floor or maturity clocks",
+120 | … identifiable, but fixed sixty-update strong acceptance unsupported and fixture not mature TG0 readiness proof.",
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+121 | …
+122 | …
+    |
+
+Found 3 errors.

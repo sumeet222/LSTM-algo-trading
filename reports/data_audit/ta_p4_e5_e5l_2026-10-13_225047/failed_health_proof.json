@@ -1,0 +1,23 @@
+{
+  "code_hash_at_measured_failure": "225992484d68fef9c6172b6a76416358297cf20a8fd71cee1785cba09ba1b80a",
+  "health": {
+    "batch_sessions": 16,
+    "early_diagnostics_unrecorded": "first/last training loss and max norm were not printed by failed probe; NOT_AVAILABLE",
+    "empirical_selection": false,
+    "epochs": 60,
+    "final_eval_MSE": 0.14391030371189117,
+    "fixture": "RANDOM_OTHER_STOCK_MEAN_ONLY",
+    "initial_eval_MSE": 0.22563853859901428,
+    "min_peer_gradient": 0.0005104650044813752,
+    "passed": false,
+    "peer_zero_ablation_MSE": 0.21520401537418365,
+    "proof_criterion": "final < .35 * initial AND peer_zero > 2 * final AND positive peer gradient",
+    "scope": "ENGINEERING_SYNTHETIC_ONLY",
+    "session_origins": 2
+  },
+  "log": "reports/data_audit/ta_p4_e5_e5l_2026-10-13_225047/health_observability.txt",
+  "log_sha": "a090882699d0d22e5fa176ae6445757dabdb061571fbac05dac23554eb434149",
+  "scope": "ENGINEERING_SYNTHETIC_ONLY",
+  "status": "reports/data_audit/ta_p4_e5_e5l_2026-10-13_225047/health_observability_status.json",
+  "status_sha": "458c2ab1aa325c9b6e8ec4a511c6bc95b2acbabb7149a89065d8543ba7ebd850"
+}
