@@ -19,6 +19,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest>=8.4,<10", "ruff>=0.13,<1"]
 neural = ["torch==2.10.0"]
+visualization = ["streamlit==1.64.0", "plotly==6.3.1"]
 
 [project.scripts]
 lstm-data = "lstm_data.cli:main"

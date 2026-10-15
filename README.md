@@ -5,6 +5,25 @@ cross-sectional equity prediction with broad-market conditioning.
 
 See `AGENTS.md` for repository and development guidelines.
 
+## Local Track A research explorer (Package010)
+
+The read-only dashboard displays the completed candidate WF1/WF2 research; the
+current real-pair registry is **6/40**. Historical engineering-only status notes
+below describe their original packages and do not replace the linked registry.
+
+```bash
+# Only if the visualization packages are missing; installs into this .venv.
+.venv/bin/python -m pip install -e ".[visualization]"
+./scripts/run_track_a_dashboard.sh
+```
+
+Open the localhost URL printed in the terminal; stop with Ctrl+C. Follow the
+[five-minute Quickstart](docs/track_a/Visualization_Quickstart.md) and
+[User Guide](docs/track_a/Visualization_User_Guide.md). Existing local source and
+completed artifacts are required. No source downloads, model/scaler fitting,
+trading or confirmation access is provided. Candidate clock/action/universe and
+researcher-attested local-use assumptions remain qualified.
+
 An opt-in [provisional candle engineering profile](docs/track_a/PROVISIONAL_CANDLE_ENGINEERING_API_v1.md)
 now references complete native sources for AAPL/COST/CMCSA/SBUX/CME. Its separate
 all-gap placeholder API uses null unknown volume and rejects scientific consumers.

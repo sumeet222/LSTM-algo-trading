@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/private/tmp/ta010_ui_check.py", line 14, in <module>
+    at=AppTest.from_file('apps/track_a_dashboard.py',default_timeout=60)
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/streamlit/testing/v1/app_test.py", line 435, in from_file
+    raise FileNotFoundError(
+    ...<2 lines>...
+    )
+FileNotFoundError: AppTest script not found at /private/tmp/apps/track_a_dashboard.py. Relative paths are resolved against the file that calls AppTest.from_file().

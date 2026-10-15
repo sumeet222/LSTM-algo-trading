@@ -1,0 +1,43 @@
+{
+  "WF1": [
+    "TM0",
+    "MC0",
+    "MC1",
+    "E5",
+    "ZERO",
+    "M1",
+    "RIDGE_OWN_112",
+    "RIDGE_MARKET_147"
+  ],
+  "WF1_batch_gradients": "NOT_RECORDED; aggregate norms only",
+  "WF2": [
+    "TM0",
+    "MC0",
+    "ZERO"
+  ],
+  "checkpoint_inference": "None; snapshots and exact weight SHA bytes only, no deserialization",
+  "default": {
+    "SPY_state_cells": 120,
+    "end": "2024-01-19",
+    "fold": "WF2",
+    "full_completed_hours": 24,
+    "hourly_feature_cells": 384,
+    "model": "TM0",
+    "partition": "Development",
+    "source_30min_candles": 52,
+    "start": "2024-01-16",
+    "stock": "AAPL"
+  },
+  "gates": "Only21 exact Package008 evaluated gate examples, not a population or full-date gate history.",
+  "inner_refit": "Saved neural partitions only; WF1 TM0 uses the verified Package006 compact snapshot because original first-pair result lacks per-origin records.",
+  "source_guard": "Inclusive ET window validated before I/O; Arrow stock/date/barrier filters before financial frame; known preconfirmation compressed component store hash before decode.",
+  "source_mode": "Genuine native30Min or existing canonical aggregate_session_hours; no invented candles or stubs promoted to hours",
+  "stocks": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ],
+  "unavailable_fields": "Raw/unadjusted cashbook, PIT action/publication evidence, individual absolute EMA values and full optimizer/dropout histories not reconstructed."
+}

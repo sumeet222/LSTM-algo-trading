@@ -1,0 +1,173 @@
+{
+  "AppTest_whole_process_peak_RSS_bytes": 514473984,
+  "cache_policy": "In-memory Streamlit caches with bounded entries, manifest/hash/file-stat keys; no persist or second feature database.",
+  "dataset_loading": "One existing11.1MB gzip /48.2MB decoded canonical component store cached in memory only when features/decomposition requested; raw reads bounded by one stock/date and max94calendar days, default4days. No checkpoint tensors loaded.",
+  "programmatic_UI_cases": [
+    {
+      "case": "cold_Start_Here",
+      "dataframes": 0,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 0,
+      "seconds": 1.4864822500385344
+    },
+    {
+      "case": "AAPL_WF2_30Min_T5",
+      "dataframes": 0,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 2,
+      "seconds": 3.5119205840164796
+    },
+    {
+      "case": "COST_stock_change",
+      "dataframes": 0,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 2,
+      "seconds": 0.8139947089948691
+    },
+    {
+      "case": "completed_hour",
+      "dataframes": 0,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 2,
+      "seconds": 0.44256241602124646
+    },
+    {
+      "case": "M1_and_T5",
+      "dataframes": 0,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 2,
+      "seconds": 0.22983883298002183
+    },
+    {
+      "case": "event_markers",
+      "dataframes": 0,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 2,
+      "seconds": 0.8041743749636225
+    },
+    {
+      "case": "faithful_price_SMA_overlay",
+      "dataframes": 0,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 2,
+      "seconds": 0.8821116659673862
+    },
+    {
+      "case": "predictions_WF2",
+      "dataframes": 4,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 1,
+      "seconds": 1.676428083970677
+    },
+    {
+      "case": "TM0_vs_MC0_paired",
+      "dataframes": 4,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 1,
+      "seconds": 0.304312874970492
+    },
+    {
+      "case": "WF2_training_batches",
+      "dataframes": 4,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 7,
+      "seconds": 2.7898393329815008
+    },
+    {
+      "case": "WF2_actual_target_decomposition",
+      "dataframes": 5,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 7,
+      "seconds": 2.7950454999809153
+    },
+    {
+      "case": "WF1_fold_change",
+      "dataframes": 5,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 5,
+      "seconds": 2.4606904170359485
+    },
+    {
+      "case": "WF1_prediction_page",
+      "dataframes": 4,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 1,
+      "seconds": 0.2834236670169048
+    },
+    {
+      "case": "E5_saved_forecasts",
+      "dataframes": 4,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 1,
+      "seconds": 0.29749862500466406
+    },
+    {
+      "case": "E5_real_peer_context",
+      "dataframes": 4,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 2,
+      "seconds": 0.43414712499361485
+    },
+    {
+      "case": "MC1_saved_gate_examples",
+      "dataframes": 4,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 2,
+      "seconds": 0.33227787498617545
+    },
+    {
+      "case": "source_backed_provenance",
+      "dataframes": 1,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 0,
+      "seconds": 2.613732208032161
+    },
+    {
+      "case": "WF1_training_epoch_aggregates",
+      "dataframes": 4,
+      "errors": [],
+      "exceptions": [],
+      "plotly_figures": 5,
+      "seconds": 2.5104254159959964
+    }
+  ],
+  "server": {
+    "SIGINT_shutdown_seconds": 0.507202957989648,
+    "actual_standalone_Ctrl_C_test": {
+      "console": "^C Stopping...",
+      "exit_code": 0,
+      "tool_returned_seconds": 0.412751709
+    },
+    "browser_render_timing": "NOT_MEASURED",
+    "browser_visual_interaction": "UNVERIFIED: IAB unavailable; native Firefox concurrent-state changes; Safari automation timed out. No screenshot fabricated.",
+    "command": "./scripts/run_track_a_dashboard.sh --smoke",
+    "health_body": "ok",
+    "health_status": 200,
+    "html_bytes": 7260,
+    "html_request_seconds": 0.0019772500381805003,
+    "html_status": 200,
+    "server_currently_running": false,
+    "server_return_code": 0,
+    "source": "Actual exec stdout from measured final smoke; values recorded verbatim",
+    "startup_to_health_seconds": 0.7777850000420585,
+    "url": "http://127.0.0.1:8501"
+  },
+  "timing_limits": "AppTest runtimes include server-side script/cache/figure submission; no browser drawing timing. Peak514473984 bytes is the entire18-case AppTest process, not isolated steady-state server RSS."
+}

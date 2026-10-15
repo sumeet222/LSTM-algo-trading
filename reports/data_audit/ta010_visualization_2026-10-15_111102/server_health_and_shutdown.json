@@ -1,0 +1,21 @@
+{
+  "command": "./scripts/run_track_a_dashboard.sh --smoke",
+  "source": "Actual exec stdout from measured final smoke; values recorded verbatim",
+  "url": "http://127.0.0.1:8501",
+  "health_status": 200,
+  "health_body": "ok",
+  "startup_to_health_seconds": 0.7777850000420585,
+  "html_status": 200,
+  "html_bytes": 7260,
+  "html_request_seconds": 0.0019772500381805003,
+  "SIGINT_shutdown_seconds": 0.507202957989648,
+  "server_return_code": 0,
+  "actual_standalone_Ctrl_C_test": {
+    "console": "^C Stopping...",
+    "exit_code": 0,
+    "tool_returned_seconds": 0.412751709
+  },
+  "server_currently_running": false,
+  "browser_visual_interaction": "UNVERIFIED: IAB unavailable; native Firefox concurrent-state changes; Safari automation timed out. No screenshot fabricated.",
+  "browser_render_timing": "NOT_MEASURED"
+}
