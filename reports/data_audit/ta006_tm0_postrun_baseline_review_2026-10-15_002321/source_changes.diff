@@ -1,0 +1,28 @@
+--- Package005 recorded real_bridge_run.py
++++ src/lstm_data/real_bridge_run.py
+@@ -32,6 +32,7 @@
+     session_batches,
+     session_losses,
+ )
++from .neural_health import g6_summary
+ from .neural_lifecycle import EarlyStop
+ from .pretraining_policy import verify_ref
+ from .real_bridge_authority import (
+@@ -590,11 +591,12 @@
+                 "development": metrics,
+                 "refit_train_evaluation": train_metrics,
+                 "development_population": development.summary(),
+-                "G6": "WARN_INVESTIGATE"
+-                if metrics["score_std"] == 0
+-                or any(r["gradients"]["sustained_clipping_warning"] for r in refit_trace)
+-                or selector.status == "MAX_EPOCHS_REACHED"
+-                else "PASS_PER_RUN_TELEMETRY",
++                "G6": g6_summary(
++                    tuple(r["training"] for r in trace),
++                    tuple(refit_trace),
++                    metrics["score_std"],
++                    selector.status,
++                )["status"],
+                 "comparative_economic_statistical_claims": "HOLD",
+                 "confirmation_numeric_rows": 0,
+             },

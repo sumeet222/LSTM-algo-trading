@@ -32,6 +32,17 @@ Need some older data to start the warmup otherwise some data lost there
 Big chunck of data missing. Need to fix it.
 
 
+
+##
+
+What should we investigate now?
+I recommend proceeding with our planned Package 008, focusing on five questions:
+1. Gradient clipping: Why do all four LSTMs experience sustained clipping during calibration?
+2. Extreme targets: Are large volatility-normalized returns and small volatility denominators driving the gradients?
+3. Overfitting: How do training and validation losses evolve across epochs?
+4. Architecture comparison: Why does adding SPY information worsen ranking accuracy, while E5 slightly improves it?
+5. Statistical reliability: Are the differences in daily Rank IC and MSE distinguishable from noise?
+
 # Random Notes
 Aggregating 30 min sotcks into hourly candles:
 Missing OHLCV data handled

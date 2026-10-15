@@ -1,0 +1,42 @@
+{
+  "actual_human_batch_grants": 3,
+  "all_targets_equal": true,
+  "approved_execution_code_unchanged": "1d3f6bab5263dcf0d579b825c804809c6abf7815051592fc452470b067d0132e",
+  "development_checks": "Earlier report-module formatting/type errors corrected; final179-file check0errors0warnings. Initial review command failure, if any, is retained and corrected without any fit retry.",
+  "dry_run": "PASS_ZERO_FIT",
+  "editor_verification": "Select repository .venv/bin/python; Pylance basic severity; reload Python language server/refresh Problems. Final editor refresh requires human confirmation.",
+  "focused": "50 passed; focused.txt (7.33s pytest)",
+  "full_test_suite": "NOT_RUN_LEAN_USER_SCOPE",
+  "mask": "EXACT_232_ORIGINS_116_SESSIONS_1160_STOCK_ROWS_ALL_8_MODELS",
+  "missing_approval": "EXPECTED_EXIT1_NO_FIT",
+  "new_review_module": "Read-only checked against exact historical checkpoint/prediction/target identities; no optimizer or journal write",
+  "paired_daily_days": 116,
+  "preservation": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/preservation_audit.json",
+    "sha256": "3149c5d6cfe11dce141c22d5db7a8c2df34f43171f8662cd8b695d1d4b7090d0"
+  },
+  "registry": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/registry_chain_and_pair_accounting.json",
+    "sha256": "947e1d0e6f250ae14bdfb67c8ccbf2917b1c0c7e190d68ac4a228824bc6def57"
+  },
+  "ruff": "PASS_ALL_PROJECT; ruff_complete.txt",
+  "safe_checkpoint_inference": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/checkpoint_inference_verification.json",
+    "sha256": "9e0b080d4c402bc6dad149813e9583bc80a06749c7ecaeb50c2e81236f16afdb"
+  },
+  "separate_market_ridge_approval": "APPROVED_COMPLETED",
+  "static_command": [
+    ".venv/bin/python",
+    "scripts/check_python_types.py",
+    "--pylance-dist",
+    "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+  ],
+  "static_summary": {
+    "errorCount": 0,
+    "filesAnalyzed": 179,
+    "informationCount": 0,
+    "timeInSec": 15.797,
+    "warningCount": 0
+  },
+  "status": "PASS_SCOPED_ENGINEERING_REVIEW"
+}

@@ -1,0 +1,208 @@
+{
+  "confirmation_numeric_rows": 0,
+  "development_observations": [
+    "First manual view prototype used JSON fingerprint on FitWindow; corrected to established serializing identity helper before release.",
+    "Initial108, later110 and115 focused passes preserved as development evidence; final119 is distinct, not a sum.",
+    "Early real audit is superseded by code-bound final_v2 audit; no source or feature formula recalculation."
+  ],
+  "editor_verification": "Select repository .venv/bin/python; retain basic Pylance/matching installed stubs; refresh language server/Problems and human-confirm zero errors. CLI/editor stub parity is verified; editor refresh is not self-attested.",
+  "fresh_focused": "119 PASS",
+  "full_regression": {
+    "inherited_evidence": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/checks.json",
+      "sha256": "8137d25e839f316a81295edd952de4b8f58ee7d6b2b8aefc872d88473614c5f7"
+    },
+    "inherited_result": "728 PASS on Package004 code only; not a full-suite claim for new Package005 orchestration",
+    "metadata": {
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "elapsed_seconds": 5792.541230292001,
+      "environment_controls": {
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "exit_code": 0,
+      "finished_at": "2026-10-15T01:29:39.760589+00:00",
+      "started_at": "2026-10-14T23:53:07.208349+00:00"
+    },
+    "reason": "Explicit lean-testing instruction; only additive bridge/runner files, no existing source/feature/model math changes, no irreversible real experiment started. Targeted safety tests and genuine batch checks run.",
+    "status": "NOT_RUN_FOR_PACKAGE005",
+    "verified_unchanged_producer_modules": 101
+  },
+  "neural_fitting_seconds": "N/A",
+  "new_hermetic_cases": 38,
+  "proofs": {
+    "diff_release": {
+      "code_after_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "code_before_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "elapsed_seconds": 0.024218375037889928,
+      "exit_code": 0,
+      "finished_at": "2026-10-15T02:23:59.785030+00:00",
+      "numerical_threads": {
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null
+      },
+      "started_at": "2026-10-15T02:23:59.760637+00:00"
+    },
+    "focused_release": {
+      "code_after_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "code_before_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "tests/test_real_bridge.py",
+        "tests/test_pretraining_candidate.py",
+        "tests/test_neural_engine.py",
+        "tests/test_hourly_proxy.py",
+        "tests/test_labels.py",
+        "-q"
+      ],
+      "elapsed_seconds": 24.322851458971854,
+      "exit_code": 0,
+      "finished_at": "2026-10-15T02:23:13.939664+00:00",
+      "numerical_threads": {
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "started_at": "2026-10-15T02:22:49.616576+00:00"
+    },
+    "real_input_release": {
+      "code_after_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "code_before_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.real_bridge_audit",
+        "--producer",
+        "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/verified_producer.json",
+        "--report",
+        "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/final_v2"
+      ],
+      "elapsed_seconds": 38.23546312499093,
+      "exit_code": 0,
+      "finished_at": "2026-10-15T02:25:34.863682+00:00",
+      "numerical_threads": {
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "started_at": "2026-10-15T02:24:56.628751+00:00"
+    },
+    "ruff_release": {
+      "code_after_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "code_before_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "elapsed_seconds": 0.10507679200964049,
+      "exit_code": 0,
+      "finished_at": "2026-10-15T02:23:59.649850+00:00",
+      "numerical_threads": {
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null
+      },
+      "started_at": "2026-10-15T02:23:59.544565+00:00"
+    },
+    "types_release": {
+      "code_after_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "code_before_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "elapsed_seconds": 23.578511250030715,
+      "exit_code": 0,
+      "finished_at": "2026-10-15T02:23:13.893459+00:00",
+      "numerical_threads": {
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null
+      },
+      "started_at": "2026-10-15T02:22:50.315369+00:00"
+    }
+  },
+  "real_training": "NOT_AUTHORIZED_NOT_RUN",
+  "static": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/check_python_types.py",
+      "--pylance-dist",
+      "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+    ],
+    "errors": 0,
+    "files": 169,
+    "warnings": 0
+  },
+  "status": "PASS_BRIDGE_ENGINEERING_WITH_SCIENTIFIC_TRAINING_HOLDS",
+  "zero_actual_pair_reservations": true,
+  "actual_unauthorized_CLI_refusal": {
+    "status": "PASS_EXPECTED_EXIT1",
+    "proof": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.real_bridge_run",
+        "--producer",
+        "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/verified_producer.json",
+        "--approval-binding",
+        "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/final_v2/training_authority_PENDING.json",
+        "--report",
+        "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/SHOULD_NOT_EXIST"
+      ],
+      "started_at": "2026-10-15T02:33:35.589704+00:00",
+      "finished_at": "2026-10-15T02:33:38.800420+00:00",
+      "elapsed_seconds": 3.2106232499936596,
+      "exit_code": 1,
+      "code_before_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "code_after_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+      "numerical_threads": {
+        "OMP_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null
+      }
+    },
+    "log": {
+      "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/unauthorized_launch_rejected.txt",
+      "sha256": "03278a45e471776da6e4dc96cdf3016f0d244c2292dc1edc61fb097c50b5254f"
+    }
+  },
+  "model_regime_mask_check": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/model_regime_retention.json",
+    "sha256": "b0f7f0ea29a622e38e195cfcc456119712089cef3101edfbe769f6aa3ec75d6b"
+  },
+  "legacy_boundaries_preserved": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/legacy_boundaries_preserved.json",
+    "sha256": "a6f104ab5266df0505d28548a070903e67fe0d5506cf4a561b6b662669a27c4b"
+  }
+}

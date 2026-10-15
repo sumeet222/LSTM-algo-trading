@@ -1,0 +1,182 @@
+{
+  "accept_existing_engineering_for_named_batch": true,
+  "accept_qualified_spy_fitting": true,
+  "actor_type": "human",
+  "approve_linked_registry_v2": true,
+  "approved_runs": [
+    "MC0",
+    "MC1",
+    "E5"
+  ],
+  "confirmation_access": false,
+  "extend_researcher_attestation_to_named_batch": true,
+  "maximum_wall_seconds": 7200,
+  "no_repeated_approval_between_named_pairs": true,
+  "owner": "Track A researcher",
+  "pair_grants": [
+    {
+      "architecture": "MC0",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "MC0",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 21,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7073,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "input_id": "93c4ab119115a8c7832760848ee80eb6eee99d109f411070384bf23f2918c3be",
+      "plan_sha256": "cb4edaff9edca889ced95ee4683d2d0059fdd7ed1ff41421e705bab8d81054f8",
+      "run_id": "TA007:MC0:b13e3a1e55bf47644b44fcd72cba9edd49f7a8cee79860b00c58fcbf36b22e8e"
+    },
+    {
+      "architecture": "MC1",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "MC1",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 21,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7169,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "input_id": "f29c7ac92d563a998ad2ab2f3bba100d20921bcdc0b68f5c26cf75c3a07de87a",
+      "plan_sha256": "cb4edaff9edca889ced95ee4683d2d0059fdd7ed1ff41421e705bab8d81054f8",
+      "run_id": "TA007:MC1:e2a11df1dc49a913f8c4d2f7eebf4154a5882ba7e834ddd1cbc163bfd76dc61c"
+    },
+    {
+      "architecture": "E5",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "E5",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 23,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7329,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "input_id": "222d47e23c03c0b5b344373d47735ee8d54f1356928c75ffcf6b165fa6aae939",
+      "plan_sha256": "cb4edaff9edca889ced95ee4683d2d0059fdd7ed1ff41421e705bab8d81054f8",
+      "run_id": "TA007:E5:f22a63459e71e474abcf69ec4630e06f4295a8d737b6ad77acc389626e952de3"
+    }
+  ],
+  "plan_sha256": "cb4edaff9edca889ced95ee4683d2d0059fdd7ed1ff41421e705bab8d81054f8",
+  "policy_scope_ref": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/qualified_policy_scope_v2.json",
+    "sha256": "3552adc00c73fb9c9de8494e63322eecfb9e6f760ff8efb5bde14ffb38d9c4df"
+  },
+  "production_migration": false,
+  "recorded_at": "2026-10-15T01:15:10.396081-04:00",
+  "response_provenance": {
+    "channel": "actual_user_async_question_reply",
+    "items": [
+      0,
+      1
+    ],
+    "question_tool_call_id": "call_4f9e1bc175da4a08ba4b1d5ab5b78eb8"
+  },
+  "response_text": "Approve all three pairs",
+  "status": "APPROVED"
+}

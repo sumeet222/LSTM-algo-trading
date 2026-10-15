@@ -1,0 +1,138 @@
+{
+  "actual_recipe_windows": {
+    "WF1_INNER_TRAIN": {
+      "constructed_at": "2026-10-14T23:54:45.737654+00:00",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "window": "FitWindow(window_id='WF1:INNER_TRAIN', start=Timestamp('2020-07-01 04:00:00+0000', tz='UTC'), stop=Timestamp('2023-03-31 04:00:00+0000', tz='UTC'), fitted_at=Timestamp('2026-10-14 23:54:40.440906+0000', tz='UTC'), phase='INNER_TRAIN')"
+    },
+    "WF1_REFIT": {
+      "constructed_at": "2026-10-14T23:54:51.273311+00:00",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "window": "FitWindow(window_id='WF1:REFIT', start=Timestamp('2020-07-01 04:00:00+0000', tz='UTC'), stop=Timestamp('2023-07-01 04:00:00+0000', tz='UTC'), fitted_at=Timestamp('2026-10-14 23:54:40.440906+0000', tz='UTC'), phase='REFIT')"
+    }
+  },
+  "calendar_sessions": 63,
+  "eligible_origins": 110,
+  "eligible_sessions": 55,
+  "excluded_lookbacks": [
+    [
+      [
+        "2023-03-31",
+        1
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-03-31",
+        2
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-03",
+        1
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-03",
+        2
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-04",
+        1
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-04",
+        2
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-05",
+        1
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-05",
+        2
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-06",
+        1
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-06",
+        2
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-10",
+        1
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-10",
+        2
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-11",
+        1
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-11",
+        2
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-12",
+        1
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ],
+    [
+      [
+        "2023-04-12",
+        2
+      ],
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP"
+    ]
+  ],
+  "minima": {
+    "each_origin": 25,
+    "sessions": 50
+  },
+  "nominal_origins": 126,
+  "tail_start": "2023-03-31",
+  "tail_stop": "2023-07-01"
+}

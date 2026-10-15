@@ -1,0 +1,9 @@
+{
+  "status": "WARN_DETECTED",
+  "command": ".venv/bin/python -B /private/tmp/ta005_postrun_audit.py",
+  "exit_code": 1,
+  "reason": "Read-only audit detected actual calibration sustained_clipping_warning; the initial blanket no-warning assertion failed. This was a diagnostic discovery, not a training failure.",
+  "source_change": false,
+  "extra_training": false,
+  "next_action": "Preserve recorded result and publish a qualified G6 warning addendum with all calibration/refit traces."
+}

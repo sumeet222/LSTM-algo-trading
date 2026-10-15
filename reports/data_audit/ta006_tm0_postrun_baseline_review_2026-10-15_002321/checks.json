@@ -1,0 +1,151 @@
+{
+  "fresh_checks": {
+    "focused_complete": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "tests/test_neural_health.py",
+        "tests/test_pilot_postrun.py",
+        "tests/test_real_bridge.py",
+        "tests/test_baseline_ridge.py::test_equal_day_not_equal_pooled_origin_and_unpenalized_intercept",
+        "tests/test_baseline_ridge.py::test_exact_tie_larger_penalty_no_near_tie_and_invalid_system",
+        "-q"
+      ],
+      "started_at": "2026-10-15T04:32:28.874345+00:00",
+      "finished_at": "2026-10-15T04:32:37.704869+00:00",
+      "elapsed_seconds": 8.830657957994845,
+      "exit_code": 0,
+      "code_before_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+      "code_after_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+      "threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "static_complete": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "started_at": "2026-10-15T04:32:29.994451+00:00",
+      "finished_at": "2026-10-15T04:32:45.906086+00:00",
+      "elapsed_seconds": 15.911959915945772,
+      "exit_code": 0,
+      "code_before_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+      "code_after_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+      "threads": {
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null
+      }
+    },
+    "ruff_complete": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "started_at": "2026-10-15T04:32:31.169935+00:00",
+      "finished_at": "2026-10-15T04:32:31.268324+00:00",
+      "elapsed_seconds": 0.09821745799854398,
+      "exit_code": 0,
+      "code_before_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+      "code_after_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+      "threads": {
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null
+      }
+    },
+    "real_review": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.pilot_postrun",
+        "--pilot",
+        "reports/data_audit/ta005_first_pair_2026-10-14_234019",
+        "--bridge",
+        "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455",
+        "--report",
+        "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321",
+        "--baseline-decision",
+        "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/baseline_decision_v1.json"
+      ],
+      "started_at": "2026-10-15T04:32:58.354771+00:00",
+      "finished_at": "2026-10-15T04:33:22.965847+00:00",
+      "elapsed_seconds": 24.611443375004455,
+      "exit_code": 0,
+      "code_before_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+      "code_after_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+      "threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "focused_release": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "tests/test_neural_health.py",
+        "tests/test_pilot_postrun.py",
+        "tests/test_real_bridge.py",
+        "tests/test_baseline_ridge.py",
+        "-q"
+      ],
+      "started_at": "2026-10-15T04:27:52.310001+00:00",
+      "finished_at": "2026-10-15T04:32:19.923623+00:00",
+      "elapsed_seconds": 267.6097386669717,
+      "exit_code": -15,
+      "code_before_sha256": "4ac63e64e47dd7144cc0f713e6f1db32d4739410a7e2767e88b55ca0332011fe",
+      "code_after_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+      "threads": {
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null
+      }
+    }
+  },
+  "focused_complete_summary": "44 PASS",
+  "static_complete_summary": {
+    "filesAnalyzed": 173,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 15.02
+  },
+  "full_suite": "NOT_RUN_LEAN_POLICY",
+  "legacy_ridge_synthetic_batch": "INTENTIONALLY_TERMINATED after267.610s,no pass claim;44dots before old synthetic fitting. SIGINT then approvedSIGTERM. Small explicit checks replaced it.",
+  "initial_development_static": "2 Optional-mean diagnostics repaired by narrowing actual non-None values; final0/0",
+  "current_owned_python_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+  "prior_full_suite": "Package004728 PASS inherited only for unchanged101producer/engine files/environment; no new full-suite claim",
+  "historic_code_evidence": {
+    "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/historical_source/real_bridge_run.py.txt",
+    "sha256": "014b62e164f19c4a33b838a22f3c29b629c78982de9c1dffebbea10812fff4b0"
+  },
+  "preservation": {
+    "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/preservation_checks.json",
+    "sha256": "93860b742cff77e50b717fb2d3dee0e2e7955cf012b4a43beafcabbae8a2ad40"
+  },
+  "baseline_proposal": {
+    "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/baseline_proposal_v1.json",
+    "sha256": "cb77779f44eb2310bb6375ebda3adccefc8c3fd5c90f41b1151d388e84fbc16e"
+  },
+  "baseline_decision": {
+    "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/baseline_decision_v1.json",
+    "sha256": "5c40e5ba09df53db35805f8d9dba691e5816e90afe116cfb496c7610295ae5c9"
+  }
+}

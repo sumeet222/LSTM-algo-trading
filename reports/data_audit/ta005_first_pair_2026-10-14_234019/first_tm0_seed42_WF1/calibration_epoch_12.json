@@ -1,0 +1,73 @@
+{
+  "selection": {
+    "best": 4.7046144875613125,
+    "epoch": 12,
+    "patience": 8,
+    "raw_epoch": 4,
+    "raw_min": 4.7046144875613125,
+    "selected": 4,
+    "status": "CALIBRATING"
+  },
+  "training": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": null,
+    "defined_only_daily_IC": null,
+    "epoch": 12,
+    "gradients": {
+      "clipped_fraction": 1.0,
+      "max": 4.649091720581055,
+      "median": 1.9149223566055298,
+      "multiplier_median": 0.5222141118862534,
+      "multiplier_min": 0.21509573159793155,
+      "nonfinite_count": 0,
+      "p90": 3.1378097057342536,
+      "p95": 3.423587894439697,
+      "p99": 4.4032398986816395,
+      "sustained_clipping_warning": true
+    },
+    "mse": 7.252146616231563,
+    "per_origin": {},
+    "permutation_hash": "43dc5a1e5b32bd3c16d8e2090777525bb0b4ae1811c34877b6436d12b6e9ea44",
+    "score_std": 0.30976951095848626,
+    "seconds": 2.77759504201822,
+    "sessions": 688,
+    "steps": 43,
+    "top_session_loss_share": {
+      "0.01": 0.25481196203332107,
+      "0.05": 0.4521061088965118,
+      "0.1": 0.558426797778227
+    }
+  },
+  "validation": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": 0.004545454545454537,
+    "defined_only_daily_IC": 0.004545454545454537,
+    "epoch": 12,
+    "gradients": null,
+    "mse": 4.756505447084254,
+    "per_origin": {
+      "1": {
+        "IC": 0.04363636363636363,
+        "MSE": 4.807409624619917,
+        "count": 55
+      },
+      "2": {
+        "IC": -0.03454545454545455,
+        "MSE": 4.705601268464869,
+        "count": 55
+      }
+    },
+    "permutation_hash": "ecb32a59226eaa22e1bc6c2ade9f44425d285ee21efd4c8cb0be498952fe6197",
+    "score_std": 0.336498232817603,
+    "seconds": 0.07406787504442036,
+    "sessions": 55,
+    "steps": 0,
+    "top_session_loss_share": {
+      "0.01": 0.08085531097621822,
+      "0.05": 0.20344045610551353,
+      "0.1": 0.34820118172705644
+    }
+  }
+}

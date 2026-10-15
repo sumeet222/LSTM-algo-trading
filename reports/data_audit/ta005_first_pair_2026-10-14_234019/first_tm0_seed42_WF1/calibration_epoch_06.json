@@ -1,0 +1,73 @@
+{
+  "selection": {
+    "best": 4.7046144875613125,
+    "epoch": 6,
+    "patience": 2,
+    "raw_epoch": 4,
+    "raw_min": 4.7046144875613125,
+    "selected": 4,
+    "status": "CALIBRATING"
+  },
+  "training": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": null,
+    "defined_only_daily_IC": null,
+    "epoch": 6,
+    "gradients": {
+      "clipped_fraction": 0.3488372093023256,
+      "max": 2.240110397338867,
+      "median": 0.9567327499389648,
+      "multiplier_median": 1.0,
+      "multiplier_min": 0.4464063712134792,
+      "nonfinite_count": 0,
+      "p90": 1.4774373531341554,
+      "p95": 1.6422091126441956,
+      "p99": 2.034242050647735,
+      "sustained_clipping_warning": false
+    },
+    "mse": 7.379763814425746,
+    "per_origin": {},
+    "permutation_hash": "e13c176c0a61042c48541d080905661e64287ef8840546246c2a317cfc12fb76",
+    "score_std": 0.1465293682535977,
+    "seconds": 3.0506994169554673,
+    "sessions": 688,
+    "steps": 43,
+    "top_session_loss_share": {
+      "0.01": 0.2539988077488807,
+      "0.05": 0.45286149781029655,
+      "0.1": 0.5607126564268787
+    }
+  },
+  "validation": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": 0.01909090909090909,
+    "defined_only_daily_IC": 0.01909090909090909,
+    "epoch": 6,
+    "gradients": null,
+    "mse": 4.709275629303672,
+    "per_origin": {
+      "1": {
+        "IC": 0.06909090909090909,
+        "MSE": 4.763825529271906,
+        "count": 55
+      },
+      "2": {
+        "IC": -0.0309090909090909,
+        "MSE": 4.6547257287935775,
+        "count": 55
+      }
+    },
+    "permutation_hash": "ecb32a59226eaa22e1bc6c2ade9f44425d285ee21efd4c8cb0be498952fe6197",
+    "score_std": 0.14381190309465647,
+    "seconds": 0.07861054100794718,
+    "sessions": 55,
+    "steps": 0,
+    "top_session_loss_share": {
+      "0.01": 0.07996125446879629,
+      "0.05": 0.20325687098833126,
+      "0.1": 0.3561937207835734
+    }
+  }
+}

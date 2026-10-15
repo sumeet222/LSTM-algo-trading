@@ -1,0 +1,174 @@
+{
+  "DATASET_READY_FOR_FIRST_P4_3_PAIR": false,
+  "MODEL_FIT_AUTHORIZED": false,
+  "SPY_store_reference_only_not_TM0_input": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/market_v2/canonical_market_components.json.gz",
+    "sha256": "6d438cc6aee61334b4502bc41994ca193eef5329bc2e53f8aa0b0d6e5b7bf8c8"
+  },
+  "canonical_stock_store": {
+    "bytes": 11122045,
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/canonical_components.json.gz",
+    "sha256": "c2e53e7f21703dbfabfcad8a43ef33ef8aa3d6c4e4915ee3883f25ae81c2a3e8",
+    "uncompressed_bytes": 48221417
+  },
+  "code_sha256": "7a5b42e89c85beacb834d92b3d11c7e215c8bec4172ddef300d328b28c880909",
+  "contract": {
+    "active_fit_seconds": 14400,
+    "architecture": "TM0",
+    "batch_sessions": 16,
+    "channels": 16,
+    "clip": 1.0,
+    "confirmation": false,
+    "cutoff": "2023-06-30",
+    "device": "CPU_FLOAT32",
+    "dropout": 0.1,
+    "economic_claims": false,
+    "hard_fit_seconds": 16200,
+    "layers": 1,
+    "lr": 0.001,
+    "max_epochs": 60,
+    "minimum_stop": 12,
+    "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+    "optimizer": "AdamW",
+    "pair_limit": 1,
+    "parameters": 6433,
+    "patience": 10,
+    "qualifying_multiplier": 0.999,
+    "seed": 42,
+    "stage": "WF1",
+    "steps": 48,
+    "target_clipping": false,
+    "universe": [
+      "AAPL",
+      "COST",
+      "CMCSA",
+      "SBUX",
+      "CME"
+    ],
+    "weight_decay_bias": 0.0,
+    "weight_decay_matrix": 0.01,
+    "width": 32
+  },
+  "dense_windows_saved": false,
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "first_pair_views": {
+    "inner": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc",
+    "refit": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b",
+    "validation": "CONDITIONAL_REAL_TM0:f494313fdce14f17c07a4b12e3d75f01eb2107d0d58e6ea252a877da242b74c1"
+  },
+  "input_id": "1b4fa7c10b2d9d8a300b5929118a3b7cc6774574a1a0e9505ebce51ca4b2ad37",
+  "preprocessing_actual_vs_historical": "Original actual constructed_at preserved; window.stop is counterfactual historical information membership, not proof a model existed then",
+  "producer": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/verified_producer.json",
+    "sha256": "02e6484b741386ce3cfa87315a58b89469e79904e5bc4c681da4c18b7247b38f"
+  },
+  "review_binding": "05bd58deb93ecac33a212e55bae3b27697d8a40c3becbac553a2c4c3b6a09309",
+  "schema": 1,
+  "shape": [
+    5,
+    48,
+    16
+  ],
+  "status": "BRIDGE_READY",
+  "strict_observed_causality_certified": false,
+  "views": {
+    "WF1": {
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "excluded": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "origins": 232,
+      "per_origin": {
+        "1": 116,
+        "2": 116
+      },
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "sessions": 116,
+      "tensor_bytes": 474240,
+      "unique_feature_rows": 7410,
+      "view_id": "CONDITIONAL_REAL_TM0:e87d636dedcc976699dd80dadd4021b47d289ee06ebfc0ecf05c9ea34beaee46"
+    },
+    "WF2": {
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "excluded": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "origins": 232,
+      "per_origin": {
+        "1": 116,
+        "2": 116
+      },
+      "preparation_id": "50e29107b7204da9ab226298f27b38e8da04d0ad6adb22ceb2d3e70d2ca5e10e",
+      "sessions": 116,
+      "tensor_bytes": 472320,
+      "unique_feature_rows": 7380,
+      "view_id": "CONDITIONAL_REAL_TM0:4f77d97959f87e7605103fb655ec62b43704060524656b227827b7ed78435fc8"
+    },
+    "inner": {
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "excluded": {},
+      "origins": 1376,
+      "per_origin": {
+        "1": 688,
+        "2": 688
+      },
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "sessions": 688,
+      "tensor_bytes": 2676480,
+      "unique_feature_rows": 41820,
+      "view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc"
+    },
+    "refit": {
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "excluded": {},
+      "origins": 1502,
+      "per_origin": {
+        "1": 751,
+        "2": 751
+      },
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "sessions": 751,
+      "tensor_bytes": 2918400,
+      "unique_feature_rows": 45600,
+      "view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b"
+    },
+    "validation": {
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "excluded": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "origins": 110,
+      "per_origin": {
+        "1": 55,
+        "2": 55
+      },
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "sessions": 55,
+      "tensor_bytes": 238080,
+      "unique_feature_rows": 3720,
+      "view_id": "CONDITIONAL_REAL_TM0:f494313fdce14f17c07a4b12e3d75f01eb2107d0d58e6ea252a877da242b74c1"
+    }
+  }
+}

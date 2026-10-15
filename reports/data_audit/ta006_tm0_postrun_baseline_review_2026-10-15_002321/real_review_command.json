@@ -1,0 +1,28 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "lstm_data.pilot_postrun",
+    "--pilot",
+    "reports/data_audit/ta005_first_pair_2026-10-14_234019",
+    "--bridge",
+    "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455",
+    "--report",
+    "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321",
+    "--baseline-decision",
+    "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/baseline_decision_v1.json"
+  ],
+  "started_at": "2026-10-15T04:32:58.354771+00:00",
+  "finished_at": "2026-10-15T04:33:22.965847+00:00",
+  "elapsed_seconds": 24.611443375004455,
+  "exit_code": 0,
+  "code_before_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+  "code_after_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

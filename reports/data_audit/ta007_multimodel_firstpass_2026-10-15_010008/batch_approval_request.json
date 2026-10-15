@@ -1,0 +1,40 @@
+{
+  "actual_checks": "50 focusedPASS;typecheck0errors0warnings;real train-only joined inputs/oracles pass,zero newfits",
+  "code_sha256": "1d3f6bab5263dcf0d579b825c804809c6abf7815051592fc452470b067d0132e",
+  "confirmation_access": false,
+  "dataset_sha256": "1835436b78fff3a8a227de873debd8ba41c1f7766299bb051190d81bf8b2be93",
+  "deadline": "2026-10-15T02:57:45-04:00",
+  "external_facts_certified": false,
+  "input_binding_sha256": "b6802d5cd26b466097af9342f35870b2aba79e88c699a56f1a5bc4335105422a",
+  "market_ridge_separate_optional_proposal_sha256": "33af52b549d0975b40cdbbd1a6e5b34fbece9b8a4d3b7e72866153df388422cb",
+  "maximum_package_wall_seconds": 7200,
+  "pair_budget": "1/40 -> up to4/40, every started failure counts",
+  "plan": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/batch_plan.json",
+    "sha256": "cb4edaff9edca889ced95ee4683d2d0059fdd7ed1ff41421e705bab8d81054f8"
+  },
+  "policies_requested": "Extend qualified researcher-attested local stock/SPY rights/clock/privacy reliance to exactly these three candidate pairs; accept existing MC0/MC1/E5 engineering with preserved warnings. No external fact certification or course substitution.",
+  "production_migration": false,
+  "queue": [
+    {
+      "channels": 21,
+      "model": "MC0",
+      "parameters": 7073,
+      "run_id": "TA007:MC0:b13e3a1e55bf47644b44fcd72cba9edd49f7a8cee79860b00c58fcbf36b22e8e"
+    },
+    {
+      "channels": 21,
+      "model": "MC1",
+      "parameters": 7169,
+      "run_id": "TA007:MC1:e2a11df1dc49a913f8c4d2f7eebf4154a5882ba7e834ddd1cbc163bfd76dc61c"
+    },
+    {
+      "channels": 23,
+      "model": "E5",
+      "parameters": 7329,
+      "run_id": "TA007:E5:f22a63459e71e474abcf69ec4630e06f4295a8d737b6ad77acc389626e952de3"
+    }
+  ],
+  "report_reserve_seconds": 900,
+  "scope": "Three separately typed seed42 June2023/WF1 calibration/fresh-refit grants in MC0\u2192MC1\u2192E5 order; no repeated inter-run approval"
+}

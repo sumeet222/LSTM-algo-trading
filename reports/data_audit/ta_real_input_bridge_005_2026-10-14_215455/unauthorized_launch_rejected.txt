@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/real_bridge_run.py", line 664, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/real_bridge_run.py", line 634, in main
+    authority = load_training_authority(
+        review, {"path": str(args.approval_binding), "sha256": digest(args.approval_binding)}
+    )
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/real_bridge_authority.py", line 288, in load_training_authority
+    validate_training_binding(review, binding)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/real_bridge_authority.py", line 204, in validate_training_binding
+    raise ValueError("COMPLETE_ACTUAL_TRAINING_AUTHORITY_BINDING_REQUIRED")
+ValueError: COMPLETE_ACTUAL_TRAINING_AUTHORITY_BINDING_REQUIRED

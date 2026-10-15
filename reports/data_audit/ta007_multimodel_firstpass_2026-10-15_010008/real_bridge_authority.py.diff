@@ -1,0 +1,30 @@
+--- Package006 real_bridge_authority.py
++++ src/lstm_data/real_bridge_authority.py
+@@ -6,6 +6,10 @@
+ import json
+ from dataclasses import dataclass
+ from pathlib import Path
++from typing import TYPE_CHECKING
++
++if TYPE_CHECKING:
++    from .real_batch_authority import BatchPairAuthority
+ 
+ from .config import digest, fingerprint
+ from .ft0_transforms import identity
+@@ -289,8 +293,15 @@
+     return TrainingAuthority(review, binding_ref, binding, FIT_SEAL)
+ 
+ 
+-def require_training(authority: TrainingAuthority, activity: str, input_id: str) -> None:
++def require_training(
++    authority: TrainingAuthority | BatchPairAuthority, activity: str, input_id: str
++) -> None:
+     """Single public admission boundary; duck-typed/subclass permissions cannot opt in."""
++    from .real_batch_authority import BatchPairAuthority
++
++    if type(authority) is BatchPairAuthority:
++        authority.ensure(activity, input_id)
++        return
+     if type(authority) is not TrainingAuthority:
+         raise ValueError("CONCRETE_REVIEWED_TRAINING_AUTHORITY_REQUIRED")
+     authority.ensure(activity, input_id)

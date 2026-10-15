@@ -1,0 +1,459 @@
+{
+  "baseline_snapshot": {
+    "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/permitted_prediction_snapshot.csv",
+    "sha256": "7233fa546e326bda0717f087b75ecccded141ac7de4a03be25a8916a3293f84b"
+  },
+  "code_sha256": "1d3f6bab5263dcf0d579b825c804809c6abf7815051592fc452470b067d0132e",
+  "confirmation_access": false,
+  "dataset": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/final_v2/dataset_input_binding.json",
+    "sha256": "1835436b78fff3a8a227de873debd8ba41c1f7766299bb051190d81bf8b2be93"
+  },
+  "deadline": "2026-10-15T02:57:45-04:00",
+  "expected_pair_seconds_NOT_ACTUAL": 900,
+  "id": "TA007-THREE-PAIR-BATCH-v1",
+  "input_binding": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/batch_input_binding.json",
+    "sha256": "b6802d5cd26b466097af9342f35870b2aba79e88c699a56f1a5bc4335105422a"
+  },
+  "market": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/market_v2/canonical_market_components.json.gz",
+    "sha256": "6d438cc6aee61334b4502bc41994ca193eef5329bc2e53f8aa0b0d6e5b7bf8c8"
+  },
+  "maximum_ending_pair_budget": "4/40",
+  "maximum_wall_seconds": 7200,
+  "no_performance_contingent_branching": true,
+  "original_protocol": {
+    "path": "configs/CURRENT_PROTOCOL.json",
+    "sha256": "1b83b2ef8f727618ef319c0c04b36056c5c8cb19857ebe40927851e3295ca600"
+  },
+  "package_started_at": "2026-10-15T00:57:45-04:00",
+  "policy_scope_requested": "Extend qualified researcher-attested local stock/SPY rights/clock/privacy reliance to exactly these three candidate pairs; accept existing MC0/MC1/E5 engineering with preserved warnings. No external fact certification or course substitution.",
+  "prior_pointer_snapshot": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/registry_pointer_v1_snapshot.json",
+    "sha256": "27b60f8a302bc0a15ded3ecaabf536e8ca319594f3ad239a3e1953cccd501c1d"
+  },
+  "prior_real_journal": {
+    "path": "reports/audit/track_a_real_pairs_v1.jsonl",
+    "sha256": "c19d38ec5b4d42af235ee9c60041dc7dd17422507bc2d5fd2ddbfc5cfce3f46b"
+  },
+  "producer": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/verified_producer.json",
+    "sha256": "02e6484b741386ce3cfa87315a58b89469e79904e5bc4c681da4c18b7247b38f"
+  },
+  "production_migration": false,
+  "registry_definition": {
+    "path": "configs/track_a_candidate_experiment_registry_v2.json",
+    "sha256": "d2fb90bc7ba3d95b00aeb871dccf82c7b33f5c36c8e6d6a4fbff824d0d4b1283"
+  },
+  "report_reserve_seconds": 900,
+  "runs": [
+    {
+      "architecture": "MC0",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "MC0",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 21,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7073,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "input_id": "93c4ab119115a8c7832760848ee80eb6eee99d109f411070384bf23f2918c3be",
+      "run_id": "TA007:MC0:b13e3a1e55bf47644b44fcd72cba9edd49f7a8cee79860b00c58fcbf36b22e8e",
+      "views": {
+        "WF1": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "market_recipe_id": "c459d8308de877fb727d77d81318afd4ffb8970b4b6de23168666a8719b2b303",
+          "market_table_bytes": 121200,
+          "origins": 232,
+          "per_origin": {
+            "1": 116,
+            "2": 116
+          },
+          "preparation_id": "3afc4894d8dd3f5ea8b1f1903ab750a9d9e71ee9573897215a6b0cd59a70ea1d",
+          "sessions": 116,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:e87d636dedcc976699dd80dadd4021b47d289ee06ebfc0ecf05c9ea34beaee46",
+          "tensor_bytes": 474240,
+          "unique_feature_rows": 7410,
+          "view_id": "e3dfb7ee3ce6f13ac568f59d53db6c99e7b4287153db567144977f89f91a20d2"
+        },
+        "inner": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {},
+          "market_recipe_id": "6af7e01e67f4b35dad37aa1332e18ff4075902dbc4c7e8e38d9b99592594f4df",
+          "market_table_bytes": 121200,
+          "origins": 1376,
+          "per_origin": {
+            "1": 688,
+            "2": 688
+          },
+          "preparation_id": "0351a959fb7238eaccf7947a5bee77e8ea07d3167bbe8e08e6234601c6890ad5",
+          "sessions": 688,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc",
+          "tensor_bytes": 2676480,
+          "unique_feature_rows": 41820,
+          "view_id": "ecc30acc702c6f3b49a90f54bfdcfb6c252f0e2adde7c9f3f25b6bcac68caaae"
+        },
+        "refit": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {},
+          "market_recipe_id": "c459d8308de877fb727d77d81318afd4ffb8970b4b6de23168666a8719b2b303",
+          "market_table_bytes": 121200,
+          "origins": 1502,
+          "per_origin": {
+            "1": 751,
+            "2": 751
+          },
+          "preparation_id": "3afc4894d8dd3f5ea8b1f1903ab750a9d9e71ee9573897215a6b0cd59a70ea1d",
+          "sessions": 751,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b",
+          "tensor_bytes": 2918400,
+          "unique_feature_rows": 45600,
+          "view_id": "163403712aca2557ce802d04228dee36ee83a7875a42d1bfb12c67f9e23fa339"
+        },
+        "validation": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "market_recipe_id": "6af7e01e67f4b35dad37aa1332e18ff4075902dbc4c7e8e38d9b99592594f4df",
+          "market_table_bytes": 121200,
+          "origins": 110,
+          "per_origin": {
+            "1": 55,
+            "2": 55
+          },
+          "preparation_id": "0351a959fb7238eaccf7947a5bee77e8ea07d3167bbe8e08e6234601c6890ad5",
+          "sessions": 55,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:f494313fdce14f17c07a4b12e3d75f01eb2107d0d58e6ea252a877da242b74c1",
+          "tensor_bytes": 238080,
+          "unique_feature_rows": 3720,
+          "view_id": "8c2039755046e9f1d20ff06eb16c1ee8b06e2b0bba7ea4829b52f0a9ca9789ce"
+        }
+      }
+    },
+    {
+      "architecture": "MC1",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "MC1",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 21,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7169,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "input_id": "f29c7ac92d563a998ad2ab2f3bba100d20921bcdc0b68f5c26cf75c3a07de87a",
+      "run_id": "TA007:MC1:e2a11df1dc49a913f8c4d2f7eebf4154a5882ba7e834ddd1cbc163bfd76dc61c",
+      "views": {
+        "WF1": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "market_recipe_id": "c459d8308de877fb727d77d81318afd4ffb8970b4b6de23168666a8719b2b303",
+          "market_table_bytes": 121200,
+          "origins": 232,
+          "per_origin": {
+            "1": 116,
+            "2": 116
+          },
+          "preparation_id": "3afc4894d8dd3f5ea8b1f1903ab750a9d9e71ee9573897215a6b0cd59a70ea1d",
+          "sessions": 116,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:e87d636dedcc976699dd80dadd4021b47d289ee06ebfc0ecf05c9ea34beaee46",
+          "tensor_bytes": 474240,
+          "unique_feature_rows": 7410,
+          "view_id": "e3dfb7ee3ce6f13ac568f59d53db6c99e7b4287153db567144977f89f91a20d2"
+        },
+        "inner": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {},
+          "market_recipe_id": "6af7e01e67f4b35dad37aa1332e18ff4075902dbc4c7e8e38d9b99592594f4df",
+          "market_table_bytes": 121200,
+          "origins": 1376,
+          "per_origin": {
+            "1": 688,
+            "2": 688
+          },
+          "preparation_id": "0351a959fb7238eaccf7947a5bee77e8ea07d3167bbe8e08e6234601c6890ad5",
+          "sessions": 688,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc",
+          "tensor_bytes": 2676480,
+          "unique_feature_rows": 41820,
+          "view_id": "ecc30acc702c6f3b49a90f54bfdcfb6c252f0e2adde7c9f3f25b6bcac68caaae"
+        },
+        "refit": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {},
+          "market_recipe_id": "c459d8308de877fb727d77d81318afd4ffb8970b4b6de23168666a8719b2b303",
+          "market_table_bytes": 121200,
+          "origins": 1502,
+          "per_origin": {
+            "1": 751,
+            "2": 751
+          },
+          "preparation_id": "3afc4894d8dd3f5ea8b1f1903ab750a9d9e71ee9573897215a6b0cd59a70ea1d",
+          "sessions": 751,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b",
+          "tensor_bytes": 2918400,
+          "unique_feature_rows": 45600,
+          "view_id": "163403712aca2557ce802d04228dee36ee83a7875a42d1bfb12c67f9e23fa339"
+        },
+        "validation": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "market_recipe_id": "6af7e01e67f4b35dad37aa1332e18ff4075902dbc4c7e8e38d9b99592594f4df",
+          "market_table_bytes": 121200,
+          "origins": 110,
+          "per_origin": {
+            "1": 55,
+            "2": 55
+          },
+          "preparation_id": "0351a959fb7238eaccf7947a5bee77e8ea07d3167bbe8e08e6234601c6890ad5",
+          "sessions": 55,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:f494313fdce14f17c07a4b12e3d75f01eb2107d0d58e6ea252a877da242b74c1",
+          "tensor_bytes": 238080,
+          "unique_feature_rows": 3720,
+          "view_id": "8c2039755046e9f1d20ff06eb16c1ee8b06e2b0bba7ea4829b52f0a9ca9789ce"
+        }
+      }
+    },
+    {
+      "architecture": "E5",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "E5",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 23,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7329,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "input_id": "222d47e23c03c0b5b344373d47735ee8d54f1356928c75ffcf6b165fa6aae939",
+      "run_id": "TA007:E5:f22a63459e71e474abcf69ec4630e06f4295a8d737b6ad77acc389626e952de3",
+      "views": {
+        "WF1": {
+          "channels": 23,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "market_recipe_id": "c459d8308de877fb727d77d81318afd4ffb8970b4b6de23168666a8719b2b303",
+          "market_table_bytes": 121200,
+          "origins": 232,
+          "per_origin": {
+            "1": 116,
+            "2": 116
+          },
+          "preparation_id": "1d1a1c50253da52cddd1a74cb0d2593051093863e76cf3e9d5ce1bd9a136afaf",
+          "sessions": 116,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:e87d636dedcc976699dd80dadd4021b47d289ee06ebfc0ecf05c9ea34beaee46",
+          "tensor_bytes": 474240,
+          "unique_feature_rows": 7410,
+          "view_id": "12ba19e72a6039309f989e93d5bc025c6eff998b1eb20d7626abcc0156dcde03"
+        },
+        "inner": {
+          "channels": 23,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {},
+          "market_recipe_id": "6af7e01e67f4b35dad37aa1332e18ff4075902dbc4c7e8e38d9b99592594f4df",
+          "market_table_bytes": 121200,
+          "origins": 1376,
+          "per_origin": {
+            "1": 688,
+            "2": 688
+          },
+          "preparation_id": "e0497118f1e51753259ca5f8a479d4706b70b19ff7ee25e3911e140cbcca65ed",
+          "sessions": 688,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc",
+          "tensor_bytes": 2676480,
+          "unique_feature_rows": 41820,
+          "view_id": "bc4721f67f79789b8cb2270c91d95e3e429a0032bd9edec619e352ff5213921d"
+        },
+        "refit": {
+          "channels": 23,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {},
+          "market_recipe_id": "c459d8308de877fb727d77d81318afd4ffb8970b4b6de23168666a8719b2b303",
+          "market_table_bytes": 121200,
+          "origins": 1502,
+          "per_origin": {
+            "1": 751,
+            "2": 751
+          },
+          "preparation_id": "1d1a1c50253da52cddd1a74cb0d2593051093863e76cf3e9d5ce1bd9a136afaf",
+          "sessions": 751,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b",
+          "tensor_bytes": 2918400,
+          "unique_feature_rows": 45600,
+          "view_id": "5c7373608c0366f45634d54d38b1ab4aa8e3c847ae4f46739ee4601ff5d261a8"
+        },
+        "validation": {
+          "channels": 23,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "market_recipe_id": "6af7e01e67f4b35dad37aa1332e18ff4075902dbc4c7e8e38d9b99592594f4df",
+          "market_table_bytes": 121200,
+          "origins": 110,
+          "per_origin": {
+            "1": 55,
+            "2": 55
+          },
+          "preparation_id": "e0497118f1e51753259ca5f8a479d4706b70b19ff7ee25e3911e140cbcca65ed",
+          "sessions": 55,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:f494313fdce14f17c07a4b12e3d75f01eb2107d0d58e6ea252a877da242b74c1",
+          "tensor_bytes": 238080,
+          "unique_feature_rows": 3720,
+          "view_id": "a6cdc1873379f3687bbffeabcab1b0be00a38626025642c905585327a037e4a2"
+        }
+      }
+    }
+  ],
+  "starting_pair_budget": "1/40",
+  "tm0_result": {
+    "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+    "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "model_masks": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/final_v2/day_origin_masks.csv",
+    "sha256": "f9bf2eed82d46d59af422d2491269e1b9407e86304eeb3e43420518ff5a7b668"
+  },
+  "no_threshold_refit_or_model_fit": true,
+  "results": {
+    "TRAIN": {
+      "gap_percentage_points": 0.0,
+      "groups": {
+        "HIGH": {
+          "model_eligible": 752,
+          "nominal": 752,
+          "original_support": "SUPPORTED_DESCRIPTIVE_ONLY",
+          "per_origin": {
+            "1": {
+              "eligible": 377,
+              "nominal": 377
+            },
+            "2": {
+              "eligible": 375,
+              "nominal": 375
+            }
+          },
+          "rate": 1.0
+        },
+        "LOW": {
+          "model_eligible": 750,
+          "nominal": 750,
+          "original_support": "SUPPORTED_DESCRIPTIVE_ONLY",
+          "per_origin": {
+            "1": {
+              "eligible": 374,
+              "nominal": 374
+            },
+            "2": {
+              "eligible": 376,
+              "nominal": 376
+            }
+          },
+          "rate": 1.0
+        }
+      }
+    },
+    "WF1": {
+      "gap_percentage_points": 7.079646017699115,
+      "groups": {
+        "HIGH": {
+          "model_eligible": 22,
+          "nominal": 22,
+          "original_support": "SPARSE_EXPLORATORY_ONLY",
+          "per_origin": {
+            "1": {
+              "eligible": 11,
+              "nominal": 11
+            },
+            "2": {
+              "eligible": 11,
+              "nominal": 11
+            }
+          },
+          "rate": 1.0
+        },
+        "LOW": {
+          "model_eligible": 210,
+          "nominal": 226,
+          "original_support": "SUPPORTED_DESCRIPTIVE_ONLY",
+          "per_origin": {
+            "1": {
+              "eligible": 105,
+              "nominal": 113
+            },
+            "2": {
+              "eligible": 105,
+              "nominal": 113
+            }
+          },
+          "rate": 0.9292035398230089
+        }
+      }
+    },
+    "WF2": {
+      "gap_percentage_points": 6.866952789699576,
+      "groups": {
+        "HIGH": {
+          "model_eligible": 15,
+          "nominal": 15,
+          "original_support": "SPARSE_EXPLORATORY_ONLY",
+          "per_origin": {
+            "1": {
+              "eligible": 8,
+              "nominal": 8
+            },
+            "2": {
+              "eligible": 7,
+              "nominal": 7
+            }
+          },
+          "rate": 1.0
+        },
+        "LOW": {
+          "model_eligible": 217,
+          "nominal": 233,
+          "original_support": "SPARSE_EXPLORATORY_ONLY",
+          "per_origin": {
+            "1": {
+              "eligible": 108,
+              "nominal": 116
+            },
+            "2": {
+              "eligible": 109,
+              "nominal": 117
+            }
+          },
+          "rate": 0.9313304721030042
+        }
+      }
+    }
+  },
+  "sparse_states_remain_exploratory": true,
+  "states": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/conditional_origin_states.jsonl",
+    "sha256": "4d694f9c97e707067a1c4796e13365b63c3781ac058131adf1d246e8623a0935"
+  },
+  "status": "PASS_CONDITIONAL_DESCRIPTIVE_MASK_CHECK",
+  "trend_not_interpreted": "Prior classifier signs standardized U5; raw-U5 sign is separate; no new directional claim"
+}

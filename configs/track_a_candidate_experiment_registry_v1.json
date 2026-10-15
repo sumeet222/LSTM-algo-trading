@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "status": "REVIEWED_DEFINITION_INACTIVE_UNTIL_EXACT_FITTING_APPROVAL",
+  "scope": "FIRST_CONDITIONAL_CANDIDATE_TM0_PAIR_ONLY",
+  "legacy_ledger": "reports/audit/track_a_events.jsonl",
+  "real_pair_journal": "reports/audit/track_a_real_pairs_v1.jsonl",
+  "activation_pointer": "configs/CURRENT_EXPERIMENT_REGISTRY.json",
+  "reader": "lstm_data.real_bridge_run.journal_rows + lstm_data.ledger.pair_budget",
+  "ceiling": 40,
+  "started_and_failed_pairs_count": true,
+  "overwrite_legacy_history": false,
+  "production_D1_migration": false
+}

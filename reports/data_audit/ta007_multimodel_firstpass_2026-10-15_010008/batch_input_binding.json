@@ -1,0 +1,184 @@
+{
+  "dataset": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/final_v2/dataset_input_binding.json",
+    "sha256": "1835436b78fff3a8a227de873debd8ba41c1f7766299bb051190d81bf8b2be93"
+  },
+  "market": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/market_v2/canonical_market_components.json.gz",
+    "sha256": "6d438cc6aee61334b4502bc41994ca193eef5329bc2e53f8aa0b0d6e5b7bf8c8"
+  },
+  "peer_views": {
+    "WF1": {
+      "channels": 23,
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+      "excluded": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "market_recipe_id": "c459d8308de877fb727d77d81318afd4ffb8970b4b6de23168666a8719b2b303",
+      "market_table_bytes": 121200,
+      "origins": 232,
+      "per_origin": {
+        "1": 116,
+        "2": 116
+      },
+      "preparation_id": "1d1a1c50253da52cddd1a74cb0d2593051093863e76cf3e9d5ce1bd9a136afaf",
+      "sessions": 116,
+      "stock_view_id": "CONDITIONAL_REAL_TM0:e87d636dedcc976699dd80dadd4021b47d289ee06ebfc0ecf05c9ea34beaee46",
+      "tensor_bytes": 474240,
+      "unique_feature_rows": 7410,
+      "view_id": "12ba19e72a6039309f989e93d5bc025c6eff998b1eb20d7626abcc0156dcde03"
+    },
+    "inner": {
+      "channels": 23,
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+      "excluded": {},
+      "market_recipe_id": "6af7e01e67f4b35dad37aa1332e18ff4075902dbc4c7e8e38d9b99592594f4df",
+      "market_table_bytes": 121200,
+      "origins": 1376,
+      "per_origin": {
+        "1": 688,
+        "2": 688
+      },
+      "preparation_id": "e0497118f1e51753259ca5f8a479d4706b70b19ff7ee25e3911e140cbcca65ed",
+      "sessions": 688,
+      "stock_view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc",
+      "tensor_bytes": 2676480,
+      "unique_feature_rows": 41820,
+      "view_id": "bc4721f67f79789b8cb2270c91d95e3e429a0032bd9edec619e352ff5213921d"
+    },
+    "refit": {
+      "channels": 23,
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+      "excluded": {},
+      "market_recipe_id": "c459d8308de877fb727d77d81318afd4ffb8970b4b6de23168666a8719b2b303",
+      "market_table_bytes": 121200,
+      "origins": 1502,
+      "per_origin": {
+        "1": 751,
+        "2": 751
+      },
+      "preparation_id": "1d1a1c50253da52cddd1a74cb0d2593051093863e76cf3e9d5ce1bd9a136afaf",
+      "sessions": 751,
+      "stock_view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b",
+      "tensor_bytes": 2918400,
+      "unique_feature_rows": 45600,
+      "view_id": "5c7373608c0366f45634d54d38b1ab4aa8e3c847ae4f46739ee4601ff5d261a8"
+    },
+    "validation": {
+      "channels": 23,
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+      "excluded": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "market_recipe_id": "6af7e01e67f4b35dad37aa1332e18ff4075902dbc4c7e8e38d9b99592594f4df",
+      "market_table_bytes": 121200,
+      "origins": 110,
+      "per_origin": {
+        "1": 55,
+        "2": 55
+      },
+      "preparation_id": "e0497118f1e51753259ca5f8a479d4706b70b19ff7ee25e3911e140cbcca65ed",
+      "sessions": 55,
+      "stock_view_id": "CONDITIONAL_REAL_TM0:f494313fdce14f17c07a4b12e3d75f01eb2107d0d58e6ea252a877da242b74c1",
+      "tensor_bytes": 238080,
+      "unique_feature_rows": 3720,
+      "view_id": "a6cdc1873379f3687bbffeabcab1b0be00a38626025642c905585327a037e4a2"
+    }
+  },
+  "same_targets_and_masks_for_all_models": true,
+  "source_basis": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE_CANDIDATE_ONLY",
+  "stock_market_views": {
+    "WF1": {
+      "channels": 21,
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+      "excluded": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "market_recipe_id": "c459d8308de877fb727d77d81318afd4ffb8970b4b6de23168666a8719b2b303",
+      "market_table_bytes": 121200,
+      "origins": 232,
+      "per_origin": {
+        "1": 116,
+        "2": 116
+      },
+      "preparation_id": "3afc4894d8dd3f5ea8b1f1903ab750a9d9e71ee9573897215a6b0cd59a70ea1d",
+      "sessions": 116,
+      "stock_view_id": "CONDITIONAL_REAL_TM0:e87d636dedcc976699dd80dadd4021b47d289ee06ebfc0ecf05c9ea34beaee46",
+      "tensor_bytes": 474240,
+      "unique_feature_rows": 7410,
+      "view_id": "e3dfb7ee3ce6f13ac568f59d53db6c99e7b4287153db567144977f89f91a20d2"
+    },
+    "inner": {
+      "channels": 21,
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+      "excluded": {},
+      "market_recipe_id": "6af7e01e67f4b35dad37aa1332e18ff4075902dbc4c7e8e38d9b99592594f4df",
+      "market_table_bytes": 121200,
+      "origins": 1376,
+      "per_origin": {
+        "1": 688,
+        "2": 688
+      },
+      "preparation_id": "0351a959fb7238eaccf7947a5bee77e8ea07d3167bbe8e08e6234601c6890ad5",
+      "sessions": 688,
+      "stock_view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc",
+      "tensor_bytes": 2676480,
+      "unique_feature_rows": 41820,
+      "view_id": "ecc30acc702c6f3b49a90f54bfdcfb6c252f0e2adde7c9f3f25b6bcac68caaae"
+    },
+    "refit": {
+      "channels": 21,
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+      "excluded": {},
+      "market_recipe_id": "c459d8308de877fb727d77d81318afd4ffb8970b4b6de23168666a8719b2b303",
+      "market_table_bytes": 121200,
+      "origins": 1502,
+      "per_origin": {
+        "1": 751,
+        "2": 751
+      },
+      "preparation_id": "3afc4894d8dd3f5ea8b1f1903ab750a9d9e71ee9573897215a6b0cd59a70ea1d",
+      "sessions": 751,
+      "stock_view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b",
+      "tensor_bytes": 2918400,
+      "unique_feature_rows": 45600,
+      "view_id": "163403712aca2557ce802d04228dee36ee83a7875a42d1bfb12c67f9e23fa339"
+    },
+    "validation": {
+      "channels": 21,
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+      "dtype": "float32",
+      "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+      "excluded": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "market_recipe_id": "6af7e01e67f4b35dad37aa1332e18ff4075902dbc4c7e8e38d9b99592594f4df",
+      "market_table_bytes": 121200,
+      "origins": 110,
+      "per_origin": {
+        "1": 55,
+        "2": 55
+      },
+      "preparation_id": "0351a959fb7238eaccf7947a5bee77e8ea07d3167bbe8e08e6234601c6890ad5",
+      "sessions": 55,
+      "stock_view_id": "CONDITIONAL_REAL_TM0:f494313fdce14f17c07a4b12e3d75f01eb2107d0d58e6ea252a877da242b74c1",
+      "tensor_bytes": 238080,
+      "unique_feature_rows": 3720,
+      "view_id": "8c2039755046e9f1d20ff06eb16c1ee8b06e2b0bba7ea4829b52f0a9ca9789ce"
+    }
+  }
+}

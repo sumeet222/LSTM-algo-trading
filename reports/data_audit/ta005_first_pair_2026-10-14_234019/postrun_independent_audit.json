@@ -1,0 +1,64 @@
+{
+  "status": "WARN_CALIBRATION_CLIPPING; INTEGRITY_CHECKS_PASS",
+  "checked_at": "2026-10-14T23:44:20.784469-04:00",
+  "method": "Read-only audit of actual epoch traces, frozen EarlyStop replay on recorded validation losses, safe CPU checkpoint loads, hash/pointer/journal and source checks. No retraining, new optimizer steps, predictions, source queries or confirmation reads.",
+  "journal_statuses": [
+    "STARTED",
+    "CALIBRATED",
+    "REFITTING",
+    "COMPLETED"
+  ],
+  "genuine_started_pairs": 1,
+  "budget": "1/40",
+  "calibration_epochs": 14,
+  "selected_epoch": 4,
+  "refit_epochs": 4,
+  "optimizer_steps": {
+    "calibration": 602,
+    "refit": 188,
+    "total": 790
+  },
+  "checkpoint_tensors_finite": true,
+  "checkpoint_parameters": 6433,
+  "fresh_initialization_and_optimizer": true,
+  "strict_D6g_recorded_selection_replayed": true,
+  "all_epoch_sessions_and_step_counts_pass": true,
+  "all_recorded_gradient_nonfinite_counts": 0,
+  "sustained_clipping_warnings": {
+    "calibration_epochs": [
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "refit_epochs": []
+  },
+  "G6_effective": "WARN_INVESTIGATE_CALIBRATION_CLIPPING",
+  "G6_original_runner": "PASS_PER_RUN_TELEMETRY; runner checks refit clipping only, so this addendum corrects the incomplete health summary",
+  "development_origins": 232,
+  "development_sessions": 116,
+  "confirmation_outcome_rows": 0,
+  "protected_files_unchanged": 2454,
+  "owned_python_sha256": "0bfddaf21c96ef714d8c5524716ca7e2c8c96b03d3b8c733a4a26b63bd909308",
+  "actual_runtime": {
+    "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/training_actual_runtime.json",
+    "sha256": "551e8bc7a32ebb9f3e2a8ac21d3d7ba818d65fae6a24bf06ea5bfac644a10d3f"
+  },
+  "actual_supervisor": {
+    "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/supervisor_actual_runtime.json",
+    "sha256": "4cb7b41daafe80d1acc00b7f40dca7275a71313e7404d05631467fb0ae9afa25"
+  },
+  "result": {
+    "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+    "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+  },
+  "legacy_ledger_unchanged": true,
+  "production_D1_changed": false,
+  "rights_and_clock_evidence_grade": "RESEARCHER_ATTESTED_PRIVATE_EMAILS_UNINSPECTED",
+  "comparative_economic_statistical_claims": "HOLD"
+}

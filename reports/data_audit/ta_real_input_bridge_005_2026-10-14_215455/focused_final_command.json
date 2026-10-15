@@ -1,0 +1,26 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_real_bridge.py",
+    "tests/test_pretraining_candidate.py",
+    "tests/test_neural_engine.py",
+    "tests/test_hourly_proxy.py",
+    "tests/test_labels.py",
+    "-q"
+  ],
+  "started_at": "2026-10-15T02:21:05.287831+00:00",
+  "finished_at": "2026-10-15T02:21:23.466384+00:00",
+  "elapsed_seconds": 18.178109084023163,
+  "exit_code": 0,
+  "code_before_sha256": "cb675ab3d5f655ef11c698ffdea174039d5d23884eb47518fd3ec35661197aae",
+  "code_after_sha256": "cb675ab3d5f655ef11c698ffdea174039d5d23884eb47518fd3ec35661197aae",
+  "numerical_threads": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

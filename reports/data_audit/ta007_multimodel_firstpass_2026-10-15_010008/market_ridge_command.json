@@ -1,0 +1,26 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "lstm_data.real_batch_baseline",
+    "--plan",
+    "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/batch_plan.json",
+    "--approval",
+    "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/market_ridge_authorization.json",
+    "--output",
+    "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/RIDGE_MARKET_147"
+  ],
+  "started_at": "2026-10-15T05:24:13.167823+00:00",
+  "finished_at": "2026-10-15T05:24:44.370940+00:00",
+  "elapsed_seconds": 31.20368008298101,
+  "exit_code": 0,
+  "code_before_sha256": "cbc6796696b2702167dceaed59fa50e5c84e49ef2c17ad36449fd6b253353fa4",
+  "code_after_sha256": "cbc6796696b2702167dceaed59fa50e5c84e49ef2c17ad36449fd6b253353fa4",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

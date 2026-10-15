@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/bin/ruff",
+    "check",
+    "src/lstm_data/real_batch_review.py"
+  ],
+  "started_at": "2026-10-15T05:19:44.642746+00:00",
+  "finished_at": "2026-10-15T05:19:44.728004+00:00",
+  "elapsed_seconds": 0.08489854203071445,
+  "exit_code": 1,
+  "code_before_sha256": "d67aceb25c5145a59800daf5425d19747214b70f0a01a3bb0af9346a02c3ffc9",
+  "code_after_sha256": "d67aceb25c5145a59800daf5425d19747214b70f0a01a3bb0af9346a02c3ffc9",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

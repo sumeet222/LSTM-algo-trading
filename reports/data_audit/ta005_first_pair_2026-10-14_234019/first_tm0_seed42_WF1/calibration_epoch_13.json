@@ -1,0 +1,73 @@
+{
+  "selection": {
+    "best": 4.7046144875613125,
+    "epoch": 13,
+    "patience": 9,
+    "raw_epoch": 4,
+    "raw_min": 4.7046144875613125,
+    "selected": 4,
+    "status": "CALIBRATING"
+  },
+  "training": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": null,
+    "defined_only_daily_IC": null,
+    "epoch": 13,
+    "gradients": {
+      "clipped_fraction": 1.0,
+      "max": 4.741474151611328,
+      "median": 2.042308807373047,
+      "multiplier_median": 0.48964167747216847,
+      "multiplier_min": 0.21090482772226762,
+      "nonfinite_count": 0,
+      "p90": 3.4105009078979496,
+      "p95": 3.6646168231964107,
+      "p99": 4.299407625198363,
+      "sustained_clipping_warning": true
+    },
+    "mse": 7.218486608677479,
+    "per_origin": {},
+    "permutation_hash": "f919030960d802516bed4b08fe07471bc4977b5dde53c09724567a1838ef9d41",
+    "score_std": 0.33125752777356265,
+    "seconds": 2.775688875000924,
+    "sessions": 688,
+    "steps": 43,
+    "top_session_loss_share": {
+      "0.01": 0.2544756269596035,
+      "0.05": 0.45246328370830025,
+      "0.1": 0.5589178291832536
+    }
+  },
+  "validation": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": 0.008181818181818177,
+    "defined_only_daily_IC": 0.008181818181818177,
+    "epoch": 13,
+    "gradients": null,
+    "mse": 4.791786420345306,
+    "per_origin": {
+      "1": {
+        "IC": 0.009090909090909068,
+        "MSE": 4.845502436161041,
+        "count": 55
+      },
+      "2": {
+        "IC": 0.007272727272727266,
+        "MSE": 4.738070337338881,
+        "count": 55
+      }
+    },
+    "permutation_hash": "ecb32a59226eaa22e1bc6c2ade9f44425d285ee21efd4c8cb0be498952fe6197",
+    "score_std": 0.3591163520464424,
+    "seconds": 0.07833108399063349,
+    "sessions": 55,
+    "steps": 0,
+    "top_session_loss_share": {
+      "0.01": 0.08054176208752988,
+      "0.05": 0.20297887199636175,
+      "0.1": 0.34747085352507584
+    }
+  }
+}

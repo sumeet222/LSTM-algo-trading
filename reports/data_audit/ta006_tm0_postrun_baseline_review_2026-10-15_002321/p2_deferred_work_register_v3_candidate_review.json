@@ -1,0 +1,811 @@
+{
+  "entries": [
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "DATA",
+      "closure_test": "Reconcile all 168 UTC keys, units, epochs and source hashes; deterministic repeated-window recomputation.",
+      "code_boundary": "stock_source.StockHistory; remediation_overlay.resolve_native",
+      "condition": "168 absent native half-hours in 15 clusters remain missing. Alpaca retries and tight minute probes recovered none; absence of qualifying trades is not established.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "New source access and candidate activation approval.",
+      "id": "P2-DEF-001",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Separately authorize compatible genuine exact-key recovery; preserve original-first candidate lineage.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/gap_cluster_reconciliation.json",
+          "sha256": "d3b247f7df62fc2e3c2db9c72c4e1bae1bffae0e5c6b18c8d0225ec1b91931bc"
+        }
+      ],
+      "responsible_phase": "P1/P2.3",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Original native gaps"
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "RETENTION",
+      "closure_test": "Train/development\u226590%; each origin/fold/supported regime\u226585%; regime gap\u226410pp;\u2265100 eligible sessions per fold; actual mature-label tails separately audited.",
+      "code_boundary": "ft0_audit.retention_audit; p2_closure.retention_evidence",
+      "condition": "Baseline 919/1502; inactive candidate 1183/1502=78.76%, below required 1352. Deficit169. All264 startup rejects recover; 75 direct plus244 propagated later losses remain319. Both train origins below85%; regimes INCONCLUSIVE.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Any scientific policy or threshold revision requires explicit approval.",
+      "id": "P2-DEF-002",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Recover legitimate observations without dropping origins/features or relaxing thresholds.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/retention_before_after.json",
+          "sha256": "f8b364372526152ce8093433f827294a3913cfd49b07e2d31052877a04f500d3"
+        }
+      ],
+      "responsible_phase": "P2.3/G3",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Training retention failure"
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "DATA",
+      "closure_test": "Original-first overlaps, native lineage, action/version and available_at evidence independently verified; activation explicitly authorized.",
+      "code_boundary": "remediation_overlay.resolve_native; configs/track_a_remediation_v2.json",
+      "condition": "Authentic context begins2019-12-18:17550 native/8680 RTH rows. Overlay inactive; pretraining context is not fitting membership beforeJuly2020.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Separate source activation approval; no implicit protocol migration.",
+      "id": "P2-DEF-003",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Review source/action/clock evidence and explicitly select a canonical candidate source.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/source_extension_manifest_v2.json",
+          "sha256": "4635723df00b8c7985f1adaa57aa8df93e393133f48b04f34fbbfb6ea2bba961"
+        }
+      ],
+      "responsible_phase": "P1/G1/P2.3",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Prehistory activation pending"
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "SOURCE_CLOCK",
+      "closure_test": "Unknown/late/stale sources fail closed; accepted source end/availability and age audited at every step cutoff.",
+      "code_boundary": "clocks.observation_at_cutoff; market_features.observation_reason; stock_source.source_reason",
+      "condition": "Actual stock/SPY available_at UNKNOWN. Period end, retrieval and original publication are separate; no assumed fixed lag is authorized.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Source-clock and scientific evidence approval.",
+      "id": "P2-DEF-004",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Establish independently supported historical source timing for every own-step dependency.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/ta_p2_close_ft0_2026-10-11/g2_timing_label_bridge.json",
+          "sha256": "165d24a57d017e2659ebcdcedca64e310ed4d774355951e45bc81f6eba901b75"
+        }
+      ],
+      "responsible_phase": "G1/G2/P2.1",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Historical publication unknown",
+      "candidate_005_evidence_update": {
+        "status": "SCOPED_CANDIDATE_EVIDENCE_ONLY",
+        "recorded_at": "2026-10-14T23:47:11.933627-04:00",
+        "note": "Idealized-clock policy retained; historical publication still unknown. No observed-causality certification.",
+        "authority": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/candidate_attestation_reliance_policy_v1.json",
+          "sha256": "d21ca124c43675b7b8abb4faae4d7fb52ccbc81ab83a280168ece5f8e618fc71"
+        },
+        "result": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+          "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+        },
+        "postrun_health": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/postrun_independent_audit.json",
+          "sha256": "a4bdb9d0114448fce8cea878c4e4c90ad95133388cf6a070d0e9144dccf7b59b"
+        }
+      }
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "ACTION",
+      "closure_test": "Genuine event IDs/dates, no guessed payment, reciprocal shares/prices and correct receivable/liability settlement; completeness/vintage independently supported.",
+      "code_boundary": "corporate_actions.normalize_action/apply_action/settle_dividend; stock_source.proxy_reference",
+      "condition": "Split/dividend and SPY ETF distribution completeness/vintage unverified. Four original preJuly2020 dividend payable/record dates remain missing. Supplemental issuer terms do not prove contemporaneous vendor publication.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Separate metadata access and action/source certification approval.",
+      "id": "P2-DEF-005",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Resolve exact event-field provenance, known-at timing, raw conversion and complete action scope.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/p1_ca_2026-10-11_011815/action_reconciliation.json",
+          "sha256": "62759ce880017c1810ad771b0423880cfbf33768c00a021effcf30020969346d"
+        }
+      ],
+      "responsible_phase": "P1.CA/G1/G4",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Corporate actions and missing event dates",
+      "candidate_005_evidence_update": {
+        "status": "SCOPED_CANDIDATE_EVIDENCE_ONLY",
+        "recorded_at": "2026-10-14T23:47:11.933627-04:00",
+        "note": "Retrospective vendor representation retained for price-only pilot; action vintage/raw cashbook not certified.",
+        "authority": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/candidate_attestation_reliance_policy_v1.json",
+          "sha256": "d21ca124c43675b7b8abb4faae4d7fb52ccbc81ab83a280168ece5f8e618fc71"
+        },
+        "result": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+          "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+        },
+        "postrun_health": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/postrun_independent_audit.json",
+          "sha256": "a4bdb9d0114448fce8cea878c4e4c90ad95133388cf6a070d0e9144dccf7b59b"
+        }
+      }
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "EXECUTION",
+      "closure_test": "C01 admission unchanged under missing/later future exits; maturity after all scheduled exits/publications and exact chronological purge.",
+      "code_boundary": "hourly_proxy.resolve_reference/proxy_label_sample; labels.minute_reference",
+      "condition": "Proxy closes10:30/11:30\u219214:30/15:30 differ from nominal execution10:33/11:33\u219214:33/15:33.240 continuous minutes preserved; minute history incomplete; labels never prove fills.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Separate scientific execution approval; physical outcomes belong to later P3.",
+      "id": "P2-DEF-006",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Verify genuine reference, raw/action conversion, source availability and all-five outcome maturity.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/ta_p2_close_ft0_2026-10-11/g2_timing_label_bridge.json",
+          "sha256": "165d24a57d017e2659ebcdcedca64e310ed4d774355951e45bc81f6eba901b75"
+        }
+      ],
+      "responsible_phase": "P2.2/G2/P3",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Execution/reference and maturity coverage"
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "FIT",
+      "closure_test": "Training-only unique observations, correct p05/medians/fallbacks and M2 50:50; labels mature/purged if defining population; each historical cutoff and factual fitting time enforced.",
+      "code_boundary": "ft0_transforms.fit_floors/fit_m2_floor/fit_scaler; market_features.fit_synthetic_floors/fit_synthetic_scaler",
+      "condition": "Synthetic interfaces complete; no real FT0/M2/D7/TG0 floors, pseudocounts or scalers fitted. True fitted_at and source/action population remain unproved.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Explicit empirical fitting and scientific prerequisites approval.",
+      "id": "P2-DEF-007",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "After source/population/gate approval, separately authorize a real fitting executor; never relabel synthetic constants.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/ta_p2_close_ft0_2026-10-11/ft0_floor_scaler_certificates.json",
+          "sha256": "a807986e5562906721ee646390957600016ea7d7f6ab826acc1753c4278be663"
+        }
+      ],
+      "responsible_phase": "P2.3/P2.4/G3",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Real empirical fitting deferred",
+      "candidate_005_evidence_update": {
+        "status": "SCOPED_CANDIDATE_EVIDENCE_ONLY",
+        "recorded_at": "2026-10-14T23:47:11.933627-04:00",
+        "note": "Exactly one candidate TM0 seed42 WF1 calibration/refit pair explicitly authorized and completed,1/40. No further fitting authority.",
+        "authority": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/candidate_attestation_reliance_policy_v1.json",
+          "sha256": "d21ca124c43675b7b8abb4faae4d7fb52ccbc81ab83a280168ece5f8e618fc71"
+        },
+        "result": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+          "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+        },
+        "postrun_health": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/postrun_independent_audit.json",
+          "sha256": "a4bdb9d0114448fce8cea878c4e4c90ad95133388cf6a070d0e9144dccf7b59b"
+        }
+      },
+      "candidate_006_update": {
+        "status": "SCOPED_REVIEW_ONLY_NO_GLOBAL_CLEARANCE",
+        "pilot_disposition": "ACCEPT_WITH_G6_WARN",
+        "evidence": {
+          "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/preservation_checks.json",
+          "sha256": "93860b742cff77e50b717fb2d3dee0e2e7955cf012b4a43beafcabbae8a2ad40"
+        },
+        "baseline_authority": {
+          "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/baseline_decision_v1.json",
+          "sha256": "5c40e5ba09df53db35805f8d9dba691e5816e90afe116cfb496c7610295ae5c9"
+        },
+        "note": "No new neural pair. Approved M1/own-ridge evaluated; G6 future summary fixed. Production/strict historical HOLDs and original IDs preserved."
+      }
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "RETENTION",
+      "closure_test": "Identical48 UTC steps; all stock cells; market endpoint and\u226546/48 vectors; source age\u226490min; own-step available certificates and frozen retention guard pass.",
+      "code_boundary": "ft0_tensor.stock_window/join_market/forecast_bridge; market_tensor.assemble_market_inputs",
+      "condition": "5\u00d748\u00d716 stock complete-case and separate48\u00d75 market implemented. Structural market coverage complete; real causal tensor/admission0. Matched evaluation population not scientifically accepted.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Scientific tensor/input admission and matched-population approval.",
+      "id": "P2-DEF-008",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Resolve source/actions/certificates and audit original IDs for stock-only, market-only and intersection.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/alpaca_only_extended/retention.json",
+          "sha256": "13b48baa150c7143a0502a0990c13f287a38a69d37b492d3839afa80417745aa"
+        }
+      ],
+      "responsible_phase": "P2.3/P2.4/G3",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Real tensor and matched population admission",
+      "candidate_005_evidence_update": {
+        "status": "SCOPED_CANDIDATE_EVIDENCE_ONLY",
+        "recorded_at": "2026-10-14T23:47:11.933627-04:00",
+        "note": "Exact candidate typed real views admitted and consumed in this one fit; ordered48x16 stock-only masks immutable.",
+        "authority": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/candidate_attestation_reliance_policy_v1.json",
+          "sha256": "d21ca124c43675b7b8abb4faae4d7fb52ccbc81ab83a280168ece5f8e618fc71"
+        },
+        "result": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+          "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+        },
+        "postrun_health": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/postrun_independent_audit.json",
+          "sha256": "a4bdb9d0114448fce8cea878c4e4c90ad95133388cf6a070d0e9144dccf7b59b"
+        }
+      },
+      "candidate_006_update": {
+        "status": "SCOPED_REVIEW_ONLY_NO_GLOBAL_CLEARANCE",
+        "pilot_disposition": "ACCEPT_WITH_G6_WARN",
+        "evidence": {
+          "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/preservation_checks.json",
+          "sha256": "93860b742cff77e50b717fb2d3dee0e2e7955cf012b4a43beafcabbae8a2ad40"
+        },
+        "baseline_authority": {
+          "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/baseline_decision_v1.json",
+          "sha256": "5c40e5ba09df53db35805f8d9dba691e5816e90afe116cfb496c7610295ae5c9"
+        },
+        "note": "No new neural pair. Approved M1/own-ridge evaluated; G6 future summary fixed. Production/strict historical HOLDs and original IDs preserved."
+      }
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "APPROVAL",
+      "closure_test": "Exact decision keys, versions/hashes and owner evidence; separately authorized pointer and ledger transition.",
+      "code_boundary": "configs/CURRENT_PROTOCOL.json; versioned shared decisions",
+      "condition": "Conceptual240-minute agreement and instructor substitution direction researcher-reported; attributable formal evidence pending. Exact SPY/proxy joint sign-off and pointer activation not supplied.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Joint/course sign-off and explicit protocol migration authority.",
+      "id": "P2-DEF-009",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Obtain attributable scoped acknowledgments and a separately reviewed protocol amendment/migration.",
+      "predecessor_evidence": [
+        {
+          "path": "docs/track_a/decisions/Shared_Cross_Track_Decisions_2026-10-11_v1.0.md",
+          "sha256": "11bfcf177dd8b0b5a98d01f2c394ae5f25d87e16f59bcec38e9f2d62e408725b"
+        }
+      ],
+      "responsible_phase": "G0/P2/P3",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Formal joint/course activation",
+      "candidate_005_evidence_update": {
+        "status": "SCOPED_CANDIDATE_EVIDENCE_ONLY",
+        "recorded_at": "2026-10-14T23:47:11.933627-04:00",
+        "note": "Researcher attests existing shared-clock approvals and explicitly directs reliance on their word for privacy; no direct email/signature inspected, no USA500 course substitution.",
+        "authority": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/candidate_attestation_reliance_policy_v1.json",
+          "sha256": "d21ca124c43675b7b8abb4faae4d7fb52ccbc81ab83a280168ece5f8e618fc71"
+        },
+        "result": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+          "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+        },
+        "postrun_health": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/postrun_independent_audit.json",
+          "sha256": "a4bdb9d0114448fce8cea878c4e4c90ad95133388cf6a070d0e9144dccf7b59b"
+        }
+      }
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "DATA",
+      "closure_test": "Attributable scope/rights, stable entity mapping and no PIT claim from retrospective liquidity.",
+      "code_boundary": "stock_source.load_stock_history; configs/track_a_data.json",
+      "condition": "Retrospective liquidity proxy accepted for educational scope, not PIT certification. As-of maps entities, not original vintage. Survivorship and source-use/redistribution restrictions remain disclosures.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Researcher/source-rights review; no new account/provider action now.",
+      "id": "P2-DEF-010",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Carry explicit retrospective limitations; obtain only separately authorized entity/rights evidence if certification required.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/p1_3b_2026-10-10_204558/human_review_card.md",
+          "sha256": "19d35df9f640c011fd32f8da76b3b578878daeac3e6ef4e876e92a892be1e1e7"
+        }
+      ],
+      "responsible_phase": "P1/G0/G1",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Formation/entity and source rights",
+      "candidate_005_evidence_update": {
+        "status": "SCOPED_CANDIDATE_EVIDENCE_ONLY",
+        "recorded_at": "2026-10-14T23:47:11.933627-04:00",
+        "note": "Researcher attests local-use approval for existing archives; private entitlement terms not independently inspected or certified; no sharing permission.",
+        "authority": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/candidate_attestation_reliance_policy_v1.json",
+          "sha256": "d21ca124c43675b7b8abb4faae4d7fb52ccbc81ab83a280168ece5f8e618fc71"
+        },
+        "result": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+          "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+        },
+        "postrun_health": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/postrun_independent_audit.json",
+          "sha256": "a4bdb9d0114448fce8cea878c4e4c90ad95133388cf6a070d0e9144dccf7b59b"
+        }
+      }
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "APPROVAL",
+      "closure_test": "G0\u2013G3 evidence; inner63 calendar sessions\u226550 eligible days and\u226525 each origin; maturity/purge and regime audits; no engineering-implied science PASS.",
+      "code_boundary": "ledger.current_blockers/pair_budget; ft0_audit.retention_audit",
+      "condition": "Seven historical scientific blockers remain;0/40 neural pairs. Mechanical63-session inner tails pass; genuine mature labels/regimes and scientific eligible-origin audits unavailable.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Explicit scientific gate closure; no ledger edits in this package.",
+      "id": "P2-DEF-011",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Resolve each real blocker with schema-valid evidence and separate approvals.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/audit/track_a_events.jsonl",
+          "sha256": "4c2f0693aaaba9c29110881a0961b31a12195c126e4437830600b2a4b81e12e4"
+        }
+      ],
+      "responsible_phase": "G0/G1/G2/G3",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Scientific gates and inner populations",
+      "candidate_005_evidence_update": {
+        "status": "SCOPED_CANDIDATE_EVIDENCE_ONLY",
+        "recorded_at": "2026-10-14T23:47:11.933627-04:00",
+        "note": "Applicable conditional pilot gates accepted under scoped attestation policy; completed run G6 WARN calibration clipping, comparative/economic claims HOLD.",
+        "authority": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/candidate_attestation_reliance_policy_v1.json",
+          "sha256": "d21ca124c43675b7b8abb4faae4d7fb52ccbc81ab83a280168ece5f8e618fc71"
+        },
+        "result": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+          "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+        },
+        "postrun_health": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/postrun_independent_audit.json",
+          "sha256": "a4bdb9d0114448fce8cea878c4e4c90ad95133388cf6a070d0e9144dccf7b59b"
+        }
+      },
+      "candidate_006_update": {
+        "status": "SCOPED_REVIEW_ONLY_NO_GLOBAL_CLEARANCE",
+        "pilot_disposition": "ACCEPT_WITH_G6_WARN",
+        "evidence": {
+          "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/preservation_checks.json",
+          "sha256": "93860b742cff77e50b717fb2d3dee0e2e7955cf012b4a43beafcabbae8a2ad40"
+        },
+        "baseline_authority": {
+          "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/baseline_decision_v1.json",
+          "sha256": "5c40e5ba09df53db35805f8d9dba691e5816e90afe116cfb496c7610295ae5c9"
+        },
+        "note": "No new neural pair. Approved M1/own-ridge evaluated; G6 future summary fixed. Production/strict historical HOLDs and original IDs preserved."
+      }
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "GIT_INTEGRATION",
+      "closure_test": "Focused commit/PR with tests; actual clean-clone reproduction, canonical history hashes and documented data; no raw or secrets committed.",
+      "code_boundary": "integration_manifest.json; README setup; canonical raw/journal manifests",
+      "condition": "Predecessor packages now committed at5393852; clean start. This closure remains uncommitted; raw/journal handoff and clean-machine rehearsal not certified.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Separate Git/data-sharing authority; preserve human notes and.env.",
+      "id": "P2-DEF-012",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Separately authorize reviewed explicit-path integration and legitimate data/journal handoff.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/preflight.json",
+          "sha256": "685defc15efae65efc92cfb738041b8187cd2402fbb3497bff99c30529d3b69b"
+        }
+      ],
+      "responsible_phase": "P0/future integration",
+      "scientific_status": "HOLD",
+      "status": "PARTIALLY_RESOLVED",
+      "title": "Git integration and portability",
+      "candidate_005_evidence_update": {
+        "status": "SCOPED_CANDIDATE_EVIDENCE_ONLY",
+        "recorded_at": "2026-10-14T23:47:11.933627-04:00",
+        "note": "All new bridge/approval/run artifacts and canonical registry/journal remain uncommitted; no portability rehearsal certified.",
+        "authority": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/candidate_attestation_reliance_policy_v1.json",
+          "sha256": "d21ca124c43675b7b8abb4faae4d7fb52ccbc81ab83a280168ece5f8e618fc71"
+        },
+        "result": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+          "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+        },
+        "postrun_health": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/postrun_independent_audit.json",
+          "sha256": "a4bdb9d0114448fce8cea878c4e4c90ad95133388cf6a070d0e9144dccf7b59b"
+        }
+      },
+      "candidate_006_update": {
+        "status": "SCOPED_REVIEW_ONLY_NO_GLOBAL_CLEARANCE",
+        "pilot_disposition": "ACCEPT_WITH_G6_WARN",
+        "evidence": {
+          "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/preservation_checks.json",
+          "sha256": "93860b742cff77e50b717fb2d3dee0e2e7955cf012b4a43beafcabbae8a2ad40"
+        },
+        "baseline_authority": {
+          "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/baseline_decision_v1.json",
+          "sha256": "5c40e5ba09df53db35805f8d9dba691e5816e90afe116cfb496c7610295ae5c9"
+        },
+        "note": "No new neural pair. Approved M1/own-ridge evaluated; G6 future summary fixed. Production/strict historical HOLDs and original IDs preserved."
+      }
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "DATA",
+      "closure_test": "Actual entitlement/license/provenance and exact-key compatible observations within cumulative and page budgets.",
+      "code_boundary": "remediation_secondary.acquire_secondary/secondary_ceiling",
+      "condition": "Massive403 twice;200 total permitted,198 remain, access still blocked. Databento disallowed; single-venue Tiingo IEX unsuitable. NYUWRDS unavailable under reported affiliation; RutgersWRDS/NYSETAQ only conditional on actual subscription/license.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "New provider/access/remediation authorization.",
+      "id": "P2-DEF-013",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Wait for a separate sourcing request and legitimately resolved access. No inquiry, purchases, account access or403 retries here.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/ta_data_remed_ft0_001_2026-10-11_195135/secondary_budget_2026-10-11_213121/checks.json",
+          "sha256": "23d037699bef49b5face64bac3d14eb72dd774035807782f94bb2300cbc9f791"
+        }
+      ],
+      "responsible_phase": "P1/future remediation",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Vendor branches blocked/inactive"
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "FIT",
+      "closure_test": "test_p2_floor_fitted_at_is_exact_own_information_cutoff and existing maturity/version tests.",
+      "code_boundary": "m2.evaluate_m2; ScheduledStep.information_cutoff",
+      "condition": "Existing fitted_at\u2264step.end is exactly own information_cutoff. Equality passes; a later nanosecond blocks. This is an engineering resolution, not a fake unresolved coding issue. Actual fitting remainsDEF007.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "No new engineering decision; real fitting separately requires approval.",
+      "id": "P2-DEF-014",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Preserve the tested own-step check; handle real certificate prerequisites throughDEF007.",
+      "predecessor_evidence": [
+        {
+          "path": "tests/test_m2.py",
+          "sha256": "fb4eaa1212868876040ae6a6341adf33e4d8d3973127faa5a244c7ff0a8c7249"
+        }
+      ],
+      "responsible_phase": "P2.3/G3",
+      "scientific_status": "HOLD",
+      "status": "RESOLVED_ENGINEERING_ONLY",
+      "title": "M2 own-step floor check reconciled"
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": true,
+      "blocks_scientific_activation": true,
+      "category": "EXECUTION",
+      "closure_test": "No phantom fill/valuation/flat position; explicit event/reference age; declared costs/exposure and separately specified benchmark opportunity.",
+      "code_boundary": "hourly_proxy.ExecutionReference; future exception/benchmark policy",
+      "condition": "Hourly closes cannot prove exact minute retry/emergency/continuous risk or09:30/15:59 benchmark prices. Coarse-observation policy remains unapproved outsideP2.",
+      "engineering_block_scope": "Later P3 exception/benchmark design only",
+      "human_authority_required": "Separate future policy amendment; this package starts no P3 engine.",
+      "id": "P2-DEF-015",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Before affected P3 branches specify observed-bar retry/marks, outstanding physical holdings and benchmark boundary conventions.",
+      "predecessor_evidence": [
+        {
+          "path": "docs/track_a/decisions/Track_A_Execution_Price_Proxy_Amendment_v1.0_2026-10-11.md",
+          "sha256": "1d6f7bc0b103e29a77aa3a8e2d6409936a359551dd64dc6c3440a88d4bcf870f"
+        }
+      ],
+      "responsible_phase": "Future P3.4/P3.5 design",
+      "scientific_status": "HOLD",
+      "status": "DEFERRED",
+      "title": "Hourly-only exception/benchmark policy",
+      "candidate_005_evidence_update": {
+        "status": "SCOPED_CANDIDATE_EVIDENCE_ONLY",
+        "recorded_at": "2026-10-14T23:47:11.933627-04:00",
+        "note": "No portfolio/economic replay run. Existing hourly-only future economic limitations unchanged.",
+        "authority": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/candidate_attestation_reliance_policy_v1.json",
+          "sha256": "d21ca124c43675b7b8abb4faae4d7fb52ccbc81ab83a280168ece5f8e618fc71"
+        },
+        "result": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+          "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+        },
+        "postrun_health": {
+          "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/postrun_independent_audit.json",
+          "sha256": "a4bdb9d0114448fce8cea878c4e4c90ad95133388cf6a070d0e9144dccf7b59b"
+        }
+      }
+    },
+    {
+      "affected_branches": [
+        "FT0",
+        "TG0",
+        "M2",
+        "D7",
+        "MC0",
+        "MC1",
+        "P3",
+        "P4"
+      ],
+      "blocks_engineering": false,
+      "blocks_scientific_activation": true,
+      "category": "FIT",
+      "closure_test": "Own-step floor/scaler negative cases, source misuse, full stock calculator\u2192MC0 and C01 counterfactual tests.",
+      "code_boundary": "market_features.vector/standardized_window/window_from_history; ft0_tensor.join_market",
+      "condition": "Retrospective training behavior preserved; joined inference passes stock context. ASOF rejects later fitted certificates even inside fitting interval. Source/feature/action versions and synthetic-to-real misuse checked. Real fitting remainsDEF007.",
+      "engineering_block_scope": "No independent P2 engineering block",
+      "human_authority_required": "Engineering-only change; empirical activation separately blocked.",
+      "id": "P2-DEF-016",
+      "last_evidence_version": {
+        "package": "TA-P2-FINAL-CLOSE-001",
+        "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229",
+        "version": 1
+      },
+      "next_minimal_action": "Keep explicit ASOF context in future inference callers; never present retrospective transforms as forecast state.",
+      "predecessor_evidence": [
+        {
+          "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_4_market_trace.json",
+          "sha256": "debe9b6d7fdc046d4949e746e0b3e694d125f815ecff966ab14f31c1da723cda"
+        }
+      ],
+      "responsible_phase": "P2.4/G3",
+      "scientific_status": "HOLD",
+      "status": "RESOLVED_ENGINEERING_ONLY",
+      "title": "D7 ASOF certificate context completed"
+    }
+  ],
+  "mandatory_handoff": "Future P3/P4/scientific closure must read this version and separately authorized successor before coding. P3 synthetic-only engineering needs explicit later authority; empirical work blocked.",
+  "package": "TA006-POSTRUN-BASELINE-REVIEW",
+  "update_policy": "Append-only new version when statuses change; retain stable IDs and history. No frozen authority/pointer edits.",
+  "version": 3,
+  "predecessor": {
+    "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/p2_deferred_work_register_v2_candidate_pilot.json",
+    "sha256": "3ecf3e474509e4883f3261331eba425c52bc6821ee32582417e00721f1186728"
+  },
+  "scope": "New scoped candidate evidence only. Original universe/strict observed-science HOLD statuses remain; no global register clearance.",
+  "historical_reference_semantics": "Inherited predecessor_evidence entries preserve the v1 historical hashes; later-authorized ledger/report changes are not corruption. Verify the immutable original v1 register file, unchanged inherited entry content, and the new candidate_005_evidence_update refs separately. Do not require historical ledger snapshots to equal the current canonical journal."
+}

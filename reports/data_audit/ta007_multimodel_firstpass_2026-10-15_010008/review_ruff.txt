@@ -1,0 +1,276 @@
+E501 Line too long (101 > 100)
+  --> src/lstm_data/real_batch_review.py:74:101
+   |
+72 |     actual_keys = list(zip(snapshot.session, snapshot.origin, snapshot.symbol))
+73 |     expected_keys = [(day, origin, symbol) for day, origin in keys for symbol in CANDIDATE]
+74 |     if actual_keys != expected_keys or not np.array_equal(snapshot.TG0.to_numpy().reshape(-1, 5), y):
+   |                                                                                                     ^
+75 |         raise ValueError("HISTORICAL_BASELINE_TARGET_OR_KEY_MISMATCH")
+76 |     tm0_result_path = Path(plan["tm0_result"]["path"])
+   |
+
+E501 Line too long (121 > 100)
+  --> src/lstm_data/real_batch_review.py:80:101
+   |
+78 |     torch.set_num_threads(1)
+79 |     scores = {
+80 |         "TM0": locked_scores(stock, tm0_result_path.parent / "refit_final.pt", tm0["final_checkpoint"], tm0["pair_key"]),
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^
+81 |         "ZERO": np.zeros_like(y),
+82 |         "M1": snapshot.M1.to_numpy().reshape(-1, 5),
+   |
+
+E501 Line too long (129 > 100)
+  --> src/lstm_data/real_batch_review.py:97:101
+   |
+95 |             raise ValueError("NEW_MODEL_WF1_KEY_MISMATCH")
+96 |         model = execution_model(authority)
+97 |         load_real_checkpoint(folder / "refit_final.pt", model, result["pair_key"], view.preparation_id, "REFIT_FINAL", authority)
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+98 |         scores[architecture] = predictions(model, view)
+99 |         records = result["development"]["origin_records"]
+   |
+
+E501 Line too long (145 > 100)
+   --> src/lstm_data/real_batch_review.py:108:101
+    |
+106 | …b("calibration_epoch_*.json"))]
+107 | …it_epoch_*.json"))]
+108 | …ration), tuple(refit), result["development"]["score_std"], result["selector"]["status"])
+    |                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+109 | …h"], "train_MSE": r["training"]["mse"], "validation_MSE": r["validation"]["mse"], **r["training"]["gradients"]} for r in calibration]
+110 | …"], **r["gradients"]} for r in refit]
+    |
+
+E501 Line too long (190 > 100)
+   --> src/lstm_data/real_batch_review.py:109:101
+    |
+107 | …
+108 | … result["development"]["score_std"], result["selector"]["status"])
+109 | …raining"]["mse"], "validation_MSE": r["validation"]["mse"], **r["training"]["gradients"]} for r in calibration]
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+110 | …for r in refit]
+111 | …
+    |
+
+E501 Line too long (101 > 100)
+   --> src/lstm_data/real_batch_review.py:115:101
+    |
+113 | …     if architecture == "MC1":
+114 | …         h["gate"] = result["development"]["gate"]
+115 | …         h["gate_by_standardized_U5_sign"] = result["development"]["gate_by_standardized_U5_sign"]
+    |                                                                                                   ^
+116 | …         h["slice_qualification"] = "Endpoint standardized U5 sign, computed only from inputs. Descriptive state slice; no learned r…
+117 | …     if architecture == "E5":
+    |
+
+E501 Line too long (165 > 100)
+   --> src/lstm_data/real_batch_review.py:116:101
+    |
+114 | …
+115 | …"]["gate_by_standardized_U5_sign"]
+116 | …gn, computed only from inputs. Descriptive state slice; no learned regime or causal effect claim."
+    |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+117 | …
+118 | …
+    |
+
+E501 Line too long (120 > 100)
+   --> src/lstm_data/real_batch_review.py:133:101
+    |
+131 |             h["peer_perturbation"] = {
+132 |                 "source": "First permissible inner-training origin; no held-out tuning",
+133 |                 "changed": "Counterfactual peer1 scaled M1 +1; only recomputed peer-summary channels supplied to model",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+134 |                 "target0_peer_mean_change": (peer[0, :, 0] - z[0, :, 21]).tolist(),
+135 |                 "max_abs_score_change": float(torch.max(torch.abs(after - before))),
+    |
+
+E501 Line too long (104 > 100)
+   --> src/lstm_data/real_batch_review.py:136:101
+    |
+134 |                 "target0_peer_mean_change": (peer[0, :, 0] - z[0, :, 21]).tolist(),
+135 |                 "max_abs_score_change": float(torch.max(torch.abs(after - before))),
+136 |                 "original_21_channel_prefix_equal": bool(torch.equal(z[:, :, :21], altered[:, :, :21])),
+    |                                                                                                     ^^^^
+137 |                 "interpretation": "Input sensitivity only; no causal peer effect or ablation fit",
+138 |             }
+    |
+
+E501 Line too long (308 > 100)
+   --> src/lstm_data/real_batch_review.py:140:101
+    |
+138 | …
+139 | …
+140 | …t["final_checkpoint"], "selected_checkpoint": result["selected_checkpoint"], "fresh_identical_seeded_initial_hashes": result["initial_hashes"], "fresh_optimizer_state_empty": result["fresh_optimizer_state_empty"]}
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+141 | …
+142 | …']}; warnings by pass: {h['warning_epochs']}; nonfinite gradients: {h['nonfinite_gradient_count']}. Selected epoch {h['selected_epoch']}; a fresh model and empty optimizer refitted exactly that many epochs.\n\n"
+    |
+
+E501 Line too long (306 > 100)
+   --> src/lstm_data/real_batch_review.py:142:101
+    |
+140 | …t["final_checkpoint"], "selected_checkpoint": result["selected_checkpoint"], "fresh_identical_seeded_initial_hashes": result["initial_hashes"], "fresh_optimizer_state_empty": result["fresh_optimizer_state_empty"]}
+141 | …
+142 | …']}; warnings by pass: {h['warning_epochs']}; nonfinite gradients: {h['nonfinite_gradient_count']}. Selected epoch {h['selected_epoch']}; a fresh model and empty optimizer refitted exactly that many epochs.\n\n"
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+143 | …--|---:|---:|---:|---:|---:|\n"
+144 | …
+    |
+
+E501 Line too long (126 > 100)
+   --> src/lstm_data/real_batch_review.py:143:101
+    |
+141 | …     runtimes[architecture] = read(folder / "training_actual_runtime.json")
+142 | …     text = f"# {architecture} training health\n\n{GRADE}. Candidate only.\n\nG6: {h['status']}; warnings by pass: {h['warning_epoch…
+143 | …     text += "| Pass | Epoch | MSE | Validation MSE | Clip fraction | Max preclip norm |\n|---|---:|---:|---:|---:|---:|\n"
+    |                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+144 | …     for phase in ("calibration", "refit"):
+145 | …         for r in h[phase]:
+    |
+
+E501 Line too long (176 > 100)
+   --> src/lstm_data/real_batch_review.py:146:101
+    |
+144 | …
+145 | …
+146 | … r.get('MSE')):.7f} | {r.get('validation_MSE', '—')} | {r['clipped_fraction']:.3f} | {r['max']:.5g} |\n"
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+147 | …ning_health.json. No rescue, extra fit, significance or trading claim.\n"
+148 | …
+    |
+
+E501 Line too long (145 > 100)
+   --> src/lstm_data/real_batch_review.py:147:101
+    |
+145 | …
+146 | …et('train_MSE', r.get('MSE')):.7f} | {r.get('validation_MSE', '—')} | {r['clipped_fraction']:.3f} | {r['max']:.5g} |\n"
+147 | …ration: ../training_health.json. No rescue, extra fit, significance or trading claim.\n"
+    |                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+148 | …
+149 | …
+    |
+
+E501 Line too long (126 > 100)
+   --> src/lstm_data/real_batch_review.py:158:101
+    |
+156 | …     m = metrics[name]
+157 | …     score = scores[name]
+158 | …     fit = runtimes[name]["neural_fitting_seconds"] if name in runtimes else (52.63942469772883 if name == "TM0" else None)
+    |                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+159 | …     rows.append({"model": name, "scope": "COMPLETED_WF1_DESCRIPTIVE", "MSE": m["MSE"], "daily_Rank_IC": m["daily_Rank_IC"], "define…
+160 | …     daily_rows.extend({"model": name, **r, "evidence_grade": GRADE} for r in m["daily"])
+    |
+
+E501 Line too long (673 > 100)
+   --> src/lstm_data/real_batch_review.py:159:101
+    |
+157 | …
+158 | …883 if name == "TM0" else None)
+159 | …ly_Rank_IC": m["daily_Rank_IC"], "defined_only_da…fit_seconds": fit, "evidence_grade": GRADE})
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^…^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+160 | …
+161 | …origin, r in m["by_origin"].items())
+    |
+
+E501 Line too long (131 > 100)
+   --> src/lstm_data/real_batch_review.py:161:101
+    |
+159 | …LETED_WF1_DESCRIPTIVE", "MSE": m["MSE"], "daily_Rank_IC": m["daily_Rank_IC"], "defined_only_daily_IC": m["defined_only_daily_Rank_IC…
+160 | …idence_grade": GRADE} for r in m["daily"])
+161 | …": origin, **r, "evidence_grade": GRADE} for origin, r in m["by_origin"].items())
+    |                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+162 | … month, **r, "evidence_grade": GRADE} for month, r in m["monthly"].items())
+163 | …
+    |
+
+E501 Line too long (125 > 100)
+   --> src/lstm_data/real_batch_review.py:162:101
+    |
+160 |         daily_rows.extend({"model": name, **r, "evidence_grade": GRADE} for r in m["daily"])
+161 |         origin_rows.extend({"model": name, "origin": origin, **r, "evidence_grade": GRADE} for origin, r in m["by_origin"].items())
+162 |         month_rows.extend({"model": name, "month": month, **r, "evidence_grade": GRADE} for month, r in m["monthly"].items())
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+163 |     differences = []
+164 |     paired_daily = []
+    |
+
+E501 Line too long (185 > 100)
+   --> src/lstm_data/real_batch_review.py:169:101
+    |
+167 | …
+168 | …
+169 | …sion"], "delta_MSE": left["MSE"]-right["MSE"], "delta_IC": left["IC"]-right["IC"], "evidence_grade": GRADE})
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+170 | …
+171 | …n_delta_MSE": float(np.mean([r["delta_MSE"] for r in subset])), "mean_delta_IC": float(np.mean([r["delta_IC"] for r in subset])), "e…
+    |
+
+E501 Line too long (232 > 100)
+   --> src/lstm_data/real_batch_review.py:171:101
+    |
+169 | …": left["MSE"]-right["MSE"], "delta_IC": left["IC"]-right["IC"], "evidence_grade": GRADE})
+170 | …
+171 | …t(np.mean([r["delta_MSE"] for r in subset])), "mean_delta_IC": float(np.mean([r["delta_IC"] for r in subset])), "evidence_grade": GRADE})
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+172 | …
+173 | …
+    |
+
+E501 Line too long (511 > 100)
+   --> src/lstm_data/real_batch_review.py:181:101
+    |
+179 | …
+180 | …
+181 | … clock, researcher-attested rights and hourly-clo…eats ZERO MSE |\n|---|---:|---:|---:|---|\n"
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^…^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+182 | …
+183 | …onds'] if r['neural_fit_seconds'] is not None else 'n/a'} | {r['beats_ZERO_MSE']} |\n"
+    |
+
+E501 Line too long (181 > 100)
+   --> src/lstm_data/real_batch_review.py:183:101
+    |
+181 | …sentation, idealized clock, researcher-attested rights and hourly-close proxy; SPY is an ETF state proxy. No observed-publication, e…
+182 | …
+183 | …| {r['neural_fit_seconds'] if r['neural_fit_seconds'] is not None else 'n/a'} | {r['beats_ZERO_MSE']} |\n"
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+184 | …erage two origins within session, then equal sessions. Constant forecasts receive project IC=0; defined-only ZERO IC is unavailable.…
+185 | …
+    |
+
+E501 Line too long (510 > 100)
+   --> src/lstm_data/real_batch_review.py:184:101
+    |
+182 | …
+183 | …onds'] if r['neural_fit_seconds'] is not None else 'n/a'} | {r['beats_ZERO_MSE']} |\n"
+184 | …thin session, then equal sessions. Constant forec… already implemented and was not added.\n\n"
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^…^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+185 | …
+186 | …delta_MSE']:.7f}, n={d['days']}.\n\n"
+    |
+
+E501 Line too long (132 > 100)
+   --> src/lstm_data/real_batch_review.py:186:101
+    |
+184 | …earman implementation: average two origins within session, then equal sessions. Constant forecasts receive project IC=0; defined-onl…
+185 | …
+186 | … ΔIC={d['mean_delta_IC']:.7f}, ΔMSE={d['mean_delta_MSE']:.7f}, n={d['days']}.\n\n"
+    |                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+187 | …reloaded and reproduced the frozen Package006 snapshot exactly; no TM0 or own-ridge refit. Each new final checkpoint reproduced its …
+188 | …e_text(md)
+    |
+
+E501 Line too long (441 > 100)
+   --> src/lstm_data/real_batch_review.py:187:101
+    |
+185 | …
+186 | …delta_MSE']:.7f}, n={d['days']}.\n\n"
+187 | … snapshot exactly; no TM0 or own-ridge refit. Eac…rozen models were not modified after WF1.\n"
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^…^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+188 | …
+189 | …0}))
+    |
+
+Found 25 errors.

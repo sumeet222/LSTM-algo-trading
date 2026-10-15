@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "status": "TRAINING_AUTHORIZED_AND_ONE_PAIR_COMPLETED",
+  "scope": "ONE_CONDITIONAL_TM0_WF1_SEED42_PAIR_ONLY",
+  "canonical_registry_pointer": {
+    "path": "configs/CURRENT_EXPERIMENT_REGISTRY.json",
+    "sha256": "27b60f8a302bc0a15ded3ecaabf536e8ca319594f3ad239a3e1953cccd501c1d"
+  },
+  "real_pair_journal": {
+    "path": "reports/audit/track_a_real_pairs_v1.jsonl",
+    "sha256": "c19d38ec5b4d42af235ee9c60041dc7dd17422507bc2d5fd2ddbfc5cfce3f46b"
+  },
+  "legacy_ledger": {
+    "path": "reports/audit/track_a_events.jsonl",
+    "sha256": "1085b7bfbb395d18f02a5fff31aa30133a6b2fdbaa3bc8885f90e57fe401c927"
+  },
+  "legacy_attempted_pairs": 0,
+  "new_real_started_pairs": 1,
+  "combined_attempted_pairs": 1,
+  "ceiling": 40,
+  "budget": "1/40",
+  "failed_started_pairs": 0,
+  "successful_completed_pairs": 1,
+  "pair_key": "881125ea128ec06c0048173ef0b5531a5bc315b509bea154048ef7a7aa7ddcf2",
+  "proposal": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/final_v2/single_run_proposal.json",
+    "sha256": "713dd50a2f9919b58bec9a314b02497128170fe1d541825850d159a79b0a4615"
+  },
+  "result": {
+    "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+    "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+  },
+  "postrun_warning_addendum": {
+    "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/postrun_independent_audit.json",
+    "sha256": "a4bdb9d0114448fce8cea878c4e4c90ad95133388cf6a070d0e9144dccf7b59b"
+  },
+  "run_permission_exhausted": true,
+  "second_pair_or_retry_authorized": false,
+  "production_D1_migrated": false
+}

@@ -1,0 +1,388 @@
+--- Package006 real_bridge_run.py
++++ src/lstm_data/real_bridge_run.py
+@@ -34,7 +34,10 @@
+ )
+ from .neural_health import g6_summary
+ from .neural_lifecycle import EarlyStop
++from .neural_models import EndpointGatedLSTM, gate_diagnostics
+ from .pretraining_policy import verify_ref
++from .real_batch_authority import BatchPairAuthority
++from .real_batch_data import ConditionedView
+ from .real_bridge_authority import (
+     ACTIVE_SECONDS,
+     CONTRACT,
+@@ -45,6 +48,24 @@
+     require_training,
+ )
+ from .real_bridge_data import RealInputView, build_view, load_inputs
++
++FitAuthority = TrainingAuthority | BatchPairAuthority
++FitModel = SharedLSTM | EndpointGatedLSTM
++FitView = RealInputView | ConditionedView
++
++
++def execution_contract(authority: FitAuthority | None) -> dict:
++    return authority.contract if type(authority) is BatchPairAuthority else CONTRACT
++
++
++def execution_model(authority: FitAuthority) -> FitModel:
++    contract = execution_contract(authority)
++    return (
++        EndpointGatedLSTM()
++        if contract["architecture"] == "MC1"
++        else SharedLSTM(contract["channels"])
++    )
++
+ 
+ JOURNAL = "reports/audit/track_a_real_pairs_v1.jsonl"
+ TRANSITIONS = {
+@@ -81,12 +102,17 @@
+     return rows
+ 
+ 
+-def pair_key(authority: TrainingAuthority) -> str:
+-    return fingerprint([authority.binding_ref, authority.binding["input_id"], CONTRACT])
+-
+-
+-def append_pair(authority: TrainingAuthority, status: str, detail: dict) -> None:
++def pair_key(authority: FitAuthority) -> str:
++    return fingerprint(
++        [authority.binding_ref, authority.binding["input_id"], execution_contract(authority)]
++    )
++
++
++def append_pair(authority: FitAuthority, status: str, detail: dict) -> None:
+     """New v1 real journal links immutable P0 history; it never rewrites P0 events."""
++    if type(authority) is BatchPairAuthority:
++        authority.append(status, detail)
++        return
+     if status != "FAILED":
+         require_training(
+             authority,
+@@ -157,19 +183,19 @@
+ 
+ def save_real_checkpoint(
+     path: Path,
+-    model: SharedLSTM,
++    model: FitModel,
+     binding: str,
+     preparation: str,
+     stage: str,
+     epoch: int,
+-    authority: TrainingAuthority | None = None,
++    authority: FitAuthority | None = None,
+ ) -> dict:
+     if (
+         stage not in {"CALIBRATION_SELECTED", "REFIT_FINAL", "SYNTHETIC_SMOKE"}
+         or type(epoch) is not int
+         or not 1 <= epoch <= 60
+-        or model.input_dim != 16
+-        or sum(p.numel() for p in model.parameters()) != 6433
++        or model.input_dim != execution_contract(authority)["channels"]
++        or sum(p.numel() for p in model.parameters()) != execution_contract(authority)["parameters"]
+         or any(
+             p.dtype != torch.float32 or p.device.type != "cpu" or not bool(torch.isfinite(p).all())
+             for p in model.parameters()
+@@ -183,7 +209,7 @@
+         "preparation_id": preparation,
+         "stage": stage,
+         "epoch": epoch,
+-        "contract": CONTRACT,
++        "contract": execution_contract(authority),
+         "model": model.state_dict(),
+         "torch_rng": torch.get_rng_state(),
+         "resumable": False,
+@@ -207,11 +233,11 @@
+ 
+ def load_real_checkpoint(
+     path: Path,
+-    model: SharedLSTM,
++    model: FitModel,
+     binding: str,
+     preparation: str,
+     stage: str,
+-    authority: TrainingAuthority | None = None,
++    authority: FitAuthority | None = None,
+ ) -> None:
+     checkpoint_authority(authority, binding, preparation, stage)
+     manifest = json.loads(path.with_suffix(".manifest.json").read_text())
+@@ -224,7 +250,7 @@
+         raise ValueError("REAL_CHECKPOINT_BINDING_CHANGED")
+     obj = torch.load(path, map_location="cpu", weights_only=True)
+     if (
+-        obj.get("contract") != CONTRACT
++        obj.get("contract") != execution_contract(authority)
+         or obj.get("pair_key") != binding
+         or obj.get("preparation_id") != preparation
+         or obj.get("stage") != stage
+@@ -247,7 +273,7 @@
+ 
+ 
+ def checkpoint_authority(
+-    authority: TrainingAuthority | None, binding: str, preparation: str, stage: str
++    authority: FitAuthority | None, binding: str, preparation: str, stage: str
+ ) -> None:
+     if stage == "SYNTHETIC_SMOKE":
+         if not binding.startswith("SYN:") or not preparation.startswith("SYN:"):
+@@ -256,6 +282,14 @@
+     if authority is None:
+         raise ValueError("REAL_CHECKPOINT_REQUIRES_ACTUAL_TRAINING_AUTHORITY")
+     require_training(authority, "CHECKPOINT", authority.binding["input_id"])
++    if type(authority) is BatchPairAuthority:
++        key = "inner" if stage == "CALIBRATION_SELECTED" else "refit"
++        if (
++            binding != pair_key(authority)
++            or preparation != authority.descriptor["views"][key]["preparation_id"]
++        ):
++            raise ValueError("APPROVED_ARCHITECTURE_AND_PREPARATION_REQUIRED")
++        return
+     prefix = "WF1_INNER_TRAIN" if stage == "CALIBRATION_SELECTED" else "WF1_REFIT"
+     if (
+         binding != pair_key(authority)
+@@ -309,10 +343,10 @@
+ 
+ 
+ def epoch_pass(
+-    authority: TrainingAuthority,
++    authority: FitAuthority,
+     input_id: str,
+-    model: SharedLSTM,
+-    view: RealInputView,
++    model: FitModel,
++    view: FitView,
+     epoch: int,
+     opt: torch.optim.AdamW | None,
+     deadline: float,
+@@ -323,12 +357,17 @@
+     )
+     model.train(opt is not None)
+     losses, norms, seen, scores = [], [], [], []
+-    rank_rows = []
++    rank_rows, gate_rows, gate_states = [], [], []
+     started = time.monotonic()
+     for positions in session_batches(len(view.sessions), 42, epoch, shuffle=opt is not None):
+         if time.monotonic() >= deadline:
+             raise TimeoutError("APPROVED_ACTIVE_FITTING_LIMIT_REACHED")
+         batch = view.batch(positions)
++        if isinstance(model, EndpointGatedLSTM) and opt is None:
++            endpoints = batch.inputs[batch.origins][:, 0, -1, 16:21]
++            with torch.no_grad():
++                gate_rows.append(model.gate(endpoints).detach())
++                gate_states.extend(endpoints[:, -1].tolist())
+         with torch.set_grad_enabled(opt is not None):
+             prediction = batch_prediction(model, batch)
+             by_day = session_losses(prediction, batch.targets, batch.origins)
+@@ -360,6 +399,8 @@
+                                 "IC": value,
+                                 "status": status,
+                                 "MSE": mse,
++                                "scores": prediction[j, origin - 1].tolist(),
++                                "targets": batch.targets[j, origin - 1].tolist(),
+                             }
+                         )
+     if len(seen) != len(view.sessions) or set(seen) != set(view.sessions):
+@@ -368,6 +409,17 @@
+     ic_rows = tuple((r["session"], r["IC"], r["status"] == "DEFINED") for r in rank_rows)
+     return {
+         "epoch": epoch,
++        "origin_records": rank_rows,
++        "gate": gate_diagnostics(torch.cat(gate_rows)) if gate_rows else None,
++        "gate_by_standardized_U5_sign": {
++            str(sign): gate_diagnostics(
++                torch.cat(gate_rows)[torch.tensor([int(v >= 0) == sign for v in gate_states])]
++            )
++            for sign in (0, 1)
++            if any(int(v >= 0) == sign for v in gate_states)
++        }
++        if gate_rows
++        else {},
+         "mse": total / len(losses),
+         "sessions": len(seen),
+         "steps": len(norms),
+@@ -405,7 +457,7 @@
+     }
+ 
+ 
+-def run_worker(authority: TrainingAuthority, out: Path) -> None:
++def run_worker(authority: FitAuthority, out: Path) -> None:
+     """Private supervised worker; all authorization is checked before fitting starts."""
+     started = time.monotonic()
+     input_id = authority.binding["input_id"]
+@@ -413,21 +465,34 @@
+     if out.exists():
+         raise ValueError("IMMUTABLE_EXPERIMENT_OUTPUT_ALREADY_EXISTS")
+     t = time.monotonic()
+-    _, candidates = load_inputs(authority.review, ("WF1_INNER_TRAIN", "WF1_REFIT"))
++    candidates = {}
++    if type(authority) is BatchPairAuthority:
++        authority.inputs()
++    else:
++        _, candidates = load_inputs(authority.review, ("WF1_INNER_TRAIN", "WF1_REFIT"))
+     timings = {"raw_derived_loading": time.monotonic() - t}
+     t = time.monotonic()
+     inner, tail, full = windows("WF1", pd.Timestamp("2023-07-01T04:00Z"))
+-    views = {
+-        "inner": build_view(authority.review, candidates["WF1_INNER_TRAIN"], inner),
+-        "validation": build_view(authority.review, candidates["WF1_INNER_TRAIN"], tail, asof=True),
++    views: dict[str, FitView] = {
++        "inner": authority.view("inner")
++        if type(authority) is BatchPairAuthority
++        else build_view(authority.review, candidates["WF1_INNER_TRAIN"], inner),
++        "validation": authority.view("validation")
++        if type(authority) is BatchPairAuthority
++        else build_view(authority.review, candidates["WF1_INNER_TRAIN"], tail, asof=True),
+     }
+     timings["inner_preprocessing_application"] = time.monotonic() - t
+-    proposal = json.loads(
+-        verify_ref(authority.review.root, authority.binding["proposal"]).read_text()
+-    )
+-    dataset = json.loads(
+-        verify_ref(authority.review.root, proposal["dataset_input_binding"]).read_text()
+-    )
++    if type(authority) is BatchPairAuthority:
++        dataset = {
++            "first_pair_views": {k: v["view_id"] for k, v in authority.descriptor["views"].items()}
++        }
++    else:
++        proposal = json.loads(
++            verify_ref(authority.review.root, authority.binding["proposal"]).read_text()
++        )
++        dataset = json.loads(
++            verify_ref(authority.review.root, proposal["dataset_input_binding"]).read_text()
++        )
+     if any(v.version != dataset["first_pair_views"][k] for k, v in views.items()):
+         raise ValueError("APPROVED_VIEW_POPULATION_CHANGED")
+     valid = views["validation"]
+@@ -436,8 +501,9 @@
+     # No statistics are re-fitted: the reviewed inner/refit recipes are immutable.
+     torch.set_num_threads(1)
+     seed_all(42)
+-    model = SharedLSTM(16)
+-    if sum(p.numel() for p in model.parameters()) != 6433:
++    model = execution_model(authority)
++    contract = execution_contract(authority)
++    if sum(p.numel() for p in model.parameters()) != contract["parameters"]:
+         raise ValueError("FROZEN_6433_PARAMETER_TM0_REQUIRED")
+     initial = identity({k: v.tolist() for k, v in model.state_dict().items()})
+     opt = optimizer(model)
+@@ -445,7 +511,22 @@
+     out.mkdir(parents=True)
+     append_pair(authority, "STARTED", {"output": str(out.relative_to(authority.review.root))})
+     fit_started = time.monotonic()
+-    deadline = fit_started + ACTIVE_SECONDS
++    remaining = ACTIVE_SECONDS
++    if type(authority) is BatchPairAuthority:
++        remaining = min(
++            remaining,
++            max(
++                0.0,
++                (
++                    pd.Timestamp(authority.plan["deadline"]) - pd.Timestamp.now(tz="UTC")
++                ).total_seconds()
++                - 900,
++            ),
++        )
++    deadline = fit_started + remaining
++    evaluation_deadline = (
++        deadline if type(authority) is BatchPairAuthority else started + HARD_SECONDS
++    )
+     try:
+         while selector.status == "CALIBRATING":
+             e = selector.epoch + 1
+@@ -476,7 +557,7 @@
+                         "batch_sessions": 16,
+                     },
+                 )
+-                if projected > ACTIVE_SECONDS:
++                if projected > deadline - time.monotonic():
+                     raise TimeoutError("FIRST_EPOCH_PROJECTED_PAIR_EXCEEDS_APPROVED_BUDGET")
+         timings["calibration_training"] = sum(r["training"]["seconds"] for r in trace)
+         timings["calibration_validation"] = sum(r["validation"]["seconds"] for r in trace)
+@@ -497,12 +578,16 @@
+         timings["selection_and_calibration_checkpoint"] = time.monotonic() - t
+         append_pair(authority, "CALIBRATED", {"selected_epoch": selector.selected})
+         t = time.monotonic()
+-        views["refit"] = build_view(authority.review, candidates["WF1_REFIT"], full)
++        views["refit"] = (
++            authority.view("refit")
++            if type(authority) is BatchPairAuthority
++            else build_view(authority.review, candidates["WF1_REFIT"], full)
++        )
+         timings["full_prefix_preprocessing_application"] = time.monotonic() - t
+         if views["refit"].version != dataset["first_pair_views"]["refit"]:
+             raise ValueError("APPROVED_FULL_PREFIX_CHANGED")
+         seed_all(42)
+-        final = SharedLSTM(16)
++        final = execution_model(authority)
+         fresh_opt = optimizer(final)
+         fresh = identity({k: v.tolist() for k, v in final.state_dict().items()})
+         if final is model or fresh_opt is opt or fresh_opt.state or fresh != initial:
+@@ -516,7 +601,7 @@
+         timings["refit_training"] = sum(r["seconds"] for r in refit_trace)
+         t = time.monotonic()
+         train_metrics = epoch_pass(
+-            authority, input_id, final, views["refit"], 1, None, started + HARD_SECONDS
++            authority, input_id, final, views["refit"], 1, None, evaluation_deadline
+         )
+         timings["refit_train_prediction_audit"] = time.monotonic() - t
+         t = time.monotonic()
+@@ -530,7 +615,7 @@
+             selector.selected,
+             authority,
+         )
+-        reloaded = SharedLSTM(16)
++        reloaded = execution_model(authority)
+         load_real_checkpoint(
+             checkpoint, reloaded, key, views["refit"].preparation_id, "REFIT_FINAL", authority
+         )
+@@ -547,10 +632,12 @@
+             pd.Timestamp("2024-01-01T05:00Z"),
+             "INNER_VALIDATION",
+         )
+-        development = build_view(authority.review, candidates["WF1_REFIT"], w, asof=True)
+-        metrics = epoch_pass(
+-            authority, input_id, final, development, 1, None, started + HARD_SECONDS
+-        )
++        development = (
++            authority.view("WF1")
++            if type(authority) is BatchPairAuthority
++            else build_view(authority.review, candidates["WF1_REFIT"], w, asof=True)
++        )
++        metrics = epoch_pass(authority, input_id, final, development, 1, None, evaluation_deadline)
+         timings["development_prediction_and_audit"] = time.monotonic() - t
+         timings["total_end_to_end_worker"] = time.monotonic() - started
+         write_json(
+@@ -576,13 +663,18 @@
+                 "refit_steps": sum(r["steps"] for r in refit_trace),
+             },
+         )
++        result_name = (
++            f"seed42_{contract['architecture'].lower()}_pair_result.json"
++            if type(authority) is BatchPairAuthority
++            else "seed42_tm0_first_pair_result.json"
++        )
+         write_json(
+-            out / "seed42_tm0_first_pair_result.json",
++            out / result_name,
+             {
+                 "status": "COMPLETED_DESCRIPTIVE_CONDITIONAL_PILOT",
+                 "pair_key": key,
+                 "input_id": input_id,
+-                "contract": CONTRACT,
++                "contract": contract,
+                 "selector": vars(selector),
+                 "initial_hashes": [initial, fresh],
+                 "fresh_optimizer_state_empty": True,
+@@ -604,11 +696,7 @@
+         append_pair(
+             authority,
+             "COMPLETED",
+-            {
+-                "result": str(
+-                    (out / "seed42_tm0_first_pair_result.json").relative_to(authority.review.root)
+-                )
+-            },
++            {"result": str((out / result_name).relative_to(authority.review.root))},
+         )
+     except BaseException as exc:
+         append_pair(authority, "FAILED", {"error_type": type(exc).__name__, "reason": str(exc)})

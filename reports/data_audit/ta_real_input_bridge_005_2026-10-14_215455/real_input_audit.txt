@@ -1,0 +1,95 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+{
+  "input_id": "1b4fa7c10b2d9d8a300b5929118a3b7cc6774574a1a0e9505ebce51ca4b2ad37",
+  "views": {
+    "inner": {
+      "view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc",
+      "origins": 1376,
+      "sessions": 688,
+      "per_origin": {
+        "1": 688,
+        "2": 688
+      },
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "unique_feature_rows": 41820,
+      "excluded": {},
+      "tensor_bytes": 2676480,
+      "dtype": "float32",
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION"
+    },
+    "validation": {
+      "view_id": "CONDITIONAL_REAL_TM0:f494313fdce14f17c07a4b12e3d75f01eb2107d0d58e6ea252a877da242b74c1",
+      "origins": 110,
+      "sessions": 55,
+      "per_origin": {
+        "1": 55,
+        "2": 55
+      },
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "unique_feature_rows": 3720,
+      "excluded": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "tensor_bytes": 238080,
+      "dtype": "float32",
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION"
+    },
+    "refit": {
+      "view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b",
+      "origins": 1502,
+      "sessions": 751,
+      "per_origin": {
+        "1": 751,
+        "2": 751
+      },
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "unique_feature_rows": 45600,
+      "excluded": {},
+      "tensor_bytes": 2918400,
+      "dtype": "float32",
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION"
+    },
+    "WF1": {
+      "view_id": "CONDITIONAL_REAL_TM0:e87d636dedcc976699dd80dadd4021b47d289ee06ebfc0ecf05c9ea34beaee46",
+      "origins": 232,
+      "sessions": 116,
+      "per_origin": {
+        "1": 116,
+        "2": 116
+      },
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "unique_feature_rows": 7410,
+      "excluded": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "tensor_bytes": 474240,
+      "dtype": "float32",
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION"
+    },
+    "WF2": {
+      "view_id": "CONDITIONAL_REAL_TM0:4f77d97959f87e7605103fb655ec62b43704060524656b227827b7ed78435fc8",
+      "origins": 232,
+      "sessions": 116,
+      "per_origin": {
+        "1": 116,
+        "2": 116
+      },
+      "preparation_id": "50e29107b7204da9ab226298f27b38e8da04d0ad6adb22ceb2d3e70d2ca5e10e",
+      "unique_feature_rows": 7380,
+      "excluded": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "tensor_bytes": 472320,
+      "dtype": "float32",
+      "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION"
+    }
+  },
+  "seconds": {
+    "canonical_store_load": 2.118846333003603,
+    "prefix_view_reconstruction": 12.50253891700413,
+    "total_bridge_audit": 28.593183499993756
+  }
+}

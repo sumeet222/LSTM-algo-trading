@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "lstm_data.real_bridge_audit",
+    "--producer",
+    "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/verified_producer.json",
+    "--report",
+    "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455"
+  ],
+  "started_at": "2026-10-15T02:13:23.382667+00:00",
+  "finished_at": "2026-10-15T02:13:55.203970+00:00",
+  "elapsed_seconds": 31.821595582994632,
+  "exit_code": 0,
+  "code_before_sha256": "0804a6977fbcecddc48126377b571ca3a1b9564df4b31ea9e98d24c9fcc7bd7c",
+  "code_after_sha256": "0804a6977fbcecddc48126377b571ca3a1b9564df4b31ea9e98d24c9fcc7bd7c",
+  "numerical_threads": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

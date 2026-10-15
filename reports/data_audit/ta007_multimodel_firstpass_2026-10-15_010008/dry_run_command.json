@@ -1,0 +1,25 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "lstm_data.real_multimodel_batch",
+    "--plan",
+    "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/batch_plan.json",
+    "--output",
+    "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008",
+    "--dry-run"
+  ],
+  "started_at": "2026-10-15T05:10:44.620149+00:00",
+  "finished_at": "2026-10-15T05:10:48.173864+00:00",
+  "elapsed_seconds": 3.553643584018573,
+  "exit_code": 0,
+  "code_before_sha256": "aa7309ba1edc80d83ac0f4bbeaaf40b52cf4fe035e4768d3720ef50afd212b59",
+  "code_after_sha256": "aa7309ba1edc80d83ac0f4bbeaaf40b52cf4fe035e4768d3720ef50afd212b59",
+  "threads": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null
+  }
+}

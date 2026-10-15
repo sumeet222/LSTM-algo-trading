@@ -1,0 +1,33 @@
+{
+  "actual_reply": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/actual_researcher_batch_reply.json",
+    "sha256": "b790b4c1230f0a5d3059b48ff5d1edb1014ba0204ca9343c2f3c6eaade838823"
+  },
+  "assumptions": [
+    "Idealized zero-latency period-end clock",
+    "Retrospective vendor split-price/inverse-volume stock representation and selection",
+    "Completed-hourly-close price proxy,not minute executable fills"
+  ],
+  "course_USA500_substitution": false,
+  "evidence_grade": "RESEARCHER_ATTESTED_EXTERNAL_RIGHTS_AND_CLOCK_APPROVALS_PRIVATE_EMAILS_UNINSPECTED",
+  "existing_engineering_accepted_for_batch": true,
+  "historical_E5_failed_and_underfit_evidence_retained": true,
+  "id": "TA-G0-007-ATTESTATION-SCOPE-v2",
+  "independent_license_publication_action_PIT_certification": false,
+  "owner": "Track A researcher",
+  "prior_policy": {
+    "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/candidate_attestation_reliance_policy_v1.json",
+    "sha256": "d21ca124c43675b7b8abb4faae4d7fb52ccbc81ab83a280168ece5f8e618fc71"
+  },
+  "production_D1_migration": false,
+  "recorded_at": "2026-10-15T01:15:10.396081-04:00",
+  "redistribution_or_teammate_transfer_authorized": false,
+  "scope": [
+    "MC0",
+    "MC1",
+    "E5",
+    "RIDGE_MARKET_147"
+  ],
+  "source_scope": "Existing Alpaca SIP stock/SPY archives for exactly the named candidate June2023/WF1 experiments",
+  "status": "APPROVED_RESEARCHER_ATTESTATION_SCOPE_EXTENSION"
+}

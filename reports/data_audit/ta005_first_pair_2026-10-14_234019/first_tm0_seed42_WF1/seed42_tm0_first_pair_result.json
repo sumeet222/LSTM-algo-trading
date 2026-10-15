@@ -1,0 +1,164 @@
+{
+  "G6": "PASS_PER_RUN_TELEMETRY",
+  "comparative_economic_statistical_claims": "HOLD",
+  "confirmation_numeric_rows": 0,
+  "contract": {
+    "active_fit_seconds": 14400,
+    "amsgrad": false,
+    "architecture": "TM0",
+    "batch_sessions": 16,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "channels": 16,
+    "clip": 1.0,
+    "confirmation": false,
+    "cutoff": "2023-06-30",
+    "device": "CPU_FLOAT32",
+    "dropout": 0.1,
+    "economic_claims": false,
+    "hard_fit_seconds": 16200,
+    "layers": 1,
+    "lr": 0.001,
+    "max_epochs": 60,
+    "minimum_stop": 12,
+    "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+    "optimizer": "AdamW",
+    "optimizer_epsilon": 1e-08,
+    "pair_limit": 1,
+    "parameters": 6433,
+    "patience": 10,
+    "qualifying_multiplier": 0.999,
+    "seed": 42,
+    "stage": "WF1",
+    "steps": 48,
+    "target_clipping": false,
+    "universe": [
+      "AAPL",
+      "COST",
+      "CMCSA",
+      "SBUX",
+      "CME"
+    ],
+    "weight_decay_bias": 0.0,
+    "weight_decay_matrix": 0.01,
+    "width": 32
+  },
+  "development": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": 0.034913793103448276,
+    "defined_only_daily_IC": 0.034913793103448276,
+    "epoch": 1,
+    "gradients": null,
+    "mse": 5.438829636265492,
+    "per_origin": {
+      "1": {
+        "IC": 0.04482758620689655,
+        "MSE": 5.127638130866248,
+        "count": 116
+      },
+      "2": {
+        "IC": 0.02499999999999999,
+        "MSE": 5.750021076921759,
+        "count": 116
+      }
+    },
+    "permutation_hash": "08d206fec7e78366d0b2434f5a8960b14092e3dc0e26b117bb0ecc7831f16f24",
+    "score_std": 0.1120730069462811,
+    "seconds": 0.18423633300699294,
+    "sessions": 116,
+    "steps": 0,
+    "top_session_loss_share": {
+      "0.01": 0.1565574315733829,
+      "0.05": 0.30688227376538524,
+      "0.1": 0.44619320843290716
+    }
+  },
+  "development_population": {
+    "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+    "dtype": "float32",
+    "excluded": {
+      "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+    },
+    "origins": 232,
+    "per_origin": {
+      "1": 116,
+      "2": 116
+    },
+    "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+    "sessions": 116,
+    "tensor_bytes": 474240,
+    "unique_feature_rows": 7410,
+    "view_id": "CONDITIONAL_REAL_TM0:e87d636dedcc976699dd80dadd4021b47d289ee06ebfc0ecf05c9ea34beaee46"
+  },
+  "final_checkpoint": {
+    "bytes": 34897,
+    "epoch": 4,
+    "pair_key": "881125ea128ec06c0048173ef0b5531a5bc315b509bea154048ef7a7aa7ddcf2",
+    "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+    "resumable": false,
+    "schema": 1,
+    "sha256": "b673d88ce4458ee7db0ce292808370eaeeefda6132b500ee6e9f7d26dc46818b",
+    "stage": "REFIT_FINAL"
+  },
+  "fresh_optimizer_state_empty": true,
+  "initial_hashes": [
+    "079edbe32c7565824b359686e3eeb181ebe7986eba173d4af3ef78869a1ec836",
+    "079edbe32c7565824b359686e3eeb181ebe7986eba173d4af3ef78869a1ec836"
+  ],
+  "input_id": "0d84401fe990f2f5a0c3f0191272f9cfb5b54f75d6b4db2c94c62ccb03798ef8",
+  "pair_key": "881125ea128ec06c0048173ef0b5531a5bc315b509bea154048ef7a7aa7ddcf2",
+  "refit_train_evaluation": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": 0.07110519307589878,
+    "defined_only_daily_IC": 0.07110519307589878,
+    "epoch": 1,
+    "gradients": null,
+    "mse": 7.316591897594945,
+    "per_origin": {
+      "1": {
+        "IC": 0.08801597869507323,
+        "MSE": 8.500609969410217,
+        "count": 751
+      },
+      "2": {
+        "IC": 0.05419440745672436,
+        "MSE": 6.13257373450758,
+        "count": 751
+      }
+    },
+    "permutation_hash": "8aa4c8f905368e7ff57cc7ce08c99875b124cf5921bbbd2be4fca3599e4c918d",
+    "score_std": 0.11392485790960083,
+    "seconds": 3.2552072079852223,
+    "sessions": 751,
+    "steps": 0,
+    "top_session_loss_share": {
+      "0.01": 0.2549038539011501,
+      "0.05": 0.4460695869227623,
+      "0.1": 0.5566477372646015
+    }
+  },
+  "selected_checkpoint": {
+    "bytes": 34897,
+    "epoch": 4,
+    "pair_key": "881125ea128ec06c0048173ef0b5531a5bc315b509bea154048ef7a7aa7ddcf2",
+    "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+    "resumable": false,
+    "schema": 1,
+    "sha256": "b0382d191f19836ac1a438cdf4eb4b923dbc56547522c4827b3fa380de5a15bd",
+    "stage": "CALIBRATION_SELECTED"
+  },
+  "selector": {
+    "best": 4.7046144875613125,
+    "epoch": 14,
+    "patience": 10,
+    "raw_epoch": 4,
+    "raw_min": 4.7046144875613125,
+    "selected": 4,
+    "status": "PATIENCE_STOP"
+  },
+  "status": "COMPLETED_DESCRIPTIVE_CONDITIONAL_PILOT"
+}

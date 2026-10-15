@@ -1,0 +1,26 @@
+{
+  "cases": {
+    "bound_source_change": "Initial hash and post-load stat changes rejected",
+    "checkpoint": "Synthetic-only smoke passes reload equality; genuine stage requires additional authority; wrong pair/corrupt bytes rejected",
+    "engineering_overlay_store": "Changed store bytes rejected",
+    "forged_permission": "Rejected before model update; optimizer state remains empty",
+    "missing_GO": "Pending actual decision rejected",
+    "pair_accounting": "Failed first pair remains counted; second start rejected",
+    "producer_engine_change": "Sealed producer code mismatch rejected",
+    "stale_metadata_code_order_shape": "Rejected before training authority issued",
+    "stale_preprocessing": "Changed bound prep rejected",
+    "tensor_and_target_mutation": "Content/metadata hashes reject",
+    "wrong_order_old_universe": "Changed manifest rejected",
+    "wrong_stage_cutoff_confirmation": "Exact frozen windows required"
+  },
+  "proof": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/focused_release.txt",
+    "sha256": "900c76e7fb2614c8fe3276eb9ded0784feedd3380f07778cd23edfda05b77c47"
+  },
+  "scope": "Hermetic fixtures only; no actual human consent or source entitlement simulated for real data",
+  "status": "PASS_FRESH_TARGETED",
+  "test_ref": {
+    "path": "tests/test_real_bridge.py",
+    "sha256": "83e514540cc2c90f3226ed527f01e514838a0bd9f28eb3933f2e6142a4705f2f"
+  }
+}

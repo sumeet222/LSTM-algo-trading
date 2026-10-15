@@ -1,0 +1,25 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_neural_health.py",
+    "tests/test_pilot_postrun.py",
+    "tests/test_real_bridge.py",
+    "tests/test_baseline_ridge.py",
+    "-q"
+  ],
+  "started_at": "2026-10-15T04:27:52.310001+00:00",
+  "finished_at": "2026-10-15T04:32:19.923623+00:00",
+  "elapsed_seconds": 267.6097386669717,
+  "exit_code": -15,
+  "code_before_sha256": "4ac63e64e47dd7144cc0f713e6f1db32d4739410a7e2767e88b55ca0332011fe",
+  "code_after_sha256": "7c5e6e25c3d41a24cde44dc67138f0b14301a0a87aeeb6fd863eff9c0bfcd461",
+  "threads": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null
+  }
+}

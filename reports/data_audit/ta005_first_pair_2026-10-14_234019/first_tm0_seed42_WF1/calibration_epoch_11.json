@@ -1,0 +1,73 @@
+{
+  "selection": {
+    "best": 4.7046144875613125,
+    "epoch": 11,
+    "patience": 7,
+    "raw_epoch": 4,
+    "raw_min": 4.7046144875613125,
+    "selected": 4,
+    "status": "CALIBRATING"
+  },
+  "training": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": null,
+    "defined_only_daily_IC": null,
+    "epoch": 11,
+    "gradients": {
+      "clipped_fraction": 1.0,
+      "max": 5.176947593688965,
+      "median": 1.7115392684936523,
+      "multiplier_median": 0.5842690460798287,
+      "multiplier_min": 0.19316398104069735,
+      "nonfinite_count": 0,
+      "p90": 2.797521352767945,
+      "p95": 3.587875032424926,
+      "p99": 4.861357994079588,
+      "sustained_clipping_warning": true
+    },
+    "mse": 7.264122485854598,
+    "per_origin": {},
+    "permutation_hash": "ff107f4a12402748559180e40e755f85ef032298f1f9d15e5048a66bfc463a14",
+    "score_std": 0.27487208817349895,
+    "seconds": 2.8525795830064453,
+    "sessions": 688,
+    "steps": 43,
+    "top_session_loss_share": {
+      "0.01": 0.2549124209681399,
+      "0.05": 0.4533953101180878,
+      "0.1": 0.5601513306295469
+    }
+  },
+  "validation": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": 0.01545454545454546,
+    "defined_only_daily_IC": 0.01545454545454546,
+    "epoch": 11,
+    "gradients": null,
+    "mse": 4.760859594561837,
+    "per_origin": {
+      "1": {
+        "IC": 0.03999999999999997,
+        "MSE": 4.819015883857554,
+        "count": 55
+      },
+      "2": {
+        "IC": -0.009090909090909096,
+        "MSE": 4.702703283049844,
+        "count": 55
+      }
+    },
+    "permutation_hash": "ecb32a59226eaa22e1bc6c2ade9f44425d285ee21efd4c8cb0be498952fe6197",
+    "score_std": 0.3010390041678793,
+    "seconds": 0.08067258400842547,
+    "sessions": 55,
+    "steps": 0,
+    "top_session_loss_share": {
+      "0.01": 0.08063084951733133,
+      "0.05": 0.201929296780707,
+      "0.1": 0.3509403873860112
+    }
+  }
+}

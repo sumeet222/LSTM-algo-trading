@@ -1,0 +1,61 @@
+{
+  "code_sha256": "7a5b42e89c85beacb834d92b3d11c7e215c8bec4172ddef300d328b28c880909",
+  "contract": {
+    "active_fit_seconds": 14400,
+    "architecture": "TM0",
+    "batch_sessions": 16,
+    "channels": 16,
+    "clip": 1.0,
+    "confirmation": false,
+    "cutoff": "2023-06-30",
+    "device": "CPU_FLOAT32",
+    "dropout": 0.1,
+    "economic_claims": false,
+    "hard_fit_seconds": 16200,
+    "layers": 1,
+    "lr": 0.001,
+    "max_epochs": 60,
+    "minimum_stop": 12,
+    "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+    "optimizer": "AdamW",
+    "pair_limit": 1,
+    "parameters": 6433,
+    "patience": 10,
+    "qualifying_multiplier": 0.999,
+    "seed": 42,
+    "stage": "WF1",
+    "steps": 48,
+    "target_clipping": false,
+    "universe": [
+      "AAPL",
+      "COST",
+      "CMCSA",
+      "SBUX",
+      "CME"
+    ],
+    "weight_decay_bias": 0.0,
+    "weight_decay_matrix": 0.01,
+    "width": 32
+  },
+  "course_substitution": false,
+  "dataset_input_binding": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/dataset_input_binding.json",
+    "sha256": "ccf941c09d1d3be357301abc19cfe438487baa3d3821be2274944d10d2299e93"
+  },
+  "input_id": "1b4fa7c10b2d9d8a300b5929118a3b7cc6774574a1a0e9505ebce51ca4b2ad37",
+  "legacy_ledger": {
+    "path": "reports/audit/track_a_events.jsonl",
+    "sha256": "1085b7bfbb395d18f02a5fff31aa30133a6b2fdbaa3bc8885f90e57fe401c927"
+  },
+  "new_append_only_journal": "reports/audit/track_a_real_pairs_v1.jsonl",
+  "production_migration": false,
+  "requires": [
+    "exact attributable researcher GO including retrospective parameter application",
+    "actual applicable local research-use rights evidence",
+    "attributable Track B common-clock acknowledgment",
+    "bound applicable conditional G0-G5 evidence and G6 postrun plan"
+  ],
+  "review_binding": "05bd58deb93ecac33a212e55bae3b27697d8a40c3becbac553a2c4c3b6a09309",
+  "schema": 1,
+  "status": "PROPOSED_NOT_AUTHORIZED"
+}

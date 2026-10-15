@@ -1,0 +1,28 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_real_multimodel_batch.py",
+    "tests/test_real_bridge.py",
+    "tests/test_neural_health.py",
+    "tests/test_neural_gate.py::test_algebra_count_and_matched_core_identity",
+    "tests/test_neural_gate.py::test_endpoint_shared_gate_and_historical_direct_inputs",
+    "tests/test_neural_gate.py::test_actual_gradient_optimizer_global_clip_and_short_update",
+    "tests/test_peer_inputs.py::test_all_five_arithmetic_population_divisor_and_all_equal",
+    "-q"
+  ],
+  "started_at": "2026-10-15T05:09:29.622097+00:00",
+  "finished_at": "2026-10-15T05:09:38.378111+00:00",
+  "elapsed_seconds": 8.756130333000328,
+  "exit_code": 0,
+  "code_before_sha256": "aa7309ba1edc80d83ac0f4bbeaaf40b52cf4fe035e4768d3720ef50afd212b59",
+  "code_after_sha256": "aa7309ba1edc80d83ac0f4bbeaaf40b52cf4fe035e4768d3720ef50afd212b59",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

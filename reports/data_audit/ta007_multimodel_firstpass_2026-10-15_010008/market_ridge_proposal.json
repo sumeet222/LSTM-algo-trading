@@ -1,0 +1,36 @@
+{
+  "WF1_origins": 232,
+  "WF1_sessions": 116,
+  "batch_plan": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/batch_plan.json",
+    "sha256": "cb4edaff9edca889ced95ee4683d2d0059fdd7ed1ff41421e705bab8d81054f8"
+  },
+  "cutoff": "2023-06-30",
+  "features": "112 stock lag columns followed by35 market lag columns;exact seven scheduled lags[0,1,2,5,11,23,47]",
+  "fit_counts": {
+    "fresh_refit": 1,
+    "inner": 5,
+    "neural": 0
+  },
+  "id": "TA007-RIDGE-MARKET147-v1",
+  "no_economics_confirmation_or_production": true,
+  "penalties": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "policies": "Extend qualified researcher-attested local stock/SPY rights/clock/privacy reliance to this non-neural control only;no factual certification",
+  "preprocessing": "Existing immutable distinct inner/full-prefix stock/SPY recipes",
+  "scope": "RIDGE_MARKET_147_WF1_ONLY",
+  "selection": "Inner55eligible tail sessions only,MSE,tie largerlambda;noWF1tuning",
+  "status": "PROPOSED_NOT_AUTHORIZED",
+  "universe": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ]
+}

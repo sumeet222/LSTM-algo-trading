@@ -1,0 +1,159 @@
+{
+  "G6": {
+    "nonfinite_gradient_count": 0,
+    "reasons": [
+      "SUSTAINED_CLIPPING"
+    ],
+    "scope": "BOTH_CALIBRATION_AND_REFIT",
+    "status": "WARN_INVESTIGATE",
+    "warning_epochs": {
+      "calibration": [
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "refit": []
+    }
+  },
+  "TG0_quantiles": {
+    "WF1": {
+      "0": -24.3998966217041,
+      "0.01": -7.601656436920166,
+      "0.1": -1.9999136924743652,
+      "0.5": 0.0,
+      "0.9": 2.1030969619750977,
+      "0.99": 6.325568199157715,
+      "1": 15.96174430847168
+    },
+    "inner": {
+      "0": -32.173622131347656,
+      "0.01": -8.065618515014648,
+      "0.1": -1.9930789470672607,
+      "0.5": 0.0,
+      "0.9": 1.9445860385894775,
+      "0.99": 7.321171760559082,
+      "1": 80.16413116455078
+    },
+    "refit": {
+      "0": -32.42558670043945,
+      "0.01": -7.9534010887146,
+      "0.1": -1.9753655195236206,
+      "0.5": 0.0,
+      "0.9": 1.9601701498031616,
+      "0.99": 7.348947525024414,
+      "1": 82.02804565429688
+    },
+    "validation": {
+      "0": -8.556501388549805,
+      "0.01": -6.005714416503906,
+      "0.1": -1.7657757997512817,
+      "0.5": 0.0,
+      "0.9": 2.0340287685394287,
+      "0.99": 7.529133319854736,
+      "1": 12.039970397949219
+    }
+  },
+  "batch_telemetry_limit": "Only per-epoch norm quantiles/fractions were saved; per-batch attribution absent.",
+  "gradient_accumulation_code": "Each batch calls zero_grad, backward, clip once, step once; no accumulation.",
+  "outlier_attribution": "High target/loss concentration is compatible with large gradients. Per-example gradients absent; causal attribution unproven.",
+  "quantile_basis": "Actual float32 targets",
+  "selected_before_warning_epochs": true,
+  "selected_epoch": 4,
+  "source_loss_shares": {
+    "WF1": {
+      "0.01": 0.1565574315733829,
+      "0.05": 0.30688227376538524,
+      "0.1": 0.44619320843290716
+    },
+    "train": {
+      "0.01": 0.2549038539011501,
+      "0.05": 0.4460695869227623,
+      "0.1": 0.5566477372646015
+    }
+  },
+  "loss_concentration_recomputed_from_snapshot": {
+    "refit": {
+      "top_session_loss_shares": {
+        "0.01": 0.25490385829424134,
+        "0.05": 0.44606958801021335,
+        "0.1": 0.5566477370403009
+      },
+      "largest_five_days": [
+        {
+          "session": "2022-09-14",
+          "MSE": 730.6759950869571
+        },
+        {
+          "session": "2022-09-13",
+          "MSE": 148.45660870482087
+        },
+        {
+          "session": "2020-12-09",
+          "MSE": 136.05578855053557
+        },
+        {
+          "session": "2022-04-28",
+          "MSE": 116.94033042894662
+        },
+        {
+          "session": "2021-06-01",
+          "MSE": 72.1000501546941
+        }
+      ]
+    },
+    "WF1": {
+      "top_session_loss_shares": {
+        "0.01": 0.1565574288145702,
+        "0.05": 0.3068822801044779,
+        "0.1": 0.4461932112880182
+      },
+      "largest_five_days": [
+        {
+          "session": "2023-11-17",
+          "MSE": 64.41558678427317
+        },
+        {
+          "session": "2023-08-10",
+          "MSE": 34.357157856312945
+        },
+        {
+          "session": "2023-10-25",
+          "MSE": 27.439947064086844
+        },
+        {
+          "session": "2023-07-26",
+          "MSE": 27.16520355347846
+        },
+        {
+          "session": "2023-12-06",
+          "MSE": 23.388143059648016
+        }
+      ]
+    }
+  },
+  "calibration_validation_relation": {
+    "selected_epoch4_MSE": 4.7046144875613125,
+    "stopping_epoch14_MSE": 4.777490196444772,
+    "relative_deterioration_percent": 1.5490261545582085,
+    "warning_epochs": [
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "selected_epoch_clipped_fraction": 0.3023255813953488,
+    "selected_checkpoint_precedes_warning": true
+  },
+  "normalization_review": "Exact existing prefix-specific floor/scaler/preparation/view identities reused and actual old metrics reproduced. No evidence of a normalization defect found; this is not proof that outliers cause clipping."
+}

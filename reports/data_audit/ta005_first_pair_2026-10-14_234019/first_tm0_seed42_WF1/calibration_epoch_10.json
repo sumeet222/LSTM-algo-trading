@@ -1,0 +1,73 @@
+{
+  "selection": {
+    "best": 4.7046144875613125,
+    "epoch": 10,
+    "patience": 6,
+    "raw_epoch": 4,
+    "raw_min": 4.7046144875613125,
+    "selected": 4,
+    "status": "CALIBRATING"
+  },
+  "training": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": null,
+    "defined_only_daily_IC": null,
+    "epoch": 10,
+    "gradients": {
+      "clipped_fraction": 0.9534883720930233,
+      "max": 3.4190354347229004,
+      "median": 1.6185024976730347,
+      "multiplier_median": 0.6178547043226824,
+      "multiplier_min": 0.29248006539042515,
+      "nonfinite_count": 0,
+      "p90": 2.5012963771820083,
+      "p95": 2.8674789190292356,
+      "p99": 3.2505423259735102,
+      "sustained_clipping_warning": true
+    },
+    "mse": 7.286624073115892,
+    "per_origin": {},
+    "permutation_hash": "5c3e2c8a6fb4501d4e709e80aa6af6d8b1d1100c69b68eb29c59c41bc45a4041",
+    "score_std": 0.25941868221459824,
+    "seconds": 2.813615040970035,
+    "sessions": 688,
+    "steps": 43,
+    "top_session_loss_share": {
+      "0.01": 0.25406867191215404,
+      "0.05": 0.452809218594676,
+      "0.1": 0.5598124790319772
+    }
+  },
+  "validation": {
+    "constant_predictions": 0,
+    "constant_target_IC_omissions": 0,
+    "daily_rank_IC": -0.000909090909090914,
+    "defined_only_daily_IC": -0.000909090909090914,
+    "epoch": 10,
+    "gradients": null,
+    "mse": 4.752834497798573,
+    "per_origin": {
+      "1": {
+        "IC": 0.050909090909090904,
+        "MSE": 4.802288443391974,
+        "count": 55
+      },
+      "2": {
+        "IC": -0.05272727272727272,
+        "MSE": 4.703380598805167,
+        "count": 55
+      }
+    },
+    "permutation_hash": "ecb32a59226eaa22e1bc6c2ade9f44425d285ee21efd4c8cb0be498952fe6197",
+    "score_std": 0.29175175045353163,
+    "seconds": 0.07694699999410659,
+    "sessions": 55,
+    "steps": 0,
+    "top_session_loss_share": {
+      "0.01": 0.08063292768981173,
+      "0.05": 0.20295075991886402,
+      "0.1": 0.352012971400072
+    }
+  }
+}
