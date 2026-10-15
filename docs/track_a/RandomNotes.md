@@ -33,7 +33,21 @@ Big chunck of data missing. Need to fix it.
 
 
 
-##
+## first. batch of results - 4 models
+Model 1: 16 stocks generated data
+Model 2: 16 stock + 5 SPY market features
+Model 3: 16 stock features modulated by market state, plus 5 SPY features
+Model 4: 16 stock + 5 SPY + 2 peer-summary features
+
+(Modulation is the gating feature :\[
+g_t=\operatorname{softmax}(W_gm_t+b_g)\in\mathbb R^{16}.
+\]
+The stock features are then modified:
+\[
+\boxed{\tilde x_t=x_t\odot(16g_t)}
+\])
+
+
 
 What should we investigate now?
 I recommend proceeding with our planned Package 008, focusing on five questions:
@@ -45,7 +59,7 @@ I recommend proceeding with our planned Package 008, focusing on five questions:
 
 Target tails and session loss concentration are substantial: training \(|TG0|\) reaches 82.03, and about 56% of squared loss sits in the worst 10% of sessions.
 
-## first. batch of results
+
 
 Extreme targets matter: \(|TG0|\) reaches 82.03, and the worst 10% of training sessions account for approximately 56% of squared loss.
 Gradient clipping remains unresolved: All four models exhibit clipping warnings, but the saved logs cannot establish exactly what causes them.

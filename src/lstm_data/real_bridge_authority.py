@@ -10,6 +10,7 @@ from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from .real_batch_authority import BatchPairAuthority
+    from .wf2_replication import WF2PairAuthority
 
 from .config import digest, fingerprint
 from .ft0_transforms import identity
@@ -294,12 +295,15 @@ def load_training_authority(review: BridgeReview, binding_ref: dict) -> Training
 
 
 def require_training(
-    authority: TrainingAuthority | BatchPairAuthority, activity: str, input_id: str
+    authority: TrainingAuthority | BatchPairAuthority | WF2PairAuthority,
+    activity: str,
+    input_id: str,
 ) -> None:
     """Single public admission boundary; duck-typed/subclass permissions cannot opt in."""
     from .real_batch_authority import BatchPairAuthority
+    from .wf2_replication import WF2PairAuthority
 
-    if type(authority) is BatchPairAuthority:
+    if type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority:
         authority.ensure(activity, input_id)
         return
     if type(authority) is not TrainingAuthority:

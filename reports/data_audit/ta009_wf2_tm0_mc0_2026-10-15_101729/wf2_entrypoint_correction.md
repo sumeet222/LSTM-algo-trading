@@ -1,0 +1,11 @@
+# Package009 entry-point correction
+
+The first approved proposal remains `wf2_two_pair_proposal_final.json`, SHA `596c80ed00ff9b3ca0c3dbbca2661e1a7851adbbcc2bdf786719570a071a3268`, with actual approval in `authority.json`. Its launcher failed before STARTED, checkpoint creation or optimizer work. `batch_execution.txt` and the associated command record preserve the failure. The linked ledger stayed 4/40 and the current registry pointer stayed v2.
+
+`python -m lstm_data.wf2_replication` originally created an authority class in `__main__`. The central guard imports the canonical module and deliberately admits only its exact concrete authority class. The resulting identity mismatch was correctly rejected. The module entry now delegates to `lstm_data.wf2_replication.main`, preserving the concrete guard. Training math, numerical loop, cohort, queue, masks and all scientific parameters remain unchanged. The read-only review CLI also accepts explicit proposal/approval paths so the first immutable proposal remains accessible.
+
+The corrected proposal is `wf2_two_pair_proposal_corrected.json`, SHA `b1ca944b79f9d01a2fca04094a22bf9c22434d5c85cbb05cd2434d250f93156a`; execution SHA `7c64afbb21c719f7643e7b0d9d64992a85c20bfca9d768ce3993d1b42cfb6e88`; input binding remains `d7731f67eacea404bc02b9083424061cf7086735463891b2363466728e03828c`. Its exact combined live approval is required before any new launch. The original reply is not silently expanded to cover new code.
+
+The focused regression suite passes 53 tests. The new entry-point test executes the `-m` code path through runpy and confirms canonical delegation; the test intentionally has the canonical module already imported and emits one documented runpy RuntimeWarning. Ruff passes. Full installed-extension static analysis reports zero errors and zero warnings. Before-correction source bytes are preserved in `entrypoint_attempt1/`; no old run's artifact was patched.
+
+The corrected binding was subsequently approved by the actual researcher response “Approve corrected binding for both exact pairs”, recorded in authority_corrected.json. A relative-output invocation then failed before STARTED and was archived under attempt2_relative_output; the successful absolute-output invocation used identical approved code. Both pairs subsequently completed; these pre-start launches consumed zero slots.

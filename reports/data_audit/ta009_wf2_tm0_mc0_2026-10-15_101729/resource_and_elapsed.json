@@ -1,0 +1,193 @@
+{
+  "actual_train_and_worker": {
+    "MC0": {
+      "calibration_epochs": 12,
+      "calibration_steps": 612,
+      "device": "cpu",
+      "logical_CPUs": 8,
+      "machine": "arm64",
+      "minutes": {
+        "calibration_training": 1.4650523736335648,
+        "calibration_validation": 0.023585633334005252,
+        "development_prediction_and_audit": 0.026929856950300746,
+        "final_checkpoint_and_verification": 0.003375483333365992,
+        "full_prefix_preprocessing_application": 0.12751057708325486,
+        "inner_preprocessing_application": 0.13896452846626442,
+        "raw_derived_loading": 0.037926954166808476,
+        "refit_train_prediction_audit": 0.13179075346658162,
+        "refit_training": 0.12948631944988545,
+        "selection_and_calibration_checkpoint": 0.0007893041668770214,
+        "total_end_to_end_worker": 2.121768952082493
+      },
+      "neural_fitting_seconds": 95.67232158500701,
+      "numpy": "2.5.3",
+      "peak_whole_process_RSS_bytes": 708313088,
+      "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+      "preprocessing": "REUSED_BOUND_PREFIX_RECIPES_NO_RECALCULATION",
+      "python": "3.14.6",
+      "refit_epochs": 1,
+      "refit_steps": 55,
+      "seconds": {
+        "calibration_training": 87.90314241801389,
+        "calibration_validation": 1.415138000040315,
+        "development_prediction_and_audit": 1.6157914170180447,
+        "final_checkpoint_and_verification": 0.2025290000019595,
+        "full_prefix_preprocessing_application": 7.650634624995291,
+        "inner_preprocessing_application": 8.337871707975864,
+        "raw_derived_loading": 2.2756172500085086,
+        "refit_train_prediction_audit": 7.907445207994897,
+        "refit_training": 7.769179166993126,
+        "selection_and_calibration_checkpoint": 0.047358250012621284,
+        "total_end_to_end_worker": 127.3061371249496
+      },
+      "threads": 1,
+      "torch": "2.10.0"
+    },
+    "TM0": {
+      "calibration_epochs": 12,
+      "calibration_steps": 612,
+      "device": "cpu",
+      "logical_CPUs": 8,
+      "machine": "arm64",
+      "minutes": {
+        "calibration_training": 0.7566772368173891,
+        "calibration_validation": 0.015364221516453351,
+        "development_prediction_and_audit": 0.024611538899868415,
+        "final_checkpoint_and_verification": 0.002348199999930027,
+        "full_prefix_preprocessing_application": 0.11844030000017179,
+        "inner_preprocessing_application": 0.1300851180499497,
+        "raw_derived_loading": 0.04123385694983881,
+        "refit_train_prediction_audit": 0.07340630484977737,
+        "refit_training": 0.1415587784673941,
+        "selection_and_calibration_checkpoint": 0.0006983118160860613,
+        "total_end_to_end_worker": 1.3512332326334824
+      },
+      "neural_fitting_seconds": 53.89416091708699,
+      "numpy": "2.5.3",
+      "peak_whole_process_RSS_bytes": 662388736,
+      "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+      "preprocessing": "REUSED_BOUND_PREFIX_RECIPES_NO_RECALCULATION",
+      "python": "3.14.6",
+      "refit_epochs": 2,
+      "refit_steps": 110,
+      "seconds": {
+        "calibration_training": 45.400634209043346,
+        "calibration_validation": 0.921853290987201,
+        "development_prediction_and_audit": 1.476692333992105,
+        "final_checkpoint_and_verification": 0.1408919999958016,
+        "full_prefix_preprocessing_application": 7.106418000010308,
+        "inner_preprocessing_application": 7.805107082996983,
+        "raw_derived_loading": 2.4740314169903286,
+        "refit_train_prediction_audit": 4.404378290986642,
+        "refit_training": 8.493526708043646,
+        "selection_and_calibration_checkpoint": 0.04189870896516368,
+        "total_end_to_end_worker": 81.07399395800894
+      },
+      "threads": 1,
+      "torch": "2.10.0"
+    }
+  },
+  "all_logged_command_seconds": 515.6120952920755,
+  "deadline": "2026-10-15T12:15:51-04:00",
+  "executions": {
+    "batch_execution": {
+      "code_after_sha256": "90bdaae6e3948c5a30c1e783f1c9a929c1ae821d4e735561b1501379c58c0612",
+      "code_before_sha256": "90bdaae6e3948c5a30c1e783f1c9a929c1ae821d4e735561b1501379c58c0612",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.wf2_replication",
+        "--plan",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/wf2_two_pair_proposal_final.json",
+        "--approval",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/authority.json",
+        "--output",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729"
+      ],
+      "elapsed_seconds": 4.982416415994521,
+      "exit_code": 0,
+      "finished_at": "2026-10-15T14:34:41.928406+00:00",
+      "started_at": "2026-10-15T14:34:36.945956+00:00"
+    },
+    "batch_execution_absolute": {
+      "code_after_sha256": "08a3b5a05372253d5d1f2fe3519a2f1d1cad2d2c976c6daacddf06064cb4f112",
+      "code_before_sha256": "08a3b5a05372253d5d1f2fe3519a2f1d1cad2d2c976c6daacddf06064cb4f112",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.wf2_replication",
+        "--plan",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/wf2_two_pair_proposal_corrected.json",
+        "--approval",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/authority_corrected.json",
+        "--output",
+        "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729"
+      ],
+      "elapsed_seconds": 219.2795575829805,
+      "exit_code": 0,
+      "finished_at": "2026-10-15T14:46:10.091753+00:00",
+      "started_at": "2026-10-15T14:42:30.818391+00:00"
+    },
+    "batch_execution_corrected": {
+      "code_after_sha256": "08a3b5a05372253d5d1f2fe3519a2f1d1cad2d2c976c6daacddf06064cb4f112",
+      "code_before_sha256": "08a3b5a05372253d5d1f2fe3519a2f1d1cad2d2c976c6daacddf06064cb4f112",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.wf2_replication",
+        "--plan",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/wf2_two_pair_proposal_corrected.json",
+        "--approval",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/authority_corrected.json",
+        "--output",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729"
+      ],
+      "elapsed_seconds": 17.887179374985863,
+      "exit_code": 1,
+      "finished_at": "2026-10-15T14:41:50.444848+00:00",
+      "started_at": "2026-10-15T14:41:32.557940+00:00"
+    },
+    "review": {
+      "code_after_sha256": "08a3b5a05372253d5d1f2fe3519a2f1d1cad2d2c976c6daacddf06064cb4f112",
+      "code_before_sha256": "08a3b5a05372253d5d1f2fe3519a2f1d1cad2d2c976c6daacddf06064cb4f112",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.wf2_review",
+        "--package",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729",
+        "--plan",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/wf2_two_pair_proposal_corrected.json",
+        "--approval",
+        "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/authority_corrected.json"
+      ],
+      "elapsed_seconds": 39.90123604197288,
+      "exit_code": 0,
+      "finished_at": "2026-10-15T14:47:04.775077+00:00",
+      "started_at": "2026-10-15T14:46:24.874524+00:00"
+    }
+  },
+  "package_elapsed_seconds_at_snapshot": 1914.239491,
+  "package_started_at": "2026-10-15T10:15:51-04:00",
+  "per_pair_supervisor": {
+    "MC0": {
+      "return_code": 0,
+      "total_pair_wall_seconds": 130.89559724996798
+    },
+    "TM0": {
+      "return_code": 0,
+      "total_pair_wall_seconds": 84.38364308304153
+    }
+  },
+  "prepared_recipe_compute": {
+    "market_recomputation_seconds": 13.871098292001989,
+    "stock_recomputation_seconds": 12.84034266602248
+  },
+  "report_reserve_seconds": 900,
+  "snapshot_at": "2026-10-15T10:47:45.239491-04:00",
+  "timing_semantics": "Neural fitting is measured calibration_training+refit_training, including forward/backward/step and scalar telemetry overhead, excluding validation; not optimizer-kernel-only. Worker, supervisor, wrapper and entire package are distinct; parallel check durations must not be summed as package wall time."
+}

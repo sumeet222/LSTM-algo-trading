@@ -1,0 +1,319 @@
+"""Read-only WF2 result and captured-batch review; no fitting or registry writes."""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import time
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import torch
+
+from .config import write_json
+from .four_model_diagnostics import paired_blocks, safe_model, session_concentration
+from .neural_engine import batch_prediction, session_batches
+from .neural_health import g6_summary
+from .pilot_postrun import summarize, target_array
+from .pretraining_policy import CANDIDATE
+from .real_batch_data import ConditionedView
+from .wf2_replication import authority
+
+GRADE = "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_CLOSE_PROXY"
+
+
+def read(path: Path) -> dict:
+    return json.loads(path.read_text())
+
+
+def table(path: Path, rows: list[dict]) -> None:
+    with path.open("x", newline="") as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def spearman(a: np.ndarray, b: np.ndarray) -> float | None:
+    if len(a) < 2 or np.ptp(a) == 0 or np.ptp(b) == 0:
+        return None
+    return float(np.corrcoef(pd.Series(a).rank().to_numpy(), pd.Series(b).rank().to_numpy())[0, 1])
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--package", type=Path, required=True)
+    parser.add_argument("--plan", type=Path)
+    parser.add_argument("--approval", type=Path)
+    args = parser.parse_args()
+    out = args.package
+    started = time.monotonic()
+    torch.set_num_threads(1)
+    plan = args.plan or out / "wf2_two_pair_proposal_final.json"
+    approval = args.approval or out / "authority.json"
+    metrics = {}
+    runtimes = {}
+    health = {}
+    batch_rows = []
+    associations = []
+    verification = {}
+    loss_tail = []
+    predictions = {}
+    original_keys = None
+    stock = None
+    for name in ("TM0", "MC0"):
+        token = authority(Path.cwd(), plan, approval, name)
+        view = token.view("WF2")
+        stock = view.stock if isinstance(view, ConditionedView) else view
+        keys = [(r.session, r.origin) for r in stock.rows]
+        if original_keys is None:
+            original_keys = keys
+        if keys != original_keys:
+            raise ValueError("WF2_MATCHED_KEYS_REQUIRED")
+        result = read(out / name / f"seed42_{name.lower()}_pair_result.json")
+        records = result["development"]["origin_records"]
+        if [(r["session"], r["origin"]) for r in records] != keys:
+            raise ValueError("WF2_STORED_KEY_MISMATCH")
+        truth = target_array(stock).astype(float)
+        scores = np.asarray([r["scores"] for r in records])
+        if not np.array_equal(truth, np.asarray([r["targets"] for r in records])):
+            raise ValueError("WF2_TARGET_MISMATCH")
+        model = safe_model(
+            out / name / "refit_final.pt",
+            result["final_checkpoint"],
+            result["contract"],
+            result["pair_key"],
+        )
+        lookup = {}
+        with torch.inference_mode():
+            for positions in session_batches(len(view.sessions), 42, 1, shuffle=False):
+                batch = view.batch(positions)
+                value = batch_prediction(model, batch)
+                for i, day in enumerate(batch.ids):
+                    for origin in (1, 2):
+                        if bool(batch.origins[i, origin - 1]):
+                            lookup[day, origin] = value[i, origin - 1].numpy().copy()
+        replay = np.asarray([lookup[k] for k in keys])
+        error = float(np.max(np.abs(replay - scores)))
+        if error > 2e-6:
+            raise ValueError("WF2_FROZEN_RELOAD_REPRODUCIBILITY_DEFECT")
+        metrics[name] = summarize(stock, scores)
+        predictions[name] = scores
+        verification[name] = {
+            "max_abs_reload_prediction_difference": error,
+            "tolerance": 2e-6,
+            "final": result["final_checkpoint"],
+            "selected": result["selected_checkpoint"],
+            "fresh_optimizer_state_empty": result["fresh_optimizer_state_empty"],
+        }
+        cal = [read(p) for p in sorted((out / name).glob("calibration_epoch_*.json"))]
+        refit = [read(p) for p in sorted((out / name).glob("refit_epoch_*.json"))]
+        health[name] = g6_summary(
+            tuple(r["training"] for r in cal),
+            tuple(refit),
+            result["development"]["score_std"],
+            result["selector"]["status"],
+        )
+        health[name]["selector"] = result["selector"]
+        runtimes[name] = read(out / name / "training_actual_runtime.json")
+        for phase, view_key, expected, trace in [
+            (
+                "CALIBRATION",
+                "inner",
+                runtimes[name]["calibration_steps"],
+                [r["training"] for r in cal],
+            ),
+            ("REFIT", "refit", runtimes[name]["refit_steps"], refit),
+        ]:
+            frame = pd.read_csv(out / name / ("gradient_batches_" + phase.lower() + ".csv"))
+            if len(frame) != expected or frame.optimizer_step_id.tolist() != list(
+                range(1, expected + 1)
+            ):
+                raise ValueError("ONE_BATCH_ROW_PER_ACTUAL_OPTIMIZER_STEP_REQUIRED")
+            fit_view = token.view(view_key)
+            for e, item in enumerate(trace, 1):
+                rows = frame.loc[frame.epoch == e]
+                sessions = [day for ids in rows.session_ids for day in ids.split("|")]
+                if len(sessions) != len(set(sessions)) or set(sessions) != set(fit_view.sessions):
+                    raise ValueError("BATCH_TELEMETRY_SESSION_CONSERVATION_REQUIRED")
+                if not np.allclose(
+                    rows.clip_multiplier.to_numpy(),
+                    np.minimum(1.0, 1.0 / (rows.preclip_global_grad_norm.to_numpy() + 1e-6)),
+                    rtol=0,
+                    atol=1e-15,
+                ):
+                    raise ValueError("BATCH_CLIP_CONVENTION_MISMATCH")
+                weighted = float(
+                    np.sum(rows.batch_session_weighted_MSE * rows.number_sessions)
+                    / rows.number_sessions.sum()
+                )
+                if abs(weighted - item["mse"]) > 2e-6:
+                    raise ValueError("BATCH_EPOCH_WEIGHTED_MSE_MISMATCH")
+                if (
+                    abs(
+                        float((rows.preclip_global_grad_norm > 1).mean())
+                        - item["gradients"]["clipped_fraction"]
+                    )
+                    > 1e-12
+                ):
+                    raise ValueError("BATCH_EPOCH_G6_CLIP_FRACTION_MISMATCH")
+            for label, subset in [
+                ("all_batches", frame),
+                (
+                    "exclude_5_largest_target_max_batches",
+                    frame.drop(frame.target_abs_max.nlargest(min(5, len(frame) - 2)).index),
+                ),
+            ]:
+                associations.append(
+                    {
+                        "model": name,
+                        "stage": phase,
+                        "sensitivity": label,
+                        "batches": len(subset),
+                        "loss_vs_preclip_spearman": spearman(
+                            subset.batch_session_weighted_MSE.to_numpy(),
+                            subset.preclip_global_grad_norm.to_numpy(),
+                        ),
+                        "targetmax_vs_preclip_spearman": spearman(
+                            subset.target_abs_max.to_numpy(),
+                            subset.preclip_global_grad_norm.to_numpy(),
+                        ),
+                        "clip_fraction_norm_gt1": float(
+                            (subset.preclip_global_grad_norm > 1).mean()
+                        ),
+                        "grade": GRADE,
+                    }
+                )
+            batch_rows.extend({**r, "grade": GRADE} for r in frame.to_dict("records"))
+        for partition, key in [("refit", "refit_train_evaluation"), ("WF2", "development")]:
+            rec = result[key]["origin_records"]
+            err = np.asarray(
+                [np.mean((np.asarray(r["scores"]) - np.asarray(r["targets"])) ** 2) for r in rec]
+            )
+            conc = session_concentration([r["session"] for r in rec], err)
+            for fraction, value in conc["shares"].items():
+                loss_tail.append(
+                    {
+                        "model": name,
+                        "partition": partition,
+                        "top_fraction": fraction,
+                        **value,
+                        "sessions": conc["sessions"],
+                        "grade": GRADE,
+                    }
+                )
+    if stock is None or original_keys is None:
+        raise ValueError("WF2_PAIR_RESULTS_REQUIRED")
+    truth = target_array(stock).astype(float)
+    metrics["ZERO"] = summarize(stock, np.zeros_like(truth))
+    rows = []
+    for name in ("TM0", "MC0", "ZERO"):
+        m = metrics[name]
+        rows.append(
+            {
+                "model": name,
+                "MSE": m["MSE"],
+                "daily_Rank_IC": m["daily_Rank_IC"],
+                "defined_only_IC": m["defined_only_daily_Rank_IC"],
+                "origin_1_IC": m["by_origin"]["1"]["IC"],
+                "origin_2_IC": m["by_origin"]["2"]["IC"],
+                "origins": m["origins"],
+                "sessions": m["sessions"],
+                "score_std": m["score_std"],
+                "tied_origins": m["tied_score_origins"],
+                "constant_origins": m["constant_forecast_origins"],
+                "MSE_minus_ZERO": m["MSE"] - metrics["ZERO"]["MSE"],
+                "beats_ZERO_MSE": m["MSE"] < metrics["ZERO"]["MSE"],
+                "calibration_epochs": runtimes[name]["calibration_epochs"]
+                if name in runtimes
+                else None,
+                "refit_epochs": runtimes[name]["refit_epochs"] if name in runtimes else None,
+                "neural_fit_seconds": runtimes[name]["neural_fitting_seconds"]
+                if name in runtimes
+                else None,
+                "G6": health[name]["status"] if name in health else "NOT_APPLICABLE",
+                "grade": GRADE,
+            }
+        )
+    table(out / "wf2_comparison.csv", rows)
+    saved = []
+    for i, (day, origin) in enumerate(original_keys):
+        for j, symbol in enumerate(CANDIDATE):
+            saved.append(
+                {
+                    "session": day,
+                    "origin": origin,
+                    "symbol": symbol,
+                    "TG0": truth[i, j],
+                    "TM0": predictions["TM0"][i, j],
+                    "MC0": predictions["MC0"][i, j],
+                    "ZERO": 0.0,
+                    "grade": GRADE,
+                }
+            )
+    table(out / "wf2_matched_predictions.csv", saved)
+    daily = []
+    for a, b in zip(metrics["TM0"]["daily"], metrics["MC0"]["daily"]):
+        if a["session"] != b["session"]:
+            raise ValueError("WF2_PAIRED_DAILY_KEY_REQUIRED")
+        daily.append(
+            {
+                "session": a["session"],
+                "TM0_MSE": a["MSE"],
+                "MC0_MSE": b["MSE"],
+                "TM0_IC": a["IC"],
+                "MC0_IC": b["IC"],
+                "MC0_minus_TM0_MSE": b["MSE"] - a["MSE"],
+                "MC0_minus_TM0_IC": b["IC"] - a["IC"],
+                "grade": GRADE,
+            }
+        )
+    table(out / "paired_daily_monthly.csv", daily)
+    month = (
+        pd.DataFrame(daily)
+        .assign(month=lambda f: f.session.str[:7])
+        .groupby("month")
+        .mean(numeric_only=True)
+        .reset_index()
+    )
+    month["grade"] = GRADE
+    table(out / "paired_monthly.csv", month.to_dict("records"))
+    calendar = {d: i for i, d in enumerate(token.inputs().base.history.calendar.days)}
+    positions = np.asarray([calendar[r["session"]] for r in daily])
+    uncertainty = {
+        metric: paired_blocks(
+            np.asarray([r["MC0_minus_TM0_" + metric] for r in daily]), positions, 5
+        )
+        for metric in ("MSE", "IC")
+    }
+    table(out / "batch_loss_vs_gradient.csv", batch_rows)
+    table(out / "batch_association_summary.csv", associations)
+    table(out / "loss_concentration.csv", loss_tail)
+    write_json(
+        out / "review_summary.json",
+        {
+            "metrics": metrics,
+            "health": health,
+            "runtimes": runtimes,
+            "reload_verification": verification,
+            "paired_exploratory_uncertainty": uncertainty,
+            "review_actual_seconds": time.monotonic() - started,
+            "batch_link": "IDENTIFIABLE_CAPTURED_BATCH_ASSOCIATION_NOT_PER_EXAMPLE_CAUSATION",
+            "new_fits": 0,
+        },
+    )
+    print(
+        json.dumps(
+            {
+                "status": "WF2_READ_ONLY_REVIEW_COMPLETE",
+                "seconds": time.monotonic() - started,
+                "matched_origins": len(original_keys),
+            }
+        )
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

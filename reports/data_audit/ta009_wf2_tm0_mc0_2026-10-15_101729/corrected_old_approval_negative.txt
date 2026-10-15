@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/wf2_replication.py", line 619, in <module>
+    raise SystemExit(canonical_main())
+                     ~~~~~~~~~~~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/wf2_replication.py", line 536, in main
+    approval_scope(reference(args.plan), json.loads(args.approval.read_text()))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/wf2_replication.py", line 154, in approval_scope
+    raise ValueError("WF2_ACTUAL_EXACT_TWO_PAIR_APPROVAL_REQUIRED")
+ValueError: WF2_ACTUAL_EXACT_TWO_PAIR_APPROVAL_REQUIRED

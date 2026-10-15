@@ -1,0 +1,128 @@
+{
+  "approval_fields": {
+    "actor_type": "human",
+    "approve_batch_telemetry_v1": true,
+    "approve_linked_registry_v3": true,
+    "approved_runs": [
+      "TA009-TM0-S42-WF2",
+      "TA009-MC0-S42-WF2"
+    ],
+    "extend_qualified_stock_SPY_attestation_to_WF2": true,
+    "owner": "Track A researcher",
+    "proposal_sha256": "596c80ed00ff9b3ca0c3dbbca2661e1a7851adbbcc2bdf786719570a071a3268",
+    "response_provenance": "",
+    "response_text": "",
+    "status": "AWAITING_APPROVAL"
+  },
+  "code_sha256": "b45be99afbcfd3a92e104f9a9be0cce3edd8847292ad328d0efd81363a2cd0c5",
+  "deadline": "2026-10-15T12:15:51-04:00",
+  "input_binding": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/input_binding.json",
+    "sha256": "d7731f67eacea404bc02b9083424061cf7086735463891b2363466728e03828c"
+  },
+  "maximum_wall_seconds": 7200,
+  "pair_budget": "4/40\u21926/40, ceiling40 unchanged",
+  "proposal": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/wf2_two_pair_proposal_final.json",
+    "sha256": "596c80ed00ff9b3ca0c3dbbca2661e1a7851adbbcc2bdf786719570a071a3268"
+  },
+  "reserve_seconds": 900,
+  "runs": [
+    {
+      "architecture": "TM0",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "TM0",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 16,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-12-31",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 6433,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF2",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "input_id": "fd9f4387a0c1bb7bf0bbc262576a410157ec2c4c355d0206d16e108830b4c70d",
+      "run_id": "TA009-TM0-S42-WF2"
+    },
+    {
+      "architecture": "MC0",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "MC0",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 21,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-12-31",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7073,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF2",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "input_id": "03deb81ed4fedffa113d65f2b89c90ee9f344aa78eb997ca487a9cef89c42ba2",
+      "run_id": "TA009-MC0-S42-WF2"
+    }
+  ]
+}

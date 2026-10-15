@@ -1,0 +1,52 @@
+{
+  "WF2": "2024-01-01 through 2024-06-30; confirmation excluded at 2024-07-01T04:00Z",
+  "actual_approval": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/authority_corrected.json",
+    "sha256": "efe1c2a05878ac6bc6af1c11732e714ab689487b52f5839ece56592fef7f74b9"
+  },
+  "actual_executed_plan": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/wf2_two_pair_proposal_corrected.json",
+    "sha256": "b1ca944b79f9d01a2fca04094a22bf9c22434d5c85cbb05cd2434d250f93156a"
+  },
+  "actual_last_fitting_exchange_session": "2023-12-29",
+  "after_started_pairs": 6,
+  "effective_cutoff": "2024-01-01T05:00:00Z exclusive, label maturity/purge enforced; last exchange session resolved by calendar",
+  "execution_code_sha256": "7c64afbb21c719f7643e7b0d9d64992a85c20bfca9d768ce3993d1b42cfb6e88",
+  "execution_command": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/batch_execution_absolute_command.json",
+    "sha256": "11780fde1ceb5962b87a4ec1f38efba260df4d939248e1377095f2968ea55c28"
+  },
+  "fresh_refit_and_checkpoint_boundaries": "selected calibration and final refit have different preparation identities and empty fresh optimizer; all immutable hashes in per-model result and manifests",
+  "input_binding": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/input_binding.json",
+    "sha256": "d7731f67eacea404bc02b9083424061cf7086735463891b2363466728e03828c"
+  },
+  "original_preflight": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/preflight_and_bindings.json",
+    "sha256": "576658a230c01920c9c7f0694878011534ded16d9a2c100c270034ba35630714"
+  },
+  "prepared_cohorts": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/prepared_dataset_retention.json",
+    "sha256": "f132e0ffe44b5d556a6c0a911c75d8c0b03a050b71812362f68e6e2b652b1c98"
+  },
+  "prior_approval_and_failed_launches_preserved": true,
+  "queue": [
+    "TA009-TM0-S42-WF2",
+    "TA009-MC0-S42-WF2"
+  ],
+  "recheck_at": "2026-10-15T14:47:19.840810+00:00",
+  "source_and_policy_qualifications": {
+    "actions": "Retrospective vendor split-price/inverse-volume representation; action vintage/raw-cashbook completeness not certified.",
+    "clock": "Idealized zero-latency period-end availability; actual publication remains unknown.",
+    "evidence_grade": "ASSUMPTION_CONDITIONAL_CANDIDATE_ONLY",
+    "execution": "Completed-hourly-close price-label proxy, not executable minute fills.",
+    "final_shortlist": "Four screened neural families do not authorize promotion past frozen <=3 family shortlist.",
+    "future_authority": "Named pairs consumed; no extra models, folds, seeds or retry authority.",
+    "market": "SPY ETF state proxy; course USA500 substitution and collaborator signatures not fabricated.",
+    "production": "Production D1 and CURRENT_PROTOCOL unchanged.",
+    "rights": "Researcher-attested local stock/SPY use; private evidence not inspected; no legal/license certification or redistribution grant.",
+    "statistics": "One seed and one development fold; no significance, bootstrap, economic replay or causal increment claim.",
+    "universe": "Retrospective AAPL/COST/CMCSA/SBUX/CME; historical membership/sector completeness not verified."
+  },
+  "starting_pairs": 4
+}

@@ -1,0 +1,16 @@
+{
+  "all_optimizer_state_tensors_bitwise_equal": true,
+  "evidence": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/focused_release_command.json",
+    "sha256": "f8d79164151cf5be3d8bb3466289fb321ee8c14261ab1ecc8d55e4576e466a68"
+  },
+  "formula": "min(1, 1/(preclip_norm+1e-6)); exceeds_cap_for_G6 is norm>1",
+  "new_real_pairs": 0,
+  "one_batch_row_per_effective_update": true,
+  "parameter_updates_bitwise_equal": true,
+  "same_single_clip_return_observed": true,
+  "scope": "Fabricated two-session, three-origin single effective optimizer batch only, observer on/off",
+  "status": "PASS",
+  "test": "test_actual_epoch_one_update_is_bitwise_identical_with_observer",
+  "torch_RNG_state_bitwise_equal": true
+}

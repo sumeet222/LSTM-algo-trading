@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "lstm_data.wf2_replication",
+    "--plan",
+    "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/wf2_two_pair_proposal_corrected.json",
+    "--approval",
+    "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/authority_corrected.json",
+    "--output",
+    "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729"
+  ],
+  "started_at": "2026-10-15T14:42:30.818391+00:00",
+  "finished_at": "2026-10-15T14:46:10.091753+00:00",
+  "elapsed_seconds": 219.2795575829805,
+  "exit_code": 0,
+  "code_before_sha256": "08a3b5a05372253d5d1f2fe3519a2f1d1cad2d2c976c6daacddf06064cb4f112",
+  "code_after_sha256": "08a3b5a05372253d5d1f2fe3519a2f1d1cad2d2c976c6daacddf06064cb4f112"
+}

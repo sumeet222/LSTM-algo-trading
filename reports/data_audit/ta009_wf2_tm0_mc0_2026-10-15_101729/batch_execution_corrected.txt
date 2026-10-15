@@ -1,0 +1,42 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/wf2_replication.py", line 619, in <module>
+    raise SystemExit(canonical_main())
+                     ~~~~~~~~~~~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/wf2_replication.py", line 540, in main
+    run_worker(
+    ~~~~~~~~~~^
+        authority(Path.cwd(), args.plan, args.approval, args.pair), args.output / args.pair
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/real_bridge_run.py", line 529, in run_worker
+    append_pair(authority, "STARTED", {"output": str(out.relative_to(authority.review.root))})
+                                                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 490, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0' is not in the subpath of '/Users/pradeepgupta/Desktop/Quant /Projects/LSTM'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/wf2_replication.py", line 619, in <module>
+    raise SystemExit(canonical_main())
+                     ~~~~~~~~~~~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/wf2_replication.py", line 594, in main
+    write_json(
+    ~~~~~~~~~~^
+        args.output / "execution_summary.json",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/config.py", line 87, in write_json
+    atomic_new(path, (json.dumps(value, indent=2, sort_keys=True) + "\n").encode())
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/config.py", line 81, in atomic_new
+    os.link(temporary, path)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/.pending-srpb7ydq' -> 'reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/execution_summary.json'

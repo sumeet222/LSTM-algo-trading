@@ -1,0 +1,619 @@
+"""Exactly two explicitly approved WF2 pairs using the existing candidate lifecycle."""
+
+from __future__ import annotations
+
+import argparse
+import gzip
+import json
+import os
+import subprocess
+import sys
+import time
+from dataclasses import asdict, dataclass, field
+from datetime import datetime, timezone
+from pathlib import Path
+
+import pandas as pd
+
+from .baseline_ridge import windows
+from .config import atomic_new, digest, fingerprint, write_json
+from .ft0_transforms import identity
+from .market_features import MarketMeasures
+from .pretraining_market import load_conditional_spy, prepare_market
+from .pretraining_policy import verify_ref
+from .pretraining_store import read_preparation, save_preparation
+from .pretraining_transforms import CandidateView, fit_preparation
+from .real_batch_authority import TRANSITIONS, atomic_replace_json, journal_rows_v2
+from .real_batch_data import BatchInputs
+from .real_bridge_authority import CONTRACT, BridgeReview, load_review
+from .real_bridge_data import load_inputs
+
+QUEUE = ("TM0", "MC0")
+JOURNAL = "reports/audit/track_a_real_pairs_v3.jsonl"
+SEAL = object()
+
+
+def reference(path: Path) -> dict:
+    return {"path": str(path), "sha256": digest(path)}
+
+
+def contract(name: str) -> dict:
+    if name not in QUEUE:
+        raise ValueError("ONLY_TM0_MC0_WF2_SEED42")
+    return {
+        **CONTRACT,
+        "architecture": name,
+        "stage": "WF2",
+        "cutoff": "2023-12-31",
+        "channels": 16 if name == "TM0" else 21,
+        "parameters": 6433 if name == "TM0" else 7073,
+    }
+
+
+def code_binding(root: Path) -> str:
+    names = (
+        "real_bridge_run.py",
+        "real_bridge_authority.py",
+        "real_bridge_data.py",
+        "real_batch_data.py",
+        "wf2_replication.py",
+        "batch_telemetry.py",
+        "neural_engine.py",
+        "neural_lifecycle.py",
+        "neural_health.py",
+        "pretraining_transforms.py",
+        "pretraining_market.py",
+    )
+    return identity({n: digest(root / "src/lstm_data" / n) for n in names})
+
+
+def journal_rows(path: Path) -> list[dict]:
+    raw = path.read_bytes() if path.exists() else b""
+    if raw and not raw.endswith(b"\n"):
+        raise ValueError("WF2_TRUNCATED_JOURNAL")
+    rows = [json.loads(r) for r in raw.splitlines()]
+    current = {}
+    started = []
+    for i, r in enumerate(rows):
+        name = r["architecture"]
+        status = r["status"]
+        if (
+            r.get("sequence") != i + 1
+            or r.get("previous") != fingerprint(rows[:i])
+            or r.get("contract") != contract(name)
+            or status not in TRANSITIONS
+            or r.get("run_id") != f"TA009-{name}-S42-WF2"
+        ):
+            raise ValueError("WF2_JOURNAL_CHAIN_OR_CONTRACT")
+        if status == "STARTED":
+            if (
+                name in current
+                or len(started) >= 2
+                or name != QUEUE[len(started)]
+                or (i and rows[i - 1]["status"] != "COMPLETED")
+            ):
+                raise ValueError("WF2_NO_RETRY_OR_OUT_OF_ORDER")
+            started.append(name)
+        elif name not in current or status not in TRANSITIONS[current[name]]:
+            raise ValueError("WF2_MONOTONE_PAIR_TRANSITION")
+        current[name] = status
+        if r.get("global_started_pairs") != 4 + len(started):
+            raise ValueError("WF2_GLOBAL_BUDGET_CHAIN")
+    return rows
+
+
+def load_plan(root: Path, ref: dict) -> tuple[dict, BridgeReview]:
+    plan = json.loads(verify_ref(root, ref).read_text())
+    if (
+        plan.get("id") != "TA009_WF2_TM0_MC0_PAIRED_REPLICATION"
+        or plan.get("code_sha256") != code_binding(root)
+        or [r["architecture"] for r in plan["runs"]] != list(QUEUE)
+        or any(r["contract"] != contract(r["architecture"]) for r in plan["runs"])
+        or plan.get("maximum_wall_seconds") != 7200
+        or plan.get("report_reserve_seconds") != 900
+        or plan.get("confirmation_access") is not False
+        or plan.get("production_migration") is not False
+    ):
+        raise ValueError("WF2_EXACT_PROPOSAL_AND_CODE_REQUIRED")
+    for key in (
+        "producer",
+        "dataset",
+        "market",
+        "prior_plan",
+        "prior_pointer_snapshot",
+        "prior_v1_journal",
+        "prior_v2_journal",
+        "original_protocol",
+        "registry_definition",
+        "input_binding",
+    ):
+        verify_ref(root, plan[key])
+    for ref in list(plan["stock_preparations"].values()) + list(
+        plan["market_preparations"].values()
+    ):
+        verify_ref(root, ref)
+    prior = journal_rows_v2(root / plan["prior_v2_journal"]["path"])
+    if sum(r["status"] == "STARTED" for r in prior) != 3 or prior[-1]["status"] != "COMPLETED":
+        raise ValueError("WF2_VERIFIED_FOUR_PAIR_PREDECESSOR_REQUIRED")
+    return plan, load_review(root, plan["producer"])
+
+
+def approval_scope(plan_ref: dict, approval: dict) -> None:
+    if (
+        approval.get("actor_type") != "human"
+        or approval.get("owner") != "Track A researcher"
+        or approval.get("status") != "APPROVED"
+        or approval.get("proposal_sha256") != plan_ref["sha256"]
+        or approval.get("approved_runs") != ["TA009-TM0-S42-WF2", "TA009-MC0-S42-WF2"]
+        or approval.get("extend_qualified_stock_SPY_attestation_to_WF2") is not True
+        or approval.get("approve_linked_registry_v3") is not True
+        or approval.get("approve_batch_telemetry_v1") is not True
+        or not approval.get("response_text")
+        or not approval.get("response_provenance")
+    ):
+        raise ValueError("WF2_ACTUAL_EXACT_TWO_PAIR_APPROVAL_REQUIRED")
+
+
+def load_wf2_inputs(review: BridgeReview, plan: dict) -> BatchInputs:
+    base, _ = load_inputs(review, ("WF2_REFIT",))
+    candidates = {
+        key: CandidateView(base, read_preparation(review.root, ref))
+        for key, ref in plan["stock_preparations"].items()
+    }
+    market = json.loads(gzip.decompress(verify_ref(review.root, plan["market"]).read_bytes()))
+    market["preparations"] = {
+        key: json.loads(verify_ref(review.root, ref).read_text())
+        for key, ref in plan["market_preparations"].items()
+    }
+    return BatchInputs(review, base, candidates, market, fold="WF2")
+
+
+@dataclass(frozen=True)
+class WF2PairAuthority:
+    review: BridgeReview
+    plan_ref: dict
+    plan: dict
+    approval_ref: dict
+    approval: dict
+    architecture: str
+    seal: object
+    cache: dict = field(default_factory=dict, compare=False)
+
+    @property
+    def descriptor(self) -> dict:
+        return next(r for r in self.plan["runs"] if r["architecture"] == self.architecture)
+
+    @property
+    def contract(self) -> dict:
+        return contract(self.architecture)
+
+    @property
+    def run_id(self) -> str:
+        return self.descriptor["run_id"]
+
+    @property
+    def binding(self) -> dict:
+        return {"input_id": self.descriptor["input_id"], "proposal": self.plan_ref}
+
+    @property
+    def binding_ref(self) -> dict:
+        return {"plan": self.plan_ref, "approval": self.approval_ref, "run_id": self.run_id}
+
+    def ensure(self, activity: str, input_id: str) -> None:
+        if (
+            type(self) is not WF2PairAuthority
+            or getattr(self, "seal", None) is not SEAL
+            or activity
+            not in {"START_PAIR", "CALIBRATION", "REFIT", "DEVELOPMENT_EVALUATION", "CHECKPOINT"}
+            or input_id != self.binding["input_id"]
+        ):
+            raise ValueError("CONCRETE_WF2_AUTHORITY_REQUIRED")
+        self.review.ensure()
+        approval_scope(self.plan_ref, self.approval)
+        if (
+            json.loads(verify_ref(self.review.root, self.approval_ref).read_text()) != self.approval
+            or json.loads(verify_ref(self.review.root, self.plan_ref).read_text()) != self.plan
+            or code_binding(self.review.root) != self.plan["code_sha256"]
+        ):
+            raise ValueError("STALE_WF2_CODE_OR_AUTHORITY")
+        for key in (
+            "dataset",
+            "market",
+            "prior_v1_journal",
+            "prior_v2_journal",
+            "original_protocol",
+            "input_binding",
+        ):
+            verify_ref(self.review.root, self.plan[key])
+        for ref in list(self.plan["stock_preparations"].values()) + list(
+            self.plan["market_preparations"].values()
+        ):
+            verify_ref(self.review.root, ref)
+        pointer = self.review.root / "configs/CURRENT_EXPERIMENT_REGISTRY.json"
+        rows = journal_rows(self.review.root / JOURNAL)
+        if not rows:
+            if digest(pointer) != self.plan["prior_pointer_snapshot"]["sha256"]:
+                raise ValueError("WF2_PRIOR_REGISTRY_CHANGED")
+        else:
+            active = json.loads(pointer.read_text())
+            if (
+                active.get("plan") != self.plan_ref
+                or active.get("approval") != self.approval_ref
+                or active.get("definition") != self.plan["registry_definition"]
+                or active.get("real_journal") != JOURNAL
+            ):
+                raise ValueError("WF2_ACTIVE_REGISTRY_OR_JOURNAL_CHANGED")
+
+    def inputs(self) -> BatchInputs:
+        self.ensure("START_PAIR", self.binding["input_id"])
+        if "inputs" not in self.cache:
+            self.cache["inputs"] = load_wf2_inputs(self.review, self.plan)
+        return self.cache["inputs"]
+
+    def view(self, key: str):
+        inputs = self.inputs()
+        view = inputs.stock_view(key) if self.architecture == "TM0" else inputs.view(key, 21)
+        expected = self.descriptor["views"][key]
+        if view.version != expected["view_id"] or view.preparation_id != expected["preparation_id"]:
+            raise ValueError("WF2_APPROVED_VIEW_OR_RECIPE_CHANGED")
+        return view
+
+    def append(self, status: str, detail: dict) -> None:
+        if status != "FAILED":
+            self.ensure("CHECKPOINT", self.binding["input_id"])
+        elif type(self) is not WF2PairAuthority or getattr(self, "seal", None) is not SEAL:
+            raise ValueError("CONCRETE_FAILED_WF2_AUTHORITY_REQUIRED")
+        root = self.review.root
+        path = root / JOURNAL
+        lock = path.with_suffix(".lock")
+        with lock.open("x"):
+            pass
+        try:
+            rows = journal_rows(path)
+            own = [r for r in rows if r["run_id"] == self.run_id]
+            if status == "STARTED":
+                started = [r["architecture"] for r in rows if r["status"] == "STARTED"]
+                if (
+                    own
+                    or started != list(QUEUE[: len(started)])
+                    or QUEUE[len(started) : len(started) + 1] != (self.architecture,)
+                    or (rows and rows[-1]["status"] != "COMPLETED")
+                ):
+                    raise ValueError("WF2_NO_DUPLICATE_RETRY_OR_OVERLAP")
+            elif not own or status not in TRANSITIONS[own[-1]["status"]]:
+                raise ValueError("WF2_CURRENT_PAIR_TRANSITION_REQUIRED")
+            event = {
+                "sequence": len(rows) + 1,
+                "previous": fingerprint(rows),
+                "at": datetime.now(timezone.utc).isoformat(),
+                "run_id": self.run_id,
+                "architecture": self.architecture,
+                "contract": self.contract,
+                "pair_key": fingerprint(
+                    [self.binding_ref, self.binding["input_id"], self.contract]
+                ),
+                "status": status,
+                "authority": self.binding_ref,
+                "detail": detail,
+                "global_started_pairs": 4
+                + sum(r["status"] == "STARTED" for r in rows)
+                + int(status == "STARTED"),
+            }
+            pointer = root / "configs/CURRENT_EXPERIMENT_REGISTRY.json"
+            if status == "STARTED" and not rows:
+                if digest(pointer) != self.plan["prior_pointer_snapshot"]["sha256"]:
+                    raise ValueError("WF2_PRIOR_REGISTRY_CHANGED")
+                atomic_replace_json(
+                    pointer,
+                    {
+                        "schema": 3,
+                        "definition": self.plan["registry_definition"],
+                        "previous_pointer": self.plan["prior_pointer_snapshot"],
+                        "prior_v1_journal": self.plan["prior_v1_journal"],
+                        "prior_v2_journal": self.plan["prior_v2_journal"],
+                        "real_journal": JOURNAL,
+                        "plan": self.plan_ref,
+                        "approval": self.approval_ref,
+                        "counts_started_including_failed": True,
+                    },
+                )
+            old = path.read_bytes() if path.exists() else b""
+            temporary = path.with_suffix(".pending")
+            atomic_new(
+                temporary, old + json.dumps(event, sort_keys=True, allow_nan=False).encode() + b"\n"
+            )
+            journal_rows(temporary)
+            os.replace(temporary, path)
+        finally:
+            lock.unlink()
+
+
+def authority(root: Path, plan_path: Path, approval_path: Path, name: str) -> WF2PairAuthority:
+    plan_ref = reference(plan_path)
+    plan, review = load_plan(root, plan_ref)
+    approval_ref = reference(approval_path)
+    approval = json.loads(approval_path.read_text())
+    approval_scope(plan_ref, approval)
+    result = WF2PairAuthority(review, plan_ref, plan, approval_ref, approval, name, SEAL)
+    result.ensure("START_PAIR", result.binding["input_id"])
+    return result
+
+
+def numeric_recipe(recipe: dict) -> dict:
+    """Compare calculations independently of actual reconstruction wall timestamps."""
+    value = dict(recipe)
+    value.pop("constructed_at", None)
+    value["window"] = {k: v for k, v in value["window"].items() if k != "fitted_at"}
+    return value
+
+
+def prepare(out: Path) -> dict:
+    pre = json.loads((out / "preflight_and_bindings.json").read_text())
+    old = pre["old_bound_plan"]
+    review = load_review(Path.cwd(), old["producer"])
+    base, _ = load_inputs(review, ("WF2_REFIT",))
+    market = json.loads(gzip.decompress(verify_ref(Path.cwd(), old["market"]).read_bytes()))
+    inner, tail, full = windows("WF2", pd.Timestamp.now(tz="UTC"))
+    stock_refs = {}
+    t = time.monotonic()
+    for key, window in (("WF2_INNER_TRAIN", inner), ("WF2_REFIT", full)):
+        prep = fit_preparation(base, window)
+        stock_refs[key] = save_preparation(prep, out / (key + "_stock_preparation.json"))
+        previous = read_preparation(Path.cwd(), review.manifest["preparations"][key])
+        if numeric_recipe(asdict(prep)) != numeric_recipe(asdict(previous)):
+            raise ValueError("WF2_RECOMPUTATION_DIFFERS_FROM_CANONICAL_RECIPE")
+    stock_seconds = time.monotonic() - t
+    t = time.monotonic()
+    history, source = load_conditional_spy(review.preparation_authority, market["source"]["annex"])
+    measures = []
+    for original in market["measures"]:
+        row = dict(original)
+        row["timestamp"] = pd.Timestamp(row["timestamp"])
+        row["evidence_ids"] = tuple(row["evidence_ids"])
+        measures.append(MarketMeasures(**row))
+    if (
+        len({r.timestamp for r in measures}) != len(measures)
+        or source["identity"] != market["source"]["identity"]
+    ):
+        raise ValueError("WF2_UNIQUE_MARKET_SOURCE_MISMATCH")
+    market_refs = {}
+    for key, window in (("WF2_INNER_TRAIN", inner), ("WF2_REFIT", full)):
+        recipe = prepare_market(history, tuple(measures), window)
+        if numeric_recipe(recipe) != numeric_recipe(market["preparations"][key]):
+            raise ValueError("WF2_MARKET_RECOMPUTATION_MISMATCH")
+        write_json(out / (key + "_market_preparation.json"), recipe)
+        market_refs[key] = reference(out / (key + "_market_preparation.json"))
+    market_seconds = time.monotonic() - t
+    recipe_plan = {
+        "stock_preparations": stock_refs,
+        "market_preparations": market_refs,
+        "market": old["market"],
+    }
+    inputs = load_wf2_inputs(review, recipe_plan)
+    stock = {key: inputs.stock_view(key) for key in ("inner", "validation", "refit", "WF2")}
+    conditioned = {key: inputs.view(key, 21) for key in stock}
+    if len(stock["validation"].sessions) < 50:
+        raise ValueError("WF2_INADEQUATE_UNSHIFTED_63_SESSION_TAIL")
+    for key, view in stock.items():
+        if [(r.session, r.origin, r.targets) for r in view.rows] != [
+            (r.session, r.origin, r.targets) for r in conditioned[key].rows
+        ]:
+            raise ValueError("WF2_EXACT_MATCHED_TARGET_MASK_REQUIRED")
+        # Existing batch validation checks every actual finite tensor/target; no fitted model.
+        for i in range(0, len(view.sessions), 16):
+            positions = tuple(range(i, min(i + 16, len(view.sessions))))
+            a = view.batch(positions)
+            b = conditioned[key].batch(positions)
+            import torch
+
+            if not torch.equal(a.inputs, b.inputs[..., :16]):
+                raise ValueError("WF2_EXACT_16_CHANNEL_PREFIX_REQUIRED")
+    bindings = {
+        name: {key: (stock if name == "TM0" else conditioned)[key].summary() for key in stock}
+        for name in QUEUE
+    }
+    write_json(
+        out / "input_binding.json",
+        {
+            "fold": "WF2",
+            "views": bindings,
+            "stock_recipes": stock_refs,
+            "market_recipes": market_refs,
+            "source": old["dataset"],
+            "market": old["market"],
+            "no_confirmation": True,
+        },
+    )
+    definition = Path("configs/track_a_candidate_experiment_registry_v3.json")
+    write_json(
+        definition,
+        {
+            "schema": 3,
+            "ceiling": 40,
+            "prior_count": 4,
+            "new_pair_limit": 2,
+            "new_real_journal": JOURNAL,
+            "prior_pointer": reference(out / "registry_pointer_v2_snapshot.json"),
+            "prior_v1_journal": reference(Path(old["prior_real_journal"]["path"])),
+            "prior_v2_journal": reference(Path("reports/audit/track_a_real_pairs_v2.jsonl")),
+            "counts_failed_starts": True,
+            "production_migration": False,
+        },
+    )
+    plan = {
+        "id": "TA009_WF2_TM0_MC0_PAIRED_REPLICATION",
+        "code_sha256": code_binding(Path.cwd()),
+        "producer": old["producer"],
+        "dataset": old["dataset"],
+        "market": old["market"],
+        "prior_plan": reference(
+            Path("reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/batch_plan.json")
+        ),
+        "prior_pointer_snapshot": reference(out / "registry_pointer_v2_snapshot.json"),
+        "prior_v1_journal": reference(Path(old["prior_real_journal"]["path"])),
+        "prior_v2_journal": reference(Path("reports/audit/track_a_real_pairs_v2.jsonl")),
+        "original_protocol": old["original_protocol"],
+        "registry_definition": reference(definition),
+        "input_binding": reference(out / "input_binding.json"),
+        **recipe_plan,
+        "maximum_wall_seconds": 7200,
+        "report_reserve_seconds": 900,
+        "deadline": pre["deadline"],
+        "package_started_at": pre["package_started_at"],
+        "confirmation_access": False,
+        "production_migration": False,
+        "telemetry_version": "TA009_BATCH_OBSERVER_v1",
+        "runs": [
+            {
+                "run_id": f"TA009-{name}-S42-WF2",
+                "architecture": name,
+                "contract": contract(name),
+                "input_id": identity([bindings[name], stock_refs, market_refs]),
+                "views": bindings[name],
+            }
+            for name in QUEUE
+        ],
+    }
+    write_json(out / "wf2_two_pair_proposal.json", plan)
+    write_json(
+        out / "prepared_dataset_retention.json",
+        {
+            "views": bindings,
+            "inner_63_calendar_tail_start": str(tail.start),
+            "tail_stop": str(tail.stop),
+            "tail_calendar_sessions": 63,
+            "stock_recomputation_seconds": stock_seconds,
+            "market_recomputation_seconds": market_seconds,
+            "recomputed_longer_prefix_numeric_parameters_match_canonical": True,
+            "fitting_time_semantics": (
+                "Actual reconstruction wall time retained; historical information cutoff "
+                "is window.stop, not a claim of historical fitted availability"
+            ),
+            "outer": {"start": "2024-01-01", "stop_exclusive": "2024-07-01"},
+            "ZERO": "Zero score on exact final matched panel; no fitting",
+            "scaling": (
+                "Inner-only recipe for calibration/validation; distinct full-prefix recipe "
+                "for refit/WF2, ASOF own-step exclusions retained"
+            ),
+            "source_qualifications": pre["source_qualifications"],
+            "new_neural_pairs": 0,
+        },
+    )
+    return plan
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--prepare", action="store_true")
+    parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--status", action="store_true")
+    parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--plan", type=Path)
+    parser.add_argument("--approval", type=Path)
+    parser.add_argument("--pair", choices=QUEUE, help=argparse.SUPPRESS)
+    args = parser.parse_args()
+    if args.prepare:
+        prepare(args.output)
+        print(json.dumps({"status": "TA009_AWAITING_APPROVAL", "new_pairs": 0}))
+        return 0
+    if args.plan is None:
+        raise ValueError("WF2_PLAN_REQUIRED")
+    plan, _ = load_plan(Path.cwd(), reference(args.plan))
+    if args.dry_run or args.status:
+        rows = journal_rows(Path(JOURNAL))
+        print(
+            json.dumps(
+                {
+                    "status": "ZERO_FITTING",
+                    "global_started_pairs": 4 + sum(r["status"] == "STARTED" for r in rows),
+                    "events": len(rows),
+                }
+            )
+        )
+        return 0
+    if args.approval is None or not args.approval.is_file():
+        raise ValueError("WF2_ACTUAL_APPROVAL_REQUIRED_BEFORE_ANY_FIT")
+    approval_scope(reference(args.plan), json.loads(args.approval.read_text()))
+    if args.pair:
+        from .real_bridge_run import run_worker
+
+        run_worker(
+            authority(Path.cwd(), args.plan, args.approval, args.pair), args.output / args.pair
+        )
+        return 0
+    if journal_rows(Path(JOURNAL)):
+        raise ValueError("WF2_BATCH_ALREADY_STARTED_NO_REPLAY")
+    started = time.monotonic()
+    for name in QUEUE:
+        remaining = (
+            datetime.fromisoformat(plan["deadline"]) - datetime.now(timezone.utc)
+        ).total_seconds()
+        if remaining < 1800:
+            write_json(
+                args.output / "continuation_manifest.json",
+                {
+                    "next": name,
+                    "status": "PENDING_AUTHORIZED_NOT_STARTED",
+                    "reason": "COMPLETE_PAIR_PLUS_REPORT_RESERVE",
+                },
+            )
+            break
+        token = authority(Path.cwd(), args.plan, args.approval, name)
+        t = time.monotonic()
+        command = [
+            sys.executable,
+            "-B",
+            "-m",
+            "lstm_data.wf2_replication",
+            "--plan",
+            str(args.plan),
+            "--approval",
+            str(args.approval),
+            "--output",
+            str(args.output),
+            "--pair",
+            name,
+        ]
+        try:
+            code = subprocess.run(command, timeout=remaining - 900, check=False).returncode
+        except subprocess.TimeoutExpired:
+            code = 124
+        rows = journal_rows(Path(JOURNAL))
+        own = [r for r in rows if r["run_id"] == token.run_id]
+        if code and own and own[-1]["status"] not in {"FAILED", "COMPLETED"}:
+            token.append("FAILED", {"reason": "SUPERVISOR_EXIT", "code": code})
+        if (args.output / name).exists():
+            write_json(
+                args.output / name / "supervisor_actual_runtime.json",
+                {"total_pair_wall_seconds": time.monotonic() - t, "return_code": code},
+            )
+        if code:
+            break
+    rows = journal_rows(Path(JOURNAL))
+    completed = sum(r["status"] == "COMPLETED" for r in rows)
+    write_json(
+        args.output / "execution_summary.json",
+        {
+            "status": "TA009_WF2_TWO_PAIRS_COMPLETED" if completed == 2 else "TA009_WF2_PARTIAL",
+            "completed_pairs": completed,
+            "global_started_pairs": 4 + sum(r["status"] == "STARTED" for r in rows),
+            "actual_batch_execution_seconds": time.monotonic() - started,
+        },
+    )
+    print(
+        json.dumps(
+            {
+                "completed": completed,
+                "global_started": 4 + sum(r["status"] == "STARTED" for r in rows),
+            }
+        )
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    # Authority admission uses exact concrete types. The -m module must delegate
+    # to its canonical import so workers never mint a second __main__ class.
+    from lstm_data.wf2_replication import main as canonical_main
+
+    raise SystemExit(canonical_main())

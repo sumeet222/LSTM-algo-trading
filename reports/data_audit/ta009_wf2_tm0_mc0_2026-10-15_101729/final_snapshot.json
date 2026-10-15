@@ -1,0 +1,47 @@
+{
+  "additional_runs": 0,
+  "ceiling": 40,
+  "confirmation_access": false,
+  "deadline": "2026-10-15T12:15:51-04:00",
+  "editor_Problems_refresh": "Pending human confirmation; reproducible installed-extension analysis zero.",
+  "elapsed_seconds_to_seal": 2276.161239,
+  "expected_changes": [
+    "configs/CURRENT_EXPERIMENT_REGISTRY.json",
+    "docs/track_a/RandomNotes.md",
+    "src/lstm_data/real_batch_data.py",
+    "src/lstm_data/real_bridge_authority.py",
+    "src/lstm_data/real_bridge_run.py"
+  ],
+  "final_static_summary": {
+    "errorCount": 0,
+    "filesAnalyzed": 186,
+    "informationCount": 0,
+    "timeInSec": 14.705,
+    "warningCount": 0
+  },
+  "git_status": "## feat/track-a-data-intake...origin/feat/track-a-data-intake [ahead 1]\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n M docs/track_a/RandomNotes.md\n M src/lstm_data/real_batch_data.py\n M src/lstm_data/real_bridge_authority.py\n M src/lstm_data/real_bridge_run.py\n?? configs/track_a_candidate_experiment_registry_v3.json\n?? docs/track_a/WF2_Replication_009_API.md\n?? reports/audit/track_a_real_pairs_v3.jsonl\n?? reports/codex_sessions/2026-10-15_104745_ta009_wf2_replication.md\n?? reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/\n?? scripts/build_ta009_review_packet.py\n?? src/lstm_data/batch_telemetry.py\n?? src/lstm_data/wf2_replication.py\n?? src/lstm_data/wf2_review.py\n?? tests/test_wf2_replication.py\n",
+  "journal_events": 8,
+  "ledger_after": 6,
+  "ledger_before": 4,
+  "maximum_seconds": 7200,
+  "new_nonignored_files_above_5MB": [],
+  "new_real_pairs_completed": 2,
+  "new_real_pairs_started": 2,
+  "no_stage_commit_push": true,
+  "obvious_secret_pattern_hits": [],
+  "old_journals_and_raw_weights_unchanged": true,
+  "package_started_at": "2026-10-15T10:15:51-04:00",
+  "production_change": false,
+  "protected_count": 2937,
+  "report_generation_core_seconds": 1.4360692499903962,
+  "report_reserve_seconds": 900,
+  "sealed_at": "2026-10-15T10:53:47.161239-04:00",
+  "session_report": "reports/codex_sessions/2026-10-15_104745_ta009_wf2_replication.md",
+  "source_code_and_review_hashes": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/source_and_review_hashes.json",
+    "sha256": "1dc57867cce415a25633d42291fa1e704b4924be27258533453fb80d45946264"
+  },
+  "status": "TA009_WF2_TWO_PAIRS_COMPLETED",
+  "unexpected_changes": [],
+  "within_package_cap": true
+}

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/wf2_replication.py", line 589, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/wf2_replication.py", line 490, in main
+    prepare(args.output)
+    ~~~~~~~^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/wf2_replication.py", line 342, in prepare
+    raise ValueError("WF2_RECOMPUTATION_DIFFERS_FROM_CANONICAL_RECIPE")
+ValueError: WF2_RECOMPUTATION_DIFFERS_FROM_CANONICAL_RECIPE

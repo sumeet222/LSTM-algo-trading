@@ -1,0 +1,323 @@
+{
+  "code_sha256": "9401794f1f4a455fc57cb8d0551a030c921d595249c49bc107578c9d6c0c06e7",
+  "confirmation_access": false,
+  "dataset": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/final_v2/dataset_input_binding.json",
+    "sha256": "1835436b78fff3a8a227de873debd8ba41c1f7766299bb051190d81bf8b2be93"
+  },
+  "deadline": "2026-10-15T12:15:51-04:00",
+  "id": "TA009_WF2_TM0_MC0_PAIRED_REPLICATION",
+  "input_binding": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/input_binding.json",
+    "sha256": "d7731f67eacea404bc02b9083424061cf7086735463891b2363466728e03828c"
+  },
+  "market": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/market_v2/canonical_market_components.json.gz",
+    "sha256": "6d438cc6aee61334b4502bc41994ca193eef5329bc2e53f8aa0b0d6e5b7bf8c8"
+  },
+  "market_preparations": {
+    "WF2_INNER_TRAIN": {
+      "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_INNER_TRAIN_market_preparation.json",
+      "sha256": "1b34263420370468c85cf355b6d87b30e3770b767b1acb8082f81557827b97df"
+    },
+    "WF2_REFIT": {
+      "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_REFIT_market_preparation.json",
+      "sha256": "7cf0e52a4314effb2f4de48de77c7b6e52d90ee281b806077285c0550f8f7fd0"
+    }
+  },
+  "maximum_wall_seconds": 7200,
+  "original_protocol": {
+    "path": "configs/CURRENT_PROTOCOL.json",
+    "sha256": "1b83b2ef8f727618ef319c0c04b36056c5c8cb19857ebe40927851e3295ca600"
+  },
+  "package_started_at": "2026-10-15T10:15:51-04:00",
+  "prior_plan": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/batch_plan.json",
+    "sha256": "cb4edaff9edca889ced95ee4683d2d0059fdd7ed1ff41421e705bab8d81054f8"
+  },
+  "prior_pointer_snapshot": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/registry_pointer_v2_snapshot.json",
+    "sha256": "b551c17e8e8b6ca7193400a8e36ed7e4a49877bacc4ee7320f8083fdc9668efd"
+  },
+  "prior_v1_journal": {
+    "path": "reports/audit/track_a_real_pairs_v1.jsonl",
+    "sha256": "c19d38ec5b4d42af235ee9c60041dc7dd17422507bc2d5fd2ddbfc5cfce3f46b"
+  },
+  "prior_v2_journal": {
+    "path": "reports/audit/track_a_real_pairs_v2.jsonl",
+    "sha256": "791a3b19a6afe16b76689796a2bd434679e86f48d75177bca410b1c30c669315"
+  },
+  "producer": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/verified_producer.json",
+    "sha256": "02e6484b741386ce3cfa87315a58b89469e79904e5bc4c681da4c18b7247b38f"
+  },
+  "production_migration": false,
+  "registry_definition": {
+    "path": "configs/track_a_candidate_experiment_registry_v3.json",
+    "sha256": "688965bfceb04ff0fc2e491e976f8175f50423e5b2014cce4722dd68cecd5d55"
+  },
+  "report_reserve_seconds": 900,
+  "runs": [
+    {
+      "architecture": "TM0",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "TM0",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 16,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-12-31",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 6433,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF2",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "input_id": "fd9f4387a0c1bb7bf0bbc262576a410157ec2c4c355d0206d16e108830b4c70d",
+      "run_id": "TA009-TM0-S42-WF2",
+      "views": {
+        "WF2": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "origins": 232,
+          "per_origin": {
+            "1": 116,
+            "2": 116
+          },
+          "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+          "sessions": 116,
+          "tensor_bytes": 472320,
+          "unique_feature_rows": 7380,
+          "view_id": "CONDITIONAL_REAL_TM0:ad364c1a17497d33a9999eb4df698fdfc1baabc010358196bd176c20a163f117"
+        },
+        "inner": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {},
+          "origins": 1626,
+          "per_origin": {
+            "1": 813,
+            "2": 813
+          },
+          "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+          "sessions": 813,
+          "tensor_bytes": 3158400,
+          "unique_feature_rows": 49350,
+          "view_id": "CONDITIONAL_REAL_TM0:f8a1a6cd509c7364e017afc6746afa6a8986b1b5454b7508c19094cea15f672e"
+        },
+        "refit": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {},
+          "origins": 1750,
+          "per_origin": {
+            "1": 875,
+            "2": 875
+          },
+          "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+          "sessions": 875,
+          "tensor_bytes": 3398400,
+          "unique_feature_rows": 53100,
+          "view_id": "CONDITIONAL_REAL_TM0:6a18a3ed0cf31a1d952d6d1faa30760ea10705ef4c715639b24e86781bcc4489"
+        },
+        "validation": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "origins": 108,
+          "per_origin": {
+            "1": 54,
+            "2": 54
+          },
+          "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+          "sessions": 54,
+          "tensor_bytes": 236160,
+          "unique_feature_rows": 3690,
+          "view_id": "CONDITIONAL_REAL_TM0:e528973fa8f3fb12f5085a882d3b8d4ef9ca40488468c2a5788d220e1c52e48c"
+        }
+      }
+    },
+    {
+      "architecture": "MC0",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "MC0",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 21,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-12-31",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7073,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF2",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "input_id": "03deb81ed4fedffa113d65f2b89c90ee9f344aa78eb997ca487a9cef89c42ba2",
+      "run_id": "TA009-MC0-S42-WF2",
+      "views": {
+        "WF2": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "market_recipe_id": "abf93171ecaf20b70fc4420824957caa5c4fbe242ffb6363ea1993b2d58cdf4d",
+          "market_table_bytes": 121200,
+          "origins": 232,
+          "per_origin": {
+            "1": 116,
+            "2": 116
+          },
+          "preparation_id": "4030f640be46cf10ef947b73b05a7fb146d93ba79c5ba3779c7aa6f323459ac6",
+          "sessions": 116,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:ad364c1a17497d33a9999eb4df698fdfc1baabc010358196bd176c20a163f117",
+          "tensor_bytes": 472320,
+          "unique_feature_rows": 7380,
+          "view_id": "7b9055b58c84dccad4580b07a4cceb33cc26958bf9560c2a55c69e60e4cb1641"
+        },
+        "inner": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {},
+          "market_recipe_id": "07ba2941af48ce68bbca7f69f3027983c85e2c5bf8ec3cde0200fe09b6316e39",
+          "market_table_bytes": 121200,
+          "origins": 1626,
+          "per_origin": {
+            "1": 813,
+            "2": 813
+          },
+          "preparation_id": "2bf4eb2980144bf1df85b712e262022b1ec2939dfcd08c28c01106a94cebfad5",
+          "sessions": 813,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:f8a1a6cd509c7364e017afc6746afa6a8986b1b5454b7508c19094cea15f672e",
+          "tensor_bytes": 3158400,
+          "unique_feature_rows": 49350,
+          "view_id": "0bf5ca605ad01b0e3f108dba0639977db35ba9c9762cb4dcf2f633ff8b3f3d70"
+        },
+        "refit": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {},
+          "market_recipe_id": "abf93171ecaf20b70fc4420824957caa5c4fbe242ffb6363ea1993b2d58cdf4d",
+          "market_table_bytes": 121200,
+          "origins": 1750,
+          "per_origin": {
+            "1": 875,
+            "2": 875
+          },
+          "preparation_id": "4030f640be46cf10ef947b73b05a7fb146d93ba79c5ba3779c7aa6f323459ac6",
+          "sessions": 875,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:6a18a3ed0cf31a1d952d6d1faa30760ea10705ef4c715639b24e86781bcc4489",
+          "tensor_bytes": 3398400,
+          "unique_feature_rows": 53100,
+          "view_id": "5ea5aced5b30946ed4e8daf74d733f8524a4f263c14723c11137dae96c98746b"
+        },
+        "validation": {
+          "channels": 21,
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "evidence_grade": "RESEARCHER_ATTESTED_IDEALIZED_RETROSPECTIVE",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "market_recipe_id": "07ba2941af48ce68bbca7f69f3027983c85e2c5bf8ec3cde0200fe09b6316e39",
+          "market_table_bytes": 121200,
+          "origins": 108,
+          "per_origin": {
+            "1": 54,
+            "2": 54
+          },
+          "preparation_id": "2bf4eb2980144bf1df85b712e262022b1ec2939dfcd08c28c01106a94cebfad5",
+          "sessions": 54,
+          "stock_view_id": "CONDITIONAL_REAL_TM0:e528973fa8f3fb12f5085a882d3b8d4ef9ca40488468c2a5788d220e1c52e48c",
+          "tensor_bytes": 236160,
+          "unique_feature_rows": 3690,
+          "view_id": "d53acd19f281e832137baf4f46a211da9493a1ff425c273d2c6f7fabe0f897ca"
+        }
+      }
+    }
+  ],
+  "stock_preparations": {
+    "WF2_INNER_TRAIN": {
+      "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_INNER_TRAIN_stock_preparation.json",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "sha256": "f5fbb2391fe197e8712ae6dde2beb4314b9fdfe29b01674e979329bb51259a77"
+    },
+    "WF2_REFIT": {
+      "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_REFIT_stock_preparation.json",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "sha256": "8604a65e6ef4c77a24e2227e1f233372e524fae338cef166c29701dfe5653d09"
+    }
+  },
+  "telemetry_version": "TA009_BATCH_OBSERVER_v1"
+}

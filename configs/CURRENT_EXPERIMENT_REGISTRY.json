@@ -1,25 +1,29 @@
 {
   "approval": {
-    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/batch_authorization.json",
-    "sha256": "ad3782085b0ff059577993674f32b6d62d9acd99dbae812b3521025262447cdb"
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/authority_corrected.json",
+    "sha256": "efe1c2a05878ac6bc6af1c11732e714ab689487b52f5839ece56592fef7f74b9"
   },
   "counts_started_including_failed": true,
   "definition": {
-    "path": "configs/track_a_candidate_experiment_registry_v2.json",
-    "sha256": "d2fb90bc7ba3d95b00aeb871dccf82c7b33f5c36c8e6d6a4fbff824d0d4b1283"
+    "path": "configs/track_a_candidate_experiment_registry_v3.json",
+    "sha256": "688965bfceb04ff0fc2e491e976f8175f50423e5b2014cce4722dd68cecd5d55"
   },
-  "legacy_real_journal": {
+  "plan": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/wf2_two_pair_proposal_corrected.json",
+    "sha256": "b1ca944b79f9d01a2fca04094a22bf9c22434d5c85cbb05cd2434d250f93156a"
+  },
+  "previous_pointer": {
+    "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/registry_pointer_v2_snapshot.json",
+    "sha256": "b551c17e8e8b6ca7193400a8e36ed7e4a49877bacc4ee7320f8083fdc9668efd"
+  },
+  "prior_v1_journal": {
     "path": "reports/audit/track_a_real_pairs_v1.jsonl",
     "sha256": "c19d38ec5b4d42af235ee9c60041dc7dd17422507bc2d5fd2ddbfc5cfce3f46b"
   },
-  "plan": {
-    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/batch_plan.json",
-    "sha256": "cb4edaff9edca889ced95ee4683d2d0059fdd7ed1ff41421e705bab8d81054f8"
+  "prior_v2_journal": {
+    "path": "reports/audit/track_a_real_pairs_v2.jsonl",
+    "sha256": "791a3b19a6afe16b76689796a2bd434679e86f48d75177bca410b1c30c669315"
   },
-  "previous_pointer": {
-    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/registry_pointer_v1_snapshot.json",
-    "sha256": "27b60f8a302bc0a15ded3ecaabf536e8ca319594f3ad239a3e1953cccd501c1d"
-  },
-  "real_journal": "reports/audit/track_a_real_pairs_v2.jsonl",
-  "schema": 2
+  "real_journal": "reports/audit/track_a_real_pairs_v3.jsonl",
+  "schema": 3
 }

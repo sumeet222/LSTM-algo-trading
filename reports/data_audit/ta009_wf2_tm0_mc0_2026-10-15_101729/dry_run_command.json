@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "lstm_data.wf2_replication",
+    "--plan",
+    "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/wf2_two_pair_proposal_final.json",
+    "--output",
+    "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729",
+    "--dry-run"
+  ],
+  "started_at": "2026-10-15T14:30:30.155403+00:00",
+  "finished_at": "2026-10-15T14:30:34.432501+00:00",
+  "elapsed_seconds": 4.2769906659959815,
+  "exit_code": 0,
+  "code_before_sha256": "90bdaae6e3948c5a30c1e783f1c9a929c1ae821d4e735561b1501379c58c0612",
+  "code_after_sha256": "90bdaae6e3948c5a30c1e783f1c9a929c1ae821d4e735561b1501379c58c0612"
+}

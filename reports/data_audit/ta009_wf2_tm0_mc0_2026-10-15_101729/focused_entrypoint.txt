@@ -1,0 +1,7 @@
+.....................................................                    [100%]
+=============================== warnings summary ===============================
+tests/test_wf2_replication.py::test_module_entry_delegates_to_canonical_authority_module
+  <frozen runpy>:130: RuntimeWarning: 'lstm_data.wf2_replication' found in sys.modules after import of package 'lstm_data', but prior to execution of 'lstm_data.wf2_replication'; this may result in unpredictable behaviour
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+53 passed, 1 warning in 12.03s

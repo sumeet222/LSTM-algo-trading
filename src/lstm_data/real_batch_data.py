@@ -5,6 +5,7 @@ from __future__ import annotations
 import gzip
 import json
 from dataclasses import dataclass, field
+from typing import Literal
 
 import pandas as pd
 import torch
@@ -122,37 +123,50 @@ class BatchInputs:
     base: BaseTables
     candidates: dict[str, CandidateView]
     market_store: dict
+    fold: Literal["WF1", "WF2"] = "WF1"
     stock_cache: dict[str, RealInputView] = field(default_factory=dict)
     market_cache: dict[str, tuple[torch.Tensor, dict[pd.Timestamp, int]]] = field(
         default_factory=dict
     )
 
     def stock_view(self, key: str) -> RealInputView:
-        if key not in {"inner", "validation", "refit", "WF1"}:
+        if self.fold not in {"WF1", "WF2"} or key not in {
+            "inner",
+            "validation",
+            "refit",
+            self.fold,
+        }:
             raise ValueError("EXACT_WF1_BATCH_WINDOW_REQUIRED")
         if key not in self.stock_cache:
             from .baseline_ridge import windows
 
-            inner, tail, full = windows("WF1", pd.Timestamp("2023-07-01T04:00Z"))
+            inner, tail, full = windows(
+                self.fold,
+                pd.Timestamp("2023-07-01T04:00Z")
+                if self.fold == "WF1"
+                else pd.Timestamp("2024-01-01T05:00Z"),
+            )
             wf = FitWindow(
-                "BRIDGE_REVIEW:WF1",
-                pd.Timestamp("2023-07-01T04:00Z"),
-                pd.Timestamp("2024-01-01T05:00Z"),
-                pd.Timestamp("2024-01-01T05:00Z"),
+                "BRIDGE_REVIEW:" + self.fold,
+                pd.Timestamp("2023-07-01T04:00Z")
+                if self.fold == "WF1"
+                else pd.Timestamp("2024-01-01T05:00Z"),
+                pd.Timestamp("2024-01-01T05:00Z") if self.fold == "WF1" else BARRIER,
+                pd.Timestamp("2024-01-01T05:00Z") if self.fold == "WF1" else BARRIER,
                 "INNER_VALIDATION",
             )
-            recipe = "WF1_INNER_TRAIN" if key in {"inner", "validation"} else "WF1_REFIT"
+            recipe = self.fold + ("_INNER_TRAIN" if key in {"inner", "validation"} else "_REFIT")
             self.stock_cache[key] = build_view(
                 self.review,
                 self.candidates[recipe],
-                {"inner": inner, "validation": tail, "refit": full, "WF1": wf}[key],
-                asof=key in {"validation", "WF1"},
+                {"inner": inner, "validation": tail, "refit": full, self.fold: wf}[key],
+                asof=key in {"validation", self.fold},
             )
         return self.stock_cache[key]
 
     def view(self, key: str, channels: int) -> ConditionedView:
         stock = self.stock_view(key)
-        prefix = "WF1_INNER_TRAIN" if key in {"inner", "validation"} else "WF1_REFIT"
+        prefix = self.fold + ("_INNER_TRAIN" if key in {"inner", "validation"} else "_REFIT")
         recipe = self.market_store["preparations"][prefix]
         if (
             pd.Timestamp(recipe["window"]["stop"])
@@ -190,7 +204,7 @@ class BatchInputs:
                 self.base.history.calendar.steps[p]
                 for p in self.base.origin_steps[row.session, row.origin]
             ]
-            if key in {"validation", "WF1"} and any(
+            if key in {"validation", self.fold} and any(
                 s.end < pd.Timestamp(recipe["window"]["stop"]) for s in steps
             ):
                 raise ValueError("MARKET_SCALER_NOT_AVAILABLE_AT_OWN_STEP")

@@ -11,6 +11,7 @@ import platform
 import subprocess
 import sys
 import time
+from collections.abc import Callable
 from pathlib import Path
 
 import numpy as np
@@ -18,11 +19,13 @@ import pandas as pd
 import torch
 
 from .baseline_ridge import windows
+from .batch_telemetry import BatchTelemetry
 from .config import atomic_new, digest, fingerprint, now, write_json
 from .ft0_transforms import identity
 from .labels import FitWindow
 from .ledger import pair_budget, read_ledger
 from .neural_engine import (
+    SessionBatch,
     SharedLSTM,
     batch_prediction,
     clip,
@@ -48,14 +51,19 @@ from .real_bridge_authority import (
     require_training,
 )
 from .real_bridge_data import RealInputView, build_view, load_inputs
+from .wf2_replication import WF2PairAuthority
 
-FitAuthority = TrainingAuthority | BatchPairAuthority
+FitAuthority = TrainingAuthority | BatchPairAuthority | WF2PairAuthority
 FitModel = SharedLSTM | EndpointGatedLSTM
 FitView = RealInputView | ConditionedView
 
 
 def execution_contract(authority: FitAuthority | None) -> dict:
-    return authority.contract if type(authority) is BatchPairAuthority else CONTRACT
+    return (
+        authority.contract
+        if (type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority)
+        else CONTRACT
+    )
 
 
 def execution_model(authority: FitAuthority) -> FitModel:
@@ -110,7 +118,7 @@ def pair_key(authority: FitAuthority) -> str:
 
 def append_pair(authority: FitAuthority, status: str, detail: dict) -> None:
     """New v1 real journal links immutable P0 history; it never rewrites P0 events."""
-    if type(authority) is BatchPairAuthority:
+    if type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority:
         authority.append(status, detail)
         return
     if status != "FAILED":
@@ -282,7 +290,7 @@ def checkpoint_authority(
     if authority is None:
         raise ValueError("REAL_CHECKPOINT_REQUIRES_ACTUAL_TRAINING_AUTHORITY")
     require_training(authority, "CHECKPOINT", authority.binding["input_id"])
-    if type(authority) is BatchPairAuthority:
+    if type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority:
         key = "inner" if stage == "CALIBRATION_SELECTED" else "refit"
         if (
             binding != pair_key(authority)
@@ -350,6 +358,7 @@ def epoch_pass(
     epoch: int,
     opt: torch.optim.AdamW | None,
     deadline: float,
+    batch_sink: Callable[[int, int, SessionBatch, torch.Tensor, float], None] | None = None,
 ) -> dict:
     """Existing pure TM0 math, sampler, optimizer and session objective; real metadata."""
     require_training(
@@ -359,7 +368,9 @@ def epoch_pass(
     losses, norms, seen, scores = [], [], [], []
     rank_rows, gate_rows, gate_states = [], [], []
     started = time.monotonic()
-    for positions in session_batches(len(view.sessions), 42, epoch, shuffle=opt is not None):
+    for batch_index, positions in enumerate(
+        session_batches(len(view.sessions), 42, epoch, shuffle=opt is not None), 1
+    ):
         if time.monotonic() >= deadline:
             raise TimeoutError("APPROVED_ACTIVE_FITTING_LIMIT_REACHED")
         batch = view.batch(positions)
@@ -376,6 +387,8 @@ def epoch_pass(
                 by_day.mean().backward()
                 norms.append(clip(model))
                 opt.step()
+                if batch_sink is not None:
+                    batch_sink(epoch, batch_index, batch, by_day.detach(), norms[-1])
         losses.extend(float(x) for x in by_day.detach())
         scores.extend(float(x) for x in prediction.detach()[batch.origins].reshape(-1))
         seen.extend(batch.ids)
@@ -466,23 +479,27 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
         raise ValueError("IMMUTABLE_EXPERIMENT_OUTPUT_ALREADY_EXISTS")
     t = time.monotonic()
     candidates = {}
-    if type(authority) is BatchPairAuthority:
+    if type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority:
         authority.inputs()
     else:
         _, candidates = load_inputs(authority.review, ("WF1_INNER_TRAIN", "WF1_REFIT"))
     timings = {"raw_derived_loading": time.monotonic() - t}
     t = time.monotonic()
-    inner, tail, full = windows("WF1", pd.Timestamp("2023-07-01T04:00Z"))
+    fold = "WF2" if type(authority) is WF2PairAuthority else "WF1"
+    inner, tail, full = windows(
+        fold,
+        pd.Timestamp("2024-01-01T05:00Z") if fold == "WF2" else pd.Timestamp("2023-07-01T04:00Z"),
+    )
     views: dict[str, FitView] = {
         "inner": authority.view("inner")
-        if type(authority) is BatchPairAuthority
+        if (type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority)
         else build_view(authority.review, candidates["WF1_INNER_TRAIN"], inner),
         "validation": authority.view("validation")
-        if type(authority) is BatchPairAuthority
+        if (type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority)
         else build_view(authority.review, candidates["WF1_INNER_TRAIN"], tail, asof=True),
     }
     timings["inner_preprocessing_application"] = time.monotonic() - t
-    if type(authority) is BatchPairAuthority:
+    if type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority:
         dataset = {
             "first_pair_views": {k: v["view_id"] for k, v in authority.descriptor["views"].items()}
         }
@@ -512,7 +529,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
     append_pair(authority, "STARTED", {"output": str(out.relative_to(authority.review.root))})
     fit_started = time.monotonic()
     remaining = ACTIVE_SECONDS
-    if type(authority) is BatchPairAuthority:
+    if type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority:
         remaining = min(
             remaining,
             max(
@@ -525,12 +542,40 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
         )
     deadline = fit_started + remaining
     evaluation_deadline = (
-        deadline if type(authority) is BatchPairAuthority else started + HARD_SECONDS
+        deadline
+        if (type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority)
+        else started + HARD_SECONDS
+    )
+    calibration_observer = (
+        BatchTelemetry(
+            out / "gradient_batches_calibration.csv",
+            authority.run_id,
+            contract["architecture"],
+            "CALIBRATION",
+        )
+        if type(authority) is WF2PairAuthority
+        else None
+    )
+    refit_observer = (
+        BatchTelemetry(
+            out / "gradient_batches_refit.csv", authority.run_id, contract["architecture"], "REFIT"
+        )
+        if type(authority) is WF2PairAuthority
+        else None
     )
     try:
         while selector.status == "CALIBRATING":
             e = selector.epoch + 1
-            training = epoch_pass(authority, input_id, model, views["inner"], e, opt, deadline)
+            training = epoch_pass(
+                authority,
+                input_id,
+                model,
+                views["inner"],
+                e,
+                opt,
+                deadline,
+                calibration_observer.record if calibration_observer is not None else None,
+            )
             validation = epoch_pass(authority, input_id, model, valid, e, None, deadline)
             qualifies = selector.observe(validation["mse"])
             if qualifies:
@@ -543,8 +588,19 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
             trace.append(entry)
             write_json(out / f"calibration_epoch_{e:02d}.json", entry)
             if e == 1:
+                calibration_sessions = len(views["inner"].sessions)
+                refit_sessions = (
+                    authority.descriptor["views"]["refit"]["sessions"]
+                    if (
+                        type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority
+                    )
+                    else 751
+                )
                 projected = 60 * (training["seconds"] + validation["seconds"]) + (
-                    60 * training["seconds"] * math.ceil(751 / 16) / math.ceil(688 / 16)
+                    60
+                    * training["seconds"]
+                    * math.ceil(refit_sessions / 16)
+                    / math.ceil(calibration_sessions / 16)
                 )
                 write_json(
                     out / "first_epoch_machine_benchmark.json",
@@ -552,8 +608,8 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
                         "actual_training_seconds": training["seconds"],
                         "actual_validation_seconds": validation["seconds"],
                         "projected_maximum_pair_seconds_NOT_ACTUAL": projected,
-                        "calibration_sessions": 688,
-                        "refit_sessions": 751,
+                        "calibration_sessions": calibration_sessions,
+                        "refit_sessions": refit_sessions,
                         "batch_sessions": 16,
                     },
                 )
@@ -580,7 +636,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
         t = time.monotonic()
         views["refit"] = (
             authority.view("refit")
-            if type(authority) is BatchPairAuthority
+            if (type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority)
             else build_view(authority.review, candidates["WF1_REFIT"], full)
         )
         timings["full_prefix_preprocessing_application"] = time.monotonic() - t
@@ -595,7 +651,16 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
         append_pair(authority, "REFITTING", {"epochs": selector.selected})
         refit_trace = []
         for e in range(1, selector.selected + 1):
-            item = epoch_pass(authority, input_id, final, views["refit"], e, fresh_opt, deadline)
+            item = epoch_pass(
+                authority,
+                input_id,
+                final,
+                views["refit"],
+                e,
+                fresh_opt,
+                deadline,
+                refit_observer.record if refit_observer is not None else None,
+            )
             refit_trace.append(item)
             write_json(out / f"refit_epoch_{e:02d}.json", item)
         timings["refit_training"] = sum(r["seconds"] for r in refit_trace)
@@ -626,15 +691,21 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
         timings["final_checkpoint_and_verification"] = time.monotonic() - t
         t = time.monotonic()
         w = FitWindow(
-            "BRIDGE_REVIEW:WF1",
-            pd.Timestamp("2023-07-01T04:00Z"),
-            pd.Timestamp("2024-01-01T05:00Z"),
-            pd.Timestamp("2024-01-01T05:00Z"),
+            "BRIDGE_REVIEW:" + fold,
+            pd.Timestamp("2024-01-01T05:00Z")
+            if fold == "WF2"
+            else pd.Timestamp("2023-07-01T04:00Z"),
+            pd.Timestamp("2024-07-01T04:00Z")
+            if fold == "WF2"
+            else pd.Timestamp("2024-01-01T05:00Z"),
+            pd.Timestamp("2024-07-01T04:00Z")
+            if fold == "WF2"
+            else pd.Timestamp("2024-01-01T05:00Z"),
             "INNER_VALIDATION",
         )
         development = (
-            authority.view("WF1")
-            if type(authority) is BatchPairAuthority
+            authority.view(fold)
+            if (type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority)
             else build_view(authority.review, candidates["WF1_REFIT"], w, asof=True)
         )
         metrics = epoch_pass(authority, input_id, final, development, 1, None, evaluation_deadline)
@@ -665,7 +736,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
         )
         result_name = (
             f"seed42_{contract['architecture'].lower()}_pair_result.json"
-            if type(authority) is BatchPairAuthority
+            if (type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority)
             else "seed42_tm0_first_pair_result.json"
         )
         write_json(
