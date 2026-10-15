@@ -1,0 +1,40 @@
+{
+  "namespace": "CAND:TRACK_A_CORE5:PREPARATION:002",
+  "package": "TA-POST-P411-D1-G1G2-G3-READINESS-002",
+  "decision_ref": {
+    "path": "docs/track_a/decisions/TA_D1_CORE5_CONDITIONAL_2026-10-14_v1.json",
+    "sha256": "9df30be86cede33a340fd595dc840a941dcfabf4766f75d3b9d73839bb0da78f",
+    "decision_id": "TA-D1-CORE5-CONDITIONAL-2026-10-14-v1"
+  },
+  "proposal_ref": {
+    "path": "reports/data_audit/ta_post_p411_readiness_2026-10-14_150813/D1_Amendment_Proposal.md",
+    "sha256": "bbdfdfdd01b87d370fc4504695e5006572c4d2fd84b79ad9b01e0f2b0f3143e4"
+  },
+  "universe": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ],
+  "source_manifest_ref": {
+    "path": "reports/data_audit/ta_provisional_source_integration_2026-10-13_163141/complete_genuine_source_manifest.json",
+    "sha256": "45a91dd7aff21d9a0aecf3a94635fc4c7eccfbeb08d16c58ec5d196e2fe62aff"
+  },
+  "code_test_sha256": "cbccbd6d6541a1940f1882e710ef8427f607f7bc9b2c13bed1d090e54ad79c3f",
+  "fit_window": "2020-07-01..2023-06-30",
+  "development": "2023-07-01..2024-06-30",
+  "confirmation_scientific_access": false,
+  "production_active": false,
+  "production_permission_created": false,
+  "source_certificate_issued": false,
+  "allowed_current_activities": [
+    "IMMUTABLE_SOURCE_KEY_QA",
+    "CALENDAR_ONLY_BOUNDS",
+    "PROPOSED_CLOCK_SENSITIVITY",
+    "SYNTHETIC_REGRESSION"
+  ],
+  "conditionally_authorized_after_source_proofs": "Implement/test/invoke provenance-bound genuine train/development diagnostic builder under current prompt; no automatic production or model permission",
+  "current_real_build_invoked": false,
+  "binding_id": "89d8fe6345c2b3c15dacda141c6f4e96b20f76c9e1c91dfa9c64103f474c21ec"
+}

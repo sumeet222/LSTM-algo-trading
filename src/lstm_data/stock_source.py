@@ -78,9 +78,14 @@ class StockBar:
     price_basis: str = "SPLIT_CONSISTENT"
     evidence_ref: str = ""
     action_known_at: pd.Timestamp | None = None
+    universe: tuple[str, ...] = UNIVERSE
 
     def __post_init__(self) -> None:
-        if self.symbol not in UNIVERSE or type(self.slot) is not int or not 0 <= self.slot <= 6:
+        if (
+            len(self.universe) != 5 or len(set(self.universe)) != 5
+            or self.symbol not in self.universe
+            or type(self.slot) is not int or not 0 <= self.slot <= 6
+        ):
             raise ValueError("CANONICAL_STOCK_SLOT_REQUIRED")
         start, end = utc(self.start), utc(self.end)
         if end - start != pd.Timedelta(minutes=30 if self.slot == 0 else 60):
@@ -177,10 +182,12 @@ class StockDaily:
     close_action_verified: bool = False
     close_action_known_at: pd.Timestamp | None = None
     volume_action_known_at: pd.Timestamp | None = None
+    universe: tuple[str, ...] = UNIVERSE
 
     def __post_init__(self) -> None:
         utc(self.end)
-        if self.symbol not in UNIVERSE or self.source_version != STOCK_VERSION:
+        if (len(self.universe) != 5 or len(set(self.universe)) != 5
+                or self.symbol not in self.universe or self.source_version != STOCK_VERSION):
             raise ValueError("DAILY_STOCK_SOURCE_REQUIRED")
         for value in (self.open, self.high, self.low, self.close):
             if value is not None and numeric(value) <= 0:
@@ -196,13 +203,19 @@ class StockHistory:
     """Exact shared hourly and full-session daily positions; no raw imputation."""
 
     def __init__(
-        self, calendar: StockCalendar, bars: tuple[StockBar, ...], *, synthetic: bool = False
+        self, calendar: StockCalendar, bars: tuple[StockBar, ...], *, synthetic: bool = False,
+        universe: tuple[str, ...] = UNIVERSE,
     ):
         self.calendar = calendar
         self.synthetic = synthetic
+        if len(universe) != 5 or len(set(universe)) != 5:
+            raise ValueError("FIVE_DISTINCT_STOCKS_REQUIRED")
+        self.universe = universe
         self.bars: dict[tuple[str, str, int], StockBar] = {}
         ids = set()
         for bar in bars:
+            if bar.universe != universe:
+                raise ValueError("STOCK_UNIVERSE_BINDING_MISMATCH")
             key = bar.symbol, bar.session, bar.slot
             if key in self.bars or bar.row_id in ids:
                 raise ValueError("DUPLICATE_STOCK_SOURCE_KEY")
@@ -225,7 +238,7 @@ class StockHistory:
         self.binding = fingerprint(
             [
                 STOCK_VERSION,
-                UNIVERSE,
+                universe,
                 calendar.days[0],
                 calendar.days[-1],
                 synthetic,
@@ -235,11 +248,11 @@ class StockHistory:
         self.action_binding = fingerprint(
             sorted({(b.symbol, b.share_basis, b.action_ref, b.action_verified) for b in bars})
         )
-        for symbol in UNIVERSE:
+        for symbol in universe:
             if len({b.share_basis for b in bars if b.symbol == symbol}) > 1:
                 raise ValueError("STOCK_ROLLING_SPLIT_EPOCH_MISMATCH")
         self.daily: dict[tuple[str, str], StockDaily] = {}
-        for symbol in UNIVERSE:
+        for symbol in universe:
             for day, clock in calendar._sessions.items():
                 parts = [
                     self.bars.get((symbol, day, slot)) for slot in range(1, len(clock.hours) + 1)
@@ -282,7 +295,12 @@ class StockHistory:
                         (b.action_known_at for b in present if b.action_known_at is not None),
                         default=None,
                     ),
+                    universe=universe,
                 )
+
+    def source_status(self, row: StockBar | None, cutoff: pd.Timestamp) -> str:
+        """Strict default; a candidate adapter must implement its own reviewed policy."""
+        return source_reason(row, cutoff, synthetic=self.synthetic)
 
     def hour(
         self, symbol: str, step: ScheduledStep, *, source_only: bool = False
@@ -291,8 +309,7 @@ class StockHistory:
         row = self.bars.get((symbol, step.session, step.slot))
         if (
             source_only
-            or source_reason(row, step.information_cutoff, synthetic=self.synthetic)
-            == "SOURCE_VALID"
+            or self.source_status(row, step.information_cutoff) == "SOURCE_VALID"
         ):
             return row
         return None

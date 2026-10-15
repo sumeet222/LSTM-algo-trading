@@ -1,0 +1,81 @@
+{
+  "WF1_INNER_TRAIN": {
+    "shape": [
+      5,
+      48,
+      16
+    ],
+    "targets": [
+      5
+    ],
+    "finite": true,
+    "day": "2023-03-31",
+    "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561"
+  },
+  "WF1_REFIT": {
+    "shape": [
+      5,
+      48,
+      16
+    ],
+    "targets": [
+      5
+    ],
+    "finite": true,
+    "day": "2023-07-05",
+    "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b"
+  },
+  "WF2_REFIT": {
+    "shape": [
+      5,
+      48,
+      16
+    ],
+    "targets": [
+      5
+    ],
+    "finite": true,
+    "day": "2024-01-02",
+    "preparation_id": "50e29107b7204da9ab226298f27b38e8da04d0ad6adb22ceb2d3e70d2ca5e10e"
+  },
+  "legacy_real_permission_rejected": true,
+  "pair_budget": {
+    "ceiling": 40,
+    "attempted_pairs": 0,
+    "prospective_pairs": 0,
+    "status": "PASS",
+    "duplicate_candidate": false
+  },
+  "legacy_operation_guards": {
+    "training": {
+      "operation": "training",
+      "status": "BLOCKED",
+      "reasons": [
+        "unresolved:formation",
+        "unresolved:shared_clock",
+        "unresolved:stock_timing",
+        "research executor and reviewed human authorization unavailable in P0.2"
+      ]
+    },
+    "economic_evaluation": {
+      "operation": "economic_evaluation",
+      "status": "BLOCKED",
+      "reasons": [
+        "unresolved:corporate_actions",
+        "unresolved:formation",
+        "unresolved:minute_execution",
+        "unresolved:shared_clock",
+        "unresolved:stock_timing",
+        "research executor and reviewed human authorization unavailable in P0.2"
+      ]
+    },
+    "confirmation_evaluation": {
+      "operation": "confirmation_evaluation",
+      "status": "BLOCKED",
+      "reasons": [
+        "research executor and reviewed human authorization unavailable in P0.2",
+        "G9 immutable manifest lock and human decision required; no metrics accessed"
+      ]
+    }
+  }
+}

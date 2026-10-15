@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "snapshot_files": 2282,
+  "unchanged_protected_files": 2277,
+  "intentionally_modified_preexisting_files": [
+    {
+      "path": "src/lstm_data/ft0_transforms.py",
+      "before_sha256": "e28241b7de1a196c12349cf5b53d0c0518e0f98b9aa24323e567ee3841386c6c",
+      "after_sha256": "dce3424a3367d2bb8889e3b8a083b82f109ebc22e22690756aaced62a939c4f6"
+    },
+    {
+      "path": "src/lstm_data/m2.py",
+      "before_sha256": "c9582a50958fe5ca6d9dd9e62f4fab51b1962f993d08e0a0e4d87ee4395e143b",
+      "after_sha256": "a076d664acbf7ccc4a4b18308e903673c218e80b9babf8b08e76a3e1245eeec3"
+    },
+    {
+      "path": "src/lstm_data/market_features.py",
+      "before_sha256": "d00588214f0f624345e90d9dee0ebf0671a9b0098c6493a5fc7ddb8e962746ea",
+      "after_sha256": "a0fc1a2e9b38d53abe8c17a94392811004a7c262f8c54c8ccdbbe1ad2aac13ce"
+    },
+    {
+      "path": "src/lstm_data/stock_features.py",
+      "before_sha256": "40aa0e93b15d52348b8f6bf12dab5826fed7a49680ffbce0bfab629d03bfaae6",
+      "after_sha256": "edae91a8fe70e25720cf3cd66fd716f37c5192b1302f3d72651717b15b9a141a"
+    },
+    {
+      "path": "src/lstm_data/stock_source.py",
+      "before_sha256": "2a2b81b5619e4c7ca4943c46aaf7aca76eb48105fdf202ba76a2e406e2f48b12",
+      "after_sha256": "ad66a140b698709f39552a1593b7f28ae188c3c1c147a2b007e59bf734930ccc"
+    }
+  ],
+  "root_control_change": {
+    "path": ".gitignore",
+    "before_sha256": "6d08be8130e76962d653bf7388f450e150f6ec69f5bdfe80be624111f7a22e41",
+    "after_sha256": "a6872d295f92ce3592d3729cdc41ab7acd90d4d9813c468ba205186681564219",
+    "purpose": "Exclude only local conditional derived compressed tables; metadata remains reviewable"
+  },
+  "missing_protected_files": [],
+  "raw_files_unchanged": 599,
+  "scientific_ledger_unchanged": true,
+  "ledger_events": 25,
+  "real_pairs": "0/40",
+  "original_protocol_and_five_governing_docs_unchanged": true,
+  "original_P2_P3_registers_and_failed_evidence_unchanged": true,
+  "prior_untracked_packets_preserved": true,
+  "logical_before_protected_bytes": 109986884,
+  "logical_current_protected_bytes": 109989909,
+  "new_packet_measured_bytes_before_final_inventory": 54830944,
+  "local_ignored_stores": [
+    {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v2/canonical_components.json.gz",
+      "bytes": 11122045,
+      "sha256": "c2e53e7f21703dbfabfcad8a43ef33ef8aa3d6c4e4915ee3883f25ae81c2a3e8"
+    },
+    {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v3/canonical_components.json.gz",
+      "bytes": 11122045,
+      "sha256": "c2e53e7f21703dbfabfcad8a43ef33ef8aa3d6c4e4915ee3883f25ae81c2a3e8"
+    },
+    {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/canonical_components.json.gz",
+      "bytes": 11122045,
+      "sha256": "c2e53e7f21703dbfabfcad8a43ef33ef8aa3d6c4e4915ee3883f25ae81c2a3e8"
+    },
+    {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/market_v2/canonical_market_components.json.gz",
+      "bytes": 1086465,
+      "sha256": "6d438cc6aee61334b4502bc41994ca193eef5329bc2e53f8aa0b0d6e5b7bf8c8"
+    },
+    {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v1/canonical_components.json.gz",
+      "bytes": 11122045,
+      "sha256": "c2e53e7f21703dbfabfcad8a43ef33ef8aa3d6c4e4915ee3883f25ae81c2a3e8"
+    },
+    {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/market_v1/canonical_market_components.json.gz",
+      "bytes": 1086467,
+      "sha256": "fe3913186629396a4d5d2f4b4019f7cc579b6f37dd7221f0cc9d78292849ec15"
+    }
+  ],
+  "one_active_stock_store": {
+    "bytes": 11122045,
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/canonical_components.json.gz",
+    "sha256": "c2e53e7f21703dbfabfcad8a43ef33ef8aa3d6c4e4915ee3883f25ae81c2a3e8",
+    "uncompressed_bytes": 48221417
+  },
+  "one_active_market_store": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/market_v2/canonical_market_components.json.gz",
+    "sha256": "6d438cc6aee61334b4502bc41994ca193eef5329bc2e53f8aa0b0d6e5b7bf8c8"
+  },
+  "historical_nonrelease_store_copies": "build_v1/v2/v3 and market_v1 retained as superseded development/failed-guard evidence; no per-seed/model/family copies",
+  "raw_archive_copies_created": 0,
+  "disk_before": "Not directly measured; logical protected-byte baseline above is recorded, not a reconstructed du claim",
+  "disk_now_free_bytes": 67993600000,
+  "du_now_KiB": "53876\treports/data_audit/ta_pretraining_g3_2026-10-14_185935",
+  "source_GETs": 0,
+  "new_dependencies": false,
+  "git": {
+    "branch": "feat/track-a-data-intake",
+    "HEAD": "bb654a8f541b184d7f649b45f29507b23fb710f8",
+    "status": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M .gitignore\n M reports/audit/track_a_events.jsonl\n M src/lstm_data/ft0_transforms.py\n M src/lstm_data/m2.py\n M src/lstm_data/market_features.py\n M src/lstm_data/stock_features.py\n M src/lstm_data/stock_source.py\n?? docs/track_a/Conditional_Candidate_Preparation_004_API.md\n?? docs/track_a/decisions/TA_D1_CORE5_CONDITIONAL_2026-10-14_v1.json\n?? reports/codex_sessions/2026-10-14_150813_ta-post-p411-real-data-readiness.md\n?? reports/codex_sessions/2026-10-14_181223_ta-conditional-d1-readiness002.md\n?? reports/codex_sessions/2026-10-14_185935_ta-pretraining-g3-004.md\n?? reports/data_audit/ta_post_p411_readiness002_2026-10-14_181223/\n?? reports/data_audit/ta_post_p411_readiness_2026-10-14_150813/\n?? reports/data_audit/ta_pretraining_g3_2026-10-14_185935/\n?? src/lstm_data/pretraining_g3.py\n?? src/lstm_data/pretraining_market.py\n?? src/lstm_data/pretraining_oracles.py\n?? src/lstm_data/pretraining_policy.py\n?? src/lstm_data/pretraining_source.py\n?? src/lstm_data/pretraining_store.py\n?? src/lstm_data/pretraining_tables.py\n?? src/lstm_data/pretraining_transforms.py\n?? tests/test_pretraining_candidate.py",
+    "upstream_counts": "0\t0",
+    "fetch": "Completed at start; final read-only fetch recorded separately if run",
+    "commits_created": 0,
+    "staging_push_merge_cleanup": false
+  }
+}

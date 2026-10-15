@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "lstm_data.pretraining_g3",
+    "--authority-binding",
+    "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/preparation_authority_binding.json",
+    "--report",
+    "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4"
+  ],
+  "started_at": "2026-10-14T23:53:08.275779+00:00",
+  "finished_at": "2026-10-14T23:55:29.576565+00:00",
+  "elapsed_seconds": 141.29627650001203,
+  "exit_code": 0,
+  "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+  "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+  "environment_controls": {
+    "VECLIB_MAXIMUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "OMP_NUM_THREADS": null
+  }
+}

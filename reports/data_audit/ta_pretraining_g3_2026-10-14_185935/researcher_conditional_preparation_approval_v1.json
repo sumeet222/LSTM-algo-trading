@@ -1,0 +1,27 @@
+{
+  "decision_id": "TA-G3-ASSUMPTION-004-APPROVAL-v1",
+  "actor_type": "human",
+  "owner": "Track A researcher",
+  "status": "CONDITIONALLY_APPROVED",
+  "policy_sha256": "77b626d21d56a1056cc274c14ea336a8d8f2a5a2004bb5cee0eb14f227fe42ce",
+  "recorded_at": "2026-10-14T23:04:37.657699+00:00",
+  "response_provenance": "Actual live user answers to request_user_input_async in current Codex conversation; local attribution, no independent identity authentication or digital signature.",
+  "response_text": "Initial policy answer: Approve with changes described in text. Rights answer: Its an assumption that needs to be noted and move ahead. Production scope answer: Limit this package permanently to candidate preparation. Follow-up clarification answer: No additional changes; proceed on that basis",
+  "clarified_policy": "Candidate preparation only; retain idealized zero-latency clock and retrospective action/universe assumptions; local-use rights remain an unverified researcher assumption, no redistribution or license certification.",
+  "production_scope": "CANDIDATE_PREPARATION_ONLY",
+  "production_migration_authorized": false,
+  "strict_observed_causality_certified": false,
+  "model_fit_authorized": false,
+  "local_use": {
+    "status": "RESEARCHER_ASSUMED_LOCAL_USE_NO_LICENSE_ATTESTATION",
+    "scope": "Local candidate research/preprocessing only on existing archives, under explicitly unverified usage-rights assumption; no transfer or public archive exposure.",
+    "evidence_refs": [
+      {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/local_use_evidence_and_limits.json",
+        "sha256": "8621c4217f53e1ca528db425060e7e468caf3e428a366469c1bf0d083ad7934e"
+      }
+    ],
+    "redistribution_authorized": false,
+    "license_certified": false
+  }
+}

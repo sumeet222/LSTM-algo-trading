@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/private/tmp/ta004_review_smoke.py", line 30, in <module>
+    result['legacy_operation_guards']={op:guard_operation(op,events) for op in ('training','economic_replay','confirmation')}
+                                          ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/ledger.py", line 247, in guard_operation
+    raise ValueError("Unknown managed operation")
+ValueError: Unknown managed operation

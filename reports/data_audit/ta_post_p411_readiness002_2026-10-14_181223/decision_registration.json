@@ -1,0 +1,33 @@
+{
+  "status": "REGISTERED_CONDITIONAL_ONLY",
+  "decision_ref": {
+    "path": "docs/track_a/decisions/TA_D1_CORE5_CONDITIONAL_2026-10-14_v1.json",
+    "sha256": "9df30be86cede33a340fd595dc840a941dcfabf4766f75d3b9d73839bb0da78f",
+    "decision_id": "TA-D1-CORE5-CONDITIONAL-2026-10-14-v1"
+  },
+  "event_id": "TA-D1-CORE5-CONDITIONAL-2026-10-14-v1",
+  "ledger": "reports/audit/track_a_events.jsonl",
+  "old_sha256": "4c2f0693aaaba9c29110881a0961b31a12195c126e4437830600b2a4b81e12e4",
+  "new_sha256": "1085b7bfbb395d18f02a5fff31aa30133a6b2fdbaa3bc8885f90e57fe401c927",
+  "old_bytes": 42704,
+  "new_bytes": 44671,
+  "old_prefix_preserved": true,
+  "events_before": 24,
+  "events_after": 25,
+  "blockers": [
+    "p0.1-F01",
+    "p0.1-USA500-source-clock",
+    "p0.1-stock-publication",
+    "p0.1-minute-execution",
+    "p0.1-actions-dividends",
+    "p0.1-formation-prehistory",
+    "p0.1-shared-D3-clock"
+  ],
+  "pair_budget": {
+    "ceiling": 40,
+    "attempted_pairs": 0,
+    "prospective_pairs": 0,
+    "status": "PASS",
+    "duplicate_candidate": false
+  }
+}

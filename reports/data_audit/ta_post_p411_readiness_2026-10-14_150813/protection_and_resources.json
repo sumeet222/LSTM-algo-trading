@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "as_of": "2026-10-14T15:21:38.986212-04:00",
+  "branch": "feat/track-a-data-intake",
+  "head": "bb654a8f541b184d7f649b45f29507b23fb710f8",
+  "upstream": "0ahead/0behind; fetched once at start",
+  "preexisting_tracked_count": 1597,
+  "preexisting_tracked_changed": [],
+  "all_preexisting_tracked_sha_conserved": true,
+  "raw_files": 599,
+  "raw_bytes": 19232923,
+  "all_raw_sha_conserved": true,
+  "new_raw_files": 0,
+  "new_parquets": 0,
+  "new_checkpoints": 0,
+  "new_source_copies": 0,
+  "source_pairs_verified": 201,
+  "source_manifest_sha256": "45a91dd7aff21d9a0aecf3a94635fc4c7eccfbeb08d16c58ec5d196e2fe62aff",
+  "canonical_protocol_unchanged": true,
+  "canonical_universe": [
+    "AAPL",
+    "JPM",
+    "JNJ",
+    "WMT",
+    "CAT"
+  ],
+  "proposed_universe": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ],
+  "scientific_activation": false,
+  "protected_register_counts": {
+    "P2": 16,
+    "P3": 33,
+    "blockers": 7,
+    "genuine_pairs": 0,
+    "ceiling": 40
+  },
+  "provider_GET": 0,
+  "env_or_secret_access": 0,
+  "confirmation": {
+    "permitted_access": "Full-horizon native/market symbol+timestamp/timeframe projection, schema and byte hashes only; current numeric stock reads limited to pre2024-07-01ET partition end. Course CSV only hashed.",
+    "features": 0,
+    "labels": 0,
+    "returns": 0,
+    "predictions": 0,
+    "economic_replays": 0,
+    "model_fits": 0,
+    "fitted_floors_scalers": 0,
+    "no_confirmation_scientific_access": true
+  },
+  "disk_before_KiB": {
+    "repository": 990324,
+    "data_audit": 87204
+  },
+  "disk_after_KiB": {
+    "repository": 991088,
+    "data_audit": 87948,
+    "package": 744
+  },
+  "package_bytes": 681724,
+  "session_report_bytes": 18169,
+  "added_payload_bytes": 699893,
+  "working_tree": "Only new audit report tree and17-section session report; no tracked modifications.",
+  "git_operations": "Read-only inspection/fetch only; no stage/commit/push/PR/merge/reset",
+  "scratch": "Local audit orchestration in temporary files only, no repository Python/source changes. reproduction.md contains complete portable command transcripts.",
+  "disk_delta_KiB": {
+    "repository": 764,
+    "data_audit": 744
+  }
+}

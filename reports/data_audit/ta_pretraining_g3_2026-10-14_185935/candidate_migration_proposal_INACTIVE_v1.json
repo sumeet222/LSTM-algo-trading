@@ -1,0 +1,64 @@
+{
+  "migration_id": "TA-D1-CORE5-MIGRATION-004-PROPOSAL-v1",
+  "status": "INACTIVE_BY_EXPLICIT_USER_SCOPE",
+  "human_instruction": "Limit this package permanently to candidate preparation",
+  "production_pointer": {
+    "path": "configs/CURRENT_PROTOCOL.json",
+    "sha256": "1b83b2ef8f727618ef319c0c04b36056c5c8cb19857ebe40927851e3295ca600",
+    "protocol_hash": "119513911f3f7fb1c51cb93381e3f5ebae6b8939bac8e056bf53448726ceb843"
+  },
+  "legacy_universe": [
+    "AAPL",
+    "JPM",
+    "JNJ",
+    "WMT",
+    "CAT"
+  ],
+  "legacy_backup_order": [
+    "MSFT",
+    "BAC",
+    "MRK",
+    "COST",
+    "HON"
+  ],
+  "candidate_universe": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ],
+  "candidate_sectors": [
+    "Technology",
+    "Consumer Staples",
+    "Communication Services",
+    "Consumer Discretionary",
+    "Financials"
+  ],
+  "formation_reference": "2020-07-01",
+  "actual_retrospective_selection": "2026-10-13",
+  "new_namespace": "CAND:TRACK_A_CORE5:IDEAL_CLOCK:004",
+  "authority": {
+    "policy_ref": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/proposed_source_policy_v1.json",
+      "sha256": "77b626d21d56a1056cc274c14ea336a8d8f2a5a2004bb5cee0eb14f227fe42ce"
+    },
+    "approval_ref": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/researcher_conditional_preparation_approval_v1.json",
+      "sha256": "736459d1f24459c92a090d86970cebfa52614699222a15bf9136f2097e18b2bd"
+    }
+  },
+  "migration_authorized": false,
+  "pointer_switch_attempted": false,
+  "training_permission": false,
+  "required_future_bindings": [
+    "explicit production decision",
+    "applicable shared/source-rights scope",
+    "source/clock/action/universe evidence or accepted limitation policy",
+    "canonical FT0/TG0/preprocessing/data/code hashes",
+    "matching real-data model executor with no synthetic-mode relabeling",
+    "appropriate scientific G0-G5 preflight"
+  ],
+  "invalidation": "Old-universe/source/proxy/scaler/model/checkpoint/forecast IDs never enter this candidate namespace; original artifacts remain intact.",
+  "minute_plan": "SUPERSEDED_INACTIVE_FOR_PACKAGE004; old implementation/tests/history remain"
+}

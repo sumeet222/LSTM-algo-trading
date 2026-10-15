@@ -1,0 +1,28 @@
+{
+  "status": "PREPARED_INTERFACE_DESCRIPTION_NOT_EXECUTED",
+  "reference_mode": "COMPLETED_HOURLY_CLOSE_PROXY:v1",
+  "fields": [
+    "symbol",
+    "source_row_id",
+    "price",
+    "price_basis",
+    "period_start",
+    "period_end",
+    "observed_available_at_UNKNOWN",
+    "approved_ideal_clock_rule",
+    "scheduled_trade_event",
+    "proxy_age_seconds",
+    "validity_reason"
+  ],
+  "raw_cashbook_compatible": false,
+  "fill_certified": false,
+  "required_separate_policies": [
+    "raw-share/action conversion or separately approved consistent accounting basis",
+    "coarse observed-bar retries/marks",
+    "risk sampling and outstanding unresolved holdings",
+    "contextual benchmark boundary opportunity",
+    "borrow/funding/dividend terms"
+  ],
+  "blocks_G3_feature_labels": false,
+  "economic_replay_authorized": false
+}

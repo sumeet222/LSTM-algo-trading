@@ -1,0 +1,119 @@
+{
+  "status": "PARTIAL",
+  "action_archive": "data/raw/alpaca/track_a_close_v1/actions-d7e39f2015b86602ac9c.json",
+  "sha256": "72f5432b84cd87a5941301b7ef05b81a377ca157bbb04c403fea3ebbcda63eb3",
+  "archive_requested_symbols": "AAPL,JPM,JNJ,WMT,CAT",
+  "historical_publication": null,
+  "AAPL": {
+    "symbol": "AAPL",
+    "timestamp": "2020-08-28 13:30:00+00:00",
+    "split_record": {
+      "cusip": "037833100",
+      "due_bill_redemption_date": "2020-09-01",
+      "ex_date": "2020-08-31",
+      "id": "d209b6c2-9231-474c-a80e-1a79dacadbb2",
+      "new_rate": 4,
+      "old_rate": 1,
+      "payable_date": "2020-08-28",
+      "process_date": "2020-08-31",
+      "record_date": "2020-08-24",
+      "symbol": "AAPL"
+    },
+    "raw_source": "data/raw/alpaca/track_a_close_v1/split_raw_30min_anchor-bd736a895c52de2e7452.parquet",
+    "raw_sha256": "b94d6f755526929b0654e9abae8b0d5d3b2708b5b409b823389065610d7592eb",
+    "adjusted_source": "data/raw/alpaca/track_a/2020-08-6a9af5eaccb5c51fed33.parquet",
+    "adjusted_sha256": "5a5cc85e9d4ff7a7dbe07e8c141a18e0758df62f6762d677535efe7dd027141d",
+    "candidate_factor": "4",
+    "OHLC": {
+      "open": {
+        "raw": 504.03,
+        "split_adjusted": 126.01,
+        "converted": "504.04",
+        "absolute_difference": "0.01"
+      },
+      "high": {
+        "raw": 505.04,
+        "split_adjusted": 126.26,
+        "converted": "505.04",
+        "absolute_difference": "0.00"
+      },
+      "low": {
+        "raw": 499.43,
+        "split_adjusted": 124.86,
+        "converted": "499.44",
+        "absolute_difference": "0.01"
+      },
+      "close": {
+        "raw": 503.5,
+        "split_adjusted": 125.88,
+        "converted": "503.52",
+        "absolute_difference": "0.02"
+      }
+    },
+    "volume": {
+      "raw": 6044631.0,
+      "split_adjusted": 24178524.0,
+      "expected_raw_times_factor": 24178524.0
+    },
+    "interpretation": "RETROSPECTIVE_UNIT_SAMPLE_ONLY; archive publication=None; factor not certified for causal use"
+  },
+  "AAPL_original_dividend_records": [
+    {
+      "cusip": "037833100",
+      "ex_date": "2020-05-08",
+      "foreign": false,
+      "id": "235946d4-2605-4e5c-9699-9bfd00452ec0",
+      "payable_date": "2020-05-14",
+      "process_date": "2020-05-14",
+      "rate": 0.82,
+      "record_date": "2020-05-11",
+      "special": false,
+      "symbol": "AAPL"
+    },
+    {
+      "cusip": "037833100",
+      "ex_date": "2020-08-07",
+      "foreign": false,
+      "id": "d09386ae-0c2b-4280-8aa0-295e545354b1",
+      "payable_date": "2020-08-13",
+      "process_date": "2020-08-13",
+      "rate": 0.82,
+      "record_date": "2020-08-10",
+      "special": false,
+      "symbol": "AAPL"
+    },
+    {
+      "cusip": "037833100",
+      "ex_date": "2020-11-06",
+      "foreign": false,
+      "id": "43032b74-6743-4fef-9a10-de51c464a480",
+      "payable_date": "2020-11-12",
+      "process_date": "2020-11-12",
+      "rate": 0.205,
+      "record_date": "2020-11-09",
+      "special": false,
+      "symbol": "AAPL"
+    }
+  ],
+  "dividend_arithmetic": {
+    "hypothetical_pre_split_one_share": "0.82 USD receivable for record rate 0.82; payment 2020-08-13 in original record",
+    "post_split_equivalent": "4 shares * 0.205 USD = 0.82 USD; cross-date rate arithmetic, not constant dividend policy or simultaneous entitlement"
+  },
+  "COST": {
+    "timestamp": "2019-12-18 14:30:00+00:00",
+    "raw_source": "data/raw/alpaca/track_a_backup_candidate_v1/raw_split_control/2019-12-06e20c221332eb43b69b.parquet",
+    "raw_sha256": "b4813f11057f9d87e36b56a63b266fcda25b4585262c7b0ab5d75f8db3944271",
+    "adjusted_source": "data/raw/alpaca/track_a_fast49_candidate_v1/full_native/2019-12-6adae6b688f99f56c7fa.parquet",
+    "adjusted_sha256": "2b2a5c8a8d504792a4b882f49465e5a56b6b1b744c2268635a5187c9818a3ef3",
+    "raw_close": 294.8,
+    "adjusted_close": 294.8,
+    "raw_volume": 326708.0,
+    "adjusted_volume": 326708.0,
+    "interpretation": "One matched candle; equality cannot establish no later splits, cash actions, complete vintage or historical publication"
+  },
+  "CMCSA": "NO_LOCAL_ACTION_ARCHIVE_FOR_SYMBOL",
+  "SBUX": "NO_LOCAL_ACTION_ARCHIVE_FOR_SYMBOL",
+  "CME": "NO_LOCAL_ACTION_ARCHIVE_FOR_SYMBOL; 2012 issuer split citation precedes prehistory and is not exhaustive",
+  "COST_cash_actions": "NO_LOCAL_ACTION_ARCHIVE_FOR_SYMBOL; cash/special distributions and pay/record/ex dates require evidence",
+  "full_historical_conversion": "HOLD"
+}

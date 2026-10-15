@@ -5,6 +5,7 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass, field
 from statistics import fmean
+from typing import Protocol
 
 import pandas as pd
 
@@ -17,7 +18,6 @@ from .ft0_transforms import (
     FloorCertificate,
     transform_reason,
 )
-from .labels import UNIVERSE
 from .m2 import M2FloorCertificate, M2Result, ReturnIndex, ScheduledStep, evaluate_m2
 from .market_features import rms
 from .stock_source import StockHistory, source_reason
@@ -130,6 +130,56 @@ class FeatureCell:
     research_ready: bool = False
 
 
+class FloorValues(Protocol):
+    """Numerical floor interface; permission and fitting provenance remain with callers."""
+
+    @property
+    def hourly_floor(self) -> float: ...
+
+    @property
+    def daily_floor(self) -> float: ...
+
+    @property
+    def hourly_pseudocount(self) -> float: ...
+
+    @property
+    def daily_pseudocount(self) -> float: ...
+
+
+def apply_component_floors(
+    v: dict[str, float | None], p: FloorValues,
+) -> dict[str, float | None]:
+    """Apply the frozen eight floor-dependent FT0 formulae without fitting anything."""
+    raw: dict[str, float | None] = {name: v.get(name) for name in ORDER}
+    h12, h60, daily = v["RMS12"], v["RMS60"], v["RMS63"]
+    if v["OC"] is not None and h60 is not None:
+        raw["M1"] = v["OC"] / max(h60, p.hourly_floor)
+    raw["V1"] = math.log(max(h12, p.hourly_floor)) if h12 is not None else None
+    raw["V2"] = math.log(max(h60, p.hourly_floor)) if h60 is not None else None
+    if raw["V1"] is not None and raw["V2"] is not None:
+        raw["V3"] = raw["V1"] - raw["V2"]
+    if daily is not None:
+        raw["M3"] = (
+            v["MOM5"] / (math.sqrt(5) * max(daily, p.daily_floor))
+            if v["MOM5"] is not None
+            else None
+        )
+        raw["M4"] = (
+            v["MOM105"] / (math.sqrt(105) * max(daily, p.daily_floor))
+            if v["MOM105"] is not None
+            else None
+        )
+    if v["Q1_MEAN"] is not None and v["VOLUME_H"] is not None:
+        raw["Q1"] = math.log(
+            (v["VOLUME_H"] + p.hourly_pseudocount) / (v["Q1_MEAN"] + p.hourly_pseudocount)
+        )
+    if v["Q2_5"] is not None and v["Q2_60"] is not None:
+        raw["Q2"] = math.log(
+            (v["Q2_5"] + p.daily_pseudocount) / (v["Q2_60"] + p.daily_pseudocount)
+        )
+    return raw
+
+
 class FeatureCalculator:
     """One source/component cache; no per-window source copies or alternate M2 math."""
 
@@ -144,7 +194,7 @@ class FeatureCalculator:
         self, symbol: str, step: ScheduledStep, *, source_only: bool = False
     ) -> Components:
         self.history.calendar.validate_step(step)
-        if symbol not in UNIVERSE:
+        if symbol not in self.history.universe:
             raise ValueError("CANONICAL_STOCK_REQUIRED")
         if step.end >= pd.Timestamp("2024-07-01", tz="America/New_York").tz_convert("UTC"):
             raise ValueError("CONFIRMATION_FEATURE_COMPUTATION_NOT_AUTHORIZED")
@@ -389,32 +439,9 @@ class FeatureCalculator:
             m2 = self._m2[key]
             raw["M2"] = m2.value
         if floor_ready and p is not None:
-            h12, h60, daily = v["RMS12"], v["RMS60"], v["RMS63"]
-            if v["OC"] is not None and h60 is not None:
-                raw["M1"] = v["OC"] / max(h60, p.hourly_floor)
-            raw["V1"] = math.log(max(h12, p.hourly_floor)) if h12 is not None else None
-            raw["V2"] = math.log(max(h60, p.hourly_floor)) if h60 is not None else None
-            if raw["V1"] is not None and raw["V2"] is not None:
-                raw["V3"] = raw["V1"] - raw["V2"]
-            if daily is not None:
-                raw["M3"] = (
-                    v["MOM5"] / (math.sqrt(5) * max(daily, p.daily_floor))
-                    if v["MOM5"] is not None
-                    else None
-                )
-                raw["M4"] = (
-                    v["MOM105"] / (math.sqrt(105) * max(daily, p.daily_floor))
-                    if v["MOM105"] is not None
-                    else None
-                )
-            if v["Q1_MEAN"] is not None and v["VOLUME_H"] is not None:
-                raw["Q1"] = math.log(
-                    (v["VOLUME_H"] + p.hourly_pseudocount) / (v["Q1_MEAN"] + p.hourly_pseudocount)
-                )
-            if v["Q2_5"] is not None and v["Q2_60"] is not None:
-                raw["Q2"] = math.log(
-                    (v["Q2_5"] + p.daily_pseudocount) / (v["Q2_60"] + p.daily_pseudocount)
-                )
+            transformed = apply_component_floors(v, p)
+            raw.update({name: transformed[name] for name in
+                        ("M1", "M3", "M4", "V1", "V2", "V3", "Q1", "Q2")})
         output = []
         floor_channels = {"M1", "M3", "M4", "V1", "V2", "V3", "Q1", "Q2"}
         for name in ORDER:

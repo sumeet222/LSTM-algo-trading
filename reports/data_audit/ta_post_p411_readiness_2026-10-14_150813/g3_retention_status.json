@@ -1,0 +1,100 @@
+{
+  "status": "G3_REAL_NOT_RUN_BLOCKED_BY_UNAPPROVED_UNIVERSE_UNKNOWN_PUBLICATION_ACTION_UNITS_MINUTE_REFERENCES_AND_REAL_FIT_EXECUTOR",
+  "disposition": "BLOCKED",
+  "real_feature_target_retention": "NOT_MEASURED",
+  "measured": {
+    "label": "MEASURED",
+    "source_RTH_keys": 89985,
+    "expected_RTH_keys": 89985,
+    "missing": 0,
+    "fills": 0,
+    "unresolved": 0,
+    "calendar_only_origin_counts": [
+      {
+        "period": "TRAIN",
+        "sessions": 755,
+        "scheduled_origins": 1510,
+        "calendar_compatible_origins": 1502,
+        "calendar_incompatible": 8,
+        "by_origin": {
+          "1": 751,
+          "2": 751
+        },
+        "upper_bound": 1502,
+        "measurement": "MEASURED_CALENDAR_ONLY",
+        "retention": "NOT_MEASURED",
+        "bound": "CONDITIONAL_BOUND"
+      },
+      {
+        "period": "WF1",
+        "sessions": 126,
+        "scheduled_origins": 252,
+        "calendar_compatible_origins": 248,
+        "calendar_incompatible": 4,
+        "by_origin": {
+          "1": 124,
+          "2": 124
+        },
+        "upper_bound": 248,
+        "measurement": "MEASURED_CALENDAR_ONLY",
+        "retention": "NOT_MEASURED",
+        "bound": "CONDITIONAL_BOUND"
+      },
+      {
+        "period": "WF2",
+        "sessions": 124,
+        "scheduled_origins": 248,
+        "calendar_compatible_origins": 248,
+        "calendar_incompatible": 0,
+        "by_origin": {
+          "1": 124,
+          "2": 124
+        },
+        "upper_bound": 248,
+        "measurement": "MEASURED_CALENDAR_ONLY",
+        "retention": "NOT_MEASURED",
+        "bound": "CONDITIONAL_BOUND"
+      }
+    ]
+  },
+  "source_only_upper_bound": {
+    "label": "CONDITIONAL_BOUND",
+    "training": 1502,
+    "development_WF1": 248,
+    "development_WF2": 248,
+    "development": 496,
+    "meaning": "Maximum origins allowed by calendar and native source availability; not measured eligible FT0/TG0 populations or a prediction of retention; lower scientific eligible count unknown"
+  },
+  "not_measured": {
+    "label": "NOT_MEASURED",
+    "FT0_48x16x5": true,
+    "channel_failure_provenance": true,
+    "TG0_and_M2": true,
+    "market_endpoint_and46of48": true,
+    "full_cohort_masks": true,
+    "maturity_purge": true,
+    "year_and_regime_retention": true,
+    "floors_scalers_and_fit_ids": true
+  },
+  "blocked": {
+    "label": "BLOCKED",
+    "reasons": [
+      "Production D1 not amended",
+      "Stock/SPY original publication UNKNOWN",
+      "Action units/vintage incomplete; AAPL raw conversion not exact to cents in sample",
+      "All-five true minute references absent; shared proxy/exception source version not scientifically activated",
+      "Core StockBar/StockDaily/Action original-universe restriction",
+      "ft0_transforms.population rejects real fitting even caller DOCUMENTED data; no noncertified diagnostic fit permission"
+    ]
+  },
+  "threshold": {
+    "training_denominator": 1502,
+    "minimum_numerator": 1352,
+    "threshold_basis": "ceil(0.90*1502); denominator matches calendar-compatible training origins only",
+    "measured_numerator": null,
+    "compliance": "NOT_MEASURED",
+    "other_guards": "train/dev>=90%; each WF/origin/supported regime>=85%; regime gap<=10pp; WF>=100 eligible sessions; inner63 >=50 eligible sessions and>=25 per origin; raw calendar tail lists are not eligible-label certificates"
+  },
+  "synthetic_proof": "218 focused tests across two batches; existing clean reader and gate/clock/order/unit/confirmation negatives only; no fabricated available_at, no replacement calculator, no real fit",
+  "no_fit_or_label_or_scaler_persisted": true
+}

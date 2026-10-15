@@ -1,0 +1,59 @@
+{
+  "TRAIN": {
+    "origins_materialized_and_checked": 1502,
+    "finite_market_history_cells": 360480,
+    "finite_joined_21channel_cells": 7570080,
+    "finite_float32_conversion": true,
+    "stock_market_masks_complete": true,
+    "dense_windows_saved": false
+  },
+  "WF1": {
+    "origins_materialized_and_checked": 248,
+    "finite_market_history_cells": 59520,
+    "finite_joined_21channel_cells": 1249920,
+    "finite_float32_conversion": true,
+    "stock_market_masks_complete": true,
+    "dense_windows_saved": false
+  },
+  "WF2": {
+    "origins_materialized_and_checked": 248,
+    "finite_market_history_cells": 59520,
+    "finite_joined_21channel_cells": 1249920,
+    "finite_float32_conversion": true,
+    "stock_market_masks_complete": true,
+    "dense_windows_saved": false
+  },
+  "independent_U1_U5_oracle": {
+    "session": "2020-07-01",
+    "slot": 1,
+    "raw_SPY_hour_open": 309.56,
+    "raw_SPY_hour_close": 310.91,
+    "independent_raw_U1_U5": [
+      1.165409329027729,
+      -5.590296285059715,
+      -0.24912099619792688,
+      -0.2519583023731664,
+      0.016121618959568183
+    ],
+    "calculator_raw_U1_U5": [
+      1.165409329027729,
+      -5.590296285059715,
+      -0.24912099619792688,
+      -0.2519583023731664,
+      0.016121618959568183
+    ],
+    "scaled_U1_U5": [
+      1.9580122696662179,
+      0.5971785275666868,
+      -0.9234972624478809,
+      -0.830609781927792,
+      -0.6316540007631335
+    ],
+    "max_abs_difference": 0.0,
+    "observed_publication": "UNKNOWN",
+    "ideal_clock_age_seconds": 0,
+    "source_action_vintage_verified": false
+  },
+  "transient_numeric_trace_sha256": "0ce6005c30036e7b1a9852d87377c00344f0800e2422a6a144c53120785bb13e",
+  "NOT_FOR_TRAINING": true
+}

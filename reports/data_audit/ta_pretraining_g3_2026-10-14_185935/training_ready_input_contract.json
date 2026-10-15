@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "status": "CANDIDATE_REVIEW_READY_MODEL_FIT_FORBIDDEN",
+  "DATASET_READY_FOR_FIRST_P4_3_PAIR": false,
+  "source_designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+  "permanent_current_package_scope": "CANDIDATE_PREPARATION_ONLY_PER_LIVE_USER_DECISION",
+  "dataset_manifest": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/canonical_dataset_manifest.json",
+    "sha256": "ffc2932434ad6ec966cb0046ab4a230d693bdf04acbbaddbf26f51cf0c6baad0"
+  },
+  "source_manifest": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/canonical_source_action_clock_manifest.json",
+    "sha256": "4972860876170921380e5c386851f7b5c15749f23721dbf61d76c783739e381f"
+  },
+  "authority": {
+    "approval_ref": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/researcher_conditional_preparation_approval_v1.json",
+      "sha256": "736459d1f24459c92a090d86970cebfa52614699222a15bf9136f2097e18b2bd"
+    },
+    "policy_ref": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/proposed_source_policy_v1.json",
+      "sha256": "77b626d21d56a1056cc274c14ea336a8d8f2a5a2004bb5cee0eb14f227fe42ce"
+    }
+  },
+  "candidate_order": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ],
+  "model_shape": [
+    5,
+    48,
+    16
+  ],
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "first_future_pair": {
+    "architecture": "TM0",
+    "input_dimension": 16,
+    "hidden_width": 32,
+    "layers": 1,
+    "parameters": 6433,
+    "seed": 42,
+    "fitting_cutoff": "2023-06-30",
+    "stage": "WF1",
+    "dropout_final_hidden": 0.1,
+    "batch_sessions": 16,
+    "loss": "equal-session, equal eligible-origin, equal-stock TG0 MSE",
+    "max_calibration_epochs": 60,
+    "minimum_stop_epoch": 12,
+    "patience": 10,
+    "qualifying_rule": "new_loss < 0.999 * previous_qualifying_best",
+    "refit": "fresh model/optimizer for exactly selected calibration epoch",
+    "inner_preprocessing": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_INNER_TRAIN_preprocessing.json",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "sha256": "3283ce988067922542cae06c9d77e3cb7695cab47761933c6ed67f66c45f1c39"
+    },
+    "refit_preprocessing": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_REFIT_preprocessing.json",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "sha256": "929fdda939f240b4e59958b62718bf876fd6979183cbd1ccea3dbcbb91890f90"
+    },
+    "inner_tail": "2023-03-31 to 2023-06-30, 63 exchange sessions, 126 origins",
+    "outer_window": "2023-07-01 to 2023-12-31",
+    "pair_permission": "NOT_GRANTED"
+  },
+  "ready_loader": "lstm_data.pretraining_store.load_candidate_view(root, manifest_ref, preparation_key)",
+  "allowed_next_now": "Load/review/reconstruct candidate features, labels, masks and preprocessing under approval-bound local assumptions",
+  "current_training_invocation": "NONE_AUTHORIZED; existing neural_lifecycle.run_pair remains synthetic-only and rejects real candidate permissions",
+  "required_future_preflight": [
+    "separate exact scope decision for production or expressly labeled assumption-study fitting",
+    "scientific G0-G5 applicability and rights/shared requirements resolved without false attestations",
+    "reviewed real-data FitData/model adapter matching candidate store and preprocessing identities; do not relabel SYNTHETIC",
+    "explicit one-pair reservation/training authorization",
+    "confirmation barrier remains locked",
+    "exact source/action/clock/universe/proxy/code/scale hashes; no old-universe cache fallback"
+  ],
+  "timing_contract": [
+    "measure source loading",
+    "measure feature prep separately",
+    "measure calibration epochs/time and chosen checkpoint",
+    "measure fresh refit epochs/updates/time",
+    "measure prediction/audit and end-to-end total",
+    "record CPU/GPU/MPS, hardware, memory/disk",
+    "do not report estimates as measured training time"
+  ],
+  "no_model_training_performed": true,
+  "ledger_pairs_spent": "0/40",
+  "audit_array_dtype": "float64; finite float32 conversion was independently checked for all active stock/market windows",
+  "conditional_versions": {
+    "target": "TG0:CONDITIONAL_VENDOR_SPLIT_HOURLY_PROXY:004:v1",
+    "M2": "M2:CONDITIONAL_VENDOR_SPLIT_HOURLY_PROXY:004:v1",
+    "features": "FT0:EXACT16:CONDITIONAL_IDEAL_CLOCK:004:v1",
+    "transforms": "FIT_TRANSFORM_ONLY:RETROSPECTIVE_RESEARCH_PREFIX:004:v1",
+    "execution_reference_mode": "COMPLETED_HOURLY_CLOSE_PROXY:v1",
+    "legacy_artifact_reuse": "FORBIDDEN; source/universe/policy/code/preparation identities must match"
+  }
+}

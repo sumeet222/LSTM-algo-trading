@@ -1,0 +1,160 @@
+{
+  "D6g_inner": {
+    "PRECONFIRMATION": {
+      "adequate_50_sessions_25_each_origin": true,
+      "calendar_tail_sessions": 63,
+      "designation": "MEASURED_ASSUMPTION_CONDITIONAL_NOT_OBSERVED_CAUSALITY",
+      "eligible": 126,
+      "eligible_sessions": 63,
+      "exclusion_reasons": {},
+      "measured": 126,
+      "nominal": 126,
+      "per_origin": {
+        "1": {
+          "eligible": 63,
+          "nominal": 63
+        },
+        "2": {
+          "eligible": 63,
+          "nominal": 63
+        }
+      },
+      "retention": 1.0,
+      "start": "2024-04-01T04:00:00+00:00",
+      "stop": "2024-07-01T04:00:00+00:00"
+    },
+    "WF1": {
+      "adequate_50_sessions_25_each_origin": true,
+      "calendar_tail_sessions": 63,
+      "designation": "MEASURED_ASSUMPTION_CONDITIONAL_NOT_OBSERVED_CAUSALITY",
+      "eligible": 126,
+      "eligible_sessions": 63,
+      "exclusion_reasons": {},
+      "measured": 126,
+      "nominal": 126,
+      "per_origin": {
+        "1": {
+          "eligible": 63,
+          "nominal": 63
+        },
+        "2": {
+          "eligible": 63,
+          "nominal": 63
+        }
+      },
+      "retention": 1.0,
+      "start": "2023-03-31T04:00:00+00:00",
+      "stop": "2023-07-01T04:00:00+00:00"
+    },
+    "WF2": {
+      "adequate_50_sessions_25_each_origin": true,
+      "calendar_tail_sessions": 63,
+      "designation": "MEASURED_ASSUMPTION_CONDITIONAL_NOT_OBSERVED_CAUSALITY",
+      "eligible": 124,
+      "eligible_sessions": 62,
+      "exclusion_reasons": {},
+      "measured": 124,
+      "nominal": 124,
+      "per_origin": {
+        "1": {
+          "eligible": 62,
+          "nominal": 62
+        },
+        "2": {
+          "eligible": 62,
+          "nominal": 62
+        }
+      },
+      "retention": 1.0,
+      "start": "2023-10-02T04:00:00+00:00",
+      "stop": "2024-01-01T05:00:00+00:00"
+    }
+  },
+  "DATASET_READY_FOR_FIRST_P4_3_PAIR": false,
+  "MC0_MC1_E5": "CONDITIONAL_STOCK_MARKET_INPUTS_COMPUTED; EXTERNAL_AND_PRODUCTION_TRAINING_HOLD; E5_PEER_DERIVATION_NOT_ACTIVATED",
+  "TM0": "CONDITIONAL_CANDIDATE_PREPARATION_MEASURED_NOT_FOR_TRAINING",
+  "development_90pct_pass": true,
+  "fold_85pct_100sessions_pass": true,
+  "observed_certified_eligible": 0,
+  "package": "TA-PRETRAIN-HOURLY-PROXY-G3-004",
+  "populations": {
+    "TRAIN": {
+      "designation": "MEASURED_ASSUMPTION_CONDITIONAL_NOT_OBSERVED_CAUSALITY",
+      "eligible": 1502,
+      "eligible_sessions": 751,
+      "exclusion_reasons": {},
+      "measured": 1502,
+      "nominal": 1502,
+      "per_origin": {
+        "1": {
+          "eligible": 751,
+          "nominal": 751
+        },
+        "2": {
+          "eligible": 751,
+          "nominal": 751
+        }
+      },
+      "retention": 1.0
+    },
+    "WF1": {
+      "designation": "MEASURED_ASSUMPTION_CONDITIONAL_NOT_OBSERVED_CAUSALITY",
+      "eligible": 248,
+      "eligible_sessions": 124,
+      "exclusion_reasons": {},
+      "measured": 248,
+      "nominal": 248,
+      "per_origin": {
+        "1": {
+          "eligible": 124,
+          "nominal": 124
+        },
+        "2": {
+          "eligible": 124,
+          "nominal": 124
+        }
+      },
+      "retention": 1.0
+    },
+    "WF2": {
+      "designation": "MEASURED_ASSUMPTION_CONDITIONAL_NOT_OBSERVED_CAUSALITY",
+      "eligible": 248,
+      "eligible_sessions": 124,
+      "exclusion_reasons": {},
+      "measured": 248,
+      "nominal": 248,
+      "per_origin": {
+        "1": {
+          "eligible": 124,
+          "nominal": 124
+        },
+        "2": {
+          "eligible": 124,
+          "nominal": 124
+        }
+      },
+      "retention": 1.0
+    }
+  },
+  "regime_retention": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/conditional_regime_retention.json",
+    "sha256": "b76854947e098ee406eb7c3f66232b56961f3aae782ee9c73384019e7f14e043"
+  },
+  "strict_observed_causality_certified": false,
+  "training_1352_of_1502_pass": true,
+  "base_build_retention_ref": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/genuine_G3_population_and_retention.json",
+    "sha256": "0ad00a2df27380ba08e56dd69c8c8b35daca3b976e1c3dde3b222136c73b9ba7"
+  },
+  "market_candidate_measured": {
+    "TRAIN": 1502,
+    "WF1": 248,
+    "WF2": 248,
+    "exact_intersection_with_stock": true,
+    "all_required_endpoints_valid": true,
+    "all_windows_at_least46_of48": true,
+    "market_source": "RAW_SPY_ETF_PRICE_STATE_PROXY",
+    "NOT_FOR_TRAINING": true
+  },
+  "scope": "CANDIDATE_ONLY; both observed clocks and rights remain uncertified"
+}

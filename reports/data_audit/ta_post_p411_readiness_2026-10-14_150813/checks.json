@@ -1,0 +1,155 @@
+{
+  "status": "PASS_REPORT_VERIFICATION_SCIENTIFIC_HOLD",
+  "functional_changes": false,
+  "commands": {
+    "types_final": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "started_at": "2026-10-14T15:16:20.494833-04:00",
+      "ended_at": "2026-10-14T15:16:41.823458-04:00",
+      "seconds": 21.328862374997698,
+      "exit_code": 0
+    },
+    "ruff_final": {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "started_at": "2026-10-14T15:16:41.824183-04:00",
+      "ended_at": "2026-10-14T15:16:41.893164-04:00",
+      "seconds": 0.06899087497731671,
+      "exit_code": 0
+    }
+  },
+  "fresh_pytest": [
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_candidate_quality.py",
+        "tests/test_stock_source.py",
+        "tests/test_candle_cleanup.py",
+        "tests/test_p2_handoff.py",
+        "tests/test_clocks.py",
+        "tests/test_labels.py",
+        "tests/test_market_source.py"
+      ],
+      "exit_code": 0,
+      "passed": 109,
+      "seconds_reported": 18.1,
+      "stdout_summary": "109 passed in 18.10s",
+      "capture": "Tool output; summary retained, not a full stdout log"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_evidence.py",
+        "tests/test_ft0_transforms.py",
+        "tests/test_corporate_actions.py",
+        "tests/test_stock_features.py",
+        "tests/test_fullpeer_sp3.py"
+      ],
+      "exit_code": 0,
+      "passed": 109,
+      "seconds_reported": 243.21,
+      "stdout_summary": "109 passed in 243.21s (0:04:03)",
+      "capture": "Tool output; summary retained, not a full stdout log"
+    }
+  ],
+  "total_fresh_cases": 218,
+  "static_summary": {
+    "filesAnalyzed": 155,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 20.39
+  },
+  "basic": true,
+  "ruff": "PASS",
+  "full_pytest": "INHERITED_EXACT_CODE_ENV_BINDING_703_PASS_NOT_FRESH_RUN",
+  "full_binding": "inherited_full_suite_binding.json",
+  "dependency_versions": {
+    "python": "3.14.6",
+    "torch": "2.10.0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "pytest": "9.1.1",
+    "ruff": "0.17.0",
+    "pyright": "1.1.414"
+  },
+  "negative_cases": [
+    {
+      "check": "altered/reordered universe or source hash",
+      "status": "PASS",
+      "evidence": "tests/test_candle_cleanup.py:test_profile_loader_sha_code_order_and_mode_bindings; tests/test_fullpeer_sp3.py:test_bound_inputs_untrained_artifact_and_source_order_stage_rejections"
+    },
+    {
+      "check": "absent source/month",
+      "status": "PASS",
+      "evidence": "tests/test_candidate_quality.py:test_unknown_source_is_not_verified_absence; census requires exactly one covering immutable reference for every session"
+    },
+    {
+      "check": "synthetic/imputed passed as genuine",
+      "status": "PASS",
+      "evidence": "tests/test_candle_cleanup.py:test_every_engineering_row_is_quarantined_even_zero_fill_and_attrs_stripped"
+    },
+    {
+      "check": "missing/invalid available_at",
+      "status": "PASS",
+      "evidence": "tests/test_stock_source.py:test_unknown_late_wrong_slot_duplicate_and_nonfinite_source_fail_closed; tests/test_clocks.py:test_publication_predicate_synthetic_only_unknowns_fail_closed"
+    },
+    {
+      "check": "counterfeit publisher timestamp",
+      "status": "HOLD_AUTHENTICITY_NOT_PROVEN",
+      "evidence": "tests/test_clocks.py:test_documented_contract_needs_evidence_and_never_derives_publication rejects missing/derived evidence; nonempty DOCUMENTED evidence is a caller assertion, not independent publisher authentication; all actual source publication remainsUNKNOWN"
+    },
+    {
+      "check": "corporate-action unit mismatch",
+      "status": "PASS_SYNTHETIC_GUARD; REAL_UNITS_HOLD",
+      "evidence": "tests/test_candle_cleanup.py:test_split_and_unknown_units_fail_closed_instead_of_reusing_price; tests/test_stock_source.py:test_split_prices_and_volumes_reciprocal_without_mutating_raw_or_inventing_publication; observed raw-conversion cents mismatch not suppressed"
+    },
+    {
+      "check": "unknown source rights",
+      "status": "BLOCKED_NOT_CERTIFIED",
+      "evidence": "No independent rights certificate in reviewed packet; current user authorizes local audit only; no runtime rights-authentication test claimed. Scientific activation remainsHOLD."
+    },
+    {
+      "check": "missing1minute execution",
+      "status": "PASS_REJECTION_AND_INVENTORY",
+      "evidence": "tests/test_labels.py:test_exact_minute_symbol_and_duplicate_candidates; tests/test_labels.py:test_missing_entry_blocks_that_name_and_five_name_label; actual minute_reference_inventory.json"
+    },
+    {
+      "check": "missing course approval",
+      "status": "PASS_SCIENTIFIC_OPERATION_BLOCKED",
+      "evidence": "tests/test_evidence.py:test_external_blockers_and_confirmation_locked; actual TA-D2-MARKET-SPY-001 joint_signoffUNVERIFIED/instructorNOT_RETRIEVED; no approval fabricated"
+    },
+    {
+      "check": "confirmation attempted scientific read",
+      "status": "PASS",
+      "evidence": "tests/test_stock_features.py:test_unknown_clocks_never_become_valid_source_only_data_and_confirmation_math_is_blocked; tests/test_ft0_transforms.py:test_factual_fit_time_historical_training_application_and_held_out_prohibition; reproduction safe_full guard and preconfirmation partition filter"
+    },
+    {
+      "check": "reproducible census and blocker handling",
+      "status": "PASS_SOURCE_REPORT; NO_NEW_CERTIFICATE",
+      "evidence": "Existing candidate_quality/fast_inventory/calendar utilities; prior and current89985keys reconcile; existing tests/test_candidate_quality.py:test_exact_run_reconciliation_and_terminal and test_unknown_source_is_not_verified_absence; unexpected_blockers_and_assumptions.md"
+    }
+  ],
+  "new_tests_added": false,
+  "new_python_added": false,
+  "all_frozen_checks_preserved": true,
+  "editor": "No CLI-vs-editor discrepancy established; no routine restart/refresh requested. If a discrepancy appears, select repository.venv interpreter and refresh Problems for human confirmation; no observed editor count claimed.",
+  "warnings": "Arrow optional hardware sysctl warnings in offline census only; no validation failure",
+  "diff_check": "PASS"
+}

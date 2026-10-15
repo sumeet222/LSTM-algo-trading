@@ -1,0 +1,98 @@
+{
+  "policy_id": "TA-G3-ASSUMPTION-004-v1",
+  "status": "PROPOSED_PENDING_HUMAN_RESPONSE",
+  "package": "TA-PRETRAIN-HOURLY-PROXY-G3-004",
+  "study_designation": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK",
+  "universe": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ],
+  "sectors": [
+    "Technology",
+    "Consumer Staples",
+    "Communication Services",
+    "Consumer Discretionary",
+    "Financials"
+  ],
+  "historical_formation_reference": "2020-07-01",
+  "actual_retrospective_selection": "2026-10-13",
+  "formation_policy": "DISCLOSED_RETROSPECTIVE_SURVIVOR_COHORT_NO_PIT_MEMBERSHIP_CERTIFICATION",
+  "availability_policy": "IDEALIZED_PERIOD_END_ZERO_LATENCY_NOT_OBSERVED_PUBLICATION",
+  "source_available_at_remains": "UNKNOWN",
+  "ideal_clock_available_at": "PERIOD_END",
+  "information_cutoff": "ORIGINAL_COMPLETED_HOUR_END_NOT_ISSUANCE",
+  "strict_observed_causality_certified": false,
+  "action_policy": "RETROSPECTIVE_VENDOR_SPLIT_PRICE_INVERSE_VOLUME_ASOF_2025-06-30",
+  "complete_action_vintage_certified": false,
+  "price_basis": "VENDOR_SPLIT_ADJUSTED_PRICE_ONLY",
+  "dividends": "NO_CASH_DISTRIBUTIONS_IN_PRICE_ONLY_TG0; CASHBOOK_NOT_AUTHORIZED",
+  "proxy_version": "COMPLETED_HOURLY_CLOSE_PROXY:v1",
+  "entry_slots": [
+    1,
+    2
+  ],
+  "exit_slots": [
+    5,
+    6
+  ],
+  "event_lag_seconds": 180,
+  "horizon_minutes": 240,
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "input_steps": 48,
+  "preprocessing_activity": "FIT_TRANSFORM_ONLY",
+  "historical_preprocessing": "FIT_ON_PERMITTED_TRAIN_PREFIX_APPLY_RETROSPECTIVELY_TO_TRAIN_WINDOWS_NOT_A_LIVE_ASOF_CLAIM",
+  "confirmation_boundary": "2024-07-01T00:00:00-04:00",
+  "source_manifest": {
+    "path": "reports/data_audit/ta_provisional_source_integration_2026-10-13_163141/complete_genuine_source_manifest.json",
+    "sha256": "45a91dd7aff21d9a0aecf3a94635fc4c7eccfbeb08d16c58ec5d196e2fe62aff"
+  },
+  "d1_decision": {
+    "path": "docs/track_a/decisions/TA_D1_CORE5_CONDITIONAL_2026-10-14_v1.json",
+    "sha256": "9df30be86cede33a340fd595dc840a941dcfabf4766f75d3b9d73839bb0da78f"
+  },
+  "minute_data_required": false,
+  "minute_plan": "SUPERSEDED_INACTIVE_LEGACY",
+  "production_migration": "SEPARATE_EXPLICIT_APPROVAL_REQUIRED",
+  "model_fit": false,
+  "pair_reservation": false,
+  "forecast_issuance": false,
+  "trading_replay": false,
+  "confirmation_numeric": false,
+  "market_branch": "HOLD_PENDING_SEPARATE_POLICY_AND_EXTERNAL_SCOPE",
+  "rights": "PENDING_APPLICABLE_ENTITLEMENT_EVIDENCE; NO_REDISTRIBUTION",
+  "public_documentation": [
+    {
+      "url": "https://docs.alpaca.markets/us/docs/market-data-faq",
+      "supports": "Left-labeled trade interval conventions; not historical first publication"
+    },
+    {
+      "url": "https://docs.alpaca.markets/us/docs/real-time-stock-pricing-data",
+      "supports": "Bars emitted after minute boundary; later updated bars possible; zero-latency historical truth unsupported"
+    },
+    {
+      "url": "https://files.alpaca.markets/disclosures/library/TermsAndConditions.pdf",
+      "supports": "Public personal/noncommercial terms; does not prove individual acceptance or entitlement"
+    }
+  ],
+  "approval_questions": "Live questions sent in current Codex conversation; no answer prefilled"
+}

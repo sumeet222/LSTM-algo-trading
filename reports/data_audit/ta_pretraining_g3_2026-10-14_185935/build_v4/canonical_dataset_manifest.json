@@ -1,0 +1,103 @@
+{
+  "DATASET_READY_FOR_FIRST_P4_3_PAIR": false,
+  "MODEL_FIT_FORBIDDEN": true,
+  "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+  "authority": {
+    "approval_ref": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/researcher_conditional_preparation_approval_v1.json",
+      "sha256": "736459d1f24459c92a090d86970cebfa52614699222a15bf9136f2097e18b2bd"
+    },
+    "policy_ref": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/proposed_source_policy_v1.json",
+      "sha256": "77b626d21d56a1056cc274c14ea336a8d8f2a5a2004bb5cee0eb14f227fe42ce"
+    }
+  },
+  "authority_binding": "451e0b0da4cab7b4fac83f71804811278a1758be6b40f4d6487e373e12f65951",
+  "built_at": "2026-10-14T23:55:29.339374+00:00",
+  "canonical_store": {
+    "bytes": 11122045,
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/canonical_components.json.gz",
+    "sha256": "c2e53e7f21703dbfabfcad8a43ef33ef8aa3d6c4e4915ee3883f25ae81c2a3e8",
+    "uncompressed_bytes": 48221417
+  },
+  "code_sha256": "d05c1e592ee3fb23b7352b30e754e7e70c864f5edcad617cbcd106df5b53e3ad",
+  "confirmation_numerical_access": false,
+  "designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "fitting_permissions": "FIT_TRANSFORM_ONLY; ML/pair/forecast/replay forbidden",
+  "loader": "lstm_data.pretraining_store.load_candidate_view",
+  "loader_arguments": [
+    "root",
+    "manifest_ref",
+    "preparation_key"
+  ],
+  "minute_data_required": false,
+  "package": "TA-PRETRAIN-HOURLY-PROXY-G3-004",
+  "pair_reservation_authorized": false,
+  "preparations": {
+    "PRECONFIRMATION_INNER_TRAIN": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/PRECONFIRMATION_INNER_TRAIN_preprocessing.json",
+      "preparation_id": "4555e46d22d32a85586204e31272143361a30bbc009ce53d5410478133681756",
+      "sha256": "bfef85801dddc34c8aa922ccca7bd5e7ada416053b155919b61fd4b30931ad87"
+    },
+    "PRECONFIRMATION_REFIT": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/PRECONFIRMATION_REFIT_preprocessing.json",
+      "preparation_id": "5f6e28a82f536f215d0de1c2e9d6f83cc471d3a9769245217a037ad301b47676",
+      "sha256": "fd2b113cbcb53d5bca7a310721a5fe9de23f25c93dede6515f6429ef2249a5cd"
+    },
+    "WF1_INNER_TRAIN": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_INNER_TRAIN_preprocessing.json",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "sha256": "3283ce988067922542cae06c9d77e3cb7695cab47761933c6ed67f66c45f1c39"
+    },
+    "WF1_REFIT": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_REFIT_preprocessing.json",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "sha256": "929fdda939f240b4e59958b62718bf876fd6979183cbd1ccea3dbcbb91890f90"
+    },
+    "WF2_INNER_TRAIN": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF2_INNER_TRAIN_preprocessing.json",
+      "preparation_id": "abace3cc1cc0c97d17d1b92d778ac8ad2fc8ad28463cab5980405b1a862d3bf8",
+      "sha256": "feb291b125f9e259762f4db15fcc88bb8c384b44b2924eb6cd62cba78c39033d"
+    },
+    "WF2_REFIT": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF2_REFIT_preprocessing.json",
+      "preparation_id": "50e29107b7204da9ab226298f27b38e8da04d0ad6adb22ceb2d3e70d2ca5e10e",
+      "sha256": "a27f45c6d89c68724d9e46e21df5030ffa60480227677b2c3598373f7bf9dac3"
+    }
+  },
+  "production_migrated": false,
+  "schema_version": 1,
+  "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+  "steps": 48,
+  "study_namespace": "CAND:TRACK_A_CORE5:IDEAL_CLOCK:004",
+  "timings_seconds": {
+    "component_preparation": 37.25207012498868,
+    "source_loading": 53.761178874992765,
+    "total_build": 139.91604741598712
+  },
+  "universe": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ]
+}

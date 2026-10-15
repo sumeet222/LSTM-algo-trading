@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "as_of": "2026-10-14T18:36:41.306324-04:00",
+  "package": "TA-POST-P411-D1-G1G2-G3-READINESS-002",
+  "head": "bb654a8f541b184d7f649b45f29507b23fb710f8",
+  "branch": "feat/track-a-data-intake",
+  "upstream": "0ahead/0behind after fetch",
+  "protected_before_count": 2234,
+  "allowed_modified_paths": [
+    "reports/audit/track_a_events.jsonl"
+  ],
+  "all_other_protected_count": 2233,
+  "all_other_protected_hashes_conserved": true,
+  "prior_uncommitted_audit_packet_and_session": "Exact prior seal and every payload preserved; now researcher-accepted, never rewritten",
+  "ledger": {
+    "old_bytes": 42704,
+    "new_bytes": 44671,
+    "old_sha256": "4c2f0693aaaba9c29110881a0961b31a12195c126e4437830600b2a4b81e12e4",
+    "new_sha256": "1085b7bfbb395d18f02a5fff31aa30133a6b2fdbaa3bc8885f90e57fe401c927",
+    "old_prefix_preserved": true,
+    "appended_event_id": "TA-D1-CORE5-CONDITIONAL-2026-10-14-v1",
+    "events_before": 24,
+    "events_after": 25,
+    "blockers": [
+      "p0.1-F01",
+      "p0.1-USA500-source-clock",
+      "p0.1-stock-publication",
+      "p0.1-minute-execution",
+      "p0.1-actions-dividends",
+      "p0.1-formation-prehistory",
+      "p0.1-shared-D3-clock"
+    ]
+  },
+  "P2_entries": 16,
+  "P3_entries": 33,
+  "neural_budget": {
+    "ceiling": 40,
+    "attempted_pairs": 0,
+    "prospective_pairs": 0,
+    "status": "PASS",
+    "duplicate_candidate": false
+  },
+  "production_universe_unchanged": true,
+  "production_protocol_sha256": "1b83b2ef8f727618ef319c0c04b36056c5c8cb19857ebe40927851e3295ca600",
+  "candidate_status": "D1_CANDIDATE_CONDITIONALLY_ACCEPTED_PRODUCTION_INACTIVE",
+  "raw_files": 599,
+  "raw_bytes": 19232923,
+  "all_raw_hashes_conserved": true,
+  "new_raw_files": 0,
+  "new_source_copies": 0,
+  "new_parquets_in_packet": 0,
+  "new_checkpoints_in_packet": 0,
+  "real_features_labels_scalers_floors_models_created": 0,
+  "provider_GET": 0,
+  "credentials_access": 0,
+  "collaborator_contacts": 0,
+  "production_Permission_created": false,
+  "confirmation": {
+    "allowed_read": "Original byte hashes, Parquet schema and projected symbol/timestamp/timeframe only",
+    "OHLCV_deserialization": false,
+    "features_labels_returns_predictions_performance": false,
+    "course_CSV": "Only bytes hashed, no values loaded"
+  },
+  "original_P4_failure_cap_ridge_operator_history": "All protected prior P2/P3/P4 report/test/source/artifact hashes match, including P4.8 failed versions and cap warning,P4.9,P4.11",
+  "functional_code_tests_dependencies_configs_changed": false,
+  "full_suite_status": "INHERITED_NOT_FRESH; 703pass identical code/environment;256fresh targeted cases",
+  "git_operations": "Read-only inspection/fetch; no stage/commit/push/PR/pull/merge/reset/stash/rebase",
+  "disk_before_KiB": {
+    "repository": 991404,
+    "data_audit": 87948
+  },
+  "disk_after_KiB": {
+    "repository": 992176,
+    "data_audit": 88692,
+    "package": 744
+  },
+  "disk_delta_KiB": {
+    "repository": 772,
+    "data_audit": 744
+  },
+  "package_bytes": 658900,
+  "decision_bytes": 3134,
+  "session_bytes": 23291,
+  "ledger_added_bytes": 1967,
+  "new_or_appended_payload_bytes": 687292,
+  "inventory_self_and_detached_seal_excluded": true
+}

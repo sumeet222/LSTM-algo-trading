@@ -1,0 +1,13 @@
+# Future P4.3 one-pair handoff — HOLD, no runnable real fit authorized
+
+Current package scope is permanently candidate preparation only. Do not launch, reserve or consume a pair from this handoff. DATASET_READY_FOR_FIRST_P4_3_PAIR=false. The exact candidate data references, prefix preparation IDs and all preflight conditions are in training_ready_input_contract.json.
+
+The intended future pair, if separately authorized after its actual scientific requirements, is one shared stock-only TM0: seed42, fitting cutoff2023-06-30, 48×16 inputs, one32-wide LSTM layer and shared scalar head, 6,433 parameters, zero initial states, final-hidden dropout0.10, 16-session complete batches, equal-session TG0 MSE, unchanged AdamW and gradient controls. Use WF1_INNER_TRAIN preprocessing for calibration; validate on the fixed final63 exchange sessions. Use WF1_REFIT preprocessing for a fresh model/optimizer refit of exactly the selected epoch count.
+
+Keep max60 epochs, stop no earlier than12, patience10 and strict qualifying improvement `new_MSE < 0.999 * previous_qualifying_best`. Never choose epochs from WF1 outer results. D6g tail adequacy is actually measured:63 eligible sessions,63 observations per origin.
+
+The existing `lstm_data.neural_lifecycle.run_pair` is synthetic-only. There is no truthful authorized real-pair CLI invocation today. A later reviewed implementation must bridge the bound candidate arrays to genuine FitData/model input contracts and validate the separately authorized study/production policy. Do not pass `allow_synthetic=True`, rename candidate data SYNTHETIC, replace Permission.ensure, or remove the source/confirmation guards.
+
+A future explicit GO must identify the exact dataset_manifest SHA, code SHA, universe, source/action/clock/proxy policy, actual local-use scope, applicable shared requirements, prefix preparation IDs, seed and cutoff. The current production pointer is preserved; current candidate-only approval does not authorize its migration or model fitting. If a disclosed assumption-study fit is desired instead, its scientific designation and applicable gate requirements need an explicit separate decision.
+
+Measure actual source loading, feature prep, calibration training, checkpoint selection, fresh refit, prediction and audit separately; report end-to-end total, device/CPU/GPU/MPS, memory/disk, epochs and optimizer updates. This package's source/preparation timings are data-processing measurements, not training-time estimates. Confirmation July2024–June2025 remains locked. Preserve the 0/40 ledger until the later exact authorization and real executor legitimately reserve one pair.

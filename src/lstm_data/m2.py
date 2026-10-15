@@ -387,6 +387,20 @@ class M2Result:
     research_ready: bool = False
 
 
+def return_moments(
+    numerator: tuple[float, ...], denominator: tuple[float, ...],
+) -> tuple[float, float]:
+    """Stable existing M2 mean20/RMS60 algebra, shared by policy-qualified adapters."""
+    if not numerator or not denominator or any(
+        not math.isfinite(x) for x in (*numerator, *denominator)
+    ):
+        raise ValueError("FINITE_NONEMPTY_M2_RETURNS_REQUIRED")
+    scale = max(abs(x) for x in denominator)
+    mean = fmean(x / scale for x in numerator) * scale if scale else 0.0
+    rms = math.sqrt(fmean((x / scale) ** 2 for x in denominator)) * scale if scale else 0.0
+    return mean, rms
+
+
 def evaluate_m2(
     calendar: ScheduledCalendar,
     index: ReturnIndex,
@@ -437,11 +451,9 @@ def evaluate_m2(
     elif floor.window.fitted_at > step.end or (floor.basis == "SYNTHETIC" and not test_scenario):
         reason = "FLOOR_NOT_AVAILABLE_AT_STEP"
     else:
-        numerator = [x for x in values[-20:] if x is not None]
-        denominator = [x for x in values if x is not None]
-        scale = max(abs(x) for x in denominator)
-        mean = fmean(x / scale for x in numerator) * scale if scale else 0.0
-        rms = math.sqrt(fmean((x / scale) ** 2 for x in denominator)) * scale if scale else 0.0
+        numerator = tuple(x for x in values[-20:] if x is not None)
+        denominator = tuple(x for x in values if x is not None)
+        mean, rms = return_moments(numerator, denominator)
         floor_id = floor.floor_id
         if not math.isfinite(rms) or not math.isfinite(mean):
             reason = "INVALID_DENOMINATOR"

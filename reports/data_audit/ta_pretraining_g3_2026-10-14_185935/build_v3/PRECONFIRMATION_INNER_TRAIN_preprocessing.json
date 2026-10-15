@@ -1,0 +1,130 @@
+{
+  "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+  "authority_binding": "451e0b0da4cab7b4fac83f71804811278a1758be6b40f4d6487e373e12f65951",
+  "constructed_at": "2026-10-14T23:17:07.541308+00:00",
+  "designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+  "floors": [
+    {
+      "daily_floor": 0.010895787340430955,
+      "daily_pseudocount": 664914.21,
+      "hourly_floor": 0.0026121966622068733,
+      "hourly_pseudocount": 84989.41500000001,
+      "m2_floor": 0.005335312127215637,
+      "symbol": "AAPL"
+    },
+    {
+      "daily_floor": 0.008675969571862535,
+      "daily_pseudocount": 15542.285,
+      "hourly_floor": 0.002297947328171318,
+      "hourly_pseudocount": 1883.16,
+      "m2_floor": 0.004586199290362674,
+      "symbol": "COST"
+    },
+    {
+      "daily_floor": 0.011694984306270082,
+      "daily_pseudocount": 141275.46,
+      "hourly_floor": 0.002747469583609709,
+      "hourly_pseudocount": 17161.88,
+      "m2_floor": 0.005347511459902011,
+      "symbol": "CMCSA"
+    },
+    {
+      "daily_floor": 0.010656477733662122,
+      "daily_pseudocount": 52955.87,
+      "hourly_floor": 0.0025769392142259177,
+      "hourly_pseudocount": 6554.74,
+      "m2_floor": 0.004793605440505724,
+      "symbol": "SBUX"
+    },
+    {
+      "daily_floor": 0.009763637923811783,
+      "daily_pseudocount": 11315.79,
+      "hourly_floor": 0.0025117713844245546,
+      "hourly_pseudocount": 1330.67,
+      "m2_floor": 0.004801866223372693,
+      "symbol": "CME"
+    }
+  ],
+  "population_binding": "4a478609dc03a4709871a66d074593b469411ecaeaed3d6f1604a9100562da4f",
+  "population_counts": {
+    "daily_floors": "UNIQUE_SESSION",
+    "feature_positions": 5630,
+    "m2_origin_weights": [
+      0.5,
+      0.5
+    ],
+    "origins": 1872,
+    "scaled": {
+      "B1": 28150,
+      "M1": 28150,
+      "M2": 9420,
+      "M3": 28150,
+      "M4": 28150,
+      "Q1": 28150,
+      "Q2": 28150,
+      "T1": 28150,
+      "T3": 28150,
+      "T4": 28150,
+      "V1": 28150,
+      "V2": 28150,
+      "V3": 28150
+    },
+    "target_mad_origins": 1872
+  },
+  "scaler": {
+    "centers": [
+      0.02391605540327061,
+      0.040204491519431965,
+      0.0898184574251416,
+      0.4204897291924431,
+      -5.44954319886436,
+      -5.355301653187334,
+      -0.07211532257503883,
+      0.00581111946084939,
+      -0.11415339832970617,
+      -0.06055866259080046,
+      0.006206138228532113,
+      0.0006898967250794814,
+      0.002218659230036399
+    ],
+    "methods": [
+      "MAD",
+      "MAD",
+      "MAD",
+      "MAD",
+      "MAD",
+      "MAD",
+      "MAD",
+      "MAD",
+      "MAD",
+      "MAD",
+      "MAD",
+      "MAD",
+      "MAD"
+    ],
+    "scales": [
+      0.5274785523845392,
+      0.1374512688837074,
+      0.613709635935827,
+      0.6945666406746036,
+      0.2771793019524358,
+      0.21289212562206172,
+      0.2058609210024671,
+      0.0021868557175046197,
+      0.24856032512789045,
+      0.1561614269547592,
+      0.02483156775619478,
+      0.0044233431555028594,
+      0.00949060539242216
+    ]
+  },
+  "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+  "target_epsilon": 0.00024097661739409554,
+  "window": {
+    "fitted_at": "2026-10-14 23:16:34.165965+00:00",
+    "phase": "INNER_TRAIN",
+    "start": "2020-07-01 04:00:00+00:00",
+    "stop": "2024-04-01 04:00:00+00:00",
+    "window_id": "PRECONFIRMATION:INNER_TRAIN"
+  }
+}

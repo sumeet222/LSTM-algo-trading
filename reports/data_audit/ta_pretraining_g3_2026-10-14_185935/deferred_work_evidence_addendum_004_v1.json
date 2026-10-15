@@ -1,0 +1,66 @@
+{
+  "status": "CANDIDATE_SCOPE_ADDITIVE_EVIDENCE_NO_AUTO_CLEAR",
+  "parents": [
+    {
+      "path": "reports/data_audit/ta_p2_final_close_2026-10-11_221229/p2_deferred_work_register.json",
+      "sha256": "9828c48ff90645f81620469eee8dde133fc81e2e0fe0c50e2db97326f57337c5"
+    },
+    {
+      "path": "reports/data_audit/ta_p3_baselines_close_2026-10-12_004950/p3_deferred_work_register_v2.json",
+      "sha256": "c2b06e195dd37b16d873e4f2d67c0004d8e40955a75cf664b90ccdabcc3dccbe"
+    }
+  ],
+  "original_registers_unchanged": true,
+  "updates": [
+    {
+      "id": "P2-DEF-004",
+      "candidate_evidence": "Approved idealized period-end preparation only; observed historical publication remains UNKNOWN",
+      "scientific_status": "HOLD_STRICT_OBSERVED_ROUTE"
+    },
+    {
+      "id": "P2-DEF-005",
+      "candidate_evidence": "Retrospective vendor-adjusted price/volume representation approved as assumption; action vintage and cashbook unverified",
+      "scientific_status": "HOLD_STRICT_AND_CASHBOOK"
+    },
+    {
+      "id": "P2-DEF-006",
+      "candidate_evidence": "Minute acquisition explicitly superseded; exact hourly-close proxy and nominal maturity used",
+      "scientific_status": "CONDITIONAL_PREPARATION_ONLY_NO_GLOBAL_GATE_CLEARANCE"
+    },
+    {
+      "id": "P2-DEF-007",
+      "candidate_evidence": "Real conditional FT0/M2/TG0 preprocessing computed in separately bound namespace; no ML weights",
+      "scientific_status": "HOLD_PRODUCTION"
+    },
+    {
+      "id": "P2-DEF-008",
+      "candidate_evidence": "Actual full-window feature and target admission measured, not source-key counts",
+      "scientific_status": "HOLD_PRODUCTION"
+    },
+    {
+      "id": "P2-DEF-009",
+      "candidate_evidence": "No external acknowledgments fabricated; SPY annex limited to candidate state preparation",
+      "scientific_status": "HOLD_SHARED_COURSE"
+    },
+    {
+      "id": "P2-DEF-010",
+      "candidate_evidence": "Explicit retrospective cohort and local-use rights assumptions retained; no licensing or PIT member certificate",
+      "scientific_status": "HOLD_STRICT_CERTIFICATION"
+    },
+    {
+      "id": "P2-DEF-015",
+      "candidate_evidence": "P3 coarse retry/benchmark/cashbook policies deferred independently; not a minute prerequisite to G3",
+      "scientific_status": "HOLD_AFFECTED_ECONOMICS"
+    },
+    {
+      "id": "P3-DEF-007",
+      "candidate_evidence": "Conditional real preprocessing and indexed candidate store now exist",
+      "scientific_status": "HOLD_PRODUCTION"
+    },
+    {
+      "id": "P3-DEF-015",
+      "candidate_evidence": "P4 infrastructure retained; no real model training or reservation authorized",
+      "scientific_status": "HOLD_REAL_TRAINING"
+    }
+  ]
+}

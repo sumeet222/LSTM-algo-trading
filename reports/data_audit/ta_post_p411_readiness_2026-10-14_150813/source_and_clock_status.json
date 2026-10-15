@@ -1,0 +1,101 @@
+{
+  "status": "PARTIAL",
+  "scientific": "HOLD",
+  "measurement_labels": [
+    "MEASURED",
+    "CONDITIONAL_BOUND",
+    "NOT_MEASURED",
+    "BLOCKED"
+  ],
+  "source_class": "ACTUAL_SOURCE_RECORD for archived keys; RETROSPECTIVE_VENDOR_PROXY for formation liquidity; not PIT source certification",
+  "stock_grid": "MEASURED_SOURCE_GRID_COMPLETE",
+  "source_rights": "UNKNOWN_FOR_SCIENTIFIC_USE_OR_REDISTRIBUTION; local read-only audit authorized by current user; no entitlement/redistribution certificate inferred",
+  "source_rights_action": "Obtain evidence for research use/reproduction/sharing; current local inspection does not transfer vendor rights",
+  "available_at": "UNKNOWN",
+  "action_units": "HOLD",
+  "market_proxy": "SPY SOURCE_SELECTED for engineering, not course USA500 or sixth stock",
+  "minute_execution": "PARTIAL_AAPL_SAMPLES_ONLY",
+  "G2": [
+    {
+      "id": "G2-01",
+      "status": "PASS",
+      "finding": "09:30 anchored full-hour geometry; 6 hours ordinary / 3 early; terminal 30m excluded",
+      "evidence": "src/lstm_data/clocks.py:session_clock; audit_chronology.csv"
+    },
+    {
+      "id": "G2-02",
+      "status": "HOLD",
+      "finding": "Historical native stock publication absent; period end not available_at",
+      "evidence": "source_hash_verification.json; stock_source.source_reason"
+    },
+    {
+      "id": "G2-03",
+      "status": "HOLD",
+      "finding": "SPY publication unknown; own-step freshness cannot be certified",
+      "evidence": "spy_source_identity.json; market_source.py:230-233"
+    },
+    {
+      "id": "G2-04",
+      "status": "CONDITIONAL",
+      "finding": "Two nominal cutoff+2min issuance plans, not actual issued forecasts",
+      "evidence": "audit_chronology.csv; clocks.execution_plan"
+    },
+    {
+      "id": "G2-05",
+      "status": "HOLD",
+      "finding": "True 10:33/11:33\u219214:33/15:33 raw minute-reference coverage missing for four stocks",
+      "evidence": "minute_reference_inventory.json"
+    },
+    {
+      "id": "G2-06",
+      "status": "PASS",
+      "finding": "Calendar exactly 240 elapsed same-session minutes; early-close plans reject EXIT_OUTSIDE_SESSION",
+      "evidence": "audit_chronology.csv; tests/test_clocks.py"
+    },
+    {
+      "id": "G2-07",
+      "status": "HOLD",
+      "finding": "All-five source-available target maturity and exact raw-price units absent; no TG0 labels built",
+      "evidence": "corporate_action_unit_samples.json; labels.minute_reference"
+    },
+    {
+      "id": "G2-08",
+      "status": "CONDITIONAL",
+      "finding": "D13-C01 separation passes synthetic counterfactual; real four flags unmeasured",
+      "evidence": "tests/test_clocks.py:test_d13_future_exit_not_an_origin_or_entry_input; tests/test_labels.py:test_future_exit_missing_or_later_publication_changes_only_label"
+    },
+    {
+      "id": "G2-09",
+      "status": "CONDITIONAL",
+      "finding": "Prior-session daily close / cross-session scheduled-hour lag causal mechanics only",
+      "evidence": "tests/test_stock_features.py; audit_chronology.md"
+    },
+    {
+      "id": "G2-10",
+      "status": "HOLD",
+      "finding": "Conceptual 240-minute joint agreement registered as researcher-reported; formal evidence and distinct hourly proxy approval pending",
+      "evidence": "ledger_reconciliation.json; CT-D3-001; TA-D3-EXEC-PROXY-001"
+    },
+    {
+      "id": "G2-11",
+      "status": "HOLD",
+      "finding": "Declared DOCUMENTED metadata is caller assertion; no independent publisher authentication is established by supplying a timestamp/evidence string",
+      "evidence": "src/lstm_data/clocks.py:observation_at_cutoff docstring; tests/test_clocks.py:test_documented_contract_needs_evidence_and_never_derives_publication"
+    }
+  ],
+  "live_admission": {
+    "stock_source.source_reason": {
+      "signature": "(row: 'StockBar | None', cutoff: 'pd.Timestamp', *, synthetic: 'bool' = False) -> 'str'",
+      "line": 139,
+      "reason": "SOURCE_PUBLICATION_UNKNOWN then ACTION_SCOPE_UNVERIFIED"
+    },
+    "ft0_transforms.population": {
+      "signature": "(records: 'tuple[FitObservation, ...]', window: 'FitWindow', *, allow_synthetic: 'bool') -> 'tuple[FitObservation, ...]'",
+      "line": 134,
+      "reason": "FIT_PENDING_SOURCE_EVIDENCE for every non-synthetic record; no real executor granted here"
+    },
+    "StockBar_and_StockDaily": "Existing genuine adapter fixed to labels.UNIVERSE = original five. Proposed-order geometry does not implement or authorize scientific-universe migration.",
+    "engineering_profile": "CANDLE_QA/DATA_SHAPE only; all FT0/TG0/T2/fits/trading reject"
+  },
+  "no_real_source_certificate_created": true
+}

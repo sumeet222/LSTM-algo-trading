@@ -354,6 +354,35 @@ class ScalerCertificate:
         )
 
 
+def robust_parameters(
+    values: np.ndarray, weights: np.ndarray | None = None,
+) -> tuple[float, float, str]:
+    """Frozen pooled robust location/scale and fallbacks; no population selection."""
+    if values.ndim != 1 or not len(values) or not np.isfinite(values).all():
+        raise ValueError("FINITE_NONEMPTY_ROBUST_POPULATION_REQUIRED")
+    if weights is not None:
+        if weights.shape != values.shape or not np.isfinite(weights).all() or (weights <= 0).any():
+            raise ValueError("POSITIVE_MATCHED_ROBUST_WEIGHTS_REQUIRED")
+        weights = weights / float(weights.sum())
+        center = weighted_quantile(values, weights, 0.5)
+        mad = weighted_quantile(np.abs(values - center), weights, 0.5)
+        iqr = (weighted_quantile(values, weights, 0.75)
+               - weighted_quantile(values, weights, 0.25)) / 1.349
+    else:
+        weights = np.full(len(values), 1 / len(values))
+        center = float(np.median(values))
+        mad = float(np.median(np.abs(values - center)))
+        iqr = float(np.diff(np.percentile(values, [25, 75]))[0]) / 1.349
+    sd = math.sqrt(float(np.sum(weights * (values - float(np.sum(values * weights))) ** 2)))
+    if mad > 0:
+        return center, mad, "MAD"
+    if iqr > 0:
+        return center, iqr, "IQR_1.349"
+    if sd > 0:
+        return center, sd, "AUDITED_POPULATION_SD"
+    return center, 1.0, "CONSTANT"
+
+
 def fit_scaler(
     records: tuple[FitObservation, ...],
     window: FitWindow,
@@ -378,24 +407,7 @@ def fit_scaler(
             weights = np.asarray(
                 [0.5 / counts[1] if r.origin == 1 else 0.5 / counts[2] for r in rows], dtype=float
             )
-            center = weighted_quantile(values, weights, 0.5)
-            mad = weighted_quantile(np.abs(values - center), weights, 0.5)
-            iqr = (
-                weighted_quantile(values, weights, 0.75) - weighted_quantile(values, weights, 0.25)
-            ) / 1.349
-        else:
-            center = float(np.median(values))
-            mad = float(np.median(np.abs(values - center)))
-            iqr = float(np.diff(np.percentile(values, [25, 75]))[0]) / 1.349
-        sd = math.sqrt(float(np.sum(weights * (values - float(np.sum(values * weights))) ** 2)))
-        if mad > 0:
-            scale, method = mad, "MAD"
-        elif iqr > 0:
-            scale, method = iqr, "IQR_1.349"
-        elif sd > 0:
-            scale, method = sd, "AUDITED_POPULATION_SD"
-        else:
-            scale, method = 1.0, "CONSTANT"
+        center, scale, method = robust_parameters(values, weights if feature == "M2" else None)
         centers.append(center)
         scales.append(scale)
         methods.append(method)

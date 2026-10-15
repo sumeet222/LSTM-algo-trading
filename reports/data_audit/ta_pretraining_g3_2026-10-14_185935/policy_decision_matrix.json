@@ -1,0 +1,66 @@
+{
+  "package": "TA-PRETRAIN-HOURLY-PROXY-G3-004",
+  "authority": {
+    "policy_ref": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/proposed_source_policy_v1.json",
+      "sha256": "77b626d21d56a1056cc274c14ea336a8d8f2a5a2004bb5cee0eb14f227fe42ce"
+    },
+    "approval_ref": {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/researcher_conditional_preparation_approval_v1.json",
+      "sha256": "736459d1f24459c92a090d86970cebfa52614699222a15bf9136f2097e18b2bd"
+    }
+  },
+  "decisions": [
+    {
+      "dependency": "D1",
+      "status": "CANDIDATE_ONLY_APPROVED_PRODUCTION_INACTIVE",
+      "owner": "Track A researcher",
+      "response": "Limit this package permanently to candidate preparation",
+      "scientific_GO": false
+    },
+    {
+      "dependency": "Hourly-close proxy",
+      "status": "RECONFIRMED_CURRENT_USER_INSTRUCTION",
+      "decision": "TA-D3-EXEC-PROXY-001",
+      "scope": "10:30/11:30 closes to14:30/15:30 closes; scheduled events 3 minutes later; 240-minute hold; no minute prerequisites or fill claim"
+    },
+    {
+      "dependency": "Clock/actions/formation",
+      "status": "CONDITIONALLY_APPROVED_ASSUMPTION",
+      "response": "No additional changes; proceed on that basis",
+      "scope": "Idealized zero-latency period-end clock, retrospective vendor split-price/inverse-volume and survivor cohort; no observed publication/PIT action/member claims"
+    },
+    {
+      "dependency": "Local-use rights",
+      "status": "RESEARCHER_ASSUMPTION_NOT_LICENSE_CERTIFICATION",
+      "response": "Its an assumption that needs to be noted and move ahead.",
+      "external_acceptance": "NOT_VERIFIED",
+      "redistribution": "NOT_AUTHORIZED"
+    },
+    {
+      "dependency": "SPY candidate state",
+      "status": "CONDITIONALLY_APPROVED_ASSUMPTION",
+      "response": "Approve conditional SPY preparation",
+      "decision": "TA-G3-SPY-004-v1",
+      "scope": "ETF raw price-state proxy only; no course/shared substitution"
+    },
+    {
+      "dependency": "Course/collaborator exact proxy",
+      "status": "EXTERNAL_ACKNOWLEDGMENT_MISSING",
+      "owner": "Instructor/collaborator where applicable",
+      "scope": "Blocks shared/course claims and affected production comparisons; does not block local conditional TM0 preparation"
+    },
+    {
+      "dependency": "P3 coarse accounting",
+      "status": "DEFERRED_UNAUTHORIZED",
+      "owner": "Researchers",
+      "scope": "Retry/risk/benchmark boundaries/raw-share actions/borrow/funding; blocks affected economics, not G3 feature/TG0 preparation"
+    },
+    {
+      "dependency": "Model fitting/pair reservation/confirmation",
+      "status": "FORBIDDEN",
+      "owner": "Future explicit researcher instruction after actual gates",
+      "scope": "No model .fit/run_pair/ridge/forecast/replay/confirmation or pair ledger spending"
+    }
+  ]
+}

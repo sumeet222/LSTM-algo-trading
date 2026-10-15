@@ -392,6 +392,21 @@ class MarketVector:
             raise ValueError("EXACTLY_FIVE_FINITE_MARKET_CHANNELS_REQUIRED")
 
 
+def market_values(
+    r: float, short: float, long: float, daily: float, m5: float, m20: float,
+    hourly_floor: float, daily_floor: float,
+) -> Vector:
+    """Pure frozen U1–U5 algebra; source permission stays with the caller."""
+    if hourly_floor <= 0 or daily_floor <= 0:
+        raise ValueError("POSITIVE_MARKET_FLOORS_REQUIRED")
+    h, d = max(long, hourly_floor), max(daily, daily_floor)
+    values = (r / h, math.log(h), math.log(max(short, hourly_floor) / h),
+              m5 / (math.sqrt(5) * d), m20 / (math.sqrt(20) * d))
+    if not all(math.isfinite(x) for x in values):
+        raise ValueError("FINITE_MARKET_VECTOR_REQUIRED")
+    return values
+
+
 def vector(
     row: MarketMeasures, floors: MarketFloors, *, allow_synthetic: bool = False,
     context: ApplicationContext = "HISTORICAL_TRAINING",
@@ -423,11 +438,7 @@ def vector(
                             row.evidence_ids, row.basis)
     if r is None or short is None or long is None or daily is None or m5 is None or m20 is None:
         raise AssertionError("Unreachable incomplete vector")
-    h, d = max(long, floors.hourly), max(daily, floors.daily)
-    values = (r / h, math.log(h), math.log(max(short, floors.hourly) / h),
-              m5 / (math.sqrt(5) * d), m20 / (math.sqrt(20) * d))
-    if not all(math.isfinite(x) for x in values):
-        raise ValueError("FINITE_MARKET_VECTOR_REQUIRED")
+    values = market_values(r, short, long, daily, m5, m20, floors.hourly, floors.daily)
     return MarketVector(row.timestamp, values, "VECTOR_VALID", row.evidence_ids, row.basis)
 
 

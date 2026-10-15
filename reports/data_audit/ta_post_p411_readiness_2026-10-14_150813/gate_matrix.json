@@ -1,0 +1,57 @@
+{
+  "status": "READINESS_PACKET_COMPLETE_SCIENTIFIC_HOLD",
+  "authority": "Advisory audit only; no scientific ledger transition",
+  "gates": [
+    {
+      "gate_id": "G0",
+      "status": "HOLD",
+      "ENGINEERING_PASS": "PASS_IDENTITY_AND_SCOPE",
+      "proof_required": "Versioned D1 decision; exact shared source/clock/course convention records and research-use rights; separately reviewed protocol migration.",
+      "evidence": "D1_decision_card.md; authority_and_evidence_hashes.json"
+    },
+    {
+      "gate_id": "G1",
+      "status": "PARTIAL",
+      "ENGINEERING_PASS": "PASS_NATIVE_GRID",
+      "proof_required": "Certify formation/entity/membership limitations accepted, historical publication, complete action/dividend scope and price/inverse-volume units, raw minute references; market source and rights.",
+      "evidence": "complete_five_stock_qa.json; formation_liquidity_qa.json; corporate_action_unit_samples.json"
+    },
+    {
+      "gate_id": "G2",
+      "status": "HOLD",
+      "ENGINEERING_PASS": "PASS_SYNTHETIC_CLOCK_ONLY",
+      "proof_required": "Independent source clocks/own-step availability and all-five true minute raw references/maturity, documented proxy exception if chosen; exact source/clock shared evidence.",
+      "evidence": "source_and_clock_status.json; audit_chronology.csv"
+    },
+    {
+      "gate_id": "G3",
+      "status": "NOT_RUN",
+      "ENGINEERING_PASS": "PASS_SYNTHETIC_P2_ONLY",
+      "proof_required": "After G0/G1/G2 and explicit real fitted-transform authority: versioned proposed-universe genuine adapter, FT0/M2/TG0/U1\u2013U5 floors/scalers, exact masks, maturity/purge, origin/fold/regime and inner-tail retention.",
+      "evidence": "g3_retention_status.json"
+    },
+    {
+      "gate_id": "G4",
+      "status": "HOLD",
+      "ENGINEERING_PASS": "PASS_PRIOR_P3_SYNTHETIC_ONLY",
+      "proof_required": "Admitted canonical inputs and baseline-fit/replay authorization; shared raw execution/proxy risk, exceptions/benchmarks/borrow/cash conventions and review. No real replay now.",
+      "evidence": "P3_DEFERRED_WORK_REGISTER_v2; ledger_reconciliation.json"
+    },
+    {
+      "gate_id": "G5",
+      "status": "HOLD",
+      "ENGINEERING_PASS": "PASS_PRIOR_P4_SYNTHETIC_ONLY",
+      "proof_required": "Human acceptance of engineering foundations plus G0\u2013G4 prerequisites, real first-pilot authorization; synthetic learning proof cannot authorize it.",
+      "evidence": "inherited_full_suite_binding.json; prior P4 handoffs"
+    },
+    {
+      "gate_id": "G6",
+      "status": "NOT_RUN",
+      "ENGINEERING_PASS": "NOT_APPLICABLE_REAL_PAIRS_0",
+      "proof_required": "Separate preregistered P4.3 seed42 June2023 two-pass pair after all prerequisites; record actual calibration/refit/source/preparation/code/seed evidence.",
+      "evidence": "ledger_reconciliation.json"
+    }
+  ],
+  "pair_budget": "0/40",
+  "confirmation": "PROTECTED"
+}

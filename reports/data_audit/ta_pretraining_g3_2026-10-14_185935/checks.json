@@ -1,0 +1,462 @@
+{
+  "status": "PASS_WITH_EXPLICIT_SCIENTIFIC_HOLDS",
+  "full_pytest": {
+    "result": "728 PASS",
+    "metadata": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "started_at": "2026-10-14T23:53:07.208349+00:00",
+      "finished_at": "2026-10-15T01:29:39.760589+00:00",
+      "elapsed_seconds": 5792.541230292001,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1"
+      }
+    },
+    "log": "full_pytest_final.txt"
+  },
+  "static": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/check_python_types.py",
+      "--pylance-dist",
+      "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+    ],
+    "summary": {
+      "filesAnalyzed": 164,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 18.939
+    },
+    "owned_files": 164
+  },
+  "commands": {
+    "all_market_tensors_audit_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_market_tensor_audit.py"
+      ],
+      "started_at": "2026-10-14T23:30:30.878979+00:00",
+      "finished_at": "2026-10-14T23:30:56.574114+00:00",
+      "elapsed_seconds": 25.65274629101623,
+      "exit_code": 0,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "all_market_tensors_final_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_market_tensor_audit.py"
+      ],
+      "started_at": "2026-10-14T23:58:07.032406+00:00",
+      "finished_at": "2026-10-14T23:58:43.596487+00:00",
+      "elapsed_seconds": 36.556591165979626,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null
+      }
+    },
+    "all_windows_audit_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_all_windows.py"
+      ],
+      "started_at": "2026-10-14T23:25:09.419118+00:00",
+      "finished_at": "2026-10-14T23:25:23.202470+00:00",
+      "elapsed_seconds": 13.741817125002854,
+      "exit_code": 0,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "all_windows_final_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_all_windows.py"
+      ],
+      "started_at": "2026-10-14T23:57:34.125428+00:00",
+      "finished_at": "2026-10-14T23:57:52.932541+00:00",
+      "elapsed_seconds": 18.790584833011962,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null
+      }
+    },
+    "build_v3_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.pretraining_g3",
+        "--authority-binding",
+        "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/preparation_authority_binding.json",
+        "--report",
+        "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v3"
+      ],
+      "started_at": "2026-10-14T23:15:05.791244+00:00",
+      "finished_at": "2026-10-14T23:17:23.982094+00:00",
+      "elapsed_seconds": 138.18662883300567,
+      "exit_code": 0,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "build_v4_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.pretraining_g3",
+        "--authority-binding",
+        "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/preparation_authority_binding.json",
+        "--report",
+        "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4"
+      ],
+      "started_at": "2026-10-14T23:53:08.275779+00:00",
+      "finished_at": "2026-10-14T23:55:29.576565+00:00",
+      "elapsed_seconds": 141.29627650001203,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null
+      }
+    },
+    "conditional_regime_audit_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_conditional_diagnostics.py"
+      ],
+      "started_at": "2026-10-14T23:20:32.754532+00:00",
+      "finished_at": "2026-10-14T23:20:44.112301+00:00",
+      "elapsed_seconds": 11.320045832981123,
+      "exit_code": 0,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "conditional_regime_final_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_conditional_diagnostics.py"
+      ],
+      "started_at": "2026-10-14T23:57:21.457049+00:00",
+      "finished_at": "2026-10-14T23:57:33.953279+00:00",
+      "elapsed_seconds": 12.44420362499659,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null
+      }
+    },
+    "diff_check_command.json": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-14T23:23:03.095317+00:00",
+      "finished_at": "2026-10-14T23:23:03.130987+00:00",
+      "elapsed_seconds": 0.0273565000097733,
+      "exit_code": 0,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "diff_guard_fixed_command.json": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-14T23:56:04.840150+00:00",
+      "finished_at": "2026-10-14T23:56:04.900324+00:00",
+      "elapsed_seconds": 0.041451500001130626,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null
+      }
+    },
+    "full_pytest_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "started_at": "2026-10-14T23:15:04.683850+00:00",
+      "finished_at": "2026-10-14T23:52:10.143289+00:00",
+      "elapsed_seconds": 2225.498329666996,
+      "exit_code": -15,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818"
+    },
+    "full_pytest_final_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "started_at": "2026-10-14T23:53:07.208349+00:00",
+      "finished_at": "2026-10-15T01:29:39.760589+00:00",
+      "elapsed_seconds": 5792.541230292001,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1"
+      }
+    },
+    "market_build_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_market_build.py"
+      ],
+      "started_at": "2026-10-14T23:18:06.184076+00:00",
+      "finished_at": "2026-10-14T23:18:36.131529+00:00",
+      "elapsed_seconds": 29.90391437499784,
+      "exit_code": 0,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "market_build_v2_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_market_build.py"
+      ],
+      "started_at": "2026-10-14T23:56:02.467930+00:00",
+      "finished_at": "2026-10-14T23:56:38.213854+00:00",
+      "elapsed_seconds": 35.70067687498522,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null
+      }
+    },
+    "quality_audit_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_quality_audit.py"
+      ],
+      "started_at": "2026-10-14T23:22:45.470577+00:00",
+      "finished_at": "2026-10-14T23:22:58.699297+00:00",
+      "elapsed_seconds": 13.178758791007567,
+      "exit_code": 0,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "quality_final_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_quality_audit.py"
+      ],
+      "started_at": "2026-10-14T23:57:53.081895+00:00",
+      "finished_at": "2026-10-14T23:58:06.916471+00:00",
+      "elapsed_seconds": 13.823615250003058,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null
+      }
+    },
+    "review_loader_smoke_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_review_smoke.py"
+      ],
+      "started_at": "2026-10-14T23:18:07.327586+00:00",
+      "finished_at": "2026-10-14T23:18:17.649879+00:00",
+      "elapsed_seconds": 10.314344790996984,
+      "exit_code": 1,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "review_loader_smoke_corrected_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_review_smoke.py"
+      ],
+      "started_at": "2026-10-14T23:18:33.495846+00:00",
+      "finished_at": "2026-10-14T23:18:41.492930+00:00",
+      "elapsed_seconds": 7.988982540991856,
+      "exit_code": 0,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "review_loader_smoke_final_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "/private/tmp/ta004_review_smoke.py"
+      ],
+      "started_at": "2026-10-14T23:56:03.614893+00:00",
+      "finished_at": "2026-10-14T23:56:17.359741+00:00",
+      "elapsed_seconds": 13.714485375006916,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null
+      }
+    },
+    "ruff_final_command.json": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "started_at": "2026-10-14T23:18:34.622988+00:00",
+      "finished_at": "2026-10-14T23:18:34.701375+00:00",
+      "elapsed_seconds": 0.06656624999595806,
+      "exit_code": 0,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "ruff_final_guard_fixed_command.json": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "started_at": "2026-10-14T23:53:39.128405+00:00",
+      "finished_at": "2026-10-14T23:53:39.247601+00:00",
+      "elapsed_seconds": 0.10688133400981314,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null
+      }
+    },
+    "types_final_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "started_at": "2026-10-14T23:18:12.263122+00:00",
+      "finished_at": "2026-10-14T23:18:32.362918+00:00",
+      "elapsed_seconds": 20.088302791002207,
+      "exit_code": 0,
+      "code_before_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c",
+      "code_after_sha256": "cd01646c5f82200b3fff606aa4cf00934128719ca9897bb9bacb01ba2f9b347c"
+    },
+    "types_final_guard_fixed_command.json": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "started_at": "2026-10-14T23:53:38.036624+00:00",
+      "finished_at": "2026-10-14T23:53:58.129535+00:00",
+      "elapsed_seconds": 20.051099333999446,
+      "exit_code": 0,
+      "code_before_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "code_after_sha256": "2a203d999bad6cf698ea0a4553ebc2ad03f777105e5d57296b7bf1fd87d03818",
+      "environment_controls": {
+        "VECLIB_MAXIMUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null
+      }
+    }
+  },
+  "fresh_focused_runs": {
+    "final_frozen_window_guard": "33 PASS in4.37s, including25 new candidate cases and8 transform cases",
+    "source_m2_proxy": "47 PASS in36.23s (tool transcript)",
+    "stock_features_transforms_and_new_candidate": "48 PASS in139.11s",
+    "market_and_new_candidate": "52 PASS in5.09s",
+    "new_candidate_early": "22 PASS in2.83s; later market and strict fit-window tests increase the new total to25"
+  },
+  "counts_overlap": "Focused runs overlap; final728 is the distinct full-suite result. No summed focused total is used as release proof.",
+  "development_observations": {
+    "build_v1": "Nonrelease development build, immutable data retained locally",
+    "build_v2": "CODE_CHANGED_DURING_BUILD_REBUILD_IN_NEW_NAMESPACE rejected as designed; no release manifest",
+    "interrupted_first_full_suite": "213 passing progress cases, then stopped for the corrected synthetic-window guard; incomplete, not release evidence. SIGINT did not stop native numerical work; owned child PID8448 was terminated. The corrected-code final run bounds numerical library threads to1 without skipping tests.",
+    "initial_review_smoke": "Incorrect managed-operation names in temporary audit glue caused Unknown managed operation; corrected enum names passed, source code unchanged",
+    "incremental_static": "Development diagnostics corrected; final164 files0errors0warnings"
+  },
+  "real_admission": {
+    "train": 1502,
+    "WF1": 248,
+    "WF2": 248,
+    "complete_window_cells": 7672320,
+    "TG0_targets": 9990,
+    "market_history_cells": 479520,
+    "joined_21channel_cells": 10069920
+  },
+  "permissions": {
+    "count_scope": "Real candidate experiments; synthetic fixture fits in pytest are regression checks only",
+    "model_fits": 0,
+    "pair_reservations": 0,
+    "real_neural_pairs": "0/40",
+    "confirmation_numeric_rows": 0,
+    "source_GETs": 0,
+    "production_migrated": false
+  },
+  "scientific_result": "CONDITIONAL_CANDIDATE_PREPARATION_COMPLETE; DATASET_READY_FOR_FIRST_P4_3_PAIR=false",
+  "editor_verification": "Select repository .venv/bin/python; retain Pylance basic and installed stubs; refresh Problems/language server; human confirm zero errors. CLI parity is proved; editor refresh is not self-attested."
+}

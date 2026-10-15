@@ -1,0 +1,52 @@
+{
+  "status": "PROPOSED_NOT_AUTHORIZED_NO_GET",
+  "purpose": "Exact nominal raw1Min endpoint references; does not establish real fills, slippage, borrow or latency",
+  "candidate_symbols": [
+    "AAPL",
+    "COST",
+    "CMCSA",
+    "SBUX",
+    "CME"
+  ],
+  "train_development_keys": 19980,
+  "historical_M2_prehistory_start": "2020-03-25",
+  "extra_prehistory_days": 68,
+  "required_symbol_minute_keys_including_M2_prehistory": 21340,
+  "existing_exact_raw_keys": 8,
+  "new_symbol_minute_keys_needed": 21332,
+  "pilot": {
+    "dates": [
+      "2020-07-01",
+      "2020-08-31",
+      "2021-03-12",
+      "2021-03-15"
+    ],
+    "base_requests": 16,
+    "max_pages_per_request": 2,
+    "max_lifetime_attempts_per_page": 3,
+    "worst_additional_transport_attempts": 96,
+    "max_new_archive_and_journal_bytes": 16777216
+  },
+  "full_endpoint_only_plan": {
+    "base_requests": 4268,
+    "max_pages_per_request": 2,
+    "max_lifetime_attempts_per_page": 3,
+    "worst_additional_transport_attempts": 25608,
+    "page_limit": 10000,
+    "max_response_bytes": 65536,
+    "storage_hard_cap_bytes": 134217728,
+    "expected_bar_rows_upper_bound": 21340,
+    "estimated_raw_record_bytes_at128": 2731520,
+    "minute_intervals": "One-minute UTC intervals at each required event, all missing symbols grouped; reuse cached keys, reject wider/unapproved intervals; dates stop2024-06-30",
+    "pacing": "At most100sends/minute if later authorized"
+  },
+  "inherited_source_completion_budget": "292/1000 prior source sends;708remaining recorded, not a new authorization. Full endpoint plan exceeds that ceiling; requires explicit reconciled plan/budget amendment. No counter reset or reservation.",
+  "permission_required": [
+    "Entitlement and allowed use",
+    "Exact requests/feed/raw/asof/currency/timeframe",
+    "Cumulative,page,lifetime,pacing/storage bounds",
+    "Historical publication/action/source evidence acceptance",
+    "No confirmation queries"
+  ],
+  "no_queries_executed": true
+}

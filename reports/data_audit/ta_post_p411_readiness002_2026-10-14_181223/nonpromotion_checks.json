@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "decision_registered": true,
+  "permission_attempts": [
+    {
+      "attempt": "CAND:TRACK_A_CORE5:PREPARATION:002",
+      "result": "REJECTED",
+      "reason": "P3_REAL_EMPIRICAL_ACTIVITY_NOT_AUTHORIZED"
+    },
+    {
+      "attempt": "SCIENTIFIC_REAL",
+      "result": "REJECTED",
+      "reason": "P3_REAL_EMPIRICAL_ACTIVITY_NOT_AUTHORIZED"
+    },
+    {
+      "attempt": "D1_CANDIDATE_CONDITIONALLY_ACCEPTED",
+      "result": "REJECTED",
+      "reason": "P3_REAL_EMPIRICAL_ACTIVITY_NOT_AUTHORIZED"
+    }
+  ],
+  "operations": {
+    "stock_administration": {
+      "operation": "stock_administration",
+      "status": "PASS",
+      "reasons": []
+    },
+    "stock_features": {
+      "operation": "stock_features",
+      "status": "BLOCKED",
+      "reasons": [
+        "unresolved:formation",
+        "unresolved:shared_clock",
+        "unresolved:stock_timing",
+        "research executor and reviewed human authorization unavailable in P0.2"
+      ]
+    },
+    "training": {
+      "operation": "training",
+      "status": "BLOCKED",
+      "reasons": [
+        "unresolved:formation",
+        "unresolved:shared_clock",
+        "unresolved:stock_timing",
+        "research executor and reviewed human authorization unavailable in P0.2"
+      ]
+    },
+    "economic_evaluation": {
+      "operation": "economic_evaluation",
+      "status": "BLOCKED",
+      "reasons": [
+        "unresolved:corporate_actions",
+        "unresolved:formation",
+        "unresolved:minute_execution",
+        "unresolved:shared_clock",
+        "unresolved:stock_timing",
+        "research executor and reviewed human authorization unavailable in P0.2"
+      ]
+    },
+    "confirmation_evaluation": {
+      "operation": "confirmation_evaluation",
+      "status": "BLOCKED",
+      "reasons": [
+        "research executor and reviewed human authorization unavailable in P0.2",
+        "G9 immutable manifest lock and human decision required; no metrics accessed"
+      ]
+    }
+  },
+  "production_pointer_sha256": "1b83b2ef8f727618ef319c0c04b36056c5c8cb19857ebe40927851e3295ca600",
+  "budget": {
+    "ceiling": 40,
+    "attempted_pairs": 0,
+    "prospective_pairs": 0,
+    "status": "PASS",
+    "duplicate_candidate": false
+  },
+  "candidate_source_object_built": false,
+  "scope": "Actual runtime rejection after conditional registration; synthetic tests separately verify DOCUMENTED real fits, engineering markers, order/source/checkpoint misuse and confirmation denial. No real candidate object/certificate exists to relabel."
+}

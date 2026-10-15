@@ -1,0 +1,113 @@
+{
+  "events": 24,
+  "current_blockers": [
+    "p0.1-F01",
+    "p0.1-USA500-source-clock",
+    "p0.1-stock-publication",
+    "p0.1-minute-execution",
+    "p0.1-actions-dividends",
+    "p0.1-formation-prehistory",
+    "p0.1-shared-D3-clock"
+  ],
+  "budget": {
+    "ceiling": 40,
+    "attempted_pairs": 0,
+    "prospective_pairs": 0,
+    "status": "PASS",
+    "duplicate_candidate": false
+  },
+  "approval_or_decision_events": [
+    {
+      "event_id": "shared-decisions-2026-10-11-010144",
+      "kind": "decision",
+      "status": "WARN",
+      "evidence": {
+        "decisions": [
+          {
+            "effective_status": "CONCEPTUAL_CONVENTION_CHOSEN",
+            "formal_evidence": "PENDING",
+            "key": "CT-D3-001",
+            "recorded_date": "2026-10-11",
+            "status": "RESEARCHER_REPORTED_JOINT_AGREEMENT"
+          },
+          {
+            "effective_status": "IMPLEMENTATION_DEFERRED",
+            "formal_evidence": "PENDING",
+            "key": "CT-MKT-002",
+            "recorded_date": "2026-10-11",
+            "source_status": "SOURCE_UNRESOLVED",
+            "status": "APPROVED_DIRECTION"
+          }
+        ],
+        "document_path": "docs/track_a/decisions/Shared_Cross_Track_Decisions_2026-10-11_v1.0.md",
+        "document_sha256": "11bfcf177dd8b0b5a98d01f2c394ae5f25d87e16f59bcec38e9f2d62e408725b",
+        "formal_evidence_verified": false,
+        "prior_ledger_sha256": "5b8a76665af1e9c8714005837bfa765d0cdc13c73eb4003eb8f86ebf59c3caca",
+        "remaining_blocker_ids": [
+          "p0.1-F01",
+          "p0.1-USA500-source-clock",
+          "p0.1-stock-publication",
+          "p0.1-minute-execution",
+          "p0.1-actions-dividends",
+          "p0.1-formation-prehistory",
+          "p0.1-shared-D3-clock"
+        ],
+        "reported_agreement": true,
+        "reported_joint_owners": [
+          "Track A researcher",
+          "Track B collaborator"
+        ],
+        "reporting_owner": "Track A researcher",
+        "research_ready": false,
+        "submitted_handoff_sha256": "51c73d1ff320c8be6e8dcbc6417f644f9173f56148214cd8f3c85b493b45f179",
+        "underlying_collaborator_action_date": null
+      }
+    },
+    {
+      "event_id": "exec-proxy-2026-10-11-010948",
+      "kind": "decision",
+      "status": "WARN",
+      "evidence": {
+        "code_implemented": false,
+        "collaborator_proxy_approval_verified": false,
+        "decision_id": "TA-D3-EXEC-PROXY-001",
+        "deferred_id": "TA-POSTPASS-OVERNIGHT-001",
+        "deferred_status": "DEFERRED_CONDITIONAL_RESEARCH / NOT_AUTHORIZED_TO_TRAIN_OR_TRADE",
+        "document_path": "docs/track_a/decisions/Track_A_Execution_Price_Proxy_Amendment_v1.0_2026-10-11.md",
+        "document_sha256": "1d6f7bc0b103e29a77aa3a8e2d6409936a359551dd64dc6c3440a88d4bcf870f",
+        "handoff_path": "reports/data_audit/exec_proxy_2026-10-11_010948/implementation_handoff.md",
+        "handoff_sha256": "9d3bd1aee93106d48c7045ff7c4c903daaf9de16eab23e89445da4ebc827f942",
+        "implementation_authorized": false,
+        "prior_shared_record_path": "docs/track_a/decisions/Shared_Cross_Track_Decisions_2026-10-11_v1.0.md",
+        "prior_shared_record_sha256": "11bfcf177dd8b0b5a98d01f2c394ae5f25d87e16f59bcec38e9f2d62e408725b",
+        "remaining_blocker_ids": [
+          "p0.1-F01",
+          "p0.1-USA500-source-clock",
+          "p0.1-stock-publication",
+          "p0.1-minute-execution",
+          "p0.1-actions-dividends",
+          "p0.1-formation-prehistory",
+          "p0.1-shared-D3-clock"
+        ],
+        "research_ready": false,
+        "submitted_handoff_sha256": "6d43b878d928a856bae3724ee520db81625e63f0417e1cfe146f824599780948",
+        "track_a_researcher_approved": true
+      }
+    },
+    {
+      "event_id": "TA-D2-MARKET-SPY-001",
+      "kind": "decision",
+      "status": "BLOCKED",
+      "evidence": {
+        "amendment_sha256": "b6e69dbe3bd31b7d1976cbef2ece10f2edb162b7329fe9e46bcb333e58b38f48",
+        "checks_sha256": "0f1ebc2f3161b688c116f1b9db7c72ce5a6f61ca7c8e99fe1551cec2afb50cf9",
+        "joint_signoff": "UNVERIFIED",
+        "neural_pairs": 0,
+        "pilot_sha256": "42e81bb21b69bdecff4d0c97f5ebf2c21bf21ab6dfb2ccebe5966551340ff2e3",
+        "publication_basis": "UNKNOWN",
+        "source_archive": "SOURCE_BLOCKED",
+        "user_selection": "APPROVED_BY_TRACK_A_RESEARCHER"
+      }
+    }
+  ]
+}

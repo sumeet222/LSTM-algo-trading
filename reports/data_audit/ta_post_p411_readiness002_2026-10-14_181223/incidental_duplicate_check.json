@@ -1,0 +1,9 @@
+{
+  "status": "NON_RELEASE_DUPLICATE_INTERRUPTED",
+  "cause": "Temporary report transcript heredoc delimiter collision",
+  "observed_duplicate_summary": "143 passed in10.11s",
+  "exec_exit_code_after_interrupt": 130,
+  "duplicate_remainder": "Interrupted; not used as verification evidence",
+  "release_evidence": "143+113 distinct completed green cases in focused_start.txt and synthetic_pipeline.txt; source/test code unchanged",
+  "fix": "Unique shell heredoc delimiter and compile-before-execute for report helper; no project source change"
+}

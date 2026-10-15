@@ -1,0 +1,13 @@
+# Chronology cases and eligibility separation
+
+chronology_cases.json links12 ordinary, DST, early-close and split-boundary origin rows to actual archive/key hashes. Timestamps there are UTC; examples here use America/New_York. Source keys are genuine; issuance and execution plans are **hypothetical**, not actual forecasts/fills. No target or return is calculated.
+
+Ordinary first origin: native 09:30 and 10:00 starts → complete 09:30–10:30 hourly step → unknown historical stock/market publication → required 10:30 own-step cutoff → planned 10:32 issue → nominal 10:33 raw minute reference → nominal 14:33 exit reference → label mature only after scheduled exit and all five actual reference publications. Second origin: native 10:30/11:00 → 11:30 cutoff → 11:32 planned issue → 11:33/15:33 nominal references. Both holds are 240 continuous same-session RTH minutes if calendar-valid. A one-minute OHLC open is a price reference, not independently proven executable fill/slippage/borrow.
+
+DST complete overnight transition: Friday 2021-03-12 opens 14:30Z, final full step 14:30–15:30ET ends 20:30Z, and daily stub ends 16:00ET/21:00Z. Monday March15 opens 13:30Z and first full step ends 10:30ET/14:30Z. Prior full-hour lag goes from Friday 15:30ET to Monday 10:30ET, with no synthetic weekend/stub hourly update. Daily feature state may use Friday's completed daily source only after actual availability; Monday close cannot enter Monday morning. Exact wall gap between those full-step endpoints is 66 hours, distinct from one scheduled-step advance.
+
+13:00ET early close 2020-11-27 has three full hours and 12:30–13:00 stub. Both 14:33/15:33 exits fall outside session; the known calendar rejects each plan before a label is attempted. Do not extrapolate an AAPL early-close minute sample into a four-hour outcome.
+
+AAPL split transition 2020-08-28→31: the genuine retrospective action identifies a 4-for-1 change; split-adjusted bars use the vendor's later adjustment basis, while raw economic shares/prices have separate pre/post action epochs. Publication/announcement vintage and complete mapping remain unknown. Preserve this distinction across the overnight boundary; no split-adjusted close is turned into a raw minute opening.
+
+Flags remain distinct: source_keys_present is measured; forecast_issuable remains unknown from publication/actions; entry_eligible is not established and cannot consult a future exit; label_valid requires all-five mature genuine outcomes and is NOT_MEASURED; exit_filled has no evidence. The zero observed complete five-stock minute-key cohorts is an inventory fact, not a G3 model-retention rate or an instruction to delete historical trades. Existing C01 counterfactual tests retain entries when future exits change.

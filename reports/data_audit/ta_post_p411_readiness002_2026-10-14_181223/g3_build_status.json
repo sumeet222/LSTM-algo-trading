@@ -1,0 +1,58 @@
+{
+  "status": "G3_REAL_NOT_RUN_SOURCE_BLOCKED",
+  "namespace": "CAND:TRACK_A_CORE5:PREPARATION:002",
+  "binding_ref": {
+    "path": "reports/data_audit/ta_post_p411_readiness002_2026-10-14_181223/candidate_preparation_binding.json",
+    "sha256": "ccef7dc8a528b394bd1ce2520be7d58f44ef2fffeaa0c889199f09e5ebc206f8"
+  },
+  "conditional_implementation_authority": "GRANTED_BY_CURRENT_PROMPT_ONLY_AFTER_INDISPENSABLE_INPUT_PROOFS_PASS",
+  "prerequisites_passed": false,
+  "real_builder_invoked": false,
+  "new_real_feature_calculator_created": false,
+  "reason": "Historical stock/market publication, complete action/unit/vintage, source rights/formation disposition and all-five raw minute references are not certified. Production inactivity itself does not forbid candidate diagnostics.",
+  "available_existing_interfaces": [
+    {
+      "path": "src/lstm_data/stock_features.py",
+      "interface": "FeatureCalculator.evaluate",
+      "reuse": "Frozen16features and own-step source/action checks"
+    },
+    {
+      "path": "src/lstm_data/m2.py",
+      "interface": "scheduled_window/ReturnIndex",
+      "reuse": "48scheduledsteps,originmatchedhistoricalmaturity"
+    },
+    {
+      "path": "src/lstm_data/labels.py",
+      "interface": "minute_reference/TG0 builders",
+      "reuse": "Exact minute keys and all-five maturity; original-universe guard preserved"
+    },
+    {
+      "path": "src/lstm_data/market_features.py",
+      "interface": "MarketHistory/market vectors",
+      "reuse": "FrozenU1-U5,ownstep,46of48"
+    },
+    {
+      "path": "src/lstm_data/ft0_transforms.py",
+      "interface": "population/fit_floors/fit_scaler",
+      "reuse": "Current executor is synthetic-only and denies real fitting; future separately typed real executor required after source proofs"
+    },
+    {
+      "path": "src/lstm_data/stock_source.py",
+      "interface": "StockBar/StockDaily/source_reason",
+      "reuse": "Unknown clocks/actions blocked; original universe guard not removed"
+    }
+  ],
+  "minimal_future_route": [
+    "Verify exact input evidence and accepted source/clock/rights/formation policy against immutable hashes",
+    "Versioned candidate source/action/minute adapters with injected ordered universe and hard separation from production and engineering overlays",
+    "Use existing feature/target/market math; add only authorized real-transform population/executor with own-step/canonical-key/maturity guards",
+    "Stream unique stock/time and shared market observations; prefix-specific floors/pseudocounts/scales/epsilon and complete-window masks",
+    "Report all attrition and real eligible denominators; preserve no-confirmation and no-model-fit boundary",
+    "Any production migration and P4.3 model permission remain separately reviewed"
+  ],
+  "code_changes": "NONE: prerequisite-deficient branch not implemented as a pretend usable real pipeline",
+  "actual_genuine_retention": "NOT_MEASURED",
+  "engineered_inputs_consumed": false,
+  "fitted_objects_persisted": false,
+  "nonpromotion_ref": "nonpromotion_checks.json"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS_NO_PYTEST_PROCESS_REMAINS",
+  "command": "ps -axo pid,etime,comm | rg 'pytest|python'",
+  "sandbox_first_attempt": "DENIED",
+  "escalated_read_only_attempt": "APPROVED_AND_SUCCEEDED",
+  "observed": "Only VSCode Python environment discovery helper remained; no pytest process",
+  "no_source_or_model_mutation": true
+}

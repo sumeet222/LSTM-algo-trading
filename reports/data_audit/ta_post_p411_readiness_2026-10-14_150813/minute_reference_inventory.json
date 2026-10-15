@@ -1,0 +1,383 @@
+{
+  "status": "PARTIAL",
+  "key_counts": {
+    "AAPL": {
+      "10:33": 3,
+      "11:33": 3,
+      "14:33": 2,
+      "15:33": 2
+    },
+    "COST": {
+      "10:33": 0,
+      "11:33": 0,
+      "14:33": 0,
+      "15:33": 0
+    },
+    "CMCSA": {
+      "10:33": 0,
+      "11:33": 0,
+      "14:33": 0,
+      "15:33": 0
+    },
+    "SBUX": {
+      "10:33": 0,
+      "11:33": 0,
+      "14:33": 0,
+      "15:33": 0
+    },
+    "CME": {
+      "10:33": 0,
+      "11:33": 0,
+      "14:33": 0,
+      "15:33": 0
+    }
+  },
+  "source_refs": [
+    {
+      "manifest": "data/raw/alpaca/track_a_close_v1/edge_raw_minute-21ce448d86f6c91b78cd.manifest.json",
+      "manifest_sha256": "231cad6a95e0eb017b3c0cab77623c82ce5aca51e23d978772b2078962cdf80c",
+      "data": "data/raw/alpaca/track_a_close_v1/edge_raw_minute-21ce448d86f6c91b78cd.parquet",
+      "sha256": "74b42488c552903a66da57c5eeb662efe6163f572e784a9607653a33cc294c38",
+      "rows": 1050,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-11-27T17:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-11-27T14:30:00+00:00",
+        "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_close_v1/edge_raw_minute-25d7ab3845944317259a.manifest.json",
+      "manifest_sha256": "08189d5ce74255f21b3d79583deea426e6899bbaad56248f52cc2210e007c52a",
+      "data": "data/raw/alpaca/track_a_close_v1/edge_raw_minute-25d7ab3845944317259a.parquet",
+      "sha256": "bd49da577863951229337b3bbfea69663a23bbf8ccb20c1855f5fdf578963ffe",
+      "rows": 1950,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-08-31T19:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-08-31T13:30:00+00:00",
+        "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_close_v1/edge_raw_minute-43ae732789289a628bf0.manifest.json",
+      "manifest_sha256": "c4ce3ab0cfc0836fe759a98754951445985cfcc821331c8a7847ba285138f1b1",
+      "data": "data/raw/alpaca/track_a_close_v1/edge_raw_minute-43ae732789289a628bf0.parquet",
+      "sha256": "18ec9ca3fbf84d1a3470973fbb02a1c1a774a5c7c285a2d06b964d21dfdd6e42",
+      "rows": 1950,
+      "params": {
+        "adjustment": "raw",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2020-05-08T19:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2020-05-08T13:30:00+00:00",
+        "symbols": "AAPL,JPM,JNJ,WMT,CAT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-04-206a34a34b7ce38146ea.manifest.json",
+      "manifest_sha256": "e3cbdf8ce95a667a151f66c611e87633ad15231517f6f20508c2e26b6b4692a9",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-04-206a34a34b7ce38146ea.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-19T14:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-19T14:00:00+00:00",
+        "symbols": "WMT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-04-228c765a6dac588434fb.manifest.json",
+      "manifest_sha256": "c92119606e3c33706ae2f42dfebabff44ec9b32ecda562c3df0fc8dd71b17e5e",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-04-228c765a6dac588434fb.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-19T14:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-19T14:00:00+00:00",
+        "symbols": "JNJ",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-04-8a926dbe7d0b03c4ac17.manifest.json",
+      "manifest_sha256": "51337871440528b35bb61c0a9a8460b4de09c76415f05d71d3a2ccae445afa88",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-04-8a926dbe7d0b03c4ac17.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-19T14:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-19T14:00:00+00:00",
+        "symbols": "CAT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-04-ae0f7d56932290ad2c3c.manifest.json",
+      "manifest_sha256": "8475d3a79141e54479dfcc18860b5a366dff0473fd6cec3a992d4c11cb581937",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-04-ae0f7d56932290ad2c3c.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-04-19T14:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-04-19T14:00:00+00:00",
+        "symbols": "JPM",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-10-1faf94a91f1d40ac6e5c.manifest.json",
+      "manifest_sha256": "64cfb364cc77b8d3b319f3bfe46e8199bbc1e8087fbff0b7dc71f3ce145a30a6",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-10-1faf94a91f1d40ac6e5c.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-10-25T14:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-10-25T14:00:00+00:00",
+        "symbols": "CAT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-10-2c6e9e4f3f2cf2c5b872.manifest.json",
+      "manifest_sha256": "58ac0088a46012885701879a4b87b611e3d86038f0bfd425112f481750873312",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-10-2c6e9e4f3f2cf2c5b872.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-10-25T14:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-10-25T14:00:00+00:00",
+        "symbols": "JNJ",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-10-3ae70a60b06dbd27d18a.manifest.json",
+      "manifest_sha256": "8d65785560ed21ad65ae77d41d83eeaae037642f67183a35db595a81c4d11b04",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-10-3ae70a60b06dbd27d18a.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-10-25T14:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-10-25T14:00:00+00:00",
+        "symbols": "JPM",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-10-ddcd0a63b0754a42ffd8.manifest.json",
+      "manifest_sha256": "48fd88abb58170d70dd9fb113dab0ea3eac09413137f3460c453d9769dca247d",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2021-10-ddcd0a63b0754a42ffd8.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2021-10-25T14:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2021-10-25T14:00:00+00:00",
+        "symbols": "WMT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-01-36c2ab76a3a1972462ae.manifest.json",
+      "manifest_sha256": "f9f2fa8a25882932d96dce577725d74b51c80ce6d85ab0bb96ad3b195fc4f038",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-01-36c2ab76a3a1972462ae.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-24T16:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-24T16:00:00+00:00",
+        "symbols": "CAT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-01-674b73998f305ece6669.manifest.json",
+      "manifest_sha256": "888bc7eb556334d5179b00dd003903cd8c7cbc6a7567d029fc93fac8e8e2fff6",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-01-674b73998f305ece6669.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-26T20:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-26T20:00:00+00:00",
+        "symbols": "WMT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-01-6a7865998f283c148b03.manifest.json",
+      "manifest_sha256": "6c5856ea1167c55d729f6f587298021eb7483d857c22e810317b456a8ded977a",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-01-6a7865998f283c148b03.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-01-24T16:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-01-24T16:00:00+00:00",
+        "symbols": "WMT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-03-0051c6b9fdea3ee83bf6.manifest.json",
+      "manifest_sha256": "625a8e5420118ca9a18ad6e694ec361d08489e3eb7e684e2c232bfb8deacab14",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-03-0051c6b9fdea3ee83bf6.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-03-08T15:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-03-08T15:00:00+00:00",
+        "symbols": "WMT",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-03-286446bd0b84326d2705.manifest.json",
+      "manifest_sha256": "f9184421adbc87cbbec7b52769f76c1434ff1647934d5b3bc1ef0848c9950284",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-03-286446bd0b84326d2705.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-03-08T14:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-03-08T14:30:00+00:00",
+        "symbols": "JNJ",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-03-51d2f7863c3402bf00e3.manifest.json",
+      "manifest_sha256": "4823f33167b14f0d78e1e6bf24df5358205233ed13549f6ed6a0c0269ff5b1e2",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-03-51d2f7863c3402bf00e3.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-03-08T15:29:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-03-08T15:00:00+00:00",
+        "symbols": "JPM",
+        "timeframe": "1Min"
+      }
+    },
+    {
+      "manifest": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-03-9b65e3beb052056ea196.manifest.json",
+      "manifest_sha256": "0b8d8aac1558cdce548c72e814a16a50d3a676f1a5a01714a035a154075bb416",
+      "data": "data/raw/alpaca/track_a_remediation_v1/minute_diagnostics/2022-03-9b65e3beb052056ea196.parquet",
+      "sha256": "16dc57c80cfe5d710e2ab12bb57a0492210d19403ba00022af3116f6962dc5ac",
+      "rows": 0,
+      "params": {
+        "adjustment": "split",
+        "asof": "2025-06-30",
+        "currency": "USD",
+        "end": "2022-03-08T14:59:59.999999999+00:00",
+        "feed": "sip",
+        "limit": 10000,
+        "sort": "asc",
+        "start": "2022-03-08T14:30:00+00:00",
+        "symbols": "CAT",
+        "timeframe": "1Min"
+      }
+    }
+  ],
+  "complete_five_stock_reference_source": false,
+  "prices_read": false,
+  "raw_minute_samples_not_fills": true,
+  "publication_and_units": "NOT_CERTIFIED"
+}
