@@ -1,0 +1,290 @@
+[
+  {
+    "fold": "WF1",
+    "prefix": "inner",
+    "rows": 6880,
+    "t1": {
+      "cutoff": "2023-03-31 04:00:00+00:00",
+      "observations": 6880,
+      "parameter_id": "ab14de1a24ef57e23935d269de673951ed0e466910c510bb0c607ba85b2a7fce",
+      "policy": {
+        "arm": "T1",
+        "cap": 9.624808417611554,
+        "scale": 1.0
+      },
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "quantile_method": "numpy.linear",
+      "scale_floor": 1e-06,
+      "target_population_hash": "8cdeb200cd0d99ae408079f2478132fdf341b78ae0c7ebabcda2975806cc605f",
+      "version": "TA011_CONTROLLED_LOSS_v1",
+      "view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc"
+    },
+    "t2": {
+      "cutoff": "2023-03-31 04:00:00+00:00",
+      "observations": 6880,
+      "parameter_id": "62ed19bc4adbdd9bd82a9d500d4538b1c101f01905e18e3f661811e228b62c76",
+      "policy": {
+        "arm": "T2",
+        "cap": 1.0,
+        "scale": 0.9082107726550774
+      },
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "quantile_method": "numpy.linear",
+      "scale_floor": 1e-06,
+      "target_population_hash": "8cdeb200cd0d99ae408079f2478132fdf341b78ae0c7ebabcda2975806cc605f",
+      "version": "TA011_CONTROLLED_LOSS_v1",
+      "view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc"
+    },
+    "quantiles": {
+      "Original TG0": {
+        "min": -32.173621172394434,
+        "p1": -8.0656191981599,
+        "p50": 0.0,
+        "p99": 7.321171909832136,
+        "p99.9": 19.128107490353013,
+        "max": 80.16413227615661,
+        "finite": 6880,
+        "missing/nonfinite": 0
+      },
+      "T1 clipped TG0 optimizer label": {
+        "min": -9.624808417611554,
+        "p1": -8.0656191981599,
+        "p50": 0.0,
+        "p99": 7.321171909832136,
+        "p99.9": 9.624808417611554,
+        "max": 9.624808417611554,
+        "finite": 6880,
+        "missing/nonfinite": 0
+      },
+      "T2 asinh optimizer label": {
+        "min": -4.260772029508871,
+        "p1": -2.880191340422526,
+        "p50": 0.0,
+        "p99": 2.7840215395297174,
+        "p99.9": 3.7409263473292564,
+        "max": 5.173534252991657,
+        "finite": 6880,
+        "missing/nonfinite": 0
+      }
+    },
+    "round_trip_max": 7.105427357601002e-15
+  },
+  {
+    "fold": "WF1",
+    "prefix": "refit",
+    "rows": 7510,
+    "t1": {
+      "cutoff": "2023-07-01 04:00:00+00:00",
+      "observations": 7510,
+      "parameter_id": "4bbfae046f3e597976b10bc9b390bf833f98fc3430242f62e7619066c77e243d",
+      "policy": {
+        "arm": "T1",
+        "cap": 9.632055658109966,
+        "scale": 1.0
+      },
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "quantile_method": "numpy.linear",
+      "scale_floor": 1e-06,
+      "target_population_hash": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca",
+      "version": "TA011_CONTROLLED_LOSS_v1",
+      "view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b"
+    },
+    "t2": {
+      "cutoff": "2023-07-01 04:00:00+00:00",
+      "observations": 7510,
+      "parameter_id": "78113493b273cb0bcc2f6b941420ce0106d365b509c3187ca4d26c6389f8dd76",
+      "policy": {
+        "arm": "T2",
+        "cap": 1.0,
+        "scale": 0.9078702183805596
+      },
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "quantile_method": "numpy.linear",
+      "scale_floor": 1e-06,
+      "target_population_hash": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca",
+      "version": "TA011_CONTROLLED_LOSS_v1",
+      "view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b"
+    },
+    "quantiles": {
+      "Original TG0": {
+        "min": -32.42558628398586,
+        "p1": -7.953400867318379,
+        "p50": 0.0,
+        "p99": 7.348947139126354,
+        "p99.9": 18.939721654605123,
+        "max": 82.02804281360736,
+        "finite": 7510,
+        "missing/nonfinite": 0
+      },
+      "T1 clipped TG0 optimizer label": {
+        "min": -9.632055658109966,
+        "p1": -7.953400867318379,
+        "p50": 0.0,
+        "p99": 7.348947139126354,
+        "p99.9": 9.632055658109966,
+        "max": 9.632055658109966,
+        "finite": 7510,
+        "missing/nonfinite": 0
+      },
+      "T2 asinh optimizer label": {
+        "min": -4.268944756194759,
+        "p1": -2.8666412247687267,
+        "p50": 0.0,
+        "p99": 2.7881490175001535,
+        "p99.9": 3.731529433115522,
+        "max": 5.196892819446871,
+        "finite": 7510,
+        "missing/nonfinite": 0
+      }
+    },
+    "round_trip_max": 2.842170943040401e-14
+  },
+  {
+    "fold": "WF2",
+    "prefix": "inner",
+    "rows": 8130,
+    "t1": {
+      "cutoff": "2023-10-02 04:00:00+00:00",
+      "observations": 8130,
+      "parameter_id": "e566823182b2b22fba8e6fbdc0991b9d55829c880a497d2f84b7330c2a941f30",
+      "policy": {
+        "arm": "T1",
+        "cap": 9.662225386735207,
+        "scale": 1.0
+      },
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "quantile_method": "numpy.linear",
+      "scale_floor": 1e-06,
+      "target_population_hash": "793434272d9838e181c9945e196451f05446c9dc29ab09659f0d5f4c007644a8",
+      "version": "TA011_CONTROLLED_LOSS_v1",
+      "view_id": "CONDITIONAL_REAL_TM0:f8a1a6cd509c7364e017afc6746afa6a8986b1b5454b7508c19094cea15f672e"
+    },
+    "t2": {
+      "cutoff": "2023-10-02 04:00:00+00:00",
+      "observations": 8130,
+      "parameter_id": "1734278e1a2628bd1d5e6c48ef96756a80ad7f58a5071633e8fd97b7b47423f0",
+      "policy": {
+        "arm": "T2",
+        "cap": 1.0,
+        "scale": 0.9087953475776984
+      },
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "quantile_method": "numpy.linear",
+      "scale_floor": 1e-06,
+      "target_population_hash": "793434272d9838e181c9945e196451f05446c9dc29ab09659f0d5f4c007644a8",
+      "version": "TA011_CONTROLLED_LOSS_v1",
+      "view_id": "CONDITIONAL_REAL_TM0:f8a1a6cd509c7364e017afc6746afa6a8986b1b5454b7508c19094cea15f672e"
+    },
+    "quantiles": {
+      "Original TG0": {
+        "min": -32.566597548454126,
+        "p1": -7.933712485979186,
+        "p50": 0.0,
+        "p99": 7.391254476832029,
+        "p99.9": 19.285402995877696,
+        "max": 83.09627952876136,
+        "finite": 8130,
+        "missing/nonfinite": 0
+      },
+      "T1 clipped TG0 optimizer label": {
+        "min": -9.662225386735207,
+        "p1": -7.933712485979186,
+        "p50": 0.0,
+        "p99": 7.391254476832029,
+        "p99.9": 9.662225386735207,
+        "max": 9.662225386735207,
+        "finite": 8130,
+        "missing/nonfinite": 0
+      },
+      "T2 asinh optimizer label": {
+        "min": -4.272264304809742,
+        "p1": -2.8631677078717535,
+        "p50": 0.0,
+        "p99": 2.7928371740965923,
+        "p99.9": 3.7486330396252465,
+        "max": 5.208812362001377,
+        "finite": 8130,
+        "missing/nonfinite": 0
+      }
+    },
+    "round_trip_max": 2.842170943040401e-14
+  },
+  {
+    "fold": "WF2",
+    "prefix": "refit",
+    "rows": 8750,
+    "t1": {
+      "cutoff": "2024-01-01 05:00:00+00:00",
+      "observations": 8750,
+      "parameter_id": "fc14d50ea52f7a69a046db4318935edcfd3b6cf5e372c677d752504064d408de",
+      "policy": {
+        "arm": "T1",
+        "cap": 9.63374120907431,
+        "scale": 1.0
+      },
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "quantile_method": "numpy.linear",
+      "scale_floor": 1e-06,
+      "target_population_hash": "9ad016fe80d99e717e13e1e02916e096c6c3bb372f3c9964db359141e529f1d3",
+      "version": "TA011_CONTROLLED_LOSS_v1",
+      "view_id": "CONDITIONAL_REAL_TM0:6a18a3ed0cf31a1d952d6d1faa30760ea10705ef4c715639b24e86781bcc4489"
+    },
+    "t2": {
+      "cutoff": "2024-01-01 05:00:00+00:00",
+      "observations": 8750,
+      "parameter_id": "c662157a2d783274ab4250fa1b00b2da986d81ea91a94b7644eda5d511a37c33",
+      "policy": {
+        "arm": "T2",
+        "cap": 1.0,
+        "scale": 0.9084179186618542
+      },
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "quantile_method": "numpy.linear",
+      "scale_floor": 1e-06,
+      "target_population_hash": "9ad016fe80d99e717e13e1e02916e096c6c3bb372f3c9964db359141e529f1d3",
+      "version": "TA011_CONTROLLED_LOSS_v1",
+      "view_id": "CONDITIONAL_REAL_TM0:6a18a3ed0cf31a1d952d6d1faa30760ea10705ef4c715639b24e86781bcc4489"
+    },
+    "quantiles": {
+      "Original TG0": {
+        "min": -32.73753736854791,
+        "p1": -7.967017622847095,
+        "p50": 0.0,
+        "p99": 7.291870200182106,
+        "p99.9": 19.061338488778766,
+        "max": 84.41624461724471,
+        "finite": 8750,
+        "missing/nonfinite": 0
+      },
+      "T1 clipped TG0 optimizer label": {
+        "min": -9.63374120907431,
+        "p1": -7.967017622847095,
+        "p50": 0.0,
+        "p99": 7.291870200182106,
+        "p99.9": 9.63374120907431,
+        "max": 9.63374120907431,
+        "finite": 8750,
+        "missing/nonfinite": 0
+      },
+      "T2 asinh optimizer label": {
+        "min": -4.277912714688199,
+        "p1": -2.8677425721142864,
+        "p50": 0.0,
+        "p99": 2.7798083783862526,
+        "p99.9": 3.7373272560412727,
+        "max": 5.2249867282964155,
+        "finite": 8750,
+        "missing/nonfinite": 0
+      }
+    },
+    "round_trip_max": 2.842170943040401e-14
+  }
+]

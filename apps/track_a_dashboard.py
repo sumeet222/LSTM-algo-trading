@@ -16,13 +16,20 @@ from lstm_data.ft0_transforms import ORDER
 from lstm_data.pretraining_policy import CANDIDATE
 from lstm_data.pretraining_tables import BaseTables
 from lstm_data.visualization import figures as charts
+from lstm_data.visualization.controlled_ui import (
+    base as shared_base_store,
+)
+from lstm_data.visualization.controlled_ui import (
+    controlled_page,
+    feature_explorer,
+    open_study,
+)
 from lstm_data.visualization.definitions import FEATURES, MARKET
 from lstm_data.visualization.loaders import (
     CAVEAT,
     PARTITIONS,
     Catalog,
     ViewUnavailable,
-    component_base,
     event_markers,
     feature_frame,
     gradient_batches,
@@ -44,6 +51,7 @@ SECTIONS = (
     "Predictions & Errors",
     "Training Diagnostics",
     "Research Notes / Provenance",
+    "Controlled Experiments",
 )
 PLOT_CONFIG = {"displaylogo": False, "scrollZoom": True, "modeBarButtonsToRemove": ["toImage"]}
 
@@ -57,7 +65,7 @@ def saved_predictions(
 
 @st.cache_resource(max_entries=1, show_spinner="Reading the existing canonical feature store…")
 def base_store(root: str, token: tuple) -> BaseTables:
-    return component_base(Catalog.discover(Path(root)))
+    return shared_base_store(root, token)
 
 
 @st.cache_data(max_entries=24, show_spinner=False)
@@ -125,6 +133,8 @@ def start_here(c: Catalog) -> None:
             "Package011 arms use seed labels in brackets. TM0 is C0 seed42; "
             "compare seed123 arms with C0 [123]. These are saved package results."
         )
+    st.button("Package 011: Compare C0 and T2", on_click=open_study, type="primary")
+    st.caption("TM0 architecture · matched C0/H1/T1/T2/O1 arms · seeds42/123 · saved evidence only")
     st.subheader("Your first five minutes")
     st.markdown(
         "1. Open **Price & Features**. Keep **AAPL / WF2 / TM0 / January16–19,2024**. "
@@ -178,6 +188,7 @@ def price_page(
         "Feature origin context",
         [1, 2],
         format_func=lambda x: "10:30 ET" if x == 1 else "11:30 ET",
+        key="feature_origin",
         help="M2 is locked to its historical forecast-origin type.",
     )
     selected = st.multiselect(
@@ -194,7 +205,9 @@ def price_page(
         help="Scaled means the exact bound inner/full-prefix recipe; no new fitting.",
     )
     options = st.columns(3)
-    markers_on = options[0].checkbox("Show forecast / horizon events", value=False)
+    markers_on = options[0].checkbox(
+        "Show forecast / horizon events", value=False, key="price_markers"
+    )
     overlay_on = options[1].checkbox(
         "Overlay previous20 daily SMA",
         value=False,
@@ -280,6 +293,18 @@ def price_page(
             "Observed publication latency, local rights and action vintage remain unverified. "
             "Only the approved idealized period-end clock is used."
         )
+
+    with st.expander("Feature Scaling Explorer / actual 48-step context"):
+        if st.checkbox("Open read-only Feature Scaling Explorer"):
+            event = st.session_state.get("selected_study_event")
+            if event is not None and (
+                event["fold"] != fold
+                or event["partition"] != partition
+                or event["session"] != start
+                or start != end
+            ):
+                event = None
+            feature_explorer(c, token, fold, partition, symbol, start, end, context, event)
 
 
 def predictions_page(
@@ -739,6 +764,22 @@ def main() -> None:
     st.sidebar.title("Track A")
     st.sidebar.caption("Research explorer · local / read-only")
     section = st.sidebar.radio("Explore", SECTIONS, key="section")
+    # Keep independent study and legacy filters when their widgets are off-page.
+    keep = (
+        ("fold", "partition", "model", "symbol", "dates", "origin_label")
+        if (section == "Controlled Experiments")
+        else tuple(k for k in st.session_state if str(k).startswith("study_"))
+    )
+    for key in keep:
+        if key in st.session_state:
+            st.session_state[key] = st.session_state[key]
+    if section == "Controlled Experiments":
+        try:
+            controlled_page(c, token)
+        except ViewUnavailable as exc:
+            st.warning(str(exc))
+            st.caption("Affected study view unavailable; no fallback cohort or synthetic evidence.")
+        return
     fold = st.sidebar.selectbox("Fold", ["WF2", "WF1"], key="fold", on_change=reset_dates)
     partition = st.sidebar.selectbox(
         "Partition", PARTITIONS, key="partition", on_change=reset_dates
@@ -756,13 +797,15 @@ def main() -> None:
         min_value=date(2020, 7, 1),
         max_value=date(2024, 6, 30),
     )
-    origin_label = st.sidebar.selectbox("Forecast origins", ["Both", "10:30 ET", "11:30 ET"])
+    origin_label = st.sidebar.selectbox(
+        "Forecast origins", ["Both", "10:30 ET", "11:30 ET"], key="origin_label"
+    )
     origins = (1, 2) if origin_label == "Both" else (1,) if origin_label.startswith("10") else (2,)
     st.sidebar.info(
         "TM0 is C0 seed42. Package011 arms show their seed in brackets when recorded. "
         "WF1 also has MC1, E5 and recorded baselines."
     )
-    st.sidebar.caption("Ledger6/40 · production D1 unchanged · no confirmation access")
+    st.sidebar.caption("Ledger24/40 · production D1 unchanged · no confirmation access")
     st.caption(f"{symbol} / {fold} / {model} / {partition} · ASSUMPTION_CONDITIONAL")
     missing_files = c.missing_required(token)
     if missing_files:

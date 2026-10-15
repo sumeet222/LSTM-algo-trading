@@ -1,6 +1,6 @@
 # Track A visualization user guide
 
-Start with [Visualization_Quickstart.md](Visualization_Quickstart.md). Launch from the repository root with `./scripts/run_track_a_dashboard.sh`. The app has five sections and no model-fitting controls. Its real-pair ledger stays6/40.
+Start with [Visualization_Quickstart.md](Visualization_Quickstart.md). Launch from the repository root with `./scripts/run_track_a_dashboard.sh`. The app has six sections and no model-fitting controls. Its real-pair ledger stays24/40. The added **Controlled Experiments** page is explained in [HOW_TO_VISUALLY_INSPECT_PACKAGE_011.md](HOW_TO_VISUALLY_INSPECT_PACKAGE_011.md).
 
 ## Controls and coverage
 
@@ -74,3 +74,11 @@ Dates outside a selected model partition give a friendly timeframe message; sele
 The current package verifies programmatic Streamlit interactions plus real local HTTP/HTML and clean shutdown. Native browser automation was unavailable/unreliable during the session; no screenshot is fabricated or claimed as verified. The researcher should follow the five-minute example for final visual review. Local rights, observed publication and action/PIT assumptions remain qualified; no redistribution or alpha certification follows from a chart. Check applicable rights before sharing screenshots.
 
 Framework API references used: [Streamlit Plotly charts](https://docs.streamlit.io/develop/api-reference/charts/st.plotly_chart), [in-memory caching](https://docs.streamlit.io/develop/concepts/architecture/caching), [local configuration](https://docs.streamlit.io/develop/api-reference/configuration/config.toml).
+
+## Controlled Experiments and Feature Scaling Explorer
+
+Use **Start Here → Package 011: Compare C0 and T2**, or the new sidebar section. The study has separate treatment/comparator/fold/seed/partition/stock/date/origin controls. TM0 remains the architecture; C0/H1/T1/T2/O1 are treatment arms. Its five views are **Target & denominator**, **Training Curves & Gradients**, **Predictions & Errors**, **Extreme Events**, and **Feature Scaling Explorer**. Follow the linked five-minute guide for exact controls, actual training populations, a verified SBUX November17,2023 outlier and one-click candle navigation.
+
+Target distributions use registered inner/full-refit training labels, independently of the development date filter. Their cap/scale/preparation/population identities are checked; no parameters are fitted. Original TG0, clipped optimizer labels and asinh labels use separate axes. Predictions always read original canonical saved scores, including T2's already applied inverse. Full-epoch training curves ignore stock/date filters; matched prediction/event metrics retain every selected five-stock origin. Recorded loss/gradient units and missing historical telemetry are explicit. Fold×seed intervals are the existing exploratory five-session blocks, not newly sampled significance results.
+
+The Feature Scaling Explorer shows all16 real FT0 channels with their native/scaled traces, distributions and actual fitted parameters. After event navigation, the Price & Features expander can show the exact48-step context from bound components and recipes. No rolling z-score, alternative floor/MAD or other Package012 transform is estimated. Complete raw target/mask/clock matches are required before paired metrics; mismatch states never silently drop rows. New adapter and UI hashes are additive to the visualization config; every sealed Package011 artifact and its scientific source remains unchanged.

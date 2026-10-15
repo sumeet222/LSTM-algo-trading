@@ -1,0 +1,1742 @@
+[
+  {
+    "fold": "WF1",
+    "seed": 42,
+    "arm": "C0",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 5.438829599996872,
+        "daily_Rank_IC": 0.034913793103448276,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011297755699736456,
+        "IC minus ZERO": 0.034913793103448276
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 5.438829599996872,
+        "daily_Rank_IC": 0.034913793103448276,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011297755699736456,
+        "IC minus ZERO": 0.034913793103448276
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 5.427531844297135,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.011297755699736456,
+        "IC minus C0": -0.034913793103448276,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 5.438829599996872,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.15655742881457016
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.3068822801044779
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.4461932112880181
+        }
+      },
+      "worst_sessions": [
+        [
+          "2023-11-17",
+          64.41558678427317
+        ],
+        [
+          "2023-08-10",
+          34.35715785631295
+        ],
+        [
+          "2023-10-25",
+          27.439947064086844
+        ],
+        [
+          "2023-07-26",
+          27.165203553478463
+        ],
+        [
+          "2023-12-06",
+          23.388143059648023
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF1",
+    "seed": 42,
+    "arm": "H1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 5.438829599996872,
+        "daily_Rank_IC": 0.034913793103448276,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011297755699736456,
+        "IC minus ZERO": 0.034913793103448276
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 5.431001207709424,
+        "daily_Rank_IC": 0.03663793103448275,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": -0.007828392287447805,
+        "IC minus C0": 0.0017241379310344723,
+        "MSE minus ZERO": 0.0034693634122886507,
+        "IC minus ZERO": 0.03663793103448275
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 5.427531844297135,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.011297755699736456,
+        "IC minus C0": -0.034913793103448276,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 5.431001207709424,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.15668327921693112
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.30813747095061933
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.44804061741131324
+        }
+      },
+      "worst_sessions": [
+        [
+          "2023-11-17",
+          64.14330023750043
+        ],
+        [
+          "2023-08-10",
+          34.56656088648258
+        ],
+        [
+          "2023-10-25",
+          27.60570321377991
+        ],
+        [
+          "2023-07-26",
+          27.49270727904632
+        ],
+        [
+          "2023-12-06",
+          23.49026589394239
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF1",
+    "seed": 42,
+    "arm": "T1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 5.438829599996872,
+        "daily_Rank_IC": 0.034913793103448276,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011297755699736456,
+        "IC minus ZERO": 0.034913793103448276
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 5.436669396900195,
+        "daily_Rank_IC": 0.03534482758620689,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": -0.0021602030966771935,
+        "IC minus C0": 0.0004310344827586146,
+        "MSE minus ZERO": 0.009137552603059262,
+        "IC minus ZERO": 0.03534482758620689
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 5.427531844297135,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.011297755699736456,
+        "IC minus C0": -0.034913793103448276,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 5.436669396900195,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.15633450616743758
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.30703803264590124
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.44629430721975905
+        }
+      },
+      "worst_sessions": [
+        [
+          "2023-11-17",
+          64.17234839305662
+        ],
+        [
+          "2023-08-10",
+          34.42057854870483
+        ],
+        [
+          "2023-10-25",
+          27.423393757935415
+        ],
+        [
+          "2023-07-26",
+          27.29582002405732
+        ],
+        [
+          "2023-12-06",
+          23.465485199518298
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF1",
+    "seed": 42,
+    "arm": "T2",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 5.438829599996872,
+        "daily_Rank_IC": 0.034913793103448276,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011297755699736456,
+        "IC minus ZERO": 0.034913793103448276
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 5.427408411340406,
+        "daily_Rank_IC": 0.04999999999999999,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": -0.011421188656465908,
+        "IC minus C0": 0.015086206896551713,
+        "MSE minus ZERO": -0.00012343295672945231,
+        "IC minus ZERO": 0.04999999999999999
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 5.427531844297135,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.011297755699736456,
+        "IC minus C0": -0.034913793103448276,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 5.427408411340406,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.1567385958735384
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.3084208150808713
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.4481130376319789
+        }
+      },
+      "worst_sessions": [
+        [
+          "2023-11-17",
+          64.0825329477812
+        ],
+        [
+          "2023-08-10",
+          34.596854392803124
+        ],
+        [
+          "2023-10-25",
+          27.751227345858137
+        ],
+        [
+          "2023-07-26",
+          27.5715687534044
+        ],
+        [
+          "2023-12-06",
+          23.397557612760124
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF1",
+    "seed": 42,
+    "arm": "O1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 5.438829599996872,
+        "daily_Rank_IC": 0.034913793103448276,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011297755699736456,
+        "IC minus ZERO": 0.034913793103448276
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 5.439226059017336,
+        "daily_Rank_IC": 0.027586206896551727,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.00039645902046370196,
+        "IC minus C0": -0.007327586206896549,
+        "MSE minus ZERO": 0.011694214720200158,
+        "IC minus ZERO": 0.027586206896551727
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 5.427531844297135,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.011297755699736456,
+        "IC minus C0": -0.034913793103448276,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 5.439226059017336,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.15667488264758891
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.30692175876225875
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.44623029970313655
+        }
+      },
+      "worst_sessions": [
+        [
+          "2023-11-17",
+          64.50776738225755
+        ],
+        [
+          "2023-08-10",
+          34.34628473861128
+        ],
+        [
+          "2023-10-25",
+          27.463305522016984
+        ],
+        [
+          "2023-07-26",
+          27.130891186646302
+        ],
+        [
+          "2023-12-06",
+          23.40800623718099
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF1",
+    "seed": 123,
+    "arm": "C0",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 5.430641226186712,
+        "daily_Rank_IC": 0.05689655172413793,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0031093818895762126,
+        "IC minus ZERO": 0.05689655172413793
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 5.430641226186712,
+        "daily_Rank_IC": 0.05689655172413793,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0031093818895762126,
+        "IC minus ZERO": 0.05689655172413793
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 5.427531844297135,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.0031093818895762126,
+        "IC minus C0": -0.05689655172413793,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 5.430641226186712,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.15597778689274056
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.30653826751759294
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.44667231772884286
+        }
+      },
+      "worst_sessions": [
+        [
+          "2023-11-17",
+          63.63201951570843
+        ],
+        [
+          "2023-08-10",
+          34.62687086910508
+        ],
+        [
+          "2023-10-25",
+          27.502120678320562
+        ],
+        [
+          "2023-07-26",
+          27.121971668488502
+        ],
+        [
+          "2023-12-06",
+          23.298656020547938
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF1",
+    "seed": 123,
+    "arm": "H1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 5.430641226186712,
+        "daily_Rank_IC": 0.05689655172413793,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0031093818895762126,
+        "IC minus ZERO": 0.05689655172413793
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 5.431429821677369,
+        "daily_Rank_IC": 0.03922413793103449,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0007885954906576842,
+        "IC minus C0": -0.017672413793103435,
+        "MSE minus ZERO": 0.003897977380233897,
+        "IC minus ZERO": 0.03922413793103449
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 5.427531844297135,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.0031093818895762126,
+        "IC minus C0": -0.05689655172413793,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 5.431429821677369,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.15620770387705143
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.3074726615021076
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.447800765048481
+        }
+      },
+      "worst_sessions": [
+        [
+          "2023-11-17",
+          63.82673611235872
+        ],
+        [
+          "2023-08-10",
+          34.59128090841482
+        ],
+        [
+          "2023-10-25",
+          27.70419882668579
+        ],
+        [
+          "2023-07-26",
+          27.315038933721784
+        ],
+        [
+          "2023-12-06",
+          23.459620473339893
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF1",
+    "seed": 123,
+    "arm": "T1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 5.430641226186712,
+        "daily_Rank_IC": 0.05689655172413793,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0031093818895762126,
+        "IC minus ZERO": 0.05689655172413793
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 5.431382988344502,
+        "daily_Rank_IC": 0.05172413793103448,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0007417621577907596,
+        "IC minus C0": -0.005172413793103445,
+        "MSE minus ZERO": 0.0038511440473669722,
+        "IC minus ZERO": 0.05172413793103448
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 5.427531844297135,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.0031093818895762126,
+        "IC minus C0": -0.05689655172413793,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 5.431382988344502,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.15593111733621948
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.30660918855191005
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.4466628743204513
+        }
+      },
+      "worst_sessions": [
+        [
+          "2023-11-17",
+          63.65011449262517
+        ],
+        [
+          "2023-08-10",
+          34.592793201579994
+        ],
+        [
+          "2023-10-25",
+          27.529570221254453
+        ],
+        [
+          "2023-07-26",
+          27.140093521801905
+        ],
+        [
+          "2023-12-06",
+          23.355092310556408
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF1",
+    "seed": 123,
+    "arm": "T2",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 5.430641226186712,
+        "daily_Rank_IC": 0.05689655172413793,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0031093818895762126,
+        "IC minus ZERO": 0.05689655172413793
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 5.427631868393494,
+        "daily_Rank_IC": 0.05301724137931033,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": -0.0030093577932177595,
+        "IC minus C0": -0.003879310344827594,
+        "MSE minus ZERO": 0.00010002409635845311,
+        "IC minus ZERO": 0.05301724137931033
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 5.427531844297135,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.0031093818895762126,
+        "IC minus C0": -0.05689655172413793,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 5.427631868393494,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.15636898711339908
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.30789543747691167
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.44805041230876513
+        }
+      },
+      "worst_sessions": [
+        [
+          "2023-11-17",
+          63.821691152819696
+        ],
+        [
+          "2023-08-10",
+          34.62905137865147
+        ],
+        [
+          "2023-10-25",
+          27.826109307889524
+        ],
+        [
+          "2023-07-26",
+          27.40361821279751
+        ],
+        [
+          "2023-12-06",
+          23.390726239607133
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF1",
+    "seed": 123,
+    "arm": "O1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 5.430641226186712,
+        "daily_Rank_IC": 0.05689655172413793,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0031093818895762126,
+        "IC minus ZERO": 0.05689655172413793
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 5.433972523764308,
+        "daily_Rank_IC": 0.04741379310344827,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.003331297577596537,
+        "IC minus C0": -0.009482758620689653,
+        "MSE minus ZERO": 0.00644067946717275,
+        "IC minus ZERO": 0.04741379310344827
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 5.427531844297135,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.0031093818895762126,
+        "IC minus C0": -0.05689655172413793,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 5.433972523764308,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.1560051643345743
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.30633137258634
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.4463881387792447
+        }
+      },
+      "worst_sessions": [
+        [
+          "2023-11-17",
+          63.790003049968206
+        ],
+        [
+          "2023-08-10",
+          34.546419030923595
+        ],
+        [
+          "2023-10-25",
+          27.48228580263496
+        ],
+        [
+          "2023-07-26",
+          27.00456025176575
+        ],
+        [
+          "2023-12-06",
+          23.35159163605291
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF2",
+    "seed": 42,
+    "arm": "C0",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 7.631510202679114,
+        "daily_Rank_IC": 0.050862068965517246,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0033911526010408366,
+        "IC minus ZERO": 0.050862068965517246
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 7.631510202679114,
+        "daily_Rank_IC": 0.050862068965517246,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0033911526010408366,
+        "IC minus ZERO": 0.050862068965517246
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 7.628119050078073,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.0033911526010408366,
+        "IC minus C0": -0.050862068965517246,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 7.631510202679114,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.2715346145029883
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.44047704730232734
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.578719351158682
+        }
+      },
+      "worst_sessions": [
+        [
+          "2024-02-14",
+          169.5244034654959
+        ],
+        [
+          "2024-06-06",
+          70.85302152587519
+        ],
+        [
+          "2024-04-22",
+          67.47626410757202
+        ],
+        [
+          "2024-05-09",
+          30.98793707239799
+        ],
+        [
+          "2024-05-23",
+          27.220502456360617
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF2",
+    "seed": 42,
+    "arm": "H1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 7.631510202679114,
+        "daily_Rank_IC": 0.050862068965517246,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0033911526010408366,
+        "IC minus ZERO": 0.050862068965517246
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 7.634848103862698,
+        "daily_Rank_IC": 0.026293103448275856,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0033379011835839023,
+        "IC minus C0": -0.02456896551724139,
+        "MSE minus ZERO": 0.006729053784624739,
+        "IC minus ZERO": 0.026293103448275856
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 7.628119050078073,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.0033911526010408366,
+        "IC minus C0": -0.050862068965517246,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 7.634848103862698,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.27066876609807544
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.4393971856246731
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.578400493259805
+        }
+      },
+      "worst_sessions": [
+        [
+          "2024-02-14",
+          168.97363852341647
+        ],
+        [
+          "2024-06-06",
+          70.74209168835824
+        ],
+        [
+          "2024-04-22",
+          67.26839242365355
+        ],
+        [
+          "2024-05-09",
+          31.078323016422967
+        ],
+        [
+          "2024-05-23",
+          27.14756511676255
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF2",
+    "seed": 42,
+    "arm": "T1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 7.631510202679114,
+        "daily_Rank_IC": 0.050862068965517246,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0033911526010408366,
+        "IC minus ZERO": 0.050862068965517246
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 7.625417720322767,
+        "daily_Rank_IC": 0.06896551724137931,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": -0.006092482356346629,
+        "IC minus C0": 0.018103448275862064,
+        "MSE minus ZERO": -0.0027013297553057924,
+        "IC minus ZERO": 0.06896551724137931
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 7.628119050078073,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.0033911526010408366,
+        "IC minus C0": -0.050862068965517246,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 7.625417720322767,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.2712186839681407
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.4402472722474698
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.5786176544643074
+        }
+      },
+      "worst_sessions": [
+        [
+          "2024-02-14",
+          169.14428604630214
+        ],
+        [
+          "2024-06-06",
+          70.76178197603844
+        ],
+        [
+          "2024-04-22",
+          67.38600648978162
+        ],
+        [
+          "2024-05-09",
+          31.023328284669304
+        ],
+        [
+          "2024-05-23",
+          27.202413778715762
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF2",
+    "seed": 42,
+    "arm": "T2",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 7.631510202679114,
+        "daily_Rank_IC": 0.050862068965517246,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0033911526010408366,
+        "IC minus ZERO": 0.050862068965517246
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 7.620405928181085,
+        "daily_Rank_IC": 0.06637931034482758,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": -0.011104274498029199,
+        "IC minus C0": 0.015517241379310334,
+        "MSE minus ZERO": -0.007713121896988362,
+        "IC minus ZERO": 0.06637931034482758
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 7.628119050078073,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.0033911526010408366,
+        "IC minus C0": -0.050862068965517246,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 7.620405928181085,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.2703534279003303
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.439468433806298
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.5781644669857398
+        }
+      },
+      "worst_sessions": [
+        [
+          "2024-02-14",
+          168.3609005042384
+        ],
+        [
+          "2024-06-06",
+          70.62263179814911
+        ],
+        [
+          "2024-04-22",
+          67.12172364538273
+        ],
+        [
+          "2024-05-09",
+          31.163584510690846
+        ],
+        [
+          "2024-05-23",
+          27.221040117317095
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF2",
+    "seed": 42,
+    "arm": "O1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 7.631510202679114,
+        "daily_Rank_IC": 0.050862068965517246,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.0033911526010408366,
+        "IC minus ZERO": 0.050862068965517246
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 7.6372157277801405,
+        "daily_Rank_IC": 0.04655172413793105,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0057055251010265096,
+        "IC minus C0": -0.004310344827586195,
+        "MSE minus ZERO": 0.009096677702067346,
+        "IC minus ZERO": 0.04655172413793105
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 7.628119050078073,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.0033911526010408366,
+        "IC minus C0": -0.050862068965517246,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 7.6372157277801405,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.27144045124021027
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.44040164932770354
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.5785982503340827
+        }
+      },
+      "worst_sessions": [
+        [
+          "2024-02-14",
+          169.59622662848076
+        ],
+        [
+          "2024-06-06",
+          70.87749024214597
+        ],
+        [
+          "2024-04-22",
+          67.46939472534247
+        ],
+        [
+          "2024-05-09",
+          31.02716960572362
+        ],
+        [
+          "2024-05-23",
+          27.279576867358475
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF2",
+    "seed": 123,
+    "arm": "C0",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 7.639672321202124,
+        "daily_Rank_IC": 0.04655172413793104,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011553271124050468,
+        "IC minus ZERO": 0.04655172413793104
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 7.639672321202124,
+        "daily_Rank_IC": 0.04655172413793104,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011553271124050468,
+        "IC minus ZERO": 0.04655172413793104
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 7.628119050078073,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.011553271124050468,
+        "IC minus C0": -0.04655172413793104,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 7.639672321202124,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.2703018127321083
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.44083271485574665
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.5793291557301871
+        }
+      },
+      "worst_sessions": [
+        [
+          "2024-02-14",
+          168.82804606855376
+        ],
+        [
+          "2024-06-06",
+          70.71395807507497
+        ],
+        [
+          "2024-04-22",
+          68.17220533106601
+        ],
+        [
+          "2024-05-09",
+          30.886580135646263
+        ],
+        [
+          "2024-05-23",
+          27.37566901781314
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF2",
+    "seed": 123,
+    "arm": "H1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 7.639672321202124,
+        "daily_Rank_IC": 0.04655172413793104,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011553271124050468,
+        "IC minus ZERO": 0.04655172413793104
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 7.630897194998839,
+        "daily_Rank_IC": 0.04612068965517241,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": -0.008775126203284245,
+        "IC minus C0": -0.0004310344827586285,
+        "MSE minus ZERO": 0.0027781449207662234,
+        "IC minus ZERO": 0.04612068965517241
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 7.628119050078073,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.011553271124050468,
+        "IC minus C0": -0.04655172413793104,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 7.630897194998839,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.2700077779387371
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.4404348030562508
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.5791818212748016
+        }
+      },
+      "worst_sessions": [
+        [
+          "2024-02-14",
+          168.28627974126047
+        ],
+        [
+          "2024-06-06",
+          70.72030531360659
+        ],
+        [
+          "2024-04-22",
+          67.84036296646762
+        ],
+        [
+          "2024-05-09",
+          31.097187759276938
+        ],
+        [
+          "2024-05-23",
+          27.371844432629455
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF2",
+    "seed": 123,
+    "arm": "T1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 7.639672321202124,
+        "daily_Rank_IC": 0.04655172413793104,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011553271124050468,
+        "IC minus ZERO": 0.04655172413793104
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 7.6349564355398245,
+        "daily_Rank_IC": 0.05258620689655173,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": -0.00471588566229908,
+        "IC minus C0": 0.006034482758620695,
+        "MSE minus ZERO": 0.0068373854617513885,
+        "IC minus ZERO": 0.05258620689655173
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 7.628119050078073,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.011553271124050468,
+        "IC minus C0": -0.04655172413793104,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 7.6349564355398245,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.2704259833044989
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.44083694120511613
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.5793601260296267
+        }
+      },
+      "worst_sessions": [
+        [
+          "2024-02-14",
+          168.7594068253428
+        ],
+        [
+          "2024-06-06",
+          70.74470295653
+        ],
+        [
+          "2024-04-22",
+          68.13482829878411
+        ],
+        [
+          "2024-05-09",
+          30.88468393676346
+        ],
+        [
+          "2024-05-23",
+          27.28222412857192
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF2",
+    "seed": 123,
+    "arm": "T2",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 7.639672321202124,
+        "daily_Rank_IC": 0.04655172413793104,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011553271124050468,
+        "IC minus ZERO": 0.04655172413793104
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 7.629399087410209,
+        "daily_Rank_IC": 0.05258620689655172,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": -0.010273233791914471,
+        "IC minus C0": 0.006034482758620681,
+        "MSE minus ZERO": 0.001280037332135997,
+        "IC minus ZERO": 0.05258620689655172
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 7.628119050078073,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.011553271124050468,
+        "IC minus C0": -0.04655172413793104,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 7.629399087410209,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.270177753028428
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.4403433846844214
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.5788938170519681
+        }
+      },
+      "worst_sessions": [
+        [
+          "2024-02-14",
+          168.3325951042246
+        ],
+        [
+          "2024-06-06",
+          70.77749757343645
+        ],
+        [
+          "2024-04-22",
+          67.8339218534346
+        ],
+        [
+          "2024-05-09",
+          31.073302924972197
+        ],
+        [
+          "2024-05-23",
+          27.249028802090304
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  },
+  {
+    "fold": "WF2",
+    "seed": 123,
+    "arm": "O1",
+    "table": [
+      {
+        "forecast": "C0",
+        "MSE": 7.639672321202124,
+        "daily_Rank_IC": 0.04655172413793104,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0,
+        "IC minus C0": 0.0,
+        "MSE minus ZERO": 0.011553271124050468,
+        "IC minus ZERO": 0.04655172413793104
+      },
+      {
+        "forecast": "Treatment",
+        "MSE": 7.6445226465797935,
+        "daily_Rank_IC": 0.0375,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 232,
+        "MSE minus C0": 0.0048503253776699395,
+        "IC minus C0": -0.009051724137931039,
+        "MSE minus ZERO": 0.016403596501720408,
+        "IC minus ZERO": 0.0375
+      },
+      {
+        "forecast": "ZERO",
+        "MSE": 7.628119050078073,
+        "daily_Rank_IC": 0.0,
+        "days": 116,
+        "origins": 232,
+        "stock_rows": 1160,
+        "defined_origins": 0,
+        "MSE minus C0": -0.011553271124050468,
+        "IC minus C0": -0.04655172413793104,
+        "MSE minus ZERO": 0.0,
+        "IC minus ZERO": 0.0
+      }
+    ],
+    "loss_concentration": {
+      "sessions": 116,
+      "equal_day_MSE": 7.6445226465797935,
+      "shares": {
+        "0.01": {
+          "k": 2,
+          "share": 0.2704831996031871
+        },
+        "0.05": {
+          "k": 6,
+          "share": 0.4408444487254856
+        },
+        "0.1": {
+          "k": 12,
+          "share": 0.579202413675621
+        }
+      },
+      "worst_sessions": [
+        [
+          "2024-02-14",
+          169.04600346945662
+        ],
+        [
+          "2024-06-06",
+          70.80893013731085
+        ],
+        [
+          "2024-04-22",
+          68.13778310046013
+        ],
+        [
+          "2024-05-09",
+          30.876940149402415
+        ],
+        [
+          "2024-05-23",
+          27.378742266942407
+        ]
+      ]
+    },
+    "independent_oracle": "MATCH<1e-12"
+  }
+]

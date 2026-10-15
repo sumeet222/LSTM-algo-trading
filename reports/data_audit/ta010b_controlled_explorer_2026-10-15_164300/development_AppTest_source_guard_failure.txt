@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/private/tmp/ta010b_ui_check.py", line 20, in <module>
+    t=time.monotonic();widget(a,'checkbox','Show exact canonical numerator and denominator').check().run();record(a,'Exact numerator MAD decomposition',t)
+                                                                                                           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/ta010b_ui_check.py", line 10, in record
+    assert not a.exception and not a.error
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

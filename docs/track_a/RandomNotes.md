@@ -209,3 +209,5 @@ H1 — Huber loss	Eliminated sustained clipping warnings, but predictive results
 T1 — Target clipping	Modest improvements in several comparisons; clipping warnings persisted	Mixed
 T2 — asinh target transformation	Improved MSE in 4/4 seed–fold comparisons and eliminated sustained clipping warnings	Most promising
 O1 — Higher gradient threshold	Reduced clipping but worsened both MSE and Rank IC in all comparisons	Unpromising
+
+# Personal notes on diagonostics 1
