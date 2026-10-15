@@ -1,0 +1,467 @@
+{
+  "HEAD": "f53feb4ba8a43c23695d3ed7dd01535ec9460a8f",
+  "P2": {
+    "inherited_entry_content_unchanged": true,
+    "original_frozen_register_and_pointer_unchanged": true,
+    "predecessor": {
+      "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/p2_deferred_work_register_v3_candidate_review.json",
+      "sha256": "770de0ffe75f98cd9dc5c58046848f6b596665c945dca7a968474ab4d71d40d0"
+    },
+    "stable_entry_ids_preserved": 16,
+    "successor": {
+      "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/p2_deferred_work_register_v4_candidate_screen.json",
+      "sha256": "5fd6956bfefd0600641af4d88f185c68cd71822172f38f3e41d501fd280db4de"
+    }
+  },
+  "active_registry": {
+    "path": "configs/CURRENT_EXPERIMENT_REGISTRY.json",
+    "sha256": "b551c17e8e8b6ca7193400a8e36ed7e4a49877bacc4ee7320f8083fdc9668efd"
+  },
+  "ahead_behind": "0/0",
+  "all_protected_bytes_unchanged": false,
+  "all_protected_scientific_artifacts_unchanged": true,
+  "batch_input_binding": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/batch_input_binding.json",
+    "sha256": "b6802d5cd26b466097af9342f35870b2aba79e88c699a56f1a5bc4335105422a"
+  },
+  "branch": "feat/track-a-data-intake",
+  "changed_by_this_audit": [],
+  "changed_old_paths": [
+    "docs/track_a/RandomNotes.md"
+  ],
+  "concurrent_external_change": {
+    "path": "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143/concurrent_note_change.json",
+    "sha256": "1027a9698c6da1e86d362eef016dcd1c21455acf1e4ac2cdf9c61a2d15a53d53"
+  },
+  "concurrent_note_change": {
+    "before_sha256": "0cddfbe84e9db48d6e9e6160c15e1247ba534edae02b64259a4d7b0fdd63265e",
+    "observed_after_sha256": "494e74877dcb415a6c89b7a910cb52d4c078f2a3079376737f9bb8874ef3cb55",
+    "origin": "Concurrent external edit, not made by this audit",
+    "path": "docs/track_a/RandomNotes.md",
+    "preservation": "Retained without modification; before-image remains in Git at starting commit.",
+    "scope_review": "Adds a descriptive sentence about target tails and loss concentration; no frozen protocol, model, source, checkpoint, registry or target change."
+  },
+  "confirmation_numeric_access": false,
+  "dataset_binding": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/final_v2/dataset_input_binding.json",
+    "sha256": "1835436b78fff3a8a227de873debd8ba41c1f7766299bb051190d81bf8b2be93"
+  },
+  "fetch": "PASS",
+  "four_distinct_completed_pairs": true,
+  "limitations": "B0unadjustedOHLC/actionvintageandactualpublicationunknown; sourcecomponentprovenanceconditional. Historicalbatchgradientcausalityunidentifiable,notanewfittingrequest.",
+  "market_store": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/market_v2/canonical_market_components.json.gz",
+    "sha256": "6d438cc6aee61334b4502bc41994ca193eef5329bc2e53f8aa0b0d6e5b7bf8c8"
+  },
+  "pair_ledger_before_after": "4/40\u21924/40",
+  "prior_171_file_inventory_verified": true,
+  "producer": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/verified_producer.json",
+    "sha256": "02e6484b741386ce3cfa87315a58b89469e79904e5bc4c681da4c18b7247b38f"
+  },
+  "production_protocol": {
+    "path": "configs/CURRENT_PROTOCOL.json",
+    "sha256": "1b83b2ef8f727618ef319c0c04b36056c5c8cb19857ebe40927851e3295ca600"
+  },
+  "protected_file_count": 2823,
+  "qualification": {
+    "actions": "Retrospective vendor split-price/inverse-volume representation; action vintage/raw-cashbook completeness not certified.",
+    "clock": "Idealized zero-latency period-end availability; actual publication remains unknown.",
+    "evidence_grade": "ASSUMPTION_CONDITIONAL_CANDIDATE_ONLY",
+    "execution": "Completed-hourly-close price-label proxy, not executable minute fills.",
+    "final_shortlist": "Four screened neural families do not authorize promotion past frozen <=3 family shortlist.",
+    "future_authority": "Named pairs consumed; no extra models, folds, seeds or retry authority.",
+    "market": "SPY ETF state proxy; course USA500 substitution and collaborator signatures not fabricated.",
+    "production": "Production D1 and CURRENT_PROTOCOL unchanged.",
+    "rights": "Researcher-attested local stock/SPY use; private evidence not inspected; no legal/license certification or redistribution grant.",
+    "statistics": "One seed and one development fold; no significance, bootstrap, economic replay or causal increment claim.",
+    "universe": "Retrospective AAPL/COST/CMCSA/SBUX/CME; historical membership/sector completeness not verified."
+  },
+  "runs": [
+    {
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "TM0",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 16,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 6433,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "final": {
+        "bytes": 34897,
+        "epoch": 4,
+        "pair_key": "881125ea128ec06c0048173ef0b5531a5bc315b509bea154048ef7a7aa7ddcf2",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "resumable": false,
+        "schema": 1,
+        "sha256": "b673d88ce4458ee7db0ce292808370eaeeefda6132b500ee6e9f7d26dc46818b",
+        "stage": "REFIT_FINAL"
+      },
+      "model": "TM0",
+      "pair_key": "881125ea128ec06c0048173ef0b5531a5bc315b509bea154048ef7a7aa7ddcf2",
+      "result": {
+        "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+        "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+      },
+      "selected": {
+        "bytes": 34897,
+        "epoch": 4,
+        "pair_key": "881125ea128ec06c0048173ef0b5531a5bc315b509bea154048ef7a7aa7ddcf2",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "resumable": false,
+        "schema": 1,
+        "sha256": "b0382d191f19836ac1a438cdf4eb4b923dbc56547522c4827b3fa380de5a15bd",
+        "stage": "CALIBRATION_SELECTED"
+      }
+    },
+    {
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "MC0",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 21,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7073,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "final": {
+        "bytes": 37457,
+        "epoch": 1,
+        "pair_key": "99213b519b53a1350acb87ec65639bd388e29dd27899a8534a39d5d7ab57d71e",
+        "preparation_id": "3afc4894d8dd3f5ea8b1f1903ab750a9d9e71ee9573897215a6b0cd59a70ea1d",
+        "resumable": false,
+        "schema": 1,
+        "sha256": "1e67d25670d6a38827fa96dd682396b6a091bc3daa3c570894eb136f23d69283",
+        "stage": "REFIT_FINAL"
+      },
+      "model": "MC0",
+      "pair_key": "99213b519b53a1350acb87ec65639bd388e29dd27899a8534a39d5d7ab57d71e",
+      "result": {
+        "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/seed42_mc0_pair_result.json",
+        "sha256": "13dfd2eeb5ada9a700434832b77484c0a5c60b9e9d7c78b63e44a19ce2f3d5ca"
+      },
+      "selected": {
+        "bytes": 37457,
+        "epoch": 1,
+        "pair_key": "99213b519b53a1350acb87ec65639bd388e29dd27899a8534a39d5d7ab57d71e",
+        "preparation_id": "0351a959fb7238eaccf7947a5bee77e8ea07d3167bbe8e08e6234601c6890ad5",
+        "resumable": false,
+        "schema": 1,
+        "sha256": "2b3760f3bc8e37b5311a7752e2964e124455ef21d9394c4baa05c3c5a09f3f2c",
+        "stage": "CALIBRATION_SELECTED"
+      }
+    },
+    {
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "MC1",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 21,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7169,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "final": {
+        "bytes": 38345,
+        "epoch": 1,
+        "pair_key": "daa92d329ed54907dfb4bc90dceca950f7d1d60f200db657c68fb3dfe08da57a",
+        "preparation_id": "3afc4894d8dd3f5ea8b1f1903ab750a9d9e71ee9573897215a6b0cd59a70ea1d",
+        "resumable": false,
+        "schema": 1,
+        "sha256": "77f81042fb42975d6d6d3ac14694d3877b520202d0226ed2c9b4a88ed52ac054",
+        "stage": "REFIT_FINAL"
+      },
+      "model": "MC1",
+      "pair_key": "daa92d329ed54907dfb4bc90dceca950f7d1d60f200db657c68fb3dfe08da57a",
+      "result": {
+        "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/seed42_mc1_pair_result.json",
+        "sha256": "edcdd12523edcb41fb774ee059ff50724b121a608faa01659bc80e2341d4f61a"
+      },
+      "selected": {
+        "bytes": 38345,
+        "epoch": 1,
+        "pair_key": "daa92d329ed54907dfb4bc90dceca950f7d1d60f200db657c68fb3dfe08da57a",
+        "preparation_id": "0351a959fb7238eaccf7947a5bee77e8ea07d3167bbe8e08e6234601c6890ad5",
+        "resumable": false,
+        "schema": 1,
+        "sha256": "28950f78a236f968f58e16560f91b62cbb8039d57bde42f147f6dba63b86d6e5",
+        "stage": "CALIBRATION_SELECTED"
+      }
+    },
+    {
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amsgrad": false,
+        "architecture": "E5",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 23,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 1,
+        "parameters": 7329,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "final": {
+        "bytes": 38481,
+        "epoch": 8,
+        "pair_key": "e909ba34803f9bac97239674a4806f9dfdaa456e8f9a9fe33bec1f68a0c61b91",
+        "preparation_id": "1d1a1c50253da52cddd1a74cb0d2593051093863e76cf3e9d5ce1bd9a136afaf",
+        "resumable": false,
+        "schema": 1,
+        "sha256": "be1c47d1d6b254c5b24a02022c8fcc7e8c97315edd7ac6767f44e75d8947b16b",
+        "stage": "REFIT_FINAL"
+      },
+      "model": "E5",
+      "pair_key": "e909ba34803f9bac97239674a4806f9dfdaa456e8f9a9fe33bec1f68a0c61b91",
+      "result": {
+        "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/seed42_e5_pair_result.json",
+        "sha256": "977d2d8494ec8c74e57f7a0a4b0d709d999e46d670c221c68c7de0af8a80cdc2"
+      },
+      "selected": {
+        "bytes": 38481,
+        "epoch": 8,
+        "pair_key": "e909ba34803f9bac97239674a4806f9dfdaa456e8f9a9fe33bec1f68a0c61b91",
+        "preparation_id": "e0497118f1e51753259ca5f8a479d4706b70b19ff7ee25e3911e140cbcca65ed",
+        "resumable": false,
+        "schema": 1,
+        "sha256": "bc86c5b30ab4c9a915dc6302c61625c83dd831e72935437aa6c8926fb4526b2d",
+        "stage": "CALIBRATION_SELECTED"
+      }
+    }
+  ],
+  "runtime": {
+    "all_diagnostic_attempt_outer_seconds": 73.6557524180389,
+    "attempts": [
+      {
+        "code_after_sha256": "0830e725a5b1b8469aabf9df86e93ae3f1e4564d2382cf96c6abc075c93b2cc6",
+        "code_before_sha256": "0830e725a5b1b8469aabf9df86e93ae3f1e4564d2382cf96c6abc075c93b2cc6",
+        "command": [
+          ".venv/bin/python",
+          "-B",
+          "-m",
+          "lstm_data.four_model_diagnostics",
+          "--previous",
+          "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008",
+          "--output",
+          "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143"
+        ],
+        "elapsed_seconds": 24.861701042042114,
+        "exit_code": 1,
+        "finished_at": "2026-10-15T13:49:46.095487+00:00",
+        "started_at": "2026-10-15T13:49:21.234508+00:00"
+      },
+      {
+        "code_after_sha256": "f5f9ec6399f7cbb472839e41b3743d039a60caecd477d2af739c76ca79fc0759",
+        "code_before_sha256": "f5f9ec6399f7cbb472839e41b3743d039a60caecd477d2af739c76ca79fc0759",
+        "command": [
+          ".venv/bin/python",
+          "-B",
+          "-m",
+          "lstm_data.four_model_diagnostics",
+          "--previous",
+          "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008",
+          "--output",
+          "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143"
+        ],
+        "elapsed_seconds": 24.40514670900302,
+        "exit_code": 0,
+        "finished_at": "2026-10-15T13:50:48.518979+00:00",
+        "started_at": "2026-10-15T13:50:24.114548+00:00"
+      },
+      {
+        "code_after_sha256": "c1f3ed41b06b8acfbb50eca0b7e567396d7e24168c6c39af522c2a67ea638561",
+        "code_before_sha256": "c1f3ed41b06b8acfbb50eca0b7e567396d7e24168c6c39af522c2a67ea638561",
+        "command": [
+          ".venv/bin/python",
+          "-B",
+          "-m",
+          "lstm_data.four_model_diagnostics",
+          "--previous",
+          "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008",
+          "--output",
+          "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143"
+        ],
+        "elapsed_seconds": 24.388904666993767,
+        "exit_code": 0,
+        "finished_at": "2026-10-15T13:53:38.334403+00:00",
+        "started_at": "2026-10-15T13:53:13.946219+00:00"
+      }
+    ],
+    "changed_by_this_audit": [],
+    "changed_old_paths": [
+      "docs/track_a/RandomNotes.md"
+    ],
+    "concurrent_external_change": {
+      "path": "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143/concurrent_note_change.json",
+      "sha256": "1027a9698c6da1e86d362eef016dcd1c21455acf1e4ac2cdf9c61a2d15a53d53"
+    },
+    "core_math_changed": false,
+    "device": "CPUfloat32",
+    "elapsed_session_minutes": 26.02742915,
+    "elapsed_session_seconds_through_release_snapshot": 1561.645749,
+    "final_analysis_core_seconds": 21.158073875005357,
+    "final_analysis_outer_seconds": 24.388904666993767,
+    "final_git_diff_scope": "Only concurrent external RandomNotes.md edit; no file changed by audit among protected paths",
+    "ledger_after": 4,
+    "ledger_before": 4,
+    "new_maintained_files": [
+      "src/lstm_data/four_model_diagnostics.py",
+      "tests/test_four_model_diagnostics.py",
+      "docs/track_a/Four_Model_Diagnostics_008_API.md"
+    ],
+    "new_neural_pairs": 0,
+    "new_ridge_fits": 0,
+    "peak_RSS_scope": "Not separately measured for this audit; historical model runtime/memory files unchanged, not reused as audit measurements.",
+    "recorded_at": "2026-10-15T10:06:14.645749-04:00",
+    "session_first_observed_clock": "2026-10-15T09:40:13-04:00",
+    "torch_threads": 1
+  },
+  "snapshot": {
+    "path": "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143/preflight_snapshot.json",
+    "sha256": "b06e07d26da8b821cd3651316d7e1ff17155f96090c11535461377eb51f46012"
+  },
+  "status": "PASS",
+  "unchanged_count": 2822,
+  "v1_journal": {
+    "path": "reports/audit/track_a_real_pairs_v1.jsonl",
+    "sha256": "c19d38ec5b4d42af235ee9c60041dc7dd17422507bc2d5fd2ddbfc5cfce3f46b"
+  },
+  "v2_journal": {
+    "path": "reports/audit/track_a_real_pairs_v2.jsonl",
+    "sha256": "791a3b19a6afe16b76689796a2bd434679e86f48d75177bca410b1c30c669315"
+  }
+}

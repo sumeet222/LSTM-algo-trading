@@ -1,0 +1,213 @@
+{
+  "CLIPPING_CAUSAL_LINK": "UNRESOLVED",
+  "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+  "health": {
+    "E5": {
+      "calibration_epochs": 18,
+      "historical_G6": "WARN_INVESTIGATE",
+      "nonfinite_gradient_count": 0,
+      "reasons": [
+        "SUSTAINED_CLIPPING"
+      ],
+      "refit_epochs": 8,
+      "scope": "BOTH_CALIBRATION_AND_REFIT",
+      "selector": {
+        "best": 4.656249299916354,
+        "epoch": 18,
+        "patience": 10,
+        "raw_epoch": 8,
+        "raw_min": 4.656249299916354,
+        "selected": 8,
+        "status": "PATIENCE_STOP"
+      },
+      "status": "WARN_INVESTIGATE",
+      "warning_epochs": {
+        "calibration": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "refit": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    "MC0": {
+      "calibration_epochs": 12,
+      "historical_G6": "WARN_INVESTIGATE",
+      "nonfinite_gradient_count": 0,
+      "reasons": [
+        "SUSTAINED_CLIPPING"
+      ],
+      "refit_epochs": 1,
+      "scope": "BOTH_CALIBRATION_AND_REFIT",
+      "selector": {
+        "best": 4.700209980661219,
+        "epoch": 12,
+        "patience": 11,
+        "raw_epoch": 1,
+        "raw_min": 4.700209980661219,
+        "selected": 1,
+        "status": "PATIENCE_STOP"
+      },
+      "status": "WARN_INVESTIGATE",
+      "warning_epochs": {
+        "calibration": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "refit": []
+      }
+    },
+    "MC1": {
+      "calibration_epochs": 12,
+      "historical_G6": "WARN_INVESTIGATE",
+      "nonfinite_gradient_count": 0,
+      "reasons": [
+        "SUSTAINED_CLIPPING"
+      ],
+      "refit_epochs": 1,
+      "scope": "BOTH_CALIBRATION_AND_REFIT",
+      "selector": {
+        "best": 4.699048003283414,
+        "epoch": 12,
+        "patience": 11,
+        "raw_epoch": 4,
+        "raw_min": 4.69629815491763,
+        "selected": 1,
+        "status": "PATIENCE_STOP"
+      },
+      "status": "WARN_INVESTIGATE",
+      "warning_epochs": {
+        "calibration": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "refit": []
+      }
+    },
+    "TM0": {
+      "calibration_epochs": 14,
+      "historical_G6": "PASS_PER_RUN_TELEMETRY",
+      "nonfinite_gradient_count": 0,
+      "reasons": [
+        "SUSTAINED_CLIPPING"
+      ],
+      "refit_epochs": 4,
+      "scope": "BOTH_CALIBRATION_AND_REFIT",
+      "selector": {
+        "best": 4.7046144875613125,
+        "epoch": 14,
+        "patience": 10,
+        "raw_epoch": 4,
+        "raw_min": 4.7046144875613125,
+        "selected": 4,
+        "status": "PATIENCE_STOP"
+      },
+      "status": "WARN_INVESTIGATE",
+      "warning_epochs": {
+        "calibration": [
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "refit": []
+      }
+    }
+  },
+  "ledger_count": 4,
+  "load_views_seconds": 16.737972416041885,
+  "models": {
+    "E5": {
+      "MSE": 5.475639678459332,
+      "daily_IC": 0.038793103448275856
+    },
+    "M1": {
+      "MSE": 12.691976309242717,
+      "daily_IC": -0.02198275862068965
+    },
+    "MC0": {
+      "MSE": 5.450865550274927,
+      "daily_IC": -0.01206896551724137
+    },
+    "MC1": {
+      "MSE": 5.4514663906774965,
+      "daily_IC": -0.012068965517241383
+    },
+    "RIDGE_MARKET_147": {
+      "MSE": 5.4681203319594545,
+      "daily_IC": -0.0034482758620689694
+    },
+    "RIDGE_OWN_112": {
+      "MSE": 5.465518006386864,
+      "daily_IC": -0.022844827586206904
+    },
+    "TM0": {
+      "MSE": 5.438829599996872,
+      "daily_IC": 0.034913793103448276
+    },
+    "ZERO": {
+      "MSE": 5.427531844297135,
+      "daily_IC": 0.0
+    }
+  },
+  "new_neural_pairs": 0,
+  "next_disposition": "NO_HYPERPARAMETER_CHANGE_YET",
+  "read_only_analysis_seconds": 21.158073875005357,
+  "score_equivalence": {
+    "daily_IC_equal_atol1e12": 78,
+    "daily_IC_negative": 19,
+    "daily_IC_positive": 19,
+    "exact_score_equal_origins": 0,
+    "literal_rank_equal_origins": 185,
+    "max_abs_score_difference": 0.024407148361206055,
+    "mean_delta_IC": 0.0,
+    "rank_different_origins": 47
+  },
+  "status": "TA008_DIAGNOSIS_COMPLETE",
+  "target_association": {
+    "CLIPPING_CAUSAL_LINK": "UNRESOLVED",
+    "all_mean_denominator": 0.0032932078638394538,
+    "historical_batch_loss_gradient_link": "CLIPPING_CAUSE_NOT_IDENTIFIABLE_FROM_SAVED_BATCH_LOGS",
+    "log_abs_target_vs_log_denominator_corr": -0.6161263679190035,
+    "log_abs_target_vs_log_relative_numerator_corr": 0.4097799676839854,
+    "max_abs_target": 82.02804281360736,
+    "top_target_1pct_mean_denominator": 0.0005805822352466797,
+    "training_origin_count": 1502
+  },
+  "trace_cases": 21
+}

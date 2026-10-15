@@ -1,0 +1,87 @@
+{
+  "all_diagnostic_attempt_outer_seconds": 73.6557524180389,
+  "attempts": [
+    {
+      "code_after_sha256": "0830e725a5b1b8469aabf9df86e93ae3f1e4564d2382cf96c6abc075c93b2cc6",
+      "code_before_sha256": "0830e725a5b1b8469aabf9df86e93ae3f1e4564d2382cf96c6abc075c93b2cc6",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.four_model_diagnostics",
+        "--previous",
+        "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008",
+        "--output",
+        "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143"
+      ],
+      "elapsed_seconds": 24.861701042042114,
+      "exit_code": 1,
+      "finished_at": "2026-10-15T13:49:46.095487+00:00",
+      "started_at": "2026-10-15T13:49:21.234508+00:00"
+    },
+    {
+      "code_after_sha256": "f5f9ec6399f7cbb472839e41b3743d039a60caecd477d2af739c76ca79fc0759",
+      "code_before_sha256": "f5f9ec6399f7cbb472839e41b3743d039a60caecd477d2af739c76ca79fc0759",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.four_model_diagnostics",
+        "--previous",
+        "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008",
+        "--output",
+        "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143"
+      ],
+      "elapsed_seconds": 24.40514670900302,
+      "exit_code": 0,
+      "finished_at": "2026-10-15T13:50:48.518979+00:00",
+      "started_at": "2026-10-15T13:50:24.114548+00:00"
+    },
+    {
+      "code_after_sha256": "c1f3ed41b06b8acfbb50eca0b7e567396d7e24168c6c39af522c2a67ea638561",
+      "code_before_sha256": "c1f3ed41b06b8acfbb50eca0b7e567396d7e24168c6c39af522c2a67ea638561",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "lstm_data.four_model_diagnostics",
+        "--previous",
+        "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008",
+        "--output",
+        "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143"
+      ],
+      "elapsed_seconds": 24.388904666993767,
+      "exit_code": 0,
+      "finished_at": "2026-10-15T13:53:38.334403+00:00",
+      "started_at": "2026-10-15T13:53:13.946219+00:00"
+    }
+  ],
+  "changed_by_this_audit": [],
+  "changed_old_paths": [
+    "docs/track_a/RandomNotes.md"
+  ],
+  "concurrent_external_change": {
+    "path": "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143/concurrent_note_change.json",
+    "sha256": "1027a9698c6da1e86d362eef016dcd1c21455acf1e4ac2cdf9c61a2d15a53d53"
+  },
+  "core_math_changed": false,
+  "device": "CPUfloat32",
+  "elapsed_session_minutes": 26.02742915,
+  "elapsed_session_seconds_through_release_snapshot": 1561.645749,
+  "final_analysis_core_seconds": 21.158073875005357,
+  "final_analysis_outer_seconds": 24.388904666993767,
+  "final_git_diff_scope": "Only concurrent external RandomNotes.md edit; no file changed by audit among protected paths",
+  "ledger_after": 4,
+  "ledger_before": 4,
+  "new_maintained_files": [
+    "src/lstm_data/four_model_diagnostics.py",
+    "tests/test_four_model_diagnostics.py",
+    "docs/track_a/Four_Model_Diagnostics_008_API.md"
+  ],
+  "new_neural_pairs": 0,
+  "new_ridge_fits": 0,
+  "peak_RSS_scope": "Not separately measured for this audit; historical model runtime/memory files unchanged, not reused as audit measurements.",
+  "recorded_at": "2026-10-15T10:06:14.645749-04:00",
+  "session_first_observed_clock": "2026-10-15T09:40:13-04:00",
+  "torch_threads": 1
+}

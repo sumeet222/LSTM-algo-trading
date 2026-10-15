@@ -43,6 +43,16 @@ I recommend proceeding with our planned Package 008, focusing on five questions:
 4. Architecture comparison: Why does adding SPY information worsen ranking accuracy, while E5 slightly improves it?
 5. Statistical reliability: Are the differences in daily Rank IC and MSE distinguishable from noise?
 
+Target tails and session loss concentration are substantial: training \(|TG0|\) reaches 82.03, and about 56% of squared loss sits in the worst 10% of sessions.
+
+## first. batch of results
+
+Extreme targets matter: \(|TG0|\) reaches 82.03, and the worst 10% of training sessions account for approximately 56% of squared loss.
+Gradient clipping remains unresolved: All four models exhibit clipping warnings, but the saved logs cannot establish exactly what causes them.
+MC1 provides no demonstrated improvement over MC0: Their ranking differences largely cancel.
+E5's apparent ranking advantage is uncertain: Its Rank IC improvement over TM0 is only 0.0039, with a wide exploratory confidence interval.
+No model beats the zero baseline on MSE.
+
 # Random Notes
 Aggregating 30 min sotcks into hourly candles:
 Missing OHLCV data handled

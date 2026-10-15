@@ -1,0 +1,91 @@
+{
+  "disposition": "NO_HYPERPARAMETER_CHANGE_YET",
+  "hypotheses": [
+    {
+      "against": "No zero MAD; floor dominance only1.33%; rare combinations, not pervasive divide-by-zero. Per-batch gradient linkage absent.",
+      "confidence": "HIGH for arithmetic/distribution; clipping cause UNRESOLVED",
+      "evidence": [
+        "target_outlier_hypotheses.md",
+        "target_loss_overlap.json",
+        "tg0_denominator_and_tail_audit.csv"
+      ],
+      "for": "|TG0|max82.028; 1%trainingdays~25.5%loss,10%~55.6%; numerator+denominator decomposition and target/error overlap",
+      "hypothesis": "Large relative targets / low MAD concentrate MSE",
+      "next_cheapest_check": "Use named severe source locators to independently verify retrospective price references under existing data scope; no changed labels.",
+      "status": "SUPPORTED"
+    },
+    {
+      "against": "MSE and ranks measure different objectives; one seed/fold and dependent five-name pairs",
+      "confidence": "HIGH descriptive, LOW generalization",
+      "evidence": [
+        "model_comparison_and_uncertainty.md",
+        "score_health.json"
+      ],
+      "for": "ZERO5.42753 is minimum MSE; E5ICgain vsTM0 only0.003879 with wide exploratoryinterval.",
+      "hypothesis": "No comparative predictive advantage on this seed/fold",
+      "next_cheapest_check": "Choose a separately approved paired second seed or WF2 test; no intervention tuned on exploredWF1.",
+      "status": "SUPPORTED"
+    },
+    {
+      "against": "Finite throughout; earlyselectedTM0/MC0/MC1do not includeworstlateupdates. Loss/gradient batches unlinked; clipping can be protective.",
+      "confidence": "MODERATE",
+      "evidence": [
+        "g6_four_model_epochs.csv",
+        "epoch_associations.json"
+      ],
+      "for": "Late clip warnings and positive last\u2212selected inner losses allfour; E5selected/refit includesclipping",
+      "hypothesis": "Optimization instability after early useful epoch",
+      "next_cheapest_check": "On a later approved fit only, attach compact batch loss/session-hash/preclip-norm telemetry; do not rerun this package.",
+      "status": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "against": "Full-prefixevaltrainMSE~7.1\u20137.35 is aboveinnerval~4.66\u20134.70; populations/targetfloors/modesdiffer, not a controlledoverfitgap. No secondseed/fold.",
+      "confidence": "LOW",
+      "evidence": [
+        "monthly_paired_deltas.csv",
+        "loss_concentration.csv"
+      ],
+      "for": "Later validation deterioration, temporal/origin contrasts and different target tails",
+      "hypothesis": "Overfitting / nonstationarity",
+      "next_cheapest_check": "Read monthly/residual distribution shifts; then separately approve unchanged-model WF2replication if useful.",
+      "status": "UNRESOLVED"
+    },
+    {
+      "against": "Finite/tie-freenonconstantscores; varyinghiddenstates; gatepositiveunsaturatednearuniformbutvarying; exactreplay",
+      "confidence": "HIGH within sampledmechanism/fullscore scope",
+      "evidence": [
+        "boundary_replay_compact.json",
+        "gate_sample_summary.json",
+        "score_health.json"
+      ],
+      "for": "Small MC0/MC1score spread merits checking",
+      "hypothesis": "Hidden/output or gate collapse",
+      "next_cheapest_check": "No rescue justified; preserve these traces and inspect independently if a future reproducibility defect appears.",
+      "status": "NOT_SUPPORTED_BY_AVAILABLE_EVIDENCE"
+    },
+    {
+      "against": "Differentcapacities andonefold; counterfactuals establishuseonly, notcausalvalue; no marketinformationnullproof",
+      "confidence": "LOW\u2013MODERATE",
+      "evidence": [
+        "mechanism_and_score_health.md",
+        "paired_contrasts_and_exploratory_uncertainty.json"
+      ],
+      "for": "MC0worse thanTM0here; MC1gaincancels; E5rank/MSEtradeoff andmonthlyreversals",
+      "hypothesis": "Incremental market/peer effects absent or unstable",
+      "next_cheapest_check": "Replicate the primarymatchedTM0/MC0question without changinginputs, losses, horizonsorclock.",
+      "status": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "against": "Raw\u2192scalerendpoint exact; frozen tensor hashes/prefixes consistent; finite perchannelinputdistributionandnoabs>100; source/prepidentities intact",
+      "confidence": "MODERATE for reviewedbounds, notglobalabsenceofoptimizationissues",
+      "evidence": [
+        "input_channel_distribution.csv",
+        "boundary_replay_compact.json"
+      ],
+      "for": "Potentialextremes/representationmismatch considered",
+      "hypothesis": "Feature scaling implementation defect",
+      "next_cheapest_check": "Inspect channelswithlargest99th/absolutetails before any separate scalingstudy; no normalizationrefit.",
+      "status": "NOT_SUPPORTED_BY_AVAILABLE_EVIDENCE"
+    }
+  ]
+}

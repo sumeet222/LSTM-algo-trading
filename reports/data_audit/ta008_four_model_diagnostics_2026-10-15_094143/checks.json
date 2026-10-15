@@ -1,0 +1,48 @@
+{
+  "TG0_all_legal_views_float32_exact": true,
+  "all_old_scientific_artifacts_unchanged": true,
+  "bootstrap": "EXPLORATORY_NOT_FULL_G8;5000,seed8008,5/10/20trading-sessionblocks,noHAC",
+  "bounded_final_forward_replay_cases": 21,
+  "concurrent_external_note_edit": {
+    "path": "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143/concurrent_note_change.json",
+    "sha256": "1027a9698c6da1e86d362eef016dcd1c21455acf1e4ac2cdf9c61a2d15a53d53"
+  },
+  "confirmation_negative_tests": "3parametrizednegativecasesbeforeaccess",
+  "editor": "Selectrepository.venv/bin/python,Pylancebasic,sameinstalledstubs;refreshProblems/languageserver,humanconfirmationpending",
+  "final_analysis_returncode": 0,
+  "final_git_diff_check": "PASS; tracked diff is exactly the concurrent external RandomNotes.md edit",
+  "final_preservation_counts": {
+    "concurrent_external_note": 1,
+    "scientific_artifact_changes": 0,
+    "unchanged": 2822
+  },
+  "frozen_8_model_metrics_match": true,
+  "frozen_weight_state_hashes_unchanged": true,
+  "historical_batch_link": "CLIPPING_CAUSE_NOT_IDENTIFIABLE_FROM_SAVED_BATCH_LOGS",
+  "historical_full_suites": "728/703 inherited only at previously recorded exact source hashes; NOT_RERUN, no new full-suite claim",
+  "initial_error_blind_representatives_unchanged": true,
+  "max_abs_score_difference": 1.1920928955078125e-07,
+  "one_to_one_WF1": "232origins/116sessions/1160stocks,all8models",
+  "pair_budget": "4/40\u21924/40",
+  "previous_failure": "NumPyint64episodecountJSONserializationfixedwithintconversion;18initialderivedfilespreserved;secondversion20filespreservedbeforeaddingmandatoryscore/featuredistributionfields;nohistoricalartifactmodified",
+  "rank_and_weight_hand_oracles": true,
+  "release_sealed_at": "2026-10-15T10:06:14.645749-04:00",
+  "ruff": "PASS_ALL_PROJECT",
+  "source_scaler_endpoint_and_peer_oracles": true,
+  "static_exact_command": [
+    ".venv/bin/python",
+    "scripts/check_python_types.py",
+    "--pylance-dist",
+    "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+  ],
+  "static_summary": {
+    "errorCount": 0,
+    "filesAnalyzed": 181,
+    "informationCount": 0,
+    "timeInSec": 14.912,
+    "warningCount": 0
+  },
+  "status": "PASS_SCOPED_DIAGNOSTICS",
+  "tests": "13 passed in focused_release.txt",
+  "tolerance": 2e-06
+}

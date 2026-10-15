@@ -1,0 +1,148 @@
+{
+  "E5": {
+    "calibration_epochs": 18,
+    "historical_G6": "WARN_INVESTIGATE",
+    "nonfinite_gradient_count": 0,
+    "reasons": [
+      "SUSTAINED_CLIPPING"
+    ],
+    "refit_epochs": 8,
+    "scope": "BOTH_CALIBRATION_AND_REFIT",
+    "selector": {
+      "best": 4.656249299916354,
+      "epoch": 18,
+      "patience": 10,
+      "raw_epoch": 8,
+      "raw_min": 4.656249299916354,
+      "selected": 8,
+      "status": "PATIENCE_STOP"
+    },
+    "status": "WARN_INVESTIGATE",
+    "warning_epochs": {
+      "calibration": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "refit": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "MC0": {
+    "calibration_epochs": 12,
+    "historical_G6": "WARN_INVESTIGATE",
+    "nonfinite_gradient_count": 0,
+    "reasons": [
+      "SUSTAINED_CLIPPING"
+    ],
+    "refit_epochs": 1,
+    "scope": "BOTH_CALIBRATION_AND_REFIT",
+    "selector": {
+      "best": 4.700209980661219,
+      "epoch": 12,
+      "patience": 11,
+      "raw_epoch": 1,
+      "raw_min": 4.700209980661219,
+      "selected": 1,
+      "status": "PATIENCE_STOP"
+    },
+    "status": "WARN_INVESTIGATE",
+    "warning_epochs": {
+      "calibration": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "refit": []
+    }
+  },
+  "MC1": {
+    "calibration_epochs": 12,
+    "historical_G6": "WARN_INVESTIGATE",
+    "nonfinite_gradient_count": 0,
+    "reasons": [
+      "SUSTAINED_CLIPPING"
+    ],
+    "refit_epochs": 1,
+    "scope": "BOTH_CALIBRATION_AND_REFIT",
+    "selector": {
+      "best": 4.699048003283414,
+      "epoch": 12,
+      "patience": 11,
+      "raw_epoch": 4,
+      "raw_min": 4.69629815491763,
+      "selected": 1,
+      "status": "PATIENCE_STOP"
+    },
+    "status": "WARN_INVESTIGATE",
+    "warning_epochs": {
+      "calibration": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "refit": []
+    }
+  },
+  "TM0": {
+    "calibration_epochs": 14,
+    "historical_G6": "PASS_PER_RUN_TELEMETRY",
+    "nonfinite_gradient_count": 0,
+    "reasons": [
+      "SUSTAINED_CLIPPING"
+    ],
+    "refit_epochs": 4,
+    "scope": "BOTH_CALIBRATION_AND_REFIT",
+    "selector": {
+      "best": 4.7046144875613125,
+      "epoch": 14,
+      "patience": 10,
+      "raw_epoch": 4,
+      "raw_min": 4.7046144875613125,
+      "selected": 4,
+      "status": "PATIENCE_STOP"
+    },
+    "status": "WARN_INVESTIGATE",
+    "warning_epochs": {
+      "calibration": [
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "refit": []
+    }
+  }
+}

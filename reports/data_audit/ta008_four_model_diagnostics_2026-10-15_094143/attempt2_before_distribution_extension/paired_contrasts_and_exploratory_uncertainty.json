@@ -1,0 +1,701 @@
+{
+  "contrasts": [
+    {
+      "contrast": "TM0-ZERO",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": 0.011297755699736137,
+      "median": 0.017041821044532446,
+      "metric": "MSE",
+      "negative_day_share": 0.46551724137931033,
+      "positive_day_share": 0.5344827586206896,
+      "quantiles": {
+        "0": -0.9792754968327948,
+        "0.01": -0.6499698203249792,
+        "0.05": -0.22422207179593567,
+        "0.5": 0.017041821044532446,
+        "0.95": 0.3098512077591121,
+        "0.99": 0.39209085577713404,
+        "1": 0.41631622420068126
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.02141713086242792,
+            0.03882589760339339
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.018267367434263767,
+            0.02546041575393959
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.019559442444750705,
+            0.02339491057105667
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.0
+    },
+    {
+      "contrast": "TM0-ZERO",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": 0.034913793103448276,
+      "median": 0.024999999999999994,
+      "metric": "IC",
+      "negative_day_share": 0.46551724137931033,
+      "positive_day_share": 0.5,
+      "quantiles": {
+        "0": -0.8499999999999999,
+        "0.01": -0.7849999999999998,
+        "0.05": -0.6124999999999999,
+        "0.5": 0.024999999999999994,
+        "0.95": 0.7499999999999999,
+        "0.99": 0.8849999999999992,
+        "1": 0.8999999999999999
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.029310344827586203,
+            0.09396551724137932
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.0017241379310344877,
+            0.08706896551724137
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            0.0004310344827586201,
+            0.08146551724137929
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.034482758620689655
+    },
+    {
+      "contrast": "MC0-TM0",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": 0.012035950278056262,
+      "median": 0.007315625932970249,
+      "metric": "MSE",
+      "negative_day_share": 0.43103448275862066,
+      "positive_day_share": 0.5689655172413793,
+      "quantiles": {
+        "0": -0.6819725566465316,
+        "0.01": -0.49999075246411023,
+        "0.05": -0.2907332149611759,
+        "0.5": 0.007315625932970249,
+        "0.95": 0.30773221526066885,
+        "0.99": 0.7845386685896197,
+        "1": 0.9035807343778259
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.016930477069634183,
+            0.04878155633412885
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.006576158013171601,
+            0.0422282336162466
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.0027571398565165114,
+            0.048624495459724006
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.0
+    },
+    {
+      "contrast": "MC0-TM0",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": -0.04698275862068965,
+      "median": -0.05000000000000006,
+      "metric": "IC",
+      "negative_day_share": 0.5344827586206896,
+      "positive_day_share": 0.4051724137931034,
+      "quantiles": {
+        "0": -1.25,
+        "0.01": -1.17,
+        "0.05": -0.725,
+        "0.5": -0.05000000000000006,
+        "0.95": 0.7625,
+        "0.99": 0.8999999999999999,
+        "1": 1.0499999999999998
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.11811422413793105,
+            0.016390086206896397
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.12025862068965515,
+            0.003017241379310345
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.10344827586206896,
+            -0.0004202586206898048
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.0603448275862069
+    },
+    {
+      "contrast": "MC1-MC0",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": 0.0006008404025707832,
+      "median": 0.0005523929886717127,
+      "metric": "MSE",
+      "negative_day_share": 0.4482758620689655,
+      "positive_day_share": 0.5517241379310345,
+      "quantiles": {
+        "0": -0.03101834575568141,
+        "0.01": -0.028915451997878306,
+        "0.05": -0.02096926819904088,
+        "0.5": 0.0005523929886717127,
+        "0.95": 0.017118987806645503,
+        "0.99": 0.04638977281239167,
+        "1": 0.0542005339616054
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.0014514116791614256,
+            0.0022448645589959225
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.0009630474711191555,
+            0.001588951558678677
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.0008862839331157739,
+            0.0013209326804666194
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.0
+    },
+    {
+      "contrast": "MC1-MC0",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": 0.0,
+      "median": 0.0,
+      "metric": "IC",
+      "negative_day_share": 0.16379310344827586,
+      "positive_day_share": 0.16379310344827586,
+      "quantiles": {
+        "0": -0.3,
+        "0.01": -0.2425,
+        "0.05": -0.10000000000000005,
+        "0.5": 0.0,
+        "0.95": 0.15,
+        "0.99": 0.19999999999999993,
+        "1": 0.24999999999999994
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.012068965517241377,
+            0.015948275862068963
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.010775862068965518,
+            0.017241379310344824
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.01508620689655172,
+            0.012499999999999994
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.6724137931034483
+    },
+    {
+      "contrast": "E5-MC0",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": 0.024774128184404335,
+      "median": 0.01698325694061087,
+      "metric": "MSE",
+      "negative_day_share": 0.47413793103448276,
+      "positive_day_share": 0.5258620689655172,
+      "quantiles": {
+        "0": -1.1092641189014678,
+        "0.01": -0.9720689860420895,
+        "0.05": -0.593946640129321,
+        "0.5": 0.01698325694061087,
+        "0.95": 0.5957712034245382,
+        "0.99": 0.8246514433417914,
+        "1": 1.185000711872073
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.05469017647775366,
+            0.09039536617322834
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.05646690066301145,
+            0.07885204289135428
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.0719181677964098,
+            0.05032728638991816
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.0
+    },
+    {
+      "contrast": "E5-MC0",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": 0.050862068965517246,
+      "median": 0.09999999999999999,
+      "metric": "IC",
+      "negative_day_share": 0.4224137931034483,
+      "positive_day_share": 0.5689655172413793,
+      "quantiles": {
+        "0": -1.1999999999999997,
+        "0.01": -0.9999999999999999,
+        "0.05": -0.7625,
+        "0.5": 0.09999999999999999,
+        "0.95": 0.7999999999999999,
+        "0.99": 0.9424999999999997,
+        "1": 1.0
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.0331896551724138,
+            0.14224137931034483
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.02414870689655172,
+            0.15905172413793106
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            0.020689655172413796,
+            0.16854525862068953
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.008620689655172414
+    },
+    {
+      "contrast": "E5-TM0",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": 0.03681007846246059,
+      "median": 0.0067079244212920885,
+      "metric": "MSE",
+      "negative_day_share": 0.4827586206896552,
+      "positive_day_share": 0.5172413793103449,
+      "quantiles": {
+        "0": -0.8801129097048719,
+        "0.01": -0.7194399076354366,
+        "0.05": -0.3847091110656775,
+        "0.5": 0.0067079244212920885,
+        "0.95": 0.5390899558131446,
+        "0.99": 0.6692922532506291,
+        "1": 0.9751941111848144
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.020519528622225003,
+            0.08664143854681386
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.022591837384191703,
+            0.07918668179388261
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.029442071772273624,
+            0.053872348424468045
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.0
+    },
+    {
+      "contrast": "E5-TM0",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": 0.003879310344827583,
+      "median": 0.02499999999999998,
+      "metric": "IC",
+      "negative_day_share": 0.43103448275862066,
+      "positive_day_share": 0.5,
+      "quantiles": {
+        "0": -1.4,
+        "0.01": -1.0775,
+        "0.05": -0.7374999999999999,
+        "0.5": 0.02499999999999998,
+        "0.95": 0.7625,
+        "0.99": 0.95,
+        "1": 1.0
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.07932112068965516,
+            0.08750000000000001
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.08707974137931035,
+            0.0935452586206895
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.030603448275862057,
+            0.1129310344827586
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.06896551724137931
+    },
+    {
+      "contrast": "MC0-RIDGE_MARKET_147",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": -0.017254781684527758,
+      "median": 0.0034325477117390646,
+      "metric": "MSE",
+      "negative_day_share": 0.49137931034482757,
+      "positive_day_share": 0.5086206896551724,
+      "quantiles": {
+        "0": -1.1041317500783236,
+        "0.01": -1.0752531639502483,
+        "0.05": -0.4554424538259294,
+        "0.5": 0.0034325477117390646,
+        "0.95": 0.3812351740788551,
+        "0.99": 0.7749051691506923,
+        "1": 0.9951505427438647
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.06937760681049585,
+            0.04216821481939844
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.04074252536044869,
+            0.04282682289351297
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.027794109365703836,
+            0.042533572734734335
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.0
+    },
+    {
+      "contrast": "MC0-RIDGE_MARKET_147",
+      "days": 116,
+      "grade": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_IDEAL_CLOCK_HOURLY_PROXY",
+      "mean": -0.008620689655172405,
+      "median": 0.02499999999999997,
+      "metric": "IC",
+      "negative_day_share": 0.45689655172413796,
+      "positive_day_share": 0.5,
+      "quantiles": {
+        "0": -1.2999999999999998,
+        "0.01": -1.0999999999999999,
+        "0.05": -0.875,
+        "0.5": 0.02499999999999997,
+        "0.95": 0.8999999999999999,
+        "0.99": 1.0924999999999998,
+        "1": 1.25
+      },
+      "uncertainty": [
+        {
+          "block_sessions": 5,
+          "eligible_starts": 108,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.12112068965517239,
+            0.08621767241379295
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 10,
+          "eligible_starts": 98,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.10862068965517241,
+            0.061637931034482764
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        },
+        {
+          "block_sessions": 20,
+          "eligible_starts": 78,
+          "limitations": "Post-screen one seed/fold; no selection adjustment or HAC. Blocks obey exchange chronology; blocks cross only at resample joins.",
+          "percentile95": [
+            -0.08922413793103447,
+            0.047424568965517104
+          ],
+          "samples": 5000,
+          "seed": 8008,
+          "status": "EXPLORATORY_NOT_FULL_G8"
+        }
+      ],
+      "zero_day_share_atol1e12": 0.04310344827586207
+    }
+  ],
+  "signs": "A-B; lower delta_MSE better; higher delta_IC better"
+}

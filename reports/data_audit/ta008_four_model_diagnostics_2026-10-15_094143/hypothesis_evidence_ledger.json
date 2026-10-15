@@ -1,0 +1,68 @@
+{
+  "disposition": "NO_HYPERPARAMETER_CHANGE_YET",
+  "hypotheses": [
+    {
+      "hypothesis": "Large TG0 / low MAD concentrates MSE",
+      "status": "SUPPORTED",
+      "confidence": "High for distribution; unresolved for clipping causality",
+      "supporting_evidence": "Targets reach 82.03; the worst 10% of training sessions contribute about 55.6% of loss. Both large relative numerators and small denominators are present.",
+      "counterevidence_or_limits": "There are no zero MADs; floor dominance occurs in only 1.33% of refit origins. Batch-gradient linkage was not retained.",
+      "source_artifacts": "target_outlier_hypotheses.md; target_loss_overlap.json",
+      "next_cheapest_check": "Independently inspect the named retrospective price references if needed; retain current labels."
+    },
+    {
+      "hypothesis": "No comparative advantage on this seed/fold",
+      "status": "SUPPORTED",
+      "confidence": "High descriptively, low for generalization",
+      "supporting_evidence": "ZERO has the lowest MSE. E5\u2212TM0 mean IC is only +0.0038793.",
+      "counterevidence_or_limits": "Ranks and MSE measure different objectives; five-name observations and within-day origins are dependent.",
+      "source_artifacts": "model_comparison_and_uncertainty.md",
+      "next_cheapest_check": "Choose one separately approved unchanged-model replication."
+    },
+    {
+      "hypothesis": "Optimization instability after an early useful epoch",
+      "status": "PARTIALLY_SUPPORTED",
+      "confidence": "Moderate",
+      "supporting_evidence": "Late clipping and validation deterioration occur in all four trajectories. E5 retains warned refit epochs.",
+      "counterevidence_or_limits": "Early selected TM0/MC0/MC1 states precede the worst late updates. Clipping can be protective; overshoot, tail noise and recurrent amplification are not separated.",
+      "source_artifacts": "g6_four_model_epochs.csv; epoch_associations.json",
+      "next_cheapest_check": "Add compact batch loss/session-hash/preclip-norm telemetry only to a later approved fit."
+    },
+    {
+      "hypothesis": "Overfitting or nonstationarity",
+      "status": "UNRESOLVED",
+      "confidence": "Low",
+      "supporting_evidence": "Validation deteriorates later and monthly contrasts reverse.",
+      "counterevidence_or_limits": "Final-prefix training MSE exceeds inner-validation MSE, and populations, floors and modes differ. This is not a controlled overfitting gap; no second seed/fold exists.",
+      "source_artifacts": "monthly_paired_deltas.csv; loss_concentration.csv",
+      "next_cheapest_check": "Review shifts, then consider a separately approved WF2 replication."
+    },
+    {
+      "hypothesis": "Hidden/output collapse or gate saturation",
+      "status": "NOT_SUPPORTED_BY_AVAILABLE_EVIDENCE",
+      "confidence": "High within the checked scope",
+      "supporting_evidence": "Small MC0/MC1 score spread warranted inspection.",
+      "counterevidence_or_limits": "Scores are finite, nonconstant and tie-free; sampled hidden states vary. Gate weights vary without saturation and frozen scores replay.",
+      "source_artifacts": "score_health.json; boundary_replay_compact.json; gate_sample_summary.json",
+      "next_cheapest_check": "No rescue is justified by a collapse claim; preserve the checks."
+    },
+    {
+      "hypothesis": "Market/peer increments are absent or unstable",
+      "status": "PARTIALLY_SUPPORTED",
+      "confidence": "Low to moderate",
+      "supporting_evidence": "MC0 underperforms TM0 here; MC1 gains cancel; E5 trades a small IC increase against worse MSE.",
+      "counterevidence_or_limits": "One seed/fold and different capacities cannot establish absence of useful information or causal peer transmission. Counterfactuals show computational use only.",
+      "source_artifacts": "mechanism_and_score_health.md",
+      "next_cheapest_check": "Replicate the primary TM0/MC0 comparison without changing loss, features or timing."
+    },
+    {
+      "hypothesis": "A feature-scaling implementation defect",
+      "status": "NOT_SUPPORTED_BY_AVAILABLE_EVIDENCE",
+      "confidence": "Moderate for the audited boundaries",
+      "supporting_evidence": "Representation and scale mismatch were considered.",
+      "counterevidence_or_limits": "Raw-to-scaled endpoints, input prefixes and identities match; distributions are finite. That does not rule out optimization sensitivity to legitimate tails.",
+      "source_artifacts": "input_channel_distribution.csv; boundary_replay_compact.json",
+      "next_cheapest_check": "Inspect the largest channel tails before proposing any separate scaling study."
+    }
+  ]
+}
