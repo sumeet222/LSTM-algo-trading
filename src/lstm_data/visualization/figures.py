@@ -257,6 +257,13 @@ def gradient_scatter(frame: pd.DataFrame) -> go.Figure:
         )
     )
     fig.add_hline(y=1, line_dash="dash", line_color=RED)
+    if "clip_cap" in frame and float(frame.clip_cap.iloc[0]) != 1:
+        fig.add_hline(
+            y=float(frame.clip_cap.iloc[0]),
+            line_dash="dot",
+            line_color=GOLD,
+            annotation_text="Applied cap",
+        )
     finish(fig, 420)
     fig.update_xaxes(title_text="Effective-batch session-weighted MSE")
     fig.update_yaxes(title_text="Preclip global L2 norm")

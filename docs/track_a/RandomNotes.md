@@ -175,3 +175,37 @@ curl --fail http://127.0.0.1:8501/_stcore/health
 For missing files, read the exact path in the app and provision the original artifacts using `data/README.md` and their manifests; do not substitute or retrain. For empty origins, try the verified default dates and **Both**. E5/MC1 have only WF1. To inspect the AAPL2020 split, choose **WF1 / Refit training**, then August28–31,2020; the chart retains a single retrospective scale. Dates are ET inclusive; hover preserves true UTC and DST. See the [User Guide](Visualization_User_Guide.md) for details.
 
 Everything binds to localhost; telemetry collection is disabled. No public publishing or bulk raw-data export is provided. Local rights/clock/action assumptions remain qualified. Check applicable rights before sharing raw-data screenshots.
+
+
+# Diagnostic 1
+
+We'll test four modifications against our existing TM0 LSTM, changing one component at a time.
+Experiment	Modification	Research question
+H1	Huber loss instead of MSE	Are extreme prediction errors dominating training?
+T1	Training-target tail clipping	Does reducing the influence of extreme targets improve learning?
+T2	Invertible target transformation	Does compressing target extremes improve optimization?
+O1	Gradient clipping threshold 1 → 5	Is excessive gradient clipping restricting learning?
+
+## Dashboard instructions:
+
+### View Package011 in five steps
+
+1. From the repository terminal, run `./scripts/run_track_a_dashboard.sh`. Open the localhost address it prints. Select **WF1** or **WF2**, **Development**, and **Both origins** in the sidebar. No new download, account or training is needed.
+2. Open **Predictions & Errors**. In **Model**, choose **H1 [42]**, **T1 [42]**, **T2 [42]** or **O1 [42]**. In **Optional saved reference**, select **TM0**: TM0 is the unchanged historical **C0 seed42**. For a `[123]` treatment choose **C0 [123]** as its reference. Only actually completed cases appear. Keep matching seeds and folds; see `paired_fold_seed_comparison.csv` for whole-fold numbers and exploratory 5-session intervals.
+3. Inspect predicted-versus-actual TG0 and the five-stock ranking table. These are relative-return target units, not price or absolute direction. T2 predictions have already been converted once to original TG0; T1 actual labels retain every tail. Keep **Both origins** for daily comparisons. WF1 and WF2 are explored development periods.
+4. Open **Training Diagnostics** and choose **calibration** or **refit**. The MSE curve is always original-scale TG0 MSE. For Package011, a separate table names the optimizer objective and actual applied clipping fraction. O1 uses cap5; the historical norm>1 warning remains separately visible. Inspect batch norms/scatter as measured associations, not per-example causal gradients. Fresh refit is a separate pass with no second checkpoint selection.
+5. On the same page choose **Target / loss partition → Refit training**. The extreme-observation table retains original TG0. Choose an observation under **Navigate an extreme observation**, then click **Inspect this date's candles** to open **Price & Features**. Inspect genuine candlesticks, volume and horizon markers on that date. Candles are retrospective split-adjusted prices; proxy label closes and nominal event times are not fills.
+
+`model_metrics.csv` / `model_by_fold.csv` give the full panel; `metrics_daily.csv`, `per_day_differences.csv`, `monthly_paired_differences.csv` `seed_variability_within_fold.csv` and `temporal_variability_within_seed.csv` separate day, month, seed and fold variation. `seed_temporal_variability.csv` is the combined descriptive summary; seeds are not independent market histories. `metrics_by_epoch.csv` names both optimized objective and canonical MSE. `target_tail_parameters.csv` identifies each training-only cap/scale. `gradient_log_pointers.csv` references the original small per-pair logs without duplicating them; `artifact_bindings.json` seals the files. The `[42]` and `[123]` labels are random seeds, not rankings.
+
+All historical caveats remain **ASSUMPTION_CONDITIONAL**: private researcher-attested rights/clock, retrospective universe/actions, idealized hour-end availability and hourly-close price proxy. No independently verified license/publication/action/PIT evidence, executable fills, alpha, economic value, course substitution or production readiness is claimed. Multiple comparisons on a five-stock panel and two development folds do not constitute full G8. Confirmation remains unopened.
+
+Stop the app with **Ctrl+C** in its launching terminal. If a planned arm did not finish, read `experiment_registry.csv` and `human_review_card.md`; do not launch a replacement fit from the dashboard. The dashboard is read-only.
+
+## Results:
+What did we learn?
+Experiment	Main finding	Assessment
+H1 — Huber loss	Eliminated sustained clipping warnings, but predictive results were inconsistent	Mixed
+T1 — Target clipping	Modest improvements in several comparisons; clipping warnings persisted	Mixed
+T2 — asinh target transformation	Improved MSE in 4/4 seed–fold comparisons and eliminated sustained clipping warnings	Most promising
+O1 — Higher gradient threshold	Reduced clipping but worsened both MSE and Rank IC in all comparisons	Unpromising

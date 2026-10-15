@@ -1,0 +1,378 @@
+{
+  "checkpoints": [
+    {
+      "arm": "C0",
+      "fold": "WF1",
+      "seed": 42,
+      "source": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/permitted_prediction_snapshot.csv",
+      "status": "REUSED_HISTORICAL_NO_FIT"
+    },
+    {
+      "arm": "C0",
+      "fold": "WF2",
+      "seed": 42,
+      "source": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/wf2_matched_predictions.csv",
+      "status": "REUSED_HISTORICAL_NO_FIT"
+    },
+    {
+      "epoch": 4,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-H1-S42-WF1/calibration_selected.pt",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "resumable": false,
+      "sha256": "89b0827783f0e823136353e935cd0cb27242784afdeae86ee3af77b9b878fcf3",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 4,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-H1-S42-WF1/refit_final.pt",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "resumable": false,
+      "sha256": "798bbf0e7d8c8a21e27d0b9333ea41341c34a4a1bd9d14f0515ce28df0e7d4b1",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 4,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-H1-S42-WF2/calibration_selected.pt",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "resumable": false,
+      "sha256": "071c6b1ae0bb7cb15b0481315bb39bb37c7fb1fe25f47fef21594f183da64972",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 4,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-H1-S42-WF2/refit_final.pt",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "resumable": false,
+      "sha256": "d4da5c406a012046f1ca2979d37e4cfa3b582edad30e9ab8999c9e5bfdfa8e35",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 4,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T1-S42-WF1/calibration_selected.pt",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "resumable": false,
+      "sha256": "0818126d9a93dc93eac83de166fe4bcde4d05e767b88dcdf946a4dbdd1897f44",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 4,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T1-S42-WF1/refit_final.pt",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "resumable": false,
+      "sha256": "ede1dba82ef27ba993a4c7f25bd95533c719cc798a00b490396f62bcb4cdb501",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 2,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T1-S42-WF2/calibration_selected.pt",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "resumable": false,
+      "sha256": "ae0301a1093e0789da623dac2c400bd9863812f7ffd789591e0ce14fd75b8766",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 2,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T1-S42-WF2/refit_final.pt",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "resumable": false,
+      "sha256": "99f24aabc9e66e9522e2b2cbe86d5aae223f3f2cca44101cdbcb78a900973544",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 4,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T2-S42-WF1/calibration_selected.pt",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "resumable": false,
+      "sha256": "a7e35e3f16f96fcbf1b4e9234196c138c95cf08ef6d3f531c282d5b9dbf17f29",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 4,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T2-S42-WF1/refit_final.pt",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "resumable": false,
+      "sha256": "f0a32923b6c7bf85a776ffbb17a6b54b254cd18f8c7fc10b5d246e73ad15f5a2",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 2,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T2-S42-WF2/calibration_selected.pt",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "resumable": false,
+      "sha256": "d6a865cef82f9f486650f6cabb998d843a1856c037d314fba60c8f2b8b1b90a2",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 2,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T2-S42-WF2/refit_final.pt",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "resumable": false,
+      "sha256": "76ddbae9199eb8412e8981524c7e54e7fbd4c207cee94149679325bf386fe763",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 4,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-O1-S42-WF1/calibration_selected.pt",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "resumable": false,
+      "sha256": "4261fe807d802b1f04d16064b30c0d80c1951ca9137dc32fe87ffad5e6e945cc",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 4,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-O1-S42-WF1/refit_final.pt",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "resumable": false,
+      "sha256": "ffff18b9b148ab21b5ab50519f1947731bab478087f35f9075dede19d298574f",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 2,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-O1-S42-WF2/calibration_selected.pt",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "resumable": false,
+      "sha256": "9307d507912fcbed761878f3e93cc7bcfe76cf2208b31a8dddf7a1ee0bcbdc38",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 2,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-O1-S42-WF2/refit_final.pt",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "resumable": false,
+      "sha256": "689bc59f7b623cad44cacfcf6c8d5cfdbb34294dfeaf64051a5ff8a3fc62deb5",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-C0-S123-WF1/calibration_selected.pt",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "resumable": false,
+      "sha256": "233cb786594d1ff0f24f02198e7f5d96090264e1b7d4dcdd3f6aeed4acc981ee",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-C0-S123-WF1/refit_final.pt",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "resumable": false,
+      "sha256": "a82947ed70791a2ca514c950e6de6bc41abb555f993a6b246a325e520e6b9039",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-C0-S123-WF2/calibration_selected.pt",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "resumable": false,
+      "sha256": "5b5209ff438f9e76aa500193d8a734fa6d4a92ee748eddcd2141cbdfce4f8279",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-C0-S123-WF2/refit_final.pt",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "resumable": false,
+      "sha256": "0bdd4508b52700341adc7dd415b039af14404d21e6b9a5a993c422b06808f09f",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-H1-S123-WF1/calibration_selected.pt",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "resumable": false,
+      "sha256": "324e0e0b414c4d16e152550e14d7e875947206a95d311e284562eb7c47bc007b",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-H1-S123-WF1/refit_final.pt",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "resumable": false,
+      "sha256": "cafb900e3606d72b59e4f3f467dce2b574444d159801cb5e7692da4754863f6d",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-H1-S123-WF2/calibration_selected.pt",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "resumable": false,
+      "sha256": "f6c88911d1eafcab851a930c7ef208b651811ad6323eb93dd84703da3e2ce725",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-H1-S123-WF2/refit_final.pt",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "resumable": false,
+      "sha256": "96b7e3273f97702ffc253a3e8d1b0bd7134f0f87cfd6f6a812c352d755cbc23c",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T1-S123-WF1/calibration_selected.pt",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "resumable": false,
+      "sha256": "776dadbfb8495b1aa3da9a6b456f7dfd167bd8ca5e43efa7330ec29e51f58335",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T1-S123-WF1/refit_final.pt",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "resumable": false,
+      "sha256": "2922a4f462631e5be30b64b94604c70a6cfed318f1c7b039d672370abe1c8497",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T1-S123-WF2/calibration_selected.pt",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "resumable": false,
+      "sha256": "2643aec1c39964e080d028876992335be17f5ee9bdb42d6ef96f9884c5555303",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T1-S123-WF2/refit_final.pt",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "resumable": false,
+      "sha256": "d9610d48228a204739b62dec0bcb89e0feb0f7c3d60b0c573b87a04d140f4485",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T2-S123-WF1/calibration_selected.pt",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "resumable": false,
+      "sha256": "226e4c1d76160ac46bd6c82a11840e88f835d1e2ef326c9677eb5c71b2f1b701",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T2-S123-WF1/refit_final.pt",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "resumable": false,
+      "sha256": "db6fc92735d080ccef29f6879d35f3e83710dbb1ccd2c49531aa5f4efa26bced",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T2-S123-WF2/calibration_selected.pt",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "resumable": false,
+      "sha256": "48d2382cc3f8f4d6af2e4851eb648e3eb9d49309027940c5021287de221018c5",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-T2-S123-WF2/refit_final.pt",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "resumable": false,
+      "sha256": "70603deda44c39084644b1b93dc54d97ca72c144346e462a0507ae7346803ea6",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-O1-S123-WF1/calibration_selected.pt",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "resumable": false,
+      "sha256": "48976a8e6ab869e3511634ae0bab07d0d788899caddd07be7fa4143e0986106d",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-O1-S123-WF1/refit_final.pt",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "resumable": false,
+      "sha256": "a04c42b8475ab821dbde1504cdd2c670eff6782e984084f2d9b8af35dc46bb7b",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-O1-S123-WF2/calibration_selected.pt",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "resumable": false,
+      "sha256": "08a93bd1f884c473224c4bd9e50161787da079b8c66d3f1e75c58b5501506a79",
+      "stage": "CALIBRATION_SELECTED",
+      "weights_only": true
+    },
+    {
+      "epoch": 1,
+      "finite": true,
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-O1-S123-WF2/refit_final.pt",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "resumable": false,
+      "sha256": "5a1a8e0e4edfc6ff372e6fb4a7d0a86883ee3c122fdd104bb27fdc8395648525",
+      "stage": "REFIT_FINAL",
+      "weights_only": true
+    }
+  ]
+}

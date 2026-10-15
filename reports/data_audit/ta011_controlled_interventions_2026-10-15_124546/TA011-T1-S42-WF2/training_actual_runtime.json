@@ -1,0 +1,43 @@
+{
+  "calibration_epochs": 12,
+  "calibration_steps": 612,
+  "device": "cpu",
+  "logical_CPUs": 8,
+  "machine": "arm64",
+  "minutes": {
+    "calibration_training": 0.7506788194489976,
+    "calibration_validation": 0.014954003449141358,
+    "development_prediction_and_audit": 0.004457940283464268,
+    "final_checkpoint_and_verification": 0.0026915645838016646,
+    "full_prefix_preprocessing_application": 0.0006242520835561057,
+    "inner_preprocessing_application": 0.12479629721686554,
+    "raw_derived_loading": 0.033428613182816966,
+    "refit_train_prediction_audit": 0.08358758889953606,
+    "refit_training": 0.151460147916805,
+    "selection_and_calibration_checkpoint": 0.0007485750005192434,
+    "total_end_to_end_worker": 1.3510993340334
+  },
+  "neural_fitting_seconds": 54.128338041948155,
+  "numpy": "2.5.3",
+  "peak_whole_process_RSS_bytes": 623837184,
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "preprocessing": "REUSED_BOUND_PREFIX_RECIPES_NO_RECALCULATION",
+  "python": "3.14.6",
+  "refit_epochs": 2,
+  "refit_steps": 110,
+  "seconds": {
+    "calibration_training": 45.040729166939855,
+    "calibration_validation": 0.8972402069484815,
+    "development_prediction_and_audit": 0.26747641700785607,
+    "final_checkpoint_and_verification": 0.16149387502809986,
+    "full_prefix_preprocessing_application": 0.03745512501336634,
+    "inner_preprocessing_application": 7.487777833011933,
+    "raw_derived_loading": 2.005716790969018,
+    "refit_train_prediction_audit": 5.0152553339721635,
+    "refit_training": 9.0876088750083,
+    "selection_and_calibration_checkpoint": 0.0449145000311546,
+    "total_end_to_end_worker": 81.06596004200401
+  },
+  "threads": 1,
+  "torch": "2.10.0"
+}

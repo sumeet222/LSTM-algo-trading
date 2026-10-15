@@ -1,0 +1,366 @@
+{
+  "WF1": {
+    "C0": {
+      "inner": {
+        "cutoff": "2023-03-31 04:00:00+00:00",
+        "observations": 6880,
+        "parameter_id": "b65a218dc3ad8747b395a35f21304c506b9e22395395f2e7b0b797e4408b4f52",
+        "policy": {
+          "arm": "C0",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "8cdeb200cd0d99ae408079f2478132fdf341b78ae0c7ebabcda2975806cc605f",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc"
+      },
+      "refit": {
+        "cutoff": "2023-07-01 04:00:00+00:00",
+        "observations": 7510,
+        "parameter_id": "9c27b7e132cde0a60289c5d284b79f12ddb0c6ed11db04fa34fe36f5f02a1f42",
+        "policy": {
+          "arm": "C0",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b"
+      }
+    },
+    "H1": {
+      "inner": {
+        "cutoff": "2023-03-31 04:00:00+00:00",
+        "observations": 6880,
+        "parameter_id": "94b5c701c10be0aa28fa1a99f53373e9fd5b4aa734e3d0f59e5644a3ad288fe3",
+        "policy": {
+          "arm": "H1",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "8cdeb200cd0d99ae408079f2478132fdf341b78ae0c7ebabcda2975806cc605f",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc"
+      },
+      "refit": {
+        "cutoff": "2023-07-01 04:00:00+00:00",
+        "observations": 7510,
+        "parameter_id": "a6fff4c4f4d79ea4e5cdceb7753f904f84ce65cf05634404432223ff8d4da690",
+        "policy": {
+          "arm": "H1",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b"
+      }
+    },
+    "O1": {
+      "inner": {
+        "cutoff": "2023-03-31 04:00:00+00:00",
+        "observations": 6880,
+        "parameter_id": "e068bfeeada4ac51e95d917a76994fe6c52f7bd4dedf9ed55af0817fadae79f9",
+        "policy": {
+          "arm": "O1",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "8cdeb200cd0d99ae408079f2478132fdf341b78ae0c7ebabcda2975806cc605f",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc"
+      },
+      "refit": {
+        "cutoff": "2023-07-01 04:00:00+00:00",
+        "observations": 7510,
+        "parameter_id": "9c8ad7a08b39ef20013a21db76af6babbe181c773c436f563ad0383d6a825f37",
+        "policy": {
+          "arm": "O1",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b"
+      }
+    },
+    "T1": {
+      "inner": {
+        "cutoff": "2023-03-31 04:00:00+00:00",
+        "observations": 6880,
+        "parameter_id": "ab14de1a24ef57e23935d269de673951ed0e466910c510bb0c607ba85b2a7fce",
+        "policy": {
+          "arm": "T1",
+          "cap": 9.624808417611554,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "8cdeb200cd0d99ae408079f2478132fdf341b78ae0c7ebabcda2975806cc605f",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc"
+      },
+      "refit": {
+        "cutoff": "2023-07-01 04:00:00+00:00",
+        "observations": 7510,
+        "parameter_id": "4bbfae046f3e597976b10bc9b390bf833f98fc3430242f62e7619066c77e243d",
+        "policy": {
+          "arm": "T1",
+          "cap": 9.632055658109966,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b"
+      }
+    },
+    "T2": {
+      "inner": {
+        "cutoff": "2023-03-31 04:00:00+00:00",
+        "observations": 6880,
+        "parameter_id": "62ed19bc4adbdd9bd82a9d500d4538b1c101f01905e18e3f661811e228b62c76",
+        "policy": {
+          "arm": "T2",
+          "cap": 1.0,
+          "scale": 0.9082107726550774
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "8cdeb200cd0d99ae408079f2478132fdf341b78ae0c7ebabcda2975806cc605f",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc"
+      },
+      "refit": {
+        "cutoff": "2023-07-01 04:00:00+00:00",
+        "observations": 7510,
+        "parameter_id": "78113493b273cb0bcc2f6b941420ce0106d365b509c3187ca4d26c6389f8dd76",
+        "policy": {
+          "arm": "T2",
+          "cap": 1.0,
+          "scale": 0.9078702183805596
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b"
+      }
+    }
+  },
+  "WF2": {
+    "C0": {
+      "inner": {
+        "cutoff": "2023-10-02 04:00:00+00:00",
+        "observations": 8130,
+        "parameter_id": "0709b0ef15aad5d3fc109a5c938d70b15a513ff6f8d96dbc47bbac010191e803",
+        "policy": {
+          "arm": "C0",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "793434272d9838e181c9945e196451f05446c9dc29ab09659f0d5f4c007644a8",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:f8a1a6cd509c7364e017afc6746afa6a8986b1b5454b7508c19094cea15f672e"
+      },
+      "refit": {
+        "cutoff": "2024-01-01 05:00:00+00:00",
+        "observations": 8750,
+        "parameter_id": "b92bd40f3ede915c1bf76a193f0a6fec93a02be44f55163f00f572c988eead09",
+        "policy": {
+          "arm": "C0",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "9ad016fe80d99e717e13e1e02916e096c6c3bb372f3c9964db359141e529f1d3",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:6a18a3ed0cf31a1d952d6d1faa30760ea10705ef4c715639b24e86781bcc4489"
+      }
+    },
+    "H1": {
+      "inner": {
+        "cutoff": "2023-10-02 04:00:00+00:00",
+        "observations": 8130,
+        "parameter_id": "798744cca6407f3614a818725cb0e1b87eea77a88fd7d04ba862a24771a62b09",
+        "policy": {
+          "arm": "H1",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "793434272d9838e181c9945e196451f05446c9dc29ab09659f0d5f4c007644a8",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:f8a1a6cd509c7364e017afc6746afa6a8986b1b5454b7508c19094cea15f672e"
+      },
+      "refit": {
+        "cutoff": "2024-01-01 05:00:00+00:00",
+        "observations": 8750,
+        "parameter_id": "7c2876e77298e3ded4e1572393bb73dac81ecfa123bcdecf794e9a8da44cda98",
+        "policy": {
+          "arm": "H1",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "9ad016fe80d99e717e13e1e02916e096c6c3bb372f3c9964db359141e529f1d3",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:6a18a3ed0cf31a1d952d6d1faa30760ea10705ef4c715639b24e86781bcc4489"
+      }
+    },
+    "O1": {
+      "inner": {
+        "cutoff": "2023-10-02 04:00:00+00:00",
+        "observations": 8130,
+        "parameter_id": "07360b2274bd828a83a6ce7fb41660e28e22a44746a71acf62c1448a21740402",
+        "policy": {
+          "arm": "O1",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "793434272d9838e181c9945e196451f05446c9dc29ab09659f0d5f4c007644a8",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:f8a1a6cd509c7364e017afc6746afa6a8986b1b5454b7508c19094cea15f672e"
+      },
+      "refit": {
+        "cutoff": "2024-01-01 05:00:00+00:00",
+        "observations": 8750,
+        "parameter_id": "3438147046e1299cfd9ce1983fa45a1305e7fc8f0bf93158732f7a7eff59efa5",
+        "policy": {
+          "arm": "O1",
+          "cap": 1.0,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "9ad016fe80d99e717e13e1e02916e096c6c3bb372f3c9964db359141e529f1d3",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:6a18a3ed0cf31a1d952d6d1faa30760ea10705ef4c715639b24e86781bcc4489"
+      }
+    },
+    "T1": {
+      "inner": {
+        "cutoff": "2023-10-02 04:00:00+00:00",
+        "observations": 8130,
+        "parameter_id": "e566823182b2b22fba8e6fbdc0991b9d55829c880a497d2f84b7330c2a941f30",
+        "policy": {
+          "arm": "T1",
+          "cap": 9.662225386735207,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "793434272d9838e181c9945e196451f05446c9dc29ab09659f0d5f4c007644a8",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:f8a1a6cd509c7364e017afc6746afa6a8986b1b5454b7508c19094cea15f672e"
+      },
+      "refit": {
+        "cutoff": "2024-01-01 05:00:00+00:00",
+        "observations": 8750,
+        "parameter_id": "fc14d50ea52f7a69a046db4318935edcfd3b6cf5e372c677d752504064d408de",
+        "policy": {
+          "arm": "T1",
+          "cap": 9.63374120907431,
+          "scale": 1.0
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "9ad016fe80d99e717e13e1e02916e096c6c3bb372f3c9964db359141e529f1d3",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:6a18a3ed0cf31a1d952d6d1faa30760ea10705ef4c715639b24e86781bcc4489"
+      }
+    },
+    "T2": {
+      "inner": {
+        "cutoff": "2023-10-02 04:00:00+00:00",
+        "observations": 8130,
+        "parameter_id": "1734278e1a2628bd1d5e6c48ef96756a80ad7f58a5071633e8fd97b7b47423f0",
+        "policy": {
+          "arm": "T2",
+          "cap": 1.0,
+          "scale": 0.9087953475776984
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "793434272d9838e181c9945e196451f05446c9dc29ab09659f0d5f4c007644a8",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:f8a1a6cd509c7364e017afc6746afa6a8986b1b5454b7508c19094cea15f672e"
+      },
+      "refit": {
+        "cutoff": "2024-01-01 05:00:00+00:00",
+        "observations": 8750,
+        "parameter_id": "c662157a2d783274ab4250fa1b00b2da986d81ea91a94b7644eda5d511a37c33",
+        "policy": {
+          "arm": "T2",
+          "cap": 1.0,
+          "scale": 0.9084179186618542
+        },
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "quantile_method": "numpy.linear",
+        "scale_floor": 1e-06,
+        "target_population_hash": "9ad016fe80d99e717e13e1e02916e096c6c3bb372f3c9964db359141e529f1d3",
+        "version": "TA011_CONTROLLED_LOSS_v1",
+        "view_id": "CONDITIONAL_REAL_TM0:6a18a3ed0cf31a1d952d6d1faa30760ea10705ef4c715639b24e86781bcc4489"
+      }
+    }
+  }
+}

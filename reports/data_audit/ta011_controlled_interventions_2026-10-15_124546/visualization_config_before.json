@@ -1,0 +1,621 @@
+{
+  "allowed_activities": [
+    "READ_SOURCE",
+    "READ_FEATURES",
+    "READ_SAVED_PREDICTIONS",
+    "READ_DIAGNOSTICS"
+  ],
+  "baseline": {
+    "path": "reports/data_audit/ta006_tm0_postrun_baseline_review_2026-10-15_002321/permitted_prediction_snapshot.csv",
+    "sha256": "7233fa546e326bda0717f087b75ecccded141ac7de4a03be25a8916a3293f84b"
+  },
+  "batch_telemetry": {
+    "MC0": {
+      "calibration": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/gradient_batches_calibration.csv",
+        "sha256": "9b22e774f5e8bf7311f401c3989d91e7f1fe3c348fe2e445869c0db17d67c419"
+      },
+      "refit": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/gradient_batches_refit.csv",
+        "sha256": "369e9d377a73b762bbf663cf927182c4f304752109df0e6fcf4f6af7d59f58a6"
+      }
+    },
+    "TM0": {
+      "calibration": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/gradient_batches_calibration.csv",
+        "sha256": "c5c473a59404ed4b6ab86bac4ef58e8fc179eb6eecca3aaea84f848ee48a175f"
+      },
+      "refit": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/gradient_batches_refit.csv",
+        "sha256": "7b71d91a83281370b354c080d82b12db5611b10592aee7f7a94490b78855b4f4"
+      }
+    }
+  },
+  "checkpoints": {
+    "WF1": {
+      "E5": {
+        "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/refit_final.pt",
+        "sha256": "be1c47d1d6b254c5b24a02022c8fcc7e8c97315edd7ac6767f44e75d8947b16b"
+      },
+      "MC0": {
+        "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/refit_final.pt",
+        "sha256": "1e67d25670d6a38827fa96dd682396b6a091bc3daa3c570894eb136f23d69283"
+      },
+      "MC1": {
+        "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/refit_final.pt",
+        "sha256": "77f81042fb42975d6d6d3ac14694d3877b520202d0226ed2c9b4a88ed52ac054"
+      },
+      "TM0": {
+        "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/refit_final.pt",
+        "sha256": "b673d88ce4458ee7db0ce292808370eaeeefda6132b500ee6e9f7d26dc46818b"
+      }
+    },
+    "WF2": {
+      "MC0": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/refit_final.pt",
+        "sha256": "474834ce34b091d4ed58eb12f509d286354cdfe314701515d84834fac02a2a1d"
+      },
+      "TM0": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/refit_final.pt",
+        "sha256": "b870e8e2157e9998c562894f0a1cda200f98efe1f2fd5deebb4f9ca45b39b01f"
+      }
+    }
+  },
+  "confirmation_barrier_utc": "2024-07-01T04:00:00Z",
+  "default_dates": [
+    "2024-01-16",
+    "2024-01-19"
+  ],
+  "development_windows": {
+    "WF1": [
+      "2023-07-01",
+      "2023-12-31"
+    ],
+    "WF2": [
+      "2024-01-01",
+      "2024-06-30"
+    ]
+  },
+  "id": "TA010_READONLY_LOCAL_VISUALIZATION_v1",
+  "manifest": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/canonical_dataset_manifest.json",
+    "sha256": "ffc2932434ad6ec966cb0046ab4a230d693bdf04acbbaddbf26f51cf0c6baad0"
+  },
+  "market": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/market_v2/canonical_market_components.json.gz",
+    "sha256": "6d438cc6aee61334b4502bc41994ca193eef5329bc2e53f8aa0b0d6e5b7bf8c8"
+  },
+  "market_recipes": {
+    "WF2": {
+      "WF2_INNER_TRAIN": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_INNER_TRAIN_market_preparation.json",
+        "sha256": "1b34263420370468c85cf355b6d87b30e3770b767b1acb8082f81557827b97df"
+      },
+      "WF2_REFIT": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_REFIT_market_preparation.json",
+        "sha256": "7cf0e52a4314effb2f4de48de77c7b6e52d90ee281b806077285c0550f8f7fd0"
+      }
+    }
+  },
+  "market_ridge": {
+    "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/RIDGE_MARKET_147/result.json",
+    "sha256": "f5abedef9f262f0f707d8860fcad3940488e5a55596f7a3ead8469e7f9b3954c"
+  },
+  "models": {
+    "WF1": {
+      "E5": {
+        "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/seed42_e5_pair_result.json",
+        "sha256": "977d2d8494ec8c74e57f7a0a4b0d709d999e46d670c221c68c7de0af8a80cdc2"
+      },
+      "MC0": {
+        "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/seed42_mc0_pair_result.json",
+        "sha256": "13dfd2eeb5ada9a700434832b77484c0a5c60b9e9d7c78b63e44a19ce2f3d5ca"
+      },
+      "MC1": {
+        "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/seed42_mc1_pair_result.json",
+        "sha256": "edcdd12523edcb41fb774ee059ff50724b121a608faa01659bc80e2341d4f61a"
+      },
+      "TM0": {
+        "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+        "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+      }
+    },
+    "WF2": {
+      "MC0": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/seed42_mc0_pair_result.json",
+        "sha256": "edf700fa569a667b3dd4454366dab6dc05aa9993c2c9b2b637ff8b21a852167d"
+      },
+      "TM0": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/seed42_tm0_pair_result.json",
+        "sha256": "4b06525d3346303f7a3d4a1938fc31dbd502372af26271dd26c092e840e1b938"
+      }
+    }
+  },
+  "notes": "Existing local-use assumptions only; no fit/transform fitting/network/export/registry authority.",
+  "readers": {
+    "src/lstm_data/aggregation.py": "a4aa643253eaa095980aea47de361eb746c03cb9d6ec85f80013e1f7efb77a2b",
+    "src/lstm_data/ft0_transforms.py": "dce3424a3367d2bb8889e3b8a083b82f109ebc22e22690756aaced62a939c4f6",
+    "src/lstm_data/peer_inputs.py": "e7a7241c8c1051f0b525db1af36368139897b2ffd5e88ae5d99dda0cbd494b66",
+    "src/lstm_data/pretraining_market.py": "7509866e6c8a72888cecf1933f9a897902f6471d957f3ba17824178c4c8c7a5f",
+    "src/lstm_data/pretraining_policy.py": "fa4eb4528705f0baef6763fe2cc8b3b58e30a061670f243791a9e78426b7f25b",
+    "src/lstm_data/pretraining_store.py": "a7d085c6f870e90a6e88e7373cefa1604443445ddee4fe543dae1088357ead70",
+    "src/lstm_data/pretraining_tables.py": "1e7c9a44259ffbe9cc142ce5d27509b386b261000013887a227460df0ca6f171",
+    "src/lstm_data/pretraining_transforms.py": "79a7b1238c1c55e42967056b474eb2a3212bbfe725f2c0332c12388dbe8e82f5",
+    "src/lstm_data/real_bridge_run.py": "b84e8565bfaf5e4cfaec1a979c96e538dd9b974778767b571601c8f23b06c612",
+    "src/lstm_data/stock_features.py": "edae91a8fe70e25720cf3cd66fd716f37c5192b1302f3d72651717b15b9a141a"
+  },
+  "recipes": {
+    "WF1": {
+      "inner": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_INNER_TRAIN_preprocessing.json",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "sha256": "3283ce988067922542cae06c9d77e3cb7695cab47761933c6ed67f66c45f1c39"
+      },
+      "refit": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_REFIT_preprocessing.json",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "sha256": "929fdda939f240b4e59958b62718bf876fd6979183cbd1ccea3dbcbb91890f90"
+      }
+    },
+    "WF2": {
+      "inner": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_INNER_TRAIN_stock_preparation.json",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "sha256": "f5fbb2391fe197e8712ae6dde2beb4314b9fdfe29b01674e979329bb51259a77"
+      },
+      "refit": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_REFIT_stock_preparation.json",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "sha256": "8604a65e6ef4c77a24e2227e1f233372e524fae338cef166c29701dfe5653d09"
+      }
+    }
+  },
+  "reference_metrics": {
+    "WF1": {
+      "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/matched_metrics.json",
+      "sha256": "f0107096e6a2636bb3733de9dfeb3b748bae80319f1409082056b16a93e9f096"
+    },
+    "WF2": {
+      "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/review_summary.json",
+      "sha256": "9e1217453bdad23ed92bd4ef16d1f9e317a16891cefa07ac40cfadac6002a9f6"
+    }
+  },
+  "saved_gate_examples": {
+    "path": "reports/data_audit/ta008_four_model_diagnostics_2026-10-15_094143/boundary_replay_compact.json",
+    "sha256": "7ee28476a8262ee78fc6960510303d4395aaaa3a1f66e9f2264c383aa5254e33"
+  },
+  "source_manifest": {
+    "path": "reports/data_audit/ta_provisional_source_integration_2026-10-13_163141/complete_genuine_source_manifest.json",
+    "sha256": "45a91dd7aff21d9a0aecf3a94635fc4c7eccfbeb08d16c58ec5d196e2fe62aff"
+  },
+  "traces": {
+    "WF1": {
+      "E5": {
+        "calibration": [
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_01.json",
+            "sha256": "a3568c996f119cdcecdab02e08a5c294e3ee67652856b7c505d97184c09606a8"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_02.json",
+            "sha256": "e59c76f96bd17ecabba45358dabb739cc0c166684621599f45766b2989e30d7a"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_03.json",
+            "sha256": "7a648efaa0e43e6db9096b30a1e8607c482d3d485adf05656c20cdacdbeddecd"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_04.json",
+            "sha256": "7627aadc06a55411ca45d0006470f5dcf5e7d4382ececeeb7354cef57a00845d"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_05.json",
+            "sha256": "86a113788a2a020e469ad3057bfbe93175a1b7998766e528bec44c0134697bef"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_06.json",
+            "sha256": "70801e36e19dd562956702b2fb522a5381b7578183014b75cb4c1cd6d1dca09d"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_07.json",
+            "sha256": "2a059fff1e68090288d244ed75b8d43c199d12453d1c93dd7b2fc023eabf280c"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_08.json",
+            "sha256": "6aafa0a2708a4dbb417f9b79c8de0a583a4c7ab2b3f24314ee6f1562f91a4577"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_09.json",
+            "sha256": "4db6b3b38468ec23af90e5d0bed2733b9a4eae4ba4f416ae3ad04188e567dafb"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_10.json",
+            "sha256": "5ad4e3c17a203629549278a4f3b8324b8a7dbd1f35a70f3c903159c637fde787"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_11.json",
+            "sha256": "1ff1310c6fbddfd9a49ad5f1752c1af43cb0cdebb3225b8beb39dcf4ee8f8ebc"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_12.json",
+            "sha256": "c228311f9fb1d2da7a57c3fec02a7d17699ccc3103d61981f0566c21d9b2d462"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_13.json",
+            "sha256": "5d7970e20bab8b002b5c91a0cbaefadf2e007ebdaaaf17c24c63440e8d5ec524"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_14.json",
+            "sha256": "4a1921153b4bc87a420d5ba56aeea16b2c943cb017e16a699798ec8fc6d4cbd9"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_15.json",
+            "sha256": "e5756875af54730446009d122b51265ca05045aed3e8c7a8b78c3f4f350f42f6"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_16.json",
+            "sha256": "53689b37017a45583b9bbdb89d2c165c75475a52635025fdd53eeedff97629d5"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_17.json",
+            "sha256": "6f12b54fcb7fdf5949bbfda081be60a6816935d067834e3f31079d1869517c9b"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/calibration_epoch_18.json",
+            "sha256": "e71e254e8ac2ad07ae10f352b29247808c33fbecc2311d4cdf4c992ee2c65fbf"
+          }
+        ],
+        "refit": [
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/refit_epoch_01.json",
+            "sha256": "48a5af8f141f46ec50a78b5899fefe5bab7d7b562d2ec7ee797b7764e440a844"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/refit_epoch_02.json",
+            "sha256": "fb77ef09175862493d0881f64056a5430b30a82f872b94a8bdd429194148ff47"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/refit_epoch_03.json",
+            "sha256": "7e2857ba3db7d7fd0805d752a3d51a4bf9338305ae32ddc90ab5bbf8cad21030"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/refit_epoch_04.json",
+            "sha256": "d71fd5b6638ff6a3bb86813ed1894ee954d45154a411889025ac34229d65e01d"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/refit_epoch_05.json",
+            "sha256": "70d89db60ec7258bda7536097b16695c4c8abd25246dab23ce8552f8d6852522"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/refit_epoch_06.json",
+            "sha256": "41f87448ac452831b5e1255c36a3a154493316559b19cee6f3f7ecd9ed07b423"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/refit_epoch_07.json",
+            "sha256": "880986ea051c826bd098864937c5d5735ce3297bcd088df4d27870168ec520a7"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/E5/refit_epoch_08.json",
+            "sha256": "88b98bb9a115eac0515aeebb4201469383756fb186f801a6b7c375777930973b"
+          }
+        ]
+      },
+      "MC0": {
+        "calibration": [
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_01.json",
+            "sha256": "6a31a1ac2e4cfd02a51740ce6c68bc9c35a0a7a1800744a392e39c25d24535e2"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_02.json",
+            "sha256": "32eecf8e2df6f183e223d69bbaac9cf797a32a576850c7890a39f08740c4184e"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_03.json",
+            "sha256": "5c5ec22d0cc807f89c3a7c86df9f7b08bba626a8f5bd3c9359411dfeda96dfa0"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_04.json",
+            "sha256": "1eb5a4258d39327cf6191d454f108cdaaf1ff01419f359ed18887ecf9ec29598"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_05.json",
+            "sha256": "e3b772975213cf9d64382591bf6acdcddf319d9ba484e169b4277cb63892a158"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_06.json",
+            "sha256": "09c0b24eaf3644be1426a343714a9791eab9772230cca95f2da9a04aed8b7a4e"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_07.json",
+            "sha256": "1f615f83b60cc520d08a9bd646fa31a04d3889e74535600a2ceb5129e91e902a"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_08.json",
+            "sha256": "c695a4d1e6faea0c9b66538302236854a5d16ee3d8b745eb7adc551bd67ec2d0"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_09.json",
+            "sha256": "67102b44653bd7f4e5c17aa6207e5eeaa9953e5bfbcb88e9474de2e1b2cec909"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_10.json",
+            "sha256": "cb9e1ebb47499e0e55a99b2546e9a08e8bde7a4a103e05b4481c52cb1a302293"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_11.json",
+            "sha256": "7b7fd240f17f7fe85ba6bc18edeac52f2b99929e767eaf2ae14453b8b97c6104"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/calibration_epoch_12.json",
+            "sha256": "e6ee6a1398e5b3ff5ecd880e511ad3622bce9cee4a506f1045d9a7c561f4961d"
+          }
+        ],
+        "refit": [
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC0/refit_epoch_01.json",
+            "sha256": "49722f8b39aa29eb2055367d1820db82ffd8b88ca3a4b4a94fca59968f9d46a0"
+          }
+        ]
+      },
+      "MC1": {
+        "calibration": [
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_01.json",
+            "sha256": "43ef9187c0b934e9c1d42e31729753d1c21fe8b8a6ddcca4e9b221a55b6440b5"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_02.json",
+            "sha256": "cbb1b746f8f07284155132e2b9ac0da0abc020f1664458d3fc86ffeadedebe4a"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_03.json",
+            "sha256": "472088c01be97585c2592a1a963b323cbfa65e64844873a531797bb034a33d93"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_04.json",
+            "sha256": "80c28dd7b8fe018490b37f3c85271bfcb165e966554b8e0510251aa013c685fd"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_05.json",
+            "sha256": "a16d139e3688f3610a1b21d8683de29d186cd68ea3120ee004950fc696ee5100"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_06.json",
+            "sha256": "acaf977d684c78b7b71341ebbf1af661e765b1b5879562dc6bc6d6b72628816e"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_07.json",
+            "sha256": "443f97fa57ca0a1ec1ebdee79a7fb4baf1aefc68fb06c7753576b63c8e4eedc2"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_08.json",
+            "sha256": "6e6328518e0d91f18351991c09406df63f56d4556c6b8eefaffa754f5b726a84"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_09.json",
+            "sha256": "2b2b78fdcf3f5b2fe146ded4d2a035b722f1005c852fc57b1650f401f438a305"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_10.json",
+            "sha256": "51b4394669c55fc0d1c64a8afed93995385fe799a36ea5185e04f62990c7fa93"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_11.json",
+            "sha256": "693401844aefe832c8c97d1bc146adc1c4daaead7faac881a542b268a4fd59fa"
+          },
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/calibration_epoch_12.json",
+            "sha256": "80f11fad6bed5763ab8ccf2c27c83a034f2359a0904cc5de8af738ce33b9499b"
+          }
+        ],
+        "refit": [
+          {
+            "path": "reports/data_audit/ta007_multimodel_firstpass_2026-10-15_010008/MC1/refit_epoch_01.json",
+            "sha256": "b63975518680bb031f44c8f4253466528aeefee3ca99bb21ef99524d0e075b01"
+          }
+        ]
+      },
+      "TM0": {
+        "calibration": [
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_01.json",
+            "sha256": "f37f317e046db79d052cda5322b6c68b14098a7638c8223298122c8b73240aca"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_02.json",
+            "sha256": "9b88c47381e7a3ecf6dde2c3bf2010ff36e913842b636cecdfbd604600451740"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_03.json",
+            "sha256": "f3c81d171518ce7de952cfa7cce2e0af8d7097f2852a0ad7cd9a9e93b9a2f8b5"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_04.json",
+            "sha256": "215ffc5bf21a145c6b70a80d2a094224a843f6d479d0d8b9a7052e85834258ac"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_05.json",
+            "sha256": "3a91fab5632a8aa5703fc78c8b86cf25765d76a545b8c9c9ff274acbc9ad3dac"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_06.json",
+            "sha256": "2d7019fdc166f7c82221a6940d65b836997a9b92a4687551c397f3773472b28c"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_07.json",
+            "sha256": "fda9f07de88306918358991565f875abf86bd2b9e1a99ecc5fd16e8fad24198a"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_08.json",
+            "sha256": "8cd4ef6ea9ab996566b1c551114246d63bbcf07cfad5f420fec2af432d79a51e"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_09.json",
+            "sha256": "249e8ce0530cd4ae5b37ebddc08f1d63926064af779df61cccf3489bdda638a2"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_10.json",
+            "sha256": "cd8ef3b9956f84382a88a2e6c61695f9383c08458dcaa279a39e3fe9a09763a1"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_11.json",
+            "sha256": "53bf61056d5341c4deb9d864c38da006428ef445e95c74ddc6f5f03cf6f2d3fb"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_12.json",
+            "sha256": "5c26a6558997aca806993b42ac47f371438d81510dab515a287dc0fc7c0e3482"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_13.json",
+            "sha256": "8c9b02616bec69bf2c4fdf0182bb68aef65bd41e831b1e5c71a67e5c73687633"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/calibration_epoch_14.json",
+            "sha256": "3f3a91fa083a7842455c38029d10d9b6382de5689147e5373ec63c0bb4a4ed05"
+          }
+        ],
+        "refit": [
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/refit_epoch_01.json",
+            "sha256": "d5dbc0a58434defd796cc4bdbff79bfaf6395575aee67e8042e1b95bb4924908"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/refit_epoch_02.json",
+            "sha256": "810d1af10c87327062ffc43230d9dd065a4d3e5afb714c2b431611f9d63522ee"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/refit_epoch_03.json",
+            "sha256": "f90019fd4e40339bb79941eb59c01e5c70094f95e641320eb2fa7d2f14410bc5"
+          },
+          {
+            "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/refit_epoch_04.json",
+            "sha256": "d735ec1303b41cad08db8ec3bbb2511a13264d36464ca94f48cb4ffd5157d6f9"
+          }
+        ]
+      }
+    },
+    "WF2": {
+      "MC0": {
+        "calibration": [
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_01.json",
+            "sha256": "594015c024c9a7c8b0409620fd4cf7f067c401149ac610329000f9e0090edaaf"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_02.json",
+            "sha256": "68b12e42d53cd976bc003e683f026b5d0994508b48d43cf11e7ff002e447795e"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_03.json",
+            "sha256": "cc1918786d466b6b00358e060af068195d89b506fccb852fb2e1614d40388d58"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_04.json",
+            "sha256": "9b92667c9c454779c62a760885d40bb740fff3fcc021efa6f0b29d68c879475f"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_05.json",
+            "sha256": "89c9a9f3fa131863a981bc91175565b51624d39797d1651f14c300b2e85f16a7"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_06.json",
+            "sha256": "181f076eae74050c79000611de4e4e67e5652b5971aba4bad5f694928c598e72"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_07.json",
+            "sha256": "dedc346764bf110dafa25a74b1b177b04837e977b839222fb353aa29be739d15"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_08.json",
+            "sha256": "3d5cbb1ec0c66e9bbe07382c403de34b6b5d820845f8d4e459eeffa514bd4d54"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_09.json",
+            "sha256": "6e01732fa214148e853b77260823ba8727fbd23f0dd940f444133edf3808df35"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_10.json",
+            "sha256": "89fd405468694c006aa941d02a22d135a943fe3e892a3697f0dc7c645542d25f"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_11.json",
+            "sha256": "5f53f4657b27337a4dbf20fea02015bb6e5ce567277715af778ca2b0403ce7fc"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/calibration_epoch_12.json",
+            "sha256": "05221ba0c57bf24de513050beca469f799e0463a0addf4b214defd849bbf571c"
+          }
+        ],
+        "refit": [
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/MC0/refit_epoch_01.json",
+            "sha256": "f9c824b161c0c779935e33a7c441d562f3320f3337400e231328f7d8bf21e103"
+          }
+        ]
+      },
+      "TM0": {
+        "calibration": [
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_01.json",
+            "sha256": "dbb864a261eabcf24310ad5f1d96c86920c50f617de64530260bd3b6794c595d"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_02.json",
+            "sha256": "284c15f513deb8c3079d280f85bc6e356932601671c82bf7717917c1a66d8c74"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_03.json",
+            "sha256": "7761892bb1c86d85c5b76643c2a9834167ecc0dea8d090c7c9e4075a1b1f5616"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_04.json",
+            "sha256": "24506e4967b4e57369ac8285ea5d0b801f508ad338361e8bff95a0dd6cdd144e"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_05.json",
+            "sha256": "ab633e174ed1238e1b18dfa1a5ddb78bbdafc48c3de75486942f825e794ec7b9"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_06.json",
+            "sha256": "4ad8cd9dc8a81bbf1557f56874550a793a834209f47f21ff193a35a10bf4ba5d"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_07.json",
+            "sha256": "f259a596e44a53ace744e72e2c172eed8165d140608c7475e2ad3c303b695ce3"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_08.json",
+            "sha256": "6c98df197a1a11b99f9ff6678fd9cf825bb7c331558c44d54a67a13432b3dc15"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_09.json",
+            "sha256": "cebc78bbb658c712c86ac5b778d793fad6ef6ae16fb53e1eb277c8b087e35431"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_10.json",
+            "sha256": "0ac792eed1d18adb9f3b0aa1bf824afb6b8b09d399db5e4e803faef6831e96c0"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_11.json",
+            "sha256": "27c2295b64294aa6365dff684b20df768423e4341f69b8cb66272f4f78bdf89c"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/calibration_epoch_12.json",
+            "sha256": "178eac564a1caa5d171bf1793d5ea33233a9a23559f90186d8de860485038b85"
+          }
+        ],
+        "refit": [
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/refit_epoch_01.json",
+            "sha256": "e1359a7df3bd91eff0a8a92d52d3e128666c48c21ef5f763543725325a78bb97"
+          },
+          {
+            "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/refit_epoch_02.json",
+            "sha256": "9e97c20eea9a6248f285659c80d8ce55563f2e5311e110e9c916fd5ebdbfb3a1"
+          }
+        ]
+      }
+    }
+  }
+}

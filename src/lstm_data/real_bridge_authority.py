@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
+    from .controlled_authority import ControlledAuthority
     from .real_batch_authority import BatchPairAuthority
     from .wf2_replication import WF2PairAuthority
 
@@ -74,7 +75,13 @@ def producer_snapshot(root: Path, producer: dict) -> tuple[dict, dict]:
     for name, row in rows.items():
         if name.startswith("src/lstm_data/") and name.endswith(".py"):
             modules[name] = row["sha256"]
-    raw = {p: r["sha256"] for p, r in before.items() if p.startswith("data/raw/")}
+    # Finder metadata is not a vendor/source observation. Keep every other file
+    # under the original byte/stamp guard; never silently refresh archive hashes.
+    raw = {
+        p: r["sha256"]
+        for p, r in before.items()
+        if p.startswith("data/raw/") and Path(p).name != ".DS_Store"
+    }
     return modules, raw
 
 
@@ -295,15 +302,20 @@ def load_training_authority(review: BridgeReview, binding_ref: dict) -> Training
 
 
 def require_training(
-    authority: TrainingAuthority | BatchPairAuthority | WF2PairAuthority,
+    authority: TrainingAuthority | BatchPairAuthority | WF2PairAuthority | ControlledAuthority,
     activity: str,
     input_id: str,
 ) -> None:
     """Single public admission boundary; duck-typed/subclass permissions cannot opt in."""
+    from .controlled_authority import ControlledAuthority
     from .real_batch_authority import BatchPairAuthority
     from .wf2_replication import WF2PairAuthority
 
-    if type(authority) is BatchPairAuthority or type(authority) is WF2PairAuthority:
+    if (
+        type(authority) is BatchPairAuthority
+        or type(authority) is WF2PairAuthority
+        or type(authority) is ControlledAuthority
+    ):
         authority.ensure(activity, input_id)
         return
     if type(authority) is not TrainingAuthority:

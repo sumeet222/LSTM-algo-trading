@@ -17,11 +17,22 @@ VERSION = "TA009_BATCH_OBSERVER_v1"
 class BatchTelemetry:
     """Record the already-computed loss and single clip return after optimizer.step."""
 
-    def __init__(self, path: Path, run_id: str, architecture: str, stage: str):
+    def __init__(
+        self,
+        path: Path,
+        run_id: str,
+        architecture: str,
+        stage: str,
+        *,
+        seed: int = 42,
+        cap: float = 1.0,
+        arm: str | None = None,
+    ):
         if path.exists() or stage not in {"CALIBRATION", "REFIT"}:
             raise ValueError("NEW_STAGE_TELEMETRY_PATH_REQUIRED")
         self.path, self.run_id, self.architecture, self.stage = path, run_id, architecture, stage
         self.steps = 0
+        self.seed, self.cap, self.arm = seed, cap, arm
 
     def record(
         self,
@@ -40,13 +51,13 @@ class BatchTelemetry:
             or not math.isfinite(preclip_norm)
         ):
             raise ValueError("NONFINITE_BATCH_OBSERVATION")
-        multiplier = min(1.0, 1.0 / (preclip_norm + 1e-6))
+        multiplier = min(1.0, self.cap / (preclip_norm + 1e-6))
         self.steps += 1
         row = {
-            "version": VERSION,
+            "version": VERSION if self.arm is None else "TA011_BATCH_OBSERVER_v2",
             "stage": self.stage,
             "architecture": self.architecture,
-            "seed": 42,
+            "seed": self.seed,
             "epoch": epoch,
             "batch_index": batch_index,
             "run_id": self.run_id,
@@ -69,6 +80,14 @@ class BatchTelemetry:
             if values.sum()
             else 0.0,
         }
+        if self.arm is not None:
+            row.update(
+                arm=self.arm,
+                clip_cap=self.cap,
+                exceeds1=preclip_norm > 1,
+                exceeds5=preclip_norm > 5,
+                canonical_TG0_MSE=float(values.mean()),
+            )
         exists = self.path.exists()
         with self.path.open("a", newline="") as stream:
             writer = csv.DictWriter(stream, fieldnames=list(row))

@@ -1,0 +1,1 @@
+Use the existing local dashboard and ../HOW_TO_VIEW_PACKAGE_011.md. panels.json points to compact native tables; no candles or dense input windows are copied here. Paired intervals are exploratory 5-session blocks, not full G8. Canonical saved T2 forecasts are already inverted exactly once.

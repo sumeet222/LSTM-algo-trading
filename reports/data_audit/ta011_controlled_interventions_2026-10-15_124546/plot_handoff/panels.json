@@ -1,0 +1,30 @@
+{
+  "evidence_grade": "ASSUMPTION_CONDITIONAL",
+  "panels": [
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/paired_fold_seed_comparison.csv",
+      "title": "Matched fold/seed heatmaps",
+      "unit": "canonical TG0 squared loss / daily five-stock Rank IC"
+    },
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/predictions_long.csv",
+      "title": "Canonical forecasts and raw labels",
+      "unit": "original TG0"
+    },
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/metrics_by_epoch.csv",
+      "title": "Both-pass curves",
+      "unit": "canonical MSE / explicitly named optimizer objective"
+    },
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/target_tail_and_clipping.csv",
+      "title": "Actual clip vs historical >1",
+      "unit": "batch fractions / preclip global L2 norm"
+    },
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/gradient_log_pointers.csv",
+      "title": "Measured paired batch association",
+      "unit": "original small per-pair CSV pointers; no duplicates"
+    }
+  ]
+}

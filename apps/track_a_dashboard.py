@@ -119,7 +119,12 @@ def start_here(c: Catalog) -> None:
     a, b, d = st.columns(3)
     a.metric("Candidate stocks", "5")
     b.metric("Explored folds", "WF1 · WF2")
-    d.metric("Real pairs consumed", "6 / 40")
+    d.metric("Pairs at package seal", f"{c.config.get('global_started_at_seal', 6)} / 40")
+    if c.config.get("controlled_models"):
+        st.caption(
+            "Package011 arms use seed labels in brackets. TM0 is C0 seed42; "
+            "compare seed123 arms with C0 [123]. These are saved package results."
+        )
     st.subheader("Your first five minutes")
     st.markdown(
         "1. Open **Price & Features**. Keep **AAPL / WF2 / TM0 / January16–19,2024**. "
@@ -505,12 +510,31 @@ def diagnostics_page(
         hide_index=True,
         width="stretch",
     )
+    cap = float(obj["contract"]["clip"])
     st.caption(
-        "Preclip norm is returned by the single existing clip. Actual scaling is "
-        "min(1,1/(norm+1e−6)); G6 cap exceedance is norm>1. >50% or100% clipping is a "
-        "warning, distinct from a nonfinite gradient. No clip threshold is changed here."
+        f"One global clip; applied multiplier min(1,{cap}/(norm+1e−6)). "
+        "The historical norm>1 warning remains visible; it differs from the applied cap for O1."
     )
-    if fold == "WF2":
+    if model in c.config.get("controlled_models", {}).get(fold, {}):
+        st.dataframe(
+            phase[
+                [
+                    "epoch",
+                    "objective_name",
+                    "optimizer_objective",
+                    "training_MSE",
+                    "applied_clipping_fraction",
+                    "fraction_above5",
+                ]
+            ],
+            hide_index=True,
+            width="stretch",
+        )
+        st.caption(
+            "T2 scores are already converted once to canonical TG0. "
+            "T1 preserves original targets. These are explored development comparisons."
+        )
+    if fold == "WF2" or model in c.config.get("controlled_models", {}).get(fold, {}):
         batches = gradient_batches(c, fold, model, stage)
         plot(
             charts.lines(
@@ -518,7 +542,7 @@ def diagnostics_page(
                 "optimizer_step_id",
                 ["preclip_global_grad_norm"],
                 "Preclip global L2 norm",
-                cap=1,
+                cap=float(obj["contract"]["clip"]),
             ),
             "batch_norms",
         )
@@ -734,7 +758,10 @@ def main() -> None:
     )
     origin_label = st.sidebar.selectbox("Forecast origins", ["Both", "10:30 ET", "11:30 ET"])
     origins = (1, 2) if origin_label == "Both" else (1,) if origin_label.startswith("10") else (2,)
-    st.sidebar.info("WF2: TM0 / MC0 / ZERO.\nWF1 adds MC1, E5 and recorded baselines.")
+    st.sidebar.info(
+        "TM0 is C0 seed42. Package011 arms show their seed in brackets when recorded. "
+        "WF1 also has MC1, E5 and recorded baselines."
+    )
     st.sidebar.caption("Ledger6/40 · production D1 unchanged · no confirmation access")
     st.caption(f"{symbol} / {fold} / {model} / {partition} · ASSUMPTION_CONDITIONAL")
     missing_files = c.missing_required(token)

@@ -154,12 +154,17 @@ class Catalog:
                 "Timeframe unavailable. Choose WF1 or WF2 and a recorded partition."
             )
         neural = tuple(n for n in ("TM0", "MC0", "MC1", "E5") if n in self.config["models"][fold])
-        return neural + (
-            ("ZERO", "M1", "RIDGE_OWN_112", "RIDGE_MARKET_147")
-            if fold == "WF1" and partition == "Development"
-            else ("ZERO",)
-            if partition == "Development"
-            else ()
+        controlled = tuple(self.config.get("controlled_models", {}).get(fold, {}))
+        return (
+            neural
+            + controlled
+            + (
+                ("ZERO", "M1", "RIDGE_OWN_112", "RIDGE_MARKET_147")
+                if fold == "WF1" and partition == "Development"
+                else ("ZERO",)
+                if partition == "Development"
+                else ()
+            )
         )
 
     def result(self, fold: str, model: str) -> dict:
@@ -169,8 +174,16 @@ class Catalog:
         ref = self.config["models"][fold][model]
         obj = read_json(self.root, ref)
         final = obj["final_checkpoint"]
+        treatment = self.config.get("controlled_models", {}).get(fold, {}).get(model)
+        expected_architecture = "TM0" if treatment is not None else model
+        if treatment is not None and (
+            obj["contract"].get("arm") != treatment["arm"]
+            or obj["contract"]["seed"] != treatment["seed"]
+            or obj["contract"].get("amendment") != "TA011_v1"
+        ):
+            raise ViewUnavailable("Controlled arm/seed identity mismatch.")
         if (
-            obj["contract"]["architecture"] != model
+            obj["contract"]["architecture"] != expected_architecture
             or obj["contract"]["stage"] != fold
             or tuple(obj["contract"]["universe"]) != CANDIDATE
             or final["stage"] != "REFIT_FINAL"
@@ -186,10 +199,14 @@ class Catalog:
         prep = read_preparation(self.root, recipe)
         if final["preparation_id"] != prep.preparation_id:
             # Market/peer arms bind a joined ID; recover it from their frozen input binding.
-            if model == "TM0":
+            if expected_architecture == "TM0":
                 raise ViewUnavailable("Checkpoint preprocessing identity mismatch.")
             if final["preparation_id"] != obj["development_population"]["preparation_id"]:
                 raise ViewUnavailable("Joined checkpoint preprocessing identity mismatch.")
+        if treatment is None and fold in self.config.get("both_pass_health", {}):
+            health = read_json(self.root, self.config["both_pass_health"][fold])
+            detailed = health if fold == "WF1" else health["health"]
+            obj = {**obj, "historical_G6": obj["G6"], "G6": detailed[model]["status"]}
         return obj
 
 
@@ -523,6 +540,12 @@ def training_trace(catalog: Catalog, fold: str, model: str) -> pd.DataFrame:
                     "selected": stage == "calibration"
                     and train["epoch"] == obj["selector"]["selected"],
                     "steps": train["steps"],
+                    "optimizer_objective": train.get("optimizer_objective", train["mse"]),
+                    "objective_name": train.get("objective_name", "MSE"),
+                    "applied_clipping_fraction": grad.get(
+                        "applied_clipping_fraction", grad["clipped_fraction"]
+                    ),
+                    "fraction_above5": grad.get("fraction_above5"),
                 }
             )
     return pd.DataFrame(rows)
@@ -530,6 +553,11 @@ def training_trace(catalog: Catalog, fold: str, model: str) -> pd.DataFrame:
 
 def gradient_batches(catalog: Catalog, fold: str, model: str, stage: str) -> pd.DataFrame:
     catalog.require("READ_DIAGNOSTICS")
+    controlled = catalog.config.get("controlled_telemetry", {}).get(fold, {}).get(model)
+    if controlled is not None:
+        if stage not in {"calibration", "refit"}:
+            raise ViewUnavailable("Choose calibration or refit.")
+        return read_csv(catalog.root, controlled[stage])
     if fold != "WF2" or model not in ("TM0", "MC0"):
         raise ViewUnavailable(
             "Not recorded: WF1 has aggregate epoch norms, no paired batch history."

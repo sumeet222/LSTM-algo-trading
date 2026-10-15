@@ -1,0 +1,12 @@
+Command: .venv/bin/python -m pytest -q tests/test_controlled_interventions.py tests/test_controlled_review.py tests/test_real_bridge.py tests/test_real_multimodel_batch.py tests/test_wf2_replication.py tests/test_visualization_readonly.py
+Executed outside the filesystem/network sandbox for the approved localhost socket oracle.
+
+........................................................................ [100%]
+=============================== warnings summary ===============================
+tests/test_wf2_replication.py::test_module_entry_delegates_to_canonical_authority_module
+  <frozen runpy>:130: RuntimeWarning:
+  'lstm_data.wf2_replication' found in sys.modules after import of package 'lstm_data', but prior to execution of 'lstm_data.wf2_replication'; this may result in unpredictable behaviour
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+72 passed, 1 warning in 16.38s
+
+The pre-existing runpy test warning is retained. Actual CLI entry delegates to the canonical module; all real authorized workers used the sealed canonical authority.
