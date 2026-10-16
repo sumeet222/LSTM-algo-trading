@@ -1,0 +1,73 @@
+{
+  "all_pass": true,
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_hf20_training.py",
+        "tests/test_hf20_visualization.py",
+        "-q"
+      ],
+      "elapsed_seconds": 11.548027374956291,
+      "finished_UTC": "2026-10-16T22:05:35.498409+00:00",
+      "log": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/release_focused_pytest.txt",
+      "name": "focused_pytest",
+      "return_code": 0,
+      "started_UTC": "2026-10-16T22:05:23.950692+00:00"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "elapsed_seconds": 0.06049804203212261,
+      "finished_UTC": "2026-10-16T22:05:35.558979+00:00",
+      "log": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/release_ruff.txt",
+      "name": "ruff",
+      "return_code": 0,
+      "started_UTC": "2026-10-16T22:05:35.498497+00:00"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "elapsed_seconds": 23.36686741700396,
+      "finished_UTC": "2026-10-16T22:05:58.925287+00:00",
+      "log": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/release_pylance.txt",
+      "name": "pylance",
+      "return_code": 0,
+      "started_UTC": "2026-10-16T22:05:35.559020+00:00"
+    },
+    {
+      "command": [
+        "./scripts/run_track_a_dashboard.sh",
+        "--check"
+      ],
+      "elapsed_seconds": 1.377207332989201,
+      "finished_UTC": "2026-10-16T22:06:00.302535+00:00",
+      "log": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/release_launcher_check.txt",
+      "name": "launcher_check",
+      "return_code": 0,
+      "started_UTC": "2026-10-16T22:05:58.925376+00:00"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "elapsed_seconds": 0.024342707998584956,
+      "finished_UTC": "2026-10-16T22:06:00.326910+00:00",
+      "log": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/release_diff_check.txt",
+      "name": "diff_check",
+      "return_code": 0,
+      "started_UTC": "2026-10-16T22:06:00.302577+00:00"
+    }
+  ]
+}

@@ -65,6 +65,7 @@ class SessionBatch:
     inputs: Tensor
     targets: Tensor
     origins: Tensor
+    stock_count: int = 5
 
     def validate(self) -> None:
         n = len(self.ids)
@@ -72,9 +73,11 @@ class SessionBatch:
             not n
             or len(set(self.ids)) != n
             or self.inputs.ndim != 5
-            or tuple(self.inputs.shape[:4]) != (n, 2, 5, 48)
+            or self.stock_count not in (5, 20)
+            or (self.stock_count == 20 and self.inputs.shape[-1] != 16)
+            or tuple(self.inputs.shape[:4]) != (n, 2, self.stock_count, 48)
             or self.inputs.shape[-1] not in (16, 21, 23, 85)
-            or tuple(self.targets.shape) != (n, 2, 5)
+            or tuple(self.targets.shape) != (n, 2, self.stock_count)
             or tuple(self.origins.shape) != (n, 2)
             or self.origins.dtype != torch.bool
             or not bool(self.origins.any(dim=1).all())
@@ -110,12 +113,15 @@ class SessionBatch:
                 raise ValueError("EXACT_CANONICAL_FULLPEER_CHANNELS_REQUIRED")
 
 
-def session_losses(prediction: Tensor, target: Tensor, origins: Tensor) -> Tensor:
-    """Mean over five stocks, then eligible origins; preserve equal session mass."""
+def session_losses(
+    prediction: Tensor, target: Tensor, origins: Tensor, *, stock_count: int = 5
+) -> Tensor:
+    """Mean over the explicitly declared panel, then origins; equal session mass."""
     if (
         prediction.shape != target.shape
         or prediction.ndim != 3
-        or tuple(prediction.shape[1:]) != (2, 5)
+        or stock_count not in (5, 20)
+        or tuple(prediction.shape[1:]) != (2, stock_count)
         or tuple(origins.shape) != tuple(prediction.shape[:2])
         or origins.dtype != torch.bool
         or not bool(origins.any(dim=1).all())
@@ -130,7 +136,7 @@ def session_losses(prediction: Tensor, target: Tensor, origins: Tensor) -> Tenso
 def batch_prediction(model: nn.Module, batch: SessionBatch) -> Tensor:
     batch.validate()
     valid = batch.inputs[batch.origins]  # (eligible origins, five, 48, 16)
-    values = model(valid.reshape(-1, 48, valid.shape[-1])).reshape(-1, 5)
+    values = model(valid.reshape(-1, 48, valid.shape[-1])).reshape(-1, batch.stock_count)
     output = torch.zeros_like(batch.targets)
     output[batch.origins] = values
     return output

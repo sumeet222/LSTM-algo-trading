@@ -149,7 +149,7 @@
     "cache_readers": [
       {
         "path": "apps/track_a_dashboard.py",
-        "sha256": "b39e328a348fd31e040915039522934dc43f9d92a59c771b0b05dfd0dde70b5a"
+        "sha256": "2f931bc850314f227749214a7f501e38ca54cd5923644b5a2400f6b8fcdfee35"
       },
       {
         "path": "src/lstm_data/aggregation.py",
@@ -527,6 +527,14 @@
     ]
   },
   "global_started_at_seal": 24,
+  "hf20_additive_compatibility": {
+    "change": "Additive HF20 route/readers only; all five-stock result/data/recipe references preserved",
+    "previous_config": {
+      "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/visualization_config_before_hf20.json",
+      "sha256": "97963b5fef9fc853699d739755f6606327e297b78de3459a0faa362bc2fc4edc"
+    },
+    "study_config": "configs/track_a_hf20_visualization_v1.json"
+  },
   "id": "TA010_READONLY_LOCAL_VISUALIZATION_v1",
   "manifest": {
     "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/canonical_dataset_manifest.json",
@@ -664,7 +672,7 @@
   },
   "notes": "Existing local-use assumptions only; no fit/transform fitting/network/export/registry authority.",
   "readers": {
-    "apps/track_a_dashboard.py": "b39e328a348fd31e040915039522934dc43f9d92a59c771b0b05dfd0dde70b5a",
+    "apps/track_a_dashboard.py": "2f931bc850314f227749214a7f501e38ca54cd5923644b5a2400f6b8fcdfee35",
     "src/lstm_data/aggregation.py": "a4aa643253eaa095980aea47de361eb746c03cb9d6ec85f80013e1f7efb77a2b",
     "src/lstm_data/ft0_transforms.py": "dce3424a3367d2bb8889e3b8a083b82f109ebc22e22690756aaced62a939c4f6",
     "src/lstm_data/normalization_report.py": "a7880bef4de53ae5cf56d6666d0c7395f4279c73eeb68ae53d050a7bcf36e0d3",
@@ -679,6 +687,8 @@
     "src/lstm_data/visualization/controlled.py": "354b402cae7910968061dc3fd1ee6582474964ac87f117ff0c3c9aa4d4d71578",
     "src/lstm_data/visualization/controlled_ui.py": "f55ef4be40f364e15c63a3d46c228cffb78dab0ec948dd64d5082d9adb19ff60",
     "src/lstm_data/visualization/figures.py": "d80e6dc6d528cf4a12393474a397b387fe259a8407afed50ac5fea0cf02666c9",
+    "src/lstm_data/visualization/hf20.py": "9908bb66b138288a33815897427791a9e1c5f9a75d0a9afd3c595591b9393adc",
+    "src/lstm_data/visualization/hf20_ui.py": "19ad12687c492e5d1371592db73f4f05599e14e41dfbd3a7f1992f355f83744e",
     "src/lstm_data/visualization/history.py": "c628c03c58fe2d5f5ba9fd4500e00804a8b2fbc83afce8b7370d3cca54d71125",
     "src/lstm_data/visualization/loaders.py": "a577b54d42a86b8bbda771e83283254d13fd40a8cf491b69ddae752bfa3bd3c2",
     "src/lstm_data/visualization/metrics.py": "8df1c9014f4426a3d4275b2d275f1c8407a058e1f9e188110d53eee474171f13",

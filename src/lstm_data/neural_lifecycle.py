@@ -7,8 +7,10 @@ import math
 import platform
 import time
 from collections import Counter
+from collections.abc import Callable
 from dataclasses import dataclass, replace
 from pathlib import Path
+from typing import Protocol
 
 import numpy as np
 import pandas as pd
@@ -19,6 +21,7 @@ from .baseline_fit import FitData, Preparation, prepare
 from .baseline_inputs import BaselineInput
 from .baseline_ridge import RidgeOrigin, Stage, adequacy, fitting_origins, windows
 from .config import digest, fingerprint, write_json
+from .controlled_loss import LossPolicy
 from .ft0_transforms import identity
 from .labels import FitWindow
 from .neural_artifacts import MODE, PairIdentity, PairRegistry, load_checkpoint, save_checkpoint
@@ -30,6 +33,7 @@ from .neural_data import (
     validate_label_clocks,
 )
 from .neural_engine import (
+    SessionBatch,
     batch_prediction,
     clip,
     norm_summary,
@@ -87,19 +91,39 @@ class EarlyStop:
         return qualifying
 
 
+class SessionView(Protocol):
+    """A panel-specific adapter supplies whole sessions to the shared epoch engine."""
+
+    @property
+    def sessions(self) -> tuple[str, ...]: ...
+
+    def batch(self, positions: tuple[int, ...]) -> SessionBatch: ...
+
+
 def epoch_pass(
     model: NeuralModel,
-    view: NeuralView | MarketNeuralView | E5View,
+    view: SessionView,
     epoch: int,
     seed: int,
     opt: torch.optim.AdamW | None = None,
+    *,
+    policy: LossPolicy | None = None,
+    batch_sink: Callable[[dict], None] | None = None,
+    deadline: float | None = None,
 ) -> dict:
     """Aggregate the exact session sum across batches; no average of batch means."""
     model.train(opt is not None)
     total, count, norms, order, losses_by_day, scores, targets = 0.0, 0, [], [], [], [], []
     gate_weights, gate_norms, input_norms = [], [], []
     peer_gradient_norms = []
-    for positions in session_batches(len(view.sessions), seed, epoch, shuffle=opt is not None):
+    objectives = []
+    started = time.monotonic()
+    for batch_index, positions in enumerate(
+        session_batches(len(view.sessions), seed, epoch, shuffle=opt is not None), 1
+    ):
+        step_started = time.monotonic()
+        if deadline is not None and step_started >= deadline:
+            raise TimeoutError("FROZEN_FITTING_DEADLINE")
         batch = view.batch(positions)
         if opt is not None and isinstance(model, EndpointGatedLSTM):
             batch.inputs.requires_grad_()
@@ -112,9 +136,20 @@ def epoch_pass(
                 )
         order.extend(batch.ids)
         with torch.set_grad_enabled(opt is not None):
-            predictions = batch_prediction(model, batch)
-            losses = session_losses(predictions, batch.targets, batch.origins)
-            loss = losses.mean()
+            logits = batch_prediction(model, batch)
+            predictions = policy.canonical(logits) if policy is not None else logits
+            losses = session_losses(
+                predictions, batch.targets, batch.origins, stock_count=batch.stock_count
+            )
+            objective = (
+                policy.objective(
+                    logits, batch.targets, batch.origins, stock_count=batch.stock_count
+                )
+                if policy is not None
+                else losses
+            )
+            objectives.extend(objective.detach().tolist())
+            loss = objective.mean()
             if opt is not None:
                 opt.zero_grad(set_to_none=True)
                 loss.backward()
@@ -142,17 +177,43 @@ def epoch_pass(
                     input_norms.append(float(batch.inputs.grad.norm()))
                 norms.append(clip(model))
                 opt.step()
+                if any(not bool(torch.isfinite(p).all()) for p in model.parameters()):
+                    raise ValueError("NONFINITE_WEIGHT_INVALID")
         measured = losses.detach()
         total += float(measured.sum())
         count += len(batch.ids)
         losses_by_day.extend(measured.tolist())
         scores.extend(predictions.detach()[batch.origins].reshape(-1).tolist())
         targets.extend(batch.targets[batch.origins].reshape(-1).tolist())
+        if batch_sink is not None:
+            truth = batch.targets[batch.origins].detach().cpu().numpy().reshape(-1)
+            batch_sink(
+                dict(
+                    epoch=epoch,
+                    batch_index=batch_index,
+                    sessions=list(batch.ids),
+                    origins=int(batch.origins.sum()),
+                    seconds=time.monotonic() - step_started,
+                    optimizer_step=opt is not None,
+                    preclip_norm=norms[-1] if opt is not None else None,
+                    canonical_mse=float(measured.mean()),
+                    objective=float(objective.detach().mean()),
+                    target_abs_max=float(np.max(np.abs(truth))),
+                    target_abs_p99=float(np.quantile(np.abs(truth), 0.99)),
+                    target_abs_gt10=int(np.sum(np.abs(truth) > 10)),
+                    target_abs_gt20=int(np.sum(np.abs(truth) > 20)),
+                    largest_session_loss_share=float(measured.max() / measured.sum())
+                    if float(measured.sum())
+                    else 0.0,
+                )
+            )
     if count != len(view.sessions) or len(set(order)) != count:
         raise ValueError("EXACT_SESSION_EPOCH_CONSERVATION_REQUIRED")
     sorted_losses = sorted(losses_by_day, reverse=True)
     result = {
         "epoch": epoch,
+        "optimizer_objective": float(np.mean(objectives)),
+        "seconds": time.monotonic() - started,
         "mean_session_mse": total / count,
         "sessions": count,
         "optimizer_steps": len(norms),

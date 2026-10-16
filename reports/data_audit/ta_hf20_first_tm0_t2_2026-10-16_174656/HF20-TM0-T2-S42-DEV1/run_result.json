@@ -1,0 +1,245 @@
+{
+  "approval": {
+    "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/live_two_pair_approval.json",
+    "sha256": "b39edb04874532d35b558536daf7781fba42645d82d17c3170baf25444df0222"
+  },
+  "arm": "T2",
+  "calibration_checkpoint": {
+    "binding": {
+      "architecture": "TM0",
+      "arm": "T2",
+      "checkpoint_outputs": "LOGITS",
+      "clock_id": "HF20_COMPLETED_VENDOR_HOUR_CLOSE_PROXY_V1",
+      "code_sha256": "5906eabba77e8cff7a06160ccc725451a988a5aa25702304a2aef4e8d5561dbc",
+      "feature_id": "FT1_HF20_HOURLY_NATIVE_V2",
+      "input_contract": {
+        "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/training_ready_input_contract.json",
+        "sha256": "4be39c0e85fc390766331ecb19e2a24721399f1e201de864eabe8eeed49add1c"
+      },
+      "inverse": "SCALE_TIMES_SINH_ONCE",
+      "parameters": 6433,
+      "plan": {
+        "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/experiment_design.json",
+        "sha256": "98c32f767c4f34c4fcd398ac9f3741d7d5614bbc2e858f33da09190f5923e44a"
+      },
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:aae2ed05bbc680a2f4f95b37fc9e4cf423bb7f00cececfeebd98ee6bc981ba8b",
+      "run_id": "HF20-TM0-T2-S42-DEV1",
+      "scale": {
+        "floor": 1e-06,
+        "observations": 17440,
+        "origins": 872,
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "population_sha256": "424ad5f4e1233f518a88d2db034910997b0d484f5d8a080bfe3a50eff0a2d24d",
+        "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+        "recipe_id": "HF20_RECIPE:aae2ed05bbc680a2f4f95b37fc9e4cf423bb7f00cececfeebd98ee6bc981ba8b",
+        "scale": 0.9055291414260864,
+        "scale_id": "HF20_T2:029766d44c5fbf4e86d657408b1f78a8ac5e5d0af0f9369381e33434dcb1452b",
+        "sessions": 436,
+        "split": "inner_train",
+        "target_sha256": "0d9eef5a8902cd08007b4ed40c9a2b1f29207859c61e5d904a5e21dbedd352ce"
+      },
+      "seed": 42,
+      "selected_epoch": 1,
+      "source_revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+      "stage": "CALIBRATION_SELECTED",
+      "symbols": [
+        "VZ",
+        "COP",
+        "BAC",
+        "BA",
+        "AAPL",
+        "PEP",
+        "MRK",
+        "SBUX",
+        "CVX",
+        "MS",
+        "AMD",
+        "KO",
+        "JNJ",
+        "AMZN",
+        "XOM",
+        "WFC",
+        "AVGO",
+        "TSLA",
+        "MA",
+        "CSCO"
+      ],
+      "target_id": "TG20_HF20_CROSS_SECTIONAL_V1"
+    },
+    "bytes": 30357,
+    "checkpoint": {
+      "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/calibration_selected.pt",
+      "sha256": "8502ae495585d05e1bb9fd375e43a83e52fcb61233599f03df150de7e10ef8a7"
+    }
+  },
+  "calibration_steps": 336,
+  "code_sha256": "5906eabba77e8cff7a06160ccc725451a988a5aa25702304a2aef4e8d5561dbc",
+  "development_rows": 7320,
+  "fresh_initial_hash": "079edbe32c7565824b359686e3eeb181ebe7986eba173d4af3ef78869a1ec836",
+  "fresh_optimizer": true,
+  "health": {
+    "nonfinite_gradient_count": 0,
+    "reasons": [],
+    "scope": "BOTH_CALIBRATION_AND_REFIT",
+    "status": "PASS_PER_RUN_TELEMETRY",
+    "warning_epochs": {
+      "calibration": [],
+      "refit": []
+    }
+  },
+  "heldout_numeric_rows": 0,
+  "initial_hash": "079edbe32c7565824b359686e3eeb181ebe7986eba173d4af3ef78869a1ec836",
+  "input_contract": {
+    "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/training_ready_input_contract.json",
+    "sha256": "4be39c0e85fc390766331ecb19e2a24721399f1e201de864eabe8eeed49add1c"
+  },
+  "inverse_count": 1,
+  "plan": {
+    "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/experiment_design.json",
+    "sha256": "98c32f767c4f34c4fcd398ac9f3741d7d5614bbc2e858f33da09190f5923e44a"
+  },
+  "refit_checkpoint": {
+    "binding": {
+      "architecture": "TM0",
+      "arm": "T2",
+      "checkpoint_outputs": "LOGITS",
+      "clock_id": "HF20_COMPLETED_VENDOR_HOUR_CLOSE_PROXY_V1",
+      "code_sha256": "5906eabba77e8cff7a06160ccc725451a988a5aa25702304a2aef4e8d5561dbc",
+      "feature_id": "FT1_HF20_HOURLY_NATIVE_V2",
+      "input_contract": {
+        "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/training_ready_input_contract.json",
+        "sha256": "4be39c0e85fc390766331ecb19e2a24721399f1e201de864eabe8eeed49add1c"
+      },
+      "inverse": "SCALE_TIMES_SINH_ONCE",
+      "parameters": 6433,
+      "plan": {
+        "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/experiment_design.json",
+        "sha256": "98c32f767c4f34c4fcd398ac9f3741d7d5614bbc2e858f33da09190f5923e44a"
+      },
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:8eec6d701287109c6c1dbc17ffdfbd53146e18d8e6796a3d0c17e385f14d6c3e",
+      "run_id": "HF20-TM0-T2-S42-DEV1",
+      "scale": {
+        "floor": 1e-06,
+        "observations": 19960,
+        "origins": 998,
+        "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+        "population_sha256": "f9c03d3948b0db1cac3af2d3162b3e0010d7011ddd9dce7d5492ea1b38407838",
+        "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+        "recipe_id": "HF20_RECIPE:8eec6d701287109c6c1dbc17ffdfbd53146e18d8e6796a3d0c17e385f14d6c3e",
+        "scale": 0.9057720005512238,
+        "scale_id": "HF20_T2:074ddfe4fbed5918e9f484d63053e48de27a6abf89fb6bf90d16e535000e894d",
+        "sessions": 499,
+        "split": "refit",
+        "target_sha256": "c6368b8ffd2ebeb185236983c7454c61d874ebfd14881d8b8bfa85affc9f06c0"
+      },
+      "seed": 42,
+      "selected_epoch": 1,
+      "source_revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+      "stage": "REFIT_FINAL",
+      "symbols": [
+        "VZ",
+        "COP",
+        "BAC",
+        "BA",
+        "AAPL",
+        "PEP",
+        "MRK",
+        "SBUX",
+        "CVX",
+        "MS",
+        "AMD",
+        "KO",
+        "JNJ",
+        "AMZN",
+        "XOM",
+        "WFC",
+        "AVGO",
+        "TSLA",
+        "MA",
+        "CSCO"
+      ],
+      "target_id": "TG20_HF20_CROSS_SECTIONAL_V1"
+    },
+    "bytes": 30229,
+    "checkpoint": {
+      "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/refit_final.pt",
+      "sha256": "fb7fa8153096cebf24b2a33f0fc1105feca4f4905ed55648c8401e67bd40dc42"
+    }
+  },
+  "refit_steps": 32,
+  "reload_exact": true,
+  "run_id": "HF20-TM0-T2-S42-DEV1",
+  "scales": {
+    "inner_train": {
+      "floor": 1e-06,
+      "observations": 17440,
+      "origins": 872,
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "population_sha256": "424ad5f4e1233f518a88d2db034910997b0d484f5d8a080bfe3a50eff0a2d24d",
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:aae2ed05bbc680a2f4f95b37fc9e4cf423bb7f00cececfeebd98ee6bc981ba8b",
+      "scale": 0.9055291414260864,
+      "scale_id": "HF20_T2:029766d44c5fbf4e86d657408b1f78a8ac5e5d0af0f9369381e33434dcb1452b",
+      "sessions": 436,
+      "split": "inner_train",
+      "target_sha256": "0d9eef5a8902cd08007b4ed40c9a2b1f29207859c61e5d904a5e21dbedd352ce"
+    },
+    "refit": {
+      "floor": 1e-06,
+      "observations": 19960,
+      "origins": 998,
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "population_sha256": "f9c03d3948b0db1cac3af2d3162b3e0010d7011ddd9dce7d5492ea1b38407838",
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:8eec6d701287109c6c1dbc17ffdfbd53146e18d8e6796a3d0c17e385f14d6c3e",
+      "scale": 0.9057720005512238,
+      "scale_id": "HF20_T2:074ddfe4fbed5918e9f484d63053e48de27a6abf89fb6bf90d16e535000e894d",
+      "sessions": 499,
+      "split": "refit",
+      "target_sha256": "c6368b8ffd2ebeb185236983c7454c61d874ebfd14881d8b8bfa85affc9f06c0"
+    }
+  },
+  "score_units": "CANONICAL_TG20",
+  "selection": {
+    "best": 3.292649355801669,
+    "epoch": 12,
+    "patience": 11,
+    "raw_epoch": 2,
+    "raw_min": 3.2911129691384056,
+    "selected": 1,
+    "status": "PATIENCE_STOP"
+  },
+  "status": "COMPLETED",
+  "views": {
+    "development": {
+      "origins": 366,
+      "population_sha256": "9a6e065cdc5c974c0a9cdc0d0152e1a3a2883532ce6aa7c8f3f2b551062d0b36",
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:8eec6d701287109c6c1dbc17ffdfbd53146e18d8e6796a3d0c17e385f14d6c3e",
+      "sessions": 183
+    },
+    "inner_train": {
+      "origins": 872,
+      "population_sha256": "424ad5f4e1233f518a88d2db034910997b0d484f5d8a080bfe3a50eff0a2d24d",
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:aae2ed05bbc680a2f4f95b37fc9e4cf423bb7f00cececfeebd98ee6bc981ba8b",
+      "sessions": 436
+    },
+    "inner_validation": {
+      "origins": 110,
+      "population_sha256": "f02fca8f5f270e4208f2f2edc6a5e40f8ed1a7f2d9a8a79c39b885e3b93aaee5",
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:aae2ed05bbc680a2f4f95b37fc9e4cf423bb7f00cececfeebd98ee6bc981ba8b",
+      "sessions": 55
+    },
+    "refit": {
+      "origins": 998,
+      "population_sha256": "f9c03d3948b0db1cac3af2d3162b3e0010d7011ddd9dce7d5492ea1b38407838",
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:8eec6d701287109c6c1dbc17ffdfbd53146e18d8e6796a3d0c17e385f14d6c3e",
+      "sessions": 499
+    }
+  }
+}

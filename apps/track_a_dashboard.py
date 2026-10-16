@@ -54,6 +54,7 @@ SECTIONS = (
     "Research Notes / Provenance",
     "Controlled Experiments",
     "B1 Normalization (012B)",
+    "HF20: TM0 vs T2",
 )
 PLOT_CONFIG = {"displaylogo": False, "scrollZoom": True, "modeBarButtonsToRemove": ["toImage"]}
 
@@ -123,6 +124,9 @@ def filter_frame(
 
 
 def start_here(c: Catalog) -> None:
+    from lstm_data.visualization.hf20_ui import open_hf20
+
+    st.button("Open HF20: TM0 vs T2", on_click=open_hf20, key="start_hf20")
     from lstm_data.visualization.nb1_ui import open_nb1
     from lstm_data.visualization.normalization_ui import open_audit
 
@@ -784,6 +788,14 @@ def main() -> None:
     st.sidebar.title("Track A")
     st.sidebar.caption("Research explorer · local / read-only")
     section = st.sidebar.radio("Explore", SECTIONS, key="section")
+    if section == "HF20: TM0 vs T2":
+        from lstm_data.visualization.hf20_ui import panel as hf20_panel
+
+        try:
+            hf20_panel(ROOT)
+        except (ViewUnavailable, OSError, ValueError) as exc:
+            st.warning(str(exc))
+        return
     if section == "B1 Normalization (012B)":
         from lstm_data.visualization.nb1_ui import panel as nb1_panel
 

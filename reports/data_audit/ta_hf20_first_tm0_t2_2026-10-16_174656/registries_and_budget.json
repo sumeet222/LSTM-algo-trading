@@ -1,0 +1,77 @@
+{
+  "ceiling": 200,
+  "closing": 30,
+  "completed": [
+    "HF20-TM0-C0-S42-DEV1",
+    "HF20-TM0-T2-S42-DEV1"
+  ],
+  "historical_40_cap_metadata_unchanged": true,
+  "journal": {
+    "path": "reports/audit/track_a_real_pairs_v6.jsonl",
+    "sha256": "e371713ec259bb8418210ebeb9165db466f101a19a9bfdf3b64dc0313127d735"
+  },
+  "new_starts": [
+    {
+      "at": "2026-10-16T21:53:24.996021+00:00",
+      "authority": {
+        "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/live_two_pair_approval.json",
+        "sha256": "b39edb04874532d35b558536daf7781fba42645d82d17c3170baf25444df0222"
+      },
+      "detail": {
+        "code_sha256": "5906eabba77e8cff7a06160ccc725451a988a5aa25702304a2aef4e8d5561dbc",
+        "start": {
+          "ET": "2026-10-16T17:53:23.065955-04:00",
+          "UTC": "2026-10-16T21:53:23.065955+00:00"
+        }
+      },
+      "effective_ceiling": 200,
+      "global_started_pairs": 29,
+      "plan": {
+        "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/experiment_design.json",
+        "sha256": "98c32f767c4f34c4fcd398ac9f3741d7d5614bbc2e858f33da09190f5923e44a"
+      },
+      "previous": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "previous_journal": {
+        "path": "reports/audit/track_a_real_pairs_v5.jsonl",
+        "sha256": "dc7f4a5ddcf61fb48a99b20cb9a2de528adc85daa760207ddaab730203ff19e6"
+      },
+      "run_id": "HF20-TM0-C0-S42-DEV1",
+      "sequence": 1,
+      "status": "STARTED"
+    },
+    {
+      "at": "2026-10-16T21:55:24.049914+00:00",
+      "authority": {
+        "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/live_two_pair_approval.json",
+        "sha256": "b39edb04874532d35b558536daf7781fba42645d82d17c3170baf25444df0222"
+      },
+      "detail": {
+        "code_sha256": "5906eabba77e8cff7a06160ccc725451a988a5aa25702304a2aef4e8d5561dbc",
+        "start": {
+          "ET": "2026-10-16T17:55:22.736162-04:00",
+          "UTC": "2026-10-16T21:55:22.736162+00:00"
+        }
+      },
+      "effective_ceiling": 200,
+      "global_started_pairs": 30,
+      "plan": {
+        "path": "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/experiment_design.json",
+        "sha256": "98c32f767c4f34c4fcd398ac9f3741d7d5614bbc2e858f33da09190f5923e44a"
+      },
+      "previous": "1fe11d97d3d12f8216c1541f5f91a68745b2fade183db54fef3075adc11b74ae",
+      "previous_journal": {
+        "path": "reports/audit/track_a_real_pairs_v5.jsonl",
+        "sha256": "dc7f4a5ddcf61fb48a99b20cb9a2de528adc85daa760207ddaab730203ff19e6"
+      },
+      "run_id": "HF20-TM0-T2-S42-DEV1",
+      "sequence": 5,
+      "status": "STARTED"
+    }
+  ],
+  "old_chain_preserved": true,
+  "opening": 28,
+  "pointer": {
+    "path": "configs/CURRENT_EXPERIMENT_REGISTRY.json",
+    "sha256": "54a487aa199025a17ea1b60001547aac496137c46b74d26b3e9703cc5878eb1e"
+  }
+}

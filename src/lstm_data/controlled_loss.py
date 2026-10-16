@@ -40,7 +40,12 @@ class LossPolicy:
         return value
 
     def objective(
-        self, logits: torch.Tensor, target: torch.Tensor, origins: torch.Tensor
+        self,
+        logits: torch.Tensor,
+        target: torch.Tensor,
+        origins: torch.Tensor,
+        *,
+        stock_count: int = 5,
     ) -> torch.Tensor:
         if self.arm == "H1":
             element = torch.nn.functional.huber_loss(logits, target, reduction="none", delta=2.0)
@@ -52,7 +57,7 @@ class LossPolicy:
             if self.arm == "T2"
             else target
         )
-        return session_losses(logits, truth, origins)
+        return session_losses(logits, truth, origins, stock_count=stock_count)
 
 
 def fit_policy(view: RealInputView, arm: str) -> dict:

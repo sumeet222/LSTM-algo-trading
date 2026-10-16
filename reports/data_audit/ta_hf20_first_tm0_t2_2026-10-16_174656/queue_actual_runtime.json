@@ -1,0 +1,43 @@
+{
+  "pairs": [
+    {
+      "command": [
+        "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/bin/python",
+        "-u",
+        "-m",
+        "lstm_data.hf20_training_run",
+        "--plan",
+        "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/experiment_design.json",
+        "--approval",
+        "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/live_two_pair_approval.json",
+        "--run-id",
+        "HF20-TM0-C0-S42-DEV1",
+        "--out",
+        "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1"
+      ],
+      "return_code": 0,
+      "run_id": "HF20-TM0-C0-S42-DEV1",
+      "supervisor_wall_seconds": 118.628650416038
+    },
+    {
+      "command": [
+        "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/bin/python",
+        "-u",
+        "-m",
+        "lstm_data.hf20_training_run",
+        "--plan",
+        "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/experiment_design.json",
+        "--approval",
+        "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/live_two_pair_approval.json",
+        "--run-id",
+        "HF20-TM0-T2-S42-DEV1",
+        "--out",
+        "reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1"
+      ],
+      "return_code": 0,
+      "run_id": "HF20-TM0-T2-S42-DEV1",
+      "supervisor_wall_seconds": 38.20480912504718
+    }
+  ],
+  "queue_supervisor_wall_seconds": 156.9451729169814
+}

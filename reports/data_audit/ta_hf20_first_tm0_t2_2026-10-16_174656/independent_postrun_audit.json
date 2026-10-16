@@ -1,0 +1,57 @@
+{
+  "actual_updates_per_arm": {
+    "calibration": 336,
+    "refit": 32
+  },
+  "canonical_validation_D6g_replay_exact": true,
+  "checkpoints": [
+    {
+      "arm": "C0",
+      "checkpoint_sha256": "84bcbd852cc41a45417996bc24c4dabe14542692807dfc2946b462972ec26234",
+      "epoch": 1,
+      "finite_float32_cpu": true,
+      "scale": null,
+      "stage": "CALIBRATION_SELECTED",
+      "state_sha256": "0ea638f0b9b9d3df1593cc7e817341e790c093463d70a571c94e4e59d1eee8ef"
+    },
+    {
+      "arm": "C0",
+      "checkpoint_sha256": "7004c5d6c77ca7177f53899fe7530da1242e24d3852378a9b78662f39cc25ed7",
+      "epoch": 1,
+      "finite_float32_cpu": true,
+      "scale": null,
+      "stage": "REFIT_FINAL",
+      "state_sha256": "795bccbe66ae77f43c23d7bb094f2538b57c15021de7e03782075ad73f4c5f32"
+    },
+    {
+      "arm": "T2",
+      "checkpoint_sha256": "8502ae495585d05e1bb9fd375e43a83e52fcb61233599f03df150de7e10ef8a7",
+      "epoch": 1,
+      "finite_float32_cpu": true,
+      "scale": 0.9055291414260864,
+      "stage": "CALIBRATION_SELECTED",
+      "state_sha256": "80fef6d7adabfd1942fb3883661e0872aa25b87fd666104e296eb9b2b9f52669"
+    },
+    {
+      "arm": "T2",
+      "checkpoint_sha256": "fb7fa8153096cebf24b2a33f0fc1105feca4f4905ed55648c8401e67bd40dc42",
+      "epoch": 1,
+      "finite_float32_cpu": true,
+      "scale": 0.9057720005512238,
+      "stage": "REFIT_FINAL",
+      "state_sha256": "3b075b3069e3871d01d5efa7c95e9484bc4001cb24d65624f6c3ca1446ee397a"
+    }
+  ],
+  "equal_seed_initial_weights": true,
+  "fresh_refit_exact_epoch_and_optimizer_state": true,
+  "global_pairs": 30,
+  "journal_starts": 2,
+  "no_model_selection_on_development": true,
+  "optimizer_steps_in_this_readonly_audit": 0,
+  "scales_independently_recomputed": {
+    "inner_train": 0.9055291414260864,
+    "refit": 0.9057720005512238
+  },
+  "source_and_feature_numeric_barrier": "2026-01-07",
+  "status": "PASS"
+}
