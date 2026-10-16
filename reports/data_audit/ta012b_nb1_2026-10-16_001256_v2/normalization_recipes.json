@@ -1,0 +1,162 @@
+{
+  "WF1": {
+    "inner": {
+      "a": 0.2731466979426308,
+      "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+      "added_floor": null,
+      "c": 0.8813735870178107,
+      "code_sha256": "a2993dc041d32e5fa2917f2df6c96f2fb77c4b455597dfb3a265d71f36024eee",
+      "count": 20680,
+      "fallback": "MAD / IQR_1.349 / AUDITED_POPULATION_SD / CONSTANT; unchanged",
+      "fit_positions_sha256": "06f9624a21770db927399645d15e391646684f347b1a01654ebc9ac58f5dc014",
+      "keys_sha256": "b2f2d2d3983feffe252e3e9d557e1e630357989be0583c67881907b00f872866",
+      "method": "MAD",
+      "original_center": 0.0063305644756560826,
+      "original_method": "MAD",
+      "original_population_binding": "3272c8ad6fd353648e6af6d57669c8d3717a2c222beccdec92372d02e0509cc2",
+      "original_preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "original_scale": 0.0023839215161307998,
+      "positive_count": 20680,
+      "recipe_id": "ce4507e688dcf661d7e7a1ed06cb50a36c457989cba653511482a84e3def7e6a",
+      "s": 0.0063305644756560826,
+      "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+      "symbol_order": [
+        "AAPL",
+        "COST",
+        "CMCSA",
+        "SBUX",
+        "CME"
+      ],
+      "training_origins_sha256": "e1e09fccbb1404ccd0d29ac396b812c38bc45105ef5ca647e7ee515020075355",
+      "values_sha256": "9bd03b48597db061cefc52312eb2ab4ea8a0ad5fd8678738d9d482334bff73e0",
+      "version": "TA012B_B1_ASINH_POSITIVE_MEDIAN_POOLED_MAD_v1",
+      "weights": "UNWEIGHTED_UNIQUE_HOURLY_KEYS",
+      "window": {
+        "fitted_at": "2026-10-14 23:54:40.440906+00:00",
+        "phase": "INNER_TRAIN",
+        "start": "2020-07-01 04:00:00+00:00",
+        "stop": "2023-03-31 04:00:00+00:00",
+        "window_id": "WF1:INNER_TRAIN"
+      }
+    },
+    "refit": {
+      "a": 0.2737574714957168,
+      "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+      "added_floor": null,
+      "c": 0.8813735866397637,
+      "code_sha256": "a2993dc041d32e5fa2917f2df6c96f2fb77c4b455597dfb3a265d71f36024eee",
+      "count": 22570,
+      "fallback": "MAD / IQR_1.349 / AUDITED_POPULATION_SD / CONSTANT; unchanged",
+      "fit_positions_sha256": "f0d04f2fe50b7046061e20e3c06782695c8b1b50338e4963045c3ff6a5ee0ddb",
+      "keys_sha256": "1938c1eb981720a9ff59132f7a792c7ee4136795122c2cbf95f259ff921d8d2f",
+      "method": "MAD",
+      "original_center": 0.006178719613460164,
+      "original_method": "MAD",
+      "original_population_binding": "82c4a8dc6f5822e84949c1a9ac9daafdf0688d9888fd1727087a08aa8324e2ff",
+      "original_preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "original_scale": 0.0023250573787846163,
+      "positive_count": 22570,
+      "recipe_id": "75c113743c05e450210e69c6e90ab9e0dd794cfee6de215936413a65552fca19",
+      "s": 0.006178719613460164,
+      "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+      "symbol_order": [
+        "AAPL",
+        "COST",
+        "CMCSA",
+        "SBUX",
+        "CME"
+      ],
+      "training_origins_sha256": "7c4230ccbead4e54cc3f1f9bbd7dbdb835d0072444cdc7dda016ddea91f2202a",
+      "values_sha256": "7988f3617de9eb221d98643a296f2cf760071b75835b71f81128ac3b82b62a2e",
+      "version": "TA012B_B1_ASINH_POSITIVE_MEDIAN_POOLED_MAD_v1",
+      "weights": "UNWEIGHTED_UNIQUE_HOURLY_KEYS",
+      "window": {
+        "fitted_at": "2026-10-14 23:54:40.440906+00:00",
+        "phase": "REFIT",
+        "start": "2020-07-01 04:00:00+00:00",
+        "stop": "2023-07-01 04:00:00+00:00",
+        "window_id": "WF1:REFIT"
+      }
+    }
+  },
+  "WF2": {
+    "inner": {
+      "a": 0.27406741076353336,
+      "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+      "added_floor": null,
+      "c": 0.881373587019543,
+      "code_sha256": "a2993dc041d32e5fa2917f2df6c96f2fb77c4b455597dfb3a265d71f36024eee",
+      "count": 24445,
+      "fallback": "MAD / IQR_1.349 / AUDITED_POPULATION_SD / CONSTANT; unchanged",
+      "fit_positions_sha256": "20a7de71862e22f6fb818f6be05d8e27a2f07cc0424cf1cc77cdbeaf10b58634",
+      "keys_sha256": "6012a28ae74d62606d31a882b82d365aae3df7d6f9188a7cc9cadaab44cc86ee",
+      "method": "MAD",
+      "original_center": 0.006019581758386129,
+      "original_method": "MAD",
+      "original_population_binding": "4658920b7e27248fea79879f2bc2cb37f8f41f3b38ed279ee2f701a59d39698d",
+      "original_preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "original_scale": 0.0022698940611838906,
+      "positive_count": 24445,
+      "recipe_id": "aeeeb99d1ba2e9e9c41478d2e00e75fe4d96061fc999f4713a961e621faf223f",
+      "s": 0.006019581758386129,
+      "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+      "symbol_order": [
+        "AAPL",
+        "COST",
+        "CMCSA",
+        "SBUX",
+        "CME"
+      ],
+      "training_origins_sha256": "981ae569d6844ffdf2c93b0968d4497d51653ebbd6974f00bdf180e7414280e5",
+      "values_sha256": "c68b32ba10f5d6c089af865a6789ef48089ce87006c2d116ff2d105c70f57ba3",
+      "version": "TA012B_B1_ASINH_POSITIVE_MEDIAN_POOLED_MAD_v1",
+      "weights": "UNWEIGHTED_UNIQUE_HOURLY_KEYS",
+      "window": {
+        "fitted_at": "2026-10-15 14:23:48.873676+00:00",
+        "phase": "INNER_TRAIN",
+        "start": "2020-07-01 04:00:00+00:00",
+        "stop": "2023-10-02 04:00:00+00:00",
+        "window_id": "WF2:INNER_TRAIN"
+      }
+    },
+    "refit": {
+      "a": 0.27343410944699587,
+      "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+      "added_floor": null,
+      "c": 0.8813735870186963,
+      "code_sha256": "a2993dc041d32e5fa2917f2df6c96f2fb77c4b455597dfb3a265d71f36024eee",
+      "count": 26320,
+      "fallback": "MAD / IQR_1.349 / AUDITED_POPULATION_SD / CONSTANT; unchanged",
+      "fit_positions_sha256": "92313371a0b9e5b30f88c2edcd7f0a3b13dee5d8cf16b643ae6d13a036412910",
+      "keys_sha256": "2411c88a2f503214e889e372613bdc002bb94d8f50908d4f98381cd911d98841",
+      "method": "MAD",
+      "original_center": 0.005908772873050662,
+      "original_method": "MAD",
+      "original_population_binding": "6c5b92a158bea1e6882e6a835b4c83ac04e9c69c8714c77b305e9152e54eb89c",
+      "original_preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "original_scale": 0.0022254735032549828,
+      "positive_count": 26320,
+      "recipe_id": "bdabdbaac7d61868b1610b168cb429dfa20dddc803a32d076210c15d5d8386ab",
+      "s": 0.005908772873050662,
+      "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+      "symbol_order": [
+        "AAPL",
+        "COST",
+        "CMCSA",
+        "SBUX",
+        "CME"
+      ],
+      "training_origins_sha256": "e76ddb65993b53ca6ddd3497bb6e95ed52a0dc28c6779ca2e80a2c73ab4069d3",
+      "values_sha256": "59700aae3617ff03f8ae7af4bb950969f0747abcfc81c9ab2307cd23697b69d1",
+      "version": "TA012B_B1_ASINH_POSITIVE_MEDIAN_POOLED_MAD_v1",
+      "weights": "UNWEIGHTED_UNIQUE_HOURLY_KEYS",
+      "window": {
+        "fitted_at": "2026-10-15 14:23:48.873676+00:00",
+        "phase": "REFIT",
+        "start": "2020-07-01 04:00:00+00:00",
+        "stop": "2024-01-01 05:00:00+00:00",
+        "window_id": "WF2:REFIT"
+      }
+    }
+  }
+}

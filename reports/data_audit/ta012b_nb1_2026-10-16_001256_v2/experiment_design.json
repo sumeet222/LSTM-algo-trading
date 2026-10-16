@@ -1,0 +1,860 @@
+{
+  "assumptions": "ASSUMPTION_CONDITIONAL; private researcher rights/clock attestation; retrospective universe/actions; idealized zero-latency hour-end inputs; completed-hour price proxy; no certification or production migration",
+  "budget_amendment": {
+    "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/budget_amendment_200.json",
+    "sha256": "9b9b32c2cdf275a1195240afd5765b9d381bbc6eaf0bcc1196373f70cf3735e4"
+  },
+  "ceiling": 200,
+  "code_sha256": "a2993dc041d32e5fa2917f2df6c96f2fb77c4b455597dfb3a265d71f36024eee",
+  "confirmation_access": false,
+  "controls": {
+    "WF1": {
+      "123": {
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/C0_WF1_seed123_reference.csv",
+        "sha256": "694e5683a287ab1061dd603f0496018e65bd8ba9149c6e728054c503abf854b1"
+      },
+      "42": {
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/C0_WF1_seed42_reference.csv",
+        "sha256": "7261e1172084442cc4437765d136447aeb2b6c19d5f04730a5485b0ec12dc226"
+      }
+    },
+    "WF2": {
+      "123": {
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/C0_WF2_seed123_reference.csv",
+        "sha256": "080712f3d5a16a89b18937ce29c4eca742e0a26f14414cac4bdd890f5c0900a3"
+      },
+      "42": {
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/C0_WF2_seed42_reference.csv",
+        "sha256": "a3c14a7ef3292afa0508be0e92ffb1a9abbe84878a3606921bb9a8f398f7fd9f"
+      }
+    }
+  },
+  "controls_retrained": false,
+  "deadline": "2026-10-16T06:12:56+00:00",
+  "formula": "x=log(H/L); s=median(x>0 training keys); q=asinh(x/s); z=(q-median(q))/MAD(q); unchanged original fallback",
+  "id": "TA012B_NB1_v1",
+  "intervals": "exploratory post-screen five-session blocks; NOT_SELECTION_ADJUSTED",
+  "maximum_new_starts": 4,
+  "maximum_wall_seconds": 7200,
+  "no_retuning": true,
+  "opening_started": 24,
+  "package_started_at": "2026-10-16T04:12:56+00:00",
+  "primary": "matched equal-day original TG0 MSE",
+  "prior_pointer_snapshot": {
+    "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/registry_pointer_v4_snapshot.json",
+    "sha256": "0d2935af5709867cecab5d5e58d9e438d91b034effc3486966461e8bab951f2a"
+  },
+  "producer": {
+    "path": "reports/data_audit/ta_real_input_bridge_005_2026-10-14_215455/verified_producer.json",
+    "sha256": "02e6484b741386ce3cfa87315a58b89469e79904e5bc4c681da4c18b7247b38f"
+  },
+  "production_migration": false,
+  "protected_refs": [
+    {
+      "path": "reports/audit/track_a_real_pairs_v1.jsonl",
+      "sha256": "c19d38ec5b4d42af235ee9c60041dc7dd17422507bc2d5fd2ddbfc5cfce3f46b"
+    },
+    {
+      "path": "reports/audit/track_a_real_pairs_v2.jsonl",
+      "sha256": "791a3b19a6afe16b76689796a2bd434679e86f48d75177bca410b1c30c669315"
+    },
+    {
+      "path": "reports/audit/track_a_real_pairs_v3.jsonl",
+      "sha256": "1246ca7a45783ce0e3973ab66176daa57886b6f69ca82e4c16fe3e4e3bd025ca"
+    },
+    {
+      "path": "reports/audit/track_a_real_pairs_v4.jsonl",
+      "sha256": "dcb1f0bf315e87f8060ed98aaee66d6a18d1e313d066310dc696be6f90ae3b75"
+    },
+    {
+      "path": "configs/CURRENT_PROTOCOL.json",
+      "sha256": "1b83b2ef8f727618ef319c0c04b36056c5c8cb19857ebe40927851e3295ca600"
+    },
+    {
+      "path": "configs/track_a_candidate_experiment_registry_v4.json",
+      "sha256": "fb165d24fb636bb687482eec0ecfaf159dfc16ffef45d53456c234963c83f907"
+    },
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/predeclared_experiment_matrix_corrected.json",
+      "sha256": "ad5e66a93888cbb4023d620192da7e92cb1d9c3a6f47f04c0d4c5b55e437131e"
+    },
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/authority_corrected.json",
+      "sha256": "8051845d45e16dda99de805ce52384f087e37ebac08b4f26b9bdd643cdddf51e"
+    },
+    {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/canonical_dataset_manifest.json",
+      "sha256": "ffc2932434ad6ec966cb0046ab4a230d693bdf04acbbaddbf26f51cf0c6baad0"
+    },
+    {
+      "bytes": 11122045,
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/canonical_components.json.gz",
+      "sha256": "c2e53e7f21703dbfabfcad8a43ef33ef8aa3d6c4e4915ee3883f25ae81c2a3e8",
+      "uncompressed_bytes": 48221417
+    },
+    {
+      "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/seed42_tm0_first_pair_result.json",
+      "sha256": "575c524f085a4758b3e19fde64c793dbb84ba1f0fc9aa3cf5d7a69aa70d7921f"
+    },
+    {
+      "path": "reports/data_audit/ta005_first_pair_2026-10-14_234019/first_tm0_seed42_WF1/refit_final.pt",
+      "sha256": "b673d88ce4458ee7db0ce292808370eaeeefda6132b500ee6e9f7d26dc46818b"
+    },
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-C0-S123-WF1/seed123_tm0_pair_result.json",
+      "sha256": "0238a363c44bc304a6b0e776d285210f38883918a7582cad9d53d4ceb197f545"
+    },
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-C0-S123-WF1/refit_final.pt",
+      "sha256": "a82947ed70791a2ca514c950e6de6bc41abb555f993a6b246a325e520e6b9039"
+    },
+    {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_INNER_TRAIN_preprocessing.json",
+      "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+      "sha256": "3283ce988067922542cae06c9d77e3cb7695cab47761933c6ed67f66c45f1c39"
+    },
+    {
+      "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_REFIT_preprocessing.json",
+      "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "sha256": "929fdda939f240b4e59958b62718bf876fd6979183cbd1ccea3dbcbb91890f90"
+    },
+    {
+      "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/seed42_tm0_pair_result.json",
+      "sha256": "4b06525d3346303f7a3d4a1938fc31dbd502372af26271dd26c092e840e1b938"
+    },
+    {
+      "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/TM0/refit_final.pt",
+      "sha256": "b870e8e2157e9998c562894f0a1cda200f98efe1f2fd5deebb4f9ca45b39b01f"
+    },
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-C0-S123-WF2/seed123_tm0_pair_result.json",
+      "sha256": "c65893311c2752a09980e2bb37b8cae70e8f16dd41ce48359e71da77e9ad2f8b"
+    },
+    {
+      "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/TA011-C0-S123-WF2/refit_final.pt",
+      "sha256": "0bdd4508b52700341adc7dd415b039af14404d21e6b9a5a993c422b06808f09f"
+    },
+    {
+      "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_INNER_TRAIN_stock_preparation.json",
+      "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+      "sha256": "f5fbb2391fe197e8712ae6dde2beb4314b9fdfe29b01674e979329bb51259a77"
+    },
+    {
+      "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_REFIT_stock_preparation.json",
+      "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+      "sha256": "8604a65e6ef4c77a24e2227e1f233372e524fae338cef166c29701dfe5653d09"
+    },
+    {
+      "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/display_manifest_final.json",
+      "sha256": "c8c8c4a7a2a62f797d1264905c376cef878e166b691714f3380cb44bfabe2a04"
+    },
+    {
+      "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/independent_feature_oracles.csv",
+      "sha256": "167e577d23a3c09fc9feb4722c6c35c6d689c8527473bb76bbf8cb04bfce11cd"
+    },
+    {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/normalization_recipes.json",
+      "sha256": "4e9794c123fde1c990d23f7ac18215e0a5a9d5953f332d752ac9bd208ddb5106"
+    },
+    {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/feature_oracles.json",
+      "sha256": "3989ba63d558ae8a7546ca6c60670d7b1a8fe3e8c7cf30c64ee2fb5f6dd13b1b"
+    }
+  ],
+  "recipes": {
+    "WF1": {
+      "inner": {
+        "a": 0.2731466979426308,
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "added_floor": null,
+        "c": 0.8813735870178107,
+        "code_sha256": "a2993dc041d32e5fa2917f2df6c96f2fb77c4b455597dfb3a265d71f36024eee",
+        "count": 20680,
+        "fallback": "MAD / IQR_1.349 / AUDITED_POPULATION_SD / CONSTANT; unchanged",
+        "fit_positions_sha256": "06f9624a21770db927399645d15e391646684f347b1a01654ebc9ac58f5dc014",
+        "keys_sha256": "b2f2d2d3983feffe252e3e9d557e1e630357989be0583c67881907b00f872866",
+        "method": "MAD",
+        "original_center": 0.0063305644756560826,
+        "original_method": "MAD",
+        "original_population_binding": "3272c8ad6fd353648e6af6d57669c8d3717a2c222beccdec92372d02e0509cc2",
+        "original_preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "original_scale": 0.0023839215161307998,
+        "positive_count": 20680,
+        "recipe_id": "ce4507e688dcf661d7e7a1ed06cb50a36c457989cba653511482a84e3def7e6a",
+        "s": 0.0063305644756560826,
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "symbol_order": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "training_origins_sha256": "e1e09fccbb1404ccd0d29ac396b812c38bc45105ef5ca647e7ee515020075355",
+        "values_sha256": "9bd03b48597db061cefc52312eb2ab4ea8a0ad5fd8678738d9d482334bff73e0",
+        "version": "TA012B_B1_ASINH_POSITIVE_MEDIAN_POOLED_MAD_v1",
+        "weights": "UNWEIGHTED_UNIQUE_HOURLY_KEYS",
+        "window": {
+          "fitted_at": "2026-10-14 23:54:40.440906+00:00",
+          "phase": "INNER_TRAIN",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2023-03-31 04:00:00+00:00",
+          "window_id": "WF1:INNER_TRAIN"
+        }
+      },
+      "refit": {
+        "a": 0.2737574714957168,
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "added_floor": null,
+        "c": 0.8813735866397637,
+        "code_sha256": "a2993dc041d32e5fa2917f2df6c96f2fb77c4b455597dfb3a265d71f36024eee",
+        "count": 22570,
+        "fallback": "MAD / IQR_1.349 / AUDITED_POPULATION_SD / CONSTANT; unchanged",
+        "fit_positions_sha256": "f0d04f2fe50b7046061e20e3c06782695c8b1b50338e4963045c3ff6a5ee0ddb",
+        "keys_sha256": "1938c1eb981720a9ff59132f7a792c7ee4136795122c2cbf95f259ff921d8d2f",
+        "method": "MAD",
+        "original_center": 0.006178719613460164,
+        "original_method": "MAD",
+        "original_population_binding": "82c4a8dc6f5822e84949c1a9ac9daafdf0688d9888fd1727087a08aa8324e2ff",
+        "original_preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "original_scale": 0.0023250573787846163,
+        "positive_count": 22570,
+        "recipe_id": "75c113743c05e450210e69c6e90ab9e0dd794cfee6de215936413a65552fca19",
+        "s": 0.006178719613460164,
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "symbol_order": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "training_origins_sha256": "7c4230ccbead4e54cc3f1f9bbd7dbdb835d0072444cdc7dda016ddea91f2202a",
+        "values_sha256": "7988f3617de9eb221d98643a296f2cf760071b75835b71f81128ac3b82b62a2e",
+        "version": "TA012B_B1_ASINH_POSITIVE_MEDIAN_POOLED_MAD_v1",
+        "weights": "UNWEIGHTED_UNIQUE_HOURLY_KEYS",
+        "window": {
+          "fitted_at": "2026-10-14 23:54:40.440906+00:00",
+          "phase": "REFIT",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2023-07-01 04:00:00+00:00",
+          "window_id": "WF1:REFIT"
+        }
+      }
+    },
+    "WF2": {
+      "inner": {
+        "a": 0.27406741076353336,
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "added_floor": null,
+        "c": 0.881373587019543,
+        "code_sha256": "a2993dc041d32e5fa2917f2df6c96f2fb77c4b455597dfb3a265d71f36024eee",
+        "count": 24445,
+        "fallback": "MAD / IQR_1.349 / AUDITED_POPULATION_SD / CONSTANT; unchanged",
+        "fit_positions_sha256": "20a7de71862e22f6fb818f6be05d8e27a2f07cc0424cf1cc77cdbeaf10b58634",
+        "keys_sha256": "6012a28ae74d62606d31a882b82d365aae3df7d6f9188a7cc9cadaab44cc86ee",
+        "method": "MAD",
+        "original_center": 0.006019581758386129,
+        "original_method": "MAD",
+        "original_population_binding": "4658920b7e27248fea79879f2bc2cb37f8f41f3b38ed279ee2f701a59d39698d",
+        "original_preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "original_scale": 0.0022698940611838906,
+        "positive_count": 24445,
+        "recipe_id": "aeeeb99d1ba2e9e9c41478d2e00e75fe4d96061fc999f4713a961e621faf223f",
+        "s": 0.006019581758386129,
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "symbol_order": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "training_origins_sha256": "981ae569d6844ffdf2c93b0968d4497d51653ebbd6974f00bdf180e7414280e5",
+        "values_sha256": "c68b32ba10f5d6c089af865a6789ef48089ce87006c2d116ff2d105c70f57ba3",
+        "version": "TA012B_B1_ASINH_POSITIVE_MEDIAN_POOLED_MAD_v1",
+        "weights": "UNWEIGHTED_UNIQUE_HOURLY_KEYS",
+        "window": {
+          "fitted_at": "2026-10-15 14:23:48.873676+00:00",
+          "phase": "INNER_TRAIN",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2023-10-02 04:00:00+00:00",
+          "window_id": "WF2:INNER_TRAIN"
+        }
+      },
+      "refit": {
+        "a": 0.27343410944699587,
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "added_floor": null,
+        "c": 0.8813735870186963,
+        "code_sha256": "a2993dc041d32e5fa2917f2df6c96f2fb77c4b455597dfb3a265d71f36024eee",
+        "count": 26320,
+        "fallback": "MAD / IQR_1.349 / AUDITED_POPULATION_SD / CONSTANT; unchanged",
+        "fit_positions_sha256": "92313371a0b9e5b30f88c2edcd7f0a3b13dee5d8cf16b643ae6d13a036412910",
+        "keys_sha256": "2411c88a2f503214e889e372613bdc002bb94d8f50908d4f98381cd911d98841",
+        "method": "MAD",
+        "original_center": 0.005908772873050662,
+        "original_method": "MAD",
+        "original_population_binding": "6c5b92a158bea1e6882e6a835b4c83ac04e9c69c8714c77b305e9152e54eb89c",
+        "original_preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "original_scale": 0.0022254735032549828,
+        "positive_count": 26320,
+        "recipe_id": "bdabdbaac7d61868b1610b168cb429dfa20dddc803a32d076210c15d5d8386ab",
+        "s": 0.005908772873050662,
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "symbol_order": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "training_origins_sha256": "e76ddb65993b53ca6ddd3497bb6e95ed52a0dc28c6779ca2e80a2c73ab4069d3",
+        "values_sha256": "59700aae3617ff03f8ae7af4bb950969f0747abcfc81c9ab2307cd23697b69d1",
+        "version": "TA012B_B1_ASINH_POSITIVE_MEDIAN_POOLED_MAD_v1",
+        "weights": "UNWEIGHTED_UNIQUE_HOURLY_KEYS",
+        "window": {
+          "fitted_at": "2026-10-15 14:23:48.873676+00:00",
+          "phase": "REFIT",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2024-01-01 05:00:00+00:00",
+          "window_id": "WF2:REFIT"
+        }
+      }
+    }
+  },
+  "registry_definition": {
+    "path": "configs/track_a_candidate_experiment_registry_v5.json",
+    "sha256": "22a0a6101d06530dc6a9149d3a79d188b233c19aef32350074c5870502c063ab"
+  },
+  "report_reserve_seconds": 900,
+  "runs": [
+    {
+      "architecture": "TM0",
+      "arm": "N-B1",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amendment": "TA012B_v1",
+        "amsgrad": false,
+        "architecture": "TM0",
+        "arm": "N-B1",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 16,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "objective": "MSE",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 4,
+        "parameters": 6433,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "target_representation": "TG0",
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "fold": "WF1",
+      "input_id": "8113e111798ba656a197fb20fbc9a9492cd87d8f241bd5b4ddb7846b45221266",
+      "recipe_ids": {
+        "inner": "ce4507e688dcf661d7e7a1ed06cb50a36c457989cba653511482a84e3def7e6a",
+        "refit": "75c113743c05e450210e69c6e90ab9e0dd794cfee6de215936413a65552fca19"
+      },
+      "run_id": "TA012B-N-B1-S42-WF1",
+      "seed": 42,
+      "views": {
+        "WF1": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "origins": 232,
+          "per_origin": {
+            "1": 116,
+            "2": 116
+          },
+          "preparation_id": "20259507312227fd0ef684c01f3d0b1abd35d43a2a499ab412918c2150b287a9",
+          "sessions": 116,
+          "tensor_bytes": 474240,
+          "unique_feature_rows": 7410,
+          "view_id": "CONDITIONAL_REAL_TM0:85f12cf62ffe5ef5a6f1b6f9436238a2d630139d984a71f1b067d4903da8a797"
+        },
+        "inner": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {},
+          "origins": 1376,
+          "per_origin": {
+            "1": 688,
+            "2": 688
+          },
+          "preparation_id": "b91c6a134e2d97a0bfde57600a195d6654400ce547d03034dfe7668dd89fceba",
+          "sessions": 688,
+          "tensor_bytes": 2676480,
+          "unique_feature_rows": 41820,
+          "view_id": "CONDITIONAL_REAL_TM0:1f977e59507b26ac06f146f62ea6e012d1137a7306e18c1ffdea52a71c4d609b"
+        },
+        "refit": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {},
+          "origins": 1502,
+          "per_origin": {
+            "1": 751,
+            "2": 751
+          },
+          "preparation_id": "20259507312227fd0ef684c01f3d0b1abd35d43a2a499ab412918c2150b287a9",
+          "sessions": 751,
+          "tensor_bytes": 2918400,
+          "unique_feature_rows": 45600,
+          "view_id": "CONDITIONAL_REAL_TM0:26bd1c6e66ab12681461278359becec09df43822b9fcaf1e44c3ec1f8bb29710"
+        },
+        "validation": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "origins": 110,
+          "per_origin": {
+            "1": 55,
+            "2": 55
+          },
+          "preparation_id": "b91c6a134e2d97a0bfde57600a195d6654400ce547d03034dfe7668dd89fceba",
+          "sessions": 55,
+          "tensor_bytes": 238080,
+          "unique_feature_rows": 3720,
+          "view_id": "CONDITIONAL_REAL_TM0:46871717c9f4655cc62da365819fdb2909dc643dbcd8e54c4642ba5911ae7d1c"
+        }
+      }
+    },
+    {
+      "architecture": "TM0",
+      "arm": "N-B1",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amendment": "TA012B_v1",
+        "amsgrad": false,
+        "architecture": "TM0",
+        "arm": "N-B1",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 16,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-06-30",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "objective": "MSE",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 4,
+        "parameters": 6433,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 123,
+        "stage": "WF1",
+        "steps": 48,
+        "target_clipping": false,
+        "target_representation": "TG0",
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "fold": "WF1",
+      "input_id": "8113e111798ba656a197fb20fbc9a9492cd87d8f241bd5b4ddb7846b45221266",
+      "recipe_ids": {
+        "inner": "ce4507e688dcf661d7e7a1ed06cb50a36c457989cba653511482a84e3def7e6a",
+        "refit": "75c113743c05e450210e69c6e90ab9e0dd794cfee6de215936413a65552fca19"
+      },
+      "run_id": "TA012B-N-B1-S123-WF1",
+      "seed": 123,
+      "views": {
+        "WF1": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "origins": 232,
+          "per_origin": {
+            "1": 116,
+            "2": 116
+          },
+          "preparation_id": "20259507312227fd0ef684c01f3d0b1abd35d43a2a499ab412918c2150b287a9",
+          "sessions": 116,
+          "tensor_bytes": 474240,
+          "unique_feature_rows": 7410,
+          "view_id": "CONDITIONAL_REAL_TM0:85f12cf62ffe5ef5a6f1b6f9436238a2d630139d984a71f1b067d4903da8a797"
+        },
+        "inner": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {},
+          "origins": 1376,
+          "per_origin": {
+            "1": 688,
+            "2": 688
+          },
+          "preparation_id": "b91c6a134e2d97a0bfde57600a195d6654400ce547d03034dfe7668dd89fceba",
+          "sessions": 688,
+          "tensor_bytes": 2676480,
+          "unique_feature_rows": 41820,
+          "view_id": "CONDITIONAL_REAL_TM0:1f977e59507b26ac06f146f62ea6e012d1137a7306e18c1ffdea52a71c4d609b"
+        },
+        "refit": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {},
+          "origins": 1502,
+          "per_origin": {
+            "1": 751,
+            "2": 751
+          },
+          "preparation_id": "20259507312227fd0ef684c01f3d0b1abd35d43a2a499ab412918c2150b287a9",
+          "sessions": 751,
+          "tensor_bytes": 2918400,
+          "unique_feature_rows": 45600,
+          "view_id": "CONDITIONAL_REAL_TM0:26bd1c6e66ab12681461278359becec09df43822b9fcaf1e44c3ec1f8bb29710"
+        },
+        "validation": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "origins": 110,
+          "per_origin": {
+            "1": 55,
+            "2": 55
+          },
+          "preparation_id": "b91c6a134e2d97a0bfde57600a195d6654400ce547d03034dfe7668dd89fceba",
+          "sessions": 55,
+          "tensor_bytes": 238080,
+          "unique_feature_rows": 3720,
+          "view_id": "CONDITIONAL_REAL_TM0:46871717c9f4655cc62da365819fdb2909dc643dbcd8e54c4642ba5911ae7d1c"
+        }
+      }
+    },
+    {
+      "architecture": "TM0",
+      "arm": "N-B1",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amendment": "TA012B_v1",
+        "amsgrad": false,
+        "architecture": "TM0",
+        "arm": "N-B1",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 16,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-12-31",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "objective": "MSE",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 4,
+        "parameters": 6433,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 42,
+        "stage": "WF2",
+        "steps": 48,
+        "target_clipping": false,
+        "target_representation": "TG0",
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "fold": "WF2",
+      "input_id": "19eeb0ec58e9cbe22d22c6e20146bdb2999cb06011d3cf9432f2280bb29bcd07",
+      "recipe_ids": {
+        "inner": "aeeeb99d1ba2e9e9c41478d2e00e75fe4d96061fc999f4713a961e621faf223f",
+        "refit": "bdabdbaac7d61868b1610b168cb429dfa20dddc803a32d076210c15d5d8386ab"
+      },
+      "run_id": "TA012B-N-B1-S42-WF2",
+      "seed": 42,
+      "views": {
+        "WF2": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "origins": 232,
+          "per_origin": {
+            "1": 116,
+            "2": 116
+          },
+          "preparation_id": "423c4888062c830fdf6359f709e07d94cab0749352dd0be75afc10d64c823853",
+          "sessions": 116,
+          "tensor_bytes": 472320,
+          "unique_feature_rows": 7380,
+          "view_id": "CONDITIONAL_REAL_TM0:8d5220ec5a73078a64a7141bee08c74b4466fe1c9d8cac02d8bbf089d02a2461"
+        },
+        "inner": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {},
+          "origins": 1626,
+          "per_origin": {
+            "1": 813,
+            "2": 813
+          },
+          "preparation_id": "c8a048dd360097e61ee50c26343784e1e929f56ce70159a21f21f0f4a87c64f9",
+          "sessions": 813,
+          "tensor_bytes": 3158400,
+          "unique_feature_rows": 49350,
+          "view_id": "CONDITIONAL_REAL_TM0:2080138b742af86f2c4774f8707d56906d73095e3f0a2cb3934674ce020e8090"
+        },
+        "refit": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {},
+          "origins": 1750,
+          "per_origin": {
+            "1": 875,
+            "2": 875
+          },
+          "preparation_id": "423c4888062c830fdf6359f709e07d94cab0749352dd0be75afc10d64c823853",
+          "sessions": 875,
+          "tensor_bytes": 3398400,
+          "unique_feature_rows": 53100,
+          "view_id": "CONDITIONAL_REAL_TM0:19394303a12dc5f7a604a29797ab314e4b55bbbcb239efd6174284037f6c9c4e"
+        },
+        "validation": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "origins": 108,
+          "per_origin": {
+            "1": 54,
+            "2": 54
+          },
+          "preparation_id": "c8a048dd360097e61ee50c26343784e1e929f56ce70159a21f21f0f4a87c64f9",
+          "sessions": 54,
+          "tensor_bytes": 236160,
+          "unique_feature_rows": 3690,
+          "view_id": "CONDITIONAL_REAL_TM0:5fbd4a32b7066ba74ba065b962664e56b15bed938647044184f21a8c0f628d59"
+        }
+      }
+    },
+    {
+      "architecture": "TM0",
+      "arm": "N-B1",
+      "contract": {
+        "active_fit_seconds": 14400,
+        "amendment": "TA012B_v1",
+        "amsgrad": false,
+        "architecture": "TM0",
+        "arm": "N-B1",
+        "batch_sessions": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "channels": 16,
+        "clip": 1.0,
+        "confirmation": false,
+        "cutoff": "2023-12-31",
+        "device": "CPU_FLOAT32",
+        "dropout": 0.1,
+        "economic_claims": false,
+        "hard_fit_seconds": 16200,
+        "layers": 1,
+        "lr": 0.001,
+        "max_epochs": 60,
+        "minimum_stop": 12,
+        "mode": "ASSUMPTION_CONDITIONAL_CANDIDATE_PILOT_NOT_PRODUCTION",
+        "objective": "MSE",
+        "optimizer": "AdamW",
+        "optimizer_epsilon": 1e-08,
+        "pair_limit": 4,
+        "parameters": 6433,
+        "patience": 10,
+        "qualifying_multiplier": 0.999,
+        "seed": 123,
+        "stage": "WF2",
+        "steps": 48,
+        "target_clipping": false,
+        "target_representation": "TG0",
+        "universe": [
+          "AAPL",
+          "COST",
+          "CMCSA",
+          "SBUX",
+          "CME"
+        ],
+        "weight_decay_bias": 0.0,
+        "weight_decay_matrix": 0.01,
+        "width": 32
+      },
+      "fold": "WF2",
+      "input_id": "19eeb0ec58e9cbe22d22c6e20146bdb2999cb06011d3cf9432f2280bb29bcd07",
+      "recipe_ids": {
+        "inner": "aeeeb99d1ba2e9e9c41478d2e00e75fe4d96061fc999f4713a961e621faf223f",
+        "refit": "bdabdbaac7d61868b1610b168cb429dfa20dddc803a32d076210c15d5d8386ab"
+      },
+      "run_id": "TA012B-N-B1-S123-WF2",
+      "seed": 123,
+      "views": {
+        "WF2": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "origins": 232,
+          "per_origin": {
+            "1": 116,
+            "2": 116
+          },
+          "preparation_id": "423c4888062c830fdf6359f709e07d94cab0749352dd0be75afc10d64c823853",
+          "sessions": 116,
+          "tensor_bytes": 472320,
+          "unique_feature_rows": 7380,
+          "view_id": "CONDITIONAL_REAL_TM0:8d5220ec5a73078a64a7141bee08c74b4466fe1c9d8cac02d8bbf089d02a2461"
+        },
+        "inner": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {},
+          "origins": 1626,
+          "per_origin": {
+            "1": 813,
+            "2": 813
+          },
+          "preparation_id": "c8a048dd360097e61ee50c26343784e1e929f56ce70159a21f21f0f4a87c64f9",
+          "sessions": 813,
+          "tensor_bytes": 3158400,
+          "unique_feature_rows": 49350,
+          "view_id": "CONDITIONAL_REAL_TM0:2080138b742af86f2c4774f8707d56906d73095e3f0a2cb3934674ce020e8090"
+        },
+        "refit": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {},
+          "origins": 1750,
+          "per_origin": {
+            "1": 875,
+            "2": 875
+          },
+          "preparation_id": "423c4888062c830fdf6359f709e07d94cab0749352dd0be75afc10d64c823853",
+          "sessions": 875,
+          "tensor_bytes": 3398400,
+          "unique_feature_rows": 53100,
+          "view_id": "CONDITIONAL_REAL_TM0:19394303a12dc5f7a604a29797ab314e4b55bbbcb239efd6174284037f6c9c4e"
+        },
+        "validation": {
+          "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+          "dtype": "float32",
+          "excluded": {
+            "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+          },
+          "origins": 108,
+          "per_origin": {
+            "1": 54,
+            "2": 54
+          },
+          "preparation_id": "c8a048dd360097e61ee50c26343784e1e929f56ce70159a21f21f0f4a87c64f9",
+          "sessions": 54,
+          "tensor_bytes": 236160,
+          "unique_feature_rows": 3690,
+          "view_id": "CONDITIONAL_REAL_TM0:5fbd4a32b7066ba74ba065b962664e56b15bed938647044184f21a8c0f628d59"
+        }
+      }
+    }
+  ],
+  "secondary": "daily Rank IC, origin/month, gradient G6, tails",
+  "stock_preparations": {
+    "WF1": {
+      "WF1_INNER_TRAIN": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_INNER_TRAIN_preprocessing.json",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "sha256": "3283ce988067922542cae06c9d77e3cb7695cab47761933c6ed67f66c45f1c39"
+      },
+      "WF1_REFIT": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_REFIT_preprocessing.json",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "sha256": "929fdda939f240b4e59958b62718bf876fd6979183cbd1ccea3dbcbb91890f90"
+      }
+    },
+    "WF2": {
+      "WF2_INNER_TRAIN": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_INNER_TRAIN_stock_preparation.json",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "sha256": "f5fbb2391fe197e8712ae6dde2beb4314b9fdfe29b01674e979329bb51259a77"
+      },
+      "WF2_REFIT": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_REFIT_stock_preparation.json",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "sha256": "8604a65e6ef4c77a24e2227e1f233372e524fae338cef166c29701dfe5653d09"
+      }
+    }
+  }
+}

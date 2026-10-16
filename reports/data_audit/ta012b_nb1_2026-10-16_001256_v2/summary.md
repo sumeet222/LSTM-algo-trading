@@ -1,0 +1,3 @@
+# Package012B · historical N-B1
+
+Engineering PASS; 28/200 starts. N-B1 improves matched MSE in 2/4 and daily Rank IC in 1/4 cells. Each cell is in matched_results.csv; five-session intervals are exploratory, post-screen and not selection-adjusted. This is no independent confirmation. The monotone feature transform changes B1 amplitude only; TG0 remains unchanged. G6 WARNs and both-pass clipping remain visible. Neither finite predictions nor smaller B1 tails establish a useful ranking mechanism. A separately preregistered independent development evaluation would be needed for stronger evidence; no further fit or confirmation access is authorized here. N-V12 remains untrained. Source/publication/actions/PIT/rights/course/joint/production qualifications persist.

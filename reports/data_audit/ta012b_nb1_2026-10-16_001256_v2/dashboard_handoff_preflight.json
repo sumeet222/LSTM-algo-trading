@@ -1,0 +1,57 @@
+{
+  "artifacts": {
+    "HOW_TO_VIEW_PACKAGE_012B.md": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/HOW_TO_VIEW_PACKAGE_012B.md",
+      "sha256": "71bec99192eed8351429bc1a28e041a621f9558d6d54d96346365e9dc61abc55"
+    },
+    "b1_distribution_before_after.csv": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/b1_distribution_before_after.csv",
+      "sha256": "73ca5ed9d81f0787bf5275068e2eac766e27a6c40d14812a84dcabf39dc92d4f"
+    },
+    "experiment_design.json": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/experiment_design.json",
+      "sha256": "49a8518f4814a602631f83382de998008cd6ba75b4b18ace641c4f48076f3080"
+    },
+    "feature_oracles.json": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/feature_oracles.json",
+      "sha256": "3989ba63d558ae8a7546ca6c60670d7b1a8fe3e8c7cf30c64ee2fb5f6dd13b1b"
+    },
+    "normalization_recipes.json": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/normalization_recipes.json",
+      "sha256": "4e9794c123fde1c990d23f7ac18215e0a5a9d5953f332d752ac9bd208ddb5106"
+    }
+  },
+  "confirmation_numeric_rows": 0,
+  "original_recipes": {
+    "WF1": {
+      "inner": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_INNER_TRAIN_preprocessing.json",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "sha256": "3283ce988067922542cae06c9d77e3cb7695cab47761933c6ed67f66c45f1c39"
+      },
+      "refit": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_REFIT_preprocessing.json",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "sha256": "929fdda939f240b4e59958b62718bf876fd6979183cbd1ccea3dbcbb91890f90"
+      }
+    },
+    "WF2": {
+      "inner": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_INNER_TRAIN_stock_preparation.json",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "sha256": "f5fbb2391fe197e8712ae6dde2beb4314b9fdfe29b01674e979329bb51259a77"
+      },
+      "refit": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_REFIT_stock_preparation.json",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "sha256": "8604a65e6ef4c77a24e2227e1f233372e524fae338cef166c29701dfe5653d09"
+      }
+    }
+  },
+  "package": "TA012B_NB1_v1",
+  "source": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/canonical_dataset_manifest.json",
+    "sha256": "ffc2932434ad6ec966cb0046ab4a230d693bdf04acbbaddbf26f51cf0c6baad0"
+  },
+  "status": "FIT_AUTHORITY_HOLD"
+}

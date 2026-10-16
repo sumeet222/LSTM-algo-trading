@@ -26,6 +26,7 @@ from .controlled_loss import fit_policy
 from .ft0_transforms import identity
 from .labels import FitWindow
 from .ledger import pair_budget, read_ledger
+from .nb1_authority import NormalizationAuthority
 from .neural_engine import (
     SessionBatch,
     SharedLSTM,
@@ -55,7 +56,13 @@ from .real_bridge_authority import (
 from .real_bridge_data import RealInputView, build_view, load_inputs
 from .wf2_replication import WF2PairAuthority
 
-FitAuthority = TrainingAuthority | BatchPairAuthority | WF2PairAuthority | ControlledAuthority
+FitAuthority = (
+    TrainingAuthority
+    | BatchPairAuthority
+    | WF2PairAuthority
+    | ControlledAuthority
+    | NormalizationAuthority
+)
 FitModel = SharedLSTM | EndpointGatedLSTM
 FitView = RealInputView | ConditionedView
 
@@ -67,6 +74,7 @@ def execution_contract(authority: FitAuthority | None) -> dict:
             type(authority) is BatchPairAuthority
             or type(authority) is WF2PairAuthority
             or type(authority) is ControlledAuthority
+            or type(authority) is NormalizationAuthority
         )
         else CONTRACT
     )
@@ -128,6 +136,7 @@ def append_pair(authority: FitAuthority, status: str, detail: dict) -> None:
         type(authority) is BatchPairAuthority
         or type(authority) is WF2PairAuthority
         or type(authority) is ControlledAuthority
+        or type(authority) is NormalizationAuthority
     ):
         authority.append(status, detail)
         return
@@ -304,6 +313,7 @@ def checkpoint_authority(
         type(authority) is BatchPairAuthority
         or type(authority) is WF2PairAuthority
         or type(authority) is ControlledAuthority
+        or type(authority) is NormalizationAuthority
     ):
         key = "inner" if stage == "CALIBRATION_SELECTED" else "refit"
         if (
@@ -542,6 +552,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
         type(authority) is BatchPairAuthority
         or type(authority) is WF2PairAuthority
         or type(authority) is ControlledAuthority
+        or type(authority) is NormalizationAuthority
     ):
         authority.inputs()
     else:
@@ -559,6 +570,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
             type(authority) is BatchPairAuthority
             or type(authority) is WF2PairAuthority
             or type(authority) is ControlledAuthority
+            or type(authority) is NormalizationAuthority
         )
         else build_view(authority.review, candidates["WF1_INNER_TRAIN"], inner),
         "validation": authority.view("validation")
@@ -566,6 +578,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
             type(authority) is BatchPairAuthority
             or type(authority) is WF2PairAuthority
             or type(authority) is ControlledAuthority
+            or type(authority) is NormalizationAuthority
         )
         else build_view(authority.review, candidates["WF1_INNER_TRAIN"], tail, asof=True),
     }
@@ -574,6 +587,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
         type(authority) is BatchPairAuthority
         or type(authority) is WF2PairAuthority
         or type(authority) is ControlledAuthority
+        or type(authority) is NormalizationAuthority
     ):
         dataset = {
             "first_pair_views": {k: v["view_id"] for k, v in authority.descriptor["views"].items()}
@@ -616,6 +630,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
         type(authority) is BatchPairAuthority
         or type(authority) is WF2PairAuthority
         or type(authority) is ControlledAuthority
+        or type(authority) is NormalizationAuthority
     ):
         remaining = min(
             remaining,
@@ -634,6 +649,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
             type(authority) is BatchPairAuthority
             or type(authority) is WF2PairAuthority
             or type(authority) is ControlledAuthority
+            or type(authority) is NormalizationAuthority
         )
         else started + HARD_SECONDS
     )
@@ -647,7 +663,11 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
             cap=contract["clip"],
             arm=contract.get("arm"),
         )
-        if (type(authority) is WF2PairAuthority or type(authority) is ControlledAuthority)
+        if (
+            type(authority) is WF2PairAuthority
+            or type(authority) is ControlledAuthority
+            or type(authority) is NormalizationAuthority
+        )
         else None
     )
     refit_observer = (
@@ -660,7 +680,11 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
             cap=contract["clip"],
             arm=contract.get("arm"),
         )
-        if (type(authority) is WF2PairAuthority or type(authority) is ControlledAuthority)
+        if (
+            type(authority) is WF2PairAuthority
+            or type(authority) is ControlledAuthority
+            or type(authority) is NormalizationAuthority
+        )
         else None
     )
     try:
@@ -695,6 +719,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
                         type(authority) is BatchPairAuthority
                         or type(authority) is WF2PairAuthority
                         or type(authority) is ControlledAuthority
+                        or type(authority) is NormalizationAuthority
                     )
                     else 751
                 )
@@ -742,6 +767,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
                 type(authority) is BatchPairAuthority
                 or type(authority) is WF2PairAuthority
                 or type(authority) is ControlledAuthority
+                or type(authority) is NormalizationAuthority
             )
             else build_view(authority.review, candidates["WF1_REFIT"], full)
         )
@@ -815,6 +841,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
                 type(authority) is BatchPairAuthority
                 or type(authority) is WF2PairAuthority
                 or type(authority) is ControlledAuthority
+                or type(authority) is NormalizationAuthority
             )
             else build_view(authority.review, candidates["WF1_REFIT"], w, asof=True)
         )
@@ -850,6 +877,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
                 type(authority) is BatchPairAuthority
                 or type(authority) is WF2PairAuthority
                 or type(authority) is ControlledAuthority
+                or type(authority) is NormalizationAuthority
             )
             else "seed42_tm0_first_pair_result.json"
         )

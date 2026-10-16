@@ -68,6 +68,7 @@ def open_example(row: pd.Series) -> None:
         full_indicators=[str(row.feature)],
         normalization_example=dict(row),
         normalization_context=False,
+        normalization_nb1=False,
         full_selected=dict(
             symbol=str(row.symbol),
             session=consumer,
@@ -308,3 +309,19 @@ def linked_context(catalog: Catalog, token: tuple) -> None:
         + prep.preparation_id
         + "; 48 endpoints, no future candles or new TG0 computation."
     )
+    if st.session_state.get("normalization_nb1") and row["feature"] == "B1":
+        from .nb1_ui import handoff, recipe
+
+        r = recipe(catalog, handoff(catalog), row["fold"], prefix)
+        if r["original_preparation_id"] != prep.preparation_id:
+            raise ViewUnavailable("N-B1 linked context recipe mismatch")
+        frame["q"] = np.arcsinh(frame.native.to_numpy(dtype=float) / r["s"])
+        frame["N_B1_scaled"] = ((frame.q - r["c"]) / r["a"]).astype(np.float32)
+        st.dataframe(frame, hide_index=True, width="stretch")
+        for field in ("q", "N_B1_scaled"):
+            fig = go.Figure(go.Scatter(x=frame.timestamp, y=frame[field], mode="lines+markers"))
+            fig.update_layout(
+                height=240, yaxis_title=field, xaxis_title="48 completed-hour ends UTC"
+            )
+            st.plotly_chart(fig, width="stretch", key="normalization_nb1_" + field)
+        st.caption(f"N-B1 s={r['s']!r}; c={r['c']!r}; a={r['a']!r}; recipe {r['recipe_id']}")

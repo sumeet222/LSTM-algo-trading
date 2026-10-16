@@ -1,0 +1,686 @@
+{
+  "TA012B-N-B1-S123-WF1": {
+    "G6": {
+      "nonfinite_gradient_count": 0,
+      "reasons": [
+        "SUSTAINED_CLIPPING"
+      ],
+      "scope": "BOTH_CALIBRATION_AND_REFIT",
+      "status": "WARN_INVESTIGATE",
+      "warning_epochs": {
+        "calibration": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "refit": []
+      }
+    },
+    "checkpoints": {
+      "CALIBRATION_SELECTED": {
+        "epoch": 1,
+        "finite": true,
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S123-WF1/calibration_selected.pt",
+        "preparation_id": "b91c6a134e2d97a0bfde57600a195d6654400ce547d03034dfe7668dd89fceba",
+        "resumable": false,
+        "sha256": "98d66eff4394913a3d49a856dcb69207e1cdd4b0cbc581872821c4c7ef37c5e5",
+        "stage": "CALIBRATION_SELECTED",
+        "weights_only": true
+      },
+      "REFIT_FINAL": {
+        "epoch": 1,
+        "finite": true,
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S123-WF1/refit_final.pt",
+        "preparation_id": "20259507312227fd0ef684c01f3d0b1abd35d43a2a499ab412918c2150b287a9",
+        "resumable": false,
+        "sha256": "173cce58f8033b8012eb4e6c6101afa19d0c8a89fa198753c34d76577fa25d4c",
+        "stage": "REFIT_FINAL",
+        "weights_only": true
+      }
+    },
+    "exact_targets_and_masks": true,
+    "fresh_seed_and_optimizer": true,
+    "result": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S123-WF1/seed123_tm0_pair_result.json",
+      "sha256": "0b0a5933d8a25e7ae5b437bf3ed374a256d490f616abf9bc669de47088344f68"
+    },
+    "target_binding": "CONDITIONAL_REAL_TM0:85f12cf62ffe5ef5a6f1b6f9436238a2d630139d984a71f1b067d4903da8a797"
+  },
+  "TA012B-N-B1-S123-WF1:calibration": [
+    {
+      "canonical_MSE_reconstructed": 7.454817400422207,
+      "epoch": 1,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.436289959175642,
+      "epoch": 2,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.420586569364681,
+      "epoch": 3,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.408339328544084,
+      "epoch": 4,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.39987343411113,
+      "epoch": 5,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.383762836456299,
+      "epoch": 6,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.368299933366997,
+      "epoch": 7,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.3582735449768775,
+      "epoch": 8,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.340848368267681,
+      "epoch": 9,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.327399104140525,
+      "epoch": 10,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.303502737089645,
+      "epoch": 11,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.275484273600024,
+      "epoch": 12,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    }
+  ],
+  "TA012B-N-B1-S123-WF1:refit": [
+    {
+      "canonical_MSE_reconstructed": 7.376947659468365,
+      "epoch": 1,
+      "origins": 1502,
+      "passed": true,
+      "sessions": 751,
+      "steps": 47
+    }
+  ],
+  "TA012B-N-B1-S123-WF2": {
+    "G6": {
+      "nonfinite_gradient_count": 0,
+      "reasons": [
+        "SUSTAINED_CLIPPING"
+      ],
+      "scope": "BOTH_CALIBRATION_AND_REFIT",
+      "status": "WARN_INVESTIGATE",
+      "warning_epochs": {
+        "calibration": [
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "refit": []
+      }
+    },
+    "checkpoints": {
+      "CALIBRATION_SELECTED": {
+        "epoch": 1,
+        "finite": true,
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S123-WF2/calibration_selected.pt",
+        "preparation_id": "c8a048dd360097e61ee50c26343784e1e929f56ce70159a21f21f0f4a87c64f9",
+        "resumable": false,
+        "sha256": "30d89fe3fe59fc49ead39a77d321c5c5b7b8693a6563f9f2ba734f8d98a6af6f",
+        "stage": "CALIBRATION_SELECTED",
+        "weights_only": true
+      },
+      "REFIT_FINAL": {
+        "epoch": 1,
+        "finite": true,
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S123-WF2/refit_final.pt",
+        "preparation_id": "423c4888062c830fdf6359f709e07d94cab0749352dd0be75afc10d64c823853",
+        "resumable": false,
+        "sha256": "a8a6234752cb49a75765f6603c56659ea345a296216fd9ddcc8a9e3bd1faf565",
+        "stage": "REFIT_FINAL",
+        "weights_only": true
+      }
+    },
+    "exact_targets_and_masks": true,
+    "fresh_seed_and_optimizer": true,
+    "result": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S123-WF2/seed123_tm0_pair_result.json",
+      "sha256": "931c2ba15c42df37059edaf6a25cbb85e6f7e9972634b7ee215202d0aa6b1baa"
+    },
+    "target_binding": "CONDITIONAL_REAL_TM0:8d5220ec5a73078a64a7141bee08c74b4466fe1c9d8cac02d8bbf089d02a2461"
+  },
+  "TA012B-N-B1-S123-WF2:calibration": [
+    {
+      "canonical_MSE_reconstructed": 7.289211782288874,
+      "epoch": 1,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.2728804585971805,
+      "epoch": 2,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.254307948648563,
+      "epoch": 3,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.237283520153088,
+      "epoch": 4,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.232943959195089,
+      "epoch": 5,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.209201396318086,
+      "epoch": 6,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.214904283098923,
+      "epoch": 7,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.1857625848692726,
+      "epoch": 8,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.173386321003293,
+      "epoch": 9,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.161143444560991,
+      "epoch": 10,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.147286619207516,
+      "epoch": 11,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.1173836246481095,
+      "epoch": 12,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    }
+  ],
+  "TA012B-N-B1-S123-WF2:refit": [
+    {
+      "canonical_MSE_reconstructed": 7.280769595554896,
+      "epoch": 1,
+      "origins": 1750,
+      "passed": true,
+      "sessions": 875,
+      "steps": 55
+    }
+  ],
+  "TA012B-N-B1-S42-WF1": {
+    "G6": {
+      "nonfinite_gradient_count": 0,
+      "reasons": [
+        "SUSTAINED_CLIPPING"
+      ],
+      "scope": "BOTH_CALIBRATION_AND_REFIT",
+      "status": "WARN_INVESTIGATE",
+      "warning_epochs": {
+        "calibration": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "refit": []
+      }
+    },
+    "checkpoints": {
+      "CALIBRATION_SELECTED": {
+        "epoch": 4,
+        "finite": true,
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S42-WF1/calibration_selected.pt",
+        "preparation_id": "b91c6a134e2d97a0bfde57600a195d6654400ce547d03034dfe7668dd89fceba",
+        "resumable": false,
+        "sha256": "f45dc8e9e46fcfc47bd135dba6abb8e8b3990550dabb9d9b7f84e8a4558a2f1b",
+        "stage": "CALIBRATION_SELECTED",
+        "weights_only": true
+      },
+      "REFIT_FINAL": {
+        "epoch": 4,
+        "finite": true,
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S42-WF1/refit_final.pt",
+        "preparation_id": "20259507312227fd0ef684c01f3d0b1abd35d43a2a499ab412918c2150b287a9",
+        "resumable": false,
+        "sha256": "ff57b344027845c2a690731fea68f5d8a4c2c67b6f627170cb395ed47c4e5d08",
+        "stage": "REFIT_FINAL",
+        "weights_only": true
+      }
+    },
+    "exact_targets_and_masks": true,
+    "fresh_seed_and_optimizer": true,
+    "result": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S42-WF1/seed42_tm0_pair_result.json",
+      "sha256": "b924441fe0b56f53c1f8fbe886bffccc02e35b0fd72abb9c91b1098dd0b93be2"
+    },
+    "target_binding": "CONDITIONAL_REAL_TM0:85f12cf62ffe5ef5a6f1b6f9436238a2d630139d984a71f1b067d4903da8a797"
+  },
+  "TA012B-N-B1-S42-WF1:calibration": [
+    {
+      "canonical_MSE_reconstructed": 7.45616261349168,
+      "epoch": 1,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.439893517383309,
+      "epoch": 2,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.424496157224788,
+      "epoch": 3,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.413887600566065,
+      "epoch": 4,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.398879910624305,
+      "epoch": 5,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.382543852162915,
+      "epoch": 6,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.369158534116523,
+      "epoch": 7,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.341673218926718,
+      "epoch": 8,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.321560549181561,
+      "epoch": 9,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.294221878051758,
+      "epoch": 10,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.273414195970047,
+      "epoch": 11,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.265714185182438,
+      "epoch": 12,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.234149322953335,
+      "epoch": 13,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    },
+    {
+      "canonical_MSE_reconstructed": 7.231164959974067,
+      "epoch": 14,
+      "origins": 1376,
+      "passed": true,
+      "sessions": 688,
+      "steps": 43
+    }
+  ],
+  "TA012B-N-B1-S42-WF1:refit": [
+    {
+      "canonical_MSE_reconstructed": 7.382192926622738,
+      "epoch": 1,
+      "origins": 1502,
+      "passed": true,
+      "sessions": 751,
+      "steps": 47
+    },
+    {
+      "canonical_MSE_reconstructed": 7.359102964083777,
+      "epoch": 2,
+      "origins": 1502,
+      "passed": true,
+      "sessions": 751,
+      "steps": 47
+    },
+    {
+      "canonical_MSE_reconstructed": 7.350177896959328,
+      "epoch": 3,
+      "origins": 1502,
+      "passed": true,
+      "sessions": 751,
+      "steps": 47
+    },
+    {
+      "canonical_MSE_reconstructed": 7.335653655538546,
+      "epoch": 4,
+      "origins": 1502,
+      "passed": true,
+      "sessions": 751,
+      "steps": 47
+    }
+  ],
+  "TA012B-N-B1-S42-WF2": {
+    "G6": {
+      "nonfinite_gradient_count": 0,
+      "reasons": [
+        "SUSTAINED_CLIPPING"
+      ],
+      "scope": "BOTH_CALIBRATION_AND_REFIT",
+      "status": "WARN_INVESTIGATE",
+      "warning_epochs": {
+        "calibration": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "refit": []
+      }
+    },
+    "checkpoints": {
+      "CALIBRATION_SELECTED": {
+        "epoch": 2,
+        "finite": true,
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S42-WF2/calibration_selected.pt",
+        "preparation_id": "c8a048dd360097e61ee50c26343784e1e929f56ce70159a21f21f0f4a87c64f9",
+        "resumable": false,
+        "sha256": "b4f0189852f331c369a47b08a0c0755f2d60b29f43a3ce4449fd3a01c677a324",
+        "stage": "CALIBRATION_SELECTED",
+        "weights_only": true
+      },
+      "REFIT_FINAL": {
+        "epoch": 2,
+        "finite": true,
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S42-WF2/refit_final.pt",
+        "preparation_id": "423c4888062c830fdf6359f709e07d94cab0749352dd0be75afc10d64c823853",
+        "resumable": false,
+        "sha256": "cdb663524b2c163389509fea1b5c4b76913ab375060d22738484273ec43b9b2a",
+        "stage": "REFIT_FINAL",
+        "weights_only": true
+      }
+    },
+    "exact_targets_and_masks": true,
+    "fresh_seed_and_optimizer": true,
+    "result": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/TA012B-N-B1-S42-WF2/seed42_tm0_pair_result.json",
+      "sha256": "f5d57e7bfd7ead7ad1166ae63533f285dec161c88383f4044b756fd7b1964b9c"
+    },
+    "target_binding": "CONDITIONAL_REAL_TM0:8d5220ec5a73078a64a7141bee08c74b4466fe1c9d8cac02d8bbf089d02a2461"
+  },
+  "TA012B-N-B1-S42-WF2:calibration": [
+    {
+      "canonical_MSE_reconstructed": 7.295698528360177,
+      "epoch": 1,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.273452972867245,
+      "epoch": 2,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.261431228923915,
+      "epoch": 3,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.252200239258938,
+      "epoch": 4,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.236258557215241,
+      "epoch": 5,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.217226794431717,
+      "epoch": 6,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.201134110435495,
+      "epoch": 7,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.189443228722792,
+      "epoch": 8,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.166930873162339,
+      "epoch": 9,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.143094167204947,
+      "epoch": 10,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.114654301717272,
+      "epoch": 11,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    },
+    {
+      "canonical_MSE_reconstructed": 7.096681505111751,
+      "epoch": 12,
+      "origins": 1626,
+      "passed": true,
+      "sessions": 813,
+      "steps": 51
+    }
+  ],
+  "TA012B-N-B1-S42-WF2:refit": [
+    {
+      "canonical_MSE_reconstructed": 7.287704505375453,
+      "epoch": 1,
+      "origins": 1750,
+      "passed": true,
+      "sessions": 875,
+      "steps": 55
+    },
+    {
+      "canonical_MSE_reconstructed": 7.268604035513742,
+      "epoch": 2,
+      "origins": 1750,
+      "passed": true,
+      "sessions": 875,
+      "steps": 55
+    }
+  ]
+}

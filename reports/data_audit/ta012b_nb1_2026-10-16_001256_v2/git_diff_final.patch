@@ -1,0 +1,419 @@
+diff --git a/apps/track_a_dashboard.py b/apps/track_a_dashboard.py
+index 1d0e059..153ef70 100644
+--- a/apps/track_a_dashboard.py
++++ b/apps/track_a_dashboard.py
+@@ -53,6 +53,7 @@ SECTIONS = (
+     "Training Diagnostics",
+     "Research Notes / Provenance",
+     "Controlled Experiments",
++    "B1 Normalization (012B)",
+ )
+ PLOT_CONFIG = {"displaylogo": False, "scrollZoom": True, "modeBarButtonsToRemove": ["toImage"]}
+ 
+@@ -122,6 +123,7 @@ def filter_frame(
+ 
+ 
+ def start_here(c: Catalog) -> None:
++    from lstm_data.visualization.nb1_ui import open_nb1
+     from lstm_data.visualization.normalization_ui import open_audit
+ 
+     st.info(
+@@ -138,7 +140,11 @@ def start_here(c: Catalog) -> None:
+     a, b, d = st.columns(3)
+     a.metric("Candidate stocks", "5")
+     b.metric("Explored folds", "WF1 · WF2")
+-    d.metric("Pairs at package seal", f"{c.config.get('global_started_at_seal', 6)} / 40")
++    if c.config.get("nb1_experiment"):
++        packet = read_json(c.root, c.config["nb1_experiment"])
++        d.metric("Cumulative research pairs", f"{packet.get('global_started_pairs', 24)} / 200")
++    else:
++        d.metric("Pairs at package seal", f"{c.config.get('global_started_at_seal', 6)} / 40")
+     if c.config.get("controlled_models"):
+         st.caption(
+             "Package011 arms use seed labels in brackets. TM0 is C0 seed42; "
+@@ -146,6 +152,8 @@ def start_here(c: Catalog) -> None:
+         )
+     st.button("Package 011: Compare C0 and T2", on_click=open_study, type="primary")
+     st.button("Package012A normalization audit", on_click=open_audit)
++    if c.config.get("nb1_experiment"):
++        st.button("Package012B B1 experiment", on_click=open_nb1)
+     st.caption("TM0 architecture · matched C0/H1/T1/T2/O1 arms · seeds42/123 · saved evidence only")
+     st.subheader("Your first five minutes")
+     st.markdown(
+@@ -776,6 +784,14 @@ def main() -> None:
+     st.sidebar.title("Track A")
+     st.sidebar.caption("Research explorer · local / read-only")
+     section = st.sidebar.radio("Explore", SECTIONS, key="section")
++    if section == "B1 Normalization (012B)":
++        from lstm_data.visualization.nb1_ui import panel as nb1_panel
++
++        try:
++            nb1_panel(c, token)
++        except ViewUnavailable as exc:
++            st.warning(str(exc))
++        return
+     # Keep independent study and legacy filters when their widgets are off-page.
+     keep = (
+         ("fold", "partition", "model", "symbol", "dates", "origin_label")
+@@ -826,7 +842,14 @@ def main() -> None:
+         "TM0 is C0 seed42. Package011 arms show their seed in brackets when recorded. "
+         "WF1 also has MC1, E5 and recorded baselines."
+     )
+-    st.sidebar.caption("Ledger24/40 · production D1 unchanged · no confirmation access")
++    if c.config.get("nb1_experiment"):
++        packet = read_json(c.root, c.config["nb1_experiment"])
++        st.sidebar.caption(
++            f"Ledger{packet.get('global_started_pairs', 24)}/200 · "
++            "production D1 unchanged · no confirmation access"
++        )
++    else:
++        st.sidebar.caption("Ledger24/40 · production D1 unchanged · no confirmation access")
+     st.caption(f"{symbol} / {fold} / {model} / {partition} · ASSUMPTION_CONDITIONAL")
+     missing_files = c.missing_required(token)
+     if missing_files:
+diff --git a/configs/CURRENT_EXPERIMENT_REGISTRY.json b/configs/CURRENT_EXPERIMENT_REGISTRY.json
+index a6adddc..80baf74 100644
+--- a/configs/CURRENT_EXPERIMENT_REGISTRY.json
++++ b/configs/CURRENT_EXPERIMENT_REGISTRY.json
+@@ -1,21 +1,22 @@
+ {
+-  "approval": {
+-    "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/authority_corrected.json",
+-    "sha256": "8051845d45e16dda99de805ce52384f087e37ebac08b4f26b9bdd643cdddf51e"
++  "budget_amendment": {
++    "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/budget_amendment_200.json",
++    "sha256": "9b9b32c2cdf275a1195240afd5765b9d381bbc6eaf0bcc1196373f70cf3735e4"
+   },
+   "counts_started_including_failed": true,
+   "definition": {
+-    "path": "configs/track_a_candidate_experiment_registry_v4.json",
+-    "sha256": "fb165d24fb636bb687482eec0ecfaf159dfc16ffef45d53456c234963c83f907"
++    "path": "configs/track_a_candidate_experiment_registry_v5.json",
++    "sha256": "22a0a6101d06530dc6a9149d3a79d188b233c19aef32350074c5870502c063ab"
+   },
++  "fit_permission": false,
+   "plan": {
+-    "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/predeclared_experiment_matrix_corrected.json",
+-    "sha256": "ad5e66a93888cbb4023d620192da7e92cb1d9c3a6f47f04c0d4c5b55e437131e"
++    "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/experiment_design.json",
++    "sha256": "49a8518f4814a602631f83382de998008cd6ba75b4b18ace641c4f48076f3080"
+   },
+   "previous_pointer": {
+-    "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/registry_pointer_v3_snapshot.json",
+-    "sha256": "40444421df925ad9e37988a9ceeb153354def3bc365534130d28ad2f9848a15a"
++    "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/registry_pointer_v4_snapshot.json",
++    "sha256": "0d2935af5709867cecab5d5e58d9e438d91b034effc3486966461e8bab951f2a"
+   },
+-  "real_journal": "reports/audit/track_a_real_pairs_v4.jsonl",
+-  "schema": 4
++  "real_journal": "reports/audit/track_a_real_pairs_v5.jsonl",
++  "schema": 5
+ }
+diff --git a/configs/track_a_visualization_v1.json b/configs/track_a_visualization_v1.json
+index 75ea8ac..c8bd748 100644
+--- a/configs/track_a_visualization_v1.json
++++ b/configs/track_a_visualization_v1.json
+@@ -149,7 +149,7 @@
+     "cache_readers": [
+       {
+         "path": "apps/track_a_dashboard.py",
+-        "sha256": "7d3fd865a66dff95b5f5dea1b69a271c36bf37962accc5adb9fdbe31e63e4d3b"
++        "sha256": "b39e328a348fd31e040915039522934dc43f9d92a59c771b0b05dfd0dde70b5a"
+       },
+       {
+         "path": "src/lstm_data/aggregation.py",
+@@ -189,7 +189,7 @@
+       },
+       {
+         "path": "src/lstm_data/real_bridge_run.py",
+-        "sha256": "17ed1390bf856551e4b5d297f764c2db0cfde96c3a9935f8e21c401a325d521b"
++        "sha256": "c8abb94d8e40cbe156cd94e6e4eaeb7cd8590ed6bef64ea4028cf82b3f4ffac0"
+       },
+       {
+         "path": "src/lstm_data/stock_features.py",
+@@ -221,7 +221,7 @@
+       },
+       {
+         "path": "src/lstm_data/visualization/normalization_ui.py",
+-        "sha256": "02cee3c41e0122338cc2c1c3c8fbf765cd6dc66fa4d14c8d5dece0796cdbaa4e"
++        "sha256": "40d514a85b8a2a108b9fd3d26f5c19bb7aa8ca732544cc3d3ad75a421f1bb00d"
+       },
+       {
+         "path": "src/lstm_data/visualization/range_ui.py",
+@@ -230,6 +230,10 @@
+       {
+         "path": "src/lstm_data/visualization/target_ranges.py",
+         "sha256": "fb654ea3dfd38e6e92d0bd3a737b646b2eec72243deeb7a346d3df1074c46096"
++      },
++      {
++        "path": "src/lstm_data/visualization/nb1_ui.py",
++        "sha256": "c83ffa907630b7b2ae76cf6259c030c94cfea8d808e5ccd3c4b730f78de6cf36"
+       }
+     ],
+     "proposal_sha256": "ad5e66a93888cbb4023d620192da7e92cb1d9c3a6f47f04c0d4c5b55e437131e",
+@@ -650,13 +654,17 @@
+       }
+     }
+   },
++  "nb1_experiment": {
++    "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/dashboard_handoff.json",
++    "sha256": "8ff813fd9843be60902301e84e85418709af79a5e6d843a8a846caa99c5b1e2a"
++  },
+   "normalization_audit": {
+     "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/display_manifest_final.json",
+     "sha256": "c8c8c4a7a2a62f797d1264905c376cef878e166b691714f3380cb44bfabe2a04"
+   },
+   "notes": "Existing local-use assumptions only; no fit/transform fitting/network/export/registry authority.",
+   "readers": {
+-    "apps/track_a_dashboard.py": "7d3fd865a66dff95b5f5dea1b69a271c36bf37962accc5adb9fdbe31e63e4d3b",
++    "apps/track_a_dashboard.py": "b39e328a348fd31e040915039522934dc43f9d92a59c771b0b05dfd0dde70b5a",
+     "src/lstm_data/aggregation.py": "a4aa643253eaa095980aea47de361eb746c03cb9d6ec85f80013e1f7efb77a2b",
+     "src/lstm_data/ft0_transforms.py": "dce3424a3367d2bb8889e3b8a083b82f109ebc22e22690756aaced62a939c4f6",
+     "src/lstm_data/normalization_report.py": "a7880bef4de53ae5cf56d6666d0c7395f4279c73eeb68ae53d050a7bcf36e0d3",
+@@ -666,7 +674,7 @@
+     "src/lstm_data/pretraining_store.py": "a7d085c6f870e90a6e88e7373cefa1604443445ddee4fe543dae1088357ead70",
+     "src/lstm_data/pretraining_tables.py": "1e7c9a44259ffbe9cc142ce5d27509b386b261000013887a227460df0ca6f171",
+     "src/lstm_data/pretraining_transforms.py": "79a7b1238c1c55e42967056b474eb2a3212bbfe725f2c0332c12388dbe8e82f5",
+-    "src/lstm_data/real_bridge_run.py": "17ed1390bf856551e4b5d297f764c2db0cfde96c3a9935f8e21c401a325d521b",
++    "src/lstm_data/real_bridge_run.py": "c8abb94d8e40cbe156cd94e6e4eaeb7cd8590ed6bef64ea4028cf82b3f4ffac0",
+     "src/lstm_data/stock_features.py": "edae91a8fe70e25720cf3cd66fd716f37c5192b1302f3d72651717b15b9a141a",
+     "src/lstm_data/visualization/controlled.py": "354b402cae7910968061dc3fd1ee6582474964ac87f117ff0c3c9aa4d4d71578",
+     "src/lstm_data/visualization/controlled_ui.py": "f55ef4be40f364e15c63a3d46c228cffb78dab0ec948dd64d5082d9adb19ff60",
+@@ -674,7 +682,8 @@
+     "src/lstm_data/visualization/history.py": "c628c03c58fe2d5f5ba9fd4500e00804a8b2fbc83afce8b7370d3cca54d71125",
+     "src/lstm_data/visualization/loaders.py": "a577b54d42a86b8bbda771e83283254d13fd40a8cf491b69ddae752bfa3bd3c2",
+     "src/lstm_data/visualization/metrics.py": "8df1c9014f4426a3d4275b2d275f1c8407a058e1f9e188110d53eee474171f13",
+-    "src/lstm_data/visualization/normalization_ui.py": "02cee3c41e0122338cc2c1c3c8fbf765cd6dc66fa4d14c8d5dece0796cdbaa4e",
++    "src/lstm_data/visualization/nb1_ui.py": "c83ffa907630b7b2ae76cf6259c030c94cfea8d808e5ccd3c4b730f78de6cf36",
++    "src/lstm_data/visualization/normalization_ui.py": "40d514a85b8a2a108b9fd3d26f5c19bb7aa8ca732544cc3d3ad75a421f1bb00d",
+     "src/lstm_data/visualization/range_ui.py": "3d7fb03e79df8f511724473a3b1154b45b32aaa79c90a1bb5fb43b41e51ccd7c",
+     "src/lstm_data/visualization/target_ranges.py": "fb654ea3dfd38e6e92d0bd3a737b646b2eec72243deeb7a346d3df1074c46096"
+   },
+diff --git a/src/lstm_data/real_bridge_authority.py b/src/lstm_data/real_bridge_authority.py
+index d104192..bd43cf6 100644
+--- a/src/lstm_data/real_bridge_authority.py
++++ b/src/lstm_data/real_bridge_authority.py
+@@ -10,6 +10,7 @@ from typing import TYPE_CHECKING
+ 
+ if TYPE_CHECKING:
+     from .controlled_authority import ControlledAuthority
++    from .nb1_authority import NormalizationAuthority
+     from .real_batch_authority import BatchPairAuthority
+     from .wf2_replication import WF2PairAuthority
+ 
+@@ -302,12 +303,17 @@ def load_training_authority(review: BridgeReview, binding_ref: dict) -> Training
+ 
+ 
+ def require_training(
+-    authority: TrainingAuthority | BatchPairAuthority | WF2PairAuthority | ControlledAuthority,
++    authority: TrainingAuthority
++    | BatchPairAuthority
++    | WF2PairAuthority
++    | ControlledAuthority
++    | NormalizationAuthority,
+     activity: str,
+     input_id: str,
+ ) -> None:
+     """Single public admission boundary; duck-typed/subclass permissions cannot opt in."""
+     from .controlled_authority import ControlledAuthority
++    from .nb1_authority import NormalizationAuthority
+     from .real_batch_authority import BatchPairAuthority
+     from .wf2_replication import WF2PairAuthority
+ 
+@@ -315,6 +321,7 @@ def require_training(
+         type(authority) is BatchPairAuthority
+         or type(authority) is WF2PairAuthority
+         or type(authority) is ControlledAuthority
++        or type(authority) is NormalizationAuthority
+     ):
+         authority.ensure(activity, input_id)
+         return
+diff --git a/src/lstm_data/real_bridge_run.py b/src/lstm_data/real_bridge_run.py
+index dafb00f..4a5345e 100644
+--- a/src/lstm_data/real_bridge_run.py
++++ b/src/lstm_data/real_bridge_run.py
+@@ -26,6 +26,7 @@ from .controlled_loss import fit_policy
+ from .ft0_transforms import identity
+ from .labels import FitWindow
+ from .ledger import pair_budget, read_ledger
++from .nb1_authority import NormalizationAuthority
+ from .neural_engine import (
+     SessionBatch,
+     SharedLSTM,
+@@ -55,7 +56,13 @@ from .real_bridge_authority import (
+ from .real_bridge_data import RealInputView, build_view, load_inputs
+ from .wf2_replication import WF2PairAuthority
+ 
+-FitAuthority = TrainingAuthority | BatchPairAuthority | WF2PairAuthority | ControlledAuthority
++FitAuthority = (
++    TrainingAuthority
++    | BatchPairAuthority
++    | WF2PairAuthority
++    | ControlledAuthority
++    | NormalizationAuthority
++)
+ FitModel = SharedLSTM | EndpointGatedLSTM
+ FitView = RealInputView | ConditionedView
+ 
+@@ -67,6 +74,7 @@ def execution_contract(authority: FitAuthority | None) -> dict:
+             type(authority) is BatchPairAuthority
+             or type(authority) is WF2PairAuthority
+             or type(authority) is ControlledAuthority
++            or type(authority) is NormalizationAuthority
+         )
+         else CONTRACT
+     )
+@@ -128,6 +136,7 @@ def append_pair(authority: FitAuthority, status: str, detail: dict) -> None:
+         type(authority) is BatchPairAuthority
+         or type(authority) is WF2PairAuthority
+         or type(authority) is ControlledAuthority
++        or type(authority) is NormalizationAuthority
+     ):
+         authority.append(status, detail)
+         return
+@@ -304,6 +313,7 @@ def checkpoint_authority(
+         type(authority) is BatchPairAuthority
+         or type(authority) is WF2PairAuthority
+         or type(authority) is ControlledAuthority
++        or type(authority) is NormalizationAuthority
+     ):
+         key = "inner" if stage == "CALIBRATION_SELECTED" else "refit"
+         if (
+@@ -542,6 +552,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+         type(authority) is BatchPairAuthority
+         or type(authority) is WF2PairAuthority
+         or type(authority) is ControlledAuthority
++        or type(authority) is NormalizationAuthority
+     ):
+         authority.inputs()
+     else:
+@@ -559,6 +570,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+             type(authority) is BatchPairAuthority
+             or type(authority) is WF2PairAuthority
+             or type(authority) is ControlledAuthority
++            or type(authority) is NormalizationAuthority
+         )
+         else build_view(authority.review, candidates["WF1_INNER_TRAIN"], inner),
+         "validation": authority.view("validation")
+@@ -566,6 +578,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+             type(authority) is BatchPairAuthority
+             or type(authority) is WF2PairAuthority
+             or type(authority) is ControlledAuthority
++            or type(authority) is NormalizationAuthority
+         )
+         else build_view(authority.review, candidates["WF1_INNER_TRAIN"], tail, asof=True),
+     }
+@@ -574,6 +587,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+         type(authority) is BatchPairAuthority
+         or type(authority) is WF2PairAuthority
+         or type(authority) is ControlledAuthority
++        or type(authority) is NormalizationAuthority
+     ):
+         dataset = {
+             "first_pair_views": {k: v["view_id"] for k, v in authority.descriptor["views"].items()}
+@@ -616,6 +630,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+         type(authority) is BatchPairAuthority
+         or type(authority) is WF2PairAuthority
+         or type(authority) is ControlledAuthority
++        or type(authority) is NormalizationAuthority
+     ):
+         remaining = min(
+             remaining,
+@@ -634,6 +649,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+             type(authority) is BatchPairAuthority
+             or type(authority) is WF2PairAuthority
+             or type(authority) is ControlledAuthority
++            or type(authority) is NormalizationAuthority
+         )
+         else started + HARD_SECONDS
+     )
+@@ -647,7 +663,11 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+             cap=contract["clip"],
+             arm=contract.get("arm"),
+         )
+-        if (type(authority) is WF2PairAuthority or type(authority) is ControlledAuthority)
++        if (
++            type(authority) is WF2PairAuthority
++            or type(authority) is ControlledAuthority
++            or type(authority) is NormalizationAuthority
++        )
+         else None
+     )
+     refit_observer = (
+@@ -660,7 +680,11 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+             cap=contract["clip"],
+             arm=contract.get("arm"),
+         )
+-        if (type(authority) is WF2PairAuthority or type(authority) is ControlledAuthority)
++        if (
++            type(authority) is WF2PairAuthority
++            or type(authority) is ControlledAuthority
++            or type(authority) is NormalizationAuthority
++        )
+         else None
+     )
+     try:
+@@ -695,6 +719,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+                         type(authority) is BatchPairAuthority
+                         or type(authority) is WF2PairAuthority
+                         or type(authority) is ControlledAuthority
++                        or type(authority) is NormalizationAuthority
+                     )
+                     else 751
+                 )
+@@ -742,6 +767,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+                 type(authority) is BatchPairAuthority
+                 or type(authority) is WF2PairAuthority
+                 or type(authority) is ControlledAuthority
++                or type(authority) is NormalizationAuthority
+             )
+             else build_view(authority.review, candidates["WF1_REFIT"], full)
+         )
+@@ -815,6 +841,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+                 type(authority) is BatchPairAuthority
+                 or type(authority) is WF2PairAuthority
+                 or type(authority) is ControlledAuthority
++                or type(authority) is NormalizationAuthority
+             )
+             else build_view(authority.review, candidates["WF1_REFIT"], w, asof=True)
+         )
+@@ -850,6 +877,7 @@ def run_worker(authority: FitAuthority, out: Path) -> None:
+                 type(authority) is BatchPairAuthority
+                 or type(authority) is WF2PairAuthority
+                 or type(authority) is ControlledAuthority
++                or type(authority) is NormalizationAuthority
+             )
+             else "seed42_tm0_first_pair_result.json"
+         )
+diff --git a/src/lstm_data/visualization/normalization_ui.py b/src/lstm_data/visualization/normalization_ui.py
+index 8832335..79cb82f 100644
+--- a/src/lstm_data/visualization/normalization_ui.py
++++ b/src/lstm_data/visualization/normalization_ui.py
+@@ -68,6 +68,7 @@ def open_example(row: pd.Series) -> None:
+         full_indicators=[str(row.feature)],
+         normalization_example=dict(row),
+         normalization_context=False,
++        normalization_nb1=False,
+         full_selected=dict(
+             symbol=str(row.symbol),
+             session=consumer,
+@@ -308,3 +309,19 @@ def linked_context(catalog: Catalog, token: tuple) -> None:
+         + prep.preparation_id
+         + "; 48 endpoints, no future candles or new TG0 computation."
+     )
++    if st.session_state.get("normalization_nb1") and row["feature"] == "B1":
++        from .nb1_ui import handoff, recipe
++
++        r = recipe(catalog, handoff(catalog), row["fold"], prefix)
++        if r["original_preparation_id"] != prep.preparation_id:
++            raise ViewUnavailable("N-B1 linked context recipe mismatch")
++        frame["q"] = np.arcsinh(frame.native.to_numpy(dtype=float) / r["s"])
++        frame["N_B1_scaled"] = ((frame.q - r["c"]) / r["a"]).astype(np.float32)
++        st.dataframe(frame, hide_index=True, width="stretch")
++        for field in ("q", "N_B1_scaled"):
++            fig = go.Figure(go.Scatter(x=frame.timestamp, y=frame[field], mode="lines+markers"))
++            fig.update_layout(
++                height=240, yaxis_title=field, xaxis_title="48 completed-hour ends UTC"
++            )
++            st.plotly_chart(fig, width="stretch", key="normalization_nb1_" + field)
++        st.caption(f"N-B1 s={r['s']!r}; c={r['c']!r}; a={r['a']!r}; recipe {r['recipe_id']}")

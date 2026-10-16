@@ -53,6 +53,7 @@ SECTIONS = (
     "Training Diagnostics",
     "Research Notes / Provenance",
     "Controlled Experiments",
+    "B1 Normalization (012B)",
 )
 PLOT_CONFIG = {"displaylogo": False, "scrollZoom": True, "modeBarButtonsToRemove": ["toImage"]}
 
@@ -122,6 +123,7 @@ def filter_frame(
 
 
 def start_here(c: Catalog) -> None:
+    from lstm_data.visualization.nb1_ui import open_nb1
     from lstm_data.visualization.normalization_ui import open_audit
 
     st.info(
@@ -138,7 +140,11 @@ def start_here(c: Catalog) -> None:
     a, b, d = st.columns(3)
     a.metric("Candidate stocks", "5")
     b.metric("Explored folds", "WF1 · WF2")
-    d.metric("Pairs at package seal", f"{c.config.get('global_started_at_seal', 6)} / 40")
+    if c.config.get("nb1_experiment"):
+        packet = read_json(c.root, c.config["nb1_experiment"])
+        d.metric("Cumulative research pairs", f"{packet.get('global_started_pairs', 24)} / 200")
+    else:
+        d.metric("Pairs at package seal", f"{c.config.get('global_started_at_seal', 6)} / 40")
     if c.config.get("controlled_models"):
         st.caption(
             "Package011 arms use seed labels in brackets. TM0 is C0 seed42; "
@@ -146,6 +152,8 @@ def start_here(c: Catalog) -> None:
         )
     st.button("Package 011: Compare C0 and T2", on_click=open_study, type="primary")
     st.button("Package012A normalization audit", on_click=open_audit)
+    if c.config.get("nb1_experiment"):
+        st.button("Package012B B1 experiment", on_click=open_nb1)
     st.caption("TM0 architecture · matched C0/H1/T1/T2/O1 arms · seeds42/123 · saved evidence only")
     st.subheader("Your first five minutes")
     st.markdown(
@@ -776,6 +784,14 @@ def main() -> None:
     st.sidebar.title("Track A")
     st.sidebar.caption("Research explorer · local / read-only")
     section = st.sidebar.radio("Explore", SECTIONS, key="section")
+    if section == "B1 Normalization (012B)":
+        from lstm_data.visualization.nb1_ui import panel as nb1_panel
+
+        try:
+            nb1_panel(c, token)
+        except ViewUnavailable as exc:
+            st.warning(str(exc))
+        return
     # Keep independent study and legacy filters when their widgets are off-page.
     keep = (
         ("fold", "partition", "model", "symbol", "dates", "origin_label")
@@ -826,7 +842,14 @@ def main() -> None:
         "TM0 is C0 seed42. Package011 arms show their seed in brackets when recorded. "
         "WF1 also has MC1, E5 and recorded baselines."
     )
-    st.sidebar.caption("Ledger24/40 · production D1 unchanged · no confirmation access")
+    if c.config.get("nb1_experiment"):
+        packet = read_json(c.root, c.config["nb1_experiment"])
+        st.sidebar.caption(
+            f"Ledger{packet.get('global_started_pairs', 24)}/200 · "
+            "production D1 unchanged · no confirmation access"
+        )
+    else:
+        st.sidebar.caption("Ledger24/40 · production D1 unchanged · no confirmation access")
     st.caption(f"{symbol} / {fold} / {model} / {partition} · ASSUMPTION_CONDITIONAL")
     missing_files = c.missing_required(token)
     if missing_files:
