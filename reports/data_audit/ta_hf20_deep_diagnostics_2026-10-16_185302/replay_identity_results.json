@@ -1,0 +1,114 @@
+{
+  "arms": [
+    {
+      "actual_forward_calls": 21,
+      "arm": "C0",
+      "backward_calls": 0,
+      "maximum_allowed": 24,
+      "optimizer_steps": 0,
+      "qualification": "Different legal CPU batch geometry may change float32last bits",
+      "saved_output_tolerance": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      }
+    },
+    {
+      "actual_forward_calls": 21,
+      "arm": "T2",
+      "backward_calls": 0,
+      "maximum_allowed": 24,
+      "optimizer_steps": 0,
+      "qualification": "Different legal CPU batch geometry may change float32last bits",
+      "saved_output_tolerance": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "arm": "C0",
+      "checkpoint": {
+        "bytes": 29781,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1/calibration_selected.pt",
+        "sha256": "84bcbd852cc41a45417996bc24c4dabe14542692807dfc2946b462972ec26234"
+      },
+      "head_bias_initial": -0.0661749318242073,
+      "head_bias_saved": -0.04956643655896187,
+      "head_norm_initial": 0.5054876804351807,
+      "head_norm_saved": 0.4874434173107147,
+      "manifest": {
+        "bytes": 1745,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1/calibration_selected.manifest.json",
+        "sha256": "43913fa84f68e01844c19b9fd6c2a98d2749021df34a67eec7ba731b9ec36168"
+      },
+      "stage": "CALIBRATION_SELECTED",
+      "state_hash_unchanged": "0ea638f0b9b9d3df1593cc7e817341e790c093463d70a571c94e4e59d1eee8ef"
+    },
+    {
+      "arm": "C0",
+      "checkpoint": {
+        "bytes": 29781,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1/refit_final.pt",
+        "sha256": "7004c5d6c77ca7177f53899fe7530da1242e24d3852378a9b78662f39cc25ed7"
+      },
+      "head_bias_initial": -0.0661749318242073,
+      "head_bias_saved": -0.04673529043793678,
+      "head_norm_initial": 0.5054876804351807,
+      "head_norm_saved": 0.4805939793586731,
+      "manifest": {
+        "bytes": 1727,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1/refit_final.manifest.json",
+        "sha256": "8abc9d223c9c3f1ec7bed0bf89ef98c0c801b7e5312735784a39b6a2f1a85092"
+      },
+      "stage": "REFIT_FINAL",
+      "state_hash_unchanged": "795bccbe66ae77f43c23d7bb094f2538b57c15021de7e03782075ad73f4c5f32"
+    },
+    {
+      "arm": "T2",
+      "checkpoint": {
+        "bytes": 30357,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/calibration_selected.pt",
+        "sha256": "8502ae495585d05e1bb9fd375e43a83e52fcb61233599f03df150de7e10ef8a7"
+      },
+      "head_bias_initial": -0.0661749318242073,
+      "head_bias_saved": -0.04648512229323387,
+      "head_norm_initial": 0.5054876804351807,
+      "head_norm_saved": 0.4787541925907135,
+      "manifest": {
+        "bytes": 2471,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/calibration_selected.manifest.json",
+        "sha256": "df07a215610fa32a408e984699d71765c7abe45989e140c08c7a2e41effa395f"
+      },
+      "stage": "CALIBRATION_SELECTED",
+      "state_hash_unchanged": "80fef6d7adabfd1942fb3883661e0872aa25b87fd666104e296eb9b2b9f52669"
+    },
+    {
+      "arm": "T2",
+      "checkpoint": {
+        "bytes": 30229,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/refit_final.pt",
+        "sha256": "fb7fa8153096cebf24b2a33f0fc1105feca4f4905ed55648c8401e67bd40dc42"
+      },
+      "head_bias_initial": -0.0661749318242073,
+      "head_bias_saved": -0.04551626741886139,
+      "head_norm_initial": 0.5054876804351807,
+      "head_norm_saved": 0.47193703055381775,
+      "manifest": {
+        "bytes": 2447,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/refit_final.manifest.json",
+        "sha256": "b66f6d34113973c4636522f7da45351b10c29aa33ccbdf2b49f88b2a130f5da4"
+      },
+      "stage": "REFIT_FINAL",
+      "state_hash_unchanged": "3b075b3069e3871d01d5efa7c95e9484bc4001cb24d65624f6c3ca1446ee397a"
+    }
+  ],
+  "historical_training_dropout_masks": "NOT_RECORDED",
+  "initial_state": "RECORDED_SEED42_HASH_RECONSTRUCTED_NO_INITIAL_FORWARD_OR_FIT",
+  "later_epoch_checkpoints": "NOT_RECORDED",
+  "no_backpropagation": true,
+  "no_parameter_updates": true,
+  "optimizer_internal_states": "NOT_RECORDED",
+  "per_example_training_gradients": "NOT_RECORDED",
+  "status": "PASS"
+}

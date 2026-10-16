@@ -1,0 +1,72 @@
+{
+  "all_pass": true,
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_hf20_postrun_diagnostics.py",
+        "-q"
+      ],
+      "elapsed_seconds": 26.149873042013496,
+      "exit_status": 0,
+      "finished_UTC": "2026-10-16T23:05:29.981463+00:00",
+      "log": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/release_v2_focused_pytest.txt",
+      "name": "focused_pytest",
+      "started_UTC": "2026-10-16T23:05:03.832021+00:00"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "elapsed_seconds": 0.07598100003087893,
+      "exit_status": 0,
+      "finished_UTC": "2026-10-16T23:05:30.057508+00:00",
+      "log": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/release_v2_ruff.txt",
+      "name": "ruff",
+      "started_UTC": "2026-10-16T23:05:29.981540+00:00"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "elapsed_seconds": 34.65895025001373,
+      "exit_status": 0,
+      "finished_UTC": "2026-10-16T23:06:04.715954+00:00",
+      "log": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/release_v2_pylance.txt",
+      "name": "pylance",
+      "started_UTC": "2026-10-16T23:05:30.057552+00:00"
+    },
+    {
+      "command": [
+        "./scripts/run_track_a_dashboard.sh",
+        "--check"
+      ],
+      "elapsed_seconds": 1.5341098749777302,
+      "exit_status": 0,
+      "finished_UTC": "2026-10-16T23:06:06.250102+00:00",
+      "log": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/release_v2_launcher_check.txt",
+      "name": "launcher_check",
+      "started_UTC": "2026-10-16T23:06:04.716026+00:00"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "elapsed_seconds": 0.019865999987814575,
+      "exit_status": 0,
+      "finished_UTC": "2026-10-16T23:06:06.269987+00:00",
+      "log": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/release_v2_diff_check.txt",
+      "name": "diff_check",
+      "started_UTC": "2026-10-16T23:06:06.250134+00:00"
+    }
+  ]
+}

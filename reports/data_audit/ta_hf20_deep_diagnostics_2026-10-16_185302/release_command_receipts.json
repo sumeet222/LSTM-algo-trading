@@ -1,0 +1,47 @@
+{
+  "all_pass": false,
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_hf20_postrun_diagnostics.py",
+        "-q"
+      ],
+      "elapsed_seconds": 23.541379624977708,
+      "exit_status": 0,
+      "finished_UTC": "2026-10-16T23:03:48.451135+00:00",
+      "log": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/release_focused_pytest.txt",
+      "name": "focused_pytest",
+      "started_UTC": "2026-10-16T23:03:24.910145+00:00"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "elapsed_seconds": 0.09099250001600012,
+      "exit_status": 0,
+      "finished_UTC": "2026-10-16T23:03:48.542190+00:00",
+      "log": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/release_ruff.txt",
+      "name": "ruff",
+      "started_UTC": "2026-10-16T23:03:48.451212+00:00"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "elapsed_seconds": 31.062033625028562,
+      "exit_status": 1,
+      "finished_UTC": "2026-10-16T23:04:19.603766+00:00",
+      "log": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/release_pylance.txt",
+      "name": "pylance",
+      "started_UTC": "2026-10-16T23:03:48.542233+00:00"
+    }
+  ]
+}

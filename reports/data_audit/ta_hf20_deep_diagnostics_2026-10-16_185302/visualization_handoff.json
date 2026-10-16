@@ -1,0 +1,302 @@
+{
+  "artifacts": {
+    "epoch_selection_reconstruction.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/epoch_selection_reconstruction.csv",
+      "sha256": "71557d75456b69db93b9d78b0c909ecc5efd93c125dda656931af60759d1c3c6"
+    },
+    "hf20_training_and_gradient_health.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/hf20_training_and_gradient_health.csv",
+      "sha256": "3c5d6d05a9b506d80c41b50f96657c4090b7b38fd64e76a6563c2a1c229f61ad"
+    },
+    "input_shift_contrasts.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/input_shift_contrasts.csv",
+      "sha256": "a4be26ca4f4d75f0e3f7ebc58b817834558adcb7324a421863bc198308a9bbfa"
+    },
+    "loss_concentration.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/loss_concentration.csv",
+      "sha256": "a5eeb3da33bd901a770a3c9474575258beee0de2760045b0f578945af8a51fb9"
+    },
+    "model_output_and_hidden_diagnostics.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/model_output_and_hidden_diagnostics.csv",
+      "sha256": "d197e7cd49dd68ff4f1a6b052a3b6f1a6dc9be618fa5ddf51e809ca4fd598120"
+    },
+    "mse_vs_zero_exact_decomposition.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/mse_vs_zero_exact_decomposition.csv",
+      "sha256": "7fbd28eb07ed5994d61da951078c7e0882e6db2b7a6aebea2bc4222a94286952"
+    },
+    "paired_c0_t2_development.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/paired_c0_t2_development.csv",
+      "sha256": "b83e6e189be09f44a71882a209cbeb49d4c1a999351935a7bbb579a8f2bf3b5f"
+    },
+    "paired_origin_stock_month.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/paired_origin_stock_month.csv",
+      "sha256": "a6957edf734dbdb7e98c2a82e072464987b157e1ef10799520a429ebbbd56a49"
+    },
+    "stage_specific_descriptive_thresholds.json": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/stage_specific_descriptive_thresholds.json",
+      "sha256": "f6d5fe33731da57946e82ca72dddf8e7d5a4e062893a90aee9651da4f65bb652"
+    },
+    "stock_origin_month_diagnostics.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/stock_origin_month_diagnostics.csv",
+      "sha256": "5963f0f417394130f563223fc4e568e4d1162eb9c8defb7f7fdbf60156a570a7"
+    },
+    "stock_rank_behavior.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/stock_rank_behavior.csv",
+      "sha256": "7d2e0863da4dcc835b2665b1f57e164b7d03a668a59451e2bb80845d4df0902f"
+    },
+    "tg20_denominator_tail_contrast.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/tg20_denominator_tail_contrast.csv",
+      "sha256": "3a3444cfac5b62c74630a39a7424ae824598b5192261325ae1fc52c0c57cb6fd"
+    },
+    "tg20_extreme_event_examples.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/tg20_extreme_event_examples.csv",
+      "sha256": "9885ae9466a5898b0e72cbf0654e8173384fe2bf6d9318fed61e96464e2807c9"
+    },
+    "tg20_tail_denominator_study.csv": {
+      "path": "reports/data_audit/ta_hf20_deep_diagnostics_2026-10-16_185302/tg20_tail_denominator_study.csv",
+      "sha256": "9da91912466a68782fa68e722ea52b822c5294b25bcb4b76c1603881c46ff37f"
+    }
+  },
+  "checkpoint_ids": [
+    {
+      "arm": "C0",
+      "checkpoint": {
+        "bytes": 29781,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1/calibration_selected.pt",
+        "sha256": "84bcbd852cc41a45417996bc24c4dabe14542692807dfc2946b462972ec26234"
+      },
+      "head_bias_initial": -0.0661749318242073,
+      "head_bias_saved": -0.04956643655896187,
+      "head_norm_initial": 0.5054876804351807,
+      "head_norm_saved": 0.4874434173107147,
+      "manifest": {
+        "bytes": 1745,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1/calibration_selected.manifest.json",
+        "sha256": "43913fa84f68e01844c19b9fd6c2a98d2749021df34a67eec7ba731b9ec36168"
+      },
+      "stage": "CALIBRATION_SELECTED",
+      "state_hash_unchanged": "0ea638f0b9b9d3df1593cc7e817341e790c093463d70a571c94e4e59d1eee8ef"
+    },
+    {
+      "arm": "C0",
+      "checkpoint": {
+        "bytes": 29781,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1/refit_final.pt",
+        "sha256": "7004c5d6c77ca7177f53899fe7530da1242e24d3852378a9b78662f39cc25ed7"
+      },
+      "head_bias_initial": -0.0661749318242073,
+      "head_bias_saved": -0.04673529043793678,
+      "head_norm_initial": 0.5054876804351807,
+      "head_norm_saved": 0.4805939793586731,
+      "manifest": {
+        "bytes": 1727,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1/refit_final.manifest.json",
+        "sha256": "8abc9d223c9c3f1ec7bed0bf89ef98c0c801b7e5312735784a39b6a2f1a85092"
+      },
+      "stage": "REFIT_FINAL",
+      "state_hash_unchanged": "795bccbe66ae77f43c23d7bb094f2538b57c15021de7e03782075ad73f4c5f32"
+    },
+    {
+      "arm": "T2",
+      "checkpoint": {
+        "bytes": 30357,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/calibration_selected.pt",
+        "sha256": "8502ae495585d05e1bb9fd375e43a83e52fcb61233599f03df150de7e10ef8a7"
+      },
+      "head_bias_initial": -0.0661749318242073,
+      "head_bias_saved": -0.04648512229323387,
+      "head_norm_initial": 0.5054876804351807,
+      "head_norm_saved": 0.4787541925907135,
+      "manifest": {
+        "bytes": 2471,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/calibration_selected.manifest.json",
+        "sha256": "df07a215610fa32a408e984699d71765c7abe45989e140c08c7a2e41effa395f"
+      },
+      "stage": "CALIBRATION_SELECTED",
+      "state_hash_unchanged": "80fef6d7adabfd1942fb3883661e0872aa25b87fd666104e296eb9b2b9f52669"
+    },
+    {
+      "arm": "T2",
+      "checkpoint": {
+        "bytes": 30229,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/refit_final.pt",
+        "sha256": "fb7fa8153096cebf24b2a33f0fc1105feca4f4905ed55648c8401e67bd40dc42"
+      },
+      "head_bias_initial": -0.0661749318242073,
+      "head_bias_saved": -0.04551626741886139,
+      "head_norm_initial": 0.5054876804351807,
+      "head_norm_saved": 0.47193703055381775,
+      "manifest": {
+        "bytes": 2447,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/refit_final.manifest.json",
+        "sha256": "b66f6d34113973c4636522f7da45351b10c29aa33ccbdf2b49f88b2a130f5da4"
+      },
+      "stage": "REFIT_FINAL",
+      "state_hash_unchanged": "3b075b3069e3871d01d5efa7c95e9484bc4001cb24d65624f6c3ca1446ee397a"
+    }
+  ],
+  "examples": [
+    {
+      "C0": 0.002986658364534378,
+      "MAD": 0.0025727760725602063,
+      "T2": 0.0027926091570407152,
+      "TG20": -11.61460018157959,
+      "cutoff": "2025-09-15 15:30:00+00:00",
+      "epsilon": 0.00035168796854748245,
+      "exit": "2025-09-15 19:30:00+00:00",
+      "issuance": "2025-09-15 15:32:00+00:00",
+      "numerator": -0.033966481534218405,
+      "origin": 2,
+      "raw_future_return": -0.035347493556409336,
+      "reason": "NEAR_ZERO_SCORE_LARGE_TARGET",
+      "selection": "POST_HOC_DIAGNOSTIC",
+      "session": "2025-09-15",
+      "source_key": "2025-09-15:2:TSLA",
+      "symbol": "TSLA"
+    },
+    {
+      "C0": 0.06938472390174866,
+      "MAD": 0.0018736125762580519,
+      "T2": 0.06070360168814659,
+      "TG20": 0.64974045753479,
+      "cutoff": "2025-08-14 15:30:00+00:00",
+      "epsilon": 0.00035168796854748245,
+      "exit": "2025-08-14 19:30:00+00:00",
+      "issuance": "2025-08-14 15:32:00+00:00",
+      "numerator": 0.0014458677916064097,
+      "origin": 2,
+      "raw_future_return": 0.005185500522896117,
+      "reason": "TYPICAL_QUIET_RAW_RETURN_ORIGIN",
+      "selection": "POST_HOC_DIAGNOSTIC",
+      "session": "2025-08-14",
+      "source_key": "2025-08-14:2:AAPL",
+      "symbol": "AAPL"
+    },
+    {
+      "C0": 0.1308797299861908,
+      "MAD": 0.0023968912910686587,
+      "T2": 0.10941869765520096,
+      "TG20": -23.350282669067383,
+      "cutoff": "2025-06-05 14:30:00+00:00",
+      "epsilon": 0.00035168796854748245,
+      "exit": "2025-06-05 18:30:00+00:00",
+      "issuance": "2025-06-05 14:32:00+00:00",
+      "numerator": -0.06418010233049862,
+      "origin": 1,
+      "raw_future_return": -0.06521070354513742,
+      "reason": "LARGEST_STOCK_SPECIFIC_TG20_TAIL",
+      "selection": "POST_HOC_DIAGNOSTIC",
+      "session": "2025-06-05",
+      "source_key": "2025-06-05:1:TSLA",
+      "symbol": "TSLA"
+    },
+    {
+      "C0": -0.020368967205286026,
+      "MAD": 0.0027791414099149364,
+      "T2": 0.059097614139318466,
+      "TG20": 3.423992395401001,
+      "cutoff": "2025-11-26 15:30:00+00:00",
+      "epsilon": 0.00035168796854748245,
+      "exit": "2025-11-26 19:30:00+00:00",
+      "issuance": "2025-11-26 15:32:00+00:00",
+      "numerator": 0.010719935667195243,
+      "origin": 1,
+      "raw_future_return": 0.014035172267594835,
+      "reason": "LARGEST_C0_T2_DISAGREEMENT",
+      "selection": "POST_HOC_DIAGNOSTIC",
+      "session": "2025-11-26",
+      "source_key": "2025-11-26:1:AMD",
+      "symbol": "AMD"
+    }
+  ],
+  "future_chart_specifications": [
+    {
+      "csv": "mse_vs_zero_exact_decomposition.csv",
+      "name": "ZERO_MSE_DECOMPOSITION",
+      "units": "CANONICAL_TG20_SQUARED",
+      "x": "arm",
+      "y": [
+        "amplitude_cost",
+        "alignment_benefit",
+        "delta_MSE_vs_ZERO"
+      ]
+    },
+    {
+      "csv": "tg20_extreme_event_examples.csv",
+      "hover": [
+        "symbol",
+        "session",
+        "origin",
+        "numerator"
+      ],
+      "name": "TAIL_DENOMINATOR",
+      "units": "EXPOST_CANONICAL_TG20",
+      "x": "MAD_over_epsilon",
+      "y": "target"
+    },
+    {
+      "csv": "paired_c0_t2_development.csv",
+      "name": "PAIRED_DAILY",
+      "separate_axes": true,
+      "x": "session",
+      "y": [
+        "delta_MSE",
+        "delta_IC"
+      ]
+    }
+  ],
+  "guide": {
+    "path": "docs/track_a/HOW_TO_VISUALLY_REVIEW_HF20_DIAGNOSIS.md",
+    "sha256": "d3c173eacf1f7988ca79d1fea5994d091a8ca2841662fffd24717d0e9b960e9c"
+  },
+  "held_out": "LOCKED_BEFORE_NUMERIC_IO",
+  "input_contract": {
+    "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/training_ready_input_contract.json",
+    "sha256": "4be39c0e85fc390766331ecb19e2a24721399f1e201de864eabe8eeed49add1c"
+  },
+  "ledger": 30,
+  "new_charts_implemented": false,
+  "original_controls": [
+    "HF20 recorded run",
+    "HF20 stock",
+    "HF20 development dates",
+    "HF20 origin"
+  ],
+  "original_handoff": {
+    "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/visualization_handoff.json",
+    "sha256": "a7d695a9aab15686dc998e02d394e9eaf418569c379b34a31a0fe703d2b47a8f"
+  },
+  "original_tabs": [
+    "Predictions & Errors",
+    "Training Diagnostics",
+    "Price & Features / extremes",
+    "Five-minute guide"
+  ],
+  "package": "TA-HF20-P016-READONLY-DIAGNOSIS-001",
+  "screenshots_obtained": false,
+  "source_revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "target_id": "TG20_HF20_CROSS_SECTIONAL_V1",
+  "ui_code_modified": false
+}

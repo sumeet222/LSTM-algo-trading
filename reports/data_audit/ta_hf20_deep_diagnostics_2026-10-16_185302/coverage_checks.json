@@ -1,0 +1,115 @@
+{
+  "excluded_origins": [
+    {
+      "input_exclusion": "FT1_COMMON",
+      "label_exclusion": "nan",
+      "missing_window_symbols": "",
+      "origin": 1,
+      "session": "2022-12-01",
+      "split": "inner_train"
+    },
+    {
+      "input_exclusion": "FT1_COMMON",
+      "label_exclusion": "nan",
+      "missing_window_symbols": "",
+      "origin": 2,
+      "session": "2022-12-01",
+      "split": "inner_train"
+    },
+    {
+      "input_exclusion": "FT1_COMMON",
+      "label_exclusion": "nan",
+      "missing_window_symbols": "",
+      "origin": 1,
+      "session": "2022-12-02",
+      "split": "inner_train"
+    },
+    {
+      "input_exclusion": "FT1_COMMON",
+      "label_exclusion": "nan",
+      "missing_window_symbols": "",
+      "origin": 2,
+      "session": "2022-12-02",
+      "split": "inner_train"
+    },
+    {
+      "input_exclusion": "FT1_COMMON",
+      "label_exclusion": "nan",
+      "missing_window_symbols": "",
+      "origin": 1,
+      "session": "2022-12-05",
+      "split": "inner_train"
+    },
+    {
+      "input_exclusion": "FT1_COMMON",
+      "label_exclusion": "nan",
+      "missing_window_symbols": "",
+      "origin": 2,
+      "session": "2022-12-05",
+      "split": "inner_train"
+    },
+    {
+      "input_exclusion": "FT1_COMMON",
+      "label_exclusion": "nan",
+      "missing_window_symbols": "",
+      "origin": 1,
+      "session": "2022-12-06",
+      "split": "inner_train"
+    },
+    {
+      "input_exclusion": "FT1_COMMON",
+      "label_exclusion": "nan",
+      "missing_window_symbols": "",
+      "origin": 2,
+      "session": "2022-12-06",
+      "split": "inner_train"
+    }
+  ],
+  "missingness": "Coverage-conditioned selection; regime summaries descriptive, not evidence missing-at-random",
+  "source_missing_counts": {
+    "AAPL": 0,
+    "AMD": 0,
+    "AMZN": 1,
+    "AVGO": 0,
+    "BA": 0,
+    "BAC": 0,
+    "COP": 0,
+    "CSCO": 0,
+    "CVX": 0,
+    "JNJ": 1,
+    "KO": 1,
+    "MA": 1,
+    "MRK": 0,
+    "MS": 0,
+    "PEP": 0,
+    "SBUX": 0,
+    "TSLA": 1,
+    "VZ": 0,
+    "WFC": 0,
+    "XOM": 1
+  },
+  "totals": {
+    "development": {
+      "retained": 0.9581151832460733,
+      "structural_origins": 382,
+      "supervised_origins": 366
+    },
+    "inner_train": {
+      "retained": 0.8482490272373541,
+      "structural_origins": 1028,
+      "supervised_origins": 872
+    },
+    "inner_validation": {
+      "retained": 0.873015873015873,
+      "structural_origins": 126,
+      "supervised_origins": 110
+    },
+    "refit": {
+      "retained": 0.8648180242634316,
+      "structural_origins": 1154,
+      "supervised_origins": 998
+    }
+  },
+  "volatility_context_train_q25": 0.00417787065576653,
+  "volatility_context_train_q75": 0.005129332554308253
+}

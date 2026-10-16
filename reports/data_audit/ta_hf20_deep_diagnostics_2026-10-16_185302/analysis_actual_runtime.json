@@ -1,0 +1,33 @@
+{
+  "derived_bytes": 764764,
+  "optimizer_updates": 0,
+  "peak_RSS_bytes": 295698432,
+  "replay_forward_calls": [
+    {
+      "actual_forward_calls": 21,
+      "arm": "C0",
+      "backward_calls": 0,
+      "maximum_allowed": 24,
+      "optimizer_steps": 0,
+      "qualification": "Different legal CPU batch geometry may change float32last bits",
+      "saved_output_tolerance": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      }
+    },
+    {
+      "actual_forward_calls": 21,
+      "arm": "T2",
+      "backward_calls": 0,
+      "maximum_allowed": 24,
+      "optimizer_steps": 0,
+      "qualification": "Different legal CPU batch geometry may change float32last bits",
+      "saved_output_tolerance": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      }
+    }
+  ],
+  "seconds": 5.330275208048988,
+  "source_requests": 0
+}

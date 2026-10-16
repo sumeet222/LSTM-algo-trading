@@ -1,0 +1,127 @@
+{
+  "T2_parameters": {
+    "inner_train": {
+      "floor": 1e-06,
+      "observations": 17440,
+      "origins": 872,
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "population_sha256": "424ad5f4e1233f518a88d2db034910997b0d484f5d8a080bfe3a50eff0a2d24d",
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:aae2ed05bbc680a2f4f95b37fc9e4cf423bb7f00cececfeebd98ee6bc981ba8b",
+      "scale": 0.9055291414260864,
+      "scale_id": "HF20_T2:029766d44c5fbf4e86d657408b1f78a8ac5e5d0af0f9369381e33434dcb1452b",
+      "sessions": 436,
+      "split": "inner_train",
+      "target_sha256": "0d9eef5a8902cd08007b4ed40c9a2b1f29207859c61e5d904a5e21dbedd352ce"
+    },
+    "refit": {
+      "floor": 1e-06,
+      "observations": 19960,
+      "origins": 998,
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "population_sha256": "f9c03d3948b0db1cac3af2d3162b3e0010d7011ddd9dce7d5492ea1b38407838",
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:8eec6d701287109c6c1dbc17ffdfbd53146e18d8e6796a3d0c17e385f14d6c3e",
+      "scale": 0.9057720005512238,
+      "scale_id": "HF20_T2:074ddfe4fbed5918e9f484d63053e48de27a6abf89fb6bf90d16e535000e894d",
+      "sessions": 499,
+      "split": "refit",
+      "target_sha256": "c6368b8ffd2ebeb185236983c7454c61d874ebfd14881d8b8bfa85affc9f06c0"
+    }
+  },
+  "at": "2026-10-16T22:53:07.018988+00:00",
+  "ceiling": 200,
+  "input_contract": {
+    "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/training_ready_input_contract.json",
+    "sha256": "4be39c0e85fc390766331ecb19e2a24721399f1e201de864eabe8eeed49add1c"
+  },
+  "journal": {
+    "bytes": 7358,
+    "path": "reports/audit/track_a_real_pairs_v6.jsonl",
+    "sha256": "e371713ec259bb8418210ebeb9165db466f101a19a9bfdf3b64dc0313127d735"
+  },
+  "ledger": 30,
+  "model_manifests": {
+    "C0": {
+      "calibration_selected": {
+        "bytes": 1745,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1/calibration_selected.manifest.json",
+        "sha256": "43913fa84f68e01844c19b9fd6c2a98d2749021df34a67eec7ba731b9ec36168"
+      },
+      "refit_final": {
+        "bytes": 1727,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-C0-S42-DEV1/refit_final.manifest.json",
+        "sha256": "8abc9d223c9c3f1ec7bed0bf89ef98c0c801b7e5312735784a39b6a2f1a85092"
+      }
+    },
+    "T2": {
+      "calibration_selected": {
+        "bytes": 2471,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/calibration_selected.manifest.json",
+        "sha256": "df07a215610fa32a408e984699d71765c7abe45989e140c08c7a2e41effa395f"
+      },
+      "refit_final": {
+        "bytes": 2447,
+        "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656/HF20-TM0-T2-S42-DEV1/refit_final.manifest.json",
+        "sha256": "b66f6d34113973c4636522f7da45351b10c29aa33ccbdf2b49f88b2a130f5da4"
+      }
+    }
+  },
+  "numerical_scope": "HELD_OUT_LOCKED2026-01-07+;original five-stock lock independent",
+  "optimizer_steps": 0,
+  "original_training_code": {
+    "config.py": "6eb750fa4e1eac2ff64057dcbad9a67f7afc3162dfdebb71682deb0db1f69f5f",
+    "controlled_loss.py": "d9aeb2efe3edc74b15bef07f3709da29b51328b46b5469fca83e139bd57c7697",
+    "hf20_training_authority.py": "0dbee4ea15d29f3ce2f6ef42df367a0ae8df8d5bb70980ecab21a3e716f6693c",
+    "hf20_training_data.py": "dc16d4545df55fa12c34a970ed57eea944228d8667dcf53c4b7d4c6bfc85e1a9",
+    "hf20_training_run.py": "6f1b7e95ceb97889ba3f68c127da7ba99dadcb9beafbe410db44216615918d52",
+    "neural_engine.py": "d899ba379f1ac7e498b7351be57145b1cb819255155c9b28a817b3faa0cf2530",
+    "neural_health.py": "1474467ff7f6de62d03bac8cf99efe4e701fc80551a3aa15608885fdafe7d52e",
+    "neural_lifecycle.py": "ee22717bd2087d82a04a37ab2f592668b17779ec09edee18a16e567b2249f189",
+    "neural_models.py": "9d2323a45f337e7b437f727bc2604fb6d79a776a8338a85e16180bf55abe27ca"
+  },
+  "original_training_execution_SHA": "5906eabba77e8cff7a06160ccc725451a988a5aa25702304a2aef4e8d5561dbc",
+  "package": "TA-HF20-P016-READONLY-DIAGNOSIS-001",
+  "qualification": "ASSUMPTION_CONDITIONAL_RETROSPECTIVE_SURVIVOR_SECTORS_AS_REPORTED_UNCERTIFIED_ACTION_PUBLICATION_PIT_LOCAL_USE_ONLY",
+  "recipe_ids": {
+    "inner": "HF20_RECIPE:aae2ed05bbc680a2f4f95b37fc9e4cf423bb7f00cececfeebd98ee6bc981ba8b",
+    "refit": "HF20_RECIPE:8eec6d701287109c6c1dbc17ffdfbd53146e18d8e6796a3d0c17e385f14d6c3e"
+  },
+  "recipes": {
+    "bytes": 18539,
+    "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/released_preparation/train_only_scalers_and_floors.json",
+    "sha256": "4352ba12028efae77447463f9b6f324f5b7676bd746674fdacbfd1fe3d6fd2b0"
+  },
+  "registry": {
+    "bytes": 1104,
+    "path": "configs/CURRENT_EXPERIMENT_REGISTRY.json",
+    "sha256": "54a487aa199025a17ea1b60001547aac496137c46b74d26b3e9703cc5878eb1e"
+  },
+  "report": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/data_audit/ta_hf20_first_tm0_t2_2026-10-16_174656",
+  "source": [
+    {
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/train.parquet",
+      "sha256": "b36cb39c27dcb98ffcc9167bc3138a5a098a38fbbd667af06bec97ee8ac473de"
+    },
+    {
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/val.parquet",
+      "sha256": "9e974a69f59ea754b2a704947a3f4a4b850bd3031dc71ec6634fc712a3a89203"
+    },
+    {
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/test.parquet",
+      "sha256": "cebfc4fce287bcc4cf26c49be98ea14e1eeeacdec9ce983b52258068ed9fa9de"
+    }
+  ],
+  "source_requests": 0,
+  "source_revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+  "store": {
+    "bytes": 20332296,
+    "path": "data/processed/hf20/21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2/components.npz",
+    "sha256": "f50b6e59e1f498caecb6fe092476e87dc998d948baa092d73764f5ef2bb11c8d"
+  },
+  "targets": {
+    "bytes": 523962,
+    "path": "data/processed/hf20/21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2/target_labels.npz",
+    "sha256": "e1ffb7036300308954ced2282b91eb19df8113d48184cbfca0758eec9bb01c2d"
+  }
+}
