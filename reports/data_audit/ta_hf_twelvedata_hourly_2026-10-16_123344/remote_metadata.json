@@ -1,0 +1,413 @@
+{
+  "automatic_retries": 0,
+  "card": "---\nlicense: mit\nlanguage:\n  - en\ntask_categories:\n  - time-series-forecasting\n  - text-generation\n  - reinforcement-learning\ntags:\n  - finance\n  - equities\n  - ohlcv\n  - technical-indicators\n  - world-model\npretty_name: Twelve Data World Model Dataset\nsize_categories:\n  - 10M<n<100M\nconfigs:\n  - config_name: bars_1day\n    data_files:\n      - split: train\n        path: bars_1day/train.parquet\n      - split: validation\n        path: bars_1day/val.parquet\n      - split: test\n        path: bars_1day/test.parquet\n  - config_name: bars_1h\n    data_files:\n      - split: train\n        path: bars_1h/train.parquet\n      - split: validation\n        path: bars_1h/val.parquet\n      - split: test\n        path: bars_1h/test.parquet\n  - config_name: bars_1min\n    data_files:\n      - split: train\n        path: bars_1min/train.parquet\n      - split: validation\n        path: bars_1min/val.parquet\n      - split: test\n        path: bars_1min/test.parquet\n  - config_name: text_1day\n    data_files:\n      - split: train\n        path: text_1day/train.jsonl\n      - split: validation\n        path: text_1day/val.jsonl\n      - split: test\n        path: text_1day/test.jsonl\n  - config_name: text_1h\n    data_files:\n      - split: train\n        path: text_1h/train.jsonl\n      - split: validation\n        path: text_1h/val.jsonl\n      - split: test\n        path: text_1h/test.jsonl\n  - config_name: text_1min\n    data_files:\n      - split: train\n        path: text_1min/train.jsonl\n      - split: validation\n        path: text_1min/val.jsonl\n      - split: test\n        path: text_1min/test.jsonl\n  - config_name: trajectories_1day\n    data_files:\n      - split: train\n        path: trajectories_1day/train.parquet\n      - split: validation\n        path: trajectories_1day/val.parquet\n      - split: test\n        path: trajectories_1day/test.parquet\n  - config_name: trajectories_1h\n    data_files:\n      - split: train\n        path: trajectories_1h/train.parquet\n      - split: validation\n        path: trajectories_1h/val.parquet\n      - split: test\n        path: trajectories_1h/test.parquet\n  - config_name: trajectories_1min\n    data_files:\n      - split: train\n        path: trajectories_1min/train.parquet\n      - split: validation\n        path: trajectories_1min/val.parquet\n      - split: test\n        path: trajectories_1min/test.parquet\n---\n\n# Twelve Data World Model Dataset\n\nA multi-modal financial time-series dataset built from [Twelve Data](https://twelvedata.com/)\nmarket data. Each timeframe is published in three parallel views:\n\n- **`bars_*`** \u2014 OHLCV bars enriched with causal technical indicators and macro\n  context, in Parquet.\n- **`text_*`** \u2014 instruction-tuning prompts/labels derived from the bars, in\n  JSONL.\n- **`trajectories_*`** \u2014 fixed-length rolling windows of state vectors plus\n  next-state pairs, suitable for world-model / sequence-model training, in\n  Parquet.\n\nAll views cover the same symbol universe and share the same time-based\ntrain / validation / test splits.\n\n## Splits\n\n| Split | Date range |\n| --- | --- |\n| `train` | up to 2023-12-31 |\n| `validation` | 2024-01-01 \u2192 2024-12-31 |\n| `test` | 2025-01-01 \u2192 2026-10-15 |\n\nSplits are assigned by timestamp. For `trajectories_*`, a window is dropped if\nit crosses a split boundary (so train and val never overlap). Datetimes are\ntz-aware in `America/New_York`.\n\n## Symbol universe\n\n51 large-cap US equities spread across sectors (Tech, Financials, Healthcare,\nConsumer, Industrials/Energy/Materials, Communication). Macro context tickers\n(SPY, QQQ, VIXY, TLT, sector SPDRs, etc.) are joined as columns onto every\nequity row \u2014 they are not first-class trainable symbols.\n\nSee [`config/symbols.yaml`](https://github.com/twelvedata/twelvedata-world-model-dataset/blob/main/config/symbols.yaml) in the source repo for the\nexact list.\n\n## Timeframes\n\nThe pipeline requests the full history available from Twelve Data per symbol;\nactual depth varies by ticker and timeframe and is bounded by the vendor's\nhistorical limits. As a rough guide:\n\n| Interval | Typical depth (older names like AAPL/MSFT) | Trajectory windows (size / stride) |\n| --- | --- | --- |\n| `1day` | several decades back to listing | 30/5, 60/10, 120/20 |\n| `1h` | a few years | 24/6, 120/24 |\n| `1min` | a few years | 390/195 (one US session), 1950/390 (one week) |\n\nNewer listings naturally start later. Each row's `datetime` reflects what the\nvendor returned \u2014 there is no synthetic backfill before a symbol's inception.\n\n## `bars_*` schema\n\nOHLCV plus deterministic, causal indicators and macro joins. Each row is one\nbar for one symbol at one timeframe.\n\n### Core\n| column | type | description |\n| --- | --- | --- |\n| `datetime` | timestamp[ns, America/New_York] | bar timestamp (interval-start) |\n| `symbol` | string | equity ticker |\n| `timeframe` | string | `1day`, `1h`, or `1min` |\n| `open`, `high`, `low`, `close` | float64 | OHLC prices |\n| `volume` | float64 | traded volume |\n| `close_adj` | float64 | split- and dividend-adjusted close (== `close` when no events) |\n\n### Returns\n| column | description |\n| --- | --- |\n| `ret_1` | 1-bar simple return |\n| `logret_1` | 1-bar log return |\n| `ret_5` | 5-bar simple return |\n| `logret_20` | 20-bar log return |\n\n### Volatility\n| column | description |\n| --- | --- |\n| `rv_5`, `rv_20`, `rv_60` | realized volatility (stdev of log returns) over 5/20/60 bars |\n| `atr_14` | Average True Range, 14 bars |\n\n### Momentum\n| column | description |\n| --- | --- |\n| `rsi_14` | Relative Strength Index, 14 bars |\n| `macd`, `macd_signal`, `macd_hist` | MACD(12,26,9) line, signal, histogram |\n| `mom_10` | 10-bar momentum |\n\n### Volume\n| column | description |\n| --- | --- |\n| `obv` | On-Balance Volume |\n| `vol_z_20` | volume z-score over 20 bars |\n\n### Bands\n| column | description |\n| --- | --- |\n| `bb_mid`, `bb_up`, `bb_lo` | Bollinger Bands(20, 2\u03c3) middle/upper/lower |\n| `bb_pctb` | %B position within the band |\n\n### Macro context (joined by date)\n| column | description |\n| --- | --- |\n| `spy_logret_1` | SPY 1-bar log return |\n| `vix_level` | VIX level (proxied via VIXY) |\n| `tlt_logret_1` | TLT (20+ yr Treasury) 1-bar log return |\n| `dxy_logret_1` | US Dollar index 1-bar log return (UUP proxy) |\n| `sector_logret_1` | sector ETF 1-bar log return matching the symbol's sector |\n\n**Causality invariant**: every indicator and macro column at row `t` uses only\ninformation from rows `\u2264 t`. Tests in `tests/test_indicators_causal.py`\nenforce this in CI.\n\n## `text_*` schema\n\nInstruction-tuning records derived from `bars_*`.\n\n| field | type | description |\n| --- | --- | --- |\n| `symbol` | string | equity ticker |\n| `timeframe` | string | `1day` / `1h` / `1min` |\n| `as_of` | string (ISO datetime) | the bar's timestamp; **everything in `prompt` is dated \u2264 this** |\n| `prompt` | string | natural-language description of the bar + already-observed indicators |\n| `label` | string | next-bar outcome (direction + log return); empty for the final bar |\n| `meta` | object | small bag for provenance (e.g. row index) |\n\n**Leak-prevention invariant**: `prompt` never references information dated\nstrictly after `as_of`. Only `label` carries the next-step outcome. This is\nenforced in `tests/test_textify.py`.\n\n## `trajectories_*` schema\n\nRolling windows over the bar series, suitable for world-model and\nsequence-model training. Each row is one window.\n\n| field | type | description |\n| --- | --- | --- |\n| `trajectory_id` | string | stable id (`{symbol}_{timeframe}_{window}_{start_ts}`) |\n| `symbol` | string | equity ticker |\n| `timeframe` | string | `1day` / `1h` / `1min` |\n| `feature_names` | list[string] | column order of the state vector (length F) |\n| `timestamps` | list[string] | T tz-aware ISO datetimes |\n| `states` | list[list[float64]] | shape `(T, F)` |\n| `next_states` | list[list[float64]] | shape `(T, F)`, shifted by one step |\n| `rewards_logret` | list[float64] \\| null | optional scalar reward stream (1-bar log return); `null` means reward-agnostic |\n| `split` | string | `train` / `val` / `test` |\n\nThe state vector is fixed across all trajectories within the dataset:\n\n```\nopen, high, low, close_adj, volume,\nlogret_1, rv_20, rsi_14, macd, macd_signal, macd_hist, atr_14, bb_pctb,\nobv, vol_z_20,\nspy_logret_1, vix_level, tlt_logret_1, dxy_logret_1, sector_logret_1\n```\n\n## How to load\n\n```python\nfrom datasets import load_dataset\n\n# OHLCV + indicators, daily bars\nbars = load_dataset(\"twelvedata/financial-world-model\", \"bars_1day\")\n\n# Instruction-tuning text, hourly\ntext = load_dataset(\"twelvedata/financial-world-model\", \"text_1h\")\n\n# Trajectories for world-model training\ntraj = load_dataset(\"twelvedata/financial-world-model\", \"trajectories_1day\")\n```\n\nFor ad-hoc analytics, the parquet files are queryable directly with DuckDB:\n\n```sql\nSELECT symbol, datetime, close, rsi_14\nFROM 'bars_1day/test.parquet'\nWHERE symbol = 'AAPL'\nORDER BY datetime DESC\nLIMIT 10;\n```\n\n> **Tip on the in-browser SQL Console**: DuckDB-WASM streams parquet over\n> HTTPS without local caching, and `1min` configs are millions of rows. Always\n> project explicit columns (`SELECT symbol, datetime, close, ...`) instead of\n> `SELECT *`, and prefer the `1day` configs for quick exploration. For real\n> work, download the parquet and query it from desktop DuckDB.\n\n## Refresh cadence\n\nThe dataset is rebuilt by an incremental pipeline that:\n\n1. Fetches the trailing window per symbol/timeframe (re-fetches the previous\n   day to capture restatements).\n2. Detects splits and dividends and triggers a per-symbol re-backfill when\n   needed (so `close_adj` stays correct historically).\n3. Recomputes indicators and macro joins.\n4. Re-emits all three views and pushes them here.\n\n## Limitations\n\n- US equities only; intraday data is regular-session only (no pre/post).\n- Macro context is ETF-proxied (e.g. VIXY for VIX, UUP for DXY) \u2014 convenient\n  to fetch but not identical to the underlying index.\n- Intraday history depth (especially `1min`) is bounded by Twelve Data's\n  vendor limits and is much shorter than daily history. Don't assume\n  identical date coverage across timeframes for the same symbol.\n- The text view is templated, not LLM-generated \u2014 it is dense and repetitive\n  by design, intended as a substrate for fine-tuning rather than as\n  human-style prose.\n\n## License\n\nMIT. Underlying market data is \u00a9 Twelve Data and redistributed under their\nterms; check [twelvedata.com](https://twelvedata.com/) for commercial use.\n\n## Citation\n\n```\n@misc{twelvedata-world-model,\n  title  = {Twelve Data World Model Dataset},\n  author = {Twelve Data},\n  year   = {2026},\n  url    = {https://huggingface.co/datasets/twelvedata/financial-world-model}\n}\n```\n",
+  "credentials_used": false,
+  "dataset": "twelvedata/financial-world-model",
+  "files": [
+    {
+      "lastCommit": {
+        "date": "2026-10-16T12:05:17.000Z",
+        "id": "b3cecc85f5ef83bceff933fda18bbf389fff560d",
+        "title": "Upload bars_1h/train.parquet with huggingface_hub"
+      },
+      "lfs": {
+        "oid": "b36cb39c27dcb98ffcc9167bc3138a5a098a38fbbd667af06bec97ee8ac473de",
+        "pointerSize": 134,
+        "size": 101602217
+      },
+      "oid": "2384f3e30faf7f642e2f54e839262f2deeb25b5d",
+      "path": "bars_1h/train.parquet",
+      "securityFileStatus": {
+        "avScan": {
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+          "status": "safe"
+        },
+        "pickleImportScan": {
+          "status": "unscanned"
+        },
+        "protectAiScan": {
+          "status": "unscanned"
+        },
+        "status": "safe",
+        "virusTotalScan": {
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/b36cb39c27dcb98ffcc9167bc3138a5a098a38fbbd667af06bec97ee8ac473de?utm_source=huggingface",
+          "status": "unscanned"
+        }
+      },
+      "size": 101602217,
+      "type": "file",
+      "xetHash": "ef4084a35b68e7754e41a482efa25d07270a2f9484307a49e2818b2ee7f0555f"
+    },
+    {
+      "lastCommit": {
+        "date": "2026-10-16T12:05:18.000Z",
+        "id": "ef67b938a383bf98670c1afd5e68b06dd90db9e6",
+        "title": "Upload bars_1h/val.parquet with huggingface_hub"
+      },
+      "lfs": {
+        "oid": "9e974a69f59ea754b2a704947a3f4a4b850bd3031dc71ec6634fc712a3a89203",
+        "pointerSize": 133,
+        "size": 20679513
+      },
+      "oid": "b69d5601a5fdf5db6e2db1c6fe6e7af4f08eeea5",
+      "path": "bars_1h/val.parquet",
+      "securityFileStatus": {
+        "avScan": {
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+          "status": "safe"
+        },
+        "pickleImportScan": {
+          "status": "unscanned"
+        },
+        "protectAiScan": {
+          "status": "unscanned"
+        },
+        "status": "safe",
+        "virusTotalScan": {
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/9e974a69f59ea754b2a704947a3f4a4b850bd3031dc71ec6634fc712a3a89203?utm_source=huggingface",
+          "status": "unscanned"
+        }
+      },
+      "size": 20679513,
+      "type": "file",
+      "xetHash": "f905e15afe0992f60c81d0d2006fc70c731c55e69f50d2c9c81b841270d6c0c7"
+    },
+    {
+      "lastCommit": {
+        "date": "2026-10-16T12:05:21.000Z",
+        "id": "d79ca35448c1c8f868b2fa3f4b24deaf463ac011",
+        "title": "Upload bars_1h/test.parquet with huggingface_hub"
+      },
+      "lfs": {
+        "oid": "cebfc4fce287bcc4cf26c49be98ea14e1eeeacdec9ce983b52258068ed9fa9de",
+        "pointerSize": 133,
+        "size": 37664211
+      },
+      "oid": "49479e783f831e4b5af8e558db78da88ee6eb10f",
+      "path": "bars_1h/test.parquet",
+      "securityFileStatus": {
+        "avScan": {
+          "status": "unscanned"
+        },
+        "pickleImportScan": {
+          "status": "unscanned"
+        },
+        "protectAiScan": {
+          "status": "unscanned"
+        },
+        "status": "unscanned",
+        "virusTotalScan": {
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/cebfc4fce287bcc4cf26c49be98ea14e1eeeacdec9ce983b52258068ed9fa9de?utm_source=huggingface",
+          "status": "unscanned"
+        }
+      },
+      "size": 37664211,
+      "type": "file",
+      "xetHash": "75aa5bda6043d46ea14261fe9179d690efaa3615eaa3cd4b88f62923c9c2e224"
+    }
+  ],
+  "info": {
+    "_id": "69e7bf7bad9c1e564967cc8e",
+    "author": "twelvedata",
+    "cardData": {
+      "configs": [
+        {
+          "config_name": "bars_1day",
+          "data_files": [
+            {
+              "path": "bars_1day/train.parquet",
+              "split": "train"
+            },
+            {
+              "path": "bars_1day/val.parquet",
+              "split": "validation"
+            },
+            {
+              "path": "bars_1day/test.parquet",
+              "split": "test"
+            }
+          ]
+        },
+        {
+          "config_name": "bars_1h",
+          "data_files": [
+            {
+              "path": "bars_1h/train.parquet",
+              "split": "train"
+            },
+            {
+              "path": "bars_1h/val.parquet",
+              "split": "validation"
+            },
+            {
+              "path": "bars_1h/test.parquet",
+              "split": "test"
+            }
+          ]
+        },
+        {
+          "config_name": "bars_1min",
+          "data_files": [
+            {
+              "path": "bars_1min/train.parquet",
+              "split": "train"
+            },
+            {
+              "path": "bars_1min/val.parquet",
+              "split": "validation"
+            },
+            {
+              "path": "bars_1min/test.parquet",
+              "split": "test"
+            }
+          ]
+        },
+        {
+          "config_name": "text_1day",
+          "data_files": [
+            {
+              "path": "text_1day/train.jsonl",
+              "split": "train"
+            },
+            {
+              "path": "text_1day/val.jsonl",
+              "split": "validation"
+            },
+            {
+              "path": "text_1day/test.jsonl",
+              "split": "test"
+            }
+          ]
+        },
+        {
+          "config_name": "text_1h",
+          "data_files": [
+            {
+              "path": "text_1h/train.jsonl",
+              "split": "train"
+            },
+            {
+              "path": "text_1h/val.jsonl",
+              "split": "validation"
+            },
+            {
+              "path": "text_1h/test.jsonl",
+              "split": "test"
+            }
+          ]
+        },
+        {
+          "config_name": "text_1min",
+          "data_files": [
+            {
+              "path": "text_1min/train.jsonl",
+              "split": "train"
+            },
+            {
+              "path": "text_1min/val.jsonl",
+              "split": "validation"
+            },
+            {
+              "path": "text_1min/test.jsonl",
+              "split": "test"
+            }
+          ]
+        },
+        {
+          "config_name": "trajectories_1day",
+          "data_files": [
+            {
+              "path": "trajectories_1day/train.parquet",
+              "split": "train"
+            },
+            {
+              "path": "trajectories_1day/val.parquet",
+              "split": "validation"
+            },
+            {
+              "path": "trajectories_1day/test.parquet",
+              "split": "test"
+            }
+          ]
+        },
+        {
+          "config_name": "trajectories_1h",
+          "data_files": [
+            {
+              "path": "trajectories_1h/train.parquet",
+              "split": "train"
+            },
+            {
+              "path": "trajectories_1h/val.parquet",
+              "split": "validation"
+            },
+            {
+              "path": "trajectories_1h/test.parquet",
+              "split": "test"
+            }
+          ]
+        },
+        {
+          "config_name": "trajectories_1min",
+          "data_files": [
+            {
+              "path": "trajectories_1min/train.parquet",
+              "split": "train"
+            },
+            {
+              "path": "trajectories_1min/val.parquet",
+              "split": "validation"
+            },
+            {
+              "path": "trajectories_1min/test.parquet",
+              "split": "test"
+            }
+          ]
+        }
+      ],
+      "language": [
+        "en"
+      ],
+      "license": "mit",
+      "pretty_name": "Twelve Data World Model Dataset",
+      "size_categories": [
+        "10M<n<100M"
+      ],
+      "tags": [
+        "finance",
+        "equities",
+        "ohlcv",
+        "technical-indicators",
+        "world-model"
+      ],
+      "task_categories": [
+        "time-series-forecasting",
+        "text-generation",
+        "reinforcement-learning"
+      ]
+    },
+    "createdAt": "2026-04-21T18:18:35.000Z",
+    "description": "\n\t\n\t\t\n\t\n\t\n\t\tTwelve Data World Model Dataset\n\t\n\nA multi-modal financial time-series dataset built from Twelve Data\nmarket data. Each timeframe is published in three parallel views:\n\nbars_* \u2014 OHLCV bars enriched with causal technical indicators and macro\ncontext, in Parquet.\ntext_* \u2014 instruction-tuning prompts/labels derived from the bars, in\nJSONL.\ntrajectories_* \u2014 fixed-length rolling windows of state vectors plus\nnext-state pairs, suitable for world-model / sequence-model training, in\u2026 See the full description on the dataset page: https://huggingface.co/datasets/twelvedata/financial-world-model.",
+    "disabled": false,
+    "downloads": 2909,
+    "gated": false,
+    "id": "twelvedata/financial-world-model",
+    "lastModified": "2026-10-16T12:27:26.000Z",
+    "likes": 12,
+    "private": false,
+    "sha": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "bars_1day/test.parquet"
+      },
+      {
+        "rfilename": "bars_1day/train.parquet"
+      },
+      {
+        "rfilename": "bars_1day/val.parquet"
+      },
+      {
+        "rfilename": "bars_1h/test.parquet"
+      },
+      {
+        "rfilename": "bars_1h/train.parquet"
+      },
+      {
+        "rfilename": "bars_1h/val.parquet"
+      },
+      {
+        "rfilename": "bars_1min/test.parquet"
+      },
+      {
+        "rfilename": "bars_1min/train.parquet"
+      },
+      {
+        "rfilename": "bars_1min/val.parquet"
+      },
+      {
+        "rfilename": "text_1day/test.jsonl"
+      },
+      {
+        "rfilename": "text_1day/train.jsonl"
+      },
+      {
+        "rfilename": "text_1day/val.jsonl"
+      },
+      {
+        "rfilename": "text_1h/test.jsonl"
+      },
+      {
+        "rfilename": "text_1h/train.jsonl"
+      },
+      {
+        "rfilename": "text_1h/val.jsonl"
+      },
+      {
+        "rfilename": "text_1min/test.jsonl"
+      },
+      {
+        "rfilename": "text_1min/train.jsonl"
+      },
+      {
+        "rfilename": "text_1min/val.jsonl"
+      },
+      {
+        "rfilename": "trajectories_1day/test.parquet"
+      },
+      {
+        "rfilename": "trajectories_1day/train.parquet"
+      },
+      {
+        "rfilename": "trajectories_1day/val.parquet"
+      },
+      {
+        "rfilename": "trajectories_1h/test.parquet"
+      },
+      {
+        "rfilename": "trajectories_1h/train.parquet"
+      },
+      {
+        "rfilename": "trajectories_1h/val.parquet"
+      },
+      {
+        "rfilename": "trajectories_1min/test.parquet"
+      },
+      {
+        "rfilename": "trajectories_1min/train.parquet"
+      },
+      {
+        "rfilename": "trajectories_1min/val.parquet"
+      }
+    ],
+    "tags": [
+      "task_categories:time-series-forecasting",
+      "task_categories:text-generation",
+      "task_categories:reinforcement-learning",
+      "language:en",
+      "license:mit",
+      "size_categories:10M<n<100M",
+      "modality:tabular",
+      "modality:text",
+      "region:us",
+      "finance",
+      "equities",
+      "ohlcv",
+      "technical-indicators",
+      "world-model"
+    ],
+    "usedStorage": 2766738579321
+  },
+  "retrieved_at": "2026-10-16T17:48:27.976452+00:00",
+  "revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec"
+}

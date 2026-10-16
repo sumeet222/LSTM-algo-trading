@@ -1,0 +1,121 @@
+{
+  "Python": "3.14.6",
+  "application_HTTP_requests": 9,
+  "at": "2026-10-16T19:11:09.967076+00:00",
+  "automatic_retries": 0,
+  "config_sha256": "31aa9da67512287a02aa2b56c0a03964dcf9448d1c4f09c2c1deaa3b84d9b18f",
+  "download_budget_bytes": 250000000,
+  "elapsed_seconds": 2.2181723329704255,
+  "events": [
+    {
+      "bytes": 4567,
+      "redirects": 0,
+      "requested_range": null,
+      "seconds": 0.11074933299096301,
+      "started_at": "2026-10-16T19:11:07.749800+00:00",
+      "status": 200,
+      "url": "https://huggingface.co/api/datasets/twelvedata/financial-world-model/revision/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec"
+    },
+    {
+      "bytes": 2743,
+      "redirects": 0,
+      "requested_range": null,
+      "seconds": 0.11241958400933072,
+      "started_at": "2026-10-16T19:11:07.860644+00:00",
+      "status": 200,
+      "url": "https://huggingface.co/api/datasets/twelvedata/financial-world-model/tree/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h?expand=true"
+    },
+    {
+      "bytes": 10678,
+      "redirects": 0,
+      "requested_range": null,
+      "seconds": 0.03151041700039059,
+      "started_at": "2026-10-16T19:11:07.973438+00:00",
+      "status": 200,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/raw/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/README.md"
+    },
+    {
+      "bytes": 8,
+      "redirects": 1,
+      "requested_range": [
+        101602209,
+        101602216
+      ],
+      "seconds": 0.5710679170442745,
+      "started_at": "2026-10-16T19:11:08.008826+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/train.parquet"
+    },
+    {
+      "bytes": 209412,
+      "redirects": 1,
+      "requested_range": [
+        101392805,
+        101602216
+      ],
+      "seconds": 0.2260517500108108,
+      "started_at": "2026-10-16T19:11:08.579919+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/train.parquet"
+    },
+    {
+      "bytes": 8,
+      "redirects": 1,
+      "requested_range": [
+        20679505,
+        20679512
+      ],
+      "seconds": 0.3042825830052607,
+      "started_at": "2026-10-16T19:11:08.834334+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/val.parquet"
+    },
+    {
+      "bytes": 205039,
+      "redirects": 1,
+      "requested_range": [
+        20474474,
+        20679512
+      ],
+      "seconds": 0.1587337080272846,
+      "started_at": "2026-10-16T19:11:09.138646+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/val.parquet"
+    },
+    {
+      "bytes": 8,
+      "redirects": 1,
+      "requested_range": [
+        37664203,
+        37664210
+      ],
+      "seconds": 0.2981098339660093,
+      "started_at": "2026-10-16T19:11:09.316743+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/test.parquet"
+    },
+    {
+      "bytes": 205472,
+      "redirects": 1,
+      "requested_range": [
+        37458739,
+        37664210
+      ],
+      "seconds": 0.3332858749781735,
+      "started_at": "2026-10-16T19:11:09.614888+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/test.parquet"
+    }
+  ],
+  "flags": [
+    "SOURCE_NOT_ACQUIRED"
+  ],
+  "machine": "arm64",
+  "new_neural_pairs": 0,
+  "original_confirmation_access": false,
+  "peak_RSS_bytes": 122748928,
+  "requests_including_redirects": 15,
+  "response_body_bytes": 637935,
+  "storage_bytes": 160043252,
+  "working_budget_bytes": 500000000
+}

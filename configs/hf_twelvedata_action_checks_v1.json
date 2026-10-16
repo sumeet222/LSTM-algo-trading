@@ -1,0 +1,15 @@
+{
+  "status": "SOURCE_QUALITY_CHECK_DATES_ONLY_NOT_A_COMPLETE_ACTION_LEDGER",
+  "events": [
+    {"symbol":"AAPL","first_post_split_trading_date":"2020-08-31","ratio":4,"source":"https://www.apple.com/newsroom/2020/07/apple-reports-third-quarter-results/"},
+    {"symbol":"TSLA","first_post_split_trading_date":"2022-08-25","ratio":3,"source":"https://ir.tesla.com/press-release/tesla-announces-three-one-stock-split"},
+    {"symbol":"NVDA","first_post_split_trading_date":"2021-07-20","ratio":4,"source":"https://nvidianews.nvidia.com/_gallery/download_pdf/60a7afd8ed6ae55e49ab1ea5/"},
+    {"symbol":"NVDA","first_post_split_trading_date":"2024-06-10","ratio":10,"source":"https://investor.nvidia.com/files/doc_downloads/2024/06/nvidia-2024-stock-split_faq_investors.pdf"}
+  ],
+  "identity_cautions": {
+    "META":{"event":"FB→META trading symbol from2022-06-09; historical META rows are retrospective ticker mapping","source":"https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx"},
+    "RTX":{"event":"UTX/Raytheon merger and spin-offs2020-04-03; a single current ticker does not prove stable historical issuer scope","source":"https://www.sec.gov/Archives/edgar/data/1047122/000119312520097237/d827106dex991.htm"},
+    "GE":{"event":"GE Vernova separation2024-04-02 changes economic issuer scope despite retained GE ticker","source":"https://www.ge.com/news/press-releases/ge-board-of-directors-approves-spin-off-of-ge-vernova-ge-vernova-and-ge-aerospace-to"},
+    "BRK.B":{"event":"Share-class punctuation/provider symbology needs an explicit entity mapping; date-specific identity UNVERIFIED","source":"Publisher symbols.yaml; no independent mapping certificate"}
+  }
+}

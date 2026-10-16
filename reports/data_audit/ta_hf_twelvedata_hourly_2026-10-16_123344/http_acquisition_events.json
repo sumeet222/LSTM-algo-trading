@@ -1,0 +1,137 @@
+{
+  "application_requests": 12,
+  "automatic_retries": 0,
+  "download_budget_bytes": 249000000,
+  "events": [
+    {
+      "bytes": 4567,
+      "redirects": 0,
+      "requested_range": null,
+      "seconds": 0.10505554097471759,
+      "started_at": "2026-10-16T17:48:27.671219+00:00",
+      "status": 200,
+      "url": "https://huggingface.co/api/datasets/twelvedata/financial-world-model/revision/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec"
+    },
+    {
+      "bytes": 2743,
+      "redirects": 0,
+      "requested_range": null,
+      "seconds": 0.16749429202172905,
+      "started_at": "2026-10-16T17:48:27.776351+00:00",
+      "status": 200,
+      "url": "https://huggingface.co/api/datasets/twelvedata/financial-world-model/tree/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h?expand=true"
+    },
+    {
+      "bytes": 10678,
+      "redirects": 0,
+      "requested_range": null,
+      "seconds": 0.03243579203262925,
+      "started_at": "2026-10-16T17:48:27.944010+00:00",
+      "status": 200,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/raw/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/README.md"
+    },
+    {
+      "bytes": 8,
+      "redirects": 1,
+      "requested_range": [
+        101602209,
+        101602216
+      ],
+      "seconds": 0.4133220419753343,
+      "started_at": "2026-10-16T17:48:27.978352+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/train.parquet"
+    },
+    {
+      "bytes": 209412,
+      "redirects": 1,
+      "requested_range": [
+        101392805,
+        101602216
+      ],
+      "seconds": 0.2638092499691993,
+      "started_at": "2026-10-16T17:48:28.391724+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/train.parquet"
+    },
+    {
+      "bytes": 8,
+      "redirects": 1,
+      "requested_range": [
+        20679505,
+        20679512
+      ],
+      "seconds": 0.34014679200481623,
+      "started_at": "2026-10-16T17:48:28.704960+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/val.parquet"
+    },
+    {
+      "bytes": 205039,
+      "redirects": 1,
+      "requested_range": [
+        20474474,
+        20679512
+      ],
+      "seconds": 0.195800416986458,
+      "started_at": "2026-10-16T17:48:29.045291+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/val.parquet"
+    },
+    {
+      "bytes": 8,
+      "redirects": 1,
+      "requested_range": [
+        37664203,
+        37664210
+      ],
+      "seconds": 0.4522992499987595,
+      "started_at": "2026-10-16T17:48:29.255607+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/test.parquet"
+    },
+    {
+      "bytes": 205472,
+      "redirects": 1,
+      "requested_range": [
+        37458739,
+        37664210
+      ],
+      "seconds": 0.15733841701876372,
+      "started_at": "2026-10-16T17:48:29.708008+00:00",
+      "status": 206,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/test.parquet"
+    },
+    {
+      "bytes": 101602217,
+      "redirects": 1,
+      "requested_range": null,
+      "seconds": 3.2363312920206226,
+      "started_at": "2026-10-16T17:48:29.885293+00:00",
+      "status": 200,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/train.parquet"
+    },
+    {
+      "bytes": 20679513,
+      "redirects": 1,
+      "requested_range": null,
+      "seconds": 0.6584048749646172,
+      "started_at": "2026-10-16T17:48:33.440577+00:00",
+      "status": 200,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/val.parquet"
+    },
+    {
+      "bytes": 37664211,
+      "redirects": 1,
+      "requested_range": null,
+      "seconds": 0.8473176659899764,
+      "started_at": "2026-10-16T17:48:34.150346+00:00",
+      "status": 200,
+      "url": "https://huggingface.co/datasets/twelvedata/financial-world-model/resolve/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/test.parquet"
+    }
+  ],
+  "preflight_extra_budget_reserved_bytes": 1000000,
+  "requests_including_redirects": 21,
+  "response_body_bytes": 160583876,
+  "seconds": 7.4121022910112515
+}

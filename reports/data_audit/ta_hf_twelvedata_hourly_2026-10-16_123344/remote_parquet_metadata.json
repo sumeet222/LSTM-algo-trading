@@ -1,0 +1,2576 @@
+{
+  "bars_1h/test.parquet": {
+    "columns": [
+      "datetime",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "symbol",
+      "timeframe",
+      "close_adj",
+      "spy_logret_1",
+      "vix_level",
+      "tlt_logret_1",
+      "dxy_logret_1",
+      "sector_logret_1",
+      "ret_1",
+      "logret_1",
+      "ret_5",
+      "logret_20",
+      "rv_5",
+      "rv_20",
+      "rv_60",
+      "atr_14",
+      "rsi_14",
+      "macd",
+      "macd_signal",
+      "macd_hist",
+      "mom_10",
+      "obv",
+      "vol_z_20",
+      "bb_mid",
+      "bb_up",
+      "bb_lo",
+      "bb_pctb"
+    ],
+    "created_by": "parquet-cpp-arrow version 24.0.0",
+    "row_groups": [
+      {
+        "group": 0,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AAPL",
+            "min": "AAPL",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 1,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MSFT",
+            "min": "MSFT",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 2,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "NVDA",
+            "min": "NVDA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 3,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "GOOGL",
+            "min": "GOOGL",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 4,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "META",
+            "min": "META",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 5,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AMZN",
+            "min": "AMZN",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 6,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AVGO",
+            "min": "AVGO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 7,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "ORCL",
+            "min": "ORCL",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 8,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "ADBE",
+            "min": "ADBE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 9,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CRM",
+            "min": "CRM",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 10,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AMD",
+            "min": "AMD",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 11,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CSCO",
+            "min": "CSCO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 12,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "JPM",
+            "min": "JPM",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 13,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BAC",
+            "min": "BAC",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 14,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "WFC",
+            "min": "WFC",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 15,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "GS",
+            "min": "GS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 16,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MS",
+            "min": "MS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 17,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BLK",
+            "min": "BLK",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 18,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "V",
+            "min": "V",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 19,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MA",
+            "min": "MA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 20,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "JNJ",
+            "min": "JNJ",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 21,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "UNH",
+            "min": "UNH",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 22,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "LLY",
+            "min": "LLY",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 23,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "PFE",
+            "min": "PFE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 24,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MRK",
+            "min": "MRK",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 25,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "ABBV",
+            "min": "ABBV",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 26,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "TMO",
+            "min": "TMO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 27,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "WMT",
+            "min": "WMT",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 28,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "HD",
+            "min": "HD",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 29,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "COST",
+            "min": "COST",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 30,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MCD",
+            "min": "MCD",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 31,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "NKE",
+            "min": "NKE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 32,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "SBUX",
+            "min": "SBUX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 33,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "DIS",
+            "min": "DIS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 34,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CAT",
+            "min": "CAT",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 35,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BA",
+            "min": "BA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 36,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "GE",
+            "min": "GE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 37,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "RTX",
+            "min": "RTX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 38,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "XOM",
+            "min": "XOM",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 39,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CVX",
+            "min": "CVX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 40,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "COP",
+            "min": "COP",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 41,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "LIN",
+            "min": "LIN",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 42,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "NFLX",
+            "min": "NFLX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 43,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "TMUS",
+            "min": "TMUS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 44,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "T",
+            "min": "T",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 45,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "VZ",
+            "min": "VZ",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 46,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "TSLA",
+            "min": "TSLA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 47,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BRK.B",
+            "min": "BRK.B",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 48,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "PG",
+            "min": "PG",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 49,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "KO",
+            "min": "KO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 50,
+        "rows": 3127,
+        "stats": {
+          "datetime": {
+            "max": "2026-10-15 19:30:00+00:00",
+            "min": "2025-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "PEP",
+            "min": "PEP",
+            "nulls": 0
+          }
+        }
+      }
+    ],
+    "rows": 159477,
+    "schema": "datetime: timestamp[us, tz=America/New_York]\nopen: double\nhigh: double\nlow: double\nclose: double\nvolume: int64\nsymbol: large_string\ntimeframe: large_string\nclose_adj: double\nspy_logret_1: double\nvix_level: double\ntlt_logret_1: double\ndxy_logret_1: double\nsector_logret_1: double\nret_1: double\nlogret_1: double\nret_5: double\nlogret_20: double\nrv_5: double\nrv_20: double\nrv_60: double\natr_14: double\nrsi_14: double\nmacd: double\nmacd_signal: double\nmacd_hist: double\nmom_10: double\nobv: double\nvol_z_20: double\nbb_mid: double\nbb_up: double\nbb_lo: double\nbb_pctb: double\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 3912"
+  },
+  "bars_1h/train.parquet": {
+    "columns": [
+      "datetime",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "symbol",
+      "timeframe",
+      "close_adj",
+      "spy_logret_1",
+      "vix_level",
+      "tlt_logret_1",
+      "dxy_logret_1",
+      "sector_logret_1",
+      "ret_1",
+      "logret_1",
+      "ret_5",
+      "logret_20",
+      "rv_5",
+      "rv_20",
+      "rv_60",
+      "atr_14",
+      "rsi_14",
+      "macd",
+      "macd_signal",
+      "macd_hist",
+      "mom_10",
+      "obv",
+      "vol_z_20",
+      "bb_mid",
+      "bb_up",
+      "bb_lo",
+      "bb_pctb"
+    ],
+    "created_by": "parquet-cpp-arrow version 24.0.0",
+    "row_groups": [
+      {
+        "group": 0,
+        "rows": 8755,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AAPL",
+            "min": "AAPL",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 1,
+        "rows": 8745,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MSFT",
+            "min": "MSFT",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 2,
+        "rows": 8749,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "NVDA",
+            "min": "NVDA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 3,
+        "rows": 8726,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "GOOGL",
+            "min": "GOOGL",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 4,
+        "rows": 8750,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "META",
+            "min": "META",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 5,
+        "rows": 8753,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AMZN",
+            "min": "AMZN",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 6,
+        "rows": 8748,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AVGO",
+            "min": "AVGO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 7,
+        "rows": 8748,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "ORCL",
+            "min": "ORCL",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 8,
+        "rows": 8741,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "ADBE",
+            "min": "ADBE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 9,
+        "rows": 8740,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CRM",
+            "min": "CRM",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 10,
+        "rows": 8755,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AMD",
+            "min": "AMD",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 11,
+        "rows": 8748,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CSCO",
+            "min": "CSCO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 12,
+        "rows": 8741,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "JPM",
+            "min": "JPM",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 13,
+        "rows": 8751,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BAC",
+            "min": "BAC",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 14,
+        "rows": 8747,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "WFC",
+            "min": "WFC",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 15,
+        "rows": 8725,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "GS",
+            "min": "GS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 16,
+        "rows": 8747,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MS",
+            "min": "MS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 17,
+        "rows": 8754,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BLK",
+            "min": "BLK",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 18,
+        "rows": 8747,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "V",
+            "min": "V",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 19,
+        "rows": 8730,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MA",
+            "min": "MA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 20,
+        "rows": 8743,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "JNJ",
+            "min": "JNJ",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 21,
+        "rows": 8747,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "UNH",
+            "min": "UNH",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 22,
+        "rows": 8727,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "LLY",
+            "min": "LLY",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 23,
+        "rows": 8741,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "PFE",
+            "min": "PFE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 24,
+        "rows": 8734,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MRK",
+            "min": "MRK",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 25,
+        "rows": 8747,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "ABBV",
+            "min": "ABBV",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 26,
+        "rows": 8743,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "TMO",
+            "min": "TMO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 27,
+        "rows": 8746,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "WMT",
+            "min": "WMT",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 28,
+        "rows": 8749,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "HD",
+            "min": "HD",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 29,
+        "rows": 8735,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "COST",
+            "min": "COST",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 30,
+        "rows": 8746,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MCD",
+            "min": "MCD",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 31,
+        "rows": 8743,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "NKE",
+            "min": "NKE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 32,
+        "rows": 8747,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "SBUX",
+            "min": "SBUX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 33,
+        "rows": 8748,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "DIS",
+            "min": "DIS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 34,
+        "rows": 8749,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CAT",
+            "min": "CAT",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 35,
+        "rows": 8755,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BA",
+            "min": "BA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 36,
+        "rows": 8747,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "GE",
+            "min": "GE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 37,
+        "rows": 6404,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2020-05-04 13:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "RTX",
+            "min": "RTX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 38,
+        "rows": 8743,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "XOM",
+            "min": "XOM",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 39,
+        "rows": 8749,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CVX",
+            "min": "CVX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 40,
+        "rows": 8730,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "COP",
+            "min": "COP",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 41,
+        "rows": 8724,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "LIN",
+            "min": "LIN",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 42,
+        "rows": 8748,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "NFLX",
+            "min": "NFLX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 43,
+        "rows": 8732,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "TMUS",
+            "min": "TMUS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 44,
+        "rows": 8722,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "T",
+            "min": "T",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 45,
+        "rows": 8751,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "VZ",
+            "min": "VZ",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 46,
+        "rows": 8755,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "TSLA",
+            "min": "TSLA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 47,
+        "rows": 8727,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BRK.B",
+            "min": "BRK.B",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 48,
+        "rows": 8743,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "PG",
+            "min": "PG",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 49,
+        "rows": 8726,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "KO",
+            "min": "KO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 50,
+        "rows": 8751,
+        "stats": {
+          "datetime": {
+            "max": "2023-12-29 20:30:00+00:00",
+            "min": "2019-01-07 14:00:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "PEP",
+            "min": "PEP",
+            "nulls": 0
+          }
+        }
+      }
+    ],
+    "rows": 443552,
+    "schema": "datetime: timestamp[us, tz=America/New_York]\nopen: double\nhigh: double\nlow: double\nclose: double\nvolume: int64\nsymbol: large_string\ntimeframe: large_string\nclose_adj: double\nspy_logret_1: double\nvix_level: double\ntlt_logret_1: double\ndxy_logret_1: double\nsector_logret_1: double\nret_1: double\nlogret_1: double\nret_5: double\nlogret_20: double\nrv_5: double\nrv_20: double\nrv_60: double\natr_14: double\nrsi_14: double\nmacd: double\nmacd_signal: double\nmacd_hist: double\nmom_10: double\nobv: double\nvol_z_20: double\nbb_mid: double\nbb_up: double\nbb_lo: double\nbb_pctb: double\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 3912"
+  },
+  "bars_1h/val.parquet": {
+    "columns": [
+      "datetime",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "symbol",
+      "timeframe",
+      "close_adj",
+      "spy_logret_1",
+      "vix_level",
+      "tlt_logret_1",
+      "dxy_logret_1",
+      "sector_logret_1",
+      "ret_1",
+      "logret_1",
+      "ret_5",
+      "logret_20",
+      "rv_5",
+      "rv_20",
+      "rv_60",
+      "atr_14",
+      "rsi_14",
+      "macd",
+      "macd_signal",
+      "macd_hist",
+      "mom_10",
+      "obv",
+      "vol_z_20",
+      "bb_mid",
+      "bb_up",
+      "bb_lo",
+      "bb_pctb"
+    ],
+    "created_by": "parquet-cpp-arrow version 24.0.0",
+    "row_groups": [
+      {
+        "group": 0,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AAPL",
+            "min": "AAPL",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 1,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MSFT",
+            "min": "MSFT",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 2,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "NVDA",
+            "min": "NVDA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 3,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "GOOGL",
+            "min": "GOOGL",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 4,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "META",
+            "min": "META",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 5,
+        "rows": 1758,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AMZN",
+            "min": "AMZN",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 6,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AVGO",
+            "min": "AVGO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 7,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "ORCL",
+            "min": "ORCL",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 8,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "ADBE",
+            "min": "ADBE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 9,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CRM",
+            "min": "CRM",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 10,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "AMD",
+            "min": "AMD",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 11,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CSCO",
+            "min": "CSCO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 12,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "JPM",
+            "min": "JPM",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 13,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BAC",
+            "min": "BAC",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 14,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "WFC",
+            "min": "WFC",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 15,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "GS",
+            "min": "GS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 16,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MS",
+            "min": "MS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 17,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BLK",
+            "min": "BLK",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 18,
+        "rows": 1758,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "V",
+            "min": "V",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 19,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MA",
+            "min": "MA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 20,
+        "rows": 1758,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "JNJ",
+            "min": "JNJ",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 21,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "UNH",
+            "min": "UNH",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 22,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "LLY",
+            "min": "LLY",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 23,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "PFE",
+            "min": "PFE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 24,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MRK",
+            "min": "MRK",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 25,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "ABBV",
+            "min": "ABBV",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 26,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "TMO",
+            "min": "TMO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 27,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "WMT",
+            "min": "WMT",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 28,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "HD",
+            "min": "HD",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 29,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "COST",
+            "min": "COST",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 30,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "MCD",
+            "min": "MCD",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 31,
+        "rows": 1758,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "NKE",
+            "min": "NKE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 32,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "SBUX",
+            "min": "SBUX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 33,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "DIS",
+            "min": "DIS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 34,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CAT",
+            "min": "CAT",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 35,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BA",
+            "min": "BA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 36,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "GE",
+            "min": "GE",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 37,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "RTX",
+            "min": "RTX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 38,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "XOM",
+            "min": "XOM",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 39,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "CVX",
+            "min": "CVX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 40,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "COP",
+            "min": "COP",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 41,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "LIN",
+            "min": "LIN",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 42,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "NFLX",
+            "min": "NFLX",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 43,
+        "rows": 1755,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "TMUS",
+            "min": "TMUS",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 44,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "T",
+            "min": "T",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 45,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "VZ",
+            "min": "VZ",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 46,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "TSLA",
+            "min": "TSLA",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 47,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "BRK.B",
+            "min": "BRK.B",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 48,
+        "rows": 1756,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "PG",
+            "min": "PG",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 49,
+        "rows": 1758,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "KO",
+            "min": "KO",
+            "nulls": 0
+          }
+        }
+      },
+      {
+        "group": 50,
+        "rows": 1757,
+        "stats": {
+          "datetime": {
+            "max": "2024-12-31 20:30:00+00:00",
+            "min": "2024-01-02 14:30:00+00:00",
+            "nulls": 0
+          },
+          "symbol": {
+            "max": "PEP",
+            "min": "PEP",
+            "nulls": 0
+          }
+        }
+      }
+    ],
+    "rows": 89574,
+    "schema": "datetime: timestamp[us, tz=America/New_York]\nopen: double\nhigh: double\nlow: double\nclose: double\nvolume: int64\nsymbol: large_string\ntimeframe: large_string\nclose_adj: double\nspy_logret_1: double\nvix_level: double\ntlt_logret_1: double\ndxy_logret_1: double\nsector_logret_1: double\nret_1: double\nlogret_1: double\nret_5: double\nlogret_20: double\nrv_5: double\nrv_20: double\nrv_60: double\natr_14: double\nrsi_14: double\nmacd: double\nmacd_signal: double\nmacd_hist: double\nmom_10: double\nobv: double\nvol_z_20: double\nbb_mid: double\nbb_up: double\nbb_lo: double\nbb_pctb: double\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 3912"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "dataset": "twelvedata/financial-world-model",
+  "files": [
+    {
+      "bytes": 101602217,
+      "download_seconds": 3.5539601250202395,
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/train.parquet",
+      "resumed_bytes": 0,
+      "reused": false,
+      "sha256": "b36cb39c27dcb98ffcc9167bc3138a5a098a38fbbd667af06bec97ee8ac473de"
+    },
+    {
+      "bytes": 20679513,
+      "download_seconds": 0.7087609170121141,
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/val.parquet",
+      "resumed_bytes": 0,
+      "reused": false,
+      "sha256": "9e974a69f59ea754b2a704947a3f4a4b850bd3031dc71ec6634fc712a3a89203"
+    },
+    {
+      "bytes": 37664211,
+      "download_seconds": 0.9287688339827582,
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/test.parquet",
+      "resumed_bytes": 0,
+      "reused": false,
+      "sha256": "cebfc4fce287bcc4cf26c49be98ea14e1eeeacdec9ce983b52258068ed9fa9de"
+    }
+  ],
+  "purpose": "LOCAL_EXPLORATORY_ONLY",
+  "remote_files": [
+    {
+      "lastCommit": {
+        "date": "2026-10-16T12:05:17.000Z",
+        "id": "b3cecc85f5ef83bceff933fda18bbf389fff560d",
+        "title": "Upload bars_1h/train.parquet with huggingface_hub"
+      },
+      "lfs": {
+        "oid": "b36cb39c27dcb98ffcc9167bc3138a5a098a38fbbd667af06bec97ee8ac473de",
+        "pointerSize": 134,
+        "size": 101602217
+      },
+      "oid": "2384f3e30faf7f642e2f54e839262f2deeb25b5d",
+      "path": "bars_1h/train.parquet",
+      "securityFileStatus": {
+        "avScan": {
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+          "status": "safe"
+        },
+        "pickleImportScan": {
+          "status": "unscanned"
+        },
+        "protectAiScan": {
+          "status": "unscanned"
+        },
+        "status": "safe",
+        "virusTotalScan": {
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/b36cb39c27dcb98ffcc9167bc3138a5a098a38fbbd667af06bec97ee8ac473de?utm_source=huggingface",
+          "status": "unscanned"
+        }
+      },
+      "size": 101602217,
+      "type": "file",
+      "xetHash": "ef4084a35b68e7754e41a482efa25d07270a2f9484307a49e2818b2ee7f0555f"
+    },
+    {
+      "lastCommit": {
+        "date": "2026-10-16T12:05:18.000Z",
+        "id": "ef67b938a383bf98670c1afd5e68b06dd90db9e6",
+        "title": "Upload bars_1h/val.parquet with huggingface_hub"
+      },
+      "lfs": {
+        "oid": "9e974a69f59ea754b2a704947a3f4a4b850bd3031dc71ec6634fc712a3a89203",
+        "pointerSize": 133,
+        "size": 20679513
+      },
+      "oid": "b69d5601a5fdf5db6e2db1c6fe6e7af4f08eeea5",
+      "path": "bars_1h/val.parquet",
+      "securityFileStatus": {
+        "avScan": {
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+          "status": "safe"
+        },
+        "pickleImportScan": {
+          "status": "unscanned"
+        },
+        "protectAiScan": {
+          "status": "unscanned"
+        },
+        "status": "safe",
+        "virusTotalScan": {
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/9e974a69f59ea754b2a704947a3f4a4b850bd3031dc71ec6634fc712a3a89203?utm_source=huggingface",
+          "status": "unscanned"
+        }
+      },
+      "size": 20679513,
+      "type": "file",
+      "xetHash": "f905e15afe0992f60c81d0d2006fc70c731c55e69f50d2c9c81b841270d6c0c7"
+    },
+    {
+      "lastCommit": {
+        "date": "2026-10-16T12:05:21.000Z",
+        "id": "d79ca35448c1c8f868b2fa3f4b24deaf463ac011",
+        "title": "Upload bars_1h/test.parquet with huggingface_hub"
+      },
+      "lfs": {
+        "oid": "cebfc4fce287bcc4cf26c49be98ea14e1eeeacdec9ce983b52258068ed9fa9de",
+        "pointerSize": 133,
+        "size": 37664211
+      },
+      "oid": "49479e783f831e4b5af8e558db78da88ee6eb10f",
+      "path": "bars_1h/test.parquet",
+      "securityFileStatus": {
+        "avScan": {
+          "status": "unscanned"
+        },
+        "pickleImportScan": {
+          "status": "unscanned"
+        },
+        "protectAiScan": {
+          "status": "unscanned"
+        },
+        "status": "unscanned",
+        "virusTotalScan": {
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/cebfc4fce287bcc4cf26c49be98ea14e1eeeacdec9ce983b52258068ed9fa9de?utm_source=huggingface",
+          "status": "unscanned"
+        }
+      },
+      "size": 37664211,
+      "type": "file",
+      "xetHash": "75aa5bda6043d46ea14261fe9179d690efaa3615eaa3cd4b88f62923c9c2e224"
+    }
+  ],
+  "retrieved_at": "2026-10-16T17:48:35.079194+00:00",
+  "revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+  "rights": "UNRESOLVED; no redistribution or model authority"
+}

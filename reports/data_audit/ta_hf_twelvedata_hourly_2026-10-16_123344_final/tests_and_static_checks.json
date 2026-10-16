@@ -1,0 +1,27 @@
+{
+  "focused_pytest": {
+    "command": ".venv/bin/python -m pytest tests/test_hf_hourly.py -q",
+    "passed": 13,
+    "failed": 0,
+    "seconds": 2.46
+  },
+  "ruff": {
+    "command": ".venv/bin/ruff check .",
+    "result": "All checks passed!"
+  },
+  "pylance": {
+    "command": ".venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist",
+    "summary": {
+      "filesAnalyzed": 227,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 19.975
+    }
+  },
+  "metadata_only_smoke": "PASS; 9 requests, no Parquet download",
+  "audit_cached_smoke": "PASS; zero HTTP; 692603 rows / 51 symbols",
+  "CLI_help": "PASS",
+  "git_diff_check": "PASS; no tracked changes",
+  "editor_verification": "Human refresh required: select repository .venv/bin/python, restart Pylance language server, refresh Problems, confirm zero project-owned error diagnostics. No claim of human editor confirmation."
+}
