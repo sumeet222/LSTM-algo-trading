@@ -1,0 +1,16 @@
+{
+  "source_test": "tests/test_target_range_history.py::test_actual_apptest_range_selection_full_data_and_lock",
+  "result": "PASS in final 36-test run",
+  "checks": [
+    "actual WF1 refit |TG0|>1 count 2860",
+    "page58 contains10 qualifying rows",
+    "ordinary AAPL selector + Show candles follows exact UTC identity",
+    "sort retains identity",
+    "switch to extreme AAPL 2020-12-09 origin2 updates chart metadata",
+    "changed population clears selected row",
+    "Open in Full data carries symbol/date/UTC boundary marker",
+    "M1 native/normalized/both render",
+    "confirmation date suppresses charts before source/feature/preparation spies"
+  ],
+  "render_method": "Streamlit AppTest actual local data and Plotly JSON; no native browser screenshot or visual review claimed"
+}

@@ -43,6 +43,7 @@ from lstm_data.visualization.loaders import (
     training_trace,
 )
 from lstm_data.visualization.metrics import loss_concentration, matched, summary
+from lstm_data.visualization.range_ui import full_data_page
 
 ROOT = Path(__file__).resolve().parents[1]
 SECTIONS = (
@@ -102,6 +103,8 @@ def reset_dates() -> None:
     c = Catalog.discover(ROOT)
     f = st.session_state.get("fold", "WF2")
     p = st.session_state.get("partition", "Development")
+    if p == "Full data":
+        return
     frame = saved_predictions(str(ROOT), c.token(), f, "TM0", p)
     first, last = date.fromisoformat(frame.session.min()), date.fromisoformat(frame.session.max())
     if f == "WF2" and p == "Development":
@@ -119,6 +122,12 @@ def filter_frame(
 
 
 def start_here(c: Catalog) -> None:
+    st.info(
+        "New: target ranges, inline candles and Price & Features → Partition → Full data. "
+        "Walkthrough: docs/track_a/HOW_TO_INSPECT_TG_RANGES_AND_CANDLES.md"
+    )
+    with st.expander("Read the target ranges & Full data guide · three-minute example"):
+        st.markdown((ROOT / "docs/track_a/HOW_TO_INSPECT_TG_RANGES_AND_CANDLES.md").read_text())
     st.title("See the data. Follow the evidence.")
     st.write(
         "Explore the completed candidate experiments, from genuine candles to saved forecasts "
@@ -781,9 +790,18 @@ def main() -> None:
             st.caption("Affected study view unavailable; no fallback cohort or synthetic evidence.")
         return
     fold = st.sidebar.selectbox("Fold", ["WF2", "WF1"], key="fold", on_change=reset_dates)
+    partitions = (*PARTITIONS, "Full data") if section == "Price & Features" else PARTITIONS
+    if st.session_state.get("partition") == "Full data" and section != "Price & Features":
+        st.session_state.partition = "Development"
     partition = st.sidebar.selectbox(
-        "Partition", PARTITIONS, key="partition", on_change=reset_dates
+        "Partition", partitions, key="partition", on_change=reset_dates
     )
+    if partition == "Full data":
+        try:
+            full_data_page(c, token)
+        except ViewUnavailable as exc:
+            st.warning(str(exc))
+        return
     names = c.model_names(fold, partition)
     if st.session_state.get("model", "TM0") not in names:
         st.session_state.model = "TM0"

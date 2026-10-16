@@ -66,8 +66,8 @@ def candles(
             decreasing_line_color=RED,
             text=[
                 f"{r.symbol} · {r.time_ET}<br>UTC start {r.UTC_key}"
-                f"<br>O {r.open:.4f} H {r.high:.4f} L {r.low:.4f} C {r.close:.4f}"
-                f"<br>Volume {r.volume:,.0f}; stub={r.is_stub}"
+                f"<br>O {r.open:.17g} H {r.high:.17g} L {r.low:.17g} C {r.close:.17g}"
+                f"<br>Volume {r.volume:.17g} adjusted shares; stub={r.is_stub}"
                 f"<br>Source {r.source_archive}"
                 for r in frame.itertuples()
             ],
@@ -87,7 +87,7 @@ def candles(
             name="Inverse-split volume · gold = closing stub",
             customdata=custom,
             hovertemplate="%{customdata[0]}<br>UTC %{customdata[1]}"
-            "<br>Volume %{y:,.0f}<br>Stub %{customdata[4]}<extra></extra>",
+            "<br>Volume %{y:.17g} adjusted shares<br>Stub %{customdata[4]}<extra></extra>",
         ),
         row=2,
         col=1,

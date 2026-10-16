@@ -149,7 +149,7 @@
     "cache_readers": [
       {
         "path": "apps/track_a_dashboard.py",
-        "sha256": "f6fe953d0de70ce845d84a27a2f8c0ce506529f36d4a8f49a386d62dcf836785"
+        "sha256": "a70420bd256fb2d796c4ea79026f940bb610bf5549076dc60f38e5aed8533323"
       },
       {
         "path": "src/lstm_data/aggregation.py",
@@ -197,11 +197,15 @@
       },
       {
         "path": "src/lstm_data/visualization/controlled_ui.py",
-        "sha256": "c94a02adb86066dec1db551d2f3efe6566df1b168725b7d0f5d4b0fa7b0431c2"
+        "sha256": "79f39d6b6dc97d52b4a9b2b519a6d4f61ef0ab4e55b1250b626ba821a6f9f4b1"
       },
       {
         "path": "src/lstm_data/visualization/figures.py",
-        "sha256": "57aa8fd9012d5809c4a43e65a8d7be2c584d240cedf2dbdf1667bf76133b6c03"
+        "sha256": "d80e6dc6d528cf4a12393474a397b387fe259a8407afed50ac5fea0cf02666c9"
+      },
+      {
+        "path": "src/lstm_data/visualization/history.py",
+        "sha256": "c628c03c58fe2d5f5ba9fd4500e00804a8b2fbc83afce8b7370d3cca54d71125"
       },
       {
         "path": "src/lstm_data/visualization/loaders.py",
@@ -210,6 +214,14 @@
       {
         "path": "src/lstm_data/visualization/metrics.py",
         "sha256": "8df1c9014f4426a3d4275b2d275f1c8407a058e1f9e188110d53eee474171f13"
+      },
+      {
+        "path": "src/lstm_data/visualization/range_ui.py",
+        "sha256": "c0cd47ec6525095965949767289e521c2717d16b19dd3dfbf1f0dd913d9824cd"
+      },
+      {
+        "path": "src/lstm_data/visualization/target_ranges.py",
+        "sha256": "fb654ea3dfd38e6e92d0bd3a737b646b2eec72243deeb7a346d3df1074c46096"
       }
     ],
     "proposal_sha256": "ad5e66a93888cbb4023d620192da7e92cb1d9c3a6f47f04c0d4c5b55e437131e",
@@ -632,7 +644,7 @@
   },
   "notes": "Existing local-use assumptions only; no fit/transform fitting/network/export/registry authority.",
   "readers": {
-    "apps/track_a_dashboard.py": "f6fe953d0de70ce845d84a27a2f8c0ce506529f36d4a8f49a386d62dcf836785",
+    "apps/track_a_dashboard.py": "a70420bd256fb2d796c4ea79026f940bb610bf5549076dc60f38e5aed8533323",
     "src/lstm_data/aggregation.py": "a4aa643253eaa095980aea47de361eb746c03cb9d6ec85f80013e1f7efb77a2b",
     "src/lstm_data/ft0_transforms.py": "dce3424a3367d2bb8889e3b8a083b82f109ebc22e22690756aaced62a939c4f6",
     "src/lstm_data/peer_inputs.py": "e7a7241c8c1051f0b525db1af36368139897b2ffd5e88ae5d99dda0cbd494b66",
@@ -644,10 +656,13 @@
     "src/lstm_data/real_bridge_run.py": "17ed1390bf856551e4b5d297f764c2db0cfde96c3a9935f8e21c401a325d521b",
     "src/lstm_data/stock_features.py": "edae91a8fe70e25720cf3cd66fd716f37c5192b1302f3d72651717b15b9a141a",
     "src/lstm_data/visualization/controlled.py": "354b402cae7910968061dc3fd1ee6582474964ac87f117ff0c3c9aa4d4d71578",
-    "src/lstm_data/visualization/controlled_ui.py": "c94a02adb86066dec1db551d2f3efe6566df1b168725b7d0f5d4b0fa7b0431c2",
-    "src/lstm_data/visualization/figures.py": "57aa8fd9012d5809c4a43e65a8d7be2c584d240cedf2dbdf1667bf76133b6c03",
+    "src/lstm_data/visualization/controlled_ui.py": "79f39d6b6dc97d52b4a9b2b519a6d4f61ef0ab4e55b1250b626ba821a6f9f4b1",
+    "src/lstm_data/visualization/figures.py": "d80e6dc6d528cf4a12393474a397b387fe259a8407afed50ac5fea0cf02666c9",
+    "src/lstm_data/visualization/history.py": "c628c03c58fe2d5f5ba9fd4500e00804a8b2fbc83afce8b7370d3cca54d71125",
     "src/lstm_data/visualization/loaders.py": "a577b54d42a86b8bbda771e83283254d13fd40a8cf491b69ddae752bfa3bd3c2",
-    "src/lstm_data/visualization/metrics.py": "8df1c9014f4426a3d4275b2d275f1c8407a058e1f9e188110d53eee474171f13"
+    "src/lstm_data/visualization/metrics.py": "8df1c9014f4426a3d4275b2d275f1c8407a058e1f9e188110d53eee474171f13",
+    "src/lstm_data/visualization/range_ui.py": "c0cd47ec6525095965949767289e521c2717d16b19dd3dfbf1f0dd913d9824cd",
+    "src/lstm_data/visualization/target_ranges.py": "fb654ea3dfd38e6e92d0bd3a737b646b2eec72243deeb7a346d3df1074c46096"
   },
   "recipes": {
     "WF1": {

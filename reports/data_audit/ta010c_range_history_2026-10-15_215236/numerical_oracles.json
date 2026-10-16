@@ -1,0 +1,119 @@
+{
+  "counts": {
+    "abs_gt_1": 2860,
+    "abs_gt_10": 67,
+    "total": 7510,
+    "abs_lt_2": 6035,
+    "signed_minus2_to_minus1": 691
+  },
+  "pages": {
+    "abs_gt_1": {
+      "pages": 58,
+      "last_page_rows": 10,
+      "unique_ids": 2860,
+      "union_equals_matches": true
+    },
+    "abs_gt_10": {
+      "pages": 2,
+      "last_page_rows": 17,
+      "unique_ids": 67,
+      "union_equals_matches": true
+    }
+  },
+  "extreme": {
+    "session": "2020-12-09",
+    "origin": 2,
+    "symbol": "AAPL",
+    "TG0": -29.11614698023523,
+    "abs_target": 29.11614698023523,
+    "cutoff": "2020-12-09 16:30:00+00:00",
+    "origin_ET": "2020-12-09 11:30:00-05:00",
+    "origin_UTC": "2020-12-09 16:30:00+00:00",
+    "log_return": -0.032215045932356495,
+    "median": -0.011395641081844732,
+    "MAD": 0.00046406869742296464,
+    "epsilon": 0.00025097800379902393,
+    "denominator": 0.0007150467012219886,
+    "numerator": -0.020819404850511765,
+    "floor_ge_MAD": false,
+    "MAD_lt_epsilon": false,
+    "maturity": "2020-12-09 20:33:00+00:00",
+    "population_id": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca",
+    "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+    "observation_id": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca|2020-12-09|2|AAPL|2020-12-09 16:30:00+00:00"
+  },
+  "ordinary": {
+    "session": "2020-07-01",
+    "origin": 1,
+    "symbol": "AAPL",
+    "TG0": -0.5367620808475437,
+    "abs_target": 0.5367620808475437,
+    "cutoff": "2020-07-01 14:30:00+00:00",
+    "origin_ET": "2020-07-01 10:30:00-04:00",
+    "origin_UTC": "2020-07-01 14:30:00+00:00",
+    "log_return": -0.0018580255632220815,
+    "median": 0.000877798037428799,
+    "MAD": 0.004845923767524005,
+    "epsilon": 0.00025097800379902393,
+    "denominator": 0.005096901771323029,
+    "numerator": -0.0027358236006508807,
+    "floor_ge_MAD": false,
+    "MAD_lt_epsilon": false,
+    "maturity": "2020-07-01 18:33:00+00:00",
+    "population_id": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca",
+    "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+    "observation_id": "fd0a19a01c12ef00544ca477addfdb804ec5ed1720c7a39368b878392ebdcaca|2020-07-01|1|AAPL|2020-07-01 14:30:00+00:00"
+  },
+  "markers": [
+    {
+      "cutoff": "2020-12-09 16:30:00+00:00",
+      "proxy_exit_close": "2020-12-09 20:30:00+00:00",
+      "entry_event": "2020-12-09 16:33:00+00:00",
+      "exit_event": "2020-12-09 20:33:00+00:00"
+    }
+  ],
+  "AAPL_20201209": {
+    "native_equals_old": true,
+    "candles": 13,
+    "volume_sum": 98259093.0,
+    "first_genuine_candle": {
+      "timestamp": "2020-12-09 14:30:00+00:00",
+      "open": 124.51,
+      "high": 125.95,
+      "low": 123.86,
+      "close": 125.86,
+      "volume": 17799359.0
+    },
+    "M1": {
+      "timestamp": "2020-12-09 15:30:00+00:00",
+      "native": 0.9306648291883257,
+      "scaled": 1.7208348512649536,
+      "independent_float32_scaled": 1.7208348512649536,
+      "parameters": {
+        "recipe": {
+          "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_REFIT_preprocessing.json",
+          "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+          "sha256": "929fdda939f240b4e59958b62718bf876fd6979183cbd1ccea3dbcbb91890f90"
+        },
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "fitted_stop": "2023-07-01 04:00:00+00:00",
+        "fitted_at": "2026-10-14 23:54:40.440906+00:00",
+        "hourly_floor": 0.0028288513643958254,
+        "daily_floor": 0.012007969923727213,
+        "m2_floor": 0.005840272578675711,
+        "hourly_pseudocount": 94113.815,
+        "daily_pseudocount": 729213.4500000001,
+        "center": 0.024829951202345903,
+        "scale": 0.526392697530884,
+        "method": "MAD",
+        "formula": "(native \u2212 center) / scale"
+      }
+    }
+  },
+  "root_cause": {
+    "previous_count": "len(tails)",
+    "previous_table": "tails.head(30)",
+    "previous_decomposition": "tails.head(20)",
+    "replacement": "complete bound relation; independent numeric range; bounded pages; stable identity selector"
+  }
+}

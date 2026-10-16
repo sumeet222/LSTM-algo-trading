@@ -36,7 +36,6 @@ from .loaders import (
     component_base,
     feature_frame,
     gradient_batches,
-    target_details,
 )
 from .metrics import loss_concentration
 
@@ -227,7 +226,7 @@ def training_view(study: Study, fold: str, seed: int, arm: str) -> None:
 
 
 def target_view(
-    study: Study, token: tuple, fold: str, stock: str, origins: tuple[int, ...]
+    study: Study, token: tuple, fold: str, stock: str, origins: tuple[int, ...], seed: int
 ) -> None:
     st.subheader("Target & denominator")
     prefix_label = st.radio(
@@ -295,32 +294,14 @@ def target_view(
         absolute.quantile([0.5, 0.9, 0.95, 0.99, 0.999, 1]).rename("|TG0|").to_frame(),
         width="stretch",
     )
-    threshold = st.number_input(
-        "Show |TG0| above threshold (display filter)", min_value=0.0, value=10.0
-    )
-    tails = raw.loc[absolute > threshold].sort_values("TG0", key=lambda v: v.abs(), ascending=False)
-    st.write(f"{len(tails)} / {len(raw)} training observations exceed {threshold:g}.")
-    st.dataframe(tails.head(30), hide_index=True, width="stretch")
+    from .range_ui import range_explorer
+
     st.info(
-        "TG0 = (future four-hour log return − cross-sectional median) / (cross-sectional "
-        "MAD + training-fitted epsilon). Historical volatility normalization is not applied "
-        "to this target. It appears in some FT0 inputs, in different units. Future returns, "
-        "median/MAD and TG0 are EX-POST outcomes, unavailable at the forecast origin."
+        "TG0 = (future four-hour log return − cross-sectional median) / (MAD + "
+        "training-fitted epsilon). All outcome quantities are EX-POST. "
+        "Historical volatility normalization is not part of TG0."
     )
-    if not tails.empty and st.checkbox("Show exact canonical numerator and denominator"):
-        # Registered labels use float64. The legacy display validates the actual float32 target.
-        selected = tails.head(20).copy()
-        selected["TG0"] = selected.TG0.astype(np.float32)
-        partition = "Inner validation" if prefix == "inner" else "Refit training"
-        details = target_details(
-            study.catalog, base(str(study.catalog.root), token), fold, partition, selected
-        )
-        st.dataframe(details, hide_index=True, width="stretch")
-        st.caption(
-            "log_return = future log(exit-close/entry-close); numerator=log_return−median; "
-            "denominator=MAD+epsilon (not max). No historical volatility denominator "
-            "or intermediate volatility-normalized target exists in this TG0 recipe."
-        )
+    range_explorer(study.catalog, token, fold, seed)
 
 
 def prediction_view(
@@ -590,7 +571,7 @@ def controlled_page(catalog: Catalog, token: tuple) -> None:
         col.button(text, on_click=study_preset, args=(view, selected_arm))
     view = st.radio("Study view", VIEWS, horizontal=True, key="study_view")
     if view == VIEWS[0]:
-        target_view(study, token, fold, stock, origins)
+        target_view(study, token, fold, stock, origins, seed)
         return
     if view == VIEWS[1]:
         training_view(study, fold, seed, arm)
