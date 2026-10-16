@@ -465,6 +465,11 @@ def feature_explorer(
     event: dict | None = None,
 ) -> None:
     st.subheader("Feature Scaling Explorer")
+    with st.expander("Package012A · full-population normalization audit", expanded=False):
+        if st.checkbox("Open Package012A audit", key="audit_open"):
+            from .normalization_ui import audit_panel
+
+            audit_panel(catalog)
     symbol = st.selectbox(
         "Scaling stock", list(CANDIDATE), index=CANDIDATE.index(stock) if stock in CANDIDATE else 0
     )

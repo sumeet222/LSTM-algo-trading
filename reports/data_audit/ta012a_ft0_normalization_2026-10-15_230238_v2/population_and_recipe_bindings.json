@@ -1,0 +1,1503 @@
+{
+  "audit_code_sha256": {
+    "src/lstm_data/normalization_audit.py": "4d0e1f48907203229c69c841d0cde267f95c28ce738305a118cad5df2d99645c",
+    "src/lstm_data/normalization_oracles.py": "f7d2e895d02f86062ae61a51bc3ff1c142653c172eab1b5913c76bdf7d18e3f0",
+    "src/lstm_data/normalization_population.py": "f11add2395eb18855a3f72b148f572955013215f5aac4bd3e8dd9bf2093f496d",
+    "src/lstm_data/normalization_report.py": "0700f8d899374a326063467759c40854e2542a589beb341cb9b7b309ec7d140c",
+    "src/lstm_data/normalization_stats.py": "fa1eed582577c5d51525ed09c4befcb6550d752f01943d53f233c5145d095b5c"
+  },
+  "components": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/canonical_dataset_manifest.json",
+    "sha256": "ffc2932434ad6ec966cb0046ab4a230d693bdf04acbbaddbf26f51cf0c6baad0"
+  },
+  "confirmation_numeric_rows": 0,
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "fit_population_hash_checks": [
+    {
+      "fold": "WF1",
+      "partition": "Inner training",
+      "passed": true,
+      "recorded": "3272c8ad6fd353648e6af6d57669c8d3717a2c222beccdec92372d02e0509cc2",
+      "reproduced": "3272c8ad6fd353648e6af6d57669c8d3717a2c222beccdec92372d02e0509cc2"
+    },
+    {
+      "fold": "WF1",
+      "partition": "Refit training",
+      "passed": true,
+      "recorded": "82c4a8dc6f5822e84949c1a9ac9daafdf0688d9888fd1727087a08aa8324e2ff",
+      "reproduced": "82c4a8dc6f5822e84949c1a9ac9daafdf0688d9888fd1727087a08aa8324e2ff"
+    },
+    {
+      "fold": "WF2",
+      "partition": "Inner training",
+      "passed": true,
+      "recorded": "4658920b7e27248fea79879f2bc2cb37f8f41f3b38ed279ee2f701a59d39698d",
+      "reproduced": "4658920b7e27248fea79879f2bc2cb37f8f41f3b38ed279ee2f701a59d39698d"
+    },
+    {
+      "fold": "WF2",
+      "partition": "Refit training",
+      "passed": true,
+      "recorded": "6c5b92a158bea1e6882e6a835b4c83ac04e9c69c8714c77b305e9152e54eb89c",
+      "reproduced": "6c5b92a158bea1e6882e6a835b4c83ac04e9c69c8714c77b305e9152e54eb89c"
+    }
+  ],
+  "git_commit": "55cf948eb6423a67e80e3ae5bd6d28d34e7e8a71",
+  "guard": "Fixed scope pre-I/O; no protected partition accepted",
+  "input_binding": {
+    "bytes": 101668,
+    "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/input_binding.json",
+    "sha256": "c7e86c51fb45aa8e0ef748add9236685e0f950b292ccb1790801d2c2fd6b78f1"
+  },
+  "populations": [
+    {
+      "audit_rows_with_origin_context": 41360,
+      "confirmation_numeric_rows": 0,
+      "exclusions": {},
+      "first_feature_UTC": "2020-07-01 14:30:00+00:00",
+      "first_origin": [
+        "2020-07-01",
+        1
+      ],
+      "fold": "WF1",
+      "invalid_complete_rows": 0,
+      "last_feature_UTC": "2023-03-30 15:30:00+00:00",
+      "last_origin": [
+        "2023-03-30",
+        2
+      ],
+      "mask_sha256": "e1e09fccbb1404ccd0d29ac396b812c38bc45105ef5ca647e7ee515020075355",
+      "origins": 1376,
+      "partition": "Inner training",
+      "population_policy": "fit positions, warm-up excluded",
+      "recipe": {
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "authority_binding": "451e0b0da4cab7b4fac83f71804811278a1758be6b40f4d6487e373e12f65951",
+        "constructed_at": "2026-10-14T23:54:45.737654+00:00",
+        "designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+        "floors": [
+          {
+            "daily_floor": 0.012197765749194496,
+            "daily_pseudocount": 760825.28,
+            "hourly_floor": 0.003029841976206424,
+            "hourly_pseudocount": 98041.85,
+            "m2_floor": 0.0060055652186512265,
+            "symbol": "AAPL"
+          },
+          {
+            "daily_floor": 0.009277737596766282,
+            "daily_pseudocount": 16591.975,
+            "hourly_floor": 0.0024318900620191493,
+            "hourly_pseudocount": 2033.785,
+            "m2_floor": 0.004084593252734267,
+            "symbol": "COST"
+          },
+          {
+            "daily_floor": 0.012575546405667144,
+            "daily_pseudocount": 146596.075,
+            "hourly_floor": 0.002779433389549149,
+            "hourly_pseudocount": 17687.39,
+            "m2_floor": 0.00607954500085734,
+            "symbol": "CMCSA"
+          },
+          {
+            "daily_floor": 0.010820288889700585,
+            "daily_pseudocount": 53908.35,
+            "hourly_floor": 0.002680022666192198,
+            "hourly_pseudocount": 6798.995,
+            "m2_floor": 0.004755916528237496,
+            "symbol": "SBUX"
+          },
+          {
+            "daily_floor": 0.01079145410229188,
+            "daily_pseudocount": 11561.68,
+            "hourly_floor": 0.0026924561094456676,
+            "hourly_pseudocount": 1359.445,
+            "m2_floor": 0.005168717779780759,
+            "symbol": "CME"
+          }
+        ],
+        "population_binding": "3272c8ad6fd353648e6af6d57669c8d3717a2c222beccdec92372d02e0509cc2",
+        "population_counts": {
+          "daily_floors": "UNIQUE_SESSION",
+          "feature_positions": 4136,
+          "m2_origin_weights": [
+            0.5,
+            0.5
+          ],
+          "origins": 1376,
+          "scaled": {
+            "B1": 20680,
+            "M1": 20680,
+            "M2": 6920,
+            "M3": 20680,
+            "M4": 20680,
+            "Q1": 20680,
+            "Q2": 20680,
+            "T1": 20680,
+            "T3": 20680,
+            "T4": 20680,
+            "V1": 20680,
+            "V2": 20680,
+            "V3": 20680
+          },
+          "target_mad_origins": 1376
+        },
+        "scaler": {
+          "centers": [
+            0.023324513556244927,
+            0.03956185272652577,
+            0.08613732829702547,
+            0.36085759837875586,
+            -5.364744614511352,
+            -5.273484644429133,
+            -0.07084297674516371,
+            0.0063305644756560826,
+            -0.11922049454152966,
+            -0.06587761203778296,
+            0.006062177129191951,
+            0.0006823895130222643,
+            0.0021440301143512914
+          ],
+          "methods": [
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD"
+          ],
+          "scales": [
+            0.5234930309231032,
+            0.13314378042687014,
+            0.6073055850695268,
+            0.7777304667192613,
+            0.26726108282069383,
+            0.20485688651637401,
+            0.20446376217724493,
+            0.0023839215161307998,
+            0.25205153729329266,
+            0.16311529628081564,
+            0.026806070414988517,
+            0.004696873019137125,
+            0.010231541606930213
+          ]
+        },
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "target_epsilon": 0.0002583601493079091,
+        "window": {
+          "fitted_at": "2026-10-14 23:54:40.440906+00:00",
+          "phase": "INNER_TRAIN",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2023-03-31 04:00:00+00:00",
+          "window_id": "WF1:INNER_TRAIN"
+        }
+      },
+      "recipe_ref": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_INNER_TRAIN_preprocessing.json",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "sha256": "3283ce988067922542cae06c9d77e3cb7695cab47761933c6ed67f66c45f1c39"
+      },
+      "saved_input_summary": {
+        "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+        "dtype": "float32",
+        "excluded": {},
+        "origins": 1376,
+        "per_origin": {
+          "1": 688,
+          "2": 688
+        },
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "sessions": 688,
+        "tensor_bytes": 2676480,
+        "unique_feature_rows": 41820,
+        "view_id": "CONDITIONAL_REAL_TM0:20068a8d13e863f3e94832a3e7546c5ca7a41721f2d2f0e70509e14d05e3cddc"
+      },
+      "source_publication": "UNKNOWN / idealized clock only",
+      "synthetic_rows": 0,
+      "tensor_exposures": 330240,
+      "unique_tensor_rows": 41820,
+      "warmup_excluded_from_fit_unique_rows": 465
+    },
+    {
+      "audit_rows_with_origin_context": 3720,
+      "confirmation_numeric_rows": 0,
+      "exclusions": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "first_feature_UTC": "2023-03-31 15:30:00+00:00",
+      "first_origin": [
+        "2023-04-13",
+        1
+      ],
+      "fold": "WF1",
+      "invalid_complete_rows": 0,
+      "last_feature_UTC": "2023-06-30 15:30:00+00:00",
+      "last_origin": [
+        "2023-06-30",
+        2
+      ],
+      "mask_sha256": "f78121451d1926f0a4b46029ad53f0c3b7a518f424c36a89a897d828f53f9f52",
+      "origins": 110,
+      "partition": "Inner validation",
+      "population_policy": "saved OOS input mask",
+      "recipe": {
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "authority_binding": "451e0b0da4cab7b4fac83f71804811278a1758be6b40f4d6487e373e12f65951",
+        "constructed_at": "2026-10-14T23:54:45.737654+00:00",
+        "designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+        "floors": [
+          {
+            "daily_floor": 0.012197765749194496,
+            "daily_pseudocount": 760825.28,
+            "hourly_floor": 0.003029841976206424,
+            "hourly_pseudocount": 98041.85,
+            "m2_floor": 0.0060055652186512265,
+            "symbol": "AAPL"
+          },
+          {
+            "daily_floor": 0.009277737596766282,
+            "daily_pseudocount": 16591.975,
+            "hourly_floor": 0.0024318900620191493,
+            "hourly_pseudocount": 2033.785,
+            "m2_floor": 0.004084593252734267,
+            "symbol": "COST"
+          },
+          {
+            "daily_floor": 0.012575546405667144,
+            "daily_pseudocount": 146596.075,
+            "hourly_floor": 0.002779433389549149,
+            "hourly_pseudocount": 17687.39,
+            "m2_floor": 0.00607954500085734,
+            "symbol": "CMCSA"
+          },
+          {
+            "daily_floor": 0.010820288889700585,
+            "daily_pseudocount": 53908.35,
+            "hourly_floor": 0.002680022666192198,
+            "hourly_pseudocount": 6798.995,
+            "m2_floor": 0.004755916528237496,
+            "symbol": "SBUX"
+          },
+          {
+            "daily_floor": 0.01079145410229188,
+            "daily_pseudocount": 11561.68,
+            "hourly_floor": 0.0026924561094456676,
+            "hourly_pseudocount": 1359.445,
+            "m2_floor": 0.005168717779780759,
+            "symbol": "CME"
+          }
+        ],
+        "population_binding": "3272c8ad6fd353648e6af6d57669c8d3717a2c222beccdec92372d02e0509cc2",
+        "population_counts": {
+          "daily_floors": "UNIQUE_SESSION",
+          "feature_positions": 4136,
+          "m2_origin_weights": [
+            0.5,
+            0.5
+          ],
+          "origins": 1376,
+          "scaled": {
+            "B1": 20680,
+            "M1": 20680,
+            "M2": 6920,
+            "M3": 20680,
+            "M4": 20680,
+            "Q1": 20680,
+            "Q2": 20680,
+            "T1": 20680,
+            "T3": 20680,
+            "T4": 20680,
+            "V1": 20680,
+            "V2": 20680,
+            "V3": 20680
+          },
+          "target_mad_origins": 1376
+        },
+        "scaler": {
+          "centers": [
+            0.023324513556244927,
+            0.03956185272652577,
+            0.08613732829702547,
+            0.36085759837875586,
+            -5.364744614511352,
+            -5.273484644429133,
+            -0.07084297674516371,
+            0.0063305644756560826,
+            -0.11922049454152966,
+            -0.06587761203778296,
+            0.006062177129191951,
+            0.0006823895130222643,
+            0.0021440301143512914
+          ],
+          "methods": [
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD"
+          ],
+          "scales": [
+            0.5234930309231032,
+            0.13314378042687014,
+            0.6073055850695268,
+            0.7777304667192613,
+            0.26726108282069383,
+            0.20485688651637401,
+            0.20446376217724493,
+            0.0023839215161307998,
+            0.25205153729329266,
+            0.16311529628081564,
+            0.026806070414988517,
+            0.004696873019137125,
+            0.010231541606930213
+          ]
+        },
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "target_epsilon": 0.0002583601493079091,
+        "window": {
+          "fitted_at": "2026-10-14 23:54:40.440906+00:00",
+          "phase": "INNER_TRAIN",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2023-03-31 04:00:00+00:00",
+          "window_id": "WF1:INNER_TRAIN"
+        }
+      },
+      "recipe_ref": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_INNER_TRAIN_preprocessing.json",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "sha256": "3283ce988067922542cae06c9d77e3cb7695cab47761933c6ed67f66c45f1c39"
+      },
+      "saved_input_summary": {
+        "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+        "dtype": "float32",
+        "excluded": {
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+        },
+        "origins": 110,
+        "per_origin": {
+          "1": 55,
+          "2": 55
+        },
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "sessions": 55,
+        "tensor_bytes": 238080,
+        "unique_feature_rows": 3720,
+        "view_id": "CONDITIONAL_REAL_TM0:f494313fdce14f17c07a4b12e3d75f01eb2107d0d58e6ea252a877da242b74c1"
+      },
+      "source_publication": "UNKNOWN / idealized clock only",
+      "synthetic_rows": 0,
+      "tensor_exposures": 26400,
+      "unique_tensor_rows": 3720,
+      "warmup_excluded_from_fit_unique_rows": 0
+    },
+    {
+      "audit_rows_with_origin_context": 45140,
+      "confirmation_numeric_rows": 0,
+      "exclusions": {},
+      "first_feature_UTC": "2020-07-01 14:30:00+00:00",
+      "first_origin": [
+        "2020-07-01",
+        1
+      ],
+      "fold": "WF1",
+      "invalid_complete_rows": 0,
+      "last_feature_UTC": "2023-06-30 15:30:00+00:00",
+      "last_origin": [
+        "2023-06-30",
+        2
+      ],
+      "mask_sha256": "7c4230ccbead4e54cc3f1f9bbd7dbdb835d0072444cdc7dda016ddea91f2202a",
+      "origins": 1502,
+      "partition": "Refit training",
+      "population_policy": "fit positions, warm-up excluded",
+      "recipe": {
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "authority_binding": "451e0b0da4cab7b4fac83f71804811278a1758be6b40f4d6487e373e12f65951",
+        "constructed_at": "2026-10-14T23:54:51.273311+00:00",
+        "designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+        "floors": [
+          {
+            "daily_floor": 0.012007969923727213,
+            "daily_pseudocount": 729213.4500000001,
+            "hourly_floor": 0.0028288513643958254,
+            "hourly_pseudocount": 94113.815,
+            "m2_floor": 0.005840272578675711,
+            "symbol": "AAPL"
+          },
+          {
+            "daily_floor": 0.009313978694546232,
+            "daily_pseudocount": 16296.890000000001,
+            "hourly_floor": 0.0023772885008907416,
+            "hourly_pseudocount": 1984.535,
+            "m2_floor": 0.00412810349530484,
+            "symbol": "COST"
+          },
+          {
+            "daily_floor": 0.01258496139146502,
+            "daily_pseudocount": 145592.31,
+            "hourly_floor": 0.0027886121299032377,
+            "hourly_pseudocount": 17529.7,
+            "m2_floor": 0.006121416902179348,
+            "symbol": "CMCSA"
+          },
+          {
+            "daily_floor": 0.010862345728795842,
+            "daily_pseudocount": 53128.68,
+            "hourly_floor": 0.0026802259920420063,
+            "hourly_pseudocount": 6645.755,
+            "m2_floor": 0.0048457471847088915,
+            "symbol": "SBUX"
+          },
+          {
+            "daily_floor": 0.010796128275133352,
+            "daily_pseudocount": 11310.26,
+            "hourly_floor": 0.002656822196014482,
+            "hourly_pseudocount": 1337.49,
+            "m2_floor": 0.005093783375720477,
+            "symbol": "CME"
+          }
+        ],
+        "population_binding": "82c4a8dc6f5822e84949c1a9ac9daafdf0688d9888fd1727087a08aa8324e2ff",
+        "population_counts": {
+          "daily_floors": "UNIQUE_SESSION",
+          "feature_positions": 4514,
+          "m2_origin_weights": [
+            0.5,
+            0.5
+          ],
+          "origins": 1502,
+          "scaled": {
+            "B1": 22570,
+            "M1": 22570,
+            "M2": 7550,
+            "M3": 22570,
+            "M4": 22570,
+            "Q1": 22570,
+            "Q2": 22570,
+            "T1": 22570,
+            "T3": 22570,
+            "T4": 22570,
+            "V1": 22570,
+            "V2": 22570,
+            "V3": 22570
+          },
+          "target_mad_origins": 1502
+        },
+        "scaler": {
+          "centers": [
+            0.024829951202345903,
+            0.04066330356313561,
+            0.09159025958933942,
+            0.41177522567802055,
+            -5.388799943680466,
+            -5.299601410690003,
+            -0.07066609087563513,
+            0.006178719613460164,
+            -0.12002125473232644,
+            -0.0709117792495033,
+            0.006931583045714954,
+            0.0007254699466408397,
+            0.0024721191017697953
+          ],
+          "methods": [
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD"
+          ],
+          "scales": [
+            0.526392697530884,
+            0.13254238081612013,
+            0.602554453610124,
+            0.7250676519678557,
+            0.2717924566348553,
+            0.2080958364675598,
+            0.20461574369142044,
+            0.0023250573787846163,
+            0.25125301779288983,
+            0.16290405630510002,
+            0.02612348904184301,
+            0.004607487002737986,
+            0.009945344480761693
+          ]
+        },
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "target_epsilon": 0.00025097800379902393,
+        "window": {
+          "fitted_at": "2026-10-14 23:54:40.440906+00:00",
+          "phase": "REFIT",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2023-07-01 04:00:00+00:00",
+          "window_id": "WF1:REFIT"
+        }
+      },
+      "recipe_ref": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_REFIT_preprocessing.json",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "sha256": "929fdda939f240b4e59958b62718bf876fd6979183cbd1ccea3dbcbb91890f90"
+      },
+      "saved_input_summary": {
+        "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+        "dtype": "float32",
+        "excluded": {},
+        "origins": 1502,
+        "per_origin": {
+          "1": 751,
+          "2": 751
+        },
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "sessions": 751,
+        "tensor_bytes": 2918400,
+        "unique_feature_rows": 45600,
+        "view_id": "CONDITIONAL_REAL_TM0:e6ea36aa11d26ea3950e11f48e5fca4cccdcf2b0304da3fbeb4a7a03b728617b"
+      },
+      "source_publication": "UNKNOWN / idealized clock only",
+      "synthetic_rows": 0,
+      "tensor_exposures": 360480,
+      "unique_tensor_rows": 45600,
+      "warmup_excluded_from_fit_unique_rows": 465
+    },
+    {
+      "audit_rows_with_origin_context": 7410,
+      "confirmation_numeric_rows": 0,
+      "exclusions": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "first_feature_UTC": "2023-07-05 15:30:00+00:00",
+      "first_origin": [
+        "2023-07-17",
+        1
+      ],
+      "fold": "WF1",
+      "invalid_complete_rows": 0,
+      "last_feature_UTC": "2023-12-29 16:30:00+00:00",
+      "last_origin": [
+        "2023-12-29",
+        2
+      ],
+      "mask_sha256": "1913509909eec9040c099287f66567614f1e8f8231f2638f461baad95b79cf81",
+      "origins": 232,
+      "partition": "Development",
+      "population_policy": "saved OOS input mask",
+      "recipe": {
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "authority_binding": "451e0b0da4cab7b4fac83f71804811278a1758be6b40f4d6487e373e12f65951",
+        "constructed_at": "2026-10-14T23:54:51.273311+00:00",
+        "designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+        "floors": [
+          {
+            "daily_floor": 0.012007969923727213,
+            "daily_pseudocount": 729213.4500000001,
+            "hourly_floor": 0.0028288513643958254,
+            "hourly_pseudocount": 94113.815,
+            "m2_floor": 0.005840272578675711,
+            "symbol": "AAPL"
+          },
+          {
+            "daily_floor": 0.009313978694546232,
+            "daily_pseudocount": 16296.890000000001,
+            "hourly_floor": 0.0023772885008907416,
+            "hourly_pseudocount": 1984.535,
+            "m2_floor": 0.00412810349530484,
+            "symbol": "COST"
+          },
+          {
+            "daily_floor": 0.01258496139146502,
+            "daily_pseudocount": 145592.31,
+            "hourly_floor": 0.0027886121299032377,
+            "hourly_pseudocount": 17529.7,
+            "m2_floor": 0.006121416902179348,
+            "symbol": "CMCSA"
+          },
+          {
+            "daily_floor": 0.010862345728795842,
+            "daily_pseudocount": 53128.68,
+            "hourly_floor": 0.0026802259920420063,
+            "hourly_pseudocount": 6645.755,
+            "m2_floor": 0.0048457471847088915,
+            "symbol": "SBUX"
+          },
+          {
+            "daily_floor": 0.010796128275133352,
+            "daily_pseudocount": 11310.26,
+            "hourly_floor": 0.002656822196014482,
+            "hourly_pseudocount": 1337.49,
+            "m2_floor": 0.005093783375720477,
+            "symbol": "CME"
+          }
+        ],
+        "population_binding": "82c4a8dc6f5822e84949c1a9ac9daafdf0688d9888fd1727087a08aa8324e2ff",
+        "population_counts": {
+          "daily_floors": "UNIQUE_SESSION",
+          "feature_positions": 4514,
+          "m2_origin_weights": [
+            0.5,
+            0.5
+          ],
+          "origins": 1502,
+          "scaled": {
+            "B1": 22570,
+            "M1": 22570,
+            "M2": 7550,
+            "M3": 22570,
+            "M4": 22570,
+            "Q1": 22570,
+            "Q2": 22570,
+            "T1": 22570,
+            "T3": 22570,
+            "T4": 22570,
+            "V1": 22570,
+            "V2": 22570,
+            "V3": 22570
+          },
+          "target_mad_origins": 1502
+        },
+        "scaler": {
+          "centers": [
+            0.024829951202345903,
+            0.04066330356313561,
+            0.09159025958933942,
+            0.41177522567802055,
+            -5.388799943680466,
+            -5.299601410690003,
+            -0.07066609087563513,
+            0.006178719613460164,
+            -0.12002125473232644,
+            -0.0709117792495033,
+            0.006931583045714954,
+            0.0007254699466408397,
+            0.0024721191017697953
+          ],
+          "methods": [
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD"
+          ],
+          "scales": [
+            0.526392697530884,
+            0.13254238081612013,
+            0.602554453610124,
+            0.7250676519678557,
+            0.2717924566348553,
+            0.2080958364675598,
+            0.20461574369142044,
+            0.0023250573787846163,
+            0.25125301779288983,
+            0.16290405630510002,
+            0.02612348904184301,
+            0.004607487002737986,
+            0.009945344480761693
+          ]
+        },
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "target_epsilon": 0.00025097800379902393,
+        "window": {
+          "fitted_at": "2026-10-14 23:54:40.440906+00:00",
+          "phase": "REFIT",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2023-07-01 04:00:00+00:00",
+          "window_id": "WF1:REFIT"
+        }
+      },
+      "recipe_ref": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_REFIT_preprocessing.json",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "sha256": "929fdda939f240b4e59958b62718bf876fd6979183cbd1ccea3dbcbb91890f90"
+      },
+      "saved_input_summary": {
+        "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+        "dtype": "float32",
+        "excluded": {
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+        },
+        "origins": 232,
+        "per_origin": {
+          "1": 116,
+          "2": 116
+        },
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "sessions": 116,
+        "tensor_bytes": 474240,
+        "unique_feature_rows": 7410,
+        "view_id": "CONDITIONAL_REAL_TM0:e87d636dedcc976699dd80dadd4021b47d289ee06ebfc0ecf05c9ea34beaee46"
+      },
+      "source_publication": "UNKNOWN / idealized clock only",
+      "synthetic_rows": 0,
+      "tensor_exposures": 55680,
+      "unique_tensor_rows": 7410,
+      "warmup_excluded_from_fit_unique_rows": 0
+    },
+    {
+      "audit_rows_with_origin_context": 48890,
+      "confirmation_numeric_rows": 0,
+      "exclusions": {},
+      "first_feature_UTC": "2020-07-01 14:30:00+00:00",
+      "first_origin": [
+        "2020-07-01",
+        1
+      ],
+      "fold": "WF2",
+      "invalid_complete_rows": 0,
+      "last_feature_UTC": "2023-09-29 15:30:00+00:00",
+      "last_origin": [
+        "2023-09-29",
+        2
+      ],
+      "mask_sha256": "981ae569d6844ffdf2c93b0968d4497d51653ebbd6974f00bdf180e7414280e5",
+      "origins": 1626,
+      "partition": "Inner training",
+      "population_policy": "fit positions, warm-up excluded",
+      "recipe": {
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "authority_binding": "451e0b0da4cab7b4fac83f71804811278a1758be6b40f4d6487e373e12f65951",
+        "constructed_at": "2026-10-15T14:23:55.040812+00:00",
+        "designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+        "floors": [
+          {
+            "daily_floor": 0.011543731382025899,
+            "daily_pseudocount": 704754.875,
+            "hourly_floor": 0.0026842919543616124,
+            "hourly_pseudocount": 90123.27,
+            "m2_floor": 0.0054730763222526025,
+            "symbol": "AAPL"
+          },
+          {
+            "daily_floor": 0.008674630098495907,
+            "daily_pseudocount": 16018.285,
+            "hourly_floor": 0.0023406070542380574,
+            "hourly_pseudocount": 1920.6000000000001,
+            "m2_floor": 0.004386816971410936,
+            "symbol": "COST"
+          },
+          {
+            "daily_floor": 0.011658417215468396,
+            "daily_pseudocount": 143259.73,
+            "hourly_floor": 0.002749495960923973,
+            "hourly_pseudocount": 17289.06,
+            "m2_floor": 0.005754101168394154,
+            "symbol": "CMCSA"
+          },
+          {
+            "daily_floor": 0.010797171483260891,
+            "daily_pseudocount": 51736.435,
+            "hourly_floor": 0.0025974463688829626,
+            "hourly_pseudocount": 6466.08,
+            "m2_floor": 0.004740554455252866,
+            "symbol": "SBUX"
+          },
+          {
+            "daily_floor": 0.010640406682828892,
+            "daily_pseudocount": 11086.265,
+            "hourly_floor": 0.0025651283292012447,
+            "hourly_pseudocount": 1310.02,
+            "m2_floor": 0.004832723125675141,
+            "symbol": "CME"
+          }
+        ],
+        "population_binding": "4658920b7e27248fea79879f2bc2cb37f8f41f3b38ed279ee2f701a59d39698d",
+        "population_counts": {
+          "daily_floors": "UNIQUE_SESSION",
+          "feature_positions": 4889,
+          "m2_origin_weights": [
+            0.5,
+            0.5
+          ],
+          "origins": 1626,
+          "scaled": {
+            "B1": 24445,
+            "M1": 24445,
+            "M2": 8180,
+            "M3": 24445,
+            "M4": 24445,
+            "Q1": 24445,
+            "Q2": 24445,
+            "T1": 24445,
+            "T3": 24445,
+            "T4": 24445,
+            "V1": 24445,
+            "V2": 24445,
+            "V3": 24445
+          },
+          "target_mad_origins": 1626
+        },
+        "scaler": {
+          "centers": [
+            0.02351805593303487,
+            0.04134699860640976,
+            0.09412901354594834,
+            0.4439226238085592,
+            -5.414119413512476,
+            -5.326916465038629,
+            -0.06884261682957238,
+            0.006019581758386129,
+            -0.11678518245310206,
+            -0.07373033487899057,
+            0.006943848276865922,
+            0.0007068522825636248,
+            0.002497957588381971
+          ],
+          "methods": [
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD"
+          ],
+          "scales": [
+            0.5296554096499868,
+            0.13651423046163344,
+            0.6036440150939563,
+            0.7091057747272382,
+            0.2772941356434586,
+            0.21393986460182113,
+            0.2051281003091674,
+            0.0022698940611838906,
+            0.2495365674973835,
+            0.15781753970256573,
+            0.025506228530600174,
+            0.004510468822614867,
+            0.009665372108471841
+          ]
+        },
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "target_epsilon": 0.00024689646852031665,
+        "window": {
+          "fitted_at": "2026-10-15 14:23:48.873676+00:00",
+          "phase": "INNER_TRAIN",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2023-10-02 04:00:00+00:00",
+          "window_id": "WF2:INNER_TRAIN"
+        }
+      },
+      "recipe_ref": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_INNER_TRAIN_stock_preparation.json",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "sha256": "f5fbb2391fe197e8712ae6dde2beb4314b9fdfe29b01674e979329bb51259a77"
+      },
+      "saved_input_summary": {
+        "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+        "dtype": "float32",
+        "excluded": {},
+        "origins": 1626,
+        "per_origin": {
+          "1": 813,
+          "2": 813
+        },
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "sessions": 813,
+        "tensor_bytes": 3158400,
+        "unique_feature_rows": 49350,
+        "view_id": "CONDITIONAL_REAL_TM0:f8a1a6cd509c7364e017afc6746afa6a8986b1b5454b7508c19094cea15f672e"
+      },
+      "source_publication": "UNKNOWN / idealized clock only",
+      "synthetic_rows": 0,
+      "tensor_exposures": 390240,
+      "unique_tensor_rows": 49350,
+      "warmup_excluded_from_fit_unique_rows": 465
+    },
+    {
+      "audit_rows_with_origin_context": 3690,
+      "confirmation_numeric_rows": 0,
+      "exclusions": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "first_feature_UTC": "2023-10-02 15:30:00+00:00",
+      "first_origin": [
+        "2023-10-12",
+        1
+      ],
+      "fold": "WF2",
+      "invalid_complete_rows": 0,
+      "last_feature_UTC": "2023-12-29 16:30:00+00:00",
+      "last_origin": [
+        "2023-12-29",
+        2
+      ],
+      "mask_sha256": "31bfdeba8ce6743e8228e465e583bc0d0fd0b42b7b1742354f29bf0f7f62a8fd",
+      "origins": 108,
+      "partition": "Inner validation",
+      "population_policy": "saved OOS input mask",
+      "recipe": {
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "authority_binding": "451e0b0da4cab7b4fac83f71804811278a1758be6b40f4d6487e373e12f65951",
+        "constructed_at": "2026-10-15T14:23:55.040812+00:00",
+        "designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+        "floors": [
+          {
+            "daily_floor": 0.011543731382025899,
+            "daily_pseudocount": 704754.875,
+            "hourly_floor": 0.0026842919543616124,
+            "hourly_pseudocount": 90123.27,
+            "m2_floor": 0.0054730763222526025,
+            "symbol": "AAPL"
+          },
+          {
+            "daily_floor": 0.008674630098495907,
+            "daily_pseudocount": 16018.285,
+            "hourly_floor": 0.0023406070542380574,
+            "hourly_pseudocount": 1920.6000000000001,
+            "m2_floor": 0.004386816971410936,
+            "symbol": "COST"
+          },
+          {
+            "daily_floor": 0.011658417215468396,
+            "daily_pseudocount": 143259.73,
+            "hourly_floor": 0.002749495960923973,
+            "hourly_pseudocount": 17289.06,
+            "m2_floor": 0.005754101168394154,
+            "symbol": "CMCSA"
+          },
+          {
+            "daily_floor": 0.010797171483260891,
+            "daily_pseudocount": 51736.435,
+            "hourly_floor": 0.0025974463688829626,
+            "hourly_pseudocount": 6466.08,
+            "m2_floor": 0.004740554455252866,
+            "symbol": "SBUX"
+          },
+          {
+            "daily_floor": 0.010640406682828892,
+            "daily_pseudocount": 11086.265,
+            "hourly_floor": 0.0025651283292012447,
+            "hourly_pseudocount": 1310.02,
+            "m2_floor": 0.004832723125675141,
+            "symbol": "CME"
+          }
+        ],
+        "population_binding": "4658920b7e27248fea79879f2bc2cb37f8f41f3b38ed279ee2f701a59d39698d",
+        "population_counts": {
+          "daily_floors": "UNIQUE_SESSION",
+          "feature_positions": 4889,
+          "m2_origin_weights": [
+            0.5,
+            0.5
+          ],
+          "origins": 1626,
+          "scaled": {
+            "B1": 24445,
+            "M1": 24445,
+            "M2": 8180,
+            "M3": 24445,
+            "M4": 24445,
+            "Q1": 24445,
+            "Q2": 24445,
+            "T1": 24445,
+            "T3": 24445,
+            "T4": 24445,
+            "V1": 24445,
+            "V2": 24445,
+            "V3": 24445
+          },
+          "target_mad_origins": 1626
+        },
+        "scaler": {
+          "centers": [
+            0.02351805593303487,
+            0.04134699860640976,
+            0.09412901354594834,
+            0.4439226238085592,
+            -5.414119413512476,
+            -5.326916465038629,
+            -0.06884261682957238,
+            0.006019581758386129,
+            -0.11678518245310206,
+            -0.07373033487899057,
+            0.006943848276865922,
+            0.0007068522825636248,
+            0.002497957588381971
+          ],
+          "methods": [
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD"
+          ],
+          "scales": [
+            0.5296554096499868,
+            0.13651423046163344,
+            0.6036440150939563,
+            0.7091057747272382,
+            0.2772941356434586,
+            0.21393986460182113,
+            0.2051281003091674,
+            0.0022698940611838906,
+            0.2495365674973835,
+            0.15781753970256573,
+            0.025506228530600174,
+            0.004510468822614867,
+            0.009665372108471841
+          ]
+        },
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "target_epsilon": 0.00024689646852031665,
+        "window": {
+          "fitted_at": "2026-10-15 14:23:48.873676+00:00",
+          "phase": "INNER_TRAIN",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2023-10-02 04:00:00+00:00",
+          "window_id": "WF2:INNER_TRAIN"
+        }
+      },
+      "recipe_ref": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_INNER_TRAIN_stock_preparation.json",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "sha256": "f5fbb2391fe197e8712ae6dde2beb4314b9fdfe29b01674e979329bb51259a77"
+      },
+      "saved_input_summary": {
+        "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+        "dtype": "float32",
+        "excluded": {
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+        },
+        "origins": 108,
+        "per_origin": {
+          "1": 54,
+          "2": 54
+        },
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "sessions": 54,
+        "tensor_bytes": 236160,
+        "unique_feature_rows": 3690,
+        "view_id": "CONDITIONAL_REAL_TM0:e528973fa8f3fb12f5085a882d3b8d4ef9ca40488468c2a5788d220e1c52e48c"
+      },
+      "source_publication": "UNKNOWN / idealized clock only",
+      "synthetic_rows": 0,
+      "tensor_exposures": 25920,
+      "unique_tensor_rows": 3690,
+      "warmup_excluded_from_fit_unique_rows": 0
+    },
+    {
+      "audit_rows_with_origin_context": 52640,
+      "confirmation_numeric_rows": 0,
+      "exclusions": {},
+      "first_feature_UTC": "2020-07-01 14:30:00+00:00",
+      "first_origin": [
+        "2020-07-01",
+        1
+      ],
+      "fold": "WF2",
+      "invalid_complete_rows": 0,
+      "last_feature_UTC": "2023-12-29 16:30:00+00:00",
+      "last_origin": [
+        "2023-12-29",
+        2
+      ],
+      "mask_sha256": "e76ddb65993b53ca6ddd3497bb6e95ed52a0dc28c6779ca2e80a2c73ab4069d3",
+      "origins": 1750,
+      "partition": "Refit training",
+      "population_policy": "fit positions, warm-up excluded",
+      "recipe": {
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "authority_binding": "451e0b0da4cab7b4fac83f71804811278a1758be6b40f4d6487e373e12f65951",
+        "constructed_at": "2026-10-15T14:24:01.701596+00:00",
+        "designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+        "floors": [
+          {
+            "daily_floor": 0.011390506719953848,
+            "daily_pseudocount": 679503.28,
+            "hourly_floor": 0.0026211402737256456,
+            "hourly_pseudocount": 87034.99,
+            "m2_floor": 0.005460390216878818,
+            "symbol": "AAPL"
+          },
+          {
+            "daily_floor": 0.00862080848318303,
+            "daily_pseudocount": 15674.73,
+            "hourly_floor": 0.002329089349243423,
+            "hourly_pseudocount": 1898.74,
+            "m2_floor": 0.004560180641453406,
+            "symbol": "COST"
+          },
+          {
+            "daily_floor": 0.011659250599563608,
+            "daily_pseudocount": 141699.30000000002,
+            "hourly_floor": 0.0027404534174230123,
+            "hourly_pseudocount": 17199.895,
+            "m2_floor": 0.005393050715961023,
+            "symbol": "CMCSA"
+          },
+          {
+            "daily_floor": 0.010635608337691005,
+            "daily_pseudocount": 51912.96,
+            "hourly_floor": 0.0025852488001098677,
+            "hourly_pseudocount": 6473.985000000001,
+            "m2_floor": 0.0047570478077387885,
+            "symbol": "SBUX"
+          },
+          {
+            "daily_floor": 0.009751413937934465,
+            "daily_pseudocount": 11194.26,
+            "hourly_floor": 0.0025328463217591866,
+            "hourly_pseudocount": 1322.29,
+            "m2_floor": 0.004786556218773462,
+            "symbol": "CME"
+          }
+        ],
+        "population_binding": "6c5b92a158bea1e6882e6a835b4c83ac04e9c69c8714c77b305e9152e54eb89c",
+        "population_counts": {
+          "daily_floors": "UNIQUE_SESSION",
+          "feature_positions": 5264,
+          "m2_origin_weights": [
+            0.5,
+            0.5
+          ],
+          "origins": 1750,
+          "scaled": {
+            "B1": 26320,
+            "M1": 26320,
+            "M2": 8810,
+            "M3": 26320,
+            "M4": 26320,
+            "Q1": 26320,
+            "Q2": 26320,
+            "T1": 26320,
+            "T3": 26320,
+            "T4": 26320,
+            "V1": 26320,
+            "V2": 26320,
+            "V3": 26320
+          },
+          "target_mad_origins": 1750
+        },
+        "scaler": {
+          "centers": [
+            0.0244367434985019,
+            0.04049530624797239,
+            0.098019321779807,
+            0.4524365395746257,
+            -5.432581026246487,
+            -5.34415375219392,
+            -0.07200046023971352,
+            0.005908772873050662,
+            -0.1144510449025937,
+            -0.06252775698354886,
+            0.006984808916504831,
+            0.0007253378302069186,
+            0.0024861244955712144
+          ],
+          "methods": [
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD"
+          ],
+          "scales": [
+            0.5272559837207997,
+            0.1395366332962559,
+            0.6146320909408665,
+            0.699172894285098,
+            0.2772059433065093,
+            0.21225782760972933,
+            0.2057329888855448,
+            0.0022254735032549828,
+            0.24893045482632473,
+            0.15690289568749013,
+            0.025153200580869145,
+            0.004492549357223756,
+            0.00954055125118754
+          ]
+        },
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "target_epsilon": 0.00024199580572819754,
+        "window": {
+          "fitted_at": "2026-10-15 14:23:48.873676+00:00",
+          "phase": "REFIT",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2024-01-01 05:00:00+00:00",
+          "window_id": "WF2:REFIT"
+        }
+      },
+      "recipe_ref": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_REFIT_stock_preparation.json",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "sha256": "8604a65e6ef4c77a24e2227e1f233372e524fae338cef166c29701dfe5653d09"
+      },
+      "saved_input_summary": {
+        "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+        "dtype": "float32",
+        "excluded": {},
+        "origins": 1750,
+        "per_origin": {
+          "1": 875,
+          "2": 875
+        },
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "sessions": 875,
+        "tensor_bytes": 3398400,
+        "unique_feature_rows": 53100,
+        "view_id": "CONDITIONAL_REAL_TM0:6a18a3ed0cf31a1d952d6d1faa30760ea10705ef4c715639b24e86781bcc4489"
+      },
+      "source_publication": "UNKNOWN / idealized clock only",
+      "synthetic_rows": 0,
+      "tensor_exposures": 420000,
+      "unique_tensor_rows": 53100,
+      "warmup_excluded_from_fit_unique_rows": 465
+    },
+    {
+      "audit_rows_with_origin_context": 7380,
+      "confirmation_numeric_rows": 0,
+      "exclusions": {
+        "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+      },
+      "first_feature_UTC": "2024-01-02 16:30:00+00:00",
+      "first_origin": [
+        "2024-01-12",
+        1
+      ],
+      "fold": "WF2",
+      "invalid_complete_rows": 0,
+      "last_feature_UTC": "2024-06-28 15:30:00+00:00",
+      "last_origin": [
+        "2024-06-28",
+        2
+      ],
+      "mask_sha256": "beefdaedd7b615c0b2a82a493f2a85f89dbc8373a8a852467e3b0c0d9f5b5d57",
+      "origins": 232,
+      "partition": "Development",
+      "population_policy": "saved OOS input mask",
+      "recipe": {
+        "action_binding": "be027a16bc499b0420cb80d9c35bdd6e925345fcb266b5071ea8c6c3f5dbb2e6",
+        "authority_binding": "451e0b0da4cab7b4fac83f71804811278a1758be6b40f4d6487e373e12f65951",
+        "constructed_at": "2026-10-15T14:24:01.701596+00:00",
+        "designation": "ASSUMPTION_CONDITIONAL_CANDIDATE_NOT_FOR_TRAINING",
+        "floors": [
+          {
+            "daily_floor": 0.011390506719953848,
+            "daily_pseudocount": 679503.28,
+            "hourly_floor": 0.0026211402737256456,
+            "hourly_pseudocount": 87034.99,
+            "m2_floor": 0.005460390216878818,
+            "symbol": "AAPL"
+          },
+          {
+            "daily_floor": 0.00862080848318303,
+            "daily_pseudocount": 15674.73,
+            "hourly_floor": 0.002329089349243423,
+            "hourly_pseudocount": 1898.74,
+            "m2_floor": 0.004560180641453406,
+            "symbol": "COST"
+          },
+          {
+            "daily_floor": 0.011659250599563608,
+            "daily_pseudocount": 141699.30000000002,
+            "hourly_floor": 0.0027404534174230123,
+            "hourly_pseudocount": 17199.895,
+            "m2_floor": 0.005393050715961023,
+            "symbol": "CMCSA"
+          },
+          {
+            "daily_floor": 0.010635608337691005,
+            "daily_pseudocount": 51912.96,
+            "hourly_floor": 0.0025852488001098677,
+            "hourly_pseudocount": 6473.985000000001,
+            "m2_floor": 0.0047570478077387885,
+            "symbol": "SBUX"
+          },
+          {
+            "daily_floor": 0.009751413937934465,
+            "daily_pseudocount": 11194.26,
+            "hourly_floor": 0.0025328463217591866,
+            "hourly_pseudocount": 1322.29,
+            "m2_floor": 0.004786556218773462,
+            "symbol": "CME"
+          }
+        ],
+        "population_binding": "6c5b92a158bea1e6882e6a835b4c83ac04e9c69c8714c77b305e9152e54eb89c",
+        "population_counts": {
+          "daily_floors": "UNIQUE_SESSION",
+          "feature_positions": 5264,
+          "m2_origin_weights": [
+            0.5,
+            0.5
+          ],
+          "origins": 1750,
+          "scaled": {
+            "B1": 26320,
+            "M1": 26320,
+            "M2": 8810,
+            "M3": 26320,
+            "M4": 26320,
+            "Q1": 26320,
+            "Q2": 26320,
+            "T1": 26320,
+            "T3": 26320,
+            "T4": 26320,
+            "V1": 26320,
+            "V2": 26320,
+            "V3": 26320
+          },
+          "target_mad_origins": 1750
+        },
+        "scaler": {
+          "centers": [
+            0.0244367434985019,
+            0.04049530624797239,
+            0.098019321779807,
+            0.4524365395746257,
+            -5.432581026246487,
+            -5.34415375219392,
+            -0.07200046023971352,
+            0.005908772873050662,
+            -0.1144510449025937,
+            -0.06252775698354886,
+            0.006984808916504831,
+            0.0007253378302069186,
+            0.0024861244955712144
+          ],
+          "methods": [
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD",
+            "MAD"
+          ],
+          "scales": [
+            0.5272559837207997,
+            0.1395366332962559,
+            0.6146320909408665,
+            0.699172894285098,
+            0.2772059433065093,
+            0.21225782760972933,
+            0.2057329888855448,
+            0.0022254735032549828,
+            0.24893045482632473,
+            0.15690289568749013,
+            0.025153200580869145,
+            0.004492549357223756,
+            0.00954055125118754
+          ]
+        },
+        "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+        "target_epsilon": 0.00024199580572819754,
+        "window": {
+          "fitted_at": "2026-10-15 14:23:48.873676+00:00",
+          "phase": "REFIT",
+          "start": "2020-07-01 04:00:00+00:00",
+          "stop": "2024-01-01 05:00:00+00:00",
+          "window_id": "WF2:REFIT"
+        }
+      },
+      "recipe_ref": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_REFIT_stock_preparation.json",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "sha256": "8604a65e6ef4c77a24e2227e1f233372e524fae338cef166c29701dfe5653d09"
+      },
+      "saved_input_summary": {
+        "designation": "ASSUMPTION_CONDITIONAL_REAL_NOT_PRODUCTION",
+        "dtype": "float32",
+        "excluded": {
+          "SCALER_NOT_AVAILABLE_AT_EVERY_HISTORICAL_STEP": 16
+        },
+        "origins": 232,
+        "per_origin": {
+          "1": 116,
+          "2": 116
+        },
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "sessions": 116,
+        "tensor_bytes": 472320,
+        "unique_feature_rows": 7380,
+        "view_id": "CONDITIONAL_REAL_TM0:ad364c1a17497d33a9999eb4df698fdfc1baabc010358196bd176c20a163f117"
+      },
+      "source_publication": "UNKNOWN / idealized clock only",
+      "synthetic_rows": 0,
+      "tensor_exposures": 55680,
+      "unique_tensor_rows": 7380,
+      "warmup_excluded_from_fit_unique_rows": 0
+    }
+  ],
+  "source_manifest": {
+    "path": "reports/data_audit/ta_provisional_source_integration_2026-10-13_163141/complete_genuine_source_manifest.json",
+    "sha256": "45a91dd7aff21d9a0aecf3a94635fc4c7eccfbeb08d16c58ec5d196e2fe62aff"
+  },
+  "study_seal": {
+    "path": "reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/artifact_bindings.json",
+    "sha256": "8669a0eb5f19749f8f2b8e0e4e726a26be5672b937278bd50b40b3f1b9ec4adb"
+  }
+}

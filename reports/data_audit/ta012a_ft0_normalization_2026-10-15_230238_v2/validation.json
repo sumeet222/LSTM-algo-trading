@@ -1,0 +1,41 @@
+{
+  "status": "P012A_AUDIT_PASS",
+  "pytest": {
+    "passed": 50,
+    "failed": 0,
+    "elapsed_seconds": 96.37,
+    "command": ".venv/bin/python -m pytest tests/test_normalization_audit.py tests/test_target_range_history.py tests/test_controlled_visualization.py tests/test_visualization_readonly.py tests/test_controlled_review.py -q"
+  },
+  "identity_after_stub_compatible_refactor": {
+    "passed": 1,
+    "seconds": 4.16
+  },
+  "static": {
+    "files": 214,
+    "errors": 0,
+    "warnings": 0,
+    "seconds": 20.197,
+    "command": ".venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+  },
+  "ruff": "PASS",
+  "http": {
+    "health": 200,
+    "html": 200,
+    "port": 8502,
+    "exit": 0,
+    "startup_seconds": 1.895,
+    "shutdown_seconds": 0.452
+  },
+  "app_tests": [
+    "original TG ranges and inline candles",
+    "ordinary/extreme row switching",
+    "Full data protected lock with reader spies",
+    "Package012A all-feature/partition controls",
+    "CMCSA B1 2024-01-25 genuine candles/volume",
+    "WF2/refit native indicator identity",
+    "exact original consuming 48-step context",
+    "original Package011 events/diagnostics/saved scores"
+  ],
+  "manual_browser_screenshot": "not claimed",
+  "editor_refresh": "pending human confirmation"
+}

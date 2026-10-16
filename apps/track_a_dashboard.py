@@ -122,6 +122,8 @@ def filter_frame(
 
 
 def start_here(c: Catalog) -> None:
+    from lstm_data.visualization.normalization_ui import open_audit
+
     st.info(
         "New: target ranges, inline candles and Price & Features → Partition → Full data. "
         "Walkthrough: docs/track_a/HOW_TO_INSPECT_TG_RANGES_AND_CANDLES.md"
@@ -143,6 +145,7 @@ def start_here(c: Catalog) -> None:
             "compare seed123 arms with C0 [123]. These are saved package results."
         )
     st.button("Package 011: Compare C0 and T2", on_click=open_study, type="primary")
+    st.button("Package012A normalization audit", on_click=open_audit)
     st.caption("TM0 architecture · matched C0/H1/T1/T2/O1 arms · seeds42/123 · saved evidence only")
     st.subheader("Your first five minutes")
     st.markdown(

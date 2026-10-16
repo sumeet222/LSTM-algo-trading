@@ -341,6 +341,7 @@ def full_data_page(c: Catalog, token: tuple) -> None:
         "Indicator(s) · all registered FT0 channels",
         list(ORDER),
         format_func=lambda f: f"{f} · {FEATURES[f]}",
+        key="full_indicators",
     )
     mode = st.radio(
         "Indicator display",
@@ -350,6 +351,7 @@ def full_data_page(c: Catalog, token: tuple) -> None:
     recipe = st.selectbox(
         "Fitted preparation (explicit retrospective recipe)",
         ["WF1 / refit", "WF1 / inner", "WF2 / refit", "WF2 / inner"],
+        key="full_recipe",
     )
     origin = st.selectbox("Indicator origin context", [1, 2], key="full_origin")
     if not isinstance(dates, tuple) or len(dates) != 2:
@@ -398,6 +400,9 @@ def full_data_page(c: Catalog, token: tuple) -> None:
         st.caption("Opened from exact observation " + linked["observation_id"])
         center_history_origin(fig, bars, linked["cutoff"])
     st.plotly_chart(fig, width="stretch", config=PLOT_CONFIG, key="full_history_candles")
+    from .normalization_ui import linked_context
+
+    linked_context(c, token)
     st.caption(
         "Source candle START / completed feature END; both ET and UTC on hover. "
         "USD split-adjusted prices; inverse-split volume in shares. Shared time axis, "

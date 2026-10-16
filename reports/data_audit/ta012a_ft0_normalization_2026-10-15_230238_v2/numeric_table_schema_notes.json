@@ -1,0 +1,26 @@
+{
+  "floor_recipe_parameters.csv": {
+    "feature_codes": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "V1",
+      "V2",
+      "V3",
+      "Q1",
+      "Q2"
+    ],
+    "representation": "shared native formula parameters, not input values",
+    "units": "three floors: unlogged return RMS; two pseudocounts: adjusted shares",
+    "counts": "see population_and_recipe_bindings.json unique feature positions, daily-session keys and M2 origin keys",
+    "model_input_status": "all recipes are original registered neural recipes, not new fitted parameters"
+  },
+  "scaler_stability.csv": {
+    "representation": "recorded native center/scale and ratios, identity marked",
+    "input_population": "exact fit key counts per row; hourly primary distributions are separate"
+  },
+  "resource_usage.json": {
+    "representation": "engineering resource metrics, not feature observations"
+  }
+}

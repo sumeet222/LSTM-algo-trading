@@ -1,0 +1,68 @@
+{
+  "artifacts": {
+    "feature_replay_examples.csv": {
+      "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/feature_replay_examples_resolved.csv",
+      "sha256": "e147aad45e4997ee709258724cc9a88980dc7e584c223584347ec9a90fdc93f2"
+    },
+    "ft0_normalization_distribution.csv": {
+      "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/ft0_normalization_distribution.csv",
+      "sha256": "1ee47baefa15eefe2e64162b5c0c08a6c337b4ce4f1bc1c792183edc03f16e22"
+    },
+    "ft0_stock_scale_comparison.csv": {
+      "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/ft0_stock_scale_comparison.csv",
+      "sha256": "9080e1e00de77b115b6ff19eee95ae17be81b8d4c5c8b30fe836d1e1a7448350"
+    },
+    "ft0_tail_and_fallback_audit.csv": {
+      "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/ft0_tail_and_fallback_audit.csv",
+      "sha256": "fdd364d39e5bcb8ad5fcab1145fdfccd87aa97b6d0ded81e040676a7c2ff8783"
+    },
+    "ft0_temporal_drift.csv": {
+      "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/ft0_temporal_drift.csv",
+      "sha256": "f2a4e1e8774c2d31f20dd125e97cd3950f02fc56499e0f778afdbccf338d476c"
+    },
+    "histograms.json": {
+      "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/histograms.json",
+      "sha256": "b0a3e45922bcc7f0d9ba0527bd130e1c29302fdaf7a1c6d8056cce9aed013a98"
+    },
+    "population_and_recipe_bindings.json": {
+      "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/population_and_recipe_bindings.json",
+      "sha256": "f77b54e8c1fb5d9e8c38dc3e7b37834d28e435ee69b8cc3042ce24698e4e2a7c"
+    },
+    "tail_identity_sets.json.gz": {
+      "path": "reports/data_audit/ta012a_ft0_normalization_2026-10-15_230238_v2/tail_identity_sets_verified.json.gz",
+      "sha256": "553c98e8f39fb164a8e20ff0af81a5b58efbe6eb7d3d55735cfbd9c5ca4e4134"
+    }
+  },
+  "confirmation_numeric_rows": 0,
+  "package": "TA012A_FT0_READONLY_v1",
+  "recipes": {
+    "WF1": {
+      "inner": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_INNER_TRAIN_preprocessing.json",
+        "preparation_id": "dd9384184fdfb582bb2028f8a0f3feb723461affcdd7ae2710995ea7f0a97561",
+        "sha256": "3283ce988067922542cae06c9d77e3cb7695cab47761933c6ed67f66c45f1c39"
+      },
+      "refit": {
+        "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/build_v4/WF1_REFIT_preprocessing.json",
+        "preparation_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+        "sha256": "929fdda939f240b4e59958b62718bf876fd6979183cbd1ccea3dbcbb91890f90"
+      }
+    },
+    "WF2": {
+      "inner": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_INNER_TRAIN_stock_preparation.json",
+        "preparation_id": "bd432f5b047a50adfc2feeadd6e77a8e3c1ad596eba5e32dbfdb1bc7d232ad9e",
+        "sha256": "f5fbb2391fe197e8712ae6dde2beb4314b9fdfe29b01674e979329bb51259a77"
+      },
+      "refit": {
+        "path": "reports/data_audit/ta009_wf2_tm0_mc0_2026-10-15_101729/WF2_REFIT_stock_preparation.json",
+        "preparation_id": "58f47f4bca44ec3abda1563125e80de3c9b4af6b7ed406ed97b381978aafe8f9",
+        "sha256": "8604a65e6ef4c77a24e2227e1f233372e524fae338cef166c29701dfe5653d09"
+      }
+    }
+  },
+  "source": {
+    "path": "reports/data_audit/ta_pretraining_g3_2026-10-14_185935/canonical_dataset_manifest.json",
+    "sha256": "ffc2932434ad6ec966cb0046ab4a230d693bdf04acbbaddbf26f51cf0c6baad0"
+  }
+}

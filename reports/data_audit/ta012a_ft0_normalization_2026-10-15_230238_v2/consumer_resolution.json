@@ -1,0 +1,40 @@
+{
+  "affected": [
+    {
+      "center": 0.41177522567802055,
+      "clock": "UTC completed-hour END; ET session; idealized period-end",
+      "consuming_cutoff": NaN,
+      "consuming_session": NaN,
+      "ever_model_input": true,
+      "feature": "M4",
+      "flags": NaN,
+      "fold": "WF1",
+      "input_status": "see ever_model_input_count; no new predictions",
+      "label": "older log(C[d\u221221]/C[d\u2212126]) / (sqrt(105) \u00d7 floored daily RMS63)",
+      "method": "MAD",
+      "native": 2.7781782000818316,
+      "origin": 1,
+      "partition": "Refit training",
+      "population_key": "symbol/UTC/recipe",
+      "recipe_id": "1cc650ca4f74e35f4bf4482de114dc9caccc287648bbb84060ec6e979c399a5b",
+      "representation": "scaled",
+      "scale": 0.7250676519678557,
+      "scaled": 3.263699531555176,
+      "selection": "largest |scaled|; descriptive",
+      "session": "2023-06-30",
+      "slot": 2,
+      "source_binding": "ffc1ffe2b72629f6333c4fa5c1fbe00c9ece02972f793652a14d03326792c803",
+      "source_lineage": "49badf34b868ad9402699e3449aac85294664d37f479f0fbf3f7f70e6d48868f",
+      "symbol": "AAPL",
+      "timestamp": "2023-06-30 15:30:00+00:00",
+      "units": "dimensionless scaled"
+    }
+  ],
+  "changed_columns": [
+    "origin",
+    "consuming_session",
+    "consuming_cutoff"
+  ],
+  "numerical_columns_identical": true,
+  "scope": "Non-M2 duplicate origin metadata only; numerical values identical"
+}
