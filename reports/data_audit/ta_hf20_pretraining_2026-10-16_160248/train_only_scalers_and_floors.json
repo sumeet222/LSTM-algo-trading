@@ -1,0 +1,590 @@
+{
+  "inner": {
+    "constant_novel_variation_counts": {},
+    "epsilon": 0.0003449186163060719,
+    "epsilon_origins": 1022,
+    "fit_scope": "UNIQUE_NATIVE_KEYS_TRAIN_ONLY; no window duplication; M2 origin mass50/50",
+    "fit_start": "2022-12-01",
+    "fit_stop_inclusive": "2024-12-24",
+    "floors": [
+      {
+        "daily_floor": 0.011023457572545062,
+        "daily_pseudocount": 115107.55,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.0022914030646393768,
+        "hourly_pseudocount": 18144.21,
+        "hourly_volume_population": 3098,
+        "m2_floor": 0.0048961188490562165,
+        "symbol": "VZ"
+      },
+      {
+        "daily_floor": 0.01176707847034094,
+        "daily_pseudocount": 33409.725,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.0030009473764760234,
+        "hourly_pseudocount": 5243.055,
+        "hourly_volume_population": 3098,
+        "m2_floor": 0.005722029184252625,
+        "symbol": "COP"
+      },
+      {
+        "daily_floor": 0.012225045921882342,
+        "daily_pseudocount": 261098.98,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.002702384799847314,
+        "hourly_pseudocount": 40010.76,
+        "hourly_volume_population": 3099,
+        "m2_floor": 0.005781678234126199,
+        "symbol": "BAC"
+      },
+      {
+        "daily_floor": 0.015408030791573704,
+        "daily_pseudocount": 45035.55,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.003572184143713232,
+        "hourly_pseudocount": 6582.16,
+        "hourly_volume_population": 3099,
+        "m2_floor": 0.007501224181151051,
+        "symbol": "BA"
+      },
+      {
+        "daily_floor": 0.010868432056488114,
+        "daily_pseudocount": 374302.03,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.0023560026038718955,
+        "hourly_pseudocount": 53551.15,
+        "hourly_volume_population": 3099,
+        "m2_floor": 0.005156626581475271,
+        "symbol": "AAPL"
+      },
+      {
+        "daily_floor": 0.008506125743860797,
+        "daily_pseudocount": 25216.265,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.0018653281418506138,
+        "hourly_pseudocount": 3810.44,
+        "hourly_volume_population": 3098,
+        "m2_floor": 0.003751664073121234,
+        "symbol": "PEP"
+      },
+      {
+        "daily_floor": 0.009821004730466121,
+        "daily_pseudocount": 43078.855,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.002431785650322467,
+        "hourly_pseudocount": 6530.110000000001,
+        "hourly_volume_population": 3097,
+        "m2_floor": 0.004662061531613859,
+        "symbol": "MRK"
+      },
+      {
+        "daily_floor": 0.010309789375075434,
+        "daily_pseudocount": 43949.305,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.0025766321481528486,
+        "hourly_pseudocount": 6708.71,
+        "hourly_volume_population": 3099,
+        "m2_floor": 0.005176137685044265,
+        "symbol": "SBUX"
+      },
+      {
+        "daily_floor": 0.009750312534684866,
+        "daily_pseudocount": 48429.535,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.0024341670928129905,
+        "hourly_pseudocount": 7424.08,
+        "hourly_volume_population": 3099,
+        "m2_floor": 0.004911429066597363,
+        "symbol": "CVX"
+      },
+      {
+        "daily_floor": 0.012706161096070392,
+        "daily_pseudocount": 39578.18,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.002554444014378451,
+        "hourly_pseudocount": 6119.005,
+        "hourly_volume_population": 3098,
+        "m2_floor": 0.005600061118957057,
+        "symbol": "MS"
+      },
+      {
+        "daily_floor": 0.0267846078420245,
+        "daily_pseudocount": 450015.815,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.005247537585503849,
+        "hourly_pseudocount": 63313.700000000004,
+        "hourly_volume_population": 3099,
+        "m2_floor": 0.011263557763725942,
+        "symbol": "AMD"
+      },
+      {
+        "daily_floor": 0.006786797616915353,
+        "daily_pseudocount": 74990.79000000001,
+        "daily_volume_population": 513,
+        "hourly_floor": 0.0017005903544344918,
+        "hourly_pseudocount": 10720.47,
+        "hourly_volume_population": 3097,
+        "m2_floor": 0.0036218660004247918,
+        "symbol": "KO"
+      },
+      {
+        "daily_floor": 0.007556097026703895,
+        "daily_pseudocount": 39121.51,
+        "daily_volume_population": 513,
+        "hourly_floor": 0.0017709066425018692,
+        "hourly_pseudocount": 5966.395,
+        "hourly_volume_population": 3098,
+        "m2_floor": 0.0035443045836457913,
+        "symbol": "JNJ"
+      },
+      {
+        "daily_floor": 0.013305296779016179,
+        "daily_pseudocount": 337687.83,
+        "daily_volume_population": 513,
+        "hourly_floor": 0.003258146112091668,
+        "hourly_pseudocount": 48407.035,
+        "hourly_volume_population": 3098,
+        "m2_floor": 0.006455072662641937,
+        "symbol": "AMZN"
+      },
+      {
+        "daily_floor": 0.010134520360169834,
+        "daily_pseudocount": 97967.08,
+        "daily_volume_population": 513,
+        "hourly_floor": 0.0027088062294573106,
+        "hourly_pseudocount": 14863.975,
+        "hourly_volume_population": 3096,
+        "m2_floor": 0.005175966673575692,
+        "symbol": "XOM"
+      },
+      {
+        "daily_floor": 0.010527705105998012,
+        "daily_pseudocount": 110355.19,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.0030670221422804287,
+        "hourly_pseudocount": 16862.285,
+        "hourly_volume_population": 3098,
+        "m2_floor": 0.0063519863876365015,
+        "symbol": "WFC"
+      },
+      {
+        "daily_floor": 0.014556284142831163,
+        "daily_pseudocount": 137953.8,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.003582573029322256,
+        "hourly_pseudocount": 20753.100000000002,
+        "hourly_volume_population": 3099,
+        "m2_floor": 0.008438592661529583,
+        "symbol": "AVGO"
+      },
+      {
+        "daily_floor": 0.028487992135390158,
+        "daily_pseudocount": 986917.73,
+        "daily_volume_population": 513,
+        "hourly_floor": 0.005874787881661955,
+        "hourly_pseudocount": 140691.555,
+        "hourly_volume_population": 3098,
+        "m2_floor": 0.011226903923926609,
+        "symbol": "TSLA"
+      },
+      {
+        "daily_floor": 0.008072479923099906,
+        "daily_pseudocount": 13815.01,
+        "daily_volume_population": 513,
+        "hourly_floor": 0.001968058497508249,
+        "hourly_pseudocount": 2046.91,
+        "hourly_volume_population": 3097,
+        "m2_floor": 0.004157534436181127,
+        "symbol": "MA"
+      },
+      {
+        "daily_floor": 0.009568700960202275,
+        "daily_pseudocount": 93715.565,
+        "daily_volume_population": 514,
+        "hourly_floor": 0.002111900442827156,
+        "hourly_pseudocount": 14320.53,
+        "hourly_volume_population": 3099,
+        "m2_floor": 0.0041370461813092715,
+        "symbol": "CSCO"
+      }
+    ],
+    "hourly_fit_keys": 61980,
+    "recipe_id": "HF20_RECIPE:aae2ed05bbc680a2f4f95b37fc9e4cf423bb7f00cececfeebd98ee6bc981ba8b",
+    "scalers": {
+      "B1": {
+        "center": 0.005668251648247137,
+        "method": "MAD",
+        "n": 61974,
+        "scale": 0.0022889484940400986
+      },
+      "M1": {
+        "center": 0.01936591413952367,
+        "method": "MAD",
+        "n": 61974,
+        "scale": 0.5146482103955126
+      },
+      "M2": {
+        "center": 0.012551953243521928,
+        "method": "MAD",
+        "n": 20760,
+        "scale": 0.1394612538770715
+      },
+      "M3": {
+        "center": 0.044688092635566425,
+        "method": "MAD",
+        "n": 61974,
+        "scale": 0.6351418543016445
+      },
+      "M4": {
+        "center": 0.259544555635567,
+        "method": "MAD",
+        "n": 61974,
+        "scale": 0.6191411561675928
+      },
+      "Q1": {
+        "center": -0.10282354038841923,
+        "method": "MAD",
+        "n": 61974,
+        "scale": 0.24147906617392412
+      },
+      "Q2": {
+        "center": -0.0705730561624681,
+        "method": "MAD",
+        "n": 61794,
+        "scale": 0.15816980894515575
+      },
+      "T1": {
+        "center": 0.004237553570813233,
+        "method": "MAD",
+        "n": 61974,
+        "scale": 0.026201795547725275
+      },
+      "T3": {
+        "center": 0.0003734646048764123,
+        "method": "MAD",
+        "n": 61974,
+        "scale": 0.004627153931731614
+      },
+      "T4": {
+        "center": 0.0016222437364385746,
+        "method": "MAD",
+        "n": 61974,
+        "scale": 0.009769407568613935
+      },
+      "V1": {
+        "center": -5.4622173261085365,
+        "method": "MAD",
+        "n": 61908,
+        "scale": 0.3248308482434421
+      },
+      "V2": {
+        "center": -5.384616967742984,
+        "method": "MAD",
+        "n": 61974,
+        "scale": 0.25794096957294776
+      },
+      "V3": {
+        "center": -0.07369988244458936,
+        "method": "MAD",
+        "n": 61908,
+        "scale": 0.2039740355975197
+      }
+    },
+    "target_fit_population": "All full20 source-valid mature structural training origins; independent of feature readiness",
+    "training_model_fit": false
+  },
+  "refit": {
+    "constant_novel_variation_counts": {},
+    "epsilon": 0.00035168796854748245,
+    "epsilon_origins": 1148,
+    "fit_scope": "UNIQUE_NATIVE_KEYS_TRAIN_ONLY; no window duplication; M2 origin mass50/50",
+    "fit_start": "2022-12-01",
+    "fit_stop_inclusive": "2025-03-28",
+    "floors": [
+      {
+        "daily_floor": 0.011069055078651312,
+        "daily_pseudocount": 117238.22,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.002280506931560325,
+        "hourly_pseudocount": 18259.645,
+        "hourly_volume_population": 3476,
+        "m2_floor": 0.004918484656012213,
+        "symbol": "VZ"
+      },
+      {
+        "daily_floor": 0.011785832374279163,
+        "daily_pseudocount": 33797.08,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.0030232411747038316,
+        "hourly_pseudocount": 5349.745,
+        "hourly_volume_population": 3476,
+        "m2_floor": 0.005758752945820559,
+        "symbol": "COP"
+      },
+      {
+        "daily_floor": 0.01203764527547533,
+        "daily_pseudocount": 258810.96,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.0027071832547038905,
+        "hourly_pseudocount": 39190.35,
+        "hourly_volume_population": 3477,
+        "m2_floor": 0.00571189696925212,
+        "symbol": "BAC"
+      },
+      {
+        "daily_floor": 0.015468486210662024,
+        "daily_pseudocount": 46057.55,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.0036283860222225887,
+        "hourly_pseudocount": 6689.29,
+        "hourly_volume_population": 3477,
+        "m2_floor": 0.007525528350533531,
+        "symbol": "BA"
+      },
+      {
+        "daily_floor": 0.010864524971389086,
+        "daily_pseudocount": 369379.60000000003,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.002390902907483033,
+        "hourly_pseudocount": 52577.85,
+        "hourly_volume_population": 3477,
+        "m2_floor": 0.005163172566814611,
+        "symbol": "AAPL"
+      },
+      {
+        "daily_floor": 0.008516929799626153,
+        "daily_pseudocount": 25919.02,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.0019196140169795367,
+        "hourly_pseudocount": 3968.445,
+        "hourly_volume_population": 3476,
+        "m2_floor": 0.003798544574319409,
+        "symbol": "PEP"
+      },
+      {
+        "daily_floor": 0.009859422467195518,
+        "daily_pseudocount": 44624.25,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.00245185537315038,
+        "hourly_pseudocount": 6874.900000000001,
+        "hourly_volume_population": 3475,
+        "m2_floor": 0.004687280084887934,
+        "symbol": "MRK"
+      },
+      {
+        "daily_floor": 0.0103256878947435,
+        "daily_pseudocount": 44781.99,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.0025986823811688297,
+        "hourly_pseudocount": 6854.860000000001,
+        "hourly_volume_population": 3477,
+        "m2_floor": 0.005226217608801379,
+        "symbol": "SBUX"
+      },
+      {
+        "daily_floor": 0.009808745239607758,
+        "daily_pseudocount": 48132.15,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.0024596695904182215,
+        "hourly_pseudocount": 7390.77,
+        "hourly_volume_population": 3477,
+        "m2_floor": 0.0049111990931456125,
+        "symbol": "CVX"
+      },
+      {
+        "daily_floor": 0.012806347419117986,
+        "daily_pseudocount": 39550.51,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.002601840141324803,
+        "hourly_pseudocount": 6101.17,
+        "hourly_volume_population": 3476,
+        "m2_floor": 0.005845452197978307,
+        "symbol": "MS"
+      },
+      {
+        "daily_floor": 0.02630446916375073,
+        "daily_pseudocount": 427845.79000000004,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.005225182003875763,
+        "hourly_pseudocount": 60484.97,
+        "hourly_volume_population": 3477,
+        "m2_floor": 0.010797484423729499,
+        "symbol": "AMD"
+      },
+      {
+        "daily_floor": 0.006800466389359256,
+        "daily_pseudocount": 76537.735,
+        "daily_volume_population": 576,
+        "hourly_floor": 0.0017281889000417036,
+        "hourly_pseudocount": 10949.72,
+        "hourly_volume_population": 3475,
+        "m2_floor": 0.003634373487237492,
+        "symbol": "KO"
+      },
+      {
+        "daily_floor": 0.0075946623801441656,
+        "daily_pseudocount": 39919.79,
+        "daily_volume_population": 576,
+        "hourly_floor": 0.0017917784753350935,
+        "hourly_pseudocount": 6075.325,
+        "hourly_volume_population": 3476,
+        "m2_floor": 0.0035864648615840586,
+        "symbol": "JNJ"
+      },
+      {
+        "daily_floor": 0.013430162412204258,
+        "daily_pseudocount": 327821.275,
+        "daily_volume_population": 576,
+        "hourly_floor": 0.003263409331403029,
+        "hourly_pseudocount": 46741.46,
+        "hourly_volume_population": 3476,
+        "m2_floor": 0.006423170974674497,
+        "symbol": "AMZN"
+      },
+      {
+        "daily_floor": 0.01015101800872736,
+        "daily_pseudocount": 96127.815,
+        "daily_volume_population": 576,
+        "hourly_floor": 0.002738057834174832,
+        "hourly_pseudocount": 14606.015,
+        "hourly_volume_population": 3474,
+        "m2_floor": 0.0052177642057807975,
+        "symbol": "XOM"
+      },
+      {
+        "daily_floor": 0.011191123308947483,
+        "daily_pseudocount": 107165.43000000001,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.0030337104309813394,
+        "hourly_pseudocount": 16570.44,
+        "hourly_volume_population": 3476,
+        "m2_floor": 0.006260211744801635,
+        "symbol": "WFC"
+      },
+      {
+        "daily_floor": 0.014702500936198685,
+        "daily_pseudocount": 141915.9,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.0036272123334305548,
+        "hourly_pseudocount": 21063.9,
+        "hourly_volume_population": 3477,
+        "m2_floor": 0.008556438208547,
+        "symbol": "AVGO"
+      },
+      {
+        "daily_floor": 0.028592895139348075,
+        "daily_pseudocount": 958561.865,
+        "daily_volume_population": 576,
+        "hourly_floor": 0.006017368353546284,
+        "hourly_pseudocount": 135689.73,
+        "hourly_volume_population": 3476,
+        "m2_floor": 0.0113006180561236,
+        "symbol": "TSLA"
+      },
+      {
+        "daily_floor": 0.008129929178243445,
+        "daily_pseudocount": 13914.165,
+        "daily_volume_population": 576,
+        "hourly_floor": 0.0019881304834864395,
+        "hourly_pseudocount": 2070.55,
+        "hourly_volume_population": 3475,
+        "m2_floor": 0.004159531729940388,
+        "symbol": "MA"
+      },
+      {
+        "daily_floor": 0.009568916417375626,
+        "daily_pseudocount": 93911.96,
+        "daily_volume_population": 577,
+        "hourly_floor": 0.0021311272758875234,
+        "hourly_pseudocount": 14326.630000000001,
+        "hourly_volume_population": 3477,
+        "m2_floor": 0.00419407122990042,
+        "symbol": "CSCO"
+      }
+    ],
+    "hourly_fit_keys": 69540,
+    "recipe_id": "HF20_RECIPE:8eec6d701287109c6c1dbc17ffdfbd53146e18d8e6796a3d0c17e385f14d6c3e",
+    "scalers": {
+      "B1": {
+        "center": 0.005753686078271885,
+        "method": "MAD",
+        "n": 69534,
+        "scale": 0.0023293219739416154
+      },
+      "M1": {
+        "center": 0.01791458130373729,
+        "method": "MAD",
+        "n": 69534,
+        "scale": 0.5145712491190919
+      },
+      "M2": {
+        "center": 0.006301439060758422,
+        "method": "MAD",
+        "n": 23280,
+        "scale": 0.1421879214429191
+      },
+      "M3": {
+        "center": 0.04328257959931266,
+        "method": "MAD",
+        "n": 69534,
+        "scale": 0.6384589396506007
+      },
+      "M4": {
+        "center": 0.26548590491965557,
+        "method": "MAD",
+        "n": 69534,
+        "scale": 0.6399104474184529
+      },
+      "Q1": {
+        "center": -0.10274172363865705,
+        "method": "MAD",
+        "n": 69534,
+        "scale": 0.2457392084478381
+      },
+      "Q2": {
+        "center": -0.06157787905278663,
+        "method": "MAD",
+        "n": 69354,
+        "scale": 0.16073775827902814
+      },
+      "T1": {
+        "center": 0.0036245498726123807,
+        "method": "MAD",
+        "n": 69534,
+        "scale": 0.026612840884128415
+      },
+      "T3": {
+        "center": 0.0003924338522361539,
+        "method": "MAD",
+        "n": 69534,
+        "scale": 0.004688723019740132
+      },
+      "T4": {
+        "center": 0.0014205618319675557,
+        "method": "MAD",
+        "n": 69534,
+        "scale": 0.009929665642267932
+      },
+      "V1": {
+        "center": -5.446170359358602,
+        "method": "MAD",
+        "n": 69468,
+        "scale": 0.32974430792484677
+      },
+      "V2": {
+        "center": -5.368975167675518,
+        "method": "MAD",
+        "n": 69534,
+        "scale": 0.260771231544664
+      },
+      "V3": {
+        "center": -0.07484801751495418,
+        "method": "MAD",
+        "n": 69468,
+        "scale": 0.20603231465450778
+      }
+    },
+    "target_fit_population": "All full20 source-valid mature structural training origins; independent of feature readiness",
+    "training_model_fit": false
+  }
+}

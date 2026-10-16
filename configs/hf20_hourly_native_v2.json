@@ -1,0 +1,132 @@
+{
+  "package": "TA-HF20-HOURLY-NATIVE-PRETRAINING-001",
+  "dataset_id": "CAND:HF_TWELVEDATA20:HOURLY_NATIVE:DATASET:v2",
+  "source_revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "cohort_id": "HF20_ORDERED_COHORT_V1",
+  "clock_id": "HF20_COMPLETED_VENDOR_HOUR_CLOSE_PROXY_V1",
+  "feature_id": "FT1_HF20_HOURLY_NATIVE_V2",
+  "target_id": "TG20_HF20_CROSS_SECTIONAL_V1",
+  "source_policy": "IDEALIZED_VENDOR_HOURLY_AS_REPORTED",
+  "price_volume_basis": "AS_REPORTED_RETROSPECTIVE_PRICE_AND_SHARE_VOLUME_ASSUMPTION",
+  "source_semantics": "Publisher interval START; retain only exact XNYS session-open anchored complete 60min starts. No top-of-hour shift, no stub use, no invented interval splitting. Actual release/publication UNKNOWN.",
+  "origins": [
+    {
+      "slot": 1,
+      "cutoff_ET": "10:30",
+      "issuance_ET": "10:32",
+      "entry_proxy_ET": "10:30",
+      "exit_proxy_ET": "14:30",
+      "label_maturity_ET": "14:32"
+    },
+    {
+      "slot": 2,
+      "cutoff_ET": "11:30",
+      "issuance_ET": "11:32",
+      "entry_proxy_ET": "11:30",
+      "exit_proxy_ET": "15:30",
+      "label_maturity_ET": "15:32"
+    }
+  ],
+  "timing": "Information assumed at interval end; forecast issuance end+2min, no executable-fill/trading event. Labels mature exit reference end+2min; all four subsequent same-session canonical full-hour rows required. No early-close labels. Missing exit only gates label, never contemporaneous forecast issuance.",
+  "warmup": [
+    "2022-06-01",
+    "2022-11-30"
+  ],
+  "train": [
+    "2022-12-01",
+    "2025-03-28"
+  ],
+  "development": [
+    "2025-03-31",
+    "2026-01-06"
+  ],
+  "locked_confirmation": [
+    "2026-01-07",
+    "2026-10-15"
+  ],
+  "daily_policy": "CLOSE_LAST_COMPLETE_HOUR_INDEPENDENT_VOLUME_ALL_SIX_V2: previous ordinary regular-session close proxy is the genuine last completed full-hour close at15:30, valid independently of missing earlier hours; daily volume proxy still requires all6genuine full-hour volumes. No missing close, candle or volume is fabricated; missing daily-volume calendar slots remain missing. Early closes remain hourly inputs only, not daily proxies.",
+  "features": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "feature_rules": "Retain D4 math/coverage (12/12,57/60,maxgap2; daily63>=60; Q1>=19/20; Q2short5/5,long57/60; SMA20>=19; EMA360 updates and recent69/72,maxgap2; RSI14consecutive changes+140updates). M4 uses preceding regular proxy closes d-21/d-126. M2 uses19/20,57/60 own-stock same-origin matured historical returns from strictly earlier normal sessions, session-locked at start of each historical day. Every48scheduled-step input is complete20x48x16; no skip-over missing rows.",
+  "fit_rules": "Inner prefix=train excluding final63exchange sessions; fresh refit=fulltrain. Unique native feature keys (M2 stock/session/origin; others stock/hour). Train-only fifth-percentile positive volatility floors; stock1%medianpositive volume pseudocounts; 13pooled median/unscaledMAD scalers with IQR/1.349 then populationSD then exactconstant-zero fallback; M2 origin-balanced50/50. No clipping. TG20 epsilon=max(1e-4,.1median training cross-sectionalMAD) using only complete20stock matured training origins, separate inner/refit.",
+  "repair_policy": "NO_MIXED_SOURCE_OVERRIDES_V1: investigate exact cached intervals and neighbor units, but preserve and mask all6missing hours unless independent alignment and price/share-volume proof permits a separately approved sparse overlay. No provider API requests.",
+  "actions": "No invented factors or adjusted-close mixing. Three documented split windows (AMZN2022-06-06,TSLA2022-08-25,AVGO2024-07-15) audited descriptively. Smooth consistent as-reported price/share units may be used only as a conditional research assumption, never a PIT action/volume certificate. Any demonstrated unresolved unit break must quarantine its crossing dependencies; no target-size clipping. Dividends/total-return status unverified; price-only labels, no strategy replay.",
+  "retention": {
+    "minimum_train": 0.85,
+    "minimum_development": 0.9,
+    "minimum_development_sessions": 100,
+    "denominator": "Unchanged fixed normal-session2origin structural grid. >=85% full train, >=84% inner-train prefix, >=90% development, >=100development sessions; inner-tail>=50sessions and>=25eachorigin. Original90% train failure remains reported.",
+    "minimum_inner_train": 0.84,
+    "diagnostic_expected_full_train_origins": 998,
+    "diagnostic_expected_development_origins": 366
+  },
+  "rights": "PENDING_RESEARCHER_ATTESTATION. Local noncommercial preparation and future separately authorized stock-only modeling only if lawful entitlement covers it; no independent license certificate, no raw/derived store redistribution, teammate/course data sharing, public upload, paid source or training now.",
+  "numeric_lock": "No protected OHLCV application materialization/features/labels from2026-01-07 onward; original five-stock confirmation untouched. Arrow predicate precedes Python materialization; compressed pages can contain discarded protected rows internally.",
+  "training_authorized": false,
+  "new_scientific_pairs": 0,
+  "retrospective_selection": true,
+  "proposed_at": "2026-10-16T20:05:12.300044+00:00",
+  "supersedes": {
+    "path": "configs/hf20_hourly_native_v1.json",
+    "sha256": "4d5793805d0d327a7115a792f6d9dbf95f18858d72d4191ae9d6e581f8493eaf"
+  },
+  "amendment": {
+    "id": "HF20_DAILY_CLOSE_INDEPENDENCE_AND_RETENTION_V2",
+    "proposed_at": "2026-10-16T20:21:16.468296+00:00",
+    "reason": "Observed missing morning hours do not invalidate a genuine last-complete-hour close. Original all-hours daily-close mask creates unnecessary long daily-return/RMS/momentum cascades. Keep volume and all actual48step/window/label masks strict; accept explicitly disclosed lower training retention rather than imputation/unknown-unit repairs.",
+    "evidence": {
+      "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/daily_close_independence_mask_diagnostic.json",
+      "sha256": "d25e2208f3b08d2b01a4a1a21af5599432f50aff8b19a58f6749a75279762afe"
+    },
+    "original_actual_train": [
+      822,
+      1154
+    ],
+    "predicted_revised_train": [
+      998,
+      1154
+    ],
+    "development": [
+      366,
+      382
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "readiness": "HF20_TRAIN_INPUT_READY_CONDITIONAL",
+  "contract_sha256": "4be39c0e85fc390766331ecb19e2a24721399f1e201de864eabe8eeed49add1c",
+  "pytest": {
+    "command": ".venv/bin/python -m pytest tests/test_hf_hourly.py tests/test_hf20_pretraining.py -q",
+    "passed": 31,
+    "failed": 0,
+    "seconds": 9.41
+  },
+  "ruff": {
+    "command": ".venv/bin/ruff check .",
+    "result": "All checks passed!"
+  },
+  "static": {
+    "command": ".venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist",
+    "summary": {
+      "filesAnalyzed": 237,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 24.658
+    }
+  },
+  "editor": "Human refresh required: repository .venv/bin/python; restart Pylance; refresh Problems and confirm zero errors. CLI Pylance parity passed; no human editor confirmation claimed.",
+  "numerical": {
+    "real_feature_scalar_equations": 80,
+    "real_target_stock_equations": 60,
+    "independent_floor_volume_equations": 160,
+    "bitwise_float32_tensor_cells": 46080,
+    "all_passed": true
+  },
+  "retention_reproducibility_condition": "PASS: actual998fulltrain/872innertrain/366development/110innervalidation match the live-approved diagnostic",
+  "locks": {
+    "held_out_numeric_rows": 0,
+    "legacy_confirmation_numeric_rows": 0,
+    "warmup_TG20_supervision": 0,
+    "old_checkpoint_acceptance": false,
+    "forecast_and_label_masks_separate": true
+  },
+  "source_conservation": "PASS; source_conservation_certificate.json",
+  "git_diff_check": "PASS",
+  "new_neural_pairs": 0,
+  "new_ridge_fits": 0,
+  "ledger": 28
+}

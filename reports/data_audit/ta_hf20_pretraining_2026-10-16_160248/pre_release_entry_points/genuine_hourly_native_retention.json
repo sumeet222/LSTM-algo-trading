@@ -1,0 +1,168 @@
+{
+  "acceptance": {
+    "denominator": "Fixed complete normal-session2origin grid; no future-label selection",
+    "development_minimum": 0.9,
+    "development_sessions_minimum": 100,
+    "inner_fit_stop": "2024-12-24",
+    "inner_sessions_minimum": 50,
+    "inner_train_minimum": 0.84,
+    "inner_validation_start": "2024-12-26",
+    "pass_all": true,
+    "train_minimum": 0.85
+  },
+  "inner:development": {
+    "feature_exclusion_counts": {
+      "": 382
+    },
+    "feature_ready": 382,
+    "forecast_issuable": 382,
+    "label_excluded": 0,
+    "label_ready": 382,
+    "per_origin": {
+      "1": 191,
+      "2": 191
+    },
+    "retained_fraction": 1.0,
+    "source_ready": 382,
+    "structural_origins": 382,
+    "supervised_ready": 382,
+    "usable_sessions": 191
+  },
+  "inner:inner_train": {
+    "feature_exclusion_counts": {
+      "": 873,
+      "FT1_COMMON": 75,
+      "SOURCE_WINDOW|FT1_COMMON": 80
+    },
+    "feature_ready": 873,
+    "forecast_issuable": 873,
+    "label_excluded": 6,
+    "label_ready": 1022,
+    "per_origin": {
+      "1": 436,
+      "2": 436
+    },
+    "retained_fraction": 0.8482490272373541,
+    "source_ready": 948,
+    "structural_origins": 1028,
+    "supervised_ready": 872,
+    "usable_sessions": 436
+  },
+  "inner:inner_validation": {
+    "feature_exclusion_counts": {
+      "": 110,
+      "FIT_NOT_AVAILABLE_AT_EVERY_STEP": 16
+    },
+    "feature_ready": 126,
+    "forecast_issuable": 110,
+    "label_excluded": 0,
+    "label_ready": 126,
+    "per_origin": {
+      "1": 55,
+      "2": 55
+    },
+    "retained_fraction": 0.873015873015873,
+    "source_ready": 126,
+    "structural_origins": 126,
+    "supervised_ready": 110,
+    "usable_sessions": 55
+  },
+  "inner:train": {
+    "feature_exclusion_counts": {
+      "": 983,
+      "FIT_NOT_AVAILABLE_AT_EVERY_STEP": 16,
+      "FT1_COMMON": 75,
+      "SOURCE_WINDOW|FT1_COMMON": 80
+    },
+    "feature_ready": 999,
+    "forecast_issuable": 983,
+    "label_excluded": 6,
+    "label_ready": 1148,
+    "per_origin": {
+      "1": 491,
+      "2": 491
+    },
+    "retained_fraction": 0.8509532062391681,
+    "source_ready": 1074,
+    "structural_origins": 1154,
+    "supervised_ready": 982,
+    "usable_sessions": 491
+  },
+  "refit:development": {
+    "feature_exclusion_counts": {
+      "": 366,
+      "FIT_NOT_AVAILABLE_AT_EVERY_STEP": 16
+    },
+    "feature_ready": 382,
+    "forecast_issuable": 366,
+    "label_excluded": 0,
+    "label_ready": 382,
+    "per_origin": {
+      "1": 183,
+      "2": 183
+    },
+    "retained_fraction": 0.9581151832460733,
+    "source_ready": 382,
+    "structural_origins": 382,
+    "supervised_ready": 366,
+    "usable_sessions": 183
+  },
+  "refit:inner_train": {
+    "feature_exclusion_counts": {
+      "": 873,
+      "FT1_COMMON": 75,
+      "SOURCE_WINDOW|FT1_COMMON": 80
+    },
+    "feature_ready": 873,
+    "forecast_issuable": 873,
+    "label_excluded": 6,
+    "label_ready": 1022,
+    "per_origin": {
+      "1": 436,
+      "2": 436
+    },
+    "retained_fraction": 0.8482490272373541,
+    "source_ready": 948,
+    "structural_origins": 1028,
+    "supervised_ready": 872,
+    "usable_sessions": 436
+  },
+  "refit:inner_validation": {
+    "feature_exclusion_counts": {
+      "": 126
+    },
+    "feature_ready": 126,
+    "forecast_issuable": 126,
+    "label_excluded": 0,
+    "label_ready": 126,
+    "per_origin": {
+      "1": 63,
+      "2": 63
+    },
+    "retained_fraction": 1.0,
+    "source_ready": 126,
+    "structural_origins": 126,
+    "supervised_ready": 126,
+    "usable_sessions": 63
+  },
+  "refit:train": {
+    "feature_exclusion_counts": {
+      "": 999,
+      "FT1_COMMON": 75,
+      "SOURCE_WINDOW|FT1_COMMON": 80
+    },
+    "feature_ready": 999,
+    "forecast_issuable": 999,
+    "label_excluded": 6,
+    "label_ready": 1148,
+    "per_origin": {
+      "1": 499,
+      "2": 499
+    },
+    "retained_fraction": 0.8648180242634316,
+    "source_ready": 1074,
+    "structural_origins": 1154,
+    "supervised_ready": 998,
+    "usable_sessions": 499
+  }
+}

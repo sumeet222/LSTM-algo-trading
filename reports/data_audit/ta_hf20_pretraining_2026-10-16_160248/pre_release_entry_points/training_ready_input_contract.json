@@ -1,0 +1,164 @@
+{
+  "action_basis": "AS_REPORTED_RETROSPECTIVE_PRICE_AND_SHARE_VOLUME_ASSUMPTION",
+  "amendment_approval": {
+    "bytes": 1953,
+    "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/human_amendment_v2_approval.json",
+    "sha256": "05ec100beef5c300bf970dcf5832acc8aaef6e6947e2b8f6768f83924bf9e3f4"
+  },
+  "approval": {
+    "bytes": 2640,
+    "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/human_approval_transcript.json",
+    "sha256": "c9f6f1efe1b8b44e4d226d41c2f2cf9c95515530230ad0dc5d2e1c4ab51708c3"
+  },
+  "batch_shape": [
+    20,
+    48,
+    16
+  ],
+  "clock_id": "HF20_COMPLETED_VENDOR_HOUR_CLOSE_PROXY_V1",
+  "code": [
+    {
+      "bytes": 11019,
+      "path": "src/lstm_data/hf20_evidence.py",
+      "sha256": "13fa1bac723eeac02aeeb8ce3ac6f6fdf00f0c040eee7ba0b19f61dde84f6e79"
+    },
+    {
+      "bytes": 7292,
+      "path": "src/lstm_data/hf20_features.py",
+      "sha256": "2a3a97846c73f41807052b968161524a1a67c1ebab5a054db48e8cb8c553d97f"
+    },
+    {
+      "bytes": 10160,
+      "path": "src/lstm_data/hf20_loader.py",
+      "sha256": "eac88c4bc27d88c2ef22c58f41cdc593dae7fcf8f31efbd11874db3634f89cde"
+    },
+    {
+      "bytes": 13268,
+      "path": "src/lstm_data/hf20_oracles.py",
+      "sha256": "5113d6d6c5c88bc7d1861d13b6d72d3d80018f861e7dbfdc76f6d43194e38aa3"
+    },
+    {
+      "bytes": 12432,
+      "path": "src/lstm_data/hf20_prepare.py",
+      "sha256": "394a231d72c55ece651b0924303be89b908b73398afec8e196043369983cf0db"
+    },
+    {
+      "bytes": 4913,
+      "path": "src/lstm_data/hf20_source.py",
+      "sha256": "1f47c1b189f9c3596b1c518a57cd30391c36aae37bc2d069ea25a76ce3467a92"
+    },
+    {
+      "bytes": 10931,
+      "path": "src/lstm_data/hf20_transforms.py",
+      "sha256": "3c4770eebef29a4bed232665075817ec891e47ef2f3fb11c879d03759a677f9c"
+    }
+  ],
+  "config": {
+    "bytes": 6647,
+    "path": "configs/hf20_hourly_native_v2.json",
+    "sha256": "bfc0eac3b504a9ae428e365e96fd9043bb1c43eedbff661310c42f3dac511c77"
+  },
+  "confirmation_locked": true,
+  "feature_id": "FT1_HF20_HOURLY_NATIVE_V2",
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "global_scientific_pairs": 28,
+  "inner_validation_start": "2024-12-26",
+  "legacy_checkpoint_compatible": false,
+  "loader": "lstm_data.hf20_loader.load_hf20_train_data",
+  "new_scientific_pairs": 0,
+  "origins": {
+    "inner": {
+      "bytes": 350615,
+      "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/real_preparation_final/inner_origins.csv",
+      "sha256": "931978734fa6bc50461145fa5a9d0d898055ec3f9fa415463bd9b540bdea6a95"
+    },
+    "refit": {
+      "bytes": 350615,
+      "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/real_preparation_final/refit_origins.csv",
+      "sha256": "e32a187a9c4486f069559006ace2aa9f9b27c93819f1f81f541e254524985db7"
+    }
+  },
+  "preparation_id": "HF20_PREP:2e6105576178b7a48975b505d458141f2b947a17d159d3509b47b3645a1018e8",
+  "proposal_sha256": "bfc0eac3b504a9ae428e365e96fd9043bb1c43eedbff661310c42f3dac511c77",
+  "readiness": "HF20_TRAIN_INPUT_READY_CONDITIONAL",
+  "recipe_ids": {
+    "inner": "HF20_RECIPE:0872f5358a02179f14a5c76b71659cdc14f903971979e7a3ca542cad579c503c",
+    "refit": "HF20_RECIPE:cc6f616f0c03e0fe0e82ebbdf619fbfed046298decc85cc0fc6fd21f355f176f"
+  },
+  "recipes": {
+    "bytes": 18539,
+    "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/real_preparation_final/train_only_scalers_and_floors.json",
+    "sha256": "5a6fec85c7f8641ad114c214001371daefdcb3b1aabcd8bc26f69e5fef7ed367"
+  },
+  "rights_status": "RESEARCHER_ATTESTED_LOCAL_USE; redistribution not authorized",
+  "source": [
+    {
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/train.parquet",
+      "sha256": "b36cb39c27dcb98ffcc9167bc3138a5a098a38fbbd667af06bec97ee8ac473de"
+    },
+    {
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/val.parquet",
+      "sha256": "9e974a69f59ea754b2a704947a3f4a4b850bd3031dc71ec6634fc712a3a89203"
+    },
+    {
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/test.parquet",
+      "sha256": "cebfc4fce287bcc4cf26c49be98ea14e1eeeacdec9ce983b52258068ed9fa9de"
+    }
+  ],
+  "source_policy": "IDEALIZED_VENDOR_HOURLY_AS_REPORTED",
+  "source_revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+  "store": {
+    "bytes": 20332292,
+    "path": "data/processed/hf20/2e6105576178b7a48975b505d458141f2b947a17d159d3509b47b3645a1018e8/components.npz",
+    "sha256": "b3cea423df7ee6a4e692a21247b2e2a207194c03d284203ad62c0d9fe8cf714e"
+  },
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "target_id": "TG20_HF20_CROSS_SECTIONAL_V1",
+  "target_shape": [
+    20
+  ],
+  "targets": {
+    "bytes": 564456,
+    "path": "data/processed/hf20/2e6105576178b7a48975b505d458141f2b947a17d159d3509b47b3645a1018e8/target_labels.npz",
+    "sha256": "4fb1140c6255a27984bb2146021efceff7bf0410043bdeb9898587396852e900"
+  },
+  "training_authorized": false
+}

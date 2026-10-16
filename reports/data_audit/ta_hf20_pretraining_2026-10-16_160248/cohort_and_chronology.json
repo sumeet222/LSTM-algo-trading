@@ -1,0 +1,90 @@
+{
+  "dataset_id": "CAND:HF_TWELVEDATA20:HOURLY_NATIVE:DATASET:v2",
+  "cohort_id": "HF20_ORDERED_COHORT_V1",
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "sectors": {
+    "VZ": "XLC",
+    "COP": "XLE",
+    "BAC": "XLF",
+    "BA": "XLI",
+    "AAPL": "XLK",
+    "PEP": "XLP",
+    "MRK": "XLV",
+    "SBUX": "XLY",
+    "CVX": "XLE",
+    "MS": "XLF",
+    "AMD": "XLK",
+    "KO": "XLP",
+    "JNJ": "XLV",
+    "AMZN": "XLY",
+    "XOM": "XLE",
+    "WFC": "XLF",
+    "AVGO": "XLK",
+    "TSLA": "XLY",
+    "MA": "XLF",
+    "CSCO": "XLK"
+  },
+  "sector_composition": {
+    "XLC": 1,
+    "XLE": 3,
+    "XLF": 4,
+    "XLI": 1,
+    "XLK": 4,
+    "XLP": 2,
+    "XLV": 2,
+    "XLY": 3
+  },
+  "sector_evidence": "Publisher static ETF proxy; no PIT sector or membership certification",
+  "retrospective_selection": true,
+  "substitution_authorized": false,
+  "chronology": {
+    "warmup": [
+      "2022-06-01",
+      "2022-11-30"
+    ],
+    "train": [
+      "2022-12-01",
+      "2025-03-28"
+    ],
+    "development": [
+      "2025-03-31",
+      "2026-01-06"
+    ],
+    "locked_confirmation": [
+      "2026-01-07",
+      "2026-10-15"
+    ]
+  },
+  "frozen_before_target_computation": {
+    "proposal_v1_sha256": "4d5793805d0d327a7115a792f6d9dbf95f18858d72d4191ae9d6e581f8493eaf",
+    "base_actual_approval_sha256": "c9f6f1efe1b8b44e4d226d41c2f2cf9c95515530230ad0dc5d2e1c4ab51708c3"
+  },
+  "amended_feature_policy_sha256": "bfc0eac3b504a9ae428e365e96fd9043bb1c43eedbff661310c42f3dac511c77",
+  "v2_actual_approval_sha256": "05ec100beef5c300bf970dcf5832acc8aaef6e6947e2b8f6768f83924bf9e3f4",
+  "clock": "HF20_COMPLETED_VENDOR_HOUR_CLOSE_PROXY_V1",
+  "feature": "FT1_HF20_HOURLY_NATIVE_V2",
+  "target": "TG20_HF20_CROSS_SECTIONAL_V1",
+  "held_out": "LOCKED: keys/schema inherited QA only; no new protected numeric features/labels/outcomes",
+  "raw_holdout_not_pristine": "Original source-quality inspection and availability-based cohort selection were retrospective"
+}

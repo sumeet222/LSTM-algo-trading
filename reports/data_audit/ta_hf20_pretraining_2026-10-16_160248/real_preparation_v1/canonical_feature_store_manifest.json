@@ -1,0 +1,103 @@
+{
+  "approval": {
+    "bytes": 2640,
+    "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/human_approval_transcript.json",
+    "sha256": "c9f6f1efe1b8b44e4d226d41c2f2cf9c95515530230ad0dc5d2e1c4ab51708c3"
+  },
+  "canonical_full_hour_positions": 5391,
+  "code": [
+    {
+      "bytes": 11019,
+      "path": "src/lstm_data/hf20_evidence.py",
+      "sha256": "13fa1bac723eeac02aeeb8ce3ac6f6fdf00f0c040eee7ba0b19f61dde84f6e79"
+    },
+    {
+      "bytes": 7062,
+      "path": "src/lstm_data/hf20_features.py",
+      "sha256": "b51a7834d87ec0e4a3d47890a811f78bfc8a5b1d9aee15e175b58ac02e0870f4"
+    },
+    {
+      "bytes": 8762,
+      "path": "src/lstm_data/hf20_loader.py",
+      "sha256": "14b70e156cfb82e4aa09645369f8e24eb7be60e5c9dec93ee577d29d57e32cfc"
+    },
+    {
+      "bytes": 11041,
+      "path": "src/lstm_data/hf20_oracles.py",
+      "sha256": "dd1be4864a91179d4199effcb3486656fc03d769012fb01b6281981fa898696d"
+    },
+    {
+      "bytes": 10734,
+      "path": "src/lstm_data/hf20_prepare.py",
+      "sha256": "2b8dfafd0815f96d02b6598fd1a1d7aebcb13655702cf0725f3a773602b7cc70"
+    },
+    {
+      "bytes": 4913,
+      "path": "src/lstm_data/hf20_source.py",
+      "sha256": "1f47c1b189f9c3596b1c518a57cd30391c36aae37bc2d069ea25a76ce3467a92"
+    },
+    {
+      "bytes": 10376,
+      "path": "src/lstm_data/hf20_transforms.py",
+      "sha256": "0291f68e91ccf02e8d7f4701f38c99d5e9c6edaca078d9f5a1a87f19bc3710b0"
+    }
+  ],
+  "common_order": [
+    "M1",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "config": {
+    "bytes": 5372,
+    "path": "configs/hf20_hourly_native_v1.json",
+    "sha256": "4d5793805d0d327a7115a792f6d9dbf95f18858d72d4191ae9d6e581f8493eaf"
+  },
+  "m2_unique_day_stock_origin_keys": 36120,
+  "maximum_numeric_date": "2026-01-06",
+  "no_dense_windows": true,
+  "no_repaired_rows": true,
+  "numeric_barrier": "2026-01-07 00:00:00-05:00",
+  "preparation_id": "HF20_PREP:525f62dbf807ef87eed5256c230d3d9befe1d1c54f6464d9346c4444a8886a3d",
+  "provenance": {
+    "bytes": 45347,
+    "path": "data/processed/hf20/525f62dbf807ef87eed5256c230d3d9befe1d1c54f6464d9346c4444a8886a3d/source_row_provenance.parquet",
+    "sha256": "3c6c778b804c23bd3398d33c7c9c47159e2c86165ab321517e19b8798f9dde17"
+  },
+  "source": [
+    {
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/train.parquet",
+      "sha256": "b36cb39c27dcb98ffcc9167bc3138a5a098a38fbbd667af06bec97ee8ac473de"
+    },
+    {
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/val.parquet",
+      "sha256": "9e974a69f59ea754b2a704947a3f4a4b850bd3031dc71ec6634fc712a3a89203"
+    },
+    {
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/test.parquet",
+      "sha256": "cebfc4fce287bcc4cf26c49be98ea14e1eeeacdec9ce983b52258068ed9fa9de"
+    }
+  ],
+  "store": {
+    "bytes": 20331776,
+    "path": "data/processed/hf20/525f62dbf807ef87eed5256c230d3d9befe1d1c54f6464d9346c4444a8886a3d/components.npz",
+    "sha256": "e23ad328f6f66a0e9949633113b0e292a7783f8c6676854f41a932f9b0d54ae6"
+  },
+  "targets": {
+    "bytes": 564453,
+    "path": "data/processed/hf20/525f62dbf807ef87eed5256c230d3d9befe1d1c54f6464d9346c4444a8886a3d/target_labels.npz",
+    "sha256": "3074c7ac8040a0db8a476fa25cc635734ac21c3d8052b2c7cb26413e606ba663"
+  },
+  "unique_hour_stock_keys": 107820
+}

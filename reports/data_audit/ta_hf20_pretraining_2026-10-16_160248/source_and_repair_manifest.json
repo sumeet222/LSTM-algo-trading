@@ -1,0 +1,44 @@
+{
+  "dataset_revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+  "files": [
+    {
+      "bytes": 101602217,
+      "download_seconds": 3.5539601250202395,
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/train.parquet",
+      "resumed_bytes": 0,
+      "reused": false,
+      "sha256": "b36cb39c27dcb98ffcc9167bc3138a5a098a38fbbd667af06bec97ee8ac473de"
+    },
+    {
+      "bytes": 20679513,
+      "download_seconds": 0.7087609170121141,
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/val.parquet",
+      "resumed_bytes": 0,
+      "reused": false,
+      "sha256": "9e974a69f59ea754b2a704947a3f4a4b850bd3031dc71ec6634fc712a3a89203"
+    },
+    {
+      "bytes": 37664211,
+      "download_seconds": 0.9287688339827582,
+      "path": "data/raw/hf_twelvedata_hourly/ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec/bars_1h/test.parquet",
+      "resumed_bytes": 0,
+      "reused": false,
+      "sha256": "cebfc4fce287bcc4cf26c49be98ea14e1eeeacdec9ce983b52258068ed9fa9de"
+    }
+  ],
+  "raw_cache_reused": true,
+  "new_downloads": 0,
+  "missing_hours": 6,
+  "repair_count": 0,
+  "mixed_source_overrides": false,
+  "repair_evidence": "source_evidence_v2/repair_decisions.json",
+  "preliminary_evidence_correction": "source_evidence_correction.md",
+  "raw_defects": "bad_hour_inventory.csv",
+  "surrounding_keys": "bad_hour_context.csv",
+  "source_policy": "IDEALIZED_VENDOR_HOURLY_AS_REPORTED",
+  "price_volume_basis": "AS_REPORTED_RETROSPECTIVE_PRICE_AND_SHARE_VOLUME_ASSUMPTION",
+  "source_rows_materialized_preheldout": 125975,
+  "unique_canonical_hour_stock_keys": 107820,
+  "valid_canonical_hour_stock_keys": 107814,
+  "held_out_numeric_rows": 0
+}

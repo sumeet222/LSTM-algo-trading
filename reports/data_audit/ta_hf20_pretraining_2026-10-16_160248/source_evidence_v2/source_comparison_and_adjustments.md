@@ -1,0 +1,3 @@
+# Cached-only alignment and repair decision
+
+Six exact missing HF keys were investigated. No override is accepted. See repair_candidates.csv and matched_cached_neighbors.csv. Two native cached30-minute rows can match the nominal HF interval, but this does not independently certify HF aggregation or share-volume units. No scaling factor was fitted. Tolerances were frozen in repair_comparison_protocol.json before reading candidates. Three before/three after neighbors are requested where present; actual counts remain explicit. No provider API request, paid access or legacy-confirmation numeric read.

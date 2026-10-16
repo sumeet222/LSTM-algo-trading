@@ -1,0 +1,15 @@
+{
+  "actor": "user",
+  "receipt_observed_at": "2026-10-16T20:24:14.986107+00:00",
+  "source": "Actual send_user_message_question_reply in this conversation",
+  "questionItemId": "[\"request_user_input_async\",\"call_63b250e8577c4f71a43dc8fd1acb930a\",0]",
+  "proposal_sha256": "bfc0eac3b504a9ae428e365e96fd9043bb1c43eedbff661310c42f3dac511c77",
+  "question": "Approve the measured HF20 v2 amendment, SHA256 bfc0eac3b504a9ae428e365e96fd9043bb1c43eedbff661310c42f3dac511c77? Accept a genuine previous regular-session 15:30 last-full-hour close independently of missing earlier hours; daily volume still requires all six hours. Keep all 16 formulas, 48-step masks, 20 names, dates, TG20, hourly clock, zero repairs, held-out lock and your bounded local-rights attestation. A validity-mask diagnostic predicts 998/1,154 training origins (86.48%), 872/1,028 inner-training origins (84.82%), and unchanged 366/382 development origins (95.81%). Explicitly revise acceptance to \u226585% full training, \u226584% inner training and \u226590% development, retaining \u2265100 development sessions and \u226550 inner-validation sessions. Preserve the original 71.23%/failed-90% result. Review: reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/daily_close_and_retention_amendment_v2.md. Package \u00a77.2 requires researcher approval for a changed feature-validity rule or acceptance threshold; this adds no training permission.",
+  "answer": "Approve the HF20 v2 validity-rule amendment, with its revised retention thresholds, provided the reported diagnostics are reproducible.",
+  "condition": "Reported diagnostics must be reproducible; build asserts exact998/872/366/110actual counts and numerical oracles",
+  "training_authorized": false,
+  "base_approval": {
+    "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/human_approval_transcript.json",
+    "sha256": "c9f6f1efe1b8b44e4d226d41c2f2cf9c95515530230ad0dc5d2e1c4ab51708c3"
+  }
+}

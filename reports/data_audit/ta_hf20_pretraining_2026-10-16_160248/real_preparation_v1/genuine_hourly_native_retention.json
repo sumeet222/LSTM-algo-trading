@@ -1,0 +1,167 @@
+{
+  "acceptance": {
+    "denominator": "Fixed complete normal-session2origin grid; no future-label selection",
+    "development_minimum": 0.9,
+    "development_sessions_minimum": 100,
+    "inner_fit_stop": "2024-12-24",
+    "inner_sessions_minimum": 50,
+    "inner_validation_start": "2024-12-26",
+    "pass_all": false,
+    "train_minimum": 0.9
+  },
+  "inner:development": {
+    "feature_exclusion_counts": {
+      "": 382
+    },
+    "feature_ready": 382,
+    "forecast_issuable": 382,
+    "label_excluded": 0,
+    "label_ready": 382,
+    "per_origin": {
+      "1": 191,
+      "2": 191
+    },
+    "retained_fraction": 1.0,
+    "source_ready": 382,
+    "structural_origins": 382,
+    "supervised_ready": 382,
+    "usable_sessions": 191
+  },
+  "inner:inner_train": {
+    "feature_exclusion_counts": {
+      "": 697,
+      "FT1_COMMON": 251,
+      "SOURCE_WINDOW|FT1_COMMON": 80
+    },
+    "feature_ready": 697,
+    "forecast_issuable": 697,
+    "label_excluded": 6,
+    "label_ready": 1022,
+    "per_origin": {
+      "1": 348,
+      "2": 348
+    },
+    "retained_fraction": 0.6770428015564203,
+    "source_ready": 948,
+    "structural_origins": 1028,
+    "supervised_ready": 696,
+    "usable_sessions": 348
+  },
+  "inner:inner_validation": {
+    "feature_exclusion_counts": {
+      "": 110,
+      "FIT_NOT_AVAILABLE_AT_EVERY_STEP": 16
+    },
+    "feature_ready": 126,
+    "forecast_issuable": 110,
+    "label_excluded": 0,
+    "label_ready": 126,
+    "per_origin": {
+      "1": 55,
+      "2": 55
+    },
+    "retained_fraction": 0.873015873015873,
+    "source_ready": 126,
+    "structural_origins": 126,
+    "supervised_ready": 110,
+    "usable_sessions": 55
+  },
+  "inner:train": {
+    "feature_exclusion_counts": {
+      "": 807,
+      "FIT_NOT_AVAILABLE_AT_EVERY_STEP": 16,
+      "FT1_COMMON": 251,
+      "SOURCE_WINDOW|FT1_COMMON": 80
+    },
+    "feature_ready": 823,
+    "forecast_issuable": 807,
+    "label_excluded": 6,
+    "label_ready": 1148,
+    "per_origin": {
+      "1": 403,
+      "2": 403
+    },
+    "retained_fraction": 0.6984402079722704,
+    "source_ready": 1074,
+    "structural_origins": 1154,
+    "supervised_ready": 806,
+    "usable_sessions": 403
+  },
+  "refit:development": {
+    "feature_exclusion_counts": {
+      "": 366,
+      "FIT_NOT_AVAILABLE_AT_EVERY_STEP": 16
+    },
+    "feature_ready": 382,
+    "forecast_issuable": 366,
+    "label_excluded": 0,
+    "label_ready": 382,
+    "per_origin": {
+      "1": 183,
+      "2": 183
+    },
+    "retained_fraction": 0.9581151832460733,
+    "source_ready": 382,
+    "structural_origins": 382,
+    "supervised_ready": 366,
+    "usable_sessions": 183
+  },
+  "refit:inner_train": {
+    "feature_exclusion_counts": {
+      "": 697,
+      "FT1_COMMON": 251,
+      "SOURCE_WINDOW|FT1_COMMON": 80
+    },
+    "feature_ready": 697,
+    "forecast_issuable": 697,
+    "label_excluded": 6,
+    "label_ready": 1022,
+    "per_origin": {
+      "1": 348,
+      "2": 348
+    },
+    "retained_fraction": 0.6770428015564203,
+    "source_ready": 948,
+    "structural_origins": 1028,
+    "supervised_ready": 696,
+    "usable_sessions": 348
+  },
+  "refit:inner_validation": {
+    "feature_exclusion_counts": {
+      "": 126
+    },
+    "feature_ready": 126,
+    "forecast_issuable": 126,
+    "label_excluded": 0,
+    "label_ready": 126,
+    "per_origin": {
+      "1": 63,
+      "2": 63
+    },
+    "retained_fraction": 1.0,
+    "source_ready": 126,
+    "structural_origins": 126,
+    "supervised_ready": 126,
+    "usable_sessions": 63
+  },
+  "refit:train": {
+    "feature_exclusion_counts": {
+      "": 823,
+      "FT1_COMMON": 251,
+      "SOURCE_WINDOW|FT1_COMMON": 80
+    },
+    "feature_ready": 823,
+    "forecast_issuable": 823,
+    "label_excluded": 6,
+    "label_ready": 1148,
+    "per_origin": {
+      "1": 411,
+      "2": 411
+    },
+    "retained_fraction": 0.7123050259965338,
+    "source_ready": 1074,
+    "structural_origins": 1154,
+    "supervised_ready": 822,
+    "usable_sessions": 411
+  }
+}

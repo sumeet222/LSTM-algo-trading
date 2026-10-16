@@ -1,0 +1,239 @@
+"""HF20 unique-key inner/refit floor, scaler and TG20 recipes; no supervised fits."""
+
+from __future__ import annotations
+
+import numpy as np
+import pandas as pd
+
+from .ft0_transforms import weighted_quantile
+from .hf20_features import BOUNDED, COMMON, Components, rolling
+from .hf20_source import SYMBOLS
+
+TRAIN_START = "2022-12-01"
+TRAIN_END = "2025-03-28"
+DEV_START = "2025-03-31"
+DEV_END = "2026-01-06"
+
+
+def robust(values: np.ndarray, weights: np.ndarray | None = None) -> dict:
+    """Exact constants first, avoiding a floating-point nonzero SD fallback."""
+    if not len(values) or not np.isfinite(values).all():
+        raise ValueError("FINITE_TRAINING_SCALER_POPULATION_REQUIRED")
+    if np.all(values == values[0]):
+        return dict(center=float(values[0]), scale=1.0, method="CONSTANT_ZERO", n=len(values))
+    if weights is None:
+        center = float(np.median(values))
+        mad = float(np.median(np.abs(values - center)))
+        iqr = float(np.diff(np.percentile(values, [25, 75]))[0]) / 1.349
+        normalized = np.full(len(values), 1 / len(values))
+    else:
+        normalized = np.asarray(weights / weights.sum(), dtype=float)
+        center = weighted_quantile(values, normalized, 0.5)
+        mad = weighted_quantile(np.abs(values - center), normalized, 0.5)
+        iqr = (
+            weighted_quantile(values, normalized, 0.75)
+            - weighted_quantile(values, normalized, 0.25)
+        ) / 1.349
+    sd = float(np.sqrt(np.sum(normalized * (values - np.sum(normalized * values)) ** 2)))
+    scale, method = (
+        (mad, "MAD") if mad > 0 else (iqr, "IQR_1.349") if iqr > 0 else (sd, "POPULATION_SD")
+    )
+    if not scale > 0:
+        raise ValueError("NONCONSTANT_POSITIVE_SCALE_REQUIRED")
+    return dict(center=center, scale=scale, method=method, n=len(values))
+
+
+def positive_floor(values: np.ndarray) -> float:
+    good = values[np.isfinite(values) & (values > 0)]
+    if not len(good):
+        raise ValueError("POSITIVE_TRAINING_FLOOR_POPULATION_REQUIRED")
+    return float(np.percentile(good, 5))
+
+
+def origin_weights(values: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    """Canonical stock/session/origin observations, with total origin mass50/50."""
+    selected, weights = [], []
+    for o in range(2):
+        v = values[..., o]
+        finite = v[np.isfinite(v)]
+        if not len(finite):
+            raise ValueError("BOTH_M2_ORIGINS_REQUIRED")
+        selected.append(finite)
+        weights.append(np.full(len(finite), 0.5 / len(finite)))
+    return np.concatenate(selected), np.concatenate(weights)
+
+
+def native(c: Components, floors: list[dict]) -> np.ndarray:
+    """Fifteen common native channels; M2 remains a separate unique day/origin table."""
+    v = c.values
+    h = np.asarray([p["hourly_floor"] for p in floors])
+    d = np.asarray([p["daily_floor"] for p in floors])
+    qh = np.asarray([p["hourly_pseudocount"] for p in floors])
+    qd = np.asarray([p["daily_pseudocount"] for p in floors])
+    raw = dict(
+        M1=v["OC"] / np.maximum(v["RMS60"], h),
+        M3=v["MOM5"] / (np.sqrt(5) * np.maximum(v["RMS63"], d)),
+        M4=v["MOM105"] / (np.sqrt(105) * np.maximum(v["RMS63"], d)),
+        V1=np.log(np.maximum(v["RMS12"], h)),
+        V2=np.log(np.maximum(v["RMS60"], h)),
+        Q1=np.log((v["VOLUME_H"] + qh) / (v["Q1_MEAN"] + qh)),
+        Q2=np.log((v["Q2_5"] + qd) / (v["Q2_60"] + qd)),
+    )
+    raw["V3"] = raw["V1"] - raw["V2"]
+    for name in ("B1", "B2", "T1", "T2", "T3", "T4", "T5"):
+        raw[name] = v[name]
+    result = np.stack([raw[name] for name in COMMON], axis=-1)
+    result[~np.isfinite(c.source["close"])] = np.nan
+    return result
+
+
+def target_decomposition(c: Components) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Full20 cross-section or no label; future values never reach feature constructors."""
+    complete = np.isfinite(c.returns).all(axis=1)
+    median = np.median(c.returns, axis=1)
+    mad = np.median(np.abs(c.returns - median[:, None, :]), axis=1)
+    median[~complete] = np.nan
+    mad[~complete] = np.nan
+    return complete, median, mad
+
+
+def fit_recipe(c: Components, stop: str) -> tuple[dict, dict[str, np.ndarray]]:
+    """Retrospective train transforms, fit only unique native keys inside this prefix."""
+    hours = np.asarray(c.grid.session.between(TRAIN_START, stop), dtype=bool)
+    days: np.ndarray = np.asarray([TRAIN_START <= day <= stop for day in c.days], dtype=bool)
+    regular: np.ndarray = np.asarray(
+        [TRAIN_START <= day <= stop for day in c.regular_days], dtype=bool
+    )
+    daily = pd.DataFrame(c.daily_close)
+    drms = rolling(np.asarray(np.log(daily / daily.shift(1)), dtype=float), 63, 60, square=True)
+    floors = []
+    for j, symbol in enumerate(SYMBOLS):
+        hv = c.source["volume"][hours, j]
+        dv = c.daily_volume[regular, j]
+        positive_h = hv[np.isfinite(hv) & (hv > 0)]
+        positive_d = dv[np.isfinite(dv) & (dv > 0)]
+        rms = c.m2_rms[days, j, :]
+        positive = np.where(rms > 0, rms, np.nan)
+        mv, mw = origin_weights(positive)
+        floors.append(
+            dict(
+                symbol=symbol,
+                hourly_floor=positive_floor(
+                    np.concatenate((c.values["RMS12"][hours, j], c.values["RMS60"][hours, j]))
+                ),
+                daily_floor=positive_floor(drms[regular, j]),
+                hourly_pseudocount=0.01 * float(np.median(positive_h)),
+                daily_pseudocount=0.01 * float(np.median(positive_d)),
+                m2_floor=weighted_quantile(mv, mw, 0.05),
+                hourly_volume_population=len(positive_h),
+                daily_volume_population=len(positive_d),
+            )
+        )
+    raw = native(c, floors)
+    m2_floor = np.asarray([p["m2_floor"] for p in floors])[None, :, None]
+    raw_m2 = c.m2_mean / np.maximum(c.m2_rms, m2_floor)
+    scalers = {}
+    standardized = raw.copy()
+    novel = {}
+    for k, name in enumerate(COMMON):
+        if name in BOUNDED:
+            continue
+        sample = raw[hours, :, k]
+        parameter = robust(sample[np.isfinite(sample)])
+        scalers[name] = parameter
+        if parameter["method"] == "CONSTANT_ZERO":
+            novel[name] = int(
+                np.sum(np.isfinite(raw[..., k]) & (raw[..., k] != parameter["center"]))
+            )
+            standardized[..., k] = np.where(np.isfinite(raw[..., k]), 0, np.nan)
+        else:
+            standardized[..., k] = (raw[..., k] - parameter["center"]) / parameter["scale"]
+    mv, mw = origin_weights(raw_m2[days])
+    parameter = robust(mv, mw)
+    scalers["M2"] = parameter
+    if parameter["method"] == "CONSTANT_ZERO":
+        standardized_m2 = np.where(np.isfinite(raw_m2), 0.0, np.nan)
+    else:
+        standardized_m2 = (raw_m2 - parameter["center"]) / parameter["scale"]
+    complete, median, mad = target_decomposition(c)
+    population = mad[days]
+    population = population[np.isfinite(population)]
+    if not len(population):
+        raise ValueError("TRAIN_ONLY_FULL20_TARGET_POPULATION_REQUIRED")
+    epsilon = max(1e-4, 0.1 * float(np.median(population)))
+    targets = (c.returns - median[:, None, :]) / (mad[:, None, :] + epsilon)
+    targets = np.where(complete[:, None, :], targets, np.nan)
+    recipe = dict(
+        fit_start=TRAIN_START,
+        fit_stop_inclusive=stop,
+        floors=floors,
+        scalers=scalers,
+        epsilon=epsilon,
+        epsilon_origins=len(population),
+        fit_scope="UNIQUE_NATIVE_KEYS_TRAIN_ONLY; no window duplication; M2 origin mass50/50",
+        constant_novel_variation_counts=novel,
+        training_model_fit=False,
+        hourly_fit_keys=int(hours.sum()) * len(SYMBOLS),
+        target_fit_population=(
+            "All full20 source-valid mature structural training origins; "
+            "independent of feature readiness"
+        ),
+    )
+    arrays = dict(
+        raw=raw,
+        raw_m2=raw_m2,
+        common=standardized.astype(np.float32),
+        m2=standardized_m2.astype(np.float32),
+        targets=targets.astype(np.float32),
+    )
+    return recipe, arrays
+
+
+def admissions(c: Components, arrays: dict[str, np.ndarray], *, fitted_stop: str) -> pd.DataFrame:
+    """Forecast input mask precedes and is independent of the ex-post target mask."""
+    rows = []
+    for d, day in enumerate(c.days):
+        if day < TRAIN_START:
+            continue
+        split = "train" if day <= TRAIN_END else "development"
+        for o, last in enumerate(c.origin_indices[d]):
+            if last < 0:
+                continue
+            history = np.arange(max(0, int(last) - 47), int(last) + 1)
+            enough = len(history) == 48
+            source_ok = enough and bool(np.isfinite(c.source["close"][history]).all())
+            common_ok = enough and bool(np.isfinite(arrays["common"][history]).all())
+            m2_ok = enough and bool(np.isfinite(arrays["m2"][c.day_index[history], :, o]).all())
+            input_ok = source_ok and common_ok and m2_ok
+            label_ok = bool(np.isfinite(arrays["targets"][d, :, o]).all())
+            # Preserve strict own-historical-step transform availability for evaluation.
+            recipe_available = day <= fitted_stop or (
+                enough and c.grid.session.iloc[history[0]] > fitted_stop
+            )
+            reasons = []
+            for valid, reason in (
+                (source_ok, "SOURCE_WINDOW"),
+                (common_ok, "FT1_COMMON"),
+                (m2_ok, "M2_HISTORY"),
+                (recipe_available, "FIT_NOT_AVAILABLE_AT_EVERY_STEP"),
+            ):
+                if not valid:
+                    reasons.append(reason)
+            rows.append(
+                dict(
+                    session=day,
+                    origin=o + 1,
+                    day_index=d,
+                    last_step=int(last),
+                    split=split,
+                    source_ready=source_ok,
+                    feature_ready=input_ok,
+                    recipe_available=recipe_available,
+                    forecast_issuable=input_ok and recipe_available,
+                    label_ready=label_ok,
+                    supervised_ready=input_ok and label_ok and recipe_available,
+                    input_exclusion="|".join(reasons),
+                    label_exclusion="" if label_ok else "FULL20_ENDPOINT_OR_FORWARD_HOUR_MISSING",
+                )
+            )
+    return pd.DataFrame(rows)
