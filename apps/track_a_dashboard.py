@@ -127,6 +127,9 @@ def start_here(c: Catalog) -> None:
     from lstm_data.visualization.hf20_ui import open_hf20
 
     st.button("Open HF20: TM0 vs T2", on_click=open_hf20, key="start_hf20")
+    from lstm_data.visualization.hf20_ui import open_replication
+
+    st.button("HF20 seed replication", on_click=open_replication, key="start_hf20_replication")
     from lstm_data.visualization.nb1_ui import open_nb1
     from lstm_data.visualization.normalization_ui import open_audit
 

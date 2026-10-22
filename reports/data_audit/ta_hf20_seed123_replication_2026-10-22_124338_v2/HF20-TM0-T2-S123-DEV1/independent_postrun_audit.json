@@ -1,0 +1,38 @@
+{
+  "checkpoints": [
+    {
+      "checkpoint": {
+        "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/HF20-TM0-T2-S123-DEV1/calibration_selected.pt",
+        "sha256": "3acdaadfb8bbe5b197abd94b5a9f144b945af9c71a09bcdd685bfe39b9657aa7"
+      },
+      "exact_eval_replay": true,
+      "stage": "CALIBRATION_SELECTED"
+    },
+    {
+      "checkpoint": {
+        "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/HF20-TM0-T2-S123-DEV1/refit_final.pt",
+        "sha256": "33ed534fef08d8a11a47ac80978e41b1e0161b8500bc16131ca902dc018227f6"
+      },
+      "exact_eval_replay": true,
+      "stage": "REFIT_FINAL"
+    }
+  ],
+  "heldout_numeric_rows": 0,
+  "optimizer_steps": 0,
+  "run_id": "HF20-TM0-T2-S123-DEV1",
+  "scales": {
+    "inner_train": 0.9055291414260864,
+    "refit": 0.9057720005512238
+  },
+  "seconds": 2.0672453329898417,
+  "selection": {
+    "best": 3.2906436573375357,
+    "epoch": 12,
+    "patience": 11,
+    "raw_epoch": 1,
+    "raw_min": 3.2906436573375357,
+    "selected": 1,
+    "status": "PATIENCE_STOP"
+  },
+  "status": "PASS"
+}

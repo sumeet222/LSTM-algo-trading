@@ -1,0 +1,9 @@
+{
+  "command": ".venv/bin/python -m pytest tests/test_visualization_readonly.py::test_bound_hash_change_and_local_port_selection -q",
+  "exit_code": 0,
+  "passed": 1,
+  "reason": "Initial sandbox bind to127.0.0.1 was denied; same unchanged test passed outside sandbox.",
+  "result": "PASS",
+  "sandbox_permissions": "require_escalated",
+  "seconds": 0.98
+}

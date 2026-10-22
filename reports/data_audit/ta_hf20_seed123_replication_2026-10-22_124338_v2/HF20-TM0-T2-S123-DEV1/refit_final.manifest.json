@@ -1,0 +1,69 @@
+{
+  "binding": {
+    "architecture": "TM0",
+    "arm": "T2",
+    "checkpoint_outputs": "LOGITS",
+    "clock_id": "HF20_COMPLETED_VENDOR_HOUR_CLOSE_PROXY_V1",
+    "code_sha256": "eecebadf8b84cd444c34d023ab4af8d5a39ed0f54eabf6857f4c1b6eb06075d8",
+    "feature_id": "FT1_HF20_HOURLY_NATIVE_V2",
+    "input_contract": {
+      "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/training_ready_input_contract.json",
+      "sha256": "4be39c0e85fc390766331ecb19e2a24721399f1e201de864eabe8eeed49add1c"
+    },
+    "inverse": "SCALE_TIMES_SINH_ONCE",
+    "parameters": 6433,
+    "plan": {
+      "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/experiment_design.json",
+      "sha256": "5004eeaa343dabb17f6b03fdface92a9c14b9bb976a468d363c33bd1f0cb79e2"
+    },
+    "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+    "recipe_id": "HF20_RECIPE:8eec6d701287109c6c1dbc17ffdfbd53146e18d8e6796a3d0c17e385f14d6c3e",
+    "run_id": "HF20-TM0-T2-S123-DEV1",
+    "scale": {
+      "floor": 1e-06,
+      "observations": 19960,
+      "origins": 998,
+      "population": "UNWEIGHTED_POOLED_UNIQUE_SESSION_ORIGIN_STOCK",
+      "population_sha256": "f9c03d3948b0db1cac3af2d3162b3e0010d7011ddd9dce7d5492ea1b38407838",
+      "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+      "recipe_id": "HF20_RECIPE:8eec6d701287109c6c1dbc17ffdfbd53146e18d8e6796a3d0c17e385f14d6c3e",
+      "scale": 0.9057720005512238,
+      "scale_id": "HF20_T2:074ddfe4fbed5918e9f484d63053e48de27a6abf89fb6bf90d16e535000e894d",
+      "sessions": 499,
+      "split": "refit",
+      "target_sha256": "c6368b8ffd2ebeb185236983c7454c61d874ebfd14881d8b8bfa85affc9f06c0"
+    },
+    "seed": 123,
+    "selected_epoch": 1,
+    "source_revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+    "stage": "REFIT_FINAL",
+    "symbols": [
+      "VZ",
+      "COP",
+      "BAC",
+      "BA",
+      "AAPL",
+      "PEP",
+      "MRK",
+      "SBUX",
+      "CVX",
+      "MS",
+      "AMD",
+      "KO",
+      "JNJ",
+      "AMZN",
+      "XOM",
+      "WFC",
+      "AVGO",
+      "TSLA",
+      "MA",
+      "CSCO"
+    ],
+    "target_id": "TG20_HF20_CROSS_SECTIONAL_V1"
+  },
+  "bytes": 30229,
+  "checkpoint": {
+    "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/HF20-TM0-T2-S123-DEV1/refit_final.pt",
+    "sha256": "33ed534fef08d8a11a47ac80978e41b1e0161b8500bc16131ca902dc018227f6"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "additional_assertion_test": {
+    "name": "Stock contributions sum to whole-panel IC",
+    "passed": 1,
+    "seconds": 3.62
+  },
+  "approval": {
+    "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/live_two_pair_approval.json",
+    "sha256": "5cf2714496e3266ccb7199ad93fc7f660787cbdca84cad7f38cba3ac5702cbf5"
+  },
+  "cap": 200,
+  "charged_starts": 2,
+  "cli_help": "PASS",
+  "completed": 2,
+  "diff_check": "PASS",
+  "editor_problems_refresh": "HUMAN_CONFIRMATION_NOT_ASSERTED",
+  "exact_approved_code": true,
+  "extra_neural_fits": 0,
+  "final_ui_test": {
+    "passed": 1,
+    "receipt": {
+      "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/final_handoff_ui_test.txt",
+      "sha256": "c982cd96b16edbffaf8abb8beafe4671e95f9c3e7a09bbd3e5e60fa3cf256ee7"
+    },
+    "seconds": 12.99
+  },
+  "focused_suite": {
+    "known_unresolved_failures": 0,
+    "passed_in_sandbox": 46,
+    "same_test_passed_with_localhost_permission": 1,
+    "sandbox_only_port_denials": 1,
+    "unique_tests": 47
+  },
+  "global_ledger": 32,
+  "heldout_numeric_rows": 0,
+  "initialization_same_across_seed123_arms": true,
+  "launcher_check": "PASS_900_DEPENDENCIES",
+  "localhost_smoke": {
+    "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/localhost_smoke_receipt.json",
+    "sha256": "d38109925e8426715f519eb7b6ad576dd3dba345fd380a41b85118c23fe0cb99"
+  },
+  "preservation": {
+    "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/final_preservation_and_bindings.json",
+    "sha256": "a2aec51022d69c3daf954ca4dcd4de944cb79b1e6b828b78eea870f04886aa3e"
+  },
+  "proposal": {
+    "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/experiment_design.json",
+    "sha256": "5004eeaa343dabb17f6b03fdface92a9c14b9bb976a468d363c33bd1f0cb79e2"
+  },
+  "ruff": "PASS",
+  "seed123_initialization_differs_from_seed42": true,
+  "source_requests": 0,
+  "static": {
+    "command": ".venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist",
+    "errorCount": 0,
+    "filesAnalyzed": 262,
+    "informationCount": 0,
+    "timeInSec": 26.821,
+    "warningCount": 0
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,56 @@
+{
+  "binding": {
+    "architecture": "TM0",
+    "arm": "C0",
+    "checkpoint_outputs": "LOGITS",
+    "clock_id": "HF20_COMPLETED_VENDOR_HOUR_CLOSE_PROXY_V1",
+    "code_sha256": "eecebadf8b84cd444c34d023ab4af8d5a39ed0f54eabf6857f4c1b6eb06075d8",
+    "feature_id": "FT1_HF20_HOURLY_NATIVE_V2",
+    "input_contract": {
+      "path": "reports/data_audit/ta_hf20_pretraining_2026-10-16_160248/training_ready_input_contract.json",
+      "sha256": "4be39c0e85fc390766331ecb19e2a24721399f1e201de864eabe8eeed49add1c"
+    },
+    "inverse": "IDENTITY",
+    "parameters": 6433,
+    "plan": {
+      "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/experiment_design.json",
+      "sha256": "5004eeaa343dabb17f6b03fdface92a9c14b9bb976a468d363c33bd1f0cb79e2"
+    },
+    "preparation_id": "HF20_PREP:21cd2432a8944dce5edcf7c78a3e2f806e90a15e944cbf6db78c43a4a3982ff2",
+    "recipe_id": "HF20_RECIPE:aae2ed05bbc680a2f4f95b37fc9e4cf423bb7f00cececfeebd98ee6bc981ba8b",
+    "run_id": "HF20-TM0-C0-S123-DEV1",
+    "scale": null,
+    "seed": 123,
+    "selected_epoch": 1,
+    "source_revision": "ad48edaf3828ec855ab4a5bb1b8336fa0b68cdec",
+    "stage": "CALIBRATION_SELECTED",
+    "symbols": [
+      "VZ",
+      "COP",
+      "BAC",
+      "BA",
+      "AAPL",
+      "PEP",
+      "MRK",
+      "SBUX",
+      "CVX",
+      "MS",
+      "AMD",
+      "KO",
+      "JNJ",
+      "AMZN",
+      "XOM",
+      "WFC",
+      "AVGO",
+      "TSLA",
+      "MA",
+      "CSCO"
+    ],
+    "target_id": "TG20_HF20_CROSS_SECTIONAL_V1"
+  },
+  "bytes": 29781,
+  "checkpoint": {
+    "path": "reports/data_audit/ta_hf20_seed123_replication_2026-10-22_124338_v2/HF20-TM0-C0-S123-DEV1/calibration_selected.pt",
+    "sha256": "669b17845ceb122134fbd5f83c3373b47056d7a2b5a700ef073454d6f65b492a"
+  }
+}

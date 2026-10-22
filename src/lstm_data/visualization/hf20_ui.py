@@ -10,7 +10,6 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from ..hf20_source import SYMBOLS
-from ..hf20_training_authority import IDS
 from .hf20 import feature_history, handoff, predictions, table
 from .loaders import ViewUnavailable
 
@@ -27,12 +26,19 @@ def open_hf20() -> None:
     st.session_state.section = "HF20: TM0 vs T2"
 
 
+def open_replication() -> None:
+    st.session_state.hf20_seed = 123
+    st.session_state.section = "HF20: TM0 vs T2"
+
+
 def panel(root: Path) -> None:
     st.header("HF20: TM0 vs T2")
     st.caption(CAVEAT)
-    h = handoff(root)
+    seed = st.selectbox("HF20 seed", [42, 123], key="hf20_seed")
+    h = handoff(root, seed)
     st.info(
-        "20 stocks · seed42 · C0/T2/ZERO · canonical TG20 scores. "
+        f"20 stocks · seed{seed} · C0/T2/ZERO · same HF20 development fold. "
+        "Canonical TG20 scores. "
         "T2 saved predictions have already been inverted once; the viewer never reinverts."
     )
     with st.expander("Study source, clock, recipes and scales"):
@@ -52,7 +58,7 @@ def panel(root: Path) -> None:
                 )
             }
         )
-    run_id = st.selectbox("HF20 recorded run", list(IDS), key="hf20_run")
+    run_id = st.selectbox("HF20 recorded run", h["runs"], key="hf20_run")
     stock = st.selectbox("HF20 stock", list(SYMBOLS), index=4, key="hf20_stock")
     dates = st.date_input(
         "HF20 development dates",
@@ -67,7 +73,9 @@ def panel(root: Path) -> None:
     if not isinstance(dates, tuple) or len(dates) != 2:
         st.info("Choose both dates.")
         return
-    h, full, subset = predictions(root, dates[0].isoformat(), dates[1].isoformat(), stock, run_id)
+    h, full, subset = predictions(
+        root, dates[0].isoformat(), dates[1].isoformat(), stock, run_id, seed=seed
+    )
     if origin != "Both":
         subset = subset.loc[subset.origin.eq(int(origin[0]))]
     tabs = st.tabs(
@@ -76,6 +84,7 @@ def panel(root: Path) -> None:
             "Training Diagnostics",
             "Price & Features / extremes",
             "Five-minute guide",
+            "Seed comparison & diagnosis",
         ]
     )
     with tabs[0]:
@@ -116,9 +125,17 @@ def panel(root: Path) -> None:
             st.plotly_chart(residual, width="stretch", key="hf20_residual")
             st.dataframe(subset, hide_index=True, width="stretch")
         st.dataframe(table(root, h, "monthly_metrics.csv"), hide_index=True, width="stretch")
+        st.dataframe(table(root, h, "per_stock_metrics.csv"), hide_index=True, width="stretch")
+        daily = table(root, h, "daily_metrics.csv")
+        for metric in ("Rank_IC", "MSE"):
+            fig = go.Figure()
+            for arm, group in daily.groupby("arm"):
+                fig.add_trace(go.Scatter(x=group.session, y=group[metric], name=str(arm)))
+            fig.update_layout(title="Daily " + metric, xaxis_title="Development session")
+            st.plotly_chart(fig, width="stretch", key="hf20_daily_" + metric)
         st.caption("Monthly panels are exploratory descriptions; no tuning or final confirmation.")
     with tabs[1]:
-        arm = "T2" if run_id == IDS[1] else "C0"
+        arm = "T2" if "-T2-" in run_id else "C0"
         r = h["run_artifacts"][arm]
         import json
 
@@ -127,6 +144,13 @@ def panel(root: Path) -> None:
         result = json.loads(verified(root, r["run_result"]).read_text())
         timing = json.loads(verified(root, r["runtime"]).read_text())
         st.json(dict(selection=result["selection"], health=result["health"], actual_runtime=timing))
+        st.caption(
+            "The marker is the qualifying selected epoch. A lower raw MSE qualifies only when "
+            "new MSE < 0.999 × prior qualifying best; smaller improvements do not reset patience. "
+            "Minimum12 governs when stopping is allowed. Online training loss uses changing "
+            "weights and dropout ON; validation uses eval mode. Per-example historical gradients, "
+            "dropout masks and optimizer internals were not recorded."
+        )
         for stage in ("calibration", "refit"):
             f = pd.read_csv(verified(root, r[stage]), float_precision="round_trip")
             st.subheader(arm + " · " + stage)
@@ -164,11 +188,32 @@ def panel(root: Path) -> None:
         st.caption(
             "Ex-post extreme selection is diagnostic only; it never enters X or training choices."
         )
+        fig = go.Figure(go.Histogram(x=full.target, nbinsx=80, name="Original TG20"))
+        fig.update_layout(title="Full development TG20 distribution (outcomes only)")
+        st.plotly_chart(fig, width="stretch", key="hf20_target_histogram")
+        tail_mode = st.selectbox(
+            "HF20 ex-post event filter",
+            ["All genuine origins", "Train-q99 tails"],
+            key="hf20_tail_mode",
+        )
+        threshold = h.get("train_target_abs_q99")
+        if tail_mode == "Train-q99 tails" and threshold is None:
+            st.info(
+                "Train-q99 event view is available with the released seed123 diagnostic packet."
+            )
         options = (
             full.loc[full.symbol.eq(stock)]
             .assign(magnitude=lambda f: f.target.abs())
             .sort_values("magnitude", ascending=False)
         )
+        if tail_mode == "Train-q99 tails" and threshold is not None:
+            options = options.loc[options.target.abs().ge(threshold)]
+            st.caption(
+                f"Training-only |TG20| q99={threshold:.8f}; ex-post diagnostic, no input feature."
+            )
+        if options.empty:
+            st.info("No saved event for this stock/filter.")
+            return
         keys = [
             f"{r.session} / origin{r.origin} / TG20={r.target:.3f}" for r in options.itertuples()
         ]
@@ -235,8 +280,16 @@ def panel(root: Path) -> None:
             except (OSError, ValueError, ViewUnavailable) as exc:
                 st.warning("SOURCE/CHRONOLOGY HOLD: " + str(exc))
     with tabs[3]:
-        guide = root / "docs/track_a/HOW_TO_VIEW_HF20_TM0_T2.md"
+        guide = root / (
+            "docs/track_a/HOW_TO_VIEW_HF20_SEED123_REPLICATION.md"
+            if seed == 123
+            else "docs/track_a/HOW_TO_VIEW_HF20_TM0_T2.md"
+        )
         if guide.is_file():
             st.markdown(guide.read_text())
         else:
             st.info("Guide is not yet recorded; no synthetic evidence is substituted.")
+    with tabs[4]:
+        from .hf20_replication_ui import comparison_panel
+
+        comparison_panel(root)
