@@ -1,0 +1,13 @@
+# Private price/derived examples and disposable synthetic fixtures
+*.parquet
+test_*/
+march_smoke/
+descriptive_provider_comparison.csv
+source_month_regime_profiles.csv
+review_smoke/
+# Resume cursors and footer statistics contain private reported prices.
+month_checkpoint*.json
+months/*/qa_receipt.json
+months/*/qa_v2_receipt.json
+months/*/row_groups.json
+independent_hour_reconstruction.csv

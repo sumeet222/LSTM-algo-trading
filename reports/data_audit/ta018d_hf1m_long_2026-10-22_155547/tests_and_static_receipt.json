@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-22T22:44:57.598026+00:00",
+  "diff_check": "git diff --check: PASS",
+  "editor_confirmation": "Human: select .venv/bin/python, restart Pylance, refresh Problems, confirm zero project-owned error diagnostics. Editor refresh not asserted.",
+  "execution_code_receipt_sha256": "0308e9488ebd463d79d8becc28d2794c562f88538bfa58dbfd7833d5c6559fde",
+  "passed": 39,
+  "ruff_command": ".venv/bin/ruff check .",
+  "ruff_result": "PASS",
+  "seconds": 24.89,
+  "static_command": ".venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist",
+  "static_receipt": "types_proxy_reconstruction_final.json",
+  "static_summary": {
+    "errorCount": 0,
+    "filesAnalyzed": 274,
+    "informationCount": 0,
+    "timeInSec": 54.743,
+    "warningCount": 0
+  },
+  "test_receipt": "tests_proxy_reconstruction_final.txt",
+  "tests_command": ".venv/bin/python -B -m pytest tests/test_hf_minute_long.py tests/test_hf_minute_boundary.py tests/test_hf_minute_preflight.py -q -p no:cacheprovider --basetemp reports/data_audit/ta018d_hf1m_long_2026-10-22_155547/test_proxy_reconstruction_final"
+}

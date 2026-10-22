@@ -1,0 +1,25 @@
+.....F....                                                               [100%]
+=================================== FAILURES ===================================
+________ test_action_uncertain_hour_keeps_observed_jump_but_blocks_fill ________
+
+source_day =                     timestamp  open  high  ...  volume  ticker  source_row
+0   2026-03-02 14:30:00+00:00  10.0  10.1  ...      VZ         388
+389 2026-03-02 20:59:00+00:00  10.0  10.1  ...     2.0      VZ         389
+
+[390 rows x 8 columns]
+
+    def test_action_uncertain_hour_keeps_observed_jump_but_blocks_fill(source_day):
+        raw = source_day.drop(index=[10, 11]).copy()
+        raw.loc[raw.index >= 20, ["open", "high", "low", "close"]] *= 3.0
+        result = qa.process_month(raw, "2026-03", "0" * 64, "raw")
+        assert result.proxies.empty
+        assert result.hourly.iloc[0].action_uncertainty
+        assert result.canonical.close.max() == 30.0
+>       assert result.hourly.iloc[0].high == 30.3
+E       assert np.float64(30.299999999999997) == 30.3
+E        +  where np.float64(30.299999999999997) = ticker                                                                            VZ\nsource_month                     ...      False\ntraining_eligibility_suggestion                            REVIEW_ONLY_NO_MODEL_MASK\nName: 0, dtype: object.high
+
+tests/test_hf_minute_long.py:101: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_hf_minute_long.py::test_action_uncertain_hour_keeps_observed_jump_but_blocks_fill
+1 failed, 9 passed in 2.47s

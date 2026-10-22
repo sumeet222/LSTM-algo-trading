@@ -1,0 +1,30 @@
+{
+  "action_policy": "PRESERVE_OBSERVED_BLOCK_FILL_IN_FLAGGED_HOUR_NO_INFERRED_FACTORS",
+  "action_uncertainty_jump_threshold_fraction": 0.25,
+  "canonical": "IDENTICAL_COPIES_ONCE_CONFLICTING_KEYS_EXCLUDED_ALL_VERSIONS_INVALID_EXCLUDED",
+  "code_hashes": {
+    "src/lstm_data/hf_minute_long.py": "1d7ac3ccbfb1f3ab5eb4efb1569cc6eade522b81570482b2ef033af629fc2259",
+    "src/lstm_data/hf_minute_long_io.py": "22e3d3ea6d8309ff5d04a16f2337d74f068c58c04e5ace12eabf5771a05ecfb8",
+    "src/lstm_data/hf_minute_long_qa.py": "b64cec1a98b2e4dcb07ec9571baccd7b1229563780311c47b323d4d2aae74ba2",
+    "src/lstm_data/hf_minute_long_report.py": "789a49f997202c2ee1eaa75ce020aff0ce1859155a7cbc57dbf69b5650cc3071"
+  },
+  "empty_hour": "MISSING_NO_SYNTHETIC_FLAT_HOUR",
+  "fill_clock": "AVAILABLE_AT_COMPLETED_HOUR_END_NOT_EARLIER_MINUTE",
+  "fill_price": "LATEST_EARLIER_UNAMBIGUOUS_SAME_SESSION_CLOSE",
+  "fill_volume": 0,
+  "fill_volume_meaning": "UNKNOWN_PLACEHOLDER_NOT_NO_TRADING",
+  "final_window_selected": false,
+  "hour_bins": "XNYS_SESSION_OPEN_PLUS60MIN_SEPARATE_SHORT_STUB",
+  "max_fill_gap_known_at_hour_completion": 5,
+  "modeling_allowed": false,
+  "observed_volume": "SUM_ONLY_UNAMBIGUOUS_VALID_GENUINE_MINUTES",
+  "opening_gap": "UNFILLED_FIRST_OBSERVED_OPEN_FLAGGED",
+  "raw": "ALL_ORIGINAL_EXACT_SYMBOL_ROWS_IMMUTABLE",
+  "revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+  "sensitivity_fill_cap": 2,
+  "source": "mito0o852/OHLCV-1m",
+  "storage_limit_bytes": 10000000000,
+  "storage_pause_bytes": 9000000000,
+  "trailing_gap": "KNOWN_PREFIX_AT_HOUR_END; LATER_HOURS_NEVER_REVISE_PRIOR_HOUR; NONGENUINE_ENDPOINT_INELIGIBLE",
+  "version": "018D_QA_V2"
+}
