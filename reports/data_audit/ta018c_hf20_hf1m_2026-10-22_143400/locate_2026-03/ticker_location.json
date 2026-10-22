@@ -1,0 +1,2802 @@
+{
+  "absent": [],
+  "all_ticker_row_groups_scanned": true,
+  "counts": {
+    "AAPL": 13666,
+    "AMD": 15532,
+    "AMZN": 15146,
+    "AVGO": 16135,
+    "BA": 9976,
+    "BAC": 10635,
+    "COP": 9952,
+    "CSCO": 9732,
+    "CVX": 10903,
+    "JNJ": 8794,
+    "KO": 9602,
+    "MA": 8980,
+    "MRK": 8940,
+    "MS": 9112,
+    "PEP": 8854,
+    "SBUX": 9161,
+    "TSLA": 20142,
+    "VZ": 9689,
+    "WFC": 9430,
+    "XOM": 12052
+  },
+  "footer": {
+    "columns": [
+      "timestamp",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "ticker"
+    ],
+    "created_by": "parquet-cpp-arrow version 23.0.1",
+    "row_groups": [
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2102077,
+            "data_offset": 151953,
+            "dictionary_offset": 4,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2118336
+          },
+          {
+            "compressed_bytes": 2425113,
+            "data_offset": 2526519,
+            "dictionary_offset": 2102081,
+            "max": "4900.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2808250
+          },
+          {
+            "compressed_bytes": 2416824,
+            "data_offset": 4946708,
+            "dictionary_offset": 4527194,
+            "max": "4900.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2799058
+          },
+          {
+            "compressed_bytes": 2424226,
+            "data_offset": 7370655,
+            "dictionary_offset": 6944018,
+            "max": "4900.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2801008
+          },
+          {
+            "compressed_bytes": 2440693,
+            "data_offset": 9790734,
+            "dictionary_offset": 9368244,
+            "max": "4900.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2805980
+          },
+          {
+            "compressed_bytes": 2506975,
+            "data_offset": 12210923,
+            "dictionary_offset": 11808937,
+            "max": "26830769.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2761908
+          },
+          {
+            "compressed_bytes": 10035,
+            "data_offset": 14320170,
+            "dictionary_offset": 14315912,
+            "max": "ZXIET",
+            "min": "AACIU",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11400
+          }
+        ],
+        "row_group": 0,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2108626,
+            "data_offset": 14476957,
+            "dictionary_offset": 14325947,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2126180
+          },
+          {
+            "compressed_bytes": 2218453,
+            "data_offset": 16734444,
+            "dictionary_offset": 16434573,
+            "max": "750749.9",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2521970
+          },
+          {
+            "compressed_bytes": 2203697,
+            "data_offset": 18950421,
+            "dictionary_offset": 18653026,
+            "max": "750749.9",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2517979
+          },
+          {
+            "compressed_bytes": 2222575,
+            "data_offset": 21161150,
+            "dictionary_offset": 20856723,
+            "max": "750749.9",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2516988
+          },
+          {
+            "compressed_bytes": 2216996,
+            "data_offset": 23376204,
+            "dictionary_offset": 23079298,
+            "max": "750749.9",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2519155
+          },
+          {
+            "compressed_bytes": 2589546,
+            "data_offset": 25752953,
+            "dictionary_offset": 25296294,
+            "max": "251994157.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2875378
+          },
+          {
+            "compressed_bytes": 9295,
+            "data_offset": 27889689,
+            "dictionary_offset": 27885840,
+            "max": "ZM",
+            "min": "AAA",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 10484
+          }
+        ],
+        "row_group": 1,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2106906,
+            "data_offset": 28046912,
+            "dictionary_offset": 27895135,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2123456
+          },
+          {
+            "compressed_bytes": 2392977,
+            "data_offset": 30352881,
+            "dictionary_offset": 30002041,
+            "max": "507.85",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2691412
+          },
+          {
+            "compressed_bytes": 2382910,
+            "data_offset": 32741340,
+            "dictionary_offset": 32395018,
+            "max": "509.9",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2683184
+          },
+          {
+            "compressed_bytes": 2393087,
+            "data_offset": 35128100,
+            "dictionary_offset": 34777928,
+            "max": "507.85",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2682341
+          },
+          {
+            "compressed_bytes": 2385955,
+            "data_offset": 37518685,
+            "dictionary_offset": 37171015,
+            "max": "509.9",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2685454
+          },
+          {
+            "compressed_bytes": 2525294,
+            "data_offset": 39946096,
+            "dictionary_offset": 39556970,
+            "max": "91199628.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2772052
+          },
+          {
+            "compressed_bytes": 9875,
+            "data_offset": 42086451,
+            "dictionary_offset": 42082264,
+            "max": "ZXZZT",
+            "min": "AAOI",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11199
+          }
+        ],
+        "row_group": 2,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2093072,
+            "data_offset": 42245080,
+            "dictionary_offset": 42092139,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2106736
+          },
+          {
+            "compressed_bytes": 2430252,
+            "data_offset": 44571454,
+            "dictionary_offset": 44185211,
+            "max": "3650.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2770079
+          },
+          {
+            "compressed_bytes": 2414074,
+            "data_offset": 46998171,
+            "dictionary_offset": 46615463,
+            "max": "3650.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2758961
+          },
+          {
+            "compressed_bytes": 2414940,
+            "data_offset": 49412589,
+            "dictionary_offset": 49029537,
+            "max": "3650.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2757566
+          },
+          {
+            "compressed_bytes": 2424373,
+            "data_offset": 51828752,
+            "dictionary_offset": 51444477,
+            "max": "3650.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2768664
+          },
+          {
+            "compressed_bytes": 2526584,
+            "data_offset": 54257097,
+            "dictionary_offset": 53868850,
+            "max": "172393436.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2773022
+          },
+          {
+            "compressed_bytes": 10378,
+            "data_offset": 56399844,
+            "dictionary_offset": 56395434,
+            "max": "ZPTAW",
+            "min": "ABTS",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11809
+          }
+        ],
+        "row_group": 3,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2091612,
+            "data_offset": 56557294,
+            "dictionary_offset": 56405812,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2107240
+          },
+          {
+            "compressed_bytes": 2270976,
+            "data_offset": 58831380,
+            "dictionary_offset": 58497424,
+            "max": "8494.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2588987
+          },
+          {
+            "compressed_bytes": 2230681,
+            "data_offset": 61096405,
+            "dictionary_offset": 60768400,
+            "max": "8494.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2580144
+          },
+          {
+            "compressed_bytes": 2249145,
+            "data_offset": 63326659,
+            "dictionary_offset": 62999081,
+            "max": "8494.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2579004
+          },
+          {
+            "compressed_bytes": 2270813,
+            "data_offset": 65577232,
+            "dictionary_offset": 65248226,
+            "max": "8494.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2587859
+          },
+          {
+            "compressed_bytes": 2435517,
+            "data_offset": 67863388,
+            "dictionary_offset": 67519039,
+            "max": "63958655.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2656259
+          },
+          {
+            "compressed_bytes": 10499,
+            "data_offset": 69959056,
+            "dictionary_offset": 69954556,
+            "max": "ZVSA",
+            "min": "AACAY",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11904
+          }
+        ],
+        "row_group": 4,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2105138,
+            "data_offset": 70117578,
+            "dictionary_offset": 69965055,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2121236
+          },
+          {
+            "compressed_bytes": 2393127,
+            "data_offset": 72424211,
+            "dictionary_offset": 72070193,
+            "max": "16900.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2685981
+          },
+          {
+            "compressed_bytes": 2386934,
+            "data_offset": 74811890,
+            "dictionary_offset": 74463320,
+            "max": "16900.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2680445
+          },
+          {
+            "compressed_bytes": 2380791,
+            "data_offset": 77196518,
+            "dictionary_offset": 76850254,
+            "max": "16900.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2672991
+          },
+          {
+            "compressed_bytes": 2383779,
+            "data_offset": 79580510,
+            "dictionary_offset": 79231045,
+            "max": "16900.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2685242
+          },
+          {
+            "compressed_bytes": 2569686,
+            "data_offset": 82057475,
+            "dictionary_offset": 81614824,
+            "max": "70000000.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2847681
+          },
+          {
+            "compressed_bytes": 8924,
+            "data_offset": 84188161,
+            "dictionary_offset": 84184510,
+            "max": "ZTSTF",
+            "min": "AAVXF",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 10036
+          }
+        ],
+        "row_group": 5,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2119529,
+            "data_offset": 84345340,
+            "dictionary_offset": 84193434,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2135852
+          },
+          {
+            "compressed_bytes": 2479590,
+            "data_offset": 86740138,
+            "dictionary_offset": 86312963,
+            "max": "830.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2849273
+          },
+          {
+            "compressed_bytes": 2473586,
+            "data_offset": 89211970,
+            "dictionary_offset": 88792553,
+            "max": "830.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2838504
+          },
+          {
+            "compressed_bytes": 2468441,
+            "data_offset": 91684202,
+            "dictionary_offset": 91266139,
+            "max": "830.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2837208
+          },
+          {
+            "compressed_bytes": 2470538,
+            "data_offset": 94157549,
+            "dictionary_offset": 93734580,
+            "max": "830.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2845102
+          },
+          {
+            "compressed_bytes": 2576652,
+            "data_offset": 96650231,
+            "dictionary_offset": 96205118,
+            "max": "87868109.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2857308
+          },
+          {
+            "compressed_bytes": 9914,
+            "data_offset": 98785960,
+            "dictionary_offset": 98781770,
+            "max": "ZTR",
+            "min": "AAPY",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11192
+          }
+        ],
+        "row_group": 6,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2097628,
+            "data_offset": 98944186,
+            "dictionary_offset": 98791684,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2113744
+          },
+          {
+            "compressed_bytes": 2410318,
+            "data_offset": 101285361,
+            "dictionary_offset": 100889312,
+            "max": "2357.425",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2770084
+          },
+          {
+            "compressed_bytes": 2389985,
+            "data_offset": 103691385,
+            "dictionary_offset": 103299630,
+            "max": "2357.425",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2762677
+          },
+          {
+            "compressed_bytes": 2382153,
+            "data_offset": 106082601,
+            "dictionary_offset": 105689615,
+            "max": "2357.425",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2759269
+          },
+          {
+            "compressed_bytes": 2392113,
+            "data_offset": 108466496,
+            "dictionary_offset": 108071768,
+            "max": "2357.425",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2767328
+          },
+          {
+            "compressed_bytes": 2649589,
+            "data_offset": 110956801,
+            "dictionary_offset": 110463881,
+            "max": "98792079.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2955713
+          },
+          {
+            "compressed_bytes": 9354,
+            "data_offset": 113117368,
+            "dictionary_offset": 113113470,
+            "max": "ZONE",
+            "min": "AACB",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 10565
+          }
+        ],
+        "row_group": 7,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2106656,
+            "data_offset": 113276849,
+            "dictionary_offset": 113122824,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2121260
+          },
+          {
+            "compressed_bytes": 2401918,
+            "data_offset": 115619563,
+            "dictionary_offset": 115229480,
+            "max": "1800.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2783057
+          },
+          {
+            "compressed_bytes": 2393885,
+            "data_offset": 118018963,
+            "dictionary_offset": 117631398,
+            "max": "1800.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2777714
+          },
+          {
+            "compressed_bytes": 2399630,
+            "data_offset": 120412592,
+            "dictionary_offset": 120025283,
+            "max": "1800.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2775492
+          },
+          {
+            "compressed_bytes": 2405364,
+            "data_offset": 122813589,
+            "dictionary_offset": 122424913,
+            "max": "1800.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2783624
+          },
+          {
+            "compressed_bytes": 2597155,
+            "data_offset": 125290732,
+            "dictionary_offset": 124830277,
+            "max": "186463581.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2883396
+          },
+          {
+            "compressed_bytes": 9848,
+            "data_offset": 127431591,
+            "dictionary_offset": 127427432,
+            "max": "ZROZ",
+            "min": "AAGAF",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11162
+          }
+        ],
+        "row_group": 8,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2106511,
+            "data_offset": 127588673,
+            "dictionary_offset": 127437280,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2122344
+          },
+          {
+            "compressed_bytes": 2375998,
+            "data_offset": 129916034,
+            "dictionary_offset": 129543791,
+            "max": "2819.885",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2684176
+          },
+          {
+            "compressed_bytes": 2354963,
+            "data_offset": 132279128,
+            "dictionary_offset": 131919789,
+            "max": "2819.885",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2670138
+          },
+          {
+            "compressed_bytes": 2375512,
+            "data_offset": 134640227,
+            "dictionary_offset": 134274752,
+            "max": "2819.885",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2675697
+          },
+          {
+            "compressed_bytes": 2372965,
+            "data_offset": 137009723,
+            "dictionary_offset": 136650264,
+            "max": "2819.885",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2676891
+          },
+          {
+            "compressed_bytes": 2496114,
+            "data_offset": 139410255,
+            "dictionary_offset": 139023229,
+            "max": "104450000.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2738365
+          },
+          {
+            "compressed_bytes": 10457,
+            "data_offset": 141523809,
+            "dictionary_offset": 141519343,
+            "max": "ZUMZ",
+            "min": "ABLGF",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11876
+          }
+        ],
+        "row_group": 9,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2095839,
+            "data_offset": 141680887,
+            "dictionary_offset": 141529800,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2111464
+          },
+          {
+            "compressed_bytes": 2214409,
+            "data_offset": 143934925,
+            "dictionary_offset": 143625639,
+            "max": "26000.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2564622
+          },
+          {
+            "compressed_bytes": 2204506,
+            "data_offset": 146149196,
+            "dictionary_offset": 145840048,
+            "max": "26000.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2551135
+          },
+          {
+            "compressed_bytes": 2216368,
+            "data_offset": 148352070,
+            "dictionary_offset": 148044554,
+            "max": "26000.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2549736
+          },
+          {
+            "compressed_bytes": 2194882,
+            "data_offset": 150567992,
+            "dictionary_offset": 150260922,
+            "max": "26000.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2553306
+          },
+          {
+            "compressed_bytes": 2384802,
+            "data_offset": 152773994,
+            "dictionary_offset": 152455804,
+            "max": "70000000.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2592106
+          },
+          {
+            "compressed_bytes": 10137,
+            "data_offset": 154844879,
+            "dictionary_offset": 154840606,
+            "max": "ZVLO",
+            "min": "AAIRF",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11501
+          }
+        ],
+        "row_group": 10,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2101088,
+            "data_offset": 155001764,
+            "dictionary_offset": 154850743,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2117336
+          },
+          {
+            "compressed_bytes": 2388209,
+            "data_offset": 157330100,
+            "dictionary_offset": 156951831,
+            "max": "1591.1044",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2745059
+          },
+          {
+            "compressed_bytes": 2373186,
+            "data_offset": 159713068,
+            "dictionary_offset": 159340040,
+            "max": "1591.1044",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2738987
+          },
+          {
+            "compressed_bytes": 2367617,
+            "data_offset": 162086410,
+            "dictionary_offset": 161713226,
+            "max": "1591.1044",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2737566
+          },
+          {
+            "compressed_bytes": 2383362,
+            "data_offset": 164454398,
+            "dictionary_offset": 164080843,
+            "max": "1591.1044",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2740533
+          },
+          {
+            "compressed_bytes": 2494387,
+            "data_offset": 166859952,
+            "dictionary_offset": 166464205,
+            "max": "145290024.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2744716
+          },
+          {
+            "compressed_bytes": 10256,
+            "data_offset": 168962948,
+            "dictionary_offset": 168958592,
+            "max": "ZVOI",
+            "min": "AAGRY",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11670
+          }
+        ],
+        "row_group": 11,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2101772,
+            "data_offset": 169122989,
+            "dictionary_offset": 168968848,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2116124
+          },
+          {
+            "compressed_bytes": 2343219,
+            "data_offset": 171445555,
+            "dictionary_offset": 171070620,
+            "max": "835.49",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2689241
+          },
+          {
+            "compressed_bytes": 2323745,
+            "data_offset": 173759273,
+            "dictionary_offset": 173413839,
+            "max": "835.49",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2681773
+          },
+          {
+            "compressed_bytes": 2311843,
+            "data_offset": 176084824,
+            "dictionary_offset": 175737584,
+            "max": "835.49",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2680301
+          },
+          {
+            "compressed_bytes": 2323976,
+            "data_offset": 178400461,
+            "dictionary_offset": 178049427,
+            "max": "835.49",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2690308
+          },
+          {
+            "compressed_bytes": 2551905,
+            "data_offset": 180779297,
+            "dictionary_offset": 180373403,
+            "max": "57229460.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2807923
+          },
+          {
+            "compressed_bytes": 8623,
+            "data_offset": 182928750,
+            "dictionary_offset": 182925308,
+            "max": "ZSEP",
+            "min": "AAEQ",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 9644
+          }
+        ],
+        "row_group": 12,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2117601,
+            "data_offset": 183084602,
+            "dictionary_offset": 182933931,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2136204
+          },
+          {
+            "compressed_bytes": 2422317,
+            "data_offset": 185427730,
+            "dictionary_offset": 185051532,
+            "max": "7445.58",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2752015
+          },
+          {
+            "compressed_bytes": 2408747,
+            "data_offset": 187843537,
+            "dictionary_offset": 187473849,
+            "max": "7445.58",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2745283
+          },
+          {
+            "compressed_bytes": 2419636,
+            "data_offset": 190254499,
+            "dictionary_offset": 189882596,
+            "max": "7445.58",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2745291
+          },
+          {
+            "compressed_bytes": 2409267,
+            "data_offset": 192674518,
+            "dictionary_offset": 192302232,
+            "max": "7445.58",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2750159
+          },
+          {
+            "compressed_bytes": 2618179,
+            "data_offset": 195180530,
+            "dictionary_offset": 194711499,
+            "max": "265659187.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2909246
+          },
+          {
+            "compressed_bytes": 10023,
+            "data_offset": 197333870,
+            "dictionary_offset": 197329678,
+            "max": "ZTWO",
+            "min": "A",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11354
+          }
+        ],
+        "row_group": 13,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2106377,
+            "data_offset": 197493597,
+            "dictionary_offset": 197339701,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2120964
+          },
+          {
+            "compressed_bytes": 2506287,
+            "data_offset": 199899653,
+            "dictionary_offset": 199446078,
+            "max": "1493.5",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2915995
+          },
+          {
+            "compressed_bytes": 2517153,
+            "data_offset": 202401902,
+            "dictionary_offset": 201952365,
+            "max": "1494.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2907199
+          },
+          {
+            "compressed_bytes": 2508092,
+            "data_offset": 204919282,
+            "dictionary_offset": 204469518,
+            "max": "1491.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2907256
+          },
+          {
+            "compressed_bytes": 2498645,
+            "data_offset": 207429999,
+            "dictionary_offset": 206977610,
+            "max": "1494.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2916355
+          },
+          {
+            "compressed_bytes": 2518809,
+            "data_offset": 209863734,
+            "dictionary_offset": 209476255,
+            "max": "47045092.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2765081
+          },
+          {
+            "compressed_bytes": 9824,
+            "data_offset": 211999182,
+            "dictionary_offset": 211995064,
+            "max": "ZNNC",
+            "min": "AACBU",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11108
+          }
+        ],
+        "row_group": 14,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2093436,
+            "data_offset": 212158207,
+            "dictionary_offset": 212004888,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2107240
+          },
+          {
+            "compressed_bytes": 2395148,
+            "data_offset": 214503660,
+            "dictionary_offset": 214098324,
+            "max": "4437.37",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2795449
+          },
+          {
+            "compressed_bytes": 2397018,
+            "data_offset": 216894838,
+            "dictionary_offset": 216493472,
+            "max": "4437.37",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2787087
+          },
+          {
+            "compressed_bytes": 2386998,
+            "data_offset": 219292261,
+            "dictionary_offset": 218890490,
+            "max": "4437.37",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2787731
+          },
+          {
+            "compressed_bytes": 2408331,
+            "data_offset": 221679778,
+            "dictionary_offset": 221277488,
+            "max": "4437.37",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2790705
+          },
+          {
+            "compressed_bytes": 2463270,
+            "data_offset": 224044739,
+            "dictionary_offset": 223685819,
+            "max": "71669157.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2691412
+          },
+          {
+            "compressed_bytes": 10793,
+            "data_offset": 226153748,
+            "dictionary_offset": 226149089,
+            "max": "ZSILF",
+            "min": "AALG",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 12255
+          }
+        ],
+        "row_group": 15,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2099477,
+            "data_offset": 226311728,
+            "dictionary_offset": 226159882,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2114356
+          },
+          {
+            "compressed_bytes": 2300888,
+            "data_offset": 228599812,
+            "dictionary_offset": 228259359,
+            "max": "16325.1",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2658639
+          },
+          {
+            "compressed_bytes": 2325529,
+            "data_offset": 230897319,
+            "dictionary_offset": 230560247,
+            "max": "16325.1",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2651563
+          },
+          {
+            "compressed_bytes": 2295926,
+            "data_offset": 233226017,
+            "dictionary_offset": 232885776,
+            "max": "16325.1",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2649303
+          },
+          {
+            "compressed_bytes": 2306217,
+            "data_offset": 235519637,
+            "dictionary_offset": 235181702,
+            "max": "16325.1",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2658404
+          },
+          {
+            "compressed_bytes": 2386810,
+            "data_offset": 237813019,
+            "dictionary_offset": 237487919,
+            "max": "91727188.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2597044
+          },
+          {
+            "compressed_bytes": 11052,
+            "data_offset": 239879496,
+            "dictionary_offset": 239874729,
+            "max": "ZTOP",
+            "min": "AA",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 12642
+          }
+        ],
+        "row_group": 16,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2099279,
+            "data_offset": 240037506,
+            "dictionary_offset": 239885781,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2115980
+          },
+          {
+            "compressed_bytes": 2487691,
+            "data_offset": 242411834,
+            "dictionary_offset": 241985060,
+            "max": "13100.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2852571
+          },
+          {
+            "compressed_bytes": 2477171,
+            "data_offset": 244895930,
+            "dictionary_offset": 244472751,
+            "max": "13100.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2844394
+          },
+          {
+            "compressed_bytes": 2491603,
+            "data_offset": 247374103,
+            "dictionary_offset": 246949922,
+            "max": "13100.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2844842
+          },
+          {
+            "compressed_bytes": 2479799,
+            "data_offset": 249866369,
+            "dictionary_offset": 249441525,
+            "max": "13100.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2852624
+          },
+          {
+            "compressed_bytes": 2526329,
+            "data_offset": 252330730,
+            "dictionary_offset": 251921324,
+            "max": "61494601.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2784764
+          },
+          {
+            "compressed_bytes": 9695,
+            "data_offset": 254451731,
+            "dictionary_offset": 254447653,
+            "max": "ZUUZF",
+            "min": "ABBRF",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 10946
+          }
+        ],
+        "row_group": 17,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2109907,
+            "data_offset": 254609623,
+            "dictionary_offset": 254457348,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2126148
+          },
+          {
+            "compressed_bytes": 2413520,
+            "data_offset": 256953718,
+            "dictionary_offset": 256567255,
+            "max": "2222.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2745919
+          },
+          {
+            "compressed_bytes": 2418196,
+            "data_offset": 259363988,
+            "dictionary_offset": 258980775,
+            "max": "2222.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2740507
+          },
+          {
+            "compressed_bytes": 2412991,
+            "data_offset": 261783142,
+            "dictionary_offset": 261398971,
+            "max": "2206.4055",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2741077
+          },
+          {
+            "compressed_bytes": 2412322,
+            "data_offset": 264197722,
+            "dictionary_offset": 263811962,
+            "max": "2210.01",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2746188
+          },
+          {
+            "compressed_bytes": 2493442,
+            "data_offset": 266608999,
+            "dictionary_offset": 266224284,
+            "max": "115380000.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2739990
+          },
+          {
+            "compressed_bytes": 9934,
+            "data_offset": 268721960,
+            "dictionary_offset": 268717726,
+            "max": "ZSPC",
+            "min": "AABVF",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11249
+          }
+        ],
+        "row_group": 18,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2114594,
+            "data_offset": 268879715,
+            "dictionary_offset": 268727660,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2130788
+          },
+          {
+            "compressed_bytes": 2238461,
+            "data_offset": 271161290,
+            "dictionary_offset": 270842254,
+            "max": "2247.625",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2599346
+          },
+          {
+            "compressed_bytes": 2224910,
+            "data_offset": 273395705,
+            "dictionary_offset": 273080715,
+            "max": "2247.625",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2593407
+          },
+          {
+            "compressed_bytes": 2223634,
+            "data_offset": 275621241,
+            "dictionary_offset": 275305625,
+            "max": "2247.625",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2594730
+          },
+          {
+            "compressed_bytes": 2226364,
+            "data_offset": 277847299,
+            "dictionary_offset": 277529259,
+            "max": "2247.625",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2599777
+          },
+          {
+            "compressed_bytes": 2560700,
+            "data_offset": 280167995,
+            "dictionary_offset": 279755623,
+            "max": "20102796.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2822329
+          },
+          {
+            "compressed_bytes": 9494,
+            "data_offset": 282320262,
+            "dictionary_offset": 282316323,
+            "max": "ZWZZT",
+            "min": "AAFRF",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 10727
+          }
+        ],
+        "row_group": 19,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2117368,
+            "data_offset": 282478056,
+            "dictionary_offset": 282325817,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2133712
+          },
+          {
+            "compressed_bytes": 2316065,
+            "data_offset": 284783538,
+            "dictionary_offset": 284443185,
+            "max": "40000.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2620106
+          },
+          {
+            "compressed_bytes": 2298101,
+            "data_offset": 287094850,
+            "dictionary_offset": 286759250,
+            "max": "40000.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2605412
+          },
+          {
+            "compressed_bytes": 2309164,
+            "data_offset": 289389247,
+            "dictionary_offset": 289057351,
+            "max": "40000.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2607814
+          },
+          {
+            "compressed_bytes": 2320637,
+            "data_offset": 291700551,
+            "dictionary_offset": 291366515,
+            "max": "40000.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2620000
+          },
+          {
+            "compressed_bytes": 2639188,
+            "data_offset": 294174592,
+            "dictionary_offset": 293687152,
+            "max": "77199000.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2941451
+          },
+          {
+            "compressed_bytes": 9731,
+            "data_offset": 296330419,
+            "dictionary_offset": 296326340,
+            "max": "ZURA",
+            "min": "AAGFF",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 10977
+          }
+        ],
+        "row_group": 20,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2120765,
+            "data_offset": 296486706,
+            "dictionary_offset": 296336071,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2138496
+          },
+          {
+            "compressed_bytes": 2355745,
+            "data_offset": 298822553,
+            "dictionary_offset": 298456836,
+            "max": "11927.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2702090
+          },
+          {
+            "compressed_bytes": 2364516,
+            "data_offset": 301177055,
+            "dictionary_offset": 300812581,
+            "max": "11927.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2692109
+          },
+          {
+            "compressed_bytes": 2362576,
+            "data_offset": 303542725,
+            "dictionary_offset": 303177097,
+            "max": "11850.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2688674
+          },
+          {
+            "compressed_bytes": 2360439,
+            "data_offset": 305902928,
+            "dictionary_offset": 305539673,
+            "max": "11850.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2694283
+          },
+          {
+            "compressed_bytes": 2644765,
+            "data_offset": 308388534,
+            "dictionary_offset": 307900112,
+            "max": "110886350.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2945676
+          },
+          {
+            "compressed_bytes": 10859,
+            "data_offset": 310549572,
+            "dictionary_offset": 310544877,
+            "max": "ZYXIQ",
+            "min": "AACOU",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 12362
+          }
+        ],
+        "row_group": 21,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2102630,
+            "data_offset": 310708245,
+            "dictionary_offset": 310555736,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2118056
+          },
+          {
+            "compressed_bytes": 2470946,
+            "data_offset": 313091696,
+            "dictionary_offset": 312658366,
+            "max": "12352.8",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2870232
+          },
+          {
+            "compressed_bytes": 2463452,
+            "data_offset": 315556260,
+            "dictionary_offset": 315129312,
+            "max": "12352.8",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2852848
+          },
+          {
+            "compressed_bytes": 2452080,
+            "data_offset": 318020383,
+            "dictionary_offset": 317592764,
+            "max": "12352.8",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2855055
+          },
+          {
+            "compressed_bytes": 2470681,
+            "data_offset": 320475084,
+            "dictionary_offset": 320044844,
+            "max": "12352.8",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2864675
+          },
+          {
+            "compressed_bytes": 2603728,
+            "data_offset": 322958159,
+            "dictionary_offset": 322515525,
+            "max": "51748380.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2879158
+          },
+          {
+            "compressed_bytes": 10278,
+            "data_offset": 325123616,
+            "dictionary_offset": 325119253,
+            "max": "ZVOL",
+            "min": "AACBR",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11716
+          }
+        ],
+        "row_group": 22,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2105955,
+            "data_offset": 325282881,
+            "dictionary_offset": 325129531,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2120444
+          },
+          {
+            "compressed_bytes": 2408011,
+            "data_offset": 327603837,
+            "dictionary_offset": 327235486,
+            "max": "1488.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2732970
+          },
+          {
+            "compressed_bytes": 2421897,
+            "data_offset": 330020308,
+            "dictionary_offset": 329643497,
+            "max": "1488.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2722642
+          },
+          {
+            "compressed_bytes": 2406206,
+            "data_offset": 332429597,
+            "dictionary_offset": 332065394,
+            "max": "1488.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2725046
+          },
+          {
+            "compressed_bytes": 2415489,
+            "data_offset": 334838140,
+            "dictionary_offset": 334471600,
+            "max": "1488.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2733327
+          },
+          {
+            "compressed_bytes": 2491093,
+            "data_offset": 337270086,
+            "dictionary_offset": 336887089,
+            "max": "178392404.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2736370
+          },
+          {
+            "compressed_bytes": 9202,
+            "data_offset": 339381998,
+            "dictionary_offset": 339378182,
+            "max": "ZYBT",
+            "min": "ABBB",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 10350
+          }
+        ],
+        "row_group": 23,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2103708,
+            "data_offset": 339540990,
+            "dictionary_offset": 339387384,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2118224
+          },
+          {
+            "compressed_bytes": 2492340,
+            "data_offset": 341933174,
+            "dictionary_offset": 341491092,
+            "max": "12100.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2895168
+          },
+          {
+            "compressed_bytes": 2491355,
+            "data_offset": 344420710,
+            "dictionary_offset": 343983432,
+            "max": "12100.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2887312
+          },
+          {
+            "compressed_bytes": 2476129,
+            "data_offset": 346913152,
+            "dictionary_offset": 346474787,
+            "max": "12100.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2882542
+          },
+          {
+            "compressed_bytes": 2496929,
+            "data_offset": 349394489,
+            "dictionary_offset": 348950916,
+            "max": "12100.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2898261
+          },
+          {
+            "compressed_bytes": 2462934,
+            "data_offset": 351814795,
+            "dictionary_offset": 351447845,
+            "max": "275656344.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2698069
+          },
+          {
+            "compressed_bytes": 10144,
+            "data_offset": 353915037,
+            "dictionary_offset": 353910779,
+            "max": "ZPHRF",
+            "min": "AADLS",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11508
+          }
+        ],
+        "row_group": 24,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2104421,
+            "data_offset": 354072715,
+            "dictionary_offset": 353920923,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2120516
+          },
+          {
+            "compressed_bytes": 2447944,
+            "data_offset": 356447439,
+            "dictionary_offset": 356025344,
+            "max": "4624.97",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2824337
+          },
+          {
+            "compressed_bytes": 2427071,
+            "data_offset": 358891496,
+            "dictionary_offset": 358473288,
+            "max": "4629.165",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2810868
+          },
+          {
+            "compressed_bytes": 2436833,
+            "data_offset": 361321279,
+            "dictionary_offset": 360900359,
+            "max": "4624.97",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2810629
+          },
+          {
+            "compressed_bytes": 2460958,
+            "data_offset": 363759207,
+            "dictionary_offset": 363337192,
+            "max": "4624.97",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2820061
+          },
+          {
+            "compressed_bytes": 2529162,
+            "data_offset": 366206154,
+            "dictionary_offset": 365798150,
+            "max": "125470422.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2785381
+          },
+          {
+            "compressed_bytes": 10439,
+            "data_offset": 368331828,
+            "dictionary_offset": 368327312,
+            "max": "ZURVY",
+            "min": "AAAC",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11882
+          }
+        ],
+        "row_group": 25,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2106873,
+            "data_offset": 368489512,
+            "dictionary_offset": 368337751,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2122952
+          },
+          {
+            "compressed_bytes": 2513530,
+            "data_offset": 370864308,
+            "dictionary_offset": 370444624,
+            "max": "1986.74",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2876987
+          },
+          {
+            "compressed_bytes": 2515765,
+            "data_offset": 373380690,
+            "dictionary_offset": 372958154,
+            "max": "1986.74",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2869872
+          },
+          {
+            "compressed_bytes": 2507884,
+            "data_offset": 375895432,
+            "dictionary_offset": 375473919,
+            "max": "1986.74",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2865665
+          },
+          {
+            "compressed_bytes": 2516273,
+            "data_offset": 378400370,
+            "dictionary_offset": 377981803,
+            "max": "1986.74",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2874528
+          },
+          {
+            "compressed_bytes": 2500002,
+            "data_offset": 380876714,
+            "dictionary_offset": 380498076,
+            "max": "46264610.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2740672
+          },
+          {
+            "compressed_bytes": 9690,
+            "data_offset": 383002127,
+            "dictionary_offset": 382998078,
+            "max": "ZZZOF",
+            "min": "AACG",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 10969
+          }
+        ],
+        "row_group": 26,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2104076,
+            "data_offset": 383159242,
+            "dictionary_offset": 383007768,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2120660
+          },
+          {
+            "compressed_bytes": 2374428,
+            "data_offset": 385505069,
+            "dictionary_offset": 385111844,
+            "max": "2750.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2742390
+          },
+          {
+            "compressed_bytes": 2379471,
+            "data_offset": 387873576,
+            "dictionary_offset": 387486272,
+            "max": "2750.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2729801
+          },
+          {
+            "compressed_bytes": 2357279,
+            "data_offset": 390252797,
+            "dictionary_offset": 389865743,
+            "max": "2750.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2731128
+          },
+          {
+            "compressed_bytes": 2385768,
+            "data_offset": 392615571,
+            "dictionary_offset": 392223022,
+            "max": "2750.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2740591
+          },
+          {
+            "compressed_bytes": 2533387,
+            "data_offset": 395017973,
+            "dictionary_offset": 394608790,
+            "max": "559894163.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2792580
+          },
+          {
+            "compressed_bytes": 9753,
+            "data_offset": 397146254,
+            "dictionary_offset": 397142177,
+            "max": "ZTO",
+            "min": "AAGIY",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11062
+          }
+        ],
+        "row_group": 27,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2094907,
+            "data_offset": 397304214,
+            "dictionary_offset": 397151930,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2110252
+          },
+          {
+            "compressed_bytes": 2311839,
+            "data_offset": 399571602,
+            "dictionary_offset": 399246837,
+            "max": "1229.69",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2596542
+          },
+          {
+            "compressed_bytes": 2305200,
+            "data_offset": 401881392,
+            "dictionary_offset": 401558676,
+            "max": "1229.86",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2590501
+          },
+          {
+            "compressed_bytes": 2306129,
+            "data_offset": 404185810,
+            "dictionary_offset": 403863876,
+            "max": "1228.43",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2589413
+          },
+          {
+            "compressed_bytes": 2300020,
+            "data_offset": 406491467,
+            "dictionary_offset": 406170005,
+            "max": "1229.8",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2591171
+          },
+          {
+            "compressed_bytes": 2556037,
+            "data_offset": 408898308,
+            "dictionary_offset": 408470025,
+            "max": "87633919.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2827058
+          },
+          {
+            "compressed_bytes": 10211,
+            "data_offset": 411030301,
+            "dictionary_offset": 411026062,
+            "max": "ZWS",
+            "min": "AAUGF",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11524
+          }
+        ],
+        "row_group": 28,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2110539,
+            "data_offset": 411189183,
+            "dictionary_offset": 411036273,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2126244
+          },
+          {
+            "compressed_bytes": 2432295,
+            "data_offset": 413519150,
+            "dictionary_offset": 413146812,
+            "max": "1300.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2745157
+          },
+          {
+            "compressed_bytes": 2413958,
+            "data_offset": 415944033,
+            "dictionary_offset": 415579107,
+            "max": "1300.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2726812
+          },
+          {
+            "compressed_bytes": 2405060,
+            "data_offset": 418357821,
+            "dictionary_offset": 417993065,
+            "max": "1300.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2727255
+          },
+          {
+            "compressed_bytes": 2423186,
+            "data_offset": 420766166,
+            "dictionary_offset": 420398125,
+            "max": "1300.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2739810
+          },
+          {
+            "compressed_bytes": 2596962,
+            "data_offset": 423263072,
+            "dictionary_offset": 422821311,
+            "max": "50000100.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2874794
+          },
+          {
+            "compressed_bytes": 10199,
+            "data_offset": 425422586,
+            "dictionary_offset": 425418273,
+            "max": "ZSL",
+            "min": "ACAN",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11539
+          }
+        ],
+        "row_group": 29,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2100446,
+            "data_offset": 425581343,
+            "dictionary_offset": 425428472,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2116108
+          },
+          {
+            "compressed_bytes": 2187936,
+            "data_offset": 427833548,
+            "dictionary_offset": 427528918,
+            "max": "1099.99",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2540866
+          },
+          {
+            "compressed_bytes": 2159165,
+            "data_offset": 430016913,
+            "dictionary_offset": 429716854,
+            "max": "1099.99",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2533588
+          },
+          {
+            "compressed_bytes": 2173176,
+            "data_offset": 432176593,
+            "dictionary_offset": 431876019,
+            "max": "1099.99",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2534378
+          },
+          {
+            "compressed_bytes": 2194321,
+            "data_offset": 434351240,
+            "dictionary_offset": 434049195,
+            "max": "1099.99",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2537791
+          },
+          {
+            "compressed_bytes": 2562429,
+            "data_offset": 436659607,
+            "dictionary_offset": 436243516,
+            "max": "177899351.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2822585
+          },
+          {
+            "compressed_bytes": 8920,
+            "data_offset": 438809575,
+            "dictionary_offset": 438805945,
+            "max": "ZHEXF",
+            "min": "AACTF",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 10036
+          }
+        ],
+        "row_group": 30,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 2120355,
+            "data_offset": 438967591,
+            "dictionary_offset": 438814865,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 2136196
+          },
+          {
+            "compressed_bytes": 2354853,
+            "data_offset": 441302337,
+            "dictionary_offset": 440935220,
+            "max": "13000.0",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2707453
+          },
+          {
+            "compressed_bytes": 2339264,
+            "data_offset": 443651327,
+            "dictionary_offset": 443290073,
+            "max": "13000.0",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2692816
+          },
+          {
+            "compressed_bytes": 2325691,
+            "data_offset": 445989493,
+            "dictionary_offset": 445629337,
+            "max": "13000.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2691128
+          },
+          {
+            "compressed_bytes": 2331342,
+            "data_offset": 448316692,
+            "dictionary_offset": 447955028,
+            "max": "13000.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2695039
+          },
+          {
+            "compressed_bytes": 2630789,
+            "data_offset": 450754033,
+            "dictionary_offset": 450286370,
+            "max": "56086597.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2922718
+          },
+          {
+            "compressed_bytes": 10365,
+            "data_offset": 452921594,
+            "dictionary_offset": 452917159,
+            "max": "ZUSFF",
+            "min": "AAAA",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 11788
+          }
+        ],
+        "row_group": 31,
+        "rows": 1048576
+      },
+      {
+        "columns": [
+          {
+            "compressed_bytes": 1698041,
+            "data_offset": 453077824,
+            "dictionary_offset": 452927524,
+            "max": "2026-03-31 23:59:00+00:00",
+            "min": "2026-03-02 09:00:00+00:00",
+            "name": "timestamp",
+            "nulls": 0,
+            "uncompressed_bytes": 1715718
+          },
+          {
+            "compressed_bytes": 1861483,
+            "data_offset": 454933106,
+            "dictionary_offset": 454625565,
+            "max": "2011.4",
+            "min": "1e-06",
+            "name": "open",
+            "nulls": 0,
+            "uncompressed_bytes": 2169110
+          },
+          {
+            "compressed_bytes": 1861991,
+            "data_offset": 456795016,
+            "dictionary_offset": 456487048,
+            "max": "2011.4",
+            "min": "1e-06",
+            "name": "high",
+            "nulls": 0,
+            "uncompressed_bytes": 2164659
+          },
+          {
+            "compressed_bytes": 1849368,
+            "data_offset": 458653272,
+            "dictionary_offset": 458349039,
+            "max": "2007.0",
+            "min": "1e-06",
+            "name": "low",
+            "nulls": 0,
+            "uncompressed_bytes": 2158490
+          },
+          {
+            "compressed_bytes": 1871345,
+            "data_offset": 460505730,
+            "dictionary_offset": 460198407,
+            "max": "2007.0",
+            "min": "1e-06",
+            "name": "close",
+            "nulls": 0,
+            "uncompressed_bytes": 2170987
+          },
+          {
+            "compressed_bytes": 2084794,
+            "data_offset": 462463358,
+            "dictionary_offset": 462069752,
+            "max": "88220793.0",
+            "min": "1.0",
+            "name": "volume",
+            "nulls": 0,
+            "uncompressed_bytes": 2330044
+          },
+          {
+            "compressed_bytes": 7206,
+            "data_offset": 464157602,
+            "dictionary_offset": 464154546,
+            "max": "ZYME",
+            "min": "AACI",
+            "name": "ticker",
+            "nulls": 0,
+            "uncompressed_bytes": 8129
+          }
+        ],
+        "row_group": 32,
+        "rows": 825495
+      }
+    ],
+    "rows": 34379927,
+    "schema": "timestamp: timestamp[ns, tz=UTC]\nopen: double\nhigh: double\nlow: double\nclose: double\nvolume: double\nticker: string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 898"
+  },
+  "groups": [
+    {
+      "compressed_bytes": 14325943,
+      "row_group": 0,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 13569188,
+      "row_group": 1,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 14197004,
+      "row_group": 2,
+      "rows": 1048576,
+      "selected_counts": {
+        "AMD": 15532
+      }
+    },
+    {
+      "compressed_bytes": 14313673,
+      "row_group": 3,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 13559243,
+      "row_group": 4,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 14228379,
+      "row_group": 5,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 14598250,
+      "row_group": 6,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 14331140,
+      "row_group": 7,
+      "rows": 1048576,
+      "selected_counts": {
+        "WFC": 9430
+      }
+    },
+    {
+      "compressed_bytes": 14314456,
+      "row_group": 8,
+      "rows": 1048576,
+      "selected_counts": {
+        "MS": 9112,
+        "VZ": 9689
+      }
+    },
+    {
+      "compressed_bytes": 14092520,
+      "row_group": 9,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 13320943,
+      "row_group": 10,
+      "rows": 1048576,
+      "selected_counts": {
+        "CVX": 10903
+      }
+    },
+    {
+      "compressed_bytes": 14118105,
+      "row_group": 11,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 13965083,
+      "row_group": 12,
+      "rows": 1048576,
+      "selected_counts": {
+        "CSCO": 9732,
+        "JNJ": 8794
+      }
+    },
+    {
+      "compressed_bytes": 14405770,
+      "row_group": 13,
+      "rows": 1048576,
+      "selected_counts": {
+        "TSLA": 20142
+      }
+    },
+    {
+      "compressed_bytes": 14665187,
+      "row_group": 14,
+      "rows": 1048576,
+      "selected_counts": {
+        "MA": 8980
+      }
+    },
+    {
+      "compressed_bytes": 14154994,
+      "row_group": 15,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 13725899,
+      "row_group": 16,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 14571567,
+      "row_group": 17,
+      "rows": 1048576,
+      "selected_counts": {
+        "MRK": 8940,
+        "SBUX": 9161
+      }
+    },
+    {
+      "compressed_bytes": 14270312,
+      "row_group": 18,
+      "rows": 1048576,
+      "selected_counts": {
+        "BAC": 10635
+      }
+    },
+    {
+      "compressed_bytes": 13598157,
+      "row_group": 19,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 14010254,
+      "row_group": 20,
+      "rows": 1048576,
+      "selected_counts": {
+        "AAPL": 13666,
+        "AMZN": 15146
+      }
+    },
+    {
+      "compressed_bytes": 14219665,
+      "row_group": 21,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 14573795,
+      "row_group": 22,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 14257853,
+      "row_group": 23,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 14533539,
+      "row_group": 24,
+      "rows": 1048576,
+      "selected_counts": {
+        "PEP": 8854
+      }
+    },
+    {
+      "compressed_bytes": 14416828,
+      "row_group": 25,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 14670017,
+      "row_group": 26,
+      "rows": 1048576,
+      "selected_counts": {
+        "COP": 9952
+      }
+    },
+    {
+      "compressed_bytes": 14144162,
+      "row_group": 27,
+      "rows": 1048576,
+      "selected_counts": {
+        "BA": 9976
+      }
+    },
+    {
+      "compressed_bytes": 13884343,
+      "row_group": 28,
+      "rows": 1048576,
+      "selected_counts": {
+        "XOM": 12052
+      }
+    },
+    {
+      "compressed_bytes": 14392199,
+      "row_group": 29,
+      "rows": 1048576,
+      "selected_counts": {}
+    },
+    {
+      "compressed_bytes": 13386393,
+      "row_group": 30,
+      "rows": 1048576,
+      "selected_counts": {
+        "KO": 9602
+      }
+    },
+    {
+      "compressed_bytes": 14112659,
+      "row_group": 31,
+      "rows": 1048576,
+      "selected_counts": {
+        "AVGO": 16135
+      }
+    },
+    {
+      "compressed_bytes": 11234228,
+      "row_group": 32,
+      "rows": 825495,
+      "selected_counts": {}
+    }
+  ],
+  "measured_range_body_bytes": 390943,
+  "note": "Ticker presence only; timestamp/OHLCV quality not yet established",
+  "projected_selected_group_fraction": 0.4885529495065261,
+  "selected_row_groups_compressed_bytes": 226782829,
+  "source": {
+    "bytes": 464192938,
+    "downloaded_bytes": 0,
+    "git_blob_oid": "079b5d95d25da9a35f41d157c81f289200332afd",
+    "lfs_sha256": "8d04558b3dbf93f9be2f10cceabf1667224f370a2c0da65d24faa67f389b5559",
+    "month": "2026-03",
+    "path": "data/ohlcv_2026-03.parquet",
+    "persisted_raw_rows": null,
+    "transfer_status": "NOT_REQUESTED_RIGHTS_GATE",
+    "xet_hash": "22ce558e0b8646d981addbe1346d10bd516050df798fac5f7ce9504c1e732604"
+  },
+  "source_rows": 34379927
+}
