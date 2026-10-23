@@ -56,6 +56,8 @@ SECTIONS = (
     "B1 Normalization (012B)",
     "HF20: TM0 vs T2",
     "HF1M Long — 20 stocks (2010–2025)",
+    "HF1M Long — Objective Improvement Screen (P022)",
+    "HF1M Long — Direction / Quantiles / Sampling (P023)",
 )
 PLOT_CONFIG = {"displaylogo": False, "scrollZoom": True, "modeBarButtonsToRemove": ["toImage"]}
 
@@ -784,6 +786,22 @@ def main() -> None:
     st.sidebar.title("Track A")
     st.sidebar.caption("Research explorer · local / read-only")
     section = st.sidebar.radio("Explore", SECTIONS, key="section")
+    if section == "HF1M Long — Direction / Quantiles / Sampling (P023)":
+        from lstm_data.visualization.dm_quantile_ui import panel as dm_quantile_panel
+
+        try:
+            dm_quantile_panel(ROOT)
+        except (OSError, ValueError, KeyError) as exc:
+            st.error(str(exc))
+        return
+    if section == "HF1M Long — Objective Improvement Screen (P022)":
+        from lstm_data.visualization.objective_screen_ui import panel as objective_panel
+
+        try:
+            objective_panel(ROOT)
+        except (OSError, ValueError, KeyError) as exc:
+            st.error(str(exc))
+        return
     if section == "HF1M Long — 20 stocks (2010–2025)":
         from lstm_data.visualization.hf1m_long_ui import panel as long_panel
 

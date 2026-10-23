@@ -5,8 +5,10 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import resource
 import sys
+import tempfile
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -15,6 +17,7 @@ import numpy as np
 import pandas as pd
 import torch
 
+from . import objective_screen_authority
 from .config import fingerprint, now, write_json
 from .hf1m_ft16_source import ref
 from .hf1m_training_data import TrainingView
@@ -28,7 +31,6 @@ from .neural_engine import (
     session_losses,
 )
 from .neural_lifecycle import state_hash
-from .objective_screen_authority import append, ensure
 from .objective_screen_loss import ARMS, RUNS, Objective, model_for
 from .objective_screen_metrics import classification, regression
 from .objective_screen_source import ordered_targets, scoped_view
@@ -274,8 +276,35 @@ def storage_bytes(roots: list[Path]) -> int:
     )
 
 
+def record_epoch(public: Path, epochs: list[dict]) -> None:
+    """Keep immutable epoch receipts and atomically refresh the progress snapshot."""
+    if not epochs:
+        raise ValueError("P022_NONEMPTY_EPOCH_RECEIPT")
+    record = epochs[-1]
+    phase = record["phase"]
+    epoch = record["training"]["epoch"]
+    if phase not in {"calibration", "refit"} or epoch < 1:
+        raise ValueError("P022_VALID_EPOCH_RECEIPT")
+    write_json(public / "epoch_receipts" / f"{phase}_{epoch:03d}.json", record)
+    fd, temporary = tempfile.mkstemp(dir=public, prefix=".progress-")
+    try:
+        with os.fdopen(fd, "w") as stream:
+            json.dump(epochs, stream, indent=2, sort_keys=True)
+            stream.write("\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temporary, public / "epochs_progress.json")
+    finally:
+        Path(temporary).unlink(missing_ok=True)
+
+
 def run(plan: Path, approval: Path, run_id: str) -> None:
-    p = ensure(plan, approval, run_id)
+    authority = objective_screen_authority
+    if json.loads(plan.read_text()).get("recovery") == "P022_PROGRESS_REPAIR_V1":
+        from . import objective_screen_recovery
+
+        authority = objective_screen_recovery
+    p = authority.ensure(plan, approval, run_id)
     initial_storage = storage_bytes([Path("data"), Path("artifacts"), Path("reports")])
     if initial_storage + p["resources"]["additional_storage_ceiling_bytes"] > 10_000_000_000:
         raise ValueError("P022_STORAGE_RESERVATION_EXCEEDS_10GB")
@@ -299,7 +328,7 @@ def run(plan: Path, approval: Path, run_id: str) -> None:
     policies = {
         split: Objective(arm, p["recipes"][v.source.fit_version]) for split, v in views.items()
     }
-    append(plan, approval, run_id, "STARTED", {"execution": p["execution_sha256"]})
+    authority.append(plan, approval, run_id, "STARTED", {"execution": p["execution_sha256"]})
     try:
         model = model_for(arm)
         initial = state_hash(model)
@@ -309,7 +338,7 @@ def run(plan: Path, approval: Path, run_id: str) -> None:
         epochs = []
         telemetry = destination / "optimizer_batches.jsonl"
         while selector.status == "CALIBRATING":
-            ensure(plan, approval, run_id)
+            authority.ensure(plan, approval, run_id)
             e = selector.epoch + 1
             training = epoch_pass(
                 model, views["inner_train"], e, policies["inner_train"], opt, telemetry
@@ -335,7 +364,7 @@ def run(plan: Path, approval: Path, run_id: str) -> None:
                 qualifies=qualifies,
             )
             epochs.append(record)
-            write_json(public / "epochs_progress.json", epochs)
+            record_epoch(public, epochs)
             print(
                 json.dumps(
                     dict(
@@ -365,7 +394,7 @@ def run(plan: Path, approval: Path, run_id: str) -> None:
             dict(**common, fit_version="inner", recipe=p["recipes"]["inner"]),
             arm,
         )
-        append(
+        authority.append(
             plan,
             approval,
             run_id,
@@ -385,14 +414,14 @@ def run(plan: Path, approval: Path, run_id: str) -> None:
         opt = optimizer(model)
         if opt.state:
             raise ValueError("P022_FRESH_OPTIMIZER")
-        append(
+        authority.append(
             plan, approval, run_id, "REFITTING", dict(initial_hash=initial, optimizer_empty=True)
         )
         for e in range(1, selector.selected + 1):
-            ensure(plan, approval, run_id)
+            authority.ensure(plan, approval, run_id)
             training = epoch_pass(model, views["refit"], e, policies["refit"], opt, telemetry)
             epochs.append(dict(phase="refit", training=training))
-            write_json(public / "epochs_progress.json", epochs)
+            record_epoch(public, epochs)
             print(
                 json.dumps(
                     dict(
@@ -440,7 +469,9 @@ def run(plan: Path, approval: Path, run_id: str) -> None:
             development_numeric_access=False,
         )
         write_json(public / "run_result.json", result)
-        append(plan, approval, run_id, "COMPLETED", dict(result=ref(public / "run_result.json")))
+        authority.append(
+            plan, approval, run_id, "COMPLETED", dict(result=ref(public / "run_result.json"))
+        )
         write_json(
             plan.parent / f"stage_{3 + RUNS.index(run_id):02d}_{arm}_gate.json",
             dict(
@@ -460,7 +491,7 @@ def run(plan: Path, approval: Path, run_id: str) -> None:
             "Development comparison remains deferred until all four arms pass.\n"
         )
     except Exception as exc:
-        append(
+        authority.append(
             plan, approval, run_id, "FAILED", dict(error_type=type(exc).__name__, error=str(exc))
         )
         write_json(
