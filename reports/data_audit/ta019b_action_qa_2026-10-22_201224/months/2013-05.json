@@ -1,0 +1,30 @@
+{
+  "month": "2013-05",
+  "rth_canonical": 168975,
+  "quarantined_minutes": 0,
+  "hour_rows": 3080,
+  "affected_hours": 0,
+  "observed_volume_conserved": true,
+  "endpoint_factors_match_original": true,
+  "grid_counts_unchanged": true,
+  "rescan_candidates": [
+    {
+      "ticker": "TSLA",
+      "timestamp_utc": "2013-05-09 13:30:00+00:00",
+      "rules": [
+        "ALL_SESSION_OPEN_BREAK"
+      ],
+      "mapped_event_ids": [],
+      "status": "STOP_SYSTEMIC_ACTION_RISK"
+    }
+  ],
+  "files": {
+    "hourly": {
+      "path": "data/processed/hf20_hf1m_long_v1_action_qa_v1/ta019b_action_qa_2026-10-22_201224/hourly/2013-05.parquet",
+      "bytes": 245105,
+      "sha256": "c303e32ebf9afba1f657642ad69ed2b022c35000e10f196d1b7e3acfbf1e2de2",
+      "rows": 3080
+    }
+  },
+  "scan_state_sha256": "561d32be67ac31da0bc362eea809dca29c8d78567cf372efd058b33232f0504d"
+}

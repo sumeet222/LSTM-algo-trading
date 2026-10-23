@@ -1,0 +1,18 @@
+{
+  "pytest_command": ".venv/bin/python -m pytest tests/test_hf1m_action_source.py tests/test_hf1m_action_audit.py tests/test_hf_minute_long.py -q",
+  "pytest_result": "61 passed in 11.61s",
+  "ruff_command": ".venv/bin/ruff check . --output-format concise",
+  "ruff_result": "All checks passed",
+  "static_command": ".venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist",
+  "static_summary": {
+    "filesAnalyzed": 282,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 29.14
+  },
+  "editor_verification": "Human only: select repository .venv/bin/python; restart Pylance; refresh Problems; confirm zero project-owned errors. CLI parity is verified, editor refresh not asserted.",
+  "cli_smokes": "all four new module --help commands pass; source/masks/closure/docs exact replay pass",
+  "independent_reconstruction": "67 hours PASS",
+  "full_suite_run": false
+}

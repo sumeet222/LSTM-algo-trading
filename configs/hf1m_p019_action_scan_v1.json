@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "dataset": "mito0o852/OHLCV-1m",
+  "revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+  "namespace": "HF20_HF1M_LONG_v1",
+  "manifest": "reports/data_audit/ta018d_hf1m_long_2026-10-22_155547/complete_acquisition_manifest.json",
+  "manifest_sha256": "2b8f9165b0387acaf650d1f1514afb8b41d081aacc9b2056b2f6efa496adf40c",
+  "start_month": "2010-07",
+  "end_month": "2026-03",
+  "symbols": ["VZ", "COP", "BAC", "BA", "AAPL", "PEP", "MRK", "SBUX", "CVX", "MS", "AMD", "KO", "JNJ", "AMZN", "XOM", "WFC", "AVGO", "TSLA", "MA", "CSCO"],
+  "symmetric_ratio_threshold": 1.25,
+  "intraminute_high_low_threshold": 1.5,
+  "rules": [
+    "ALL_SESSION_ADJACENT_CLOSE: absolute log close/previous genuine close > log(1.25)",
+    "ALL_SESSION_OPEN_BREAK: absolute log open/previous genuine close > log(1.25)",
+    "RTH_ADJACENT_CLOSE: same threshold on consecutive RTH genuine observations, including month/overnight boundaries",
+    "MINUTE_BODY: absolute log close/open > log(1.25)",
+    "MINUTE_RANGE: high/low > 1.5",
+    "SESSION_MEDIAN_SHIFT: absolute log median(first 30 observed RTH closes)/median(previous session last 30 observed RTH closes) > log(1.25)"
+  ],
+  "interpretation": "Detection only. No ratio proves a split or vendor error. Symmetric threshold means >25% up or >20% down. Multiple rules at the same ticker/minute merge. Later observations support retrospective event diagnosis only; never model features or admission.",
+  "missingness": "Canonical excludes conflicts/invalids; proxies never scanned as genuine. Record elapsed time and RTH/EH endpoints. No overnight/holiday interpolation. UTC order and stored exchange-calendar RTH flag; ET dates use America/New_York. All names publicly listed by active July2010 scope; no pre-scope reads.",
+  "release": "No automatic PASS; every candidate requires external evidence, coherent handling and post-treatment verification. No adjustment or downstream model capability in this scanner."
+}

@@ -1,0 +1,33 @@
+{
+  "month": "2015-08",
+  "rth_canonical": 162510,
+  "quarantined_minutes": 0,
+  "hour_rows": 2940,
+  "affected_hours": 0,
+  "observed_volume_conserved": true,
+  "endpoint_factors_match_original": true,
+  "grid_counts_unchanged": true,
+  "rescan_candidates": [
+    {
+      "ticker": "SBUX",
+      "timestamp_utc": "2015-08-24 13:30:00+00:00",
+      "rules": [
+        "ALL_SESSION_ADJACENT_CLOSE",
+        "RTH_ADJACENT_CLOSE"
+      ],
+      "mapped_event_ids": [
+        "P019-054"
+      ],
+      "status": "RETAIN_VERIFIED_MOVE"
+    }
+  ],
+  "files": {
+    "hourly": {
+      "path": "data/processed/hf20_hf1m_long_v1_action_qa_v1/ta019b_action_qa_2026-10-22_201224/hourly/2015-08.parquet",
+      "bytes": 229742,
+      "sha256": "93c902e7282883002291a23f9164ff51a89ffd584eff1fc2e92f8a5c1cd0ad0d",
+      "rows": 2940
+    }
+  },
+  "scan_state_sha256": "36734acbc404cc608753dfa1f944a0f88bb021b030d7c3cea8e359617fac1881"
+}

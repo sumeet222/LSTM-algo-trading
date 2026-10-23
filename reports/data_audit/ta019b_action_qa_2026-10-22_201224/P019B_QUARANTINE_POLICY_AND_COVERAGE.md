@@ -1,0 +1,56 @@
+# P019B quarantine policy and coverage
+
+**PRE_FEATURE_READY_WITH_QUARANTINES — source and availability masks only.** As of 2026-10-22. Namespace `HF20_HF1M_LONG_v1_ACTION_QA_v1`; exclusively `mito0o852/OHLCV-1m`, immutable revision `776328445b7ac6e7815ef3a483e9c8ded1eb6d56`, July 1, 2010–March 31, 2026. Four-hour same-session endpoint potential; no returns or targets calculated.
+
+Canonical order: VZ, COP, BAC, BA, AAPL, PEP, MRK, SBUX, CVX, MS, AMD, KO, JNJ, AMZN, XOM, WFC, AVGO, TSLA, MA, CSCO. All 20 retained.
+
+Rights: `HUMAN_REPORTED_MAINTAINER_PERMISSION_FOR_PRIVATE_RESEARCH`; not independent legal certification. Raw prices and detailed price examples remain local/ignored. UNRESOLVED means evidence does not establish an exact interpretation or price treatment; it does not mean fraud or that prices are fabricated.
+
+## Count reconciliation
+
+| Disposition | Candidate minutes | Canonical ticker/date groups |
+| --- | --- | --- |
+| COP_2012_SPINOFF_LOCAL_BOUNDARY | 1 | 1 |
+| KO_MIXED_BASIS_PREMARKET | 3 | 1 |
+| UNVERIFIED_EH_OUT_OF_SCOPE | 24 | 10 |
+| UNVERIFIED_RTH_LOCAL_QUARANTINE | 18 | 12 |
+| VERIFIED_GENUINE_MOVE_RETAINED | 6 | 6 |
+| VERIFIED_SPLIT_ADJUSTED | 17 | 9 |
+
+Original 67 = 17 split candidate minutes (9 actions) + 4 genuine moves + 46 policy-handled candidates. The RTH-only rescan exposed two additional genuine earnings gaps, so final 69 = 17 + 6 + 46. The 46 original blocker IDs remain exactly P019-001…P019-046: 18 RTH suspect minutes, 24 EH records, 3 KO EH records and 1 COP boundary. They represent 24 ticker/date policy groups, not 46 unique RTH candles removed. Multiple flags/rows at one timestamp merge under one event ID; same-date groups list every alias below.
+
+The 18 RTH minutes affect 14 distinct bins (11 full hours, 3 closing stubs). Their independently genuine scheduled closes remain usable. COP adds one direct boundary and 806 full-hour feature-history dependencies. Origin dependency union is 401 unique scheduled origins: 133 OHLC contexts plus 268 COP price-basis contexts. These footprints are not 401 new joint admission losses: other defects overlap. COP removes 142 otherwise jointly available training origins (5,352→5,210); RTH extreme-minute removal causes zero extra genuine future-endpoint losses. EH/KO excludes no RTH hours or origins.
+
+## Applied policy and causal scope
+
+UTC nanosecond minute starts are preserved; ET uses America/New_York with DST. XNYS open-anchored full hours and separate closing stubs retain the complete scheduled grid; missing positions are never compressed. All EH rows are excluded before aggregation, prior-close anchors, gaps and factor application. No past-session close can fill an opening minute.
+
+Verified splits adjust the entire earlier OHLC segment by the reciprocal of every later verified split, composed through March2026. This is an ex-post unit convention, not PIT price availability. Future feature code must use origin-basis factors or scale-invariant representations. Observed share volume remains as reported; no inverse split factor is justified, and `volume_basis_id` plus `origin_volume_history_basis_consistent` expose regime crossings. No dividend or COP distribution factor, replacement vendor price, clipping or smoothing is used.
+
+All five fields of each suspect RTH minute are excluded. Independent scheduled first/last genuine-minute open/close survive where present. High/low are marked untrusted and set missing in affected bins; remaining observed extrema are private QA only. Observed-volume sums exclude quarantined prints and remain incomplete, never measured zero by imputation. True observed zeros survive. Existing 018D causal price-only cap5 proxies may support input-close continuity, but never label endpoints. No proxy is used anywhere in an anomaly-containing bin or across opening/session/action discontinuities; unknown volume remains unknown.
+
+Hour columns include `genuine_open`, `genuine_close`, `hour_usable_price_endpoints`, `hour_field_usable_open/close/high/low` and `hour_field_usable_complete_volume`, `hour_proxy_price_usable`, `missing_count`, `conflict_count`, `proxy_count`, `quarantine_count`, `observed_volume_complete`, `untrusted_fields`, `anomaly_event_ids`, `price_basis_id`, `action_boundary` and the companion `hour_feature_dependency_action_crossing`. The private overlay contains masks, not replacement prices.
+
+Origin columns include `origin_input_48_cap0`, `origin_input_48_cap5`, `origin_input_48_eligible` (cap5 closing-price upper bound), `origin_input_ohlc48_potential`, `origin_volume48_complete`, `action_crossing_input`, `origin_future_4h_eligible` and `origin_cross_section_20_eligible`. Input masks use past-only availability plus structural 126-regular-session/360-genuine-hour warmup; they do not compute any indicator. Future endpoint availability is separate and never changes input eligibility. Four-hour endpoints are genuine 10:30→14:30 or 11:30→15:30 ET completed closes on six-full-hour sessions only; no stubs, overnight horizons or proxies. The two-minute issuance assumption is clock metadata, not certification of vendor publication latency.
+
+## Coverage and proposed chronology
+
+| Window | Scheduled | Genuine future20 | Input20 cap0 / joint | Input20 cap5 / joint | Before joint5 | OHLC joint | Complete volume48 joint |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| full_source | 7854 | 6319 | 453 / 441 | 6756 / 5619 | 5761 | 360 | 0 |
+| research_proposal | 7476 | 6084 | 453 / 441 | 6630 / 5521 | 5663 | 360 | 0 |
+| train_proposal | 7104 | 5773 | 441 / 430 | 6258 / 5210 | 5352 | 308 | 0 |
+| development_proposal | 250 | 194 | 4 / 3 | 250 / 194 | 194 | 35 | 0 |
+| protected_source_quality_only | 122 | 117 | 8 / 8 | 122 / 117 | 117 | 17 | 0 |
+
+Proposed quality-only research span April1,2011–March31,2026 (15 calendar years), with July2010–March2011 startup history. Proposed training April2011–June2025 (14 years 3 months), development July–December2025, protected January–March2026. These are count filters/proposals, not materialized splits. Protected raw quality was inspected; no model outcome was accessed. Window/cohort choice is retrospective and survivorship conditioned, not PIT membership.
+
+Training cap5 joint retention is 73.3390%; development 77.6000%. Sequential training loss decomposition: 7,104 scheduled→6,258 all20 past-input availability (846 fail warmup/past missingness/basis guard)→5,210 also genuine all20 future endpoints (1,048 further failures). Development 250→250→194 (56 endpoint failures). Before-action counts are unsafe presence-only diagnostics, never an admissible training source.
+
+These 5,210/194 origins are closing-price availability upper bounds, **not final 16-channel FT admission**. Strict OHLC joint potential is only 308 training /35 development; there is no complete 48-step volume window across all20. Long daily-indicator validity, channel missingness, volume regime handling and any train-fitted fallback require a separately approved feature implementation. Do not invent volume, silently drop channels or loosen rules to promote these upper bounds to FT-ready counts.
+
+Weakest training-coverage names are MA and AVGO. Hypothetically excluding AVGO gives 5,533 joint origins; MA 5,540; both 5,885, versus all20 5,210. These are quality-only counterfactual counts, not a changed cohort or smaller TG. All20 remain mandatory. [weak_stock_counterfactuals_v2.csv](weak_stock_counterfactuals_v2.csv).
+
+Exact stock/year before/after input and endpoint counts: [stock_year_candidate_counts_v2.csv](stock_year_candidate_counts_v2.csv); annual joint counts: [yearwide_candidate_counts_v2.json](yearwide_candidate_counts_v2.json).
+
+[Full root register](../../../UNRESOLVED_MARKET_DATA_ANOMALIES.md).

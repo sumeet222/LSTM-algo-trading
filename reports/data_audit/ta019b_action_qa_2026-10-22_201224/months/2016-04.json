@@ -1,0 +1,32 @@
+{
+  "month": "2016-04",
+  "rth_canonical": 163028,
+  "quarantined_minutes": 0,
+  "hour_rows": 2940,
+  "affected_hours": 0,
+  "observed_volume_conserved": true,
+  "endpoint_factors_match_original": true,
+  "grid_counts_unchanged": true,
+  "rescan_candidates": [
+    {
+      "ticker": "AMD",
+      "timestamp_utc": "2016-04-22 13:30:00+00:00",
+      "rules": [
+        "SESSION_MEDIAN_SHIFT"
+      ],
+      "mapped_event_ids": [
+        "P019-055"
+      ],
+      "status": "RETAIN_VERIFIED_MOVE"
+    }
+  ],
+  "files": {
+    "hourly": {
+      "path": "data/processed/hf20_hf1m_long_v1_action_qa_v1/ta019b_action_qa_2026-10-22_201224/hourly/2016-04.parquet",
+      "bytes": 226524,
+      "sha256": "cee9effb5506628dbd26e01ea28d9835bd391e80a21e41fc66dfc2e06ad58dec",
+      "rows": 2940
+    }
+  },
+  "scan_state_sha256": "15fe1f82c05895e974fbbd71ba9d2950b90e7e0cbb420031ce5c49f4247903ff"
+}

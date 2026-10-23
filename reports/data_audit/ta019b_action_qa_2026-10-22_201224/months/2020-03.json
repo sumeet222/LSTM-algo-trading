@@ -1,0 +1,35 @@
+{
+  "month": "2020-03",
+  "rth_canonical": 170379,
+  "quarantined_minutes": 0,
+  "hour_rows": 3080,
+  "affected_hours": 0,
+  "observed_volume_conserved": true,
+  "endpoint_factors_match_original": true,
+  "grid_counts_unchanged": true,
+  "rescan_candidates": [
+    {
+      "ticker": "COP",
+      "timestamp_utc": "2020-03-09 13:30:00+00:00",
+      "rules": [
+        "ALL_SESSION_ADJACENT_CLOSE",
+        "ALL_SESSION_OPEN_BREAK",
+        "RTH_ADJACENT_CLOSE",
+        "SESSION_MEDIAN_SHIFT"
+      ],
+      "mapped_event_ids": [
+        "P019-056"
+      ],
+      "status": "RETAIN_VERIFIED_MOVE"
+    }
+  ],
+  "files": {
+    "hourly": {
+      "path": "data/processed/hf20_hf1m_long_v1_action_qa_v1/ta019b_action_qa_2026-10-22_201224/hourly/2020-03.parquet",
+      "bytes": 245678,
+      "sha256": "5ef448cc5753058252bd896458ad798171f51c2f6aee9e314cc584e313fb3221",
+      "rows": 3080
+    }
+  },
+  "scan_state_sha256": "8306b58bda72b3628be93002d57434006271bf21a929e02ae6053b15a3747268"
+}

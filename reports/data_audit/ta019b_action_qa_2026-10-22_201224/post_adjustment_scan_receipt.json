@@ -1,0 +1,90 @@
+{
+  "scope": "ALL20_RTH_GENUINE_UNQUARANTINED; noEH",
+  "rth_rows": 30493892,
+  "candidates": [
+    {
+      "ticker": "COP",
+      "timestamp_utc": "2012-05-01 13:30:00+00:00",
+      "rules": [
+        "ALL_SESSION_ADJACENT_CLOSE",
+        "ALL_SESSION_OPEN_BREAK",
+        "RTH_ADJACENT_CLOSE",
+        "SESSION_MEDIAN_SHIFT"
+      ],
+      "mapped_event_ids": [
+        "P019-042"
+      ],
+      "status": "BOUNDARY_MASK"
+    },
+    {
+      "ticker": "TSLA",
+      "timestamp_utc": "2013-05-09 13:30:00+00:00",
+      "rules": [
+        "ALL_SESSION_OPEN_BREAK"
+      ],
+      "mapped_event_ids": [],
+      "status": "STOP_SYSTEMIC_ACTION_RISK"
+    },
+    {
+      "ticker": "SBUX",
+      "timestamp_utc": "2015-08-24 13:30:00+00:00",
+      "rules": [
+        "ALL_SESSION_ADJACENT_CLOSE",
+        "RTH_ADJACENT_CLOSE"
+      ],
+      "mapped_event_ids": [
+        "P019-054"
+      ],
+      "status": "RETAIN_VERIFIED_MOVE"
+    },
+    {
+      "ticker": "AMD",
+      "timestamp_utc": "2016-04-22 13:30:00+00:00",
+      "rules": [
+        "SESSION_MEDIAN_SHIFT"
+      ],
+      "mapped_event_ids": [
+        "P019-055"
+      ],
+      "status": "RETAIN_VERIFIED_MOVE"
+    },
+    {
+      "ticker": "AMD",
+      "timestamp_utc": "2018-10-25 13:30:00+00:00",
+      "rules": [
+        "ALL_SESSION_OPEN_BREAK"
+      ],
+      "mapped_event_ids": [],
+      "status": "STOP_SYSTEMIC_ACTION_RISK"
+    },
+    {
+      "ticker": "COP",
+      "timestamp_utc": "2020-03-09 13:30:00+00:00",
+      "rules": [
+        "ALL_SESSION_ADJACENT_CLOSE",
+        "ALL_SESSION_OPEN_BREAK",
+        "RTH_ADJACENT_CLOSE",
+        "SESSION_MEDIAN_SHIFT"
+      ],
+      "mapped_event_ids": [
+        "P019-056"
+      ],
+      "status": "RETAIN_VERIFIED_MOVE"
+    },
+    {
+      "ticker": "AMD",
+      "timestamp_utc": "2025-10-06 13:30:00+00:00",
+      "rules": [
+        "ALL_SESSION_ADJACENT_CLOSE",
+        "ALL_SESSION_OPEN_BREAK",
+        "RTH_ADJACENT_CLOSE",
+        "SESSION_MEDIAN_SHIFT"
+      ],
+      "mapped_event_ids": [
+        "P019-067"
+      ],
+      "status": "RETAIN_VERIFIED_MOVE"
+    }
+  ],
+  "uncontrolled": 2
+}

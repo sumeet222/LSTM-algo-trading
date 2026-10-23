@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "namespace": "HF20_HF1M_LONG_v1_ACTION_QA_v1",
+  "source_config": "configs/hf1m_p019_action_scan_v1.json",
+  "p019": "reports/data_audit/ta019_hf1m_actions_2026-10-22_193000_v3",
+  "evidence_sha256": "d285ffaea9fe60ef8f7904f3ea63abbb86518a793c83dd25a3c510c73ed82a5b",
+  "facts": "configs/hf1m_p019_verified_event_facts_v1.json",
+  "facts_sha256": "d96b1d50f9709cd56b8549c53bff1ea0bcf019d6d98405f9d8cee7d597f51340",
+  "price_basis": "Backward split-consistent OHLC in March2026 share units; retain raw references. Causal prefix factors available separately; future feature code must use scale-invariant or origin-basis representations.",
+  "volume_basis": "Genuine observed source share volume unchanged; no inverse split volume convention is independently verified. Cross-split volume dependencies flagged, not homogenized.",
+  "quarantine": "Exclude all five fields of18 unresolved RTH minutes; recompute from remaining genuine rows; high/low and volume completeness untrusted in affected hour, preserve independently genuine expected open/close. No proxy anywhere in an anomaly-containing hour. All EH excluded before aggregation or anchors. KO3 EH isolated; test consistent adjusted RTH. COP2012 retain levels but partition dependency basis at2012-05-01 RTH open.",
+  "proxy_caps": [0, 5],
+  "lookback": 48,
+  "daily_warmup_regular_sessions": 126,
+  "ema_warmup_genuine_hours": 360,
+  "research_window_proposal": ["2011-04-01", "2026-03-31"],
+  "proposed_train_end": "2025-06-30",
+  "proposed_development": ["2025-07-01", "2025-12-31"],
+  "protected_source_quality_only": ["2026-01-01", "2026-03-31"],
+  "no_features_targets_splits_or_training": true,
+  "storage_limit_bytes": 10000000000
+}

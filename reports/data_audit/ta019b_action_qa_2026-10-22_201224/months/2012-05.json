@@ -1,0 +1,35 @@
+{
+  "month": "2012-05",
+  "rth_canonical": 169781,
+  "quarantined_minutes": 0,
+  "hour_rows": 3080,
+  "affected_hours": 0,
+  "observed_volume_conserved": true,
+  "endpoint_factors_match_original": true,
+  "grid_counts_unchanged": true,
+  "rescan_candidates": [
+    {
+      "ticker": "COP",
+      "timestamp_utc": "2012-05-01 13:30:00+00:00",
+      "rules": [
+        "ALL_SESSION_ADJACENT_CLOSE",
+        "ALL_SESSION_OPEN_BREAK",
+        "RTH_ADJACENT_CLOSE",
+        "SESSION_MEDIAN_SHIFT"
+      ],
+      "mapped_event_ids": [
+        "P019-042"
+      ],
+      "status": "BOUNDARY_MASK"
+    }
+  ],
+  "files": {
+    "hourly": {
+      "path": "data/processed/hf20_hf1m_long_v1_action_qa_v1/ta019b_action_qa_2026-10-22_201224/hourly/2012-05.parquet",
+      "bytes": 243193,
+      "sha256": "c9fa706b4ae216c9ddc660dfee85d319e15551f9ac037cc6573ac91f36e0852e",
+      "rows": 3080
+    }
+  },
+  "scan_state_sha256": "f514785ab1d93bab75cc5953c9c638660b58f7048911ec4e6910ee5e8dfe091f"
+}

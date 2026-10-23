@@ -1,0 +1,93 @@
+{
+  "counts": {
+    "full_source": {
+      "schedule_origins": 7854,
+      "future20": 6319,
+      "input20_cap0": 453,
+      "joint20_cap0": 441,
+      "before_joint20_cap0": 441,
+      "input20_cap5": 6756,
+      "joint20_cap5": 5619,
+      "before_joint20_cap5": 5761,
+      "ohlc_joint20": 360,
+      "complete_volume48_joint20": 0
+    },
+    "research_proposal": {
+      "schedule_origins": 7476,
+      "future20": 6084,
+      "input20_cap0": 453,
+      "joint20_cap0": 441,
+      "before_joint20_cap0": 441,
+      "input20_cap5": 6630,
+      "joint20_cap5": 5521,
+      "before_joint20_cap5": 5663,
+      "ohlc_joint20": 360,
+      "complete_volume48_joint20": 0
+    },
+    "train_proposal": {
+      "schedule_origins": 7104,
+      "future20": 5773,
+      "input20_cap0": 441,
+      "joint20_cap0": 430,
+      "before_joint20_cap0": 430,
+      "input20_cap5": 6258,
+      "joint20_cap5": 5210,
+      "before_joint20_cap5": 5352,
+      "ohlc_joint20": 308,
+      "complete_volume48_joint20": 0
+    },
+    "development_proposal": {
+      "schedule_origins": 250,
+      "future20": 194,
+      "input20_cap0": 4,
+      "joint20_cap0": 3,
+      "before_joint20_cap0": 3,
+      "input20_cap5": 250,
+      "joint20_cap5": 194,
+      "before_joint20_cap5": 194,
+      "ohlc_joint20": 35,
+      "complete_volume48_joint20": 0
+    },
+    "protected_source_quality_only": {
+      "schedule_origins": 122,
+      "future20": 117,
+      "input20_cap0": 8,
+      "joint20_cap0": 8,
+      "before_joint20_cap0": 8,
+      "input20_cap5": 122,
+      "joint20_cap5": 117,
+      "before_joint20_cap5": 117,
+      "ohlc_joint20": 17,
+      "complete_volume48_joint20": 0
+    }
+  },
+  "weakest_two_training_coverage_only": [
+    "MA",
+    "AVGO"
+  ],
+  "structural": {
+    "full_hours": 23664,
+    "regular_sessions": 3927,
+    "candidate_origins": 7854
+  },
+  "before_counts_are_unsafe_presence_only": true,
+  "input_envelopes_are_not_final16_feature_admission": true,
+  "features_targets_transforms_fitted": false,
+  "files": {
+    "stock_origin_masks": {
+      "path": "data/processed/hf20_hf1m_long_v1_action_qa_v1/ta019b_action_qa_2026-10-22_201224/origin_masks.parquet",
+      "bytes": 91866,
+      "sha256": "ff117e05a78e6e35dc58cb895354ad566cb450c0631cea8d6cd908a28c58afee",
+      "rows": 157080
+    },
+    "origin_clock": {
+      "path": "data/processed/hf20_hf1m_long_v1_action_qa_v1/ta019b_action_qa_2026-10-22_201224/origin_clock.parquet",
+      "bytes": 224196,
+      "sha256": "cad8595d0bd5e8f9de4937c5c9caf79e937dab7fca140a9a2a5c8490ef63c61c",
+      "rows": 7854
+    }
+  },
+  "unique_origins_with_event_dependency": 401,
+  "unique_price_input_boundary_origins": 268,
+  "unique_ohlc_channel_dependency_origins": 133
+}
