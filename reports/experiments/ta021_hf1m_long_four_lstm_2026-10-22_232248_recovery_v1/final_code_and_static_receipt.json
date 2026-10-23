@@ -1,0 +1,45 @@
+{
+  "code": {
+    "apps/track_a_dashboard.py": "ed74f3c80c040d2c56ada3fb58e890da33fa533dd56167dbcc7b023c2b71802a",
+    "scripts/prepare_hf1m_training.py": "0d510ffa327dfb484c1145fffdfbec1b46056ca66fa2fb1b641ebcda367075f7",
+    "scripts/update_hf1m_viewer_bindings.py": "889eef3b23e02aeb4233dbf5fb32aea77aedf6be1b1c5238c0b3d2d84dbd76e5",
+    "src/lstm_data/hf1m_training_authority.py": "2d93d7b1802cafdf325c65d6bf375a941b760d903a7c1f924890c52396033e0f",
+    "src/lstm_data/hf1m_training_data.py": "ace7e3036a348a6dbb6a2bbbf0d19633e7bc2c9fbaa21a7ff386e013617302d4",
+    "src/lstm_data/hf1m_training_diagnostics.py": "6042c846214acb67147358a2d3b77fb4cbe8f9076008b36d55efe346573ff5df",
+    "src/lstm_data/hf1m_training_recovery.py": "dfee78b45b220422221480511a7b9c8ab212cfc4bc59fe8e6b8abbfa7b67c9bb",
+    "src/lstm_data/hf1m_training_report.py": "2c26f57aa7696fddea5b1dfacc9fcf047f7e2f1776103daf16d8b829881d1cdd",
+    "src/lstm_data/hf1m_training_run.py": "e730e96ac94e942a5ce00d964be897d819d29960ce4f77fee2a1b30b0c7ff31c",
+    "src/lstm_data/visualization/hf1m_long.py": "ea9dfaeb7b5dfe36a8c0d2c6614c215e42d24eba57c344d852bb3b6c6706b5da",
+    "src/lstm_data/visualization/hf1m_long_ui.py": "632bf3b58c1b220f2e174a8e64866f8ca33b0e23c7e3467df5002d7ff2bc1f03",
+    "tests/test_hf1m_long_visualization.py": "7929770d9fa9210b68f3126dc30cb3bd037698fcb91663606d811013fd5fc482",
+    "tests/test_hf1m_training.py": "b809e64764047280f28fb3ca1cecbcd105ccfa4e9fcbcd46c59077f858c31b25"
+  },
+  "diagnostic_execution_snapshots": [
+    {
+      "bytes": 10908,
+      "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/diagnostic_publication_execution_v1.py.txt",
+      "sha256": "3e76ce6c58e7b3cbb3b33a0ce676194a637e0f464381a35a880e21ef7071fb8f"
+    },
+    {
+      "bytes": 16561,
+      "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/diagnostic_extensions_execution_v2.py.txt",
+      "sha256": "18b8339dee643538b501b0baa76b4ece2a9934e3277dbcdd4e75f314b8f56bea"
+    }
+  ],
+  "editor_confirmation": "Human: select repository.venv/bin/python, restart Pylance, refresh Problems, confirm0 project errors. CLI parity passed; editor state not asserted.",
+  "frozen_execution_sha256": "95ec1c58f8c7f5b4a73803f3fe7a9795c3c9dee4ffc8fcbe3722566296e985a5",
+  "later_diagnostic_change": "type-safe string column guard and explicit JSON import; numerical algorithms and all saved outputs unchanged",
+  "static": {
+    "bytes": 13072,
+    "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/types_release_sealed.json",
+    "sha256": "b59b4afd729a68bfd610c79bcc7d80be96e6c7246440e36894b968b6ce96b302"
+  },
+  "status": "PASS_FINAL_CODE_AND_STATIC",
+  "summary": {
+    "errorCount": 0,
+    "filesAnalyzed": 304,
+    "informationCount": 0,
+    "timeInSec": 52.38,
+    "warningCount": 0
+  }
+}

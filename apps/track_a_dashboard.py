@@ -55,6 +55,7 @@ SECTIONS = (
     "Controlled Experiments",
     "B1 Normalization (012B)",
     "HF20: TM0 vs T2",
+    "HF1M Long — 20 stocks (2010–2025)",
 )
 PLOT_CONFIG = {"displaylogo": False, "scrollZoom": True, "modeBarButtonsToRemove": ["toImage"]}
 
@@ -124,6 +125,9 @@ def filter_frame(
 
 
 def start_here(c: Catalog) -> None:
+    from lstm_data.visualization.hf1m_long_ui import open_long
+
+    st.button("Open HF1M Long —20 stocks (2010–2025)", on_click=open_long, key="start_hf1m_long")
     from lstm_data.visualization.hf20_ui import open_hf20
 
     st.button("Open HF20: TM0 vs T2", on_click=open_hf20, key="start_hf20")
@@ -777,6 +781,17 @@ def provenance_page(c: Catalog, token: tuple) -> None:
 def main() -> None:
     st.set_page_config(page_title="Track A · Research Explorer", page_icon="📊", layout="wide")
     t = time.monotonic()
+    st.sidebar.title("Track A")
+    st.sidebar.caption("Research explorer · local / read-only")
+    section = st.sidebar.radio("Explore", SECTIONS, key="section")
+    if section == "HF1M Long — 20 stocks (2010–2025)":
+        from lstm_data.visualization.hf1m_long_ui import panel as long_panel
+
+        try:
+            long_panel(ROOT)
+        except (OSError, ValueError, KeyError) as exc:
+            st.error(str(exc))
+        return
     try:
         c = Catalog.discover(ROOT)
         token = c.token()
@@ -788,9 +803,6 @@ def main() -> None:
             "and provision the exact existing artifacts. No synthetic market data is displayed."
         )
         return
-    st.sidebar.title("Track A")
-    st.sidebar.caption("Research explorer · local / read-only")
-    section = st.sidebar.radio("Explore", SECTIONS, key="section")
     if section == "HF20: TM0 vs T2":
         from lstm_data.visualization.hf20_ui import panel as hf20_panel
 

@@ -1,0 +1,519 @@
+"""P021 frozen four-run executor with session weighting and full telemetry."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import platform
+import resource
+import time
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import torch
+
+from .config import fingerprint, now, write_json
+from .controlled_loss import LossPolicy
+from .hf1m_action_audit import SYMBOLS
+from .hf1m_ft16_source import ref
+from .hf1m_training_authority import IDS, append, ensure
+from .hf1m_training_data import COUNTS, TrainingView, load_views
+from .hf20_training_run import checkpoint, reload_checkpoint
+from .neural_engine import (
+    SharedLSTM,
+    batch_prediction,
+    clip,
+    optimizer,
+    seed_all,
+    session_batches,
+    session_losses,
+)
+from .neural_lifecycle import EarlyStop, state_hash
+
+
+def distribution(values: list[float] | np.ndarray, prefix: str) -> dict:
+    a = np.asarray(values, dtype=np.float64)
+    if not a.size or not np.isfinite(a).all():
+        raise ValueError("P021_FINITE_DISTRIBUTION_REQUIRED")
+    return {
+        prefix + "_" + k: float(v)
+        for k, v in {
+            "mean": a.mean(),
+            "sd": a.std(),
+            "min": a.min(),
+            "max": a.max(),
+            **{
+                f"p{int(q * 100):02d}": np.quantile(a, q)
+                for q in (0.01, 0.05, 0.5, 0.9, 0.95, 0.99)
+            },
+        }.items()
+    }
+
+
+def epoch_pass(
+    model: SharedLSTM,
+    view: TrainingView,
+    epoch: int,
+    seed: int,
+    policy: LossPolicy,
+    opt: torch.optim.AdamW | None = None,
+) -> tuple[dict, list[dict]]:
+    """Same frozen computation as neural_lifecycle; additional measured telemetry only."""
+    started = time.monotonic()
+    model.train(opt is not None)
+    objective_values, mse_values, mae_values, outputs = [], [], [], []
+    pre, post, batches, order = [], [], [], []
+    loader_seconds = 0.0
+    for number, positions in enumerate(
+        session_batches(len(view.sessions), seed, epoch, shuffle=opt is not None), 1
+    ):
+        load_at = time.monotonic()
+        batch = view.batch(positions)
+        load_seconds = time.monotonic() - load_at
+        loader_seconds += load_seconds
+        compute_at = time.monotonic()
+        order.extend(batch.ids)
+        with torch.set_grad_enabled(opt is not None):
+            raw = batch_prediction(model, batch)
+            pred = policy.canonical(raw)
+            objective = policy.objective(raw, batch.targets, batch.origins, stock_count=20)
+            mse = session_losses(pred, batch.targets, batch.origins, stock_count=20)
+            mae = ((pred - batch.targets).abs().mean(dim=2) * batch.origins).sum(
+                dim=1
+            ) / batch.origins.sum(dim=1)
+            if not bool(torch.isfinite(objective).all()):
+                raise ValueError("P021_NONFINITE_OBJECTIVE")
+            if opt is not None:
+                opt.zero_grad(set_to_none=True)
+                objective.mean().backward()
+                pre.append(clip(model))
+                post.append(
+                    float(
+                        torch.sqrt(
+                            sum(
+                                (
+                                    p.grad.square().sum()
+                                    for p in model.parameters()
+                                    if p.grad is not None
+                                ),
+                                torch.tensor(0.0),
+                            )
+                        )
+                    )
+                )
+                opt.step()
+                if any(not bool(torch.isfinite(p).all()) for p in model.parameters()):
+                    raise ValueError("P021_NONFINITE_WEIGHT")
+        objective_values.extend(objective.detach().tolist())
+        mse_values.extend(mse.detach().tolist())
+        mae_values.extend(mae.detach().tolist())
+        outputs.extend(pred.detach()[batch.origins].reshape(-1).tolist())
+        batches.append(
+            dict(
+                epoch=epoch,
+                batch=number,
+                sessions=len(batch.ids),
+                origins=int(batch.origins.sum()),
+                optimizer_step=opt is not None,
+                objective=float(objective.detach().mean()),
+                original_mse=float(mse.detach().mean()),
+                original_mae=float(mae.detach().mean()),
+                preclip_norm=pre[-1] if opt is not None else None,
+                postclip_norm=post[-1] if opt is not None else None,
+                loader_seconds=load_seconds,
+                compute_seconds=time.monotonic() - compute_at,
+            )
+        )
+    if len(order) != len(view.sessions) or len(set(order)) != len(order):
+        raise ValueError("P021_EXACT_SESSION_EPOCH_CONSERVATION")
+    result = dict(
+        epoch=epoch,
+        original_mse=float(np.mean(mse_values)),
+        original_mae=float(np.mean(mae_values)),
+        objective=float(np.mean(objective_values)),
+        objective_units="z squared" if policy.arm == "T2" else "TG20 squared",
+        measured_training_predictions="online pre-update, dropout active"
+        if opt is not None
+        else "fixed checkpoint, dropout disabled",
+        sessions=len(order),
+        stock_rows=len(outputs),
+        optimizer_steps=len(pre),
+        permutation_sha256=fingerprint(order),
+        seconds=time.monotonic() - started,
+        loader_seconds=loader_seconds,
+        clip_cap=1.0,
+        **distribution(objective_values, "objective_session"),
+        **distribution(outputs, "prediction"),
+    )
+    if pre:
+        result.update(
+            distribution(pre, "preclip"),
+            **distribution(post, "postclip"),
+            clipped_count=sum(v > 1 for v in pre),
+            clipped_fraction=float(np.mean(np.array(pre) > 1)),
+            nonfinite_count=0,
+        )
+    return result, batches
+
+
+def predictions(
+    model: SharedLSTM, view: TrainingView, policy: LossPolicy, identity: dict
+) -> pd.DataFrame:
+    """Full permitted population; retain original64 source targets and raw network space."""
+    model.eval()
+    frames = []
+    with torch.inference_mode():
+        for positions in session_batches(len(view.source.rows), 42, 1, shuffle=False):
+            b = view.origin_batch(positions)
+            raw = model(torch.from_numpy(b["x"].reshape(-1, 48, 16))).reshape(-1, 20)
+            pred = policy.canonical(raw).numpy().astype(np.float64)
+            rows = view.source.rows.iloc[list(positions)]
+            idx = pd.MultiIndex.from_product([rows.origin_id, SYMBOLS])
+            frame = (
+                view.source.targets.set_index(["origin_id", "ticker"]).reindex(idx).reset_index()
+            )
+            frame["raw_net_output"] = raw.numpy().reshape(-1)
+            frame["pred_original_TG20"] = pred.reshape(-1)
+            frame["actual_TG20"] = frame.TG20
+            frame["error"] = frame.pred_original_TG20 - frame.actual_TG20
+            frame["squared_error"] = frame.error**2
+            frame["abs_error"] = frame.error.abs()
+            frame["zero_prediction"] = 0.0
+            frame["zero_squared_error"] = frame.actual_TG20**2
+            frame["target_sign"] = np.sign(frame.actual_TG20)
+            frame["prediction_sign"] = np.sign(frame.pred_original_TG20)
+            frame["target_magnitude"] = frame.actual_TG20.abs()
+            for k, v in identity.items():
+                frame[k] = v
+            frame["partition"] = view.split
+            frame["phase"] = "calibration" if view.split.startswith("inner") else "refit"
+            frame["raw_output_units"] = "z" if policy.arm == "T2" else "TG20"
+            frame["inverse_count"] = int(policy.arm == "T2")
+            frame["t2_scale"] = view.source.fit["t2_scale"]
+            frames.append(frame)
+    result = pd.concat(frames, ignore_index=True)
+    if (
+        len(result) != COUNTS[view.split][0] * 20
+        or result.duplicated(["origin_id", "ticker"]).any()
+    ):
+        raise ValueError("P021_PREDICTION_POPULATION_REQUIRED")
+    if not np.isfinite(
+        result[["actual_TG20", "pred_original_TG20", "raw_net_output"]].to_numpy()
+    ).all():
+        raise ValueError("P021_FINITE_PREDICTION_REQUIRED")
+    return result
+
+
+def run(plan_path: Path, approval: Path, run_id: str) -> None:
+    started = time.monotonic()
+    p = ensure(plan_path, approval, run_id)
+    seed = int(p["run_specs"][run_id]["seed"])
+    arm = p["run_specs"][run_id]["arm"]
+    out = Path(p["private_root"]) / run_id
+    public = plan_path.parent / run_id
+    if out.exists() or public.exists():
+        raise ValueError("P021_IMMUTABLE_RUN_EXISTS_NO_RESTART")
+    views = load_views(Path(p["input_contract"]["path"]))
+    if {k: v.summary() for k, v in views.items()} != p["views"]:
+        raise ValueError("P021_INPUT_POPULATION_CHANGED")
+    torch.set_num_threads(p["cpu_threads"])
+    torch.set_num_interop_threads(1)
+    policies = {
+        k: LossPolicy(arm, scale=v.source.fit["t2_scale"] if arm == "T2" else 1.0)
+        for k, v in views.items()
+    }
+    out.mkdir(parents=True)
+    public.mkdir(parents=True)
+    append(plan_path, approval, run_id, "STARTED", dict(at=now(), code_sha256=p["code_sha256"]))
+    try:
+        write_json(
+            plan_path.parent / "stage1_frozen_experiment.json",
+            dict(
+                status="PASS_FROZEN_EXPERIMENT",
+                plan=ref(plan_path),
+                approval=ref(approval),
+                optimizer_steps_before_approval=0,
+            ),
+        )
+        seed_all(seed)
+        model = SharedLSTM()
+        initial = state_hash(model)
+        opt = optimizer(model)
+        selector = EarlyStop()
+        best = None
+        epochs = []
+        batches = []
+        while selector.status == "CALIBRATING":
+            ensure(plan_path, approval, run_id)
+            e = selector.epoch + 1
+            training, tb = epoch_pass(
+                model, views["inner_train"], e, seed, policies["inner_train"], opt
+            )
+            val, vb = epoch_pass(
+                model, views["inner_validation"], e, seed, policies["inner_validation"]
+            )
+            previous_best = selector.best
+            qualifies = selector.observe(val["original_mse"])
+            record = dict(
+                phase="calibration",
+                **training,
+                validation_mse=val["original_mse"],
+                validation_mae=val["original_mae"],
+                validation_seconds=val["seconds"],
+                qualifying=qualifies,
+                selected_epoch=selector.selected,
+                qualifying_best=selector.best,
+                raw_best=selector.raw_min,
+                raw_best_epoch=selector.raw_epoch,
+                relative_improvement=None
+                if previous_best in (None, 0)
+                else (previous_best - val["original_mse"]) / previous_best,
+                patience=selector.patience,
+                stop_reason=selector.status,
+            )
+            epochs.append(record)
+            batches.extend(dict(phase="calibration", **b) for b in tb)
+            batches.extend(dict(phase="validation", **b) for b in vb)
+            if qualifies:
+                best = {k: v.detach().clone() for k, v in model.state_dict().items()}
+            # Durable per-epoch progress survives failure without creating a restart right.
+            pd.DataFrame(epochs).to_csv(public / "epochs_progress.csv", index=False)
+            print(json.dumps(dict(run_id=run_id, **record)), flush=True)
+        if best is None:
+            raise ValueError("P021_NO_CALIBRATION_CHECKPOINT")
+        model.load_state_dict(best)
+        common = dict(
+            run_id=run_id,
+            seed=seed,
+            arm=arm,
+            architecture="TM0",
+            parameters=6433,
+            source_revision=p["source_revision"],
+            symbols=p["symbols"],
+            feature_id=p["feature_id"],
+            target_id=p["target_id"],
+            input_contract=p["input_contract"],
+            code_sha256=p["code_sha256"],
+            plan=ref(plan_path),
+            selected_epoch=selector.selected,
+        )
+        calibration_binding = dict(
+            **common,
+            stage="CALIBRATION_SELECTED",
+            fit_version="inner",
+            fit_recipe=p["fit_recipes"],
+            scale=views["inner_train"].source.fit["t2_scale"],
+        )
+        cal = checkpoint(out / "calibration_selected.pt", model, calibration_binding)
+        append(
+            plan_path,
+            approval,
+            run_id,
+            "CALIBRATED",
+            dict(selector=vars(selector), checkpoint=cal["checkpoint"]),
+        )
+        loaded = reload_checkpoint(out / "calibration_selected.pt", calibration_binding, cal)
+        reload_checks = []
+        for split in ("inner_train", "inner_validation"):
+            a = predictions(
+                model,
+                views[split],
+                policies[split],
+                dict(
+                    run_id=run_id, seed=seed, arm=arm, checkpoint_sha256=cal["checkpoint"]["sha256"]
+                ),
+            )
+            b = predictions(
+                loaded,
+                views[split],
+                policies[split],
+                dict(
+                    run_id=run_id, seed=seed, arm=arm, checkpoint_sha256=cal["checkpoint"]["sha256"]
+                ),
+            )
+            if not a.equals(b):
+                raise ValueError("P021_CALIBRATION_FULL_RELOAD_MISMATCH")
+            a.to_parquet(out / (split + "_predictions.parquet"), index=False)
+            reload_checks.append(dict(partition=split, rows=len(a), reload_max_error=0.0))
+        seed_all(seed)
+        final = SharedLSTM()
+        fresh = state_hash(final)
+        refit_opt = optimizer(final)
+        if initial != fresh or refit_opt.state or final is model or refit_opt is opt:
+            raise ValueError("P021_FRESH_SAME_SEED_REFIT_REQUIRED")
+        append(
+            plan_path,
+            approval,
+            run_id,
+            "REFITTING",
+            dict(initial_hash=fresh, optimizer_state_empty=True),
+        )
+        for e in range(1, selector.selected + 1):
+            ensure(plan_path, approval, run_id)
+            r, bs = epoch_pass(final, views["refit"], e, seed, policies["refit"], refit_opt)
+            epochs.append(dict(phase="refit", **r))
+            batches.extend(dict(phase="refit", **b) for b in bs)
+            print(json.dumps(dict(run_id=run_id, phase="refit", **r)), flush=True)
+        final_binding = dict(
+            **common,
+            stage="REFIT_FINAL",
+            fit_version="refit",
+            fit_recipe=p["fit_recipes"],
+            scale=views["refit"].source.fit["t2_scale"],
+        )
+        fit = checkpoint(out / "refit_final.pt", final, final_binding)
+        reloaded = reload_checkpoint(out / "refit_final.pt", final_binding, fit)
+        for split in ("refit", "development"):
+            a = predictions(
+                final,
+                views[split],
+                policies[split],
+                dict(
+                    run_id=run_id, seed=seed, arm=arm, checkpoint_sha256=fit["checkpoint"]["sha256"]
+                ),
+            )
+            b = predictions(
+                reloaded,
+                views[split],
+                policies[split],
+                dict(
+                    run_id=run_id, seed=seed, arm=arm, checkpoint_sha256=fit["checkpoint"]["sha256"]
+                ),
+            )
+            if not a.equals(b):
+                raise ValueError("P021_REFIT_FULL_RELOAD_MISMATCH")
+            a.to_parquet(out / (split + "_predictions.parquet"), index=False)
+            reload_checks.append(dict(partition=split, rows=len(a), reload_max_error=0.0))
+        table = pd.DataFrame(epochs)
+        table["checkpoint_selected"] = table.phase.eq("calibration") & table.epoch.eq(
+            selector.selected
+        )
+        table.to_csv(public / "epochs.csv", index=False)
+        pd.DataFrame(batches).to_parquet(out / "gradient_batches.parquet", index=False)
+        manifests = {
+            name: ref(out / name)
+            for name in (
+                "calibration_selected.pt",
+                "refit_final.pt",
+                "gradient_batches.parquet",
+                *(s + "_predictions.parquet" for s in COUNTS),
+            )
+        }
+        result = dict(
+            status="COMPLETED",
+            run_id=run_id,
+            seed=seed,
+            arm=arm,
+            selector=vars(selector),
+            calibration_epochs=selector.epoch,
+            refit_epochs=selector.selected,
+            calibration_steps=math.ceil(2513 / 16) * selector.epoch,
+            refit_steps=math.ceil(2980 / 16) * selector.selected,
+            initial_hash=initial,
+            refit_initial_hash=fresh,
+            fresh_optimizer_state_empty=True,
+            calibration=cal,
+            refit=fit,
+            reload_checks=reload_checks,
+            artifacts=manifests,
+            epochs=ref(public / "epochs.csv"),
+            device="cpu",
+            threads=torch.get_num_threads(),
+            python=platform.python_version(),
+            torch=torch.__version__,
+            numpy=np.__version__,
+            reproducibility=(
+                "seed Python/NumPy/Torch; deterministic algorithms; "
+                "SHA(seed:epoch) session shuffle; no workers; same CPU float32"
+            ),
+            elapsed_seconds=time.monotonic() - started,
+            peak_rss_bytes_macos=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+        )
+        write_json(public / "run_result.json", result)
+        append(
+            plan_path, approval, run_id, "COMPLETED", dict(result=ref(public / "run_result.json"))
+        )
+    except BaseException as error:
+        write_json(
+            public / "failure.json",
+            dict(
+                status="FAILED_AFTER_START",
+                error_type=type(error).__name__,
+                error=str(error),
+                at=now(),
+            ),
+        )
+        append(
+            plan_path,
+            approval,
+            run_id,
+            "FAILED_AFTER_START",
+            dict(failure=ref(public / "failure.json")),
+        )
+        raise
+
+
+def audit_pair(plan: Path, seed: int) -> dict:
+    """Independent saved-file arithmetic and population parity before the next pair."""
+    from .hf1m_ft16_source import checked
+
+    ids = IDS[:2] if seed == 42 else IDS[2:]
+    results = [json.loads((plan.parent / i / "run_result.json").read_text()) for i in ids]
+    checks = []
+    for split in COUNTS:
+        frames = [
+            pd.read_parquet(checked(r["artifacts"][split + "_predictions.parquet"]))
+            for r in results
+        ]
+        if not frames[0][["origin_id", "ticker", "actual_TG20"]].equals(
+            frames[1][["origin_id", "ticker", "actual_TG20"]]
+        ):
+            raise ValueError("P021_PAIR_POPULATION_MISMATCH")
+        for r, f in zip(results, frames):
+            y = f.actual_TG20.to_numpy(dtype=np.float64)
+            pred = f.pred_original_TG20.to_numpy(dtype=np.float64)
+            count = f.groupby("session_date_et").origin_id.transform("nunique").to_numpy()
+            w = 1 / (count * 20 * f.session_date_et.nunique())
+            excess = float(np.sum(w * ((pred - y) ** 2 - y**2)))
+            decomposition = float(np.sum(w * pred**2) - 2 * np.sum(w * y * pred))
+            scale = f.t2_scale.to_numpy()
+            z = f.raw_net_output.to_numpy()
+            inverse = scale * np.sinh(z) if r["arm"] == "T2" else z
+            if abs(excess - decomposition) > 1e-10 or not np.allclose(
+                inverse, pred, rtol=2e-6, atol=2e-7
+            ):
+                raise ValueError("P021_INDEPENDENT_INVERSE_OR_DECOMPOSITION")
+            checks.append(
+                dict(
+                    run_id=r["run_id"],
+                    partition=split,
+                    rows=len(f),
+                    decomposition_error=abs(excess - decomposition),
+                    equal_session_mse=float(np.sum(w * (pred - y) ** 2)),
+                    zero_mse=float(np.sum(w * y * y)),
+                )
+            )
+    result = dict(status=f"PASS_SEED{seed}_PAIR", runs=list(ids), checks=checks, plan=ref(plan))
+    write_json(plan.parent / f"PASS_SEED{seed}_PAIR.json", result)
+    return result
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--plan", type=Path, required=True)
+    ap.add_argument("--approval", type=Path)
+    ap.add_argument("--run-id", choices=IDS)
+    ap.add_argument("--audit-seed", type=int, choices=(42, 123))
+    args = ap.parse_args()
+    if args.audit_seed:
+        audit_pair(args.plan, args.audit_seed)
+    elif args.run_id and args.approval:
+        run(args.plan, args.approval, args.run_id)
+    else:
+        ap.error("a run requires an exact live approval; alternatively --audit-seed")
+
+
+if __name__ == "__main__":
+    main()

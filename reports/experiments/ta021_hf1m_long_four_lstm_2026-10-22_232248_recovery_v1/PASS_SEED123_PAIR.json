@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "decomposition_error": 8.673617379884035e-18,
+      "equal_session_mse": 4.151608294434283,
+      "partition": "inner_train",
+      "rows": 88560,
+      "run_id": "HF1M-LONG-TM0-C0-S123-DEV1",
+      "zero_mse": 4.1568666462085755
+    },
+    {
+      "decomposition_error": 1.734723475976807e-18,
+      "equal_session_mse": 4.152673656764501,
+      "partition": "inner_train",
+      "rows": 88560,
+      "run_id": "HF1M-LONG-TM0-T2-S123-DEV1",
+      "zero_mse": 4.1568666462085755
+    },
+    {
+      "decomposition_error": 3.469446951953614e-18,
+      "equal_session_mse": 3.6581936622911346,
+      "partition": "inner_validation",
+      "rows": 15320,
+      "run_id": "HF1M-LONG-TM0-C0-S123-DEV1",
+      "zero_mse": 3.653762775572292
+    },
+    {
+      "decomposition_error": 1.431146867680866e-17,
+      "equal_session_mse": 3.6556650854797708,
+      "partition": "inner_validation",
+      "rows": 15320,
+      "run_id": "HF1M-LONG-TM0-T2-S123-DEV1",
+      "zero_mse": 3.653762775572292
+    },
+    {
+      "decomposition_error": 3.469446951953614e-18,
+      "equal_session_mse": 4.06498420341521,
+      "partition": "refit",
+      "rows": 104200,
+      "run_id": "HF1M-LONG-TM0-C0-S123-DEV1",
+      "zero_mse": 4.069544431451007
+    },
+    {
+      "decomposition_error": 6.071532165918825e-18,
+      "equal_session_mse": 4.066120849355052,
+      "partition": "refit",
+      "rows": 104200,
+      "run_id": "HF1M-LONG-TM0-T2-S123-DEV1",
+      "zero_mse": 4.069544431451007
+    },
+    {
+      "decomposition_error": 4.553649124439119e-18,
+      "equal_session_mse": 3.1172568800098075,
+      "partition": "development",
+      "rows": 3660,
+      "run_id": "HF1M-LONG-TM0-C0-S123-DEV1",
+      "zero_mse": 3.1165604395024173
+    },
+    {
+      "decomposition_error": 1.474514954580286e-17,
+      "equal_session_mse": 3.114912252730491,
+      "partition": "development",
+      "rows": 3660,
+      "run_id": "HF1M-LONG-TM0-T2-S123-DEV1",
+      "zero_mse": 3.1165604395024173
+    }
+  ],
+  "plan": {
+    "bytes": 9542,
+    "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/experiment_design.json",
+    "sha256": "c556d5b93e5389e40f063a669e706d2014db4ca6eed558d593f910b586c27cfe"
+  },
+  "runs": [
+    "HF1M-LONG-TM0-C0-S123-DEV1",
+    "HF1M-LONG-TM0-T2-S123-DEV1"
+  ],
+  "status": "PASS_SEED123_PAIR"
+}

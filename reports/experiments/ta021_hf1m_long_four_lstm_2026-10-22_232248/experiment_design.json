@@ -1,0 +1,244 @@
+{
+  "budget_amendment": {
+    "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/budget_amendment_200.json",
+    "sha256": "9b9b32c2cdf275a1195240afd5765b9d381bbc6eaf0bcc1196373f70cf3735e4"
+  },
+  "ceiling": 200,
+  "code": {
+    "controlled_loss.py": "d9aeb2efe3edc74b15bef07f3709da29b51328b46b5469fca83e139bd57c7697",
+    "hf1m_ft16_loader.py": "275bd3ebeb8540fd56a4f9ef388cd19e9f9f40c4dc8b08ab98fb7bce0ff553ec",
+    "hf1m_ft16_source.py": "9872fcb9829a22cf50d40fc2f9838288498cf5436354d3c711066ad4d9226cd5",
+    "hf1m_training_authority.py": "2d93d7b1802cafdf325c65d6bf375a941b760d903a7c1f924890c52396033e0f",
+    "hf1m_training_data.py": "ace7e3036a348a6dbb6a2bbbf0d19633e7bc2c9fbaa21a7ff386e013617302d4",
+    "hf1m_training_run.py": "70a6e00fa573fb6b9f4d29983c95372ff029a97491d8b64f47ca200ad7917204",
+    "hf20_training_run.py": "6f1b7e95ceb97889ba3f68c127da7ba99dadcb9beafbe410db44216615918d52",
+    "neural_engine.py": "d899ba379f1ac7e498b7351be57145b1cb819255155c9b28a817b3faa0cf2530",
+    "neural_lifecycle.py": "ee22717bd2087d82a04a37ab2f592668b17779ec09edee18a16e567b2249f189"
+  },
+  "code_sha256": "4aca06f65c720783ab047cce5c22d03deae2f9e8bf11386094256764291de353",
+  "cpu_threads": 4,
+  "device": "cpu",
+  "dry_precheck": {
+    "bytes": 4307,
+    "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248/dry_precheck.json",
+    "sha256": "f44ce7612a335185d55e6a8b21f503688361b18ffb09a6fcff8468bdda35ebc9"
+  },
+  "feature_id": "HF20_HF1M_LONG_v1_FT16_v1",
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "fit_deadline": "2026-10-24T03:29:05.960964+00:00",
+  "fit_recipes": {
+    "bytes": 489158,
+    "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/train_only_fit_recipes.json",
+    "sha256": "d6c394bebb35131522d05c2b91b33347cfadb4e3204a8a4525b60cd9305ababc"
+  },
+  "frozen_training": {
+    "batch_sessions": 16,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "clip": 1,
+    "d6g_max_epochs": 60,
+    "d6g_min_epochs": 12,
+    "d6g_patience": 10,
+    "decay": [
+      0.01,
+      0
+    ],
+    "dropout": 0.1,
+    "dropout_location": "output hidden",
+    "eps": 1e-08,
+    "layers": 1,
+    "lookback": 48,
+    "lr": 0.001,
+    "optimizer": "AdamW",
+    "parameters": 6433,
+    "qualifying_loss_factor": 0.999,
+    "refit": "fresh same seed; selected epochs only",
+    "selection": "original TG20 equal-session validation MSE",
+    "width": 32
+  },
+  "heldout_access": false,
+  "input_contract": {
+    "bytes": 4019,
+    "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+    "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+  },
+  "maximum_new_starts": 4,
+  "model_input_id": "HF20_HF1M_LONG_v1_MODEL_INPUT_v1",
+  "opening_started": 32,
+  "package": "021",
+  "previous_journal": {
+    "bytes": 7638,
+    "path": "reports/audit/track_a_real_pairs_v7.jsonl",
+    "sha256": "045c42dcccd9c3b68a67cbeb889e78714f23128335f42ed54d3973c52cf67495"
+  },
+  "previous_pointer": {
+    "bytes": 1132,
+    "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248/registry_pointer_v7_snapshot.json",
+    "sha256": "99a48de239b7bec5155fbab363a8875288767c27f896ab20f2e5b488c637ea26"
+  },
+  "private_root": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248",
+  "protected_refs": [
+    {
+      "bytes": 2891,
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/release_gate.json",
+      "sha256": "9453f559e63210f3ac54c1cc9daa2dbc3f4755d99e1593d8c2403f22cc3b880e"
+    },
+    {
+      "bytes": 1822,
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/final_closeout_receipt.json",
+      "sha256": "e0508a5f2037a32792eb3847f712aa6f5aee5599da7cfe4202ee613d2e49c1ba"
+    },
+    {
+      "bytes": 3380,
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/numeric_file_allowlist.json",
+      "sha256": "8e7a77b48870931ae640ee00ffcf62dce8f9f46517ad4dc87150e4f86b46848c"
+    },
+    {
+      "bytes": 489158,
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/train_only_fit_recipes.json",
+      "sha256": "d6c394bebb35131522d05c2b91b33347cfadb4e3204a8a4525b60cd9305ababc"
+    },
+    {
+      "bytes": 32467,
+      "path": "UNRESOLVED_MARKET_DATA_ANOMALIES.md",
+      "sha256": "2ac03f37164ac3e7e77d883a02bc02d6dc5398876c00d393dec1829bad6d4c07"
+    }
+  ],
+  "registry_definition": {
+    "bytes": 706,
+    "path": "configs/track_a_candidate_experiment_registry_v8_p021.json",
+    "sha256": "7db5f70a93c7674a785340aaa9e8843167a7cf6da6594039abb5fc1e477f95bf"
+  },
+  "resources": {
+    "additional_storage_bound_bytes": 1000000000,
+    "estimate_basis": "bounded CPU planning estimate; no optimization benchmark",
+    "estimated_four_run_wall_hours": [
+      0.5,
+      6
+    ],
+    "estimated_peak_rss_bytes": 2000000000,
+    "project_ceiling_bytes": 10000000000
+  },
+  "rights": "HUMAN_REPORTED_MAINTAINER_PERMISSION_FOR_PRIVATE_RESEARCH",
+  "run_specs": {
+    "HF1M-LONG-TM0-C0-S123-DEV1": {
+      "arm": "C0",
+      "seed": 123
+    },
+    "HF1M-LONG-TM0-C0-S42-DEV1": {
+      "arm": "C0",
+      "seed": 42
+    },
+    "HF1M-LONG-TM0-T2-S123-DEV1": {
+      "arm": "T2",
+      "seed": 123
+    },
+    "HF1M-LONG-TM0-T2-S42-DEV1": {
+      "arm": "T2",
+      "seed": 42
+    }
+  },
+  "runs": [
+    "HF1M-LONG-TM0-C0-S42-DEV1",
+    "HF1M-LONG-TM0-T2-S42-DEV1",
+    "HF1M-LONG-TM0-C0-S123-DEV1",
+    "HF1M-LONG-TM0-T2-S123-DEV1"
+  ],
+  "schema": 1,
+  "sealed_at": "2026-10-23T03:29:05.960945+00:00",
+  "source_revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+  "status": "FROZEN_AWAITING_LIVE_APPROVAL",
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "target_id": "HF20_HF1M_LONG_v1_TG20_4H_v1",
+  "views": {
+    "development": {
+      "first_session": "2025-07-15",
+      "fit_version": "refit",
+      "last_session": "2025-12-31",
+      "origins": 183,
+      "population_sha256": "c8a27a072cd577bd7f77fb619733853d068e1e3c2f44586e36abde22ddab697a",
+      "scale": 0.9057319697455458,
+      "sessions": 109,
+      "stock_rows": 3660,
+      "target_float32_sha256": "d98bbf2aad56df7ede85eca246f3e66ad730ac871e4f2f8e2cd862e2e4b8afe2",
+      "weighting": "equal session, equal admitted origins within session, equal20 stocks"
+    },
+    "inner_train": {
+      "first_session": "2011-04-01",
+      "fit_version": "inner",
+      "last_session": "2023-01-23",
+      "origins": 4428,
+      "population_sha256": "739409f26070d581ca75172f58dcee539ba6cc85e3bed7549f8ba68ee7f47e08",
+      "scale": 0.906406830018944,
+      "sessions": 2513,
+      "stock_rows": 88560,
+      "target_float32_sha256": "f8113e27c895141eaef9c774d563cabe29f7d4f7e6f78c0f8fc1536af60c2380",
+      "weighting": "equal session, equal admitted origins within session, equal20 stocks"
+    },
+    "inner_validation": {
+      "first_session": "2023-02-03",
+      "fit_version": "inner",
+      "last_session": "2025-06-30",
+      "origins": 766,
+      "population_sha256": "f4779be967e200017914618ece15a443352687718aa7555f0b2207fcb91dfa41",
+      "scale": 0.906406830018944,
+      "sessions": 459,
+      "stock_rows": 15320,
+      "target_float32_sha256": "2ba85111dd2b74d52654412a539866c26d22910d60ca04457911747beae2ef70",
+      "weighting": "equal session, equal admitted origins within session, equal20 stocks"
+    },
+    "refit": {
+      "first_session": "2011-04-01",
+      "fit_version": "refit",
+      "last_session": "2025-06-30",
+      "origins": 5210,
+      "population_sha256": "ea5795c911d9a6f0b901aa0a451f001e64e78e8712603975f04c005836f230e3",
+      "scale": 0.9057319697455458,
+      "sessions": 2980,
+      "stock_rows": 104200,
+      "target_float32_sha256": "9afe920c388f4102a0644e6851c4eca0eb26535030a92d576d3300bf8b872506",
+      "weighting": "equal session, equal admitted origins within session, equal20 stocks"
+    }
+  },
+  "workers": 0
+}

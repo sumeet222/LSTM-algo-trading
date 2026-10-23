@@ -1,0 +1,212 @@
+{
+  "arm": "C0",
+  "artifacts": {
+    "calibration_selected.pt": {
+      "bytes": 29717,
+      "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S123-DEV1/calibration_selected.pt",
+      "sha256": "6eedd90a6f72d9d04ff6551ab8c2cb982380bb6c44a7aec75d774b257367143b"
+    },
+    "development_predictions.parquet": {
+      "bytes": 430245,
+      "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S123-DEV1/development_predictions.parquet",
+      "sha256": "857c261514fc2756ee7238c10db89f20eb685f8b9d5b066e0fd86d087d81650d"
+    },
+    "gradient_batches.parquet": {
+      "bytes": 131562,
+      "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S123-DEV1/gradient_batches.parquet",
+      "sha256": "4e304fb4c9fd5385f39e225592f67118cb347714dd2835cb62be24a17c4c6ee7"
+    },
+    "inner_train_predictions.parquet": {
+      "bytes": 10432261,
+      "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S123-DEV1/inner_train_predictions.parquet",
+      "sha256": "08d0dab3800666ced3bde9676bc61d2c1bddd7b2577e3d4795508ebd6b0068b3"
+    },
+    "inner_validation_predictions.parquet": {
+      "bytes": 1778957,
+      "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S123-DEV1/inner_validation_predictions.parquet",
+      "sha256": "c43efd09ca6a78e673e1a9716d093821fbe53937ebd093abf331fe89f1c57038"
+    },
+    "refit_final.pt": {
+      "bytes": 29717,
+      "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S123-DEV1/refit_final.pt",
+      "sha256": "54fd657cbdb0f2292c2922017a4e04e6ac4100e7594c379770a30619105f021a"
+    },
+    "refit_predictions.parquet": {
+      "bytes": 12297120,
+      "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S123-DEV1/refit_predictions.parquet",
+      "sha256": "8fe262f66d794d2675de43cef720b6fac18661f606e0edb5416ac5a948a7590f"
+    }
+  },
+  "calibration": {
+    "binding": {
+      "architecture": "TM0",
+      "arm": "C0",
+      "code_sha256": "95ec1c58f8c7f5b4a73803f3fe7a9795c3c9dee4ffc8fcbe3722566296e985a5",
+      "feature_id": "HF20_HF1M_LONG_v1_FT16_v1",
+      "fit_recipe": {
+        "bytes": 489158,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/train_only_fit_recipes.json",
+        "sha256": "d6c394bebb35131522d05c2b91b33347cfadb4e3204a8a4525b60cd9305ababc"
+      },
+      "fit_version": "inner",
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "parameters": 6433,
+      "plan": {
+        "bytes": 9542,
+        "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/experiment_design.json",
+        "sha256": "c556d5b93e5389e40f063a669e706d2014db4ca6eed558d593f910b586c27cfe"
+      },
+      "run_id": "HF1M-LONG-TM0-C0-S123-DEV1",
+      "scale": 0.906406830018944,
+      "seed": 123,
+      "selected_epoch": 1,
+      "source_revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+      "stage": "CALIBRATION_SELECTED",
+      "symbols": [
+        "VZ",
+        "COP",
+        "BAC",
+        "BA",
+        "AAPL",
+        "PEP",
+        "MRK",
+        "SBUX",
+        "CVX",
+        "MS",
+        "AMD",
+        "KO",
+        "JNJ",
+        "AMZN",
+        "XOM",
+        "WFC",
+        "AVGO",
+        "TSLA",
+        "MA",
+        "CSCO"
+      ],
+      "target_id": "HF20_HF1M_LONG_v1_TG20_4H_v1"
+    },
+    "bytes": 29717,
+    "checkpoint": {
+      "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S123-DEV1/calibration_selected.pt",
+      "sha256": "6eedd90a6f72d9d04ff6551ab8c2cb982380bb6c44a7aec75d774b257367143b"
+    }
+  },
+  "calibration_epochs": 12,
+  "calibration_steps": 1896,
+  "device": "cpu",
+  "elapsed_seconds": 186.80609199998435,
+  "epochs": {
+    "bytes": 16214,
+    "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/HF1M-LONG-TM0-C0-S123-DEV1/epochs.csv",
+    "sha256": "3aa83e28aa702fc443877c113cdf47d74c000d4094783d98284f6f8300439892"
+  },
+  "fresh_optimizer_state_empty": true,
+  "initial_hash": "c9b150b1baac0633708f5153a05a18ff3bcf45d254bd09bf3c4e6e29c49accbf",
+  "numpy": "2.5.3",
+  "peak_rss_bytes_macos": 633995264,
+  "python": "3.14.6",
+  "refit": {
+    "binding": {
+      "architecture": "TM0",
+      "arm": "C0",
+      "code_sha256": "95ec1c58f8c7f5b4a73803f3fe7a9795c3c9dee4ffc8fcbe3722566296e985a5",
+      "feature_id": "HF20_HF1M_LONG_v1_FT16_v1",
+      "fit_recipe": {
+        "bytes": 489158,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/train_only_fit_recipes.json",
+        "sha256": "d6c394bebb35131522d05c2b91b33347cfadb4e3204a8a4525b60cd9305ababc"
+      },
+      "fit_version": "refit",
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "parameters": 6433,
+      "plan": {
+        "bytes": 9542,
+        "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/experiment_design.json",
+        "sha256": "c556d5b93e5389e40f063a669e706d2014db4ca6eed558d593f910b586c27cfe"
+      },
+      "run_id": "HF1M-LONG-TM0-C0-S123-DEV1",
+      "scale": 0.9057319697455458,
+      "seed": 123,
+      "selected_epoch": 1,
+      "source_revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+      "stage": "REFIT_FINAL",
+      "symbols": [
+        "VZ",
+        "COP",
+        "BAC",
+        "BA",
+        "AAPL",
+        "PEP",
+        "MRK",
+        "SBUX",
+        "CVX",
+        "MS",
+        "AMD",
+        "KO",
+        "JNJ",
+        "AMZN",
+        "XOM",
+        "WFC",
+        "AVGO",
+        "TSLA",
+        "MA",
+        "CSCO"
+      ],
+      "target_id": "HF20_HF1M_LONG_v1_TG20_4H_v1"
+    },
+    "bytes": 29717,
+    "checkpoint": {
+      "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S123-DEV1/refit_final.pt",
+      "sha256": "54fd657cbdb0f2292c2922017a4e04e6ac4100e7594c379770a30619105f021a"
+    }
+  },
+  "refit_epochs": 1,
+  "refit_initial_hash": "c9b150b1baac0633708f5153a05a18ff3bcf45d254bd09bf3c4e6e29c49accbf",
+  "refit_steps": 187,
+  "reload_checks": [
+    {
+      "partition": "inner_train",
+      "reload_max_error": 0.0,
+      "rows": 88560
+    },
+    {
+      "partition": "inner_validation",
+      "reload_max_error": 0.0,
+      "rows": 15320
+    },
+    {
+      "partition": "refit",
+      "reload_max_error": 0.0,
+      "rows": 104200
+    },
+    {
+      "partition": "development",
+      "reload_max_error": 0.0,
+      "rows": 3660
+    }
+  ],
+  "reproducibility": "seed Python/NumPy/Torch; deterministic algorithms; SHA(seed:epoch) session shuffle; no workers; same CPU float32",
+  "run_id": "HF1M-LONG-TM0-C0-S123-DEV1",
+  "seed": 123,
+  "selector": {
+    "best": 3.6581936614965302,
+    "epoch": 12,
+    "patience": 11,
+    "raw_epoch": 2,
+    "raw_min": 3.6568947525325686,
+    "selected": 1,
+    "status": "PATIENCE_STOP"
+  },
+  "status": "COMPLETED",
+  "threads": 4,
+  "torch": "2.10.0"
+}

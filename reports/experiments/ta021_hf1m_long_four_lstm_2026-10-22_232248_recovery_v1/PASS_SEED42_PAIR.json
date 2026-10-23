@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "decomposition_error": 1.734723475976807e-18,
+      "equal_session_mse": 4.1520254187016,
+      "partition": "inner_train",
+      "rows": 88560,
+      "run_id": "HF1M-LONG-TM0-C0-S42-DEV1",
+      "zero_mse": 4.1568666462085755
+    },
+    {
+      "decomposition_error": 5.204170427930421e-18,
+      "equal_session_mse": 4.141503593281362,
+      "partition": "inner_train",
+      "rows": 88560,
+      "run_id": "HF1M-LONG-TM0-T2-S42-DEV1",
+      "zero_mse": 4.1568666462085755
+    },
+    {
+      "decomposition_error": 5.204170427930421e-18,
+      "equal_session_mse": 3.6583812905236637,
+      "partition": "inner_validation",
+      "rows": 15320,
+      "run_id": "HF1M-LONG-TM0-C0-S42-DEV1",
+      "zero_mse": 3.653762775572292
+    },
+    {
+      "decomposition_error": 1.1275702593849246e-17,
+      "equal_session_mse": 3.6521776337333485,
+      "partition": "inner_validation",
+      "rows": 15320,
+      "run_id": "HF1M-LONG-TM0-T2-S42-DEV1",
+      "zero_mse": 3.653762775572292
+    },
+    {
+      "decomposition_error": 1.734723475976807e-18,
+      "equal_session_mse": 4.0650762813004455,
+      "partition": "refit",
+      "rows": 104200,
+      "run_id": "HF1M-LONG-TM0-C0-S42-DEV1",
+      "zero_mse": 4.069544431451007
+    },
+    {
+      "decomposition_error": 5.204170427930421e-18,
+      "equal_session_mse": 4.055393999057921,
+      "partition": "refit",
+      "rows": 104200,
+      "run_id": "HF1M-LONG-TM0-T2-S42-DEV1",
+      "zero_mse": 4.069544431451007
+    },
+    {
+      "decomposition_error": 3.469446951953614e-18,
+      "equal_session_mse": 3.1125663511498107,
+      "partition": "development",
+      "rows": 3660,
+      "run_id": "HF1M-LONG-TM0-C0-S42-DEV1",
+      "zero_mse": 3.1165604395024173
+    },
+    {
+      "decomposition_error": 0.0,
+      "equal_session_mse": 3.1065600155524167,
+      "partition": "development",
+      "rows": 3660,
+      "run_id": "HF1M-LONG-TM0-T2-S42-DEV1",
+      "zero_mse": 3.1165604395024173
+    }
+  ],
+  "plan": {
+    "bytes": 9542,
+    "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/experiment_design.json",
+    "sha256": "c556d5b93e5389e40f063a669e706d2014db4ca6eed558d593f910b586c27cfe"
+  },
+  "runs": [
+    "HF1M-LONG-TM0-C0-S42-DEV1",
+    "HF1M-LONG-TM0-T2-S42-DEV1"
+  ],
+  "status": "PASS_SEED42_PAIR"
+}

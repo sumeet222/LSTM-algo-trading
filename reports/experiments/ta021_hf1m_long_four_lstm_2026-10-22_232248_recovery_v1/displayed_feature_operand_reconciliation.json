@@ -1,0 +1,201 @@
+{
+  "cases": [
+    {
+      "case": "source_close_proxy",
+      "channels": 16,
+      "date": "2011-04-01",
+      "fit": "inner",
+      "normalization_reconstruction_pass": true,
+      "step": 1140,
+      "ticker": "AVGO"
+    },
+    {
+      "case": "source_close_proxy",
+      "channels": 16,
+      "date": "2011-04-01",
+      "fit": "refit",
+      "normalization_reconstruction_pass": true,
+      "step": 1140,
+      "ticker": "AVGO"
+    },
+    {
+      "case": "volume_assumed_zero_minute",
+      "channels": 16,
+      "date": "2011-04-04",
+      "fit": "inner",
+      "normalization_reconstruction_pass": true,
+      "step": 1144,
+      "ticker": "VZ"
+    },
+    {
+      "case": "volume_assumed_zero_minute",
+      "channels": 16,
+      "date": "2011-04-04",
+      "fit": "refit",
+      "normalization_reconstruction_pass": true,
+      "step": 1144,
+      "ticker": "VZ"
+    },
+    {
+      "case": "missing_Q1",
+      "channels": 16,
+      "date": "2011-04-25",
+      "fit": "inner",
+      "normalization_reconstruction_pass": true,
+      "step": 1230,
+      "ticker": "PEP"
+    },
+    {
+      "case": "missing_Q1",
+      "channels": 16,
+      "date": "2011-04-25",
+      "fit": "refit",
+      "normalization_reconstruction_pass": true,
+      "step": 1230,
+      "ticker": "PEP"
+    },
+    {
+      "case": "missing_Q2",
+      "channels": 16,
+      "date": "2011-04-26",
+      "fit": "inner",
+      "normalization_reconstruction_pass": true,
+      "step": 1233,
+      "ticker": "PEP"
+    },
+    {
+      "case": "missing_Q2",
+      "channels": 16,
+      "date": "2011-04-26",
+      "fit": "refit",
+      "normalization_reconstruction_pass": true,
+      "step": 1233,
+      "ticker": "PEP"
+    },
+    {
+      "case": "source_material_quarantine",
+      "channels": 16,
+      "date": "2011-06-23",
+      "fit": "inner",
+      "normalization_reconstruction_pass": true,
+      "step": 1483,
+      "ticker": "AMZN"
+    },
+    {
+      "case": "source_material_quarantine",
+      "channels": 16,
+      "date": "2011-06-23",
+      "fit": "refit",
+      "normalization_reconstruction_pass": true,
+      "step": 1483,
+      "ticker": "AMZN"
+    },
+    {
+      "case": "COP_long_dependency",
+      "channels": 16,
+      "date": "2012-05-01",
+      "fit": "inner",
+      "normalization_reconstruction_pass": true,
+      "step": 2766,
+      "ticker": "COP"
+    },
+    {
+      "case": "COP_long_dependency",
+      "channels": 16,
+      "date": "2012-05-01",
+      "fit": "refit",
+      "normalization_reconstruction_pass": true,
+      "step": 2766,
+      "ticker": "COP"
+    },
+    {
+      "case": "volume_Q1_basis_reset",
+      "channels": 16,
+      "date": "2012-08-13",
+      "fit": "inner",
+      "normalization_reconstruction_pass": true,
+      "step": 3195,
+      "ticker": "KO"
+    },
+    {
+      "case": "volume_Q1_basis_reset",
+      "channels": 16,
+      "date": "2012-08-13",
+      "fit": "refit",
+      "normalization_reconstruction_pass": true,
+      "step": 3195,
+      "ticker": "KO"
+    }
+  ],
+  "independent_scalar_example": {
+    "comparisons": [
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "M1"
+      },
+      {
+        "absolute_discrepancy": 6.938893903907228e-17,
+        "feature": "M2"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "M3"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "M4"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "V2"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "B1"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "B2"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "Q1"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "Q2"
+      },
+      {
+        "absolute_discrepancy": 1.1796119636642288e-16,
+        "feature": "T1"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "T2"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "T3"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "T4"
+      },
+      {
+        "absolute_discrepancy": 0.0,
+        "feature": "T5"
+      }
+    ],
+    "fit": "refit",
+    "origin_id": "2014-01-14T16:30:00+00:00",
+    "ticker": "TSLA"
+  },
+  "optimizer_steps": 0,
+  "private_witnesses": {
+    "bytes": 28643,
+    "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/explorer_qa/feature_witnesses.parquet",
+    "sha256": "211137a485ecfa9fb17146e6f1a3494e1fcf7b675aa10414ee33c25be50144dd"
+  },
+  "protected_numeric_access": false,
+  "status": "PASS_DISPLAYED_FEATURE_RECONCILIATION"
+}

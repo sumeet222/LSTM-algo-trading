@@ -1,0 +1,32 @@
+Port8501 is occupied; using free local port8502.
+Open http://localhost:8502 in your browser
+Localhost only · read-only research · stop with Ctrl+C
+{
+  "url": "http://127.0.0.1:8502",
+  "command": [
+    "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/bin/python",
+    "-m",
+    "streamlit",
+    "run",
+    "apps/track_a_dashboard.py",
+    "--server.address",
+    "127.0.0.1",
+    "--server.port",
+    "8502",
+    "--server.headless",
+    "true",
+    "--browser.gatherUsageStats",
+    "false",
+    "--server.fileWatcherType",
+    "none"
+  ],
+  "health_status": 200,
+  "health_body": "ok",
+  "startup_to_health_seconds": 3.1995504579972476,
+  "html_status": 200,
+  "html_bytes": 7260,
+  "html_request_seconds": 0.006044082983862609,
+  "SIGINT_shutdown_seconds": 0.3945050420006737,
+  "server_return_code": 0,
+  "server_log": "2026-10-23 00:27:50.830 Uvicorn server started on 127.0.0.1:8502\n\n  You can now view your Streamlit app in your browser.\n\n  URL: http://127.0.0.1:8502\n\n  Stopping...\n"
+}

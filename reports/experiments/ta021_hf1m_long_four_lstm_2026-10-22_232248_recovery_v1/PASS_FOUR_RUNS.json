@@ -1,0 +1,70 @@
+{
+  "actual_new_starts_this_package": 4,
+  "global_started_pairs": 36,
+  "no_extra_fits_or_retries": true,
+  "original_failed_event_preserved": true,
+  "protected_numeric_access": false,
+  "resume_existing_start33_not_a_new_start": true,
+  "runs": [
+    {
+      "bytes": 7794,
+      "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/HF1M-LONG-TM0-C0-S42-DEV1/run_result.json",
+      "sha256": "9b514bd79b331a21184ab00773aefed2182b57240f62dbc620d55a5114116c30"
+    },
+    {
+      "bytes": 7469,
+      "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/HF1M-LONG-TM0-T2-S42-DEV1/run_result.json",
+      "sha256": "a5989a43ea753115acce1968ba8a34e38333e8261b9aff330fe61bf47aa55c15"
+    },
+    {
+      "bytes": 7486,
+      "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/HF1M-LONG-TM0-C0-S123-DEV1/run_result.json",
+      "sha256": "338d17555cdad43caf86c200661716940ff1f33841676a884598490b6742130c"
+    },
+    {
+      "bytes": 7486,
+      "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/HF1M-LONG-TM0-T2-S123-DEV1/run_result.json",
+      "sha256": "7eaa78ce01326b81460f3bee4ea1c93361418a96875349d1822c4e5bb594429d"
+    }
+  ],
+  "status": "PASS_FOUR_RUNS",
+  "summary": [
+    {
+      "arm": "C0",
+      "calibration_epochs": 12,
+      "calibration_steps": 1896,
+      "refit_epochs": 1,
+      "refit_steps": 187,
+      "run_id": "HF1M-LONG-TM0-C0-S42-DEV1",
+      "seed": 42
+    },
+    {
+      "arm": "T2",
+      "calibration_epochs": 17,
+      "calibration_steps": 2686,
+      "refit_epochs": 7,
+      "refit_steps": 1309,
+      "run_id": "HF1M-LONG-TM0-T2-S42-DEV1",
+      "seed": 42
+    },
+    {
+      "arm": "C0",
+      "calibration_epochs": 12,
+      "calibration_steps": 1896,
+      "refit_epochs": 1,
+      "refit_steps": 187,
+      "run_id": "HF1M-LONG-TM0-C0-S123-DEV1",
+      "seed": 123
+    },
+    {
+      "arm": "T2",
+      "calibration_epochs": 12,
+      "calibration_steps": 1896,
+      "refit_epochs": 1,
+      "refit_steps": 187,
+      "run_id": "HF1M-LONG-TM0-T2-S123-DEV1",
+      "seed": 123
+    }
+  ],
+  "telemetry_limitation": "All12 calibration epoch summaries retained; original in-memory per-batch calibration norms lost on failure. No replay to regenerate them."
+}

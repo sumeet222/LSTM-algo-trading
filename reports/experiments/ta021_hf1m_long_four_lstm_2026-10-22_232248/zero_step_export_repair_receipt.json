@@ -1,0 +1,32 @@
+{
+  "calibration_checkpoint_preserved": {
+    "bytes": 29717,
+    "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S42-DEV1/calibration_selected.pt",
+    "sha256": "44dd1b45b910a716b59826b2139b6b3ecda84bf0965831a1458ec7fa0299b895"
+  },
+  "files": [
+    {
+      "file": {
+        "bytes": 10455395,
+        "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S42-DEV1/diagnostic_recovery_no_fit/inner_train_predictions.parquet",
+        "sha256": "5dbf3f2548b942c10dee381de9458cb63088a53899dce00cb61c49561b30ed39"
+      },
+      "rows": 88560,
+      "split": "inner_train"
+    },
+    {
+      "file": {
+        "bytes": 1782732,
+        "path": "artifacts/hf20_hf1m_long_v1/ta021_hf1m_long_four_lstm_2026-10-22_232248/HF1M-LONG-TM0-C0-S42-DEV1/diagnostic_recovery_no_fit/inner_validation_predictions.parquet",
+        "sha256": "7088436651f92e587f0785ddc9e67f11b42e424dc1afdb213a6d38176ef2627f"
+      },
+      "rows": 15320,
+      "split": "inner_validation"
+    }
+  ],
+  "journal_failed_event_preserved": true,
+  "no_refit_started": true,
+  "optimizer_steps": 0,
+  "source_targets_exact": true,
+  "status": "PASS_ZERO_STEP_EXPORT_REPAIR"
+}

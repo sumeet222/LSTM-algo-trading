@@ -1,0 +1,40 @@
+{
+  "actual_component_tests": "32focused tests passed17.64s; includes17UI/reader/metric checks and15training/authority checks",
+  "all16_independent_native": {
+    "bytes": 582,
+    "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/all16_independent_native_reconciliation.json",
+    "sha256": "3e88a8a6fcc0e549e72487f933fda50f73e9715771a4751d407c635a411d0854"
+  },
+  "all16_native_scaled_features": true,
+  "all20_return_operands": true,
+  "all20_tickers": true,
+  "all4_models": true,
+  "all4_roles": true,
+  "all_required_panels_implemented": true,
+  "guide": {
+    "bytes": 6642,
+    "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/P021_DASHBOARD_USER_GUIDE.md",
+    "sha256": "ecf704fa3262eb5f29f39f584cf22c8e6d9989c034ba89277d10340b5ff51448"
+  },
+  "legacy_numeric_bindings_unchanged": true,
+  "masked_source_volume_and_proxy_ages": true,
+  "matrix": {
+    "bytes": 1658,
+    "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/ui_feature_matrix_v3.csv",
+    "sha256": "835b7b050910cd9ec0296d87f708d4f6698b982e37ace6e940a11f8264883ff6"
+  },
+  "protected_negative_tests_every_view": true,
+  "status": "PASS_DASHBOARD_COMPLETENESS",
+  "supersedes": {
+    "bytes": 691,
+    "path": "reports/experiments/ta021_hf1m_long_four_lstm_2026-10-22_232248_recovery_v1/dashboard_gate_correction_v2.json",
+    "sha256": "0d178be97160f8a2a9827b6c1ff56d209ed64f5f7a55799b15df75332591322f"
+  },
+  "verified_plot_keys": [
+    "forecast_timeseries",
+    "residual_timeseries",
+    "prediction_identity_scatter",
+    "mse_by_target_bin",
+    "ic_heatmap"
+  ]
+}

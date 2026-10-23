@@ -1,0 +1,31 @@
+................................F                                        [100%]
+=================================== FAILURES ===================================
+_______________ test_bound_hash_change_and_local_port_selection ________________
+
+tmp_path = PosixPath('/private/var/folders/gv/w5vyh_657znbjwdrx__2m6h00000gp/T/pytest-of-pradeepgupta/pytest-39/test_bound_hash_change_and_loc0')
+
+    def test_bound_hash_change_and_local_port_selection(tmp_path):
+        c = Catalog(tmp_path, {"checkpoints": {"WF1": {"TM0": {"path": "optional.pt"}}}})
+        assert c.missing_required(
+            (
+                ("required.parquet", ("SYN:SHA", -1, -1, -1)),
+                ("optional.pt", ("SYN:SHA", -1, -1, -1)),
+            )
+        ) == ["required.parquet"]
+        p = tmp_path / "evidence.json"
+        p.write_text("{}")
+        ref = {"path": p.name, "sha256": digest(p)}
+        assert loaders.verified(tmp_path, ref) == p
+        p.write_text('{"changed":true}')
+        with pytest.raises(ViewUnavailable, match="hash changed"):
+            loaders.verified(tmp_path, ref)
+        import socket
+    
+        with socket.socket() as occupied:
+>           occupied.bind(("127.0.0.1", 0))
+E           PermissionError: [Errno 1] Operation not permitted
+
+tests/test_visualization_readonly.py:258: PermissionError
+=========================== short test summary info ============================
+FAILED tests/test_visualization_readonly.py::test_bound_hash_change_and_local_port_selection
+1 failed, 32 passed in 87.36s (0:01:27)

@@ -1,0 +1,94 @@
+{
+  "at": "2026-10-23T03:22:48.966433+00:00",
+  "closeout": {
+    "bytes": 1822,
+    "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/final_closeout_receipt.json",
+    "sha256": "e0508a5f2037a32792eb3847f712aa6f5aee5599da7cfe4202ee613d2e49c1ba"
+  },
+  "contract": {
+    "bytes": 4019,
+    "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+    "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+  },
+  "cpu_count": 8,
+  "device": "cpu",
+  "effective_ceiling": 200,
+  "feature_id": "HF20_HF1M_LONG_v1_FT16_v1",
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "free_disk_bytes": 58982400000,
+  "gate": {
+    "bytes": 2891,
+    "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/release_gate.json",
+    "sha256": "9453f559e63210f3ac54c1cc9daa2dbc3f4755d99e1593d8c2403f22cc3b880e"
+  },
+  "input_id": "HF20_HF1M_LONG_v1_MODEL_INPUT_v1",
+  "journal": {
+    "bytes": 7638,
+    "path": "reports/audit/track_a_real_pairs_v7.jsonl",
+    "sha256": "045c42dcccd9c3b68a67cbeb889e78714f23128335f42ed54d3973c52cf67495"
+  },
+  "maximum_numeric_date": "2025-12-31",
+  "numeric_arrays_or_weights_loaded": false,
+  "opening_started": 32,
+  "original_protocol_unchanged": true,
+  "p2_deferred_entries": 16,
+  "parent_hourly_files_hashed": 189,
+  "parent_namespace": "HF20_HF1M_LONG_v1_ACTION_QA_v1",
+  "pointer": {
+    "bytes": 1132,
+    "path": "configs/CURRENT_EXPERIMENT_REGISTRY.json",
+    "sha256": "99a48de239b7bec5155fbab363a8875288767c27f896ab20f2e5b488c637ea26"
+  },
+  "private_contract_files_hashed": 5,
+  "python": "3.14.6",
+  "revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+  "rights": "HUMAN_REPORTED_MAINTAINER_PERMISSION_FOR_PRIVATE_RESEARCH",
+  "source": "mito0o852/OHLCV-1m",
+  "source_span": [
+    "2010-07-01",
+    "2026-03-31"
+  ],
+  "status": "PASS_IDENTITY",
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "target_id": "HF20_HF1M_LONG_v1_TG20_4H_v1",
+  "torch": "2.10.0",
+  "torch_threads_before": 4
+}

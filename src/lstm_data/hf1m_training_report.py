@@ -1,0 +1,384 @@
+"""Independent saved-file P021 diagnostics and event arithmetic. No fitting."""
+
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+from .config import atomic_new, digest, write_json
+from .hf1m_ft16_source import ref
+from .hf1m_training_authority import IDS
+from .hf1m_training_data import COUNTS
+from .hf1m_training_diagnostics import daily_metrics, grouped, origin_metrics, summary, weights
+from .visualization.hf1m_long import ROLES, LongStudy
+
+
+def operands(s: LongStudy, split: str) -> pd.DataFrame:
+    """Full target population, genuine endpoint prices, independent20-name decomposition."""
+    f = s.targets(split)
+    c = s.table("candles_quality").set_index(["hour_end_utc", "ticker"])
+    for key, column in (("entry", "entry_end_utc"), ("exit", "exit_end_utc")):
+        index = pd.MultiIndex.from_arrays([f[column], f.ticker], names=["hour_end_utc", "ticker"])
+        values = c.reindex(index)
+        if not values.genuine_close.all():
+            raise ValueError("P021_EVENT_REQUIRES_GENUINE_ENDPOINTS")
+        for field in (
+            "close",
+            "price_factor",
+            "genuine_close",
+            "hour_id",
+            "anomaly_event_ids",
+            "price_basis_id",
+        ):
+            f[key + "_" + field] = values[field].to_numpy()
+        f[key + "_ET"] = f[column].dt.tz_convert("America/New_York").astype(str)
+    independent = pd.Series(
+        np.log(f.exit_close.to_numpy(dtype=float) / f.entry_close.to_numpy(dtype=float)),
+        index=f.index,
+    )
+    median = independent.groupby(f.origin_id).transform("median")
+    numerator = independent - median
+    mad = numerator.abs().groupby(f.origin_id).transform("median")
+    if (
+        not np.allclose(independent, f.return_4h, atol=1e-13, rtol=1e-12)
+        or not np.allclose(median, f.cross_section_median, atol=1e-13, rtol=1e-12)
+        or not np.allclose(mad, f.cross_section_mad, atol=1e-13, rtol=1e-12)
+        or not np.allclose(numerator / (mad + f.epsilon), f.TG20, atol=1e-11, rtol=1e-11)
+    ):
+        raise ValueError("P021_EVENT_SOURCE_DECOMPOSITION_MISMATCH")
+    version = "inner" if split.startswith("inner") else "refit"
+    scale = s.recipe(version)["t2_scale"]
+    f["t2_scale"] = scale
+    f["inverse_discrepancy"] = scale * np.sinh(f.T2_z) - f.TG20
+    if f.inverse_discrepancy.abs().max() > 1e-10:
+        raise ValueError("P021_EVENT_TARGET_INVERSE_MISMATCH")
+    f["partition"] = split
+    f["role"] = ROLES[split]
+    return f
+
+
+def report(plan: Path) -> None:
+    root = Path.cwd()
+    s = LongStudy.discover(root)
+    if s.token != ref(plan)["sha256"]:
+        raise ValueError("P021_DIAGNOSTIC_STUDY_PLAN_MISMATCH")
+    output = Path(s.plan["private_root"]) / "diagnostics"
+    output.mkdir(parents=True, exist_ok=False)
+    files = {}
+    metrics = []
+    daily_tables = {}
+    run_checks = []
+    event_tables = {split: operands(s, split) for split in COUNTS}
+    for split, f in event_tables.items():
+        path = output / (split + "_event_operands.parquet")
+        f.to_parquet(path, index=False)
+        files[path.name] = ref(path)
+    for run in IDS:
+        r = s.run_result(run)
+        epochs = pd.read_csv(root / r["epochs"]["path"])
+        if (
+            epochs.loc[epochs.phase.eq("calibration"), "optimizer_steps"].sum()
+            != r["calibration_steps"]
+            or epochs.loc[epochs.phase.eq("refit"), "optimizer_steps"].sum() != r["refit_steps"]
+            or epochs.loc[epochs.phase.eq("refit"), "epoch"].max() != r["selector"]["selected"]
+        ):
+            raise ValueError("P021_EPOCH_STEP_CONSERVATION")
+        for split in COUNTS:
+            f = s.prediction(run, split)
+            source = event_tables[split]
+            fields = [
+                "origin_id",
+                "ticker",
+                "tail_class",
+                "target_p99",
+                "abs_tg_p99_train",
+                "assumed_zero_minute_count",
+                "price_proxy_minute_count",
+                "poor_volume_hour_count",
+            ]
+            f = f.merge(source[fields], on=["origin_id", "ticker"], validate="one_to_one")
+            pred = f.pred_original_TG20.to_numpy(dtype=np.float64)
+            raw = f.raw_net_output.to_numpy(dtype=np.float64)
+            inverse = f.t2_scale.to_numpy() * np.sinh(raw) if r["arm"] == "T2" else raw
+            if not np.allclose(inverse, pred, rtol=2e-6, atol=2e-7):
+                raise ValueError("P021_SAVED_NET_INVERSE_MISMATCH")
+            m = summary(f)
+            d = daily_metrics(f)
+            # Independent pandas day/origin/stock reduction, separate from numpy weights.
+            independent = (
+                f.groupby(["session_date_et", "origin_id"])
+                .squared_error.mean()
+                .groupby("session_date_et")
+                .mean()
+                .mean()
+            )
+            if abs(independent - m["mse"]) > 1e-10:
+                raise ValueError("P021_INDEPENDENT_WEIGHTED_MSE_MISMATCH")
+            valid = d.rank_ic.dropna()
+            threshold = float(f.abs_tg_p99_train.iloc[0])
+            actual = f.actual_TG20.abs().ge(threshold)
+            forecast = f.pred_original_TG20.abs().ge(threshold)
+            tp = int((actual & forecast).sum())
+            metrics.append(
+                dict(
+                    run_id=run,
+                    seed=r["seed"],
+                    arm=r["arm"],
+                    partition=split,
+                    role=ROLES[split],
+                    **m,
+                    daily_ic_mean=float(valid.mean()) if len(valid) else None,
+                    daily_ic_median=float(valid.median()) if len(valid) else None,
+                    daily_ic_positive_fraction=float(valid.gt(0).mean()) if len(valid) else None,
+                    defined_ic_days=len(valid),
+                    zero_ic="UNDEFINED constant predictor; plot0reference only",
+                    top4_recall=float(d.top4_recall.mean()),
+                    bottom4_recall=float(d.bottom4_recall.mean()),
+                    tail_threshold_train=threshold,
+                    rare_actual_count=int(actual.sum()),
+                    rare_predicted_count=int(forecast.sum()),
+                    rare_precision=tp / int(forecast.sum()) if forecast.any() else None,
+                    rare_recall=tp / int(actual.sum()) if actual.any() else None,
+                    rare_threshold_status=(
+                        "retrospective diagnostic only, training-prefix threshold"
+                    ),
+                )
+            )
+            daily_loss = (
+                f.groupby(["session_date_et", "origin_id"])[["squared_error", "zero_squared_error"]]
+                .mean()
+                .groupby("session_date_et")
+                .mean()
+                .reset_index()
+            )
+            d = d.merge(daily_loss, on="session_date_et", validate="one_to_one")
+            d["run_id"] = run
+            d["partition"] = split
+            daily_tables[run, split] = d
+            path = output / (run + "_" + split + "_daily.parquet")
+            d.to_parquet(path, index=False)
+            files[path.name] = ref(path)
+            origins = origin_metrics(f)
+            path = output / (run + "_" + split + "_origins.parquet")
+            origins.to_parquet(path, index=False)
+            files[path.name] = ref(path)
+            f["month"] = f.session_date_et.str[:7]
+            f["year"] = f.session_date_et.str[:4]
+            f["volume_quality"] = np.where(
+                f.assumed_zero_minute_count.gt(0), "some assumed0minutes", "none assumed0"
+            )
+            f["proxy_quality"] = np.where(
+                f.price_proxy_minute_count.gt(0), "some input proxies", "no input proxy"
+            )
+            for key in ("ticker", "month", "year", "tail_class", "volume_quality", "proxy_quality"):
+                table = grouped(f, key)
+                path = output / (run + "_" + split + "_by_" + key + ".parquet")
+                table.to_parquet(path, index=False)
+                files[path.name] = ref(path)
+            run_checks.append(
+                dict(
+                    run_id=run,
+                    partition=split,
+                    rows=len(f),
+                    session_mse_independent_error=abs(independent - m["mse"]),
+                    inverse_max_error=float(np.max(abs(inverse - pred))),
+                    decomposition_error=m["decomposition_error"],
+                )
+            )
+    contrasts = []
+    comparisons = ((IDS[0], IDS[1]), (IDS[2], IDS[3]), (IDS[0], IDS[2]), (IDS[1], IDS[3]))
+    for split in COUNTS:
+        for left, right in comparisons:
+            a = daily_tables[left, split]
+            b = daily_tables[right, split]
+            common = a.merge(
+                b, on="session_date_et", suffixes=("_left", "_right"), validate="one_to_one"
+            )
+            if len(common) != len(a) or len(common) != len(b):
+                raise ValueError("P021_CONTRAST_MATCHED_DAYS_REQUIRED")
+            contrasts.append(
+                dict(
+                    partition=split,
+                    left=left,
+                    right=right,
+                    days=len(common),
+                    delta_mse_right_minus_left=float(
+                        (common.squared_error_right - common.squared_error_left).mean()
+                    ),
+                    delta_ic_right_minus_left=float(
+                        (common.rank_ic_right - common.rank_ic_left).mean()
+                    ),
+                    status=(
+                        "exploratory paired days; dependent origins; two seeds; "
+                        "no significance/winner selection"
+                    ),
+                )
+            )
+    pd.DataFrame(metrics).to_csv(plan.parent / "metrics.csv", index=False)
+    pd.DataFrame(contrasts).to_csv(plan.parent / "paired_comparisons.csv", index=False)
+    files["metrics.csv"] = ref(plan.parent / "metrics.csv")
+    files["paired_comparisons.csv"] = ref(plan.parent / "paired_comparisons.csv")
+    write_json(
+        plan.parent / "diagnostics_manifest.json",
+        dict(
+            status="PASS_DIAGNOSTICS",
+            plan=ref(plan),
+            files=files,
+            checks=run_checks,
+            no_optimization=True,
+            protected_numeric_access=False,
+            all_four_runs_complete=True,
+            telemetry_limitation=s.run_result(IDS[0]).get("telemetry_limitation"),
+            trading=(
+                "UNAVAILABLE: no audited cost-aware engine for this exact source/target; "
+                "no invented P&L"
+            ),
+        ),
+    )
+    print("PASS_DIAGNOSTICS", len(run_checks), "run/partition checks", len(files), "files")
+
+
+def publish_extensions(plan: Path) -> None:
+    """Named phase/gradient files and full-population fixed-bin/tail accounting; zero fits."""
+    s = LongStudy.discover(Path.cwd())
+    if s.token != ref(plan)["sha256"]:
+        raise ValueError("P021_EXTENSION_PLAN_IDENTITY")
+    refs = {}
+    bins = []
+    tails = []
+
+    def csv(path: Path, table: pd.DataFrame) -> None:
+        data = table.to_csv(index=False).encode()
+        if path.exists():
+            if path.read_bytes() != data:
+                raise ValueError("P021_DIAGNOSTIC_REPUBLICATION_DIFFERS")
+        else:
+            atomic_new(path, data)
+        refs[str(path)] = ref(path)
+
+    events = {split: s.diagnostic(split + "_event_operands.parquet") for split in COUNTS}
+    for name in IDS:
+        result = s.run_result(name)
+        public = plan.parent / name
+        epoch_path = Path(result["epochs"]["path"])
+        if digest(epoch_path) != result["epochs"]["sha256"]:
+            raise ValueError("P021_EXTENSION_EPOCH_BYTES_CHANGED")
+        epochs = pd.read_csv(epoch_path)
+        for phase in ("calibration", "refit"):
+            csv(
+                public / (phase + "_epochs.csv"),
+                epochs.loc[epochs.phase.eq(phase)].dropna(axis=1, how="all"),
+            )
+        columns = [
+            c
+            for c in epochs
+            if isinstance(c, str)
+            and (
+                c
+                in (
+                    "phase",
+                    "epoch",
+                    "optimizer_steps",
+                    "clipped_count",
+                    "clipped_fraction",
+                    "clip_cap",
+                    "nonfinite_count",
+                )
+                or c.startswith(("preclip_", "postclip_"))
+            )
+        ]
+        csv(public / "gradient_health.csv", epochs[columns])
+        contract = dict(
+            run_id=name,
+            seed=result["seed"],
+            arm=result["arm"],
+            calibration=result["calibration"],
+            refit=result["refit"],
+            input_contract=s.plan["input_contract"],
+            original_scale_predictions={
+                split: result["artifacts"][split + "_predictions.parquet"] for split in COUNTS
+            },
+            telemetry_limitation=result.get("telemetry_limitation"),
+        )
+        path = public / "phase_contracts.json"
+        if path.exists():
+            if json.loads(path.read_text()) != contract:
+                raise ValueError("P021_PHASE_CONTRACT_CHANGED")
+        else:
+            write_json(path, contract)
+        refs[str(path)] = ref(path)
+        for split in COUNTS:
+            frame = s.prediction(name, split).merge(
+                events[split][["origin_id", "ticker", "tail_class", "target_p99"]],
+                on=["origin_id", "ticker"],
+                validate="one_to_one",
+            )
+            frame["target_magnitude_bin"] = pd.cut(
+                frame.actual_TG20.abs(),
+                bins=[0, 0.5, 1, 2, 4, 8, np.inf],
+                labels=["0–0.5", "0.5–1", "1–2", "2–4", "4–8", ">8"],
+                include_lowest=True,
+            ).astype(str)
+            for label, part in frame.groupby("target_magnitude_bin"):
+                bins.append(dict(run_id=name, partition=split, bin=label, **summary(part)))
+            w = weights(frame)
+            frame["weighted_loss"] = w * frame.squared_error
+            frame["weighted_target_square"] = w * frame.actual_TG20**2
+            total_loss = float(frame.weighted_loss.sum())
+            total_target = float(frame.weighted_target_square.sum())
+            for group in ("tail_class", "target_p99"):
+                for label, part in frame.groupby(group):
+                    tails.append(
+                        dict(
+                            run_id=name,
+                            partition=split,
+                            classification=group,
+                            label=str(label),
+                            stock_rows=len(part),
+                            origins=part.origin_id.nunique(),
+                            sessions=part.session_date_et.nunique(),
+                            weighted_full_population_loss_share=float(
+                                part.weighted_loss.sum() / total_loss
+                            )
+                            if total_loss
+                            else None,
+                            weighted_full_population_target_square_share=float(
+                                part.weighted_target_square.sum() / total_target
+                            )
+                            if total_target
+                            else None,
+                            weights=(
+                                "original full-role equal-day/origin/stock weights; "
+                                "no group reweighting for shares"
+                            ),
+                        )
+                    )
+    csv(plan.parent / "mse_by_target_magnitude_bins.csv", pd.DataFrame(bins))
+    csv(plan.parent / "tail_error_concentration.csv", pd.DataFrame(tails))
+    write_json(
+        plan.parent / "diagnostic_extensions_manifest_v2.json",
+        dict(
+            status="PASS_DIAGNOSTIC_EXTENSIONS",
+            files=refs,
+            code=ref(Path(__file__).relative_to(Path.cwd())),
+            new_optimizer_steps=0,
+            fixed_absolute_TG_bins=[0, 0.5, 1, 2, 4, 8, "infinity"],
+            bins_are_retrospective_display_groups_not_model_or_trade_rules=True,
+        ),
+    )
+    print("PASS_DIAGNOSTIC_EXTENSIONS", len(refs), "named files")
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--plan", type=Path, required=True)
+    ap.add_argument("--extensions", action="store_true")
+    args = ap.parse_args()
+    if args.extensions:
+        publish_extensions(args.plan)
+    else:
+        report(args.plan)

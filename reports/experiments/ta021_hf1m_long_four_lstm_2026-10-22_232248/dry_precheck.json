@@ -1,0 +1,161 @@
+{
+  "all10_private_hashes_verified": 10,
+  "batch_oracles": [
+    {
+      "inverse_max_error": 4.7178681228388086e-07,
+      "origins": 27,
+      "scale": 0.906406830018944,
+      "shape": [
+        16,
+        2,
+        20,
+        48,
+        16
+      ],
+      "source_batch_exact": true,
+      "split": "inner_train"
+    },
+    {
+      "inverse_max_error": 4.434768570149572e-07,
+      "origins": 26,
+      "scale": 0.906406830018944,
+      "shape": [
+        16,
+        2,
+        20,
+        48,
+        16
+      ],
+      "source_batch_exact": true,
+      "split": "inner_validation"
+    },
+    {
+      "inverse_max_error": 2.435284391921755e-07,
+      "origins": 27,
+      "scale": 0.9057319697455458,
+      "shape": [
+        16,
+        2,
+        20,
+        48,
+        16
+      ],
+      "source_batch_exact": true,
+      "split": "refit"
+    },
+    {
+      "inverse_max_error": 1.8669991863617952e-07,
+      "origins": 28,
+      "scale": 0.9057319697455458,
+      "shape": [
+        16,
+        2,
+        20,
+        48,
+        16
+      ],
+      "source_batch_exact": true,
+      "split": "development"
+    }
+  ],
+  "d6g_epoch1_selection_verified": true,
+  "dropout": "nn.Dropout(0.10) after last hidden; no recurrent dropout",
+  "elapsed_seconds": 3.310973792016739,
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "forward_only": [
+    {
+      "optimizer_steps": 0,
+      "seconds": 0.03144395802519284,
+      "seed": 42,
+      "unchanged_weights": true
+    },
+    {
+      "optimizer_steps": 0,
+      "seconds": 0.016580042021814734,
+      "seed": 123,
+      "unchanged_weights": true
+    }
+  ],
+  "initial_hashes": {
+    "123": "c9b150b1baac0633708f5153a05a18ff3bcf45d254bd09bf3c4e6e29c49accbf",
+    "42": "079edbe32c7565824b359686e3eeb181ebe7986eba173d4af3ef78869a1ec836"
+  },
+  "optimizer_steps": 0,
+  "parameters": 6433,
+  "peak_rss_bytes_macos": 651886592,
+  "protected_denied_before_file_read": [
+    "confirmation",
+    "2026",
+    "heldout",
+    "test",
+    "protected_date"
+  ],
+  "status": "PASS_DRY_PRECHECK_AWAITING_LIVE_APPROVAL",
+  "views": {
+    "development": {
+      "first_session": "2025-07-15",
+      "fit_version": "refit",
+      "last_session": "2025-12-31",
+      "origins": 183,
+      "population_sha256": "c8a27a072cd577bd7f77fb619733853d068e1e3c2f44586e36abde22ddab697a",
+      "scale": 0.9057319697455458,
+      "sessions": 109,
+      "stock_rows": 3660,
+      "target_float32_sha256": "d98bbf2aad56df7ede85eca246f3e66ad730ac871e4f2f8e2cd862e2e4b8afe2",
+      "weighting": "equal session, equal admitted origins within session, equal20 stocks"
+    },
+    "inner_train": {
+      "first_session": "2011-04-01",
+      "fit_version": "inner",
+      "last_session": "2023-01-23",
+      "origins": 4428,
+      "population_sha256": "739409f26070d581ca75172f58dcee539ba6cc85e3bed7549f8ba68ee7f47e08",
+      "scale": 0.906406830018944,
+      "sessions": 2513,
+      "stock_rows": 88560,
+      "target_float32_sha256": "f8113e27c895141eaef9c774d563cabe29f7d4f7e6f78c0f8fc1536af60c2380",
+      "weighting": "equal session, equal admitted origins within session, equal20 stocks"
+    },
+    "inner_validation": {
+      "first_session": "2023-02-03",
+      "fit_version": "inner",
+      "last_session": "2025-06-30",
+      "origins": 766,
+      "population_sha256": "f4779be967e200017914618ece15a443352687718aa7555f0b2207fcb91dfa41",
+      "scale": 0.906406830018944,
+      "sessions": 459,
+      "stock_rows": 15320,
+      "target_float32_sha256": "2ba85111dd2b74d52654412a539866c26d22910d60ca04457911747beae2ef70",
+      "weighting": "equal session, equal admitted origins within session, equal20 stocks"
+    },
+    "refit": {
+      "first_session": "2011-04-01",
+      "fit_version": "refit",
+      "last_session": "2025-06-30",
+      "origins": 5210,
+      "population_sha256": "ea5795c911d9a6f0b901aa0a451f001e64e78e8712603975f04c005836f230e3",
+      "scale": 0.9057319697455458,
+      "sessions": 2980,
+      "stock_rows": 104200,
+      "target_float32_sha256": "9afe920c388f4102a0644e6851c4eca0eb26535030a92d576d3300bf8b872506",
+      "weighting": "equal session, equal admitted origins within session, equal20 stocks"
+    }
+  }
+}
