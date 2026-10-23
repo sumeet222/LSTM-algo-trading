@@ -47,7 +47,7 @@ def test_all_five_arithmetic_population_divisor_and_all_equal():
     pairs = peer_summaries(values)
     np.testing.assert_allclose(pairs, direct(values), rtol=0, atol=0)
     np.testing.assert_allclose(
-        pairs[[0, 2, 4], 0], [(3.5, 1.25**0.5), (3.0, 2.5**0.5), (2.5, 1.25**0.5)]
+        pairs[[0, 2, 4], 0], np.asarray([(3.5, 1.25**0.5), (3.0, 2.5**0.5), (2.5, 1.25**0.5)])
     )
     assert np.array_equal(peer_summaries(np.ones((5, 48, 16)))[..., 1], np.zeros((5, 48)))
     # Centered differences remain stable even with a large common offset.
