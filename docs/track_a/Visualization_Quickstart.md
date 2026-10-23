@@ -44,3 +44,6 @@ For missing files, read the exact path in the app and provision the original art
 Everything binds to localhost; telemetry collection is disabled. No public publishing or bulk raw-data export is provided. Local rights/clock/action assumptions remain qualified. Check applicable rights before sharing raw-data screenshots.
 
 Package011 adds saved H1/T1/T2/O1 arms with explicit seed labels. **TM0 remains C0 seed42**; use **C0 [123]** for seed123 comparisons. Follow the [five-step Package011 guide](../../reports/data_audit/ta011_controlled_interventions_2026-10-15_124546/HOW_TO_VIEW_PACKAGE_011.md) for matched comparisons, original-scale TG0 and actual clipping diagnostics. Only completed cases appear; the explorer never starts training.
+
+
+For the completed 20-stock E1/QR1 two-seed study, choose **HF1M Long — E1 / QR1 Replication (P025)**. Start Here links the guide and six reports. Compare E1 event ranking/calibration separately from QR1 proper quantile skill and causal-state response. Use Exact Cases for marked input/outcome boundaries and History / Features for all20 stocks. Protected2026 dates remain locked; this page grants no trading or additional fitting permission.

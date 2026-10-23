@@ -59,6 +59,7 @@ SECTIONS = (
     "HF1M Long — Objective Improvement Screen (P022)",
     "HF1M Long — Direction / Quantiles / Sampling (P023)",
     "HF1M Long — Optimization & Capacity (P024)",
+    "HF1M Long — E1 / QR1 Replication (P025)",
 )
 PLOT_CONFIG = {"displaylogo": False, "scrollZoom": True, "modeBarButtonsToRemove": ["toImage"]}
 
@@ -787,6 +788,14 @@ def main() -> None:
     st.sidebar.title("Track A")
     st.sidebar.caption("Research explorer · local / read-only")
     section = st.sidebar.radio("Explore", SECTIONS, key="section")
+    if section == "HF1M Long — E1 / QR1 Replication (P025)":
+        from lstm_data.visualization.branch_replication_ui import panel as replication_panel
+
+        try:
+            replication_panel(ROOT)
+        except (OSError, ValueError, KeyError) as exc:
+            st.error(str(exc))
+        return
     if section == "HF1M Long — Optimization & Capacity (P024)":
         from lstm_data.visualization.optimization_screen_ui import panel as optimization_panel
 
