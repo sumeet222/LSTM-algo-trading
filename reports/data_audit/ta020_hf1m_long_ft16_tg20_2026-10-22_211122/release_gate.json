@@ -1,0 +1,79 @@
+{
+  "status": "FEATURE_READY_FOR_TRAINING",
+  "source": "mito0o852/OHLCV-1m",
+  "revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+  "feature_id": "HF20_HF1M_LONG_v1_FT16_v1",
+  "target_id": "HF20_HF1M_LONG_v1_TG20_4H_v1",
+  "model_input_id": "HF20_HF1M_LONG_v1_MODEL_INPUT_v1",
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "evidence": {
+    "model_input_contract.json": {
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+      "bytes": 4019,
+      "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+    },
+    "train_only_fit_recipes.json": {
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/train_only_fit_recipes.json",
+      "bytes": 489158,
+      "sha256": "d6c394bebb35131522d05c2b91b33347cfadb4e3204a8a4525b60cd9305ababc"
+    },
+    "quantitative_qa.json": {
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/quantitative_qa.json",
+      "bytes": 27504,
+      "sha256": "e0f690ca6c3ccb59b8d7b0b926b7789de9b43dd4f77654b72bb700aa0a86c7c9"
+    },
+    "independent_oracle_and_causality.json": {
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/independent_oracle_and_causality.json",
+      "bytes": 16122,
+      "sha256": "5ec73d0a43d614a7b946de3c2753828e313cdf7a10b987861835d2395e4a3c51"
+    },
+    "quality_and_fit_prefix_receipt.json": {
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/quality_and_fit_prefix_receipt.json",
+      "bytes": 2608,
+      "sha256": "8156509d817e5fe6808fd950846b774f5a7565f84ba2a79ce24c80ae823f78a7"
+    },
+    "provenance_overlay_manifest.json": {
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/provenance_overlay_manifest.json",
+      "bytes": 444,
+      "sha256": "35fb684c221d5012f9256aba1f297bdd5b1c4aa2d706d7d4fac7c3b538754145"
+    },
+    "tests_static_receipt.json": {
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/tests_static_receipt.json",
+      "bytes": 954,
+      "sha256": "352b1f7d3d7a881a62f4b96c5626ff5c20a9ccf711210f81a337dce2d3fea2c8"
+    }
+  },
+  "upstream_gate_sha256": "5a3d64f38c1c05fe3829b0ab2c873529cbde1312dd32d6acc3eb1614e51e98f6",
+  "root_register_unchanged_sha256": "2ac03f37164ac3e7e77d883a02bc02d6dc5398876c00d393dec1829bad6d4c07",
+  "split_counts": {
+    "inner_train": 4428,
+    "inner_validation": 766,
+    "refit": 5210,
+    "development": 183
+  },
+  "model_training_authorized": false,
+  "ledger": 32,
+  "protected_numeric_access": false,
+  "required_next_action": "separate explicit live authorization for matched seed42 C0/T2 pair; no automatic fitting"
+}

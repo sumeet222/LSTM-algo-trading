@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "source": "mito0o852/OHLCV-1m",
+  "revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+  "parent_namespace": "HF20_HF1M_LONG_v1_ACTION_QA_v1",
+  "feature_id": "HF20_HF1M_LONG_v1_FT16_v1",
+  "target_id": "HF20_HF1M_LONG_v1_TG20_4H_v1",
+  "model_input_id": "HF20_HF1M_LONG_v1_MODEL_INPUT_v1",
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "upstream_packet": "reports/data_audit/ta019b_action_qa_2026-10-22_201224",
+  "upstream_gate_sha256": "5a3d64f38c1c05fe3829b0ab2c873529cbde1312dd32d6acc3eb1614e51e98f6",
+  "root_register_sha256": "2ac03f37164ac3e7e77d883a02bc02d6dc5398876c00d393dec1829bad6d4c07",
+  "source_manifest_sha256": "2b8f9165b0387acaf650d1f1514afb8b41d081aacc9b2056b2f6efa496adf40c",
+  "warmup": [
+    "2010-07-01",
+    "2011-03-31"
+  ],
+  "train": [
+    "2011-04-01",
+    "2025-06-30"
+  ],
+  "inner_train_end": "2023-01-23",
+  "inner_validation": [
+    "2023-01-24",
+    "2025-06-30"
+  ],
+  "inner_split_selection": "latest ceil15% of5210 source-quality joint training origins; round to whole starting session, before feature/label values",
+  "development": [
+    "2025-07-01",
+    "2025-12-31"
+  ],
+  "protected": [
+    "2026-01-01",
+    "2026-03-31"
+  ],
+  "embargo_complete_hours": 48,
+  "lookback": 48,
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "volume_max_absent_minutes": 5,
+  "volume_max_consecutive_absent_minutes": 5,
+  "volume_conflicts_allowed": 0,
+  "volume_quarantines_allowed": 0,
+  "volume_rule": "feature-only zero for ABSENT minute; observed sum is lower bound; poor/unknown bins missing; no inverse split share factor",
+  "daily_close_policy": "genuine15:30 last full-hour close on regular6-hour sessions, independently of earlier missing hours; never claim16:00 exchange close; stubs excluded",
+  "daily_volume_policy": "sum6 full-hour feature-lower-bound volumes only if all6 meet declared tier; never full-day exchange volume",
+  "indicator_gap_policy": "invalid hourly price freezes EMA and disconnects RSI predecessor; >=3 consecutive invalid full-hour positions resets all indicator state; COP basis boundary resets; regular overnight is expected, not a gap",
+  "fallback": "train-only native robust median on unique eligible input timestamps; B2/T2/T5 neutral0; no target fallback; explicit masks separate from16 tensor",
+  "scaling": "13pooled median/unscaledMAD, IQR/1.349 then populationSD then constant scale1; bounded B2/T2/T5 identity; M2 unique stock/session/origin balanced50/50",
+  "m2_policy": "previous regular-session same-origin matured genuine4h returns;19/20mean and57/60RMS maxgap2; session-locked at day start; two origin contexts retained separately for all48 steps",
+  "issuance_lag_minutes_assumed": 2,
+  "publication_timing_verified": false,
+  "training_authorized": false,
+  "storage_ceiling_bytes": 10000000000
+}

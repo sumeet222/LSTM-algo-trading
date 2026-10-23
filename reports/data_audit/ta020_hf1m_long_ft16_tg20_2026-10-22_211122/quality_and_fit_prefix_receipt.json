@@ -1,0 +1,89 @@
+{
+  "result": "PASS",
+  "fit_prefix_checks": [
+    {
+      "fit": "inner",
+      "stop": "2023-01-23",
+      "unique_fit_hours": 16723,
+      "prefix_only_refit_of_all_preprocessing_parameters_identical": true,
+      "development_observations_used": 0,
+      "overlap_windows_not_duplicated": true
+    },
+    {
+      "fit": "refit",
+      "stop": "2025-06-30",
+      "unique_fit_hours": 20149,
+      "prefix_only_refit_of_all_preprocessing_parameters_identical": true,
+      "development_observations_used": 0,
+      "overlap_windows_not_duplicated": true
+    }
+  ],
+  "epsilon_T2_independent_train_prefix_checks": [
+    {
+      "fit": "inner",
+      "epsilon": 0.00032970431934696,
+      "unique_train_origins": 4864,
+      "T2_scale": 0.906406830018944,
+      "development_values_used": 0,
+      "nonfinite_target_imputed": false,
+      "unscaled_MAD": true
+    },
+    {
+      "fit": "refit",
+      "epsilon": 0.00033464021096456584,
+      "unique_train_origins": 5773,
+      "T2_scale": 0.9057319697455458,
+      "development_values_used": 0,
+      "nonfinite_target_imputed": false,
+      "unscaled_MAD": true
+    }
+  ],
+  "reason_masks": {
+    "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/P020_component_quality_reason_masks.parquet",
+    "bytes": 1363869,
+    "sha256": "9bf5d86d553d1d3b17046f21de820ae580eb2642f2c4d09a0c235a90076ecfb1",
+    "rows": 465960
+  },
+  "volume_thresholds_predeclared": [
+    0,
+    1,
+    2,
+    5
+  ],
+  "weak_stock_counterfactuals": [
+    {
+      "excluded_hypothetical": "NONE",
+      "retained_stocks": 20,
+      "feature_and_endpoint_potential": 5210,
+      "actual_cohort_changed": false,
+      "smaller_target_constructed": false
+    },
+    {
+      "excluded_hypothetical": "MA",
+      "retained_stocks": 19,
+      "feature_and_endpoint_potential": 5540,
+      "actual_cohort_changed": false,
+      "smaller_target_constructed": false
+    },
+    {
+      "excluded_hypothetical": "AVGO",
+      "retained_stocks": 19,
+      "feature_and_endpoint_potential": 5533,
+      "actual_cohort_changed": false,
+      "smaller_target_constructed": false
+    },
+    {
+      "excluded_hypothetical": "MA,AVGO",
+      "retained_stocks": 18,
+      "feature_and_endpoint_potential": 5885,
+      "actual_cohort_changed": false,
+      "smaller_target_constructed": false
+    }
+  ],
+  "quality_masks_are_not_extra_model_channels": true,
+  "genuine_zero_volume_hours": 0,
+  "assumed_zero_minutes": 271188,
+  "unknown_conflict_quarantine_minutes": 283,
+  "feature_volume_complete_source_claim": false,
+  "protected_numeric_access": false
+}

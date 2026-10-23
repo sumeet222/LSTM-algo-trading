@@ -1,0 +1,1045 @@
+{
+  "year_train_origin_counts": {
+    "2011": 283,
+    "2012": 126,
+    "2013": 243,
+    "2014": 429,
+    "2015": 379,
+    "2016": 452,
+    "2017": 450,
+    "2018": 456,
+    "2019": 466,
+    "2020": 436,
+    "2021": 307,
+    "2022": 376,
+    "2023": 298,
+    "2024": 320,
+    "2025": 189
+  },
+  "train_years_at_least100": 15,
+  "waterfall": [
+    {
+      "split": "inner_train",
+      "scheduled": 5894,
+      "past_source_input": 5248,
+      "finite16_after_declared_fallback": 5248,
+      "genuine20_future": 4864,
+      "joint_before_fit_embargo": 4428,
+      "final_admitted": 4428,
+      "stock_rows": 88560
+    },
+    {
+      "split": "inner_validation",
+      "scheduled": 1210,
+      "past_source_input": 1010,
+      "finite16_after_declared_fallback": 1010,
+      "genuine20_future": 909,
+      "joint_before_fit_embargo": 782,
+      "final_admitted": 766,
+      "stock_rows": 15320
+    },
+    {
+      "split": "refit",
+      "scheduled": 7104,
+      "past_source_input": 6258,
+      "finite16_after_declared_fallback": 6258,
+      "genuine20_future": 5773,
+      "joint_before_fit_embargo": 5210,
+      "final_admitted": 5210,
+      "stock_rows": 104200
+    },
+    {
+      "split": "development",
+      "scheduled": 250,
+      "past_source_input": 250,
+      "finite16_after_declared_fallback": 250,
+      "genuine20_future": 194,
+      "joint_before_fit_embargo": 194,
+      "final_admitted": 183,
+      "stock_rows": 3660
+    }
+  ],
+  "admitted_fallback_rates": [
+    {
+      "split": "inner_train",
+      "feature": "M1",
+      "fallback_cells": 114598,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.026958653267088226
+    },
+    {
+      "split": "inner_train",
+      "feature": "M2",
+      "fallback_cells": 213160,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.050144911171333933
+    },
+    {
+      "split": "inner_train",
+      "feature": "M3",
+      "fallback_cells": 95971,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.022576737052092743
+    },
+    {
+      "split": "inner_train",
+      "feature": "M4",
+      "fallback_cells": 97498,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.022935956790123457
+    },
+    {
+      "split": "inner_train",
+      "feature": "V1",
+      "fallback_cells": 206461,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.04856900218307739
+    },
+    {
+      "split": "inner_train",
+      "feature": "V2",
+      "fallback_cells": 101502,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.023877879403794038
+    },
+    {
+      "split": "inner_train",
+      "feature": "V3",
+      "fallback_cells": 246150,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.05790565718157181
+    },
+    {
+      "split": "inner_train",
+      "feature": "B1",
+      "fallback_cells": 207,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 4.869579945799458e-05
+    },
+    {
+      "split": "inner_train",
+      "feature": "B2",
+      "fallback_cells": 207,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 4.869579945799458e-05
+    },
+    {
+      "split": "inner_train",
+      "feature": "Q1",
+      "fallback_cells": 266068,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.06259127521830773
+    },
+    {
+      "split": "inner_train",
+      "feature": "Q2",
+      "fallback_cells": 836470,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.19677572643781993
+    },
+    {
+      "split": "inner_train",
+      "feature": "T1",
+      "fallback_cells": 18966,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.0044616644083107495
+    },
+    {
+      "split": "inner_train",
+      "feature": "T2",
+      "fallback_cells": 114706,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.026984059771153267
+    },
+    {
+      "split": "inner_train",
+      "feature": "T3",
+      "fallback_cells": 16139,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.0037966256398675098
+    },
+    {
+      "split": "inner_train",
+      "feature": "T4",
+      "fallback_cells": 16139,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.0037966256398675098
+    },
+    {
+      "split": "inner_train",
+      "feature": "T5",
+      "fallback_cells": 6275,
+      "admitted_cells": 4250880,
+      "fallback_fraction": 0.0014761649352604638
+    },
+    {
+      "split": "inner_validation",
+      "feature": "M1",
+      "fallback_cells": 35201,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.04786907093124456
+    },
+    {
+      "split": "inner_validation",
+      "feature": "M2",
+      "fallback_cells": 110180,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.14983137510879024
+    },
+    {
+      "split": "inner_validation",
+      "feature": "M3",
+      "fallback_cells": 180243,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.2451085182767624
+    },
+    {
+      "split": "inner_validation",
+      "feature": "M4",
+      "fallback_cells": 184801,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.25130684290687555
+    },
+    {
+      "split": "inner_validation",
+      "feature": "V1",
+      "fallback_cells": 45994,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.0625462358572672
+    },
+    {
+      "split": "inner_validation",
+      "feature": "V2",
+      "fallback_cells": 32855,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.04467879677980853
+    },
+    {
+      "split": "inner_validation",
+      "feature": "V3",
+      "fallback_cells": 57959,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.07881717798085291
+    },
+    {
+      "split": "inner_validation",
+      "feature": "B1",
+      "fallback_cells": 0,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.0
+    },
+    {
+      "split": "inner_validation",
+      "feature": "B2",
+      "fallback_cells": 0,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.0
+    },
+    {
+      "split": "inner_validation",
+      "feature": "Q1",
+      "fallback_cells": 81937,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.1114243363794604
+    },
+    {
+      "split": "inner_validation",
+      "feature": "Q2",
+      "fallback_cells": 251897,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.342549227589208
+    },
+    {
+      "split": "inner_validation",
+      "feature": "T1",
+      "fallback_cells": 26351,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.03583414926022628
+    },
+    {
+      "split": "inner_validation",
+      "feature": "T2",
+      "fallback_cells": 48620,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.06611727589208007
+    },
+    {
+      "split": "inner_validation",
+      "feature": "T3",
+      "fallback_cells": 132191,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.17976365317667536
+    },
+    {
+      "split": "inner_validation",
+      "feature": "T4",
+      "fallback_cells": 132191,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.17976365317667536
+    },
+    {
+      "split": "inner_validation",
+      "feature": "T5",
+      "fallback_cells": 30468,
+      "admitted_cells": 735360,
+      "fallback_fraction": 0.041432767624020886
+    },
+    {
+      "split": "refit",
+      "feature": "M1",
+      "fallback_cells": 149904,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.029971209213051825
+    },
+    {
+      "split": "refit",
+      "feature": "M2",
+      "fallback_cells": 324100,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.06479926423544466
+    },
+    {
+      "split": "refit",
+      "feature": "M3",
+      "fallback_cells": 276214,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.0552251279590531
+    },
+    {
+      "split": "refit",
+      "feature": "M4",
+      "fallback_cells": 282314,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.05644473768394114
+    },
+    {
+      "split": "refit",
+      "feature": "V1",
+      "fallback_cells": 253007,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.05058521273192578
+    },
+    {
+      "split": "refit",
+      "feature": "V2",
+      "fallback_cells": 134402,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.026871801023672426
+    },
+    {
+      "split": "refit",
+      "feature": "V3",
+      "fallback_cells": 304706,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.060921705054382595
+    },
+    {
+      "split": "refit",
+      "feature": "B1",
+      "fallback_cells": 207,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 4.138675623800384e-05
+    },
+    {
+      "split": "refit",
+      "feature": "B2",
+      "fallback_cells": 207,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 4.138675623800384e-05
+    },
+    {
+      "split": "refit",
+      "feature": "Q1",
+      "fallback_cells": 335136,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.06700575815738964
+    },
+    {
+      "split": "refit",
+      "feature": "Q2",
+      "fallback_cells": 1084120,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.21675463851567497
+    },
+    {
+      "split": "refit",
+      "feature": "T1",
+      "fallback_cells": 45317,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.009060500639795266
+    },
+    {
+      "split": "refit",
+      "feature": "T2",
+      "fallback_cells": 163326,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.03265475047984645
+    },
+    {
+      "split": "refit",
+      "feature": "T3",
+      "fallback_cells": 148330,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.029656509916826616
+    },
+    {
+      "split": "refit",
+      "feature": "T4",
+      "fallback_cells": 148330,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.029656509916826616
+    },
+    {
+      "split": "refit",
+      "feature": "T5",
+      "fallback_cells": 36743,
+      "admitted_cells": 5001600,
+      "fallback_fraction": 0.007346249200255918
+    },
+    {
+      "split": "development",
+      "feature": "M1",
+      "fallback_cells": 5265,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.029969262295081966
+    },
+    {
+      "split": "development",
+      "feature": "M2",
+      "fallback_cells": 10415,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.05928392531876139
+    },
+    {
+      "split": "development",
+      "feature": "M3",
+      "fallback_cells": 8558,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.04871357012750455
+    },
+    {
+      "split": "development",
+      "feature": "M4",
+      "fallback_cells": 8497,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.04836634790528233
+    },
+    {
+      "split": "development",
+      "feature": "V1",
+      "fallback_cells": 6501,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.03700478142076503
+    },
+    {
+      "split": "development",
+      "feature": "V2",
+      "fallback_cells": 4959,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.028227459016393442
+    },
+    {
+      "split": "development",
+      "feature": "V3",
+      "fallback_cells": 8004,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.045560109289617484
+    },
+    {
+      "split": "development",
+      "feature": "B1",
+      "fallback_cells": 0,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.0
+    },
+    {
+      "split": "development",
+      "feature": "B2",
+      "fallback_cells": 0,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.0
+    },
+    {
+      "split": "development",
+      "feature": "Q1",
+      "fallback_cells": 7827,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.0445525956284153
+    },
+    {
+      "split": "development",
+      "feature": "Q2",
+      "fallback_cells": 17661,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.10052937158469945
+    },
+    {
+      "split": "development",
+      "feature": "T1",
+      "fallback_cells": 1492,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.00849271402550091
+    },
+    {
+      "split": "development",
+      "feature": "T2",
+      "fallback_cells": 7181,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.04087545537340619
+    },
+    {
+      "split": "development",
+      "feature": "T3",
+      "fallback_cells": 0,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.0
+    },
+    {
+      "split": "development",
+      "feature": "T4",
+      "fallback_cells": 0,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.0
+    },
+    {
+      "split": "development",
+      "feature": "T5",
+      "fallback_cells": 0,
+      "admitted_cells": 175680,
+      "fallback_fraction": 0.0
+    }
+  ],
+  "maximum_admitted_channel_fallback_fraction": 0.342549227589208,
+  "train_only_tail_thresholds": {
+    "mad_p05": 0.0017088144016643594,
+    "abs_numerator_p95": 0.01593538084097676,
+    "abs_TG20_p99": 7.249104565631099
+  },
+  "training_TG20_quantiles": {
+    "0": -32.630348601739534,
+    "0.01": -5.419494166849399,
+    "0.5": 0.0,
+    "0.99": 5.78997555449669,
+    "1": 46.20068269622903
+  },
+  "tail_mechanism_counts": {
+    "LARGE_NUMERATOR": 1001,
+    "BOTH": 101,
+    "SMALL_MAD": 50,
+    "ORDINARY": 3
+  },
+  "final16_all_finite": true,
+  "new_store_protected_rows": 0,
+  "source_complete48_volume20_windows": 0,
+  "batch_checks": [
+    {
+      "split": "inner_train",
+      "origin_id": "2011-04-01T14:30:00+00:00",
+      "source_first_end": "2011-03-22 15:30:00+00:00",
+      "source_last_end": "2011-04-01 14:30:00+00:00",
+      "cutoff": "2011-04-01 14:30:00+00:00",
+      "issuance": "2011-04-01 14:32:00+00:00",
+      "label_maturity": "2011-04-01 18:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "inner_train",
+      "origin_id": "2017-08-28T14:30:00+00:00",
+      "source_first_end": "2017-08-16 15:30:00+00:00",
+      "source_last_end": "2017-08-28 14:30:00+00:00",
+      "cutoff": "2017-08-28 14:30:00+00:00",
+      "issuance": "2017-08-28 14:32:00+00:00",
+      "label_maturity": "2017-08-28 18:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "inner_train",
+      "origin_id": "2023-01-23T16:30:00+00:00",
+      "source_first_end": "2023-01-10 17:30:00+00:00",
+      "source_last_end": "2023-01-23 16:30:00+00:00",
+      "cutoff": "2023-01-23 16:30:00+00:00",
+      "issuance": "2023-01-23 16:32:00+00:00",
+      "label_maturity": "2023-01-23 20:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "inner_validation",
+      "origin_id": "2023-02-03T15:30:00+00:00",
+      "source_first_end": "2023-01-24 16:30:00+00:00",
+      "source_last_end": "2023-02-03 15:30:00+00:00",
+      "cutoff": "2023-02-03 15:30:00+00:00",
+      "issuance": "2023-02-03 15:32:00+00:00",
+      "label_maturity": "2023-02-03 19:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "inner_validation",
+      "origin_id": "2024-06-05T14:30:00+00:00",
+      "source_first_end": "2024-05-23 15:30:00+00:00",
+      "source_last_end": "2024-06-05 14:30:00+00:00",
+      "cutoff": "2024-06-05 14:30:00+00:00",
+      "issuance": "2024-06-05 14:32:00+00:00",
+      "label_maturity": "2024-06-05 18:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "inner_validation",
+      "origin_id": "2025-06-30T15:30:00+00:00",
+      "source_first_end": "2025-06-17 16:30:00+00:00",
+      "source_last_end": "2025-06-30 15:30:00+00:00",
+      "cutoff": "2025-06-30 15:30:00+00:00",
+      "issuance": "2025-06-30 15:32:00+00:00",
+      "label_maturity": "2025-06-30 19:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "refit",
+      "origin_id": "2011-04-01T14:30:00+00:00",
+      "source_first_end": "2011-03-22 15:30:00+00:00",
+      "source_last_end": "2011-04-01 14:30:00+00:00",
+      "cutoff": "2011-04-01 14:30:00+00:00",
+      "issuance": "2011-04-01 14:32:00+00:00",
+      "label_maturity": "2011-04-01 18:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "refit",
+      "origin_id": "2018-07-09T15:30:00+00:00",
+      "source_first_end": "2018-06-25 19:30:00+00:00",
+      "source_last_end": "2018-07-09 15:30:00+00:00",
+      "cutoff": "2018-07-09 15:30:00+00:00",
+      "issuance": "2018-07-09 15:32:00+00:00",
+      "label_maturity": "2018-07-09 19:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "refit",
+      "origin_id": "2025-06-30T15:30:00+00:00",
+      "source_first_end": "2025-06-17 16:30:00+00:00",
+      "source_last_end": "2025-06-30 15:30:00+00:00",
+      "cutoff": "2025-06-30 15:30:00+00:00",
+      "issuance": "2025-06-30 15:32:00+00:00",
+      "label_maturity": "2025-06-30 19:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "development",
+      "origin_id": "2025-07-15T15:30:00+00:00",
+      "source_first_end": "2025-07-01 19:30:00+00:00",
+      "source_last_end": "2025-07-15 15:30:00+00:00",
+      "cutoff": "2025-07-15 15:30:00+00:00",
+      "issuance": "2025-07-15 15:32:00+00:00",
+      "label_maturity": "2025-07-15 19:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "development",
+      "origin_id": "2025-10-10T14:30:00+00:00",
+      "source_first_end": "2025-09-30 15:30:00+00:00",
+      "source_last_end": "2025-10-10 14:30:00+00:00",
+      "cutoff": "2025-10-10 14:30:00+00:00",
+      "issuance": "2025-10-10 14:32:00+00:00",
+      "label_maturity": "2025-10-10 18:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    },
+    {
+      "split": "development",
+      "origin_id": "2025-12-31T16:30:00+00:00",
+      "source_first_end": "2025-12-17 20:30:00+00:00",
+      "source_last_end": "2025-12-31 16:30:00+00:00",
+      "cutoff": "2025-12-31 16:30:00+00:00",
+      "issuance": "2025-12-31 16:32:00+00:00",
+      "label_maturity": "2025-12-31 20:32:00+00:00",
+      "shape": [
+        20,
+        48,
+        16
+      ],
+      "component_float32_bitwise_equal": true,
+      "C0_T2_inputs_identical": true
+    }
+  ],
+  "target_extreme_endpoint_checks": [
+    {
+      "fit": "inner",
+      "origin_id": "2013-04-08T15:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2015-05-27T14:30:00+00:00",
+      "ticker": "AVGO",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2014-01-14T16:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2020-02-04T16:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2017-05-02T14:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2013-05-09T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2019-03-19T15:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2013-05-01T15:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2019-11-11T16:30:00+00:00",
+      "ticker": "BA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2021-08-31T15:30:00+00:00",
+      "ticker": "WFC",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2023-05-30T14:30:00+00:00",
+      "ticker": "AVGO",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2019-09-26T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2014-01-14T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2024-07-11T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2015-05-27T15:30:00+00:00",
+      "ticker": "AVGO",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2012-08-08T14:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2018-09-13T15:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2023-05-30T15:30:00+00:00",
+      "ticker": "AVGO",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2016-04-05T14:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2013-07-16T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2015-10-20T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2014-06-16T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2018-09-12T15:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2025-06-05T14:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "inner",
+      "origin_id": "2012-08-13T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2013-04-08T15:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2015-05-27T14:30:00+00:00",
+      "ticker": "AVGO",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2014-01-14T16:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2020-02-04T16:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2013-05-09T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2017-05-02T14:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2019-03-19T15:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2013-05-01T15:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2019-11-11T16:30:00+00:00",
+      "ticker": "BA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2021-08-31T15:30:00+00:00",
+      "ticker": "WFC",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2023-05-30T14:30:00+00:00",
+      "ticker": "AVGO",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2019-09-26T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2014-01-14T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2024-07-11T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2015-05-27T15:30:00+00:00",
+      "ticker": "AVGO",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2012-08-08T14:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2018-09-13T15:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2023-05-30T15:30:00+00:00",
+      "ticker": "AVGO",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2016-04-05T14:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2013-07-16T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2015-10-20T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2014-06-16T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2018-09-12T15:30:00+00:00",
+      "ticker": "AMD",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2025-06-05T14:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    },
+    {
+      "fit": "refit",
+      "origin_id": "2012-08-13T15:30:00+00:00",
+      "ticker": "TSLA",
+      "genuine_endpoint_ratio_verified": true
+    }
+  ],
+  "quality_artifacts": {
+    "origin_quality": {
+      "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/P020_origin_quality_diagnostics.parquet",
+      "bytes": 449538,
+      "sha256": "464cbe2fad17835e06158f9c654308b68c048ca62a42763ba7bf0935335f625c",
+      "rows": 7354
+    },
+    "target_extremes": {
+      "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/P020_target_extremes_dashboard.parquet",
+      "bytes": 31268,
+      "sha256": "74ebc7ace79883ae7ebadef00b52a86ad0c096f8394c6160fab8788541c85fe9",
+      "rows": 300
+    }
+  },
+  "model_trained": false
+}

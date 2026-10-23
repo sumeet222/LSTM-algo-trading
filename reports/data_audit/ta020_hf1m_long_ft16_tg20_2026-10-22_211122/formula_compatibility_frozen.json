@@ -1,0 +1,188 @@
+{
+  "reference_code": [
+    "src/lstm_data/hf20_features.py",
+    "src/lstm_data/hf20_transforms.py",
+    "src/lstm_data/stock_features.py",
+    "src/lstm_data/ft0_transforms.py"
+  ],
+  "previous_dictionary": "FT1_HF20_HOURLY_NATIVE_V1",
+  "numeric_old_stores_read": false,
+  "features": [
+    {
+      "feature": "M1",
+      "formula": "log(C/O)/max(RMS60,h)",
+      "lookback": "60h",
+      "source_and_cutoff": "cap5 close; genuine open; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "M2",
+      "formula": "mean20(previous same-origin matured4h returns)/max(RMS60(previous same-origin returns),m2floor)",
+      "lookback": "60 previous regular sessions",
+      "source_and_cutoff": "genuine endpoints; each historical day locked before its open; origin1/2 context; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "M3",
+      "formula": "log(D[d-1]/D[d-6])/(sqrt(5)*max(RMS63,dailyfloor))",
+      "lookback": "63/5 previous regular sessions",
+      "source_and_cutoff": "genuine15:30 surrogate; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "M4",
+      "formula": "log(D[d-21]/D[d-126])/(sqrt(105)*max(RMS63,dailyfloor))",
+      "lookback": "126 previous regular sessions",
+      "source_and_cutoff": "genuine15:30 surrogate; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "V1",
+      "formula": "log(max(RMS12,h))",
+      "lookback": "12h",
+      "source_and_cutoff": "RMS of OC; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "V2",
+      "formula": "log(max(RMS60,h))",
+      "lookback": "60h",
+      "source_and_cutoff": "RMS of OC; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "V3",
+      "formula": "V1-V2",
+      "lookback": "12/60h",
+      "source_and_cutoff": "log volatility ratio; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "B1",
+      "formula": "log(H/L)",
+      "lookback": "current complete hour",
+      "source_and_cutoff": "trusted observed extremes; missing completeness retained; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "B2",
+      "formula": "(2C-H-L)/(H-L), zero range=>0",
+      "lookback": "current hour",
+      "source_and_cutoff": "missing if unreliable/outside observed range; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "neutral0",
+      "scaling": "identity",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "Q1",
+      "formula": "log((hour_volume+q_h)/(mean_previous20_same_slot_volume+q_h))",
+      "lookback": "20 matching slots, >=19 valid,maxgap2",
+      "source_and_cutoff": "<=5absent minutes and no conflict/quarantine; same volume regime; current completed-hour or earlier only",
+      "units": "dimensionless compatible as-reported volume regime; no split factor",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "Q2",
+      "formula": "log((mean5daily_volume+q_d)/(mean60daily_volume+q_d))",
+      "lookback": "5/60 previous regular sessions",
+      "source_and_cutoff": "sum6usable hourly lower bounds, no stub, same share regime; current completed-hour or earlier only",
+      "units": "dimensionless compatible as-reported volume regime; no split factor",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "T1",
+      "formula": "log(C/mean20previous_daily_close)",
+      "lookback": "20 previous regular sessions",
+      "source_and_cutoff": ">=19 valid,maxgap2; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "T2",
+      "formula": "mean20(sign(previous daily logreturns))",
+      "lookback": "20 previous regular sessions",
+      "source_and_cutoff": ">=19 valid,maxgap2; bounded identity; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "neutral0",
+      "scaling": "identity",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "T3",
+      "formula": "(EMA6-EMA18)/C",
+      "lookback": ">=360usable hourly updates and69/72recent,maxgap2",
+      "source_and_cutoff": "gap>=3 resets; COP resets; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "T4",
+      "formula": "(EMA24-EMA72)/C",
+      "lookback": "same as T3",
+      "source_and_cutoff": "price invariant; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "unique-eligible-training-native median",
+      "scaling": "pooled train median/unscaledMAD with documented nonzero fallback",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    },
+    {
+      "feature": "T5",
+      "formula": "(WilderRSI14-50)/50",
+      "lookback": "14seed changes+140updates",
+      "source_and_cutoff": "gap disconnects predecessor;gap>=3 resets;neutral0 if missing; current completed-hour or earlier only",
+      "units": "dimensionless; invariant to future uniform split rescaling",
+      "fallback": "neutral0",
+      "scaling": "identity",
+      "compatibility": "same economic FT1 math; new source-specific quality/missingness/reset contract",
+      "verification": "independent real and synthetic oracle required before release"
+    }
+  ]
+}

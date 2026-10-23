@@ -1,0 +1,32 @@
+{
+  "preparation_execution_code_sha256": {
+    "src/lstm_data/hf1m_ft16_fit.py": "bd6f1ffb84536e1232bac026a01012ff0b1c5d1165daf5ae1a970086ed00a7bf",
+    "src/lstm_data/hf1m_ft16_loader.py": "1b9d5a09e1686364e6c2a5cbffd682ee4e6b0c337fa1a13fcaadfc699c1eddd9",
+    "src/lstm_data/hf1m_ft16_math.py": "2a1558ffc2a48a3edea7eb177fedcaa7f4f2b7c6b7402731919441f95008ac56",
+    "src/lstm_data/hf1m_ft16_prepare.py": "a86fffdf150f02300ceeba191319607a88ba82436b04c3b9e763b0572701df88",
+    "src/lstm_data/hf1m_ft16_source.py": "9872fcb9829a22cf50d40fc2f9838288498cf5436354d3c711066ad4d9226cd5"
+  },
+  "matching_execution_snapshots": {
+    "src/lstm_data/hf1m_ft16_fit.py": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/preparation_execution_snapshots/hf1m_ft16_fit.py.txt",
+    "src/lstm_data/hf1m_ft16_loader.py": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/preparation_execution_snapshots/hf1m_ft16_loader.py.txt",
+    "src/lstm_data/hf1m_ft16_math.py": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/preparation_execution_snapshots/hf1m_ft16_math.py.txt",
+    "src/lstm_data/hf1m_ft16_prepare.py": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/preparation_execution_snapshots/hf1m_ft16_prepare.py.txt",
+    "src/lstm_data/hf1m_ft16_source.py": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/preparation_execution_snapshots/hf1m_ft16_source.py.txt"
+  },
+  "final_code_sha256": {
+    "src/lstm_data/hf1m_ft16_audit.py": "4b3d0873edc623dfd9b2e6fb7a4d4430d2f79deb8675e4958590dcc9f69e290f",
+    "src/lstm_data/hf1m_ft16_fit.py": "bd6f1ffb84536e1232bac026a01012ff0b1c5d1165daf5ae1a970086ed00a7bf",
+    "src/lstm_data/hf1m_ft16_loader.py": "275bd3ebeb8540fd56a4f9ef388cd19e9f9f40c4dc8b08ab98fb7bce0ff553ec",
+    "src/lstm_data/hf1m_ft16_math.py": "2a1558ffc2a48a3edea7eb177fedcaa7f4f2b7c6b7402731919441f95008ac56",
+    "src/lstm_data/hf1m_ft16_oracles.py": "38dd284d0defd674913eb105e3311c52f49b40276c26daef2afa22aa56574e70",
+    "src/lstm_data/hf1m_ft16_prepare.py": "f1b0a857d382ac659b64440d8664046c874c8ba6f392bd75ab95070255c65b6f",
+    "src/lstm_data/hf1m_ft16_quality.py": "9e2125c4af5666dd383cfc68b736a660cdb18659e81e90e7c3a02e34cb804701",
+    "src/lstm_data/hf1m_ft16_report.py": "b4ce209ce3c440100f465bd1bbfedb5b5742f22261517418096e48539c4195a5",
+    "src/lstm_data/hf1m_ft16_source.py": "9872fcb9829a22cf50d40fc2f9838288498cf5436354d3c711066ad4d9226cd5"
+  },
+  "config_sha256": "8a60bf6eebfbcfe8b17a2118267151c44597702c32f866f368becdbaaeb4a96b",
+  "compatibility_changes": "Typing-safe dictionary/index access in producer; strict loader config/root/recipe/version guards; no source/feature/label arithmetic changes after numeric publication. Independent full vs prefix values and refitted preprocessing agree; producer replay verifies original store hashes. QA/report helpers added separately.",
+  "starting_git_head": "f0dc1c3c0ac05a5aa7ee2c1a8bece74c7e1962bd",
+  "external_ending_git_head": "d7db9f4194e2de427a386f8a4a5f179bbe587287",
+  "external_commit": "data prepared15years;prior019B files now tracked;no index/commit/push by this session"
+}

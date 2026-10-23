@@ -1,0 +1,77 @@
+{
+  "visibility": "LOCAL_PRIVATE_ONLY",
+  "contract": {
+    "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+    "bytes": 4019,
+    "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+  },
+  "charts": [
+    {
+      "name": "coverage_by_year",
+      "table": "quantitative_qa.json:year_train_origin_counts",
+      "x": "year",
+      "y": "origins"
+    },
+    {
+      "name": "channel_fallback_heatmap",
+      "table": "feature_missingness_stock_year.csv",
+      "filters": [
+        "ticker",
+        "year",
+        "feature"
+      ]
+    },
+    {
+      "name": "volume_quality",
+      "table": "volume_quality_stock_year.csv",
+      "filters": [
+        "ticker",
+        "year"
+      ]
+    },
+    {
+      "name": "input_candles_and_quality",
+      "file": {
+        "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/HF20_HF1M_LONG_v1_FT16_v1_candles_quality.parquet",
+        "bytes": 14937094,
+        "sha256": "860f30b39163464ebfbe2a8791ca95d7bc16fdbbc9196f6754b9c733e97d8a1f",
+        "rows": 465960
+      },
+      "filters": [
+        "ticker",
+        "session_date_et",
+        "step"
+      ]
+    },
+    {
+      "name": "target_extremes",
+      "file": {
+        "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/P020_target_extremes_dashboard.parquet",
+        "bytes": 31268,
+        "sha256": "74ebc7ace79883ae7ebadef00b52a86ad0c096f8394c6160fab8788541c85fe9",
+        "rows": 300
+      },
+      "filters": [
+        "selection",
+        "ticker",
+        "origin_id"
+      ]
+    },
+    {
+      "name": "48step_native_scaled",
+      "file": {
+        "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/HF20_HF1M_LONG_v1_FT16_v1_components.npz",
+        "bytes": 126686720,
+        "sha256": "324065850b3f5e37d9fcef60a3fe0a351f5e5a141a585fe26c835fe3972e1103"
+      },
+      "index": {
+        "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/HF20_HF1M_LONG_v1_FT16_v1_grid.parquet",
+        "bytes": 436012,
+        "sha256": "83a24b8664fe490a83daf22492f50dbd60fb35d183da439d7bf116456fc119f6",
+        "rows": 23298
+      },
+      "instructions": "joinorigin first_step:entry_index inclusive;common15 channels plus forecast-origin M2 context;usefit version;separate fallback/reason mask"
+    }
+  ],
+  "existing_Streamlit_integration": "new allowlisted contract adapter required; old FT0/Twelve Data pages must not silently treat new stores as their own; no dashboard changed"
+}

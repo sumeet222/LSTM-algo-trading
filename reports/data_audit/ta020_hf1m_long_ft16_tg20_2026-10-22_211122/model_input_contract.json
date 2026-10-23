@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "source": "mito0o852/OHLCV-1m",
+  "revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+  "feature_id": "HF20_HF1M_LONG_v1_FT16_v1",
+  "target_id": "HF20_HF1M_LONG_v1_TG20_4H_v1",
+  "model_input_id": "HF20_HF1M_LONG_v1_MODEL_INPUT_v1",
+  "parent_namespace": "HF20_HF1M_LONG_v1_ACTION_QA_v1",
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "feature_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "V1",
+    "V2",
+    "V3",
+    "B1",
+    "B2",
+    "Q1",
+    "Q2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "config": {
+    "path": "configs/hf1m_long_ft16_v1.json",
+    "bytes": 3139,
+    "sha256": "8a60bf6eebfbcfe8b17a2118267151c44597702c32f866f368becdbaaeb4a96b"
+  },
+  "upstream_gate_sha256": "5a3d64f38c1c05fe3829b0ab2c873529cbde1312dd32d6acc3eb1614e51e98f6",
+  "action_ledger_sha256": "015d672c11d61b3a14441a2abbfb689ffa59191016398bdc32bb580524a0b937",
+  "root_register_sha256": "2ac03f37164ac3e7e77d883a02bc02d6dc5398876c00d393dec1829bad6d4c07",
+  "fit_recipes": {
+    "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/train_only_fit_recipes.json",
+    "bytes": 489158,
+    "sha256": "d6c394bebb35131522d05c2b91b33347cfadb4e3204a8a4525b60cd9305ababc"
+  },
+  "files": {
+    "components": {
+      "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/HF20_HF1M_LONG_v1_FT16_v1_components.npz",
+      "bytes": 126686720,
+      "sha256": "324065850b3f5e37d9fcef60a3fe0a351f5e5a141a585fe26c835fe3972e1103"
+    },
+    "origins": {
+      "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/HF20_HF1M_LONG_v1_MODEL_INPUT_v1_origins.parquet",
+      "bytes": 390876,
+      "sha256": "a6b3cbcc8832594d6e7659a571381059540eae650d678fa688b0d188d187974d",
+      "rows": 7354
+    },
+    "targets": {
+      "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/HF20_HF1M_LONG_v1_TG20_4H_v1_targets.parquet",
+      "bytes": 8617086,
+      "sha256": "d844e5f24484da0ec9068f7dbba00fa3a5b2794331eeeb40ad3d41a0254cbd02",
+      "rows": 294160
+    },
+    "candles_quality": {
+      "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/HF20_HF1M_LONG_v1_FT16_v1_candles_quality.parquet",
+      "bytes": 14937094,
+      "sha256": "860f30b39163464ebfbe2a8791ca95d7bc16fdbbc9196f6754b9c733e97d8a1f",
+      "rows": 465960
+    },
+    "grid": {
+      "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/HF20_HF1M_LONG_v1_FT16_v1_grid.parquet",
+      "bytes": 436012,
+      "sha256": "83a24b8664fe490a83daf22492f50dbd60fb35d183da439d7bf116456fc119f6",
+      "rows": 23298
+    }
+  },
+  "maximum_numeric_date": "2025-12-31",
+  "protected_numeric_access": false,
+  "lookback": 48,
+  "tensor_shape_per_origin": [
+    20,
+    48,
+    16
+  ],
+  "shared_components": "15unique stock/hour common channels plus2session-locked origin-context M2 channels; materialize16on demand",
+  "split_counts": {
+    "inner_train": 4428,
+    "inner_validation": 766,
+    "refit": 5210,
+    "development": 183
+  },
+  "model_training_authorized": false,
+  "ledger": 32,
+  "original_source_unchanged": true,
+  "status": "PENDING_INDEPENDENT_QA",
+  "code_sha256": {
+    "src/lstm_data/hf1m_ft16_fit.py": "bd6f1ffb84536e1232bac026a01012ff0b1c5d1165daf5ae1a970086ed00a7bf",
+    "src/lstm_data/hf1m_ft16_loader.py": "1b9d5a09e1686364e6c2a5cbffd682ee4e6b0c337fa1a13fcaadfc699c1eddd9",
+    "src/lstm_data/hf1m_ft16_math.py": "2a1558ffc2a48a3edea7eb177fedcaa7f4f2b7c6b7402731919441f95008ac56",
+    "src/lstm_data/hf1m_ft16_prepare.py": "a86fffdf150f02300ceeba191319607a88ba82436b04c3b9e763b0572701df88",
+    "src/lstm_data/hf1m_ft16_source.py": "9872fcb9829a22cf50d40fc2f9838288498cf5436354d3c711066ad4d9226cd5"
+  }
+}

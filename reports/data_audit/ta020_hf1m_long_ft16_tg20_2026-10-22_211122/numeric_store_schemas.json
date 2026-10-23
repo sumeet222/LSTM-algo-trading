@@ -1,0 +1,379 @@
+{
+  "HF20_HF1M_LONG_v1_FT16_v1_candles_quality.parquet": {
+    "rows": 465960,
+    "fields": {
+      "ticker": "large_string",
+      "hour_id": "large_string",
+      "source_month": "large_string",
+      "session_date_et": "large_string",
+      "hour_start_utc": "timestamp[ns, tz=UTC]",
+      "hour_end_utc": "timestamp[ns, tz=UTC]",
+      "open": "double",
+      "high": "double",
+      "low": "double",
+      "close": "double",
+      "close_input_cap5": "double",
+      "observed_volume": "double",
+      "expected_minutes": "int64",
+      "genuine_count": "int64",
+      "missing_count": "int64",
+      "conflict_count": "int64",
+      "quarantine_count": "int64",
+      "proxy_count": "int64",
+      "price_basis_id": "large_string",
+      "volume_basis_id": "large_string",
+      "anomaly_event_ids": "large_string",
+      "price_factor": "double",
+      "raw_linkage_hash": "large_string",
+      "genuine_open": "bool",
+      "genuine_close": "bool",
+      "extrema_complete": "bool",
+      "step": "int64",
+      "observed_volume_sum": "double",
+      "assumed_zero_missing_count": "int64",
+      "quarantine_volume_unknown_count": "int64",
+      "observed_minute_fraction": "double",
+      "source_volume_observed": "bool",
+      "volume_missing_assumed_zero": "bool",
+      "hourly_volume_lower_bound": "bool",
+      "volume_usable_for_feature": "bool",
+      "volume_for_feature": "double",
+      "volume_quality_tier": "large_string"
+    }
+  },
+  "HF20_HF1M_LONG_v1_FT16_v1_components.npz": {
+    "arrays": {
+      "feature_id": {
+        "shape": [],
+        "dtype": "<U25"
+      },
+      "symbols": {
+        "shape": [
+          20
+        ],
+        "dtype": "<U4"
+      },
+      "feature_order": {
+        "shape": [
+          16
+        ],
+        "dtype": "<U2"
+      },
+      "hour_end_ns": {
+        "shape": [
+          23298
+        ],
+        "dtype": "int64"
+      },
+      "m2_reference_end_index": {
+        "shape": [
+          23298
+        ],
+        "dtype": "int64"
+      },
+      "inner_native_common": {
+        "shape": [
+          23298,
+          20,
+          15
+        ],
+        "dtype": "float64"
+      },
+      "inner_native_m2": {
+        "shape": [
+          23298,
+          20,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "inner_scaled_common": {
+        "shape": [
+          23298,
+          20,
+          15
+        ],
+        "dtype": "float32"
+      },
+      "inner_scaled_m2": {
+        "shape": [
+          23298,
+          20,
+          2
+        ],
+        "dtype": "float32"
+      },
+      "inner_fallback_common": {
+        "shape": [
+          23298,
+          20,
+          15
+        ],
+        "dtype": "bool"
+      },
+      "inner_fallback_m2": {
+        "shape": [
+          23298,
+          20,
+          2
+        ],
+        "dtype": "bool"
+      },
+      "refit_native_common": {
+        "shape": [
+          23298,
+          20,
+          15
+        ],
+        "dtype": "float64"
+      },
+      "refit_native_m2": {
+        "shape": [
+          23298,
+          20,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "refit_scaled_common": {
+        "shape": [
+          23298,
+          20,
+          15
+        ],
+        "dtype": "float32"
+      },
+      "refit_scaled_m2": {
+        "shape": [
+          23298,
+          20,
+          2
+        ],
+        "dtype": "float32"
+      },
+      "refit_fallback_common": {
+        "shape": [
+          23298,
+          20,
+          15
+        ],
+        "dtype": "bool"
+      },
+      "refit_fallback_m2": {
+        "shape": [
+          23298,
+          20,
+          2
+        ],
+        "dtype": "bool"
+      }
+    }
+  },
+  "HF20_HF1M_LONG_v1_FT16_v1_grid.parquet": {
+    "rows": 23298,
+    "fields": {
+      "hour_start_utc": "timestamp[ns, tz=UTC]",
+      "hour_end_utc": "timestamp[ns, tz=UTC]",
+      "session_date_et": "large_string",
+      "slot": "int64"
+    }
+  },
+  "HF20_HF1M_LONG_v1_MODEL_INPUT_v1_origins.parquet": {
+    "rows": 7354,
+    "fields": {
+      "Index": "int64",
+      "origin_id": "large_string",
+      "session_date_et": "large_string",
+      "entry_index": "int64",
+      "exit_index": "int64",
+      "entry_end_utc": "timestamp[ns, tz=UTC]",
+      "exit_end_utc": "timestamp[ns, tz=UTC]",
+      "first_step": "int64",
+      "source_input_eligible": "bool",
+      "label_eligible": "bool",
+      "label_missing_stocks": "large_string",
+      "input_exclusion": "large_string",
+      "inner_train": "bool",
+      "inner_validation": "bool",
+      "refit": "bool",
+      "development": "bool",
+      "inner_embargo": "bool",
+      "development_embargo": "bool",
+      "issuance_utc": "timestamp[ns, tz=UTC]",
+      "label_maturity_utc": "timestamp[ns, tz=UTC]",
+      "source_publication_available_at": "large_string",
+      "inner_train_admitted": "bool",
+      "inner_validation_admitted": "bool",
+      "refit_admitted": "bool",
+      "development_admitted": "bool"
+    }
+  },
+  "HF20_HF1M_LONG_v1_TG20_4H_v1_targets.parquet": {
+    "rows": 294160,
+    "fields": {
+      "origin_id": "large_string",
+      "ticker": "large_string",
+      "session_date_et": "large_string",
+      "fit_version": "large_string",
+      "return_4h": "double",
+      "cross_section_median": "double",
+      "cross_section_mad": "double",
+      "numerator": "double",
+      "epsilon": "double",
+      "denominator": "double",
+      "TG20": "double",
+      "T2_z": "double",
+      "label_eligible": "bool",
+      "entry_end_utc": "timestamp[ns, tz=UTC]",
+      "exit_end_utc": "timestamp[ns, tz=UTC]",
+      "label_maturity_utc": "timestamp[ns, tz=UTC]"
+    }
+  },
+  "P020_component_quality_reason_masks.parquet": {
+    "rows": 465960,
+    "fields": {
+      "hour_id": "large_string",
+      "ticker": "large_string",
+      "session_date_et": "large_string",
+      "step": "int64",
+      "hour_end_utc": "timestamp[ns, tz=UTC]",
+      "source_close_proxy": "bool",
+      "source_close_missing": "bool",
+      "source_open_missing": "bool",
+      "extrema_untrusted": "bool",
+      "source_conflict": "bool",
+      "source_material_quarantine": "bool",
+      "volume_assumed_zero_minute": "bool",
+      "volume_unknown_or_severe": "bool",
+      "COP_long_dependency": "bool",
+      "volume_Q1_basis_reset": "bool",
+      "volume_Q2_basis_reset": "bool",
+      "missing_M1": "bool",
+      "missing_M3": "bool",
+      "missing_M4": "bool",
+      "missing_V1": "bool",
+      "missing_V2": "bool",
+      "missing_V3": "bool",
+      "missing_B1": "bool",
+      "missing_B2": "bool",
+      "missing_Q1": "bool",
+      "missing_Q2": "bool",
+      "missing_T1": "bool",
+      "missing_T2": "bool",
+      "missing_T3": "bool",
+      "missing_T4": "bool",
+      "missing_T5": "bool",
+      "missing_M2_origin1": "bool",
+      "missing_M2_origin2": "bool"
+    }
+  },
+  "P020_hour_provenance_overlay.parquet": {
+    "rows": 465960,
+    "fields": {
+      "hour_id": "large_string",
+      "ticker": "large_string",
+      "session_date_et": "large_string",
+      "hour_start_utc": "timestamp[ns, tz=UTC]",
+      "hour_end_utc": "timestamp[ns, tz=UTC]",
+      "first_minute": "timestamp[ns, tz=UTC]",
+      "last_minute": "timestamp[ns, tz=UTC]",
+      "longest_gap_minutes": "int64",
+      "opening_minutes_missing": "bool",
+      "invalid_minutes": "int64",
+      "quality_tier": "large_string",
+      "source_quality_tier_018d": "large_string",
+      "source_action_uncertainty_018d": "bool",
+      "issue_ids": "large_string",
+      "issue_reasons": "large_string",
+      "raw_linkage_hash": "large_string",
+      "terminal_input_price_age_minutes": "double"
+    }
+  },
+  "P020_independent_real_oracle_operands.parquet": {
+    "rows": 3,
+    "fields": {
+      "ticker": "large_string",
+      "date": "large_string",
+      "cutoff": "large_string",
+      "OC": "double",
+      "RMS12": "double",
+      "RMS60": "double",
+      "RMS63": "double",
+      "M2_mean20": "double",
+      "M2_RMS60": "double",
+      "daily_close_lag1": "double",
+      "daily_close_lag6": "double",
+      "daily_close_lag21": "double",
+      "daily_close_lag126": "double",
+      "Q1_previous20_mean": "double",
+      "Q2_mean5": "double",
+      "Q2_mean60": "double",
+      "SMA20": "double",
+      "EMA6": "double",
+      "EMA18": "double",
+      "EMA24": "double",
+      "EMA72": "double",
+      "RSI_average_gain": "double",
+      "RSI_average_loss": "double",
+      "Wilder_updates": "int64"
+    }
+  },
+  "P020_origin_quality_diagnostics.parquet": {
+    "rows": 7354,
+    "fields": {
+      "Index": "int64",
+      "origin_id": "large_string",
+      "session_date_et": "large_string",
+      "entry_index": "int64",
+      "exit_index": "int64",
+      "entry_end_utc": "timestamp[ns, tz=UTC]",
+      "exit_end_utc": "timestamp[ns, tz=UTC]",
+      "first_step": "int64",
+      "source_input_eligible": "bool",
+      "label_eligible": "bool",
+      "label_missing_stocks": "large_string",
+      "input_exclusion": "large_string",
+      "inner_train": "bool",
+      "inner_validation": "bool",
+      "refit": "bool",
+      "development": "bool",
+      "inner_embargo": "bool",
+      "development_embargo": "bool",
+      "issuance_utc": "timestamp[ns, tz=UTC]",
+      "label_maturity_utc": "timestamp[ns, tz=UTC]",
+      "source_publication_available_at": "large_string",
+      "inner_train_admitted": "bool",
+      "inner_validation_admitted": "bool",
+      "refit_admitted": "bool",
+      "development_admitted": "bool",
+      "assumed_zero_minute_count": "int64",
+      "price_proxy_minute_count": "int64",
+      "poor_volume_hour_count": "int64",
+      "inner_feature_fallback_cells": "int64",
+      "refit_feature_fallback_cells": "int64"
+    }
+  },
+  "P020_target_extremes_dashboard.parquet": {
+    "rows": 300,
+    "fields": {
+      "origin_id": "large_string",
+      "ticker": "large_string",
+      "session_date_et": "large_string",
+      "fit_version": "large_string",
+      "return_4h": "double",
+      "cross_section_median": "double",
+      "cross_section_mad": "double",
+      "numerator": "double",
+      "epsilon": "double",
+      "denominator": "double",
+      "TG20": "double",
+      "T2_z": "double",
+      "label_eligible": "bool",
+      "entry_end_utc": "timestamp[ns, tz=UTC]",
+      "exit_end_utc": "timestamp[ns, tz=UTC]",
+      "label_maturity_utc": "timestamp[ns, tz=UTC]",
+      "tail_class": "large_string",
+      "selection": "large_string"
+    }
+  }
+}

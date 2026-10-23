@@ -1,0 +1,72 @@
+{
+  "candidate_run_ids": [
+    "HF1M-LONG-TM0-C0-S42-DEV1",
+    "HF1M-LONG-TM0-T2-S42-DEV1"
+  ],
+  "model_input_contract": {
+    "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+    "bytes": 4019,
+    "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+  },
+  "release_gate": {
+    "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/release_gate.json",
+    "bytes": 2891,
+    "sha256": "9453f559e63210f3ac54c1cc9daa2dbc3f4755d99e1593d8c2403f22cc3b880e"
+  },
+  "fit_versions": {
+    "inner_train": "inner",
+    "inner_validation": "inner",
+    "refit": "refit",
+    "development": "refit"
+  },
+  "seed": 42,
+  "input_shape": [
+    20,
+    48,
+    16
+  ],
+  "model": "shared stock-only TM0;one LSTM layer,width32,dropout0.1,scalar head",
+  "nominal_parameters": 6433,
+  "parameter_count_formula": "4*32*(16+32+2)+32+1=6433",
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay_weights": 0.01,
+    "weight_decay_bias": 0.0,
+    "amsgrad": false
+  },
+  "global_L2_gradient_clip": 1,
+  "batch_sessions": 16,
+  "loss": "session-weighted equal-origin equal-stock MSE",
+  "calibration": "D6g60epoch cap;min12epochs;patience10;qualifying improvement loss<0.999*best;select original TG20 validation MSE",
+  "refit": "fresh seed42 weights and optimizer;full-prefix refit recipe;exact selected calibration epoch count",
+  "diagnostics": [
+    "original_TG20_MSE",
+    "daily_Rank_IC",
+    "ZERO_MSE",
+    "prediction variance",
+    "tails and gradient clipping"
+  ],
+  "model_training_authorized": false,
+  "neural_starts": 0,
+  "ledger": 32,
+  "engine_code": {
+    "neural_engine.py": {
+      "path": "src/lstm_data/neural_engine.py",
+      "bytes": 7589,
+      "sha256": "d899ba379f1ac7e498b7351be57145b1cb819255155c9b28a817b3faa0cf2530"
+    },
+    "neural_lifecycle.py": {
+      "path": "src/lstm_data/neural_lifecycle.py",
+      "bytes": 24315,
+      "sha256": "ee22717bd2087d82a04a37ab2f592668b17779ec09edee18a16e567b2249f189"
+    }
+  },
+  "preserve_10_plus_3_improvement_hypotheses": true,
+  "checkpoints_used": false
+}

@@ -1,0 +1,40 @@
+# P020 human review card
+
+**FEATURE_READY_FOR_TRAINING. Dataset preparation only; neural training is not authorized.**
+
+Only mito0o852/OHLCV-1m at revision `776328445b7ac6e7815ef3a483e9c8ded1eb6d56`. Parent `HF20_HF1M_LONG_v1_ACTION_QA_v1`, P019B current v3 action ledger and PRE_FEATURE_READY_WITH_QUARANTINES gate. All9 split events,6 genuine moves,18 quarantined RTH minutes/14 bins, EH/KO exclusion and COP boundary masks retained. Root anomaly register and all original source bytes are unchanged. No old Alpaca/Twelve Data numeric inputs, fitted statistics, model outputs or checkpoints.
+
+New IDs: `HF20_HF1M_LONG_v1_FT16_v1`, `HF20_HF1M_LONG_v1_TG20_4H_v1`, `HF20_HF1M_LONG_v1_MODEL_INPUT_v1`. Ordered20: VZ,COP,BAC,BA,AAPL,PEP,MRK,SBUX,CVX,MS,AMD,KO,JNJ,AMZN,XOM,WFC,AVGO,TSLA,MA,CSCO.
+
+Rights remain HUMAN_REPORTED_MAINTAINER_PERMISSION_FOR_PRIVATE_RESEARCH, not independent legal certification; numerical stores and price examples remain ignored/local. Publication timing remains UNKNOWN. Completed-hour end+2minute issuance and maturity are conditional research assumptions, not executable-fill evidence.
+
+Frozen chronology: warmup2010-07-01–2011-03-31; research train2011-04-01–2025-06-30; inner train ends2023-01-23; nominal inner validation2023-01-24–2025-06-30; development2025-07-01–2025-12-31; protected confirmation2026-01-01–2026-03-31 (keys/calendar/source quality only). First48complete-hour contexts after fit cutoffs are embargoed. All horizons mature within the same session; no crossing labels survive. The nominal15calendar-year research/confirmation span contains14years3months of fitted training history plus9months earlier startup. Missing dates and hourly positions never compress.
+
+| Split | Admitted origins | Stock rows | First/last admitted date |
+| --- | --- | --- | --- |
+| inner_train | 4428 | 88560 | 2011-04-01 / 2023-01-23 |
+| inner_validation | 766 | 15320 | 2023-02-03 / 2025-06-30 |
+| refit | 5210 | 104200 | 2011-04-01 / 2025-06-30 |
+| development | 183 | 3660 | 2025-07-15 / 2025-12-31 |
+
+16features usable under frozen causal fallback. Refit Q1fallback6.7006%,Q2fallback21.6755%; development Q1fallback4.4553%,Q2fallback10.0529%. Maximum across all channels/splits 34.2549%. Native components and missing masks remain separate; no claim of complete minute volume.
+
+At each allowed origin, r_i=log(genuine_exit_close/genuine_entry_close), m=median20(r), a=median20(abs(r-m)), TG20_i=(r_i-m)/(a+epsilon). Epsilon=max(1e-4,0.1median_unique_train(a)), fit independently for each training prefix using all complete20genuine mature origins, independent of feature values. No volatility scaling, 5stock cross-section, clipping or partial19/20target. If one genuine compatible endpoint is unavailable, all20labels are ineligible. No proxy, stub, overnight or COP-crossing price generates a label.
+
+Regular-session completed-end clocks:10:30→14:30 and11:30→15:30 ET, with issuance and maturity2minutes later under the inherited publication assumption. Early closes produce no synthetic four-hour horizon. Feature input admission is separate from eventual ex-post label validity. Historical M2 outcomes are distinct past own-stock source signals; current future TG20 labels are never feature arguments.
+
+T2 preprocessing s=max(median_unique_admitted_training_origin_stock(abs(TG20)),1e-6), z=asinh(TG20/s), inverse=s*sinh(z_prediction) exactly once. No learned model or target prediction was computed. C0 and T2 use the identical X, origin mask and original TG20 evaluation scale. Validation selection next package must use inverse-transformed original TG20 MSE, not transformed-space MSE or development results.
+
+| Fit | Train end | Epsilon | Epsilon origins | T2 scale | T2 origins |
+| --- | --- | --- | --- | --- | --- |
+| inner | 2023-01-23 | 0.00032970431934696 | 4864 | 0.906406830018944 | 4428 |
+| refit | 2025-06-30 | 0.00033464021096456584 | 5773 | 0.9057319697455458 | 5210 |
+
+Training target quantiles (uncapped): {"0": -32.630348601739534, "0.01": -5.419494166849399, "0.5": 0.0, "0.99": 5.78997555449669, "1": 46.20068269622903}.
+
+Training-only tail thresholds: {"mad_p05": 0.0017088144016643594, "abs_numerator_p95": 0.01593538084097676, "abs_TG20_p99": 7.249104565631099}. Tail mechanisms: {"LARGE_NUMERATOR": 1001, "BOTH": 101, "SMALL_MAD": 50, "ORDINARY": 3}. These thresholds are diagnostic labels, not target filters. Top absolute target, numerator and smallest-MAD examples remain private, with endpoint and source row links. Fifty extreme endpoints were independently verified against genuine candles. Protected2026numeric features/returns/targets were never calculated or stored.
+Readiness:5,210training origins/104,200stock rows;183development/3,660stock rows;4,428inner training/88,560stock rows;766inner validation/15,320stock rows. Training covers15years with>=100origins each. Final development reduction11/194 is the frozen embargo. All20stocks retained.
+
+Top limitations: incomplete/lower-bound volume, Q2fallback, historical source latency unverified,15:30daily surrogate, retrospective cohort and split units, dividends not reconstructed. All16future-split invariance and causal checks passed. No protected numeric features/targets stored.
+
+Tests and full static results: tests_static_receipt.json. Storage/RAM: final_resource_receipt.json. Ledger32/200unchanged. Next action is separately authorized matched seed42 C0/T2 training; no model has been trained and no training permission is implied.
