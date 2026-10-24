@@ -98,3 +98,8 @@ Start Here supplies the click guide and six scientific report downloads. Full re
 ## P026 temporal architectures
 
 Explore → **HF1M Long — Temporal Architectures (P026)** is additive to P021–P025. During preparation it reports that no candidate starts are approved. After all three separately approved fits and full scientific gates pass, the hash-bound viewer provides four roles, saved T2 controls/ZERO, actual z-MSE cohorts,52-hour source cases and attention/multiscale/GRU diagnostics. Protected2026 routes are rejected before file lookup. Attention is not causal attribution; native GRU gates are not directly observed. Source candles and model stores remain local and require lawful private provisioning.
+
+
+## P027 cross-stock sharing
+
+Explore → **HF1M Long — Cross-Stock Sharing (P027)** is additive. Preparation exposes no trained candidate. After separately approved scientific/component gates, completed A4/A5/A6 appear progressively with four roles and saved T2/ZERO context. A4 has two peer summaries; A5/A6 have fuller peer histories, so this is not a full-information-matched architecture comparison. Peer Information Control holds own history fixed and shifts only peers by ten prior source-input-eligible sessions at the same slot; it is a matched distribution shift, not a trained null. Exact Cases includes genuine volume flags and peer operands/encoders/attention. Protected2026 and malformed selectors are blocked; no fitting or download is triggered.

@@ -1,0 +1,7 @@
+# P027 peer mechanisms and falsification
+
+A4 sees own FT16 plus two leave-one-out peer M1 summaries at every historical step; A5/A6 encode all16 channels of all20 histories before final-state exchange. A4 is not a full-information-matched control. No fourth full-peer LSTM is authorized; A5/A6 gains cannot identify the exchange mechanism independently of information/capacity.
+
+All actual projection/mixing norms and spectra, local cross-hidden and peer-input derivatives, own-base readout shifts, source operands, true same-origin attention/self mass and saved coordinate-permutation checks are bound in per-arm mechanisms.json and private Parquets. mechanism_and_peer_controls.json preserves the four-role original-vs-ten-session-shift matched metrics and counts, not only favorable slices. Zero/near-zero peer response is a negative finding, not a rescue trigger. Shifts alter input distributions and are not a trained permutation null; common-market information can cancel in TG20 rankings. Attention is not causal explanation. A5 depends on ticker coordinates; A6 is equivariant absent learned identities. A5/A6 versus A4 do not isolate architecture. A fourth full-peer ordinary LSTM, replication, market-state or regime work requires a separate proposal and authorization.
+
+Read P027_RESEARCHER_DIAGNOSIS.md and scientific_closeout_v2 for detailed interpretation and complete secondary/gradient summaries.

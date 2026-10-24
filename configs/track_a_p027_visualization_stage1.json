@@ -1,0 +1,32 @@
+{
+  "available_arms": [
+    "A4"
+  ],
+  "fit_permission": false,
+  "manifest": {
+    "bytes": 24684,
+    "path": "reports/experiments/ta027_cross_stock_2026-10-23_214637_preparation_v1/viewer_stage_1/view_manifest.json",
+    "sha256": "556a9dce1db25ce336274a9f6b51d324aa4fe1aad2fff57142bd5c230a0ec555"
+  },
+  "model_bindings": {
+    "A4": {
+      "calibration": {
+        "bytes": 30293,
+        "path": "artifacts/hf20_hf1m_long_v1/p027_approved_runs/HF1M-LONG-P027-PEER19-M1-MEANSD-T2-S42-DEV1/calibration_007.pt",
+        "sha256": "1cbff8aadca1ad52a661ee24152edc37860a0d4356ae4568ec1e897ca5c0dc6d"
+      },
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "parameters": 6689,
+      "refit": {
+        "bytes": 30293,
+        "path": "artifacts/hf20_hf1m_long_v1/p027_approved_runs/HF1M-LONG-P027-PEER19-M1-MEANSD-T2-S42-DEV1/refit_final.pt",
+        "sha256": "7871b5612b44190ada276e789b78a64bbab7a9fb6bc4a8c5a3c77f5e99774a0f"
+      },
+      "run_id": "HF1M-LONG-P027-PEER19-M1-MEANSD-T2-S42-DEV1"
+    }
+  }
+}
