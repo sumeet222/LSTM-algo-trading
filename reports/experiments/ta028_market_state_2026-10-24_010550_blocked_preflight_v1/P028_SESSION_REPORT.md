@@ -1,0 +1,7 @@
+# P028 session review — BLOCKED
+
+A7/A8/A12 not implemented or fitted:0 starts,0 optimizer steps and0 training seconds each. Ledger59/200→59/200;141 remaining. Source/design approval missing; no candidate metrics/deltas/uncertainty or22 cases exist. Scientific gates/model rehearsal/tails/mechanisms/gradients are NOT_RUN_SOURCE_BLOCKED, not PASS. Existing37 data tests and415-file static0/0/Ruff/launcher checks pass independently. Protected2026 remains numerically unopened; technical checks do not certify alpha, licensing, causality or trading performance.
+
+Review [preflight/source decision](P028_PREFLIGHT.md), [unapproved conditional design card](P028_DESIGN_FREEZE_CARD_PROPOSED.md), [researcher diagnosis](P028_RESEARCHER_DIAGNOSIS.md), [historical-only comparison](P028_MARKET_STATE_COLLECTIVE_COMPARISON.md), [mechanism status](P028_MARKET_STATE_MECHANISM_FALSIFICATION.md), [fit/gradient status](P028_FIT_AND_GRADIENT_VERIFICATION.md), [objective-tail status](P028_OBJECTIVE_SPACE_EXTREME_LOSS.md), [dashboard status](P028_DASHBOARD_USER_GUIDE.md) and [full engineering session report](../../codex_sessions/2026-10-24_010756_p028_source_blocked_preflight.md).
+
+Smallest next decision: prepare exactly the proposed two-channel panel-derived common state (no fitting), or identify an already approved independent local source covering the frozen dates and publication clocks. Source replacement is not selected here. Recurrent_Architecture_Research.md path/authority also needs clarification. No automatic promotion/next experiment/download/trading/Git publication.

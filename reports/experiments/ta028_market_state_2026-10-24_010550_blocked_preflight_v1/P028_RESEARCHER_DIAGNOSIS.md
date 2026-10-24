@@ -1,0 +1,7 @@
+# P028 diagnosis — a source/design block, not a failed forecasting result
+
+A7/A8/A12 were not fitted. The repository cannot currently support the requested full-period market-state input under an approved HF20 source/clock contract. Legacy course USA500/SPY do not cover the existing2011–2025 fitting/development population; diagnostic panel states do not supply new-input approval. This is not evidence against state conditioning and is not an optimization bug. No neural rehearsal or actual state-regime adequacy claim is made.
+
+P027 stays negative/mixed: A4 tiny MSE advantage/lower IC; A5/A6 both worse than T2/42; near-uniform A6 attention does not exclude other state hypotheses. T2 near-zero scores/seed sensitivity/genuine tails and E1/QR1 independent branches remain unresolved. No amplitude, denominator, target or threshold repair was attempted. Technical/metadata PASS cannot establish alpha, causality, source publication rights or net trading performance. All2026 confirmation remains numerically unopened.
+
+The smallest next decision is which state information set to audit: explicitly authorize the two proposed frozen-panel channels for preparation only, or identify a current approved independent local feed with full coverage. The proposed numeric card is not an existing approved record. No fourth comparator, MC2 second fit, state-count search, Experiment4, universe expansion or T2/E1/QR1 fusion follows. See P028_PREFLIGHT.md for source details and the absent background reference.

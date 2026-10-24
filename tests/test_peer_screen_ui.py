@@ -63,9 +63,25 @@ def test_current_app_peer_entry_and_preserved_P021_to_P026_navigation():
 def test_full_component_rehearsal_is_current_complete_and_cannot_authorize_a_start():
     reference = json.loads((PREPARATION / "latest_complete_rehearsal_reference.json").read_text())
     receipt = json.loads(checked(reference).read_text())
-    assert receipt["code"] == code_binding() and receipt["execution_sha256"] == fingerprint(
-        code_binding()
+    current = code_binding()
+    # P028 adds precisely one dispatcher route; historical numerical/reader modules
+    # must still match the sealed P027 rehearsal. Verify the old app byte identity
+    # after removing ONLY that separately authorized additive route.
+    import hashlib
+
+    app = (ROOT / "apps/track_a_dashboard.py").read_text()
+    app = app.replace('    "HF1M Long — Market-State Recurrence (P028)",\n', "")
+    route = (
+        '    if section == "HF1M Long — Market-State Recurrence (P028)":\n'
+        "        from lstm_data.visualization.state_screen_ui import panel as state_panel\n"
+        "\n        try:\n            state_panel(ROOT)\n"
+        "        except (OSError, ValueError, KeyError) as exc:\n"
+        "            st.error(str(exc))\n        return\n"
     )
+    app = app.replace(route, "")
+    current["apps/track_a_dashboard.py"] = hashlib.sha256(app.encode()).hexdigest()
+    assert receipt["code"] == current
+    assert receipt["execution_sha256"] == fingerprint(current)
     assert receipt["optimizer_step_calls"] == 0 and receipt["neural_starts"] == 0
     assert receipt["all_role_exports"] == 12 and receipt["exact_cases"] == 66
     for arm, gate in zip(ARMS, receipt["gates"]):

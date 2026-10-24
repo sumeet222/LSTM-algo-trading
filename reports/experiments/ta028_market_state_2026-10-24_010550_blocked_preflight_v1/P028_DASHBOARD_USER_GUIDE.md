@@ -1,0 +1,3 @@
+# P028 dashboard status — BLOCKED
+
+No P028 panel was added while §1.1 stops affected implementation. Use P028_PREFLIGHT.md as the bounded blocked-review surface; no missing model files or case links are fabricated. Existing launcher/app/CSS/routes remain unchanged. `./scripts/run_track_a_dashboard.sh --check` checks the existing setup only. Existing P027 view shows historical completed arms, not P028 results. A future P028 view must label gate/source/rights and blocked arms, reject2026/malformed queries before I/O, and expose only genuine completed models after source/design and full scientific/component gates. No new render/manual visual check is claimed.

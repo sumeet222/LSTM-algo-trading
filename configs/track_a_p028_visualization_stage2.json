@@ -1,0 +1,52 @@
+{
+  "available_arms": [
+    "A7",
+    "A8"
+  ],
+  "fit_permission": false,
+  "manifest": {
+    "bytes": 60712,
+    "path": "reports/experiments/ta028_market_state_2026-10-24_064442_execution_v1/checkpoint_completion_v2/viewer_stage_2/view_manifest.json",
+    "sha256": "61674b334fa0760d04040b24b192bed073d86dacfdcfff806d50c18ae781aa1a"
+  },
+  "model_bindings": {
+    "A7": {
+      "calibration": {
+        "bytes": 42885,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-MC1-T2-S42-DEV1/calibration_007.pt",
+        "sha256": "044a52fffcaf30875d6d2e480be8fed7d397400b0533a3f326b97a005db9c4fb"
+      },
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "parameters": 6737,
+      "refit": {
+        "bytes": 42885,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-MC1-T2-S42-DEV1/refit_final.pt",
+        "sha256": "5d5ee475fb6c5b805d6f8db0cc1c0fa4d6ac994fdd31a00fbd7f29bf0ca07dfa"
+      },
+      "run_id": "HF1M-LONG-P028-MC1-T2-S42-DEV1"
+    },
+    "A8": {
+      "calibration": {
+        "bytes": 47807,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-GLOBAL8-LOCAL32-T2-S42-DEV1/calibration_006.pt",
+        "sha256": "d5a351a35ad6776540698017dc32dcac8f573a6aec29808d8f288b43347a96ae"
+      },
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "parameters": 7841,
+      "refit": {
+        "bytes": 47807,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-GLOBAL8-LOCAL32-T2-S42-DEV1/refit_final.pt",
+        "sha256": "796873f878a24da4d75bca1ec64f46928843f250f2ff9e027a9b25c16dd6e020"
+      },
+      "run_id": "HF1M-LONG-P028-GLOBAL8-LOCAL32-T2-S42-DEV1"
+    }
+  }
+}

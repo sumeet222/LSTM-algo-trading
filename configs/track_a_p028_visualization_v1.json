@@ -1,0 +1,117 @@
+{
+  "available_arms": [
+    "A7",
+    "A8",
+    "A12"
+  ],
+  "fit_permission": false,
+  "manifest": {
+    "bytes": 90992,
+    "path": "reports/experiments/ta028_market_state_2026-10-24_064442_execution_v1/checkpoint_completion_v2/viewer_final_v2/view_manifest.json",
+    "sha256": "b2d83855b26b0e242d7f7923ff71f51dd4daa1970fa3bbb7281c03dd5af84648"
+  },
+  "model_bindings": {
+    "A12": {
+      "calibration": {
+        "bytes": 43519,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-SOFT2-T2-S42-DEV1/calibration_007.pt",
+        "sha256": "ee7186bf7e53edd1c1fa435a83ec4e938d1b7ebe384b601f18ed9dd59f9a216d"
+      },
+      "calibration_epochs": 17,
+      "gate": {
+        "bytes": 53807,
+        "path": "reports/experiments/ta028_market_state_2026-10-24_064442_execution_v1/checkpoint_completion_v2/A12_immediate_gate.json",
+        "sha256": "78fbe3be6c24b200cf8c6c236726f526ec0435335d34aa8ecbb0d2665ea7b718"
+      },
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "optimizer_updates": 3995,
+      "parameters": 6728,
+      "raw_minimum": {
+        "bytes": 43519,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-SOFT2-T2-S42-DEV1/calibration_007.pt",
+        "sha256": "ee7186bf7e53edd1c1fa435a83ec4e938d1b7ebe384b601f18ed9dd59f9a216d"
+      },
+      "refit": {
+        "bytes": 43519,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-SOFT2-T2-S42-DEV1/refit_final.pt",
+        "sha256": "7405bb2433cb1c9c1ac2c934a099a98623c37c4fac1cc99a60e28eb836042dbe"
+      },
+      "refit_epochs": 7,
+      "run_id": "HF1M-LONG-P028-SOFT2-T2-S42-DEV1",
+      "selected_epoch": 7,
+      "state": "PASS_P028_A12"
+    },
+    "A7": {
+      "calibration": {
+        "bytes": 42885,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-MC1-T2-S42-DEV1/calibration_007.pt",
+        "sha256": "044a52fffcaf30875d6d2e480be8fed7d397400b0533a3f326b97a005db9c4fb"
+      },
+      "calibration_epochs": 17,
+      "gate": {
+        "bytes": 53573,
+        "path": "reports/experiments/ta028_market_state_2026-10-24_064442_execution_v1/checkpoint_completion_v2/A7_immediate_gate.json",
+        "sha256": "16230d55b43e48f86c23ff1ba7eadce6676c6b89a44bfe95c67d07e8281db836"
+      },
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "optimizer_updates": 3995,
+      "parameters": 6737,
+      "raw_minimum": {
+        "bytes": 42885,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-MC1-T2-S42-DEV1/calibration_007.pt",
+        "sha256": "044a52fffcaf30875d6d2e480be8fed7d397400b0533a3f326b97a005db9c4fb"
+      },
+      "refit": {
+        "bytes": 42885,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-MC1-T2-S42-DEV1/refit_final.pt",
+        "sha256": "5d5ee475fb6c5b805d6f8db0cc1c0fa4d6ac994fdd31a00fbd7f29bf0ca07dfa"
+      },
+      "refit_epochs": 7,
+      "run_id": "HF1M-LONG-P028-MC1-T2-S42-DEV1",
+      "selected_epoch": 7,
+      "state": "PASS_P028_A7"
+    },
+    "A8": {
+      "calibration": {
+        "bytes": 47807,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-GLOBAL8-LOCAL32-T2-S42-DEV1/calibration_006.pt",
+        "sha256": "d5a351a35ad6776540698017dc32dcac8f573a6aec29808d8f288b43347a96ae"
+      },
+      "calibration_epochs": 16,
+      "gate": {
+        "bytes": 53619,
+        "path": "reports/experiments/ta028_market_state_2026-10-24_064442_execution_v1/checkpoint_completion_v2/A8_immediate_gate.json",
+        "sha256": "f270b47da33ea5be8c58564afe3eb40ad1adf9cb38a423eaa0f5065ccba9dd9d"
+      },
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "optimizer_updates": 3650,
+      "parameters": 7841,
+      "raw_minimum": {
+        "bytes": 47807,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-GLOBAL8-LOCAL32-T2-S42-DEV1/calibration_006.pt",
+        "sha256": "d5a351a35ad6776540698017dc32dcac8f573a6aec29808d8f288b43347a96ae"
+      },
+      "refit": {
+        "bytes": 47807,
+        "path": "artifacts/hf20_hf1m_long_v1/p028_approved_runs/HF1M-LONG-P028-GLOBAL8-LOCAL32-T2-S42-DEV1/refit_final.pt",
+        "sha256": "796873f878a24da4d75bca1ec64f46928843f250f2ff9e027a9b25c16dd6e020"
+      },
+      "refit_epochs": 6,
+      "run_id": "HF1M-LONG-P028-GLOBAL8-LOCAL32-T2-S42-DEV1",
+      "selected_epoch": 6,
+      "state": "PASS_P028_A8"
+    }
+  }
+}

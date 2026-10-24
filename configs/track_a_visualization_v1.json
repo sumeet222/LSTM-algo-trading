@@ -687,8 +687,37 @@
     "sha256": "c8c8c4a7a2a62f797d1264905c376cef878e166b691714f3380cb44bfabe2a04"
   },
   "notes": "Existing local-use assumptions only; no fit/transform fitting/network/export/registry authority.",
+  "p028_additive_compatibility": {
+    "authorization": {
+      "bytes": 4079,
+      "path": "reports/experiments/ta028_market_state_2026-10-24_064442_execution_v1/authorization_scope.json",
+      "sha256": "2db70dee29d41e1f9857196910819aa9b0edfdb20b5279c2655284aba427553e"
+    },
+    "previous_config": {
+      "bytes": 126391,
+      "path": "reports/experiments/ta028_market_state_2026-10-24_064442_execution_v1/prior_reader_snapshots/configs/track_a_visualization_v1.json",
+      "sha256": "439d07968d3a4aea1b400884cdaf99f942fba892894a06d83afb28866d631589"
+    },
+    "protected_numeric_access": false,
+    "scope": "New read-only P028 route only; frozen old numerical sources/results unchanged",
+    "training_via_UI": false
+  },
+  "p028_postfit_ledger_metadata_correction": {
+    "change": "Progressive display ledger59+completed_count, not62+count; actual journal remains62",
+    "executed_source": {
+      "bytes": 18512,
+      "path": "reports/experiments/ta028_market_state_2026-10-24_064442_execution_v1/checkpoint_completion_v2/executed_source/state_screen_release_approved_execution.py.txt",
+      "sha256": "74cd109130d8087c5ffeb865eedf889fe77a88a5ec6781a3684bec1142c7970e"
+    },
+    "no_training_change": true,
+    "previous": {
+      "bytes": 128825,
+      "path": "reports/experiments/ta028_market_state_2026-10-24_064442_execution_v1/checkpoint_completion_v2/executed_source/visualization_reader_config_before_ledger_correction.json",
+      "sha256": "ae4d2f1eeb0405b0fe7555f5e3245259689c973a83b6797def29a75b3e4bf133"
+    }
+  },
   "readers": {
-    "apps/track_a_dashboard.py": "c3f4f3850207bd50a0406a39e22acf80984bf744cc22ffea1961743b9d75eb92",
+    "apps/track_a_dashboard.py": "260b4e3010aa06c430325113cea8826ca9018cc71ea7f2f8772fc94131808956",
     "src/lstm_data/aggregation.py": "a4aa643253eaa095980aea47de361eb746c03cb9d6ec85f80013e1f7efb77a2b",
     "src/lstm_data/ft0_transforms.py": "dce3424a3367d2bb8889e3b8a083b82f109ebc22e22690756aaced62a939c4f6",
     "src/lstm_data/normalization_report.py": "a7880bef4de53ae5cf56d6666d0c7395f4279c73eeb68ae53d050a7bcf36e0d3",
@@ -699,6 +728,20 @@
     "src/lstm_data/pretraining_tables.py": "1e7c9a44259ffbe9cc142ce5d27509b386b261000013887a227460df0ca6f171",
     "src/lstm_data/pretraining_transforms.py": "79a7b1238c1c55e42967056b474eb2a3212bbfe725f2c0332c12388dbe8e82f5",
     "src/lstm_data/real_bridge_run.py": "c8abb94d8e40cbe156cd94e6e4eaeb7cd8590ed6bef64ea4028cf82b3f4ffac0",
+    "src/lstm_data/state_screen_authority.py": "983ce4d983e07e15d1ee92862e42f2e7b9028783ce6b24ba2293b6a2c13b0e18",
+    "src/lstm_data/state_screen_cases.py": "cdedba138992dc0b1a47c98525d3e5fa09303fb26a4c7e854f7e48761a812379",
+    "src/lstm_data/state_screen_control.py": "5fe9efaa321ecbafbe548e4c2988db742c2c3202157414f4584e969c03ac63bc",
+    "src/lstm_data/state_screen_data.py": "33a304d36516ff060711621bda0706551a1ab7eb62710699a11e94b693d293e6",
+    "src/lstm_data/state_screen_diagnostics.py": "a5f05492f52169deb9b630f7c644517a7949e67209d23328afb6aa73bad3c6c0",
+    "src/lstm_data/state_screen_engine.py": "566426610fe83d8acf5c6db29179f3faa808cbee0ab2acf048fe588b0cfc8c7a",
+    "src/lstm_data/state_screen_mechanisms.py": "524bf3f9d973873eae56ecce141d9fb18ebc94bab854b199375849dc80ea1145",
+    "src/lstm_data/state_screen_metrics.py": "6b0a9432d03381dec9af590749c2557b9937911e05bf57c4755199964871779f",
+    "src/lstm_data/state_screen_models.py": "3388839d25ac450928fd61e5bb95233f41e5061510d8059855390f69d4d27cfa",
+    "src/lstm_data/state_screen_rehearsal.py": "b96bd1d7f60997a21600ed19da79b9ab0ee68d6c557a7c1621aca88144b3d1a4",
+    "src/lstm_data/state_screen_release.py": "8bc0d9fdd40ee5a3d261cf945e47d216ff308ae694afda3a90d3d00200852685",
+    "src/lstm_data/state_screen_run.py": "29fb21a57267f3e50b4144a3a35806449ab6759aeb74d3eb885705617ef7a936",
+    "src/lstm_data/state_screen_source.py": "c2817a4acfe086ae1e149d563c42348fb275c917e2d1cf6a4aec96324f0cd4c2",
+    "src/lstm_data/state_screen_spec.py": "1de3540d121f67ca4edb26ef5684950dce3abe71d85d8dd2c20699dbed6cb0e2",
     "src/lstm_data/stock_features.py": "edae91a8fe70e25720cf3cd66fd716f37c5192b1302f3d72651717b15b9a141a",
     "src/lstm_data/visualization/branch_replication_ui.py": "4ca5c1d077803e14092d85e0b54db6f83082d7c2562fc2c7002611b74ae7a933",
     "src/lstm_data/visualization/controlled.py": "354b402cae7910968061dc3fd1ee6582474964ac87f117ff0c3c9aa4d4d71578",
@@ -714,6 +757,7 @@
     "src/lstm_data/visualization/normalization_ui.py": "40d514a85b8a2a108b9fd3d26f5c19bb7aa8ca732544cc3d3ad75a421f1bb00d",
     "src/lstm_data/visualization/peer_screen_ui.py": "9987c28e96061e9e57d17894d57c7e2628b50e7ff3663b1f1d1925820cc47c9e",
     "src/lstm_data/visualization/range_ui.py": "3d7fb03e79df8f511724473a3b1154b45b32aaa79c90a1bb5fb43b41e51ccd7c",
+    "src/lstm_data/visualization/state_screen_ui.py": "03bbfa80b1e5c3703dc03d0c38ae8034b7dd6a0a89208609a341ae7f7ef93a49",
     "src/lstm_data/visualization/target_ranges.py": "fb654ea3dfd38e6e92d0bd3a737b646b2eec72243deeb7a346d3df1074c46096",
     "src/lstm_data/visualization/temporal_screen_ui.py": "93402519065f55ba202a4db7c5deda02e4326c6ae6f78a1c2a111fb414d7f9a4"
   },

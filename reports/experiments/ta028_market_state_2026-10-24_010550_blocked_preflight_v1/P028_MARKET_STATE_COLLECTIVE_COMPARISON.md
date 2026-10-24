@@ -1,0 +1,3 @@
+# P028 collective comparison — no candidate fits
+
+BLOCKED. CSV contains independently previously verified saved T2/42, T2/123, ZERO and P027 context, not new P028 evaluations. A7/A8/A12 metrics/deltas/intervals/coverage are unavailable, not zero. ZERO IC remains undefined. Historical references use109 retained development sessions/183 origins/3660 rows; P028 joint market-input coverage is NOT_ESTABLISHED. No bootstrap or significance claim applies to nonexistent P028 forecasts. Refit remains in-sample; any future development evidence is repeatedly inspected/exploratory and information-confounded unless an identical-input comparator exists.
