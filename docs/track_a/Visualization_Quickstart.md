@@ -47,3 +47,8 @@ Package011 adds saved H1/T1/T2/O1 arms with explicit seed labels. **TM0 remains 
 
 
 For the completed 20-stock E1/QR1 two-seed study, choose **HF1M Long — E1 / QR1 Replication (P025)**. Start Here links the guide and six reports. Compare E1 event ranking/calibration separately from QR1 proper quantile skill and causal-state response. Use Exact Cases for marked input/outcome boundaries and History / Features for all20 stocks. Protected2026 dates remain locked; this page grants no trading or additional fitting permission.
+
+
+## P026 temporal architectures
+
+Explore → **HF1M Long — Temporal Architectures (P026)** is additive to P021–P025. During preparation it reports that no candidate starts are approved. After all three separately approved fits and full scientific gates pass, the hash-bound viewer provides four roles, saved T2 controls/ZERO, actual z-MSE cohorts,52-hour source cases and attention/multiscale/GRU diagnostics. Protected2026 routes are rejected before file lookup. Attention is not causal attribution; native GRU gates are not directly observed. Source candles and model stores remain local and require lawful private provisioning.

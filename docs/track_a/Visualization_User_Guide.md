@@ -93,3 +93,8 @@ Choose **HF1M Long — E1 / QR1 Replication (P025)** in Explore. This page is is
 **Actual-Objective Tails** reports new seed123 fixed-checkpoint CE/pinball allocations, with distinct ranked1%/5% and fitting-maximum99%/95% magnitude groups. **Exact Cases** offers saved refit witnesses for both seeds:48 input hours and4 future outcome hours, with orange entry/input and green exit markers, genuine source/volume flags and20 return operands. These are retrospective examples. **History / Features** covers all20 stocks and all16 native/scaled channels; T2 here is a feature name.
 
 Start Here supplies the click guide and six scientific report downloads. Full reports and private numerical stores remain locally bound through `configs/track_a_p025_visualization_v1.json`; private point-level case annexes are ignored and must not be redistributed. The final analysis is in `reports/experiments/ta025_e1_qr1_seed123_2026-10-23_171546_preparation_v3/scientific_closeout_v2/`. Ledger53/200 records exactly two new starts. These independent research candidates receive no automatic trading, production or further-training authority.
+
+
+## P026 temporal architectures
+
+Explore → **HF1M Long — Temporal Architectures (P026)** is additive to P021–P025. During preparation it reports that no candidate starts are approved. After all three separately approved fits and full scientific gates pass, the hash-bound viewer provides four roles, saved T2 controls/ZERO, actual z-MSE cohorts,52-hour source cases and attention/multiscale/GRU diagnostics. Protected2026 routes are rejected before file lookup. Attention is not causal attribution; native GRU gates are not directly observed. Source candles and model stores remain local and require lawful private provisioning.

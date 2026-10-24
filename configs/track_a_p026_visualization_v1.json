@@ -1,0 +1,64 @@
+{
+  "fit_permission": false,
+  "manifest": {
+    "bytes": 40771,
+    "path": "reports/experiments/ta026_temporal_architectures_2026-10-23_preparation_v3/collective_v1/view_manifest.json",
+    "sha256": "1636f1d3fe2efbb5b446b949c4c9af8c2fc5748f520240fb1ee5194d40351cba"
+  },
+  "model_bindings": {
+    "A1": {
+      "calibration": {
+        "bytes": 29837,
+        "path": "artifacts/hf20_hf1m_long_v1/p026_approved_runs/HF1M-LONG-TM1_ATTENTION-T2-S42-DEV1/calibration_007.pt",
+        "sha256": "96e7b9e5e081d4afe83487e0e7a30d8f38dbcfed1934867927eced17d57a4d76"
+      },
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "refit": {
+        "bytes": 29837,
+        "path": "artifacts/hf20_hf1m_long_v1/p026_approved_runs/HF1M-LONG-TM1_ATTENTION-T2-S42-DEV1/refit_final.pt",
+        "sha256": "db59ec6c9380530ef4149518cfbec5fc03a9f654bd748d0a74039de4afd2b588"
+      },
+      "run_id": "HF1M-LONG-TM1_ATTENTION-T2-S42-DEV1"
+    },
+    "A2": {
+      "calibration": {
+        "bytes": 32845,
+        "path": "artifacts/hf20_hf1m_long_v1/p026_approved_runs/HF1M-LONG-TM3_MULTISCALE-T2-S42-DEV1/calibration_007.pt",
+        "sha256": "44bc58c696b32eb9625490a57267fb420d9c58f8ec0e8e61e4410d9848fdb0fc"
+      },
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "refit": {
+        "bytes": 32845,
+        "path": "artifacts/hf20_hf1m_long_v1/p026_approved_runs/HF1M-LONG-TM3_MULTISCALE-T2-S42-DEV1/refit_final.pt",
+        "sha256": "0ff02613863f35b7072cdb33c3f69fb159010ca76ae5873a7b3343b3d9ed38ff"
+      },
+      "run_id": "HF1M-LONG-TM3_MULTISCALE-T2-S42-DEV1"
+    },
+    "A3": {
+      "calibration": {
+        "bytes": 22869,
+        "path": "artifacts/hf20_hf1m_long_v1/p026_approved_runs/HF1M-LONG-GRU32-T2-S42-DEV1/calibration_003.pt",
+        "sha256": "d8e22edf02ec5824beb2da897a18580dbe2a08c54e3b18cec565f8b83fde54a0"
+      },
+      "input_contract": {
+        "bytes": 4019,
+        "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/model_input_contract.json",
+        "sha256": "7adfec916b7eb74fead83ef1fe6082ff0fcee9ff0b6ebae5722077e2a82c01a5"
+      },
+      "refit": {
+        "bytes": 22869,
+        "path": "artifacts/hf20_hf1m_long_v1/p026_approved_runs/HF1M-LONG-GRU32-T2-S42-DEV1/refit_final.pt",
+        "sha256": "bfd7deb94c858eaa41bd24eeb291f03232ea1b2799e0bd5eb5f4957d29161193"
+      },
+      "run_id": "HF1M-LONG-GRU32-T2-S42-DEV1"
+    }
+  }
+}
