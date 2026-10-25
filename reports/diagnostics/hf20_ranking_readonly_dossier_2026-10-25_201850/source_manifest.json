@@ -1,0 +1,57 @@
+{
+  "timestamp_utc": "2026-10-25T20:18:50.581097+00:00",
+  "status": "STOP_GATE_A_MISSING_REQUIRED_PLANS",
+  "branch": "feat/track-a-data-intake",
+  "head": "5ceb611ceacdbf220241698491f3a35f44636697",
+  "cached_ahead_behind": "0\t0",
+  "remote_fetched": false,
+  "remote_fetch_reason": "Current explicit task prohibits internet access and registry/repository mutations; no fetch attempted.",
+  "ledger_reported_before_after": "62/200; active journal not decoded or changed",
+  "read_boundary": {
+    "numeric_reads": 0,
+    "model_forwards": 0,
+    "optimizer_steps": 0,
+    "downloads": 0,
+    "protected_numeric_reads": 0
+  },
+  "missing_plans": [
+    {
+      "filename": "HF20_LSTM_Comprehensive_Review_and_Expansion_Plan_2026-10-24.md",
+      "project_reference_sha256": "1657b7a37791e3e67b90e367089879ee302d3cfa89e9a6a71d258b3711687a94",
+      "repository_path": null,
+      "actual_sha256": null
+    },
+    {
+      "filename": "HF20_Focused_Second_Pass_Ranking_Inputs_Minute_Data_and_Horizons_2026-10-24.md",
+      "project_reference_sha256": "ae1fe8a1f2ccc821afeef9397d37ba6c76fe2989c17dc38fe626803bd3934b1f",
+      "repository_path": null,
+      "actual_sha256": null
+    }
+  ],
+  "read_evidence": [
+    {
+      "path": "/Users/pradeepgupta/.codex/attachments/a437873e-9333-4f05-ad93-022706b3c6bc/Pasted text.txt",
+      "sha256": "21f9d8045209bdf25fc995c160589f962bcd378fe60ce4cdf01fd5f7eea7acd5",
+      "access": "instruction/report text only",
+      "status": "READ"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "605de61de2eaa68ea83a2a3e7dcea83f576fb0feef4c75a4dfd6227e6deb1ca8",
+      "access": "instruction/report text only",
+      "status": "READ"
+    },
+    {
+      "path": "reports/codex_sessions/2026-10-24_042134_p028_three_market_state_final.md",
+      "sha256": "86b2cbea97b7049500d5ef3f80de7ae400d9adaaa2f747f9e2b3c064930aa34f",
+      "access": "instruction/report text only",
+      "status": "READ"
+    }
+  ],
+  "proposed_commands_after_plans_supplied": [
+    "Read both supplied repository planning documents in full and compute their SHA256.",
+    "Inspect actual source/forecast manifests and pre-I/O protected guards as text.",
+    "Publish explicit allowed pre-2026 role/artifact paths before numerical reads."
+  ],
+  "seven_workstreams": "Not started: mandatory planning-document gate unmet."
+}

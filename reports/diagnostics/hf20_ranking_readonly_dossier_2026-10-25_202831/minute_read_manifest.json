@@ -1,0 +1,57 @@
+{
+  "predeclared_months": [
+    "2015-11",
+    "2025-07"
+  ],
+  "predeclared_days": [
+    "2015-11-02",
+    "2025-07-15"
+  ],
+  "tickers": [
+    "AAPL",
+    "VZ"
+  ],
+  "purpose": "observability only, no labels or predictive feature tests",
+  "upstream_manifest": {
+    "path": "reports/data_audit/ta018d_hf1m_long_2026-10-22_155547/complete_acquisition_manifest.json",
+    "sha256": "2b8f9165b0387acaf650d1f1514afb8b41d081aacc9b2056b2f6efa496adf40c"
+  },
+  "files": [
+    {
+      "bytes": 2719905,
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-11.parquet",
+      "rows": 165140,
+      "sha256": "b5a08c738a5a035044630d2a5adba3f6bc3e3ad997e7e7bda030d0b23a41e468",
+      "access": "PRE2026_BOUNDED_MINUTE",
+      "month": "2015-11",
+      "kind": "canonical_observed"
+    },
+    {
+      "bytes": 42794,
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/fill_proxies_cap5/2015-11.parquet",
+      "rows": 1603,
+      "sha256": "22d99f760d96b72f93517a1d92bc8cea1bd6828e0d306085c024b5a9b1efe5f1",
+      "access": "PRE2026_BOUNDED_MINUTE",
+      "month": "2015-11",
+      "kind": "fill_proxies_cap5"
+    },
+    {
+      "bytes": 4006252,
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2025-07.parquet",
+      "rows": 217730,
+      "sha256": "1f1c6410ffe8d008b6365a6f2e2bba9eb36a22b3fc2dfd07cb38926beebef25a",
+      "access": "PRE2026_BOUNDED_MINUTE",
+      "month": "2025-07",
+      "kind": "canonical_observed"
+    },
+    {
+      "bytes": 43984,
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/fill_proxies_cap5/2025-07.parquet",
+      "rows": 1378,
+      "sha256": "2e1c049fff2d4f2036ea4c7e33810a11328574c9d99cdcb83049b368970e4f37",
+      "access": "PRE2026_BOUNDED_MINUTE",
+      "month": "2025-07",
+      "kind": "fill_proxies_cap5"
+    }
+  ]
+}
