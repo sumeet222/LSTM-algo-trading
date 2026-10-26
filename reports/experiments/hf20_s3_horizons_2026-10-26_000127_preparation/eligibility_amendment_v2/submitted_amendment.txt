@@ -1,0 +1,18 @@
+## S3 endpoint-eligibility amendment — audit before training
+
+The reported loss of approximately 25% of fitting origins and reduction of F24 inner validation from 74 to 42 sessions is a material concern.
+
+**Do not lower the 50-session validation minimum yet.**
+
+Instead, revise the proposed S3 eligibility design as follows:
+
+1. **Horizon-specific eligibility:** For S3-A, construct independent valid-origin sets for the 1-, 2-, and 4-hour targets. A valid 1-hour observation must not be excluded solely because its 4-hour endpoint is unavailable. Preserve the original FT16 input and source-quality requirements.
+2. **Matched horizon comparison:** Also construct the intersection of eligible origins across all three horizons for a secondary, strictly matched comparison. Do not use this intersection as the mandatory fitting population unless scientifically justified.
+3. **S3-B matching:** Within each horizon, require the original-M2 and horizon-aligned-M2 models to use identical origin/stock populations. The input-feature comparison must not be confounded by sample selection.
+4. **Validation support:** Retain the existing 50-session minimum initially. Report the actual fitting, validation, refit and OOS counts for every horizon, year and experiment arm. Include retention percentages, origin-slot composition and reasons for exclusions.
+5. **Historical comparability:** Preserve the existing four-hour TG20 reference and archived S1/S2 outcomes. Clearly distinguish newly constructed horizon-specific populations from the original four-hour population. Do not silently alter source clocks, target endpoints, embargoes or label-maturity rules.
+6. **Readiness decision:** If horizon-specific eligibility restores sufficient support, propose the updated design-freeze card and continue only with authorized non-training preparation. If any fold still fails the minimum, report the exact deficiency and propose the smallest defensible alternative for human approval.
+
+Verify endpoint arithmetic, source availability, no leakage, cohort identities and matched-population invariants using inexpensive deterministic tests.
+
+**Stop before any optimizer update.** Do not launch training, relax statistical thresholds, add origins outside the authorized forecast schedule, access protected 2026 numerics, or change the research ledger. Await explicit approval of the amended eligibility design.

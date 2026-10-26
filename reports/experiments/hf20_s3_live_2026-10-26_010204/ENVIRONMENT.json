@@ -1,0 +1,20 @@
+{
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "machine": "arm64",
+  "system": "Darwin",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "torch": "2.10.0",
+    "pyarrow": "23.0.1",
+    "plotly": "6.3.1"
+  },
+  "training_device": "cpu",
+  "training_dtype": "float32",
+  "training_threads_intra": 4,
+  "training_threads_inter": 1,
+  "loader_workers": 0,
+  "thread_evidence": "Explicit setter in sealed hf20_horizon_run.main; inventory process is not a training run",
+  "dependencies_changed": false,
+  "packages_installed": false
+}

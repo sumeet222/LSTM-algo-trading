@@ -1,0 +1,14 @@
+{
+  "status": "DISCLOSED_OPERATIONAL_EXCEPTION",
+  "command": "python -m pytest tests/test_hf20_horizons.py tests/test_hf20_ranking.py plus two protected-read tests -q",
+  "receipt": "focused_tests.txt",
+  "synthetic_AdamW_step_invocations": 42,
+  "synthetic_LBFGS_step_invocations": 1,
+  "LBFGS_internal_iterations": "not retained; do not infer update count",
+  "empirical_model_optimizer_updates": 0,
+  "real_data_baseline_fits": 0,
+  "real_checkpoints_modified": 0,
+  "research_ledger": 74,
+  "explanation": "Inherited tests exercised two20-step synthetic learning fixtures plus two synthetic epoch steps and one synthetic LBFGS solver call. Latest instruction forbids any optimizer update. This was a test-selection scope mistake; not a real-data fit or neural-start debit. No rerun of these tests; final verification blocks optimizer.step and explicitly deselects them.",
+  "prior_preparation_receipts": "optimizer_step_calls0 applies only to those separately guarded source/SYN rehearsal processes, not the entire unguarded legacy test command"
+}

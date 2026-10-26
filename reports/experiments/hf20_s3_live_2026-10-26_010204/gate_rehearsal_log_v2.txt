@@ -1,0 +1,23 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_horizon_run.py", line 669, in <module>
+    main()
+    ~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_horizon_run.py", line 663, in main
+    gate_rehearsal(args.out)
+    ~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_horizon_run.py", line 330, in gate_rehearsal
+    pass_gate(data, 2024, dest, untrained_rehearsal=True)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_horizon_diagnostics.py", line 159, in pass_gate
+    data.phase(year, phase, dest.parent)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_horizon_data.py", line 154, in phase
+    if path.exists():
+            ^^^^^^^^^
+ValueError: IMMUTABLE_S3_RECIPE_CHANGED:/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H1/F24_inner_recipe.json:['shared_target_path']

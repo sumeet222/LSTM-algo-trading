@@ -1,0 +1,520 @@
+........................................FFF....F.                        [100%]
+=================================== FAILURES ===================================
+____________ test_complete_new_neural_workflow_synthetic_only[T2R] _____________
+
+tmp_path = PosixPath('/private/var/folders/gv/w5vyh_657znbjwdrx__2m6h00000gp/T/pytest-of-pradeepgupta/pytest-172/test_complete_new_neural_workf0')
+arm = 'T2R'
+
+    @pytest.mark.parametrize("arm", ["T2R", "NR", "PW"])
+    def test_complete_new_neural_workflow_synthetic_only(tmp_path, arm):
+        torch.set_num_threads(4)
+        data = SyntheticData()
+        journal = SyntheticJournal()
+        (tmp_path / "CONTINUATION_AUTHORITY_AND_RUN_MANIFEST.json").write_text(
+            json.dumps({"old_namespace": str(tmp_path / "old_empty")})
+        )
+        pd.DataFrame(
+            dict(
+                case_id=[1, 2],
+                year=[2021, 2021],
+                origin_id=data.rows.origin_id,
+                ticker=["S0", "S1"],
+                session_date_et=data.rows.session_date_et,
+                witness_return_4h=[data.returns[0, 0], data.returns[1, 1]],
+            )
+        ).to_csv(tmp_path / "shared_source_case_keys.csv", index=False)
+        for role in ("inner_train", "inner_validation", "refit", "oos"):
+            data.rows[["origin_id"]].to_csv(tmp_path / f"F21_{role}_indices.csv", index=False)
+        # Flat synthetic selector trace bounds the rehearsal at12+1 epochs; real selector tests reused.
+        with patch("lstm_data.hf20_ranking_continue.daily_ic", return_value=0.1):
+>           neural_one(data, tmp_path, journal, 2021, arm)
+
+tests/test_hf20_ranking_continue.py:156: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/lstm_data/hf20_ranking_continue.py:449: in neural_one
+    receipt = epoch(model, opt, data, fitpos, arm, number, "calibration", dest)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/hf20_ranking_run.py:372: in epoch
+    opt.step()
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <MagicMock name='step' id='4451199904'>, args = (), kwargs = {}
+
+    def _execute_mock_call(self, /, *args, **kwargs):
+        # separate from _increment_mock_call so that awaited functions are
+        # executed separately from their call, also AsyncMock overrides this method
+    
+        effect = self.side_effect
+        if effect is not None:
+            if _is_exception(effect):
+>               raise effect
+E               AssertionError: ZERO_STEP_GUARD
+
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1241: AssertionError
+----------------------------- Captured stdout call -----------------------------
+NEURAL START HF20-S1S2-F21-T2R-S42
+_____________ test_complete_new_neural_workflow_synthetic_only[NR] _____________
+
+tmp_path = PosixPath('/private/var/folders/gv/w5vyh_657znbjwdrx__2m6h00000gp/T/pytest-of-pradeepgupta/pytest-172/test_complete_new_neural_workf1')
+arm = 'NR'
+
+    @pytest.mark.parametrize("arm", ["T2R", "NR", "PW"])
+    def test_complete_new_neural_workflow_synthetic_only(tmp_path, arm):
+        torch.set_num_threads(4)
+        data = SyntheticData()
+        journal = SyntheticJournal()
+        (tmp_path / "CONTINUATION_AUTHORITY_AND_RUN_MANIFEST.json").write_text(
+            json.dumps({"old_namespace": str(tmp_path / "old_empty")})
+        )
+        pd.DataFrame(
+            dict(
+                case_id=[1, 2],
+                year=[2021, 2021],
+                origin_id=data.rows.origin_id,
+                ticker=["S0", "S1"],
+                session_date_et=data.rows.session_date_et,
+                witness_return_4h=[data.returns[0, 0], data.returns[1, 1]],
+            )
+        ).to_csv(tmp_path / "shared_source_case_keys.csv", index=False)
+        for role in ("inner_train", "inner_validation", "refit", "oos"):
+            data.rows[["origin_id"]].to_csv(tmp_path / f"F21_{role}_indices.csv", index=False)
+        # Flat synthetic selector trace bounds the rehearsal at12+1 epochs; real selector tests reused.
+        with patch("lstm_data.hf20_ranking_continue.daily_ic", return_value=0.1):
+>           neural_one(data, tmp_path, journal, 2021, arm)
+
+tests/test_hf20_ranking_continue.py:156: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/lstm_data/hf20_ranking_continue.py:449: in neural_one
+    receipt = epoch(model, opt, data, fitpos, arm, number, "calibration", dest)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/hf20_ranking_run.py:372: in epoch
+    opt.step()
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1241: in _execute_mock_call
+    raise effect
+.venv/lib/python3.14/site-packages/_pytest/runner.py:361: in from_call
+    result: TResult | None = func()
+                             ^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:250: in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/logging.py:865: in pytest_runtest_call
+    yield
+.venv/lib/python3.14/site-packages/_pytest/capture.py:900: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/skipping.py:268: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:184: in pytest_runtest_call
+    item.runtest()
+.venv/lib/python3.14/site-packages/_pytest/python.py:1707: in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/python.py:167: in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_hf20_ranking_continue.py:156: in test_complete_new_neural_workflow_synthetic_only
+    neural_one(data, tmp_path, journal, 2021, arm)
+src/lstm_data/hf20_ranking_continue.py:449: in neural_one
+    receipt = epoch(model, opt, data, fitpos, arm, number, "calibration", dest)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/hf20_ranking_run.py:372: in epoch
+    opt.step()
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <MagicMock name='step' id='4451199904'>, args = (), kwargs = {}
+
+    def _execute_mock_call(self, /, *args, **kwargs):
+        # separate from _increment_mock_call so that awaited functions are
+        # executed separately from their call, also AsyncMock overrides this method
+    
+        effect = self.side_effect
+        if effect is not None:
+            if _is_exception(effect):
+>               raise effect
+E               AssertionError: ZERO_STEP_GUARD
+
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1241: AssertionError
+----------------------------- Captured stdout call -----------------------------
+NEURAL START HF20-S1S2-F21-NR-S42
+_____________ test_complete_new_neural_workflow_synthetic_only[PW] _____________
+
+tmp_path = PosixPath('/private/var/folders/gv/w5vyh_657znbjwdrx__2m6h00000gp/T/pytest-of-pradeepgupta/pytest-172/test_complete_new_neural_workf2')
+arm = 'PW'
+
+    @pytest.mark.parametrize("arm", ["T2R", "NR", "PW"])
+    def test_complete_new_neural_workflow_synthetic_only(tmp_path, arm):
+        torch.set_num_threads(4)
+        data = SyntheticData()
+        journal = SyntheticJournal()
+        (tmp_path / "CONTINUATION_AUTHORITY_AND_RUN_MANIFEST.json").write_text(
+            json.dumps({"old_namespace": str(tmp_path / "old_empty")})
+        )
+        pd.DataFrame(
+            dict(
+                case_id=[1, 2],
+                year=[2021, 2021],
+                origin_id=data.rows.origin_id,
+                ticker=["S0", "S1"],
+                session_date_et=data.rows.session_date_et,
+                witness_return_4h=[data.returns[0, 0], data.returns[1, 1]],
+            )
+        ).to_csv(tmp_path / "shared_source_case_keys.csv", index=False)
+        for role in ("inner_train", "inner_validation", "refit", "oos"):
+            data.rows[["origin_id"]].to_csv(tmp_path / f"F21_{role}_indices.csv", index=False)
+        # Flat synthetic selector trace bounds the rehearsal at12+1 epochs; real selector tests reused.
+        with patch("lstm_data.hf20_ranking_continue.daily_ic", return_value=0.1):
+>           neural_one(data, tmp_path, journal, 2021, arm)
+
+tests/test_hf20_ranking_continue.py:156: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/lstm_data/hf20_ranking_continue.py:449: in neural_one
+    receipt = epoch(model, opt, data, fitpos, arm, number, "calibration", dest)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/hf20_ranking_run.py:372: in epoch
+    opt.step()
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1241: in _execute_mock_call
+    raise effect
+.venv/lib/python3.14/site-packages/_pytest/runner.py:361: in from_call
+    result: TResult | None = func()
+                             ^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:250: in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/logging.py:865: in pytest_runtest_call
+    yield
+.venv/lib/python3.14/site-packages/_pytest/capture.py:900: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/skipping.py:268: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:184: in pytest_runtest_call
+    item.runtest()
+.venv/lib/python3.14/site-packages/_pytest/python.py:1707: in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/python.py:167: in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_hf20_ranking_continue.py:156: in test_complete_new_neural_workflow_synthetic_only
+    neural_one(data, tmp_path, journal, 2021, arm)
+src/lstm_data/hf20_ranking_continue.py:449: in neural_one
+    receipt = epoch(model, opt, data, fitpos, arm, number, "calibration", dest)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/hf20_ranking_run.py:372: in epoch
+    opt.step()
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1241: in _execute_mock_call
+    raise effect
+.venv/lib/python3.14/site-packages/_pytest/runner.py:361: in from_call
+    result: TResult | None = func()
+                             ^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:250: in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/logging.py:865: in pytest_runtest_call
+    yield
+.venv/lib/python3.14/site-packages/_pytest/capture.py:900: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/skipping.py:268: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:184: in pytest_runtest_call
+    item.runtest()
+.venv/lib/python3.14/site-packages/_pytest/python.py:1707: in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/python.py:167: in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_hf20_ranking_continue.py:156: in test_complete_new_neural_workflow_synthetic_only
+    neural_one(data, tmp_path, journal, 2021, arm)
+src/lstm_data/hf20_ranking_continue.py:449: in neural_one
+    receipt = epoch(model, opt, data, fitpos, arm, number, "calibration", dest)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/hf20_ranking_run.py:372: in epoch
+    opt.step()
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <MagicMock name='step' id='4451199904'>, args = (), kwargs = {}
+
+    def _execute_mock_call(self, /, *args, **kwargs):
+        # separate from _increment_mock_call so that awaited functions are
+        # executed separately from their call, also AsyncMock overrides this method
+    
+        effect = self.side_effect
+        if effect is not None:
+            if _is_exception(effect):
+>               raise effect
+E               AssertionError: ZERO_STEP_GUARD
+
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1241: AssertionError
+----------------------------- Captured stdout call -----------------------------
+NEURAL START HF20-S1S2-F21-PW-S42
+__________ test_corrected_guard_actual_synthetic_optimizer_checkpoint __________
+
+    def test_corrected_guard_actual_synthetic_optimizer_checkpoint():
+        import io
+    
+        from lstm_data.neural_engine import SharedLSTM, optimizer, seed_all
+    
+        seed_all(42)
+        model = SharedLSTM()
+        opt = optimizer(model)
+        x = torch.randn(40, 48, 16)
+        r = torch.arange(20, dtype=torch.float64).repeat(2, 1)
+        with validation_adapter():
+            score = model(x).reshape(2, 20)
+            loss = original.row_loss("PW", score, r, r.float(), 1).sum() / 2
+            loss.backward()
+            norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 1, error_if_nonfinite=True)
+            assert torch.isfinite(norm)
+>           opt.step()
+
+tests/test_hf20_ranking_pair_guard.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1241: in _execute_mock_call
+    raise effect
+.venv/lib/python3.14/site-packages/_pytest/runner.py:361: in from_call
+    result: TResult | None = func()
+                             ^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:250: in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/logging.py:865: in pytest_runtest_call
+    yield
+.venv/lib/python3.14/site-packages/_pytest/capture.py:900: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/skipping.py:268: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:184: in pytest_runtest_call
+    item.runtest()
+.venv/lib/python3.14/site-packages/_pytest/python.py:1707: in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/python.py:167: in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_hf20_ranking_continue.py:156: in test_complete_new_neural_workflow_synthetic_only
+    neural_one(data, tmp_path, journal, 2021, arm)
+src/lstm_data/hf20_ranking_continue.py:449: in neural_one
+    receipt = epoch(model, opt, data, fitpos, arm, number, "calibration", dest)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/hf20_ranking_run.py:372: in epoch
+    opt.step()
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1241: in _execute_mock_call
+    raise effect
+.venv/lib/python3.14/site-packages/_pytest/runner.py:361: in from_call
+    result: TResult | None = func()
+                             ^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:250: in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/logging.py:865: in pytest_runtest_call
+    yield
+.venv/lib/python3.14/site-packages/_pytest/capture.py:900: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/skipping.py:268: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:184: in pytest_runtest_call
+    item.runtest()
+.venv/lib/python3.14/site-packages/_pytest/python.py:1707: in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/python.py:167: in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_hf20_ranking_continue.py:156: in test_complete_new_neural_workflow_synthetic_only
+    neural_one(data, tmp_path, journal, 2021, arm)
+src/lstm_data/hf20_ranking_continue.py:449: in neural_one
+    receipt = epoch(model, opt, data, fitpos, arm, number, "calibration", dest)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/hf20_ranking_run.py:372: in epoch
+    opt.step()
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1241: in _execute_mock_call
+    raise effect
+.venv/lib/python3.14/site-packages/_pytest/runner.py:361: in from_call
+    result: TResult | None = func()
+                             ^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:250: in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/logging.py:865: in pytest_runtest_call
+    yield
+.venv/lib/python3.14/site-packages/_pytest/capture.py:900: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/skipping.py:268: in pytest_runtest_call
+    return (yield)
+            ^^^^^
+.venv/lib/python3.14/site-packages/_pytest/runner.py:184: in pytest_runtest_call
+    item.runtest()
+.venv/lib/python3.14/site-packages/_pytest/python.py:1707: in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+.venv/lib/python3.14/site-packages/pluggy/_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/pluggy/_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/python.py:167: in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_hf20_ranking_continue.py:156: in test_complete_new_neural_workflow_synthetic_only
+    neural_one(data, tmp_path, journal, 2021, arm)
+src/lstm_data/hf20_ranking_continue.py:449: in neural_one
+    receipt = epoch(model, opt, data, fitpos, arm, number, "calibration", dest)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/hf20_ranking_run.py:372: in epoch
+    opt.step()
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <MagicMock name='step' id='4451199904'>, args = (), kwargs = {}
+
+    def _execute_mock_call(self, /, *args, **kwargs):
+        # separate from _increment_mock_call so that awaited functions are
+        # executed separately from their call, also AsyncMock overrides this method
+    
+        effect = self.side_effect
+        if effect is not None:
+            if _is_exception(effect):
+>               raise effect
+E               AssertionError: ZERO_STEP_GUARD
+
+/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py:1241: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_hf20_ranking_continue.py::test_complete_new_neural_workflow_synthetic_only[T2R]
+FAILED tests/test_hf20_ranking_continue.py::test_complete_new_neural_workflow_synthetic_only[NR]
+FAILED tests/test_hf20_ranking_continue.py::test_complete_new_neural_workflow_synthetic_only[PW]
+FAILED tests/test_hf20_ranking_pair_guard.py::test_corrected_guard_actual_synthetic_optimizer_checkpoint
+4 failed, 45 passed, 4 deselected in 23.09s
+{'exit_code': 1, 'AdamW_step_calls': 4, 'LBFGS_step_calls': 0}
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+AssertionError

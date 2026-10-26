@@ -1,0 +1,81 @@
+{
+  "schema": "S3_RESOURCE_ONLY_CONTINUATION_v1",
+  "sealed_at": "2026-10-26T06:06:22.317354+00:00",
+  "base_execution_sha256": "d6d038eaaa5b233d0ebb7cad477e890dc6154d53ba67a8c3230c66630dee6b0e",
+  "base_design_sha256": "bf12ae80cdd5a7c4418ffb7735e80eb93b7e720a90ba942518195839b2a266c3",
+  "scientific_changes": false,
+  "additional_starts": 0,
+  "neural_completed_before": 12,
+  "ledger_before": 86,
+  "baseline_attempts_completed": 72,
+  "remaining_runs": [
+    "HF20-S3A-F24-H1-T2R-S42",
+    "HF20-S3A-F24-H1-NR-S42",
+    "HF20-S3A-F24-H2-T2R-S42",
+    "HF20-S3A-F24-H2-NR-S42",
+    "HF20-S3B-F21-H1-T2R-S42",
+    "HF20-S3B-F21-H1-NR-S42",
+    "HF20-S3B-F21-H2-T2R-S42",
+    "HF20-S3B-F21-H2-NR-S42",
+    "HF20-S3B-F22-H1-T2R-S42",
+    "HF20-S3B-F22-H1-NR-S42",
+    "HF20-S3B-F22-H2-T2R-S42",
+    "HF20-S3B-F22-H2-NR-S42",
+    "HF20-S3B-F23-H1-T2R-S42",
+    "HF20-S3B-F23-H1-NR-S42",
+    "HF20-S3B-F23-H2-T2R-S42",
+    "HF20-S3B-F23-H2-NR-S42",
+    "HF20-S3B-F24-H1-T2R-S42",
+    "HF20-S3B-F24-H1-NR-S42",
+    "HF20-S3B-F24-H2-T2R-S42",
+    "HF20-S3B-F24-H2-NR-S42"
+  ],
+  "maximum_final_ledger": 106,
+  "journal_boundary_snapshot": "reports/experiments/hf20_s3_live_2026-10-26_010204/journal_at_resource_boundary.jsonl.txt",
+  "bindings": [
+    {
+      "path": "src/lstm_data/hf20_horizon_resources.py",
+      "sha256": "4c5774e169a11d9b695f8055470beee63fa00fbf3dcda6670e5d659a08ac0fab"
+    },
+    {
+      "path": "src/lstm_data/hf20_horizon_resource_continue.py",
+      "sha256": "edfccb13ebf979eb0cf5cc26dfcde4fbe1f39ec86ebf108906b9983bdb287bd4"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/RESOURCE_AMENDMENT_AUTHORITY_v1.json",
+      "sha256": "49e2c9ce0a6412edc6728f4ae9fcf3ae63726c15153f34e1b757215a79cc0b4e"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/RESOURCE_AMENDMENT_USER_MESSAGE.txt",
+      "sha256": "010282b908df056badae40a5177847362a61086b143e62efa133441664bae2f2"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/RESOURCE_BOUNDARY_HELD.json",
+      "sha256": "d2230a2505566bf796f45fe94462c86481dafa1699deb9815cebce76cfe236a9"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/RESOURCE_BOUNDARY_CLASSIFICATION.json",
+      "sha256": "ddc924f51e2f1b81ef868b09e6af969b1c87be714faf79aac03c120466f69f6f"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/journal_at_resource_boundary.jsonl.txt",
+      "sha256": "111cf3d58106ec10d04f4d55991d1752b9a220943bef094ede412ebdc2d18a6b"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/resource_amendment_static_v2.json",
+      "sha256": "2c9cd5910cd22249d184ed82163eb319321344fdc5cf35e381a75e06db423f7c"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/resource_amendment_tests_v2.txt",
+      "sha256": "7d31108c0708729b43f238ff64cc732a21f8e2b9fe0e32652561c45a6847083c"
+    }
+  ],
+  "scope_summary_receipt": "RESOURCE_AMENDMENT_AUTHORITY_v1.json",
+  "verbatim_user_request": "RESOURCE_AMENDMENT_USER_MESSAGE.txt",
+  "caps": {
+    "task_artifact_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "RAM_bytes": 2000000000
+  },
+  "operation": "Delegate unchanged original neural_one/Journal scientific functions; replace only resource check call sites in the new controller. No completed fit repeated."
+}

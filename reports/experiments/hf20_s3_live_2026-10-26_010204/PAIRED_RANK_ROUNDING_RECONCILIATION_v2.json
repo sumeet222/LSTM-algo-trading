@@ -1,0 +1,13 @@
+{
+  "status": "RESOLVED_PASS",
+  "initial_rank_difference": 1.65785596e-09,
+  "intermediate_actual_objective_difference": 1.24492279e-08,
+  "root_cause": "FP32 within-origin reduction order/layout and CSV float32 decimal serialization versus re-aggregation from rows.",
+  "resolution": "Reconstruct the inherited matrix rank-loss reduction and saved actual-allocation sum before flattening, then aggregate conditional session means.",
+  "verified_primary_role_metric_differences": 416,
+  "rtol": 1e-12,
+  "atol": 1e-12,
+  "scientific_gate_tolerance_changes": false,
+  "training_output_changes": false,
+  "new_fits": 0
+}

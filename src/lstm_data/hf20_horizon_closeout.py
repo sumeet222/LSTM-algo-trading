@@ -1,0 +1,701 @@
+"""Read-only S3 saved-output verification, paired estimands and complete file index."""
+
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+from .hf20_horizon_authority import JOURNAL, validate
+from .hf20_horizon_data import PREPARATION
+from .hf20_horizon_resources import resources
+from .hf20_ranking import YEARS, origin_weights, rank_targets
+from .hf20_ranking_continue_report import markdown
+from .hf20_ranking_run import sha, write
+from .hf20_recent_linear import PRIOR
+
+
+def role_oracle(path: Path) -> dict:
+    """Independent stored source-price/target/objective/weight reconstruction."""
+    f = pd.read_parquet(path)
+    if f.session_date_et.ge("2025-01-01").any() or f.duplicated(["origin_id", "ticker"]).any():
+        raise ValueError("S3_CLOSEOUT_DATE_OR_DUPLICATE")
+    if not f.groupby("origin_id").size().eq(20).all():
+        raise ValueError("S3_CLOSEOUT_COMPLETE20")
+    r = f.return_h.to_numpy().reshape(-1, 20)
+    p = f.score.to_numpy().reshape(-1, 20)
+    raw = np.log(f.exit_source_close.to_numpy() / f.entry_source_close.to_numpy())
+    np.testing.assert_allclose(f.return_h, raw, rtol=1e-14, atol=1e-16)
+    med = np.median(r, axis=1)
+    mad = np.median(abs(r - med[:, None]), axis=1)
+    y = (r - med[:, None]) / (mad[:, None] + float(f.epsilon.iloc[0]))
+    np.testing.assert_array_equal(f.TG20.to_numpy().reshape(-1, 20), y)
+    w = origin_weights(f.session_date_et.to_numpy()[::20])
+    np.testing.assert_allclose(f.weight, np.repeat(w / 20, 20), rtol=1e-14, atol=1e-15)
+    m = json.loads((path.parent / (str(f.role.iloc[0]) + "_metrics.json")).read_text())
+    if m["actual_objective"] is not None:
+        if str(f.model.iloc[0]) == "T2R":
+            target = np.arcsinh(y.astype(np.float32) / np.float32(f.scale.iloc[0]))
+            loss = (p.astype(np.float32) - target) ** 2
+        else:
+            loss = (p - rank_targets(r)) ** 2
+        np.testing.assert_allclose(w @ loss.mean(1), m["actual_objective"], rtol=3e-7, atol=1e-8)
+    indices = pd.read_csv(
+        path.parent.parent / f"F{int(f.year.iloc[0]) % 100}_{f.role.iloc[0]}_indices.csv"
+    )
+    np.testing.assert_array_equal(f.origin_id.to_numpy()[::20], indices.origin_id)
+    return dict(
+        path=str(path),
+        rows=len(f),
+        origins=len(f) // 20,
+        source_ratio="PASS",
+        target="PASS",
+        objective="PASS",
+        weights="PASS",
+        keys="PASS",
+    )
+
+
+def origin_file(out: Path, stage: str, year: int, h: int, arm: str) -> Path:
+    if h == 4:
+        d = PRIOR / (
+            f"HF20-S1S2-F{year % 100}-{arm}-S42"
+            if arm in ("T2R", "NR")
+            else f"F{year % 100}_S1_{arm}"
+        )
+    else:
+        group = out / stage / f"F{year % 100}_H{h}"
+        d = group / (
+            f"HF20-S3{stage}-F{year % 100}-H{h}-{arm}-S42" if arm in ("T2R", "NR") else arm
+        )
+    return d / "oos_origins.csv"
+
+
+def matched_differences(out: Path) -> pd.DataFrame:
+    source = pd.read_csv(PREPARATION / "S3_SOURCE_COMMON_INDEX.csv")
+    common = set(source.loc[source.common_target_source & source.input_eligible, "origin_id"])
+    results = []
+    for arm in ("N1", "N2", "P", "LR", "T2R", "NR"):
+        comparisons = [
+            ("H1_MINUS_H4", "A", 1, "A", 4, True),
+            ("H2_MINUS_H4", "A", 2, "A", 4, True),
+            ("H1_MINUS_H2", "A", 1, "A", 2, True),
+        ]
+        if arm in ("T2R", "NR"):
+            comparisons += [
+                (f"B_MINUS_A_H{h}", "B", h, "A", h, matched)
+                for h in (1, 2)
+                for matched in (False, True)
+            ]
+        for label, sa, ha, sb, hb, matched in comparisons:
+            per_year = []
+            rng = np.random.default_rng(22042)
+            for year in YEARS:
+                pa, pb = origin_file(out, sa, year, ha, arm), origin_file(out, sb, year, hb, arm)
+                if not pa.exists() or not pb.exists():
+                    continue
+                a, b = pd.read_csv(pa), pd.read_csv(pb)
+                if matched:
+                    a = a.loc[a.origin_id.isin(common)]
+                    b = b.loc[b.origin_id.isin(common)]
+                joined = a.merge(
+                    b,
+                    on=["origin_id", "session_date_et"],
+                    validate="one_to_one",
+                    suffixes=("_a", "_b"),
+                )
+                if len(joined) != len(a) or len(joined) != len(b):
+                    raise ValueError("S3_PAIRED_ORIGIN_POPULATIONS")
+                d = (
+                    pd.DataFrame(dict(day=joined.session_date_et, delta=joined.ic_a - joined.ic_b))
+                    .groupby("day")
+                    .delta.mean()
+                    .dropna()
+                )
+                monthly = d.groupby(lambda v: str(v)[:7]).agg(["sum", "count"])
+                draw = rng.integers(len(monthly), size=(400, len(monthly)))
+                sample = monthly["sum"].to_numpy()[draw].sum(1) / monthly["count"].to_numpy()[
+                    draw
+                ].sum(1)
+                per_year.append((year, float(d.mean()), sample))
+                lo, hi = np.quantile(sample, [0.025, 0.975])
+                results.append(
+                    dict(
+                        comparison=label,
+                        model=arm,
+                        population="SECONDARY_COMMON" if matched else "PRIMARY_HORIZON_SPECIFIC",
+                        year=str(year),
+                        delta_ic=float(d.mean()),
+                        low=lo,
+                        high=hi,
+                        origins=len(joined),
+                        sessions=len(d),
+                    )
+                )
+            if len(per_year) == 4:
+                sample = np.mean([v[2] for v in per_year], axis=0)
+                lo, hi = np.quantile(sample, [0.025, 0.975])
+                results.append(
+                    dict(
+                        comparison=label,
+                        model=arm,
+                        population="SECONDARY_COMMON" if matched else "PRIMARY_HORIZON_SPECIFIC",
+                        year="EQUAL_YEAR",
+                        delta_ic=float(np.mean([v[1] for v in per_year])),
+                        low=lo,
+                        high=hi,
+                    )
+                )
+    result = pd.DataFrame(results)
+    result.to_csv(out / "S3_MATCHED_HORIZON_AND_AB_DIFFERENCES.csv", index=False)
+    return result
+
+
+def paired_keys_and_inputs(out: Path) -> pd.DataFrame:
+    checks = []
+    for year in YEARS:
+        for h in (1, 2):
+            for arm in ("T2R", "NR"):
+                a = origin_file(out, "A", year, h, arm).parent
+                b = origin_file(out, "B", year, h, arm).parent
+                if not (a / "PASS.json").exists() or not (b / "PASS.json").exists():
+                    continue
+                for role in ("inner_train", "inner_validation", "refit", "oos"):
+                    cols = [
+                        "origin_id",
+                        "ticker",
+                        "return_h",
+                        "TG20",
+                        "epsilon",
+                        "scale",
+                        "median",
+                        "mad",
+                        "weight",
+                        "entry_end_utc",
+                        "exit_end_utc",
+                        "label_maturity_utc",
+                    ]
+                    aa = pd.read_parquet(a / f"{role}_scores.parquet")
+                    bb = pd.read_parquet(b / f"{role}_scores.parquet")
+                    pd.testing.assert_frame_equal(aa[cols], bb[cols], check_exact=True)
+                    delta = bb.M2_scaled_latest.to_numpy() - aa.M2_scaled_latest.to_numpy()
+                    checks.append(
+                        dict(
+                            year=year,
+                            horizon=h,
+                            model=arm,
+                            role=role,
+                            rows=len(aa),
+                            keys_targets_weights_clocks="BITWISE_PASS",
+                            latest_M2_mean_abs_change=float(np.mean(abs(delta))),
+                            latest_M2_p95_abs_change=float(np.quantile(abs(delta), 0.95)),
+                            latest_M2_fraction_changed=float(np.mean(delta != 0)),
+                            A_latest_M2_native_fraction=float(aa.M2_native_latest_valid.mean()),
+                            B_latest_M2_native_fraction=float(bb.M2_native_latest_valid.mean()),
+                        )
+                    )
+    f = pd.DataFrame(checks)
+    f.to_csv(out / "S3_AB_ALL_ROLE_IDENTITIES_AND_M2_CHANGES.csv", index=False)
+    return f
+
+
+def paired_role_diagnostics(out: Path) -> None:
+    """Recompute conditional paired effects in each role and OOS attribution slice."""
+    source = pd.read_csv(PREPARATION / "S3_SOURCE_COMMON_INDEX.csv")
+    common = set(source.loc[source.common_target_source & source.input_eligible, "origin_id"])
+    rows = []
+    for year in YEARS:
+        for h in (1, 2):
+            for arm in ("T2R", "NR"):
+                a = origin_file(out, "A", year, h, arm).parent
+                b = origin_file(out, "B", year, h, arm).parent
+                for role in ("inner_train", "inner_validation", "refit", "oos"):
+                    aa = pd.read_parquet(a / f"{role}_scores.parquet")
+                    bb = pd.read_parquet(b / f"{role}_scores.parquet")
+                    pd.testing.assert_frame_equal(
+                        aa[["origin_id", "ticker"]], bb[["origin_id", "ticker"]]
+                    )
+                    frame = aa[["origin_id", "ticker", "session_date_et", "quality"]].copy()
+                    frame["month"] = frame.session_date_et.str[:7]
+                    oa = pd.read_csv(a / f"{role}_origins.csv").set_index("origin_id")
+                    ob = pd.read_csv(b / f"{role}_origins.csv").set_index("origin_id")
+                    times = pd.DatetimeIndex(pd.to_datetime(oa.index, utc=True)).tz_convert(
+                        "America/New_York"
+                    )
+                    if not np.isin(times.hour, [10, 11]).all() or not (times.minute == 30).all():
+                        raise ValueError("S3_PAIRED_REPORT_UNEXPECTED_SLOT")
+                    np.testing.assert_array_equal(
+                        oa.slot, np.where(times.hour == 10, "10:30", "11:30")
+                    )
+                    pd.testing.assert_series_equal(oa.slot, ob.slot)
+                    frame["slot"] = frame.origin_id.map(oa.slot)
+                    frame["delta_actual_objective"] = 20 * (
+                        bb.actual_row_allocation - aa.actual_row_allocation
+                    )
+                    actual_delta = bb.actual_row_allocation.to_numpy().reshape(-1, 20).sum(
+                        1
+                    ).astype(float) - aa.actual_row_allocation.to_numpy().reshape(-1, 20).sum(
+                        1
+                    ).astype(float)
+                    frame["origin_actual_loss_delta"] = frame.origin_id.map(
+                        pd.Series(actual_delta, index=aa.origin_id.to_numpy()[::20])
+                    )
+                    qa = rank_targets(aa.return_h.to_numpy().reshape(-1, 20))
+                    qb = rank_targets(bb.return_h.to_numpy().reshape(-1, 20))
+                    pa = rank_targets(aa.score.to_numpy().reshape(-1, 20))
+                    pb = rank_targets(bb.score.to_numpy().reshape(-1, 20))
+                    rank_loss_a, rank_loss_b = (qa - pa) ** 2, (qb - pb) ** 2
+                    frame["delta_normalized_rank_error"] = (rank_loss_b - rank_loss_a).reshape(-1)
+                    # Retain the inherited FP32 matrix layout/reduction before flattening;
+                    # both layout changes and decimal CSV roundtrips can change last bits.
+                    origin_delta = rank_loss_b.mean(1).astype(float) - rank_loss_a.mean(1).astype(
+                        float
+                    )
+                    frame["origin_rank_error_delta"] = frame.origin_id.map(
+                        pd.Series(origin_delta, index=aa.origin_id.to_numpy()[::20])
+                    )
+                    frame["delta_relative_side_accuracy"] = bb.relative_side_hit.astype(
+                        float
+                    ) - aa.relative_side_hit.astype(float)
+                    if arm == "T2R":
+                        frame["delta_original_TG20_mse"] = (
+                            bb.original_squared_error - aa.original_squared_error
+                        )
+                    for metric in ("ic", "concordance", "top4", "bottom4"):
+                        frame["delta_" + metric] = frame.origin_id.map(ob[metric] - oa[metric])
+                    metrics = [str(c) for c in frame if str(c).startswith("delta_")]
+                    for population, selected in (
+                        ("PRIMARY_HORIZON_SPECIFIC", frame),
+                        ("SECONDARY_COMMON", frame.loc[frame.origin_id.isin(common)]),
+                    ):
+                        dimensions = (
+                            ("ALL", "ticker", "slot", "month", "quality")
+                            if role == "oos"
+                            else ("ALL",)
+                        )
+                        for dimension in dimensions:
+                            groups = (
+                                [("ALL", selected)]
+                                if dimension == "ALL"
+                                else selected.groupby(dimension)
+                            )
+                            for value, group in groups:
+                                daily = group.groupby("session_date_et")[metrics].mean()
+                                if dimension in ("ALL", "slot", "month"):
+                                    daily["delta_normalized_rank_error"] = group.groupby(
+                                        "session_date_et"
+                                    ).origin_rank_error_delta.mean()
+                                    daily["delta_actual_objective"] = group.groupby(
+                                        "session_date_et"
+                                    ).origin_actual_loss_delta.mean()
+                                if dimension in ("ticker", "quality"):
+                                    # Whole-origin ranking metrics are not stock-level metrics.
+                                    daily[
+                                        [
+                                            "delta_ic",
+                                            "delta_concordance",
+                                            "delta_top4",
+                                            "delta_bottom4",
+                                        ]
+                                    ] = np.nan
+                                rows.append(
+                                    dict(
+                                        year=year,
+                                        horizon=h,
+                                        model=arm,
+                                        role=role,
+                                        population=population,
+                                        dimension=dimension,
+                                        value=str(value),
+                                        rows=len(group),
+                                        origins=group.origin_id.nunique(),
+                                        sessions=len(daily),
+                                        **{str(k): float(v) for k, v in daily.mean().items()},
+                                    )
+                                )
+    result = pd.DataFrame(rows)
+    result.loc[result.dimension.eq("ALL")].to_csv(
+        out / "S3_AB_PAIRED_ROLE_LOSS_AND_RETRIEVAL.csv", index=False
+    )
+    result.loc[result.dimension.ne("ALL")].to_csv(
+        out / "S3_AB_PAIRED_OOS_STOCK_SLOT_MONTH_QUALITY.csv", index=False
+    )
+
+
+def diagnostic_summaries(out: Path) -> None:
+    """Summarize saved role metrics and equal-year energy without refitting anything."""
+    metrics = []
+    for p in sorted(out.glob("[AB]/F*/*/*_metrics.json")):
+        row = json.loads(p.read_text())
+        row.update(run_id=p.parent.name, evidence=str(p))
+        metrics.append(row)
+    mf = pd.DataFrame(metrics)
+    mf.to_csv(out / "S3_ALL_ROLE_METRICS.csv", index=False)
+    neural = mf.loc[mf.model.isin(["T2R", "NR"])]
+    wide = neural.pivot(index="run_id", columns="role", values=["actual_objective", "daily_ic"])
+    wide.columns = [f"{metric}_{role}" for metric, role in wide.columns]
+    wide = wide.reset_index()
+    wide.to_csv(out / "S3_NEURAL_FOUR_ROLE_METRICS.csv", index=False)
+    trace = out / "S3_TRAINING_AND_FAILURE_TRACE.md"
+    trace.write_text(
+        trace.read_text() + "\n## Selected-checkpoint diagnostics for all four roles\n\n"
+        "These are deterministic dropout-OFF full-population metrics. Online dropout-ON "
+        "training losses are retained separately in each calibration/refit batch CSV. "
+        "T2R and NR objectives have different units and must not be compared numerically.\n\n"
+        + markdown(wide)
+        + "\n\nAll role support, objective, IC, pair concordance, retrieval, "
+        "score spread and tie rates are in S3_ALL_ROLE_METRICS.csv. Calibration metrics use "
+        "the selected inner checkpoint and inner recipe; refit/OOS use the fresh refit and "
+        "full-prefix recipe. No training loss is substituted for an OOS metric.\n"
+    )
+    f = pd.read_csv(out / "S3_ALL_ROLE_TAIL_ENERGY_AND_NUM_MAD.csv")
+    keys = ["stage", "horizon", "model", "role"]
+    numeric = [c for c in f.columns if c not in keys + ["year", "cohort"]]
+    summary = f.groupby(keys + ["cohort"])[numeric].mean().reset_index()
+    totals = summary.loc[
+        summary.cohort.eq("ALL"),
+        keys + ["actual_objective_contribution", "original_MSE_contribution"],
+    ]
+    summary = summary.merge(totals, on=keys, suffixes=("", "_total"), validate="many_to_one")
+    summary["actual_objective_share"] = (
+        summary.actual_objective_contribution / summary.actual_objective_contribution_total
+    )
+    summary["original_MSE_share"] = (
+        summary.original_MSE_contribution / summary.original_MSE_contribution_total
+    )
+    summary.to_csv(out / "S3_EQUAL_YEAR_ROLE_TAIL_ATTRIBUTION.csv", index=False)
+    selected = summary.loc[
+        summary.role.eq("oos")
+        & summary.model.isin(["T2R", "NR"])
+        & summary.cohort.isin(
+            ["TARGET_RANK_TOP1", "TARGET_RANK_TOP5", "NUM_ONLY", "MAD_ONLY", "BOTH", "FLOOR"]
+        ),
+        [
+            "stage",
+            "horizon",
+            "model",
+            "cohort",
+            "weight_mass",
+            "actual_objective_share",
+            "original_MSE_share",
+        ],
+    ]
+    tail = out / "S3_HORIZON_EXTREMES_AND_OBJECTIVE_DIAGNOSTICS.md"
+    tail.write_text(
+        tail.read_text() + "\n## Measured equal-year OOS attribution\n\n"
+        "Shares below divide equal-year mean contributions by equal-year mean total loss; "
+        "they are not averages of yearly percentages. Original-MSE cells are unavailable "
+        "for ordinal NR. Target-ranked tails, numerator/MAD categories and floor flags "
+        "overlap and must not be added together. NUM_ONLY/MAD_ONLY/BOTH/NEITHER alone "
+        "form a disjoint partition.\n\n" + markdown(selected) + "\n\n"
+        "S3_EQUAL_YEAR_ROLE_TAIL_ATTRIBUTION.csv includes every role, ordinary complements, "
+        "positive/negative tails, training-threshold events, target/forecast energy, alignment, "
+        "and exact common/centered/subset-cross terms. Counts there are yearly means; exact "
+        "integer counts are in S3_ALL_ROLE_TAIL_ENERGY_AND_NUM_MAD.csv and each role file. "
+        "Paired A/B actual loss, normalized-rank error, IC, concordance and top/bottom retrieval "
+        "are in S3_AB_PAIRED_ROLE_LOSS_AND_RETRIEVAL.csv. OOS stock/slot/month/quality "
+        "slices are in S3_AB_PAIRED_OOS_STOCK_SLOT_MONTH_QUALITY.csv. Slice effects use "
+        "equal sessions and equal rows within each session; they are conditional effects, "
+        "not additive contributions. Whole-origin IC/retrieval are deliberately blank for "
+        "individual-stock and quality-row slices.\n"
+    )
+
+
+def file_index(out: Path) -> None:
+    """Every diagnostic/analysis/checkpoint/receipt path, plus untouched h4 references."""
+    records = []
+    for p in sorted(out.rglob("*")):
+        if not p.is_file() or p.name in (
+            "DIAGNOSTIC_FILE_INDEX.csv",
+            "artifact_inventory.csv",
+            "FINAL_VERIFICATION.json",
+        ):
+            continue
+        if "gradients" in p.name:
+            purpose = "Per-parameter gradient incidence/norms"
+        elif "batches" in p.name:
+            purpose = "Dropout-ON online losses/clipping/updates"
+        elif p.suffix == ".pt":
+            purpose = "Calibration/refit model or optimizer checkpoint"
+        elif "scores.parquet" in p.name:
+            purpose = "Keyed scores, true target operands, objective, prices and quality"
+        elif "tail_" in p.name or "cohort" in p.name:
+            purpose = "Heavy-tail/objective/NUM-MAD/energy/pair/stratum attribution"
+        elif "source_case" in p.name:
+            purpose = "Predeclared genuine source-event inputs/replay"
+        elif "recipe" in p.name or p.parent.name == "targets":
+            purpose = "Train-only phase/target/M2 normalizer recipe"
+        elif p.suffix == ".md":
+            purpose = "Scientific/technical analysis or handoff"
+        else:
+            purpose = "Metric, population, trace, provenance or verification evidence"
+        records.append(
+            dict(
+                scope="S3_NEW", path=str(p), purpose=purpose, bytes=p.stat().st_size, sha256=sha(p)
+            )
+        )
+    prior_index = PRIOR / "DIAGNOSTIC_FILE_INDEX.csv"
+    if prior_index.exists():
+        records.append(
+            dict(
+                scope="ARCHIVAL_H4_INDEX",
+                path=str(prior_index),
+                purpose="Complete original h4 diagnostic index; no copied/refitted outcomes",
+                bytes=prior_index.stat().st_size,
+                sha256=sha(prior_index),
+            )
+        )
+    pd.DataFrame(records).to_csv(out / "DIAGNOSTIC_FILE_INDEX.csv", index=False)
+
+
+def overview_plot(out: Path) -> None:
+    """One portable offline scientific figure; no application/server or network assets."""
+    import plotly.graph_objects as go
+    from plotly.subplots import make_subplots
+
+    a = pd.read_csv(out / "S3A_OOS_BY_YEAR_HORIZON.csv")
+    a = a.loc[a.population.eq("SECONDARY_COMMON") & a.model.ne("N0")]
+    a["row"] = a.model + " / " + a.year.astype(str)
+    matrix = a.pivot(index="row", columns="horizon", values="daily_ic").sort_index()
+    b = pd.read_csv(out / "S3B_MINUS_A_PAIRED.csv")
+    fig = make_subplots(
+        rows=1,
+        cols=2,
+        column_widths=[0.55, 0.45],
+        subplot_titles=("S3-A: common evaluation keys", "S3-B minus A: identical within-h keys"),
+    )
+    fig.add_trace(
+        go.Heatmap(
+            x=["1h", "2h", "4h"],
+            y=matrix.index.tolist(),
+            z=matrix.to_numpy(),
+            colorscale="RdBu",
+            zmid=0,
+            colorbar=dict(title="Rank IC", x=0.46),
+        ),
+        row=1,
+        col=1,
+    )
+    for h in (1, 2):
+        for arm in ("T2R", "NR"):
+            f = b.loc[b.horizon.eq(h) & b.model.eq(arm) & b.status.eq("PAIRED")]
+            fig.add_trace(
+                go.Bar(x=f.year.astype(str), y=f.delta_ic, name=f"h{h} {arm}"), row=1, col=2
+            )
+    fig.update_layout(
+        height=900,
+        width=1150,
+        barmode="group",
+        title="HF20 S3 exploratory ranking diagnostics, 2021–2024",
+        legend=dict(orientation="h", y=-0.08),
+    )
+    fig.update_yaxes(title_text="Rank IC delta", row=1, col=2)
+    fig.write_html(out / "S3_DIAGNOSTIC_OVERVIEW.html", include_plotlyjs=True, full_html=True)
+
+
+def witness_histories(out: Path) -> None:
+    """Reconstruct saved witness M2 inputs with stored parameters; no parameter/model fit."""
+    from .hf20_horizon_data import source_matrix
+    from .hf20_horizon_math import historical_m2
+    from .hf20_ranking_data import FoldData
+
+    base = FoldData(live_approved=True)
+    basis = source_matrix(base, "price_basis_id")
+    blocked = source_matrix(base, "cop_dependency").astype(bool)
+    keys = pd.read_csv(PREPARATION / "S3_PREDECLARED_SOURCE_WITNESSES.csv")
+    regular_days = np.array(
+        [
+            str(day)
+            for day, ix in base.grid.groupby("session_date_et").indices.items()
+            if len(ix) == 6
+        ]
+    )
+    end_times = pd.DatetimeIndex(pd.to_datetime(base.grid.hour_end_utc, utc=True))
+    start_times = pd.DatetimeIndex(pd.to_datetime(base.grid.hour_start_utc, utc=True))
+    first_steps = base.rows.first_step.to_numpy(int)
+    records = []
+
+    def longest_missing(values: np.ndarray) -> int:
+        best = run = 0
+        for value in values:
+            run = 0 if np.isfinite(value) else run + 1
+            best = max(best, run)
+        return best
+
+    for native_h in (1, 2, 4):
+        mean, rms, refs, past = historical_m2(
+            base.grid, base.components.source["close"], basis, blocked, native_h
+        )
+        if native_h == 4:
+            np.testing.assert_array_equal(mean, base.components.m2_mean)
+            np.testing.assert_array_equal(rms, base.components.m2_rms)
+        for stage in ("A",) if native_h == 4 else ("B",):
+            for h in (1, 2) if stage == "A" else (native_h,):
+                selected = keys.loc[keys.horizon.eq(h)]
+                years = selected.year.to_numpy(int)
+                case_ids = selected.case_id.to_numpy(int)
+                case_times = pd.DatetimeIndex(pd.to_datetime(selected.entry_end_utc, utc=True))
+                for case_index, case in enumerate(selected.itertuples()):
+                    year = int(years[case_index])
+                    case_id = int(case_ids[case_index])
+                    group = out / stage / f"F{year % 100}_H{h}"
+                    recipe = json.loads((group / f"F{year % 100}_refit_recipe.json").read_text())
+                    j = base.symbols.index(str(case.ticker))
+                    slot = case_times[case_index].tz_convert("America/New_York").hour - 10
+                    position = int(np.flatnonzero(base.rows.origin_id.eq(case.origin_id))[0])
+                    start = int(first_steps[position])
+                    if stage == "A":
+                        floor = recipe["floors"][j]["m2_floor"]
+                        sc = recipe["scalers"]["M2"]
+                    else:
+                        floor = recipe["S3_M2"]["floors"][j]
+                        sc = recipe["S3_M2"]["scaler"]
+                    with np.load(group / "shared_source_case_inputs.npz") as saved:
+                        k = int(np.flatnonzero(saved["case_id"] == case_id)[0])
+                        expected = saved["inputs"][k, :, 1].copy()
+                    for offset, step in enumerate(range(start, start + 48)):
+                        reference = int(refs[step])
+                        if reference < 0:
+                            raise ValueError("S3_WITNESS_PREVIOUS_SESSION_REFERENCE")
+                        end = end_times[reference]
+                        cutoff = start_times[step]
+                        if end + pd.Timedelta(minutes=2) >= cutoff:
+                            raise ValueError("S3_WITNESS_HISTORICAL_MATURITY_LEAK")
+                        last = int(
+                            np.searchsorted(
+                                regular_days, str(base.grid.session_date_et.iloc[reference])
+                            )
+                        )
+                        history = past[max(0, last - 59) : last + 1, j, slot]
+                        short = history[-20:]
+                        native = mean[step, j, slot] / np.maximum(rms[step, j, slot], floor)
+                        value = np.float32(
+                            ((native if np.isfinite(native) else sc["center"]) - sc["center"])
+                            / sc["scale"]
+                        )
+                        np.testing.assert_array_equal(value, expected[offset])
+                        records.append(
+                            dict(
+                                case_id=case_id,
+                                year=year,
+                                ticker=str(case.ticker),
+                                horizon=h,
+                                stage=stage,
+                                step=offset,
+                                source_return_horizon=native_h,
+                                feature_start_utc=str(cutoff),
+                                latest_reference_end_utc=str(end),
+                                assumed_maturity_utc=str(end + pd.Timedelta(minutes=2)),
+                                mean20=mean[step, j, slot],
+                                RMS60=rms[step, j, slot],
+                                floor=floor,
+                                valid20=int(np.isfinite(short).sum()),
+                                valid60=int(np.isfinite(history).sum()),
+                                max_missing_run20=longest_missing(short),
+                                max_missing_run60=longest_missing(history),
+                                COP_dependency=bool(blocked[step, j]),
+                                native_M2=native,
+                                scaled_M2=float(value),
+                                fallback=not np.isfinite(native),
+                                saved_input_bitwise=True,
+                            )
+                        )
+    result = pd.DataFrame(records)
+    result.to_parquet(out / "S3_WITNESS_M2_HISTORIES.parquet", index=False)
+    write(
+        out / "S3_WITNESS_M2_HISTORY_VERIFICATION.json",
+        dict(
+            status="PASS",
+            rows=len(result),
+            unique_stock_events=int(keys.case_id.nunique()),
+            unique_origins=int(keys.origin_id.nunique()),
+            unique_sessions=int(pd.to_datetime(keys.entry_end_utc, utc=True).dt.date.nunique()),
+            parameter_fits=0,
+            optimizer_calls=0,
+            stored_parameters_only=True,
+            scope="Historical source end+2min audit; publisher actual available_at remains UNKNOWN",
+        ),
+    )
+
+
+def closeout(out: Path) -> None:
+    if not all(
+        (out / name).exists()
+        for name in ("FITTING_FINISHED.json", "S3A_PASS.json", "S3B_PASS.json")
+    ):
+        raise ValueError("S3_COMPLETE_STAGES_REQUIRED_FOR_FINAL_PASS")
+    history = validate([json.loads(s) for s in JOURNAL.read_text().splitlines()])
+    starts = [r for r in history if r["status"] == "STARTED"]
+    baseline = [json.loads(s) for s in (out / "baseline_attempts.jsonl").read_text().splitlines()]
+    if len(starts) > 32 or sum(r["status"] == "STARTED" for r in baseline) > 72:
+        raise ValueError("S3_FINAL_BUDGET")
+    checks = []
+    for p in sorted(out.glob("[AB]/F*/HF20*/PASS.json")):
+        gate = json.loads(p.read_text())
+        for name, expected in gate["files"].items():
+            if sha(Path(name)) != expected:
+                raise ValueError("S3_ACCEPTED_MODEL_ARTIFACT_CHANGED")
+    for p in sorted(out.glob("[AB]/F*/*/*_scores.parquet")):
+        checks.append(role_oracle(p))
+    pd.DataFrame(checks).to_csv(out / "S3_INDEPENDENT_FINAL_ROLE_VERIFICATION.csv", index=False)
+    identities = paired_keys_and_inputs(out)
+    paired_role_diagnostics(out)
+    differences = matched_differences(out)
+    overview_plot(out)
+    witness_histories(out)
+    diagnostic_summaries(out)
+    refs = json.loads((PREPARATION / "REFERENCE_AND_PRESERVATION.json").read_text())["files"]
+    preserved = 0
+    for ref in refs:
+        if ref["path"] == "configs/CURRENT_EXPERIMENT_REGISTRY.json":
+            continue
+        if sha(Path(ref["path"])) != ref["sha256"]:
+            raise ValueError("S3_PRIOR_REFERENCE_CHANGED:" + ref["path"])
+        preserved += 1
+    (out / "S3_FINAL_RESEARCH_DECISION.md").write_text(
+        "# S3 final research comparison\n\n"
+        "Exploratory annual OOS through2024; protected2026 numerics remain unopened. "
+        "The whole-month intervals below are descriptive sensitivity, "
+        "not post-search significance. Independent horizon training populations differ; "
+        "secondary evaluation uses identical keys.\n\n"
+        + markdown(differences.loc[differences.year.eq("EQUAL_YEAR")])
+        + "\n\n"
+        "Read S3A_HORIZON_ONLY_COMPARISON.md and S3B_HORIZON_ALIGNED_M2.md "
+        "for all per-year/full/common estimates. "
+        "Original-target tail/energy, NUM/MAD and ordinary complement attribution is in "
+        "S3_HORIZON_EXTREMES_AND_OBJECTIVE_DIAGNOSTICS.md and its all-role tables. "
+        "Publication timing/action vintage/rights remain qualified; "
+        "labels start two minutes before assumed issuance. This is price-only ranking research, "
+        "with no execution or profitability inference. No next fits are authorized.\n"
+    )
+    write(
+        out / "FINAL_VERIFICATION.json",
+        dict(
+            status="PASS_TECHNICAL_QUALIFIED_SCIENCE",
+            neural_starts=len(starts),
+            ledger=74 + len(starts),
+            completed=sum(r["status"] == "COMPLETED" for r in history),
+            failed=sum(r["status"] == "FAILED" for r in history),
+            baseline_attempts=sum(r["status"] == "STARTED" for r in baseline),
+            independently_checked_roles=len(checks),
+            AB_role_identities=len(identities),
+            unchanged_prior_refs=preserved,
+            protected_numeric_reads=0,
+            resources=resources(out),
+        ),
+    )
+    file_index(out)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out", type=Path, required=True)
+    args = parser.parse_args()
+    closeout(args.out)
+
+
+if __name__ == "__main__":
+    main()

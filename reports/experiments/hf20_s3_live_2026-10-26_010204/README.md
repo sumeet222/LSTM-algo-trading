@@ -1,0 +1,20 @@
+# HF20 S3 live campaign
+
+The actual user live-fit response is recorded in LIVE_AUTHORITY.json. It authorizes the unchanged amended design bf12ae80cdd5a7c4418ffb7735e80eb93b7e720a90ba942518195839b2a266c3: at most72 supervised non-neural attempts and32 neural lifecycles, S3-A before S3-B, starting from74/200. The copied frozen card retains its historical proposal status; it is immutable. Live authority is a separate receipt, not an invented signature or certification.
+
+Independent horizon populations are primary. The h1/h2/h4 intersection is secondary evaluation only. A/B membership, target recipes, clocks, seed and scientific configuration match within each horizon. Only M2 changes in B. All h4 fitted artifacts are reused unchanged. No2025 tuning, protected2026 numerical access, new source, trading or publication.
+
+Before the first supervised attempt, READINESS_PASS.json and FULL_STAGE_GATE_REHEARSAL.json must pass, focused tests and full-project static checking must pass, and EXECUTION_MANIFEST.json must bind the exact implementation and prepared recipes. Per-model PASS.json gates guard the next start. Failures count permanently; no retries are authorized.
+
+Final reports: S3A_HORIZON_ONLY_COMPARISON.md; S3B_HORIZON_ALIGNED_M2.md; S3_HORIZON_EXTREMES_AND_OBJECTIVE_DIAGNOSTICS.md; S3_TRAINING_AND_FAILURE_TRACE.md; S3_FINAL_RESEARCH_DECISION.md; WORK_SESSION_REPORT.md. DIAGNOSTIC_FILE_INDEX.csv indexes every diagnostic and analysis file, including all role scores/cohorts/thresholds/tails/energy/pairs/strata, source cases and training telemetry. No partial-year mean is a four-year result.
+
+Reproduction uses the repository .venv and lawful local P019B/P020 cache with project-relative paths. The live CLI is python -m lstm_data.hf20_horizon_run --out NEW_OUTPUT --prepare, then --gate-rehearsal, and --run only with its exact sealed manifest and valid campaign authority. Never rerun a populated campaign or recreate charged starts. This response does not authorize another reproduction training campaign.
+
+Population metadata: the carried P020 label_eligible column in the bound role-index CSVs describes the original four-hour source flag. It is not an h1/h2 fitting filter. Actual h-specific membership is the approved S3_ROLE_MEMBERSHIP.json and the frozen per-horizon index row sets, verified against independent genuine endpoints/basis. Conservative_admission_maturity_utc records the inherited four-hour cutoff; label_maturity_utc records the actual h endpoint plus2minutes.
+
+Recipe interpretation: B retains the original FT16 floors/scalers dictionary for lineage. Its actual horizon-aligned M2 floor/scaler override is explicitly stored in S3_M2 and applied by HorizonData. The other15 original channel recipes are reused unchanged. S3B_M2_SOURCE_AND_SCALE_AUDIT.csv compares the actual old/new M2 parameters; shared_target_path/SHA identifies the identical A/B h-specific target recipe. Do not feed a B receipt into the legacy unmodified P020 loader.
+
+Current resource limits: task2.5GB, project15GB, RAM2GB unchanged. RESOURCE_AMENDMENT_EXECUTION_v1.json records the human-authorized boundary after12 completed models (ledger86), retaining the original scientific executor byte-for-byte. The original FATAL_STOP is the deliberate before-start journal-lock hold, not a failed model.20 exact unstarted IDs continue; no completed fit or baseline is repeated.
+
+
+Final status: S3-A PASS; S3-B PASS; 72/72 baseline attempts and32/32 neural starts completed,0new failures, ledger106/200. Start with S3_FINAL_RESEARCH_DECISION.md and DIAGNOSTIC_FILE_INDEX.csv. Detailed training/validation/refit/OOS: S3_TRAINING_AND_FAILURE_TRACE.md. Detailed extremes/objective/NUM-MAD: S3_HORIZON_EXTREMES_AND_OBJECTIVE_DIAGNOSTICS.md. Final handoff: reports/codex_sessions/2026-10-26_033648_hf20_s3_campaign_complete.md. Top-level paired tables supersede preserved initial report drafts; READ_ONLY_CLOSEOUT_FINAL_CHECKS.json records416exact reconciliations. Resource-policy and read-only reporting interruptions did not restart any fit.

@@ -1,0 +1,9 @@
+# S3 preflight — actual live authority recorded
+
+Live fitting was explicitly approved in LIVE_AUTHORITY.json under unchanged design bf12ae80cdd5a7c4418ffb7735e80eb93b7e720a90ba942518195839b2a266c3. No further routine approval is requested. EXECUTION_MANIFEST.json binds the implementation and all prepared recipes/populations.
+
+PASS:64 full-population source/shape/target-rank/non-M2-identity checks,64 bounded training→checkpoint→full validation/OOS zero-step workflows across all fold/horizon/stage/objective/phase combinations, plus8 complete four-role workflows with source witnesses and final stage-gate reloads. Actual optimizer calls0 in those rehearsals.16 h-specific prefix target recipes and16 B M2-only prefix recipes were fitted under this live authority; original8 FT16 recipes are reused unchanged. The50-session validation minimum remains unchanged. Protected numerics are unopened.
+
+Tests:45 passed/8 optimizer tests intentionally deselected under zero-step guards;0AdamW/0LBFGS calls. An earlier guarded test selection intercepted4calls and raised before updates; that log is preserved. Earlier gate rehearsals detected a path-only recipe consistency error (absolute tempfile vs repository-relative paths); repaired and regression-tested before any empirical attempt. Zero baseline attempts/neural starts occurred during these corrections. Prior preparation's separately disclosed synthetic-test exception remains preserved.
+
+Full-project static check462files,0errors/0warnings; Ruff passes.5,847 prior hashes unchanged. Final zero-step rehearsal peak936,853,504bytes; current task41.1MB/project7.392GB, beneath fixed2GB/1GB/10GB limits. Training remains sequential CPU4/1 with no loader workers. Forecast1–6hours is planning only. No extra arms/seeds/h4 fits or performance-based B cancellation.

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "AdamW_step_calls": 0,
+  "LBFGS_step_calls": 0,
+  "pytest_args": [
+    "tests/test_hf20_horizons.py",
+    "tests/test_hf20_ranking.py",
+    "tests/test_hf1m_ft16.py::test_protected_read_and_unknown_split_fail_before_file_access",
+    "tests/test_state_screen.py::test_protected_routes_fail_before_io",
+    "-k",
+    "not synthetic_lstm_rank_learning_and_fresh_state and not rank_checkpoint_and_complete_epoch_rehearsal and not linear_solvers_recover_synthetic_rank_information",
+    "-q"
+  ],
+  "excluded_reason": "Legacy tests perform synthetic optimizer steps, forbidden by latest task; tests unchanged"
+}

@@ -1,0 +1,21 @@
+**S3 storage-limit amendment — apply during execution**
+
+I authorize the following resource-limit increases for the ongoing S3 campaign:
+
+- **Task-artifact storage cap:** Increase from 1 GB to **2.5 GB**.
+- **Total project-storage cap:** Increase from 10 GB to **15 GB**.
+- **RAM cap:** Keep unchanged at 2 GB.
+
+Apply these changes at the next safe execution boundary without interrupting active training or restarting completed fits.
+
+Requirements:
+
+1. Preserve all completed models, checkpoints, predictions, diagnostics, and ledger entries.
+2. Check task-artifact storage, total project storage, and RAM limits before each subsequent fit.
+3. If any limit would be exceeded, stop safely and report the required additional capacity.
+4. Do not silently delete, overwrite, or compress scientific artifacts to bypass storage limits.
+5. Record both cap increases in the execution log as **resource amendments**, separate from the frozen scientific design.
+6. Preserve existing experiment configurations, stage gates, training budgets, eligibility rules, and verification requirements.
+7. Keep protected 2026 data closed.
+
+**This is resource-limit authorization only.** Continue the already-approved S3 campaign without launching additional experiments or changing the scientific design.

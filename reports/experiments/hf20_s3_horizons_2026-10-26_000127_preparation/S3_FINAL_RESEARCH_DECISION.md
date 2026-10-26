@@ -1,0 +1,11 @@
+# S3 decision — amended eligibility ready for design review, fitting closed
+
+The user's amendment resolves the primary source-support issue without relaxing statistics: allh1/h2/h4 F21–F24 validation sets meet≥50sessions and≥25origins per slot. F24 has66/64/74sessions. Independent h1/h2 membership admits legitimate observations even when h4 prices are unavailable; original FT16/source-quality masks, schedule/cutoffs/48-step embargo and conservative maturity remain unchanged. Source arithmetic and full h4 target/M2/reference identities pass. A/B populations are identical within each horizon. The three-horizon intersection is a secondary evaluation cohort, not the fitting/selection population.
+
+No horizon superiority, M2-alignment benefit, recurrent-versus-linear gain or tail-loss change can be concluded: new S3-A/S3-B fits and predictions are NOT_RUN. The old h4 results are retrospective context only. Secondary common evaluation controls evaluation composition but does not make h-specific estimation populations identical. This is an explicit remaining scientific qualification rather than an unnoticed confound.
+
+Both shorter horizons and both T2R/NR objectives remain in the prospective A/B inventory; no selection from the monthly/recent36 results or new horizon IC occurred. Future maximum32neural/72non-neural tasks remain unstarted and unreserved. Preserve74/200, failed65, deferredLP, protected2026 lock and conditional source/private-use/action/publication/survivor assumptions. No source downloads, installs, trading or Git publication.
+
+The earlier inherited pytest optimizer scope error is disclosed in S3_TRAINING_AND_FAILURE_TRACE.md: synthetic fixture steps only; no empirical model/ledger changed. Final guarded verification permits no optimizer steps. Scientific/source gates pass, with this operational exception retained, not erased.
+
+The smallest next decision is human approval or revision of the sealed amended eligibility design. No threshold reduction, new origins, widervalidationtail, additional h4refit or other experiment is necessary to restore current support. Any future live fitting still needs explicit executable-bound authority. Stop here; do not initiate S4/S5/S7, rolling LSTMs, protected confirmation or any new campaign from this report.

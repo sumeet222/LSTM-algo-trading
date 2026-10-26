@@ -1,0 +1,17 @@
+{
+  "kind": "ACTUAL_DIRECT_USER_REQUEST",
+  "at": "2026-10-26T05:54:27.286555+00:00",
+  "response": "S3 storage-limit amendment \u2014 apply during execution. Task-artifact cap 1 GB \u2192 2.5 GB; total project cap 10 GB \u2192 15 GB; RAM unchanged 2 GB. Apply at next safe boundary without interrupting active training or restarting completed fits. Preserve all results, check caps before subsequent fits, stop/report required capacity if exceeded; no silent deletion/overwrite/compression; record resource amendments separately; frozen science, stage gates, budgets and protected2026 lock unchanged.",
+  "old_caps": {
+    "task_artifact_bytes": 1000000000,
+    "project_bytes": 10000000000,
+    "RAM_bytes": 2000000000
+  },
+  "new_caps": {
+    "task_artifact_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "RAM_bytes": 2000000000
+  },
+  "resource_only": true,
+  "additional_experiments_authorized": 0
+}

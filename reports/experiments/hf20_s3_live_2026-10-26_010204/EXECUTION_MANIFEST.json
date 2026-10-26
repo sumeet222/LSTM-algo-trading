@@ -1,0 +1,596 @@
+{
+  "schema": "HF20_S3_LIVE_v1",
+  "sealed_at": "2026-10-26T05:22:10.073296+00:00",
+  "design_sha256": "bf12ae80cdd5a7c4418ffb7735e80eb93b7e720a90ba942518195839b2a266c3",
+  "execution_sha256": "d6d038eaaa5b233d0ebb7cad477e890dc6154d53ba67a8c3230c66630dee6b0e",
+  "authority": {
+    "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/LIVE_AUTHORITY.json",
+    "sha256": "25083581695c640fa59ea9cc4e88cb1bbcba68b61e4d7d717cb8d8594340c23a"
+  },
+  "neural_before": 74,
+  "maximum": 106,
+  "baseline_cap": 72,
+  "neural_runs": [
+    "HF20-S3A-F21-H1-T2R-S42",
+    "HF20-S3A-F21-H1-NR-S42",
+    "HF20-S3A-F21-H2-T2R-S42",
+    "HF20-S3A-F21-H2-NR-S42",
+    "HF20-S3A-F22-H1-T2R-S42",
+    "HF20-S3A-F22-H1-NR-S42",
+    "HF20-S3A-F22-H2-T2R-S42",
+    "HF20-S3A-F22-H2-NR-S42",
+    "HF20-S3A-F23-H1-T2R-S42",
+    "HF20-S3A-F23-H1-NR-S42",
+    "HF20-S3A-F23-H2-T2R-S42",
+    "HF20-S3A-F23-H2-NR-S42",
+    "HF20-S3A-F24-H1-T2R-S42",
+    "HF20-S3A-F24-H1-NR-S42",
+    "HF20-S3A-F24-H2-T2R-S42",
+    "HF20-S3A-F24-H2-NR-S42",
+    "HF20-S3B-F21-H1-T2R-S42",
+    "HF20-S3B-F21-H1-NR-S42",
+    "HF20-S3B-F21-H2-T2R-S42",
+    "HF20-S3B-F21-H2-NR-S42",
+    "HF20-S3B-F22-H1-T2R-S42",
+    "HF20-S3B-F22-H1-NR-S42",
+    "HF20-S3B-F22-H2-T2R-S42",
+    "HF20-S3B-F22-H2-NR-S42",
+    "HF20-S3B-F23-H1-T2R-S42",
+    "HF20-S3B-F23-H1-NR-S42",
+    "HF20-S3B-F23-H2-T2R-S42",
+    "HF20-S3B-F23-H2-NR-S42",
+    "HF20-S3B-F24-H1-T2R-S42",
+    "HF20-S3B-F24-H1-NR-S42",
+    "HF20-S3B-F24-H2-T2R-S42",
+    "HF20-S3B-F24-H2-NR-S42"
+  ],
+  "implementation_under_direct_design_authority": true,
+  "signature_claimed": false,
+  "prepared_bindings": [
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H1/F21_inner_recipe.json",
+      "sha256": "034296f50be1f51519f6a509c82a6adce4fe9ba1884668d8111d206978f4e0d4"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H1/F21_inner_train_indices.csv",
+      "sha256": "9ae9bb8b5a49b37378e40f963fb2c738d6242ed3fc14690f9cc7d2ee71bdf675"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H1/F21_inner_validation_indices.csv",
+      "sha256": "0af49bca4cb3f30835efd3066703bec669c32ce0321bea27faf75e0b944f4c24"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H1/F21_oos_indices.csv",
+      "sha256": "06b31ec1914f598301f405af8f02e86d0e4ce6cc5e9edfea651ee68b7cce3d29"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H1/F21_refit_indices.csv",
+      "sha256": "b7d6706e0c979155889ef2f4851391a5f8c8b45a4b577b46bcc72171ef3d0209"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H1/F21_refit_recipe.json",
+      "sha256": "6c64f0501303e0358b63deab7c27a104fb9c70dd0e91a2a40a706edf0aa12502"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H2/F21_inner_recipe.json",
+      "sha256": "c340bfc21ad1835f383b39ce81b5dd7f8f4a63ce2da5c678a7c4f9da67dfc05f"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H2/F21_inner_train_indices.csv",
+      "sha256": "62ed602e516a4391410ff11fd2aaf40eef4d86a402e0a96944cc9df5366987a4"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H2/F21_inner_validation_indices.csv",
+      "sha256": "b0ba829913e925aebf277b323bb5ddd72a5d4d80bf44137312213dcd7b7b3f5a"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H2/F21_oos_indices.csv",
+      "sha256": "e7bfd7efd3f6668a0ee21696a73617323f88a996a71ea7102599e5ca17909191"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H2/F21_refit_indices.csv",
+      "sha256": "34ea4306e3568d9d1904dd752d0b21a9999689995693ffc7a12b405cc1e02623"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F21_H2/F21_refit_recipe.json",
+      "sha256": "b30d2110a52dd806c13bdf63719d33fa4c43b273aca43d15ca1dd0dcb6fe8744"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H1/F22_inner_recipe.json",
+      "sha256": "6b007151f6559d28fe5d4e192354f265f3709b91b6ef6b9b28fc1e284e366a89"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H1/F22_inner_train_indices.csv",
+      "sha256": "7dfe15b2818b1f3832d8bc1ce5c3869940cc148a5cc01b04221d581a79cc9757"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H1/F22_inner_validation_indices.csv",
+      "sha256": "9c07d12b0bc176e70e2b72ae5721678371806852b6bd4f806a35d9a56a54b7e3"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H1/F22_oos_indices.csv",
+      "sha256": "0cb7d6f1c3954b5233bbcd09e5f081da7938a65d9f9552cf32681d917e2a5c48"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H1/F22_refit_indices.csv",
+      "sha256": "233aa4ea18fd312a1b10cc2a9137c235103ff7a9b12418e2a0951c27b6679d39"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H1/F22_refit_recipe.json",
+      "sha256": "9a2a800a1b8bd3e8f779982bcd06bcb7fdd0bf6d93c8248daff495d03b441086"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H2/F22_inner_recipe.json",
+      "sha256": "d7a264c6d9132533553cdc78fd667fed640a5e01a046d8c4fc7ccb1798df7edd"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H2/F22_inner_train_indices.csv",
+      "sha256": "23d13fb527ffa324aacb6ef6d4069df400bb8a8b16a15e273bc700f43d0773d5"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H2/F22_inner_validation_indices.csv",
+      "sha256": "f30691a4fe3b8a26f9da630b30ea8364424328e364cd94d88ca238689042a243"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H2/F22_oos_indices.csv",
+      "sha256": "8c44800f6a91c61b7e01ed32b2c9eee26d057ab1294a5e4be6c79641365dfc30"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H2/F22_refit_indices.csv",
+      "sha256": "c12e3df4a81a32f27a5136a390c58f39e71a0ccc94c5c8e186751f2fb86a7a5c"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F22_H2/F22_refit_recipe.json",
+      "sha256": "5461b81599c8f94df0647c3c32c23034e24f05d15a4a25c86b7c7cb5a7513269"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H1/F23_inner_recipe.json",
+      "sha256": "31078d8ee53fa15d61d8450791af228a003bbfb75d7025e3240ac8332012bac8"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H1/F23_inner_train_indices.csv",
+      "sha256": "4373b7cd973b3bd12f39b305eca957b7b6ad39b9e54b770620d7ce6594d9e106"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H1/F23_inner_validation_indices.csv",
+      "sha256": "8237f23236d9a6eb0eed30f9790667043e981eebba6e3a83fd0a82dd7fe187f7"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H1/F23_oos_indices.csv",
+      "sha256": "ef413bea4b9be574626ceaa9e638aa8f6d909eccc5346be11c229c2c96c22043"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H1/F23_refit_indices.csv",
+      "sha256": "46f82add82ba16dad4b41eeaee0e404b5b16041c33064194f4dac707c627cb46"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H1/F23_refit_recipe.json",
+      "sha256": "a1dc2bba4a8e983baa6a0eb5dbc800c33fe73506c30f79f2dd5934644a85c7ad"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H2/F23_inner_recipe.json",
+      "sha256": "9a0035cd6797c00776840731b23d421326b4f26d352858619ce16f5afacdd284"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H2/F23_inner_train_indices.csv",
+      "sha256": "4a02904c0e238e6ba16655a1d96bf150132b658d029fceb49467d40094ce6140"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H2/F23_inner_validation_indices.csv",
+      "sha256": "d16243f1506f733fad5d524fe684a68261f4ba3d22d9b13a1488fd330d88dc18"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H2/F23_oos_indices.csv",
+      "sha256": "bfc3c7bf1ed129ac7463ad0d28e3d0bd0ce40c2b46643d0c2fe0dae6e2b657bb"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H2/F23_refit_indices.csv",
+      "sha256": "4c2e5806f1064a4b28849549fbc58c68af178bb259f54ad05f73684d46dd5fb5"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F23_H2/F23_refit_recipe.json",
+      "sha256": "52941bd94c89e56c2afa2d144f16415aa6e7073687428abb0c97ac9b422346b5"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H1/F24_inner_recipe.json",
+      "sha256": "26f3cb81de25d93ae2844c9d88005a756aaf153873c2007f125ba4e94b864fc5"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H1/F24_inner_train_indices.csv",
+      "sha256": "69824b5aa2a26150972b56d8719acc17ab2d8d39141c9c7e902063bdec13f533"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H1/F24_inner_validation_indices.csv",
+      "sha256": "93c41bbe014ae35b597841748ef0e72b3f2827514f3e43c305f017c8cdeafc3f"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H1/F24_oos_indices.csv",
+      "sha256": "6d2e245ca6f7f9ff3ed44c36106f77a7505702a48df6643a044a570ed9baafe9"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H1/F24_refit_indices.csv",
+      "sha256": "ee5369d7afc969eea818aa50f3dd203a589f421fc145f56a987976ffb11bde2b"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H1/F24_refit_recipe.json",
+      "sha256": "ea47f1663266cea826ce1f767a9e7c1a63a22606dc8f3bd595efc7942340b5bb"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/F24_inner_recipe.json",
+      "sha256": "acfcff0b5c70b39da9c5952ca6533b626a04859c11d6b2090a8e5ea88743c2d0"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/F24_inner_train_indices.csv",
+      "sha256": "e3011e8dd65fdaca4d437bdbad57dc9f93ea36487c7a5d34a3b135c131dd514b"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/F24_inner_validation_indices.csv",
+      "sha256": "2a23b9f12626d108495e3a756d9b61f7b62bdbc044eeef9c1013d311401396f2"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/F24_oos_indices.csv",
+      "sha256": "59cbcbd702873282fc7d61135f1ffc60b49ebe8a9b446c1202d18bc8919a650d"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/F24_refit_indices.csv",
+      "sha256": "f1538a9f685453349166f6733ca2649080e0820734e8ea9d788047683f3330a1"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/F24_refit_recipe.json",
+      "sha256": "ddf926807cc8eb362c6b6f5f212ad73a5b0f3673ce3807d4b91314415addc4ee"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H1/F21_inner_recipe.json",
+      "sha256": "672bc36670fbdc67bbec9c1d0242091e033b9fd6c51db460974ef54367c5984f"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H1/F21_inner_train_indices.csv",
+      "sha256": "9ae9bb8b5a49b37378e40f963fb2c738d6242ed3fc14690f9cc7d2ee71bdf675"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H1/F21_inner_validation_indices.csv",
+      "sha256": "0af49bca4cb3f30835efd3066703bec669c32ce0321bea27faf75e0b944f4c24"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H1/F21_oos_indices.csv",
+      "sha256": "06b31ec1914f598301f405af8f02e86d0e4ce6cc5e9edfea651ee68b7cce3d29"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H1/F21_refit_indices.csv",
+      "sha256": "b7d6706e0c979155889ef2f4851391a5f8c8b45a4b577b46bcc72171ef3d0209"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H1/F21_refit_recipe.json",
+      "sha256": "0ff6cd1c293b1b5a8fba9fd45c768d365156faafe87d925ba62f1dd872de94e1"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H2/F21_inner_recipe.json",
+      "sha256": "a7d4488ef7b102a512e5766c77be027d033b9d1d1b58e47fdc6e7a80957ca41b"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H2/F21_inner_train_indices.csv",
+      "sha256": "62ed602e516a4391410ff11fd2aaf40eef4d86a402e0a96944cc9df5366987a4"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H2/F21_inner_validation_indices.csv",
+      "sha256": "b0ba829913e925aebf277b323bb5ddd72a5d4d80bf44137312213dcd7b7b3f5a"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H2/F21_oos_indices.csv",
+      "sha256": "e7bfd7efd3f6668a0ee21696a73617323f88a996a71ea7102599e5ca17909191"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H2/F21_refit_indices.csv",
+      "sha256": "34ea4306e3568d9d1904dd752d0b21a9999689995693ffc7a12b405cc1e02623"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F21_H2/F21_refit_recipe.json",
+      "sha256": "a37a4ee81806a74e559418f9d8197b7465cef1645ce84c530d31676f55c3b332"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H1/F22_inner_recipe.json",
+      "sha256": "99fa5945a0778e1c556617c684e5a0a0c779d73559116c064ad5303ffe7b99f4"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H1/F22_inner_train_indices.csv",
+      "sha256": "7dfe15b2818b1f3832d8bc1ce5c3869940cc148a5cc01b04221d581a79cc9757"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H1/F22_inner_validation_indices.csv",
+      "sha256": "9c07d12b0bc176e70e2b72ae5721678371806852b6bd4f806a35d9a56a54b7e3"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H1/F22_oos_indices.csv",
+      "sha256": "0cb7d6f1c3954b5233bbcd09e5f081da7938a65d9f9552cf32681d917e2a5c48"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H1/F22_refit_indices.csv",
+      "sha256": "233aa4ea18fd312a1b10cc2a9137c235103ff7a9b12418e2a0951c27b6679d39"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H1/F22_refit_recipe.json",
+      "sha256": "729a12c04d8614ef5e3d61a48299e5f7e79b9155a21599b3bab2fb6bb10913f5"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H2/F22_inner_recipe.json",
+      "sha256": "050297400539764c36e3f12d68869f59038ad8aeb6dbfb69f2b1325aad276a5b"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H2/F22_inner_train_indices.csv",
+      "sha256": "23d13fb527ffa324aacb6ef6d4069df400bb8a8b16a15e273bc700f43d0773d5"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H2/F22_inner_validation_indices.csv",
+      "sha256": "f30691a4fe3b8a26f9da630b30ea8364424328e364cd94d88ca238689042a243"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H2/F22_oos_indices.csv",
+      "sha256": "8c44800f6a91c61b7e01ed32b2c9eee26d057ab1294a5e4be6c79641365dfc30"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H2/F22_refit_indices.csv",
+      "sha256": "c12e3df4a81a32f27a5136a390c58f39e71a0ccc94c5c8e186751f2fb86a7a5c"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F22_H2/F22_refit_recipe.json",
+      "sha256": "cc8c752be60e29df76d73b3109d702690d3a9ac9552f0f71ff9b1ef53263083b"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H1/F23_inner_recipe.json",
+      "sha256": "cee805a8c6f1cc2fc6a64dfefde2a9b671b2cf773d3953312dd597aa182f1bee"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H1/F23_inner_train_indices.csv",
+      "sha256": "4373b7cd973b3bd12f39b305eca957b7b6ad39b9e54b770620d7ce6594d9e106"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H1/F23_inner_validation_indices.csv",
+      "sha256": "8237f23236d9a6eb0eed30f9790667043e981eebba6e3a83fd0a82dd7fe187f7"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H1/F23_oos_indices.csv",
+      "sha256": "ef413bea4b9be574626ceaa9e638aa8f6d909eccc5346be11c229c2c96c22043"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H1/F23_refit_indices.csv",
+      "sha256": "46f82add82ba16dad4b41eeaee0e404b5b16041c33064194f4dac707c627cb46"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H1/F23_refit_recipe.json",
+      "sha256": "8ff6d66960240b109218161183c2135371084160f003646e9926071ee1dc9035"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H2/F23_inner_recipe.json",
+      "sha256": "312658a69f4a1fd9abbe331b0dd8208ef74fa0326e4560000b07acb3bbc6d4df"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H2/F23_inner_train_indices.csv",
+      "sha256": "4a02904c0e238e6ba16655a1d96bf150132b658d029fceb49467d40094ce6140"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H2/F23_inner_validation_indices.csv",
+      "sha256": "d16243f1506f733fad5d524fe684a68261f4ba3d22d9b13a1488fd330d88dc18"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H2/F23_oos_indices.csv",
+      "sha256": "bfc3c7bf1ed129ac7463ad0d28e3d0bd0ce40c2b46643d0c2fe0dae6e2b657bb"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H2/F23_refit_indices.csv",
+      "sha256": "4c2e5806f1064a4b28849549fbc58c68af178bb259f54ad05f73684d46dd5fb5"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F23_H2/F23_refit_recipe.json",
+      "sha256": "6bf159dc00e82af061b08d29e08508d591749866bac46d46fe97e46d22784333"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H1/F24_inner_recipe.json",
+      "sha256": "192204cfefbf3e67019cfdc3f63179d97f5b0cc08fce8314fdd4ccfd458e3076"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H1/F24_inner_train_indices.csv",
+      "sha256": "69824b5aa2a26150972b56d8719acc17ab2d8d39141c9c7e902063bdec13f533"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H1/F24_inner_validation_indices.csv",
+      "sha256": "93c41bbe014ae35b597841748ef0e72b3f2827514f3e43c305f017c8cdeafc3f"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H1/F24_oos_indices.csv",
+      "sha256": "6d2e245ca6f7f9ff3ed44c36106f77a7505702a48df6643a044a570ed9baafe9"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H1/F24_refit_indices.csv",
+      "sha256": "ee5369d7afc969eea818aa50f3dd203a589f421fc145f56a987976ffb11bde2b"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H1/F24_refit_recipe.json",
+      "sha256": "1268abcd75dbd1cbdb8fbc184f677b46744973518bc51506a68adff8995e50ce"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H2/F24_inner_recipe.json",
+      "sha256": "ae260a332aef755e6d2b8a786924325d9808a19305565e32072a13d9d39dfeb0"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H2/F24_inner_train_indices.csv",
+      "sha256": "e3011e8dd65fdaca4d437bdbad57dc9f93ea36487c7a5d34a3b135c131dd514b"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H2/F24_inner_validation_indices.csv",
+      "sha256": "2a23b9f12626d108495e3a756d9b61f7b62bdbc044eeef9c1013d311401396f2"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H2/F24_oos_indices.csv",
+      "sha256": "59cbcbd702873282fc7d61135f1ffc60b49ebe8a9b446c1202d18bc8919a650d"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H2/F24_refit_indices.csv",
+      "sha256": "f1538a9f685453349166f6733ca2649080e0820734e8ea9d788047683f3330a1"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/B/F24_H2/F24_refit_recipe.json",
+      "sha256": "392ca523cb30dfcfa732f26fb6c8482536a227eeb937029ab62861bb4f27691f"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/FULL_STAGE_GATE_REHEARSAL.json",
+      "sha256": "bddb4a3ea725b25fd8808e8d6e6c81cedca3815db463bd552311d94ea016f908"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/GUARDED_TEST_RECEIPT_v2.json",
+      "sha256": "068869b8b538f9b2fb01354d4116c4e872a0f7410c2d3bc364ea1eb1b37b0a67"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/LIVE_AUTHORITY.json",
+      "sha256": "25083581695c640fa59ea9cc4e88cb1bbcba68b61e4d7d717cb8d8594340c23a"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/PRE_FIT_PRESERVATION.json",
+      "sha256": "cbcca14c28e23d2f958e583fcd49b615573fd97efcb1dfb754aefcd529253429"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/READINESS_PASS.json",
+      "sha256": "90a03c4a6000c37a5edb49db3082d1ed4ac8b19485e0de4250e82b70b851b330"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/prior_registry_pointer.json",
+      "sha256": "04aca5d18735f0b9fdf5cbe3bc9fffb9a8adafe04a7c444ed41f348b89b8399a"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/ruff_seal.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/static_seal.json",
+      "sha256": "53e56beb3b66e0f70a1b6a24f09e0fb8c2f365cd5d8356a97d1978d06a3a0466"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F21_H1_inner.json",
+      "sha256": "e62949361d50f161fa108861be7d3af05adcba82bc0150097fefa94bce0eb7dd"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F21_H1_refit.json",
+      "sha256": "4c04cb5eba0fd44ce2032b537f0f3b4b9b3f6f840f6c8ee8a15522053c4654dc"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F21_H2_inner.json",
+      "sha256": "a3455e143a45ead51c06a119d451a8260b631600e900ece5ff615d3c7b800f9c"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F21_H2_refit.json",
+      "sha256": "79a76c2439ed0caf7f77bc616cdbddec12b1162165dbe472d4bf6cff17586b71"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F22_H1_inner.json",
+      "sha256": "92b53ea552cb78fc8cc6c4c9343f5e363c7b4817ebb96451d840893c9bf438ac"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F22_H1_refit.json",
+      "sha256": "c41a365fbf34a33cfb6c208dc7ec454ceaedb1dc9b785ee229047c41a4a19919"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F22_H2_inner.json",
+      "sha256": "827d17b8949366124f565a3b45a68fe6a6354536883c81b0ecca945282de65cd"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F22_H2_refit.json",
+      "sha256": "c3a8bb4606e266c654fba7cd3c919b120fe44aeb1e8d57e6a0747543e6758b53"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F23_H1_inner.json",
+      "sha256": "bfaeda98c9d32c118deab599f957f550fe8c5a843b42a8b7514cd58a0a8cc472"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F23_H1_refit.json",
+      "sha256": "b90114b813d74c420c59237d056831acc6a38d8a3ed9ee143ba7dedff4819a40"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F23_H2_inner.json",
+      "sha256": "e02e4b735e23598e3a6633c7192a302f0a765cd22a0f5183cea3247538601f39"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F23_H2_refit.json",
+      "sha256": "6a9a424b3e3a358a8cc23c0cdc2e448edb40576c917e4118d5b36fac272096fa"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F24_H1_inner.json",
+      "sha256": "19a426d2abd859aa44d4f6fa326ed71d051c35576a01d8ea884ae5a6743af552"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F24_H1_refit.json",
+      "sha256": "35f9d0886534fcaf130b594e7c549f0ed7955e28555673dc30dd2aaa97bb8e1e"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F24_H2_inner.json",
+      "sha256": "a657e2caebd7ddd4a5752c16a432a7f743428fce01ae8974574d1f6a6cbd53be"
+    },
+    {
+      "path": "reports/experiments/hf20_s3_live_2026-10-26_010204/targets/F24_H2_refit.json",
+      "sha256": "8991d1cf104938108ba678455b49e803b61c50e55c7cde86c8486ae245039289"
+    }
+  ],
+  "code": [
+    {
+      "path": "src/lstm_data/hf20_ranking.py",
+      "sha256": "fbfae6a7fa252b58e86505714a88c24580a4fff42677bae3f68f0064f1be54fe"
+    },
+    {
+      "path": "src/lstm_data/hf20_ranking_data.py",
+      "sha256": "ec586c3c6396f4f6d05edf9d520926b57581cc7795827f1687dbaffd9051bad7"
+    },
+    {
+      "path": "src/lstm_data/hf20_ranking_run.py",
+      "sha256": "6c78d1e102e2515c445512d3d705e1eb9aea583112e506f08e9ec56999b6797f"
+    },
+    {
+      "path": "src/lstm_data/hf20_ranking_diagnostics.py",
+      "sha256": "87c84c143ed18b5fa3161d9b0ed1a95320118f23068e1eeead86a1aaa3330ec0"
+    },
+    {
+      "path": "src/lstm_data/hf20_ranking_authority.py",
+      "sha256": "b1404b311a10fdbeee8ced15bdfe2f7e7838f3ab1e7dcc4593b3dbd8e341cc0c"
+    },
+    {
+      "path": "src/lstm_data/hf20_horizon_data.py",
+      "sha256": "24fa5ad9a829b1192cfdf04636507159ea67571da5fa45036a604ffa610de0f3"
+    },
+    {
+      "path": "src/lstm_data/hf20_horizon_math.py",
+      "sha256": "5f1fc8d1313a470a83bbdcf18dffa2eb52cd629f70318e40c1cc8dc231c0cefd"
+    },
+    {
+      "path": "src/lstm_data/hf20_horizon_preflight.py",
+      "sha256": "27b179857272e6b7cc72d3b228bc48d6b0fb1b4824a6908cc926c7ac7aaebcc2"
+    },
+    {
+      "path": "src/lstm_data/hf20_horizon_authority.py",
+      "sha256": "ab22996f4e61e9ee76b6bb23c657bea16cbc86b59aa665bf73ef69b3bbd3b178"
+    },
+    {
+      "path": "src/lstm_data/hf20_horizon_diagnostics.py",
+      "sha256": "0cbe8add4bf6f398df7df78d9d3dbafeb124047ea5b51f7548ec130df9bc2ae4"
+    },
+    {
+      "path": "src/lstm_data/hf20_horizon_run.py",
+      "sha256": "aa69d2b66d1a529420a0ad3f78730546babf342913da5a2b9f6c09eb270d5496"
+    },
+    {
+      "path": "src/lstm_data/hf20_horizon_report.py",
+      "sha256": "b0ff70490e5df8c3aacf3cf6356f3fbd83db5aab055c70d41146042d5d329e9a"
+    },
+    {
+      "path": "src/lstm_data/hf20_ranking_continue.py",
+      "sha256": "ab9555ea61d78814b294eb9432917255aee0c8eac0ca26b3cd9f14022c216fdc"
+    },
+    {
+      "path": "src/lstm_data/hf20_ranking_continue_report.py",
+      "sha256": "077444f48490dd008f6f93bf3b90a556367242cbe54c38940e30cc69f5e46637"
+    }
+  ],
+  "failure_policy": "No retries; permanent charges; only proven isolated failures may precede unrelated conditions",
+  "resource_limits": {
+    "RSS": 2000000000,
+    "task": 1000000000,
+    "project": 10000000000
+  },
+  "qualifications": "Historical availability unknown; price target starts two minutes before assumed issuance; conditional private-use rights and retrospective survivors; no trading"
+}

@@ -1,0 +1,82 @@
+{
+  "status": "PASS_TECHNICAL",
+  "reconciliation": [
+    {
+      "role": "inner_train",
+      "rows": 83020,
+      "status": "PASS",
+      "output_sha256": "f71a5f67eeb3093b8a52fd83eeb01d5390fc70883eda728a4ad1e71a329658c1"
+    },
+    {
+      "role": "inner_validation",
+      "rows": 1860,
+      "status": "PASS",
+      "output_sha256": "c7485369872c6277e559d3b914ced461e0a47e503dcdbbe0cba36130a456e37a"
+    },
+    {
+      "role": "refit",
+      "rows": 85040,
+      "status": "PASS",
+      "output_sha256": "75b922751548ea76dc9c60a5d2b1053ce19f496234ca0789670f08dcd8ee3cde"
+    },
+    {
+      "role": "oos",
+      "rows": 5620,
+      "status": "PASS",
+      "output_sha256": "6c26021040617ef72437056c94b401e5ddeba005c55b3e7469b28b666f90d038"
+    }
+  ],
+  "files": {
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_extreme_examples.parquet": "19758d94ba36ce81597158004dd373dcc6b63352228350e6d57ed77872ceb000",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_tail_strata.parquet": "72cf3ccc08bee5a8888ac370c2de2e0c5962e668f157b8a310f6bc2c3e6361a0",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_thresholds.json": "bdcefca2cabc68b076ba5dd7ec166cf5c698e9ae87849bcf2f46e043b7ac8cd8",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_thresholds.json": "bdcefca2cabc68b076ba5dd7ec166cf5c698e9ae87849bcf2f46e043b7ac8cd8",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_stock_quality.csv": "4e8c64d1a61ebb6971b217ab754d1b919442cda57d383ab44ac57847987ab86d",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_tail_pairs.parquet": "5ce183dd0014b9ed5ff8570f656a3711e484d95a1ae1b7ef4b1fb4013e53bf3e",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_slot.csv": "6dc55f4d3265ff3d72a805d31d969855ff5698c5fbbce0aed8bf6bf9b33d1b51",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_cohorts.csv": "1693afd2cdcf83e335c665379921f26a269d10786bed21c7cec26d98d944bfef",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_tail_pairs.parquet": "c297e98943596611030acc8e0fbec6d97107b9ca7ff09b626f725c716c2d1faf",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_metrics.json": "e3e9e9fc792d437397fb04fd41fa010b40aa57ebcc4672208ca7a84f78b034c2",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_month.csv": "0504c63126a9cf049958770b7334ef12ef834c8f385eb84e2d1c538abb7eeeff",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_cohorts.csv": "8d3ece7467cc25daaac737a4eb0731d3370e38db767149753193a4bc8600fad4",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_tail_pairs.parquet": "4682fa90bdff5be9a4e340f2648971bf191415d711d30ca45238f3fe98b14725",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_tail_strata.parquet": "3c3bd4984c78b83f5d7e6129dfbd65b7feeee2a3a394bbd10697656e1e977485",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_scores.parquet": "75b922751548ea76dc9c60a5d2b1053ce19f496234ca0789670f08dcd8ee3cde",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_tail_energy.parquet": "2afcf71d281d1ae6c7bdc32ebcf82a116115515e6ec8bc5968807fdd11514a76",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_stock_quality.csv": "581b8a7c0490c5abd4a15c9751e13db48620a60c9b62234c882b2caf21202f85",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_origins.csv": "21e6b680ba958b9bbebb8f19a465c6550d3da84c3b2c87701d59e4ec91321114",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_origins.csv": "e36b73d46eea15852f1ec3cab2fa53b309157d996008065dead724e77340efb8",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_tail_strata.parquet": "151126a8944288d1a042e58d04f0b00dbc0b91da325e9d9e9e78e55130eb6983",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_extreme_examples.parquet": "0f81945a78af411add239b7d5552eab9e8616c807c21e8de6ec305b06856eecc",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_tail_pairs.parquet": "ef246c76911ffacfa2de53c4f9cb40ba8b132558f515505b2197daedf48582b8",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_metrics.json": "499fc30b2afb70f6ccb9b940339a26f6d65f6594468882e28e12720243b1e96b",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_month.csv": "69ef0cdbabd1f20e0325c523c796da6a6aaeb43173b11a560d0c6a5b4b09de86",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_metrics.json": "485456786b48406f7395ceaf2f997202d005745110135c011beb75909c9a3a5c",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_month.csv": "3d335951d536bf361b212a76da1ceb43791986292976e79ccf2bbe33688399c4",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_scores.parquet": "6c26021040617ef72437056c94b401e5ddeba005c55b3e7469b28b666f90d038",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_thresholds.json": "1c3121728697a84f7b9e329f8074e80cbb10d37cc2b703a8bc275305198b9424",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_cohorts.csv": "90f5fd32b56c92f1f3a68a26e70aa613f98cbd89ed2acef2c0a2f2aba094e6ec",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_tail_energy.parquet": "40d69258a607a20eeafbfbe2a1fedd5d368df8e74606357cff457675d7faea98",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/oos_slot.csv": "22a8175ee10a37a6d42ae89b8e0f76a6841f677237a68585cc089f664943c698",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_scores.parquet": "f71a5f67eeb3093b8a52fd83eeb01d5390fc70883eda728a4ad1e71a329658c1",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_origins.csv": "8b7077457616855ea9276bddea5ef55e1fa7cc6c7ac19be0b5c10e8663b2aed1",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_month.csv": "6d630742a56508eefc3f776eeff60ba7bac244f917a5084e3fca56d94055921e",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_tail_energy.parquet": "ee040806fc9719caae199133f0c978e74fdc75120640f9c1f331a419d621278b",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_metrics.json": "fbbf6162cfb468a0eef4dd1727615ed48488fbcab96c173d08e65fa1fbed7094",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/selection.json": "d354474234657cea76bf4a90bf1085dbb91698ba73880002a4c5bfb45dd09af9",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_slot.csv": "0558b6d1d89e9a6530b02f03648c094659ce1724a7639a1ce3aad850ffea9472",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_tail_energy.parquet": "19d12d587b568894130f2533fa45ad4ad7cd79d1c007924024c6e2ea8deb2b03",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_cohorts.csv": "63d7ddf3f1393850ff9cca7c67851fb7ec2a11b779f2d779e8d87288970199a8",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_coefficients.npy": "fcec47e062bc971c86d78f344b5bb25cd95c1cacd0dc54d6e6677dde11cf005a",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_stock_quality.csv": "0a5798beffb5c4d0e0aedebe1ee7cf9e179da85a24dfd62ca73faf9111b6916f",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_thresholds.json": "1c3121728697a84f7b9e329f8074e80cbb10d37cc2b703a8bc275305198b9424",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_scores.parquet": "c7485369872c6277e559d3b914ced461e0a47e503dcdbbe0cba36130a456e37a",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_validation_slot.csv": "d89e7a63f522d65cab5f5f36a4cef81c2b0efe88e6019907009bffbeda6b2a8f",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_tail_strata.parquet": "01812595a39cf257d6a19b8f5501556397a1184b69c5b6561e2c39a5ea9da8bb",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_stock_quality.csv": "73b3b071e7cb1c6a503f99c56c908b29d3a013a1642f82fba08e47c88a89a23e",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_origins.csv": "a66e25e93a89f66820313887738529e5bd45f9202d34aa7d30308594195f4434",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_train_extreme_examples.parquet": "05f1562fe82ef64c49730601390d60309386c45e757a31fb1e18c6891b50492d",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/inner_None.npy": "094f789be158972132cfb84cfc78ee9c5edb96eeed10cc27002180095826b61e",
+    "reports/experiments/hf20_s3_live_2026-10-26_010204/A/F24_H2/P/refit_extreme_examples.parquet": "ab1abdedf526955f86cf4521f1d60cad296c3552b6680e164ed6fa3a499674b1"
+  }
+}

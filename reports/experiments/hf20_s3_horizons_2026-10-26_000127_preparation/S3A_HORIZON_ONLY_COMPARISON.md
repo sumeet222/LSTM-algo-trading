@@ -1,0 +1,9 @@
+# S3-A horizon comparison — NOT_RUN pending approval
+
+No new P/LR/T2R/NR fitting or new h1/h2 forecast evaluation occurred. No conclusion about horizon predictability is available. [S3A_OOS_BY_YEAR_HORIZON.csv](S3A_OOS_BY_YEAR_HORIZON.csv) explicitly marks unrun h1/h2 rows; their IC is unavailable, not zero. h4 rows are the unchanged archived S1/S2 reference, including constant-score undefined IC. Four-year h4 values remain M1.01172550, T2R.00767329, LR.00604246, NR.00236953; these are historical context, not S3 results.
+
+The amended primary population is independent perh. See [full eligible-role counts](eligibility_amendment_v2/S3_HORIZON_ROLE_SUPPORT.csv), [clocks/recipe bindings](eligibility_amendment_v2/S3_HORIZON_ROLE_CLOCKS.csv), [exclusion reasons](eligibility_amendment_v2/S3_EXCLUSION_REASON_COUNTS.csv) and [membership row indices](eligibility_amendment_v2/S3_ROLE_MEMBERSHIP.json). Every original h4 role is array-identical; h1/h2 may admit valid examples whose h4 endpoint is missing. Input/source-quality, original schedule, cutoff/embargo/maturity remain frozen.
+
+The original common-key count file remains the secondary comparison. [Archival h4 full versus common evaluation](S3_H4_ARCHIVAL_COMMON_KEY_COMPARISON.csv) reweights sessions/origins on its actual intersection; changes reflect sample restriction and are not improved forecasts. An identical evaluation cohort does not imply identical fitting history across horizons. Models on h-specific fitting populations must retain that qualification; no extra h4 refit or altered archival outcomes.
+
+Both objectives and both shorter horizons are proposed before any new outcome-based model selection. No favorable horizon/sign/year or new2025 tuning. All12 horizon/year validation supports now≥50 sessions; the secondary F24 common subset42 is not a selector. A valid negative result will not cancel S3-B if later independently approved.
