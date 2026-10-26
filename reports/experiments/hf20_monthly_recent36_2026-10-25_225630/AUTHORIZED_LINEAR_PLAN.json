@@ -1,0 +1,48 @@
+{
+  "authority": "DIRECT_SUBMITTED_USER_TASK",
+  "instruction_sha256": "b45cc85e6a1bdf3598beec650829838bff0fd0788d55bc8b44455256a29fc078",
+  "code": [
+    {
+      "path": "src/lstm_data/hf20_recent_linear.py",
+      "sha256": "7f873e3098abf89e77703dbe4dfc733c0feb48260ea0801fb4a15255081c7bd3"
+    },
+    {
+      "path": "src/lstm_data/hf20_recent_analysis.py",
+      "sha256": "abdebbf7b285f48757cd3dac64de3f9b133a307ae9751a1fd9ce44382822a35e"
+    },
+    {
+      "path": "tests/test_hf20_recent_linear.py",
+      "sha256": "a2b759f25e77eecdefd69585551bd99fe6c21e49fcc3e757d9c8c14729438026"
+    }
+  ],
+  "max_attempts": 28,
+  "grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "folds": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "window_months": 36,
+  "window_rule": "inclusive [(inherited cutoff+1day)-36 calendar months, cutoff]",
+  "phase_recipes": "frozen expanding-prefix same as saved LR",
+  "neural_starts": 0,
+  "neural_inference": 0,
+  "scaler_fits": 0,
+  "neural_ledger": 74,
+  "gates": [
+    "A",
+    "B",
+    "C per fold",
+    "D"
+  ],
+  "source_manifest_sha256": "15101b0549b846974484b0bdda4bf2ca78d8d12d1e31e8fc411715faeed3c48b",
+  "preflight_sha256": "4e1fe9f998466b5221568af60b7a28c9d973d5df02d14e901ee9beaa2cff62fa"
+}

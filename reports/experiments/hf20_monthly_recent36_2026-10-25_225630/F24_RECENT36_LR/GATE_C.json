@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "year": 2024,
+  "selected_penalty": 0.1,
+  "refit": {
+    "penalty": 0.1,
+    "seconds": 0.008077792008407414,
+    "coefficient_path": "reports/experiments/hf20_monthly_recent36_2026-10-25_225630/F24_RECENT36_LR/refit_coefficients.npy",
+    "sha256": "f60dfd0ea01dce2f8efc164b38273719de1230dd22aedad0d0ad2bf813dcbd97",
+    "slope_norm": 0.12396277335929581,
+    "intercept": -0.006093128494118117,
+    "normal_equation_max_abs_residual": 2.463307335887066e-16,
+    "penalty_term": 0.001536676917892814
+  },
+  "checks": [
+    {
+      "role": "refit",
+      "daily_ic": 0.1612612815241669,
+      "origins": 983,
+      "sessions": 575,
+      "sha256": "4d6b800c04f7883c016f9f9b811beb7148a75b31503f311332f510c267f5c080"
+    },
+    {
+      "role": "oos",
+      "daily_ic": 0.008148744138963972,
+      "origins": 308,
+      "sessions": 185,
+      "sha256": "2459f020a9d9a7590c0a26e57cc170c5b4b1ddec23078168823671b9952f41f1"
+    }
+  ],
+  "coefficient_exact_reload": true,
+  "rank_objective_and_cohort_conservation": true,
+  "OOS_keys_exact": true,
+  "no_neural_calls": true,
+  "thresholds": "reused expanding-prefix train-frozen definitions; matched cohorts"
+}

@@ -1,0 +1,624 @@
+"""Saved-score monthly ranking and compact, truthful-unit linear diagnostics."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+from plotly import graph_objects as go
+from plotly.subplots import make_subplots
+
+from .hf20_ranking import origin_ic, origin_weights, rank_targets, ranks
+
+METRICS = ("ic", "concordance", "top4", "bottom4", "rank_error", "actual_loss")
+
+
+def oracle_ic(actual: np.ndarray, score: np.ndarray) -> np.ndarray:
+    """Independent small-cross-section midrank/correlation oracle; constants stay NaN."""
+
+    def midrank(v: np.ndarray) -> np.ndarray:
+        _, inverse, counts = np.unique(v, return_inverse=True, return_counts=True)
+        end = counts.cumsum()
+        return ((end + end - counts + 1) / 2)[inverse]
+
+    result = []
+    for a, b in zip(actual, score, strict=True):
+        x, y = midrank(a), midrank(b)
+        x, y = x - x.mean(), y - y.mean()
+        d = np.linalg.norm(x) * np.linalg.norm(y)
+        result.append(float(x @ y / d) if d > 0 else np.nan)
+    return np.array(result)
+
+
+def validate_frame(f: pd.DataFrame) -> tuple[np.ndarray, np.ndarray]:
+    """Require complete immutable ordered panels before any reshaping or comparison."""
+    if f.empty or f.duplicated(["origin_id", "ticker"]).any():
+        raise ValueError("EMPTY_OR_DUPLICATE_SCORE_KEYS")
+    n = len(f) // 20
+    if len(f) != n * 20 or f.groupby("origin_id", sort=False).size().ne(20).any():
+        raise ValueError("EXACT20_REQUIRED")
+    if not np.array_equal(f.ticker.to_numpy().reshape(n, 20), np.tile(f.ticker.iloc[:20], (n, 1))):
+        raise ValueError("STOCK_ORDER_CHANGED")
+    if f.session_date_et.ge("2025-01-01").any():
+        raise ValueError("POST2024_SCORE_ACCESS_FORBIDDEN")
+    r, s = (f[k].to_numpy(float).reshape(n, 20) for k in ("return_4h", "score"))
+    if not np.isfinite(r).all() or not np.isfinite(s).all():
+        raise ValueError("NONFINITE_SCORES")
+    return r, s
+
+
+def origin_panel(f: pd.DataFrame) -> pd.DataFrame:
+    """Hierarchical metrics, tie-aware pair credit and fractional top/bottom retrieval."""
+    r, s = validate_frame(f)
+    ic = origin_ic(r, s)
+    np.testing.assert_allclose(ic, oracle_ic(r, s), rtol=1e-12, atol=1e-14, equal_nan=True)
+    i, j = np.triu_indices(20, 1)
+    direction, prediction = np.sign(r[:, i] - r[:, j]), np.sign(s[:, i] - s[:, j])
+    valid = direction != 0
+    credit = ((direction == prediction) + 0.5 * (prediction == 0)) * valid
+    concord = np.divide(
+        credit.sum(1), valid.sum(1), out=np.full(len(r), np.nan), where=valid.sum(1) > 0
+    )
+
+    def member(v: np.ndarray) -> np.ndarray:
+        cut = np.sort(v, axis=1)[:, -4]
+        above, tie = v > cut[:, None], v == cut[:, None]
+        return above + tie * ((4 - above.sum(1)) / tie.sum(1))[:, None]
+
+    out = f.iloc[::20][["origin_id", "session_date_et", "year", "model", "entry_end_utc"]].copy()
+    out["month"] = out.session_date_et.str[:7]
+    out["slot_et"] = (
+        pd.to_datetime(out.entry_end_utc, utc=True)
+        .dt.tz_convert("America/New_York")
+        .dt.strftime("%H:%M")
+    )
+    out["ic"] = ic
+    out["concordance"] = concord
+    out["top4"] = (member(r) * member(s)).sum(1) / 4
+    out["bottom4"] = (member(-r) * member(-s)).sum(1) / 4
+    out["rank_error"] = ((rank_targets(r) - rank_targets(s)) ** 2).mean(1)
+    out["actual_loss"] = f.actual_row_allocation.to_numpy().reshape(-1, 20).sum(1)
+    out["constant"] = np.ptp(s, axis=1) == 0
+    out["pair_tie_rate"] = (prediction == 0).mean(1)
+    out["valid_pairs"] = valid.sum(1)
+    return out.reset_index(drop=True)
+
+
+def day_panel(origins: pd.DataFrame) -> pd.DataFrame:
+    return origins.groupby(["year", "model", "month", "session_date_et"], as_index=False)[
+        list(METRICS) + ["constant", "pair_tie_rate"]
+    ].mean()
+
+
+def monthly(origins: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    days = day_panel(origins)
+    result = []
+    for (model, month), g in origins.groupby(["model", "month"]):
+        model, month = str(model), str(month)
+        d = days.loc[days.model.eq(model) & days.month.eq(month)]
+        finite = g.ic.dropna().to_numpy()
+        row = dict(
+            model=model,
+            month=month,
+            year=int(g.year.iloc[0]),
+            sessions=len(d),
+            origins=len(g),
+            stock_rows=20 * len(g),
+            defined_origins=len(finite),
+            defined_sessions=int(d.ic.notna().sum()),
+            status="DEFINED" if len(finite) else "UNDEFINED",
+            daily_ic=d.ic.mean(),
+            origin_ic=g.ic.mean(),
+            origin_ic_sd=g.ic.std(ddof=0),
+            origin_ic_p05=np.quantile(finite, 0.05) if len(finite) else np.nan,
+            origin_ic_p50=np.quantile(finite, 0.5) if len(finite) else np.nan,
+            origin_ic_p95=np.quantile(finite, 0.95) if len(finite) else np.nan,
+            positive_day_fraction=float(d.ic.gt(0).mean()) if d.ic.notna().all() else np.nan,
+            constant_origin_fraction=g.constant.mean(),
+            pair_tie_rate=d.pair_tie_rate.mean(),
+        )
+        row.update({k: d[k].mean() for k in METRICS if k != "ic"})
+        result.append(row)
+    f = pd.DataFrame(result)
+    grid = pd.MultiIndex.from_product(
+        [sorted(f.model.unique()), pd.period_range("2021-01", "2024-12", freq="M").astype(str)],
+        names=["model", "month"],
+    )
+    f = f.set_index(["model", "month"]).reindex(grid).reset_index()
+    missing = f.status.isna()
+    f.loc[missing, "status"] = "UNAVAILABLE_NO_ACCEPTED_ORIGINS"
+    pw = f.model.eq("PW") & f.month.lt("2022-01")
+    f.loc[pw, "status"] = "UNAVAILABLE_FAILED_START_65"
+    f.loc[missing, ["sessions", "origins", "stock_rows", "defined_origins", "defined_sessions"]] = 0
+    f["year"] = f.month.str[:4].astype(int)
+    return f, days
+
+
+def paired(days: pd.DataFrame, comparisons: list[tuple[str, str]]) -> pd.DataFrame:
+    rows = []
+    for a, b in comparisons:
+        keys = ["year", "month", "session_date_et"]
+        z = days.loc[days.model.eq(a)].merge(
+            days.loc[days.model.eq(b)], on=keys, suffixes=("_a", "_b"), validate="one_to_one"
+        )
+        for (year, month), g in z.groupby(["year", "month"]):
+            row = dict(year=year, month=month, comparison=a + "-" + b, sessions=len(g))
+            row.update({k + "_difference": (g[k + "_a"] - g[k + "_b"]).mean() for k in METRICS})
+            row["positive_difference_fraction"] = (g.ic_a > g.ic_b).mean()
+            rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def reconcile(origins: pd.DataFrame, prior: pd.DataFrame) -> pd.DataFrame:
+    """Reconstruct annual IC both from daily records and session-weighted monthly means."""
+    months, days = monthly(origins)
+    rows = []
+    for (year, model), d in days.groupby(["year", "model"]):
+        year, model = int(d.year.iloc[0]), str(model)
+        m = months.loc[months.year.eq(year) & months.model.eq(model)]
+        ic = float(d.ic.mean())
+        v = m.daily_ic.notna()
+        folded = (
+            float(np.average(m.loc[v, "daily_ic"], weights=m.loc[v, "defined_sessions"]))
+            if v.any()
+            else np.nan
+        )
+        np.testing.assert_allclose(ic, folded, atol=1e-14, rtol=1e-12, equal_nan=True)
+        saved = prior.loc[prior.year.eq(year) & prior.model.eq(model)]
+        if len(saved):
+            np.testing.assert_allclose(
+                ic, float(saved.daily_ic.iloc[0]), atol=1e-13, rtol=1e-11, equal_nan=True
+            )
+        rows.append(
+            dict(
+                year=year,
+                model=model,
+                daily_ic=ic,
+                from_weighted_months=folded,
+                sessions=len(d),
+                status="PASS",
+            )
+        )
+    return pd.DataFrame(rows)
+
+
+def timeline(months: pd.DataFrame, pairs: pd.DataFrame, path: Path) -> None:
+    fig = make_subplots(
+        rows=2,
+        cols=1,
+        shared_xaxes=True,
+        subplot_titles=(
+            "Saved forecasts: monthly equal-session Rank IC",
+            "Paired monthly IC differences",
+        ),
+        vertical_spacing=0.12,
+    )
+    for model in ("N1", "LR", "T2R", "NR", "PW", "RECENT36_LR"):
+        g = months.loc[months.model.eq(model)]
+        if len(g):
+            fig.add_trace(
+                go.Scatter(x=g.month, y=g.daily_ic, name=model, mode="lines", connectgaps=False),
+                row=1,
+                col=1,
+            )
+    for name in ("T2R-N1", "NR-N1", "LR-N1", "T2R-LR", "NR-T2R", "RECENT36_LR-LR"):
+        g = pairs.loc[pairs.comparison.eq(name)]
+        if len(g):
+            fig.add_trace(
+                go.Scatter(
+                    x=g.month, y=g.ic_difference, name=name, mode="lines", connectgaps=False
+                ),
+                row=2,
+                col=1,
+            )
+    fig.add_hline(y=0, line_color="gray", line_width=1, row="all", col="all")
+    fig.update_layout(
+        height=780,
+        template="plotly_white",
+        title="HF20 2021–2024 historical ranking stability; no trading interpretation",
+        legend=dict(orientation="h", y=-0.15),
+    )
+    fig.write_html(path, include_plotlyjs=True, full_html=True)
+
+
+def cohorts(f: pd.DataFrame, thresholds: dict) -> pd.DataFrame:
+    """Pointwise rank loss/error and half-endpoint concordance, on common target masks."""
+    r, s = validate_frame(f)
+    n = len(r)
+    w = np.repeat(origin_weights(f.session_date_et.to_numpy()[::20]) / 20, 20)
+    q = rank_targets(r).reshape(-1)
+    error = (q - rank_targets(s).reshape(-1)) ** 2
+    loss = (s.reshape(-1) - q) ** 2
+    i, j = np.triu_indices(20, 1)
+    a, b = np.sign(r[:, i] - r[:, j]), np.sign(s[:, i] - s[:, j])
+    valid = a != 0
+    count = valid.sum(1)
+    credit = ((a == b) + 0.5 * (b == 0)) * valid
+    mass = np.zeros((n, 20))
+    credit_mass = np.zeros((n, 20))
+    for k in range(len(i)):
+        half = valid[:, k] / (2 * count)
+        mass[:, i[k]] += half
+        mass[:, j[k]] += half
+        v = credit[:, k] / (2 * count)
+        credit_mass[:, i[k]] += v
+        credit_mass[:, j[k]] += v
+    ow = origin_weights(f.session_date_et.to_numpy()[::20])
+    pair_w = (ow[:, None] * mass).reshape(-1)
+    pair_c = (ow[:, None] * credit_mass).reshape(-1)
+    np.testing.assert_allclose(pair_w.sum(), 1, atol=1e-14)
+    num = abs(f.numerator.to_numpy()) > thresholds["num95"]
+    mad = f.mad.to_numpy() < thresholds["mad05"]
+    masks = {
+        "ALL": np.ones(len(f), bool),
+        "TRAIN_EVENT95": abs(f.TG20.to_numpy()) > thresholds["abs_y95"],
+        "TRAIN_EVENT99": abs(f.TG20.to_numpy()) > thresholds["abs_y99"],
+        "NUM_ONLY": num & ~mad,
+        "MAD_ONLY": mad & ~num,
+        "BOTH": num & mad,
+        "NEITHER": ~(num | mad),
+        "FLOOR": f.mad.le(f.epsilon).to_numpy(),
+        "NUM_POS": f.numerator.gt(0).to_numpy(),
+        "NUM_NEG": f.numerator.lt(0).to_numpy(),
+        "NUM_ZERO": f.numerator.eq(0).to_numpy(),
+    }
+    order = np.lexsort((np.tile(np.arange(20), n), f.origin_id.to_numpy(), -abs(f.TG20.to_numpy())))
+    for pct in (1, 5):
+        mask = np.zeros(len(f), bool)
+        mask[order[: len(f) * pct // 100]] = True
+        masks[f"TOP{pct}"] = mask
+        masks[f"TOP{pct}_COMPLEMENT"] = ~mask
+    for label in ("TRAIN_EVENT95", "TRAIN_EVENT99", "TOP1", "TOP5"):
+        for sign, name in ((1, "POS"), (-1, "NEG")):
+            masks[label + "_" + name] = masks[label] & (sign * f.numerator.to_numpy() > 0)
+    rows = []
+    for name, mask in masks.items():
+        weight = w[mask].sum()
+        rows.append(
+            dict(
+                year=int(f.year.iloc[0]),
+                model=str(f.model.iloc[0]),
+                role=str(f.role.iloc[0]),
+                cohort=name,
+                rows=int(mask.sum()),
+                origins=f.loc[mask, "origin_id"].nunique(),
+                sessions=f.loc[mask, "session_date_et"].nunique(),
+                weight_mass=weight,
+                actual_rank_loss_contribution=float(w[mask] @ loss[mask]),
+                normalized_rank_error_contribution=float(w[mask] @ error[mask]),
+                conditional_rank_loss=float(w[mask] @ loss[mask] / weight) if weight else np.nan,
+                pair_endpoint_mass=pair_w[mask].sum(),
+                pair_concordant_mass=pair_c[mask].sum(),
+                conditional_pair_concordance=pair_c[mask].sum() / pair_w[mask].sum()
+                if pair_w[mask].sum()
+                else np.nan,
+            )
+        )
+    out = pd.DataFrame(rows)
+    for labels in (
+        ("NUM_ONLY", "MAD_ONLY", "BOTH", "NEITHER"),
+        ("TOP1", "TOP1_COMPLEMENT"),
+        ("TOP5", "TOP5_COMPLEMENT"),
+        ("NUM_POS", "NUM_NEG", "NUM_ZERO"),
+    ):
+        for k in (
+            "weight_mass",
+            "actual_rank_loss_contribution",
+            "normalized_rank_error_contribution",
+            "pair_endpoint_mass",
+            "pair_concordant_mass",
+        ):
+            np.testing.assert_allclose(
+                out.loc[out.cohort.isin(labels), k].sum(),
+                out.loc[out.cohort.eq("ALL"), k].iloc[0],
+                rtol=1e-12,
+                atol=1e-14,
+            )
+    return out
+
+
+def saved_monthly(prior: Path, out: Path) -> None:
+    paths = sorted(prior.glob("*/oos_scores.parquet"))
+    if len(paths) != 31:
+        raise ValueError("SAVED31_OOS_CELLS_REQUIRED")
+    panels = []
+    for path in paths:
+        f = pd.read_parquet(path)
+        panels.append(origin_panel(f))
+    origins = pd.concat(panels, ignore_index=True)
+    months, days = monthly(origins)
+    pairs = paired(
+        days,
+        [
+            ("T2R", "N1"),
+            ("NR", "N1"),
+            ("LR", "N1"),
+            ("T2R", "LR"),
+            ("NR", "T2R"),
+            ("PW", "N1"),
+            ("PW", "LR"),
+            ("PW", "T2R"),
+        ],
+    )
+    annual = reconcile(origins, pd.read_csv(prior / "four_fold_OOS_metrics.csv"))
+    original = pd.read_csv(prior / "equal_year_summary.csv")
+    for model, g in annual.groupby("model"):
+        if len(g) == 4:
+            np.testing.assert_allclose(
+                g.daily_ic.mean(),
+                float(original.loc[original.model.eq(model), "daily_ic"].iloc[0]),
+                rtol=1e-11,
+                atol=1e-13,
+                equal_nan=True,
+            )
+    for name, frame in [
+        ("MONTHLY_IC_BY_MODEL.csv", months),
+        ("MONTHLY_PAIRED_IC.csv", pairs),
+        ("SAVED_ORIGIN_METRICS.csv", origins),
+        ("SAVED_DAILY_METRICS.csv", days),
+        ("SAVED_ANNUAL_RECONCILIATION.csv", annual),
+    ]:
+        frame.to_csv(out / name, index=False)
+    timeline(months, pairs, out / "MONTHLY_RANKING_STABILITY.html")
+    (out / "GATE_B.json").write_text(
+        json.dumps(
+            dict(
+                status="PASS",
+                accepted_saved_cells=31,
+                monthly_rows=len(months),
+                independent_midrank_oracle=True,
+                annual_and_equal_year_reconciled=True,
+                PW2021="UNAVAILABLE_FAILED_START_65",
+                N0="UNDEFINED",
+                checkpoint_inference_calls=0,
+            ),
+            indent=2,
+        )
+        + "\n"
+    )
+
+
+def collective(prior: Path, out: Path) -> None:
+    """Read-only fold reloads, matched recent/expanding attribution and chronological summary."""
+    origins = pd.read_csv(out / "SAVED_ORIGIN_METRICS.csv")
+    new = []
+    role_metrics = []
+    cohort_frames = []
+    strata = []
+    fold_results = []
+    for dest in sorted(out.glob("F*_RECENT36_LR")):
+        gate_path = dest / "GATE_C.json"
+        if not gate_path.exists():
+            continue
+        gate = json.loads(gate_path.read_text())
+        if gate["status"] != "PASS":
+            continue
+        year = int(gate["year"])
+        selected = json.loads((dest / "selection.json").read_text())["selected"]
+        for role in ("inner_train", "inner_validation", "refit", "oos"):
+            f = pd.read_parquet(dest / f"{role}_scores.parquet")
+            p = origin_panel(f)
+            d = p.groupby("session_date_et")[list(METRICS)].mean()
+            row = dict(
+                year=year,
+                role=role,
+                model="RECENT36_LR",
+                origins=len(p),
+                sessions=len(d),
+                stock_rows=len(f),
+            )
+            row.update({k: float(d[k].mean()) for k in METRICS})
+            role_metrics.append(row)
+            if role != "oos":
+                continue
+            old = pd.read_parquet(prior / f"F{year % 100}_S1_LR/oos_scores.parquet")
+            for k in (
+                "origin_id",
+                "ticker",
+                "session_date_et",
+                "return_4h",
+                "TG20",
+                "q",
+                "phase_recipe_sha256",
+                "quality",
+                "fallback",
+            ):
+                np.testing.assert_array_equal(f[k].to_numpy(), old[k].to_numpy())
+            th = json.loads((prior / f"F{year % 100}_S1_LR/oos_thresholds.json").read_text())
+            cohort_frames.extend((cohorts(f, th), cohorts(old, th)))
+            new.append(p)
+            old_p = origin_panel(old)
+            old_d = old_p.groupby("session_date_et")[list(METRICS)].mean()
+            result = dict(
+                year=year,
+                status="PASS",
+                selected_penalty=gate["selected_penalty"],
+                inner_selection_ic=selected["inner_ic"],
+                sessions=len(d),
+                origins=len(p),
+                recent36_ic=float(d.ic.mean()),
+                expanding_ic=float(old_d.ic.mean()),
+            )
+            result.update({k + "_difference": float((d[k] - old_d[k]).mean()) for k in METRICS})
+            coef = np.load(dest / "refit_coefficients.npy")
+            old_coef = np.load(prior / f"F{year % 100}_S1_LR/refit_coefficients.npy")
+            result.update(
+                slope_norm=float(np.linalg.norm(coef[:-1])),
+                expanding_slope_norm=float(np.linalg.norm(old_coef[:-1])),
+                matched_recipe_coefficient_cosine=float(
+                    coef[:-1]
+                    @ old_coef[:-1]
+                    / (np.linalg.norm(coef[:-1]) * np.linalg.norm(old_coef[:-1]))
+                ),
+            )
+            fold_results.append(result)
+            for model, frame in (("RECENT36_LR", f), ("LR", old)):
+                r, s = validate_frame(frame)
+                ar, pr = ranks(r), ranks(s)
+                ar -= ar.mean(1)[:, None]
+                pr -= pr.mean(1)[:, None]
+                den = np.sqrt((ar * ar).sum(1) * (pr * pr).sum(1))
+                ow = origin_weights(frame.session_date_et.to_numpy()[::20])
+                icmass = (ow[:, None] * ar * pr / den[:, None]).reshape(-1)
+                weights = np.repeat(ow / 20, 20)
+                loss = (s.reshape(-1) - rank_targets(r).reshape(-1)) ** 2
+                rankerror = (rank_targets(s) - rank_targets(r)).reshape(-1) ** 2
+                for dim in ("quality", "fallback", "ticker", "static_publisher_sector_proxy"):
+                    for key, g in frame.groupby(dim, sort=False):
+                        ix = g.index.to_numpy(int)
+                        mass = float(weights[ix].sum())
+                        strata.append(
+                            dict(
+                                year=year,
+                                model=model,
+                                dimension=dim,
+                                value=str(key),
+                                rows=len(ix),
+                                sessions=g.session_date_et.nunique(),
+                                weight_mass=mass,
+                                rank_ic_contribution=float(icmass[ix].sum()),
+                                actual_rank_loss_contribution=float(weights[ix] @ loss[ix]),
+                                rank_error_contribution=float(weights[ix] @ rankerror[ix]),
+                                conditional_rank_error=float(weights[ix] @ rankerror[ix] / mass),
+                            )
+                        )
+                for dim in ("quality", "fallback", "ticker", "static_publisher_sector_proxy"):
+                    z = [
+                        q
+                        for q in strata
+                        if q["year"] == year and q["model"] == model and q["dimension"] == dim
+                    ]
+                    np.testing.assert_allclose(
+                        sum(q["rank_ic_contribution"] for q in z),
+                        d.ic.mean() if model == "RECENT36_LR" else old_d.ic.mean(),
+                        rtol=1e-11,
+                        atol=1e-14,
+                    )
+    if not new:
+        raise ValueError("NO_ACCEPTED_RECENT_FOLDS")
+    recent = pd.concat(new, ignore_index=True)
+    combined = pd.concat([origins, recent], ignore_index=True)
+    months, days = monthly(combined)
+    pairs = paired(
+        days,
+        [
+            ("RECENT36_LR", "LR"),
+            ("RECENT36_LR", "N1"),
+            ("RECENT36_LR", "T2R"),
+            ("RECENT36_LR", "NR"),
+        ],
+    )
+    annual = reconcile(combined, pd.read_csv(prior / "four_fold_OOS_metrics.csv"))
+    summary = []
+    for model, g in annual.groupby("model"):
+        summary.append(
+            dict(
+                model=model,
+                completed_years=len(g),
+                equal_year_ic=float(g.daily_ic.mean())
+                if len(g) == 4 and g.daily_ic.notna().all()
+                else np.nan,
+            )
+        )
+    sensitivity = []
+    for a, b in (
+        ("RECENT36_LR", "LR"),
+        ("T2R", "N1"),
+        ("NR", "N1"),
+        ("LR", "N1"),
+        ("T2R", "LR"),
+        ("NR", "T2R"),
+    ):
+        z = days.loc[days.model.eq(a)].merge(
+            days.loc[days.model.eq(b)],
+            on=["year", "month", "session_date_et"],
+            suffixes=("_a", "_b"),
+            validate="one_to_one",
+        )
+        z["delta"] = z.ic_a - z.ic_b
+        draws = []
+        for year, g in z.groupby("year"):
+            m = g.groupby("month").delta.agg(["sum", "count"])
+            draw = np.random.default_rng(22042).integers(len(m), size=(400, len(m)))
+            boot = m["sum"].to_numpy()[draw].sum(1) / m["count"].to_numpy()[draw].sum(1)
+            low, high = np.quantile(boot, [0.025, 0.975])
+            sensitivity.append(
+                dict(
+                    comparison=a + "-" + b,
+                    year=int(g.year.iloc[0]),
+                    mean=float(g.delta.mean()),
+                    low=float(low),
+                    high=float(high),
+                    months=len(m),
+                    replicates=400,
+                )
+            )
+            draws.append(boot)
+        if len(draws) == 4:
+            lo, hi = np.quantile(np.mean(draws, axis=0), [0.025, 0.975])
+            sensitivity.append(
+                dict(
+                    comparison=a + "-" + b,
+                    year="EQUAL_FOUR_YEAR",
+                    mean=float(z.groupby("year").delta.mean().mean()),
+                    low=float(lo),
+                    high=float(hi),
+                    months=48,
+                    replicates=400,
+                )
+            )
+    slots = recent.groupby(["year", "model", "slot_et", "session_date_et"], as_index=False)[
+        list(METRICS)
+    ].mean()
+    old = origins.loc[origins.model.eq("LR")]
+    slots = slots.merge(
+        old,
+        on=["year", "slot_et", "session_date_et"],
+        suffixes=("_recent", "_expanding"),
+        validate="one_to_one",
+    )
+    slot_rows = []
+    for (year, slot), g in slots.groupby(["year", "slot_et"]):
+        row = dict(year=year, slot_et=slot, sessions=len(g))
+        row.update(
+            {k + "_difference": (g[k + "_recent"] - g[k + "_expanding"]).mean() for k in METRICS}
+        )
+        slot_rows.append(row)
+    outputs = [
+        ("RECENT36_ORIGIN_METRICS.csv", recent),
+        ("RECENT36_DAILY_METRICS.csv", day_panel(recent)),
+        ("RECENT36_MONTHLY_PAIRED.csv", pairs),
+        ("RECENT36_FOLD_RESULTS.csv", pd.DataFrame(fold_results)),
+        ("RECENT36_ALL_ROLE_METRICS.csv", pd.DataFrame(role_metrics)),
+        ("COMBINED_MONTHLY_IC.csv", months),
+        ("COMBINED_ANNUAL_IC.csv", annual),
+        ("COMBINED_EQUAL_YEAR_IC.csv", pd.DataFrame(summary)),
+        ("OBJECTIVE_AND_EXTREME_COHORTS.csv", pd.concat(cohort_frames, ignore_index=True)),
+        ("RECENT36_QUALITY_STOCK_ATTRIBUTION.csv", pd.DataFrame(strata)),
+        ("RECENT36_SLOT_COMPARISON.csv", pd.DataFrame(slot_rows)),
+        ("MONTH_BLOCK_SENSITIVITY.csv", pd.DataFrame(sensitivity)),
+    ]
+    for name, frame in outputs:
+        frame.to_csv(out / name, index=False)
+    timeline(
+        months,
+        pd.concat([pd.read_csv(out / "MONTHLY_PAIRED_IC.csv"), pairs], ignore_index=True),
+        out / "RECENT36_VS_EXPANDING_MONTHLY.html",
+    )
+    (out / "GATE_D_ANALYSIS.json").write_text(
+        json.dumps(
+            dict(
+                status="PASS",
+                accepted_recent_folds=len(new),
+                four_year_primary_available=len(new) == 4,
+                matched_keys=True,
+                source_strata_and_cohorts_conserved=True,
+                monthly_and_annual_reconciled=True,
+                neural_inference=0,
+            ),
+            indent=2,
+        )
+        + "\n"
+    )
