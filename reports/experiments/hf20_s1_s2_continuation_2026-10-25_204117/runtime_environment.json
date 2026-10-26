@@ -1,0 +1,20 @@
+{
+  "at_local": "2026-10-25T21:00:36.250444-04:00",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "pyarrow": "23.0.1",
+    "torch": "2.10.0",
+    "plotly": "6.3.1",
+    "exchange-calendars": "4.13.2"
+  },
+  "git_head": "efdad8c21f79c74845e0b4f66e7056638cfca4ef",
+  "threads": {
+    "intra": 4,
+    "interop": 1,
+    "workers": 0
+  },
+  "command": "OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 MKL_NUM_THREADS=4 VECLIB_MAXIMUM_THREADS=4 .venv/bin/python -u -m lstm_data.hf20_ranking_continue --run --out reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117"
+}

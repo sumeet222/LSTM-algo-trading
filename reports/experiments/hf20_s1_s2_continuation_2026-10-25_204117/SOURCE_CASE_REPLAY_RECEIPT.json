@@ -1,0 +1,60 @@
+{
+  "status": "PASS_READONLY_SOURCE_FEATURE_TARGET_CHECKPOINT",
+  "model_replays": 60,
+  "unique_origins": 22,
+  "unique_sessions": 12,
+  "cases_by_family": {
+    "NR": 22,
+    "PW": 16,
+    "T2R": 22
+  },
+  "missing_PW_F21_cases": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "missing_reason": "Failed start65 has no accepted full-prefix model; no substitution",
+  "max_score_absolute_difference": 4.4648147581871633e-08,
+  "score_replay_tolerance": {
+    "rtol": 7e-07,
+    "atol": 1e-07
+  },
+  "exact_feature_tensor_identity": true,
+  "phase_feature_refs": [
+    {
+      "year": 2021,
+      "path": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F21_refit_source_case_inputs.npz",
+      "sha256": "ed6c167d541057083ece4de8e3d1aa7da76f06650fe7b867fd166ac32aed2131",
+      "recipe": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F21_refit_recipe.json",
+      "recipe_sha256": "1d851582a10dec723e71d4006cd55992caf4e690d812d881c56fcbfbbdf918de"
+    },
+    {
+      "year": 2022,
+      "path": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_refit_source_case_inputs.npz",
+      "sha256": "87b70b433801950949a9e233dbb583a597a6e249e61394c5b91e6e06668a0553",
+      "recipe": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_refit_recipe.json",
+      "recipe_sha256": "095ae10d9f80450d410ca23e57a3ffe38b9922b96aa8ffc68b1bdaf85f87eed5"
+    },
+    {
+      "year": 2023,
+      "path": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_refit_source_case_inputs.npz",
+      "sha256": "e3a8dfe5913f059d457ff805adc30301be7daa87dd31af865b16ccfd6ffc4af7",
+      "recipe": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_refit_recipe.json",
+      "recipe_sha256": "86229d2eef07a7f9536b70915bb37c0aae4b26c68742c85f2f9390d08e2ff571"
+    },
+    {
+      "year": 2024,
+      "path": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_refit_source_case_inputs.npz",
+      "sha256": "068f99b262b9e029105512ac168793aa30e4acc135201b51da75808a6224b6ab",
+      "recipe": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_refit_recipe.json",
+      "recipe_sha256": "b3dc38e59b46b976bda356e8966978f6c8d70d56c6d0318c6b245679ea36a415"
+    }
+  ],
+  "real_optimizer_updates": 0,
+  "new_prefix_fits": 0,
+  "journal_before_after_sha256": "19cda50f114a848a04abab3bef15a6325d692a5953d21fa4557c4e7eb58eb921",
+  "audit_code_sha256": "9dfdff17da4fd7e3f09f9ccdd63bafb9cfdf75b9bf4f1a3687283ac184fbd155"
+}

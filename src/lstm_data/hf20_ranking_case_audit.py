@@ -1,0 +1,168 @@
+"""Bounded read-only source/feature/target/checkpoint replay for completed ranking models."""
+
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+from unittest.mock import patch
+
+import numpy as np
+import pandas as pd
+import torch
+
+from .hf1m_ft16_source import COMMON, ORDER
+from .hf20_ranking_data import FoldData
+from .hf20_ranking_run import sha, write
+from .neural_engine import SharedLSTM
+
+
+def audit(out: Path) -> None:
+    keys = pd.read_csv(out / "shared_source_case_keys.csv")
+    journal = Path("reports/audit/track_a_real_pairs_v20_hf20_ranking_guard.jsonl")
+    before = sha(journal)
+    replay = []
+    quality = []
+    refs = []
+    with (
+        patch(
+            "lstm_data.hf20_ranking_data.fit", side_effect=AssertionError("READONLY_NO_RECIPE_FIT")
+        ) as fit_block,
+        patch.object(
+            torch.optim.AdamW, "step", side_effect=AssertionError("READONLY_NO_OPTIMIZER_STEP")
+        ) as step_block,
+    ):
+        data = FoldData(live_approved=True)
+        for year in (2021, 2022, 2023, 2024):
+            case = keys.loc[keys.year.eq(year)].reset_index(drop=True)
+            data.phase(year, "refit", out)
+            positions = np.array(
+                [int(np.flatnonzero(data.rows.origin_id.eq(k))[0]) for k in case.origin_id]
+            )
+            x, r, y = data.arrays(positions)
+            j = np.array([data.symbols.index(t) for t in case.ticker])
+            chosen = x[np.arange(len(case)), j]
+            features = out / f"F{year % 100}_refit_source_case_inputs.npz"
+            with np.load(features) as stored:
+                np.testing.assert_array_equal(stored["inputs"], chosen)
+                np.testing.assert_array_equal(stored["returns20"], r)
+                np.testing.assert_array_equal(stored["TG20_20"], y)
+                np.testing.assert_array_equal(stored["case_id"], case.case_id.to_numpy())
+            refs.append(
+                dict(
+                    year=year,
+                    path=str(features),
+                    sha256=sha(features),
+                    recipe=str(out / f"F{year % 100}_refit_recipe.json"),
+                    recipe_sha256=sha(out / f"F{year % 100}_refit_recipe.json"),
+                )
+            )
+            starts = case.first_step.to_numpy(dtype=int)
+            ends = case.entry_index.to_numpy(dtype=int)
+            for n, row in enumerate(case.itertuples()):
+                history = np.arange(starts[n], ends[n] + 1)
+                slot = (
+                    pd.Timestamp(data.rows.iloc[positions[n]].entry_end_utc)
+                    .tz_convert("America/New_York")
+                    .hour
+                    - 10
+                )
+                for name in ORDER:
+                    flags = (
+                        data.fallback_m2[history, j[n], slot]
+                        if name == "M2"
+                        else data.fallback_common[history, j[n], COMMON.index(name)]
+                    )
+                    quality.append(
+                        dict(
+                            case_id=row.case_id,
+                            year=year,
+                            ticker=row.ticker,
+                            channel=name,
+                            steps=48,
+                            fallback_steps=int(flags.sum()),
+                            native_steps=int((~flags).sum()),
+                            max_terminal_price_age_minutes=float(data.age_max48[ends[n], j[n]]),
+                            source_publication="UNKNOWN_ASSUMED_END_PLUS2_ISSUANCE",
+                        )
+                    )
+            for arm in ("T2R", "NR", "PW"):
+                dest = out / f"HF20-S1S2-F{year % 100}-{arm}-S42"
+                if not (dest / "PASS.json").exists():
+                    continue
+                saved = (
+                    pd.read_csv(dest / "source_cases.csv")
+                    .sort_values("case_id")
+                    .reset_index(drop=True)
+                )
+                np.testing.assert_array_equal(saved.case_id, case.case_id)
+                model = SharedLSTM().eval()
+                state = torch.load(dest / "refit_final.pt", map_location="cpu", weights_only=True)
+                model.load_state_dict(state["model"])
+                with torch.inference_mode():
+                    score = model(torch.from_numpy(chosen)).numpy()
+                np.testing.assert_allclose(score, saved.score.to_numpy(float), rtol=7e-7, atol=1e-7)
+                np.testing.assert_allclose(
+                    r[np.arange(len(case)), j],
+                    saved.return_4h.to_numpy(float),
+                    rtol=1e-13,
+                    atol=1e-14,
+                )
+                np.testing.assert_allclose(
+                    y[np.arange(len(case)), j], saved.TG20.to_numpy(float), rtol=1e-13, atol=1e-14
+                )
+                for n, row in enumerate(case.itertuples()):
+                    replay.append(
+                        dict(
+                            case_id=row.case_id,
+                            year=year,
+                            model=arm,
+                            ticker=row.ticker,
+                            origin_id=row.origin_id,
+                            score=float(score[n]),
+                            saved_score=float(saved.score.iloc[n]),
+                            absolute_difference=float(abs(score[n] - saved.score.iloc[n])),
+                            checkpoint_sha256=sha(dest / "refit_final.pt"),
+                            features_sha256=sha(features),
+                            target_identity="PASS",
+                            mode="DROPOUT_OFF_READONLY",
+                        )
+                    )
+        assert fit_block.call_count == 0 and step_block.call_count == 0
+    if sha(journal) != before:
+        raise ValueError("READONLY_AUDIT_CHANGED_NEURAL_JOURNAL")
+    f = pd.DataFrame(replay)
+    f.to_csv(out / "source_case_checkpoint_replay.csv", index=False)
+    pd.DataFrame(quality).to_csv(out / "source_case_native_fallback_by_channel.csv", index=False)
+    write(
+        out / "SOURCE_CASE_REPLAY_RECEIPT.json",
+        dict(
+            status="PASS_READONLY_SOURCE_FEATURE_TARGET_CHECKPOINT",
+            model_replays=len(f),
+            unique_origins=keys.origin_id.nunique(),
+            unique_sessions=keys.session_date_et.nunique(),
+            cases_by_family=f.groupby("model").size().to_dict(),
+            missing_PW_F21_cases=keys.loc[keys.year.eq(2021), "case_id"].tolist(),
+            missing_reason="Failed start65 has no accepted full-prefix model; no substitution",
+            max_score_absolute_difference=float(f.absolute_difference.max()),
+            score_replay_tolerance=dict(rtol=7e-7, atol=1e-7),
+            exact_feature_tensor_identity=True,
+            phase_feature_refs=refs,
+            real_optimizer_updates=0,
+            new_prefix_fits=0,
+            journal_before_after_sha256=before,
+            audit_code_sha256=sha(Path(__file__)),
+        ),
+    )
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out", type=Path, required=True)
+    args = parser.parse_args()
+    torch.set_num_threads(4)
+    torch.set_num_interop_threads(1)
+    audit(args.out)
+
+
+if __name__ == "__main__":
+    main()

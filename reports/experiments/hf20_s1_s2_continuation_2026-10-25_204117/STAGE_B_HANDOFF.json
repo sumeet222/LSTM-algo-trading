@@ -1,0 +1,359 @@
+{
+  "status": "PASS_COMMON_SCIENTIFIC_CHECKS",
+  "LP": "DEFERRED_AFTER_PRIOR_FAILURE",
+  "S1_performance_gate": false,
+  "baseline_available": [
+    {
+      "year": 2021,
+      "model": "P",
+      "status": "COMPLETED"
+    },
+    {
+      "year": 2021,
+      "model": "LR",
+      "status": "COMPLETED"
+    },
+    {
+      "year": 2022,
+      "model": "P",
+      "status": "COMPLETED"
+    },
+    {
+      "year": 2022,
+      "model": "LR",
+      "status": "COMPLETED"
+    },
+    {
+      "year": 2023,
+      "model": "P",
+      "status": "COMPLETED"
+    },
+    {
+      "year": 2023,
+      "model": "LR",
+      "status": "COMPLETED"
+    },
+    {
+      "year": 2024,
+      "model": "P",
+      "status": "COMPLETED"
+    },
+    {
+      "year": 2024,
+      "model": "LR",
+      "status": "COMPLETED"
+    }
+  ],
+  "independent_outputs": [
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F21_S1_LR/oos_scores.parquet",
+      "rows": 5860,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F21_S1_LR/refit_scores.parquet",
+      "rows": 74400,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F21_S1_N0/oos_scores.parquet",
+      "rows": 5860,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F21_S1_N1/oos_scores.parquet",
+      "rows": 5860,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F21_S1_N2/oos_scores.parquet",
+      "rows": 5860,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F21_S1_P/oos_scores.parquet",
+      "rows": 5860,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F21_S1_P/refit_scores.parquet",
+      "rows": 74400,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_LR/inner_train_scores.parquet",
+      "rows": 77800,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_LR/inner_validation_scores.parquet",
+      "rows": 2740,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_LR/oos_scores.parquet",
+      "rows": 7280,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_LR/refit_scores.parquet",
+      "rows": 80540,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_N0/oos_scores.parquet",
+      "rows": 7280,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_N1/oos_scores.parquet",
+      "rows": 7280,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_N2/oos_scores.parquet",
+      "rows": 7280,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_P/inner_train_scores.parquet",
+      "rows": 77800,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_P/inner_validation_scores.parquet",
+      "rows": 2740,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_P/oos_scores.parquet",
+      "rows": 7280,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F22_S1_P/refit_scores.parquet",
+      "rows": 80540,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_LR/inner_train_scores.parquet",
+      "rows": 84900,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_LR/inner_validation_scores.parquet",
+      "rows": 2860,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_LR/oos_scores.parquet",
+      "rows": 5680,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_LR/refit_scores.parquet",
+      "rows": 88060,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_N0/oos_scores.parquet",
+      "rows": 5680,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_N1/oos_scores.parquet",
+      "rows": 5680,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_N2/oos_scores.parquet",
+      "rows": 5680,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_P/inner_train_scores.parquet",
+      "rows": 84900,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_P/inner_validation_scores.parquet",
+      "rows": 2860,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_P/oos_scores.parquet",
+      "rows": 5680,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F23_S1_P/refit_scores.parquet",
+      "rows": 88060,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_LR/inner_train_scores.parquet",
+      "rows": 91560,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_LR/inner_validation_scores.parquet",
+      "rows": 2220,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_LR/oos_scores.parquet",
+      "rows": 6160,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_LR/refit_scores.parquet",
+      "rows": 94020,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_N0/oos_scores.parquet",
+      "rows": 6160,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_N1/oos_scores.parquet",
+      "rows": 6160,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_N2/oos_scores.parquet",
+      "rows": 6160,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_P/inner_train_scores.parquet",
+      "rows": 91560,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_P/inner_validation_scores.parquet",
+      "rows": 2220,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_P/oos_scores.parquet",
+      "rows": 6160,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_S1_P/refit_scores.parquet",
+      "rows": 94020,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_ranking_2026-10-25_225152_preparation_v1/F21_S1_LR/inner_train_scores.parquet",
+      "rows": 70200,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_ranking_2026-10-25_225152_preparation_v1/F21_S1_LR/inner_validation_scores.parquet",
+      "rows": 3940,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_ranking_2026-10-25_225152_preparation_v1/F21_S1_P/inner_train_scores.parquet",
+      "rows": 70200,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    },
+    {
+      "file": "reports/experiments/hf20_s1_s2_ranking_2026-10-25_225152_preparation_v1/F21_S1_P/inner_validation_scores.parquet",
+      "rows": 3940,
+      "keys": "PASS",
+      "weights": "PASS",
+      "independent_ic": "PASS"
+    }
+  ],
+  "new_attempts": 29,
+  "old_attempts_preserved": 8
+}
