@@ -1,0 +1,44 @@
+...................F...                                                  [100%]
+=================================== FAILURES ===================================
+___________ test_exact_objectives_hierarchical_weights_and_selector ____________
+
+    def test_exact_objectives_hierarchical_weights_and_selector():
+        import torch
+    
+        from lstm_data.hf20_ranking import (
+            RankSelector,
+            origin_ic,
+            origin_weights,
+            rank_targets,
+            row_loss,
+        )
+    
+        returns = np.arange(80).reshape(4, 20).astype(float)
+        returns[0, :2] = 1
+        q = rank_targets(returns)
+        assert q[0, 0] == q[0, 1]
+        weights = origin_weights(np.array(["A", "A", "A", "B"]))
+        np.testing.assert_allclose(weights[:3].sum(), 0.5)
+        assert weights[3] == 0.5
+        s = torch.zeros((4, 20), dtype=torch.float32)
+        r = torch.tensor(returns)
+        y = torch.tensor(returns / 20, dtype=torch.float32)
+        np.testing.assert_allclose(row_loss("NR", s, r, y, 2).numpy(), q**2 / 20, rtol=3e-7, atol=1e-8)
+        np.testing.assert_allclose(
+            row_loss("T2R", s, r, y, 2).numpy(),
+            np.arcsinh(y.numpy() / 2) ** 2 / 20,
+            rtol=3e-7,
+            atol=1e-8,
+        )
+        assert np.isnan(origin_ic(returns, np.zeros_like(returns))).all()
+        selector = RankSelector()
+        assert selector.observe(1, -0.01)
+>       assert not selector.observe(2, -0.009)
+E       assert not True
+E        +  where True = observe(2, -0.009)
+E        +    where observe = RankSelector(best=-0.009, selected=2, raw_best=-0.009, raw_epoch=2, stale=0).observe
+
+tests/test_hf20_s4_readonly.py:165: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_hf20_s4_readonly.py::test_exact_objectives_hierarchical_weights_and_selector
+1 failed, 22 passed in 12.58s

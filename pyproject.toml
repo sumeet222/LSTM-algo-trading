@@ -27,6 +27,9 @@ lstm-data = "lstm_data.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+lstm_data = ["hf20_rank_visual_template.html", "hf20_s4_visual_qa.js", "hf20_s4_visual_supplement.js"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 

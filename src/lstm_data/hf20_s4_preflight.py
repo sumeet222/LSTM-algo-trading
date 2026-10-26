@@ -1,0 +1,505 @@
+"""Bounded S4 endpoint, input and M2 audit. No fitting interface or optimizer."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import resource
+import sys
+import time
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+from .hf1m_action_audit import SYMBOLS, ActivePanel, digest
+from .hf1m_action_masks import full_window
+from .hf1m_action_source import adjust_prices
+from .hf1m_ft16_fit import native
+from .hf1m_ft16_math import Components, build, rolling
+from .hf1m_ft16_source import COMMON, checked, configuration
+from .hf20_ranking_data import metadata
+from .hf20_s4_clock import complete_prices, month_guard, schedule, sessions
+
+
+def field_masks(hours: pd.DataFrame, facts: list[dict]) -> pd.DataFrame:
+    """Exact P019B release formulas on permitted hours; never open mixed-2026 masks."""
+    f = hours[["hour_id", "ticker", "hour_start_utc", "session_date_et", "is_stub"]].copy()
+    ordinal = np.zeros(len(f), dtype=int)
+    for action in facts:
+        if action["kind"] == "SPLIT":
+            ordinal += (
+                f.ticker.eq(action["ticker"]) & f.session_date_et.ge(action["date"])
+            ).to_numpy()
+    f["volume_basis_id"] = (
+        f.ticker + ":AS_REPORTED_SHARE_REGIME:" + pd.Series(ordinal, index=f.index).astype(str)
+    )
+    grid = (
+        f.loc[~f.is_stub, ["hour_start_utc", "session_date_et"]]
+        .drop_duplicates()
+        .sort_values("hour_start_utc")
+        .reset_index(drop=True)
+    )
+    regular = np.asarray([str(d) for d, p in grid.groupby("session_date_et") if len(p) == 6])
+    previous = np.searchsorted(regular, grid.session_date_et.to_numpy(), side="left") - 1
+    basis_ok = np.ones(len(grid), bool)
+    for i in np.flatnonzero(grid.session_date_et.ge("2012-05-01")):
+        p = previous[i]
+        basis_ok[i] = p >= 125 and regular[p - 125] >= "2012-05-01"
+    crossing = ~full_window(basis_ok[:, None], 48)[:, 0]
+    crossing &= grid.session_date_et.ge("2012-05-01").to_numpy()
+    f["hour_feature_dependency_action_crossing"] = f.ticker.eq("COP") & f.hour_start_utc.isin(
+        grid.loc[crossing, "hour_start_utc"]
+    )
+    return f
+
+
+def input_valid(c: Components) -> np.ndarray:
+    """Original 48-close cap5, 126-session/360-genuine update and COP dependencies."""
+    close = c.source["close"]
+    available = np.isfinite(c.source["close_input_cap5"])
+    warm = (c.day_index >= 125)[:, None] & (np.cumsum(np.isfinite(close), axis=0) >= 360)
+    blocked = (
+        c.hours.pivot(index="hour_start_utc", columns="ticker", values="cop_dependency")
+        .reindex(index=c.grid.hour_start_utc, columns=SYMBOLS)
+        .to_numpy(bool)
+    )
+    return full_window(available, 48) & warm & ~blocked
+
+
+def load_source(
+    out: Path,
+) -> tuple[Components, pd.DataFrame, pd.DataFrame, list[dict], pd.DataFrame]:
+    """Verify/open only month partitions through2024, recording every numerical file."""
+    config = configuration()
+    up = Path(config["upstream_packet"])
+    if digest(up / "pre_feature_gate.json") != config["upstream_gate_sha256"]:
+        raise ValueError("P019B_RELEASE_CHANGED")
+    qa = json.loads(Path("configs/hf1m_action_qa_v1.json").read_text())
+    if digest(Path(qa["facts"])) != qa["facts_sha256"]:
+        raise ValueError("ACTION_FACTS_CHANGED")
+    facts = json.loads(Path(qa["facts"]).read_text())["events"]
+    manifest = json.loads((up / "adjusted_hourly_manifest.json").read_text())
+    refs, frames = [], []
+    for row in manifest["monthly"]:
+        if row["month"] > "2024-12":
+            continue
+        month_guard(row["month"])
+        ref = row["files"]["hourly"]
+        frame = pd.read_parquet(checked(ref))
+        if not frame.session_date_et.str.startswith(row["month"]).all():
+            raise ValueError("MONTH_CONTENT_SCOPE")
+        frames.append(frame)
+        refs.append(dict(ref, purpose="permitted adjusted hourly source"))
+    hours = pd.concat(frames, ignore_index=True)
+    del frames
+    fields = field_masks(hours, facts)
+    c = build(hours, fields)
+    calendar = sessions("2010-07-01", "2025-01-10")
+    clock = schedule(calendar)
+    times = pd.DatetimeIndex(
+        pd.concat([clock.entry_end_utc, clock.exit_end_utc, clock.session_close]).unique()
+    )
+    required = set(times - pd.Timedelta(minutes=1)) | set(calendar.open)
+    panel = ActivePanel(Path.cwd(), json.loads(Path(qa["source_config"]).read_text()))
+    ledger = json.loads((up / "unresolved_event_ledger_v3.json").read_text())
+    quarantine = {
+        (e["ticker"], pd.Timestamp(e["timestamp_utc"]))
+        for e in ledger
+        if e["disposition"] == "UNVERIFIED_RTH_LOCAL_QUARANTINE"
+    }
+    price_frames = []
+    for row in panel.months:
+        month = row["month"]
+        if month > "2024-12":
+            continue
+        month_guard(month)
+        ref = row["derived_files"]["canonical_observed"]
+        path = checked(ref)
+        frame = pd.read_parquet(
+            path,
+            columns=["ticker", "timestamp", "is_rth", "open", "high", "low", "close"],
+            filters=[("is_rth", "==", True)],
+        )
+        frame = frame.loc[frame.timestamp.isin(required)].copy()
+        bad = np.asarray(
+            [(s, t) in quarantine for s, t in zip(frame.ticker, frame.timestamp)], bool
+        )
+        frame = adjust_prices(frame.loc[~bad], facts)
+        price_frames.append(frame[["ticker", "timestamp", "open", "close"]])
+        refs.append(dict(ref, purpose="permitted genuine minute endpoints; no proxy"))
+    prices = pd.concat(price_frames, ignore_index=True)
+    if prices.duplicated(["ticker", "timestamp"]).any():
+        raise ValueError("AMBIGUOUS_GENUINE_MINUTE")
+    receipt_path = out / "S4_NUMERICAL_SOURCE_READS.csv"
+    receipt_text = pd.DataFrame(refs).to_csv(index=False)
+    if receipt_path.exists() and receipt_path.read_text() != receipt_text:
+        raise ValueError("S4_NUMERICAL_SOURCE_INVENTORY_CHANGED")
+    if not receipt_path.exists():
+        receipt_path.write_text(receipt_text)
+    return c, hours, prices, facts, clock
+
+
+def price_matrix(prices: pd.DataFrame, times: pd.Series, field: str = "close") -> np.ndarray:
+    idx = pd.DatetimeIndex(times) - (
+        pd.Timedelta(minutes=1) if field == "close" else pd.Timedelta(0)
+    )
+    return (
+        prices.pivot(index="timestamp", columns="ticker", values=field)
+        .reindex(index=idx, columns=SYMBOLS)
+        .to_numpy(dtype=float, copy=True)
+    )
+
+
+def expanded_m2(
+    c: Components, clock: pd.DataFrame, returns: np.ndarray
+) -> tuple[np.ndarray, np.ndarray, list[dict]]:
+    """Day-start lock; unavailable latest overnight label stays in scheduled window."""
+    means = np.full((len(c.grid), 20, 7), np.nan)
+    rms = means.copy()
+    records = []
+    days = c.regular_days
+    for context in range(7):
+        rows = clock.loc[clock.context.eq(context) & clock.regular_session]
+        ix = rows.set_index("session_date_et").reindex(days)["row_index"].to_numpy(int)
+        past = returns[ix]
+        maturities = pd.DatetimeIndex(clock.label_maturity_utc.iloc[ix])
+        # On each historical input day, only prior regular-origin slots exist in the window.
+        daily_mean = np.full_like(past, np.nan)
+        daily_rms = daily_mean.copy()
+        for p in range(1, len(days)):
+            current_open = pd.Timestamp(str(days[p]) + " 09:30", tz="America/New_York")
+            lo = max(0, p - 60)
+            sample = past[lo:p].copy()
+            immature = maturities[lo:p] >= current_open
+            sample[immature] = np.nan
+            if p >= 20:
+                daily_mean[p] = rolling(sample[-20:], 20, 19)[-1]
+            if p >= 60:
+                daily_rms[p] = rolling(sample, 60, 57, True)[-1]
+        # Early-close input days retain the same preceding regular-origin dates.
+        for day, positions in c.grid.groupby("session_date_et").indices.items():
+            p = int(np.searchsorted(days, str(day), side="left"))
+            if str(day) in set(days):
+                means[positions, :, context] = daily_mean[p]
+                rms[positions, :, context] = daily_rms[p]
+            elif p >= 60:
+                sample = past[p - 60 : p].copy()
+                sample[
+                    maturities[p - 60 : p]
+                    >= pd.Timestamp(str(day) + " 09:30", tz="America/New_York")
+                ] = np.nan
+                means[positions, :, context] = rolling(sample[-20:], 20, 19)[-1]
+                rms[positions, :, context] = rolling(sample, 60, 57, True)[-1]
+        records.append(
+            dict(
+                context=context,
+                slot="09:30" if context == 6 else f"{10 + context}:30",
+                native_mean_cells=int(np.isfinite(means[:, :, context]).sum()),
+                native_rms_cells=int(np.isfinite(rms[:, :, context]).sum()),
+                session_start_locked=True,
+            )
+        )
+    blocked = (
+        c.hours.pivot(index="hour_start_utc", columns="ticker", values="cop_dependency")
+        .reindex(index=c.grid.hour_start_utc, columns=SYMBOLS)
+        .to_numpy(bool)
+    )
+    means[blocked] = np.nan
+    rms[blocked] = np.nan
+    np.testing.assert_allclose(means[:, :, :2], c.m2_mean, atol=1e-12, rtol=1e-11, equal_nan=True)
+    np.testing.assert_allclose(rms[:, :, :2], c.m2_rms, atol=1e-12, rtol=1e-11, equal_nan=True)
+    return means, rms, records
+
+
+def run(out: Path, *, rehearse: bool = False) -> None:
+    started = time.monotonic()
+    if not (out / "S4_SOURCE_POLICY.json").exists():
+        raise ValueError("SOURCE_POLICY_BEFORE_NUMERIC_AUDIT_REQUIRED")
+    c, hours, prices, _, clock = load_source(out)
+    print("permitted source loaded", flush=True)
+    entry = price_matrix(prices, clock.entry_end_utc)
+    exit_ = price_matrix(prices, clock.exit_end_utc)
+    open_mask = clock.conditional_open.to_numpy()
+    entry[open_mask] = price_matrix(prices, clock.loc[open_mask, "entry_end_utc"], "open")
+    basis = np.ones_like(entry, dtype=bool)
+    basis[:, SYMBOLS.index("COP")] = (
+        clock.session_date_et.lt("2012-05-01").to_numpy()
+        == clock.exit_end_utc.dt.tz_convert("America/New_York")
+        .dt.strftime("%Y-%m-%d")
+        .lt("2012-05-01")
+        .to_numpy()
+    )
+    with np.errstate(divide="ignore", invalid="ignore"):
+        returns = np.log(exit_ / entry)
+    returns[~basis] = np.nan
+    clock["row_index"] = np.arange(len(clock))
+    clock["label_eligible"] = complete_prices(entry) & complete_prices(exit_) & basis.all(axis=1)
+    grid_index = pd.Series(c.grid.index.to_numpy(), index=c.grid.hour_end_utc)
+    clock["entry_index"] = clock.entry_end_utc.map(grid_index).fillna(-1).astype(int)
+    clock.loc[open_mask, "entry_index"] = (
+        np.searchsorted(
+            pd.DatetimeIndex(c.grid.hour_end_utc).to_numpy(dtype="datetime64[ns]").view("int64"),
+            pd.DatetimeIndex(clock.loc[open_mask, "entry_end_utc"])
+            .to_numpy(dtype="datetime64[ns]")
+            .view("int64"),
+            side="left",
+        )
+        - 1
+    )
+    clock["first_step"] = clock.entry_index - 47
+    inputs = input_valid(c)
+    good = clock.entry_index.ge(0).to_numpy()
+    inp = np.zeros(len(clock), bool)
+    inp[good] = inputs[clock.loc[good, "entry_index"].to_numpy(int)].all(axis=1)
+    clock["source_input_eligible"] = inp
+    clock["opening_reference_complete20"] = complete_prices(entry) & open_mask
+    clock["open_admitted"] = (
+        open_mask & clock.opening_reference_complete20 & inp & clock.label_eligible
+    )
+    clock["open_exclusion"] = np.where(
+        open_mask & ~clock.open_admitted, "MISSING_GENUINE_OPEN_OR_EXIT_OR_PREVIOUS48_INPUTS", ""
+    )
+    clock["opening_latency"] = np.where(
+        open_mask,
+        "UNVERIFIED_TIMING_PROXY_09:32;09:30_START_MINUTE_COMPLETES09:31",
+        "INHERITED_END_PLUS2_PROXY",
+    )
+    clock["eligible"] = inp & clock.label_eligible & clock.session_date_et.ge("2011-04-01")
+    close = price_matrix(prices, clock.session_close)
+    clock["true_session_close_complete20"] = complete_prices(close)
+    next_open = clock.exit_end_utc.dt.tz_convert("America/New_York").dt.normalize() + pd.Timedelta(
+        hours=9, minutes=30
+    )
+    next_price = price_matrix(prices, next_open, "open")
+    overnight = clock.category.eq("OVERNIGHT").to_numpy()[:, None]
+    supported = overnight & np.isfinite(returns) & np.isfinite(close) & np.isfinite(next_price)
+    with np.errstate(invalid="ignore", divide="ignore"):
+        first_leg = np.where(supported, np.log(close / entry), np.nan)
+        gap_leg = np.where(supported, np.log(next_price / close), np.nan)
+        final_leg = np.where(supported, np.log(exit_ / next_price), np.nan)
+    np.testing.assert_allclose(
+        (first_leg + gap_leg + final_leg)[supported], returns[supported], atol=1e-12, rtol=1e-11
+    )
+    pd.DataFrame(
+        dict(
+            origin_id=np.repeat(clock.origin_id.to_numpy(), 20),
+            ticker=np.tile(SYMBOLS, len(clock)),
+            entry_source_price=entry.ravel(),
+            exit_source_price=exit_.ravel(),
+            genuine_session_end_price=close.ravel(),
+            next_session_open=next_price.ravel(),
+            direct_return=returns.ravel(),
+            origin_to_close=first_leg.ravel(),
+            close_to_next_open=gap_leg.ravel(),
+            next_open_to_exit=final_leg.ravel(),
+            decomposition_supported=supported.ravel(),
+            decomposition_status=np.where(
+                supported,
+                "SUPPORTED_VENDOR_REFERENCE",
+                np.where(overnight, "UNAVAILABLE_MISSING_GENUINE_COMPONENT", "NOT_APPLICABLE"),
+            ).ravel(),
+        )
+    ).to_parquet(out / "S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet", index=False)
+    from .hf20_s4_opening import audit
+
+    audit(clock, c.grid, prices, entry, exit_, returns, out)
+    clock.to_parquet(out / "S4_ORIGIN_SOURCE_ELIGIBILITY.parquet", index=False)
+    coverage = clock.groupby(
+        [clock.session_date_et.str[:4].rename("year"), "slot", "category"], as_index=False
+    ).agg(
+        candidates=("origin_id", "size"),
+        input_eligible=("source_input_eligible", "sum"),
+        label_eligible=("label_eligible", "sum"),
+        joint_eligible=("eligible", "sum"),
+        true_close_complete=("true_session_close_complete20", "sum"),
+        opening_reference_complete=("opening_reference_complete20", "sum"),
+    )
+    coverage.to_csv(out / "S4_SOURCE_COVERAGE_BY_YEAR_SLOT.csv", index=False)
+    # Exact old two-origin source, eligibility and endpoint witnesses; never reinterpret archives.
+    _, old, grid = metadata(2021)
+    pd.testing.assert_frame_equal(c.grid[grid.columns], grid, check_exact=True)
+    joined = old.merge(clock, on="origin_id", suffixes=("_old", "_s4"), validate="one_to_one")
+    for key in (
+        "entry_end_utc",
+        "exit_end_utc",
+        "label_maturity_utc",
+        "entry_index",
+        "first_step",
+        "source_input_eligible",
+        "label_eligible",
+    ):
+        np.testing.assert_array_equal(joined[key + "_old"], joined[key + "_s4"])
+    oldreturns = np.log(
+        c.source["close"][joined.exit_index.to_numpy(int)]
+        / c.source["close"][joined.entry_index_old.to_numpy(int)]
+    )
+    oldreturns[~joined.label_eligible_old.to_numpy()] = np.nan
+    newreturns = returns[joined.row_index.to_numpy(int)].copy()
+    newreturns[~joined.label_eligible_s4.to_numpy()] = np.nan
+    np.testing.assert_allclose(oldreturns, newreturns, rtol=1e-11, atol=1e-12, equal_nan=True)
+    (out / "S4_OLD_ANCHOR_IDENTITY.json").write_text(
+        json.dumps(
+            dict(
+                status="PASS_SOURCE_ENDPOINT_AND_INPUT_MASK",
+                origins=len(joined),
+                price_return_tolerance="atol1e-12 rtol1e-11",
+                all16_status="PENDING_FEATURE_WITNESSES",
+            ),
+            indent=2,
+        )
+        + "\n"
+    )
+    print("source anchors passed", flush=True)
+    means, rms, m2counts = expanded_m2(c, clock, returns)
+    pd.DataFrame(m2counts).to_csv(out / "S4_M2_SOURCE_SUPPORT.csv", index=False)
+    # Replay stored recipes without refitting; new transforms still require authority.
+    recipe_path = Path(
+        "reports/experiments/hf20_s1_s2_continuation_2026-10-25_204117/F24_refit_recipe.json"
+    )
+    recipe = json.loads(recipe_path.read_text())
+    common, _ = native(c, recipe["floors"])
+    c.m2_mean, c.m2_rms = means, rms
+    _, m2 = native(c, recipe["floors"])
+    witness_rows = []
+    for context in range(7):
+        rows = clock.loc[
+            clock.context.eq(context) & clock.eligible & clock.session_date_et.ge("2024-01-01")
+        ]
+        sample = rows.iloc[0]
+        end = int(sample.entry_index)
+        for k, name in enumerate(COMMON):
+            values = common[end - 47 : end + 1, :, k]
+            witness_rows.append(
+                dict(
+                    origin_id=sample.origin_id,
+                    context=context,
+                    feature=name,
+                    history_steps=48,
+                    stock_rows=20,
+                    native_cells=int(np.isfinite(values).sum()),
+                    fallback_cells=int((~np.isfinite(values)).sum()),
+                    last_input_end=str(c.grid.hour_end_utc.iloc[end]),
+                    recipe_sha256=digest(recipe_path),
+                    status="SHIFTED_NATIVE_CALCULATED_SCALAR_VERIFICATION_PENDING",
+                )
+            )
+        values = m2[end - 47 : end + 1, :, context]
+        witness_rows.append(
+            dict(
+                origin_id=sample.origin_id,
+                context=context,
+                feature="M2",
+                history_steps=48,
+                stock_rows=20,
+                native_cells=int(np.isfinite(values).sum()),
+                fallback_cells=int((~np.isfinite(values)).sum()),
+                last_input_end=str(c.grid.hour_end_utc.iloc[end]),
+                recipe_sha256=digest(recipe_path),
+                status="SESSION_START_LOCKED_EXPANSION_SCALAR_VERIFICATION_PENDING",
+            )
+        )
+    pd.DataFrame(witness_rows).to_csv(out / "S4_SHIFTED_FEATURE_COVERAGE.csv", index=False)
+    from .hf20_s4_witnesses import verify
+
+    verify(c, clock, returns, out)
+    print("all16 scalar and archived tensor witnesses passed", flush=True)
+    counts = []
+    all_days = sorted(set(c.grid.session_date_et))
+    for year in range(2021, 2025):
+        stop = max(s for s in all_days if s < str(year))
+        anchor = (pd.Timestamp(stop).to_period("M") - 5).start_time.strftime("%Y-%m-%d")
+        inner = max(s for s in all_days if s < anchor)
+        first = np.full(len(clock), "0000", dtype=object)
+        has = clock.first_step.ge(0)
+        first[has] = c.grid.session_date_et.to_numpy()[clock.loc[has, "first_step"].to_numpy(int)]
+        day = clock.session_date_et
+        nominal = {
+            "inner_train": day.between("2011-04-01", inner),
+            "inner_validation": day.between(anchor, stop),
+            "refit": day.between("2011-04-01", stop),
+            "oos": day.str.startswith(str(year)),
+        }
+        for role, mask in nominal.items():
+            cutoff = (
+                inner if role == "inner_train" else str(year) + "-12-31" if role == "oos" else stop
+            )
+            boundary = inner if role == "inner_validation" else stop if role == "oos" else "0000"
+            embargo = first > boundary
+            # Four wall-hours before phase boundary, plus maturity and 48-step embargo.
+            limit = (
+                pd.Timestamp(cutoff, tz="America/New_York")
+                + pd.Timedelta(days=1)
+                - pd.Timedelta(hours=4)
+            )
+            mature = clock.label_maturity_utc.lt(limit)
+            admitted = mask & clock.eligible & embargo & mature
+            for slot in ["ALL", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30"]:
+                selected = (
+                    pd.Series(True, index=clock.index) if slot == "ALL" else clock.slot.eq(slot)
+                )
+                m = mask & selected
+                a = admitted & selected
+                counts.append(
+                    dict(
+                        year=year,
+                        role=role,
+                        slot=slot,
+                        candidates=int(m.sum()),
+                        origins=int(a.sum()),
+                        sessions=int(day[a].nunique()),
+                        rows=20 * int(a.sum()),
+                        retention=float(a.sum() / m.sum()) if m.any() else None,
+                        unavailable_inputs=int((m & ~clock.source_input_eligible).sum()),
+                        unavailable_labels=int((m & ~clock.label_eligible).sum()),
+                        embargo=int((m & ~embargo).sum()),
+                        unmatured_or_4h_purge=int((m & ~mature).sum()),
+                        inner_stop=inner,
+                        refit_stop=stop,
+                    )
+                )
+    pd.DataFrame(counts).to_csv(out / "S4_FOLD_ROLE_SLOT_COUNTS.csv", index=False)
+    if rehearse:
+        from .hf20_s4_data import S4Data
+        from .hf20_s4_rehearsal import run as zero_step
+
+        zero_step(S4Data(c, clock, returns), out)
+    peak = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * (
+        1 if sys.platform == "darwin" else 1024
+    )
+    (out / "S4_SOURCE_PREFLIGHT_RESULT.json").write_text(
+        json.dumps(
+            dict(
+                status="SOURCE_AUDIT_COMPLETE_FURTHER_GATES_PENDING",
+                runtime_seconds=time.monotonic() - started,
+                peak_rss_bytes=peak,
+                new_fits=0,
+                optimizer_updates=0,
+                neural_starts=0,
+                protected_partition_reads=0,
+                ledger=106,
+                opening_decision="INCLUDE09:30_CONDITIONAL_PRICE_ONLY_TIMING_PROXY",
+                m2_original_context_identity=True,
+                remaining=[
+                    "zero-step lifecycle" if not rehearse else "zero-step lifecycle passed",
+                    "full static/tests/graphic verification",
+                    "sealed live-fit card and live response",
+                ],
+            ),
+            indent=2,
+        )
+        + "\n"
+    )
+    print("source audit completed", flush=True)
+
+
+def main() -> None:
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--rehearse", action="store_true")
+    args = p.parse_args()
+    run(args.out, rehearse=args.rehearse)
+
+
+if __name__ == "__main__":
+    main()

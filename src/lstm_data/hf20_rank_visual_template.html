@@ -1,0 +1,119 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Historical S1/S2 ranking diagnostics</title>
+<style>body{font:15px system-ui;margin:24px;background:#f6f7fa;color:#172536}h1{font-size:26px}.controls{display:flex;flex-wrap:wrap;gap:16px;padding:18px;background:white;position:sticky;top:0;z-index:2;border:1px solid #ccd4df}label{display:grid;gap:5px}select,input{padding:6px;font:inherit}.note{padding:12px;background:#fff4d8;border-left:4px solid #c58c20}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.plot{background:white;min-height:420px;margin-top:12px}.wide{height:520px}table{border-collapse:collapse;font-size:12px;max-width:100%;overflow:auto;display:block;background:white}td,th{border:1px solid #dce1e7;padding:5px;text-align:left}.details{overflow:auto;max-height:360px}button{padding:9px;background:#173b61;color:white;border:0;cursor:pointer}small{color:#536477}@media(max-width:900px){.grid{display:block}}</style>
+<script>__PLOTLY__</script></head><body>
+<h1>Historical S1 + S2: how rankings change</h1>
+<p>Authentic saved annual OOS forecasts, 2021–2024. Four-hour <b>same-session</b> price-only labels. This is not S4, a trading strategy, or a position chart.</p>
+<p class="note">The realized line is the later-known outcome attached to the earlier forecast origin. It was not predictor information. N0 IC is undefined. F21 PW failed; LP has no accepted OOS predictions. No missing output has been manufactured. Source publication, action vintage, surviving-universe and private-use assumptions remain qualified.</p>
+<div class="controls">
+<label>OOS fold/year<select id="year"></select></label><label>Primary model / objective<select id="model"></select></label>
+<label>Additional predicted lines<select id="models" multiple size="3"></select></label><label>Stocks (default AAPL)<select id="stocks" multiple size="3"></select></label>
+<label>First session<input id="from" type="date"></label><label>Last session<input id="to" type="date"></label>
+<label>Diagnostic role<select id="role"><option>oos</option><option>inner_validation</option><option>inner_train</option><option>refit</option></select></label>
+<label>Scatter origin<select id="origin"></select></label><button id="update">Update views</button><button id="full">Full saved year</button>
+</div><p id="status" aria-live="polite"></p>
+<h2>Forecast-origin rank trajectories</h2><p>Rank 1 = best; ties retain midranks. Lines break between sessions and missing scheduled origin slots. Sparse two-origin observations do not describe continuous intraday paths. Green = top four; red = bottom four.</p>
+<div id="trajectory" class="plot wide"></div>
+<div class="grid"><div id="predHeat" class="plot"></div><div id="trueHeat" class="plot"></div><div id="m1Heat" class="plot"></div><div id="scatter" class="plot"></div></div>
+<h2>Ranking quality and selection stability</h2><p>20% retrieval and 50% concordance are orientation references, not significance thresholds. Stock pairs and repeated origins are dependent. Selection-set changes are uncosted ranking diagnostics, not trades.</p>
+<div class="grid"><div id="annual" class="plot"></div><div id="monthly" class="plot"></div><div id="sessions" class="plot"></div><div id="groupError" class="plot"></div><div id="retrieval" class="plot"></div><div id="movement" class="plot"></div><div id="absoluteMovement" class="plot"></div><div id="sets" class="plot"></div><div id="confusion" class="plot"></div><div id="daily" class="plot"></div><div id="margins" class="plot"></div><div id="residual" class="plot"></div></div>
+<h2>Actual objective, cohorts and all four roles</h2><p>Trajectory panels above always show outer OOS. The role selector below controls archived numerical diagnostic tables and cohort plots only. NR/P/LR are ordinal scores; PW uses pairwise logistic loss. Only T2R has a once-inverted original-TG20 diagnostic. Never compare loss values across different objectives.</p>
+<div class="grid"><div id="scores" class="plot"></div><div id="outcomes" class="plot"></div><div id="tails" class="plot"></div><div id="energy" class="plot"></div></div>
+<div id="roleMetrics" class="details"></div>
+<h2>Training and checkpoint evidence</h2><p>Online batch/epoch curves are dropout-ON; archived selected-checkpoint role metrics are dropout-OFF. Validation chooses the checkpoint; refit/inner-train are in sample. No OOS picture selected an epoch.</p>
+<div class="grid"><div id="training" class="plot"></div><div id="selector" class="plot"></div></div>
+<p id="provenance"></p><p><a href="../HISTORICAL_S1_S2_RANKING_VISUAL_DIAGNOSTICS.md">Full historical report, uncertainty, gradient/source-witness tables and reproduction</a> · <a href="../HISTORICAL_MODEL_RUN_INVENTORY.csv">Complete inventory including failures</a></p>
+<h2>Saved witness replays and run inventory</h2><p>Multiple models on the same source event are not independent observations. This viewer does not refit or replay a model.</p><div id="witnesses" class="details"></div><div id="inventory" class="details"></div>
+<script>
+const D=__DATA__;
+const $=id=>document.getElementById(id),pick=id=>Array.from($(id).selectedOptions).map(x=>x.value);
+const cfg={responsive:true,displaylogo:false,toImageButtonOptions:{format:'png',scale:1}};
+const esc=x=>String(x??'UNAVAILABLE').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function table(id,rows){if(!rows.length){$(id).innerHTML='<p>UNAVAILABLE for this selection; no synthetic substitute.</p>';return;}let keys=Object.keys(rows[0]);$(id).innerHTML='<table><thead><tr>'+keys.map(k=>'<th>'+esc(k)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+keys.map(k=>'<td>'+esc(typeof r[k]==='number'?Number(r[k].toPrecision(7)):r[k])+'</td>').join('')+'</tr>').join('')+'</tbody></table>';}
+function plot(id,data,layout={}){Plotly.react(id,data,{height:420,margin:{l:65,r:30,t:65,b:65},paper_bgcolor:'white',...layout},cfg);}
+function empty(id,title){plot(id,[],{title,annotations:[{text:'UNAVAILABLE — no accepted saved output',showarrow:false,x:.5,y:.5,xref:'paper',yref:'paper'}]});}
+function option(id,value,label,selected=false){let o=document.createElement('option');o.value=value;o.textContent=label??value;o.selected=selected;$(id).appendChild(o);}
+for(const y of Object.keys(D.years))option('year',y);
+for(const a of ['NR','T2R','PW','N1','N2','P','LR','N0','LP'])option('model',a,a+(a==='LP'?' — DEFERRED':''));
+for(const a of ['T2R','NR','PW','P','LR','N2','N0'])option('models',a,a,a==='T2R');
+for(const s of D.symbols)option('stocks',s,s,s==='AAPL');
+const dash=['solid','dash','dot','dashdot','longdash'],colors=['#124b81','#c04c22','#24855c','#854ca1','#a17b16'];
+function resetDates(){let v=D.years[$('year').value];$('from').value=v.first;$('to').value=v.default_end;update();}
+function update(){
+ const year=$('year').value,arm=$('model').value,v=D.data[year+'|'+arm],role=$('role').value;
+ table('inventory',D.inventory.filter(r=>String(r.year)===year));
+ table('roleMetrics',D.metrics.filter(r=>String(r.year)===year&&r.model===arm&&r.role===role));
+ table('witnesses',D.witnesses.filter(r=>String(r.year)===year&&r.model===arm));
+ if(!v){$('status').textContent=arm==='LP'?'LP DEFERRED: original failed optimization; no accepted OOS predictions.':'FAILED / UNAVAILABLE: F21 PW has no accepted outer-OOS score export.';document.querySelectorAll('.plot').forEach(e=>empty(e.id,arm+' '+year));return;}
+ const ix=v.days.map((d,i)=>d>=$('from').value&&d<=$('to').value?i:-1).filter(i=>i>=0),symbols=pick('stocks');
+ if(!ix.length||!symbols.length){$('status').textContent='No saved observations or no selected stocks. Choose a valid range and at least one stock.';document.querySelectorAll('.plot').forEach(e=>empty(e.id,'Empty filter'));return;}
+ const oldOrigin=$('origin').value;$('origin').innerHTML='';for(const i of ix)option('origin',String(i),v.wall[i],String(i)===oldOrigin);
+ const k=Number($('origin').value||ix[0]);let models=[arm,...pick('models')].filter((a,i,aa)=>aa.indexOf(a)===i&&a!=='N1');
+ const traces=[];
+ for(let sj=0;sj<symbols.length;sj++){let symbol=symbols[sj],j=D.symbols.indexOf(symbol);
+  const specs=[{name:'Realized later-known',data:v.truth,score:null,dash:'solid'},{name:'M1 momentum',data:v.m1rank,score:v.m1,dash:'dot'},...models.filter(a=>D.data[year+'|'+a]).map((a,i)=>({name:a,data:D.data[year+'|'+a].pred,score:D.data[year+'|'+a].score,dash:dash[(i+1)%dash.length]}))];
+  for(const spec of specs){let x=[],y=[],hover=[];for(let z=0;z<ix.length;z++){let i=ix[z],prev=ix[z-1];if(z&&(v.days[i]!==v.days[prev]||Date.parse(v.origins[i])-Date.parse(v.origins[prev])!==3600000)){x.push(null);y.push(null);hover.push('');}x.push(v.wall[i]);y.push(spec.data[i][j]);hover.push(symbol+' | '+spec.name+' | '+year+' OOS 4h<br>Origin '+v.origins[i]+'<br>Exit '+v.exits[i]+'<br>Maturity '+v.maturity[i]+'<br>Score '+(spec.score?spec.score[i][j]:'later-known outcome rank')+'<br>Pred/line rank '+spec.data[i][j]+' | realized '+v.truth[i][j]+'<br>M1 '+v.m1[i][j]+' | quality '+v.quality[i][j]+' | fallback cells '+v.fallback[i][j]);}
+   traces.push({x,y,text:hover,hovertemplate:'%{text}<extra></extra>',name:symbol+' '+spec.name,type:'scatter',mode:'lines+markers',connectgaps:false,line:{dash:spec.dash},marker:{symbol:spec.name==='Realized later-known'?'diamond':'circle',size:5}});
+  }
+ }
+ plot('trajectory',traces,{height:520,title:'Historical S1/S2 — origin-aligned OOS ranks',xaxis:{title:'Forecast origin (ET); closures are gaps'},yaxis:{title:'Display midrank (1 best)',range:[20.5,.5],dtick:2},shapes:[{type:'rect',xref:'paper',x0:0,x1:1,y0:1,y1:4,fillcolor:'#bbdfc8',opacity:.25,line:{width:0},layer:'below'},{type:'rect',xref:'paper',x0:0,x1:1,y0:17,y1:20,fillcolor:'#efc5c5',opacity:.25,line:{width:0},layer:'below'}]});
+ const heat=(id,title,arr)=>plot(id,[{type:'heatmap',x:ix.map(i=>v.wall[i]),y:D.symbols,z:D.symbols.map((_,j)=>ix.map(i=>arr[i][j])),zmin:1,zmax:20,colorscale:'RdYlGn',reversescale:true,colorbar:{title:'Rank'}}],{title,yaxis:{autorange:'reversed'},xaxis:{title:'Saved forecast origin ET'}});
+ heat('predHeat',arm+' predicted rank — all 20',v.pred);heat('trueHeat','Realized future rank — identical keys',v.truth);heat('m1Heat','M1 rank — identical keys',v.m1rank);
+ plot('scatter',[{type:'scatter',mode:'markers+text',x:v.truth[k],y:v.pred[k],text:D.symbols,textposition:'top center',marker:{size:8},name:arm},{type:'scatter',mode:'lines',x:[1,20],y:[1,20],line:{dash:'dot',color:'#888'},name:'Identity reference'}],{title:v.wall[k]+' '+arm+' vs realized',xaxis:{title:'Realized rank (later known)',range:[20.5,.5]},yaxis:{title:'Predicted rank',range:[20.5,.5]}});
+ const oms=ix.map(i=>v.origins_metrics[i]);
+ plot('retrieval',['top4','bottom4','concordance'].map((key,i)=>({x:ix.map(i=>v.wall[i]),y:oms.map(r=>r[key]),name:key,mode:'markers',marker:{symbol:['circle','diamond','cross'][i]}})),{title:'Retrieval and pair concordance',yaxis:{range:[0,1]},shapes:[.2,.5].map(y=>({type:'line',xref:'paper',x0:0,x1:1,y0:y,y1:y,line:{dash:'dot',color:'#888'}}))});
+ let idset=new Set(ix.map(i=>v.origins[i]));let mov=v.movement.filter(r=>idset.has(r.origin_id)&&idset.has(r.previous_origin)&&symbols.includes(r.ticker)),sets=v.set_changes.filter(r=>idset.has(r.origin_id)&&idset.has(r.previous_origin));
+ plot('movement',['WITHIN_SESSION_ADJACENT','ACROSS_SESSION'].map(rel=>({type:'histogram',x:mov.filter(r=>r.relation===rel).map(r=>r.signed_change),name:rel,opacity:.65,xbins:{size:1}})),{title:'Signed rank movement; selected stocks',barmode:'overlay',xaxis:{title:'Current minus previous display rank'}});
+ plot('sets',['TOP4','BOTTOM4'].map(side=>({type:'histogram',x:sets.filter(r=>r.side===side&&r.unambiguous_four_names).map(r=>r.jaccard),name:side,opacity:.65,xbins:{size:.1}})),{title:'Predicted-set Jaccard; ambiguous tie sets omitted',barmode:'overlay',xaxis:{range:[0,1],title:'Overlap, not trading turnover'}});
+ plot('confusion',[{type:'histogram2d',x:ix.flatMap(i=>v.truth[i]),y:ix.flatMap(i=>v.pred[i]),xbins:{start:.5,end:20.5,size:1},ybins:{start:.5,end:20.5,size:1},colorscale:'Blues'}],{title:'Midrank confusion (unit-rank bins)',xaxis:{title:'Realized midrank'},yaxis:{title:'Predicted midrank',autorange:'reversed'}});
+ plot('daily',[{x:ix.map(i=>v.wall[i]),y:oms.map(r=>r.ic),name:'Origin IC',mode:'markers'},{x:ix.map(i=>v.wall[i]),y:oms.map(r=>r.pair_tie_rate),name:'Pair tie rate',mode:'markers'}],{title:'Chronological origin IC and ties; no interpolation',yaxis:{range:[-1,1]}});
+ plot('margins',[{x:ix.map(i=>v.wall[i]),y:oms.map(r=>r.score_sd),name:'Within-origin score SD',mode:'markers'},{x:ix.map(i=>v.wall[i]),y:oms.map(r=>r.min_score_gap),name:'Minimum score margin',mode:'markers'}],{title:'Score spread and margins — '+v.score_units});
+ plot('scores',[{type:'histogram',x:ix.flatMap(i=>v.score[i]),name:'Saved model score',nbinsx:50}],{title:arm+' saved-score distribution',xaxis:{title:v.score_units}});
+ const target=arm==='T2R'?v.z:v.q;
+ plot('outcomes',[{type:'scattergl',mode:'markers',x:ix.flatMap(i=>target[i]),y:ix.flatMap(i=>v.score[i]),marker:{size:3,opacity:.25}}],{title:arm==='T2R'?'Transformed target Z vs predicted Z':'Normalized realized rank vs ordinal score (PW objective remains pairwise)',xaxis:{title:arm==='T2R'?'Z, not raw return':'Normalized rank label q'},yaxis:{title:v.score_units}});
+ const co=D.cohorts.filter(r=>String(r.year)===year&&r.model===arm&&r.role===role),wanted=['ALL','TARGET_RANK_TOP1','TARGET_RANK_TOP5','TARGET_RANK_TOP5_COMPLEMENT','NUM_ONLY','MAD_ONLY','BOTH','NEITHER','FLOOR'],cs=co.filter(r=>wanted.includes(r.cohort));
+ plot('tails',[{type:'bar',x:cs.map(r=>r.cohort),y:cs.map(r=>r.actual_objective_contribution),name:'Actual objective contribution'}],{title:arm+' '+role+' — overlapping cohort definitions',xaxis:{tickangle:-25},yaxis:{title:'Loss contribution in own objective units'}});
+ const all=co.find(r=>r.cohort==='ALL');if(arm==='T2R'&&all)plot('energy',[{type:'bar',x:['Target energy','Forecast energy','Alignment','Common error','Centered error','Subset cross term'],y:[all.target_energy,all.forecast_energy,all.alignment,all.common_error,all.centered_error,all.subset_cross_term]}],{title:'T2R original-Y energy/decomposition: '+role});else empty('energy','Original-Y energy is not defined for ordinal '+arm);
+ const ep=D.epochs.filter(r=>r.run_id===v.run),cal=ep.filter(r=>r.phase==='calibration'),ref=ep.filter(r=>r.phase==='refit');
+ if(ep.length){plot('training',[{x:cal.map(r=>r.epoch),y:cal.map(r=>r.online_objective),name:'Calibration online ON',mode:'lines+markers'},{x:ref.map(r=>r.epoch),y:ref.map(r=>r.online_objective),name:'Fresh refit online ON',mode:'lines+markers'}],{title:arm+' online objective; no OOS selection',xaxis:{title:'Epoch'}});plot('selector',[{x:cal.map(r=>r.epoch),y:cal.map(r=>r.ic),name:'Inner-validation IC OFF',mode:'lines+markers'},{x:cal.filter(r=>r.qualifies).map(r=>r.epoch),y:cal.filter(r=>r.qualifies).map(r=>r.ic),name:'Qualified improvements',mode:'markers',marker:{symbol:'star',size:12}}],{title:'Frozen strict +0.001 IC selector'});}else{empty('training','No neural training trace for '+arm);empty('selector','No neural checkpoint selector for '+arm);}
+ $('status').textContent=year+' '+arm+': '+ix.length+' genuine saved origins, '+new Set(ix.map(i=>v.days[i])).size+' sessions, '+ix.length*20+' stock rows. 4h same-session historical OOS; labels start two minutes before assumed issuance. Full year available through date filters.';
+ $('provenance').textContent='Run '+v.run+' | phase recipe SHA256 '+v.recipe_sha256+' | checkpoint '+(v.checkpoint||'Non-neural comparator; coefficient/source identities in inventory')+'. All detailed gradient/reload/role/source receipts are linked in the report.';
+ const yr=D.metrics.filter(r=>r.role==='oos');
+ plot('annual',['N1','NR','T2R','PW','P','LR','N2','N0'].map(a=>{let rows=yr.filter(r=>r.model===a),complete=rows.length===4&&rows.every(r=>r.daily_ic!==null);return {type:'scatter',mode:'markers',name:a,x:[...rows.map(r=>String(r.year)),'Equal-year mean'],y:[...rows.map(r=>r.daily_ic),complete?rows.reduce((s,r)=>s+r.daily_ic,0)/4:null]};}),{title:'Archived annual IC; PW four-year mean unavailable',xaxis:{type:'category'},yaxis:{title:'Equal-session Rank IC'}});
+ const ms=D.monthly.filter(r=>String(r.year)===year&&r.model===arm),ds=D.daily.filter(r=>String(r.year)===year&&r.model===arm&&r.session_date_et>=$('from').value&&r.session_date_et<=$('to').value),ci=D.intervals.find(r=>String(r.year)===year&&r.model===arm);
+ plot('monthly',[{x:ms.map(r=>r.month),y:ms.map(r=>r.ic),mode:'markers',text:ms.map(r=>r.sessions+' sessions; '+r.origins+' origins'),name:'Monthly daily-mean IC'}],{title:'Full-year monthly IC; whole-month interval '+(ci?'['+ci.low.toFixed(4)+', '+ci.high.toFixed(4)+']':'undefined'),yaxis:{title:'Descriptive; researcher search not corrected'}});
+ plot('sessions',[{x:ds.map(r=>r.session_date_et),y:ds.map(r=>r.ic),mode:'markers',name:'Session IC'},{x:ds.map(r=>r.session_date_et),y:ds.map(r=>r.origins),mode:'markers',name:'Saved origins/session',yaxis:'y2'}],{title:'Session IC and actual support',yaxis2:{overlaying:'y',side:'right',range:[0,3]}});
+ const ge=D.group_errors.filter(r=>String(r.year)===year&&r.model===arm);
+ plot('groupError',['ticker','slot','quality'].map(dim=>{let rows=ge.filter(r=>r.dimension===dim);return {type:'bar',x:rows.map(r=>r.group),y:rows.map(r=>r.mean_absolute_rank_error),name:dim,text:rows.map(r=>r.rows+' rows')};}),{title:'Full-year descriptive mean absolute rank error',xaxis:{tickangle:-35}});
+ plot('absoluteMovement',['WITHIN_SESSION_ADJACENT','ACROSS_SESSION'].map(rel=>({type:'histogram',x:mov.filter(r=>r.relation===rel).map(r=>r.absolute_change),name:rel,opacity:.65,xbins:{size:1}})),{title:'Absolute rank movement; selected stocks',barmode:'overlay'});
+ plot('residual',[{type:'histogram',x:ix.flatMap(i=>v.score[i].map((s,j)=>s-target[i][j])),nbinsx:50}],{title:arm==='T2R'?'Actual transformed residual Zhat − Z':arm==='PW'?'Ordinal-score minus q (not PW optimized loss)':'Ordinal score − realized q'});
+ window.__rankViewStatus={year,model:arm,origins:ix.length,stocks:symbols,plots:24,ready:true};
+ document.body.dataset.ready='true';
+}
+$('update').onclick=update;$('year').onchange=resetDates;$('model').onchange=update;$('role').onchange=update;$('origin').onchange=update;$('full').onclick=()=>{let v=D.years[$('year').value];$('from').value=v.first;$('to').value=v.last;update();};
+resetDates();
+if(new URLSearchParams(location.search).has('qa')){
+ setTimeout(async()=>{
+ const results=[];
+ try {
+ for(const [year,arm] of [['2021','NR'],['2022','T2R'],['2023','PW'],['2024','NR']]){
+ $('year').value=year;$('model').value=arm;resetDates();
+ if(!window.__rankViewStatus.ready||window.__rankViewStatus.origins<10)throw Error('FILTER_FAILURE');
+ results.push({...window.__rankViewStatus});
+ await new Promise(r=>setTimeout(r,100));
+ }
+ $('full').click();results.push({...window.__rankViewStatus,case:'full year'});
+ $('stocks').options[1].selected=true;update();
+ if(window.__rankViewStatus.stocks.length!==2)throw Error('MULTISTOCK_FAILURE');
+ results.push({...window.__rankViewStatus,case:'two stocks'});
+ $('year').value='2021';$('model').value='PW';resetDates();
+ if(!$('status').textContent.includes('FAILED'))throw Error('FAILED_FOLD_HIDDEN');
+ results.push({case:'F21 PW failure',status:'PASS'});
+ $('model').value='LP';update();
+ if(!$('status').textContent.includes('DEFERRED'))throw Error('LP_HIDDEN');
+ results.push({case:'LP deferred',status:'PASS'});
+ $('model').value='NR';$('stocks').options[1].selected=false;resetDates();
+ const e=document.createElement('pre');e.id='qa-result';e.textContent=JSON.stringify({status:'PASS',cases:results});document.body.appendChild(e);
+ } catch(error){const e=document.createElement('pre');e.id='qa-result';e.textContent=JSON.stringify({status:'FAIL',error:String(error),cases:results});document.body.appendChild(e);}
+ },200);
+}
+</script></body></html>

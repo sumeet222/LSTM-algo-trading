@@ -1,0 +1,21 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+permitted source loaded
+source anchors passed
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_s4_preflight.py", line 459, in <module>
+    main()
+    ~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_s4_preflight.py", line 455, in main
+    run(p.parse_args().out)
+    ~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_s4_preflight.py", line 365, in run
+    verify(c, clock, returns, out)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_s4_witnesses.py", line 148, in verify
+    raise ValueError("ALL16_NATIVE_REAL_WITNESSES_REQUIRED")
+ValueError: ALL16_NATIVE_REAL_WITNESSES_REQUIRED

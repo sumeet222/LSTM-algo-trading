@@ -1,0 +1,244 @@
+{
+  "kind": "PROPOSED_S4A_EXACT_EIGHT_STARTS_NOT_AUTHORITY",
+  "execution_sha256": "a737c9219513ddbbfffb882a2e76af7708e2f3ee55a297e1b145790bc47f2a95",
+  "run_ids": [
+    "HF20-S4A-F21-H4-NR-S42",
+    "HF20-S4A-F21-H4-T2R-S42",
+    "HF20-S4A-F22-H4-NR-S42",
+    "HF20-S4A-F22-H4-T2R-S42",
+    "HF20-S4A-F23-H4-NR-S42",
+    "HF20-S4A-F23-H4-T2R-S42",
+    "HF20-S4A-F24-H4-NR-S42",
+    "HF20-S4A-F24-H4-T2R-S42"
+  ],
+  "source_audit": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2",
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "ledger_before": 106,
+  "maximum_after": 114,
+  "effective_ceiling": 200,
+  "baseline_attempts": 8,
+  "baseline_models": [
+    "N0",
+    "N1",
+    "N2",
+    "P"
+  ],
+  "optional_LR": "NOT_INCLUDED",
+  "prefix_recipes": 8,
+  "resource_caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "resources_now": {
+    "task_bytes": 229877361,
+    "project_bytes": 8569562208,
+    "peak_rss_bytes": 278478848,
+    "reserve_bytes": 0,
+    "caps": {
+      "task_bytes": 1000000000,
+      "project_bytes": 10000000000,
+      "ram_bytes": 2000000000
+    }
+  },
+  "resource_scope": "PROPOSED_S4_ONLY; prior S3 amendment not silently inherited",
+  "forecast_slots": [
+    "09:30",
+    "10:30",
+    "11:30",
+    "12:30",
+    "13:30",
+    "14:30",
+    "15:30"
+  ],
+  "normal_exits": [
+    "13:30 same",
+    "14:30 same",
+    "15:30 same",
+    "10:00 next",
+    "11:00 next",
+    "12:00 next",
+    "13:00 next"
+  ],
+  "target": {
+    "trading_minutes": 240,
+    "clock": "XNYS including closing stub, early closes/DST/holidays",
+    "issuance_lag_minutes": 2,
+    "opening_reference": "genuine first-minute OPEN; prior48 full-hour features; conditional publication proxy",
+    "endpoint": "genuine end-minus-one-minute CLOSE; never shift missing endpoint",
+    "intermediate_missing_close": "decomposition unavailable only",
+    "epsilon": "max(1e-4,0.1*median training complete20 MAD)",
+    "T2R_scale": "max(median absolute admitted training TG20,1e-6)"
+  },
+  "features": {
+    "order": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "V1",
+      "V2",
+      "V3",
+      "B1",
+      "B2",
+      "Q1",
+      "Q2",
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5"
+    ],
+    "steps": 48,
+    "channels": 16,
+    "M2": "same20/60 regular-origin-day mean/RMS;19/20,57/60,max2missing; matured strictly before each historical input session open;7 origin contexts; training floor/fallback/scaler pool equal1/7",
+    "common": "unchanged P020 formulas, native/fallback source policies; train-prefix only; no time/stock IDs"
+  },
+  "neural": {
+    "seed": 42,
+    "layers": 1,
+    "hidden": 32,
+    "dropout": 0.1,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "matrix_weight_decay": 0.01,
+    "bias_weight_decay": 0,
+    "gradient_clip": 1.0,
+    "batch_complete_sessions": 16,
+    "min_epochs": 12,
+    "max_epochs": 60,
+    "patience": 10,
+    "qualifying_absolute_IC_improvement": 0.001,
+    "selection": "strict validation daily Rank IC; raw/qualified best separately",
+    "refit": "fresh same-seed empty optimizer, exactly selected epochs",
+    "cpu_intra": 4,
+    "cpu_inter": 1,
+    "loader_workers": 0
+  },
+  "chronology": {
+    "OOS_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "earliest_training": "2011-04-01",
+    "inner": "last6calendar months before OOS with actual purged support",
+    "purge": "actual endpoint+2 maturity plus inherited conservative4h boundary and48step embargo",
+    "validation_min_sessions": 50,
+    "min_origins_per_slot": 25,
+    "defined_OOS_IC_min_fraction": 0.99
+  },
+  "gates": "historical PASS; source/clock/input PASS; prior complete numerical+visual PASS before every next start; failures permanently charged, no retry; final8individual+collective browser and diagnostic verification",
+  "prohibited": [
+    "2025 tuning",
+    "protected2026 file reads or hashes",
+    "extra starts",
+    "other seeds",
+    "S4B",
+    "new downloads",
+    "trading/backtesting",
+    "Git publication"
+  ],
+  "qualification": "private-use rights, publication timing/action vintage and retrospective survivor cohort remain conditional; price-only outcomes, not executable P&L",
+  "planning_runtime_hours": [
+    2,
+    10
+  ],
+  "evidence": [
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/HISTORICAL_PHASE_I_GATE.json",
+      "sha256": "dd367f85ec5845b5807e290860ad95ef0cab95e666a766fadf6a14e9c7d44d0c"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ZERO_STEP_WORKFLOW_REHEARSAL.json",
+      "sha256": "3d9f4f318d78ffb961f142e27b60d95f3d4b5d01fc43bcde76faf5e7bed7b360"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/untrained_visual_preview_v1/SUPPLEMENTAL_VERIFICATION.json",
+      "sha256": "d2e90ffbb53a83c43e25dc68cc38059b83207e40397510013c813b009eb047ff"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/untrained_visual_preview_v1/S4_BROWSER_QA.json",
+      "sha256": "b3998334da416d2af3b38f3e1a50833d6256ab5a8e131d8d920230ba1803b134"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/static_check_final_v2.txt",
+      "sha256": "6daa5af38c618aef749d5b20ab4fe19e8b670cd8fd9b74e8370e7bd4d23e1bb8"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/tests_final.txt",
+      "sha256": "63008e4255de0dc88e7a9af3ef7f0e98e9875b359122bd0de0f33550b149121b"
+    },
+    {
+      "path": "reports/audit/track_a_real_pairs_v21_hf20_s3.jsonl",
+      "sha256": "3d12316d08a987fea7abf6ee59498e68ce6ec6203bf53e903096e04e8d6696db"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/prior_registry_pointer.json",
+      "sha256": "53a84dacf9409d69e2c20debf8e18e853302492db5b2a1133c5e1b902396e28c"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/submitted_instruction.txt",
+      "sha256": "9cce61c1de06567682f2440513510fb76a27eee6cf4f21d5d173ec80c7ea0e92"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_SOURCE_POLICY.json",
+      "sha256": "afa1e8f94ced78a3b82f510908d44d4ea5acad16a12ef061c652561c50011c1b"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_0930_REAUDIT_DECISION.json",
+      "sha256": "f08a1a56616582cd73e6e32be5c59ca4e6c17a4c4484de69cfca873bf5262535"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv",
+      "sha256": "9d1fae7940694c0db27f532133ce268d043525029e9fe27dc2676537a3d2623b"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ORIGIN_SOURCE_ELIGIBILITY.parquet",
+      "sha256": "4c8a23ff266a8514574a2ca87324d723ec411106b08fe7b6b1e713ee7dcb73c3"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet",
+      "sha256": "a66edd638bc9cdb2c919c3ff1a81f5023eeab9bad0e0926d12e45306c8af3d51"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_FOLD_ROLE_SLOT_COUNTS.csv",
+      "sha256": "020063df4125e576c51b84dfe3c016dcd8f4125d0fae618fd94258b2503a25c1"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ARCHIVED_ALL16_TENSOR_IDENTITY.csv",
+      "sha256": "35294395c3f4bb2e340518e5020a5d188c2234ed3893b13008cfd52149c67075"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ALL16_SCALAR_SOURCE_WITNESSES.csv",
+      "sha256": "f6fde828ab99d3709ff3d2c6a9c9c65df46eac9cf63028a9f0c1a485ce194ddd"
+    }
+  ]
+}

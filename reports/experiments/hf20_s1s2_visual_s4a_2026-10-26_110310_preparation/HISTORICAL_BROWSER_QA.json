@@ -1,0 +1,94 @@
+{
+  "2021": {
+    "png": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/plots/historical_2021.png",
+    "bytes": 64992
+  },
+  "2022": {
+    "png": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/plots/historical_2022.png",
+    "bytes": 81393
+  },
+  "2023": {
+    "png": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/plots/historical_2023.png",
+    "bytes": 71327
+  },
+  "2024": {
+    "png": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/plots/historical_2024.png",
+    "bytes": 72718
+  },
+  "interactive": {
+    "status": "PASS",
+    "cases": [
+      {
+        "year": "2021",
+        "model": "NR",
+        "origins": 17,
+        "stocks": [
+          "AAPL"
+        ],
+        "plots": 24,
+        "ready": true
+      },
+      {
+        "year": "2022",
+        "model": "T2R",
+        "origins": 20,
+        "stocks": [
+          "AAPL"
+        ],
+        "plots": 24,
+        "ready": true
+      },
+      {
+        "year": "2023",
+        "model": "PW",
+        "origins": 19,
+        "stocks": [
+          "AAPL"
+        ],
+        "plots": 24,
+        "ready": true
+      },
+      {
+        "year": "2024",
+        "model": "NR",
+        "origins": 18,
+        "stocks": [
+          "AAPL"
+        ],
+        "plots": 24,
+        "ready": true
+      },
+      {
+        "year": "2024",
+        "model": "NR",
+        "origins": 308,
+        "stocks": [
+          "AAPL"
+        ],
+        "plots": 24,
+        "ready": true,
+        "case": "full year"
+      },
+      {
+        "year": "2024",
+        "model": "NR",
+        "origins": 308,
+        "stocks": [
+          "COP",
+          "AAPL"
+        ],
+        "plots": 24,
+        "ready": true,
+        "case": "two stocks"
+      },
+      {
+        "case": "F21 PW failure",
+        "status": "PASS"
+      },
+      {
+        "case": "LP deferred",
+        "status": "PASS"
+      }
+    ]
+  }
+}

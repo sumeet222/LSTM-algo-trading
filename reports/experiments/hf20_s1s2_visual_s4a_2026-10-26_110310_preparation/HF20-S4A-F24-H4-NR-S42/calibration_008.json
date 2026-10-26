@@ -1,0 +1,29 @@
+{
+  "phase": "calibration",
+  "epoch": 8,
+  "steps": 172,
+  "batches": 172,
+  "dropout_on": true,
+  "online_objective": 0.36764418600249466,
+  "ic": -0.015718730323345316,
+  "qualifies": false,
+  "selector": {
+    "best": -0.002138062726603042,
+    "selected": 7,
+    "raw_best": -0.002138062726603042,
+    "raw_epoch": 7,
+    "stale": 1
+  },
+  "inner_train_off": {
+    "actual_objective": 0.36721185417718283,
+    "daily_ic": 0.055900579742791924,
+    "dropout_on": false,
+    "origins": 14945
+  },
+  "inner_validation_off": {
+    "actual_objective": 0.37007188789738155,
+    "daily_ic": -0.015718730323345316,
+    "dropout_on": false,
+    "origins": 350
+  }
+}

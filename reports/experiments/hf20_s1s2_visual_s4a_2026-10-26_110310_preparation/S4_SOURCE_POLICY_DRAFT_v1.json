@@ -1,0 +1,30 @@
+{
+  "status": "PROPOSED_NOT_TRAINING_AUTHORITY",
+  "numeric_source_stop": "2024-12-31",
+  "calendar_only_lookahead": "2025-01-10",
+  "protected_2026_file_reads": false,
+  "horizon_trading_minutes": 240,
+  "minute_timestamp": "start; endpoint close is immediately preceding RTH minute; no substitutions",
+  "issuance_and_maturity_lag_minutes": 2,
+  "candidate_origins_et": [
+    "09:30",
+    "10:30",
+    "11:30",
+    "12:30",
+    "13:30",
+    "14:30",
+    "15:30"
+  ],
+  "open_rule": "Conditional only if genuine opening reference has source publication available by09:32; else exclude09:30 automatically",
+  "six_full_hour_origins": "10:30 through15:30, only when completed full hour exists on authoritative actual session",
+  "true_close_rule": "Genuine final-minute close, including30minute stub; missing intermediate close invalidates only component decomposition",
+  "M2": "Preserve session-start lock, previous20/60 regular origin-day slots without compression; same-context240trading-minute returns only if endpoint+2min precedes current historical input-session open. Late immature slots remain missing under original19/20,57/60,max2gap rules. Original morning contexts must match unchanged. Expanded-context phase fitting requires explicit card and no current fitting.",
+  "M2_pooling_proposed": "Equal weight per admitted context; replaces two-context50:50 with six-context1/6 only in new S4 recipe, subject to consolidated approval",
+  "population": "Input eligibility before labels; preserve48 full-hour close cap5, structural126 regular sessions/360 genuine hours and COPbasis dependency. All20 genuine start/end prices on compatible basis; no price-based ranking selection",
+  "validation_min_sessions": 50,
+  "validation_min_origins_each_admitted_slot": 25,
+  "primary_weights": "equalstock/equaloriginpersession/equalsession/equalyear",
+  "secondary_weights": "equalintraday/overnight categories",
+  "new_fits": 0,
+  "neural_starts": 0
+}

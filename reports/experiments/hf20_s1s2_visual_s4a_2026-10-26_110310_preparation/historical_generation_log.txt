@@ -1,0 +1,34 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_rank_visuals.py", line 415, in <module>
+    main()
+    ~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_rank_visuals.py", line 411, in main
+    historical(args.out)
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_rank_visuals.py", line 351, in historical
+    (plots / "historical_s1_s2_rankings.html").write_text(page(payload, get_plotlyjs()))
+                                                          ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_rank_visual_html.py", line 9, in page
+    data = json.dumps(payload, separators=(",", ":"), allow_nan=False).replace("</", "<\\/")
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Timestamp is not JSON serializable
+when serializing list item 0
+when serializing dict item 'exits'
+when serializing dict item '2021|N0'
+when serializing dict item 'data'

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "script": "scripts/summarize_hf20_s4.py",
+  "script_sha256": "aff0de4ffc73a83d709f4c6c3beee5e0fbf4eab842cecfd6fc352e524028b0e0",
+  "neural_lifecycles": 8,
+  "annual_model_control_rows": 24,
+  "finite_primary_annual_ic_reconciliations": 20,
+  "role_numerator_mad_partition_reconciliations": 32,
+  "bootstrap_oracles": [
+    "unequal-session-count equal-year constant oracle",
+    "incomplete-year guard",
+    "undefined-IC guard"
+  ],
+  "fits": 0,
+  "optimizer_updates": 0,
+  "source_reads": 0,
+  "protected_reads": 0,
+  "warning": "Arrow sandbox sysctl capability-probe warnings; summary completed successfully"
+}

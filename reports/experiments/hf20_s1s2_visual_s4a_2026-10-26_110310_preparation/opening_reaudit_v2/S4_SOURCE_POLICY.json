@@ -1,0 +1,32 @@
+{
+  "status": "PROPOSED_WITH_USER_OPENING_REAUDIT_INSTRUCTION",
+  "numeric_source_stop": "2024-12-31",
+  "calendar_only_lookahead": "2025-01-10",
+  "protected_2026_file_reads": false,
+  "horizon_trading_minutes": 240,
+  "minute_timestamp": "start; endpoint close is immediately preceding RTH minute; no substitutions",
+  "issuance_and_maturity_lag_minutes": 2,
+  "candidate_origins_et": [
+    "09:30",
+    "10:30",
+    "11:30",
+    "12:30",
+    "13:30",
+    "14:30",
+    "15:30"
+  ],
+  "open_rule": "Use genuinely observed09:30 minute OPEN as09:30 price reference; bar09:30\u201309:31 completed before09:32 issue. Publication by09:32 is a disclosed timing proxy, not measured fact. Use only48 previously completed full-hour inputs; never current unfinished hour.",
+  "six_full_hour_origins": "10:30 through15:30, only when completed full hour exists on authoritative actual session",
+  "true_close_rule": "Genuine final-minute close, including30minute stub; missing intermediate close invalidates only component decomposition",
+  "M2": "Preserve session-start lock, previous20/60 regular origin-day slots without compression; same-context240trading-minute returns only if endpoint+2min precedes current historical input-session open. Late immature slots remain missing under original19/20,57/60,max2gap rules. Original morning contexts must match unchanged. Expanded-context phase fitting requires explicit card and no current fitting.",
+  "M2_pooling_proposed": "Seven matched-origin contexts equally weighted1/7; original morning contexts stay identical. Opening context is09:30 OPEN\u219213:30 CLOSE, session-start maturity lock at every historical input step.",
+  "population": "Input eligibility before labels; preserve48 full-hour close cap5, structural126 regular sessions/360 genuine hours and COPbasis dependency. All20 genuine start/end prices on compatible basis; no price-based ranking selection",
+  "validation_min_sessions": 50,
+  "validation_min_origins_each_admitted_slot": 25,
+  "primary_weights": "equalstock/equaloriginpersession/equalsession/equalyear",
+  "secondary_weights": "equalintraday/overnight categories",
+  "new_fits": 0,
+  "neural_starts": 0,
+  "opening_semantics": "Source-canonical minute starts. Do not substitute09:31 close or shift13:30 endpoint.",
+  "source_policy_predecessor_sha256": "2ddd9335a61214cdb978514028a08577d25d67e58606f2275945d596cfa36875"
+}

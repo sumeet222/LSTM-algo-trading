@@ -1,0 +1,33 @@
+{
+  "status": "INCLUDE_0930_UNDER_DISCLOSED_TIMING_PROXY",
+  "daily_origins_on_regular_session": 7,
+  "starts_before_audit": 0,
+  "ledger": 106,
+  "all20_stock_coverage": true,
+  "opening_price_panels": 3062,
+  "eligible_opening_origins": 2101,
+  "minute_timestamp": "START:09:30 represents09:30\u201309:31",
+  "target_entry": "Genuine09:30 minute OPEN; not09:31 close, not certified auction",
+  "target_exit": "Genuine13:29 minute CLOSE at13:30 on normal sessions",
+  "publication_latency_verified": false,
+  "missing_data_distinguished": true,
+  "issuance": "09:32 assumed under existing origin+2 price-only proxy",
+  "features": "48 previously completed full-hour steps; no current09:30\u201310:30 data",
+  "early_close": "Exact240trading-minute calendar; may cross into following session",
+  "source_documents": [
+    {
+      "path": "reports/data_audit/ta018_hf20_1m_2026-10-22_134833/dataset_card_snapshot.md",
+      "sha256": "c89d95f74ee8a5281b2c3390e317fc3e3c69f6a16a2be468b82a8d93f2356fda"
+    },
+    {
+      "path": "reports/data_audit/ta019b_action_qa_2026-10-22_201224/P019B_QUARANTINE_POLICY_AND_COVERAGE.md",
+      "sha256": "a7f114e4ab1d7e71b59a68d3617e8ed7d2b71332f61d4a4491569168786f4d1b"
+    },
+    {
+      "path": "reports/data_audit/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/P020_TARGET_TG20_AND_CLOCK_AUDIT.md",
+      "sha256": "23b3a296b6e9c4eb69c9231b79170b81936b60ca298845536683ee0e3bfe266e"
+    }
+  ],
+  "previous_six_origin_draft_preserved": true,
+  "new_training": false
+}

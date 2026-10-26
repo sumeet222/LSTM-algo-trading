@@ -1,0 +1,124 @@
+"""Proposed S4 prefix recipe: original formulas, six equally weighted M2 contexts."""
+
+from __future__ import annotations
+
+import numpy as np
+
+from .hf1m_action_audit import SYMBOLS
+from .hf1m_ft16_fit import native, positive_floor, quantile, robust
+from .hf1m_ft16_math import Components
+from .hf1m_ft16_source import BOUNDED, COMMON
+
+
+def fit_expanded(c: Components, fit_hours: np.ndarray, stop: str, *, approved: bool = False) -> tuple[dict, dict[str, np.ndarray]]:
+    """Prefix membership uses input availability only, never future return values."""
+    if not approved:
+        raise ValueError("S4_LIVE_AUTHORITY_REQUIRED_BEFORE_RECIPE_FIT")
+    if not fit_hours.any() or (c.grid.loc[fit_hours, "session_date_et"] > stop).any():
+        raise ValueError("TRAIN_FIT_PREFIX_REQUIRED")
+    daily_fit = (c.regular_days >= "2011-04-01") & (c.regular_days <= stop)
+    unique_day = c.grid.loc[fit_hours].drop_duplicates("session_date_et").index.to_numpy(dtype=int)
+    floors = []
+    for j, symbol in enumerate(SYMBOLS):
+        regimes = {}
+        for regime in sorted(set(c.hourly_volume_basis[fit_hours, j])):
+            hv = c.source["volume_for_feature"][
+                fit_hours & (c.hourly_volume_basis[:, j] == regime), j
+            ]
+            dv = c.daily_volume[daily_fit & (c.daily_basis[:, j] == regime), j]
+            hv = hv[np.isfinite(hv) & (hv > 0)]
+            dv = dv[np.isfinite(dv) & (dv > 0)]
+            # Missing entire training regime population stays missing, not a borrowed share unit.
+            if len(hv) and len(dv):
+                regimes[regime] = {
+                    "hour": 0.01 * float(np.median(hv)),
+                    "day": 0.01 * float(np.median(dv)),
+                    "hour_n": len(hv),
+                    "day_n": len(dv),
+                }
+        positive = c.m2_rms[unique_day, j, :]
+        vals = []
+        weights = []
+        for o in range(6):
+            x = positive[:, o]
+            x = x[np.isfinite(x) & (x > 0)]
+            if not len(x):
+                raise ValueError("ALL_SIX_M2_CONTEXTS_REQUIRED")
+            vals.append(x)
+            weights.append(np.full(len(x), (1 / 6) / len(x)))
+        floors.append(
+            {
+                "symbol": symbol,
+                "hourly_floor": positive_floor(
+                    np.concatenate(
+                        [c.values["RMS12"][fit_hours, j], c.values["RMS60"][fit_hours, j]]
+                    )
+                ),
+                "daily_floor": positive_floor(c.values["RMS63"][unique_day, j]),
+                "m2_floor": quantile(np.concatenate(vals), 0.05, np.concatenate(weights)),
+                "volume_pseudocounts": regimes,
+            }
+        )
+    raw, m2 = native(c, floors)
+    scaled = raw.copy()
+    imputed = ~np.isfinite(raw)
+    m2imputed = ~np.isfinite(m2)
+    scalers = {}
+    fallbacks = {}
+    for k, name in enumerate(COMMON):
+        x = raw[fit_hours, :, k]
+        x = x[np.isfinite(x)]
+        if not len(x):
+            raise ValueError("STOP_FEATURE_UNSAFE: no native training population " + name)
+        p = robust(x)
+        fallbacks[name] = 0.0 if name in BOUNDED else p["center"]
+        filled = np.where(np.isfinite(raw[:, :, k]), raw[:, :, k], fallbacks[name])
+        if name in BOUNDED:
+            scalers[name] = {"center": 0.0, "scale": 1.0, "method": "BOUNDED_IDENTITY", "n": len(x)}
+            scaled[:, :, k] = filled
+        else:
+            scalers[name] = p
+            scaled[:, :, k] = (filled - p["center"]) / p["scale"]
+    vals = []
+    weights = []
+    for o in range(6):
+        x = m2[unique_day, :, o]
+        x = x[np.isfinite(x)]
+        if not len(x):
+            raise ValueError("M2_TRAIN_POPULATION_REQUIRED")
+        vals.append(x)
+        weights.append(np.full(len(x), (1 / 6) / len(x)))
+    p = robust(np.concatenate(vals), np.concatenate(weights))
+    scalers["M2"] = p
+    fallbacks["M2"] = p["center"]
+    filled = np.where(np.isfinite(m2), m2, p["center"])
+    scaled_m2 = (filled - p["center"]) / p["scale"]
+    arrays = {
+        "native_common": raw,
+        "native_m2": m2,
+        "scaled_common": scaled.astype(np.float32),
+        "scaled_m2": scaled_m2.astype(np.float32),
+        "fallback_common": imputed,
+        "fallback_m2": m2imputed,
+    }
+    if not np.isfinite(arrays["scaled_common"]).all() or not np.isfinite(arrays["scaled_m2"]).all():
+        raise ValueError("STOP_FEATURE_UNSAFE: nonfinite float32")
+    recipe = {
+        "fit_start": "2011-04-01",
+        "fit_stop_inclusive": stop,
+        "floors": floors,
+        "scalers": scalers,
+        "fallbacks": fallbacks,
+        "unique_hour_timestamps": int(fit_hours.sum()),
+        "unique_hour_stock_rows": int(fit_hours.sum()) * 20,
+        "unique_m2_day_timestamps": len(unique_day),
+        "fit_hour_indices": np.flatnonzero(fit_hours).tolist(),
+        "fit_population": (
+            "union of scheduled history keys in input-only eligible training origins, "
+            "prefix-clipped; no window multiplicity; no development; M2 stock/day/context equal1/6"
+        ),
+        "model_trained": False,
+        "clipping": False,
+    }
+    return recipe, arrays
+
