@@ -1,0 +1,95 @@
+{
+  "status": "PASS_SOURCE_AND_FOUR_UNTRAINED_WORKFLOWS",
+  "results": [
+    {
+      "arm": "META-T2R",
+      "status": "PASS_UNTRAINED_WORKFLOW",
+      "roles": 4,
+      "batches": 2,
+      "optimizer_step_calls": 0,
+      "starts": 0,
+      "prefix_fits": 0,
+      "baseline_fits": 0,
+      "input_dim": 22,
+      "initial_sha256": "fa7c481e1e6a397249982e372e32f70a58dd9eac7b50699c0893ff0b268e9d1a"
+    },
+    {
+      "arm": "MAG",
+      "status": "PASS_UNTRAINED_WORKFLOW",
+      "roles": 4,
+      "batches": 2,
+      "optimizer_step_calls": 0,
+      "starts": 0,
+      "prefix_fits": 0,
+      "baseline_fits": 0,
+      "input_dim": 16,
+      "initial_sha256": "1e6f1b81ccd0286b5da1eb7c47ffff1702ae8b677f34c2058f7538417bc928bc"
+    },
+    {
+      "arm": "EVENT",
+      "status": "PASS_UNTRAINED_WORKFLOW",
+      "roles": 4,
+      "batches": 2,
+      "optimizer_step_calls": 0,
+      "starts": 0,
+      "prefix_fits": 0,
+      "baseline_fits": 0,
+      "input_dim": 16,
+      "initial_sha256": "d3a266e729121a79e465cd45fa6317c474bb73609737e2082688899671cdefea"
+    },
+    {
+      "arm": "QUANTILE",
+      "status": "PASS_UNTRAINED_WORKFLOW",
+      "roles": 4,
+      "batches": 2,
+      "optimizer_step_calls": 0,
+      "starts": 0,
+      "prefix_fits": 0,
+      "baseline_fits": 0,
+      "input_dim": 16,
+      "initial_sha256": "d3a266e729121a79e465cd45fa6317c474bb73609737e2082688899671cdefea"
+    }
+  ],
+  "metadata_fields": [
+    "step_sin",
+    "step_cos",
+    "session_boundary",
+    "elapsed_scheduled_wall",
+    "origin_sin",
+    "origin_cos"
+  ],
+  "run_ids": [
+    "HF20-S5-F21-H4-META-T2R-S42",
+    "HF20-S5-F22-H4-META-T2R-S42",
+    "HF20-S5-F23-H4-META-T2R-S42",
+    "HF20-S5-F24-H4-META-T2R-S42",
+    "HF20-S9-F21-H4-MAG-S42",
+    "HF20-S9-F22-H4-MAG-S42",
+    "HF20-S9-F23-H4-MAG-S42",
+    "HF20-S9-F24-H4-MAG-S42",
+    "HF20-S9-F21-H4-EVENT-S42",
+    "HF20-S9-F22-H4-EVENT-S42",
+    "HF20-S9-F23-H4-EVENT-S42",
+    "HF20-S9-F24-H4-EVENT-S42",
+    "HF20-S9-F21-H4-QUANTILE-S42",
+    "HF20-S9-F22-H4-QUANTILE-S42",
+    "HF20-S9-F23-H4-QUANTILE-S42",
+    "HF20-S9-F24-H4-QUANTILE-S42"
+  ],
+  "ledger": 114,
+  "neural_starts": 0,
+  "target_or_baseline_fits": 0,
+  "protected_reads_or_hashes": 0,
+  "seconds": 261.58817125001224,
+  "resources": {
+    "task_bytes": 8683032,
+    "project_bytes": 10068626196,
+    "peak_rss_bytes": 991854592,
+    "reserve_bytes": 0,
+    "caps": {
+      "task_bytes": 2500000000,
+      "project_bytes": 15000000000,
+      "ram_bytes": 2000000000
+    }
+  }
+}

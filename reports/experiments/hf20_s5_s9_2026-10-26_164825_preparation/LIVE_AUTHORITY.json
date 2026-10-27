@@ -1,0 +1,36 @@
+{
+  "kind": "ACTUAL_DIRECT_USER_RESPONSE",
+  "approved": true,
+  "recorded_at": "2026-10-26T18:01:01.573213-04:00",
+  "question_item_id": "[\"request_user_input_async\",\"call_d280f3390c9b410680aacfc8cc225f08\",0]",
+  "exact_response": "Approve this exact S5 + S9 campaign and caps",
+  "proposal_sha256": "74f15becfc412697db87a837f625efadcdffb302ccd28fea34b7cc95290ac632",
+  "execution_sha256": "e19fc1da419d6456d16a7dec7777bc7e1400b2d0412be65ba116906d01cfd73e",
+  "run_ids": [
+    "HF20-S5-F21-H4-META-T2R-S42",
+    "HF20-S5-F22-H4-META-T2R-S42",
+    "HF20-S5-F23-H4-META-T2R-S42",
+    "HF20-S5-F24-H4-META-T2R-S42",
+    "HF20-S9-F21-H4-MAG-S42",
+    "HF20-S9-F22-H4-MAG-S42",
+    "HF20-S9-F23-H4-MAG-S42",
+    "HF20-S9-F24-H4-MAG-S42",
+    "HF20-S9-F21-H4-EVENT-S42",
+    "HF20-S9-F22-H4-EVENT-S42",
+    "HF20-S9-F23-H4-EVENT-S42",
+    "HF20-S9-F24-H4-EVENT-S42",
+    "HF20-S9-F21-H4-QUANTILE-S42",
+    "HF20-S9-F22-H4-QUANTILE-S42",
+    "HF20-S9-F23-H4-QUANTILE-S42",
+    "HF20-S9-F24-H4-QUANTILE-S42"
+  ],
+  "neural_starts": 16,
+  "baseline_attempts": 64,
+  "prefix_recipes": 32,
+  "resource_caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "scope": "Exact sealed S5 F21\u2013F24 then MAG, EVENT, QUANTILE F21\u2013F24; seed42; original stage gates; no retries/extra experiments/protected2026 contents or hashes/new2025 tuning/downloads/trading/Git publication; existing bounded private-use/source/clock qualifications persist"
+}

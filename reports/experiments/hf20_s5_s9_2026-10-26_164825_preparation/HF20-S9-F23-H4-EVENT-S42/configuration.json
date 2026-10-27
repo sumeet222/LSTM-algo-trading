@@ -1,0 +1,26 @@
+{
+  "arm": "EVENT",
+  "seed": 42,
+  "input_dim": 16,
+  "hidden": 32,
+  "layers": 1,
+  "dropout": 0.1,
+  "head_outputs": 3,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "epsilon": 1e-08,
+  "weight_decay_matrices": 0.01,
+  "weight_decay_bias": 0,
+  "gradient_cap": 1.0,
+  "session_batch": 16,
+  "min_epochs": 12,
+  "max_epochs": 60,
+  "patience": 10,
+  "selection": "proper loss <= .999*best",
+  "initial_sha256": "d3a266e729121a79e465cd45fa6317c474bb73609737e2082688899671cdefea",
+  "execution_sha256": "e19fc1da419d6456d16a7dec7777bc7e1400b2d0412be65ba116906d01cfd73e"
+}

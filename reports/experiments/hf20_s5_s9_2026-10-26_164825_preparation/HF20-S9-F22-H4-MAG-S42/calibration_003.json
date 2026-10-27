@@ -1,0 +1,26 @@
+{
+  "phase": "calibration",
+  "epoch": 3,
+  "steps": 146,
+  "batches": 146,
+  "dropout_on": true,
+  "online_objective": 0.23290785344845744,
+  "inner_train_off": {
+    "actual_objective": 0.22559462802544025,
+    "dropout_on": false
+  },
+  "inner_validation_off": {
+    "actual_objective": 0.23837448475288525,
+    "dropout_on": false
+  },
+  "qualifies": true,
+  "selector": {
+    "epoch": 3,
+    "selected": 3,
+    "best": 0.23837448475288525,
+    "raw_best": 0.23837448475288525,
+    "raw_epoch": 3,
+    "patience": 0,
+    "status": "CALIBRATING"
+  }
+}

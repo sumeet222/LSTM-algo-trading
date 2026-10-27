@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "rehearsal": true,
+  "views": [
+    {
+      "run": "EVENT",
+      "png": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/plots/EVENT.png",
+      "bytes": 135978
+    },
+    {
+      "run": "MAG",
+      "png": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/plots/MAG.png",
+      "bytes": 145735
+    },
+    {
+      "run": "META-T2R",
+      "png": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/plots/META-T2R.png",
+      "bytes": 126271
+    },
+    {
+      "run": "QUANTILE",
+      "png": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/plots/QUANTILE.png",
+      "bytes": 136634
+    }
+  ],
+  "interactive": {
+    "status": "PASS",
+    "cases": [
+      {
+        "run": "EVENT",
+        "role": "oos",
+        "rows": 100,
+        "status": "PASS"
+      },
+      {
+        "run": "EVENT",
+        "role": "inner_train",
+        "rows": 200,
+        "status": "PASS"
+      },
+      {
+        "run": "EVENT",
+        "role": "inner_validation",
+        "rows": 160,
+        "status": "PASS"
+      },
+      {
+        "run": "EVENT",
+        "role": "refit",
+        "rows": 200,
+        "status": "PASS"
+      },
+      {
+        "run": "MAG",
+        "role": "oos",
+        "rows": 100,
+        "status": "PASS"
+      },
+      {
+        "run": "MAG",
+        "role": "inner_train",
+        "rows": 200,
+        "status": "PASS"
+      },
+      {
+        "run": "MAG",
+        "role": "inner_validation",
+        "rows": 160,
+        "status": "PASS"
+      },
+      {
+        "run": "MAG",
+        "role": "refit",
+        "rows": 200,
+        "status": "PASS"
+      },
+      {
+        "run": "META-T2R",
+        "role": "oos",
+        "rows": 100,
+        "status": "PASS"
+      },
+      {
+        "run": "META-T2R",
+        "role": "inner_train",
+        "rows": 200,
+        "status": "PASS"
+      },
+      {
+        "run": "META-T2R",
+        "role": "inner_validation",
+        "rows": 160,
+        "status": "PASS"
+      },
+      {
+        "run": "META-T2R",
+        "role": "refit",
+        "rows": 200,
+        "status": "PASS"
+      },
+      {
+        "run": "QUANTILE",
+        "role": "oos",
+        "rows": 100,
+        "status": "PASS"
+      },
+      {
+        "run": "QUANTILE",
+        "role": "inner_train",
+        "rows": 200,
+        "status": "PASS"
+      },
+      {
+        "run": "QUANTILE",
+        "role": "inner_validation",
+        "rows": 160,
+        "status": "PASS"
+      },
+      {
+        "run": "QUANTILE",
+        "role": "refit",
+        "rows": 200,
+        "status": "PASS"
+      }
+    ]
+  }
+}

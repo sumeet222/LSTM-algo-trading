@@ -1,0 +1,1 @@
+The separately named HF20_S4A_Revised_Codex_Prompt_S1_S2_Visuals_8_Neural_Starts_2026-10-26.md was not found by name. The actual executed S4 submitted_instruction.txt is present, read and hashed in REFERENCE_IDENTITIES.csv; it is authoritative for the earlier package. No content is invented.

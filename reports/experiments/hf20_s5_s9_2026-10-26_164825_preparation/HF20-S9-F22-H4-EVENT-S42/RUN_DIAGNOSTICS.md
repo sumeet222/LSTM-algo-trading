@@ -1,0 +1,338 @@
+# HF20-S9-F22-H4-EVENT-S42
+
+TECHNICAL_PASS. All four roles verified; OOS remains exploratory.
+
+| role | model | arm | rows | origins | sessions | optimized_loss | prevalence | ANY_AP | ANY_AUC | ANY_Brier | ANY_log_loss | precision_at_half | recall_at_half | year |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| inner_train | GLOBAL | EVENT | 254320 | 12716 | 2331 | 0.2340951 | 0.0502909 | 0.0502909 | 0.5 | 0.04776173 | 0.1993709 | nan | 0 | 2022 |
+| inner_validation | GLOBAL | EVENT | 9140 | 457 | 92 | 0.2186774 | 0.04607531 | 0.04607531 | 0.5 | 0.04397015 | 0.1869841 | nan | 0 | 2022 |
+| inner_train | STOCK | EVENT | 254320 | 12716 | 2331 | 0.204465 | 0.0502909 | 0.1671367 | 0.7832974 | 0.04377187 | 0.1698297 | nan | 0 | 2022 |
+| inner_validation | STOCK | EVENT | 9140 | 457 | 92 | 0.1903749 | 0.04607531 | 0.1770158 | 0.7701221 | 0.03976319 | 0.1583875 | nan | 0 | 2022 |
+| inner_train | VOL | EVENT | 254320 | 12716 | 2331 | 0.2172049 | 0.0502909 | 0.1007898 | 0.7213363 | 0.04598845 | 0.1825054 | nan | 0 | 2022 |
+| inner_validation | VOL | EVENT | 9140 | 457 | 92 | 0.2026855 | 0.04607531 | 0.09355631 | 0.7323272 | 0.0424188 | 0.1709433 | nan | 0 | 2022 |
+| inner_train | NEURAL | EVENT | 254320 | 12716 | 2331 | 0.1972837 | 0.0502909 | 0.2556628 | 0.8110996 | 0.04226906 | 0.1633349 | 0.6504515 | 0.0194584 | 2022 |
+| inner_validation | NEURAL | EVENT | 9140 | 457 | 92 | 0.1826435 | 0.04607531 | 0.2553223 | 0.8163712 | 0.03845644 | 0.1506619 | 0 | 0 | 2022 |
+| refit | GLOBAL | EVENT | 263460 | 13173 | 2423 | 0.2339691 | 0.05025775 | 0.05025775 | 0.5 | 0.04773191 | 0.1992735 | nan | 0 | 2022 |
+| oos | GLOBAL | EVENT | 23600 | 1180 | 210 | 0.2176249 | 0.04566383 | 0.04566383 | 0.5 | 0.04359975 | 0.1857718 | nan | 0 | 2022 |
+| refit | STOCK | EVENT | 263460 | 13173 | 2423 | 0.2043268 | 0.05025775 | 0.1676481 | 0.7827803 | 0.0437185 | 0.1697094 | nan | 0 | 2022 |
+| oos | STOCK | EVENT | 23600 | 1180 | 210 | 0.1980734 | 0.04566383 | 0.1221569 | 0.7374798 | 0.04138232 | 0.1662495 | nan | 0 | 2022 |
+| refit | VOL | EVENT | 263460 | 13173 | 2423 | 0.2170824 | 0.05025775 | 0.1007986 | 0.721454 | 0.04595789 | 0.1824086 | nan | 0 | 2022 |
+| oos | VOL | EVENT | 23600 | 1180 | 210 | 0.2182764 | 0.04566383 | 0.06793691 | 0.660618 | 0.04438913 | 0.1864298 | nan | 0 | 2022 |
+| refit | NEURAL | EVENT | 263460 | 13173 | 2423 | 0.1973485 | 0.05025775 | 0.2525371 | 0.8111938 | 0.04228327 | 0.1633168 | 0.6614274 | 0.02130988 | 2022 |
+| oos | NEURAL | EVENT | 23600 | 1180 | 210 | 0.2101632 | 0.04566383 | 0.1105305 | 0.7530963 | 0.04410276 | 0.1781868 | 0 | 0 | 2022 |
+
+
+| role | reference | group | metric | mean | low | high | sessions | months |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| inner_train | GLOBAL | ALL | proper_loss | -0.03681145 | -0.03980994 | -0.03356725 | 2331 | 118 |
+| inner_train | GLOBAL | ALL | ANY_Brier | -0.005492671 | -0.006117916 | -0.004807613 | 2331 | 118 |
+| inner_train | GLOBAL | ALL | ANY_log_loss | -0.03603604 | -0.03903543 | -0.03270789 | 2331 | 118 |
+| inner_validation | GLOBAL | ALL | proper_loss | -0.03603383 | -0.04672497 | -0.02380884 | 92 | 6 |
+| inner_validation | GLOBAL | ALL | ANY_Brier | -0.005513703 | -0.007539656 | -0.003352508 | 92 | 6 |
+| inner_validation | GLOBAL | ALL | ANY_log_loss | -0.0363222 | -0.04667782 | -0.02414439 | 92 | 6 |
+| inner_train | STOCK | ALL | proper_loss | -0.007181353 | -0.00911836 | -0.005292163 | 2331 | 118 |
+| inner_train | STOCK | ALL | ANY_Brier | -0.001502812 | -0.001874301 | -0.001098879 | 2331 | 118 |
+| inner_train | STOCK | ALL | ANY_log_loss | -0.006494829 | -0.008365615 | -0.004762839 | 2331 | 118 |
+| inner_validation | STOCK | ALL | proper_loss | -0.007731344 | -0.01336611 | 0.0001140733 | 92 | 6 |
+| inner_validation | STOCK | ALL | ANY_Brier | -0.001306747 | -0.002234925 | -0.0002640795 | 92 | 6 |
+| inner_validation | STOCK | ALL | ANY_log_loss | -0.007725603 | -0.01357359 | 0.0001125756 | 92 | 6 |
+| inner_train | VOL | ALL | proper_loss | -0.01992122 | -0.02190274 | -0.01789562 | 2331 | 118 |
+| inner_train | VOL | ALL | ANY_Brier | -0.003719398 | -0.004178295 | -0.003230083 | 2331 | 118 |
+| inner_train | VOL | ALL | ANY_log_loss | -0.01917056 | -0.02104716 | -0.01722584 | 2331 | 118 |
+| inner_validation | VOL | ALL | proper_loss | -0.02004194 | -0.02955489 | -0.01009404 | 92 | 6 |
+| inner_validation | VOL | ALL | ANY_Brier | -0.003962358 | -0.005622452 | -0.002185884 | 92 | 6 |
+| inner_validation | VOL | ALL | ANY_log_loss | -0.02028139 | -0.02991529 | -0.01034092 | 92 | 6 |
+| refit | GLOBAL | ALL | proper_loss | -0.03662066 | -0.03983993 | -0.03347735 | 2423 | 124 |
+| refit | GLOBAL | ALL | ANY_Brier | -0.005448632 | -0.006120852 | -0.004773914 | 2423 | 124 |
+| refit | GLOBAL | ALL | ANY_log_loss | -0.0359567 | -0.03904691 | -0.03284528 | 2423 | 124 |
+| oos | GLOBAL | ALL | proper_loss | -0.007461689 | -0.01485161 | -0.0001276498 | 210 | 12 |
+| oos | GLOBAL | ALL | ANY_Brier | 0.0005030133 | -0.0008996646 | 0.002014302 | 210 | 12 |
+| oos | GLOBAL | ALL | ANY_log_loss | -0.007584986 | -0.01518263 | 5.451832e-05 | 210 | 12 |
+| refit | STOCK | ALL | proper_loss | -0.006978311 | -0.008883789 | -0.005441426 | 2423 | 124 |
+| refit | STOCK | ALL | ANY_Brier | -0.001435224 | -0.00175721 | -0.001089534 | 2423 | 124 |
+| refit | STOCK | ALL | ANY_log_loss | -0.006392605 | -0.008193657 | -0.004895335 | 2423 | 124 |
+| oos | STOCK | ALL | proper_loss | 0.01208977 | 0.007107054 | 0.01824695 | 210 | 12 |
+| oos | STOCK | ALL | ANY_Brier | 0.002720449 | 0.001729689 | 0.00386 | 210 | 12 |
+| oos | STOCK | ALL | ANY_log_loss | 0.01193733 | 0.006954037 | 0.01836863 | 210 | 12 |
+| refit | VOL | ALL | proper_loss | -0.01973393 | -0.02164617 | -0.01768182 | 2423 | 124 |
+| refit | VOL | ALL | ANY_Brier | -0.003674615 | -0.004177483 | -0.003210018 | 2423 | 124 |
+| refit | VOL | ALL | ANY_log_loss | -0.01909186 | -0.02103009 | -0.01705811 | 2423 | 124 |
+| oos | VOL | ALL | proper_loss | -0.008113194 | -0.01094893 | -0.004889031 | 210 | 12 |
+| oos | VOL | ALL | ANY_Brier | -0.0002863618 | -0.0009227424 | 0.0003379756 | 210 | 12 |
+| oos | VOL | ALL | ANY_log_loss | -0.008242932 | -0.01113367 | -0.004873374 | 210 | 12 |
+
+
+All diagnostic files:
+
+- [calibration_001.json](calibration_001.json)
+- [calibration_001.pt](calibration_001.pt)
+- [calibration_001_batches.csv](calibration_001_batches.csv)
+- [calibration_001_gradients.csv](calibration_001_gradients.csv)
+- [calibration_002.json](calibration_002.json)
+- [calibration_002.pt](calibration_002.pt)
+- [calibration_002_batches.csv](calibration_002_batches.csv)
+- [calibration_002_gradients.csv](calibration_002_gradients.csv)
+- [calibration_003.json](calibration_003.json)
+- [calibration_003.pt](calibration_003.pt)
+- [calibration_003_batches.csv](calibration_003_batches.csv)
+- [calibration_003_gradients.csv](calibration_003_gradients.csv)
+- [calibration_004.json](calibration_004.json)
+- [calibration_004.pt](calibration_004.pt)
+- [calibration_004_batches.csv](calibration_004_batches.csv)
+- [calibration_004_gradients.csv](calibration_004_gradients.csv)
+- [calibration_005.json](calibration_005.json)
+- [calibration_005.pt](calibration_005.pt)
+- [calibration_005_batches.csv](calibration_005_batches.csv)
+- [calibration_005_gradients.csv](calibration_005_gradients.csv)
+- [calibration_006.json](calibration_006.json)
+- [calibration_006.pt](calibration_006.pt)
+- [calibration_006_batches.csv](calibration_006_batches.csv)
+- [calibration_006_gradients.csv](calibration_006_gradients.csv)
+- [calibration_007.json](calibration_007.json)
+- [calibration_007.pt](calibration_007.pt)
+- [calibration_007_batches.csv](calibration_007_batches.csv)
+- [calibration_007_gradients.csv](calibration_007_gradients.csv)
+- [calibration_008.json](calibration_008.json)
+- [calibration_008.pt](calibration_008.pt)
+- [calibration_008_batches.csv](calibration_008_batches.csv)
+- [calibration_008_gradients.csv](calibration_008_gradients.csv)
+- [calibration_009.json](calibration_009.json)
+- [calibration_009.pt](calibration_009.pt)
+- [calibration_009_batches.csv](calibration_009_batches.csv)
+- [calibration_009_gradients.csv](calibration_009_gradients.csv)
+- [calibration_010.json](calibration_010.json)
+- [calibration_010.pt](calibration_010.pt)
+- [calibration_010_batches.csv](calibration_010_batches.csv)
+- [calibration_010_gradients.csv](calibration_010_gradients.csv)
+- [calibration_011.json](calibration_011.json)
+- [calibration_011.pt](calibration_011.pt)
+- [calibration_011_batches.csv](calibration_011_batches.csv)
+- [calibration_011_gradients.csv](calibration_011_gradients.csv)
+- [calibration_012.json](calibration_012.json)
+- [calibration_012.pt](calibration_012.pt)
+- [calibration_012_batches.csv](calibration_012_batches.csv)
+- [calibration_012_gradients.csv](calibration_012_gradients.csv)
+- [calibration_013.json](calibration_013.json)
+- [calibration_013.pt](calibration_013.pt)
+- [calibration_013_batches.csv](calibration_013_batches.csv)
+- [calibration_013_gradients.csv](calibration_013_gradients.csv)
+- [calibration_014.json](calibration_014.json)
+- [calibration_014.pt](calibration_014.pt)
+- [calibration_014_batches.csv](calibration_014_batches.csv)
+- [calibration_014_gradients.csv](calibration_014_gradients.csv)
+- [calibration_015.json](calibration_015.json)
+- [calibration_015.pt](calibration_015.pt)
+- [calibration_015_batches.csv](calibration_015_batches.csv)
+- [calibration_015_gradients.csv](calibration_015_gradients.csv)
+- [calibration_016.json](calibration_016.json)
+- [calibration_016.pt](calibration_016.pt)
+- [calibration_016_batches.csv](calibration_016_batches.csv)
+- [calibration_016_gradients.csv](calibration_016_gradients.csv)
+- [calibration_017.json](calibration_017.json)
+- [calibration_017.pt](calibration_017.pt)
+- [calibration_017_batches.csv](calibration_017_batches.csv)
+- [calibration_017_gradients.csv](calibration_017_gradients.csv)
+- [calibration_018.json](calibration_018.json)
+- [calibration_018.pt](calibration_018.pt)
+- [calibration_018_batches.csv](calibration_018_batches.csv)
+- [calibration_018_gradients.csv](calibration_018_gradients.csv)
+- [calibration_019.json](calibration_019.json)
+- [calibration_019.pt](calibration_019.pt)
+- [calibration_019_batches.csv](calibration_019_batches.csv)
+- [calibration_019_gradients.csv](calibration_019_gradients.csv)
+- [calibration_020.json](calibration_020.json)
+- [calibration_020.pt](calibration_020.pt)
+- [calibration_020_batches.csv](calibration_020_batches.csv)
+- [calibration_020_gradients.csv](calibration_020_gradients.csv)
+- [calibration_021.json](calibration_021.json)
+- [calibration_021.pt](calibration_021.pt)
+- [calibration_021_batches.csv](calibration_021_batches.csv)
+- [calibration_021_gradients.csv](calibration_021_gradients.csv)
+- [calibration_022.json](calibration_022.json)
+- [calibration_022.pt](calibration_022.pt)
+- [calibration_022_batches.csv](calibration_022_batches.csv)
+- [calibration_022_gradients.csv](calibration_022_gradients.csv)
+- [calibration_023.json](calibration_023.json)
+- [calibration_023.pt](calibration_023.pt)
+- [calibration_023_batches.csv](calibration_023_batches.csv)
+- [calibration_023_gradients.csv](calibration_023_gradients.csv)
+- [calibration_024.json](calibration_024.json)
+- [calibration_024.pt](calibration_024.pt)
+- [calibration_024_batches.csv](calibration_024_batches.csv)
+- [calibration_024_gradients.csv](calibration_024_gradients.csv)
+- [calibration_025.json](calibration_025.json)
+- [calibration_025.pt](calibration_025.pt)
+- [calibration_025_batches.csv](calibration_025_batches.csv)
+- [calibration_025_gradients.csv](calibration_025_gradients.csv)
+- [calibration_026.json](calibration_026.json)
+- [calibration_026.pt](calibration_026.pt)
+- [calibration_026_batches.csv](calibration_026_batches.csv)
+- [calibration_026_gradients.csv](calibration_026_gradients.csv)
+- [calibration_027.json](calibration_027.json)
+- [calibration_027.pt](calibration_027.pt)
+- [calibration_027_batches.csv](calibration_027_batches.csv)
+- [calibration_027_gradients.csv](calibration_027_gradients.csv)
+- [calibration_028.json](calibration_028.json)
+- [calibration_028.pt](calibration_028.pt)
+- [calibration_028_batches.csv](calibration_028_batches.csv)
+- [calibration_028_gradients.csv](calibration_028_gradients.csv)
+- [calibration_029.json](calibration_029.json)
+- [calibration_029.pt](calibration_029.pt)
+- [calibration_029_batches.csv](calibration_029_batches.csv)
+- [calibration_029_gradients.csv](calibration_029_gradients.csv)
+- [calibration_030.json](calibration_030.json)
+- [calibration_030.pt](calibration_030.pt)
+- [calibration_030_batches.csv](calibration_030_batches.csv)
+- [calibration_030_gradients.csv](calibration_030_gradients.csv)
+- [calibration_031.json](calibration_031.json)
+- [calibration_031.pt](calibration_031.pt)
+- [calibration_031_batches.csv](calibration_031_batches.csv)
+- [calibration_031_gradients.csv](calibration_031_gradients.csv)
+- [calibration_032.json](calibration_032.json)
+- [calibration_032.pt](calibration_032.pt)
+- [calibration_032_batches.csv](calibration_032_batches.csv)
+- [calibration_032_gradients.csv](calibration_032_gradients.csv)
+- [calibration_033.json](calibration_033.json)
+- [calibration_033.pt](calibration_033.pt)
+- [calibration_033_batches.csv](calibration_033_batches.csv)
+- [calibration_033_gradients.csv](calibration_033_gradients.csv)
+- [calibration_034.json](calibration_034.json)
+- [calibration_034.pt](calibration_034.pt)
+- [calibration_034_batches.csv](calibration_034_batches.csv)
+- [calibration_034_gradients.csv](calibration_034_gradients.csv)
+- [calibration_035.json](calibration_035.json)
+- [calibration_035.pt](calibration_035.pt)
+- [calibration_035_batches.csv](calibration_035_batches.csv)
+- [calibration_035_gradients.csv](calibration_035_gradients.csv)
+- [calibration_036.json](calibration_036.json)
+- [calibration_036.pt](calibration_036.pt)
+- [calibration_036_batches.csv](calibration_036_batches.csv)
+- [calibration_036_gradients.csv](calibration_036_gradients.csv)
+- [calibration_037.json](calibration_037.json)
+- [calibration_037.pt](calibration_037.pt)
+- [calibration_037_batches.csv](calibration_037_batches.csv)
+- [calibration_037_gradients.csv](calibration_037_gradients.csv)
+- [calibration_binding.json](calibration_binding.json)
+- [calibration_stop_optimizer.pt](calibration_stop_optimizer.pt)
+- [configuration.json](configuration.json)
+- [inner_GLOBAL_control.json](inner_GLOBAL_control.json)
+- [inner_STOCK_control.json](inner_STOCK_control.json)
+- [inner_VOL_control.json](inner_VOL_control.json)
+- [inner_target_recipe.json](inner_target_recipe.json)
+- [inner_train_GLOBAL_control_scores.parquet](inner_train_GLOBAL_control_scores.parquet)
+- [inner_train_STOCK_control_scores.parquet](inner_train_STOCK_control_scores.parquet)
+- [inner_train_VOL_control_scores.parquet](inner_train_VOL_control_scores.parquet)
+- [inner_train_cohorts.csv](inner_train_cohorts.csv)
+- [inner_train_metrics.json](inner_train_metrics.json)
+- [inner_train_scores.parquet](inner_train_scores.parquet)
+- [inner_train_strata.csv](inner_train_strata.csv)
+- [inner_validation_GLOBAL_control_scores.parquet](inner_validation_GLOBAL_control_scores.parquet)
+- [inner_validation_STOCK_control_scores.parquet](inner_validation_STOCK_control_scores.parquet)
+- [inner_validation_VOL_control_scores.parquet](inner_validation_VOL_control_scores.parquet)
+- [inner_validation_cohorts.csv](inner_validation_cohorts.csv)
+- [inner_validation_metrics.json](inner_validation_metrics.json)
+- [inner_validation_scores.parquet](inner_validation_scores.parquet)
+- [inner_validation_strata.csv](inner_validation_strata.csv)
+- [matched_baseline_differences.csv](matched_baseline_differences.csv)
+- [model_and_control_metrics.csv](model_and_control_metrics.csv)
+- [oos_GLOBAL_control_scores.parquet](oos_GLOBAL_control_scores.parquet)
+- [oos_STOCK_control_scores.parquet](oos_STOCK_control_scores.parquet)
+- [oos_VOL_control_scores.parquet](oos_VOL_control_scores.parquet)
+- [oos_cohorts.csv](oos_cohorts.csv)
+- [oos_metrics.json](oos_metrics.json)
+- [oos_scores.parquet](oos_scores.parquet)
+- [oos_strata.csv](oos_strata.csv)
+- [refit_001.json](refit_001.json)
+- [refit_001_batches.csv](refit_001_batches.csv)
+- [refit_001_gradients.csv](refit_001_gradients.csv)
+- [refit_002.json](refit_002.json)
+- [refit_002_batches.csv](refit_002_batches.csv)
+- [refit_002_gradients.csv](refit_002_gradients.csv)
+- [refit_003.json](refit_003.json)
+- [refit_003_batches.csv](refit_003_batches.csv)
+- [refit_003_gradients.csv](refit_003_gradients.csv)
+- [refit_004.json](refit_004.json)
+- [refit_004_batches.csv](refit_004_batches.csv)
+- [refit_004_gradients.csv](refit_004_gradients.csv)
+- [refit_005.json](refit_005.json)
+- [refit_005_batches.csv](refit_005_batches.csv)
+- [refit_005_gradients.csv](refit_005_gradients.csv)
+- [refit_006.json](refit_006.json)
+- [refit_006_batches.csv](refit_006_batches.csv)
+- [refit_006_gradients.csv](refit_006_gradients.csv)
+- [refit_007.json](refit_007.json)
+- [refit_007_batches.csv](refit_007_batches.csv)
+- [refit_007_gradients.csv](refit_007_gradients.csv)
+- [refit_008.json](refit_008.json)
+- [refit_008_batches.csv](refit_008_batches.csv)
+- [refit_008_gradients.csv](refit_008_gradients.csv)
+- [refit_009.json](refit_009.json)
+- [refit_009_batches.csv](refit_009_batches.csv)
+- [refit_009_gradients.csv](refit_009_gradients.csv)
+- [refit_010.json](refit_010.json)
+- [refit_010_batches.csv](refit_010_batches.csv)
+- [refit_010_gradients.csv](refit_010_gradients.csv)
+- [refit_011.json](refit_011.json)
+- [refit_011_batches.csv](refit_011_batches.csv)
+- [refit_011_gradients.csv](refit_011_gradients.csv)
+- [refit_012.json](refit_012.json)
+- [refit_012_batches.csv](refit_012_batches.csv)
+- [refit_012_gradients.csv](refit_012_gradients.csv)
+- [refit_013.json](refit_013.json)
+- [refit_013_batches.csv](refit_013_batches.csv)
+- [refit_013_gradients.csv](refit_013_gradients.csv)
+- [refit_014.json](refit_014.json)
+- [refit_014_batches.csv](refit_014_batches.csv)
+- [refit_014_gradients.csv](refit_014_gradients.csv)
+- [refit_015.json](refit_015.json)
+- [refit_015_batches.csv](refit_015_batches.csv)
+- [refit_015_gradients.csv](refit_015_gradients.csv)
+- [refit_016.json](refit_016.json)
+- [refit_016_batches.csv](refit_016_batches.csv)
+- [refit_016_gradients.csv](refit_016_gradients.csv)
+- [refit_017.json](refit_017.json)
+- [refit_017_batches.csv](refit_017_batches.csv)
+- [refit_017_gradients.csv](refit_017_gradients.csv)
+- [refit_018.json](refit_018.json)
+- [refit_018_batches.csv](refit_018_batches.csv)
+- [refit_018_gradients.csv](refit_018_gradients.csv)
+- [refit_019.json](refit_019.json)
+- [refit_019_batches.csv](refit_019_batches.csv)
+- [refit_019_gradients.csv](refit_019_gradients.csv)
+- [refit_020.json](refit_020.json)
+- [refit_020_batches.csv](refit_020_batches.csv)
+- [refit_020_gradients.csv](refit_020_gradients.csv)
+- [refit_021.json](refit_021.json)
+- [refit_021_batches.csv](refit_021_batches.csv)
+- [refit_021_gradients.csv](refit_021_gradients.csv)
+- [refit_022.json](refit_022.json)
+- [refit_022_batches.csv](refit_022_batches.csv)
+- [refit_022_gradients.csv](refit_022_gradients.csv)
+- [refit_023.json](refit_023.json)
+- [refit_023_batches.csv](refit_023_batches.csv)
+- [refit_023_gradients.csv](refit_023_gradients.csv)
+- [refit_024.json](refit_024.json)
+- [refit_024_batches.csv](refit_024_batches.csv)
+- [refit_024_gradients.csv](refit_024_gradients.csv)
+- [refit_025.json](refit_025.json)
+- [refit_025_batches.csv](refit_025_batches.csv)
+- [refit_025_gradients.csv](refit_025_gradients.csv)
+- [refit_026.json](refit_026.json)
+- [refit_026_batches.csv](refit_026_batches.csv)
+- [refit_026_gradients.csv](refit_026_gradients.csv)
+- [refit_027.json](refit_027.json)
+- [refit_027_batches.csv](refit_027_batches.csv)
+- [refit_027_gradients.csv](refit_027_gradients.csv)
+- [refit_GLOBAL_control.json](refit_GLOBAL_control.json)
+- [refit_GLOBAL_control_scores.parquet](refit_GLOBAL_control_scores.parquet)
+- [refit_STOCK_control.json](refit_STOCK_control.json)
+- [refit_STOCK_control_scores.parquet](refit_STOCK_control_scores.parquet)
+- [refit_VOL_control.json](refit_VOL_control.json)
+- [refit_VOL_control_scores.parquet](refit_VOL_control_scores.parquet)
+- [refit_binding.json](refit_binding.json)
+- [refit_cohorts.csv](refit_cohorts.csv)
+- [refit_final.pt](refit_final.pt)
+- [refit_metrics.json](refit_metrics.json)
+- [refit_scores.parquet](refit_scores.parquet)
+- [refit_strata.csv](refit_strata.csv)
+- [refit_target_recipe.json](refit_target_recipe.json)

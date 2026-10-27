@@ -1,0 +1,258 @@
+{
+  "schema": "HF20_S5_S9_PROPOSED_v1",
+  "status": "SEALED_AWAITING_ACTUAL_LIVE_APPROVAL",
+  "execution_sha256": "e19fc1da419d6456d16a7dec7777bc7e1400b2d0412be65ba116906d01cfd73e",
+  "source_contract": {
+    "s4_proposal_sha256": "971765111037fb649a7c5319e4a260223301a9bc8a80ce8621fe29e7061349f0",
+    "s4_execution_sha256": "a737c9219513ddbbfffb882a2e76af7708e2f3ee55a297e1b145790bc47f2a95",
+    "folds": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "stocks": 20,
+    "lookback": 48,
+    "feature_base": "Frozen S4 FT16",
+    "candidate_origins_et": [
+      "09:30",
+      "10:30",
+      "11:30",
+      "12:30",
+      "13:30",
+      "14:30",
+      "15:30"
+    ],
+    "horizon": "240 actual regular-session trading minutes; existing genuine endpoints, closing stub, overnight gap and next-session calendar",
+    "issuance": "existing price-only two-minute proxy; publication and fills unverified",
+    "population": "Exact archived S4 masks/stock order; original maturity/48-step embargo/50-session minimum",
+    "weighting": "equal stocks within origin, origins within session, sessions within role/year, years equally",
+    "source_access": "Approved local monthly sources July2010\u2013December2024 only, filtered before I/O; no protected2026 opens or hashes and no new2025 numerics"
+  },
+  "run_ids": [
+    "HF20-S5-F21-H4-META-T2R-S42",
+    "HF20-S5-F22-H4-META-T2R-S42",
+    "HF20-S5-F23-H4-META-T2R-S42",
+    "HF20-S5-F24-H4-META-T2R-S42",
+    "HF20-S9-F21-H4-MAG-S42",
+    "HF20-S9-F22-H4-MAG-S42",
+    "HF20-S9-F23-H4-MAG-S42",
+    "HF20-S9-F24-H4-MAG-S42",
+    "HF20-S9-F21-H4-EVENT-S42",
+    "HF20-S9-F22-H4-EVENT-S42",
+    "HF20-S9-F23-H4-EVENT-S42",
+    "HF20-S9-F24-H4-EVENT-S42",
+    "HF20-S9-F21-H4-QUANTILE-S42",
+    "HF20-S9-F22-H4-QUANTILE-S42",
+    "HF20-S9-F23-H4-QUANTILE-S42",
+    "HF20-S9-F24-H4-QUANTILE-S42"
+  ],
+  "run_order": "S5 F21\u2013F24, MAG F21\u2013F24, EVENT F21\u2013F24, QUANTILE F21\u2013F24",
+  "neural_starts": 16,
+  "ledger": {
+    "before": 114,
+    "maximum_after": 130,
+    "ceiling": 200,
+    "failed_starts_count": true,
+    "retry_authorized": false
+  },
+  "prefix_recipes": 32,
+  "baseline_attempts": 64,
+  "resource_caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "threads": {
+    "cpu": 4,
+    "interop": 1
+  },
+  "planning": {
+    "hours": "4\u201316, not a guarantee",
+    "additional_storage_bytes": "approximately1.4\u20132.2GB",
+    "project_before_bytes": 10091270290,
+    "check": "task/project storage and RAM before each fit/start; memory before each optimizer update; no deletion/compression bypass"
+  },
+  "models": {
+    "META_T2R": {
+      "input_dim": 22,
+      "added_fields": [
+        "step_sin",
+        "step_cos",
+        "session_boundary",
+        "elapsed_scheduled_wall",
+        "origin_sin",
+        "origin_cos"
+      ],
+      "metadata_scope": "clock-only reduced design; scheduled elapsed gap is not observation age; retrospective flags remain diagnostic only",
+      "parameters": 7201,
+      "loss": "Original S4 MSE of asinh(TG20 / sealed phase T2 scale)",
+      "selector": "Original S4 RankSelector: strict absolute validation daily IC improvement >.001"
+    },
+    "MAG": {
+      "input_dim": 16,
+      "parameters": 6433,
+      "target": "A=abs(log(Pexit/Pentry)); m=log1p(A/sA); sA=max(prefix-weighted median A,1e-8)",
+      "loss": "MSE in m",
+      "inverse": "Ahat=sA*expm1(max(mhat,0)); clamp reporting only, not conditional mean certification"
+    },
+    "EVENT": {
+      "input_dim": 16,
+      "parameters": 6499,
+      "target": "Original E1 NEG/NORMAL/POS from signed TG20 and prefix unweighted linear q95(abs(TG20)); strict tails/equality NORMAL",
+      "loss": "UNWEIGHTED natural three-class CE, intentionally differs from historical [4,1,4] weighted E1",
+      "any_tail": "pNEG+pPOS; binary log loss/Brier separate from optimized3classCE"
+    },
+    "QUANTILE": {
+      "input_dim": 16,
+      "parameters": 6499,
+      "target": "Original QR1 Z=asinh(TG20/sealed phase T2 scale); alpha=.05,.50,.95",
+      "loss": "equal-quantile mean pinball in Z; original ordered median\u00b1softplus-gap head",
+      "output": "Save raw coordinates, implied qZ, once-inverted signed TG20 qY; structural crossing0; no hidden sorting"
+    }
+  },
+  "training": {
+    "seed": 42,
+    "layers": 1,
+    "hidden": 32,
+    "dropout": 0.1,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay_matrix": 0.01,
+    "weight_decay_bias": 0,
+    "gradient_cap": 1,
+    "batch": "16 complete sessions; same S4 epoch shuffle",
+    "selection": "min12 max60 patience10; S9 exact original inclusive proper validation loss <=.999*best; S5 original strict IC selector",
+    "refit": "Fresh same-seed initialization; selected epoch count; all optimizer step counts/checkpoint reloads verified"
+  },
+  "controls": {
+    "MAG": "global/stock mean transformed magnitude, plus unfitted2sqrt(2/pi)*native hourly V2 sigma",
+    "EVENT": "global/stock/four predeclared prefix-volatility-bin class priors",
+    "QUANTILE": "pooled/stock weighted inverse empirical CDF and pooled Z/rho conditional scale control",
+    "S5": "Frozen S4 T2R, N1/M1 and P on exact keys; NR reference only",
+    "fits": "MAG16 + EVENT24 + QUANTILE24 =64; no ridge, calibrator or search"
+  },
+  "gates": "Source integrity, correct proper units/weights, all4role numeric/checkpoint/gradient diagnostics and complete hash-bound PASS before next neural start; any serious failure stops, no rescue fits",
+  "diagnostics": {
+    "roles": [
+      "inner_train",
+      "inner_validation",
+      "refit",
+      "oos"
+    ],
+    "required": "all brief Sections3.3,4.5,5.1; ranking/proper scores, tail/NUM/MAD, gradient/epoch/fresh refit, same-task controls, source/age/clock strata, keyed saved outputs and per-run offline views/PNG",
+    "intervals": "whole-month400 seed22042, annual and equal-year paired estimates; descriptive post-search only",
+    "deliverables": "All nine brief Section6 artifacts; existing dashboards linked not regenerated"
+  },
+  "rights": "Existing researcher-attested bounded private local research permissions and qualified source/action/clock assumptions only; no new certification/sharing/trading",
+  "prohibitions": [
+    "No protected2026 opens/hashes",
+    "No new2025 tuning",
+    "No new seeds/widths/objectives/arms/retries",
+    "No ranker on S9 outputs",
+    "No downloads/dependencies/trading/Git publication"
+  ],
+  "evidence": [
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/submitted_instruction.txt",
+      "sha256": "d8c97419164f9328295a3fe326226af724d84a246c3fcfc7d5bfe8dfbcf26f04"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/prior_registry_pointer.json",
+      "sha256": "2995ddda6d89840db610a7ed089904471e8e07e1a41de1f4afa8ebc4b00a8f63"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/PRESEAL_INTEGRITY.json",
+      "sha256": "91a7b39a5b90f56ffd75c9b532dce857c71dfa59f79a43308680f84415bd5e7e"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/PREFLIGHT.json",
+      "sha256": "eeed00bd101dfaa83baeebbbe476dba50a982d918df2284caf6d675c51ddd079"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/S5_CAUSAL_METADATA_MANIFEST.md",
+      "sha256": "309ba500938681bd95b79f3fa98f01017ccdf6931f60eb957c78a10af8e4435a"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/S9_TARGET_AND_BASELINE_CONTRACT.md",
+      "sha256": "85d1fe4133e1ffdf5459129983b4a4c47d30670311a9fc6e7b5f3f3a815f6682"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/S5_S9_ROLE_COUNTS.csv",
+      "sha256": "c338ae5740715c0089d856f1cb96426ffb14102739b4112ad6bd0201bb6d7a6b"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/S5_CAUSAL_COVERAGE_AND_DIAGNOSTIC_STRATA.csv",
+      "sha256": "46923d51f875339c2ef0c1d97679146b6a9821da0ca4cbfde97384b77e99acba"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/S4_REUSED_RECIPES.json",
+      "sha256": "00f25645e1eae393d562d946210b581b89ab8fe5cacb960affaeb7cc7b1a606b"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/REFERENCE_IDENTITIES.csv",
+      "sha256": "a52a9e88898d45f8e5e3bcac4b287a5cdcaa0e38527f14e109f755496c1f4a67"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/REFERENCE_ALIAS.md",
+      "sha256": "1eae361c13102ef20d59bd901bdfdc5f920d88c77d8a808f9807b96edeb2aaba"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/S9_SAVED_CONTROL_LOSS_RECONCILIATION.csv",
+      "sha256": "681f717478ddfbfeaeb11a45ba2eb7564cecec5f8b30ef4dfd97df068c84c11a"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/tests_sealed.txt",
+      "sha256": "c25f41c80ced80067db01c0e229799bbf621a8a4f77171b25ef5e75b74189a75"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/static_check_complete.json",
+      "sha256": "fdb5c0c6e26e2b49fff95a2087af4be1450a7157d84b4d9a51a32743bce5a064"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/SOURCE_AND_REHEARSAL.json",
+      "sha256": "4107bee669c5606f32bee510164773ed5d7df875f3ea288fa57daedb334b79ce"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/SOURCE_AUDIT_REUSED.json",
+      "sha256": "cc2bdec995c3675835f4d4d8819daf069c4ced68cd9d8020ca6306408e439370"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/REHEARSAL_BROWSER_QA.json",
+      "sha256": "4c80fe7b51bb28c12a7a16d0d72cf8d608dc5e02e6845a2da387dbc48bc387dc"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/browser_verified.log",
+      "sha256": "31d1f83d802607d526e22c7ad60d2ced905770333e1ca62d414473de44a3201c"
+    },
+    {
+      "path": "reports/audit/track_a_real_pairs_v22_hf20_s4a.jsonl",
+      "sha256": "33932a883f0ac6fd1f0ddfea48e098826d375548e9222b2de8e3ba10b2b3e364"
+    },
+    {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/S4_FROZEN_EXPERIMENT_CARD.json",
+      "sha256": "971765111037fb649a7c5319e4a260223301a9bc8a80ce8621fe29e7061349f0"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/plots_final/EVENT.png",
+      "sha256": "8514685f3d4387110d18b1744e3269841c0d86011dc0746aa96132058116cc90"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/plots_final/MAG.png",
+      "sha256": "37bf295356c37e205e9238c911ba9cb876c6a1a7cad91db26e17787f830af0dd"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/plots_final/META-T2R.png",
+      "sha256": "19940f5d0b0030623713f63642e6249e82495f9d0fa205dbbf7dafb2ac82cf0e"
+    },
+    {
+      "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/preflight_v2/plots_final/QUANTILE.png",
+      "sha256": "54e643da8f93631cf2823b82914400fa89183125ede8b7d8289f8e761985e60f"
+    }
+  ]
+}
