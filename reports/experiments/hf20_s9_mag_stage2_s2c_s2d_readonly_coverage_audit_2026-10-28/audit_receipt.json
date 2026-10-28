@@ -1,0 +1,195 @@
+{
+  "kind": "READ_ONLY_AVAILABILITY_AUDIT_NOT_PROTOCOL_AMENDMENT",
+  "timestamp": "2026-10-28T17:54:31.822924+00:00",
+  "branch": "feat/track-a-data-intake",
+  "commit": "5f7bb86a35d5aaff34ff79ef8f471117de6d3e42",
+  "ledger_count": 158,
+  "ceiling": 300,
+  "neural_starts": 0,
+  "non_neural_fits": 0,
+  "forecast_scores_or_OOS_performance_calculated": false,
+  "source_paths": {
+    "configs/CURRENT_EXPERIMENT_REGISTRY.json": {
+      "sha256": "3ed73ff8bc91be0ba1460c27b4731ee8ac55998219ef677af5e6864395abb652",
+      "size": 1073,
+      "mtime_ns": 1793208171694219742
+    },
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/neural_starts.jsonl": {
+      "sha256": "019ffac2528e6be97022f1359d5b7d1f983f046891cf64fa54f7226d94deaf96",
+      "size": 14824,
+      "mtime_ns": 1793208171693791203
+    },
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet": {
+      "sha256": "a66edd638bc9cdb2c919c3ff1a81f5023eeab9bad0e0926d12e45306c8af3d51",
+      "size": 14299227,
+      "mtime_ns": 1793030738687963214
+    },
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ORIGIN_SOURCE_ELIGIBILITY.parquet": {
+      "sha256": "4c8a23ff266a8514574a2ca87324d723ec411106b08fe7b6b1e713ee7dcb73c3",
+      "size": 1747725,
+      "mtime_ns": 1793030739448601523
+    },
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_SOURCE_POLICY.json": {
+      "sha256": "afa1e8f94ced78a3b82f510908d44d4ea5acad16a12ef061c652561c50011c1b",
+      "size": 2392,
+      "mtime_ns": 1793029377352282898
+    },
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/S4_FROZEN_EXPERIMENT_CARD.json": {
+      "sha256": "971765111037fb649a7c5319e4a260223301a9bc8a80ce8621fe29e7061349f0",
+      "size": 8393,
+      "mtime_ns": 1793033558689875726
+    },
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/role_indices.npz": {
+      "sha256": "c38a74b71cf20c73e146cb0efc2747f0a6855abc87cd13aa2af8b1155c98e42d",
+      "size": 176280,
+      "mtime_ns": 1793162782650343694
+    },
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/role_counts.csv": {
+      "sha256": "6db31c34222f84958226210cc2fcaab0d9a0d73b5faa82befccb91f9287b1c39",
+      "size": 2888,
+      "mtime_ns": 1793156923800784124
+    },
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/source_validation.json": {
+      "sha256": "d4057d9cdede121f6010757e49f122179b2ee71e6ade013506d5788df7779779",
+      "size": 4376,
+      "mtime_ns": 1793205185067014202
+    },
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/component_coverage.csv": {
+      "sha256": "ca4ddbb2ed65b64a310fc698e2d69bbdbbac52c4f929fcac1fe65a100a74c047",
+      "size": 620,
+      "mtime_ns": 1793204551977515110
+    },
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/gap_coverage.csv": {
+      "sha256": "fefaa3d7d81ade5dcbd4e23f11d6b966a9f6b22121afa6ccda74c8e13847fe0d",
+      "size": 1450,
+      "mtime_ns": 1793204551978922268
+    },
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/planning_receipt_v2.json": {
+      "sha256": "9e7995062c713df833d81b856e0c6e022c70e30c792aafedb32bff560b424932",
+      "size": 15002,
+      "mtime_ns": 1793205364875046031
+    },
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2c_decomposition/protocol.json": {
+      "sha256": "7dfbc17f0cbd2bddca6e097325ff01c37550318edb0cb1978d99f83fef611000",
+      "size": 4753,
+      "mtime_ns": 1793204538144936528
+    },
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2d_overnight_hold/protocol_v2.json": {
+      "sha256": "1227434ed4d70be8f934e13111321ad4e5cc5a14c2dee2c77ae2c91d1dce991d",
+      "size": 5266,
+      "mtime_ns": 1793205364873762581
+    },
+    "src/lstm_data/hf20_s4_preflight.py": {
+      "sha256": "e9a4d7fef93d52e4540172382aaf86064758b8cd4572aa6a850f3620fca33f5f",
+      "size": 22519,
+      "mtime_ns": 1793032302153442274
+    },
+    "src/lstm_data/hf20_s4_clock.py": {
+      "sha256": "99f812fc23b6c0caabb94177de6fdc3f5812cb4c054be06b526b9c1190bf8ec7",
+      "size": 3427,
+      "mtime_ns": 1793029419145868007
+    },
+    "src/lstm_data/hf20_stage2_bcd.py": {
+      "sha256": "5966607cd74ae6b3fbd55dc174b0108de63cef810c96fcad8c5875835c280031",
+      "size": 66040,
+      "mtime_ns": 1793205578341387531
+    },
+    "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/HF20_HF1M_LONG_v1_FT16_v1_grid.parquet": {
+      "sha256": "83a24b8664fe490a83daf22492f50dbd60fb35d183da439d7bf116456fc119f6",
+      "size": 436012,
+      "mtime_ns": 1792718335252278093
+    }
+  },
+  "existing_assets_unchanged": true,
+  "reads": {
+    "keys_and_flags": [
+      "origin_id",
+      "ticker",
+      "decomposition_supported",
+      "decomposition_status"
+    ],
+    "validity_bitmaps_only": [
+      "genuine_session_end_price",
+      "next_session_open",
+      "entry_source_price",
+      "exit_source_price",
+      "origin_to_close",
+      "close_to_next_open",
+      "next_open_to_exit"
+    ],
+    "numeric_payload_policy": "Parquet reader projects columns to extract null validity. Scalar payloads never inspected, converted to numbers, reported or used; no return reconstruction. Existing source positivity/finite/action assurances inherited; no new numerical validation.",
+    "calendar_only": "XNYS2010-07-01..2025-01-10;market artifacts <=2024"
+  },
+  "tests": {
+    "original_20_roles_C_counts": "PASS",
+    "original_20_roles_D_counts": "PASS",
+    "three_aux_validity_masks_equal_supported": "PASS",
+    "close_all20_matches_saved_boolean": "PASS",
+    "mutually_exclusive_cause_accounting": "PASS",
+    "stock_axis_and_unique_keys": "PASS",
+    "exact_original_role_NPZ_identity": "PASS",
+    "all48_input_lengths": "PASS",
+    "current_selector_reproduction": "PASS",
+    "existing_file_hash_mtime_preservation": "PASS",
+    "additivity": "EXISTING_RECEIPT_ONLY:max4.2500725161431774e-16;no recomputation"
+  },
+  "protected_2026_access": false,
+  "market_2025_access": false,
+  "no_network": true,
+  "no_fit_imports": true,
+  "limitations": [
+    "No independent per-head saved labels outside complete-triple support; source-reference presence is not a materialized auxiliary label.",
+    "Null validity is the only per-stock availability bitmap; finite/positive source values inherited from prior validation, not newly inspected.",
+    "Source input eligibility remains original complete20-panel flag; no per-stock input rematerialization.",
+    "No current protocol is changed."
+  ],
+  "checks_completed": [
+    "20 C archived counts",
+    "20 D archived counts",
+    "20 exact role masks",
+    "auxiliary saved mask identity",
+    "exclusive cause accounting",
+    "original stock axis",
+    "current vs sweep identity",
+    "allowlisted preexisting asset hashes+mtimes unchanged"
+  ],
+  "created_files": [
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/S2C_S2D_READONLY_AUDIT_REPORT.md",
+      "bytes": 28963
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/S2D_SELECTOR_FEASIBILITY.csv",
+      "bytes": 16587
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/S2D_MONTH_THRESHOLD_COUNTS.csv",
+      "bytes": 204364
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/S2D_ROLE_GATES.csv",
+      "bytes": 4456
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/SESSION_HANDOFF.md",
+      "bytes": 3400
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/S2C_ROLE_SUMMARY.csv",
+      "bytes": 4221
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/S2C_MASKING_COVERAGE.csv",
+      "bytes": 276269
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/S2D_SESSION_COUNT_DISTRIBUTION.csv",
+      "bytes": 12899
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/S2D_STOCK_MONTH_COVERAGE.csv",
+      "bytes": 184192
+    }
+  ],
+  "report_status": "AUDIT_COMPLETE_WITH_EVIDENCE_LIMITS_ORIGINAL_C_D_REMAIN_BLOCKED"
+}

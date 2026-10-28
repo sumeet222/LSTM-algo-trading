@@ -1,0 +1,186 @@
+{
+  "status": "PASS_ALL_FOUR",
+  "folds": [
+    {
+      "year": 2021,
+      "status": "REUSE",
+      "selector_start": "2020-07-01",
+      "initial_stop": "2020-06-30",
+      "selector_sessions": 57,
+      "slot_min": 46,
+      "cutoffs": {
+        "initial": "2020-06-30",
+        "september": "2020-09-30",
+        "december": "2020-12-31"
+      }
+    },
+    {
+      "year": 2022,
+      "status": "READY",
+      "selector_start": "2021-05-01",
+      "initial_stop": "2021-04-30",
+      "selector_sessions": 58,
+      "slot_min": 36,
+      "cutoffs": {
+        "initial": "2021-04-30",
+        "september": "2021-09-30",
+        "december": "2021-12-31"
+      }
+    },
+    {
+      "year": 2023,
+      "status": "READY",
+      "selector_start": "2022-06-01",
+      "initial_stop": "2022-05-31",
+      "selector_sessions": 59,
+      "slot_min": 38,
+      "cutoffs": {
+        "initial": "2022-05-31",
+        "september": "2022-09-30",
+        "december": "2022-12-30"
+      }
+    },
+    {
+      "year": 2024,
+      "status": "READY",
+      "selector_start": "2023-06-01",
+      "initial_stop": "2023-05-31",
+      "selector_sessions": 69,
+      "slot_min": 31,
+      "cutoffs": {
+        "initial": "2023-05-31",
+        "september": "2023-09-29",
+        "december": "2023-12-29"
+      }
+    }
+  ],
+  "calibration_coverage": [
+    {
+      "year": 2021,
+      "sessions": 56,
+      "origins": 283,
+      "rows": 5660,
+      "month_origin_counts": {
+        "2020-10": 76,
+        "2020-11": 102,
+        "2020-12": 105
+      },
+      "min_A": 0.0,
+      "max_A": 0.15022641304290751,
+      "June_prefix95": 0.028876178512332373,
+      "June_prefix99": 0.055052003037503024,
+      "exceed95_rows": 499,
+      "exceed99_rows": 110,
+      "finite_all": true,
+      "warning": "Limited tail precision; global pooled scalars, no slot-wise minimum"
+    },
+    {
+      "year": 2022,
+      "sessions": 50,
+      "origins": 245,
+      "rows": 4900,
+      "month_origin_counts": {
+        "2021-10": 30,
+        "2021-11": 95,
+        "2021-12": 120
+      },
+      "min_A": 0.0,
+      "max_A": 0.1398994888634435,
+      "June_prefix95": 0.02943898600167619,
+      "June_prefix99": 0.05521867515056971,
+      "exceed95_rows": 387,
+      "exceed99_rows": 52,
+      "finite_all": true,
+      "warning": "Limited tail precision; global pooled scalars, no slot-wise minimum"
+    },
+    {
+      "year": 2023,
+      "sessions": 48,
+      "origins": 258,
+      "rows": 5160,
+      "month_origin_counts": {
+        "2022-10": 65,
+        "2022-11": 74,
+        "2022-12": 119
+      },
+      "min_A": 0.0,
+      "max_A": 0.11896382486871192,
+      "June_prefix95": 0.03035634362046966,
+      "June_prefix99": 0.05617426338233736,
+      "exceed95_rows": 336,
+      "exceed99_rows": 44,
+      "finite_all": true,
+      "warning": "Limited tail precision; global pooled scalars, no slot-wise minimum"
+    },
+    {
+      "year": 2024,
+      "sessions": 40,
+      "origins": 163,
+      "rows": 3260,
+      "month_origin_counts": {
+        "2023-10": 63,
+        "2023-11": 64,
+        "2023-12": 36
+      },
+      "min_A": 0.0,
+      "max_A": 0.1241818530103625,
+      "June_prefix95": 0.030526467687412958,
+      "June_prefix99": 0.05608080183806907,
+      "exceed95_rows": 131,
+      "exceed99_rows": 30,
+      "finite_all": true,
+      "warning": "Limited tail precision; global pooled scalars, no slot-wise minimum"
+    }
+  ],
+  "F21_reuse": "EXACT_CHRONOLOGY_KEYS_PARAMETERS_FORMULAS_AND_ARTIFACTS",
+  "prior_pointer": {
+    "budget_amendment": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/budget_amendment_200.json",
+      "sha256": "9b9b32c2cdf275a1195240afd5765b9d381bbc6eaf0bcc1196373f70cf3735e4"
+    },
+    "counts_started_including_failed": true,
+    "definition": {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/session2_design.json",
+      "sha256": "efb3cbf2264b1f7d7f8dc406f5de1432f1d3233fff6844a665358ff3df0889c8"
+    },
+    "effective_ceiling": 200,
+    "fit_permission": false,
+    "live_approval_required": true,
+    "plan": {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/session2_design.json",
+      "sha256": "efb3cbf2264b1f7d7f8dc406f5de1432f1d3233fff6844a665358ff3df0889c8"
+    },
+    "previous_journal": {
+      "path": "reports/audit/track_a_real_pairs_v23_hf20_s5_s9.jsonl",
+      "sha256": "127a81ec30525d8e6c87f139e686be9cb2bf9e191c390c9d3dfff29b31389920"
+    },
+    "real_journal": "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/neural_starts.jsonl",
+    "schema_version": 24
+  },
+  "ledger_before": 131,
+  "maximum_new_pairs": 3,
+  "maximum_after": 134,
+  "permitted_hourly_partitions": 174,
+  "caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "resources": {
+    "project_bytes": 12415421241,
+    "task_bytes": 69399,
+    "peak_rss_bytes": 453132288
+  },
+  "estimated_workload": {
+    "neural_phase_fits": 6,
+    "coefficient_fits": 27,
+    "initial_feature_target_recipes": 3,
+    "restricted_feature_target_recipes": 3,
+    "maximum_total_neural_epochs": 360,
+    "parent_F21_pair_seconds": 1072.4257028329885,
+    "rough_360epoch_seconds": 5677.547838527586,
+    "artifact_reserve_bytes": 60000000
+  },
+  "parent_bindings": "parent_bindings.json",
+  "parent_code_sha256": "a08753c9278d81af523e371b45c0df6a1b967caf8711bb44f44fc1984654cffd"
+}

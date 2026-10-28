@@ -1,0 +1,409 @@
+{
+  "kind": "HF20_STAGE1_SESSION4_C3_IO_SMEAR_V1",
+  "kappa": 25.0,
+  "groups": [
+    "INTRADAY",
+    "OVERNIGHT"
+  ],
+  "regular_session_slot_map": {
+    "09:30": "INTRADAY",
+    "10:30": "INTRADAY",
+    "11:30": "INTRADAY",
+    "12:30": "OVERNIGHT",
+    "13:30": "OVERNIGHT",
+    "14:30": "OVERNIGHT",
+    "15:30": "OVERNIGHT"
+  },
+  "category_rule": "Original saved category/endpoint keys govern; verify scheduled early-close morning crossing exceptions; no outcome-based relabeling",
+  "early_close_dates": [
+    "2020-11-27",
+    "2020-12-24",
+    "2021-11-26",
+    "2022-11-25",
+    "2023-07-03",
+    "2024-07-03",
+    "2024-12-24"
+  ],
+  "early_close_exceptions": [
+    {
+      "year": 2021,
+      "role": "calibration",
+      "origin_id": "2020-11-27T14:30:00+00:00",
+      "session_date_et": "2020-11-27",
+      "slot": "09:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2020-11-30 15:00:00+00:00"
+    },
+    {
+      "year": 2021,
+      "role": "calibration",
+      "origin_id": "2020-11-27T15:30:00+00:00",
+      "session_date_et": "2020-11-27",
+      "slot": "10:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2020-11-30 16:00:00+00:00"
+    },
+    {
+      "year": 2021,
+      "role": "calibration",
+      "origin_id": "2020-12-24T14:30:00+00:00",
+      "session_date_et": "2020-12-24",
+      "slot": "09:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2020-12-28 15:00:00+00:00"
+    },
+    {
+      "year": 2021,
+      "role": "calibration",
+      "origin_id": "2020-12-24T15:30:00+00:00",
+      "session_date_et": "2020-12-24",
+      "slot": "10:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2020-12-28 16:00:00+00:00"
+    },
+    {
+      "year": 2021,
+      "role": "oos",
+      "origin_id": "2021-11-26T14:30:00+00:00",
+      "session_date_et": "2021-11-26",
+      "slot": "09:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2021-11-29 15:00:00+00:00"
+    },
+    {
+      "year": 2021,
+      "role": "oos",
+      "origin_id": "2021-11-26T15:30:00+00:00",
+      "session_date_et": "2021-11-26",
+      "slot": "10:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2021-11-29 16:00:00+00:00"
+    },
+    {
+      "year": 2021,
+      "role": "oos",
+      "origin_id": "2021-11-26T16:30:00+00:00",
+      "session_date_et": "2021-11-26",
+      "slot": "11:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2021-11-29 17:00:00+00:00"
+    },
+    {
+      "year": 2022,
+      "role": "calibration",
+      "origin_id": "2021-11-26T14:30:00+00:00",
+      "session_date_et": "2021-11-26",
+      "slot": "09:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2021-11-29 15:00:00+00:00"
+    },
+    {
+      "year": 2022,
+      "role": "calibration",
+      "origin_id": "2021-11-26T15:30:00+00:00",
+      "session_date_et": "2021-11-26",
+      "slot": "10:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2021-11-29 16:00:00+00:00"
+    },
+    {
+      "year": 2022,
+      "role": "calibration",
+      "origin_id": "2021-11-26T16:30:00+00:00",
+      "session_date_et": "2021-11-26",
+      "slot": "11:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2021-11-29 17:00:00+00:00"
+    },
+    {
+      "year": 2022,
+      "role": "oos",
+      "origin_id": "2022-11-25T14:30:00+00:00",
+      "session_date_et": "2022-11-25",
+      "slot": "09:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2022-11-28 15:00:00+00:00"
+    },
+    {
+      "year": 2022,
+      "role": "oos",
+      "origin_id": "2022-11-25T15:30:00+00:00",
+      "session_date_et": "2022-11-25",
+      "slot": "10:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2022-11-28 16:00:00+00:00"
+    },
+    {
+      "year": 2023,
+      "role": "calibration",
+      "origin_id": "2022-11-25T14:30:00+00:00",
+      "session_date_et": "2022-11-25",
+      "slot": "09:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2022-11-28 15:00:00+00:00"
+    },
+    {
+      "year": 2023,
+      "role": "calibration",
+      "origin_id": "2022-11-25T15:30:00+00:00",
+      "session_date_et": "2022-11-25",
+      "slot": "10:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2022-11-28 16:00:00+00:00"
+    },
+    {
+      "year": 2023,
+      "role": "oos",
+      "origin_id": "2023-07-03T13:30:00+00:00",
+      "session_date_et": "2023-07-03",
+      "slot": "09:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2023-07-05 14:00:00+00:00"
+    },
+    {
+      "year": 2023,
+      "role": "oos",
+      "origin_id": "2023-07-03T15:30:00+00:00",
+      "session_date_et": "2023-07-03",
+      "slot": "11:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2023-07-05 16:00:00+00:00"
+    },
+    {
+      "year": 2024,
+      "role": "oos",
+      "origin_id": "2024-07-03T14:30:00+00:00",
+      "session_date_et": "2024-07-03",
+      "slot": "10:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2024-07-05 15:00:00+00:00"
+    },
+    {
+      "year": 2024,
+      "role": "oos",
+      "origin_id": "2024-07-03T15:30:00+00:00",
+      "session_date_et": "2024-07-03",
+      "slot": "11:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2024-07-05 16:00:00+00:00"
+    },
+    {
+      "year": 2024,
+      "role": "oos",
+      "origin_id": "2024-12-24T14:30:00+00:00",
+      "session_date_et": "2024-12-24",
+      "slot": "09:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2024-12-26 15:00:00+00:00"
+    },
+    {
+      "year": 2024,
+      "role": "oos",
+      "origin_id": "2024-12-24T15:30:00+00:00",
+      "session_date_et": "2024-12-24",
+      "slot": "10:30",
+      "category": "OVERNIGHT",
+      "exit_end_utc": "2024-12-26 16:00:00+00:00"
+    }
+  ],
+  "folds": [
+    {
+      "year": 2021,
+      "source": "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/F21",
+      "scale": 0.005848759193156053,
+      "thresholds": {
+        "95": 0.029152683601565685,
+        "99": 0.055591859892280306
+      },
+      "september": "2020-09-30",
+      "calibration_cutoff": "2020-12-31",
+      "model_identity": "5185a51700c68d3c0267d97d5de060a2c2ec9435babc9e13b9b1f98dafda1431",
+      "global_c0": 1.20559953878307,
+      "calibration_sessions": 56,
+      "q_max": 9.153076499746064,
+      "top10_share": 0.015028697739800315,
+      "top1pct_share": 0.05652585193856755
+    },
+    {
+      "year": 2022,
+      "source": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F22",
+      "scale": 0.005933406715930685,
+      "thresholds": {
+        "95": 0.029381635568292794,
+        "99": 0.0550530573806432
+      },
+      "september": "2021-09-30",
+      "calibration_cutoff": "2021-12-31",
+      "model_identity": "a746329daaad19c66937faab64a7102291a1003e4303ac223b967599454172ce",
+      "global_c0": 1.1908408152085126,
+      "calibration_sessions": 50,
+      "q_max": 8.237211516911731,
+      "top10_share": 0.015570928967332864,
+      "top1pct_share": 0.055273496130786325
+    },
+    {
+      "year": 2023,
+      "source": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F23",
+      "scale": 0.006121673076939892,
+      "thresholds": {
+        "95": 0.03048333514069074,
+        "99": 0.05621444505567313
+      },
+      "september": "2022-09-30",
+      "calibration_cutoff": "2022-12-30",
+      "model_identity": "85831c83d5755745087d8038dc94b7dca7ca9cc3a5a99099b2db7eb8197cb13d",
+      "global_c0": 1.1328386638116912,
+      "calibration_sessions": 48,
+      "q_max": 6.963056605221075,
+      "top10_share": 0.017732427295457667,
+      "top1pct_share": 0.058433540798368155
+    },
+    {
+      "year": 2024,
+      "source": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F24",
+      "scale": 0.00617444719514992,
+      "thresholds": {
+        "95": 0.03041068403132899,
+        "99": 0.055872346745723445
+      },
+      "september": "2023-09-29",
+      "calibration_cutoff": "2023-12-29",
+      "model_identity": "ed40d96cfbeeb870b2aa84d8568f9b8225efab20670ef72edc47faa51f7fcb56",
+      "global_c0": 1.1705833860446673,
+      "calibration_sessions": 40,
+      "q_max": 10.898310573431175,
+      "top10_share": 0.032815579375160706,
+      "top1pct_share": 0.07258735470630437
+    }
+  ],
+  "coverage": [
+    {
+      "year": 2021,
+      "group": "INTRADAY",
+      "sessions": 53,
+      "origins": 118,
+      "rows": 2360,
+      "weight_mass": 0.4061649659863945,
+      "n_eff": 49.96986196659143,
+      "first_date": "2020-10-13",
+      "last_date": "2020-12-30"
+    },
+    {
+      "year": 2021,
+      "group": "OVERNIGHT",
+      "sessions": 56,
+      "origins": 165,
+      "rows": 3300,
+      "weight_mass": 0.5938350340136054,
+      "n_eff": 53.00752898569824,
+      "first_date": "2020-10-12",
+      "last_date": "2020-12-30"
+    },
+    {
+      "year": 2022,
+      "group": "INTRADAY",
+      "sessions": 47,
+      "origins": 108,
+      "rows": 2160,
+      "weight_mass": 0.4546190476190477,
+      "n_eff": 42.70758735601539,
+      "first_date": "2021-10-13",
+      "last_date": "2021-12-31"
+    },
+    {
+      "year": 2022,
+      "group": "OVERNIGHT",
+      "sessions": 47,
+      "origins": 137,
+      "rows": 2740,
+      "weight_mass": 0.5453809523809525,
+      "n_eff": 44.696800580913354,
+      "first_date": "2021-10-12",
+      "last_date": "2021-12-30"
+    },
+    {
+      "year": 2023,
+      "group": "INTRADAY",
+      "sessions": 46,
+      "origins": 119,
+      "rows": 2380,
+      "weight_mass": 0.46507936507936504,
+      "n_eff": 44.089425283666905,
+      "first_date": "2022-10-13",
+      "last_date": "2022-12-30"
+    },
+    {
+      "year": 2023,
+      "group": "OVERNIGHT",
+      "sessions": 47,
+      "origins": 139,
+      "rows": 2780,
+      "weight_mass": 0.5349206349206349,
+      "n_eff": 44.98394583421009,
+      "first_date": "2022-10-13",
+      "last_date": "2022-12-29"
+    },
+    {
+      "year": 2024,
+      "group": "INTRADAY",
+      "sessions": 35,
+      "origins": 73,
+      "rows": 1460,
+      "weight_mass": 0.45630952380952383,
+      "n_eff": 30.687986748838917,
+      "first_date": "2023-10-12",
+      "last_date": "2023-12-29"
+    },
+    {
+      "year": 2024,
+      "group": "OVERNIGHT",
+      "sessions": 36,
+      "origins": 90,
+      "rows": 1800,
+      "weight_mass": 0.5436904761904763,
+      "n_eff": 32.95592049493553,
+      "first_date": "2023-10-11",
+      "last_date": "2023-12-28"
+    }
+  ],
+  "q": "exp(log1p(A/s)-unconstrained_Mhat)",
+  "moment": "original calibration row weights normalized within group",
+  "n_eff": "1/sum_d(p_gd^2); p_gd=group row weight mass per session / group total weight",
+  "pooling": "rho=n_eff/(n_eff+25); c_star=c0+rho*(c_raw-c0); no renormalization/search",
+  "decode": "s*max(0,exp(Mhat)*c_star-1)",
+  "weights": "stock\u2192origin\u2192session\u2192year, then equal years",
+  "reliability": "10 weighted empirical C0 score bins per OOS year, shared across arms, descriptive only",
+  "paired": {
+    "comparators": [
+      "C1a",
+      "M1"
+    ],
+    "draws": 400,
+    "seed": 22042,
+    "method": "existing whole-month within-year; equal years"
+  },
+  "no_oos_labels_in_preflight": true,
+  "no_neural_fits": true,
+  "no_neural_forward_passes": true,
+  "ledger_before": 138,
+  "raw_source_reads": 0,
+  "protected": "No2025/2026 numerical reads/hashes; no underlying source, FT16 rebuild or checkpoints",
+  "preservation_bindings": {
+    "configs/CURRENT_EXPERIMENT_REGISTRY.json": "e62f1d2ea085e28b7c7137c995b7650a54d780cedee7d2b610752a8964906ae8",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/neural_starts.jsonl": "65e1298f8d812c90089f9e4004c9e0c6e93bb2d613a11c723b0376d34f20c990",
+    "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/F21/calibration_scores.parquet": "3e97f6948b30a5d802b56e8e21500c9f132b26fc37db8527d6dcc6b7c0f21d58",
+    "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/F21/oos_scores.parquet": "cce9a2a0525d66a46dcfcdb0d29be246d1fa32921076f50d813f0224f292e438",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/oos_scores.parquet": "6503a5f2d0a727e820555924a1c6799d161cfe4985e404c82fb81997acd29888",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F22/calibration_scores.parquet": "0449921906213e55681f407d262c5af0e0b164afc7340b0a1d7a8b7ba9fb6699",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F22/oos_scores.parquet": "24f0affd0013787e3f4b6b7de20234bf53df492bfce73cd6be2e4ad3691a9fc3",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/oos_scores.parquet": "79c30c8aaec738bec14fb3c711860fe1256484410d2bc78e3159de4b5e9fa923",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F23/calibration_scores.parquet": "3ca33638a275133bcb667fed444e13e64881971bacd0591bd085ad80ee5f1abf",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F23/oos_scores.parquet": "fd56eb2fe3dce1726dc358cfd0f140178bff115e7207434e5cc307d83c74ea04",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/oos_scores.parquet": "e0709a88e8e1f2b3bc76a6966e2390f03dbff98a9af9cf7833471b04bd9cf1f5",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F24/calibration_scores.parquet": "2d6d822c32009f259655fe4f160687de38c64ec251f17bf9ea7b87fb1213d10c",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F24/oos_scores.parquet": "e0b5127c5e7d2a8633b432537e71024d046db2c81fc26004a0e00338019f3500",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/oos_scores.parquet": "17c003e886f09d4a29d01fe907c83b8ea6e25c182b46c95f113a772a39b147ec"
+  },
+  "source_rows": "saved S4 eligibility metadata; exact O1/DesignA role indices",
+  "git_start": "5f7bb86a35d5aaff34ff79ef8f471117de6d3e42"
+}

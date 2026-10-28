@@ -1,0 +1,65 @@
+{
+  "status": "COMPLETE",
+  "completed": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "intraday_bit_identical": true,
+  "old_C3_metrics_reproduced": true,
+  "unselected_oos_predictions": 0,
+  "source_bindings_unchanged": true,
+  "ledger_after": 154,
+  "resources": {
+    "project_bytes": 12428447604,
+    "task_bytes": 2551857,
+    "peak_rss_bytes": 360742912
+  },
+  "seed": 42,
+  "torch_version": "2.10.0",
+  "dtype": "CPU float32",
+  "maximum_trainable_parameters": 6433,
+  "ledger_before": 138,
+  "charged_candidate_starts": 16,
+  "neural_phase_fits": 20,
+  "failed_attempts": 0,
+  "total_epochs": 425,
+  "optimizer_updates": 63309,
+  "clipped_batches": 895,
+  "fit_seconds": 6746.003251083079,
+  "training_peak_rss_bytes": 1137885184,
+  "population": {
+    "rows": 80260,
+    "origins": 4013,
+    "sessions": 793
+  },
+  "overnight_population": {
+    "rows": 45460,
+    "origins": 2273,
+    "sessions": 771
+  },
+  "original_overnight_weight_masses": [
+    0.5547112462006079,
+    0.555453514739229,
+    0.5634199134199134,
+    0.5864697802197801
+  ],
+  "full_delta_equals_original_weighted_night_delta": true,
+  "code_unchanged_during_fits": {
+    "src/lstm_data/hf20_overnight_specialist.py": "d9a44a7c971147a24764a472e2ca7d6f8afa2e72e8d21d0bbce977985943d638",
+    "tests/test_hf20_overnight_specialist.py": "d13f0ab98e77f46497426d62c816cdb749e2b9d3bad090f5ae86a181d4d4cc3d"
+  },
+  "static_summary": {
+    "filesAnalyzed": 508,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 95.923
+  },
+  "tests": "10 passed in 4.06s",
+  "ruff": "PASS",
+  "numerical_replay": "BYTE_IDENTICAL_8_FILES",
+  "pending_years": [],
+  "protected_numeric_access": false
+}

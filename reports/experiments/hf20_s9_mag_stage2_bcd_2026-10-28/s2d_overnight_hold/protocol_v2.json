@@ -1,0 +1,111 @@
+{
+  "seed": 42,
+  "folds": [
+    {
+      "year": 2021,
+      "phases": {
+        "initial": {
+          "cutoff": "2020-06-30",
+          "input_recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/initial_recipe.json"
+        },
+        "restricted": {
+          "cutoff": "2020-09-30",
+          "input_recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/restricted_recipe.json"
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "phases": {
+        "initial": {
+          "cutoff": "2021-04-30",
+          "input_recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/initial_recipe.json"
+        },
+        "restricted": {
+          "cutoff": "2021-09-30",
+          "input_recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/restricted_recipe.json"
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "phases": {
+        "initial": {
+          "cutoff": "2022-05-31",
+          "input_recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/initial_recipe.json"
+        },
+        "restricted": {
+          "cutoff": "2022-09-30",
+          "input_recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/restricted_recipe.json"
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "phases": {
+        "initial": {
+          "cutoff": "2023-05-31",
+          "input_recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/initial_recipe.json"
+        },
+        "restricted": {
+          "cutoff": "2023-09-29",
+          "input_recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/restricted_recipe.json"
+        }
+      }
+    }
+  ],
+  "model": "own-stock48x16 FT16;one-layerH32;final hidden dropout.10;CPU float32",
+  "optimizer": "AdamW lr.001 betas(.9,.999) eps1e-8 matrix decay.01 bias0;clip1;16 complete sessions;shuffle42+epoch",
+  "selector": "primary transformed magnitude loss only;first finite nonnegative;<=.999 qualified best;min12 patience10 max60",
+  "fresh_refit": true,
+  "maximum_starts": 4,
+  "maximum_phase_fits": 8,
+  "epoch_cutoffs": "exact saved Design A role indices/cutoffs;48 completed-step embargo;task-specific maturity",
+  "source": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet",
+  "source_sha256": "a66edd638bc9cdb2c919c3ff1a81f5023eeab9bad0e0926d12e45306c8af3d51",
+  "role_index_source": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/role_indices.npz",
+  "source_read_receipt": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv",
+  "protected": "No2025/2026 prices/outcomes/metrics/hashes;calendar-only next-session dates may extend into January2025",
+  "uncertainty": {
+    "draws": 400,
+    "seed": 22042,
+    "unit": "whole calendar months within year, then equal years"
+  },
+  "caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "no_deferred_C0_M1_router": true,
+  "intraday_preference_unresolved": true,
+  "kind": "HF20_S2D_OVERNIGHT_HOLD_V2_METADATA_CLARIFICATION",
+  "estimand": "A_gap=abs(log(next09:30 genuine minute open / actual16:00 genuine end-of-session price))",
+  "primary": "GAP-SMEAR raw A_gap MSE vs all same-gap controls, strongest observed comparator explicitly descriptive",
+  "objective": "canonical M_gap transformed MSE",
+  "parameters": 6433,
+  "clock": null,
+  "population": "one normal full-session15:30 origin/session;input source eligibility,all20 genuine close/open,same action basis;new gap maturity nextopen+2min and48-step embargo",
+  "scale": "independent phase-prefix weighted left median A_gap, floor1e-8;original input-only FT16 prefix recipes",
+  "minimums": {
+    "prefix_sessions": 252,
+    "selector_sessions": 50,
+    "calibration_sessions": 25,
+    "oos_sessions": 100,
+    "selector_calibration_sessions_per_month": 5,
+    "oos_months": 12
+  },
+  "baselines": [
+    "prefix per-stock raw gap mean",
+    "prefix weighted-left-median raw gap",
+    "mean of last20 genuinely matured valid gaps per stock;at least20, no current/future gap, no parameter selection"
+  ],
+  "calibration": "predeclared primary one global own-tail smear;raw diagnostic, never choose by OOS",
+  "tails": "own legal prefix95/99 gap thresholds;no cross-task comparison",
+  "source_gate": "genuine current close/next open all20;exclude early closes and COP2012-05-01 basis crossing;rebuild admissions using gap maturity, not4h eligibility",
+  "parent_protocol": {
+    "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2d_overnight_hold/protocol.json",
+    "sha256": "312a1b747230f932171faea1410323607521d17ba3e71be58acadc42ae59a6a0"
+  },
+  "scale_status": "NOT_FITTED: own A_gap-only phase scale required after the source/coverage gate; no four-hour target scales or thresholds are operative",
+  "clarification": "Remove inherited four-hour scale/threshold reference fields from D chronology metadata. No scientific rule, cohort, minimum, gate or result changes; D stays BLOCKED with zero fits."
+}

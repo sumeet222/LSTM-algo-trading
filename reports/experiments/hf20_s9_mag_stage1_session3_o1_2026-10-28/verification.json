@@ -1,0 +1,109 @@
+{
+  "prefit_tests": 13,
+  "prefit_static": {
+    "filesAnalyzed": 504,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 106.41
+  },
+  "numerical_kernels": {
+    "positive": "34b98202cd84de64e8441d2f05e9a0a12783b5cb3ce6a4b941a18b9b562feaf0",
+    "stock_loss": "09b4289ca57a0b5e43fe2ef8e9d2840401ce66d657696f1c6d5ef673e3715a96",
+    "weighted_loss": "d8d7954f74f38b19bf394a4d5186e0937e9026d26a32cb51d4d59068bfc3356b",
+    "decoded": "c55cd23240c680a69861797d98cab0d04da4983be6a006efe90d0111bb65e7a0",
+    "train_epoch": "ec38f98cf069519e546f13951772c49266389482afb4b638792ee94c456546d3",
+    "check_recipe": "62f20867564924043b67ff240d867ad5b8ba27e8b5372bd11725d777dee69e5e",
+    "prepare_recipes": "fd3ad457e5f2963ab1f439a6a0220c54355907e47834a1613881afa41c78d342",
+    "run_fold": "2b98ce1a9169676692ac66eb61c6f457955e4d39b64f4fc17610246a9e44fa24"
+  },
+  "status": "COMPLETE",
+  "preparation_correction": "F21 source-only S4 target metadata recognized; all FT16 fields still exact; before any neural start",
+  "preparation_log": "execution.log",
+  "postfit_checks": "PASS",
+  "fold_checks": [
+    {
+      "year": 2021,
+      "canonical_roles": true,
+      "prefix_recipes_exact": true,
+      "same_keys_labels_weights": true,
+      "positive_finite": true,
+      "checkpoint_reloaded": true,
+      "selector_replayed": true
+    },
+    {
+      "year": 2022,
+      "canonical_roles": true,
+      "prefix_recipes_exact": true,
+      "same_keys_labels_weights": true,
+      "positive_finite": true,
+      "checkpoint_reloaded": true,
+      "selector_replayed": true
+    },
+    {
+      "year": 2023,
+      "canonical_roles": true,
+      "prefix_recipes_exact": true,
+      "same_keys_labels_weights": true,
+      "positive_finite": true,
+      "checkpoint_reloaded": true,
+      "selector_replayed": true
+    },
+    {
+      "year": 2024,
+      "canonical_roles": true,
+      "prefix_recipes_exact": true,
+      "same_keys_labels_weights": true,
+      "positive_finite": true,
+      "checkpoint_reloaded": true,
+      "selector_replayed": true
+    }
+  ],
+  "population": {
+    "rows": 80260,
+    "origins": 4013,
+    "sessions": 793
+  },
+  "new_pairs": 4,
+  "new_neural_phases": 8,
+  "neural_epochs": 164,
+  "optimizer_updates": 25059,
+  "clipped_batches": 20024,
+  "fit_seconds": 3326.56098291697,
+  "fit_peak_rss_bytes": 1156300800,
+  "ledger_after": 138,
+  "failed_neural_pairs": 0,
+  "resources_at_verification": {
+    "project_bytes": 12425187346,
+    "task_bytes": 4076150,
+    "peak_rss_bytes": 450510848
+  },
+  "scientific_verdict": "NO_INCREMENTAL_EVIDENCE",
+  "completed_at_utc": "2026-10-28T05:54:44.998433+00:00",
+  "final_static": {
+    "command": ".venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist > /private/tmp/s9_mag_o1_types_final.json",
+    "summary": {
+      "filesAnalyzed": 504,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 73.196
+    }
+  },
+  "focused_tests": {
+    "command": ".venv/bin/python -m pytest tests/test_hf20_mag_o1.py tests/test_hf20_mag_designa.py tests/test_hf20_mag_designa_continue.py -q",
+    "passed": 13,
+    "failed": 0,
+    "seconds": 7.39
+  },
+  "source_final_sha256": {
+    "src/lstm_data/hf20_mag_o1.py": "b857fbeeaa0a98dce038c9f8399fa5b169c43effe409eabb82d7f5c0d130bae2",
+    "tests/test_hf20_mag_o1.py": "62ce5df938938791e3e2135244fbbefefe2d7896d8fa189d9c1e300b75bf88f6"
+  },
+  "aggregate_sha256": {
+    "metrics.csv": "af90f428e169818ebf6debdd909ab4ef66a90dda672f8a7c1f5d7a2c65ee314a",
+    "groups.csv": "2af9fe8d631b7897136c8aac27723ad59861f846ffbbcf5f293c442cece69f3d",
+    "paired_MSE.csv": "2f1f7a31f6a1ad7f55369b66beb57875647279e396c97e4add753c0064735814"
+  },
+  "final_summary": "Final verification PASS: all four canonical-role/key/label/weight/axis/prefix-recipe/softplus/checkpoint/selector checks pass; all eight pre-fit numerical kernels and bound predecessor assets remain unchanged. Thirteen focused tests, Ruff, and full basic Pylance-stub parity504 files/zero errors and warnings pass. Four new pairs/eight phase fits,164 epochs/25,059 optimizer updates; ledger134\u2192138/200; no neural failure/retry; empty continuation queue. One preparation-only metadata-checker correction before any start is retained in execution.log. Actual fit lifecycle sum3,326.56s; peak RSS1,156,300,800 bytes, under2GB. New namespace approximately4.08MB, under2.5GB; whole project remains under15GB. PyArrow cache-query warnings are environmental. PyTorch warns on the read-only Parquet NumPy view used for decoder replay; softplus/multiplication are out-of-place and no input is mutated; exact decoder/reload checks pass. The current registry pointer is the only existing file changed. No commit/push. Editor: select .venv/bin/python, Pylance basic, refresh Problems; actual editor refresh remains human-confirmed. STOP; no further experiment or protected release."
+}

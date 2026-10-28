@@ -1,0 +1,615 @@
+{
+  "status": "PREFLIGHT_COMPLETE",
+  "B": {
+    "status": "READY",
+    "reasons": []
+  },
+  "C": {
+    "status": "BLOCKED",
+    "reasons": [
+      "F21/inner_train:861 original overnight origins lack complete20 genuine components",
+      "F21/selector:10 original overnight origins lack complete20 genuine components",
+      "F21/restricted_refit:875 original overnight origins lack complete20 genuine components",
+      "F21/calibration:34 original overnight origins lack complete20 genuine components",
+      "F21/oos:112 original overnight origins lack complete20 genuine components",
+      "F22/inner_train:934 original overnight origins lack complete20 genuine components",
+      "F22/selector:66 original overnight origins lack complete20 genuine components",
+      "F22/restricted_refit:1013 original overnight origins lack complete20 genuine components",
+      "F22/calibration:11 original overnight origins lack complete20 genuine components",
+      "F22/oos:95 original overnight origins lack complete20 genuine components",
+      "F23/inner_train:1074 original overnight origins lack complete20 genuine components",
+      "F23/selector:29 original overnight origins lack complete20 genuine components",
+      "F23/restricted_refit:1109 original overnight origins lack complete20 genuine components",
+      "F23/calibration:17 original overnight origins lack complete20 genuine components",
+      "F23/oos:116 original overnight origins lack complete20 genuine components",
+      "F24/inner_train:1178 original overnight origins lack complete20 genuine components",
+      "F24/selector:43 original overnight origins lack complete20 genuine components",
+      "F24/restricted_refit:1224 original overnight origins lack complete20 genuine components",
+      "F24/calibration:18 original overnight origins lack complete20 genuine components",
+      "F24/oos:137 original overnight origins lack complete20 genuine components"
+    ]
+  },
+  "D": {
+    "status": "BLOCKED",
+    "reasons": [
+      "F22/selector:sessions31<50;one role month has fewer than5 sessions",
+      "F23/selector:sessions48<50;one role month has fewer than5 sessions"
+    ]
+  },
+  "ledger_before": 154,
+  "ceiling": 300,
+  "remaining_capacity": 146,
+  "resources": {
+    "project_bytes": 12428537908,
+    "task_bytes": 20176,
+    "peak_rss_bytes": 514490368
+  },
+  "source_gate": "saved genuine endpoint/component artifact only;no minute read",
+  "component_coverage": [
+    {
+      "year": 2021,
+      "role": "inner_train",
+      "N_origins": 6474,
+      "complete20_origins": 5613,
+      "missing_origins": 861
+    },
+    {
+      "year": 2021,
+      "role": "selector",
+      "N_origins": 195,
+      "complete20_origins": 185,
+      "missing_origins": 10
+    },
+    {
+      "year": 2021,
+      "role": "restricted_refit",
+      "N_origins": 6697,
+      "complete20_origins": 5822,
+      "missing_origins": 875
+    },
+    {
+      "year": 2021,
+      "role": "calibration",
+      "N_origins": 165,
+      "complete20_origins": 131,
+      "missing_origins": 34
+    },
+    {
+      "year": 2021,
+      "role": "oos",
+      "N_origins": 533,
+      "complete20_origins": 421,
+      "missing_origins": 112
+    },
+    {
+      "year": 2022,
+      "role": "inner_train",
+      "N_origins": 7103,
+      "complete20_origins": 6169,
+      "missing_origins": 934
+    },
+    {
+      "year": 2022,
+      "role": "selector",
+      "N_origins": 152,
+      "complete20_origins": 86,
+      "missing_origins": 66
+    },
+    {
+      "year": 2022,
+      "role": "restricted_refit",
+      "N_origins": 7286,
+      "complete20_origins": 6273,
+      "missing_origins": 1013
+    },
+    {
+      "year": 2022,
+      "role": "calibration",
+      "N_origins": 137,
+      "complete20_origins": 126,
+      "missing_origins": 11
+    },
+    {
+      "year": 2022,
+      "role": "oos",
+      "N_origins": 665,
+      "complete20_origins": 570,
+      "missing_origins": 95
+    },
+    {
+      "year": 2023,
+      "role": "inner_train",
+      "N_origins": 7793,
+      "complete20_origins": 6719,
+      "missing_origins": 1074
+    },
+    {
+      "year": 2023,
+      "role": "selector",
+      "N_origins": 177,
+      "complete20_origins": 148,
+      "missing_origins": 29
+    },
+    {
+      "year": 2023,
+      "role": "restricted_refit",
+      "N_origins": 7998,
+      "complete20_origins": 6889,
+      "missing_origins": 1109
+    },
+    {
+      "year": 2023,
+      "role": "calibration",
+      "N_origins": 139,
+      "complete20_origins": 122,
+      "missing_origins": 17
+    },
+    {
+      "year": 2023,
+      "role": "oos",
+      "N_origins": 505,
+      "complete20_origins": 389,
+      "missing_origins": 116
+    },
+    {
+      "year": 2024,
+      "role": "inner_train",
+      "N_origins": 8380,
+      "complete20_origins": 7202,
+      "missing_origins": 1178
+    },
+    {
+      "year": 2024,
+      "role": "selector",
+      "N_origins": 167,
+      "complete20_origins": 124,
+      "missing_origins": 43
+    },
+    {
+      "year": 2024,
+      "role": "restricted_refit",
+      "N_origins": 8578,
+      "complete20_origins": 7354,
+      "missing_origins": 1224
+    },
+    {
+      "year": 2024,
+      "role": "calibration",
+      "N_origins": 90,
+      "complete20_origins": 72,
+      "missing_origins": 18
+    },
+    {
+      "year": 2024,
+      "role": "oos",
+      "N_origins": 570,
+      "complete20_origins": 433,
+      "missing_origins": 137
+    }
+  ],
+  "gap_coverage": [
+    {
+      "year": 2021,
+      "role": "inner_train",
+      "sessions": 1773,
+      "origins": 1773,
+      "rows": 35460,
+      "months": 105,
+      "minimum_month_sessions": 5,
+      "first_date": "2011-04-01",
+      "last_date": "2020-06-29",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2021,
+      "role": "selector",
+      "sessions": 53,
+      "origins": 53,
+      "rows": 1060,
+      "months": 3,
+      "minimum_month_sessions": 15,
+      "first_date": "2020-07-13",
+      "last_date": "2020-09-28",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2021,
+      "role": "restricted_refit",
+      "sessions": 1833,
+      "origins": 1833,
+      "rows": 36660,
+      "months": 108,
+      "minimum_month_sessions": 5,
+      "first_date": "2011-04-01",
+      "last_date": "2020-09-28",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2021,
+      "role": "calibration",
+      "sessions": 43,
+      "origins": 43,
+      "rows": 860,
+      "months": 3,
+      "minimum_month_sessions": 12,
+      "first_date": "2020-10-12",
+      "last_date": "2020-12-29",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2021,
+      "role": "oos",
+      "sessions": 145,
+      "origins": 145,
+      "rows": 2900,
+      "months": 12,
+      "minimum_month_sessions": 3,
+      "first_date": "2021-01-13",
+      "last_date": "2021-12-30",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2022,
+      "role": "inner_train",
+      "sessions": 1948,
+      "origins": 1948,
+      "rows": 38960,
+      "months": 115,
+      "minimum_month_sessions": 5,
+      "first_date": "2011-04-01",
+      "last_date": "2021-04-28",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2022,
+      "role": "selector",
+      "sessions": 31,
+      "origins": 31,
+      "rows": 620,
+      "months": 5,
+      "minimum_month_sessions": 3,
+      "first_date": "2021-05-13",
+      "last_date": "2021-09-29",
+      "status": "BLOCKED",
+      "reason": "sessions31<50;one role month has fewer than5 sessions"
+    },
+    {
+      "year": 2022,
+      "role": "restricted_refit",
+      "sessions": 1984,
+      "origins": 1984,
+      "rows": 39680,
+      "months": 120,
+      "minimum_month_sessions": 3,
+      "first_date": "2011-04-01",
+      "last_date": "2021-09-29",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2022,
+      "role": "calibration",
+      "sessions": 44,
+      "origins": 44,
+      "rows": 880,
+      "months": 3,
+      "minimum_month_sessions": 8,
+      "first_date": "2021-10-12",
+      "last_date": "2021-12-30",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2022,
+      "role": "oos",
+      "sessions": 176,
+      "origins": 176,
+      "rows": 3520,
+      "months": 12,
+      "minimum_month_sessions": 4,
+      "first_date": "2022-01-12",
+      "last_date": "2022-12-29",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2023,
+      "role": "inner_train",
+      "sessions": 2124,
+      "origins": 2124,
+      "rows": 42480,
+      "months": 128,
+      "minimum_month_sessions": 3,
+      "first_date": "2011-04-01",
+      "last_date": "2022-05-27",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2023,
+      "role": "selector",
+      "sessions": 48,
+      "origins": 48,
+      "rows": 960,
+      "months": 4,
+      "minimum_month_sessions": 4,
+      "first_date": "2022-06-10",
+      "last_date": "2022-09-26",
+      "status": "BLOCKED",
+      "reason": "sessions48<50;one role month has fewer than5 sessions"
+    },
+    {
+      "year": 2023,
+      "role": "restricted_refit",
+      "sessions": 2178,
+      "origins": 2178,
+      "rows": 43560,
+      "months": 132,
+      "minimum_month_sessions": 3,
+      "first_date": "2011-04-01",
+      "last_date": "2022-09-26",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2023,
+      "role": "calibration",
+      "sessions": 40,
+      "origins": 40,
+      "rows": 800,
+      "months": 3,
+      "minimum_month_sessions": 10,
+      "first_date": "2022-10-13",
+      "last_date": "2022-12-29",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2023,
+      "role": "oos",
+      "sessions": 147,
+      "origins": 147,
+      "rows": 2940,
+      "months": 12,
+      "minimum_month_sessions": 5,
+      "first_date": "2023-01-12",
+      "last_date": "2023-12-28",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2024,
+      "role": "inner_train",
+      "sessions": 2282,
+      "origins": 2282,
+      "rows": 45640,
+      "months": 140,
+      "minimum_month_sessions": 3,
+      "first_date": "2011-04-01",
+      "last_date": "2023-05-30",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2024,
+      "role": "selector",
+      "sessions": 52,
+      "origins": 52,
+      "rows": 1040,
+      "months": 4,
+      "minimum_month_sessions": 9,
+      "first_date": "2023-06-12",
+      "last_date": "2023-09-28",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2024,
+      "role": "restricted_refit",
+      "sessions": 2341,
+      "origins": 2341,
+      "rows": 46820,
+      "months": 144,
+      "minimum_month_sessions": 3,
+      "first_date": "2011-04-01",
+      "last_date": "2023-09-28",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2024,
+      "role": "calibration",
+      "sessions": 32,
+      "origins": 32,
+      "rows": 640,
+      "months": 3,
+      "minimum_month_sessions": 6,
+      "first_date": "2023-10-11",
+      "last_date": "2023-12-28",
+      "status": "PASS",
+      "reason": ""
+    },
+    {
+      "year": 2024,
+      "role": "oos",
+      "sessions": 154,
+      "origins": 154,
+      "rows": 3080,
+      "months": 12,
+      "minimum_month_sessions": 7,
+      "first_date": "2024-01-11",
+      "last_date": "2024-12-30",
+      "status": "PASS",
+      "reason": ""
+    }
+  ],
+  "role_counts": [
+    {
+      "year": 2021,
+      "role": "inner_train",
+      "origins": 11449,
+      "sessions": 2100,
+      "rows": 228980
+    },
+    {
+      "year": 2021,
+      "role": "selector",
+      "origins": 349,
+      "sessions": 57,
+      "rows": 6980
+    },
+    {
+      "year": 2021,
+      "role": "restricted_refit",
+      "origins": 11846,
+      "sessions": 2164,
+      "rows": 236920
+    },
+    {
+      "year": 2021,
+      "role": "calibration",
+      "origins": 283,
+      "sessions": 56,
+      "rows": 5660
+    },
+    {
+      "year": 2021,
+      "role": "oos",
+      "origins": 955,
+      "sessions": 188,
+      "rows": 19100
+    },
+    {
+      "year": 2022,
+      "role": "inner_train",
+      "origins": 12560,
+      "sessions": 2301,
+      "rows": 251200
+    },
+    {
+      "year": 2022,
+      "role": "selector",
+      "origins": 278,
+      "sessions": 58,
+      "rows": 5560
+    },
+    {
+      "year": 2022,
+      "role": "restricted_refit",
+      "origins": 12888,
+      "sessions": 2366,
+      "rows": 257760
+    },
+    {
+      "year": 2022,
+      "role": "calibration",
+      "origins": 245,
+      "sessions": 50,
+      "rows": 4900
+    },
+    {
+      "year": 2022,
+      "role": "oos",
+      "origins": 1180,
+      "sessions": 210,
+      "rows": 23600
+    },
+    {
+      "year": 2023,
+      "role": "inner_train",
+      "origins": 13776,
+      "sessions": 2526,
+      "rows": 275520
+    },
+    {
+      "year": 2023,
+      "role": "selector",
+      "origins": 313,
+      "sessions": 59,
+      "rows": 6260
+    },
+    {
+      "year": 2023,
+      "role": "restricted_refit",
+      "origins": 14137,
+      "sessions": 2592,
+      "rows": 282740
+    },
+    {
+      "year": 2023,
+      "role": "calibration",
+      "origins": 258,
+      "sessions": 48,
+      "rows": 5160
+    },
+    {
+      "year": 2023,
+      "role": "oos",
+      "origins": 887,
+      "sessions": 187,
+      "rows": 17740
+    },
+    {
+      "year": 2024,
+      "role": "inner_train",
+      "origins": 14824,
+      "sessions": 2719,
+      "rows": 296480
+    },
+    {
+      "year": 2024,
+      "role": "selector",
+      "origins": 291,
+      "sessions": 69,
+      "rows": 5820
+    },
+    {
+      "year": 2024,
+      "role": "restricted_refit",
+      "origins": 15167,
+      "sessions": 2795,
+      "rows": 303340
+    },
+    {
+      "year": 2024,
+      "role": "calibration",
+      "origins": 163,
+      "sessions": 40,
+      "rows": 3260
+    },
+    {
+      "year": 2024,
+      "role": "oos",
+      "origins": 991,
+      "sessions": 208,
+      "rows": 19820
+    }
+  ],
+  "projected_new_starts": 4,
+  "projected_after": 158,
+  "protocols": {
+    "B": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2b_clock/protocol.json",
+      "sha256": "8c83d76e8ddb53c5f250e31b0a287d0083ae77faff5a1212399d7f8874f73ec8"
+    },
+    "C": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2c_decomposition/protocol.json",
+      "sha256": "7dfbc17f0cbd2bddca6e097325ff01c37550318edb0cb1978d99f83fef611000"
+    },
+    "D": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2d_overnight_hold/protocol_v2.json",
+      "sha256": "1227434ed4d70be8f934e13111321ad4e5cc5a14c2dee2c77ae2c91d1dce991d"
+    }
+  },
+  "supersedes": {
+    "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/planning_receipt.json",
+    "sha256": "954914dac6d24dd8c0c400c5059b2b16542dec30fb424cf719bf998a0e504860"
+  },
+  "metadata_clarification": "Remove inherited four-hour scale/threshold reference fields from D chronology metadata. No scientific rule, cohort, minimum, gate or result changes; D stays BLOCKED with zero fits."
+}

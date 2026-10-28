@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "old_S2B_control_metrics_reproduced": true,
+  "old_S2B_code_unchanged": true,
+  "new_code_matches_prefit": true,
+  "old_bindings_unchanged": true,
+  "rank_checks": [
+    {
+      "year": 2021,
+      "raw_cal_ranks_identical": true,
+      "raw_clamp_rows": 0,
+      "cal_clamp_rows": 0
+    },
+    {
+      "year": 2022,
+      "raw_cal_ranks_identical": true,
+      "raw_clamp_rows": 0,
+      "cal_clamp_rows": 0
+    },
+    {
+      "year": 2023,
+      "raw_cal_ranks_identical": true,
+      "raw_clamp_rows": 0,
+      "cal_clamp_rows": 0
+    },
+    {
+      "year": 2024,
+      "raw_cal_ranks_identical": true,
+      "raw_clamp_rows": 0,
+      "cal_clamp_rows": 0
+    }
+  ],
+  "unconstrained_main_objective_diagnostics": [
+    {
+      "year": 2021,
+      "original_main_Mhat_transformed_MSE": 0.22384837341308916
+    },
+    {
+      "year": 2022,
+      "original_main_Mhat_transformed_MSE": 0.2775639601295025
+    },
+    {
+      "year": 2023,
+      "original_main_Mhat_transformed_MSE": 0.20752781583649182
+    },
+    {
+      "year": 2024,
+      "original_main_Mhat_transformed_MSE": 0.21544386742972527
+    }
+  ],
+  "epochs": 160,
+  "optimizer_updates": 24885,
+  "clipped_batches": 304,
+  "phase_fits": 8,
+  "charged_starts": 4,
+  "ledger_before": 158,
+  "ledger_after": 162,
+  "protected_2026_access": false,
+  "opportunistic_2025_market_analysis": false,
+  "no_new_minute_source": true,
+  "no_S2D_or_deferred_route": true
+}

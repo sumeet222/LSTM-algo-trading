@@ -1,0 +1,61 @@
+{
+  "status": "COMPLETE",
+  "scientific_status": "MIXED",
+  "completed_at_utc": "2026-10-28T04:03:40.480401+00:00",
+  "four_year_population": {
+    "rows": 80260,
+    "origins": 4013,
+    "sessions": 793
+  },
+  "reused_years": [
+    2021
+  ],
+  "new_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "new_pairs": 3,
+  "new_neural_phase_fits": 6,
+  "new_neural_epochs": 158,
+  "new_fit_seconds": 2538.3526068330975,
+  "new_fit_peak_rss": 1165688832,
+  "ledger_before": 131,
+  "ledger_after": 134,
+  "ceiling": 200,
+  "failed_or_aborted": 0,
+  "focused_tests": {
+    "command": ".venv/bin/python -m pytest tests/test_hf20_mag_designa.py tests/test_hf20_mag_designa_continue.py -q",
+    "passed": 8,
+    "failed": 0
+  },
+  "static": {
+    "command": ".venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist > /private/tmp/s9_mag_session2b_types_complete.json",
+    "summary": {
+      "filesAnalyzed": 502,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 65.609
+    }
+  },
+  "code_sha256": {
+    "src/lstm_data/hf20_mag_designa.py": "d8f0afb5d9a15823b37a115e3fd38971f5244d757e12cd9f540d49c74333c837",
+    "src/lstm_data/hf20_mag_designa_continue.py": "591a2fa2547436e1138debd73bf532fe04d82c29a1ca9f306fd145554c092c53",
+    "tests/test_hf20_mag_designa_continue.py": "9e9f1324db1dc5e6161a17d5f624eec845937a00fb2ca84d13f6900cd4a1c7d2"
+  },
+  "aggregate_sha256": {
+    "fourfold_metrics.csv": "54d22e764a20b088669883f8e79e68d1784509aee6c22797f2faffffd0d41322",
+    "fourfold_groups.csv": "ba827dcc1296d305a6f9ad76f746301c629921bd07da6ba4af25dc9cd7248d4c",
+    "paired_MSE.csv": "db38aedec7f7c43617367c3c2f38f35f542b5337bacf086bdd9dbe69af9e0ff1",
+    "fit_summary.csv": "13990378c6713677ca4c28eb03da2a8becb714cb615e19093424a80afec7366b"
+  },
+  "source_end": "2024-12-31",
+  "no_2025_or_2026_numerical_reads": true,
+  "resources_at_verification": {
+    "project_bytes": 12420922460,
+    "task_bytes": 5544113,
+    "peak_rss_bytes": 313655296
+  },
+  "summary": "Verification PASS: eight focused tests; Ruff clean; full basic Pylance-stub parity 502 Python files, zero errors/warnings. All four key/weight/axis/phase-recipe/decoder/rank/checkpoint checks pass; 16 bound parent files and ten numerical kernels are unchanged. New work: three pairs, six neural phases, 158 epochs, no retries; ledger134/200; empty continuation queue. Resources remain below 2GB process RAM, 2.5GB task and 15GB project caps. Exact checks/commands: execution_receipt.json, integrity_checks.json and ../../codex_sessions/2026-10-27_230800_hf20_s9_mag_session2b_fourfold.md. For editor verification select .venv/bin/python, Pylance basic, and refresh Problems; the actual editor refresh remains human-confirmed. No commit or push."
+}

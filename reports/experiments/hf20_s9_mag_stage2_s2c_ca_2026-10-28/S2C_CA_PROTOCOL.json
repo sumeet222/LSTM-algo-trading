@@ -1,0 +1,77 @@
+{
+  "kind": "S2C_CA_PROSPECTIVE_AMENDMENT_V1",
+  "seed": 42,
+  "parameters": 6572,
+  "main": "original complete20 240-XNYS-minute absolute endpoint magnitude; transformed M MSE",
+  "mask": "one common complete-triple stock mask; no C-B or reconstructed components",
+  "auxiliary": "normalized signed linear heads; L=main+.10*(pre+gap+post)/3",
+  "auxiliary_weights": "overnight session/origin/20 fixed weights times mask/global phase masked mass; batch factor S_phase/B_batch",
+  "selector": "main unrestricted M loss only; .999 qualified best; min12 patience10 max60",
+  "calibration": "own frozen September encoder; own Oct-Dec C3 IO kappa25; calibrated primary, raw diagnostic",
+  "source_stop": "2024-12-31",
+  "no_2025_2026_market_access": true,
+  "clock_contract": {
+    "fields": [
+      "slot_09:30",
+      "slot_10:30",
+      "slot_11:30",
+      "slot_12:30",
+      "slot_13:30",
+      "slot_14:30",
+      "slot_15:30",
+      "remaining_trading_minutes/240",
+      "target_crosses_session",
+      "calendar_days_to_next_scheduled_session/7"
+    ],
+    "dimension": 10,
+    "scale": "fixed, no fitting",
+    "placement": "concatenate to dropped final H32 hidden state before scalar head;metadata not dropped",
+    "calendar": "executed XNYS schedule and actual early closes;no outcomes used"
+  },
+  "previous_pointer": {
+    "budget_amendment": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/budget_amendment_300.json",
+      "sha256": "1109ba7415d39905850a7dbcc392aec1d8db05666624475f9c28a671c3a943aa"
+    },
+    "counts_started_including_failed": true,
+    "definition": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/planning_receipt_v2.json",
+      "sha256": "9e7995062c713df833d81b856e0c6e022c70e30c792aafedb32bff560b424932"
+    },
+    "effective_ceiling": 300,
+    "fit_permission": false,
+    "live_approval_required": true,
+    "plan": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/planning_receipt_v2.json",
+      "sha256": "9e7995062c713df833d81b856e0c6e022c70e30c792aafedb32bff560b424932"
+    },
+    "previous_journal": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_session1_overnight_specialist_2026-10-28/neural_starts.jsonl",
+      "sha256": "06e4fa6c90185fa4f4d6e9dcb6e1852193ce9a35b1e0ef2bac1e494016893d96"
+    },
+    "real_journal": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/neural_starts.jsonl",
+    "schema_version": 29
+  },
+  "ledger_before": 158,
+  "ceiling": 300,
+  "max_charged_starts": 4,
+  "max_phase_fits": 8,
+  "preservation_bindings": {
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/neural_starts.jsonl": "019ffac2528e6be97022f1359d5b7d1f983f046891cf64fa54f7226d94deaf96",
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet": "a66edd638bc9cdb2c919c3ff1a81f5023eeab9bad0e0926d12e45306c8af3d51",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/role_indices.npz": "c38a74b71cf20c73e146cb0efc2747f0a6855abc87cd13aa2af8b1155c98e42d",
+    "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/S2C_ROLE_SUMMARY.csv": "46f6a51c25666dab22e7dd6700b87e08467efc19df51629001eab0f74e5acfa2",
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2c_decomposition/protocol.json": "7dfbc17f0cbd2bddca6e097325ff01c37550318edb0cb1978d99f83fef611000",
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2b_clock/protocol.json": "8c83d76e8ddb53c5f250e31b0a287d0083ae77faff5a1212399d7f8874f73ec8",
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/planning_receipt_v2.json": "9e7995062c713df833d81b856e0c6e022c70e30c792aafedb32bff560b424932",
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_SOURCE_POLICY.json": "afa1e8f94ced78a3b82f510908d44d4ea5acad16a12ef061c652561c50011c1b",
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv": "9d1fae7940694c0db27f532133ce268d043525029e9fe27dc2676537a3d2623b"
+  },
+  "blocked_original_not_overwritten": true,
+  "no_S2D_or_deferred_route": true,
+  "uncertainty": {
+    "draws": 400,
+    "seed": 22042,
+    "unit": "whole months within years; equal years"
+  }
+}

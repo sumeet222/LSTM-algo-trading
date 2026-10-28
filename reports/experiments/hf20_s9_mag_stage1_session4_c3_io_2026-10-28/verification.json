@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "neural_fits": 0,
+  "neural_forward_passes": 0,
+  "ledger_before": 138,
+  "ledger_after": 138,
+  "population": {
+    "rows": 80260,
+    "origins": 4013,
+    "sessions": 793
+  },
+  "rank_checks": [
+    {
+      "year": 2021,
+      "rank_vectors_identical": true,
+      "clamp_rows": 0
+    },
+    {
+      "year": 2022,
+      "rank_vectors_identical": true,
+      "clamp_rows": 0
+    },
+    {
+      "year": 2023,
+      "rank_vectors_identical": true,
+      "clamp_rows": 0
+    },
+    {
+      "year": 2024,
+      "rank_vectors_identical": true,
+      "clamp_rows": 0
+    }
+  ],
+  "c1a_reproduction": "PASS_ALL_FOUR",
+  "no_oos_labels_before_factor_freeze": true,
+  "static_summary": {
+    "filesAnalyzed": 506,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 63.504
+  },
+  "focused_tests": "5 passed in 2.72s",
+  "ruff": "PASS",
+  "byte_identical_replay": [
+    "protocol.json",
+    "calibration_coefficients.csv",
+    "metrics.csv",
+    "groups.csv"
+  ],
+  "source_sha256": {
+    "src/lstm_data/hf20_mag_c3_io.py": "4c1d04100d36a7aba1d5be968e68f4fba68b452fb1586883fd800bbab68a8857",
+    "tests/test_hf20_mag_c3_io.py": "1a7db5be4b7fa01bb10f8bf648443dcaa59f2b370e39d4754b2542d9efcb5957"
+  },
+  "final_summary": "Verification: five focused tests pass (2.72s); Ruff and `git diff --check` pass. Full repository Pylance-parity basic check: **506 files, zero errors, zero warnings** (63.504s). Exact commands: `.venv/bin/python -m pytest tests/test_hf20_mag_c3_io.py -q`; `.venv/bin/ruff check src/lstm_data/hf20_mag_c3_io.py tests/test_hf20_mag_c3_io.py --output-format concise`; `.venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist`. Select repository `.venv/bin/python`, retain Pylance basic and refresh editor Problems; actual editor refresh remains human-confirmed. Two initial type diagnostics in exception-record key construction were corrected without changing numerical formulas or data. Frozen protocol/coefficients and both numerical CSVs replay byte-identically. All14 explicitly bound previous score/ledger/registry files remain byte-identical. No previous file is written. Branch `feat/track-a-data-intake`, SHA `5f7bb86a35d5aaff34ff79ef8f471117de6d3e42`, fetched0/0 upstream; prior dirty work preserved, no commit/push. Exact saved metadata root: `reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ORIGIN_SOURCE_ELIGIBILITY.parquet`; original S9 references: `reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/HF20-S9-Fxx-H4-MAG-S42/oos_scores.parquet`. Session handoff: `reports/codex_sessions/2026-10-28_085747_hf20_s9_mag_session4_c3_io.md`."
+}

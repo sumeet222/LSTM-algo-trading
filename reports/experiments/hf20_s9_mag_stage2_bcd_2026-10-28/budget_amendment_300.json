@@ -1,0 +1,40 @@
+{
+  "id": "HF20_BUDGET_200_TO_300_2026_10_28_V1",
+  "actor_type": "human",
+  "recorded_at": "2026-10-28T16:22:18.049308+00:00",
+  "old_ceiling": 200,
+  "new_ceiling": 300,
+  "opening_started": 154,
+  "prospective_only": true,
+  "fit_permission": false,
+  "scope": "Ceiling only; this B/C/D campaign at most12 starts/24 phases, subject to three gates",
+  "verbatim_authorization": "Extend the existing cumulative neural-start budget from 200 to 300 starts (+100).",
+  "previous_pointer": {
+    "budget_amendment": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/budget_amendment_200.json",
+      "sha256": "9b9b32c2cdf275a1195240afd5765b9d381bbc6eaf0bcc1196373f70cf3735e4"
+    },
+    "counts_started_including_failed": true,
+    "definition": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_session1_overnight_specialist_2026-10-28/protocol.json",
+      "sha256": "6ef6a8563e6baee257e360fdcbf19a865db2d9b3deacec1c5a6ac624cd871cc9"
+    },
+    "effective_ceiling": 200,
+    "fit_permission": false,
+    "live_approval_required": true,
+    "plan": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_session1_overnight_specialist_2026-10-28/protocol.json",
+      "sha256": "6ef6a8563e6baee257e360fdcbf19a865db2d9b3deacec1c5a6ac624cd871cc9"
+    },
+    "previous_journal": {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/neural_starts.jsonl",
+      "sha256": "65e1298f8d812c90089f9e4004c9e0c6e93bb2d613a11c723b0376d34f20c990"
+    },
+    "real_journal": "reports/experiments/hf20_s9_mag_stage2_session1_overnight_specialist_2026-10-28/neural_starts.jsonl",
+    "schema_version": 27
+  },
+  "immutable_prior_journal": {
+    "path": "reports/experiments/hf20_s9_mag_stage2_session1_overnight_specialist_2026-10-28/neural_starts.jsonl",
+    "sha256": "06e4fa6c90185fa4f4d6e9dcb6e1852193ce9a35b1e0ef2bac1e494016893d96"
+  }
+}

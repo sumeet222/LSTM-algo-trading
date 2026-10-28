@@ -1,0 +1,171 @@
+{
+  "kind": "HF20_STAGE1_SESSION3_O1_SEED42_V1",
+  "folds": [
+    {
+      "year": 2021,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.005797117684325846,
+          "cutoff": "2020-06-30"
+        },
+        "restricted": {
+          "scale": 0.005848759193156053,
+          "cutoff": "2020-09-30"
+        }
+      },
+      "thresholds": {
+        "95": 0.029152683601565685,
+        "99": 0.055591859892280306
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/F21"
+    },
+    {
+      "year": 2022,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.005935124632023495,
+          "cutoff": "2021-04-30"
+        },
+        "restricted": {
+          "scale": 0.005933406715930685,
+          "cutoff": "2021-09-30"
+        }
+      },
+      "thresholds": {
+        "95": 0.029381635568292794,
+        "99": 0.0550530573806432
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F22"
+    },
+    {
+      "year": 2023,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.006072334419240624,
+          "cutoff": "2022-05-31"
+        },
+        "restricted": {
+          "scale": 0.006121673076939892,
+          "cutoff": "2022-09-30"
+        }
+      },
+      "thresholds": {
+        "95": 0.03048333514069074,
+        "99": 0.05621444505567313
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F23"
+    },
+    {
+      "year": 2024,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.0061734035023815,
+          "cutoff": "2023-05-31"
+        },
+        "restricted": {
+          "scale": 0.00617444719514992,
+          "cutoff": "2023-09-29"
+        }
+      },
+      "thresholds": {
+        "95": 0.03041068403132899,
+        "99": 0.055872346745723445
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F24"
+    }
+  ],
+  "information": "original own-stock48x16 FT16; H32,one layer,final dropout0.1;6433 parameters",
+  "objective": "mean_session mean_origin mean20 ((s*torch.softplus(z)-abs(R))/s)^2",
+  "decoder": "s*torch.softplus(z); no calibration, inverse transform, output cap or target trim",
+  "optimizer": "AdamW lr.001,beta(.9,.999),eps1e-8,matrix decay.01,bias0,clip1,batch16sessions",
+  "selector": "O1 scaled raw MSE; first finite nonnegative; <=.999*qualified best; min12,patience10,max60",
+  "seed": 42,
+  "threads": [
+    4,
+    1
+  ],
+  "dtype": "CPU float32",
+  "fresh_refit": true,
+  "calibration_tail": "reserved and excluded from all O1 fitting and selection; no inference needed",
+  "weights": "equal stocks/origin,origins/session,sessions/year,then equal four years",
+  "primary_comparators": [
+    "C0",
+    "C1a",
+    "M1",
+    "B0-RMEAN",
+    "B0-RMED",
+    "B0-CLOCK",
+    "B0-VOL"
+  ],
+  "bootstrap": {
+    "draws": 400,
+    "seed": 22042,
+    "kind": "existing whole months within year"
+  },
+  "event_definition": "A>restricted September weighted prefix95/99; strict exceedance",
+  "event_prior": "UNAVAILABLE: archived EVENT uses |TG20|, not these raw-A labels",
+  "authority": "Session3 explicit raw-MSE/softplus protocol overrides older rank-primary/full-December prose",
+  "ledger_before": 134,
+  "maximum_new_pairs": 4,
+  "maximum_neural_phase_fits": 8,
+  "maximum_after": 138,
+  "caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "resources": {
+    "project_bytes": 12421078557,
+    "task_bytes": 0,
+    "peak_rss_bytes": 383533056
+  },
+  "source_partitions": 174,
+  "source_end": "2024-12-31",
+  "workload": {
+    "maximum_epochs": 480,
+    "reference_epoch_seconds_p95": 23.267181135510327,
+    "rough_max_seconds": 11168.246945044957,
+    "artifact_reserve_bytes": 30000000
+  },
+  "prior_pointer": {
+    "budget_amendment": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/budget_amendment_200.json",
+      "sha256": "9b9b32c2cdf275a1195240afd5765b9d381bbc6eaf0bcc1196373f70cf3735e4"
+    },
+    "counts_started_including_failed": true,
+    "definition": {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/amendment.json",
+      "sha256": "379daeb6cb0e4123c524cd008ded70e4595d1b8d1c318f45d33682ef38161386"
+    },
+    "effective_ceiling": 200,
+    "fit_permission": false,
+    "live_approval_required": true,
+    "plan": {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/amendment.json",
+      "sha256": "379daeb6cb0e4123c524cd008ded70e4595d1b8d1c318f45d33682ef38161386"
+    },
+    "previous_journal": {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/neural_starts.jsonl",
+      "sha256": "a16f3001f7947dac546c579b8d9dc2a9771218a4fe4613d95f1f49bcc7726e29"
+    },
+    "real_journal": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/neural_starts.jsonl",
+    "schema_version": 25
+  },
+  "preservation_bindings": {
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/neural_starts.jsonl": "189bb5a91e9636e9a7415825b8847f9d9375987435bf619cacc9a8cef204cccf",
+    "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/F21/oos_scores.parquet": "cce9a2a0525d66a46dcfcdb0d29be246d1fa32921076f50d813f0224f292e438",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F22/oos_scores.parquet": "24f0affd0013787e3f4b6b7de20234bf53df492bfce73cd6be2e4ad3691a9fc3",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F23/oos_scores.parquet": "fd56eb2fe3dce1726dc358cfd0f140178bff115e7207434e5cc307d83c74ea04",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F24/oos_scores.parquet": "e0b5127c5e7d2a8633b432537e71024d046db2c81fc26004a0e00338019f3500"
+  },
+  "source_code": {
+    "src/lstm_data/hf20_mag_designa.py": "d8f0afb5d9a15823b37a115e3fd38971f5244d757e12cd9f540d49c74333c837",
+    "src/lstm_data/hf20_mag_designa_continue.py": "591a2fa2547436e1138debd73bf532fe04d82c29a1ca9f306fd145554c092c53",
+    "tests/test_hf20_mag_designa_continue.py": "9e9f1324db1dc5e6161a17d5f624eec845937a00fb2ca84d13f6900cd4a1c7d2"
+  },
+  "git_start": "5f7bb86a35d5aaff34ff79ef8f471117de6d3e42"
+}

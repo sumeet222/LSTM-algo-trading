@@ -1,0 +1,109 @@
+{
+  "folds": [
+    {
+      "year": 2021,
+      "status": "READY",
+      "reasons": [],
+      "calibration_coverage_flags": [],
+      "cutoffs": {
+        "june": "2020-06-30",
+        "september": "2020-09-30",
+        "december": "2020-12-31"
+      }
+    },
+    {
+      "year": 2022,
+      "status": "BLOCKED",
+      "reasons": [
+        "SELECTOR_LT50_SESSIONS",
+        "SELECTOR_SLOT_LT25_ORIGINS"
+      ],
+      "calibration_coverage_flags": [],
+      "cutoffs": {
+        "june": "2021-06-30",
+        "september": "2021-09-30",
+        "december": "2021-12-31"
+      }
+    },
+    {
+      "year": 2023,
+      "status": "BLOCKED",
+      "reasons": [
+        "SELECTOR_LT50_SESSIONS",
+        "SELECTOR_SLOT_LT25_ORIGINS"
+      ],
+      "calibration_coverage_flags": [
+        "CALIBRATION_LT50_SESSIONS_REVIEW"
+      ],
+      "cutoffs": {
+        "june": "2022-06-30",
+        "september": "2022-09-30",
+        "december": "2022-12-30"
+      }
+    },
+    {
+      "year": 2024,
+      "status": "BLOCKED",
+      "reasons": [
+        "SELECTOR_LT50_SESSIONS",
+        "SELECTOR_SLOT_LT25_ORIGINS"
+      ],
+      "calibration_coverage_flags": [
+        "CALIBRATION_LT50_SESSIONS_REVIEW",
+        "CALIBRATION_SLOT_LT25_ORIGINS_REVIEW"
+      ],
+      "cutoffs": {
+        "june": "2023-06-30",
+        "september": "2023-09-29",
+        "december": "2023-12-29"
+      }
+    }
+  ],
+  "alternatives_not_authorized": [
+    {
+      "year": 2022,
+      "proposed_inner_stop": "2021-04-30",
+      "proposed_selector_start": "2021-05-01",
+      "selector_stop": "2021-09-30",
+      "sessions": 58,
+      "origins": 278,
+      "slot_min": 36,
+      "approved": false
+    },
+    {
+      "year": 2023,
+      "proposed_inner_stop": "2022-05-31",
+      "proposed_selector_start": "2022-06-01",
+      "selector_stop": "2022-09-30",
+      "sessions": 59,
+      "origins": 313,
+      "slot_min": 38,
+      "approved": false
+    },
+    {
+      "year": 2024,
+      "proposed_inner_stop": "2023-05-31",
+      "proposed_selector_start": "2023-06-01",
+      "selector_stop": "2023-09-29",
+      "sessions": 69,
+      "origins": 291,
+      "slot_min": 31,
+      "approved": false
+    }
+  ],
+  "ledger_before": 130,
+  "ledger_ceiling": 200,
+  "resources": {
+    "project_bytes": 12413609827,
+    "task_bytes": 9742,
+    "peak_rss_bytes": 391233536
+  },
+  "source_end": "2024-12-31",
+  "menu": "docs/track_a/HF20_S9_MAG_Stage1_Calibration_and_Prediction_Objectives_Research_Menu_v0.1_2026-10-27.md",
+  "benchmark_seconds": {
+    "2021": 2521.917547082994,
+    "2022": 2320.2491482080077,
+    "2023": 2710.4062596660224,
+    "2024": 2151.948273833026
+  }
+}

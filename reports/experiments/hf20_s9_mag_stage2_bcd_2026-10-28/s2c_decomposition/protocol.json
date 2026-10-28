@@ -1,0 +1,131 @@
+{
+  "seed": 42,
+  "folds": [
+    {
+      "year": 2021,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.005797117684325846,
+          "cutoff": "2020-06-30"
+        },
+        "restricted": {
+          "scale": 0.005848759193156053,
+          "cutoff": "2020-09-30"
+        }
+      },
+      "thresholds": {
+        "95": 0.029152683601565685,
+        "99": 0.055591859892280306
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/F21"
+    },
+    {
+      "year": 2022,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.005935124632023495,
+          "cutoff": "2021-04-30"
+        },
+        "restricted": {
+          "scale": 0.005933406715930685,
+          "cutoff": "2021-09-30"
+        }
+      },
+      "thresholds": {
+        "95": 0.029381635568292794,
+        "99": 0.0550530573806432
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F22"
+    },
+    {
+      "year": 2023,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.006072334419240624,
+          "cutoff": "2022-05-31"
+        },
+        "restricted": {
+          "scale": 0.006121673076939892,
+          "cutoff": "2022-09-30"
+        }
+      },
+      "thresholds": {
+        "95": 0.03048333514069074,
+        "99": 0.05621444505567313
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F23"
+    },
+    {
+      "year": 2024,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.0061734035023815,
+          "cutoff": "2023-05-31"
+        },
+        "restricted": {
+          "scale": 0.00617444719514992,
+          "cutoff": "2023-09-29"
+        }
+      },
+      "thresholds": {
+        "95": 0.03041068403132899,
+        "99": 0.055872346745723445
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F24"
+    }
+  ],
+  "model": "own-stock48x16 FT16;one-layerH32;final hidden dropout.10;CPU float32",
+  "optimizer": "AdamW lr.001 betas(.9,.999) eps1e-8 matrix decay.01 bias0;clip1;16 complete sessions;shuffle42+epoch",
+  "selector": "primary transformed magnitude loss only;first finite nonnegative;<=.999 qualified best;min12 patience10 max60",
+  "fresh_refit": true,
+  "maximum_starts": 4,
+  "maximum_phase_fits": 8,
+  "epoch_cutoffs": "exact saved Design A role indices/cutoffs;48 completed-step embargo;task-specific maturity",
+  "source": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet",
+  "source_sha256": "a66edd638bc9cdb2c919c3ff1a81f5023eeab9bad0e0926d12e45306c8af3d51",
+  "role_index_source": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/role_indices.npz",
+  "source_read_receipt": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv",
+  "protected": "No2025/2026 prices/outcomes/metrics/hashes;calendar-only next-session dates may extend into January2025",
+  "uncertainty": {
+    "draws": 400,
+    "seed": 22042,
+    "unit": "whole calendar months within year, then equal years"
+  },
+  "caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "no_deferred_C0_M1_router": true,
+  "intraday_preference_unresolved": true,
+  "kind": "HF20_S2C_DECOMPOSITION_V1",
+  "estimand": "same original A_total;three signed training-only auxiliary components",
+  "primary": "COMPONENT-C3 raw MSE vs S2B and frozen C3 on identical original keys",
+  "objective": "L_M_all + .10*(L_pre_N+L_gap_N+L_post_N)/3;each aux conditional group-session/origin/stock mean of ((R-Rhat)/s)^2",
+  "clock": {
+    "fields": [
+      "slot_09:30",
+      "slot_10:30",
+      "slot_11:30",
+      "slot_12:30",
+      "slot_13:30",
+      "slot_14:30",
+      "slot_15:30",
+      "remaining_trading_minutes/240",
+      "target_crosses_session",
+      "calendar_days_to_next_scheduled_session/7"
+    ],
+    "dimension": 10,
+    "scale": "fixed, no fitting",
+    "placement": "concatenate to dropped final H32 hidden state before scalar head;metadata not dropped",
+    "calendar": "executed XNYS schedule and actual early closes;no outcomes used"
+  },
+  "parameters": 6572,
+  "aux_heads": "three independent42\u21921 linear normalized signed heads;Rhat=s*u;intraday aux masked, not zero-labelled",
+  "calibration": "own independent-tail C3 IO smear kappa25;main head only",
+  "source_gate": "all original N observations in every role require all20 genuine components,one closure,additivity atol1e-12 rtol1e-11;otherwise BLOCKED, no attrition rescue"
+}

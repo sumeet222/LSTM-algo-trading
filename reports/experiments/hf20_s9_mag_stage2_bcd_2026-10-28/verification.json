@@ -1,0 +1,87 @@
+{
+  "status": "PARTIAL_B_COMPLETE_C_D_BLOCKED",
+  "tasks": {
+    "B": "COMPLETE_4_OF_4",
+    "C": "BLOCKED_NO_FITS",
+    "D": "BLOCKED_NO_FITS"
+  },
+  "ledger_before": 154,
+  "ledger_after": 158,
+  "effective_ceiling": 300,
+  "capacity_remaining": 142,
+  "neural_pairs": 4,
+  "neural_phase_fits": 8,
+  "neural_failures": 0,
+  "retries": 0,
+  "seed": 42,
+  "parameters": 6443,
+  "epochs": 136,
+  "optimizer_updates": 21020,
+  "clipped_batches": 302,
+  "fit_seconds": 2183.832903499948,
+  "training_peak_rss_bytes": 978681856,
+  "task_bytes": 3803750,
+  "exact_original_population": {
+    "rows": 80260,
+    "origins": 4013,
+    "sessions": 793
+  },
+  "source_partitions": 174,
+  "source_end": "2024-12-31",
+  "new_minute_reads": 0,
+  "single_closure_geometry": "PASS",
+  "one_gap_candidate_per_normal_session": "PASS",
+  "gap_scales_or_thresholds_fitted": false,
+  "all_eight_phase_parity": "PASS",
+  "checkpoint_reload_errors": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rank_raw_vs_calibrated": "IDENTICAL_ALL_FOLDS_ZERO_CLAMPS",
+  "original_network_loss_diagnostic": [
+    {
+      "year": 2021,
+      "original_unconstrained_Mhat_MSE": 0.22360017544632904,
+      "scale": 0.005848759193156053
+    },
+    {
+      "year": 2022,
+      "original_unconstrained_Mhat_MSE": 0.2778272030187014,
+      "scale": 0.005933406715930685
+    },
+    {
+      "year": 2023,
+      "original_unconstrained_Mhat_MSE": 0.20819483903093142,
+      "scale": 0.006121673076939892
+    },
+    {
+      "year": 2024,
+      "original_unconstrained_Mhat_MSE": 0.21604479248760483,
+      "scale": 0.00617444719514992
+    }
+  ],
+  "code_sha256": {
+    "src/lstm_data/hf20_stage2_bcd.py": "5966607cd74ae6b3fbd55dc174b0108de63cef810c96fcad8c5875835c280031",
+    "tests/test_hf20_stage2_bcd.py": "bea15a7fd2a9e5dfd2f3a4a939835e3e1524b4cc6276e1e99b98c93fb085c8ad"
+  },
+  "tests": "10 passed in 4.64s",
+  "ruff": "PASS",
+  "static_summary": {
+    "filesAnalyzed": 510,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 83.335
+  },
+  "replay": "14 frozen protocol/metric/journal files byte-identical",
+  "prior_artifacts_unchanged": true,
+  "deferred_C0_intraday_M1_overnight_route": "NOT_CREATED_OR_SCORED",
+  "intraday_preference": "UNRESOLVED",
+  "protected_2026_numeric_access": false,
+  "opportunistic_2025_numeric_analysis": false,
+  "calendar_only_next_session_dates_in_January2025": true,
+  "pending_fits": [],
+  "commit_or_push": false
+}

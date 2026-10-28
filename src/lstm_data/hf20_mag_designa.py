@@ -1,0 +1,1370 @@
+"""Bounded S9-MAG Design A: past-only selector, restricted refit and calibration.
+
+Historical S4/S9 inputs are immutable. This runner never acquires source data or
+opens minute stores. Preflight determines which folds may start before any fit.
+"""
+
+from __future__ import annotations
+
+import argparse
+import gc
+import json
+import math
+import os
+import resource
+import sys
+import time
+from collections.abc import Callable
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import torch
+
+from .hf1m_action_audit import SYMBOLS, digest
+from .hf1m_ft16_fit import quantile
+from .hf1m_ft16_math import Components, build
+from .hf1m_ft16_source import COMMON, configuration
+from .hf1m_training_data import CONTRACT
+from .hf20_ranking import origin_ic, origin_weights
+from .hf20_ranking_run import initial_hash
+from .hf20_s4_closeout import block_interval
+from .hf20_s4_fit import fit_expanded
+from .hf20_s4_preflight import expanded_m2, field_masks
+from .hf20_s4_witnesses import assemble, scaled
+from .hf20_s5s9 import model_for, row_objective
+from .neural_engine import SharedLSTM, optimizer
+from .objective_screen_run import Selector
+
+S4 = Path("reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation")
+S9 = Path("reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation")
+DEFAULT_OUT = Path("reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27")
+POINTER = Path("configs/CURRENT_EXPERIMENT_REGISTRY.json")
+YEARS = (2021, 2022, 2023, 2024)
+SLOTS = tuple(f"{h:02d}:30" for h in range(9, 16))
+ARMS = ("C0", "C1a", "M1", "B0-RMEAN", "B0-RMED", "B0-CLOCK", "B0-VOL")
+CAPS = dict(task_bytes=2_500_000_000, project_bytes=15_000_000_000, ram_bytes=2_000_000_000)
+
+
+def read(path: Path) -> dict:
+    return json.loads(path.read_text())
+
+
+def write(path: Path, data: dict, *, new: bool = False) -> None:
+    """Atomic local output replacement; use exclusive creation for frozen designs."""
+    if new:
+        with path.open("x") as stream:
+            json.dump(data, stream, indent=2, allow_nan=False)
+    else:
+        temporary = path.with_suffix(path.suffix + ".tmp")
+        temporary.write_text(json.dumps(data, indent=2, allow_nan=False))
+        temporary.replace(path)
+
+
+def limit(stop: str) -> pd.Timestamp:
+    return pd.Timestamp(stop, tz="America/New_York") + pd.Timedelta(days=1, hours=-4)
+
+
+def role_mask(
+    rows: pd.DataFrame, first: np.ndarray, start: str, stop: str, embargo: str = "0000"
+) -> np.ndarray:
+    """Executed S4 strict maturity and first-of-48-input-step embargo semantics."""
+    return (
+        rows.eligible
+        & rows.session_date_et.between(start, stop)
+        & (first > embargo)
+        & rows.label_maturity_utc.lt(limit(stop))
+    ).to_numpy(bool)
+
+
+def memory() -> int:
+    size = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    size *= 1 if sys.platform == "darwin" else 1024
+    if size > CAPS["ram_bytes"]:
+        raise RuntimeError("BLOCKED_RAM_CEILING", size)
+    return int(size)
+
+
+def resources(out: Path) -> dict:
+    """File metadata only; no protected contents/hashes or source discovery loader."""
+    total = 0
+    task = 0
+    for folder, _, names in os.walk(Path.cwd(), followlinks=False):
+        for name in names:
+            p = Path(folder) / name
+            if not p.is_symlink():
+                size = p.stat().st_size
+                total += size
+                if p.is_relative_to(out.resolve()):
+                    task += size
+    result = dict(project_bytes=total, task_bytes=task, peak_rss_bytes=memory())
+    if total + 20_000_000 > CAPS["project_bytes"] or task + 20_000_000 > CAPS["task_bytes"]:
+        raise RuntimeError("BLOCKED_STORAGE_CEILING", result)
+    return result
+
+
+def metadata() -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Read only existing permitted hourly-grid metadata and frozen S4 masks."""
+    contract = read(CONTRACT)
+    grid = pd.read_parquet(
+        contract["files"]["grid"]["path"],
+        columns=["hour_start_utc", "hour_end_utc", "session_date_et"],
+        filters=[("session_date_et", "<=", "2024-12-31")],
+    )
+    rows = pd.read_parquet(S4 / "opening_reaudit_v2/S4_ORIGIN_SOURCE_ELIGIBILITY.parquet")
+    if grid.session_date_et.ge("2025-01-01").any() or rows.session_date_et.ge("2025-01-01").any():
+        raise ValueError("PRE2025_SCOPE_REQUIRED")
+    assert tuple(read(S4 / "S4_FROZEN_EXPERIMENT_CARD.json")["symbols"]) == SYMBOLS
+    assert rows.row_index.tolist() == list(range(len(rows)))
+    return grid, rows
+
+
+def preflight(
+    out: Path,
+) -> tuple[pd.DataFrame, pd.DataFrame, dict[int, dict[str, np.ndarray]], dict]:
+    """No fitting: exact counts/coverage, saved-key equality and frozen design."""
+    grid, rows = metadata()
+    first = np.full(len(rows), "0000", dtype=object)
+    good = rows.first_step.ge(0)
+    first[good] = grid.session_date_et.to_numpy()[rows.loc[good, "first_step"].to_numpy(int)]
+    plans: dict[int, dict[str, np.ndarray]] = {}
+    counts, folds, alternatives = [], [], []
+    for year in YEARS:
+        prior = year - 1
+        stops = {
+            name: str(
+                grid.loc[grid.session_date_et.le(f"{prior}-{month}"), "session_date_et"].max()
+            )
+            for name, month in (("june", "06-30"), ("september", "09-30"), ("december", "12-31"))
+        }
+        j, s, d = (stops[k] for k in ("june", "september", "december"))
+        definitions = {
+            "inner_train": ("2011-04-01", j, "0000"),
+            "selector": (f"{prior}-07-01", s, j),
+            "restricted_refit": ("2011-04-01", s, "0000"),
+            "calibration": (f"{prior}-10-01", d, s),
+            "oos": (f"{year}-01-01", f"{year}-12-31", d),
+        }
+        plans[year] = {}
+        for role, (start, stop, embargo) in definitions.items():
+            mask = role_mask(rows, first, start, stop, embargo)
+            plans[year][role] = np.flatnonzero(mask)
+            f = rows.loc[mask]
+            slots = f.groupby("slot").size().reindex(SLOTS, fill_value=0)
+            counts.append(
+                dict(
+                    year=year,
+                    role=role,
+                    start=start,
+                    cutoff=stop,
+                    embargo_after=embargo,
+                    maturity_before=str(limit(stop)),
+                    first_date=str(f.session_date_et.min()),
+                    last_date=str(f.session_date_et.max()),
+                    sessions=f.session_date_et.nunique(),
+                    origins=len(f),
+                    stock_rows=len(f) * 20,
+                    **{slot: int(slots[slot]) for slot in SLOTS},
+                )
+            )
+            assert (first[mask] > embargo).all()
+            assert f.label_maturity_utc.lt(limit(stop)).all()
+        for role, original in (("inner_train", "inner_train"), ("oos", "oos")):
+            saved = pd.read_csv(S4 / f"F{year % 100}_{original}_indices.csv")
+            np.testing.assert_array_equal(rows.iloc[plans[year][role]].origin_id, saved.origin_id)
+        saved = pd.read_parquet(
+            S9 / f"HF20-S9-F{year % 100}-H4-MAG-S42/oos_scores.parquet",
+            columns=["origin_id", "ticker"],
+        )
+        np.testing.assert_array_equal(
+            saved.origin_id.iloc[::20], rows.iloc[plans[year]["oos"]].origin_id
+        )
+        assert saved.ticker.tolist() == list(SYMBOLS) * len(plans[year]["oos"])
+        selector = rows.iloc[plans[year]["selector"]]
+        cal = rows.iloc[plans[year]["calibration"]]
+        reasons = []
+        if selector.session_date_et.nunique() < 50:
+            reasons.append("SELECTOR_LT50_SESSIONS")
+        if selector.groupby("slot").size().reindex(SLOTS, fill_value=0).min() < 25:
+            reasons.append("SELECTOR_SLOT_LT25_ORIGINS")
+        # The live protocol freezes selector minima; no new numeric tail minimum
+        # was approved. Disclose sparse tails separately, without inventing a gate.
+        coverage_flags = []
+        if cal.session_date_et.nunique() < 50:
+            coverage_flags.append("CALIBRATION_LT50_SESSIONS_REVIEW")
+        if cal.groupby("slot").size().reindex(SLOTS, fill_value=0).min() < 25:
+            coverage_flags.append("CALIBRATION_SLOT_LT25_ORIGINS_REVIEW")
+        folds.append(
+            dict(
+                year=year,
+                status="BLOCKED" if reasons else "READY",
+                reasons=reasons,
+                calibration_coverage_flags=coverage_flags,
+                cutoffs=stops,
+            )
+        )
+        if reasons:
+            for month in (6, 5, 4):
+                anchor = pd.Timestamp(f"{prior}-{month:02d}-01")
+                stop_inner = str(
+                    grid.loc[grid.session_date_et.lt(str(anchor.date())), "session_date_et"].max()
+                )
+                alt = rows.loc[role_mask(rows, first, str(anchor.date()), s, stop_inner)]
+                if (
+                    alt.session_date_et.nunique() >= 50
+                    and alt.groupby("slot").size().reindex(SLOTS, fill_value=0).min() >= 25
+                ):
+                    break
+            alternatives.append(
+                dict(
+                    year=year,
+                    proposed_inner_stop=stop_inner,
+                    proposed_selector_start=str(anchor.date()),
+                    selector_stop=s,
+                    sessions=alt.session_date_et.nunique(),
+                    origins=len(alt),
+                    slot_min=int(alt.groupby("slot").size().reindex(SLOTS, fill_value=0).min()),
+                    approved=False,
+                )
+            )
+    table = pd.DataFrame(counts)
+    table.to_csv(out / "session2_role_counts.csv", index=False)
+    pointer = read(POINTER)
+    last = json.loads(Path(pointer["real_journal"]).read_text().splitlines()[-1])
+    assert last["status"] == "COMPLETED" and last["global_started_pairs"] == 130
+    receipt = dict(
+        folds=folds,
+        alternatives_not_authorized=alternatives,
+        ledger_before=130,
+        ledger_ceiling=pointer["effective_ceiling"],
+        resources=resources(out),
+        source_end="2024-12-31",
+        menu="docs/track_a/HF20_S9_MAG_Stage1_Calibration_and_Prediction_Objectives_Research_Menu_v0.1_2026-10-27.md",
+        benchmark_seconds={
+            str(y): read(S9 / f"HF20-S9-F{y % 100}-H4-MAG-S42/PASS.json")["seconds"] for y in YEARS
+        },
+    )
+    write(out / "preflight.json", receipt)
+    design = dict(
+        kind="USER_APPROVED_S9_MAG_SESSION2_DESIGNA",
+        seed=42,
+        years=list(YEARS),
+        role_counts="session2_role_counts.csv",
+        chronology=(
+            "June inner; July-September selector; September fresh refit; "
+            "October-December calibration; exact original outer keys"
+        ),
+        maturity=(
+            "strict ET cutoff midnight +1 day -4 hours; "
+            "first of48 input steps strictly after prior cutoff"
+        ),
+        model=dict(
+            input=[48, 16],
+            hidden=32,
+            layers=1,
+            dropout=0.1,
+            parameters=6433,
+            lr=0.001,
+            matrix_decay=0.01,
+            bias_decay=0,
+            gradient_cap=1.0,
+            session_batch=16,
+            selector="loss<=.999*best; min12 patience10 max60; fresh seed42 refit",
+        ),
+        target="M=log1p(abs(R)/prefix_weighted_median_A); positive scale floor1e-8",
+        weights=(
+            "equal stock within origin; equal origin within session; "
+            "equal session within year; equal years"
+        ),
+        C0="s*expm1(max(Mhat,0))",
+        C1a="c=Ecal_w exp(M-Mhat); s*max(0,exp(Mhat)*c-1)",
+        M1="k=max(0,Ecal_w[A0*A]/Ecal_w[A0^2]); k*A0",
+        baselines=dict(
+            RMEAN="per-stock weighted raw A mean",
+            RMED="per-stock weighted left median",
+            CLOCK=(
+                "weighted stock-slot raw mean, shrink50 origin-equivalent observations "
+                "toward stock mean; role weights rescaled to mean1 per origin"
+            ),
+            VOL=dict(
+                feature_dictionary=[
+                    "unpenalized intercept",
+                    "19 stock dummies; reference VZ",
+                    "6 slot dummies; reference09:30",
+                    "prefix-standardized log(decoded FT16 V2 RMS60)",
+                ],
+                penalties=[0.001, 0.1, 10.0],
+                objective="Ew raw squared error + lambda sum(nonintercept coefficients^2)",
+                selection=(
+                    "June fit, July-September raw MSE; ties first listed; "
+                    "September fresh refit; max0 prediction"
+                ),
+            ),
+        ),
+        diagnostics=dict(
+            deciles=(
+                "10 weighted empirical C0 score bins per OOS year, descriptive; "
+                "same bins for all arms"
+            ),
+            tails="restricted-September prefix weighted95/99 of raw A; strict exceedance",
+            uncertainty="existing400 whole-month bootstrap seed22042; post-search descriptive",
+        ),
+        maximum_new_pairs=4,
+        maximum_neural_phase_fits=8,
+        actual_ready_years=[x["year"] for x in folds if x["status"] == "READY"],
+        caps=CAPS,
+        prior_pointer=pointer,
+        protection=(
+            "No2025/2026 numeric observations/hashes; no minute reads or "
+            "source downloads; no retries/other objectives"
+        ),
+    )
+    path = out / "session2_design.json"
+    if path.exists():
+        assert read(path) == design, "IMMUTABLE_DESIGN_CHANGED"
+    else:
+        write(path, design, new=True)
+    return grid, rows, plans, receipt
+
+
+def source_components(grid: pd.DataFrame, rows: pd.DataFrame) -> tuple[Components, np.ndarray]:
+    """Reuse adjusted hourly FT16 math plus saved S4 endpoints; no minute rebuild."""
+    config = configuration()
+    up = Path(config["upstream_packet"])
+    assert digest(up / "pre_feature_gate.json") == config["upstream_gate_sha256"]
+    qa = read(Path("configs/hf1m_action_qa_v1.json"))
+    assert digest(Path(qa["facts"])) == qa["facts_sha256"]
+    facts = read(Path(qa["facts"]))["events"]
+    # The executed S4 read receipt contains only permitted partitions, avoiding
+    # even incidental future-partition hash fields in the broader parent manifest.
+    manifest = pd.read_csv(S4 / "opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv")
+    manifest = manifest.loc[manifest.purpose.eq("permitted adjusted hourly source")]
+    hours = []
+    for row in manifest.to_dict("records"):
+        path = Path(str(row["path"]))
+        month = path.stem
+        assert "2010-07" <= month <= "2024-12"
+        assert not path.is_absolute() and ".." not in path.parts
+        assert path.name == month + ".parquet"
+        assert path.stat().st_size == row["bytes"]
+        f = pd.read_parquet(path)
+        assert f.session_date_et.str.startswith(month).all()
+        hours.append(f)
+    h = pd.concat(hours, ignore_index=True)
+    c = build(h, field_masks(h, facts))
+    np.testing.assert_array_equal(c.grid.session_date_et, grid.session_date_et)
+    np.testing.assert_array_equal(c.grid.hour_end_utc, grid.hour_end_utc)
+    target = pd.read_parquet(
+        S4 / "opening_reaudit_v2/S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet",
+        columns=["origin_id", "ticker", "direct_return"],
+    )
+    np.testing.assert_array_equal(target.origin_id.iloc[::20], rows.origin_id)
+    assert target.ticker.tolist() == list(SYMBOLS) * len(rows)
+    r = target.direct_return.to_numpy().reshape(-1, 20)
+    c.m2_mean, c.m2_rms, _ = expanded_m2(c, rows, r)
+    memory()
+    return c, r
+
+
+def feature_fit_hours(grid: pd.DataFrame, rows: pd.DataFrame, stop: str) -> np.ndarray:
+    """Input-only prefix union, preserving S4 absence of future-label selection."""
+    fh = np.zeros(len(grid), bool)
+    chosen = rows.loc[rows.source_input_eligible & rows.session_date_et.between("2011-04-01", stop)]
+    for first, end in chosen[["first_step", "entry_index"]].to_numpy(int):
+        fh[first : end + 1] = True
+    fh &= grid.session_date_et.between("2011-04-01", stop).to_numpy()
+    assert not grid.loc[fh].session_date_et.gt(stop).any()
+    return fh
+
+
+class View:
+    """Phase recipe applied to historical own-stock FT16; no new channels."""
+
+    def __init__(
+        self, c: Components, rows: pd.DataFrame, r: np.ndarray, recipe: dict, scale: float
+    ):
+        self.common, self.m2 = scaled(c, recipe)
+        self.rows, self.r, self.recipe, self.scale = rows, r, recipe, scale
+
+    def x(self, pos: np.ndarray) -> np.ndarray:
+        return assemble(self.rows.iloc[pos], self.common, self.m2)
+
+    def sigma(self, pos: np.ndarray) -> np.ndarray:
+        sc = self.recipe["scalers"]["V2"]
+        ix = self.rows.iloc[pos].entry_index.to_numpy(int)
+        return np.exp(
+            (self.common[ix, :, COMMON.index("V2")] * sc["scale"] + sc["center"]).astype(float)
+        )
+
+
+def predict(view: View, pos: np.ndarray, model: SharedLSTM) -> np.ndarray:
+    model.eval()
+    chunks = []
+    with torch.inference_mode():
+        for k in range(0, len(pos), 32):
+            x = view.x(pos[k : k + 32])
+            chunks.append(model(torch.from_numpy(x.reshape(-1, 48, 16))).numpy().reshape(-1, 20))
+    result = np.concatenate(chunks)
+    assert np.isfinite(result).all()
+    return result
+
+
+def epoch(
+    view: View, pos: np.ndarray, model: SharedLSTM, opt: torch.optim.AdamW, number: int
+) -> int:
+    groups = view.rows.iloc[pos].groupby("session_date_et").indices
+    days = sorted(groups, key=str)
+    np.random.default_rng(42 + number).shuffle(days)
+    model.train()
+    for k in range(0, len(days), 16):
+        selected = pos[np.concatenate([groups[d] for d in days[k : k + 16]])]
+        x = view.x(selected)
+        opt.zero_grad()
+        raw = model(torch.from_numpy(x.reshape(-1, 48, 16))).reshape(-1, 20)
+        r = torch.from_numpy(view.r[selected].astype(np.float32))
+        allocation = row_objective(
+            raw, r, torch.zeros_like(r), "MAG", dict(magnitude_scale=view.scale)
+        ).mean(1)
+        w = origin_weights(view.rows.iloc[selected].session_date_et.to_numpy()).astype(np.float32)
+        loss = (allocation * torch.from_numpy(w)).sum()
+        if not bool(torch.isfinite(loss)):
+            raise ValueError("NONFINITE_TRAIN_LOSS")
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0, error_if_nonfinite=True)
+        memory()
+        opt.step()
+    assert all(bool(torch.isfinite(p).all()) for p in model.parameters())
+    return math.ceil(len(days) / 16)
+
+
+def event(out: Path, year: int, status: str, detail: dict) -> None:
+    """One new append-only pair journal; old journals/definitions are immutable."""
+    design = read(out / "session2_design.json")
+    journal = out / "neural_starts.jsonl"
+    old = [json.loads(x) for x in journal.read_text().splitlines()] if journal.exists() else []
+    starts = sum(x["status"] == "STARTED" for x in old)
+    prior = design["prior_pointer"]
+    if not old:
+        assert read(POINTER) == prior, "CONCURRENT_LEDGER_CHANGE"
+    else:
+        assert read(POINTER)["real_journal"] == str(journal)
+    if status == "STARTED":
+        assert starts < design["maximum_new_pairs"] and year in design["actual_ready_years"]
+        assert not any(x["year"] == year for x in old), "NO_RETRY"
+        assert not old or old[-1]["status"] in ("COMPLETED", "FAILED")
+        resources(out)
+    count = 130 + starts + int(status == "STARTED")
+    record = dict(
+        sequence=len(old) + 1,
+        at=pd.Timestamp.now(tz="UTC").isoformat(),
+        year=year,
+        status=status,
+        global_started_pairs=count,
+        effective_ceiling=200,
+        detail=detail,
+        previous_journal=dict(
+            path=prior["real_journal"], sha256=digest(Path(prior["real_journal"]))
+        ),
+        plan=dict(
+            path=str(out / "session2_design.json"), sha256=digest(out / "session2_design.json")
+        ),
+    )
+    with journal.open("a") as stream:
+        stream.write(json.dumps(record) + "\n")
+        stream.flush()
+        os.fsync(stream.fileno())
+    pointer = dict(
+        prior,
+        schema_version=24,
+        definition=record["plan"],
+        plan=record["plan"],
+        real_journal=str(journal),
+        previous_journal=record["previous_journal"],
+        fit_permission=False,
+    )
+    write(POINTER, pointer)
+
+
+def factors(a: np.ndarray, raw: np.ndarray, scale: float, w: np.ndarray) -> dict:
+    """Independent-tail only; actual unconstrained Mhat in residual smearing."""
+    a, raw, w = a.ravel(), raw.astype(float).ravel(), w.ravel()
+    w = w / w.sum()
+    e = np.log1p(a / scale) - raw
+    ex = np.exp(e)
+    base = scale * np.expm1(np.maximum(raw, 0))
+    denominator = float(w @ (base * base))
+    if not np.isfinite(ex).all() or denominator <= 0 or not math.isfinite(denominator):
+        raise ValueError("INVALID_CALIBRATION_EXPONENTIAL_OR_DENOMINATOR")
+    c = float(w @ ex)
+    k = max(0.0, float(w @ (base * a)) / denominator)
+    contribution = w * ex
+    top = np.argsort(-contribution, kind="stable")
+    return dict(
+        c=c,
+        k=k,
+        exp_max=float(ex.max()),
+        exp_top1row_share=float(contribution[top[0]] / c),
+        exp_top10row_share=float(contribution[top[:10]].sum() / c),
+        exp_top1pct_share=float(contribution[top[: max(1, len(a) // 100)]].sum() / c),
+        denominator=denominator,
+        calibration_rows=len(a),
+        status="UNSTABLE_DOMINATED" if contribution[top[:10]].sum() / c > 0.5 else "FINITE",
+    )
+
+
+def decode(raw: np.ndarray, scale: float, c: float, k: float) -> dict[str, np.ndarray]:
+    z = raw.astype(float)
+    base = scale * np.expm1(np.maximum(z, 0))
+    result = {"C0": base, "C1a": scale * np.maximum(0, np.exp(z) * c - 1), "M1": k * base}
+    assert all(np.isfinite(x).all() and (x >= 0).all() for x in result.values())
+    return result
+
+
+def ridge_features(rows: pd.DataFrame, sigma: np.ndarray, center: float, sd: float) -> np.ndarray:
+    n = len(rows)
+    stock = np.tile(np.eye(20)[:, 1:], (n, 1))
+    clock = np.repeat(np.eye(7)[[SLOTS.index(x) for x in rows.slot], 1:], 20, axis=0)
+    return np.column_stack([np.ones(n * 20), stock, clock, (np.log(sigma.ravel()) - center) / sd])
+
+
+def ridge_fit(x: np.ndarray, a: np.ndarray, w: np.ndarray, penalty: float) -> np.ndarray:
+    reg = np.eye(x.shape[1]) * penalty
+    reg[0, 0] = 0
+    return np.linalg.solve(x.T @ (w[:, None] * x) + reg, x.T @ (w * a))
+
+
+def baseline_fit(inner: View, refit: View, plans: dict[str, np.ndarray]) -> dict:
+    """Four fixed controls; tiny ridge selection only on the July-September selector."""
+    ip, vp, rp = (plans[x] for x in ("inner_train", "selector", "restricted_refit"))
+    w = origin_weights(inner.rows.iloc[ip].session_date_et.to_numpy())
+    logs = np.log(inner.sigma(ip))
+    center = float(np.sum(logs * w[:, None] / 20))
+    sd = max(float(np.sqrt(np.sum((logs - center) ** 2 * w[:, None] / 20))), 1e-12)
+    x = ridge_features(inner.rows.iloc[ip], inner.sigma(ip), center, sd)
+    xv = ridge_features(inner.rows.iloc[vp], inner.sigma(vp), center, sd)
+    y = abs(inner.r[ip]).ravel()
+    ww = np.repeat(w / 20, 20)
+    vw = np.repeat(origin_weights(inner.rows.iloc[vp].session_date_et.to_numpy()) / 20, 20)
+    candidates = []
+    for penalty in (0.001, 0.1, 10.0):
+        b = ridge_fit(x, y, ww, penalty)
+        error = np.maximum(0, xv @ b) - abs(inner.r[vp]).ravel()
+        candidates.append(dict(penalty=penalty, selector_raw_MSE=float(vw @ (error * error))))
+    chosen = min(candidates, key=lambda z: z["selector_raw_MSE"])["penalty"]
+    a = abs(refit.r[rp])
+    rows = refit.rows.iloc[rp]
+    w = origin_weights(rows.session_date_et.to_numpy())
+    mean = np.sum(w[:, None] * a, axis=0)
+    median = np.array([quantile(a[:, j], 0.5, w) for j in range(20)])
+    mass = w * len(rp)  # mean one per origin; fixed50 is origin-equivalent prior mass.
+    clock_mean = []
+    for slot in SLOTS:
+        mask = rows.slot.eq(slot).to_numpy()
+        clock_mean.append(
+            (np.sum(mass[mask, None] * a[mask], axis=0) + 50 * mean) / (mass[mask].sum() + 50)
+        )
+    logs = np.log(refit.sigma(rp))
+    center = float(np.sum(logs * w[:, None] / 20))
+    sd = max(float(np.sqrt(np.sum((logs - center) ** 2 * w[:, None] / 20))), 1e-12)
+    x = ridge_features(rows, refit.sigma(rp), center, sd)
+    beta = ridge_fit(x, a.ravel(), np.repeat(w / 20, 20), chosen)
+    return dict(
+        mean=mean.tolist(),
+        median=median.tolist(),
+        clock=np.asarray(clock_mean).tolist(),
+        ridge_center=center,
+        ridge_sd=sd,
+        ridge_beta=beta.tolist(),
+        ridge_penalty=chosen,
+        ridge_candidates=candidates,
+        shrinkage_origin_equivalents=50,
+        fit_cutoff=refit.recipe["fit_stop_inclusive"],
+    )
+
+
+def baseline_predict(view: View, pos: np.ndarray, b: dict) -> dict[str, np.ndarray]:
+    rows = view.rows.iloc[pos]
+    x = ridge_features(rows, view.sigma(pos), b["ridge_center"], b["ridge_sd"])
+    return {
+        "B0-RMEAN": np.broadcast_to(b["mean"], (len(pos), 20)),
+        "B0-RMED": np.broadcast_to(b["median"], (len(pos), 20)),
+        "B0-CLOCK": np.array(b["clock"])[[SLOTS.index(x) for x in rows.slot]],
+        "B0-VOL": np.maximum(0, x @ np.array(b["ridge_beta"])).reshape(-1, 20),
+    }
+
+
+def run_fold(
+    out: Path,
+    year: int,
+    c: Components,
+    rows: pd.DataFrame,
+    r: np.ndarray,
+    pos: dict[str, np.ndarray],
+    receipt: dict,
+    *,
+    initial: tuple[dict, float] | None = None,
+    journal: Callable[[Path, int, str, dict], None] = event,
+) -> dict:
+    """One pair; optional earlier initial recipe and versioned journal for Session2B.
+
+    The default path preserves the executed Session2 procedure. Supplied initial
+    parameters must already be fitted on the amended initial-only prefix.
+    """
+    dest = out / f"F{year % 100}"
+    dest.mkdir()
+    started = time.monotonic()
+    if initial is None:
+        inner_recipe = read(S4 / f"F{year % 100}_inner_recipe.json")
+        inner_scale = read(S9 / f"HF20-S9-F{year % 100}-H4-MAG-S42/inner_target_recipe.json")[
+            "magnitude_scale"
+        ]
+    else:
+        inner_recipe, inner_scale = initial
+        write(dest / "initial_recipe.json", inner_recipe, new=True)
+        write(
+            dest / "initial_target.json",
+            dict(scale=inner_scale, cutoff=inner_recipe["fit_stop_inclusive"]),
+            new=True,
+        )
+    ip, sp, rp, cp, op = (
+        pos[k] for k in ("inner_train", "selector", "restricted_refit", "calibration", "oos")
+    )
+    w = origin_weights(rows.iloc[ip].session_date_et.to_numpy())
+    assert inner_scale == max(quantile(abs(r[ip]).ravel(), 0.5, np.repeat(w / 20, 20)), 1e-8)
+    inner = View(c, rows, r, inner_recipe, inner_scale)
+    if initial is None:
+        saved_sigma = pd.read_parquet(
+            S9 / f"HF20-S9-F{year % 100}-H4-MAG-S42/inner_validation_scores.parquet",
+            columns=["origin_id", "ticker", "sigma_proxy"],
+        )
+        saved_sigma = saved_sigma.loc[saved_sigma.origin_id.isin(rows.iloc[sp].origin_id)]
+        np.testing.assert_array_equal(saved_sigma.origin_id.iloc[::20], rows.iloc[sp].origin_id)
+        np.testing.assert_array_equal(inner.sigma(sp).ravel(), saved_sigma.sigma_proxy)
+    model = model_for("MAG")
+    original_cfg = read(S9 / f"HF20-S9-F{year % 100}-H4-MAG-S42/configuration.json")
+    assert initial_hash(model) == original_cfg["initial_sha256"]
+    opt = optimizer(model)
+    selector = Selector()
+    journal(out, year, "STARTED", dict(seed=42, phase="encoder_selection", scope="one pair"))
+    traces = []
+    try:
+        while selector.status == "CALIBRATING":
+            n = selector.epoch + 1
+            tick = time.monotonic()
+            steps = epoch(inner, ip, model, opt, n)
+            raw = predict(inner, sp, model)
+            rt = torch.from_numpy(r[sp].astype(np.float32))
+            loss = row_objective(
+                torch.from_numpy(raw),
+                rt,
+                torch.zeros_like(rt),
+                "MAG",
+                dict(magnitude_scale=inner_scale),
+            ).numpy()
+            val = float(origin_weights(rows.iloc[sp].session_date_et.to_numpy()) @ loss.mean(1))
+            if selector.observe(val):
+                torch.save(model.state_dict(), dest / "selected_initial.pt")
+            traces.append(
+                dict(
+                    phase="selector",
+                    epoch=n,
+                    validation_MSE=val,
+                    steps=steps,
+                    seconds=time.monotonic() - tick,
+                    selected=selector.selected,
+                )
+            )
+            pd.DataFrame(traces).to_csv(dest / "training.csv", index=False)
+            print(year, "selector", n, "loss", val, "selected", selector.selected, flush=True)
+        write(dest / "selection.json", dict(vars(selector), inner_scale=inner_scale))
+        journal(out, year, "CALIBRATED", dict(selected_epoch=selector.selected))
+        stop = next(x["cutoffs"]["september"] for x in receipt["folds"] if x["year"] == year)
+        fh = feature_fit_hours(c.grid, rows, stop)
+        recipe, _ = fit_expanded(c, fh, stop, approved=True)
+        w = origin_weights(rows.iloc[rp].session_date_et.to_numpy())
+        scale = max(quantile(abs(r[rp]).ravel(), 0.5, np.repeat(w / 20, 20)), 1e-8)
+        thresholds = {
+            str(p): quantile(abs(r[rp]).ravel(), p / 100, np.repeat(w / 20, 20)) for p in (95, 99)
+        }
+        write(dest / "restricted_recipe.json", recipe, new=True)
+        write(
+            dest / "restricted_target.json",
+            dict(scale=scale, thresholds=thresholds, cutoff=stop),
+            new=True,
+        )
+        refit = View(c, rows, r, recipe, scale)
+        model = model_for("MAG")
+        assert initial_hash(model) == original_cfg["initial_sha256"]
+        opt = optimizer(model)
+        assert not opt.state
+        journal(out, year, "REFITTING", dict(epochs=selector.selected, cutoff=stop))
+        for n in range(1, selector.selected + 1):
+            tick = time.monotonic()
+            steps = epoch(refit, rp, model, opt, n)
+            traces.append(
+                dict(phase="refit", epoch=n, steps=steps, seconds=time.monotonic() - tick)
+            )
+            pd.DataFrame(traces).to_csv(dest / "training.csv", index=False)
+            print(year, "refit", n, "of", selector.selected, flush=True)
+        torch.save(model.state_dict(), dest / "restricted_final.pt")
+        frozen = initial_hash(model)
+        raw_cal = predict(refit, cp, model)
+        cal_w = np.repeat(origin_weights(rows.iloc[cp].session_date_et.to_numpy()) / 20, 20)
+        coeff = factors(abs(r[cp]), raw_cal, scale, cal_w)
+        if coeff["status"] != "FINITE":
+            raise ValueError("INVALID_CALIBRATION_DOMINATED_EXPONENTIAL_MEAN")
+        b = baseline_fit(inner, refit, pos)
+        write(dest / "coefficients.json", dict(coeff, baselines=b), new=True)
+        assert initial_hash(model) == frozen
+        # Coefficients and all choices are saved before the first new OOS prediction.
+        raw_oos = predict(refit, op, model)
+        reloaded = model_for("MAG")
+        reloaded.load_state_dict(torch.load(dest / "restricted_final.pt", weights_only=True))
+        np.testing.assert_array_equal(raw_oos, predict(refit, op, reloaded))
+        assert initial_hash(model) == frozen
+        for role, p, raw in (("calibration", cp, raw_cal), ("oos", op, raw_oos)):
+            base = rows.iloc[p][
+                [
+                    "origin_id",
+                    "session_date_et",
+                    "slot",
+                    "category",
+                    "entry_end_utc",
+                    "exit_end_utc",
+                    "label_maturity_utc",
+                ]
+            ]
+            f = base.loc[base.index.repeat(20)].reset_index(drop=True)
+            f["ticker"] = np.tile(SYMBOLS, len(p))
+            f["A"], f["Mhat"] = abs(r[p]).ravel(), raw.ravel()
+            f["weight"] = np.repeat(
+                origin_weights(rows.iloc[p].session_date_et.to_numpy()) / 20, 20
+            )
+            values = decode(raw, scale, coeff["c"], coeff["k"])
+            if role == "oos":
+                values.update(baseline_predict(refit, p, b))
+                saved = pd.read_parquet(
+                    S9 / f"HF20-S9-F{year % 100}-H4-MAG-S42/oos_scores.parquet",
+                    columns=["origin_id", "ticker", "return_4h"],
+                )
+                np.testing.assert_array_equal(
+                    f[["origin_id", "ticker"]], saved[["origin_id", "ticker"]]
+                )
+                np.testing.assert_array_equal(f.A, saved.return_4h.abs())
+            for name, value in values.items():
+                assert np.isfinite(value).all() and (value >= 0).all()
+                f[name] = value.ravel()
+            f.to_parquet(dest / f"{role}_scores.parquet", index=False, compression="zstd")
+        result = dict(
+            year=year,
+            status="COMPLETED",
+            selected_epoch=selector.selected,
+            selector_epochs=selector.epoch,
+            scale=scale,
+            coefficients=coeff,
+            seconds=time.monotonic() - started,
+            peak_rss_bytes=memory(),
+            frozen_parameter_sha256=frozen,
+            reload_max_error=0,
+        )
+        write(dest / "result.json", result, new=True)
+        journal(out, year, "COMPLETED", result)
+        del inner, refit, model, opt, reloaded
+        gc.collect()
+        return result
+    except Exception as error:
+        journal(out, year, "FAILED", dict(error=repr(error)))
+        write(dest / "failure.json", dict(error=repr(error), seconds=time.monotonic() - started))
+        raise
+
+
+def metrics(f: pd.DataFrame, prediction: str) -> dict:
+    w = f.weight.to_numpy(float, copy=True)
+    w /= w.sum()
+    a, p = f.A.to_numpy(), f[prediction].to_numpy()
+    error = p - a
+    return dict(
+        rows=len(f),
+        sessions=f.session_date_et.nunique(),
+        origins=f.origin_id.nunique(),
+        observed=float(w @ a),
+        predicted=float(w @ p),
+        bias=float(w @ error),
+        ratio=float((w @ p) / (w @ a)),
+        raw_MAE=float(w @ abs(error)),
+        raw_MSE=float(w @ (error * error)),
+    )
+
+
+def rank_metrics(f: pd.DataFrame, prediction: str) -> dict:
+    a, p = (f[name].to_numpy().reshape(-1, 20) for name in ("A", prediction))
+    i, j = np.triu_indices(20, 1)
+    ad, pd_ = np.sign(a[:, i] - a[:, j]), np.sign(p[:, i] - p[:, j])
+    valid = ad != 0
+    pair = (((ad * pd_ > 0) + 0.5 * (pd_ == 0)) * valid).sum(1) / valid.sum(1)
+
+    def membership(v: np.ndarray, high: bool) -> np.ndarray:
+        d = pd.DataFrame(v if high else -v)
+        first = d.rank(axis=1, method="min", ascending=False).to_numpy()
+        last = d.rank(axis=1, method="max", ascending=False).to_numpy()
+        return np.clip((5 - first) / (last - first + 1), 0, 1)
+
+    o = pd.DataFrame(
+        dict(
+            day=f.session_date_et.iloc[::20].to_numpy(),
+            magnitude_IC=origin_ic(a, p),
+            pair_concordance=pair,
+            top4=(membership(a, True) * membership(p, True)).sum(1) / 4,
+            bottom4=(membership(a, False) * membership(p, False)).sum(1) / 4,
+            tie_rate=(pd_ == 0).mean(1),
+            constant_rate=np.ptp(p, axis=1) == 0,
+        )
+    )
+    return {str(k): float(v) for k, v in o.groupby("day").mean().mean().to_dict().items()}
+
+
+def markdown(f: pd.DataFrame) -> str:
+    lines = [
+        "| " + " | ".join(map(str, f.columns)) + " |",
+        "| " + " | ".join("---" for _ in f) + " |",
+    ]
+    for row in f.itertuples(index=False, name=None):
+        lines.append(
+            "| " + " | ".join(f"{v:.8g}" if isinstance(v, float) else str(v) for v in row) + " |"
+        )
+    return "\n".join(lines)
+
+
+def report(out: Path, receipt: dict) -> None:
+    results, groups, annual = [], [], []
+    for year in YEARS:
+        path = out / f"F{year % 100}/result.json"
+        if not path.exists():
+            continue
+        result = read(path)
+        results.append(result)
+        f = pd.read_parquet(out / f"F{year % 100}/oos_scores.parquet")
+        target = read(out / f"F{year % 100}/restricted_target.json")
+        raw_loss = (np.log1p(f.A / target["scale"]) - f.Mhat) ** 2
+        for arm in ARMS:
+            value: dict[str, str | int | float | None] = dict(
+                year=year, arm=arm, **metrics(f, arm), **rank_metrics(f, arm)
+            )
+            value["original_Mhat_transformed_MSE"] = (
+                float(f.weight @ raw_loss) if arm in ("C0", "C1a", "M1") else None
+            )
+            daily_parts = (
+                pd.DataFrame(
+                    dict(
+                        day=f.session_date_et,
+                        weight=f.weight,
+                        weighted_delta=f.weight * ((f[arm] - f.A) ** 2 - (f.C0 - f.A) ** 2),
+                    )
+                )
+                .groupby("day")[["weight", "weighted_delta"]]
+                .sum()
+            )
+            daily = daily_parts.weighted_delta / daily_parts.weight
+            interval = block_interval(daily)
+            value.update(
+                delta_MSE_vs_C0=interval["mean"],
+                delta_low=interval["low"],
+                delta_high=interval["high"],
+            )
+            annual.append(value)
+            for field in ("slot", "category"):
+                for label, g in f.groupby(field):
+                    groups.append(
+                        dict(year=year, arm=arm, field=field, group=str(label), **metrics(g, arm))
+                    )
+            low = f.groupby("origin_id")[arm].rank(method="average").le(10.5)
+            for percentile in (95, 99):
+                mask = f.A.gt(target["thresholds"][str(percentile)])
+                for name, m in ((f"PREFIX{percentile}", mask), (f"LE_PREFIX{percentile}", ~mask)):
+                    g = f.loc[m]
+                    stat: dict[str, str | int | float] = dict(
+                        year=year, arm=arm, field="tail", group=name, **metrics(g, arm)
+                    )
+                    stat.update(
+                        weight_mass=float(g.weight.sum()),
+                        raw_MSE_loss_share=float(
+                            (g.weight * (g[arm] - g.A) ** 2).sum()
+                            / ((f.weight * (f[arm] - f.A) ** 2).sum())
+                        ),
+                        false_low_rank=float(np.average(low.loc[m], weights=g.weight)),
+                    )
+                    groups.append(stat)
+            w = f.weight.to_numpy()
+            cuts = np.unique([quantile(f.C0.to_numpy(), q, w) for q in np.arange(0.1, 1, 0.1)])
+            bins = np.searchsorted(cuts, f.C0, side="left") + 1
+            for label in np.unique(bins):
+                groups.append(
+                    dict(
+                        year=year,
+                        arm=arm,
+                        field="C0_decile",
+                        group=str(label),
+                        **metrics(f.loc[bins == label], arm),
+                    )
+                )
+    pd.DataFrame(annual, columns=None if annual else ["year", "arm", "status"]).to_csv(
+        out / "session2_metrics.csv", index=False
+    )
+    pd.DataFrame(
+        groups, columns=None if groups else ["year", "arm", "field", "group", "status"]
+    ).to_csv(out / "session2_groups.csv", index=False)
+    protocol = dict(
+        design=read(out / "session2_design.json"),
+        preflight=receipt,
+        completed_results=results,
+        status="PARTIAL" if results else "BLOCKED",
+        equal_year_fourfold="UNAVAILABLE unless all four folds complete",
+    )
+    if not (out / "session2_protocol.json").exists():
+        write(out / "session2_protocol.json", protocol, new=True)
+    counts = pd.read_csv(out / "session2_role_counts.csv")
+    a = pd.DataFrame(annual)
+    g = pd.DataFrame(groups)
+    sections = [
+        "# S9 MAG Stage 1 Session 2 — B0/C1 Design A",
+        "Prepared 27 October 2026. **PARTIAL: F21 completed; F22–F24 BLOCKED before fitting.**",
+        "## 1. Executive result",
+        (
+            "**MIXED one-year calibration evidence, not a four-year success.** F21 uses "
+            "19,100 matched stock-origin rows / 955 origins / 188 sessions. Global "
+            "smearing C1a reduces raw OOS MSE versus the identical uncalibrated encoder, "
+            "but the simple raw multiplier M1 does slightly better. Both improve mean "
+            "level while worsening overall MAE and ordinary-period error. Large-move "
+            "amplitudes remain substantially underpredicted. F22–F24 cannot be scored "
+            "under the approved shortened selector because coverage fails its frozen "
+            "sufficiency rules. No four-year equal-year average is available."
+        ),
+    ]
+    for result in results:
+        year = result["year"]
+        m = a.loc[a.year.eq(year)].set_index("arm")
+
+        def number(arm: str, name: str) -> float:
+            values = m.loc[[arm], name].to_numpy(dtype=float).ravel()
+            assert len(values) == 1 and np.isfinite(values[0])
+            return float(values[0])
+
+        gain_c = 100 * (1 - number("C1a", "raw_MSE") / number("C0", "raw_MSE"))
+        gain_k = 100 * (1 - number("M1", "raw_MSE") / number("C0", "raw_MSE"))
+        sections.append(
+            f"F{year % 100}: C1a MSE improvement **{gain_c:.2f}%**; M1 **{gain_k:.2f}%**. "
+            f"Mean forecast/realized ratio {number('C0', 'ratio'):.3f} → "
+            f"{number('C1a', 'ratio'):.3f} (C1a) / "
+            f"{number('M1', 'ratio'):.3f} (M1). All are historically out of fit "
+            "within the new chronology, but the period is repeatedly studied, "
+            "**exploratory/post-search**, not pristine confirmation."
+        )
+    sections.extend(
+        [
+            (
+                "Next decision: review whether to amend the blocked-fold selector chronology "
+                "and calibration coverage. Do not launch O1 or contextual calibration "
+                "automatically. If a scalar map remains a comparator, M1 deserves preference "
+                "over a claim that special Jensen modeling produced an extra advantage. "
+                "Its superiority here is a one-year result, not a frozen promotion choice."
+            ),
+            "## 2. Preflight, exact role populations and blockers",
+            markdown(
+                counts[
+                    [
+                        "year",
+                        "role",
+                        "cutoff",
+                        "embargo_after",
+                        "first_date",
+                        "last_date",
+                        "sessions",
+                        "origins",
+                        "stock_rows",
+                    ]
+                ]
+            ),
+            "Selector coverage by slot (minimum 50 sessions and 25 origins in each slot):",
+            markdown(counts.loc[counts.role.eq("selector"), ["year", "sessions", *SLOTS]]),
+            "Independent calibration coverage, disclosed separately:",
+            markdown(counts.loc[counts.role.eq("calibration"), ["year", "sessions", *SLOTS]]),
+            (
+                "F21 passes: selector57 sessions, minimum46 origins per slot; independent "
+                "tail56 sessions, minimum36 per slot. F22/F23/F24 selectors have35/38/47 "
+                "sessions, with minimum22/23/19 origins per slot, and are BLOCKED. No "
+                "neural, scalar or B0 fitting and no new OOS metric was performed for those "
+                "years. F23/F24 tails have48/40 sessions; F24 has some slots below25. "
+                "These tail figures are review flags: the live prompt supplied no new "
+                "numeric calibration-tail minimum, and none was invented as an extra gate."
+            ),
+            "Latest monthly extension passing selector counts, **not approved or executed**:",
+            markdown(pd.DataFrame(receipt["alternatives_not_authorized"])),
+            (
+                "Those alternatives move initial training earlier and extend the selector; "
+                "they are not just more rows in the same approved fold. The researcher "
+                "must choose whether a common revision is preferable and settle calibration "
+                "coverage before another fit. Existing fitted F21 is preserved."
+            ),
+            (
+                "Nominal dates are filtered by saved S4 source/label eligibility. Actual "
+                "cutoffs use the last scheduled session on/before June30, September30 and "
+                "December31. Strict maturity is before next local midnight minus4h. The "
+                "first of48 completed input steps must lie strictly after the prior cutoff "
+                "for selector, calibration and OOS. All original OOS keys matched in order, "
+                "20 names per origin, without dropping rows. The full timestamp limits "
+                "are in session2_role_counts.csv; actual folds/maturity rules are frozen "
+                "in session2_design.json and session2_protocol.json."
+            ),
+            "## 3. Matched annual results and uncertainty",
+            (
+                "Raw A is absolute endpoint log return. Means/MAE use log-return units; "
+                "MSE uses squared log-return units. Within year: equal stock within origin, "
+                "origin within session, session within year. Subgroup errors condition "
+                "original role mass on the group; they do not rebalance surviving rows or "
+                "pretend overlapping stock/clock/tail groups are independent replications."
+            ),
+        ]
+    )
+    if annual:
+        sections.append(
+            markdown(
+                a[["year", "arm", "raw_MSE", "raw_MAE", "observed", "predicted", "bias", "ratio"]]
+            )
+        )
+        sections.append("Primary paired raw-MSE differences versus C0; negative is improvement:")
+        sections.append(
+            markdown(
+                a.loc[
+                    a.arm.isin(["C1a", "M1"]),
+                    ["year", "arm", "delta_MSE_vs_C0", "delta_low", "delta_high"],
+                ]
+            )
+        )
+    pairs = []
+    for result in results:
+        year = result["year"]
+        f = pd.read_parquet(out / f"F{year % 100}/oos_scores.parquet")
+        for left, right in (("C1a", "B0-VOL"), ("M1", "B0-VOL"), ("C1a", "M1")):
+            parts = (
+                pd.DataFrame(
+                    dict(
+                        day=f.session_date_et,
+                        w=f.weight,
+                        n=f.weight * ((f[left] - f.A) ** 2 - (f[right] - f.A) ** 2),
+                    )
+                )
+                .groupby("day")
+                .sum()
+            )
+            pairs.append(
+                dict(
+                    year=year,
+                    comparison=f"{left} minus {right}",
+                    **block_interval(parts.n / parts.w),
+                )
+            )
+    if pairs:
+        sections.append("Additional descriptive paired comparisons with the strongest raw-MSE B0:")
+        sections.append(markdown(pd.DataFrame(pairs)))
+    sections.extend(
+        [
+            (
+                "Intervals resample whole observed calendar-month blocks using the existing "
+                "400-draw utility, seed22042. F21 has12 month blocks/188 sessions. They "
+                "are descriptive and not selection-adjusted. No IID stock-row or four-year "
+                "independence assumption is made. C1a's point MSE is lower than B0-VOL, "
+                "but that paired interval includes zero. M1 is slightly better than C1a "
+                "and B0-VOL in this single year; this is not multi-year robustness."
+            ),
+            "Four-year equal-year result: **NOT AVAILABLE**. A lone F21 mean is not substituted.",
+            "## 4. Fits, phase identity and calibration factors",
+            (
+                "Initial MAG recipe/scale reuse is restricted to the exact unchanged June "
+                "population: S4/F21_inner_recipe.json and S9/HF20-S9-F21-H4-MAG-S42/"
+                "inner_target_recipe.json (S4/S9 roots below). The initial network itself "
+                "was newly trained, not an archived checkpoint. July–September alone "
+                "selected epoch29 after39 selector epochs. A fresh seed42 model and empty "
+                "optimizer then refit through2020-09-30 for exactly29 epochs, using new "
+                "input-only-prefix FT16 floors/scalers and raw-A scale. No October–December "
+                "outcome entered either phase, feature/target fitting or B0 selection."
+            ),
+        ]
+    )
+    factor_rows = []
+    for result in results:
+        year = result["year"]
+        target = read(out / f"F{year % 100}/restricted_target.json")
+        co = read(out / f"F{year % 100}/coefficients.json")
+        factor_rows.append(
+            dict(
+                year=year,
+                selected_epoch=result["selected_epoch"],
+                selector_epochs=result["selector_epochs"],
+                restricted_scale=result["scale"],
+                c=co["c"],
+                k=co["k"],
+                ridge_penalty=co["baselines"]["ridge_penalty"],
+                prefix95=target["thresholds"]["95"],
+                prefix99=target["thresholds"]["99"],
+            )
+        )
+        sections.append(
+            f"F{year % 100} restricted model identity `{result['frozen_parameter_sha256']}`; "
+            f"checkpoint reload maximum error {result['reload_max_error']}. Parameters "
+            "were checked unchanged across calibration and OOS prediction. The same "
+            "September input recipe, target scale and network generated both populations."
+        )
+    if factor_rows:
+        sections.append(markdown(pd.DataFrame(factor_rows)))
+    sections.extend(
+        [
+            (
+                "C0 = s*expm1(max(Mhat,0)). C1a fits c = E_cal,w[exp(log1p(A/s)−Mhat)] "
+                "using unconstrained Mhat, then predicts s*max(0,exp(Mhat)*c−1). M1 fits "
+                "k=max(0,E_cal,w[A0*A]/E_cal,w[A0²]) and predicts k*A0. There is no double "
+                "inverse, inner-scale transfer, residual trimming, extra context parameter "
+                "or OOS coefficient fit. Calibration exports are fitting data, not OOS "
+                "improvement evidence. The menu lists multiplication within C2; this "
+                "specific one-parameter M1 comparison is explicitly authorized by the "
+                "live Session2 prompt, which excludes the other C2 variants."
+            ),
+        ]
+    )
+    for result in results:
+        co = result["coefficients"]
+        sections.append(
+            f"Exponential-moment concentration: maximum exp(residual) {co['exp_max']:.4f}; "
+            f"largest row {100 * co['exp_top1row_share']:.3f}% of the weighted moment, "
+            f"largest10 rows {100 * co['exp_top10row_share']:.3f}%, largest1% "
+            f"{100 * co['exp_top1pct_share']:.3f}%. Status {co['status']}; no handful "
+            "dominance or nonfinite estimate was observed. Across-fold c/k stability "
+            "is UNAVAILABLE because three folds are blocked."
+        )
+    sections.extend(
+        [
+            (
+                "B0-RMEAN/RMED use weighted stock mean/left empirical median of A through "
+                "September. RMED is judged appropriately by raw MAE, not required to win "
+                "mean-squared error. B0-CLOCK shrinks stock×slot means toward stock means "
+                "with fixed50 origin-equivalent prior observations: origin weights are "
+                "rescaled to mean1 before adding that prior mass. B0-VOL uses27 columns: "
+                "unpenalized intercept,19 stock dummies (VZ reference),6 clock dummies "
+                "(09:30 reference), and prefix-standardized log(decoded FT16 V2 RMS60). "
+                "Its normalized weighted raw-MSE ridge penalties0.001/0.1/10 were tested "
+                "only on the July–September selector; 0.001 won, followed by September "
+                "refit. Original FT16 robust/fallback semantics are retained; the extra "
+                "single-column ridge mean/SD is fitted only on its phase prefix. Full "
+                "coefficients/centers/SD/candidate losses are in F21/coefficients.json. "
+                "B0 has explicit stock/clock identifiers, which are not neural channels "
+                "in MAG. No through-December baseline receives a silent history advantage."
+            ),
+            "## 5. Magnitude ordering, clocks, tails and reliability",
+        ]
+    )
+    if annual:
+        sections.append(
+            markdown(
+                a[
+                    [
+                        "year",
+                        "arm",
+                        "magnitude_IC",
+                        "top4",
+                        "bottom4",
+                        "pair_concordance",
+                        "tie_rate",
+                        "constant_rate",
+                    ]
+                ]
+            )
+        )
+    sections.extend(
+        [
+            (
+                "IC is within-origin Spearman using average ties, then origin→session→year "
+                "means; historical pooled all-row0.408 is not substituted. Top/bottom4 "
+                "retrieval uses fractional membership across boundary ties, chance0.20. "
+                "Pair concordance excludes realized ties and credits predicted ties0.5, "
+                "chance0.50. C0/C1a/M1 have identical rankings and zero tied/constant "
+                "origins. No negative Mhat/decoder clamp occurred in calibration or OOS. "
+                "B0-VOL clamps144 OOS values to zero (0.754% of rows), with small pair ties "
+                "and no constant whole-origin scores. Original Mhat transformed MSE is "
+                "0.225555544 for all three network decoders; no corrected-A-to-M loss is "
+                "misrepresented as the historical objective."
+            ),
+            "Intraday versus original overnight-crossing targets (all seven arms):",
+        ]
+    )
+    group_cols = [
+        "year",
+        "arm",
+        "group",
+        "rows",
+        "sessions",
+        "observed",
+        "predicted",
+        "ratio",
+        "raw_MSE",
+        "raw_MAE",
+    ]
+    if groups:
+        sections.append(markdown(g.loc[g.field.eq("category"), group_cols]))
+        sections.append("All seven original clock slots, matched network decoders:")
+        sections.append(
+            markdown(g.loc[g.field.eq("slot") & g.arm.isin(["C0", "C1a", "M1"]), group_cols])
+        )
+        sections.append("Prefix95/99 events and ordinary≤prefix95 complement, all controls:")
+        sections.append(
+            markdown(
+                g.loc[
+                    g.field.eq("tail") & g.group.isin(["PREFIX95", "PREFIX99", "LE_PREFIX95"]),
+                    [*group_cols, "weight_mass", "raw_MSE_loss_share", "false_low_rank"],
+                ]
+            )
+        )
+        sections.append("Annual reliability: weighted C0-score deciles, all three decoders:")
+        sections.append(
+            markdown(g.loc[g.field.eq("C0_decile") & g.arm.isin(["C0", "C1a", "M1"]), group_cols])
+        )
+    sections.extend(
+        [
+            (
+                "Reliability bins use the predeclared ten weighted empirical C0-score "
+                "deciles in each OOS year, with whole ties retained and the same membership "
+                "for all arms. Their numeric boundaries are descriptive, not future "
+                "calibration cutoffs. All baselines/slots/deciles and the99th-tail "
+                "complement are retained in session2_groups.csv. Tail cutoffs were fitted "
+                "through September only; strict A>threshold, no OOS threshold selection. "
+                "False-low is role-weighted mass of an event cohort with within-origin "
+                "forecast midrank≤10.5 divided by total event mass, not a calibrated "
+                "probability. Prefix95 has1089 rows/162 sessions; prefix99 has94/46. "
+                "The three network arms' false-low rates are unchanged at17.30%/10.12%."
+            ),
+            "## 6. Scientific interpretation and Session3 decision",
+            (
+                "C1a's mean-level correction is real within F21: ratio0.769→1.050, while "
+                "raw MSE falls6.89%. It is **not a uniformly better forecast**. Overall "
+                "MAE rises5.89%; ordinary≤prefix95 MSE rises10.98%, and that ordinary "
+                "mean ratio becomes1.246. Intraday MSE rises3.04% with ratio1.223. "
+                "Overnight MSE falls9.66%, ratio0.719→0.968;15:30 MSE falls13.41% but "
+                "its mean ratio remains0.869. A global average can hide offsetting "
+                "ordinary/intraday overprediction and tail underprediction."
+            ),
+            (
+                "Prefix95/99 forecast mean ratios remain only0.373/0.235 for smearing, "
+                "despite raw-MSE reductions19.48%/11.62%. Mean calibration therefore does "
+                "not solve jump amplitudes or change magnitude ranking. M1 gives lower "
+                "overall MSE than C1a and slightly lower overall MAE, with a similar "
+                "ordinary-period trade-off. B0-VOL remains competitive, including at "
+                "the95/99 tails and15:30. C1a's paired advantage over B0-VOL is "
+                "inconclusive under the descriptive month-block interval. This does not "
+                "establish a special Jensen-based mechanism or an architecture advantage."
+            ),
+            (
+                "Decision: **MIXED/INCONCLUSIVE, overall PARTIAL**. Review chronology "
+                "and coverage before filling the three unavailable years. Do not "
+                "automatically start O1, C1b/c, C2 flexible maps, C3 clock/overnight "
+                "calibration, another seed, Stage2 overnight targets or options work. "
+                "No result here authorizes a final-test release."
+            ),
+            "## 7. Reproduction, files and integrity",
+            f"Result namespace: `{out}`.",
+            (
+                "```bash\n.venv/bin/python -m lstm_data.hf20_mag_designa --report\n"
+                ".venv/bin/python -m pytest tests/test_hf20_mag_designa.py -q\n```"
+            ),
+            (
+                "The report command reuses saved calibration/OOS forecasts and frozen "
+                "coefficients; it does not train or calibrate. The original --run is "
+                "single-use and rejects the existing journal. Do not evade that guard "
+                "with a new output directory. --preflight is for a fresh, pre-start "
+                "namespace and requires the unchanged130-start predecessor; this "
+                "completed namespace is not a continuation authorization."
+            ),
+            (
+                "Verification passed: four focused synthetic fixtures, original inner/OOS "
+                "key/order equality, all20 names per origin, date/maturity/48-step masks, "
+                "input-only scaler prefix exclusion, archived V2 parity before fitting, "
+                "initial parameter identity, fresh empty optimizer, finite gradients/"
+                "weights, frozen parameters for calibration+OOS, exact checkpoint reload, "
+                "same baseline keys, positive finite outputs, and independent saved "
+                "c/k/decoder/weight identities. No initial or refit failure/retry. "
+                "Basic Pylance-stub parity and Ruff are recorded in the mandatory "
+                "session report; final editor Problems refresh remains human-confirmed."
+            ),
+            (
+                "Execution used one pair/two neural phase fits and9 bounded non-neural "
+                "coefficient fits (three grouped controls, three ridge candidates+one "
+                "refit, c and k), plus the newly authorized September feature/target "
+                "recipe statistics. The current ledger is131/200; old130-start history "
+                "is byte-identical and bound by the new append-only neural_starts.jsonl. "
+                "Only configs/CURRENT_EXPERIMENT_REGISTRY.json advanced to this successor. "
+                "The prior campaign's permission is not reused. Actual lifecycle "
+                "elapsed1072.43s; peak RSS1,244,594,176 bytes, under the existing2GB cap. "
+                "Initial project storage12.41GB was below15GB; no bulk source copy."
+            ),
+            (
+                f"S4 root `{S4}`; S9 root `{S9}`. Inputs were saved S4 "
+                "opening_reaudit_v2 masks/endpoints/read receipt, timestamp/date-only "
+                "P020 grid projection through2024, and174 explicit adjusted-hourly "
+                "partitions2010-07–2024-12 from that existing permitted read receipt. "
+                "Original FT16 and M2-as-of math was reused in memory. No minute store, "
+                "2025/2026 observations, protected hashes, acquisition or canonical "
+                "rebuild was accessed. Fixed-survivor, retrospective action vintage "
+                "and source/publication qualifications persist. The original price "
+                "target begins before approximate origin+2-minute issuance: no "
+                "executable returns, trading or options claims."
+            ),
+            (
+                "Small immutable protocol/recipe/coefficients and epoch trace are retained; "
+                "F21/oos_scores.parquet is one compressed keyed store for all seven arms, "
+                "F21/calibration_scores.parquet retains fitting-pair lineage. Selected "
+                "initial/restricted checkpoints are private local files; .gitignore "
+                "prevents accidental score/checkpoint commits. Main aggregates are "
+                "session2_metrics.csv and session2_groups.csv. No existing model, "
+                "prediction, source, index, recipe, dashboard or historical report "
+                "was modified. Source code: src/lstm_data/hf20_mag_designa.py; tests: "
+                "tests/test_hf20_mag_designa.py. Post-fit edits affected report "
+                "presentation only, not fitting, forecast or metric definitions."
+            ),
+            (
+                "Mandatory handoff: reports/codex_sessions/"
+                "2026-10-27_213331_hf20_s9_mag_session2_designa.md. No commits/push "
+                "were performed. **STOP after Session2.**"
+            ),
+        ]
+    )
+    (out / "S9_MAG_STAGE1_SESSION2_B0_C1_DESIGNA_REPORT.md").write_text(
+        "\n\n".join(sections) + "\n"
+    )
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--preflight", action="store_true")
+    parser.add_argument("--run", action="store_true")
+    parser.add_argument("--report", action="store_true")
+    args = parser.parse_args()
+    out = args.out
+    out.mkdir(parents=True, exist_ok=True)
+    if args.report:
+        report(out, read(out / "preflight.json"))
+        return
+    if args.run and (out / "neural_starts.jsonl").exists():
+        raise SystemExit("NO_RETRY: session journal already exists")
+    grid, rows, plans, receipt = preflight(out)
+    if not args.run:
+        print(json.dumps(receipt, indent=2))
+        return
+    torch.set_num_threads(4)
+    torch.set_num_interop_threads(1)
+    c, r = source_components(grid, rows)
+    for fold in receipt["folds"]:
+        if fold["status"] == "READY":
+            run_fold(out, fold["year"], c, rows, r, plans[fold["year"]], receipt)
+    report(out, receipt)
+
+
+if __name__ == "__main__":
+    main()

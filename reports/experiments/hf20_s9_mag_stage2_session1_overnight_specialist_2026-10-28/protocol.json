@@ -1,0 +1,209 @@
+{
+  "kind": "HF20_STAGE2_S2A_S2E_OVERNIGHT_SPECIALIST_V1",
+  "folds": [
+    {
+      "year": 2021,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.005797117684325846,
+          "cutoff": "2020-06-30"
+        },
+        "restricted": {
+          "scale": 0.005848759193156053,
+          "cutoff": "2020-09-30"
+        }
+      },
+      "thresholds": {
+        "95": 0.029152683601565685,
+        "99": 0.055591859892280306
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/F21"
+    },
+    {
+      "year": 2022,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.005935124632023495,
+          "cutoff": "2021-04-30"
+        },
+        "restricted": {
+          "scale": 0.005933406715930685,
+          "cutoff": "2021-09-30"
+        }
+      },
+      "thresholds": {
+        "95": 0.029381635568292794,
+        "99": 0.0550530573806432
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F22"
+    },
+    {
+      "year": 2023,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.006072334419240624,
+          "cutoff": "2022-05-31"
+        },
+        "restricted": {
+          "scale": 0.006121673076939892,
+          "cutoff": "2022-09-30"
+        }
+      },
+      "thresholds": {
+        "95": 0.03048333514069074,
+        "99": 0.05621444505567313
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F23"
+    },
+    {
+      "year": 2024,
+      "status": "READY",
+      "phases": {
+        "initial": {
+          "scale": 0.0061734035023815,
+          "cutoff": "2023-05-31"
+        },
+        "restricted": {
+          "scale": 0.00617444719514992,
+          "cutoff": "2023-09-29"
+        }
+      },
+      "thresholds": {
+        "95": 0.03041068403132899,
+        "99": 0.055872346745723445
+      },
+      "comparator_root": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F24"
+    }
+  ],
+  "lambdas": [
+    0.0,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "loss": "L_N+lambda L_D; separate equal group-session/origin/20-stock means",
+  "batches": "16 complete sessions; full-role conditional origin weights multiplied by all_role_sessions/batch_sessions; missing group contributes zero; batch-session-weighted epoch reduction equals population loss at fixed parameters",
+  "epoch_monitor": "overnight-only transformed MSE; first finite nonnegative; <=.999 best; min12 patience10 max60",
+  "lambda_selection": "selected checkpoints overnight raw MSE; exact ties larger lambda, then candidate order",
+  "calibration": "one overnight-only smear for selected refit plus same-operation frozen old control; canonical calibration row weights restricted and renormalized; no shrink/trim",
+  "routing": "frozen C3 on saved INTRADAY; selected specialist on saved OVERNIGHT including early closes; no mixing within origin",
+  "information": "unchanged own-stock FT16 48x16; H32 one layer dropout.10 linear M head;6433 parameters",
+  "optimizer": "CPU float32;seed42;AdamW lr.001 betas(.9,.999) eps1e-8 matrix decay.01 bias0;clip1;16sessions",
+  "scoring": "original stock/origin/session/year weights; conditional renormalization for group OOS; equal four years",
+  "uncertainty": {
+    "draws": 400,
+    "seed": 22042,
+    "unit": "whole months within year; weighted group mass preserved"
+  },
+  "bins": "10 weighted saved C3 score deciles per year, common arm membership, descriptive",
+  "tails": "existing September prefix95/99 strict raw A exceedance and complements; no new thresholds",
+  "ledger_before": 138,
+  "maximum_new_starts": 16,
+  "maximum_neural_phase_fits": 20,
+  "maximum_after": 154,
+  "ledger_units": "one charged candidate start; selected candidate fresh refit part of its same pair; unselected starts remain charged",
+  "prior_pointer": {
+    "budget_amendment": {
+      "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/budget_amendment_200.json",
+      "sha256": "9b9b32c2cdf275a1195240afd5765b9d381bbc6eaf0bcc1196373f70cf3735e4"
+    },
+    "counts_started_including_failed": true,
+    "definition": {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/protocol.json",
+      "sha256": "2d7685d9fc4bf9f9be091090d78e8d739465b08630998d4a6fe492abdf9cf49f"
+    },
+    "effective_ceiling": 200,
+    "fit_permission": false,
+    "live_approval_required": true,
+    "plan": {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/protocol.json",
+      "sha256": "2d7685d9fc4bf9f9be091090d78e8d739465b08630998d4a6fe492abdf9cf49f"
+    },
+    "previous_journal": {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/neural_starts.jsonl",
+      "sha256": "189bb5a91e9636e9a7415825b8847f9d9375987435bf619cacc9a8cef204cccf"
+    },
+    "real_journal": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/neural_starts.jsonl",
+    "schema_version": 26
+  },
+  "preservation_bindings": {
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/neural_starts.jsonl": "65e1298f8d812c90089f9e4004c9e0c6e93bb2d613a11c723b0376d34f20c990",
+    "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/F21/calibration_scores.parquet": "3e97f6948b30a5d802b56e8e21500c9f132b26fc37db8527d6dcc6b7c0f21d58",
+    "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/F21/oos_scores.parquet": "cce9a2a0525d66a46dcfcdb0d29be246d1fa32921076f50d813f0224f292e438",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/oos_scores.parquet": "6503a5f2d0a727e820555924a1c6799d161cfe4985e404c82fb81997acd29888",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F22/calibration_scores.parquet": "0449921906213e55681f407d262c5af0e0b164afc7340b0a1d7a8b7ba9fb6699",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F22/oos_scores.parquet": "24f0affd0013787e3f4b6b7de20234bf53df492bfce73cd6be2e4ad3691a9fc3",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/oos_scores.parquet": "79c30c8aaec738bec14fb3c711860fe1256484410d2bc78e3159de4b5e9fa923",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F23/calibration_scores.parquet": "3ca33638a275133bcb667fed444e13e64881971bacd0591bd085ad80ee5f1abf",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F23/oos_scores.parquet": "fd56eb2fe3dce1726dc358cfd0f140178bff115e7207434e5cc307d83c74ea04",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/oos_scores.parquet": "e0709a88e8e1f2b3bc76a6966e2390f03dbff98a9af9cf7833471b04bd9cf1f5",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F24/calibration_scores.parquet": "2d6d822c32009f259655fe4f160687de38c64ec251f17bf9ea7b87fb1213d10c",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F24/oos_scores.parquet": "e0b5127c5e7d2a8633b432537e71024d046db2c81fc26004a0e00338019f3500",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/oos_scores.parquet": "17c003e886f09d4a29d01fe907c83b8ea6e25c182b46c95f113a772a39b147ec",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/initial_recipe.json": "ae20769b9c6553730efb1001f65eb4cc9a0ad35f3fa321cf57604e9dab9982d2",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/restricted_recipe.json": "dec98c8daaea2b1a041ab117df4024890d16b1039e699ba6d7d9ee5b7f8bd6de",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/initial_recipe.json": "9d4c5ef349b7b585a863af275d615b1c81d2e3142ecfb725f77bed1f1dfbacf1",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/restricted_recipe.json": "828f354b976ff6e5c9f39476e9eb18c5b25a36a8034a8181116fab0871536850",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/initial_recipe.json": "887a6bdeda61cf23a879cdf5b4c640ddd33bf2bb087a05e858c29d76857706c4",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/restricted_recipe.json": "7b998301c42b4f6c76260b520fc6eb553e60f032290dc2663912447eb7f6b1c9",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/initial_recipe.json": "a6e3e7fb9c358d1daf8c74b4425ccf5cfbc4bc0eb45e441aeb7e595b1c180e02",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/restricted_recipe.json": "422ffd0d8289a1d21a3f32c235fe7a97cd6fe0bfc36e1ed9dc642e17631e417a"
+  },
+  "early_close_dates": [
+    "2010-11-26",
+    "2011-11-25",
+    "2012-07-03",
+    "2012-11-23",
+    "2012-12-24",
+    "2013-07-03",
+    "2013-11-29",
+    "2013-12-24",
+    "2014-07-03",
+    "2014-11-28",
+    "2014-12-24",
+    "2015-11-27",
+    "2015-12-24",
+    "2016-11-25",
+    "2017-07-03",
+    "2017-11-24",
+    "2018-07-03",
+    "2018-11-23",
+    "2018-12-24",
+    "2019-07-03",
+    "2019-11-29",
+    "2019-12-24",
+    "2020-11-27",
+    "2020-12-24",
+    "2021-11-26",
+    "2022-11-25",
+    "2023-07-03",
+    "2023-11-24",
+    "2024-07-03",
+    "2024-11-29",
+    "2024-12-24"
+  ],
+  "caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "resources": {
+    "project_bytes": 12425895671,
+    "task_bytes": 0,
+    "peak_rss_bytes": 324681728
+  },
+  "source_partitions": 174,
+  "source_end": "2024-12-31",
+  "workload": {
+    "maximum_epochs": 1200,
+    "reference_epoch_seconds_p95": 23.267181135510327,
+    "rough_max_seconds": 27920.617362612393,
+    "artifact_reserve_bytes": 40000000
+  },
+  "no_oos_outcomes_in_preflight": true,
+  "protection": "No2025/2026 numerical source/hash; only saved authorized pre2025 hourly read receipt; no minute rebuild/download",
+  "git_start": "5f7bb86a35d5aaff34ff79ef8f471117de6d3e42"
+}

@@ -1,0 +1,187 @@
+{
+  "kind": "USER_APPROVED_SESSION2B_DESIGNA_FOURFOLD_V1",
+  "selector_rule": "Try July1, June1, May1 in that order; first window with>=50 sessions and>=25 origins in every slot. No loss/forecast selection. No earlier month.",
+  "initial_stop": "Last complete permitted session strictly before chosen nominal start",
+  "calibration": "October-December after48-step embargo; no new numerical minimum; limited precision accepted explicitly",
+  "inherited_numerical_design": {
+    "kind": "USER_APPROVED_S9_MAG_SESSION2_DESIGNA",
+    "seed": 42,
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "role_counts": "session2_role_counts.csv",
+    "chronology": "June inner; July-September selector; September fresh refit; October-December calibration; exact original outer keys",
+    "maturity": "strict ET cutoff midnight +1 day -4 hours; first of48 input steps strictly after prior cutoff",
+    "model": {
+      "input": [
+        48,
+        16
+      ],
+      "hidden": 32,
+      "layers": 1,
+      "dropout": 0.1,
+      "parameters": 6433,
+      "lr": 0.001,
+      "matrix_decay": 0.01,
+      "bias_decay": 0,
+      "gradient_cap": 1.0,
+      "session_batch": 16,
+      "selector": "loss<=.999*best; min12 patience10 max60; fresh seed42 refit"
+    },
+    "target": "M=log1p(abs(R)/prefix_weighted_median_A); positive scale floor1e-8",
+    "weights": "equal stock within origin; equal origin within session; equal session within year; equal years",
+    "C0": "s*expm1(max(Mhat,0))",
+    "C1a": "c=Ecal_w exp(M-Mhat); s*max(0,exp(Mhat)*c-1)",
+    "M1": "k=max(0,Ecal_w[A0*A]/Ecal_w[A0^2]); k*A0",
+    "baselines": {
+      "RMEAN": "per-stock weighted raw A mean",
+      "RMED": "per-stock weighted left median",
+      "CLOCK": "weighted stock-slot raw mean, shrink50 origin-equivalent observations toward stock mean; role weights rescaled to mean1 per origin",
+      "VOL": {
+        "feature_dictionary": [
+          "unpenalized intercept",
+          "19 stock dummies; reference VZ",
+          "6 slot dummies; reference09:30",
+          "prefix-standardized log(decoded FT16 V2 RMS60)"
+        ],
+        "penalties": [
+          0.001,
+          0.1,
+          10.0
+        ],
+        "objective": "Ew raw squared error + lambda sum(nonintercept coefficients^2)",
+        "selection": "June fit, July-September raw MSE; ties first listed; September fresh refit; max0 prediction"
+      }
+    },
+    "diagnostics": {
+      "deciles": "10 weighted empirical C0 score bins per OOS year, descriptive; same bins for all arms",
+      "tails": "restricted-September prefix weighted95/99 of raw A; strict exceedance",
+      "uncertainty": "existing400 whole-month bootstrap seed22042; post-search descriptive"
+    },
+    "maximum_new_pairs": 4,
+    "maximum_neural_phase_fits": 8,
+    "actual_ready_years": [
+      2021
+    ],
+    "caps": {
+      "task_bytes": 2500000000,
+      "project_bytes": 15000000000,
+      "ram_bytes": 2000000000
+    },
+    "prior_pointer": {
+      "budget_amendment": {
+        "path": "reports/data_audit/ta012b_nb1_2026-10-16_001256_v2/budget_amendment_200.json",
+        "sha256": "9b9b32c2cdf275a1195240afd5765b9d381bbc6eaf0bcc1196373f70cf3735e4"
+      },
+      "counts_started_including_failed": true,
+      "definition": {
+        "path": "configs/track_a_candidate_experiment_registry_v23_hf20_s5_s9.json",
+        "sha256": "7f69483466dd157b9475b1c1857fddf89b060062416b3ea6d2a5b4fa57ebaf01"
+      },
+      "effective_ceiling": 200,
+      "fit_permission": false,
+      "live_approval_required": true,
+      "plan": {
+        "path": "reports/experiments/hf20_s5_s9_2026-10-26_164825_preparation/design.json",
+        "sha256": "74f15becfc412697db87a837f625efadcdffb302ccd28fea34b7cc95290ac632"
+      },
+      "previous_journal": {
+        "path": "reports/audit/track_a_real_pairs_v22_hf20_s4a.jsonl",
+        "sha256": "33932a883f0ac6fd1f0ddfea48e098826d375548e9222b2de8e3ba10b2b3e364"
+      },
+      "real_journal": "reports/audit/track_a_real_pairs_v23_hf20_s5_s9.jsonl",
+      "schema_version": 23
+    },
+    "protection": "No2025/2026 numeric observations/hashes; no minute reads or source downloads; no retries/other objectives"
+  },
+  "F21_reuse_root": "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27",
+  "new_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "paired_comparisons": [
+    [
+      "C1a",
+      "C0"
+    ],
+    [
+      "M1",
+      "C0"
+    ],
+    [
+      "C1a",
+      "M1"
+    ],
+    [
+      "C1a",
+      "B0-VOL"
+    ],
+    [
+      "M1",
+      "B0-VOL"
+    ]
+  ],
+  "bootstrap": "Annual: original block_interval400/22042. Equal-year: original S5/S9 per-contrast RNG22042, resample whole months independently within each year,400 draws, mean four annual draw means.",
+  "equal_year": "Only all four valid folds; proper losses/means/IC average annual values; ratio=equal-year predicted mean/observed mean. No equal-row pooling.",
+  "chosen_windows": [
+    {
+      "year": 2021,
+      "status": "REUSE",
+      "selector_start": "2020-07-01",
+      "initial_stop": "2020-06-30",
+      "selector_sessions": 57,
+      "slot_min": 46,
+      "cutoffs": {
+        "initial": "2020-06-30",
+        "september": "2020-09-30",
+        "december": "2020-12-31"
+      }
+    },
+    {
+      "year": 2022,
+      "status": "READY",
+      "selector_start": "2021-05-01",
+      "initial_stop": "2021-04-30",
+      "selector_sessions": 58,
+      "slot_min": 36,
+      "cutoffs": {
+        "initial": "2021-04-30",
+        "september": "2021-09-30",
+        "december": "2021-12-31"
+      }
+    },
+    {
+      "year": 2023,
+      "status": "READY",
+      "selector_start": "2022-06-01",
+      "initial_stop": "2022-05-31",
+      "selector_sessions": 59,
+      "slot_min": 38,
+      "cutoffs": {
+        "initial": "2022-05-31",
+        "september": "2022-09-30",
+        "december": "2022-12-30"
+      }
+    },
+    {
+      "year": 2024,
+      "status": "READY",
+      "selector_start": "2023-06-01",
+      "initial_stop": "2023-05-31",
+      "selector_sessions": 69,
+      "slot_min": 31,
+      "cutoffs": {
+        "initial": "2023-05-31",
+        "september": "2023-09-29",
+        "december": "2023-12-29"
+      }
+    }
+  ],
+  "preflight": "preflight.json",
+  "parent_bindings": "parent_bindings.json",
+  "git_start": "5f7bb86a35d5aaff34ff79ef8f471117de6d3e42"
+}
