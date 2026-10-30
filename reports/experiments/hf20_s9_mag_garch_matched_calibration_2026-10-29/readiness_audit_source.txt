@@ -1,0 +1,63 @@
+from pathlib import Path
+import hashlib,json,subprocess,sys,platform,importlib.metadata,time
+import numpy as np
+import pandas as pd
+from lstm_data import hf20_classical as old
+b,c3=old.b,old.c3
+out=Path('reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29')
+assert not out.exists()
+start=time.time()
+bind=dict(b.read(old.OUT/'protocol.json')['preservation_bindings'])
+fix=b.read(old.OUT/'logging_recovery_final.json')
+bind['src/lstm_data/hf20_classical.py']=fix['fixed_runner_sha256']
+for p,h in bind.items(): assert b.digest(Path(p))==h,p
+inv=pd.read_csv(old.OUT/'artifact_inventory.csv')
+for row in inv.to_dict('records'): assert b.digest(Path(row['path']))==row['sha256'],row['path']
+paths=list(old.OUT.rglob('*'))+[c3.CONT/'amendment.json',b.S9/'S9_TARGET_AND_BASELINE_CONTRACT.md']
+for root in [old.HYBRID,old.S2C,old.clock.OUT/'s2b_clock']:
+ paths += [p for p in root.rglob('*') if p.is_file()]
+for p in paths:
+ if p.is_file(): bind[str(p)]=b.digest(p)
+pointer=b.read(b.POINTER)
+journal=Path(pointer['real_journal']); last=json.loads(journal.read_text().splitlines()[-1])
+assert last['status']=='COMPLETED' and last['global_started_pairs']==186
+assert pointer['effective_ceiling']==300 and not pointer['fit_permission']
+for k in ['definition','plan','previous_journal','budget_amendment']:
+ assert b.digest(Path(pointer[k]['path']))==pointer[k]['sha256']
+grid,rows=b.metadata(); plans=old.rank.validate_roles(grid,rows); signed=old.signed_targets(rows)
+streams,thin=old.stream_masks(rows)
+counts=[]; checks=[]; support=[]
+early=set(rows.loc[~rows.regular_session,'session_date_et'])
+for y,roles in plans.items():
+ for role,ix in roles.items():
+  f=rows.iloc[ix]; counts.append(dict(year=y,role=role,rows=len(ix)*20,origins=len(ix),sessions=f.session_date_et.nunique(),first=f.session_date_et.min(),last=f.session_date_et.max()))
+ for role in ['calibration','oos']:
+  canonical=pd.read_parquet(c3.root(y)/f'{role}_scores.parquet',columns=[*c3.META,'A'])
+  c3.validate_panel(canonical,early)
+  np.testing.assert_array_equal(canonical.origin_id.iloc[::20],rows.iloc[roles[role]].origin_id)
+  np.testing.assert_array_equal(canonical.A.to_numpy().reshape(-1,20),abs(signed[roles[role]]))
+  for root in [old.OUT,old.HYBRID,old.S2C,old.clock.OUT/'s2b_clock']:
+   p=root/f'F{y%100}'/f'{role}_scores.parquet'; f=pd.read_parquet(p)
+   pd.testing.assert_frame_equal(f[[*c3.META,'A']],canonical,check_dtype=False)
+   checks.append(dict(year=y,role=role,path=str(p),sha256=b.digest(p),keys_labels_weights_sha256=hashlib.sha256(pd.util.hash_pandas_object(canonical,index=False).values.tobytes()).hexdigest()))
+ for slot,ix in streams.items():
+  keep=thin[slot]; fit=np.intersect1d(keep,roles['restricted_refit']); full=np.intersect1d(ix,roles['restricted_refit'])
+  g=rows.iloc[fit]; w=b.origin_weights(rows.iloc[roles['restricted_refit']].session_date_et.to_numpy()); lookup=dict(zip(roles['restricted_refit'],w)); fw=np.array([lookup[i] for i in fit]);fw/=fw.sum()
+  assert len(fit)>100 and (g.exit_end_utc.iloc[:-1].to_numpy()<=g.entry_end_utc.iloc[1:].to_numpy()).all()
+  for j,s in enumerate(b.SYMBOLS):
+   assert np.isfinite(signed[fit,j]).all() and np.var(signed[fit,j])>0
+   support.append(dict(year=y,slot=slot,ticker=s,n=len(fit),effective_weighted_sessions=1/(fw@fw),excluded=len(full)-len(fit),first=str(g.entry_end_utc.min()),last_end=str(g.exit_end_utc.max()),last_maturity=str(g.label_maturity_utc.max()),variance_scaled=float(np.var(100*signed[fit,j])),sample_sha256=hashlib.sha256(fit.tobytes()+signed[fit,j].tobytes()).hexdigest()))
+project=int(subprocess.check_output(['du','-sk','.'],text=True).split()[0])*1024
+assert project+300_000_000<15_000_000_000
+out.mkdir()
+for name,data in [('predecessor_bindings.json',bind),('key_checks.json',checks)]: b.write(out/name,data)
+pd.DataFrame(counts).to_csv(out/'role_counts.csv',index=False)
+pd.DataFrame(support).to_csv(out/'garch_support_prefit.csv',index=False)
+freeze=subprocess.check_output([sys.executable,'-m','pip','freeze'],text=True)
+(out/'pip_freeze_before.txt').write_text(freeze)
+(out/'existing_constraints.txt').write_text('\n'.join(x for x in freeze.splitlines() if '==' in x)+'\n')
+receipt=dict(status='READY_FOR_DEPENDENCY_CHECK_AND_IMPLEMENTATION',timestamp_utc=pd.Timestamp.now(tz='UTC').isoformat(),branch=subprocess.check_output(['git','branch','--show-current'],text=True).strip(),head=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),git_status=subprocess.check_output(['git','status','--short','--branch'],text=True),predecessor=str(old.OUT),bindings=len(bind),binding_sha256=b.digest(out/'predecessor_bindings.json'),historical_logging_exception=fix,ledger=186,ceiling=300,neural_starts=0,expected_garch_fits=560,expected_common_calibrations_without_garch=72,expected_common_calibrations_with_garch=80,calibration_description='Each G/IO family per model/fold; IO has two category coefficients and shares the global coefficient.',historical_fits=0,rows=80260,origins=4013,sessions=793,role_key_label_weight_parity=True,endpoint_identity=True,garch_min_n=min(x['n'] for x in support),garch_max_n=max(x['n'] for x in support),equality_rule='keep start>=last retained end; maturity strictly before issuance; no evaluation key exclusions',garch_scientific_assessment='Acceptable only as authorized one-next-same-slot-event Gaussian approximation. Variable event spacing and intraday/overnight composition; not continuous-time four-hour variance or fully clock-regime-aware dynamics. Genuine signed 240-trading-minute endpoint observations and identical evaluation labels/keys/weights verified.',garch_spec=dict(mean='Constant',vol='GARCH',p=1,o=0,q=1,dist='normal',scale=100,rescale=False,optimizer='arch supported SLSQP, package default deterministic starting values, one call/unit',options=dict(maxiter=1000,ftol=1e-9),tol=1e-9,gate='convergence_flag==0; finite parameters/conditional variances; omega>0; alpha,beta>=0; alpha+beta<1; positive finite unconditional variance; no retry/fallback',near_unit='alpha+beta>=.99 disclosed; strict >=1 blocks complete GARCH arm',initial_state='arch fitted final conditional variance; next h=omega+alpha*(last x-mu)^2+beta*h; frozen coefficients thereafter',sample_min=100),dependency_constraints=['scipy>=1.16,<2','arch>=8,<9','statsmodels>=0.14.5,<0.15'],dependency_policy='existing interpreter only; binary wheels; constrain all installed packages; dry-run before install; no neural dependency changes',environment=dict(interpreter='.venv/bin/python',version=sys.version,platform=platform.platform(),pip=importlib.metadata.version('pip')),permitted_writes=[str(out),'src/lstm_data/hf20_matched*.py','tests/test_hf20_matched*.py','project-local optional dependency declaration if installed','reports/codex_sessions/new session report','new append-only successor registry file after audit'],prohibited='No historical writes, neural starts/inference, market downloads, raw minute reads, 2025 numerical/protected2026 access, git fetch/commit/push',resources=dict(project_bytes=project,peak_rss_bytes=b.memory(),task_cap=2500000000,project_cap=15000000000,ram_cap=2000000000),seconds=time.time()-start)
+b.write(out/'readiness.json',receipt)
+(out/'READINESS.md').write_text('# Read-only readiness receipt\n\nAuthenticated predecessor '+str(old.OUT)+'; exact files/hashes in predecessor_bindings.json. Historical runner change matches logging_recovery_final.json. Live neural ledger 186/300; zero new starts. All frozen calibration and OOS scores present; identical keys, labels and weights across four folds (80,260 OOS rows). All 560 GARCH units have '+str(receipt['garch_min_n'])+'–'+str(receipt['garch_max_n'])+' legal de-overlapped observations. No fitting or installation performed.\n\n'+receipt['garch_scientific_assessment']+'\n\nSingle specification, optimizer/checks, permitted writes, environment, package constraints and caps are frozen in readiness.json. GARCH fit likelihood is the ordinary supported arch event-sequence likelihood; canonical hierarchical weights govern calibration/evaluation. No custom weighted likelihood. 560 maximum fit calls, 72 common model/fold/family calibrations without GARCH or 80 with complete GARCH. Original +2-minute availability limitation retained.\n')
+(out/'research_journal.jsonl').write_text(json.dumps(dict(status='READINESS_COMPLETE',at=receipt['timestamp_utc'],predecessor_journal=str(old.OUT/'execution.jsonl'),predecessor_sha256=b.digest(old.OUT/'execution.jsonl'),neural_ledger=186))+'\n')
+print(json.dumps({k:receipt[k] for k in ['status','bindings','garch_min_n','garch_max_n','resources']}))

@@ -1,0 +1,8 @@
+{
+  "stage": "postfit numerical variance bounds audit",
+  "error": "NotADirectoryError: GARCH/F21/oos_scores.parquet/parameters.json",
+  "cause": "Glob included score files as well as unit directories",
+  "fix": "Filter is_dir before reading saved parameters",
+  "model_or_calibration_fits": 0,
+  "original_output_artifacts_changed": false
+}

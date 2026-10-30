@@ -1,0 +1,23 @@
+{
+  "year": 2023,
+  "phases": {
+    "initial": {
+      "cutoff": "2022-05-31",
+      "scale": 0.006072334419240624,
+      "recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/initial_recipe.json",
+      "recipe_sha256": "887a6bdeda61cf23a879cdf5b4c640ddd33bf2bb087a05e858c29d76857706c4",
+      "minute_normalizer": "original20 hourly floors only"
+    },
+    "restricted": {
+      "cutoff": "2022-09-30",
+      "scale": 0.006121673076939892,
+      "recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/restricted_recipe.json",
+      "recipe_sha256": "7b998301c42b4f6c76260b520fc6eb553e60f032290dc2663912447eb7f6b1c9",
+      "minute_normalizer": "original20 hourly floors only"
+    }
+  },
+  "thresholds": {
+    "95": 0.03048333514069074,
+    "99": 0.05621444505567313
+  }
+}

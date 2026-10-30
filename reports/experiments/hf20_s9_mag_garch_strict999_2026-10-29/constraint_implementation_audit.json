@@ -1,0 +1,37 @@
+{
+  "status": "PUBLIC_API_FEASIBLE_TESTS_REQUIRED",
+  "method": "Public GARCH subclass overriding only constraints(): same A matrix, only b[-1] changes -1 to -.999; ConstantMean(volatility=subclass,distribution=Normal(),rescale=False). No package source edits or monkey-patching.",
+  "inequality": "A @ [omega,alpha,beta] - b >= 0; final row .999-alpha-beta",
+  "package_sources": {
+    ".venv/lib/python3.14/site-packages/arch/univariate/volatility.py": "7a567f576d6636f2b68e72b747050c379781d98dd8e50cb30e033b93d9c48ba1",
+    ".venv/lib/python3.14/site-packages/arch/univariate/base.py": "3311003af6f0add54b0c64bda8c0eeccf85129ff52c78d86e0c9f1773176f9f4",
+    ".venv/lib/python3.14/site-packages/arch/univariate/mean.py": "6ea4ec9b5df921756a951cfdbc8b4fc8d38d46f3d6615725137f6a34a3044ad4",
+    ".venv/lib/python3.14/site-packages/arch/univariate/distribution.py": "00121bdfae9326764eb9c4b900bdc7addd1b2c687c6891d3f80edd11c1819584"
+  },
+  "package_versions": {
+    "arch": "8.0.0",
+    "scipy": "1.18.1",
+    "statsmodels": "0.14.6",
+    "patsy": "1.0.3",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "torch": "2.10.0"
+  },
+  "optimizer": "Inherited ARCHModel.fit assembles subclass constraint matrix and passes to scipy.optimize.minimize(method=SLSQP)",
+  "preserved": [
+    "Gaussian likelihood",
+    "variance recursion",
+    "starting_values",
+    "parameter bounds",
+    "backcast",
+    "variance bounds",
+    "constant mean",
+    "rescale=False",
+    "tol1e-9/ftol1e-9/maxiter1000"
+  ],
+  "feasibility_tolerance": 1e-10,
+  "contact_tolerance": 1e-08,
+  "coefficient_adjustment": false,
+  "dependency_changes": false,
+  "initial_inspection_import_error": "VolatilityProcess is exported from arch.univariate.volatility, not arch.univariate; read-only import corrected; no model instantiated"
+}

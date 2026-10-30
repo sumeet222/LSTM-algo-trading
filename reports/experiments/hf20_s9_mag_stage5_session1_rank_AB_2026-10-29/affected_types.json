@@ -1,0 +1,94 @@
+{
+    "version": "1.1.414",
+    "time": "1793246838488",
+    "generalDiagnostics": [
+        {
+            "file": "/private/tmp/hf20_coverage_audit.py",
+            "severity": "error",
+            "message": "\"is_valid\" is not a known attribute of module \"pyarrow.compute\"",
+            "range": {
+                "start": {
+                    "line": 39,
+                    "character": 14
+                },
+                "end": {
+                    "line": 39,
+                    "character": 22
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "/private/tmp/hf20_coverage_report.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"triple_fraction\" for class \"DataFrame\"\n  Attribute \"triple_fraction\" is unknown",
+            "range": {
+                "start": {
+                    "line": 17,
+                    "character": 216
+                },
+                "end": {
+                    "line": 17,
+                    "character": 231
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "/private/tmp/hf20_coverage_report.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"triple_fraction\" for class \"DataFrame\"\n  Attribute \"triple_fraction\" is unknown",
+            "range": {
+                "start": {
+                    "line": 18,
+                    "character": 143
+                },
+                "end": {
+                    "line": 18,
+                    "character": 158
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "/private/tmp/hf20_coverage_report.py",
+            "severity": "error",
+            "message": "Argument of type \"str\" cannot be assigned to parameter \"value\" of type \"int\" in function \"__setitem__\"\n  \"str\" is not assignable to \"int\"",
+            "range": {
+                "start": {
+                    "line": 28,
+                    "character": 38
+                },
+                "end": {
+                    "line": 28,
+                    "character": 50
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/private/tmp/hf20_coverage_report.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"triple_fraction\" for class \"DataFrame\"\n  Attribute \"triple_fraction\" is unknown",
+            "range": {
+                "start": {
+                    "line": 31,
+                    "character": 215
+                },
+                "end": {
+                    "line": 31,
+                    "character": 230
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 24,
+        "errorCount": 5,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 5.481
+    }
+}
+

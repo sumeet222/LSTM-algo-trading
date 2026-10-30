@@ -1,0 +1,39 @@
+{
+  "year": 2021,
+  "phases": {
+    "initial": {
+      "scale": 0.005797117684325846,
+      "mu": 0.7807054887617805,
+      "variance": 0.2896750098388086,
+      "tau": 0.5382146503383279,
+      "lambda_fixed": 0.25,
+      "cutoff": "2020-06-30",
+      "role": "inner_train",
+      "first_date": "2011-04-01",
+      "last_date": "2020-06-30",
+      "rows": 228980,
+      "sessions": 2100,
+      "recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/initial_recipe.json",
+      "recipe_sha256": "ae20769b9c6553730efb1001f65eb4cc9a0ad35f3fa321cf57604e9dab9982d2"
+    },
+    "restricted": {
+      "scale": 0.005848759193156053,
+      "mu": 0.7807308281819507,
+      "variance": 0.2896340476151733,
+      "tau": 0.5381765951945265,
+      "lambda_fixed": 0.25,
+      "cutoff": "2020-09-30",
+      "role": "restricted_refit",
+      "first_date": "2011-04-01",
+      "last_date": "2020-09-30",
+      "rows": 236920,
+      "sessions": 2164,
+      "recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/restricted_recipe.json",
+      "recipe_sha256": "dec98c8daaea2b1a041ab117df4024890d16b1039e699ba6d7d9ee5b7f8bd6de"
+    }
+  },
+  "thresholds": {
+    "95": 0.029152683601565685,
+    "99": 0.055591859892280306
+  }
+}

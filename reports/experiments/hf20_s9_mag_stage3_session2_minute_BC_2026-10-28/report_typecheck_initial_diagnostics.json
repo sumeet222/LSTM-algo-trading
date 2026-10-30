@@ -1,0 +1,77 @@
+{
+  "version": "1.1.414",
+  "time": "1793233542784",
+  "generalDiagnostics": [
+    {
+      "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_minute_report.py",
+      "severity": "error",
+      "message": "Operator \"/\" not supported for types \"Hashable\" and \"Hashable\"",
+      "range": {
+        "start": {
+          "line": 28,
+          "character": 36
+        },
+        "end": {
+          "line": 28,
+          "character": 70
+        }
+      },
+      "rule": "reportOperatorIssue"
+    },
+    {
+      "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_minute_report.py",
+      "severity": "error",
+      "message": "Argument of type \"float\" cannot be assigned to parameter \"value\" of type \"str\" in function \"__setitem__\"\n\u00a0\u00a0\"float\" is not assignable to \"str\"",
+      "range": {
+        "start": {
+          "line": 119,
+          "character": 20
+        },
+        "end": {
+          "line": 119,
+          "character": 53
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_minute_report.py",
+      "severity": "error",
+      "message": "Argument of type \"float\" cannot be assigned to parameter \"value\" of type \"str\" in function \"__setitem__\"\n\u00a0\u00a0\"float\" is not assignable to \"str\"",
+      "range": {
+        "start": {
+          "line": 123,
+          "character": 20
+        },
+        "end": {
+          "line": 123,
+          "character": 51
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_minute_report.py",
+      "severity": "error",
+      "message": "Argument of type \"Series[Any]\" cannot be assigned to parameter \"f\" of type \"DataFrame\" in function \"markdown\"\n\u00a0\u00a0\"Series[Any]\" is not assignable to \"DataFrame\"",
+      "range": {
+        "start": {
+          "line": 284,
+          "character": 19
+        },
+        "end": {
+          "line": 284,
+          "character": 73
+        }
+      },
+      "rule": "reportArgumentType"
+    }
+  ],
+  "summary": {
+    "filesAnalyzed": 1,
+    "errorCount": 4,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 3.312
+  }
+}

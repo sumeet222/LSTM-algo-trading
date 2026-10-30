@@ -1,0 +1,95 @@
+--- frozen_runner
++++ logging_only_recovery
+@@ -512,13 +512,16 @@
+     )
+ 
+ 
+-def run() -> None:
++def run(*, resume_unstarted: bool = False) -> None:
+     """One guarded run, six fixed non-neural arms; no neural journal mutations."""
+-    if (OUT / "execution.jsonl").exists():
++    if (OUT / "execution.jsonl").exists() and not resume_unstarted:
+         raise ValueError("SINGLE_USE_EXECUTION_NO_RETRY")
+     assert b.read(OUT / "readiness.json")["status"] == "READY"
+     protocol = b.read(OUT / "protocol.json")
++    recovery = b.read(OUT / "logging_recovery.json") if resume_unstarted else {}
+     for name, sha in protocol["preservation_bindings"].items():
++        if resume_unstarted and name == "src/lstm_data/hf20_classical.py":
++            sha = recovery["fixed_runner_sha256"]
+         assert b.digest(Path(name)) == sha, name
+     _, rows = b.metadata()
+     plans = clock.saved_plans(rows)
+@@ -530,17 +533,43 @@
+         with (OUT / "execution.jsonl").open("a") as stream:
+             stream.write(
+                 json.dumps(
+-                    dict(
+-                        status=status,
+-                        year=year,
+-                        at=pd.Timestamp.now(tz="UTC").isoformat(),
++                    {
+                         **detail,
+-                    )
++                        "status": status,
++                        "year": year,
++                        "at": pd.Timestamp.now(tz="UTC").isoformat(),
++                    }
+                 )
+                 + "\n"
+             )
+ 
++    if resume_unstarted:
++        assert b.digest(OUT / "execution.jsonl") == recovery["failed_journal_sha256"]
++        saved = b.read(OUT / "logging_failure_preservation.json")
++        for name, sha in saved["F21_bindings"].items():
++            assert b.digest(Path(name)) == sha, name
++        assert not any((OUT / f"F{year % 100}").exists() for year in [2022, 2023, 2024])
++        calibration.extend(
++            pd.read_csv(OUT / "F21/calibration.csv", float_precision="round_trip").to_dict(
++                "records"
++            )
++        )
++        recovered = dict(
++            year=2021,
++            status="COMPLETED_LOG_RECOVERED",
++            HAR_fits=140,
++            EWMA_R2_stock_slot_parameters=140,
++            EWMA_A_seeds=140,
++            global_calibrations=6,
++            GARCH_fits=0,
++            neural_fits=0,
++            telemetry="Resource check passed before logger failure; exact F21 peak/runtime not persisted",
++        )
++        summary.append(recovered)
++        event("COMPLETED_LOG_RECOVERED", 2021, recovered)
+     for year, roles in plans.items():
++        if resume_unstarted and year == 2021:
++            continue
+         dest = OUT / f"F{year % 100}"
+         dest.mkdir()
+         event("STARTED", year, dict(neural_starts=0))
+@@ -607,6 +636,8 @@
+         dict(
+             status="COMPLETE_WITH_B3_BLOCKED",
+             seconds=time.monotonic() - started,
++            runtime_scope="unstarted F22-F24 only" if resume_unstarted else "all four folds",
++            logging_recovery_no_refit=resume_unstarted,
+             ledger_unchanged=186,
+             **resources(),
+         ),
+@@ -619,12 +650,15 @@
+     actions = parser.add_mutually_exclusive_group(required=True)
+     actions.add_argument("--prepare", action="store_true")
+     actions.add_argument("--run", action="store_true")
++    actions.add_argument("--resume-unstarted", action="store_true")
+     actions.add_argument("--report", action="store_true")
+     args = parser.parse_args()
+     if args.prepare:
+         prepare()
+     elif args.run:
+         run()
++    elif args.resume_unstarted:
++        run(resume_unstarted=True)
+     else:
+         from .hf20_classical_report import report
+ 

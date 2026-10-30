@@ -1,0 +1,110 @@
+{
+    "version": "1.1.414",
+    "time": "1793246866618",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_mag_rank_report.py",
+            "severity": "error",
+            "message": "No overloads for \"__getitem__\" match the provided arguments",
+            "range": {
+                "start": {
+                    "line": 53,
+                    "character": 12
+                },
+                "end": {
+                    "line": 53,
+                    "character": 41
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_mag_rank_report.py",
+            "severity": "error",
+            "message": "Argument of type \"Index[str]\" cannot be assigned to parameter \"key\" of type \"CovariantList[Hashable]\" in function \"__getitem__\"\n  \"Index[str]\" is incompatible with protocol \"CovariantList[Hashable]\"\n    \"__class__\" is an incompatible type\n      Type \"() -> type[Index[str]]\" is not assignable to type \"() -> type[list[Any]]\"\n      Type \"(type: type[Index[str]], /) -> None\" is not assignable to type \"(value: type[list[Any]], /) -> None\"\n        \"CovariantList[_T_co@CovariantList]\" is not assignable to \"Index[str]\"\n        Function return type \"type[Index[str]]\" is incompatible with type \"type[list[Any]]\"\n          \"type[Index[str]]\" is not assignable to \"type[list[Any]]\"\n          Type \"type[Index[str]]\" is not assignable to type \"type[list[Any]]\"",
+            "range": {
+                "start": {
+                    "line": 53,
+                    "character": 12
+                },
+                "end": {
+                    "line": 53,
+                    "character": 41
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/tests/test_hf20_mag_rank.py",
+            "severity": "error",
+            "message": "Argument of type \"Tensor | None\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"isfinite\"\n  Type \"Tensor | None\" is not assignable to type \"Tensor\"\n    \"None\" is not assignable to \"Tensor\"",
+            "range": {
+                "start": {
+                    "line": 56,
+                    "character": 54
+                },
+                "end": {
+                    "line": 56,
+                    "character": 66
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/tests/test_hf20_mag_rank.py",
+            "severity": "error",
+            "message": "Argument of type \"Tensor | None\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"isfinite\"\n  Type \"Tensor | None\" is not assignable to type \"Tensor\"\n    \"None\" is not assignable to \"Tensor\"",
+            "range": {
+                "start": {
+                    "line": 61,
+                    "character": 26
+                },
+                "end": {
+                    "line": 61,
+                    "character": 35
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/tests/test_hf20_mag_rank.py",
+            "severity": "error",
+            "message": "\"numpy\" is not a known attribute of \"None\"",
+            "range": {
+                "start": {
+                    "line": 67,
+                    "character": 39
+                },
+                "end": {
+                    "line": 67,
+                    "character": 44
+                }
+            },
+            "rule": "reportOptionalMemberAccess"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/tests/test_hf20_mag_rank.py",
+            "severity": "error",
+            "message": "Object of type \"None\" is not subscriptable",
+            "range": {
+                "start": {
+                    "line": 68,
+                    "character": 31
+                },
+                "end": {
+                    "line": 68,
+                    "character": 38
+                }
+            },
+            "rule": "reportOptionalSubscript"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 3,
+        "errorCount": 6,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 3.441
+    }
+}
+

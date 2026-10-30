@@ -1,0 +1,29 @@
+{
+  "status": "READY",
+  "all_four": true,
+  "ledger_before": 174,
+  "max_new_pairs": 8,
+  "max_phases": 16,
+  "tests": "12passed; additional exact linear flatten/clock/feature parity PASS",
+  "ruff": "PASS",
+  "affected_typecheck": "3files0errors0warnings",
+  "linear_parity": true,
+  "no_magnitude_decode": true,
+  "no_all_tied_origins": true,
+  "calibration_unused": true,
+  "resources": {
+    "project_bytes": 12824268800,
+    "task_bytes": 35074,
+    "peak_rss_bytes": 1015922688
+  },
+  "hashes": {
+    "reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/protocol.json": "73534cefd09c02a240a0bb6bafebb8f946df078a6231e1766ec953913a8864c0",
+    "reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/preflight.json": "a1b02051e03b1c36bfe90c553e45dbc68279427e5edcf05c54c5769769167274",
+    "reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/role_counts.csv": "449683a9026631410758f94cbb0ad6412fdc775e5b2b9351380db98752ace473",
+    "reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/phase_recipes.csv": "1958773abaf39bc057fed7e46656a106b2b07bc4e02db714f541af2d686c09b2",
+    "reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/clock_dictionary.csv": "6a6310c4c66c2e79fa06dbcc969a477fafff76ceac7e372bc285be04ca8f317c",
+    "src/lstm_data/hf20_mag_rank.py": "5f3db62a76e61c85ed54bda09e6f459ecf1cda7153e06080731a47ecb222985d",
+    "src/lstm_data/hf20_mag_rank_report.py": "7c9c8739c272a73721561129c81fce0b43b5e1c9b6db9124ad54a88e33762ce9",
+    "tests/test_hf20_mag_rank.py": "f91ec0614de9aa08c9680d3e5dc0c1e25f2931111917d3b3a7c361ca2e276664"
+  }
+}

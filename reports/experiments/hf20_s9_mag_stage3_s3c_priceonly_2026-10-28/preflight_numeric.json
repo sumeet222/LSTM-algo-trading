@@ -1,0 +1,213 @@
+{
+  "status": "ALL_FOUR_NUMERIC_READY",
+  "checks": [
+    {
+      "year": 2021,
+      "phase": "initial",
+      "role": "inner_train",
+      "origins": 11449,
+      "rows": 228980,
+      "sessions": 2100,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2021,
+      "phase": "initial",
+      "role": "selector",
+      "origins": 349,
+      "rows": 6980,
+      "sessions": 57,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2021,
+      "phase": "restricted",
+      "role": "restricted_refit",
+      "origins": 11846,
+      "rows": 236920,
+      "sessions": 2164,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2021,
+      "phase": "restricted",
+      "role": "calibration",
+      "origins": 283,
+      "rows": 5660,
+      "sessions": 56,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2021,
+      "phase": "restricted",
+      "role": "oos",
+      "origins": 955,
+      "rows": 19100,
+      "sessions": 188,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2022,
+      "phase": "initial",
+      "role": "inner_train",
+      "origins": 12560,
+      "rows": 251200,
+      "sessions": 2301,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2022,
+      "phase": "initial",
+      "role": "selector",
+      "origins": 278,
+      "rows": 5560,
+      "sessions": 58,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2022,
+      "phase": "restricted",
+      "role": "restricted_refit",
+      "origins": 12888,
+      "rows": 257760,
+      "sessions": 2366,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2022,
+      "phase": "restricted",
+      "role": "calibration",
+      "origins": 245,
+      "rows": 4900,
+      "sessions": 50,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2022,
+      "phase": "restricted",
+      "role": "oos",
+      "origins": 1180,
+      "rows": 23600,
+      "sessions": 210,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2023,
+      "phase": "initial",
+      "role": "inner_train",
+      "origins": 13776,
+      "rows": 275520,
+      "sessions": 2526,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2023,
+      "phase": "initial",
+      "role": "selector",
+      "origins": 313,
+      "rows": 6260,
+      "sessions": 59,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2023,
+      "phase": "restricted",
+      "role": "restricted_refit",
+      "origins": 14137,
+      "rows": 282740,
+      "sessions": 2592,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2023,
+      "phase": "restricted",
+      "role": "calibration",
+      "origins": 258,
+      "rows": 5160,
+      "sessions": 48,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2023,
+      "phase": "restricted",
+      "role": "oos",
+      "origins": 887,
+      "rows": 17740,
+      "sessions": 187,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2024,
+      "phase": "initial",
+      "role": "inner_train",
+      "origins": 14824,
+      "rows": 296480,
+      "sessions": 2719,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2024,
+      "phase": "initial",
+      "role": "selector",
+      "origins": 291,
+      "rows": 5820,
+      "sessions": 69,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2024,
+      "phase": "restricted",
+      "role": "restricted_refit",
+      "origins": 15167,
+      "rows": 303340,
+      "sessions": 2795,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2024,
+      "phase": "restricted",
+      "role": "calibration",
+      "origins": 163,
+      "rows": 3260,
+      "sessions": 40,
+      "tensor_finite": true,
+      "key_drops": 0
+    },
+    {
+      "year": 2024,
+      "phase": "restricted",
+      "role": "oos",
+      "origins": 991,
+      "rows": 19820,
+      "sessions": 208,
+      "tensor_finite": true,
+      "key_drops": 0
+    }
+  ],
+  "resources": {
+    "project_bytes": 12819365888,
+    "task_bytes": 159179704,
+    "peak_rss_bytes": 1148354560
+  },
+  "old_CLOCK_reload": "exact one origin eachfold",
+  "phases": "all8prefix recipes and scales exact",
+  "no_new_normalizer": true
+}

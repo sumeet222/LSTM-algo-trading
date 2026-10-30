@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "tests": "12 passed in 4.11s",
+  "ruff": "PASS",
+  "static_summary": {
+    "filesAnalyzed": 514,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 118.241
+  },
+  "code_sha256": {
+    "src/lstm_data/hf20_s2d_gap.py": "b902de2a7e2a564da924b70b6e706b5f816d44a9372f0ad1df6ea5357e2b1170",
+    "tests/test_hf20_s2d_gap.py": "16850f17dae383892ac372102165a53eef52d55c55876b564c7e3a78765af2e8"
+  },
+  "all_four_role_source_baseline_gates": true,
+  "no_active_HF20_fit": true,
+  "source_filtered_projection_reproduces_masks": true,
+  "baseline_policy": "fixed RMEAN primary; all other arms independently reported; no selection",
+  "ledger_before": 162,
+  "ceiling": 300,
+  "max_charged_starts": 4,
+  "max_phase_fits": 8,
+  "phase_recipe_parity_required_before_first_neural_start": true
+}

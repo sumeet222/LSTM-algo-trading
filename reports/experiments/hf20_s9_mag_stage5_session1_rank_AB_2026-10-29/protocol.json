@@ -1,0 +1,174 @@
+{
+  "kind": "HF20_STAGE5_MAGNITUDE_RANK_AB_V1",
+  "date": "2026-10-29",
+  "previous_pointer": {
+    "budget_amendment": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/budget_amendment_300.json",
+      "sha256": "1109ba7415d39905850a7dbcc392aec1d8db05666624475f9c28a671c3a943aa"
+    },
+    "counts_started_including_failed": true,
+    "definition": {
+      "path": "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/S3C_PRICE_ONLY_PROTOCOL.json",
+      "sha256": "aeddade3f975418bf6b2f28e03f1f7ea9096be73e34b8795692b080289dabecb"
+    },
+    "effective_ceiling": 300,
+    "fit_permission": false,
+    "live_approval_required": true,
+    "plan": {
+      "path": "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/S3C_PRICE_ONLY_PROTOCOL.json",
+      "sha256": "aeddade3f975418bf6b2f28e03f1f7ea9096be73e34b8795692b080289dabecb"
+    },
+    "previous_journal": {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/neural_starts.jsonl",
+      "sha256": "a8adfe8aeaa3c81945a743f748b1613259f64d8b7627369bd9ed2cfca80ff49c"
+    },
+    "real_journal": "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/neural_starts.jsonl",
+    "schema_version": 33
+  },
+  "ledger_before": 174,
+  "ceiling": 300,
+  "max_pairs": 8,
+  "max_phases": 16,
+  "order": [
+    [
+      "S5A",
+      2021
+    ],
+    [
+      "S5A",
+      2022
+    ],
+    [
+      "S5A",
+      2023
+    ],
+    [
+      "S5A",
+      2024
+    ],
+    [
+      "S5B",
+      2021
+    ],
+    [
+      "S5B",
+      2022
+    ],
+    [
+      "S5B",
+      2023
+    ],
+    [
+      "S5B",
+      2024
+    ]
+  ],
+  "seed": 42,
+  "git_commit": "997b30cff98785911b0e33b7e3d2e72f61b8270b",
+  "starting_status": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n?? reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md\n?? reports/codex_sessions/2026-10-28_212826_hf20_stage3_minute_bc.md\n?? reports/codex_sessions/2026-10-28_232241_hf20_s3c_priceonly_completion.md\n?? reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/\n?? src/lstm_data/hf20_minute_bc.py\n?? src/lstm_data/hf20_minute_inputs.py\n?? src/lstm_data/hf20_minute_report.py\n?? src/lstm_data/hf20_s2d_gap.py\n?? src/lstm_data/hf20_s3c_price_report.py\n?? src/lstm_data/hf20_s3c_priceonly.py\n?? tests/test_hf20_minute_inputs.py\n?? tests/test_hf20_minute_report.py\n?? tests/test_hf20_s2d_gap.py\n?? tests/test_hf20_s3c_priceonly.py\n",
+  "preservation_bindings": {
+    "AGENTS.md": "605de61de2eaa68ea83a2a3e7dcea83f576fb0feef4c75a4dfd6227e6deb1ca8",
+    "configs/CURRENT_EXPERIMENT_REGISTRY.json": "d2c4542764f739680d2bee7e9704da9c291596522d20cd6a7960eeb0e3ab99cf",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/neural_starts.jsonl": "17acf1711d74fa8b7bee9c2fdfca47148de3af7bd38dcd6b2cb51d6d32c3ffee",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/S3C_PRICE_ONLY_PROTOCOL.json": "aeddade3f975418bf6b2f28e03f1f7ea9096be73e34b8795692b080289dabecb",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/role_indices.npz": "c38a74b71cf20c73e146cb0efc2747f0a6855abc87cd13aa2af8b1155c98e42d",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/role_counts.csv": "6db31c34222f84958226210cc2fcaab0d9a0d73b5faa82befccb91f9287b1c39",
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2b_clock/protocol.json": "8c83d76e8ddb53c5f250e31b0a287d0083ae77faff5a1212399d7f8874f73ec8",
+    "src/lstm_data/hf20_mag_designa.py": "d8f0afb5d9a15823b37a115e3fd38971f5244d757e12cd9f540d49c74333c837",
+    "src/lstm_data/hf20_stage2_bcd.py": "5966607cd74ae6b3fbd55dc174b0108de63cef810c96fcad8c5875835c280031",
+    "src/lstm_data/objective_screen_run.py": "275ad0a03ce033781d8d35be18e35c5d94c25e91d88d1da7f1b47d0ef3dd0c46",
+    "src/lstm_data/neural_engine.py": "d899ba379f1ac7e498b7351be57145b1cb819255155c9b28a817b3faa0cf2530",
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv": "9d1fae7940694c0db27f532133ce268d043525029e9fe27dc2676537a3d2623b",
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet": "a66edd638bc9cdb2c919c3ff1a81f5023eeab9bad0e0926d12e45306c8af3d51",
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ORIGIN_SOURCE_ELIGIBILITY.parquet": "4c8a23ff266a8514574a2ca87324d723ec411106b08fe7b6b1e713ee7dcb73c3",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/initial_recipe.json": "ae20769b9c6553730efb1001f65eb4cc9a0ad35f3fa321cf57604e9dab9982d2",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/restricted_recipe.json": "dec98c8daaea2b1a041ab117df4024890d16b1039e699ba6d7d9ee5b7f8bd6de",
+    "reports/experiments/hf20_s9_mag_stage1_session2_designa_2026-10-27/F21/oos_scores.parquet": "cce9a2a0525d66a46dcfcdb0d29be246d1fa32921076f50d813f0224f292e438",
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2b_clock/F21/oos_scores.parquet": "c8d40a647cc182d398d93ec4608545dd23962dde7bee1dc8b7d0205c3b29221d",
+    "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F21/oos_scores.parquet": "be4ee7e68e59917ce9d1ba3b6d05d1c7f47fdff8b1edf434a82f9a25bc243253",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/phases.json": "2c9a2698a052301a36c5b118480a251d6f895cfdf5914e696181bd37ea3f1b6a",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/initial_recipe.json": "9d4c5ef349b7b585a863af275d615b1c81d2e3142ecfb725f77bed1f1dfbacf1",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/restricted_recipe.json": "828f354b976ff6e5c9f39476e9eb18c5b25a36a8034a8181116fab0871536850",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F22/oos_scores.parquet": "24f0affd0013787e3f4b6b7de20234bf53df492bfce73cd6be2e4ad3691a9fc3",
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2b_clock/F22/oos_scores.parquet": "e6f16309e0a6210e92a1ff0d16c1117f5dab4833b0ea9be13fe1e6994951fb69",
+    "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F22/oos_scores.parquet": "263a1b04d69bf54368287a8fcdc2fe216c05892468ac32422353795a50e92956",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/phases.json": "7e04c711db2931fec9f86f45ba50a1e2d5d24572d01b4d2be3b94ff9ccd52215",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/initial_recipe.json": "887a6bdeda61cf23a879cdf5b4c640ddd33bf2bb087a05e858c29d76857706c4",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/restricted_recipe.json": "7b998301c42b4f6c76260b520fc6eb553e60f032290dc2663912447eb7f6b1c9",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F23/oos_scores.parquet": "fd56eb2fe3dce1726dc358cfd0f140178bff115e7207434e5cc307d83c74ea04",
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2b_clock/F23/oos_scores.parquet": "de70a7e1df42c0dbe855c309cef55f9f4f3dce1e28c8d0a5078aba89002e6bf2",
+    "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F23/oos_scores.parquet": "ab17166c107b4fb1408b5809f7e2e260916441a421390a151ce9220c4030f506",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/phases.json": "cbb78b0fb5b1f6b4d6e3de68228512052d8c2616c0b7e1c0e0d510519e01b444",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/initial_recipe.json": "a6e3e7fb9c358d1daf8c74b4425ccf5cfbc4bc0eb45e441aeb7e595b1c180e02",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/restricted_recipe.json": "422ffd0d8289a1d21a3f32c235fe7a97cd6fe0bfc36e1ed9dc642e17631e417a",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/F24/oos_scores.parquet": "e0b5127c5e7d2a8633b432537e71024d046db2c81fc26004a0e00338019f3500",
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2b_clock/F24/oos_scores.parquet": "c4a130c074e557add3b28d460edbf241847cf21b2b06a99a62a83698b23c7118",
+    "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F24/oos_scores.parquet": "3873d29dd076f05870ca3b1a4c897a68eeffae73bd40bbfd9c4f3dad51923365",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/phases.json": "f02afbba5b2187415f6c8f488f8c3807416bdafa8d48683f2e91a8c651a6d5e5"
+  },
+  "target": "A=abs(saved genuine 240-trading-minute log endpoint return); ascending within-origin average ranks; q=2*(rank-1)/19-1; no signed/TG20 label",
+  "model": "executed CLOCK 48x16 H32 one layer final hidden dropout.10 + exact10 clock scalar head;6443 parameters;unconstrained score",
+  "clock": "Only scheduled slot, remaining session time, crossing and next-session dates.",
+  "roles": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/role_indices.npz",
+  "chronology": "exact Design A masks/48 completed-step first-input embargo/maturity; Oct-Dec reserved UNUSED for fitting/inference/calibration",
+  "features": "original own phase FT16 input-only floors/scalers, no new feature normalizers",
+  "weights": "equal sessions;equal origins within session;20 stocks for A or valid unordered pairs for B",
+  "S5A": "mean20 (z-q)^2; no centering/tanh",
+  "S5B": "mean valid190 unordered softplus(-sign(Ai-Aj)*(zi-zj)); tau1; exclude exact A ties formed in float64; block if any all-role origin has zero valid pairs",
+  "optimizer": "inherited AdamW lr.001 betas(.9,.999) eps1e-8 matrixdecay.01 bias0 clip1 CPUfloat32 batch16sessions shuffle42+epoch",
+  "selector": "same Selector first finite nonnegative; <=.999 qualifiedbest;min12 patience10 max60;surrogate only; IC diagnostic;freshseed42 refit selectedepochs",
+  "linear": {
+    "features": "intercept + flattened48x16 scaled FT16 in time-major feature order +10CLOCK;no stockID/no extra scaling",
+    "objective": "sum normalized row weights*(Xbeta-q)^2 + alpha*sum(nonintercept beta^2)",
+    "alpha": [
+      0.01,
+      1,
+      100
+    ],
+    "selection": "minimum selector normalized-rank MSE, exact ties largeralpha; initial-prefix normalizers then freshSeptemberrefit selectedalpha",
+    "implementation": "stream sufficient moments in float64; no full flattened panel cache",
+    "budget": "3initial ridge solves+1refit/fold;0chargedstarts"
+  },
+  "primary": "within-origin Spearman versus CLOCK-C3 and S2C-C3; undefinedIC=0; historical omit-undefined reported separately",
+  "ties": "average ranks;true pair ties excluded;predictedpairties halfcredit;top/bottom4fractionalboundaryties;constant score .2 retrieval",
+  "metrics": [
+    "IC",
+    "pair_concordance",
+    "top4",
+    "bottom4",
+    "rank_discrepancy",
+    "score_spread",
+    "ties",
+    "constants",
+    "own_objective",
+    "offset_centered_error",
+    "prefix95/99 eventcapture falselow",
+    "stock/month/category/slot/earlyclose",
+    "fixed_stock_prior_score_dynamics"
+  ],
+  "units": "dimensionless score; raw_A_MSE,A_MAE,M_MAG_loss,calibration N/A for rankers and ridge",
+  "uncertainty": "400 whole-calendar-month paired draws seed22042,year stratified equalyear; session origin dependence; descriptive post-search",
+  "controls": [
+    "CLOCK-C3",
+    "S2C-C3",
+    "C0",
+    "C3",
+    "M1",
+    "B0-VOL",
+    "B0-CLOCK",
+    "saved B0-RMEAN staticstockprior",
+    "CONSTANT0",
+    "RANK-RIDGE"
+  ],
+  "no_pairwise_linear": true,
+  "caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "no_minute_source": true,
+  "no_2025_market_or_protected2026": true,
+  "no_network": true,
+  "no_extra_run": true,
+  "source_timing": "historical origin+2min publication proxy; retrospective action vintage/fixedsurvivor;not executable"
+}

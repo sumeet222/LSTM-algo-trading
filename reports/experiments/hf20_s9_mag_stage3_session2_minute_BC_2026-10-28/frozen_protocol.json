@@ -1,0 +1,121 @@
+{
+  "kind": "S3_B_C_MINUTE_TWO_ARM_V1",
+  "date": "2026-10-28",
+  "git_commit": "997b30cff98785911b0e33b7e3d2e72f61b8270b",
+  "starting_git_status": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n?? reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md\n?? reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/\n?? src/lstm_data/hf20_s2d_gap.py\n?? tests/test_hf20_s2d_gap.py\n",
+  "seed": 42,
+  "ledger_before": 166,
+  "ceiling": 300,
+  "max_charged_starts": 8,
+  "max_phase_fits": 16,
+  "previous_pointer": {
+    "budget_amendment": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/budget_amendment_300.json",
+      "sha256": "1109ba7415d39905850a7dbcc392aec1d8db05666624475f9c28a671c3a943aa"
+    },
+    "counts_started_including_failed": true,
+    "definition": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/protocol.json",
+      "sha256": "d3f1b692b20c26524042e9412cc620902ec99c2ce89d5216b3659a0329c3b224"
+    },
+    "effective_ceiling": 300,
+    "fit_permission": false,
+    "live_approval_required": true,
+    "plan": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/protocol.json",
+      "sha256": "d3f1b692b20c26524042e9412cc620902ec99c2ce89d5216b3659a0329c3b224"
+    },
+    "previous_journal": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/neural_starts.jsonl",
+      "sha256": "2aab7925f693f231bf028062b6c77e2fa816afee565c47bc3939d2e16f88a17d"
+    },
+    "real_journal": "reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/neural_starts.jsonl",
+    "schema_version": 31
+  },
+  "preservation_bindings": {
+    "reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/neural_starts.jsonl": "b6a97c8c2747b790d9c42353c1f3fc53ef0653ef03748128396e583397532259",
+    "configs/CURRENT_EXPERIMENT_REGISTRY.json": "ff92c46aabf9ed989f334e590461d8d7e6ffc0cfd5ea643b5d766d7ae34dafa6",
+    "src/lstm_data/hf20_stage2_bcd.py": "5966607cd74ae6b3fbd55dc174b0108de63cef810c96fcad8c5875835c280031",
+    "src/lstm_data/hf20_s2c_ca.py": "b4860f3e459d6ae9eb8acde48ce7aae4608211ee69279f40efd24e761a184662",
+    "src/lstm_data/hf20_s2d_gap.py": "b902de2a7e2a564da924b70b6e706b5f816d44a9372f0ad1df6ea5357e2b1170",
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/role_indices.npz": "c38a74b71cf20c73e146cb0efc2747f0a6855abc87cd13aa2af8b1155c98e42d",
+    "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/source_access_and_timing_receipt.json": "e3d408dc78ee13d689d4b4d2120e7155dd2d2e31cf532dc98433f0903bcf4ddd"
+  },
+  "source_grant": {
+    "dataset": "mito0o852/OHLCV-1m",
+    "revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+    "months": "2010-07..2024-12",
+    "purpose": "bounded sample then streamed unique legal input blocks for S3-B/C; no acquisition",
+    "minute_template": "data/processed/hf20_hf1m_long_v1/<revision>/qa_v2/canonical_observed/YYYY-MM.parquet",
+    "source_receipt": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv",
+    "asof": "completed intervals by origin; assumed historical publication byorigin+2min; not independently verified",
+    "actions": "same P019B retrospective price/action/quarantine vintage; provenance exclusions only; no learned issue IDs"
+  },
+  "target": "original A=abs(log(genuine4h endpoint/origin));M=log1p(A/phase_s)",
+  "roles": "unchanged Stage1 O1 role_indices.npz/DesignA;240min maturity;48 completed-hour embargo",
+  "weights": "equal20 stocks/origin,equal origins/session,equal sessions/year,equal4years",
+  "clock": {
+    "fields": [
+      "slot_09:30",
+      "slot_10:30",
+      "slot_11:30",
+      "slot_12:30",
+      "slot_13:30",
+      "slot_14:30",
+      "slot_15:30",
+      "remaining_trading_minutes/240",
+      "target_crosses_session",
+      "calendar_days_to_next_scheduled_session/7"
+    ],
+    "dimension": 10,
+    "scale": "fixed, no fitting",
+    "placement": "concatenate to dropped final H32 hidden state before scalar head;metadata not dropped",
+    "calendar": "executed XNYS schedule and actual early closes;no outcomes used"
+  },
+  "model": {
+    "B": "48x23,H32,one layer,final dropout.10,scalar M,7339 parameters",
+    "C": "48x16 H32 plus60x7 minuteH8,no minute dropout,late scalar fusion,6995 parameters"
+  },
+  "B_fields": [
+    "log1p(sum59_adjacent_return_squares/phase_hourly_floor^2)",
+    "(positive_semivariance-negative_semivariance)/RV;zero->0",
+    "(sum r[31..59]^2-sum r[1..29]^2)/(their sum);zero->0;omit r30",
+    "abs(sum59r)/sum59abs(r);zero->0",
+    "last15scheduled_volume/total60volume;observed_allzero->.25",
+    "all60 validprice P",
+    "all60 compatible volume V<=P"
+  ],
+  "B_MIN04_resolution": "User table was truncated; exact denominator=sum(abs(r)) andzero->0 preserved from mandatory Session1 contract.",
+  "B_missing": "strict60 feature validity only,no primary key removal;MIN01 prefixmedian+native robust scale;bounded invalid0,invalid volume.25;maskexplicit",
+  "B_normalizer": "unique eligible input keys in own initial/refit prefix;no selector/calibration/OOS distribution fitting;original stock hourly floors unchanged",
+  "C_fields": [
+    "adjacentclose return/h,maskRET0 atfirst or missing",
+    "log(H/L)/h,PRICE_OBS",
+    "log1p(v/u_stock_slot_regime_prefix)",
+    "PRICE_OBS",
+    "RET_OBS",
+    "VOLUME_OBS",
+    "k/59"
+  ],
+  "C_missing": "fixed60 positions,mask numerical placeholders,zero allmissing embedding;no interpolation",
+  "C_normalizer": "positive stock x scheduled-hour-slot x as-reported-share-regime genuine-minute median from legal phase input-only prefix;NO fallback across regimes or later observations;unseen required regime BLOCKS C before any C start",
+  "optimizer": "AdamW .001 betas(.9,.999)eps1e-8,matrix.01/bias0,clip1,16 complete dates,shuffle42+epoch,CPUfloat32",
+  "selector": "main transformed MSE;firstfinite nonnegative;qualified<=.999best;min12 duration,patience10,max60;fresh seed42/emptyoptimizer selected-epoch Septemberrefit",
+  "calibration": "each frozen model ownOct-Dec C3 IO:unclamped q=exp(log1p(A/s)-Mhat),neff sessionmass,rho=neff/(neff+25),c*=c0+rho(cgroup-c0);calibrated primary,rawdiagnostic",
+  "decode": {
+    "raw": "s*expm1(max(Mhat,0))",
+    "C3": "s*max(0,exp(Mhat)*cgroup_star-1)"
+  },
+  "primary_comparator": "frozen CLOCK-C3 exact original keys;C0/C3/CLOCK-RAW controls;optionalM1/B0 preserved",
+  "metrics": "raw MSE primary;MAE,means,bias,ratio,within-origin Spearman,pairconcordance,topbottom4,ties;clock/IO/earlyclose/stock/featuremissing/prefix95/99 groups;400 wholemonth draws seed22042 yearstratified equalyear",
+  "optional_latest_summary_control": "NOT_RUN:keep bounded two-arm scope;attribution limited to changed information/masks/capacity;no thirdneuralstart or ad-hoc baseline",
+  "caps": {
+    "ram_bytes": 2000000000,
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000
+  },
+  "project_disk_opening_kib": 12330876,
+  "no_2025_2026_market_access": true,
+  "no_network": true,
+  "no_retries_or_other_experiments": true
+}

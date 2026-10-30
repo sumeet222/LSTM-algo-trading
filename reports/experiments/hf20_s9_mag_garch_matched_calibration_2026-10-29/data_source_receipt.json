@@ -1,0 +1,34 @@
+{
+  "source_revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+  "source_scope": "Previously authorized pre2025 saved derivatives and frozen predictions only",
+  "predecessor_bindings": "reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/predecessor_bindings.json",
+  "predecessor_bindings_sha256": "c88bb148ee71f6c08f8190910a692cbce31e543b6a4fba6140c3edf4fc9f7cc9",
+  "genuine_endpoint_source": {
+    "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet",
+    "sha256": "a66edd638bc9cdb2c919c3ff1a81f5023eeab9bad0e0926d12e45306c8af3d51"
+  },
+  "roles": {
+    "path": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/role_indices.npz",
+    "sha256": "c38a74b71cf20c73e146cb0efc2747f0a6855abc87cd13aa2af8b1155c98e42d"
+  },
+  "authoritative_role_amendment": {
+    "path": "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/amendment.json",
+    "sha256": "379daeb6cb0e4123c524cd008ded70e4595d1b8d1c318f45d33682ef38161386"
+  },
+  "source_authorization": {
+    "path": "reports/experiments/hf20_s9_mag_classical_volatility_benchmarks_2026-10-29/source_authorization.json",
+    "sha256": "d5e8ce3782b430eb61a4beba8027f2c93912ab12783a789a9c70296a9e71754b"
+  },
+  "key_label_weight_receipts": "reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/key_checks.json",
+  "neural_CAL_RAW_source": "Frozen Mhat calibration Parquets and frozen restricted scale; exact historical raw_decode. OOS RAW bitwise parity.",
+  "classical_source": "Original saved UNCAL/calibration/OOS Parquets, never refitted",
+  "HAR_coverage": "Saved daily_rv.parquet for descriptive missingness only, no new RV or regression fit",
+  "raw_minute_reads": 0,
+  "source_fetches": 0,
+  "neural_inference": 0,
+  "neural_starts": 0,
+  "protected_access": false,
+  "availability_limitation": "Nominal target origin precedes historical approximate origin+2-minute issuance; not executable P&L",
+  "units": "R,A,mu,sigma in log-return; arch fitting x=100R; arch h/10000 for log-return variance",
+  "fairness": "Shared calibrators and eval support; unequal information sets, not architectural ablation"
+}

@@ -1,0 +1,154 @@
+{
+  "raw_status": "COMPLETED",
+  "raw_rows": 80260,
+  "neural_starts": 0,
+  "source_history_origins": 25457,
+  "partial_stock_history_origins": 6625,
+  "risk_gate": true,
+  "coverage_gate_time": "2026-10-30T00:24:10.391009+00:00",
+  "witnesses": [
+    {
+      "case": "09:30",
+      "origin": "2021-01-13T14:30:00+00:00",
+      "ticker": "AVGO",
+      "issue": "2021-01-13 14:32:00+00:00",
+      "n_same": 60,
+      "n_all": 200,
+      "current_target_excluded": true,
+      "immature_prior_excluded": {
+        "origin": "2021-01-12T20:30:00+00:00",
+        "maturity": "2021-01-13 18:02:00+00:00",
+        "admitted": false
+      },
+      "observations": [
+        {
+          "origin": "2021-01-08T14:30:00+00:00",
+          "endpoint": "2021-01-08 18:30:00+00:00",
+          "maturity": "2021-01-08 18:32:00+00:00",
+          "R": -0.007996089502019658
+        },
+        {
+          "origin": "2021-01-11T14:30:00+00:00",
+          "endpoint": "2021-01-11 18:30:00+00:00",
+          "maturity": "2021-01-11 18:32:00+00:00",
+          "R": 0.01199451792162304
+        },
+        {
+          "origin": "2021-01-12T14:30:00+00:00",
+          "endpoint": "2021-01-12 18:30:00+00:00",
+          "maturity": "2021-01-12 18:32:00+00:00",
+          "R": 0.002453605799094261
+        },
+        {
+          "origin": "2021-01-12T15:30:00+00:00",
+          "endpoint": "2021-01-12 19:30:00+00:00",
+          "maturity": "2021-01-12 19:32:00+00:00",
+          "R": -0.001956556197007893
+        },
+        {
+          "origin": "2021-01-12T16:30:00+00:00",
+          "endpoint": "2021-01-12 20:30:00+00:00",
+          "maturity": "2021-01-12 20:32:00+00:00",
+          "R": -0.006490436686790203
+        }
+      ]
+    },
+    {
+      "case": "15:30",
+      "origin": "2021-01-13T20:30:00+00:00",
+      "ticker": "AVGO",
+      "issue": "2021-01-13 20:32:00+00:00",
+      "n_same": 60,
+      "n_all": 200,
+      "current_target_excluded": true,
+      "immature_prior_excluded": {
+        "origin": "2021-01-13T19:30:00+00:00",
+        "maturity": "2021-01-14 17:02:00+00:00",
+        "admitted": false
+      },
+      "observations": [
+        {
+          "origin": "2021-01-07T20:30:00+00:00",
+          "endpoint": "2021-01-08 18:00:00+00:00",
+          "maturity": "2021-01-08 18:02:00+00:00",
+          "R": 0.008749198327611995
+        },
+        {
+          "origin": "2021-01-08T20:30:00+00:00",
+          "endpoint": "2021-01-11 18:00:00+00:00",
+          "maturity": "2021-01-11 18:02:00+00:00",
+          "R": 0.00850935384090433
+        },
+        {
+          "origin": "2021-01-12T18:30:00+00:00",
+          "endpoint": "2021-01-13 16:00:00+00:00",
+          "maturity": "2021-01-13 16:02:00+00:00",
+          "R": 0.0044013764202150175
+        },
+        {
+          "origin": "2021-01-12T19:30:00+00:00",
+          "endpoint": "2021-01-13 17:00:00+00:00",
+          "maturity": "2021-01-13 17:02:00+00:00",
+          "R": 0.0016677603625467735
+        },
+        {
+          "origin": "2021-01-12T20:30:00+00:00",
+          "endpoint": "2021-01-13 18:00:00+00:00",
+          "maturity": "2021-01-13 18:02:00+00:00",
+          "R": 0.002197729897941658
+        }
+      ]
+    },
+    {
+      "case": "missing_risk",
+      "origin": "2010-07-01T13:30:00+00:00",
+      "ticker": "VZ",
+      "issue": "2010-07-01 13:32:00+00:00",
+      "n_same": 0,
+      "n_all": 0,
+      "current_target_excluded": true,
+      "immature_prior_excluded": null,
+      "observations": []
+    }
+  ],
+  "normalized_status": "COMPLETED",
+  "seconds": 192.20015320798848,
+  "peak_rss_bytes": 1063616512,
+  "final_fits": 8,
+  "validation_solves": 24,
+  "raw_key_parity": "80260 rows, exact original stock-origin order and R",
+  "frozen_S4_metric_parity": "8 annual T2R/NR ICs within1e-12; no neural inference",
+  "T1": "unchanged saved scores; full raw metrics copied by reference",
+  "saved_risk_replay": "PASS: all 80260 scales byte-equivalent float64; timestamp accessor identical",
+  "empirical_pooled_fallback_cells": 0,
+  "fallback_fixture": "Synthetic only: same=0,pool=200 returns of0.01 => sigma0.01; floor0.02 => sigma0.02. No empirical fallback exists.",
+  "preservation": "PASS: all14 predecessor files,26 source/role/recipe bindings and live registry unchanged",
+  "validation": {
+    "repair_readonly_pytest": "32 passed",
+    "additional_non_neural_math_pytest": "12 passed",
+    "ruff": "PASS",
+    "basic_types": "3 files,0 errors,0 warnings",
+    "legacy_test_warning": "Accidentally broad test_hf20_ranking invocation ran synthetic neural fixtures;32 passed,2 legacy10GB resource failures; no real-data neural run or ledger entry. Unresolved; no retry."
+  },
+  "code_hashes": {
+    "src/lstm_data/hf20_targets_repair.py": "00f5d48be47d2b17f5920102d8d39d82a9bb3b2b0bb554781baf54d040cc4e35",
+    "src/lstm_data/hf20_targets_repair_report.py": "8ed68f8c64d623e292d69836484419f4c3fde8a8176548f6764fc71927619ffa",
+    "tests/test_hf20_targets_repair.py": "840d477bf39c25e01ff6a800afaf037a614d9a04fb660204fd8e9c21b93266ee"
+  },
+  "score_hashes": {
+    "R_SCORES.parquet": "7964c53ffaaf16bb9d7c8e661e6c01497e971a8970b0719ebbbd90b11f4c3575",
+    "RISK_SCORES.parquet": "0c6e80a43568605944e3b4688191b98fed184cae319db2aa581bc79c3ad2e08f",
+    "Z_SCORES.parquet": "1d045748fc3d37997c97ff791958263f479d9d141fe240dda7fa2fde0e88cf2e"
+  },
+  "resources": {
+    "project_bytes": 13121565135,
+    "task_bytes": 4656801,
+    "peak_rss_bytes": 307953664
+  },
+  "git_final": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M README.md\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n M pyproject.toml\n?? configs/track_a_hf20_classical_matched_successor_v1.json\n?? configs/track_a_hf20_garch_strict999_successor_v1.json\n?? reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md\n?? reports/codex_sessions/2026-10-28_212826_hf20_stage3_minute_bc.md\n?? reports/codex_sessions/2026-10-28_232241_hf20_s3c_priceonly_completion.md\n?? reports/codex_sessions/2026-10-29_010132_hf20_stage5_rank_ab.md\n?? reports/codex_sessions/2026-10-29_101604_hf20_s5c_hybrid.md\n?? reports/codex_sessions/2026-10-29_114323_hf20_classical_volatility.md\n?? reports/codex_sessions/2026-10-29_201017_hf20_garch_matched_calibration.md\n?? reports/codex_sessions/2026-10-29_205941_hf20_garch_strict999_completion.md\n?? reports/codex_sessions/2026-10-29_hf20_t0_t2_partial.md\n?? reports/codex_sessions/2026-10-29_hf20_t0_t2_repair.md\n?? reports/experiments/hf20_s9_mag_classical_volatility_benchmarks_2026-10-29/\n?? reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/\n?? reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29/\n?? reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/\n?? reports/experiments/hf20_s9_mag_stage5_session2_hybrid_C_2026-10-29/\n?? reports/experiments/hf20_t0_t2_repair_2026-10-29_v2/\n?? reports/experiments/hf20_t0_t2_return_targets_2026-10-29/\n?? src/lstm_data/hf20_classical.py\n?? src/lstm_data/hf20_classical_math.py\n?? src/lstm_data/hf20_classical_report.py\n?? src/lstm_data/hf20_classical_rv.py\n?? src/lstm_data/hf20_mag_hybrid.py\n?? src/lstm_data/hf20_mag_hybrid_report.py\n?? src/lstm_data/hf20_mag_rank.py\n?? src/lstm_data/hf20_mag_rank_report.py\n?? src/lstm_data/hf20_matched.py\n?? src/lstm_data/hf20_matched_garch.py\n?? src/lstm_data/hf20_matched_math.py\n?? src/lstm_data/hf20_matched_report.py\n?? src/lstm_data/hf20_matched_verify.py\n?? src/lstm_data/hf20_minute_bc.py\n?? src/lstm_data/hf20_minute_inputs.py\n?? src/lstm_data/hf20_minute_report.py\n?? src/lstm_data/hf20_s2d_gap.py\n?? src/lstm_data/hf20_s3c_price_report.py\n?? src/lstm_data/hf20_s3c_priceonly.py\n?? src/lstm_data/hf20_strict999.py\n?? src/lstm_data/hf20_strict999_audit.py\n?? src/lstm_data/hf20_strict999_fit.py\n?? src/lstm_data/hf20_strict999_model.py\n?? src/lstm_data/hf20_strict999_report.py\n?? src/lstm_data/hf20_strict999_verify.py\n?? src/lstm_data/hf20_targets.py\n?? src/lstm_data/hf20_targets_repair.py\n?? src/lstm_data/hf20_targets_repair_report.py\n?? src/lstm_data/hf20_targets_report.py\n?? tests/test_hf20_classical.py\n?? tests/test_hf20_mag_hybrid.py\n?? tests/test_hf20_mag_rank.py\n?? tests/test_hf20_matched.py\n?? tests/test_hf20_minute_inputs.py\n?? tests/test_hf20_minute_report.py\n?? tests/test_hf20_s2d_gap.py\n?? tests/test_hf20_s3c_priceonly.py\n?? tests/test_hf20_strict999.py\n?? tests/test_hf20_targets.py\n?? tests/test_hf20_targets_repair.py\n",
+  "wall_duration_from_fit_start_seconds": 1334.842153,
+  "report_only_replay": "PASS: METRICS.csv and PAIRED.csv byte-identical; no fits or feature/source replay",
+  "incremental_disk_bytes": 4720832,
+  "completion": "COMPLETED research computation; WARN legacy validation-scope deviation; STOP for researcher review",
+  "session_report": "reports/codex_sessions/2026-10-29_hf20_t0_t2_repair.md"
+}

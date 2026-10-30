@@ -1,0 +1,110 @@
+{
+    "version": "1.1.414",
+    "time": "1793280886703",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_mag_hybrid_report.py",
+            "severity": "error",
+            "message": "Type \"DataFrame\" is not assignable to declared type \"dict[Unknown, Unknown]\"\n  \"DataFrame\" is not assignable to \"dict[Unknown, Unknown]\"",
+            "range": {
+                "start": {
+                    "line": 285,
+                    "character": 13
+                },
+                "end": {
+                    "line": 285,
+                    "character": 64
+                }
+            },
+            "rule": "reportAssignmentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_mag_hybrid_report.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"loc\" for class \"dict[Unknown, Unknown]\"\n  Attribute \"loc\" is unknown",
+            "range": {
+                "start": {
+                    "line": 289,
+                    "character": 23
+                },
+                "end": {
+                    "line": 289,
+                    "character": 26
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_mag_hybrid_report.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"year\" for class \"dict[Unknown, Unknown]\"\n  Attribute \"year\" is unknown",
+            "range": {
+                "start": {
+                    "line": 290,
+                    "character": 19
+                },
+                "end": {
+                    "line": 290,
+                    "character": 23
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_mag_hybrid_report.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"arm\" for class \"dict[Unknown, Unknown]\"\n  Attribute \"arm\" is unknown",
+            "range": {
+                "start": {
+                    "line": 290,
+                    "character": 42
+                },
+                "end": {
+                    "line": 290,
+                    "character": 45
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_mag_hybrid_report.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"scope\" for class \"dict[Unknown, Unknown]\"\n  Attribute \"scope\" is unknown",
+            "range": {
+                "start": {
+                    "line": 290,
+                    "character": 67
+                },
+                "end": {
+                    "line": 290,
+                    "character": 72
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/tests/test_hf20_mag_hybrid.py",
+            "severity": "error",
+            "message": "Object of type \"Tensor\" is not callable\n  Attribute \"__call__\" is unknown",
+            "range": {
+                "start": {
+                    "line": 74,
+                    "character": 56
+                },
+                "end": {
+                    "line": 74,
+                    "character": 91
+                }
+            },
+            "rule": "reportCallIssue"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 3,
+        "errorCount": 6,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 2.441
+    }
+}
+

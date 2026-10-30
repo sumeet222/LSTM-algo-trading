@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "series": 560,
+  "math_tests": 37,
+  "real_fits_before_gate": 0,
+  "implementation_hashes": {
+    "src/lstm_data/hf20_strict999.py": "47249a3025e6c2fe7cc7293fd336f5849a621187150560a24d6fdbee9fcf8167",
+    "src/lstm_data/hf20_strict999_fit.py": "2b1b26b0dd596d7da720e2104ee006be0031ae8db89ebdef02d79f6bf8a2f936",
+    "src/lstm_data/hf20_strict999_model.py": "4d420c36d3341c35827aaa49c6e09cbc25437022a4a32af8808eeddf1d69cecc",
+    "tests/test_hf20_strict999.py": "90111bf96032c26e4b97ad0d51d543b88d90405b7363e7728891d6610353a5d2",
+    "reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29/garch_unit_input_support.csv": "d043ee57259eb40ac876d4748f438585bd816eb2ad40085099677433e1ee41b1",
+    "reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29/garch_overlap_audit.csv": "3fb19d78167512375798dc2f06bd9aa64b4b6038b2fd36009a89c668c57bd280",
+    "reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29/readiness.json": "6085793ddee9c9eaacaa323e5b6dde3c027bd25bcddc530e7c6f4ce37aa1ca4c",
+    "reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29/key_checks.json": "8f3691d64db224c43b2f9952246ba0266bc4a8110ca4fb8cca01409f220039b0"
+  },
+  "static_summary": {
+    "filesAnalyzed": 546,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 88.128
+  },
+  "scientific_acceptability": "One-next-observation same-slot approximation accepted under explicit researcher authorization; irregular event spacing/calendar composition retained, not integrated continuous-time four-hour variance",
+  "synthetic_fixture": "seed22042,1500 normals,h=.01+.12*x^2+.89*h; deliberately stress-boundary synthetic fixture. Initial .12+.88 fixture did not make estimated cap bind, retained failed test log; no research fit occurred.",
+  "early_preflight_failures": [
+    "CSV None sentinel interpreted as missing by default read_csv; exact sentinel-preserving read fixed before namespace creation",
+    "Public VolatilityProcess import path corrected",
+    "Test-only heterogeneously typed kwargs expanded explicitly; no settings change"
+  ],
+  "no_retry": true
+}

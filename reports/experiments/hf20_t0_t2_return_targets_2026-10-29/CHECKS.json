@@ -1,0 +1,357 @@
+{
+  "status": "PARTIAL_BLOCKED",
+  "blocked": [
+    {
+      "year": 2022,
+      "phase": "inner",
+      "train_origins": 3876,
+      "evaluation_origins": 0,
+      "reason": "NO_LEGAL_RISK_SUPPORT_OR_SELECTION"
+    },
+    {
+      "year": 2022,
+      "phase": "refit",
+      "train_origins": 3876,
+      "evaluation_origins": 56,
+      "reason": "NO_LEGAL_RISK_SUPPORT_OR_SELECTION"
+    },
+    {
+      "year": 2024,
+      "phase": "inner",
+      "train_origins": 3964,
+      "evaluation_origins": 0,
+      "reason": "NO_LEGAL_RISK_SUPPORT_OR_SELECTION"
+    },
+    {
+      "year": 2024,
+      "phase": "refit",
+      "train_origins": 3964,
+      "evaluation_origins": 0,
+      "reason": "NO_LEGAL_RISK_SUPPORT_OR_SELECTION"
+    }
+  ],
+  "key_identity": "exact saved S4 and archived N1",
+  "N1_tensor_score_exact": true,
+  "source_revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+  "coverage": [
+    {
+      "year": 2021,
+      "role": "inner_train",
+      "original_origins": 11449,
+      "risk_origins": 3663,
+      "original_sessions": 2100,
+      "risk_sessions": 1185,
+      "floor_cells": 7355
+    },
+    {
+      "year": 2021,
+      "role": "inner_validation",
+      "original_origins": 674,
+      "risk_origins": 172,
+      "original_sessions": 120,
+      "risk_sessions": 77,
+      "floor_cells": 17
+    },
+    {
+      "year": 2021,
+      "role": "refit",
+      "original_origins": 12171,
+      "risk_origins": 3867,
+      "original_sessions": 2227,
+      "risk_sessions": 1269,
+      "floor_cells": 7687
+    },
+    {
+      "year": 2021,
+      "role": "oos",
+      "original_origins": 955,
+      "risk_origins": 3,
+      "original_sessions": 188,
+      "risk_sessions": 3,
+      "floor_cells": 0
+    },
+    {
+      "year": 2022,
+      "role": "inner_train",
+      "original_origins": 12716,
+      "risk_origins": 3876,
+      "original_sessions": 2331,
+      "risk_sessions": 1278,
+      "floor_cells": 7925
+    },
+    {
+      "year": 2022,
+      "role": "inner_validation",
+      "original_origins": 457,
+      "risk_origins": 0,
+      "original_sessions": 92,
+      "risk_sessions": 0,
+      "floor_cells": 0
+    },
+    {
+      "year": 2022,
+      "role": "refit",
+      "original_origins": 13173,
+      "risk_origins": 3876,
+      "original_sessions": 2423,
+      "risk_sessions": 1278,
+      "floor_cells": 7958
+    },
+    {
+      "year": 2022,
+      "role": "oos",
+      "original_origins": 1180,
+      "risk_origins": 56,
+      "original_sessions": 210,
+      "risk_sessions": 56,
+      "floor_cells": 0
+    },
+    {
+      "year": 2023,
+      "role": "inner_train",
+      "original_origins": 13896,
+      "risk_origins": 3904,
+      "original_sessions": 2547,
+      "risk_sessions": 1306,
+      "floor_cells": 8239
+    },
+    {
+      "year": 2023,
+      "role": "inner_validation",
+      "original_origins": 453,
+      "risk_origins": 28,
+      "original_sessions": 86,
+      "risk_sessions": 28,
+      "floor_cells": 0
+    },
+    {
+      "year": 2023,
+      "role": "refit",
+      "original_origins": 14395,
+      "risk_origins": 3932,
+      "original_sessions": 2640,
+      "risk_sessions": 1334,
+      "floor_cells": 8505
+    },
+    {
+      "year": 2023,
+      "role": "oos",
+      "original_origins": 887,
+      "risk_origins": 24,
+      "original_sessions": 187,
+      "risk_sessions": 24,
+      "floor_cells": 0
+    },
+    {
+      "year": 2024,
+      "role": "inner_train",
+      "original_origins": 14945,
+      "risk_origins": 3964,
+      "original_sessions": 2740,
+      "risk_sessions": 1366,
+      "floor_cells": 8653
+    },
+    {
+      "year": 2024,
+      "role": "inner_validation",
+      "original_origins": 350,
+      "risk_origins": 0,
+      "original_sessions": 87,
+      "risk_sessions": 0,
+      "floor_cells": 0
+    },
+    {
+      "year": 2024,
+      "role": "refit",
+      "original_origins": 15332,
+      "risk_origins": 3964,
+      "original_sessions": 2835,
+      "risk_sessions": 1366,
+      "floor_cells": 8733
+    },
+    {
+      "year": 2024,
+      "role": "oos",
+      "original_origins": 991,
+      "risk_origins": 0,
+      "original_sessions": 208,
+      "risk_sessions": 0,
+      "floor_cells": 0
+    }
+  ],
+  "maturity_examples": [
+    {
+      "forecast_origin": "2021-01-15T14:30:00+00:00",
+      "slot": "09:30",
+      "input_day": "2021-01-14",
+      "lock": "2021-01-14 09:30:00-05:00",
+      "issue": "2021-01-15 14:32:00+00:00",
+      "history_origin": "2021-01-11T14:30:00+00:00",
+      "endpoint": "2021-01-11 18:30:00+00:00",
+      "maturity": "2021-01-11 18:32:00+00:00",
+      "admitted": true,
+      "native_rms": 0.012706655682387054,
+      "risk_complete_origin": false,
+      "valid_history_count": 60
+    },
+    {
+      "forecast_origin": "2021-01-15T14:30:00+00:00",
+      "slot": "09:30",
+      "input_day": "2021-01-14",
+      "lock": "2021-01-14 09:30:00-05:00",
+      "issue": "2021-01-15 14:32:00+00:00",
+      "history_origin": "2021-01-12T14:30:00+00:00",
+      "endpoint": "2021-01-12 18:30:00+00:00",
+      "maturity": "2021-01-12 18:32:00+00:00",
+      "admitted": true,
+      "native_rms": 0.012706655682387054,
+      "risk_complete_origin": false,
+      "valid_history_count": 60
+    },
+    {
+      "forecast_origin": "2021-01-15T14:30:00+00:00",
+      "slot": "09:30",
+      "input_day": "2021-01-14",
+      "lock": "2021-01-14 09:30:00-05:00",
+      "issue": "2021-01-15 14:32:00+00:00",
+      "history_origin": "2021-01-13T14:30:00+00:00",
+      "endpoint": "2021-01-13 18:30:00+00:00",
+      "maturity": "2021-01-13 18:32:00+00:00",
+      "admitted": true,
+      "native_rms": 0.012706655682387054,
+      "risk_complete_origin": false,
+      "valid_history_count": 60
+    },
+    {
+      "forecast_origin": "2021-01-13T20:30:00+00:00",
+      "slot": "15:30",
+      "input_day": "2021-01-13",
+      "lock": "2021-01-13 09:30:00-05:00",
+      "issue": "2021-01-13 20:32:00+00:00",
+      "history_origin": "2021-01-07T20:30:00+00:00",
+      "endpoint": "2021-01-08 18:00:00+00:00",
+      "maturity": "2021-01-08 18:02:00+00:00",
+      "admitted": true,
+      "native_rms": 0.017710112134062702,
+      "risk_complete_origin": false,
+      "valid_history_count": 59
+    },
+    {
+      "forecast_origin": "2021-01-13T20:30:00+00:00",
+      "slot": "15:30",
+      "input_day": "2021-01-13",
+      "lock": "2021-01-13 09:30:00-05:00",
+      "issue": "2021-01-13 20:32:00+00:00",
+      "history_origin": "2021-01-08T20:30:00+00:00",
+      "endpoint": "2021-01-11 18:00:00+00:00",
+      "maturity": "2021-01-11 18:02:00+00:00",
+      "admitted": true,
+      "native_rms": 0.017710112134062702,
+      "risk_complete_origin": false,
+      "valid_history_count": 59
+    },
+    {
+      "forecast_origin": "2021-01-13T20:30:00+00:00",
+      "slot": "15:30",
+      "input_day": "2021-01-13",
+      "lock": "2021-01-13 09:30:00-05:00",
+      "issue": "2021-01-13 20:32:00+00:00",
+      "history_origin": "2021-01-11T20:30:00+00:00",
+      "endpoint": "2021-01-12 18:00:00+00:00",
+      "maturity": "2021-01-12 18:02:00+00:00",
+      "admitted": true,
+      "native_rms": 0.017710112134062702,
+      "risk_complete_origin": false,
+      "valid_history_count": 59
+    },
+    {
+      "forecast_origin": "2021-01-13T20:30:00+00:00",
+      "slot": "15:30",
+      "input_day": "2021-01-13",
+      "lock": "2021-01-13 09:30:00-05:00",
+      "issue": "2021-01-13 20:32:00+00:00",
+      "history_origin": "2021-01-12T20:30:00+00:00",
+      "endpoint": "2021-01-13 18:00:00+00:00",
+      "maturity": "2021-01-13 18:02:00+00:00",
+      "admitted": false,
+      "native_rms": 0.017710112134062702,
+      "risk_complete_origin": false,
+      "valid_history_count": 59
+    }
+  ],
+  "training_isolation": "all saved roles,maturity cutoffs and48-step embargo verified",
+  "sigma_convention": "exact expanded_m2 RMS at latest S4 input step and origin context; prior60 regular-session occurrences;57finite,max2consecutive missing; immature slots remain missing; strict input-session09:30 lock; opening origins inherit prior-input-session lock",
+  "trial_target_fits": 12,
+  "final_target_fits": 4,
+  "neural_starts": 0,
+  "seconds": 177.67586204095278,
+  "peak_rss_bytes": 1333051392,
+  "preservation": "All26 essential/recipe/role bindings unchanged; live neural registry unchanged; F21 coefficients unchanged",
+  "report_only_replay": "PASS after exact EQ3 tie correction: numerical CSVs byte-identical; saved scores/coefs unchanged",
+  "resources": {
+    "project_bytes": 13116758210,
+    "task_bytes": 3513434,
+    "peak_rss_bytes": 313835520
+  },
+  "validation": {
+    "focused_tests": "29 passed",
+    "ruff": "PASS",
+    "human_editor": "PENDING researcher confirmation for the final549-file task; earlier546-file GARCH confirmation not reused",
+    "pylance_last_completed": {
+      "filesAnalyzed": 549,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 90.954
+    },
+    "static_resources": {
+      "returncode": 0,
+      "seconds": 92.312591166934,
+      "peak_child_rss_bytes": 1661550592
+    },
+    "git_diff_check": "PASS"
+  },
+  "saved_scores_sha256": "f1ebb693808049e0bd28127f1de47a8db802df076c72b7f86afc415a6e2360f4",
+  "environment": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "pyarrow": "23.0.1",
+    "ruff": "0.17.0",
+    "pytest": "9.1.1",
+    "pyright": "1.1.414"
+  },
+  "git_final": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M README.md\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n M pyproject.toml\n?? configs/track_a_hf20_classical_matched_successor_v1.json\n?? configs/track_a_hf20_garch_strict999_successor_v1.json\n?? reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md\n?? reports/codex_sessions/2026-10-28_212826_hf20_stage3_minute_bc.md\n?? reports/codex_sessions/2026-10-28_232241_hf20_s3c_priceonly_completion.md\n?? reports/codex_sessions/2026-10-29_010132_hf20_stage5_rank_ab.md\n?? reports/codex_sessions/2026-10-29_101604_hf20_s5c_hybrid.md\n?? reports/codex_sessions/2026-10-29_114323_hf20_classical_volatility.md\n?? reports/codex_sessions/2026-10-29_201017_hf20_garch_matched_calibration.md\n?? reports/codex_sessions/2026-10-29_205941_hf20_garch_strict999_completion.md\n?? reports/codex_sessions/2026-10-29_hf20_t0_t2_partial.md\n?? reports/experiments/hf20_s9_mag_classical_volatility_benchmarks_2026-10-29/\n?? reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/\n?? reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29/\n?? reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/\n?? reports/experiments/hf20_s9_mag_stage5_session2_hybrid_C_2026-10-29/\n?? reports/experiments/hf20_t0_t2_return_targets_2026-10-29/\n?? src/lstm_data/hf20_classical.py\n?? src/lstm_data/hf20_classical_math.py\n?? src/lstm_data/hf20_classical_report.py\n?? src/lstm_data/hf20_classical_rv.py\n?? src/lstm_data/hf20_mag_hybrid.py\n?? src/lstm_data/hf20_mag_hybrid_report.py\n?? src/lstm_data/hf20_mag_rank.py\n?? src/lstm_data/hf20_mag_rank_report.py\n?? src/lstm_data/hf20_matched.py\n?? src/lstm_data/hf20_matched_garch.py\n?? src/lstm_data/hf20_matched_math.py\n?? src/lstm_data/hf20_matched_report.py\n?? src/lstm_data/hf20_matched_verify.py\n?? src/lstm_data/hf20_minute_bc.py\n?? src/lstm_data/hf20_minute_inputs.py\n?? src/lstm_data/hf20_minute_report.py\n?? src/lstm_data/hf20_s2d_gap.py\n?? src/lstm_data/hf20_s3c_price_report.py\n?? src/lstm_data/hf20_s3c_priceonly.py\n?? src/lstm_data/hf20_strict999.py\n?? src/lstm_data/hf20_strict999_audit.py\n?? src/lstm_data/hf20_strict999_fit.py\n?? src/lstm_data/hf20_strict999_model.py\n?? src/lstm_data/hf20_strict999_report.py\n?? src/lstm_data/hf20_strict999_verify.py\n?? src/lstm_data/hf20_targets.py\n?? src/lstm_data/hf20_targets_report.py\n?? tests/test_hf20_classical.py\n?? tests/test_hf20_mag_hybrid.py\n?? tests/test_hf20_mag_rank.py\n?? tests/test_hf20_matched.py\n?? tests/test_hf20_minute_inputs.py\n?? tests/test_hf20_minute_report.py\n?? tests/test_hf20_s2d_gap.py\n?? tests/test_hf20_s3c_priceonly.py\n?? tests/test_hf20_strict999.py\n?? tests/test_hf20_targets.py\n",
+  "git_cached_ahead_behind": "0\t0",
+  "current_unmatured_target_exclusion": [
+    {
+      "slot": "09:30",
+      "current_origin": "2021-01-15T14:30:00+00:00",
+      "issue": "2021-01-15 14:32:00+00:00",
+      "current_target_maturity": "2021-01-15 18:32:00+00:00",
+      "excluded_from_history": "current origin, not a prior input-day scheduled occurrence"
+    },
+    {
+      "slot": "15:30",
+      "current_origin": "2021-01-13T20:30:00+00:00",
+      "issue": "2021-01-13 20:32:00+00:00",
+      "current_target_maturity": "2021-01-14 18:02:00+00:00",
+      "excluded_from_history": "current origin, not a prior input-day scheduled occurrence"
+    }
+  ],
+  "eq3_tie_correction": {
+    "reason": "sum half-integer midranks before division; removes float32 combination roundoff tie breaking",
+    "old_scores_sha256": "a2cdc62d82ca29b286a3efec917dbb5f2920aab0016777d20ec85e42e029663e",
+    "old_EQ3": "EQ3_before_tie_correction.npz",
+    "old_broken_tied_pairs_by_year": [
+      3106,
+      4144,
+      2481,
+      3363
+    ],
+    "extra_fits": 0,
+    "exact_rank_sum_parity": "PASS"
+  },
+  "neural_ledger_unchanged": 186,
+  "incremental_bytes_including_code_session": 3582324,
+  "stop": "PARTIAL_BLOCKED scientific comparison; authorized independent work finished; human editor refresh pending; no follow-on authority"
+}

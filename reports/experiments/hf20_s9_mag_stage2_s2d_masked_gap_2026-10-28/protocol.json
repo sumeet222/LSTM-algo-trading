@@ -1,0 +1,93 @@
+{
+  "kind": "S2D_GENUINE_GAP_MASKED_PANEL_V1",
+  "git_commit": "997b30cff98785911b0e33b7e3d2e72f61b8270b",
+  "seed": 42,
+  "target": "A_gap=abs(log(genuine adjusted next09:30 minute open / genuine current full-session final-minute close))",
+  "forecast": "normal full-session15:30 only; approximate15:32 issuance before future16:00 close; not executable fills",
+  "population": "all20 original FT16 input eligibility; >=10 genuine labels/date; one stock-date gap; no early close",
+  "weights": "1/(eligible_role_sessions*n_valid_date); zero on missing labels; equal annual years",
+  "chronology": "exact saved DesignA nominal roles; independently derived gap next-open+2min maturity and48-step first-input embargo",
+  "minimums": {
+    "prefix_sessions": 252,
+    "selector_sessions": 50,
+    "calibration_sessions": 25,
+    "oos_sessions": 100,
+    "selector_calibration_per_month": 5,
+    "oos_months": 12
+  },
+  "model": "original one-layerH32/48x16 FT16/6433 params/final hidden dropout.10/scalar linear M_gap; no clock vector or auxiliaries",
+  "optimizer": "seed42 CPUfloat32;AdamW lr.001 betas(.9,.999)eps1e-8,matrix decay.01,bias0,clip1,16 sessions;shuffle42+epoch",
+  "selector": "main gap M-MSE;first finite nonnegative,qualified<=.999best,min12,patience10,max60;fresh selected-epoch refit",
+  "scale": "own gap-phase weighted-left-median A_gap, floor1e-8; independent input-only FT16 prefix recipes",
+  "calibration": "own frozen September model/scale,own Oct-Dec gap residual global exp moment;primary SMEAR;RAW diagnostic;no variants/trimming",
+  "baselines": {
+    "primary": "B0-GAP-RMEAN",
+    "selection": "NONE;all named comparisons retained",
+    "mean": "B0-GAP-RMEAN",
+    "median": "B0-GAP-RMED",
+    "recent_locked": "B0-GAP-RECENT20-LOCKED",
+    "recent_live": "B0-GAP-RECENT20-LIVE",
+    "locked_history": "through-September role only;recent20 observed per stock",
+    "live_history": "normal15:30,input-eligible,>=10 valid source bank since2011-04-01;20 most recent per-stock gaps matured strictly before each15:32 issuance; includes past calibration/OOS labels;more information diagnostic",
+    "history_minimum": 20,
+    "optional_EWMA": "NOT_INCLUDED;not already verified/reused"
+  },
+  "baseline_weighting": "per-stock mean/left-median conditional on phase panel weights;recent20 arithmetic mean of20 actual observed mature gaps;no missing-value fallback",
+  "ranking": "same valid stocks/date;average ranks;undefined Spearman excluded and valid-session count disclosed;fractional top/bottom4 ties;chance4/n;pair ties.5;false-low fractional bottom half",
+  "reliability": "fixed descriptive RAW-score deciles per outer year;shared membership across arms;not deployable calibration",
+  "tails": "own restricted gap-prefix weighted95/99,not OOS thresholds;ordinary complements",
+  "uncertainty": {
+    "draws": 400,
+    "seed": 22042,
+    "blocks": "whole calendar months/session panels,year stratified equal years;descriptive conditional only"
+  },
+  "protected": "No2025 market or protected2026 values/paths/hashes;calendar-only next-session dates throughJan2025",
+  "no_network": true,
+  "caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "ledger_before": 162,
+  "ceiling": 300,
+  "max_charged_starts": 4,
+  "max_neural_phases": 8,
+  "previous_pointer": {
+    "budget_amendment": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/budget_amendment_300.json",
+      "sha256": "1109ba7415d39905850a7dbcc392aec1d8db05666624475f9c28a671c3a943aa"
+    },
+    "counts_started_including_failed": true,
+    "definition": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/S2C_CA_PROTOCOL.json",
+      "sha256": "79442f2278e772373be9e65a42052bc72211d409d20d889965470df483f5e8bb"
+    },
+    "effective_ceiling": 300,
+    "fit_permission": false,
+    "live_approval_required": true,
+    "plan": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/S2C_CA_PROTOCOL.json",
+      "sha256": "79442f2278e772373be9e65a42052bc72211d409d20d889965470df483f5e8bb"
+    },
+    "previous_journal": {
+      "path": "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/neural_starts.jsonl",
+      "sha256": "019ffac2528e6be97022f1359d5b7d1f983f046891cf64fa54f7226d94deaf96"
+    },
+    "real_journal": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/neural_starts.jsonl",
+    "schema_version": 30
+  },
+  "preservation_bindings": {
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet": "a66edd638bc9cdb2c919c3ff1a81f5023eeab9bad0e0926d12e45306c8af3d51",
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ORIGIN_SOURCE_ELIGIBILITY.parquet": "4c8a23ff266a8514574a2ca87324d723ec411106b08fe7b6b1e713ee7dcb73c3",
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_SOURCE_POLICY.json": "afa1e8f94ced78a3b82f510908d44d4ea5acad16a12ef061c652561c50011c1b",
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv": "9d1fae7940694c0db27f532133ce268d043525029e9fe27dc2676537a3d2623b",
+    "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/S2D_ROLE_GATES.csv": "8a60590b20888dce073c887dc968fb77a0f2746358a53780649d6c08406786ae",
+    "reports/experiments/hf20_s9_mag_stage2_s2c_s2d_readonly_coverage_audit_2026-10-28/audit_receipt.json": "781cb540dabc6244ec636d2e2558bdeccef7db2dab8732d3f1e24cfb2b957983",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/role_counts.csv": "6db31c34222f84958226210cc2fcaab0d9a0d73b5faa82befccb91f9287b1c39",
+    "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/neural_starts.jsonl": "2aab7925f693f231bf028062b6c77e2fa816afee565c47bc3939d2e16f88a17d",
+    "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/S2C_CA_PROTOCOL.json": "79442f2278e772373be9e65a42052bc72211d409d20d889965470df483f5e8bb",
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2d_overnight_hold/protocol_v2.json": "1227434ed4d70be8f934e13111321ad4e5cc5a14c2dee2c77ae2c91d1dce991d"
+  },
+  "original_four_hour_models_frozen": true,
+  "strict20_blocked_namespace_preserved": true
+}

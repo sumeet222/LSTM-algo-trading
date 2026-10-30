@@ -1,0 +1,59 @@
+{
+  "status": "READY_ALL_FOUR",
+  "at": "2026-10-29T01:54:35.673666+00:00",
+  "ledger_before": 170,
+  "max_new_pairs": 4,
+  "max_phases": 8,
+  "params": 6931,
+  "all_roles": 20,
+  "phase_recipes": 8,
+  "source_status": "PRICE_SOURCE_CERTIFIED",
+  "newest_shape": [
+    60,
+    5
+  ],
+  "no_minute_volume": true,
+  "no_new_normalizer": true,
+  "focused_tests": "23 passed in3.57s",
+  "ruff": "PASS",
+  "types": {
+    "filesAnalyzed": 3,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 3.099
+  },
+  "resources": {
+    "project_bytes": 12819365888,
+    "task_bytes": 159179704,
+    "peak_rss_bytes": 1148354560
+  },
+  "prefit_hashes": {
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/S3C_PRICE_ONLY_PROTOCOL.json": "aeddade3f975418bf6b2f28e03f1f7ea9096be73e34b8795692b080289dabecb",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/source_receipt.json": "64f3618581fb3af006c50cb7e05731bcc6543ece22953c2d08271f00564fca53",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/preflight_numeric.json": "fa01e7a97cad6a63a8fe5ebfd339a87ce6e32b505c71c71b35a4d4643abe1818",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/key_timing_checks.json": "c1fa02f4e9e6b8092db580740cec9722518e82ec2db1c413e079f3e901976a69",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/control_replay.json": "674a5cb125f5a36ac47ded79f61e86f362e073df239f5984f000ded3e0a82463",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/role_counts.csv": "bbdce3c0f079648b85d464a1cdd7ae380a70119b87a99ce9db7f007e62934178",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/calibration_coverage_prefit.csv": "a053bc128c3b7c98fbeab5447edd26b2159014b982d67d6a8d99fa43a6917582",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/minute_price_native.npy": "cda0a748b5987ba922818d6dbcb94b1da67976b7d4e8b9c7acbf9a99d3eb31c5",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/minute_price_observed.npy": "cfa35e6ac31cb327cc73845abe00c0b6bde2eba02f81cd9e3349f94b8cc3612b",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/minute_hour_mapping.npy": "4de3517889001fecded0168b00fd123d0404e174495d26ab3955bf9cf60d5732",
+    "src/lstm_data/hf20_s3c_priceonly.py": "e72ba37bbf00a0b398c5e1e202966d8e006ad02afc610d1932c5f3c81a7c8c32",
+    "src/lstm_data/hf20_s3c_price_report.py": "c6f365a2a1c316df9cdced4997584185271161dff1ff4412472bb0c154de8e69",
+    "tests/test_hf20_s3c_priceonly.py": "aa8061c20c6372a21357c4b8880808d2bc36747c6a2080b9e85f9c7356cf6165",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/F21/phases.json": "857a67f9c0a926447deb5e532d58ee9a36b7bad462e5b28711d8b6ebbdf3c9ba",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/F22/phases.json": "d4bd640d97d0fe4fa660f105f5e4a42860528da9d31668bcb369d27dd4a30287",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/F23/phases.json": "3a039da0e3d4211aa06f9a2d388de5606e133109645b3d0a72403d71de023f0c",
+    "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/F24/phases.json": "73acff5a3fbd2fd060f62e9209b9a4b441848fe49532ac6ff3f6cc6281b62663"
+  },
+  "expected_OOS": {
+    "rows": 80260,
+    "origins": 4013,
+    "sessions": 793
+  },
+  "calibration": "two nonempty groups each fold,56/50/48/40sessions,own model frozen before coefficients",
+  "prior_controls": "48 annual metrics exact;old CLOCK checkpoint firstorigin exact eachfold",
+  "publication_proxy": "assumed origin+2min,not observed arrival",
+  "no_next_experiment": true
+}

@@ -1,0 +1,447 @@
+VolatilityProcess.constraints
+    @abstractmethod
+    def constraints(self) -> tuple[Float64Array, Float64Array]:
+        """
+        Construct parameter constraints arrays for parameter estimation
+
+        Returns
+        -------
+        A : ndarray
+            Parameters loadings in constraint. Shape is number of constraints
+            by number of parameters
+        b : ndarray
+            Constraint values, one for each constraint
+
+        Notes
+        -----
+        Values returned are used in constructing linear inequality
+        constraints of the form A.dot(parameters) - b >= 0
+        """
+
+
+GARCH.constraints
+    def constraints(self) -> tuple[Float64Array, Float64Array]:
+        p, o, q = self.p, self.o, self.q
+        k_arch = p + o + q
+        # alpha[i] >0
+        # alpha[i] + gamma[i] > 0 for i<=p, otherwise gamma[i]>0
+        # beta[i] >0
+        # sum(alpha) + 0.5 sum(gamma) + sum(beta) < 1
+        a = np.zeros((k_arch + 2, k_arch + 1))
+        for i in range(k_arch + 1):
+            a[i, i] = 1.0
+        for i in range(o):
+            if i < p:
+                a[i + p + 1, i + 1] = 1.0
+
+        a[k_arch + 1, 1:] = -1.0
+        a[k_arch + 1, p + 1 : p + o + 1] = -0.5
+        b = np.zeros(k_arch + 2)
+        b[k_arch + 1] = -1.0
+        return a, b
+
+
+GARCH.starting_values
+    def starting_values(self, resids: ArrayLike1D) -> Float64Array1D:
+        p, o, q = self.p, self.o, self.q
+        power = self.power
+        alphas = [0.01, 0.05, 0.1, 0.2]
+        gammas = alphas
+        abg = [0.5, 0.7, 0.9, 0.98]
+        abgs = list(itertools.product(*[alphas, gammas, abg]))
+
+        target = np.mean(np.absolute(resids) ** power)
+        scale = np.mean(resids**2) / (target ** (2.0 / power))
+        target *= scale ** (power / 2)
+
+        svs: list[Float64Array1D] = []
+        var_bounds = self.variance_bounds(resids)
+        backcast = self.backcast(resids)
+        llfs = np.zeros(len(abgs))
+        for i, values in enumerate(abgs):
+            alpha, gamma, agb = values
+            sv = (1.0 - agb) * target * np.ones(p + o + q + 1, dtype=float)
+            if p > 0:
+                sv[1 : 1 + p] = alpha / p
+                agb -= alpha
+            if o > 0:
+                sv[1 + p : 1 + p + o] = gamma / o
+                agb -= gamma / 2.0
+            if q > 0:
+                sv[1 + p + o : 1 + p + o + q] = agb / q
+            svs.append(cast("Float64Array1D", sv))
+            llfs[i] = self._gaussian_loglikelihood(
+                cast("Float64Array1D", sv), resids, backcast, var_bounds
+            )
+        loc = np.argmax(llfs)
+
+        return svs[int(loc)]
+
+
+GARCH.bounds
+    def bounds(self, resids: ArrayLike1D) -> list[tuple[float, float]]:
+        v = float(np.mean(np.absolute(resids) ** self.power))
+
+        bounds = [(1e-8 * v, 10.0 * float(v))]
+        bounds.extend([(0.0, 1.0)] * self.p)
+        for i in range(self.o):
+            if i < self.p:
+                bounds.append((-1.0, 2.0))
+            else:
+                bounds.append((0.0, 2.0))
+
+        bounds.extend([(0.0, 1.0)] * self.q)
+
+        return bounds
+
+
+GARCH.compute_variance
+    def compute_variance(
+        self,
+        parameters: Float64Array1D,
+        resids: ArrayLike1D,
+        sigma2: Float64Array1D,
+        backcast: float | Float64Array1D,
+        var_bounds: Float64Array2D,
+    ) -> Float64Array1D:
+        # fresids is abs(resids) ** power
+        # sresids is I(resids<0)
+        power = self.power
+        fresids = np.absolute(resids) ** power
+        sresids = np.sign(resids)
+
+        p, o, q = self.p, self.o, self.q
+        nobs = resids.shape[0]
+
+        rec.garch_recursion(
+            parameters, fresids, sresids, sigma2, p, o, q, nobs, backcast, var_bounds
+        )
+        inv_power = 2.0 / power
+        sigma2 **= inv_power
+
+        return sigma2
+
+
+ARCHModel.fit
+    def fit(
+        self,
+        update_freq: int = 1,
+        disp: Literal["off", "final"] | bool = "final",
+        starting_values: ArrayLike1D | None = None,
+        cov_type: Literal["robust", "classic"] = "robust",
+        show_warning: bool = True,
+        first_obs: int | DateLike | None = None,
+        last_obs: int | DateLike | None = None,
+        tol: float | None = None,
+        options: dict[str, Any] | None = None,
+        backcast: float | Float64Array1D | None = None,
+    ) -> "ARCHModelResult":
+        r"""
+        Estimate model parameters
+
+        Parameters
+        ----------
+        update_freq : int, optional
+            Frequency of iteration updates.  Output is generated every
+            `update_freq` iterations. Set to 0 to disable iterative output.
+        disp : {bool, "off", "final"}
+            Either 'final' to print optimization result or 'off' to display
+            nothing. If using a boolean, False is "off" and True is "final"
+        starting_values : ndarray, optional
+            Array of starting values to use.  If not provided, starting values
+            are constructed by the model components.
+        cov_type : str, optional
+            Estimation method of parameter covariance.  Supported options are
+            'robust', which does not assume the Information Matrix Equality
+            holds and 'classic' which does.  In the ARCH literature, 'robust'
+            corresponds to Bollerslev-Wooldridge covariance estimator.
+        show_warning : bool, optional
+            Flag indicating whether convergence warnings should be shown.
+        first_obs : {int, str, datetime, Timestamp}
+            First observation to use when estimating model
+        last_obs : {int, str, datetime, Timestamp}
+            Last observation to use when estimating model
+        tol : float, optional
+            Tolerance for termination.
+        options : dict, optional
+            Options to pass to `scipy.optimize.minimize`.  Valid entries
+            include 'ftol', 'eps', 'disp', and 'maxiter'.
+        backcast : {float, ndarray}, optional
+            Value to use as backcast. Should be measure :math:`\sigma^2_0`
+            since model-specific non-linear transformations are applied to
+            value before computing the variance recursions.
+
+        Returns
+        -------
+        results : ARCHModelResult
+            Object containing model results
+
+        Notes
+        -----
+        A ConvergenceWarning is raised if SciPy's optimizer indicates
+        difficulty finding the optimum.
+
+        Parameters are optimized using SLSQP.
+        """
+        if self._y_original is None:
+            raise RuntimeError("Cannot estimate model without data.")
+        # 1. Check in ARCH or Non-normal dist.  If no ARCH and normal,
+        # use closed form
+        v, d = self.volatility, self.distribution
+        offsets = np.array((self.num_params, v.num_params, d.num_params), dtype=int)
+        total_params = sum(offsets)
+
+        # Closed form is applicable when model has no parameters
+        # Or when distribution is normal and constant variance
+        has_closed_form = (
+            v.closed_form and d.num_params == 0 and isinstance(v, ConstantVariance)
+        )
+
+        self._adjust_sample(first_obs, last_obs)
+
+        resids = self.resids(self.starting_values())
+        self._check_scale(resids)
+        if self.scale != 1.0:
+            # Scale changed, rescale data and reset model
+            self._y = to_array_1d(
+                self.scale * ensure1d(self._y_original, "y", series=False)
+            )
+            self._scale_changed()
+            self._adjust_sample(first_obs, last_obs)
+            resids = self.resids(self.starting_values())
+
+        if backcast is None:
+            backcast = v.backcast(resids)
+        else:
+            assert backcast is not None
+            backcast = v.backcast_transform(backcast)
+
+        if has_closed_form:
+            try:
+                return self._fit_no_arch_normal_errors(cov_type=cov_type)
+            except NotImplementedError:
+                pass
+        assert backcast is not None
+        if total_params == 0:
+            return self._fit_parameterless_model(cov_type=cov_type, backcast=backcast)
+
+        sigma2 = np.zeros(resids.shape[0], dtype=float)
+        self._backcast = backcast
+        sv_volatility = v.starting_values(resids)
+        self._var_bounds = var_bounds = v.variance_bounds(resids)
+        v.compute_variance(sv_volatility, resids, sigma2, backcast, var_bounds)
+        std_resids = resids / np.sqrt(sigma2)
+
+        # 2. Construct constraint matrices from all models and distribution
+        constraints = (
+            self.constraints(),
+            self.volatility.constraints(),
+            self.distribution.constraints(),
+        )
+        num_cons = []
+        for c in constraints:
+            assert c is not None
+            num_cons.append(c[0].shape[0])
+        num_constraints = np.array(num_cons, dtype=int)
+        num_params = offsets.sum()
+        a = np.zeros((int(num_constraints.sum()), int(num_params)))
+        b = np.zeros(int(num_constraints.sum()))
+
+        for i, c in enumerate(constraints):
+            assert c is not None
+            r_en = num_constraints[: i + 1].sum()
+            c_en = offsets[: i + 1].sum()
+            r_st = r_en - num_constraints[i]
+            c_st = c_en - offsets[i]
+
+            if r_en - r_st > 0:
+                a[r_st:r_en, c_st:c_en] = c[0]
+                b[r_st:r_en] = c[1]
+
+        bounds = self.bounds()
+        bounds.extend(v.bounds(resids))
+        bounds.extend(d.bounds(std_resids))
+
+        # 3. Construct starting values from all models
+        if starting_values is None:
+            sv = to_array_1d(
+                np.hstack(
+                    [
+                        self.starting_values(),
+                        sv_volatility,
+                        d.starting_values(std_resids),
+                    ]
+                )
+            )
+        else:
+            assert starting_values is not None
+            sv = np.asarray(ensure1d(starting_values, "starting_values"), dtype=float)
+            assert isinstance(sv, (np.ndarray, pd.Series))
+            valid = sv.shape[0] == num_params
+            if a.shape[0] > 0:
+                satisfies_constraints = a.dot(sv) - b >= 0
+                valid = valid and satisfies_constraints.all()
+            for i, bound in enumerate(bounds):
+                valid = valid and bound[0] <= sv[i] <= bound[1]
+            if not valid:
+                warnings.warn(
+                    starting_value_warning, StartingValueWarning, stacklevel=2
+                )
+                starting_values = None
+
+        # 4. Estimate models using constrained optimization
+        _callback_info["count"], _callback_info["iter"] = 0, 0
+        if not isinstance(disp, str):
+            disp = bool(disp)
+            disp = "off" if not disp else "final"
+        if update_freq <= 0 or disp == "off":
+            _callback_info["display"] = 2**31
+
+        else:
+            _callback_info["display"] = update_freq
+        disp_flag = True if disp == "final" else False
+
+        func = self._loglikelihood
+        args = (sigma2, backcast, var_bounds)
+        ineq_constraints = constraint(a, b)
+
+        options = {} if options is None else options
+        options.setdefault("disp", disp_flag)
+        with warnings.catch_warnings():
+            warnings.filterwarnings(
+                "ignore",
+                "Values in x were outside bounds during a minimize step",
+                RuntimeWarning,
+            )
+            opt = minimize(  # type: ignore[call-overload]
+                func,
+                sv,
+                args=args,
+                method="SLSQP",
+                bounds=bounds,
+                constraints=ineq_constraints,
+                tol=tol,
+                callback=_callback,
+                options=options,
+            )
+
+        if show_warning:
+            warnings.filterwarnings("always", "", ConvergenceWarning)
+        else:
+            warnings.filterwarnings("ignore", "", ConvergenceWarning)
+
+        if opt.status != 0 and show_warning:
+            warnings.warn(
+                convergence_warning.format(code=opt.status, string_message=opt.message),
+                ConvergenceWarning,
+                stacklevel=2,
+            )
+
+        # 5. Return results
+        params = opt.x
+        loglikelihood = -1.0 * opt.fun
+
+        mp, vp, _ = self._parse_parameters(params)
+
+        resids = self.resids(mp)
+        vol = np.zeros(resids.shape[0], dtype=float)
+        self.volatility.compute_variance(vp, resids, vol, backcast, var_bounds)
+        vol = cast("Float64Array1D", np.sqrt(vol))
+
+        try:
+            r2 = self._r2(mp)
+        except NotImplementedError:
+            r2 = np.nan
+
+        names = self._all_parameter_names()
+        # Reshape resids and vol
+        first_obs, last_obs = self._fit_indices
+        resids_final = np.full(self._y.shape, np.nan, dtype=float)
+        resids_final[first_obs:last_obs] = resids
+        vol_final = np.full(self._y.shape, np.nan, dtype=float)
+        vol_final[first_obs:last_obs] = vol
+
+        fit_start, fit_stop = self._fit_indices
+        model_copy = deepcopy(self)
+        assert isinstance(r2, float)
+        return ARCHModelResult(
+            params,
+            None,
+            r2,
+            resids_final,
+            vol_final,
+            cov_type,
+            self._y_series,
+            names,
+            loglikelihood,
+            self._is_pandas,
+            opt,
+            fit_start,
+            fit_stop,
+            model_copy,
+        )
+
+
+ConstantMean.__init__
+    def __init__(
+        self,
+        y: ArrayLike | None = None,
+        hold_back: int | None = None,
+        volatility: VolatilityProcess | None = None,
+        distribution: Distribution | None = None,
+        rescale: bool | None = None,
+    ) -> None:
+        super().__init__(
+            y,
+            hold_back=hold_back,
+            volatility=volatility,
+            distribution=distribution,
+            rescale=rescale,
+        )
+        self._name = "Constant Mean"
+
+
+Normal.loglikelihood
+    def loglikelihood(
+        self,
+        parameters: Sequence[float] | ArrayLike1D,
+        resids: ArrayLike,
+        sigma2: ArrayLike,
+        individual: bool = False,
+    ) -> float | Float64Array1D:
+        r"""Computes the log-likelihood of assuming residuals are normally
+        distributed, conditional on the variance
+
+        Parameters
+        ----------
+        parameters : ndarray
+            The normal likelihood has no shape parameters. Empty since the
+            standard normal has no shape parameters.
+        resids  : ndarray
+            The residuals to use in the log-likelihood calculation
+        sigma2 : ndarray
+            Conditional variances of resids
+        individual : bool, optional
+            Flag indicating whether to return the vector of individual log
+            likelihoods (True) or the sum (False)
+
+        Returns
+        -------
+        ll : float
+            The log-likelihood
+
+        Notes
+        -----
+        The log-likelihood of a single data point x is
+
+        .. math::
+
+            \ln f\left(x\right)=-\frac{1}{2}\left(\ln2\pi+\ln\sigma^{2}
+            +\frac{x^{2}}{\sigma^{2}}\right)
+
+        """
+        lls = -0.5 * (log(2 * pi) + log(sigma2) + resids**2.0 / sigma2)
+        if individual:
+            return lls
+        else:
+            return sum(lls)

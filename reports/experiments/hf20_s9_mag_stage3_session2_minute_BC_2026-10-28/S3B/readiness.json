@@ -1,0 +1,295 @@
+{
+  "status": "READY_ALL_FOUR",
+  "at": "2026-10-29T00:18:15.163762+00:00",
+  "ledger_before": 166,
+  "max_new_pairs": 4,
+  "max_phases": 8,
+  "source": "SOURCE_CERTIFIED_HISTORICAL_TIMING_PROXY",
+  "phase_source_coverage": "ALL_EIGHT_COMPLETE_INPUT_ONLY_PREFIX_UNIONS",
+  "roles": [
+    {
+      "year": 2021,
+      "role": "inner_train",
+      "origins": 11449,
+      "sessions": 2100,
+      "rows": 228980,
+      "first": "2011-04-01",
+      "last": "2020-06-30"
+    },
+    {
+      "year": 2021,
+      "role": "selector",
+      "origins": 349,
+      "sessions": 57,
+      "rows": 6980,
+      "first": "2020-07-13",
+      "last": "2020-09-30"
+    },
+    {
+      "year": 2021,
+      "role": "restricted_refit",
+      "origins": 11846,
+      "sessions": 2164,
+      "rows": 236920,
+      "first": "2011-04-01",
+      "last": "2020-09-30"
+    },
+    {
+      "year": 2021,
+      "role": "calibration",
+      "origins": 283,
+      "sessions": 56,
+      "rows": 5660,
+      "first": "2020-10-12",
+      "last": "2020-12-30"
+    },
+    {
+      "year": 2021,
+      "role": "oos",
+      "origins": 955,
+      "sessions": 188,
+      "rows": 19100,
+      "first": "2021-01-13",
+      "last": "2021-12-31"
+    },
+    {
+      "year": 2022,
+      "role": "inner_train",
+      "origins": 12560,
+      "sessions": 2301,
+      "rows": 251200,
+      "first": "2011-04-01",
+      "last": "2021-04-30"
+    },
+    {
+      "year": 2022,
+      "role": "selector",
+      "origins": 278,
+      "sessions": 58,
+      "rows": 5560,
+      "first": "2021-05-12",
+      "last": "2021-09-30"
+    },
+    {
+      "year": 2022,
+      "role": "restricted_refit",
+      "origins": 12888,
+      "sessions": 2366,
+      "rows": 257760,
+      "first": "2011-04-01",
+      "last": "2021-09-30"
+    },
+    {
+      "year": 2022,
+      "role": "calibration",
+      "origins": 245,
+      "sessions": 50,
+      "rows": 4900,
+      "first": "2021-10-12",
+      "last": "2021-12-31"
+    },
+    {
+      "year": 2022,
+      "role": "oos",
+      "origins": 1180,
+      "sessions": 210,
+      "rows": 23600,
+      "first": "2022-01-12",
+      "last": "2022-12-30"
+    },
+    {
+      "year": 2023,
+      "role": "inner_train",
+      "origins": 13776,
+      "sessions": 2526,
+      "rows": 275520,
+      "first": "2011-04-01",
+      "last": "2022-05-31"
+    },
+    {
+      "year": 2023,
+      "role": "selector",
+      "origins": 313,
+      "sessions": 59,
+      "rows": 6260,
+      "first": "2022-06-10",
+      "last": "2022-09-27"
+    },
+    {
+      "year": 2023,
+      "role": "restricted_refit",
+      "origins": 14137,
+      "sessions": 2592,
+      "rows": 282740,
+      "first": "2011-04-01",
+      "last": "2022-09-27"
+    },
+    {
+      "year": 2023,
+      "role": "calibration",
+      "origins": 258,
+      "sessions": 48,
+      "rows": 5160,
+      "first": "2022-10-13",
+      "last": "2022-12-30"
+    },
+    {
+      "year": 2023,
+      "role": "oos",
+      "origins": 887,
+      "sessions": 187,
+      "rows": 17740,
+      "first": "2023-01-13",
+      "last": "2023-12-29"
+    },
+    {
+      "year": 2024,
+      "role": "inner_train",
+      "origins": 14824,
+      "sessions": 2719,
+      "rows": 296480,
+      "first": "2011-04-01",
+      "last": "2023-05-31"
+    },
+    {
+      "year": 2024,
+      "role": "selector",
+      "origins": 291,
+      "sessions": 69,
+      "rows": 5820,
+      "first": "2023-06-12",
+      "last": "2023-09-29"
+    },
+    {
+      "year": 2024,
+      "role": "restricted_refit",
+      "origins": 15167,
+      "sessions": 2795,
+      "rows": 303340,
+      "first": "2011-04-01",
+      "last": "2023-09-29"
+    },
+    {
+      "year": 2024,
+      "role": "calibration",
+      "origins": 163,
+      "sessions": 40,
+      "rows": 3260,
+      "first": "2023-10-11",
+      "last": "2023-12-29"
+    },
+    {
+      "year": 2024,
+      "role": "oos",
+      "origins": 991,
+      "sessions": 208,
+      "rows": 19820,
+      "first": "2024-01-11",
+      "last": "2024-12-31"
+    }
+  ],
+  "phases": [
+    {
+      "year": 2021,
+      "phase": "initial",
+      "cutoff": "2020-06-30",
+      "fit_hours": 13102,
+      "native_valid_cells": 228540,
+      "constant_channels": [],
+      "P_equals_V": true
+    },
+    {
+      "year": 2021,
+      "phase": "restricted",
+      "cutoff": "2020-09-30",
+      "fit_hours": 13486,
+      "native_valid_cells": 235679,
+      "constant_channels": [],
+      "P_equals_V": true
+    },
+    {
+      "year": 2022,
+      "phase": "initial",
+      "cutoff": "2021-04-30",
+      "fit_hours": 14340,
+      "native_valid_cells": 251148,
+      "constant_channels": [],
+      "P_equals_V": true
+    },
+    {
+      "year": 2022,
+      "phase": "restricted",
+      "cutoff": "2021-09-30",
+      "fit_hours": 14867,
+      "native_valid_cells": 260487,
+      "constant_channels": [],
+      "P_equals_V": true
+    },
+    {
+      "year": 2023,
+      "phase": "initial",
+      "cutoff": "2022-05-31",
+      "fit_hours": 15865,
+      "native_valid_cells": 278539,
+      "constant_channels": [],
+      "P_equals_V": true
+    },
+    {
+      "year": 2023,
+      "phase": "restricted",
+      "cutoff": "2022-09-30",
+      "fit_hours": 16342,
+      "native_valid_cells": 287272,
+      "constant_channels": [],
+      "P_equals_V": true
+    },
+    {
+      "year": 2024,
+      "phase": "initial",
+      "cutoff": "2023-05-31",
+      "fit_hours": 17294,
+      "native_valid_cells": 304497,
+      "constant_channels": [],
+      "P_equals_V": true
+    },
+    {
+      "year": 2024,
+      "phase": "restricted",
+      "cutoff": "2023-09-29",
+      "fit_hours": 17786,
+      "native_valid_cells": 313086,
+      "constant_channels": [],
+      "P_equals_V": true
+    }
+  ],
+  "resources": {
+    "project_bytes": 12654764032,
+    "task_bytes": 27733743,
+    "peak_rss_bytes": 324698112
+  },
+  "focused_tests": "17 passed;source summaries,placeholder invariance,7339 model+reload,hierarchical loss,existing clock/C3 fixtures",
+  "affected_static": {
+    "filesAnalyzed": 3,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 3.93
+  },
+  "ruff": "PASS",
+  "prefit_hashes": {
+    "src/lstm_data/hf20_minute_inputs.py": "5f860396006b5c856f8dd1cea58fb1de04bd016a8dd30aa6fdd3d266fa2306d9",
+    "src/lstm_data/hf20_minute_bc.py": "d168ec13ad7a6da50a7cf7c55e26ca65c7cc6dbc9fd4270f2ca40f450ae009b6",
+    "tests/test_hf20_minute_inputs.py": "1b75b89a1a9724789c2013d4e3474405e535802a53f93bddf78c90b6ae30f964",
+    "reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/frozen_protocol.json": "302187e337a1f5d73c2c8b1f506930c8f5990cc7c45e12e04247bbf0eff3e7c4",
+    "reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/source_certification.json": "66da4c5f6c8f379b8a71126dbf2543c83297b435ea7870303cd3a612f650c68a",
+    "reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/source_normalizer_supplement.json": "8e398cd775e660be0d9f6875be27bbf3efb1a8df5e70e32e47f8fcb4ed75a20a",
+    "reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/minute_summary_primitives_v2.npz": "c9789f470e07d9d6fe4a6ab0077a82a734c2c678164da7bd8447e0178a75612e",
+    "reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/S3B/F21/phases_v2.json": "4da2b262804e298617eb784dfcaeabf2166c1a5150f92f031253df215a8915b2",
+    "reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/S3B/F22/phases_v2.json": "4e2538c56598d4c347f1f827044f694a610e4455c71b56abed102daf73b0d980",
+    "reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/S3B/F23/phases_v2.json": "77f311bf928f758332445eab00bd6df4fc2c3c681a9c7fb41a2d1cd236aff487",
+    "reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/S3B/F24/phases_v2.json": "4e62bc47fc7e7285d2da69d3b62ebae52f2788d5031d07b13eb02515870242c3"
+  },
+  "old_preliminary_normalizers": "phases.json retained but NOT USED;phases_v2.json only used for fits",
+  "C": "BLOCKED_BEFORE_FIT_NO_SAME_REGIME_VOLUME_PREFIX",
+  "no_OOS_metrics_used_for_gates": true
+}

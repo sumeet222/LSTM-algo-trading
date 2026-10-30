@@ -1,0 +1,281 @@
+{
+  "status": "DATA_PASS_ALL_FOUR",
+  "roles": [
+    {
+      "year": 2021,
+      "role": "inner_train",
+      "origins": 11449,
+      "rows": 228980,
+      "sessions": 2100,
+      "true_tied_pairs": 145,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 184
+    },
+    {
+      "year": 2021,
+      "role": "selector",
+      "origins": 349,
+      "rows": 6980,
+      "sessions": 57,
+      "true_tied_pairs": 2,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 189
+    },
+    {
+      "year": 2021,
+      "role": "restricted_refit",
+      "origins": 11846,
+      "rows": 236920,
+      "sessions": 2164,
+      "true_tied_pairs": 147,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 184
+    },
+    {
+      "year": 2021,
+      "role": "calibration",
+      "origins": 283,
+      "rows": 5660,
+      "sessions": 56,
+      "true_tied_pairs": 2,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 189
+    },
+    {
+      "year": 2021,
+      "role": "oos",
+      "origins": 955,
+      "rows": 19100,
+      "sessions": 188,
+      "true_tied_pairs": 6,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 187
+    },
+    {
+      "year": 2022,
+      "role": "inner_train",
+      "origins": 12560,
+      "rows": 251200,
+      "sessions": 2301,
+      "true_tied_pairs": 154,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 184
+    },
+    {
+      "year": 2022,
+      "role": "selector",
+      "origins": 278,
+      "rows": 5560,
+      "sessions": 58,
+      "true_tied_pairs": 0,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 190
+    },
+    {
+      "year": 2022,
+      "role": "restricted_refit",
+      "origins": 12888,
+      "rows": 257760,
+      "sessions": 2366,
+      "true_tied_pairs": 154,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 184
+    },
+    {
+      "year": 2022,
+      "role": "calibration",
+      "origins": 245,
+      "rows": 4900,
+      "sessions": 50,
+      "true_tied_pairs": 0,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 190
+    },
+    {
+      "year": 2022,
+      "role": "oos",
+      "origins": 1180,
+      "rows": 23600,
+      "sessions": 210,
+      "true_tied_pairs": 4,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 189
+    },
+    {
+      "year": 2023,
+      "role": "inner_train",
+      "origins": 13776,
+      "rows": 275520,
+      "sessions": 2526,
+      "true_tied_pairs": 156,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 184
+    },
+    {
+      "year": 2023,
+      "role": "selector",
+      "origins": 313,
+      "rows": 6260,
+      "sessions": 59,
+      "true_tied_pairs": 2,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 189
+    },
+    {
+      "year": 2023,
+      "role": "restricted_refit",
+      "origins": 14137,
+      "rows": 282740,
+      "sessions": 2592,
+      "true_tied_pairs": 159,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 184
+    },
+    {
+      "year": 2023,
+      "role": "calibration",
+      "origins": 258,
+      "rows": 5160,
+      "sessions": 48,
+      "true_tied_pairs": 1,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 189
+    },
+    {
+      "year": 2023,
+      "role": "oos",
+      "origins": 887,
+      "rows": 17740,
+      "sessions": 187,
+      "true_tied_pairs": 2,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 189
+    },
+    {
+      "year": 2024,
+      "role": "inner_train",
+      "origins": 14824,
+      "rows": 296480,
+      "sessions": 2719,
+      "true_tied_pairs": 161,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 184
+    },
+    {
+      "year": 2024,
+      "role": "selector",
+      "origins": 291,
+      "rows": 5820,
+      "sessions": 69,
+      "true_tied_pairs": 1,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 189
+    },
+    {
+      "year": 2024,
+      "role": "restricted_refit",
+      "origins": 15167,
+      "rows": 303340,
+      "sessions": 2795,
+      "true_tied_pairs": 162,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 184
+    },
+    {
+      "year": 2024,
+      "role": "calibration",
+      "origins": 163,
+      "rows": 3260,
+      "sessions": 40,
+      "true_tied_pairs": 0,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 190
+    },
+    {
+      "year": 2024,
+      "role": "oos",
+      "origins": 991,
+      "rows": 19820,
+      "sessions": 208,
+      "true_tied_pairs": 2,
+      "all_tied_origins": 0,
+      "min_valid_pairs": 189
+    }
+  ],
+  "recipes": [
+    {
+      "year": 2021,
+      "phase": "initial",
+      "cutoff": "2020-06-30",
+      "recipe": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/initial_recipe.json",
+      "sha256": "ae20769b9c6553730efb1001f65eb4cc9a0ad35f3fa321cf57604e9dab9982d2",
+      "parity": true
+    },
+    {
+      "year": 2021,
+      "phase": "restricted",
+      "cutoff": "2020-09-30",
+      "recipe": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/restricted_recipe.json",
+      "sha256": "dec98c8daaea2b1a041ab117df4024890d16b1039e699ba6d7d9ee5b7f8bd6de",
+      "parity": true
+    },
+    {
+      "year": 2022,
+      "phase": "initial",
+      "cutoff": "2021-04-30",
+      "recipe": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/initial_recipe.json",
+      "sha256": "9d4c5ef349b7b585a863af275d615b1c81d2e3142ecfb725f77bed1f1dfbacf1",
+      "parity": true
+    },
+    {
+      "year": 2022,
+      "phase": "restricted",
+      "cutoff": "2021-09-30",
+      "recipe": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/restricted_recipe.json",
+      "sha256": "828f354b976ff6e5c9f39476e9eb18c5b25a36a8034a8181116fab0871536850",
+      "parity": true
+    },
+    {
+      "year": 2023,
+      "phase": "initial",
+      "cutoff": "2022-05-31",
+      "recipe": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/initial_recipe.json",
+      "sha256": "887a6bdeda61cf23a879cdf5b4c640ddd33bf2bb087a05e858c29d76857706c4",
+      "parity": true
+    },
+    {
+      "year": 2023,
+      "phase": "restricted",
+      "cutoff": "2022-09-30",
+      "recipe": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/restricted_recipe.json",
+      "sha256": "7b998301c42b4f6c76260b520fc6eb553e60f032290dc2663912447eb7f6b1c9",
+      "parity": true
+    },
+    {
+      "year": 2024,
+      "phase": "initial",
+      "cutoff": "2023-05-31",
+      "recipe": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/initial_recipe.json",
+      "sha256": "a6e3e7fb9c358d1daf8c74b4425ccf5cfbc4bc0eb45e441aeb7e595b1c180e02",
+      "parity": true
+    },
+    {
+      "year": 2024,
+      "phase": "restricted",
+      "cutoff": "2023-09-29",
+      "recipe": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/restricted_recipe.json",
+      "sha256": "422ffd0d8289a1d21a3f32c235fe7a97cd6fe0bfc36e1ed9dc642e17631e417a",
+      "parity": true
+    }
+  ],
+  "resources": {
+    "project_bytes": 12824268800,
+    "task_bytes": 35074,
+    "peak_rss_bytes": 1015922688
+  },
+  "no_minute_source": true,
+  "calibration_unused": true,
+  "OOS_rows": 80260,
+  "OOS_origins": 4013,
+  "OOS_sessions": 793
+}

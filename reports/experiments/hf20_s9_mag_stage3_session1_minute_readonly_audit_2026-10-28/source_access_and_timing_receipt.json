@@ -1,0 +1,440 @@
+{
+  "status": "AUDIT_PARTIAL_SOURCE_PERMISSION_BLOCKED_FOR_FULL_MINUTE_PATHS",
+  "timestamp": "2026-10-28T22:55:28.443806+00:00",
+  "git_branch": "feat/track-a-data-intake",
+  "git_commit": "997b30cff98785911b0e33b7e3d2e72f61b8270b",
+  "starting_git_status": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n?? reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md\n?? reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/\n?? src/lstm_data/hf20_s2d_gap.py\n?? tests/test_hf20_s2d_gap.py",
+  "ledger": {
+    "observed": 166,
+    "ceiling": 300,
+    "new_charged_starts": 0,
+    "new_neural_phases": 0,
+    "registry_unchanged": true
+  },
+  "source": {
+    "dataset": "mito0o852/OHLCV-1m",
+    "revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+    "upstream_vendor": "NOT_VERIFIED",
+    "canonical_minute_path_template": "data/processed/hf20_hf1m_long_v1/<revision>/qa_v2/canonical_observed/YYYY-MM.parquet",
+    "authorized_months": "2010-07..2024-12",
+    "source_receipt": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv",
+    "full_path_permission": "NOT_ESTABLISHED: source receipt purpose is genuine minute endpoints; Stage1/2 grant is hourly+saved endpoint/component reuse",
+    "adjustment": "historical March2026 split-consistent price basis; no2026 observations accessed; volume as reported; COP basis boundary",
+    "hourly_count_fields": [
+      "ticker",
+      "source_month",
+      "source_revision",
+      "session_date_et",
+      "hour_start_utc",
+      "hour_end_utc",
+      "completed_at_utc",
+      "expected_minutes",
+      "is_stub",
+      "genuine_count",
+      "missing_count",
+      "quarantine_count",
+      "conflict_count",
+      "invalid_minutes",
+      "proxy_count",
+      "first_minute",
+      "last_minute",
+      "genuine_open",
+      "genuine_close",
+      "observed_volume_complete",
+      "exact_duplicate_minutes",
+      "longest_gap_minutes",
+      "price_adjustment_version",
+      "action_boundary"
+    ],
+    "source_grid_projection": {
+      "path": "data/processed/hf20_hf1m_long_v1_ft16_v1/ta020_hf1m_long_ft16_tg20_2026-10-22_211122/HF20_HF1M_LONG_v1_FT16_v1_grid.parquet",
+      "columns": [
+        "hour_start_utc",
+        "hour_end_utc",
+        "session_date_et"
+      ],
+      "filter": "session_date_et<=2024-12-31",
+      "mixed_grid_content_hash_NOT_computed": true
+    },
+    "origin_metadata_projection": {
+      "path": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ORIGIN_SOURCE_ELIGIBILITY.parquet",
+      "columns": [
+        "row_index",
+        "origin_id",
+        "session_date_et",
+        "slot",
+        "context",
+        "entry_index",
+        "first_step",
+        "source_input_eligible",
+        "eligible",
+        "regular_session",
+        "entry_end_utc",
+        "issuance_utc",
+        "session_open",
+        "session_close",
+        "category",
+        "label_maturity_utc"
+      ]
+    },
+    "sampled_input_time_bounds": [
+      "2011-04-06 18:30:00+00:00",
+      "2024-12-31 16:30:00+00:00"
+    ],
+    "allowed_fields_this_audit": "saved timing/count/quality metadata only; no OHLCV payloads; raw/canonical minute contents not permitted/opened",
+    "metadata_full_month_decode_bounds_utc": [
+      "2011-04-01T13:30:00Z",
+      "2024-12-31T20:30:00Z"
+    ],
+    "metadata_full_month_decode_bounds_note": "count/timing metadata projection only, then retained exact input-key filtering; no OHLCV values"
+  },
+  "read_modes": {
+    "source_policy_and_code": "metadata/static inspection",
+    "minute_files": "pre2025 allowlist existence/size only, NO contents or hashes",
+    "hourly_quality_counts": "16 sampled months, only count/timing/quality fields used as-of selected input blocks",
+    "role_geometry": "all20 saved role-index sets exhaustive; no target values",
+    "prior_reports": "source/contract/history context, no performance lookup used for design",
+    "saved_scores": "NOT_OPENED",
+    "source_OHLCV_reaggregation": "BLOCKED_PERMISSION",
+    "minute_internal_order_duplicate_test": "BLOCKED_PERMISSION"
+  },
+  "preservation_before": {
+    "configs/CURRENT_EXPERIMENT_REGISTRY.json": {
+      "sha256": "ff92c46aabf9ed989f334e590461d8d7e6ffc0cfd5ea643b5d766d7ae34dafa6",
+      "bytes": 1061,
+      "mtime_ns": 1793220830006835289
+    },
+    "reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/neural_starts.jsonl": {
+      "sha256": "b6a97c8c2747b790d9c42353c1f3fc53ef0653ef03748128396e583397532259",
+      "bytes": 5822,
+      "mtime_ns": 1793220830005947308
+    },
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/role_indices.npz": {
+      "sha256": "c38a74b71cf20c73e146cb0efc2747f0a6855abc87cd13aa2af8b1155c98e42d",
+      "bytes": 176280,
+      "mtime_ns": 1793162782650343694
+    },
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_SOURCE_POLICY.json": {
+      "sha256": "afa1e8f94ced78a3b82f510908d44d4ea5acad16a12ef061c652561c50011c1b",
+      "bytes": 2392,
+      "mtime_ns": 1793029377352282898
+    },
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv": {
+      "sha256": "9d1fae7940694c0db27f532133ce268d043525029e9fe27dc2676537a3d2623b",
+      "bytes": 79027,
+      "mtime_ns": 1793030733736620868
+    },
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ORIGIN_SOURCE_ELIGIBILITY.parquet": {
+      "sha256": "4c8a23ff266a8514574a2ca87324d723ec411106b08fe7b6b1e713ee7dcb73c3",
+      "bytes": 1747725,
+      "mtime_ns": 1793030739448601523
+    },
+    "src/lstm_data/hf20_s4_clock.py": {
+      "sha256": "99f812fc23b6c0caabb94177de6fdc3f5812cb4c054be06b526b9c1190bf8ec7",
+      "bytes": 3427,
+      "mtime_ns": 1793029419145868007
+    },
+    "src/lstm_data/hf20_s4_preflight.py": {
+      "sha256": "e9a4d7fef93d52e4540172382aaf86064758b8cd4572aa6a850f3620fca33f5f",
+      "bytes": 22519,
+      "mtime_ns": 1793032302153442274
+    },
+    "src/lstm_data/hf1m_ft16_math.py": {
+      "sha256": "2a1558ffc2a48a3edea7eb177fedcaa7f4f2b7c6b7402731919441f95008ac56",
+      "bytes": 9602,
+      "mtime_ns": 1792718295880896601
+    },
+    "src/lstm_data/hf1m_ft16_fit.py": {
+      "sha256": "bd6f1ffb84536e1232bac026a01012ff0b1c5d1165daf5ae1a970086ed00a7bf",
+      "bytes": 8151,
+      "mtime_ns": 1792718308764321506
+    },
+    "src/lstm_data/hf20_stage2_bcd.py": {
+      "sha256": "5966607cd74ae6b3fbd55dc174b0108de63cef810c96fcad8c5875835c280031",
+      "bytes": 66040,
+      "mtime_ns": 1793205578341387531
+    },
+    "src/lstm_data/hf20_s2c_ca.py": {
+      "sha256": "b4860f3e459d6ae9eb8acde48ce7aae4608211ee69279f40efd24e761a184662",
+      "bytes": 47312,
+      "mtime_ns": 1793211517361172072
+    },
+    "src/lstm_data/hf20_s2d_gap.py": {
+      "sha256": "b902de2a7e2a564da924b70b6e706b5f816d44a9372f0ad1df6ea5357e2b1170",
+      "bytes": 60231,
+      "mtime_ns": 1793219857058055070
+    },
+    "tests/test_hf20_s2d_gap.py": {
+      "sha256": "16850f17dae383892ac372102165a53eef52d55c55876b564c7e3a78765af2e8",
+      "bytes": 6588,
+      "mtime_ns": 1793219857056566501
+    },
+    "reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md": {
+      "sha256": "145a7b5c47937db2299343e97f023553542bf7e1606de9b01c61cfbe95af2fe0",
+      "bytes": 27964,
+      "mtime_ns": 1793222879059861979
+    },
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2b_clock/protocol.json": {
+      "sha256": "8c83d76e8ddb53c5f250e31b0a287d0083ae77faff5a1212399d7f8874f73ec8",
+      "bytes": 4503,
+      "mtime_ns": 1793204538144260199
+    }
+  },
+  "checks": {
+    "all20_canonical_axis": true,
+    "all48_full_hour_geometry": true,
+    "role_maturity_embargo": true,
+    "no_source_duplicate_hour_stock_keys": true,
+    "expected_60_per_input_block": true,
+    "minute_counter_conservation": true,
+    "hour_completion_timestamp_matches_end": true,
+    "input_metadata_only": true,
+    "minute_stamps_independently_checked": false,
+    "OHLCV_reaggregation_checked": false,
+    "real_publication_latency_verified": false,
+    "no_outcome_or_score_payload_read": true,
+    "no_fitting_or_inference": true,
+    "stock_axis_matches_frozen_card": true,
+    "selector_50_sessions_25_per_slot": true,
+    "aggregate_rollup_counter_conservation": true,
+    "unique_hour_stock_counts_reconcile": true,
+    "sample_at_least_k_counts_monotone": true,
+    "original_CLOCK_key_join": "BOUND_TO_SAME_ROLE_ARCHIVE_BY_PROTOCOL;score_files_not_reopened",
+    "final_existing_16_hashes_mtimes": "PASS",
+    "ledger_after_166": true,
+    "minute_OHLCV_reconstruction": "BLOCKED_PERMISSION",
+    "minute_positive_finite_duplicate_test": "BLOCKED_PERMISSION",
+    "saved_hourly_terminal_age_le5_minutes": true,
+    "observed_pair_bounds_only_not_minute_measurement": true,
+    "input_earlyclose_and_full_calendar_count_rollups": "PASS",
+    "repeated_metadata_replay_unique_26880": "PASS",
+    "handoff_source_only_replay": "PASS:210 origins/1344 grid hours/26880 stock-hours/counters exact",
+    "final_only_prior_registry_tracked_diff": "PASS:unchanged preexisting dirty edit",
+    "required_seven_deliverables": "PASS"
+  },
+  "no_training": true,
+  "no_calibration_or_baseline_fit": true,
+  "no_forecast_scoring": true,
+  "no_2025_market_or_2026_protected_access": true,
+  "no_network": true,
+  "no_existing_file_writes": true,
+  "sampled_counts_not_population_estimates": true,
+  "ephemeral_script": "inline Python metadata/count audit; no persistent module or notebook",
+  "created_namespace": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28",
+  "coverage_scope": {
+    "unique_sample_origins": 210,
+    "overlapping_role_origin_occurrences": 1049,
+    "unique_grid_hours": 1344,
+    "unique_stock_hours": 26880,
+    "sample_requested_months": [
+      "2011-04",
+      "2012-05",
+      "2015-06",
+      "2018-11",
+      "2020-07",
+      "2020-11",
+      "2021-05",
+      "2021-11",
+      "2022-06",
+      "2022-11",
+      "2023-06",
+      "2023-11",
+      "2024-03",
+      "2024-07",
+      "2024-11",
+      "2024-12"
+    ],
+    "zero_retained_months": [
+      "2012-05",
+      "2024-11"
+    ],
+    "evidence": "sampled saved-hourly counters, NOT minute-record verification",
+    "whole_month_count_metadata_decoded_before_key_projection": true,
+    "retained_input_bounds_utc": [
+      "2011-04-06T18:30:00Z",
+      "2024-12-31T16:30:00Z"
+    ],
+    "no_model_or_target_values_read": true
+  },
+  "source_map": [
+    "docs/track_a/brainstorm/HF20_Focused_Second_Pass_Ranking_Inputs_Minute_Data_and_Horizons_2026-10-24.md#5",
+    "docs/track_a/Consolidation/HF20_S9_MAG_Methodological_Replication_and_Options_Research_Handoff_v2_2026-10-27.md#2",
+    "docs/track_a/Consolidation/HF20_Complete_Experiment_Consolidation_and_Novel_Architecture_Handoff_v3_2026-10-27.md#1",
+    "src/lstm_data/hf20_s4_preflight.py:input_valid,run",
+    "src/lstm_data/hf20_s4_clock.py:schedule",
+    "src/lstm_data/hf1m_ft16_math.py:build",
+    "src/lstm_data/hf1m_ft16_fit.py:native,fit",
+    "src/lstm_data/hf20_stage2_bcd.py:clock_values",
+    "src/lstm_data/market_source.py:MarketSource",
+    "src/lstm_data/state_screen_source.py:verify_support (static only; NOT called)"
+  ],
+  "preservation_after": {
+    "configs/CURRENT_EXPERIMENT_REGISTRY.json": {
+      "sha256": "ff92c46aabf9ed989f334e590461d8d7e6ffc0cfd5ea643b5d766d7ae34dafa6",
+      "bytes": 1061,
+      "mtime_ns": 1793220830006835289,
+      "unchanged": true
+    },
+    "reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/neural_starts.jsonl": {
+      "sha256": "b6a97c8c2747b790d9c42353c1f3fc53ef0653ef03748128396e583397532259",
+      "bytes": 5822,
+      "mtime_ns": 1793220830005947308,
+      "unchanged": true
+    },
+    "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/role_indices.npz": {
+      "sha256": "c38a74b71cf20c73e146cb0efc2747f0a6855abc87cd13aa2af8b1155c98e42d",
+      "bytes": 176280,
+      "mtime_ns": 1793162782650343694,
+      "unchanged": true
+    },
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_SOURCE_POLICY.json": {
+      "sha256": "afa1e8f94ced78a3b82f510908d44d4ea5acad16a12ef061c652561c50011c1b",
+      "bytes": 2392,
+      "mtime_ns": 1793029377352282898,
+      "unchanged": true
+    },
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv": {
+      "sha256": "9d1fae7940694c0db27f532133ce268d043525029e9fe27dc2676537a3d2623b",
+      "bytes": 79027,
+      "mtime_ns": 1793030733736620868,
+      "unchanged": true
+    },
+    "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_ORIGIN_SOURCE_ELIGIBILITY.parquet": {
+      "sha256": "4c8a23ff266a8514574a2ca87324d723ec411106b08fe7b6b1e713ee7dcb73c3",
+      "bytes": 1747725,
+      "mtime_ns": 1793030739448601523,
+      "unchanged": true
+    },
+    "src/lstm_data/hf20_s4_clock.py": {
+      "sha256": "99f812fc23b6c0caabb94177de6fdc3f5812cb4c054be06b526b9c1190bf8ec7",
+      "bytes": 3427,
+      "mtime_ns": 1793029419145868007,
+      "unchanged": true
+    },
+    "src/lstm_data/hf20_s4_preflight.py": {
+      "sha256": "e9a4d7fef93d52e4540172382aaf86064758b8cd4572aa6a850f3620fca33f5f",
+      "bytes": 22519,
+      "mtime_ns": 1793032302153442274,
+      "unchanged": true
+    },
+    "src/lstm_data/hf1m_ft16_math.py": {
+      "sha256": "2a1558ffc2a48a3edea7eb177fedcaa7f4f2b7c6b7402731919441f95008ac56",
+      "bytes": 9602,
+      "mtime_ns": 1792718295880896601,
+      "unchanged": true
+    },
+    "src/lstm_data/hf1m_ft16_fit.py": {
+      "sha256": "bd6f1ffb84536e1232bac026a01012ff0b1c5d1165daf5ae1a970086ed00a7bf",
+      "bytes": 8151,
+      "mtime_ns": 1792718308764321506,
+      "unchanged": true
+    },
+    "src/lstm_data/hf20_stage2_bcd.py": {
+      "sha256": "5966607cd74ae6b3fbd55dc174b0108de63cef810c96fcad8c5875835c280031",
+      "bytes": 66040,
+      "mtime_ns": 1793205578341387531,
+      "unchanged": true
+    },
+    "src/lstm_data/hf20_s2c_ca.py": {
+      "sha256": "b4860f3e459d6ae9eb8acde48ce7aae4608211ee69279f40efd24e761a184662",
+      "bytes": 47312,
+      "mtime_ns": 1793211517361172072,
+      "unchanged": true
+    },
+    "src/lstm_data/hf20_s2d_gap.py": {
+      "sha256": "b902de2a7e2a564da924b70b6e706b5f816d44a9372f0ad1df6ea5357e2b1170",
+      "bytes": 60231,
+      "mtime_ns": 1793219857058055070,
+      "unchanged": true
+    },
+    "tests/test_hf20_s2d_gap.py": {
+      "sha256": "16850f17dae383892ac372102165a53eef52d55c55876b564c7e3a78765af2e8",
+      "bytes": 6588,
+      "mtime_ns": 1793219857056566501,
+      "unchanged": true
+    },
+    "reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md": {
+      "sha256": "145a7b5c47937db2299343e97f023553542bf7e1606de9b01c61cfbe95af2fe0",
+      "bytes": 27964,
+      "mtime_ns": 1793222879059861979,
+      "unchanged": true
+    },
+    "reports/experiments/hf20_s9_mag_stage2_bcd_2026-10-28/s2b_clock/protocol.json": {
+      "sha256": "8c83d76e8ddb53c5f250e31b0a287d0083ae77faff5a1212399d7f8874f73ec8",
+      "bytes": 4503,
+      "mtime_ns": 1793204538144260199,
+      "unchanged": true
+    }
+  },
+  "ledger_after": 166,
+  "new_neural_starts": 0,
+  "new_non_neural_fits": 0,
+  "full_repo_static_test_scan": "NOT_RUN per explicit read-only audit scope",
+  "output_peak_rss_bytes": 218726400,
+  "git_diff_check": "PASS",
+  "future_b_c_plan_only": {
+    "charged_starts": 8,
+    "phase_fits": 16,
+    "ceiling_not_fit_authority": true,
+    "third_trained_control_not_included": true
+  },
+  "ephemeral_reproduction": "SESSION_HANDOFF.md includes read-only counter-replay snippet; no persistent Python file or bytecode",
+  "metadata_audit_peak_rss_bytes": 218726400,
+  "actual_minute_read_permission": "SOURCE_PERMISSION_BLOCKED; no new grant inferred",
+  "current_source_representation": "adjusted hourly plus saved endpoints; canonical minute files exist but pre-P019B action/quarantine adaptation and input permissions remain uncertified",
+  "final_status": "PARTIAL_SOURCE_PERMISSION_BLOCKED_FULL_PATHS",
+  "created_files": [
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/S3B_FEATURE_CONTRACT_PROPOSAL.md",
+      "bytes_at_verification": 8502
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/S3C_MINUTE_ENCODER_CONTRACT_PROPOSAL.md",
+      "bytes_at_verification": 8209
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/S3_SESSION2_READINESS_MATRIX.csv",
+      "bytes_at_verification": 5032
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/SESSION_HANDOFF.md",
+      "bytes_at_verification": 12748
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/STAGE3_SESSION1_MINUTE_AUDIT_REPORT.md",
+      "bytes_at_verification": 32822
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/input_hour_calendar_quality.csv",
+      "bytes_at_verification": 22804
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/metadata_audit_summary.json",
+      "bytes_at_verification": 53106
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/minute_coverage.csv",
+      "bytes_at_verification": 698862
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/role_geometry_counts.csv",
+      "bytes_at_verification": 4195
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/sample_era_summary.csv",
+      "bytes_at_verification": 551
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/sample_input_geometry.csv",
+      "bytes_at_verification": 68098
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/sample_origin_slot_summary.csv",
+      "bytes_at_verification": 348
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/unique_hour_metadata_summary.csv",
+      "bytes_at_verification": 2332
+    }
+  ]
+}

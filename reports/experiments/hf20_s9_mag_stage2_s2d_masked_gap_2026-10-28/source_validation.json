@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "source": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_GENUINE_ENDPOINT_AND_COMPONENTS.parquet",
+  "source_sha256": "a66edd638bc9cdb2c919c3ff1a81f5023eeab9bad0e0926d12e45306c8af3d51",
+  "source_policy": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_SOURCE_POLICY.json",
+  "certification": "only saved normal15:30 genuine close/open finite positive/action-compatible; no raw minute or new source",
+  "per_stock_positive_finite": true,
+  "cop_basis_excluded": true,
+  "true_close": "session_close minus1min genuine minute close;not15:30 or official auction claim",
+  "open": "next scheduled09:30 genuine minute open",
+  "original_48_full_hour_input_end": "exactly15:30, strictly before future16:00 close",
+  "market_source_stop": "2024-12-31",
+  "numeric_gap_values_used": false,
+  "source_version_matches_audit": true
+}

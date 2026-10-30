@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE",
+  "at": "2026-10-29T03:23:29.187238+00:00",
+  "completed_folds": 4,
+  "ledger_before": 170,
+  "ledger_after": 174,
+  "charged_starts": 4,
+  "phases": 8,
+  "no_retry_or_restart": true,
+  "journal_entries": 16,
+  "all_prefit_bindings_unchanged": true,
+  "prior_bound_assets_unchanged_except_authorized_registry": true,
+  "verification": "reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/verification.json",
+  "focused_tests": 23,
+  "full_static_summary": {
+    "filesAnalyzed": 522,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 189.708
+  },
+  "diff_check": "PASS",
+  "session_report": "reports/codex_sessions/2026-10-28_232241_hf20_s3c_priceonly_completion.md",
+  "session_report_sha256": "50a5bc4e93185af5c6fdd04f5179b2736c2afeb15fdc575e0a0828e2db04e6bc",
+  "inventory_sha256": "0037a402f481398b7e10d622986024feb4b62b3ec009bce47cd0d446eb95d124",
+  "task_bytes": 163659235,
+  "git_status": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n?? reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md\n?? reports/codex_sessions/2026-10-28_212826_hf20_stage3_minute_bc.md\n?? reports/codex_sessions/2026-10-28_232241_hf20_s3c_priceonly_completion.md\n?? reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/\n?? src/lstm_data/hf20_minute_bc.py\n?? src/lstm_data/hf20_minute_inputs.py\n?? src/lstm_data/hf20_minute_report.py\n?? src/lstm_data/hf20_s2d_gap.py\n?? src/lstm_data/hf20_s3c_price_report.py\n?? src/lstm_data/hf20_s3c_priceonly.py\n?? tests/test_hf20_minute_inputs.py\n?? tests/test_hf20_minute_report.py\n?? tests/test_hf20_s2d_gap.py\n?? tests/test_hf20_s3c_priceonly.py\n",
+  "no_commit_push_fetch": true,
+  "editor_refresh": "human confirmation outstanding",
+  "scope_stop": true
+}

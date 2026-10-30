@@ -1,0 +1,7 @@
+# Stage5 all-fold readiness
+
+GO for separately frozen S5-A/S5-B and the three-alpha full-history linear control. Ledger174/300; maximum8pairs/16phases. Original80260rows/4013origins/793sessions preserved. All20role arrays match exact saved geometry, maturity,48step embargo and stock order; all8input-only FT16 phase recipes exactly reproduced. No all-tied origin; genuine ties excluded only from pair labels (minimum184validpairs in a training origin). Calibration reserved/unused.
+
+12focused tests pass; exact flattened48x16+10clock linear parity passes; Ruff and affected basic type check zeroerrors/warnings. Preflight peakRSS1,015,922,688bytes,project12,824,268,800bytes. No minute source/2025market/protected2026/network. Read only174receipt-bound adjusted-hourly partitions plus saved genuine returns/role/calendarmetadata. Calendar may reference2025schedule only. Fixed origin+2min publication proxy, revised-vintage actionbasis and survivor cohort limitations remain.
+
+Prefit implementation corrections: used existing pandas average ranks rather than unavailable scipy (no package addition); fixed read-only pandas array subtraction in IC helper; added explicit gradient-not-None assertions for installed stubs. Initial scratch type config rejected absolute include paths and scanned unrelated temporary files; corrected relative includes, actual3projectfiles nowclean. None changed scientific design, labels, eligibility or model fit; no starts consumed.

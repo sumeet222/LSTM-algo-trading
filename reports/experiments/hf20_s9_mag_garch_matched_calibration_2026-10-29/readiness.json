@@ -1,0 +1,90 @@
+{
+  "status": "READY_FOR_DEPENDENCY_CHECK_AND_IMPLEMENTATION",
+  "timestamp_utc": "2026-10-29T19:49:56.472826+00:00",
+  "branch": "feat/track-a-data-intake",
+  "head": "997b30cff98785911b0e33b7e3d2e72f61b8270b",
+  "git_status": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n?? reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md\n?? reports/codex_sessions/2026-10-28_212826_hf20_stage3_minute_bc.md\n?? reports/codex_sessions/2026-10-28_232241_hf20_s3c_priceonly_completion.md\n?? reports/codex_sessions/2026-10-29_010132_hf20_stage5_rank_ab.md\n?? reports/codex_sessions/2026-10-29_101604_hf20_s5c_hybrid.md\n?? reports/codex_sessions/2026-10-29_114323_hf20_classical_volatility.md\n?? reports/experiments/hf20_s9_mag_classical_volatility_benchmarks_2026-10-29/\n?? reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/\n?? reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/\n?? reports/experiments/hf20_s9_mag_stage5_session2_hybrid_C_2026-10-29/\n?? src/lstm_data/hf20_classical.py\n?? src/lstm_data/hf20_classical_math.py\n?? src/lstm_data/hf20_classical_report.py\n?? src/lstm_data/hf20_classical_rv.py\n?? src/lstm_data/hf20_mag_hybrid.py\n?? src/lstm_data/hf20_mag_hybrid_report.py\n?? src/lstm_data/hf20_mag_rank.py\n?? src/lstm_data/hf20_mag_rank_report.py\n?? src/lstm_data/hf20_minute_bc.py\n?? src/lstm_data/hf20_minute_inputs.py\n?? src/lstm_data/hf20_minute_report.py\n?? src/lstm_data/hf20_s2d_gap.py\n?? src/lstm_data/hf20_s3c_price_report.py\n?? src/lstm_data/hf20_s3c_priceonly.py\n?? tests/test_hf20_classical.py\n?? tests/test_hf20_mag_hybrid.py\n?? tests/test_hf20_mag_rank.py\n?? tests/test_hf20_minute_inputs.py\n?? tests/test_hf20_minute_report.py\n?? tests/test_hf20_s2d_gap.py\n?? tests/test_hf20_s3c_priceonly.py\n",
+  "predecessor": "reports/experiments/hf20_s9_mag_classical_volatility_benchmarks_2026-10-29",
+  "bindings": 400,
+  "binding_sha256": "c88bb148ee71f6c08f8190910a692cbce31e543b6a4fba6140c3edf4fc9f7cc9",
+  "historical_logging_exception": {
+    "fixed_runner_sha256": "5aab2f18e64e692edcc260c8312611903445232e1670b60cba75a347ad6c05d9",
+    "failed_journal_sha256": "bc0280d1963ddc42dbd1f006df601ebf0180663de4c7bf462c0f6d9ac614e1ad",
+    "all_numerical_functions_AST_identical": true,
+    "resume_only_unstarted": [
+      2022,
+      2023,
+      2024
+    ],
+    "completed_F21_no_refit": true,
+    "scientific_protocol_unchanged": true,
+    "outer_performance_not_scored": true,
+    "supersedes": "logging_recovery.json (formatting-only finalization)"
+  },
+  "ledger": 186,
+  "ceiling": 300,
+  "neural_starts": 0,
+  "expected_garch_fits": 560,
+  "expected_common_calibrations_without_garch": 72,
+  "expected_common_calibrations_with_garch": 80,
+  "calibration_description": "Each G/IO family per model/fold; IO has two category coefficients and shares the global coefficient.",
+  "historical_fits": 0,
+  "rows": 80260,
+  "origins": 4013,
+  "sessions": 793,
+  "role_key_label_weight_parity": true,
+  "endpoint_identity": true,
+  "garch_min_n": 1526,
+  "garch_max_n": 2412,
+  "equality_rule": "keep start>=last retained end; maturity strictly before issuance; no evaluation key exclusions",
+  "garch_scientific_assessment": "Acceptable only as authorized one-next-same-slot-event Gaussian approximation. Variable event spacing and intraday/overnight composition; not continuous-time four-hour variance or fully clock-regime-aware dynamics. Genuine signed 240-trading-minute endpoint observations and identical evaluation labels/keys/weights verified.",
+  "garch_spec": {
+    "mean": "Constant",
+    "vol": "GARCH",
+    "p": 1,
+    "o": 0,
+    "q": 1,
+    "dist": "normal",
+    "scale": 100,
+    "rescale": false,
+    "optimizer": "arch supported SLSQP, package default deterministic starting values, one call/unit",
+    "options": {
+      "maxiter": 1000,
+      "ftol": 1e-09
+    },
+    "tol": 1e-09,
+    "gate": "convergence_flag==0; finite parameters/conditional variances; omega>0; alpha,beta>=0; alpha+beta<1; positive finite unconditional variance; no retry/fallback",
+    "near_unit": "alpha+beta>=.99 disclosed; strict >=1 blocks complete GARCH arm",
+    "initial_state": "arch fitted final conditional variance; next h=omega+alpha*(last x-mu)^2+beta*h; frozen coefficients thereafter",
+    "sample_min": 100
+  },
+  "dependency_constraints": [
+    "scipy>=1.16,<2",
+    "arch>=8,<9",
+    "statsmodels>=0.14.5,<0.15"
+  ],
+  "dependency_policy": "existing interpreter only; binary wheels; constrain all installed packages; dry-run before install; no neural dependency changes",
+  "environment": {
+    "interpreter": ".venv/bin/python",
+    "version": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "pip": "26.1.2"
+  },
+  "permitted_writes": [
+    "reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29",
+    "src/lstm_data/hf20_matched*.py",
+    "tests/test_hf20_matched*.py",
+    "project-local optional dependency declaration if installed",
+    "reports/codex_sessions/new session report",
+    "new append-only successor registry file after audit"
+  ],
+  "prohibited": "No historical writes, neural starts/inference, market downloads, raw minute reads, 2025 numerical/protected2026 access, git fetch/commit/push",
+  "resources": {
+    "project_bytes": 12854521856,
+    "peak_rss_bytes": 447709184,
+    "task_cap": 2500000000,
+    "project_cap": 15000000000,
+    "ram_cap": 2000000000
+  },
+  "seconds": 19.250741004943848
+}

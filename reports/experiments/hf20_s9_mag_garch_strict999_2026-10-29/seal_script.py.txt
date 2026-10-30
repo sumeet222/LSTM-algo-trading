@@ -1,0 +1,153 @@
+from pathlib import Path
+import json,subprocess,sys
+import pandas as pd
+from lstm_data import hf20_strict999 as t
+b,o=t.b,t.OUT
+assert b.read(o/'static_resource_receipt.json')['exit_code']==0
+assert b.read(o/'static_resource_receipt.json')['peak_child_rss_bytes']<2_000_000_000
+assert b.read(o/'static_final_003.json')['summary']['errorCount']==0
+assert b.read(o/'static_final_003.json')['summary']['warningCount']==0
+assert '37 passed' in (o/'tests_final.txt').read_text()
+assert 'All checks passed!' in (o/'ruff_final.txt').read_text()
+assert b.read(o/'human_editor_check.json')['status']=='USER_CONFIRMED_ZERO_ERRORS'
+assert t.preservation()==3296
+for name in ['frozen_fit_outputs.json','frozen_calibration_outputs.json']:
+ for path,sha in b.read(o/name).items():assert b.digest(Path(path))==sha,path
+for path,sha in b.read(o/'prefit_gate.json')['implementation_hashes'].items():assert b.digest(Path(path))==sha,path
+receipt=b.read(o/'static_resource_receipt.json')
+p=o/'FINAL_REPORT.md';s=p.read_text();s=s.replace('It did not alter scientific results.','It did not alter scientific results.')
+s=s.replace('the wrapper failure is retained and is not represented as a type-check failure or a measured memory peak.',f"the wrapper failure is retained and is not represented as a type-check failure or a measured memory peak. A subsequent successful resource-aware full check recorded peak child RSS {receipt['peak_child_rss_bytes']/1e9:.6f}GB, below the 2GB process ceiling, with zero errors/warnings.")
+p.write_text(s)
+p=o/'SESSION_HANDOFF.md';s=p.read_text().replace('git_status_final.txt captures completed additions.','git_status_final.txt captures completed additions after the final pointer; seal_receipt.json binds that late Git snapshot without modifying the scientific inventory.').replace('The150MB initial task estimate',f"The final static check completed in {receipt['seconds']:.3f}s with peak child RSS {receipt['peak_child_rss_bytes']:,} bytes, below2GB. The150MB initial task estimate")
+p.write_text(s)
+now=pd.Timestamp.now(tz='UTC');session=Path('reports/codex_sessions')/(now.strftime('%Y-%m-%d_%H%M%S')+'_hf20_garch_strict999_completion.md')
+head=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip();assert head=='997b30cff98785911b0e33b7e3d2e72f61b8270b'
+code=sorted(Path('src/lstm_data').glob('hf20_strict999*.py'))+[Path('tests/test_hf20_strict999.py')]
+interfaces='''- Strict999GARCH.constraints / make_model / constraint_audit: public arch component construction and unrounded coefficient audit; only the persistence matrix bound changes.
+- hf20_strict999.main/calibrate/load_panel/preservation/resources: single-use new fitting/calibration lifecycle, exact frozen-score reads, predecessor hash checks and resource gates; no old calibration fitting.
+- hf20_strict999_fit.run/admitted: 560 uniformly constrained signed-return fits, prefix initialization, causal per-event state updates and folded-normal forecasts; no retries or dropped OOS rows.
+- hf20_strict999_audit.audit: saved optimizer/input/start/normal-likelihood/bound verification and all560 old/new coefficient deltas; no fit.
+- hf20_strict999_verify.verify_garch: independent public package prefix recursion and every saved subsequent state/forecast replay, exact issue/endpoint/role/score checks.
+- hf20_strict999_report.report(output=None)/verify: existing magnitude/rank/group reducers and paired-month implementation, optional fresh-directory report-only replay; saved G/IO arithmetic and660 old metric parity checks. Default report output is guarded against overwrite.
+- tests/test_hf20_strict999.py: synthetic package parity, deterministic starts, constraint and optimizer boundary fixtures.'''
+report=f'''# Codex Session Report
+
+## 1. Session metadata
+
+- Date/time: {now.isoformat()}; researcher task dated2026-10-29.
+- Contributor: Codex; bounded GARCH11-STRICT999 successor.
+- Branch: feat/track-a-data-intake.
+- Starting/ending commit: {head}; no commit created.
+- Working tree at start: dirty prior research work; git_status_initial.txt in experiment records the snapshot after readiness creation.
+- Working tree at end: prior work preserved plus only new strict999 code/test/experiment/session report/successor pointer. Final Git snapshot is bound by seal_receipt.json.
+- Issue/PR: none.
+
+## 2. Executive summary
+
+COMPLETE:560/560 fits pass under one uniform inside-optimizer alpha+beta<=.999 constraint. All three old COP boundaries pass;13 contacts and five tiny roundoff overshoots explicitly audited. Zero retries. New G/IO calibration completes on independent prior Oct–Dec only. Full80,260-row comparison preserves all old scores and calibrators. GARCH MSE loses to S2-C by3.7736% G/4.1538% IO in all four years; IC0.307433340 remains below neural models. Raw and native-package/tail comparisons differ and are reported separately. Benchmark technically closed; STOP.
+
+## 3. Research/protocol impact
+
+Only authorized scientific change is the same .999 persistence cap on all560 new fits. Target,20-stock order, genuine240-minute endpoints, timing proxy, source revision,48-hour embargo, role masks, fit series, eligible keys, weights, neural models and old calibrations unchanged. New G/IO fits concern only new GARCH. No architecture, training, trading,2025/protected2026 or final-test protocol change. Source/timing/survivor/repeated-search limitations remain. Ledger186/300 unchanged.
+
+## 4. Files created
+
+- New code/test files: {', '.join(str(p) for p in code)}. Interfaces and purposes below.
+- New experiment directory: {o}; every artifact path/type/size/SHA256/purpose and tracking policy is enumerated in artifact_inventory.csv. FINAL_REPORT.md is the scientific verdict; SESSION_HANDOFF.md is the operational handoff; README-style IMPLEMENTATION.md explains the frozen method.
+- Readiness/API/input/hash/role receipts, fit-unit parameters and state traces, new calibration/OOS Parquets, full47-arm metrics/annual/group/rank/tail/pair tables, tests/logs, independent verification, source snapshots, append-only journal and final integrity are in that inventory.
+- New append-only config: configs/track_a_hf20_garch_strict999_successor_v1.json, added only after audited scientific artifacts.
+- This session report; late git_status_final.txt/seal_receipt.json bind final pointer/Git state without rewriting the scientific seal.
+
+## 5. Files modified
+
+No pre-existing repository/source/environment file was modified by this task. New task files were developed and corrected before sealing. All3,296 bound predecessors plus old frozen fit/source/journal assets were rehashed unchanged. Earlier dirty registry/README/pyproject changes belong to predecessor work and were preserved.
+
+## 6. Files deleted, renamed, or moved
+
+No pre-existing files deleted/renamed/moved. Within the new run, provisional new fold diagnostic score files were renamed to eligible score files only after all560 fits passed. No partial panel was scored.
+
+## 7. Critical interfaces
+
+{interfaces}
+
+## 8. Data/schema/provenance changes
+
+No market source/schema/adjustment changes. Source revision776328445b7ac6e7815ef3a483e9c8ded1eb6d56; saved genuine signed return histories and masks only. Exact indices/x vectors match each archived unit;59 exact exclusions remain history-only. Metadata columns and A/weights/stock order match all prior panels. New raw/G/IO score columns are appended only in the new namespace. data_source_receipt.json and predecessor_bindings.json provide exact paths/hashes. No minute source, market fetch,2025 observations or protected2026 material accessed.
+
+## 9. Dependency/environment changes
+
+None. Existing .venv Python3.14.6, arch8.0.0/scipy1.18.1/statsmodels0.14.6 verified. Pip freeze before/after byte-identical. Public package constraints extension only; no package source patch or dependency upgrade. Portable setup remains existing README/pyproject route plus exact archived private artifacts.
+
+## 10. Commands and tests
+
+Exact fit/audit/calibration/report/static commands and logs are in SESSION_HANDOFF.md. Guarded fit/calibration commands were run once and must not be rerun.37 focused tests pass; Ruff passes. Full installed Pylance/basic command:
+
+```sh
+.venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist
+```
+
+Final546files/0errors/0warnings, exit0; peak child RSS{receipt['peak_child_rss_bytes']:,} bytes. No severity/exclusion/suppression changes. Human VSCode Problems refresh confirmed zero errors by researcher. Git diff --check passes.
+
+Initial non-scientific failures retained: incorrect public base-class import location corrected; CSV literal None sentinel preserved with exact parsing; initial synthetic fixture did not force cap contact and was corrected before data fits;30 test-only kwargs typing errors fixed with explicit arguments; initial Ruff import-order fixes. A time-wrapper sysctl query failed after a clean static check; a subsequent resource-aware full check exited0. Arrow hardware/cache and pip cache notices were nonfatal. Sandbox process inspection denial was resolved with the already approved read-only ps permission. No real fit failed or was retried.
+
+## 11. Experiment/results
+
+New experiment {o.name}.560fits,560pass,0retry;37tests;99,240 forward traces replayed including80,260 OOS rows. GARCH all3variants share IC0.307433340. S2-C same-family MSE remains lower in every annual fold; S5-C IC0.332045935 remains higher in every fold. HAR and ROLL60 remain the strongest descriptive classical MSE/IC comparators in the fixed grid. New calibrator fits8family-folds; old fits0/neural starts0.13contacts; five overshoots max1.7942e-13 within frozen1e-10 tolerance. Gaussian/irregular-event approximation retained. Inference is descriptive400draws/seed22042, not selection-adjusted confirmation. No trading metrics or claims.
+
+## 12. Reproduction
+
+Supply exact authorized artifact lineage through the existing private-artifact route; do not download/rebuild data under this task. Authenticate the successor pointer and manifests. Use a new nonexistent output directory:
+
+```sh
+.venv/bin/python -u -B -m lstm_data.hf20_strict999 report --output reports/experiments/hf20_strict999_report_replay_NEW
+```
+
+Executed report_replay_001 produced8byte-identical numerical CSVs; zero model/calibration fitting, neural inference or source reconstruction. Code snapshots, fixed coefficients and saved scores are available. Do not rerun guarded fit/calibrate or writing verifier commands into the sealed directory. A new scientific fit requires separate researcher authorization.
+
+## 13. Git/collaboration
+
+No fetch/commit/push per explicit instruction. Cached ahead/behind0/0; current remote state unverified. All old local work protected, no resets/stash/merges/branch switch. New uncommitted artifacts and source are listed in inventory/Git snapshots. Large unit state/Parquet/trace files intentionally ignored. For a later authorized integration, review and stage only this task's explicit code/test/small receipts/session/pointer files; never git add the entire dirty tree. No PR/merge is initiated.
+
+## 14. Risks and limitations
+
+Repeated 2021–2024 inspection; overlapping events and residual dependence; unequal features across families; fixed Gaussian assumption; irregular same-slot horizon; retrospective source/survivor cohort; nominal-origin/+2min availability proxy; early-close support only5sessions. No proof of recurrence necessity or tradability. Original blocked GARCH has no full-panel performance score. Task output exceeded150MB estimate due saved comparator panels but remains under2.5GB; numerical RSS<528MB and static child RSS<2GB; project<15GB. There are no residual failing scientific/type/unit checks and editor refresh is confirmed.
+
+## 15. Human review
+
+Review scientific interpretation and append-only artifact linkage. Any further cap, calibration, architecture, hybrid/router, trading or holdout work needs a new explicit decision. No request to repair or assert the ledger.
+
+## 16. Next steps
+
+STOP after this report/seal. No autonomous sequel. Researcher review only.
+
+## 17. Artifact inventory
+
+artifact_inventory.csv enumerates the complete new experiment and new code/test/session report with purpose/type/SHA/bytes/tracking policy. final_integrity.json binds the inventory and journal; the new successor config binds final integrity. seal_receipt.json additionally binds final pointer/Git snapshot. Older primaries and journals remain immutable. No plots/checkpoints/neural outputs were newly generated; numerical tables, model parameters, calibration coefficients, keyed forecasts and filter/replay logs are preserved.
+'''
+assert not session.exists();session.write_text(report)
+# Last scientific journal entry; do not append after its hash is sealed.
+t.journal('COMPLETE_HARD_STOP',fits=560,passing=560,calibrations=8,neural_starts=0,ledger=186,predecessors=3296,old_metric_rows=660,human_editor='confirmed zero errors',session_report=str(session),no_follow_on_authorized=True)
+# Save sealing code itself before indexing; no scientific modifications afterward.
+(o/'seal_script.py.txt').write_text(Path('/private/tmp/hf20_strict999_seal.py').read_text())
+paths=sorted([p for p in o.rglob('*') if p.is_file()]+code+[session],key=str)
+excluded={'artifact_inventory.csv','final_integrity.json','git_status_final.txt','seal_receipt.json'}
+paths=[p for p in paths if p.name not in excluded]
+records=[]
+for p in paths:
+ ignored=subprocess.run(['git','check-ignore','-q',str(p)],capture_output=True).returncode==0
+ purpose=('unit fit/initialization/optimizer/filter receipt' if '/GARCH/' in str(p) else 'report-only replay artifact' if '/report_replay_' in str(p) else 'new implementation/test source' if p.suffix=='.py' else 'research result/verification/provenance or handoff: '+p.stem)
+ records.append(dict(path=str(p),type=p.suffix or 'text',bytes=p.stat().st_size,sha256=b.digest(p),intentionally_local=ignored,purpose=purpose))
+pd.DataFrame(records).to_csv(o/'artifact_inventory.csv',index=False)
+res=t.resources();elapsed=(pd.Timestamp.now(tz='UTC')-pd.Timestamp(b.read(o/'readiness.json')['at'])).total_seconds()
+integrity=dict(status='COMPLETE',experiment=str(o),scientific_outputs_sealed=True,artifacts=len(records),artifact_inventory=dict(path=str(o/'artifact_inventory.csv'),sha256=b.digest(o/'artifact_inventory.csv')),predecessor_bindings=dict(path=str(o/'predecessor_bindings.json'),sha256=b.digest(o/'predecessor_bindings.json'),verified_count=3296),predecessor_final_integrity=dict(path=str(t.parent.OUT/'final_integrity.json'),sha256=b.digest(t.parent.OUT/'final_integrity.json')),journal=dict(path=str(o/'research_journal.jsonl'),sha256=b.digest(o/'research_journal.jsonl')),session_report=dict(path=str(session),sha256=b.digest(session)),new_code={str(p):b.digest(p) for p in code},fit_count=560,fit_pass=560,fit_retry=0,calibration_family_fold_count=8,prior_calibrations_refitted=0,neural_starts=0,ledger=186,cap=.999,cap_contacts=13,roundoff_overshoots=5,old_metric_rows_replayed=660,report_replay_tables=8,tests=37,static=b.read(o/'static_final_003.json')['summary'],static_peak_child_rss_bytes=receipt['peak_child_rss_bytes'],human_editor='USER_CONFIRMED_ZERO_ERRORS',environment_changed=False,elapsed_since_readiness_seconds=elapsed,elapsed_definition='readiness creation to seal; earlier read-only discovery excluded',late_metadata=['git_status_final.txt','seal_receipt.json'],**res)
+b.write(o/'final_integrity.json',integrity,new=True)
+# Verify all newly sealed artifacts before publishing a separate successor pointer.
+for rec in records:assert b.digest(Path(rec['path']))==rec['sha256'],rec['path']
+assert t.preservation()==3296
+pointer=Path('configs/track_a_hf20_garch_strict999_successor_v1.json')
+b.write(pointer,dict(schema=1,experiment=str(o),status='COMPLETE',fit_permission=False,hard_stop=True,final_integrity=dict(path=str(o/'final_integrity.json'),sha256=b.digest(o/'final_integrity.json')),journal=integrity['journal'],predecessor=dict(path='configs/track_a_hf20_classical_matched_successor_v1.json',sha256=b.digest(Path('configs/track_a_hf20_classical_matched_successor_v1.json'))),unchanged_live_neural_registry=dict(path=str(b.POINTER),sha256=b.digest(b.POINTER)),neural_ledger=186,neural_ceiling=300,authorized_successor='uniform .999 constrained Gaussian GARCH only; completed',no_new_authority=True),new=True)
+(o/'git_status_final.txt').write_text(subprocess.check_output(['git','status','--short','--branch'],text=True))
+assert str(session) in (o/'git_status_final.txt').read_text()
+assert str(pointer) in (o/'git_status_final.txt').read_text()
+b.write(o/'seal_receipt.json',dict(status='PASS_FINAL_APPEND_ONLY_SEAL',at=pd.Timestamp.now(tz='UTC').isoformat(),final_integrity_sha256=b.digest(o/'final_integrity.json'),inventory_sha256=b.digest(o/'artifact_inventory.csv'),pointer=dict(path=str(pointer),sha256=b.digest(pointer)),final_git_snapshot_sha256=b.digest(o/'git_status_final.txt'),scientific_inventory_unchanged=True,predecessors_unchanged=3296,git_sha=head,git_operations='read-only status/diff only; no fetch/commit/push',**t.resources()),new=True)
+print(json.dumps(dict(status='COMPLETE',report=str(o/'FINAL_REPORT.md'),handoff=str(o/'SESSION_HANDOFF.md'),session=str(session),artifacts=len(records),resources=res,elapsed_since_readiness_seconds=elapsed)))

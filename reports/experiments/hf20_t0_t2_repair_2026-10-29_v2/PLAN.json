@@ -1,0 +1,53 @@
+{
+  "status": "PREDECLARED",
+  "created": "2026-10-29",
+  "predecessor": "reports/experiments/hf20_t0_t2_return_targets_2026-10-29",
+  "preserve": {
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/REPORT.md": "da562ba18d8aa51a48bc6c5bf4c752d69da27afea9c9ceaaf67875121bcdc77a",
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/METRICS.csv": "a9c2abd8848b9673cf0f389bf522e0c165e8abd6be655fdedebfabae47f9b660",
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/PAIRED.csv": "a5bbd24942fd228cec167c3467a861db07cb3a216b9cdeed32846a1d3935d3c1",
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/OOS_SCORES.parquet": "f1ebb693808049e0bd28127f1de47a8db802df076c72b7f86afc415a6e2360f4",
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/REPRODUCIBILITY.json": "8f489120804b106ce27fd784ae2d987415e9ef209670f291c218e4911f1e4613",
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/CHECKS.json": "e45c341c6f3dcb587a87840e14b216129473d0c5fb3289db72397cc408f8cf46",
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/execution.log": "98f71e5a645af713347c1950f616fb192d8ede6ca716b22efd70130fe83ccfd0",
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/recovery.log": "4e263034a2fa3db2213fc14e600f0790a33fa148590822a2b37971a2724c0aea",
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/completion.log": "8a41125ae1e5f0dc4d11352354acc5aa7f3c709541ab3352dade23070fb38748",
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/F21_coefficients.npz": "53db82a0f910a72978cf2310660f65bbac986558d94a86a98bd270fb8760ed80",
+    "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/F23_coefficients.npz": "69de552787eb8bb3cd51d0123edc9963be1c5f2a62ddb2d473935eee224eb7fc",
+    "src/lstm_data/hf20_targets.py": "8c526e8569062ba152279680bcc80abcf833a76e393c7849541ab3fc78be25ca",
+    "src/lstm_data/hf20_targets_report.py": "748c28bdde2ace5778d7d652d843c3a6bedf967bb7e00e005415ad521fbee458",
+    "tests/test_hf20_targets.py": "7375b1ff5ca30e465b27331328182ec3a02517ea2eb52f5f40899f3c477561e4"
+  },
+  "source_bindings_reference": "reports/experiments/hf20_t0_t2_return_targets_2026-10-29/REPRODUCIBILITY.json",
+  "git_sha": "997b30cff98785911b0e33b7e3d2e72f61b8270b",
+  "git_initial": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M README.md\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n M pyproject.toml\n?? configs/track_a_hf20_classical_matched_successor_v1.json\n?? configs/track_a_hf20_garch_strict999_successor_v1.json\n?? reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md\n?? reports/codex_sessions/2026-10-28_212826_hf20_stage3_minute_bc.md\n?? reports/codex_sessions/2026-10-28_232241_hf20_s3c_priceonly_completion.md\n?? reports/codex_sessions/2026-10-29_010132_hf20_stage5_rank_ab.md\n?? reports/codex_sessions/2026-10-29_101604_hf20_s5c_hybrid.md\n?? reports/codex_sessions/2026-10-29_114323_hf20_classical_volatility.md\n?? reports/codex_sessions/2026-10-29_201017_hf20_garch_matched_calibration.md\n?? reports/codex_sessions/2026-10-29_205941_hf20_garch_strict999_completion.md\n?? reports/codex_sessions/2026-10-29_hf20_t0_t2_partial.md\n?? reports/experiments/hf20_s9_mag_classical_volatility_benchmarks_2026-10-29/\n?? reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/\n?? reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29/\n?? reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/\n?? reports/experiments/hf20_s9_mag_stage5_session2_hybrid_C_2026-10-29/\n?? reports/experiments/hf20_t0_t2_return_targets_2026-10-29/\n?? src/lstm_data/hf20_classical.py\n?? src/lstm_data/hf20_classical_math.py\n?? src/lstm_data/hf20_classical_report.py\n?? src/lstm_data/hf20_classical_rv.py\n?? src/lstm_data/hf20_mag_hybrid.py\n?? src/lstm_data/hf20_mag_hybrid_report.py\n?? src/lstm_data/hf20_mag_rank.py\n?? src/lstm_data/hf20_mag_rank_report.py\n?? src/lstm_data/hf20_matched.py\n?? src/lstm_data/hf20_matched_garch.py\n?? src/lstm_data/hf20_matched_math.py\n?? src/lstm_data/hf20_matched_report.py\n?? src/lstm_data/hf20_matched_verify.py\n?? src/lstm_data/hf20_minute_bc.py\n?? src/lstm_data/hf20_minute_inputs.py\n?? src/lstm_data/hf20_minute_report.py\n?? src/lstm_data/hf20_s2d_gap.py\n?? src/lstm_data/hf20_s3c_price_report.py\n?? src/lstm_data/hf20_s3c_priceonly.py\n?? src/lstm_data/hf20_strict999.py\n?? src/lstm_data/hf20_strict999_audit.py\n?? src/lstm_data/hf20_strict999_fit.py\n?? src/lstm_data/hf20_strict999_model.py\n?? src/lstm_data/hf20_strict999_report.py\n?? src/lstm_data/hf20_strict999_verify.py\n?? src/lstm_data/hf20_targets.py\n?? src/lstm_data/hf20_targets_report.py\n?? tests/test_hf20_classical.py\n?? tests/test_hf20_mag_hybrid.py\n?? tests/test_hf20_mag_rank.py\n?? tests/test_hf20_matched.py\n?? tests/test_hf20_minute_inputs.py\n?? tests/test_hf20_minute_report.py\n?? tests/test_hf20_s2d_gap.py\n?? tests/test_hf20_s3c_priceonly.py\n?? tests/test_hf20_strict999.py\n?? tests/test_hf20_targets.py\n",
+  "python": "3.14.6",
+  "risk_name": "HIST4-SHRINK20-252",
+  "history": "strictly preceding252 regular/full-session dates per archived regular_session flag; current-session and early-close history origins excluded; all original OOS keys retained; mature<=issue and source origin<current",
+  "same_cap": 60,
+  "all_cap": 200,
+  "lookback": 252,
+  "pseudocount": 20,
+  "min_all": 30,
+  "floor": "reuse saved per-stock phase-specific S4 m2_floor: physical4h RMS fifth percentile; no new floor fit",
+  "coverage_gate": "eachyear>=90% OOS; inner-validation>=50 sessions and>=25 origins in each7contexts (executed S4 adequacy); both OOS categories and all7slots represented",
+  "penalties": [
+    0.001,
+    0.1,
+    10.0
+  ],
+  "objective": "sum normalized equal-session/origin/stock weights*(standardized_target-Xb-intercept)^2+lambda*sum(slopes^2); intercept unpenalized",
+  "max_final_fits": 8,
+  "max_trial_solves": 24,
+  "neural_starts": 0,
+  "neural_ledger": 186,
+  "ledger_hash": "a5f236f06b7af0c37901a3b49a5d92cac4397ea8dce77cc6bbc432a043b35fe4",
+  "expected_seconds_under": 900,
+  "expected_output_bytes_under": 15000000,
+  "caps": {
+    "task_bytes": 2500000000,
+    "project_bytes": 15000000000,
+    "ram_bytes": 2000000000
+  },
+  "checks": "targeted pytest/Ruff/basic on new files only; explicit user override of whole-project/editor sweep"
+}

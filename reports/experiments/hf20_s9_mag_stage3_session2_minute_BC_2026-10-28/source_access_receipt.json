@@ -1,0 +1,3219 @@
+{
+  "source_grant": {
+    "dataset": "mito0o852/OHLCV-1m",
+    "revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+    "months": "2010-07..2024-12",
+    "purpose": "bounded sample then streamed unique legal input blocks for S3-B/C; no acquisition",
+    "minute_template": "data/processed/hf20_hf1m_long_v1/<revision>/qa_v2/canonical_observed/YYYY-MM.parquet",
+    "source_receipt": "reports/experiments/hf20_s1s2_visual_s4a_2026-10-26_110310_preparation/opening_reaudit_v2/S4_NUMERICAL_SOURCE_READS.csv",
+    "asof": "completed intervals by origin; assumed historical publication byorigin+2min; not independently verified",
+    "actions": "same P019B retrospective price/action/quarantine vintage; provenance exclusions only; no learned issue IDs"
+  },
+  "all_numeric_reads": [
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2011-03.parquet",
+      "sha256": "b05a5ed8346f049e440217ed53673ab71983b431fde85239eb119ff5c7463e29",
+      "rows_read": 55663,
+      "quarantined_rows": 2,
+      "scheduled_hours": 47,
+      "expected_stock_minutes": 56400,
+      "genuine_stock_minutes": 55661,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 774,
+      "max_timestamp": "2011-03-31 19:29:00+00:00",
+      "min_timestamp": "2011-03-22 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2011-04.parquet",
+      "sha256": "575a23e5d7597081d0b6250500ebba01dc17b5ee9e7414f882ce87d5f8e4b10d",
+      "rows_read": 141994,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 141994,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1987,
+      "max_timestamp": "2011-04-29 19:29:00+00:00",
+      "min_timestamp": "2011-04-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2011-05.parquet",
+      "sha256": "a0ee2ef20f92cb1635b74d463109446bc2ddf15d4b8fca2452b11beb479849c5",
+      "rows_read": 149090,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 149090,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2063,
+      "max_timestamp": "2011-05-31 19:29:00+00:00",
+      "min_timestamp": "2011-05-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2011-06.parquet",
+      "sha256": "986dd5c295f1cf582bedab3551d1295f3f3514ce6c688569515a2d48176a23d8",
+      "rows_read": 157394,
+      "quarantined_rows": 1,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157393,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2308,
+      "max_timestamp": "2011-06-30 19:29:00+00:00",
+      "min_timestamp": "2011-06-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2011-07.parquet",
+      "sha256": "456341c89c7381c459ef4d9da135cc9b96995bb18093027b78af85bab37c7674",
+      "rows_read": 140275,
+      "quarantined_rows": 0,
+      "scheduled_hours": 118,
+      "expected_stock_minutes": 141600,
+      "genuine_stock_minutes": 140275,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2043,
+      "max_timestamp": "2011-07-29 19:29:00+00:00",
+      "min_timestamp": "2011-07-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2011-08.parquet",
+      "sha256": "becc1a922207bb374f16473001963388ce2b313385bb4d53664449354f414e4d",
+      "rows_read": 164564,
+      "quarantined_rows": 0,
+      "scheduled_hours": 138,
+      "expected_stock_minutes": 165600,
+      "genuine_stock_minutes": 164564,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2501,
+      "max_timestamp": "2011-08-31 19:29:00+00:00",
+      "min_timestamp": "2011-08-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2011-09.parquet",
+      "sha256": "bbca16168bfb77f4be14cc175ae7cb792afdded96e8a2f700b982cb0e093ef0b",
+      "rows_read": 149973,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 149973,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2269,
+      "max_timestamp": "2011-09-30 19:29:00+00:00",
+      "min_timestamp": "2011-09-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2011-10.parquet",
+      "sha256": "116e958c005d42851c4ae3bbe971f95ccd4437d8da9677d11e2c6f26ed687725",
+      "rows_read": 149926,
+      "quarantined_rows": 1,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 149925,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2252,
+      "max_timestamp": "2011-10-31 19:29:00+00:00",
+      "min_timestamp": "2011-10-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2011-11.parquet",
+      "sha256": "19d0edb314504954918e7eb3700e1103827534ee0a6545df7f66bfc6e2990e77",
+      "rows_read": 146305,
+      "quarantined_rows": 0,
+      "scheduled_hours": 123,
+      "expected_stock_minutes": 147600,
+      "genuine_stock_minutes": 146305,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2136,
+      "max_timestamp": "2011-11-30 20:29:00+00:00",
+      "min_timestamp": "2011-11-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2011-12.parquet",
+      "sha256": "981b1edf428edc1ccff6bc82cb2d06b4fb41257e6445bc307bfca8836b6a818b",
+      "rows_read": 148982,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 148982,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2093,
+      "max_timestamp": "2011-12-30 20:29:00+00:00",
+      "min_timestamp": "2011-12-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2012-01.parquet",
+      "sha256": "427cb5cf38e98f67599688b7e81f7cda4881670c6b413bd26269b9879cf8c1aa",
+      "rows_read": 138690,
+      "quarantined_rows": 0,
+      "scheduled_hours": 117,
+      "expected_stock_minutes": 140400,
+      "genuine_stock_minutes": 138690,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1947,
+      "max_timestamp": "2012-01-31 17:29:00+00:00",
+      "min_timestamp": "2012-01-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2012-02.parquet",
+      "sha256": "a7e450c172f1aea683c54827b18e3674757327ce57d2cee1ccd818221e57829e",
+      "rows_read": 130010,
+      "quarantined_rows": 0,
+      "scheduled_hours": 110,
+      "expected_stock_minutes": 132000,
+      "genuine_stock_minutes": 130010,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1805,
+      "max_timestamp": "2012-02-29 20:29:00+00:00",
+      "min_timestamp": "2012-02-02 18:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2012-03.parquet",
+      "sha256": "d591cdbd9bcfdb2238bf2a8824557fef59413f08d016b2ad99fb63ab5ed3c1ad",
+      "rows_read": 155576,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 155576,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2169,
+      "max_timestamp": "2012-03-30 19:29:00+00:00",
+      "min_timestamp": "2012-03-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2012-04.parquet",
+      "sha256": "39eaf160ec0176c80a188bb27fec6386da4479943635ac78ab9b721afe73c0f9",
+      "rows_read": 141973,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 141973,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2003,
+      "max_timestamp": "2012-04-30 19:29:00+00:00",
+      "min_timestamp": "2012-04-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2012-11.parquet",
+      "sha256": "0316d4982750ba5d6df41f90b728b045cbbe50371d33f3f62c0cc99d20c81f41",
+      "rows_read": 142313,
+      "quarantined_rows": 0,
+      "scheduled_hours": 121,
+      "expected_stock_minutes": 145200,
+      "genuine_stock_minutes": 142313,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1940,
+      "max_timestamp": "2012-11-30 20:29:00+00:00",
+      "min_timestamp": "2012-11-01 15:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2012-12.parquet",
+      "sha256": "420967ec4ef4bfeae2ba16c9ecd449f2fbc6fc6daafb3f3fd79249feb2ec245b",
+      "rows_read": 137427,
+      "quarantined_rows": 0,
+      "scheduled_hours": 117,
+      "expected_stock_minutes": 140400,
+      "genuine_stock_minutes": 137427,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1805,
+      "max_timestamp": "2012-12-31 20:29:00+00:00",
+      "min_timestamp": "2012-12-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-01.parquet",
+      "sha256": "ce2aeabd4ad2e645a38a1d3c43289f5af6fe824f27607cf9993e6c2bd512ddf7",
+      "rows_read": 148405,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 148405,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1945,
+      "max_timestamp": "2013-01-31 20:29:00+00:00",
+      "min_timestamp": "2013-01-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-02.parquet",
+      "sha256": "05486bb675601e50b4f03b435d75df43ee5d2dc2be258feaee4218770ca50f05",
+      "rows_read": 134612,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 134612,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1754,
+      "max_timestamp": "2013-02-28 20:29:00+00:00",
+      "min_timestamp": "2013-02-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-03.parquet",
+      "sha256": "48d7adb855edb275f07d70457d6bf9af3b7734caf2b58e7fb25ad194364aa2ab",
+      "rows_read": 128941,
+      "quarantined_rows": 0,
+      "scheduled_hours": 110,
+      "expected_stock_minutes": 132000,
+      "genuine_stock_minutes": 128941,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1649,
+      "max_timestamp": "2013-03-28 19:29:00+00:00",
+      "min_timestamp": "2013-03-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-04.parquet",
+      "sha256": "b53154fae221f1c18de8d4380a4ad97f457c7132ae8bab5b838744adf6d89727",
+      "rows_read": 151619,
+      "quarantined_rows": 0,
+      "scheduled_hours": 129,
+      "expected_stock_minutes": 154800,
+      "genuine_stock_minutes": 151619,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2006,
+      "max_timestamp": "2013-04-30 19:29:00+00:00",
+      "min_timestamp": "2013-04-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-05.parquet",
+      "sha256": "6133a8c0353212a56d47bc30f38f3751d0e13b9fcea0cca0a3b13ee3078600c2",
+      "rows_read": 155797,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 155797,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2116,
+      "max_timestamp": "2013-05-31 19:29:00+00:00",
+      "min_timestamp": "2013-05-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-06.parquet",
+      "sha256": "09e6bed6ce4fc7b6366f257e058f309ecfcbed2dea71d8341df73dbd75a2fb02",
+      "rows_read": 142479,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 142479,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2039,
+      "max_timestamp": "2013-06-28 19:29:00+00:00",
+      "min_timestamp": "2013-06-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-07.parquet",
+      "sha256": "fe1c2ba45d1c3565943b750e9f787ef3fa901742f314c7ab8d41ec784e0ffa25",
+      "rows_read": 152145,
+      "quarantined_rows": 0,
+      "scheduled_hours": 129,
+      "expected_stock_minutes": 154800,
+      "genuine_stock_minutes": 152145,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2051,
+      "max_timestamp": "2013-07-31 19:29:00+00:00",
+      "min_timestamp": "2013-07-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-08.parquet",
+      "sha256": "37f5a98ef616150e6d0b8bc4fd859767767e5074a2acf680c4e539de2cc40ddb",
+      "rows_read": 150632,
+      "quarantined_rows": 0,
+      "scheduled_hours": 128,
+      "expected_stock_minutes": 153600,
+      "genuine_stock_minutes": 150632,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1925,
+      "max_timestamp": "2013-08-30 19:29:00+00:00",
+      "min_timestamp": "2013-08-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-09.parquet",
+      "sha256": "700450ac26894730a373006c4775d2035b89fbc5e4dba44200c0587c1c449ee6",
+      "rows_read": 136608,
+      "quarantined_rows": 0,
+      "scheduled_hours": 116,
+      "expected_stock_minutes": 139200,
+      "genuine_stock_minutes": 136608,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1785,
+      "max_timestamp": "2013-09-30 15:29:00+00:00",
+      "min_timestamp": "2013-09-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-10.parquet",
+      "sha256": "6e7d3b10bf4e1817382f4539af7a613d9b934b7021be51d5fe91616a0592288d",
+      "rows_read": 148503,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 148503,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2041,
+      "max_timestamp": "2013-10-31 19:29:00+00:00",
+      "min_timestamp": "2013-10-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-11.parquet",
+      "sha256": "48df273957c0ab38db31a2f3eb307503a2baa7c16637170d140784181f73aae9",
+      "rows_read": 137410,
+      "quarantined_rows": 0,
+      "scheduled_hours": 117,
+      "expected_stock_minutes": 140400,
+      "genuine_stock_minutes": 137410,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1800,
+      "max_timestamp": "2013-11-29 17:29:00+00:00",
+      "min_timestamp": "2013-11-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2013-12.parquet",
+      "sha256": "bb5e1363e62c6bb5d8cc8664933f5c7a429eac81824cac848530b4dedab36688",
+      "rows_read": 143544,
+      "quarantined_rows": 0,
+      "scheduled_hours": 122,
+      "expected_stock_minutes": 146400,
+      "genuine_stock_minutes": 143544,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1824,
+      "max_timestamp": "2013-12-31 20:29:00+00:00",
+      "min_timestamp": "2013-12-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-01.parquet",
+      "sha256": "b830cdf1016c240ca3c0823c2b3cbe76b343c43e8505842f4c99f06d2b53b8b2",
+      "rows_read": 149390,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 149390,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2060,
+      "max_timestamp": "2014-01-31 20:29:00+00:00",
+      "min_timestamp": "2014-01-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-02.parquet",
+      "sha256": "9476a38cf3a226c9c2f61fd7e283e992bc9b44b77ebfe78013332516361129e5",
+      "rows_read": 136054,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136054,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2011,
+      "max_timestamp": "2014-02-28 20:29:00+00:00",
+      "min_timestamp": "2014-02-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-03.parquet",
+      "sha256": "a98886d55a4cc57d13d0ecf0af07dc6bdf2041afced9f061995af199089ebea1",
+      "rows_read": 150306,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150306,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2154,
+      "max_timestamp": "2014-03-31 19:29:00+00:00",
+      "min_timestamp": "2014-03-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-04.parquet",
+      "sha256": "c6c7ba9867ab94660cee3f42c7a42979b6b280f2a7aa9f4f56e7473faad1fc5e",
+      "rows_read": 150702,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150702,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2258,
+      "max_timestamp": "2014-04-30 19:29:00+00:00",
+      "min_timestamp": "2014-04-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-05.parquet",
+      "sha256": "807f2c5fa943921486d9f77b1b5cf6b050b1edb6a532b8545d3568a2917d975b",
+      "rows_read": 150354,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150354,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2080,
+      "max_timestamp": "2014-05-30 19:29:00+00:00",
+      "min_timestamp": "2014-05-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-06.parquet",
+      "sha256": "e0226ed66da71e3eda938c0cd72e9cd044fc1ddd285ff30b7b15fa58cbccb835",
+      "rows_read": 149992,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 149992,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1970,
+      "max_timestamp": "2014-06-30 19:29:00+00:00",
+      "min_timestamp": "2014-06-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-07.parquet",
+      "sha256": "df9dace3b5ae4033fb402db77a3820e124046ed8412345ee360234ff6a7657a7",
+      "rows_read": 153918,
+      "quarantined_rows": 0,
+      "scheduled_hours": 129,
+      "expected_stock_minutes": 154800,
+      "genuine_stock_minutes": 153918,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2133,
+      "max_timestamp": "2014-07-31 19:29:00+00:00",
+      "min_timestamp": "2014-07-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-08.parquet",
+      "sha256": "6c355b4fece538474151292ce4d8c2cd5e229417525f7fe2af838fa42004f14f",
+      "rows_read": 149822,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 149822,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1913,
+      "max_timestamp": "2014-08-29 19:29:00+00:00",
+      "min_timestamp": "2014-08-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-09.parquet",
+      "sha256": "67ee007023f6b74a3839a488b710684ca1160cd80ad30fe57acad28b52128633",
+      "rows_read": 150501,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150501,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2181,
+      "max_timestamp": "2014-09-30 19:29:00+00:00",
+      "min_timestamp": "2014-09-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-10.parquet",
+      "sha256": "ae3c80206d00463a8ca2d3c025bcd444e334d0c16141866ec7f90607a263ba9e",
+      "rows_read": 162902,
+      "quarantined_rows": 0,
+      "scheduled_hours": 136,
+      "expected_stock_minutes": 163200,
+      "genuine_stock_minutes": 162902,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2565,
+      "max_timestamp": "2014-10-31 19:29:00+00:00",
+      "min_timestamp": "2014-10-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-11.parquet",
+      "sha256": "07738d3248a7f5cf03ecb5050df8551640a7300c971a4baafe5aa8dc7d01161e",
+      "rows_read": 132380,
+      "quarantined_rows": 0,
+      "scheduled_hours": 111,
+      "expected_stock_minutes": 133200,
+      "genuine_stock_minutes": 132380,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1862,
+      "max_timestamp": "2014-11-28 17:29:00+00:00",
+      "min_timestamp": "2014-11-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2014-12.parquet",
+      "sha256": "871796abae60619067cb7c187fd1ca8a860e2a522e0fb9b7e23d0a2cb1c2c92c",
+      "rows_read": 153916,
+      "quarantined_rows": 0,
+      "scheduled_hours": 129,
+      "expected_stock_minutes": 154800,
+      "genuine_stock_minutes": 153916,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2229,
+      "max_timestamp": "2014-12-31 20:29:00+00:00",
+      "min_timestamp": "2014-12-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-01.parquet",
+      "sha256": "0448f52654db6ffc8121ebacd4cd86720b1107ef0c395a2694b91e843223672b",
+      "rows_read": 143076,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143076,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2176,
+      "max_timestamp": "2015-01-30 20:29:00+00:00",
+      "min_timestamp": "2015-01-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-02.parquet",
+      "sha256": "72dd663a70458d0dedb6fffef929403ee0ac4b5b4d037635bcbbebcd20a45806",
+      "rows_read": 135941,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 135941,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2034,
+      "max_timestamp": "2015-02-27 20:29:00+00:00",
+      "min_timestamp": "2015-02-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-03.parquet",
+      "sha256": "75a4b10aa6868d2a07b544dcf1cce5d0b661bfcedaab4b28b59a72028282c5da",
+      "rows_read": 157368,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157368,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2292,
+      "max_timestamp": "2015-03-31 19:29:00+00:00",
+      "min_timestamp": "2015-03-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-04.parquet",
+      "sha256": "d8adca5d0c95b20e8993989d1965d352acff4e4c553e1ed2c31835a0994e8d48",
+      "rows_read": 150082,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150082,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2162,
+      "max_timestamp": "2015-04-30 19:29:00+00:00",
+      "min_timestamp": "2015-04-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-05.parquet",
+      "sha256": "2b3421c4d2c4198eecfe160b6b64e0fd00ed7ff34947f2d92aabef8cf4f31fd7",
+      "rows_read": 142605,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 142605,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1950,
+      "max_timestamp": "2015-05-29 19:29:00+00:00",
+      "min_timestamp": "2015-05-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-06.parquet",
+      "sha256": "c55359c72c3addf989a145d66609fad831f98a72478e0307efb43e892caf48f6",
+      "rows_read": 157012,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157012,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2100,
+      "max_timestamp": "2015-06-30 19:29:00+00:00",
+      "min_timestamp": "2015-06-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-07.parquet",
+      "sha256": "cdc0ea5e6fe4d8db24e749295e7cc221cfa457b20ae9c325409c05c86656107c",
+      "rows_read": 157339,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157339,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2226,
+      "max_timestamp": "2015-07-31 19:29:00+00:00",
+      "min_timestamp": "2015-07-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-08.parquet",
+      "sha256": "7b1a232ffce8eef8f837382f8ef7cf86f57467e8cdcd2e05a5649219013b6ba3",
+      "rows_read": 149920,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 149920,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2183,
+      "max_timestamp": "2015-08-31 19:29:00+00:00",
+      "min_timestamp": "2015-08-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-09.parquet",
+      "sha256": "34957d4a00f700588b974a65de40440af5109f018e78405c5d5aeee9ce4397ae",
+      "rows_read": 148206,
+      "quarantined_rows": 0,
+      "scheduled_hours": 125,
+      "expected_stock_minutes": 150000,
+      "genuine_stock_minutes": 148206,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2229,
+      "max_timestamp": "2015-09-30 19:29:00+00:00",
+      "min_timestamp": "2015-09-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-10.parquet",
+      "sha256": "6fe9167b9c6bbcfd4f2996abc2251c8f3f23db2c0e63d4f69c72f0949329d58c",
+      "rows_read": 156816,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 156816,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2334,
+      "max_timestamp": "2015-10-30 19:29:00+00:00",
+      "min_timestamp": "2015-10-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-11.parquet",
+      "sha256": "b5a08c738a5a035044630d2a5adba3f6bc3e3ad997e7e7bda030d0b23a41e468",
+      "rows_read": 138802,
+      "quarantined_rows": 0,
+      "scheduled_hours": 117,
+      "expected_stock_minutes": 140400,
+      "genuine_stock_minutes": 138802,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1965,
+      "max_timestamp": "2015-11-30 20:29:00+00:00",
+      "min_timestamp": "2015-11-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2015-12.parquet",
+      "sha256": "956b146bab3e5102f204d240b312385e61ea873dbdf9edb685147f535a3a1d8d",
+      "rows_read": 153572,
+      "quarantined_rows": 0,
+      "scheduled_hours": 129,
+      "expected_stock_minutes": 154800,
+      "genuine_stock_minutes": 153572,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2240,
+      "max_timestamp": "2015-12-31 20:29:00+00:00",
+      "min_timestamp": "2015-12-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-01.parquet",
+      "sha256": "a5901da144b757eb3b0c16341097c285199a1c06ecacc0aeb68de16336d5e85d",
+      "rows_read": 136443,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136443,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2153,
+      "max_timestamp": "2016-01-29 20:29:00+00:00",
+      "min_timestamp": "2016-01-04 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-02.parquet",
+      "sha256": "4b39a13f019685efcbd88da91099d9be15846c21cd6ed5c76ef5c856d14582f4",
+      "rows_read": 142749,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 142749,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2216,
+      "max_timestamp": "2016-02-29 20:29:00+00:00",
+      "min_timestamp": "2016-02-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-03.parquet",
+      "sha256": "eff425535c17ebe71cbd0068587441c80689d9e657afb83ea23dbd809834cb69",
+      "rows_read": 157790,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157790,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2410,
+      "max_timestamp": "2016-03-31 19:29:00+00:00",
+      "min_timestamp": "2016-03-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-04.parquet",
+      "sha256": "95da6aca9b70bd503f3335186d7efba5c48d2fa24d0e43b0ccfe8b4070e961f8",
+      "rows_read": 150439,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150439,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2262,
+      "max_timestamp": "2016-04-29 19:29:00+00:00",
+      "min_timestamp": "2016-04-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-05.parquet",
+      "sha256": "d1839c061ee8d9490dc785f3b98c3dd318b647b92e3494a83d89254d327ebd8d",
+      "rows_read": 150473,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150473,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2199,
+      "max_timestamp": "2016-05-31 19:29:00+00:00",
+      "min_timestamp": "2016-05-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-06.parquet",
+      "sha256": "79f5131612b662d7aeb9b74c65dc48f48e419f6855ae091d4af1199d927126e5",
+      "rows_read": 157822,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157822,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2368,
+      "max_timestamp": "2016-06-30 19:29:00+00:00",
+      "min_timestamp": "2016-06-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-07.parquet",
+      "sha256": "8949e82b39c8491b34e81ad0ccfa03bbdd0bccac5479571d3046f7e721b43651",
+      "rows_read": 143480,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143480,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2136,
+      "max_timestamp": "2016-07-29 19:29:00+00:00",
+      "min_timestamp": "2016-07-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-08.parquet",
+      "sha256": "603fbb54677c9717da049184e4dccf2adccf457678d4a9d2e330d66ed2ed2bab",
+      "rows_read": 164389,
+      "quarantined_rows": 0,
+      "scheduled_hours": 138,
+      "expected_stock_minutes": 165600,
+      "genuine_stock_minutes": 164389,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2271,
+      "max_timestamp": "2016-08-31 19:29:00+00:00",
+      "min_timestamp": "2016-08-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-09.parquet",
+      "sha256": "5aadb8b466122325e3810dd255bc49fcfae5d0bcf746d401764a43b43d633b40",
+      "rows_read": 150746,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150746,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2330,
+      "max_timestamp": "2016-09-30 19:29:00+00:00",
+      "min_timestamp": "2016-09-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-10.parquet",
+      "sha256": "65e8374c7ed97823f6c63f6ce77e6e310e7370bed9ec21021dff0eac413b60f0",
+      "rows_read": 150572,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150572,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2251,
+      "max_timestamp": "2016-10-31 19:29:00+00:00",
+      "min_timestamp": "2016-10-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-11.parquet",
+      "sha256": "3eb4d2bf0ccbbeea101816b133f9e818b2423a796ffacd52c93428278586f693",
+      "rows_read": 147289,
+      "quarantined_rows": 0,
+      "scheduled_hours": 123,
+      "expected_stock_minutes": 147600,
+      "genuine_stock_minutes": 147289,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2277,
+      "max_timestamp": "2016-11-30 20:29:00+00:00",
+      "min_timestamp": "2016-11-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2016-12.parquet",
+      "sha256": "927430a24d142fa9f7bfa1c3afd3eb44f378aac361f07b26b452ae420d513fba",
+      "rows_read": 150529,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150529,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2231,
+      "max_timestamp": "2016-12-30 20:29:00+00:00",
+      "min_timestamp": "2016-12-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-01.parquet",
+      "sha256": "4d15d68b7e721f41391454f67b32694d801a1555e55dd7f4f0bfe5c85905ebb0",
+      "rows_read": 143555,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143555,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2159,
+      "max_timestamp": "2017-01-31 20:29:00+00:00",
+      "min_timestamp": "2017-01-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-02.parquet",
+      "sha256": "8fb477457cd8090a752817067a8d31f69881aad1fb8388ecd21914bd3355a96f",
+      "rows_read": 136358,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136358,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2046,
+      "max_timestamp": "2017-02-28 20:29:00+00:00",
+      "min_timestamp": "2017-02-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-03.parquet",
+      "sha256": "b54210fe81aa97ac2d0c37037e6cd2929a21693c946e1027499e21005d9e52f7",
+      "rows_read": 164896,
+      "quarantined_rows": 0,
+      "scheduled_hours": 138,
+      "expected_stock_minutes": 165600,
+      "genuine_stock_minutes": 164896,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2416,
+      "max_timestamp": "2017-03-31 19:29:00+00:00",
+      "min_timestamp": "2017-03-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-04.parquet",
+      "sha256": "3cf885217a9a47d78de3b54e54de1b71cf714ae4add05d5174843b90ef74504f",
+      "rows_read": 136171,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136171,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2014,
+      "max_timestamp": "2017-04-28 19:29:00+00:00",
+      "min_timestamp": "2017-04-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-05.parquet",
+      "sha256": "776eaca0164347347ffa241e63ba111eeee70fe10d2235b10b83fb17a0a7b89c",
+      "rows_read": 157746,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157746,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2290,
+      "max_timestamp": "2017-05-31 19:29:00+00:00",
+      "min_timestamp": "2017-05-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-06.parquet",
+      "sha256": "28d03838c1edbb409bb9a61c8436ba2361c30c196692db3ae963f93ce9dffd3a",
+      "rows_read": 157975,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157975,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2374,
+      "max_timestamp": "2017-06-30 19:29:00+00:00",
+      "min_timestamp": "2017-06-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-07.parquet",
+      "sha256": "440f6f94424868303b13221a0cc6c4b065258b5047a1482dd03b5712dccc7a19",
+      "rows_read": 139830,
+      "quarantined_rows": 0,
+      "scheduled_hours": 117,
+      "expected_stock_minutes": 140400,
+      "genuine_stock_minutes": 139830,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2071,
+      "max_timestamp": "2017-07-31 19:29:00+00:00",
+      "min_timestamp": "2017-07-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-08.parquet",
+      "sha256": "f1c9ea5d764afc6446b7e1dc5900ad9890291fa31b4073d3aa9c1db4412cad3d",
+      "rows_read": 164870,
+      "quarantined_rows": 0,
+      "scheduled_hours": 138,
+      "expected_stock_minutes": 165600,
+      "genuine_stock_minutes": 164870,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2344,
+      "max_timestamp": "2017-08-31 19:29:00+00:00",
+      "min_timestamp": "2017-08-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-09.parquet",
+      "sha256": "26ee7304b737d9193ab82cc11b1b277b6ac84fbf614c475563d09d00c91041ee",
+      "rows_read": 143285,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143285,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2055,
+      "max_timestamp": "2017-09-29 19:29:00+00:00",
+      "min_timestamp": "2017-09-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-10.parquet",
+      "sha256": "0480fb3623a054c9445cf15f2696eb08d584e052237451c0fda69e1c5e113184",
+      "rows_read": 157427,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157427,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2195,
+      "max_timestamp": "2017-10-31 19:29:00+00:00",
+      "min_timestamp": "2017-10-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-11.parquet",
+      "sha256": "9ea9846b99e26f49790f9627fe9023d6c88f8c539c36c07c7a30e6a1256f3a4e",
+      "rows_read": 146839,
+      "quarantined_rows": 0,
+      "scheduled_hours": 123,
+      "expected_stock_minutes": 147600,
+      "genuine_stock_minutes": 146839,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2112,
+      "max_timestamp": "2017-11-30 20:29:00+00:00",
+      "min_timestamp": "2017-11-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2017-12.parquet",
+      "sha256": "d097539db5e9296502f70e0a841157bf3d9a5e87a2f852b06073360a796338aa",
+      "rows_read": 142735,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 142735,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1939,
+      "max_timestamp": "2017-12-29 20:29:00+00:00",
+      "min_timestamp": "2017-12-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-01.parquet",
+      "sha256": "9a893f53ed90ae9329b2efc60efd27fe2a446b6389df28857d03cf8a3b0bcc84",
+      "rows_read": 150687,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150687,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2257,
+      "max_timestamp": "2018-01-31 20:29:00+00:00",
+      "min_timestamp": "2018-01-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-02.parquet",
+      "sha256": "695c82e0c9d02fb0b88dec193ff59ccf4c8b0782eeaceab66f9be78ecf1f439f",
+      "rows_read": 136598,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136598,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2156,
+      "max_timestamp": "2018-02-28 20:29:00+00:00",
+      "min_timestamp": "2018-02-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-03.parquet",
+      "sha256": "aa990b3f0480ec38c3093df3f63f3c99c6b2ed2f22d4f6d69d636257bc3b168f",
+      "rows_read": 151051,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 151051,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2411,
+      "max_timestamp": "2018-03-29 19:29:00+00:00",
+      "min_timestamp": "2018-03-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-04.parquet",
+      "sha256": "d35f101c76d2e708b308d2805826a36bfa3ab3eabd86d3c111a084041d5b3880",
+      "rows_read": 150997,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150997,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2384,
+      "max_timestamp": "2018-04-30 19:29:00+00:00",
+      "min_timestamp": "2018-04-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-05.parquet",
+      "sha256": "2210ce9141d65a95d762a97d54886e4431cb8a0e065a861dc27ec5e6511715c9",
+      "rows_read": 157891,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157891,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2374,
+      "max_timestamp": "2018-05-31 19:29:00+00:00",
+      "min_timestamp": "2018-05-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-06.parquet",
+      "sha256": "67ad7f6ce3cf9a94a7b5bacfa05381fee6a478730ca8dc6f9ac46264f7dda670",
+      "rows_read": 150719,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150719,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2296,
+      "max_timestamp": "2018-06-29 19:29:00+00:00",
+      "min_timestamp": "2018-06-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-07.parquet",
+      "sha256": "8c58d501b1e5fd430a97b4d55eea41d9c6260fe4aaace520600759be57172955",
+      "rows_read": 147157,
+      "quarantined_rows": 0,
+      "scheduled_hours": 123,
+      "expected_stock_minutes": 147600,
+      "genuine_stock_minutes": 147157,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2239,
+      "max_timestamp": "2018-07-31 19:29:00+00:00",
+      "min_timestamp": "2018-07-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-08.parquet",
+      "sha256": "b1cd80e48ac5215cf5947f61dc3409ed780dac02cdd8ed858327ee125821db61",
+      "rows_read": 162483,
+      "quarantined_rows": 0,
+      "scheduled_hours": 136,
+      "expected_stock_minutes": 163200,
+      "genuine_stock_minutes": 162483,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2340,
+      "max_timestamp": "2018-08-31 19:29:00+00:00",
+      "min_timestamp": "2018-08-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-09.parquet",
+      "sha256": "45d0103df30ece1e513975d0e5f6329a8bd0551fce693bf7b02f2ff31ca133e3",
+      "rows_read": 136536,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136536,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2100,
+      "max_timestamp": "2018-09-28 19:29:00+00:00",
+      "min_timestamp": "2018-09-04 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-10.parquet",
+      "sha256": "4404d8826f2df5fc55517028210b461b8b5a5f490333796d5831fbceb1181ebb",
+      "rows_read": 165519,
+      "quarantined_rows": 0,
+      "scheduled_hours": 138,
+      "expected_stock_minutes": 165600,
+      "genuine_stock_minutes": 165519,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2697,
+      "max_timestamp": "2018-10-31 19:29:00+00:00",
+      "min_timestamp": "2018-10-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-11.parquet",
+      "sha256": "749fe0473ce91d04286d550f52d27e1777f6ceab4064a12663dd446c42254f66",
+      "rows_read": 147499,
+      "quarantined_rows": 0,
+      "scheduled_hours": 123,
+      "expected_stock_minutes": 147600,
+      "genuine_stock_minutes": 147499,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2382,
+      "max_timestamp": "2018-11-30 20:29:00+00:00",
+      "min_timestamp": "2018-11-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2018-12.parquet",
+      "sha256": "51c69acca58e00907f8287cfeecc0babac405a753cf9afc18405f9629caa29c7",
+      "rows_read": 133185,
+      "quarantined_rows": 0,
+      "scheduled_hours": 111,
+      "expected_stock_minutes": 133200,
+      "genuine_stock_minutes": 133185,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2207,
+      "max_timestamp": "2018-12-31 20:29:00+00:00",
+      "min_timestamp": "2018-12-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-01.parquet",
+      "sha256": "ef433d24a5f2c9b2dceb75ebb1d3b88caa30bc5077e46a0ae2cc3e580c18a798",
+      "rows_read": 151094,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 151094,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2441,
+      "max_timestamp": "2019-01-31 20:29:00+00:00",
+      "min_timestamp": "2019-01-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-02.parquet",
+      "sha256": "37fc2ff29adc3537d513518712b51a4603e698e0f8d2c0f0aec5990885f80b40",
+      "rows_read": 136527,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136527,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2110,
+      "max_timestamp": "2019-02-28 20:29:00+00:00",
+      "min_timestamp": "2019-02-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-03.parquet",
+      "sha256": "2e9a08dd4abcc99a8b3b9cbc1d890d5d8bafe1ae850a33dc4ca2dd92167c9886",
+      "rows_read": 151084,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 151084,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2439,
+      "max_timestamp": "2019-03-29 19:29:00+00:00",
+      "min_timestamp": "2019-03-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-04.parquet",
+      "sha256": "7fe21daa0edaaf7228f0a0260c795a4345ad148b654c368c88e7d554644534fe",
+      "rows_read": 150753,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150753,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2335,
+      "max_timestamp": "2019-04-30 19:29:00+00:00",
+      "min_timestamp": "2019-04-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-05.parquet",
+      "sha256": "61b0f6b62f6d056dcb29b82e24eb86895f7bd4bbd7f01b585e2289daaaff1fe8",
+      "rows_read": 158075,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 158075,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2499,
+      "max_timestamp": "2019-05-31 19:29:00+00:00",
+      "min_timestamp": "2019-05-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-06.parquet",
+      "sha256": "f9dfd0b8c140a153a3b918ccad4c59040b06bc17625e65a3e6b53beef4bae67d",
+      "rows_read": 143548,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143548,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2191,
+      "max_timestamp": "2019-06-28 19:29:00+00:00",
+      "min_timestamp": "2019-06-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-07.parquet",
+      "sha256": "528f5ca89ced4e1b8ba10a13e3daf440b4fbb964821bc088766e65938e5a073c",
+      "rows_read": 154229,
+      "quarantined_rows": 0,
+      "scheduled_hours": 129,
+      "expected_stock_minutes": 154800,
+      "genuine_stock_minutes": 154229,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2355,
+      "max_timestamp": "2019-07-31 19:29:00+00:00",
+      "min_timestamp": "2019-07-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-08.parquet",
+      "sha256": "2e3a94214ed7e67aa6e13692f89e87724c536b8f1cc4f6c55c27cefa6f7b359f",
+      "rows_read": 157723,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157723,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2411,
+      "max_timestamp": "2019-08-30 19:29:00+00:00",
+      "min_timestamp": "2019-08-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-09.parquet",
+      "sha256": "a99dfcd54d0240a47498160f34211d4a8bd45ba3a69a09b94e15aa6ab7fb1b3d",
+      "rows_read": 143373,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143373,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2135,
+      "max_timestamp": "2019-09-30 19:29:00+00:00",
+      "min_timestamp": "2019-09-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-10.parquet",
+      "sha256": "c11114802882c778c996ad1b72aff30109283f65def2ee97e015f25022be2e5f",
+      "rows_read": 164711,
+      "quarantined_rows": 0,
+      "scheduled_hours": 138,
+      "expected_stock_minutes": 165600,
+      "genuine_stock_minutes": 164711,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2427,
+      "max_timestamp": "2019-10-31 19:29:00+00:00",
+      "min_timestamp": "2019-10-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-11.parquet",
+      "sha256": "62dd6ca411cf0ff8ec357ca53900167eee2793b74fab916c23b064071655709b",
+      "rows_read": 139582,
+      "quarantined_rows": 0,
+      "scheduled_hours": 117,
+      "expected_stock_minutes": 140400,
+      "genuine_stock_minutes": 139582,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2057,
+      "max_timestamp": "2019-11-29 17:29:00+00:00",
+      "min_timestamp": "2019-11-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2019-12.parquet",
+      "sha256": "2673dcbde38a574ccca219fb31f6249bc371afbee6884b130a045cb484c46621",
+      "rows_read": 146679,
+      "quarantined_rows": 0,
+      "scheduled_hours": 123,
+      "expected_stock_minutes": 147600,
+      "genuine_stock_minutes": 146679,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2142,
+      "max_timestamp": "2019-12-31 20:29:00+00:00",
+      "min_timestamp": "2019-12-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-01.parquet",
+      "sha256": "64d9af10209ff4ca1e14078179598ccbea1acb125fb131196a6adbd2947bf0b2",
+      "rows_read": 149580,
+      "quarantined_rows": 0,
+      "scheduled_hours": 125,
+      "expected_stock_minutes": 150000,
+      "genuine_stock_minutes": 149580,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2308,
+      "max_timestamp": "2020-01-31 20:29:00+00:00",
+      "min_timestamp": "2020-01-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-02.parquet",
+      "sha256": "a4e61459fe421a0e043d31695997371902cf2fe3f8bca9e0ce149a658a844688",
+      "rows_read": 136408,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136408,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2099,
+      "max_timestamp": "2020-02-28 20:29:00+00:00",
+      "min_timestamp": "2020-02-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-03.parquet",
+      "sha256": "15809cda6e9be0d8c874fd95894c7d90ba337b3a5849b247c53f21543ce91d23",
+      "rows_read": 157179,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157179,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2547,
+      "max_timestamp": "2020-03-31 19:29:00+00:00",
+      "min_timestamp": "2020-03-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-04.parquet",
+      "sha256": "f749fbee1a3873d2bfba76f8de128674d58bbe1bc3ca1f796d130e1ca4a4ac8a",
+      "rows_read": 151021,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 151021,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2446,
+      "max_timestamp": "2020-04-30 19:29:00+00:00",
+      "min_timestamp": "2020-04-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-05.parquet",
+      "sha256": "7be3204ae23452a36ce23df0764f228b49ccdf5e710a3bb13b48563f27a8c824",
+      "rows_read": 143701,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143701,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2267,
+      "max_timestamp": "2020-05-29 19:29:00+00:00",
+      "min_timestamp": "2020-05-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-06.parquet",
+      "sha256": "050ab36d0558ce445dc05e8be0041fb34c26eb5bc7feb62fb0bc82b7f3fec880",
+      "rows_read": 158172,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 158172,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2527,
+      "max_timestamp": "2020-06-30 19:29:00+00:00",
+      "min_timestamp": "2020-06-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-07.parquet",
+      "sha256": "3fa88b6104a2ad29946d3cdc8284d8a82f028f78401c8677adfeeca3ee7a8630",
+      "rows_read": 158116,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 158116,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2493,
+      "max_timestamp": "2020-07-31 19:29:00+00:00",
+      "min_timestamp": "2020-07-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-08.parquet",
+      "sha256": "57e50b4db0f9c36cc111f50fd56e6883aed1a0b7b29b382d20cfda46104bcf93",
+      "rows_read": 150363,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150363,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2253,
+      "max_timestamp": "2020-08-31 19:29:00+00:00",
+      "min_timestamp": "2020-08-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-09.parquet",
+      "sha256": "7917adbc803f8345ed1c85e9e61fa5f44401d290ec1b39af3b796ee7fc021bf4",
+      "rows_read": 150936,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150936,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2393,
+      "max_timestamp": "2020-09-30 19:29:00+00:00",
+      "min_timestamp": "2020-09-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-10.parquet",
+      "sha256": "958635a1d1fd16f883caf83e48f3cca307da7654dda4ba68c38b40abec858238",
+      "rows_read": 157604,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157604,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2444,
+      "max_timestamp": "2020-10-30 19:29:00+00:00",
+      "min_timestamp": "2020-10-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-11.parquet",
+      "sha256": "3b6cd91f00c83864a9622336c62521b4476027ce9a11b46f2b3c6ff069d616dd",
+      "rows_read": 139366,
+      "quarantined_rows": 0,
+      "scheduled_hours": 117,
+      "expected_stock_minutes": 140400,
+      "genuine_stock_minutes": 139366,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2118,
+      "max_timestamp": "2020-11-30 20:29:00+00:00",
+      "min_timestamp": "2020-11-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-12.parquet",
+      "sha256": "ed90afc77cadcd9503731c8d15c9b8c68c4ce959b24988f29738c12a7406f5fe",
+      "rows_read": 153476,
+      "quarantined_rows": 0,
+      "scheduled_hours": 129,
+      "expected_stock_minutes": 154800,
+      "genuine_stock_minutes": 153476,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2200,
+      "max_timestamp": "2020-12-31 20:29:00+00:00",
+      "min_timestamp": "2020-12-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-01.parquet",
+      "sha256": "336f2ce1e172d02fff978851168db63edc3b864de81e7a7765871d6f57b617e7",
+      "rows_read": 136061,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136061,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2092,
+      "max_timestamp": "2021-01-29 20:29:00+00:00",
+      "min_timestamp": "2021-01-04 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-02.parquet",
+      "sha256": "7fdcd313ef726dc10507e43bcea48ca48362a65b8ada711645b0a44e7af408e3",
+      "rows_read": 136111,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136111,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2077,
+      "max_timestamp": "2021-02-26 20:29:00+00:00",
+      "min_timestamp": "2021-02-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-03.parquet",
+      "sha256": "ce71a181a387be282cdb13b6eeba4d78db9782a69e1bd4cc7b0f255d97fcec4c",
+      "rows_read": 145802,
+      "quarantined_rows": 0,
+      "scheduled_hours": 122,
+      "expected_stock_minutes": 146400,
+      "genuine_stock_minutes": 145802,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2272,
+      "max_timestamp": "2021-03-31 19:29:00+00:00",
+      "min_timestamp": "2021-03-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-04.parquet",
+      "sha256": "263c638663cd3070329518ec354e67b4536039982c3d26306b5fedb032dd64db",
+      "rows_read": 150183,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150183,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2266,
+      "max_timestamp": "2021-04-30 19:29:00+00:00",
+      "min_timestamp": "2021-04-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-05.parquet",
+      "sha256": "194b55a2e86c8cbad4d2621ac440153ee5dedacfa137e12eb1fbb20a53eea85a",
+      "rows_read": 143112,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143112,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2156,
+      "max_timestamp": "2021-05-28 19:29:00+00:00",
+      "min_timestamp": "2021-05-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-06.parquet",
+      "sha256": "47710016435ad7c56a2a32e11586c80a2d199de9cc2b6715bb23fb1813f083ed",
+      "rows_read": 123604,
+      "quarantined_rows": 0,
+      "scheduled_hours": 104,
+      "expected_stock_minutes": 124800,
+      "genuine_stock_minutes": 123604,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1826,
+      "max_timestamp": "2021-06-29 18:29:00+00:00",
+      "min_timestamp": "2021-06-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-07.parquet",
+      "sha256": "0d6020fbf26877c3ce427b3d1a66144753713aef53d05da1eb2db7ea02ce9f32",
+      "rows_read": 105853,
+      "quarantined_rows": 0,
+      "scheduled_hours": 89,
+      "expected_stock_minutes": 106800,
+      "genuine_stock_minutes": 105853,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1583,
+      "max_timestamp": "2021-07-30 19:29:00+00:00",
+      "min_timestamp": "2021-07-12 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-08.parquet",
+      "sha256": "93dbc751f683d7a297ae48935f76f239b96f4d1ab34d94a732ffd52d8d1343ce",
+      "rows_read": 97268,
+      "quarantined_rows": 0,
+      "scheduled_hours": 82,
+      "expected_stock_minutes": 98400,
+      "genuine_stock_minutes": 97268,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1427,
+      "max_timestamp": "2021-08-31 19:29:00+00:00",
+      "min_timestamp": "2021-08-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-09.parquet",
+      "sha256": "81c8f676d38077a13bf1011ee1e0b45fb7a05c516b11f239bca85f3168ddcaf1",
+      "rows_read": 150078,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150078,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2247,
+      "max_timestamp": "2021-09-30 19:29:00+00:00",
+      "min_timestamp": "2021-09-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-10.parquet",
+      "sha256": "86d6bb90410b6177007740f9eb0ab13f99456ae7415317381080f3b13b3a3858",
+      "rows_read": 148592,
+      "quarantined_rows": 0,
+      "scheduled_hours": 125,
+      "expected_stock_minutes": 150000,
+      "genuine_stock_minutes": 148592,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2209,
+      "max_timestamp": "2021-10-29 19:29:00+00:00",
+      "min_timestamp": "2021-10-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-11.parquet",
+      "sha256": "e081c3f1edd8fbab5604ad0ab5735118575f6ac38f60267fe9d3bac1a7891eab",
+      "rows_read": 146359,
+      "quarantined_rows": 0,
+      "scheduled_hours": 123,
+      "expected_stock_minutes": 147600,
+      "genuine_stock_minutes": 146359,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2208,
+      "max_timestamp": "2021-11-30 20:29:00+00:00",
+      "min_timestamp": "2021-11-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-12.parquet",
+      "sha256": "10e45b409536232d5f951514088cf3eae6777cc0d7b237896b4cc66efa88d830",
+      "rows_read": 157024,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157024,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2287,
+      "max_timestamp": "2021-12-31 20:29:00+00:00",
+      "min_timestamp": "2021-12-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-01.parquet",
+      "sha256": "9c8fbaae7c16b1aa54ff49a23cfaf6e743d671cbb37e61c5db2391ff56ad2a75",
+      "rows_read": 143533,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143533,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2236,
+      "max_timestamp": "2022-01-31 20:29:00+00:00",
+      "min_timestamp": "2022-01-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-02.parquet",
+      "sha256": "fc7e35143602dc7a2dc42de23500fa4c658bb89e09d62fb4f51c44d2909b27c8",
+      "rows_read": 136287,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 136287,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2097,
+      "max_timestamp": "2022-02-28 20:29:00+00:00",
+      "min_timestamp": "2022-02-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-03.parquet",
+      "sha256": "ab0214cd9823b0775c2739e7eaf51f3170e5b6d15dd0b453fa6309897f9b0891",
+      "rows_read": 164632,
+      "quarantined_rows": 0,
+      "scheduled_hours": 138,
+      "expected_stock_minutes": 165600,
+      "genuine_stock_minutes": 164632,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2511,
+      "max_timestamp": "2022-03-31 19:29:00+00:00",
+      "min_timestamp": "2022-03-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-04.parquet",
+      "sha256": "d46c6f368c595070ca49a1ed71514e576189a9704a97d5b5f2f4aee8f8c3a410",
+      "rows_read": 143110,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143110,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2158,
+      "max_timestamp": "2022-04-29 19:29:00+00:00",
+      "min_timestamp": "2022-04-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-05.parquet",
+      "sha256": "5eb02e6008711fdc449154663b089921b1e721014f1a5b002e8c2bed4d5588e4",
+      "rows_read": 150770,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150770,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2346,
+      "max_timestamp": "2022-05-31 19:29:00+00:00",
+      "min_timestamp": "2022-05-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-06.parquet",
+      "sha256": "d88786b72d57e1489519440d4e054ee677e776001d595a30bd8fdfd1b6a643d3",
+      "rows_read": 150457,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150457,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2329,
+      "max_timestamp": "2022-06-30 19:29:00+00:00",
+      "min_timestamp": "2022-06-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-07.parquet",
+      "sha256": "a7029e4ffb5cc708d3aa0f30b33a095535b6bcb42511600149500e3b13d3aa2d",
+      "rows_read": 143199,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143199,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2205,
+      "max_timestamp": "2022-07-29 19:29:00+00:00",
+      "min_timestamp": "2022-07-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-08.parquet",
+      "sha256": "d65710d4ccd2fed61806a118ae29beb56a9fd7f765308e4c8a0782feb5f064eb",
+      "rows_read": 154832,
+      "quarantined_rows": 0,
+      "scheduled_hours": 130,
+      "expected_stock_minutes": 156000,
+      "genuine_stock_minutes": 154832,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2351,
+      "max_timestamp": "2022-08-31 19:29:00+00:00",
+      "min_timestamp": "2022-08-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-09.parquet",
+      "sha256": "e8c08de290de1cdc10b305ee71e69f31e38622dd92e6144db6f393e0bb0699f0",
+      "rows_read": 117703,
+      "quarantined_rows": 0,
+      "scheduled_hours": 99,
+      "expected_stock_minutes": 118800,
+      "genuine_stock_minutes": 117703,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1839,
+      "max_timestamp": "2022-09-27 19:29:00+00:00",
+      "min_timestamp": "2022-09-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-10.parquet",
+      "sha256": "338a2c538bdd73cbc9259c6f580f6866e72eb423dec481560dc94243c28c30bf",
+      "rows_read": 148220,
+      "quarantined_rows": 0,
+      "scheduled_hours": 124,
+      "expected_stock_minutes": 148800,
+      "genuine_stock_minutes": 148220,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2340,
+      "max_timestamp": "2022-10-31 19:29:00+00:00",
+      "min_timestamp": "2022-10-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-11.parquet",
+      "sha256": "05d7155a90c2d1af1aeeac6a0ece547664a22daa1ffdd0d7cc08b78bc0d1b92f",
+      "rows_read": 146672,
+      "quarantined_rows": 0,
+      "scheduled_hours": 123,
+      "expected_stock_minutes": 147600,
+      "genuine_stock_minutes": 146672,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2240,
+      "max_timestamp": "2022-11-30 20:29:00+00:00",
+      "min_timestamp": "2022-11-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-12.parquet",
+      "sha256": "af05228c002e9298a503187416b6992ff5aa2b7ad21c5aed0579768c011ece92",
+      "rows_read": 150387,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150387,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2274,
+      "max_timestamp": "2022-12-30 20:29:00+00:00",
+      "min_timestamp": "2022-12-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-01.parquet",
+      "sha256": "74b1c3361fa6e3a7d0850293440b8ad9010267ab040196b97c3dc1a6ed7dc305",
+      "rows_read": 143081,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143081,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2188,
+      "max_timestamp": "2023-01-31 20:29:00+00:00",
+      "min_timestamp": "2023-01-03 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-02.parquet",
+      "sha256": "5b1f185ac619db2369ac6786c3f0c5f5c085db0f4c96221482f4d32a279e074f",
+      "rows_read": 135948,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 135948,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2043,
+      "max_timestamp": "2023-02-28 20:29:00+00:00",
+      "min_timestamp": "2023-02-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-03.parquet",
+      "sha256": "d693ed82124626d4fe569bd137e08059ff736d6fa371e9849b4018370b547c16",
+      "rows_read": 56091,
+      "quarantined_rows": 0,
+      "scheduled_hours": 47,
+      "expected_stock_minutes": 56400,
+      "genuine_stock_minutes": 56091,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 843,
+      "max_timestamp": "2023-03-31 19:29:00+00:00",
+      "min_timestamp": "2023-03-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-04.parquet",
+      "sha256": "e6fef6cf6e776b2fe739562548d818f048cfe9688c2bcc7b9c91c883d8002372",
+      "rows_read": 135707,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 135707,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2027,
+      "max_timestamp": "2023-04-28 19:29:00+00:00",
+      "min_timestamp": "2023-04-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-05.parquet",
+      "sha256": "f9cdcc773bd4f58df9d5e0d980fb8d466b0b3b525a3f35c54434e1e0188e7621",
+      "rows_read": 157225,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 157225,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2306,
+      "max_timestamp": "2023-05-31 19:29:00+00:00",
+      "min_timestamp": "2023-05-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-06.parquet",
+      "sha256": "76e75ff95f16f8f208ea53a16c0955bd4201e70c668bf09c4009ccc2725344a6",
+      "rows_read": 150231,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150231,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2242,
+      "max_timestamp": "2023-06-30 19:29:00+00:00",
+      "min_timestamp": "2023-06-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-07.parquet",
+      "sha256": "0e59479d72a366c399e699550978341baca33c5a228da7e5018a5c4022730696",
+      "rows_read": 139063,
+      "quarantined_rows": 0,
+      "scheduled_hours": 117,
+      "expected_stock_minutes": 140400,
+      "genuine_stock_minutes": 139063,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2053,
+      "max_timestamp": "2023-07-31 19:29:00+00:00",
+      "min_timestamp": "2023-07-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-08.parquet",
+      "sha256": "6717d368b56702159db8d9a552cce23ae3e7ae9d0a94fa26aebed4df52e9f54b",
+      "rows_read": 159093,
+      "quarantined_rows": 0,
+      "scheduled_hours": 134,
+      "expected_stock_minutes": 160800,
+      "genuine_stock_minutes": 159093,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2312,
+      "max_timestamp": "2023-08-31 19:29:00+00:00",
+      "min_timestamp": "2023-08-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-09.parquet",
+      "sha256": "589942e52b41f1077ca80f14125ef7e304681ef4474b3ab141b7ec18f2af601d",
+      "rows_read": 138588,
+      "quarantined_rows": 0,
+      "scheduled_hours": 117,
+      "expected_stock_minutes": 140400,
+      "genuine_stock_minutes": 138588,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2017,
+      "max_timestamp": "2023-09-29 19:29:00+00:00",
+      "min_timestamp": "2023-09-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-10.parquet",
+      "sha256": "dd6535568146716facefdd7cc65d90ae30a2b693d40c8a529ffbb43c725209a3",
+      "rows_read": 156626,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 156626,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2373,
+      "max_timestamp": "2023-10-31 19:29:00+00:00",
+      "min_timestamp": "2023-10-02 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-11.parquet",
+      "sha256": "6f212c14e89607e031a3da0dc481c63da080973a15a13b3d8826437b6a0a7390",
+      "rows_read": 143874,
+      "quarantined_rows": 0,
+      "scheduled_hours": 121,
+      "expected_stock_minutes": 145200,
+      "genuine_stock_minutes": 143874,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2141,
+      "max_timestamp": "2023-11-30 20:29:00+00:00",
+      "min_timestamp": "2023-11-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-12.parquet",
+      "sha256": "e684b5011fbb62af794c1757d8b4adab23dc60d45917e77bf9d52c0ef3116fcc",
+      "rows_read": 133194,
+      "quarantined_rows": 0,
+      "scheduled_hours": 112,
+      "expected_stock_minutes": 134400,
+      "genuine_stock_minutes": 133194,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1983,
+      "max_timestamp": "2023-12-29 15:29:00+00:00",
+      "min_timestamp": "2023-12-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-01.parquet",
+      "sha256": "5fde2657140dcdddaf66fafa566c36e3de6d72fcdbdad43ee86b804477c5a4ce",
+      "rows_read": 150101,
+      "quarantined_rows": 0,
+      "scheduled_hours": 126,
+      "expected_stock_minutes": 151200,
+      "genuine_stock_minutes": 150101,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2280,
+      "max_timestamp": "2024-01-31 20:29:00+00:00",
+      "min_timestamp": "2024-01-02 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-02.parquet",
+      "sha256": "5bb357848211488e17db95572ca792bd10457a89dc89503d54a229259433775c",
+      "rows_read": 140918,
+      "quarantined_rows": 0,
+      "scheduled_hours": 119,
+      "expected_stock_minutes": 142800,
+      "genuine_stock_minutes": 140918,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2078,
+      "max_timestamp": "2024-02-29 19:29:00+00:00",
+      "min_timestamp": "2024-02-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-03.parquet",
+      "sha256": "62f068ac1fb6648f21f8bac7e4e9fbe44ed264878fc1c04f12d7eaca074d0569",
+      "rows_read": 142562,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 142562,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2107,
+      "max_timestamp": "2024-03-28 19:29:00+00:00",
+      "min_timestamp": "2024-03-01 14:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-04.parquet",
+      "sha256": "d483ed84d604aa3488450c3391d6b57578e3b4533b973f85ab06ff07a1b3675a",
+      "rows_read": 156738,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 156738,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2313,
+      "max_timestamp": "2024-04-30 19:29:00+00:00",
+      "min_timestamp": "2024-04-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-05.parquet",
+      "sha256": "10d8d9bad21a9e111f453429f60d7a733ed825395346c120f4bb976787e52326",
+      "rows_read": 152866,
+      "quarantined_rows": 0,
+      "scheduled_hours": 129,
+      "expected_stock_minutes": 154800,
+      "genuine_stock_minutes": 152866,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2183,
+      "max_timestamp": "2024-05-31 19:29:00+00:00",
+      "min_timestamp": "2024-05-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-06.parquet",
+      "sha256": "7865ca62140136c95309603287a65e8783c8fffab497a2c66c24cbce7fcc3b7c",
+      "rows_read": 135891,
+      "quarantined_rows": 0,
+      "scheduled_hours": 114,
+      "expected_stock_minutes": 136800,
+      "genuine_stock_minutes": 135891,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1944,
+      "max_timestamp": "2024-06-28 19:29:00+00:00",
+      "min_timestamp": "2024-06-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-07.parquet",
+      "sha256": "9ee732e54ac2d6d22da7513bd1f92da7a1ab8cb219385ab2ec081c61f4c38b64",
+      "rows_read": 153651,
+      "quarantined_rows": 0,
+      "scheduled_hours": 129,
+      "expected_stock_minutes": 154800,
+      "genuine_stock_minutes": 153651,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2270,
+      "max_timestamp": "2024-07-31 19:29:00+00:00",
+      "min_timestamp": "2024-07-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-08.parquet",
+      "sha256": "2d0ea869ed994d9901a91afae1ca7a3838ce90b27d42c83d2678456d51850ab1",
+      "rows_read": 156815,
+      "quarantined_rows": 0,
+      "scheduled_hours": 132,
+      "expected_stock_minutes": 158400,
+      "genuine_stock_minutes": 156815,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2277,
+      "max_timestamp": "2024-08-30 19:29:00+00:00",
+      "min_timestamp": "2024-08-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-09.parquet",
+      "sha256": "e8790ba30f2d167d48118bd5527f87d3d0b95a1ded9c0f2cf04904fdd97488c4",
+      "rows_read": 143301,
+      "quarantined_rows": 0,
+      "scheduled_hours": 120,
+      "expected_stock_minutes": 144000,
+      "genuine_stock_minutes": 143301,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2169,
+      "max_timestamp": "2024-09-30 19:29:00+00:00",
+      "min_timestamp": "2024-09-03 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-10.parquet",
+      "sha256": "3847f6df481f89ebd6fc6f5bbcda08351ddb543e32399c887c1d666bb246cd2c",
+      "rows_read": 164443,
+      "quarantined_rows": 0,
+      "scheduled_hours": 138,
+      "expected_stock_minutes": 165600,
+      "genuine_stock_minutes": 164443,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 2416,
+      "max_timestamp": "2024-10-31 19:29:00+00:00",
+      "min_timestamp": "2024-10-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-11.parquet",
+      "sha256": "9dd9c17c3445b0eac430a53139a4bc5c5a2b32d030b350dfc03d803796643740",
+      "rows_read": 52557,
+      "quarantined_rows": 0,
+      "scheduled_hours": 44,
+      "expected_stock_minutes": 52800,
+      "genuine_stock_minutes": 52557,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 782,
+      "max_timestamp": "2024-11-12 16:29:00+00:00",
+      "min_timestamp": "2024-11-01 13:30:00+00:00"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-12.parquet",
+      "sha256": "127922240fb382b66d134fc835d433b3b6a46dd97901aa68f554004acb77d25f",
+      "rows_read": 112908,
+      "quarantined_rows": 0,
+      "scheduled_hours": 95,
+      "expected_stock_minutes": 114000,
+      "genuine_stock_minutes": 112908,
+      "observed_zero_volume_minutes": 0,
+      "mathematical_source_reconciliation": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "observed_volume": 0.0
+      },
+      "complete_stock_hours": 1658,
+      "max_timestamp": "2024-12-31 16:29:00+00:00",
+      "min_timestamp": "2024-12-06 14:30:00+00:00"
+    }
+  ],
+  "raw_minute_store_copied": false,
+  "future_outcome_columns_read": false,
+  "allowed_input_only": true,
+  "first_source_date": "2011-03-22",
+  "last_source_date": "2024-12-31"
+}

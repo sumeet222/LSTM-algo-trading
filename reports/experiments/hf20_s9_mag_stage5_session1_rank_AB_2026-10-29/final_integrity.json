@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "at": "2026-10-29T05:02:21.933433+00:00",
+  "branch": "feat/track-a-data-intake",
+  "head": "997b30cff98785911b0e33b7e3d2e72f61b8270b",
+  "all_prefit_hashes_unchanged": true,
+  "authorized_old_binding_count": 37,
+  "all_bound_old_assets_unchanged": true,
+  "preservation_scope": "Exact allowed bindings only; no protected source scan/hash",
+  "registry_successor": "33 -> 34; fit_permission=false",
+  "ledger_before": 174,
+  "ledger_after": 182,
+  "new_pairs": 8,
+  "new_phases": 16,
+  "retries": 0,
+  "all_training_completed": true,
+  "tests": "12 passed",
+  "ruff": "PASS",
+  "full_static": {
+    "files": 525,
+    "errors": 0,
+    "warnings": 0
+  },
+  "human_editor_refresh": "OUTSTANDING, not claimed",
+  "resources": {
+    "project_bytes": 12830175232,
+    "task_bytes": 5681925,
+    "peak_observed_process_rss_bytes": 1015922688
+  },
+  "git_diff_check": "PASS",
+  "git_status": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n?? reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md\n?? reports/codex_sessions/2026-10-28_212826_hf20_stage3_minute_bc.md\n?? reports/codex_sessions/2026-10-28_232241_hf20_s3c_priceonly_completion.md\n?? reports/codex_sessions/2026-10-29_010132_hf20_stage5_rank_ab.md\n?? reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/\n?? src/lstm_data/hf20_mag_rank.py\n?? src/lstm_data/hf20_mag_rank_report.py\n?? src/lstm_data/hf20_minute_bc.py\n?? src/lstm_data/hf20_minute_inputs.py\n?? src/lstm_data/hf20_minute_report.py\n?? src/lstm_data/hf20_s2d_gap.py\n?? src/lstm_data/hf20_s3c_price_report.py\n?? src/lstm_data/hf20_s3c_priceonly.py\n?? tests/test_hf20_mag_rank.py\n?? tests/test_hf20_minute_inputs.py\n?? tests/test_hf20_minute_report.py\n?? tests/test_hf20_s2d_gap.py\n?? tests/test_hf20_s3c_priceonly.py\n",
+  "session_report": "reports/codex_sessions/2026-10-29_010132_hf20_stage5_rank_ab.md",
+  "no_commits_push_fetch": true,
+  "no_minute_source_2025_market_protected2026_or_network": true,
+  "no_further_fits": true,
+  "inventory_excludes": "Inventory itself and this final receipt to avoid recursive hashes"
+}

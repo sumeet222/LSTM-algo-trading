@@ -1,0 +1,133 @@
+from pathlib import Path
+import pandas as pd, numpy as np, json
+from lstm_data import hf20_strict999 as t
+b,o=t.b,t.OUT
+m=pd.read_csv(o/'metrics.csv',dtype={'year':str});d=pd.read_csv(o/'paired_differences.csv',dtype={'year':str});g=pd.read_csv(o/'groups.csv',dtype={'year':str});rk=pd.read_csv(o/'tail_retrieval.csv',dtype={'year':str});dy=pd.read_csv(o/'score_dynamics.csv',dtype={'year':str});delta=pd.read_csv(o/'garch_persistence_delta.csv',float_precision='round_trip');coef=pd.read_csv(o/'calibration_coefficients.csv');support=pd.read_csv(o/'garch_unit_input_support.csv');fit=b.read(o/'garch_status.json');audit=b.read(o/'garch_constraints_verification.json');ver=b.read(o/'verification.json')
+eq=m.loc[m.year.eq('EQ')&m.scope.eq('FULL')].set_index('arm')
+new='GARCH11-STRICT999';ga='MATCH-'+new+'-G';io='MATCH-'+new+'-IO';raw=new+'-UNCAL'
+def md(frame,cols=None):
+ if cols is not None:frame=frame[cols]
+ def fmt(x):
+  if isinstance(x,(float,np.floating)):
+   return '' if pd.isna(x) else f'{x:.9g}'
+  return str(x).replace('|','/')
+ return '| '+' | '.join(frame.columns)+' |\n| '+' | '.join(['---']*len(frame.columns))+' |\n'+'\n'.join('| '+' | '.join(fmt(x) for x in row)+' |' for row in frame.itertuples(index=False,name=None))+'\n'
+def metrics(arms):return eq.loc[arms].reset_index()[['arm','raw_MSE','raw_MAE','predicted','observed','ratio','bias','IC']]
+def pairs(candidates,refs):
+ q=d.loc[d.year.eq('EQ')&d.scope.eq('FULL')&d.left.isin(candidates)&d.right.isin(refs)]
+ rows=[]
+ for (left,right),f in q.groupby(['left','right'],sort=False):
+  mm=f.loc[f.metric.eq('raw_MSE')].iloc[0];ic=f.loc[f.metric.eq('IC')].iloc[0]
+  annual=d.loc[d.year.ne('EQ')&d.scope.eq('FULL')&d.left.eq(left)&d.right.eq(right)]
+  rows.append(dict(candidate=left,reference=right,delta_MSE=mm.delta,MSE_low=mm.low,MSE_high=mm.high,MSE_percent=mm.percent,delta_IC=ic.delta,IC_low=ic.low,IC_high=ic.high,MSE_win_folds=int((annual.loc[annual.metric.eq('raw_MSE'),'delta']<0).sum()),IC_win_folds=int((annual.loc[annual.metric.eq('IC'),'delta']>0).sum())))
+ return pd.DataFrame(rows)
+common=[f'MATCH-{n}-{family}' for n in [*t.BASES,new] for family in ['G','IO']]
+native=[n+'-C3' for n in t.NEURAL]+[n+'-CAL' for n in t.old.ARMS]+[ga,io]
+controls=['C0','C3','C1a','M1','B0-VOL','B0-CLOCK','B0-RMEAN','B0-RMED']
+paired=pairs([ga,io],[f'MATCH-{n}-{f}' for n in t.BASES for f in ['G','IO']])
+paired.to_csv(o/'table_I_matched_comparisons.csv',index=False)
+pairs([ga,io],[n+'-C3' for n in t.NEURAL]).to_csv(o/'table_II_native_neural_comparisons.csv',index=False)
+annual=[]
+for arm in eq.index:
+ row={'arm':arm}
+ for year in b.YEARS:
+  h=m.loc[m.year.eq(str(year))&m.scope.eq('FULL')&m.arm.eq(arm)].iloc[0];row[f'MSE_{year}']=h.raw_MSE;row[f'IC_{year}']=h.IC
+ annual.append(row)
+annual=pd.DataFrame(annual);annual.to_csv(o/'annual_model_grid.csv',index=False)
+# Complete frozen inventory references, without refitting or rewriting predecessor inventories.
+inv=[]
+for year in b.YEARS:
+ for arm in eq.index:
+  if new in arm:continue
+  inv.append(dict(year=year,arm=arm,status='FROZEN_REPLAY',score_path=str(t.parent.OUT/f'F{year%100}/oos_scores.parquet'),metrics_path=str(t.parent.OUT/'metrics.csv'),refits=0,source_sha256=b.digest(t.parent.OUT/f'F{year%100}/oos_scores.parquet')))
+pd.DataFrame(inv).to_csv(o/'frozen_comparator_inventory.csv',index=False)
+ranking=[]
+for name in [*t.BASES,new]:
+ arm=name+'-UNCAL';row=eq.loc[arm]
+ r=dict(model=name,IC=row.IC,pair_concordance=row.pair_concordance,top4=row.top4,bottom4=row.bottom4,tie_rate=row.tie_rate,constant_rate=row.constant_rate)
+ for level in [95,99]:
+  h=rk.loc[rk.year.eq('EQ')&rk.scope.eq('FULL')&rk.arm.eq(arm)&rk.level.eq(level)].iloc[0];r[f'capture{level}']=h.top4_event_recall;r[f'false_low{level}']=h.false_low_rank
+ ranking.append(r)
+# Tail sensitivity is explicitly model/calibrator matched; native C3 stays contextual.
+tails=[]
+for left,right,label in [(raw,'S2C-UNCAL','RAW'),(ga,'MATCH-S2C-G','G'),(io,'MATCH-S2C-IO','IO'),(ga,'S2C-C3','G vs native C3'),(io,'S2C-C3','IO vs native C3')]:
+ for level in [95,99]:
+  take=g.year.eq('EQ')&g.field.eq('tail_FULL')&g.group.eq(f'PREFIX{level}')
+  a=g.loc[take&g.arm.eq(left)].iloc[0];r=g.loc[take&g.arm.eq(right)].iloc[0]
+  tails.append(dict(comparison=label,level=level,GARCH_MSE=a.raw_MSE,reference_MSE=r.raw_MSE,percent=100*(a.raw_MSE/r.raw_MSE-1),GARCH_ratio=a.ratio,reference_ratio=r.ratio,GARCH_loss_share=a.raw_MSE_loss_share))
+tails=pd.DataFrame(tails);tails.to_csv(o/'tail_calibration_sensitivity.csv',index=False)
+hetero=[]
+for family,left in [('G',ga),('IO',io)]:
+ right='MATCH-S2C-'+family
+ for field in ['slot','stock','calendar']:
+  for group in g.loc[g.year.eq('EQ')&g.field.eq(field)&g.arm.eq(left),'group']:
+   a=g.loc[g.year.eq('EQ')&g.field.eq(field)&g.group.eq(group)&g.arm.eq(left)].iloc[0];r=g.loc[g.year.eq('EQ')&g.field.eq(field)&g.group.eq(group)&g.arm.eq(right)].iloc[0]
+   hetero.append(dict(family=family,field=field,group=group,rows=a.rows,sessions=a.sessions,GARCH_MSE=a.raw_MSE,S2C_MSE=r.raw_MSE,percent=100*(a.raw_MSE/r.raw_MSE-1),GARCH_ratio=a.ratio,S2C_ratio=r.ratio))
+hetero=pd.DataFrame(hetero);hetero.to_csv(o/'heterogeneity_comparisons.csv',index=False)
+near=delta.persistence_old.ge(.99)
+nearmax=delta.loc[near,['delta_alpha','delta_beta']].abs().max().max();farmax=delta.loc[~near,['delta_alpha','delta_beta']].abs().max().max()
+# Scientific conclusions use the entire fixed grid; no deployment choice is made.
+lines=['# HF20 S9-MAG GARCH11-STRICT999 — final report',
+'''**COMPLETE.** All560 uniformly constrained Gaussian GARCH fits passed, including the three former COP boundaries. Both prespecified common calibrators completed on the independent preceding Oct–Dec roles. This is a valid complete-panel benchmark on80,260 stock-origin keys; the old unconstrained panel remains PARTIAL_BLOCKED and the older dependency block remains BLOCKED_DEPENDENCY.
+
+The constrained GARCH **does not close the matched-calibration LSTM advantage**. Against S2-C, equal-year MSE is3.7736% worse under G and4.1538% worse under IO, with higher loss in all four years. IC is0.307433340 versus S5-C0.332045935, lower in all four years. The paired descriptive intervals retain these directions. HAR remains the strongest classical magnitude comparator and ROLL60 the strongest classical ranking comparator in this fixed grid; neither catches the corresponding strongest neural equal-year benchmark in any of the four folds. This is evidence beyond these baseline implementations, not proof that recurrence is necessary.
+
+Raw GARCH has1.6646% lower headline MSE than raw S2-C (wins3/4 years), but its descriptive interval includes zero and the matched-calibration comparison reverses the sign. Native C3 packages remain a separate comparison. No calibrator, cap, model or deployment rule was selected from these outcomes.''',
+'## Task, preservation and interpretation',
+'''A=|log(P_exit/P_origin)| at the genuine endpoint after240 scheduled XNYS minutes. It is endpoint magnitude, not integrated realized volatility or path variation. Evaluation is2021–2024,19,100/23,600/17,740/19,820 rows,4,013 origins,793 sessions,20 stocks/origin. Original equal-stock/origin/session/year reducers, ties, category normalization and constant-score conventions are unchanged. EQ rows require all four years; conditional group losses normalize original weights within group. Ratios are predicted/observed equal-year means. MSE units are squared log return; MAE, mean and bias are log return.
+
+The nominal origin precedes the historical approximate origin+2-minute publication proxy. Actual vendor arrival was not measured; this is not post-issuance executable P&L. Same-source revision776328445b7ac6e7815ef3a483e9c8ded1eb6d56, retrospective adjustments, quarantine and survivor universe remain frozen. No raw minutes, market downloads,2025 values or protected2026 material were accessed.3,296 exact predecessor bindings were checked, including original roles, scores, contracts, both earlier GARCH failures, journal history and package records. Live neural ledger remains186/300; no neural starts, inference or refits.
+
+The feature inputs differ: neural models use frozen48-hour own-stock FT16 plus their authorized clock/objective variants; rolling/EWMA and GARCH refresh past-return histories; HAR uses archived historical full-session RV information. Common calibration equalizes postprocessing, not information sets or architecture. The shared-stock neural training also differs from stock-slot GARCH estimation.''',
+'## Uniform constraint, fit and causal replay',
+f'''Public arch8.0.0 GARCH.constraints was subclassed only to replace the persistence inequality with .999-alpha-beta>=0. The inherited Gaussian likelihood, variance recursion, bounds, deterministic starting values, backcast and SLSQP were unchanged: x=100R,rescale=False,maxiter1000,ftol/tol1e-9. No post-fit coefficient adjustment, alternative start, cap search or retry. All560 exact original vectors were authenticated before fitting; sample sizes range{int(support.n.min())}–{int(support.n.max())}. The same59 overlapping history origins were excluded by start>=last retained endpoint, equality permitted; no evaluation key was excluded.
+
+All560 convergence flags are0, all560 admissibility gates pass, and no solver warnings occurred. All65 old persistence>=.99 units remain in that descriptive cohort. There are{audit['cap_contacts']} cap contacts and{audit['roundoff_overshoots']} tiny signed overshoots; minimum slack{audit['minimum_slack']:.17g}, maximum unrounded persistence{audit['maximum_persistence']:.17g}. The predeclared feasibility tolerance is1e-10; cap-contact tolerance1e-8. These overshoots are displayed explicitly, never rounded/clipped into compliance. All saved vectors exactly equal optimizer returns. The fixed normal log-likelihood was independently recomputed, and no conditional variance touched its numerical lower/soft upper bounds.
+
+Maximum absolute alpha/beta change among the65 old near-unit units is{nearmax:.9g}; among the495 others it is{farmax:.9g}. No unit exceeded the predeclared .01 large-change flag. Old numerical boundary contact does not establish nonstationary stock returns. All560 coefficient deltas, optimizer flags, supports, initial states, bounds, iterations and likelihoods are saved, including the557 old passing fits; none was transplanted.''',
+md(delta.loc[delta.status_old.ne('PASS')],['year','ticker','slot','alpha_old','beta_old','alpha_new','beta_new','persistence_new','cap_slack','status_new']),
+'''Parameters remain frozen after the September restricted prefix. Every later update uses a signed return whose genuine endpoint+2-minute maturity is strictly before issue; state replay checked all99,240 calibration/OOS forecasts and every consumed event. Representative09:30/15:30/early-close cases are in garch_maturity_cases.csv. The package recursion and independent replay agree, and saved raw score rows match traces exactly. No unfinished current/future target enters state.
+
+This is a one-next-observation forecast of an irregular same-stock/same-slot four-hour-return process. Calendar spacing and intraday/overnight composition vary. It is not continuous-time four-hour integrated variance. The conditional-Gaussian folded-normal mean uses mu/100 and variance/10000, without a horizon multiplier. Normality is assumed, not demonstrated.''',
+'## Table I — identical common calibration families',
+'''Every old G/IO arm below is reused exactly; only new GARCH's four G fits and four two-category IO fits were estimated. G is the nonnegative weighted MSE-optimal multiplier. IO shrinks category multipliers using n_eff=1/sum(normalized category session mass²),rho=n_eff/(n_eff+25). No old C3 output is calibrated again. Zero denominators/support would have blocked the arm; none occurred.''',
+md(metrics(common)),
+'Paired GARCH-minus-reference differences within the same family; negative MSE/positive IC favors GARCH. Bounds are descriptive95% intervals,400 whole-calendar-month resamples within year,seed22042,equal-four-year aggregation. Whole overlapping sessions/stocks remain together. These repeatedly inspected years do not provide selection-adjusted confirmation.',
+md(paired),
+'''The strongest classical same-calibrator MSE remains HAR:2.0788% above S2-C under G and2.4212% under IO, losing all4 annual folds. The strongest classical IC remains ROLL60=.318689978 versus S5-C=.332045935, losing all4 folds. GARCH neither changes these frontier descriptions nor closes either gap. These are descriptions of the complete fixed grid, not a best-from-many deployment selection.
+
+For GARCH alone, G→IO raises MSE by3.252982e-8 (+.029338%; interval[1.469820e-8,5.097842e-8]). Both remain reported. Calibration changes no within-origin ranks: IC, pairs, top/bottom retrieval are invariant. There are zero changed-rank origins, zero GARCH zero-scalar exceptions, and no random tie jitter.''',
+'## Raw-estimator diagnostic',md(metrics([n+'-UNCAL' for n in [*t.BASES,new]])),
+md(pairs([raw],[n+'-UNCAL' for n in t.NEURAL])),
+'''Raw neural inverse-transformed outputs underpredict average endpoint magnitude (S2-C ratio~.778); raw GARCH ratio~1.077. Their raw MSE ordering does not measure the ordering after a common calibration. Raw GARCH wins over raw S2-C in2021–2023 and loses2024. Raw comparisons remain diagnostic and do not replace declared calibrated primaries.''',
+'## Table II — original archived forecasting packages',md(metrics(native)),md(pairs([ga,io],[n+'-C3' for n in t.NEURAL])),
+'''CLOCK-C3/S2C-C3/S5C-C3 retain their native transformed-M residual-smearing calibration with schedule shrinkage; historical classical CAL remains its original global multiplier. New GARCH-G/IO are labelled candidates, not native C3. GARCH-G has4.0646% higher overall MSE than native S2C-C3; GARCH-IO is4.0952% higher. A native-C3 versus multiplier comparison combines raw estimation and calibration differences and cannot isolate network quality. The original GARCH panel has no lawful full-panel score; its 557 passing units are diagnostic only. The older BLOCKED_DEPENDENCY record is not an empirical loss.''',
+'## Ranking and simple-control context',md(pd.DataFrame(ranking)),
+'''The ten raw-family rows summarize rank-invariant G/IO variants. Existing neural native C3 rankings are also preserved. All tie, constant, undefined-IC, rank-spread and zero-forecast metrics for all47 arms/scopes are in metrics.csv. Prefix95/99 events use the original lawful O1 prefix thresholds, not outer-year quantiles.''',md(metrics(controls)),
+'## Annual results — complete fixed grid',md(annual),
+'## Conditions, tails and persistent score component',
+md(m.loc[m.year.eq('EQ')&m.arm.isin([ga,io,'MATCH-S2C-G','MATCH-S2C-IO','MATCH-HAR-RV-A-G','MATCH-HAR-RV-A-IO'])],['arm','scope','raw_MSE','raw_MAE','ratio','IC']),
+'''GARCH has higher MSE and lower IC than matched S2-C in both intraday and overnight conditions, while its intraday MAE is lower. A near-unity overall mean ratio does not imply good conditional calibration or tail accuracy. Calibration-dependent extreme-event conclusions remain: raw GARCH's tail MSE advantage over raw S2-C reverses under common G/IO, but GARCH can still beat native S2C-C3 on realized-tail loss while losing overall. The distinct calibration procedures explain why those statements can coexist.''',md(tails),
+'''Realized-tail categories are outcome diagnostics only. PREFIX95 and PREFIX99 complements, predicted/observed ratios and weighted squared-error contributions are saved for every arm/year/category. No future extreme is used to select a model or route forecasts. The previously suggested classical/LSTM extreme-event hybrid remains a deferred, unvalidated idea; none was constructed.''',
+md(hetero.loc[hetero.field.isin(['slot','calendar'])]),
+'''Only5 early-close sessions/14 origins/280 OOS rows are represented; these results have very limited support. All20 stock comparisons and months are retained in heterogeneity_comparisons.csv/groups.csv; rank_groups.csv uses complete20-stock origin panels for clock/month/calendar ranking. Coverage and cap-contact cohorts are descriptive conditional summaries, not filters on the evaluation panel. Stock-score deciles use the archived C0 descriptive cut convention; they do not fit calibration.''',
+md(dy.loc[dy.year.eq('EQ')&dy.arm.isin([ga,io,'MATCH-S2C-G','MATCH-S5C-G','MATCH-ROLL60-G','MATCH-HAR-RV-A-G','B0-RMEAN'])]),
+'''The within-origin-centered score decomposition gives GARCH~76.0% static cross-stock variance under G, versus~78.1% for S2-C/S5-C,~83.9% for ROLL60 and~74.7% for HAR. Thus GARCH has a somewhat larger temporal component than these neural outputs, but still a dominant persistent stock component and lower ranking skill. These variance fractions are not a decomposition of predictive accuracy and do not establish a causal role for recurrence.''',
+'## Verification and resource record',
+f'''All660 archived metric rows across44 frozen arms, four annual folds plus equal-year rows and three scopes replay within the existing tolerance. Every saved predecessor score column is exactly identical in all eight calibration/OOS panels. New coefficients were independently recomputed from Oct–Dec only, and all new raw/G/IO keys, labels and weights agree. Fit and calibration outputs are separately hash-frozen.
+
+37 focused tests pass; Ruff passes. Full installed Pylance/basic analysis covers546 Python files with0 errors/0 warnings, without exclusions or reduced severity. The researcher confirmed a human VSCode Problems refresh at zero errors. Initial synthetic-fixture/type-check failures and their corrections are retained; no real unit was retried. Arrow sandbox hardware notices are nonfatal. A /usr/bin/time wrapper failed its sandboxed kern.clockrate query after a zero-diagnostic static check; the wrapper failure is retained and is not represented as a type-check failure or a measured memory peak.
+
+Real fitting took{fit['seconds']:.3f}s, peak process RSS{fit['peak_rss_bytes']/1e6:.3f}MB; independent replay peak519.094MB. Calibration took5.381s. Final storage/resources and report-only byte-parity replay are recorded in final_integrity.json and report_replay_verification.json. Task output exceeded its initial150MB estimate because complete frozen comparison score panels were preserved, but remained well below2.5GB; project remains below15GB. No dependencies changed, Git fetch/commit/push, neural work, source rebuild, trading or protected holdout action occurred.''',
+'## Decision and hard stop',
+'''| Decision | Result |
+|---|---|
+| Technical admissibility | COMPLETE:560/560;13 cap contacts explicitly audited; three COP units now pass. |
+| Full-panel fairness |80,260 identical OOS rows; no diagnostic/cohort exclusions; original weights and roles. |
+| G against G / IO against IO |GARCH loses magnitude MSE and ranking to all three neural comparators in all four years; strongest classical frontiers remain HAR and ROLL60. |
+| Remaining uncertainty |Conditional-Gaussian/irregular-event approximation, unequal feature sets, publication proxy, source/survivor vintage and repeated-year/post-search evidence. |
+| Historical primaries |All old scores/calibrations/failures and journals preserved; old GARCH remains blocked. |
+| Benchmark closure |This bounded classical implementation comparison is technically closed. No claim that all classical methods are exhausted or recurrence is indispensable. |
+| Next action |Researcher review only. STOP: no tuning, router/hybrid, trading, new model or autonomous sequel. |''']
+(o/'FINAL_REPORT.md').write_text('\n\n'.join(lines)+'\n')
+print('report written',len(lines),'sections; models',len(eq),'paired rows',len(d))

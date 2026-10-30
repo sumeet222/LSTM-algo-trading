@@ -1,0 +1,68 @@
+{
+  "status": "COMPLETE",
+  "experiment": "reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29",
+  "scientific_outputs_sealed": true,
+  "artifacts": 4049,
+  "artifact_inventory": {
+    "path": "reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29/artifact_inventory.csv",
+    "sha256": "18991c474f2fcf51ef9edcecb55881c40d6615eb457816c6f2534edae6595e10"
+  },
+  "predecessor_bindings": {
+    "path": "reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29/predecessor_bindings.json",
+    "sha256": "798162594c284023ce90435d8b3c4cf417a8def585a0114e6c3205b2f0de68be",
+    "verified_count": 3296
+  },
+  "predecessor_final_integrity": {
+    "path": "reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/final_integrity.json",
+    "sha256": "06664abd5e1e474f870858d85feb55f1ba4b16103c69c5b6b81c2484caa72197"
+  },
+  "journal": {
+    "path": "reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29/research_journal.jsonl",
+    "sha256": "6c2bc61dd590b4b8203d0241e88b68e865c905f8d667982974b43b7f9a94ded2"
+  },
+  "session_report": {
+    "path": "reports/codex_sessions/2026-10-29_205941_hf20_garch_strict999_completion.md",
+    "sha256": "077cb57571f56eb908af581f65ec8ad3f44c97b98a8f3449eb6c627982883ea1"
+  },
+  "new_code": {
+    "src/lstm_data/hf20_strict999.py": "47249a3025e6c2fe7cc7293fd336f5849a621187150560a24d6fdbee9fcf8167",
+    "src/lstm_data/hf20_strict999_audit.py": "0f1bf392a2830902b2abd0eed84fdb64a04f1bde1ce13031e8b23048d6fd56d2",
+    "src/lstm_data/hf20_strict999_fit.py": "2b1b26b0dd596d7da720e2104ee006be0031ae8db89ebdef02d79f6bf8a2f936",
+    "src/lstm_data/hf20_strict999_model.py": "4d420c36d3341c35827aaa49c6e09cbc25437022a4a32af8808eeddf1d69cecc",
+    "src/lstm_data/hf20_strict999_report.py": "014db7b41a56931b92b1f9cf6678b1127c45f4e07d984619422b61fd8315f8ce",
+    "src/lstm_data/hf20_strict999_verify.py": "971e8108a8579fdc0137c073f63f6db1d33cf267b21477da3f11fce93ee703e7",
+    "tests/test_hf20_strict999.py": "90111bf96032c26e4b97ad0d51d543b88d90405b7363e7728891d6610353a5d2"
+  },
+  "fit_count": 560,
+  "fit_pass": 560,
+  "fit_retry": 0,
+  "calibration_family_fold_count": 8,
+  "prior_calibrations_refitted": 0,
+  "neural_starts": 0,
+  "ledger": 186,
+  "cap": 0.999,
+  "cap_contacts": 13,
+  "roundoff_overshoots": 5,
+  "old_metric_rows_replayed": 660,
+  "report_replay_tables": 8,
+  "tests": 37,
+  "static": {
+    "filesAnalyzed": 546,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 77.858
+  },
+  "static_peak_child_rss_bytes": 1718730752,
+  "human_editor": "USER_CONFIRMED_ZERO_ERRORS",
+  "environment_changed": false,
+  "elapsed_since_readiness_seconds": 1869.406186,
+  "elapsed_definition": "readiness creation to seal; earlier read-only discovery excluded",
+  "late_metadata": [
+    "git_status_final.txt",
+    "seal_receipt.json"
+  ],
+  "project_bytes": 13331038208,
+  "task_bytes": 185328555,
+  "peak_rss_bytes": 260849664
+}

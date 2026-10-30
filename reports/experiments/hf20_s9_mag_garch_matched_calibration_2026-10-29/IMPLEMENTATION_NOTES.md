@@ -1,0 +1,13 @@
+# Frozen implementation notes before fitting
+
+The same-slot event sequence is an approximation, with variable elapsed gaps and calendar composition. This is a deliberately limited scientific sensitivity, not a continuous-time forecast or equal-input architecture ablation. GARCH estimates the supported ordinary Gaussian event-sequence likelihood; calibration and all evaluation use the same canonical hierarchical weights as the predecessor. No weighted custom likelihood or optimizer is introduced.
+
+The signed original endpoint targets, complete20 support, >= equality de-overlap, strictly earlier endpoint+2-minute maturity and original role masks were authenticated before installation. Restricted fitting uses the full lawful prefix ending in September, not only September dates. Late role-embargo observations may update the state after maturity; they never enter coefficient estimation. Saved calibration predictions use only state available at their own issuance.
+
+Specification: ConstantMean Gaussian GARCH(1,1), percent returns, rescale=False, package deterministic defaults, SLSQP maxiter1000/ftol1e-9/tol1e-9, once per unit. Strict positive omega/variance, nonnegative alpha/beta, alpha+beta<1 and convergence status0 are required for a complete arm. >=.99 persistence is a disclosed diagnostic, never a tuning criterion. If any unit fails, all GARCH aggregate scores remain unavailable; partial rows are diagnostic only.
+
+Prefit fixture initially found high-level arch ConstantMean.forecast recomputes its backcast under the final mean. The declared filtering state remains the fitted terminal conditional variance. Validation therefore uses the public volatility.forecast API with the original prefix starting-mean residual backcast and bounds, matching fitting exactly. This correction preceded all research fits. No tolerance was weakened; original failed fixture receipt is retained.
+
+Common G/IO formulas, kappa25 and effective weighted-session convention are fixed. RAW neural calibration forecasts are decoded from frozen Mhat using the same frozen restricted scale and exact historical raw_decode; OOS bitwise parity is checked. No C3 output is recalibrated. The complete 9-model G/IO grid is mandatory independently of GARCH support. Bootstrap400/22042 and historical conditional weighting/tie rules remain unchanged.
+
+Versioned environment receipts prove no previously installed distribution changed. Optional project extra classical pins four new packages. Python3.14 arm64 binary wheel hashes are in installed_wheels.lock; no global install or new environment. Network activity was pip package retrieval only. Original source data, checkpoints, contracts, journal history and registry remain immutable.

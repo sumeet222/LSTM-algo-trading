@@ -1,0 +1,31 @@
+..F............................                                          [100%]
+=================================== FAILURES ===================================
+__________ test_supported_optimizer_applies_cap_on_synthetic_boundary __________
+
+    def test_supported_optimizer_applies_cap_on_synthetic_boundary():
+        class PermissiveGARCH(Strict999GARCH):
+            def constraints(self):
+                return GARCH.constraints(self)
+    
+        x = fixture_series()
+        kwargs = dict(update_freq=0, disp="off", tol=1e-9, options={"maxiter": 1000, "ftol": 1e-9})
+        default = arch_model(
+            x, mean="Constant", vol="GARCH", p=1, q=1, dist="normal", rescale=False
+        ).fit(**kwargs)
+        permissive = ConstantMean(
+            x, volatility=PermissiveGARCH(p=1, o=0, q=1), distribution=Normal(), rescale=False
+        ).fit(**kwargs)
+        strict = make_model(x).fit(**kwargs)
+        np.testing.assert_array_equal(default.params, permissive.params)
+        assert default.loglikelihood == permissive.loglikelihood
+        assert strict.convergence_flag == default.convergence_flag == 0
+        p = strict.params
+        audit = constraint_audit(float(p["omega"]), float(p["alpha[1]"]), float(p["beta[1]"]))
+        assert audit["constraint_pass"]
+>       assert audit["cap_contact"]
+E       assert False
+
+tests/test_hf20_strict999.py:85: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_hf20_strict999.py::test_supported_optimizer_applies_cap_on_synthetic_boundary
+1 failed, 30 passed in 4.95s

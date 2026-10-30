@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "scientific_verdict": "MIXED_MAGNITUDE_VERSUS_RANKING_TRADEOFF",
+  "at": "2026-10-29T14:17:57.376459+00:00",
+  "branch": "feat/track-a-data-intake",
+  "head": "997b30cff98785911b0e33b7e3d2e72f61b8270b",
+  "git_status": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n M configs/CURRENT_EXPERIMENT_REGISTRY.json\n?? reports/codex_sessions/2026-10-28_172337_hf20_s2d_masked_gap.md\n?? reports/codex_sessions/2026-10-28_212826_hf20_stage3_minute_bc.md\n?? reports/codex_sessions/2026-10-28_232241_hf20_s3c_priceonly_completion.md\n?? reports/codex_sessions/2026-10-29_010132_hf20_stage5_rank_ab.md\n?? reports/codex_sessions/2026-10-29_101604_hf20_s5c_hybrid.md\n?? reports/experiments/hf20_s9_mag_stage2_s2d_masked_gap_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_s3c_priceonly_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session1_minute_readonly_audit_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage3_session2_minute_BC_2026-10-28/\n?? reports/experiments/hf20_s9_mag_stage5_session1_rank_AB_2026-10-29/\n?? reports/experiments/hf20_s9_mag_stage5_session2_hybrid_C_2026-10-29/\n?? src/lstm_data/hf20_mag_hybrid.py\n?? src/lstm_data/hf20_mag_hybrid_report.py\n?? src/lstm_data/hf20_mag_rank.py\n?? src/lstm_data/hf20_mag_rank_report.py\n?? src/lstm_data/hf20_minute_bc.py\n?? src/lstm_data/hf20_minute_inputs.py\n?? src/lstm_data/hf20_minute_report.py\n?? src/lstm_data/hf20_s2d_gap.py\n?? src/lstm_data/hf20_s3c_price_report.py\n?? src/lstm_data/hf20_s3c_priceonly.py\n?? tests/test_hf20_mag_hybrid.py\n?? tests/test_hf20_mag_rank.py\n?? tests/test_hf20_minute_inputs.py\n?? tests/test_hf20_minute_report.py\n?? tests/test_hf20_s2d_gap.py\n?? tests/test_hf20_s3c_priceonly.py\n",
+  "git_diff_check": "PASS",
+  "session_report": "reports/codex_sessions/2026-10-29_101604_hf20_s5c_hybrid.md",
+  "source_and_prior_binding_count": 154,
+  "all_authorized_bound_prior_assets_unchanged": true,
+  "all_prefit_hashes_unchanged": true,
+  "preservation_scope": "Exact allowed bound assets only, no protected source discovery/hash",
+  "registry_successor": "34 ->35, fit_permission=false",
+  "ledger_before": 182,
+  "ledger_after": 186,
+  "new_pairs": 4,
+  "new_phases": 8,
+  "retries": 0,
+  "all_training_completed": true,
+  "postfit_tests": "17 passed in3.31s",
+  "ruff": "PASS",
+  "static": {
+    "filesAnalyzed": 528,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 84.197
+  },
+  "human_editor_refresh": "OUTSTANDING, not claimed",
+  "resources": {
+    "project_bytes": 12836089856,
+    "task_bytes": 5548461,
+    "peak_rss_bytes": 319307776,
+    "peak_training_process_rss_bytes": 1079345152,
+    "total_neural_pair_seconds": 1799.3142386259278
+  },
+  "rank_decode_changes": 0,
+  "point_estimate_bootstrap_parity": true,
+  "tail_mass_loss_conservation": true,
+  "benchmark_archive_parity": true,
+  "no_new_baselines": true,
+  "no_minute_2025_market_protected2026_network": true,
+  "no_commits_push_fetch": true,
+  "runtime": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "packages": {
+      "torch": "2.10.0",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "pyarrow": "23.0.1"
+    }
+  },
+  "inventory_excludes": "Inventory itself and this final receipt to avoid recursive hashes",
+  "stop": "Researcher review only; no additional authorized runs"
+}

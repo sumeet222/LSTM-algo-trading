@@ -1,0 +1,61 @@
+{
+  "version": "1.1.414",
+  "time": "1793232787412",
+  "generalDiagnostics": [
+    {
+      "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_minute_inputs.py",
+      "severity": "error",
+      "message": "No overloads for \"to_datetime\" match the provided arguments",
+      "range": {
+        "start": {
+          "line": 196,
+          "character": 29
+        },
+        "end": {
+          "line": 196,
+          "character": 71
+        }
+      },
+      "rule": "reportCallIssue"
+    },
+    {
+      "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/hf20_minute_inputs.py",
+      "severity": "error",
+      "message": "Argument of type \"ndarray[tuple[int], dtype[timedelta64[Any]]]\" cannot be assigned to parameter \"arg\" of type \"Sequence[float | date] | list[str] | tuple[float | str | date, ...] | np_ndarray_dt[tuple[Any, ...]] | np_ndarray_str[tuple[Any, ...]] | np_ndarray_anyint[tuple[Any, ...]] | np_ndarray_float[tuple[Any, ...]] | Index[Any] | ExtensionArray\" in function \"to_datetime\"\n\u00a0\u00a0Type \"ndarray[tuple[int], dtype[timedelta64[Any]]]\" is not assignable to type \"Sequence[float | date] | list[str] | tuple[float | str | date, ...] | np_ndarray_dt[tuple[Any, ...]] | np_ndarray_str[tuple[Any, ...]] | np_ndarray_anyint[tuple[Any, ...]] | np_ndarray_float[tuple[Any, ...]] | Index[Any] | ExtensionArray\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[tuple[int], dtype[timedelta64[Any]]]\" is not assignable to \"Sequence[float | date]\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[tuple[int], dtype[timedelta64[Any]]]\" is not assignable to \"list[str]\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[tuple[int], dtype[timedelta64[Any]]]\" is not assignable to \"tuple[float | str | date, ...]\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[tuple[int], dtype[timedelta64[Any]]]\" is not assignable to \"ndarray[tuple[Any, ...], dtype[datetime64[Any]]]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Type parameter \"_DTypeT_co@ndarray\" is covariant, but \"dtype[timedelta64[Any]]\" is not a subtype of \"dtype[datetime64[Any]]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"dtype[timedelta64[Any]]\" is not assignable to \"dtype[datetime64[Any]]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Type parameter \"_ScalarT_co@dtype\" is covariant, but \"timedelta64[Any]\" is not a subtype of \"datetime64[Any]\"\n  ...",
+      "range": {
+        "start": {
+          "line": 196,
+          "character": 44
+        },
+        "end": {
+          "line": 196,
+          "character": 60
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/tests/test_hf20_minute_inputs.py",
+      "severity": "error",
+      "message": "Cannot access attribute \"asi8\" for class \"DatetimeIndex\"\n\u00a0\u00a0Attribute \"asi8\" is unknown",
+      "range": {
+        "start": {
+          "line": 49,
+          "character": 44
+        },
+        "end": {
+          "line": 49,
+          "character": 48
+        }
+      },
+      "rule": "reportAttributeAccessIssue"
+    }
+  ],
+  "summary": {
+    "filesAnalyzed": 3,
+    "errorCount": 3,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 2.808
+  }
+}

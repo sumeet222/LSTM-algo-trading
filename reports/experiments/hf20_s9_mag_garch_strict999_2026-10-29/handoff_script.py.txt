@@ -1,0 +1,97 @@
+from pathlib import Path
+import subprocess, json, re
+import pandas as pd
+from lstm_data import hf20_strict999 as t
+b,o=t.b,t.OUT
+for p in [o/'FINAL_REPORT.md',Path('/private/tmp/hf20_strict999_documents.py')]:
+ s=p.read_text().replace('0.307433366','0.307433340')
+ if p.suffix=='.md':
+  lines=[]
+  for line in s.splitlines():
+   if not line.startswith('|'):
+    line=re.sub(r'\b(All|all|Only|only|is|in|and|than|over|of|versus|with|by|took|range|covers|below|including|before|after|remaining|across|flags|neural|old)(?=\d)',r'\1 ',line)
+    for a,z in [('on80,260','on 80,260'),('at240','at 240'),('after240','after 240'),('is2021','is 2021'),('arch8.0.0','arch 8.0.0'),('on2021','on 2021'),('S5-C0.332','S5-C 0.332'),('S2-C0.','S2-C 0.'),('55%','55%')]:line=line.replace(a,z)
+   lines.append(line)
+  s='\n'.join(lines)+'\n'
+ p.write_text(s)
+status=subprocess.check_output(['git','status','--short','--branch'],text=True)
+(o/'git_status_preseal.txt').write_text(status)
+(o/'git_diff_check.txt').write_text(subprocess.run(['git','diff','--check'],capture_output=True,text=True).stdout)
+diff=subprocess.run(['git','diff','--stat'],capture_output=True,text=True,check=True).stdout
+(o/'git_diff_stat.txt').write_text(diff)
+cmd='''# Completed single-use commands; DO NOT relaunch garch or calibrate.
+.venv/bin/python -B /private/tmp/hf20_strict999_readiness.py
+.venv/bin/python -u -B -m lstm_data.hf20_strict999 garch
+.venv/bin/python -B -m lstm_data.hf20_strict999_audit
+.venv/bin/python -B -m lstm_data.hf20_strict999_verify
+.venv/bin/python -u -B -m lstm_data.hf20_strict999 calibrate
+.venv/bin/python -u -B -m lstm_data.hf20_strict999 report
+.venv/bin/python -B -m lstm_data.hf20_strict999 verify
+.venv/bin/python -m pytest tests/test_hf20_strict999.py tests/test_hf20_matched.py tests/test_hf20_classical.py tests/test_hf20_s4_readonly.py -q
+.venv/bin/ruff check src/lstm_data/hf20_strict999*.py tests/test_hf20_strict999.py
+.venv/bin/python scripts/check_python_types.py --pylance-dist /Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist
+git diff --check
+git status --short --branch'''
+replay='''.venv/bin/python -u -B -m lstm_data.hf20_strict999 report --output reports/experiments/hf20_strict999_report_replay_NEW'''
+handoff=f'''# GARCH11-STRICT999 session handoff — COMPLETE, STOP
+
+All 560 new uniform constrained fits passed once; both new calibration families completed. No old model/calibrator was refitted. Full panel 80,260 keys. Matched GARCH MSE is 3.7736% worse than S2-C under G, 4.1538% worse under IO; both lose all four folds. IC 0.307433340 is below all three neural comparators in all four years. Old B3 BLOCKED_DEPENDENCY and later unconstrained PARTIAL_BLOCKED remain unchanged. Scientific qualifications and full fixed-grid results are in FINAL_REPORT.md.
+
+## Binding and implementation
+
+Readiness before fitting: readiness.json, predecessor_bindings.json (3,296 files), READINESS.md, arch_api_source_inspection.txt, constraint_implementation_audit.json, garch_unit_input_support.csv, garch_overlap_audit.csv, key_checks.json and prefit_gate.json. The implementation audit initially says tests required; the separately appended prefit_gate.json records their subsequent PASS before garch_started.json. No history is silently relabelled.
+
+Authenticated predecessor is {t.parent.OUT}. Its FINAL_REPORT.md, SESSION_HANDOFF.md, readiness.json, verification.json, final_integrity.json, all560 fit artifacts/diagnostics, support/variance/replay/filter receipts, frozen calibration/OOS scores and coefficients, role counts, source permissions and journals were inspected. Exact paths/SHA256s are in predecessor_bindings.json. Its successor pointer remains configs/track_a_hf20_classical_matched_successor_v1.json. Older dependency block is {t.old.OUT}. S5-C handoff, original O1 role_indices.npz, Session2B amendment.json/role_counts.csv, genuine endpoint contract, timing and original source permission bindings are inherited and reverified. No invented Session2B protocol file is used. The legacy P2 handoff hashes were checked through load_deferred_work (16 stable entries); no legacy gate status was changed by this benchmark.
+
+Public package extension is src/lstm_data/hf20_strict999_model.py: subclass GARCH, override only constraints(), change b[-1] from -1 to -.999. ConstantMean takes that volatility component and Normal through public APIs. All other likelihood/recursion/bounds/starts/optimizer behavior is inherited. Synthetic permissive-subclass fit exactly matched the package default; a fixed stress fixture proved optimizer-applied boundary enforcement. Independent real-data arithmetic also reproduced normal log-likelihood, initialization, every later filter transition and all99,240 forecasts. Unrounded optimizer coefficients are exactly saved; no clipping. Tolerances1e-10 feasibility/1e-8 contact were declared before fitting.
+
+13 cap contacts, five roundoff overshoots no larger than1.7942e-13; all pass the fixed tolerance. Three old COP boundaries now pass. All65 old near-unit units and495 others retained. No large alpha/beta delta above .01, no retry. Detailed deltas and complete numerical bounds are saved. Model semantics and limitations are in IMPLEMENTATION.md.
+
+## Environment and resources
+
+Existing .venv only, Python3.14.6; arch8.0.0, scipy1.18.1, statsmodels0.14.6, patsy1.0.3, numpy2.5.3, pandas3.0.6, torch2.10.0. No installation, upgrade or dependency-spec change. Before/after pip freeze is byte-identical. Installed package source hashes are in constraint_implementation_audit.json.
+
+Sequential real fitting:210.228s, peak527,581,184 bytes. Independent replay peak519,094,272 bytes. Calibration5.381s, peak379,731,968 bytes. Report/verification receipts and final_integrity.json provide final storage and measured peaks. The150MB initial task estimate was exceeded by saved full comparator panels, while <2.5GB task/<15GB project limits remained satisfied. No giant pair matrix or duplicated underlying feature/market matrix was generated. Elapsed readiness-to-seal time in final_integrity.json is explicitly measured from readiness creation and excludes earlier read-only discovery.
+
+## Commands and reproducibility
+
+Historical commands below were completed once where guarded. The temporary readiness driver is archived as readiness_script.py.txt; it refuses an existing namespace. Logs are readiness_execution.txt, garch_execution.log, constraints_audit.log, filter_replay.log, calibration_execution.log, report_execution.log and verification_execution.log. Report text/table generation source is archived as documents_script.py.txt. Do not invoke consumed predecessor or successor fit/calibration guards.
+
+```sh
+{cmd}
+```
+
+Report-only replay to a **new**, nonexistent destination:
+
+```sh
+{replay}
+```
+
+This reads saved predictions, frozen calibration results and authorized calendar/role/RV coverage metadata; it performs zero fits, zero calibrator estimation, zero inference and zero raw source reconstruction. Do not use default report output after sealing: the report receipt guard rejects overwrite. report_replay_001 was actually run; every numerical CSV is byte-identical (report_replay_verification.json). It reproduces numerical tables, not the manually finalized prose. Do not rerun audit/verify commands into this sealed directory; those were one-time validation commands that write receipts.
+
+Before replay, authenticate final_integrity.json through configs/track_a_hf20_garch_strict999_successor_v1.json, then verify the explicit artifact_inventory.csv and frozen_fit_outputs.json/frozen_calibration_outputs.json hashes. These manifests enumerate only authorized assets. Do not perform a broad protected-source scan. A second machine needs repository setup plus the exact private saved artifacts through the existing authorized artifact route; source permission does not authorize new downloads. --pylance-dist must name that machine's installed Pylance distribution, while the repository .venv remains the interpreter.
+
+## Validation and initial failures
+
+37 focused tests pass (tests_final.txt), including constraint feasibility/contact, inherited package behavior, optimizer-vector identity, deterministic starts, folded-normal quadrature/limits/symmetry/scaling, causal de-overlap/maturity, calendar endpoint fixtures and G/IO hierarchical support arithmetic. Ruff passes. Full Pylance/basic checks cover546 Python files with zero errors/warnings; no severity reductions, ignore directives or exclusions. Latest complete resource-aware static receipt is static_resource_receipt.json with static_final_003.json. Earlier static_final_002.json also has zero diagnostics, but its /usr/bin/time wrapper exited1 because the sandbox denied kern.clockrate after the check; static_resources.txt retains this instrumentation failure. It did not alter scientific results.
+
+Other retained initial issues: public VolatilityProcess import path corrected during read-only inspection; default CSV NA parsing treated the archived literal None sentinel as missing, corrected with keep_default_na=False before namespace creation; first synthetic IGARCH fixture did not force estimated boundary contact, so a fixed synthetic stress fixture was used before real fitting;30 test-only typing diagnostics from heterogeneous kwargs were corrected using explicit arguments. Tests and static checks were rerun without weakening. Arrow hardware sysctl warnings and pip cache notice were nonfatal. Sandbox denied initial process inspection; approved read-only ps escalation then verified local resource use. No failure triggered a real-data refit or parameter change.
+
+Human editor check is **CONFIRMED**: researcher replied “Refreshed: zero errors” with .venv/basic requested; human_editor_check.json preserves the receipt. No remaining editor HOLD.
+
+## Git, append-only linkage and stop
+
+Branch feat/track-a-data-intake; starting/ending HEAD997b30cff98785911b0e33b7e3d2e72f61b8270b. Dirty prior work was preserved, including earlier registry/README/pyproject changes and untracked research files. Cached upstream ahead/behind0/0; remote freshness is unknown because fetch was explicitly prohibited. No branch switch, commit, push, fetch, stash, merge or reset. git_status_initial.txt was captured after creation of readiness artifacts; git_status_final.txt captures completed additions. git_diff_stat.txt and git_diff_check.txt cover existing tracked changes. New files are uncommitted; checkpoints/Parquets/fit arrays/large traces are intentionally ignored. Review an explicit file list before any later separately authorized Git integration; do not broadly add the dirty tree.
+
+New task journal is research_journal.jsonl, linked to the exact prior journal hash at creation. CURRENT_EXPERIMENT_REGISTRY.json and the live neural journal are byte-preserved at186/300. Only a new strict999 successor pointer is appended after audited artifact writing. final_integrity.json, artifact_inventory.csv, archived source snapshots, preserved manifests and the new pointer close the chain.
+
+**STOP.** The bounded classical comparison is technically closed. Researcher review only; no cap/calibrator tuning, alternate GARCH, architecture, hybrid/router, trading, options,2025 numerical research or protected2026 activity is authorized by this completed task.
+'''
+(o/'SESSION_HANDOFF.md').write_text(handoff)
+(o/'documents_script.py.txt').write_text(Path('/private/tmp/hf20_strict999_documents.py').read_text())
+(o/'handoff_script.py.txt').write_text(Path('/private/tmp/hf20_strict999_handoff.py').read_text())
+# Archive new source code as text without making a second importable package.
+archive=o/'source_archive';archive.mkdir(exist_ok=True)
+for p in [*Path('src/lstm_data').glob('hf20_strict999*.py'),Path('tests/test_hf20_strict999.py')]:
+ (archive/(p.name+'.txt')).write_bytes(p.read_bytes())
+print('handoff written; source snapshots',len(list(archive.iterdir())))

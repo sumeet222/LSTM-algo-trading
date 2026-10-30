@@ -1,0 +1,83 @@
+from pathlib import Path
+import inspect,json,sys,subprocess,hashlib,time,importlib.metadata
+import numpy as np,pandas as pd
+from arch.univariate import GARCH,ConstantMean,Normal
+from arch.univariate.base import ARCHModel
+from arch.univariate.volatility import VolatilityProcess
+from lstm_data import hf20_matched as parent
+from lstm_data.hf20_matched_garch import admitted
+b,c3,old=parent.b,parent.c3,parent.old
+pointerpath=Path('configs/track_a_hf20_classical_matched_successor_v1.json')
+pointer=b.read(pointerpath); prior=Path(pointer['experiment'])
+assert prior==parent.OUT
+out=Path('reports/experiments/hf20_s9_mag_garch_strict999_2026-10-29');assert not out.exists()
+tick=time.monotonic()
+for key in ['final_integrity','journal','predecessor','unchanged_live_neural_registry']:
+ r=pointer[key];assert b.digest(Path(r['path']))==r['sha256']
+assert parent.preservation()==400
+for row in pd.read_csv(prior/'artifact_inventory.csv').to_dict('records'):
+ assert b.digest(Path(row['path']))==row['sha256'],row['path']
+for name,sha in b.read(prior/'frozen_fit_outputs.json').items():assert b.digest(Path(name))==sha,name
+assert b.read(prior/'garch_status.json')['status']=='PARTIAL_BLOCKED'
+assert b.read(old.OUT/'readiness.json')['B3']=='BLOCKED_DEPENDENCY'
+assert (prior/'garch_started.json').exists() and (prior/'calibration_started.json').exists()
+ledger=b.read(b.POINTER);last=json.loads(Path(ledger['real_journal']).read_text().splitlines()[-1])
+assert last['global_started_pairs']==186 and last['status']=='COMPLETED' and ledger['effective_ceiling']==300
+bind=b.read(prior/'predecessor_bindings.json')
+paths=[p for p in prior.rglob('*') if p.is_file()]+[pointerpath,Path('AGENTS.md'),Path('README.md'),Path('pyproject.toml')]
+paths+=list(Path('src/lstm_data').glob('hf20_matched*.py'))+[Path('tests/test_hf20_matched.py'),Path('tests/test_hf20_s4_readonly.py')]
+for p in paths:bind[str(p)]=b.digest(p)
+grid,rows=b.metadata();plans=old.rank.validate_roles(grid,rows);signed=old.signed_targets(rows)
+streams,audit=admitted(rows)
+archived_audit=pd.read_csv(prior/'garch_overlap_audit.csv',keep_default_na=False)
+pd.testing.assert_frame_equal(audit,archived_audit,check_dtype=False)
+assert int((~audit.retained).sum())==59
+assert rows.iloc[old.history(rows)].trading_minutes.eq(240).all()
+assert (rows.label_maturity_utc==rows.exit_end_utc+pd.Timedelta(minutes=2)).all()
+oldfit=pd.read_csv(prior/'garch_fit_diagnostics.csv',float_precision='round_trip')
+assert len(oldfit)==560 and oldfit.status.eq('PASS').sum()==557 and oldfit.persistence.ge(.99).sum()==65
+assert set(map(tuple,oldfit.loc[oldfit.status.ne('PASS'),['year','ticker','slot']].to_numpy()))=={(2022,'COP','15:30'),(2023,'COP','13:30'),(2024,'COP','15:30')}
+support=pd.read_csv(prior/'garch_support_prefit.csv',float_precision='round_trip');records=[];keychecks=[]
+for year,roles in plans.items():
+ for slot,stream in streams.items():
+  ix=np.intersect1d(stream,roles['restricted_refit'])
+  assert len(ix)>=100
+  for stock,ticker in enumerate(b.SYMBOLS):
+   source=prior/f'GARCH/F{year%100}'/(ticker+'_'+slot.replace(':',''))/'fit_state.npz'
+   with np.load(source) as f:
+    np.testing.assert_array_equal(f['indices'],ix);np.testing.assert_array_equal(f['x'],100*signed[ix,stock]);assert f['x'].dtype==np.dtype('float64')
+    x=f['x'];res=x-x.mean();v=GARCH(p=1,q=1);sv=v.starting_values(res)
+    assert sv[1]+sv[2]<=.999
+   r=support.loc[(support.year==year)&(support.slot==slot)&(support.ticker==ticker)].iloc[0].to_dict()
+   r.update(old_fit_state=str(source),old_fit_state_sha256=b.digest(source),input_series_identity=True,default_volatility_start=sv.tolist(),default_start_persistence=float(sv[1]+sv[2]))
+   records.append(r)
+ for role in ['calibration','oos']:
+  f=pd.read_parquet(prior/f'F{year%100}/{role}_scores.parquet')
+  canonical=pd.read_parquet(c3.root(year)/f'{role}_scores.parquet',columns=[*c3.META,'A'])
+  pd.testing.assert_frame_equal(f[[*c3.META,'A']],canonical,check_dtype=False)
+  np.testing.assert_array_equal(f.origin_id.iloc[::20],rows.iloc[roles[role]].origin_id)
+  np.testing.assert_array_equal(f.A.to_numpy().reshape(-1,20),abs(signed[roles[role]]))
+  assert f.ticker.tolist()==list(b.SYMBOLS)*len(roles[role])
+  keychecks.append(dict(year=year,role=role,rows=len(f),sha256=parent.panel_hash(f)))
+versions={n:importlib.metadata.version(n) for n in ['arch','scipy','statsmodels','patsy','numpy','pandas','torch']}
+assert versions['arch']=='8.0.0' and versions['scipy']=='1.18.1' and versions['statsmodels']=='0.14.6'
+project=int(subprocess.check_output(['du','-sk','.'],text=True).split()[0])*1024
+assert project+200_000_000<15_000_000_000
+out.mkdir()
+(out/'.gitignore').write_text('*.parquet\n*.npz\nGARCH/\ngarch_filter_trace.csv\n')
+b.write(out/'predecessor_bindings.json',bind,new=True)
+pd.DataFrame(records).to_csv(out/'garch_unit_input_support.csv',index=False)
+audit.to_csv(out/'garch_overlap_audit.csv',index=False)
+pd.read_csv(prior/'role_counts.csv').to_csv(out/'role_counts.csv',index=False)
+b.write(out/'key_checks.json',dict(checks=keychecks),new=True)
+source_items={'VolatilityProcess.constraints':VolatilityProcess.constraints,'GARCH.constraints':GARCH.constraints,'GARCH.starting_values':GARCH.starting_values,'GARCH.bounds':GARCH.bounds,'GARCH.compute_variance':GARCH.compute_variance,'ARCHModel.fit':ARCHModel.fit,'ConstantMean.__init__':ConstantMean.__init__,'Normal.loglikelihood':Normal.loglikelihood}
+(out/'arch_api_source_inspection.txt').write_text('\n\n'.join(name+'\n'+inspect.getsource(obj) for name,obj in source_items.items()))
+api_paths={str(Path(inspect.getfile(obj)).relative_to(Path.cwd())):b.digest(Path(inspect.getfile(obj))) for obj in source_items.values()}
+b.write(out/'constraint_implementation_audit.json',dict(status='PUBLIC_API_FEASIBLE_TESTS_REQUIRED',method='Public GARCH subclass overriding only constraints(): same A matrix, only b[-1] changes -1 to -.999; ConstantMean(volatility=subclass,distribution=Normal(),rescale=False). No package source edits or monkey-patching.',inequality='A @ [omega,alpha,beta] - b >= 0; final row .999-alpha-beta',package_sources=api_paths,package_versions=versions,optimizer='Inherited ARCHModel.fit assembles subclass constraint matrix and passes to scipy.optimize.minimize(method=SLSQP)',preserved=['Gaussian likelihood','variance recursion','starting_values','parameter bounds','backcast','variance bounds','constant mean','rescale=False','tol1e-9/ftol1e-9/maxiter1000'],feasibility_tolerance=1e-10,contact_tolerance=1e-8,coefficient_adjustment=False,dependency_changes=False,initial_inspection_import_error='VolatilityProcess is exported from arch.univariate.volatility, not arch.univariate; read-only import corrected; no model instantiated'),new=True)
+receipt=dict(status='READ_ONLY_INPUTS_READY_CONSTRAINT_TESTS_PENDING',at=pd.Timestamp.now(tz='UTC').isoformat(),predecessor=str(prior),bindings=len(bind),bindings_sha256=b.digest(out/'predecessor_bindings.json'),expected_new_fits=560,expected_new_calibrations=8,old_fits_reused_as_new=0,old_calibrations_refitted=0,neural_ledger=186,neural_ceiling=300,old_pass=557,old_near_unit=65,old_failed=3,old_dependency_block_preserved=True,input_series_identical=560,history_exclusions=59,rows=80260,origins=4013,sessions=793,scale=100,rescale=False,sample_min=100,optimizer=dict(method='SLSQP',maxiter=1000,ftol=1e-9,tol=1e-9,starting_values='package deterministic default, unchanged'),uniform_cap=.999,cap_feasibility_tolerance=1e-10,cap_contact_tolerance=1e-8,contact_definition='abs(.999-alpha-beta)<=1e-8, feasible only if signed slack>=-1e-10; tiny negative slack explicitly reported as roundoff overshoot; no clipping',large_parameter_change_flag='abs(new alpha-old alpha)>.01 or abs(new beta-old beta)>.01; far from cap means old persistence<.99; descriptive flags only, no retries',environment=dict(python=sys.version,versions=versions,interpreter='.venv/bin/python'),resource_estimate=dict(prior_fit_seconds=237.878,expected_task_bytes_under=150000000,expected_numeric_rss_under=700000000,project_bytes_before=project),caps=b.CAPS,git_branch=subprocess.check_output(['git','branch','--show-current'],text=True).strip(),git_sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),permitted_writes=[str(out),'src/lstm_data/hf20_strict999*.py','tests/test_hf20_strict999.py','reports/codex_sessions/new report','configs/new append-only strict999 successor pointer after audit'],prohibited='No predecessor writes, guarded predecessor commands, neural starts/inference, dependency upgrades, market downloads/raw minutes,2025/protected2026,git fetch/commit/push',seconds=time.monotonic()-tick)
+b.write(out/'readiness.json',receipt,new=True)
+(out/'pip_freeze_before.txt').write_text(subprocess.check_output([sys.executable,'-m','pip','freeze'],text=True))
+(out/'git_status_initial.txt').write_text(subprocess.check_output(['git','status','--short','--branch'],text=True))
+(out/'research_journal.jsonl').write_text(json.dumps(dict(status='READ_ONLY_FEASIBILITY_RECORDED',at=receipt['at'],predecessor_journal=pointer['journal'],neural_ledger=186))+'\n')
+(out/'READINESS.md').write_text('# Read-only feasibility gate\n\nAll '+str(len(bind))+' predecessor bindings verified. All560 signed fit series and original role/sample identity verified; 59 exact overlap exclusions. Old outcomes557pass/3COPboundaries/65near-unit authenticated; dependency block preserved. Neural ledger186/300. No real fit or package change.\n\nPublic arch8.0.0 GARCH.constraints supports A@params-b>=0. Inherit GARCH(1,1), override only the final constraint bound to -.999, supply through ConstantMean public volatility argument. Inherited Gaussian likelihood, recursion, initialization, bounds and SLSQP unchanged. Source/API saved in arch_api_source_inspection.txt; independent fixtures must pass before fitting. Tolerances and all560-fit scope fixed in readiness.json.\n\nOnly new namespace/code/tests/session report and post-audit successor pointer may be written. Frozen nine-arm calibrators/scores will only be read.\n')
+print(json.dumps({k:receipt[k] for k in ['status','bindings','input_series_identical','history_exclusions','old_pass','old_failed','old_near_unit','resource_estimate']}))

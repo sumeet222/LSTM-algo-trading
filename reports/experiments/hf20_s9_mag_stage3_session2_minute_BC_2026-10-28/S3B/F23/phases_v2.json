@@ -1,0 +1,46 @@
+{
+  "year": 2023,
+  "phases": {
+    "initial": {
+      "cutoff": "2022-05-31",
+      "scale": 0.006072334419240624,
+      "recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/initial_recipe.json",
+      "original_recipe_sha256": "887a6bdeda61cf23a879cdf5b4c640ddd33bf2bb087a05e858c29d76857706c4",
+      "MIN01_scaler": {
+        "center": 1.3892521377334608,
+        "scale": 0.5262738035437128,
+        "method": "MAD",
+        "n": 278539
+      },
+      "fit_unique_hour_keys": 15865,
+      "valid_MIN01_stock_hours": 278539,
+      "MIN01_native_min": 0.015117049889995921,
+      "MIN01_native_max": 8.908669758289054,
+      "MIN06_equals_MIN07": true,
+      "constant_new_channels": []
+    },
+    "restricted": {
+      "cutoff": "2022-09-30",
+      "scale": 0.006121673076939892,
+      "recipe_reference": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/restricted_recipe.json",
+      "original_recipe_sha256": "7b998301c42b4f6c76260b520fc6eb553e60f032290dc2663912447eb7f6b1c9",
+      "MIN01_scaler": {
+        "center": 1.3947887715462495,
+        "scale": 0.5269529649794805,
+        "method": "MAD",
+        "n": 287272
+      },
+      "fit_unique_hour_keys": 16342,
+      "valid_MIN01_stock_hours": 287272,
+      "MIN01_native_min": 0.014983345070301754,
+      "MIN01_native_max": 8.90251794852367,
+      "MIN06_equals_MIN07": true,
+      "constant_new_channels": []
+    }
+  },
+  "thresholds": {
+    "95": 0.03048333514069074,
+    "99": 0.05621444505567313
+  },
+  "materialization": "complete original input-only prefix union; source_normalizer_supplement.json"
+}

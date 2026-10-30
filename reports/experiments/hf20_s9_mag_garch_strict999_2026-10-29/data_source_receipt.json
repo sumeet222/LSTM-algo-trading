@@ -1,0 +1,99 @@
+{
+  "status": "BOUND_SAVED_DERIVATIVES_ONLY",
+  "source_revision": "776328445b7ac6e7815ef3a483e9c8ded1eb6d56",
+  "source_permissions": {
+    "reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/data_source_receipt.json": "bfb518ddc4c0071bc16faff3d11c3beebecf68fdf006851d28bff5cda1dfda45",
+    "reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/role_counts.csv": "6f72c0f264fc8e294c303be7dc6a0195ce8a7d766e5b3efa5e864dbf55f5d436",
+    "reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/calibration_coefficients.csv": "98abfd5cba59af9806ef9be4556f1ff5313dcce29b8428facadac51ad39039a6",
+    "reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/calibration_support.csv": "1ff0e955f5f6b084e77ca161d44a7d6652f604813741cbb95eb0626091748025",
+    "reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/metrics.csv": "c6282d9ecabe652382aeab97ee907f30ad9e3b49b73fe2ca3b3b5cfc572bfba7",
+    "reports/experiments/hf20_s9_mag_garch_matched_calibration_2026-10-29/paired_differences.csv": "cf5e005b04e414b1223b043b05b1bf9d0107f90fb7f92cdc6f7bea49a237b20a",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/amendment.json": "379daeb6cb0e4123c524cd008ded70e4595d1b8d1c318f45d33682ef38161386",
+    "reports/experiments/hf20_s9_mag_stage1_session2b_fourfold_2026-10-27/role_counts.csv": "6db31c34222f84958226210cc2fcaab0d9a0d73b5faa82befccb91f9287b1c39"
+  },
+  "signed_return_input": "Exact saved genuine endpoint log-return histories, independently compared to all560 archived fit_state.npz x vectors at scale100",
+  "source_reconstruction": false,
+  "raw_minute_read": false,
+  "market_download": false,
+  "market_2025_read": false,
+  "protected_2026_access": false,
+  "neural_inference": false,
+  "stock_order": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "role_target_key_weight_checks": {
+    "checks": [
+      {
+        "year": 2021,
+        "role": "calibration",
+        "rows": 5660,
+        "sha256": "91c27da4593dee3deb0b139a24713537acbfbe765000c533c547b5449a9281af"
+      },
+      {
+        "year": 2021,
+        "role": "oos",
+        "rows": 19100,
+        "sha256": "6c33853c08f981031206bb0986f098650592dca6c106c0b1ccd19b1474ac2f64"
+      },
+      {
+        "year": 2022,
+        "role": "calibration",
+        "rows": 4900,
+        "sha256": "a862e8f2c572e4e31be31b800f6159edeb4ba979ba2aa8ee0ca96f894d2af92d"
+      },
+      {
+        "year": 2022,
+        "role": "oos",
+        "rows": 23600,
+        "sha256": "5e70407df19979b8dcbc6c3ed1f551f4d87a0bd96982ccc9431c07b4decd67c3"
+      },
+      {
+        "year": 2023,
+        "role": "calibration",
+        "rows": 5160,
+        "sha256": "103546d99fc0318cdc66cf71d5b7744b9a2a6525eb124080fc4d78e2ff0dcbea"
+      },
+      {
+        "year": 2023,
+        "role": "oos",
+        "rows": 17740,
+        "sha256": "90f694378d62ade83c6e4342f8363fb6858f796346ed5bb1214831b9d09b256f"
+      },
+      {
+        "year": 2024,
+        "role": "calibration",
+        "rows": 3260,
+        "sha256": "6db99de0c190da82149babb5c122583b5ccc34270427f95fc90c08b25b537ade"
+      },
+      {
+        "year": 2024,
+        "role": "oos",
+        "rows": 19820,
+        "sha256": "89a4686b57d35950801c3197fee9ef82fdc5a0271df48026dac9a0e0a3595559"
+      }
+    ]
+  },
+  "no_frozen_calibration_refit": true,
+  "package_changes": false,
+  "source_timing": "Endpoint+2min strictly before origin+2min issue; nominal origin target is not post-issue executable return",
+  "predecessor_bindings_sha256": "798162594c284023ce90435d8b3c4cf417a8def585a0114e6c3205b2f0de68be"
+}

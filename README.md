@@ -301,3 +301,18 @@ DOCUMENTED metadata remains a caller assertion requiring review. ASSUMED publica
 is retained but not activated. Every output has `research_ready=False`, execution
 is `NOT_EVALUATED`, and market branches remain HOLD. Production label integration,
 inner-tail adequacy checks and source/approval closure need separate authorization.
+
+
+### Optional classical GARCH environment
+
+The HF20 GARCH/matched-calibration successor uses the existing project environment:
+`python -m pip install -e '.[classical]'`. This pinned optional extra requires
+Python 3.12 or newer (executed with 3.14); the core project still supports 3.11.
+Exact dependency versions and wheel hashes
+are recorded in its `dependency_install.json`; other platforms must satisfy the
+project Python constraints and provide compatible wheels. No neural package upgrade
+is needed. Historical fit commands are single-use; use
+`.venv/bin/python -B -m lstm_data.hf20_matched report` for saved-score report replay
+without model or calibration fitting. The frozen artifacts referenced by the
+successor's `predecessor_bindings.json` must be supplied through the existing data
+transfer procedure.
