@@ -1,0 +1,140 @@
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:303:32
+    |
+301 |                 shorts = sorted(
+302 |                     (lot for lot in self.lots.values() if lot.ticker == j and lot.quantity < 0),
+303 |                     key=lambda l: l.key,
+    |                                ^
+304 |                 )
+305 |                 denom = sum((-lot.quantity for lot in shorts), ZERO)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:417:21
+    |
+415 |                     "internal": l.internal,
+416 |                 }
+417 |                 for l in legs
+    |                     ^
+418 |             ],
+419 |         )
+    |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py:18:17
+   |
+16 |             'forecasts':0,'equal':0,'s2c':0,'rolling':0,'ewma':0,'matched':0}
+17 |     per_ticker={t:{'valid':0,'missing_or_invalid':0}for t in SYMBOLS}
+18 |     first_bad=[];calendar=[];previous_fold=None
+   |                 ^
+19 |     for day in market.days():
+20 |         totals['sessions']+=1;totals['rows']+=day.valid.size
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py:18:29
+   |
+16 |             'forecasts':0,'equal':0,'s2c':0,'rolling':0,'ewma':0,'matched':0}
+17 |     per_ticker={t:{'valid':0,'missing_or_invalid':0}for t in SYMBOLS}
+18 |     first_bad=[];calendar=[];previous_fold=None
+   |                             ^
+19 |     for day in market.days():
+20 |         totals['sessions']+=1;totals['rows']+=day.valid.size
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py:20:30
+   |
+18 |     first_bad=[];calendar=[];previous_fold=None
+19 |     for day in market.days():
+20 |         totals['sessions']+=1;totals['rows']+=day.valid.size
+   |                              ^
+21 |         totals['valid']+=int(day.valid.sum());totals['missing_or_invalid']+=int((~day.valid).sum())
+22 |         totals['opportunities']+=len(day.signals)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py:21:46
+   |
+19 |     for day in market.days():
+20 |         totals['sessions']+=1;totals['rows']+=day.valid.size
+21 |         totals['valid']+=int(day.valid.sum());totals['missing_or_invalid']+=int((~day.valid).sum())
+   |                                              ^
+22 |         totals['opportunities']+=len(day.signals)
+23 |         totals['forecasts']+=int(day.signals.magnitude_c3.notna().sum())
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py:37:37
+   |
+35 |             calendar.append({'first_session':day.date,'fold':'F'+year[2:],'opportunities':len(day.signals)})
+36 |             previous_fold=year
+37 |         if totals['sessions']%100==0:print('source_sessions',totals['sessions'],flush=True)
+   |                                     ^
+38 |     expected=json.loads((V2/'FULL_SIGNAL_COVERAGE_REPORT.json').read_text())['totals']
+39 |     for key in ('forecasts','equal','s2c','rolling','ewma','matched'):
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py:40:38
+   |
+38 |     expected=json.loads((V2/'FULL_SIGNAL_COVERAGE_REPORT.json').read_text())['totals']
+39 |     for key in ('forecasts','equal','s2c','rolling','ewma','matched'):
+40 |         if totals[key]!=expected[key]:raise ValueError('FROZEN_SIGNAL_COUNTS_CHANGED:'+key)
+   |                                      ^
+41 |     if totals['opportunities']!=expected['rows']:raise ValueError('OPPORTUNITY_AXIS_CHANGED')
+42 |     publish(ROOT/'RAW_SOURCE_AND_SIGNAL_PREFLIGHT_V4.json',{
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py:41:49
+   |
+39 |     for key in ('forecasts','equal','s2c','rolling','ewma','matched'):
+40 |         if totals[key]!=expected[key]:raise ValueError('FROZEN_SIGNAL_COUNTS_CHANGED:'+key)
+41 |     if totals['opportunities']!=expected['rows']:raise ValueError('OPPORTUNITY_AXIS_CHANGED')
+   |                                                 ^
+42 |     publish(ROOT/'RAW_SOURCE_AND_SIGNAL_PREFLIGHT_V4.json',{
+43 |         'totals':totals,'per_ticker':per_ticker,'first_invalid_witnesses':first_bad,
+   |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:125:80
+    |
+123 |     requests = tuple(Request(str(i), D(1), "ENTRY") for i in range(8))
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+    |                                                                                ^
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:126:27
+    |
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+    |                           ^
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:128:32
+    |
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |                                ^
+129 |     assert all(l.quantity == 1 for l in partial)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:129:36
+    |
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+129 |     assert all(l.quantity == 1 for l in partial)
+    |                                    ^
+
+Found 15 errors (2 fixed, 13 remaining).

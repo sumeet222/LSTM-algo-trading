@@ -1,0 +1,27 @@
+{
+  "adjustment": "raw",
+  "endpoint": "https://data.alpaca.markets/v2/stocks/bars",
+  "expected_original_gap_cells": 99048,
+  "feed": "sip",
+  "limit": 10000,
+  "maximum_dates": 1005,
+  "maximum_pages_per_date": 2,
+  "maximum_requests": 2010,
+  "minimum_seconds_between_requests": 0.6,
+  "no_2025_prices": true,
+  "original_partitions_modified": false,
+  "period": [
+    "2021-01-01",
+    "2024-12-31"
+  ],
+  "preflight_sha256": "e5ea124db85913b9b0f49d645cbeac5d73bb4f660d5981d9661de854ac007966",
+  "price_precedence": "original validated bar first; supplement only original invalid/missing key",
+  "reason": "canonical schema gaps exposed unpriceable held inventory; source quality selection independent of PnL",
+  "retention": "only exact selected missing-key rows retained; raw full-response digest plus query; no replacement full panel",
+  "retry_policy": "no automatic retry; HTTP429 stops and preserves resumable receipts",
+  "runtime": "all fields become known after bar completion plus scenario lag; never fill-bar volume for prior decision",
+  "selection": "all 20 fixed names, all calendar RTH minutes, exact original invalid/missing OHLCV mask; no strategy/label/fill-success filter",
+  "signals_and_controls": "original cache unchanged; no neural forward or feature refit",
+  "timeframe": "1Min",
+  "version": "RAW_GAP_ONLY_1"
+}

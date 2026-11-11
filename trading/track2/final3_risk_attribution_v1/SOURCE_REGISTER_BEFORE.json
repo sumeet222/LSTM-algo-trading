@@ -1,0 +1,581 @@
+{
+  "files": [
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 986780,
+      "mtime_ns": 1794370294086456032,
+      "path": "trading/track2/final_directional_slate_v1/analysis_03/COMBINED_DAILY_NAV.parquet",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "canonical daily accounts",
+      "row_count": 24120,
+      "sha256": "09b2f52b2fac6d750512a1564b6f7d0fd38ec7651e74c2c5acb53475adc6b20c"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 1599,
+      "mtime_ns": 1794370294822050196,
+      "path": "trading/track2/final_directional_slate_v1/analysis_03/ANALYSIS_MANIFEST.json",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "canonical derived validation",
+      "row_count": null,
+      "sha256": "46450fbd507384920b7345bf01c24f6f201d625e4b5715a9350bf7bf0fbdb3ae"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 24638,
+      "mtime_ns": 1794370294045470964,
+      "path": "trading/track2/final_directional_slate_v1/FOUR_ARM_S2C_SIZING_RESULTS.csv",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "canonical final financial anchors",
+      "row_count": 24,
+      "sha256": "e7d9bc2d26ba707ebea52aef6ab64033ea3ff2d078e9e61776a841b0a4bf66ca"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 4910,
+      "mtime_ns": 1794368856455970749,
+      "path": "trading/track2/final_directional_slate_v1/FIVE_ALGORITHM_REGISTRY.json",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "frozen alpha/cost/selection protocol",
+      "row_count": null,
+      "sha256": "e1a9565b8ce31576d2cbdfe4fb7f4992bdccdaa2127b7afabf83fa6fd2b2d0e1"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 83,
+      "mtime_ns": 1794368856456388193,
+      "path": "trading/track2/final_directional_slate_v1/REGISTRY_SEAL.json",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "five-policy seal",
+      "row_count": null,
+      "sha256": "d911c51e9de4fbcc1ce288b4906e9dfa539544f7f889441eea0e5670501af70d"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 2179,
+      "mtime_ns": 1794369696754334648,
+      "path": "trading/track2/final_directional_slate_v1/OVERLAY_RUN_REGISTRY.json",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "actual overlay code/source/selection identity",
+      "row_count": null,
+      "sha256": "405b23e7090c26dde20eae73c0905c90eaadce67a9b3ac1896d0ec3016901b39"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 786,
+      "mtime_ns": 1794368863524360358,
+      "path": "trading/track2/final_directional_slate_v1/SELECTION_RECEIPT.json",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "frozen three-family selection",
+      "row_count": null,
+      "sha256": "0a4f5bee450b76f7e643c99d957c6e0416c8531eaa8b76d29c03e79887124f7b"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 1536,
+      "mtime_ns": 1794370294112875897,
+      "path": "trading/track2/final_directional_slate_v1/S2C_MATCHED_VS_ATTAINABLE.csv",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "causal opportunity/readiness denominators",
+      "row_count": 24,
+      "sha256": "0d38efbc2b1f34a07b6f4f4aaff2cd6f2fad413671f114afea7d60e2d5e547e1"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 351,
+      "mtime_ns": 1794371295661699139,
+      "path": "trading/track2/final_directional_slate_v1/FIXED_POLICY_RISK_CAUSE_SUPPORT.csv",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "fixed partial-risk attribution caveat",
+      "row_count": 7,
+      "sha256": "68f991dcf2c0b17554fe6345bfa72c84c99443f449a5ad081a576134506e747c"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 2519,
+      "mtime_ns": 1794371747202457706,
+      "path": "trading/track2/final_directional_slate_v1/EXPORT_SCHEMA_AND_COUNTING.md",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "book arm/sample schema convention",
+      "row_count": null,
+      "sha256": "be13f2447030b1b9c475ab608a07392cf82323b38c4a5fadd580b16c9a933f9f"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 7035,
+      "mtime_ns": 1794371747202624201,
+      "path": "trading/track2/final_directional_slate_v1/VALIDATION_AND_REPRODUCE.md",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "source/validation interpretation",
+      "row_count": null,
+      "sha256": "ad9d7d873f2a754f4f07f8a2b9dc9a5ab385d238a73e91ca4c096ebc91340365"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 4378,
+      "mtime_ns": 1794371747202078135,
+      "path": "trading/track2/final_directional_slate_v1/FINAL_DIRECTIONAL_AND_SIZING_HANDOFF.md",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "human handoff",
+      "row_count": null,
+      "sha256": "4948b2302b3d8deee9b61819a7fa343eb4df0d9cea9fada01f18651b7d42dbfc"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 643,
+      "mtime_ns": 1794370294346668774,
+      "path": "trading/track2/final_directional_slate_v1/analysis_03/PAIRED_FUNDED_PATH_DIVERGENCE.csv",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "prior executed-key join witness",
+      "row_count": 9,
+      "sha256": "e28e7d8ddd6e1ecd27e50f113e6117d29142cf74a905c0e44a7da16f2b5078e9"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 3631,
+      "mtime_ns": 1794370294047300905,
+      "path": "trading/track2/final_directional_slate_v1/analysis_03/CONCENTRATION_AND_TAILS.csv",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "prior concentration check",
+      "row_count": 21,
+      "sha256": "255b9a5d6cf73641ba4abc81e097aa71204569e26c3684a3edd99522e5c5b795"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 11446,
+      "mtime_ns": 1794370294051374942,
+      "path": "trading/track2/final_directional_slate_v1/analysis_03/ANNUAL_NAV_AND_COSTS.csv",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "prior calendar-year monetary check",
+      "row_count": 96,
+      "sha256": "8b53217b76ba0f8a9dd187af14d87dde2160c83fb9d0155ac1ea9eb39e9f6605"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 13133,
+      "mtime_ns": 1794369860557622470,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/RUN_RECEIPT.json",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "matched run frontier",
+      "row_count": null,
+      "sha256": "578b2a544c45128e16796b77fce4d5607ea509a641a16f22efe9f1e9f50b62a2"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 785,
+      "mtime_ns": 1794369860543025810,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/OUTPUT_MANIFEST.json",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "settled result file hashes",
+      "row_count": null,
+      "sha256": "f9b5d35ae6c5e7722e8479d29560a736a2d64c8126e4f993d5f0abe4459a88dc"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 13967,
+      "mtime_ns": 1794369860191333396,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/RESULTS.csv",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "original Decimal financial amounts",
+      "row_count": 12,
+      "sha256": "e5490d6507a55d9945b971fd27853f35ffaff5f1313c3d0f6ad30dcb94be158d"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 493372,
+      "mtime_ns": 1794369860319013742,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/DAILY_NAV.parquet",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "independent daily export crosscheck",
+      "row_count": 12060,
+      "sha256": "ade5bb19a4c914c41eb9a2b56f0e7a4d003e9dab01eea1a30e646f69bf663ae8"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 669629,
+      "mtime_ns": 1794369860409869930,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/COHORTS.parquet",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "complete closed-cohort allocations",
+      "row_count": 8029,
+      "sha256": "0cb709466543f1f6f0c68e36204c5b2f44831bcab3575555c2026e9b07c76fef"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 806799,
+      "mtime_ns": 1794369860525429413,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/PHYSICAL_FILLS.parquet",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "external fills and costs",
+      "row_count": 16758,
+      "sha256": "9645a9e792b715b26337c5bf7113fb4b9a0fd6366bb7bbee08a7c040083856d6"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 6650,
+      "mtime_ns": 1794369860191865462,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/EXIT_REASONS.csv",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "dynamic grouped exit counters",
+      "row_count": 40,
+      "sha256": "084e05cdd814ed03babbd4e373fb4be3669ab8eb11b4b2e4fe6cae011b21280a"
+    },
+    {
+      "arms": [
+        "EQUAL",
+        "ROLLING_RISK",
+        "EWMA_RISK",
+        "S2C_RISK"
+      ],
+      "bytes": 90296,
+      "mtime_ns": 1794369860196402276,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/ATTRIBUTION.csv",
+      "period": [
+        "2021-01-04",
+        "2024-12-31"
+      ],
+      "policies": [
+        "R01-A",
+        "M04-T480",
+        "R07-PERSIST"
+      ],
+      "population": "MATCHED_PRIMARY; other rows present only in named mixed containers",
+      "role": "source aggregate/rejection counters",
+      "row_count": 430,
+      "sha256": "c2fe5ddf8668922d0b041f9b2cea6f4ec1611c68e63aa4ee6e5da82356e9207c"
+    },
+    {
+      "bytes": 30299,
+      "mtime_ns": 1794372013665775063,
+      "path": "trading/track2/final_directional_slate_v1/FINAL_SLATE_CONTENT_MANIFEST.json",
+      "role": "final root content anchor",
+      "row_count": null,
+      "sha256": "8633f549c91e1d7df3531ffc164fffdf7a550b3780a129ae5e2bd77e18d2f580"
+    },
+    {
+      "bytes": 3147,
+      "mtime_ns": 1794178377292597277,
+      "path": "trading/track2/stage012/original_bundles.json",
+      "role": "original model path/hash anchor",
+      "row_count": null,
+      "sha256": "26a509f602e7afb16f9ee234816f8c76b5f1a189817df3afe02cb84622675931"
+    },
+    {
+      "bytes": 5268,
+      "mtime_ns": 1794179062458991816,
+      "path": "trading/track2/stage012/SOURCE_AND_MODEL_REGISTRY.md",
+      "role": "original model architecture anchor",
+      "row_count": null,
+      "sha256": "a9045b8058a5b2ddb00c0522c2f7fdca552f7af95e509d856b797f7c0739ed90"
+    }
+  ],
+  "scope": "Relevant inputs only; no raw source/model/checkpoint read"
+}

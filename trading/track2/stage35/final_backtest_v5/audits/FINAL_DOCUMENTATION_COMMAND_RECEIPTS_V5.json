@@ -1,0 +1,21 @@
+{
+  "commands": [
+    {
+      "argv": [
+        ".venv/bin/python",
+        "trading/track2/stage35/final_backtest_v5/audits/ASSEMBLE_FINAL_HANDOFF_V5.py.txt"
+      ],
+      "returncode": 0,
+      "stdout": "STAGE35_V5_FINANCIAL_BACKTEST_COMPLETE_EXPLORATORY 24 of24; final and recovery handoffs assembled from actual machine evidence."
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "trading/track2/stage35/final_backtest_v5/audits/FINALIZE_DOCUMENTATION_AND_INDEX_V5.py.txt"
+      ],
+      "returncode": 0,
+      "stdout_summary": "Actual24/24 cases completed and reconciled; original/protected bytes unchanged; no Stage6 audit or unauthorized activities."
+    }
+  ],
+  "no_new_financial_replay": true
+}

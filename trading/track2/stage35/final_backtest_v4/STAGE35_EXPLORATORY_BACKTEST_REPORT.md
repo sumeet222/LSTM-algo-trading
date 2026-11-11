@@ -1,0 +1,7 @@
+# Exploratory financial backtest: HOLD
+
+**STAGE35_BACKTEST_HOLD.** The owner approved the research workflow; authorization and RSA signatures are not blockers. The frozen baseline and 23 additional predefined scenarios were not executed as full 2021–2024 strategy-performance runs. No annual returns, Sharpe, drawdown, S2C superiority, profitability or Stage6 significance conclusion is available.
+
+Authorized bounded actual-price financial ledger diagnostics did run to certify readiness. Four of five windows reconcile and terminate without unresolved executions. The June 2021 window retains two submitted AVGO orders at 2021-06-09 16:33 UTC with no approved exact-minute raw bar. It would be false to erase them, substitute 16:34, or claim a broker cancellation from absent OHLCV. An exact raw-trades query returned 18 trades, mostly excluded odd lots; converting these into a fill proxy requires an explicit new price-construction convention. See MATERIAL_PRICE_BLOCKER_V4.json and ACTUAL_MATERIAL_ORDER_WITNESSES_V4.json.
+
+The baseline runner was actually invoked and refused with MANDATORY_RESEARCH_GATE_HOLD before financial-result construction. BASELINE_FOUR_ARM_RESULTS and SENSITIVITY_RESULTS were not created. Conditional MRK/OGN accounting, ordinary-dividend evidence classes, unknown AMD/AMZN zero-recorded base/yield sensitivities and academic short assumptions remain disclosed. They do not waive missing execution prices. This report deliberately contains no diagnostic investment-performance headline.

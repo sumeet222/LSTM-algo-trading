@@ -1,0 +1,318 @@
+{
+    "version": "1.1.414",
+    "time": "1794348027703",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"float\" cannot be assigned to parameter \"gross_winning_USD\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"float\" is not assignable to type \"str | list[str] | None\"\n    \"float\" is not assignable to \"str\"\n    \"float\" is not assignable to \"list[str]\"\n    \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 201,
+                    "character": 30
+                },
+                "end": {
+                    "line": 201,
+                    "character": 44
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"float\" cannot be assigned to parameter \"gross_losing_USD\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"float\" is not assignable to type \"str | list[str] | None\"\n    \"float\" is not assignable to \"str\"\n    \"float\" is not assignable to \"list[str]\"\n    \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 202,
+                    "character": 29
+                },
+                "end": {
+                    "line": 202,
+                    "character": 48
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"float | None\" cannot be assigned to parameter \"average_gross_winner_USD\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"float | None\" is not assignable to type \"str | list[str] | None\"\n    Type \"float\" is not assignable to type \"str | list[str] | None\"\n      \"float\" is not assignable to \"str\"\n      \"float\" is not assignable to \"list[str]\"\n      \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 203,
+                    "character": 37
+                },
+                "end": {
+                    "line": 203,
+                    "character": 72
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"float | None\" cannot be assigned to parameter \"average_gross_loser_USD\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"float | None\" is not assignable to type \"str | list[str] | None\"\n    Type \"float\" is not assignable to type \"str | list[str] | None\"\n      \"float\" is not assignable to \"str\"\n      \"float\" is not assignable to \"list[str]\"\n      \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 204,
+                    "character": 36
+                },
+                "end": {
+                    "line": 204,
+                    "character": 81
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"float | None\" cannot be assigned to parameter \"gross_price_hit_rate\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"float | None\" is not assignable to type \"str | list[str] | None\"\n    Type \"float\" is not assignable to type \"str | list[str] | None\"\n      \"float\" is not assignable to \"str\"\n      \"float\" is not assignable to \"list[str]\"\n      \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 205,
+                    "character": 33
+                },
+                "end": {
+                    "line": 205,
+                    "character": 86
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"int\" cannot be assigned to parameter \"cohorts_filled\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"int\" is not assignable to type \"str | list[str] | None\"\n    \"int\" is not assignable to \"str\"\n    \"int\" is not assignable to \"list[str]\"\n    \"int\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 218,
+                    "character": 27
+                },
+                "end": {
+                    "line": 218,
+                    "character": 40
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"int\" cannot be assigned to parameter \"physical_external_orders\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"int\" is not assignable to type \"str | list[str] | None\"\n    \"int\" is not assignable to \"str\"\n    \"int\" is not assignable to \"list[str]\"\n    \"int\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 219,
+                    "character": 37
+                },
+                "end": {
+                    "line": 219,
+                    "character": 48
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"int\" cannot be assigned to parameter \"physical_external_fill_events\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"int\" is not assignable to type \"str | list[str] | None\"\n    \"int\" is not assignable to \"str\"\n    \"int\" is not assignable to \"list[str]\"\n    \"int\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 220,
+                    "character": 42
+                },
+                "end": {
+                    "line": 220,
+                    "character": 68
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"float | None\" cannot be assigned to parameter \"median_external_order_notional_USD\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"float | None\" is not assignable to type \"str | list[str] | None\"\n    Type \"float\" is not assignable to type \"str | list[str] | None\"\n      \"float\" is not assignable to \"str\"\n      \"float\" is not assignable to \"list[str]\"\n      \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 221,
+                    "character": 47
+                },
+                "end": {
+                    "line": 223,
+                    "character": 21
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"int\" cannot be assigned to parameter \"minimum_fee_binding_orders\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"int\" is not assignable to type \"str | list[str] | None\"\n    \"int\" is not assignable to \"str\"\n    \"int\" is not assignable to \"list[str]\"\n    \"int\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 224,
+                    "character": 39
+                },
+                "end": {
+                    "line": 228,
+                    "character": 18
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"int\" cannot be assigned to parameter \"candidate_intents\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"int\" is not assignable to type \"str | list[str] | None\"\n    \"int\" is not assignable to \"str\"\n    \"int\" is not assignable to \"list[str]\"\n    \"int\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 229,
+                    "character": 30
+                },
+                "end": {
+                    "line": 229,
+                    "character": 73
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"int\" cannot be assigned to parameter \"scheduled_name_opportunities\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"int\" is not assignable to type \"str | list[str] | None\"\n    \"int\" is not assignable to \"str\"\n    \"int\" is not assignable to \"list[str]\"\n    \"int\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 230,
+                    "character": 41
+                },
+                "end": {
+                    "line": 230,
+                    "character": 76
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"int\" cannot be assigned to parameter \"observed_calendar_name_opportunities\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"int\" is not assignable to type \"str | list[str] | None\"\n    \"int\" is not assignable to \"str\"\n    \"int\" is not assignable to \"list[str]\"\n    \"int\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 231,
+                    "character": 49
+                },
+                "end": {
+                    "line": 231,
+                    "character": 89
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"dict[str, int]\" cannot be assigned to parameter \"rejections\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"dict[str, int]\" is not assignable to type \"str | list[str] | None\"\n    \"dict[str, int]\" is not assignable to \"str\"\n    \"dict[str, int]\" is not assignable to \"list[str]\"\n    \"dict[str, int]\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 232,
+                    "character": 23
+                },
+                "end": {
+                    "line": 232,
+                    "character": 39
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"dict[Unknown, int]\" cannot be assigned to parameter \"execution_counts\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"dict[Unknown, int]\" is not assignable to type \"str | list[str] | None\"\n    \"dict[Unknown, int]\" is not assignable to \"str\"\n    \"dict[Unknown, int]\" is not assignable to \"list[str]\"\n    \"dict[Unknown, int]\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 233,
+                    "character": 29
+                },
+                "end": {
+                    "line": 233,
+                    "character": 49
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"float | None\" cannot be assigned to parameter \"median_holding_wall_minutes\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"float | None\" is not assignable to type \"str | list[str] | None\"\n    Type \"float\" is not assignable to type \"str | list[str] | None\"\n      \"float\" is not assignable to \"str\"\n      \"float\" is not assignable to \"list[str]\"\n      \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 234,
+                    "character": 40
+                },
+                "end": {
+                    "line": 234,
+                    "character": 82
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"float | None\" cannot be assigned to parameter \"average_virtual_gross_NAV\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"float | None\" is not assignable to type \"str | list[str] | None\"\n    Type \"float\" is not assignable to type \"str | list[str] | None\"\n      \"float\" is not assignable to \"str\"\n      \"float\" is not assignable to \"list[str]\"\n      \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 235,
+                    "character": 38
+                },
+                "end": {
+                    "line": 245,
+                    "character": 21
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"float | Literal[0]\" cannot be assigned to parameter \"turnover_over_mean_NAV\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"float | Literal[0]\" is not assignable to type \"str | list[str] | None\"\n    Type \"float\" is not assignable to type \"str | list[str] | None\"\n      \"float\" is not assignable to \"str\"\n      \"float\" is not assignable to \"list[str]\"\n      \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 246,
+                    "character": 35
+                },
+                "end": {
+                    "line": 250,
+                    "character": 18
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/reporting.py",
+            "severity": "error",
+            "message": "Argument of type \"int\" cannot be assigned to parameter \"terminal_stock_symbols\" of type \"str | list[str] | None\" in function \"update\"\n  Type \"int\" is not assignable to type \"str | list[str] | None\"\n    \"int\" is not assignable to \"str\"\n    \"int\" is not assignable to \"list[str]\"\n    \"int\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 254,
+                    "character": 35
+                },
+                "end": {
+                    "line": 254,
+                    "character": 68
+                }
+            },
+            "rule": "reportArgumentType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 17,
+        "errorCount": 19,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 4.685
+    }
+}
+

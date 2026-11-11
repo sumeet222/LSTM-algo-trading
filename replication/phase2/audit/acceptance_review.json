@@ -1,0 +1,577 @@
+{
+  "status": "PREFIT_SUPPORTED_WITH_NONBLOCKING_FINDINGS_FINAL_RUN_PENDING",
+  "reviewer": "fresh independent acceptance reviewer /root/clean_phase2/acceptance_reviewer",
+  "updated_utc": "2026-11-03T00:00:52.781324+00:00",
+  "authority": "replication/EXPERIMENT_SPEC.md, read in full; accepted modeling-layer/inherited-preprocessing authorization",
+  "spec_sha256": "92d09d7f1bd2792383094cb280994c8255de142ec45bf1c99eb2a52d45712bbd",
+  "scope": "Independent MODELING-LAYER replication with audited INHERITED preprocessing; no historical outcome comparison",
+  "access": {
+    "original_source_tests_configs_reports": false,
+    "original_market_inputs": false,
+    "other_phase1_files": false,
+    "git_network": false,
+    "model_constructed_fit_or_interrupted": false,
+    "new_artifact_inputs_for_exact_threshold_oracle": [
+      "artifacts/source_geometry.npz",
+      "artifacts/origins.parquet",
+      "artifacts/roles.json",
+      "code/evaluation.py"
+    ],
+    "additional_provenance_receipt_written": false,
+    "boundary_for_artifact_oracle": "boundary.install(); exit writer unregistered so only the two authorized acceptance-review files are written"
+  },
+  "prefit": {
+    "utc": "2026-11-02T23:41:27.714932+00:00",
+    "synthetic_tests": 64,
+    "real_neural_fits": 0,
+    "code_and_test_lock": [
+      {
+        "path": "code/acceptance.py",
+        "expected": "b379b518a859f531dcc0924c5dd21e100237935cdda44ce4b25180cbc6cb7823",
+        "actual": "b379b518a859f531dcc0924c5dd21e100237935cdda44ce4b25180cbc6cb7823",
+        "match": true
+      },
+      {
+        "path": "code/boundary.py",
+        "expected": "222bade62e8a51ce5490f38a6f38f90cba5fbee6e9bccbc39d440614af3b3bbd",
+        "actual": "222bade62e8a51ce5490f38a6f38f90cba5fbee6e9bccbc39d440614af3b3bbd",
+        "match": true
+      },
+      {
+        "path": "code/contract.py",
+        "expected": "556af3b42028e0c6d964bcf41c32081ebe0c97de91f45ee272c46713f7d1e763",
+        "actual": "556af3b42028e0c6d964bcf41c32081ebe0c97de91f45ee272c46713f7d1e763",
+        "match": true
+      },
+      {
+        "path": "code/dataset.py",
+        "expected": "71d9c80f78855593d81ebd1b60bffd813a31d9c7460fa4bd14340245bd7949e9",
+        "actual": "71d9c80f78855593d81ebd1b60bffd813a31d9c7460fa4bd14340245bd7949e9",
+        "match": true
+      },
+      {
+        "path": "code/evaluation.py",
+        "expected": "a3c24b306812afdfa7b00611d5335163a5a14820e5a86a6427df913a4a02f13d",
+        "actual": "a3c24b306812afdfa7b00611d5335163a5a14820e5a86a6427df913a4a02f13d",
+        "match": true
+      },
+      {
+        "path": "code/features.py",
+        "expected": "a48720cbf321c6168b2dea3090175d1a215865fc09f3b31ed62d16e21662521a",
+        "actual": "a48720cbf321c6168b2dea3090175d1a215865fc09f3b31ed62d16e21662521a",
+        "match": true
+      },
+      {
+        "path": "code/geometry.py",
+        "expected": "32dad3f6291838d02bf1a29203732cacb4f3017680bb60b8613ec82750fc8837",
+        "actual": "32dad3f6291838d02bf1a29203732cacb4f3017680bb60b8613ec82750fc8837",
+        "match": true
+      },
+      {
+        "path": "code/inspect_inputs.py",
+        "expected": "2b18a95f88357b4e008f5a61cc638ab393641a50d3c7d214222033680a72b590",
+        "actual": "2b18a95f88357b4e008f5a61cc638ab393641a50d3c7d214222033680a72b590",
+        "match": true
+      },
+      {
+        "path": "code/model.py",
+        "expected": "ab42cccea260701875d58945e9bc1f74258dea833e76d182ffb9c288b99bfb73",
+        "actual": "ab42cccea260701875d58945e9bc1f74258dea833e76d182ffb9c288b99bfb73",
+        "match": true
+      },
+      {
+        "path": "code/prepare.py",
+        "expected": "8af50a480e7f7053ea543290919a2f931bc3c9ac0cdb5b029e99dbc7d2789147",
+        "actual": "8af50a480e7f7053ea543290919a2f931bc3c9ac0cdb5b029e99dbc7d2789147",
+        "match": true
+      },
+      {
+        "path": "code/profile_contract.py",
+        "expected": "c1fccd741f639d8b9733e353c52c5ec93397c17b33baee8b64039cc096007f59",
+        "actual": "c1fccd741f639d8b9733e353c52c5ec93397c17b33baee8b64039cc096007f59",
+        "match": true
+      },
+      {
+        "path": "code/run_experiment.py",
+        "expected": "74c5e5a5ddff3d9afa58fea89b8a114598f25abb2ca343ec03a7e95e9294f200",
+        "actual": "74c5e5a5ddff3d9afa58fea89b8a114598f25abb2ca343ec03a7e95e9294f200",
+        "match": true
+      },
+      {
+        "path": "code/run_gates.py",
+        "expected": "31a546d8e66873c8dad1cbbdaa7193202400f4249b5ba5bba1056263ea72c1f7",
+        "actual": "31a546d8e66873c8dad1cbbdaa7193202400f4249b5ba5bba1056263ea72c1f7",
+        "match": true
+      },
+      {
+        "path": "tests/test_evaluation.py",
+        "expected": "d1abe7d5d0fb43eae4c0c8a8dadaad846a881aa55c42a8dc8c44c3c71670a0fe",
+        "actual": "d1abe7d5d0fb43eae4c0c8a8dadaad846a881aa55c42a8dc8c44c3c71670a0fe",
+        "match": true
+      },
+      {
+        "path": "tests/test_feature_math_review.py",
+        "expected": "0203a93fd02de3d699c7f4fc8007ff27ef14e1dec556f5b84fdb7dd16aad7eac",
+        "actual": "0203a93fd02de3d699c7f4fc8007ff27ef14e1dec556f5b84fdb7dd16aad7eac",
+        "match": true
+      },
+      {
+        "path": "tests/test_frontiers_review.py",
+        "expected": "8fd7a1e31384ef07254bbf8f280b7301f86d44ddf57851d3e29b8860946448e3",
+        "actual": "8fd7a1e31384ef07254bbf8f280b7301f86d44ddf57851d3e29b8860946448e3",
+        "match": true
+      },
+      {
+        "path": "tests/test_model.py",
+        "expected": "5a6f093f1f288323940444af8391a2e8c04c2d4a2eb666a31255c85c30c02c27",
+        "actual": "5a6f093f1f288323940444af8391a2e8c04c2d4a2eb666a31255c85c30c02c27",
+        "match": true
+      },
+      {
+        "path": "tests/test_source_contract.py",
+        "expected": "cb25066b6c452039cb5e1cfc8f691dfccfda05dd830402d9b992d5dcd583a908",
+        "actual": "cb25066b6c452039cb5e1cfc8f691dfccfda05dd830402d9b992d5dcd583a908",
+        "match": true
+      }
+    ],
+    "evidence_lock": [
+      {
+        "path": "audit/INHERITED_DATA_CONTRACT.md",
+        "expected": "a899f7b9fd25d012d7cd4e127e56b837da76838c4866940222bcb1ffdb4fdc01",
+        "actual": "a899f7b9fd25d012d7cd4e127e56b837da76838c4866940222bcb1ffdb4fdc01",
+        "match": true
+      },
+      {
+        "path": "audit/input_manifest.json",
+        "expected": "c9d57fbb64a7fcf43ae238e9e7cb4fc3e004e013f85916c19cb8c220182c1deb",
+        "actual": "c9d57fbb64a7fcf43ae238e9e7cb4fc3e004e013f85916c19cb8c220182c1deb",
+        "match": true
+      },
+      {
+        "path": "audit/synthetic_gates.json",
+        "expected": "49a292b270e077d8a811b2ff82bd50def27952e5213faaedf844a00b784ce250",
+        "actual": "49a292b270e077d8a811b2ff82bd50def27952e5213faaedf844a00b784ce250",
+        "match": true
+      },
+      {
+        "path": "audit/all_fold_preflight.json",
+        "expected": "169825cb2196a05575995f614f7075735b6b3235d272abcbcd687b4223febf35",
+        "actual": "169825cb2196a05575995f614f7075735b6b3235d272abcbcd687b4223febf35",
+        "match": true
+      },
+      {
+        "path": "audit/geometry_checks.json",
+        "expected": "2a8391a183dcc8e306eca65b129da986cf4fb2d6b6f2dc9261bf812784bdb673",
+        "actual": "2a8391a183dcc8e306eca65b129da986cf4fb2d6b6f2dc9261bf812784bdb673",
+        "match": true
+      },
+      {
+        "path": "audit/pyright_phase2_final.log",
+        "expected": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+        "actual": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+        "match": true
+      },
+      {
+        "path": "audit/AUDIT_MATRIX.csv",
+        "expected": "2fa227003b028328372fb86d044895a3096b0edc4260aaf810803326c3b24cd5",
+        "actual": "2fa227003b028328372fb86d044895a3096b0edc4260aaf810803326c3b24cd5",
+        "match": true
+      },
+      {
+        "path": "audit/CAUSAL_DEPENDENCIES.csv",
+        "expected": "7ceac621892828bb908dda7a4dbb9cbda28f1e4255a7457c1c662d0cc63487af",
+        "actual": "7ceac621892828bb908dda7a4dbb9cbda28f1e4255a7457c1c662d0cc63487af",
+        "match": true
+      }
+    ],
+    "eight_recipe_hashes_match": true,
+    "all_twenty_role_geometry_checks_pass": true,
+    "phase_parameter_frontier": "Adequate prefit strict role slicing plus constructors restricted to admitted phase arrays; direct external-future perturbation correctly disclosed post-prefit, not among64"
+  },
+  "gates": {
+    "D0": "SUPPORTED_WITH_INHERITED_LIMITATION",
+    "A": "SUPPORTED",
+    "B": "SUPPORTED",
+    "C": "SUPPORTED",
+    "D": "SUPPORTED_FOR_AUTHORIZED_POPULATION_WITH_NUMERICAL_EDGE"
+  },
+  "findings": [
+    {
+      "id": "AR01",
+      "classification": "CONFIRMED DEFECT",
+      "severity": "nonblocking numerical edge; zero effect on authorized actual thresholds",
+      "function": "evaluation.weighted_left_quantile",
+      "description": "At exact cumulative mass boundaries floating sequential-total normalization can choose the next observation. Native formula uses cumulative/cumulative[-1].",
+      "synthetic_witnesses": [
+        {
+          "n": 40,
+          "q": 0.5,
+          "equal_weight": "1/40",
+          "values": "0..39",
+          "expected": 19,
+          "actual": 20
+        },
+        {
+          "n": 600,
+          "q": 0.95,
+          "equal_weight": "1/600",
+          "values": "0..599",
+          "expected": 569,
+          "actual": 570
+        },
+        {
+          "n": 600,
+          "q": 0.99,
+          "equal_weight": "1/600",
+          "values": "0..599",
+          "expected": 593,
+          "actual": 594
+        }
+      ],
+      "actual_population_disposition": "All8 .95/.99 restricted-refit thresholds equal exact integer hierarchy and sum-denominator alternative; zero refit/OOS strict-tail membership changes. Preserve frozen code; future general-purpose repair separately authorized.",
+      "affected_stages": "restricted-refit tail thresholds -> tail scalar/event descriptive diagnostics only",
+      "unaffected_stages": [
+        "FT16 feature recipes",
+        "initial/refit target scale s",
+        "phase auxiliary weights Z and S/B",
+        "model training",
+        "selector",
+        "fresh refit",
+        "C3 estimation and decoding",
+        "unconditional/category/stock/slot/calendar scalar metrics",
+        "rank metrics"
+      ],
+      "oracle": {
+        "method": "For each refit role let L=lcm(actual eligible origins per session). Assign integer cell mass L/O_d; common factor1/(S*20*L) cancels. Stable sort abs(R). Select first index with100*cumulative>=percent*total. Compare actual frozen helper and separate cumsum/np.sum(weights) helper; compare strict A>threshold on refit and OOS cells.",
+        "lcm": 420,
+        "results": [
+          {
+            "fold": "F21",
+            "quantile": 0.95,
+            "sessions": 2164,
+            "origins": 11846,
+            "rows": 236920,
+            "origin_counts": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "lcm": 420,
+            "integer_total": 18177600,
+            "exact_index": 224230,
+            "exact_threshold": 0.029152683601565685,
+            "frozen_threshold": 0.029152683601565685,
+            "sum_denominator_threshold": 0.029152683601565685,
+            "frozen_exact_equal": true,
+            "sum_exact_equal": true,
+            "refit_membership_changed_frozen_vs_exact": 0,
+            "oos_membership_changed_frozen_vs_exact": 0,
+            "refit_membership_changed_sum_vs_exact": 0,
+            "oos_membership_changed_sum_vs_exact": 0
+          },
+          {
+            "fold": "F21",
+            "quantile": 0.99,
+            "sessions": 2164,
+            "origins": 11846,
+            "rows": 236920,
+            "origin_counts": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "lcm": 420,
+            "integer_total": 18177600,
+            "exact_index": 234361,
+            "exact_threshold": 0.055591859892280306,
+            "frozen_threshold": 0.055591859892280306,
+            "sum_denominator_threshold": 0.055591859892280306,
+            "frozen_exact_equal": true,
+            "sum_exact_equal": true,
+            "refit_membership_changed_frozen_vs_exact": 0,
+            "oos_membership_changed_frozen_vs_exact": 0,
+            "refit_membership_changed_sum_vs_exact": 0,
+            "oos_membership_changed_sum_vs_exact": 0
+          },
+          {
+            "fold": "F22",
+            "quantile": 0.95,
+            "sessions": 2366,
+            "origins": 12888,
+            "rows": 257760,
+            "origin_counts": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "lcm": 420,
+            "integer_total": 19874400,
+            "exact_index": 244033,
+            "exact_threshold": 0.029381635568292794,
+            "frozen_threshold": 0.029381635568292794,
+            "sum_denominator_threshold": 0.029381635568292794,
+            "frozen_exact_equal": true,
+            "sum_exact_equal": true,
+            "refit_membership_changed_frozen_vs_exact": 0,
+            "oos_membership_changed_frozen_vs_exact": 0,
+            "refit_membership_changed_sum_vs_exact": 0,
+            "oos_membership_changed_sum_vs_exact": 0
+          },
+          {
+            "fold": "F22",
+            "quantile": 0.99,
+            "sessions": 2366,
+            "origins": 12888,
+            "rows": 257760,
+            "origin_counts": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "lcm": 420,
+            "integer_total": 19874400,
+            "exact_index": 254984,
+            "exact_threshold": 0.0550530573806432,
+            "frozen_threshold": 0.0550530573806432,
+            "sum_denominator_threshold": 0.0550530573806432,
+            "frozen_exact_equal": true,
+            "sum_exact_equal": true,
+            "refit_membership_changed_frozen_vs_exact": 0,
+            "oos_membership_changed_frozen_vs_exact": 0,
+            "refit_membership_changed_sum_vs_exact": 0,
+            "oos_membership_changed_sum_vs_exact": 0
+          },
+          {
+            "fold": "F23",
+            "quantile": 0.95,
+            "sessions": 2592,
+            "origins": 14137,
+            "rows": 282740,
+            "origin_counts": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "lcm": 420,
+            "integer_total": 21772800,
+            "exact_index": 267643,
+            "exact_threshold": 0.03048333514069074,
+            "frozen_threshold": 0.03048333514069074,
+            "sum_denominator_threshold": 0.03048333514069074,
+            "frozen_exact_equal": true,
+            "sum_exact_equal": true,
+            "refit_membership_changed_frozen_vs_exact": 0,
+            "oos_membership_changed_frozen_vs_exact": 0,
+            "refit_membership_changed_sum_vs_exact": 0,
+            "oos_membership_changed_sum_vs_exact": 0
+          },
+          {
+            "fold": "F23",
+            "quantile": 0.99,
+            "sessions": 2592,
+            "origins": 14137,
+            "rows": 282740,
+            "origin_counts": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "lcm": 420,
+            "integer_total": 21772800,
+            "exact_index": 279686,
+            "exact_threshold": 0.05621444505567313,
+            "frozen_threshold": 0.05621444505567313,
+            "sum_denominator_threshold": 0.05621444505567313,
+            "frozen_exact_equal": true,
+            "sum_exact_equal": true,
+            "refit_membership_changed_frozen_vs_exact": 0,
+            "oos_membership_changed_frozen_vs_exact": 0,
+            "refit_membership_changed_sum_vs_exact": 0,
+            "oos_membership_changed_sum_vs_exact": 0
+          },
+          {
+            "fold": "F24",
+            "quantile": 0.95,
+            "sessions": 2795,
+            "origins": 15167,
+            "rows": 303340,
+            "origin_counts": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "lcm": 420,
+            "integer_total": 23478000,
+            "exact_index": 287210,
+            "exact_threshold": 0.03041068403132899,
+            "frozen_threshold": 0.03041068403132899,
+            "sum_denominator_threshold": 0.03041068403132899,
+            "frozen_exact_equal": true,
+            "sum_exact_equal": true,
+            "refit_membership_changed_frozen_vs_exact": 0,
+            "oos_membership_changed_frozen_vs_exact": 0,
+            "refit_membership_changed_sum_vs_exact": 0,
+            "oos_membership_changed_sum_vs_exact": 0
+          },
+          {
+            "fold": "F24",
+            "quantile": 0.99,
+            "sessions": 2795,
+            "origins": 15167,
+            "rows": 303340,
+            "origin_counts": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "lcm": 420,
+            "integer_total": 23478000,
+            "exact_index": 300073,
+            "exact_threshold": 0.055872346745723445,
+            "frozen_threshold": 0.055872346745723445,
+            "sum_denominator_threshold": 0.055872346745723445,
+            "frozen_exact_equal": true,
+            "sum_exact_equal": true,
+            "refit_membership_changed_frozen_vs_exact": 0,
+            "oos_membership_changed_frozen_vs_exact": 0,
+            "refit_membership_changed_sum_vs_exact": 0,
+            "oos_membership_changed_sum_vs_exact": 0
+          }
+        ],
+        "input_sha256": {
+          "artifacts/source_geometry.npz": "f776d06a4ac7f3ea9e000a19c14c0f950e6180ed259809fad56445cc27f714b5",
+          "artifacts/origins.parquet": "d5d3f90e99b3037d8de1df5415dfd5251e8f8854e8039c27c35a83d08997d46c",
+          "artifacts/roles.json": "c38abbaf094285c67f53225e0078b18bbcafe92d190edd4e1dfe573b08fcfd59",
+          "code/evaluation.py": "a3c24b306812afdfa7b00611d5335163a5a14820e5a86a6427df913a4a02f13d"
+        }
+      },
+      "numerical_code_modified": false,
+      "prefit_test_count_changed": false
+    },
+    {
+      "id": "AR02",
+      "classification": "execution-order deviation without confirmed information leak",
+      "severity": "nonblocking",
+      "description": "run_experiment computes frozen raw OOS main/aux heads before fit_c3; C3 decoding and stored OOS scores occur after calibration. Spec describes calibration then OOS inference. Raw-head interface uses only X/CLOCK; no OOS labels enter coefficients or model selection.",
+      "disposition": "Document actual order; preserve frozen code and run."
+    }
+  ],
+  "d0": {
+    "manifest_files": 348,
+    "families": {
+      "canonical": 174,
+      "hourly": 174
+    },
+    "literal_months": "2010-07..2024-12",
+    "hourly_rows": 509140,
+    "canonical_rows": 33296542,
+    "canonical_rth": 28092143,
+    "bounded_stock_hours": 284,
+    "field_assertions": 2272,
+    "quarantine_minutes_seen": 18,
+    "witness_failures": 0,
+    "reopened_original_inputs": false,
+    "reviewed_provenance_receipts": 29,
+    "original_lstm_data_modules_seen": 0,
+    "denials": "only synthetic FORBIDDEN_BOUNDARY_PROBE"
+  },
+  "final_pending": [
+    "eight real phases complete without retries",
+    "actual fresh initialization/selected-refit receipts",
+    "all own calibration/OOS scores and exact checkpoint reload",
+    "full key/label identity and report replay",
+    "completed-run peak RSS and new-output size",
+    "final manifest for code/tests/import provenance/inputs/audits/role keys/recipes/checkpoints/coefs/scores/metrics"
+  ],
+  "conclusion": "No newly confirmed severe leak, false association, wrong training weighting or unreconstructible target identified. Pending active-run outputs are not failures. Quantile finding has zero realized threshold or tail-membership impact in this fixed population.",
+  "phase_scale_exact_integer_oracle": [
+    {
+      "fold": "F21",
+      "phase": "initial",
+      "stored_scale": 0.005797117684325846,
+      "exact_integer_scale": 0.005797117684325846,
+      "equal": true
+    },
+    {
+      "fold": "F21",
+      "phase": "refit",
+      "stored_scale": 0.005848759193156053,
+      "exact_integer_scale": 0.005848759193156053,
+      "equal": true
+    },
+    {
+      "fold": "F22",
+      "phase": "initial",
+      "stored_scale": 0.005935124632023495,
+      "exact_integer_scale": 0.005935124632023495,
+      "equal": true
+    },
+    {
+      "fold": "F22",
+      "phase": "refit",
+      "stored_scale": 0.005933406715930685,
+      "exact_integer_scale": 0.005933406715930685,
+      "equal": true
+    },
+    {
+      "fold": "F23",
+      "phase": "initial",
+      "stored_scale": 0.006072334419240624,
+      "exact_integer_scale": 0.006072334419240624,
+      "equal": true
+    },
+    {
+      "fold": "F23",
+      "phase": "refit",
+      "stored_scale": 0.006121673076939892,
+      "exact_integer_scale": 0.006121673076939892,
+      "equal": true
+    },
+    {
+      "fold": "F24",
+      "phase": "initial",
+      "stored_scale": 0.0061734035023815,
+      "exact_integer_scale": 0.0061734035023815,
+      "equal": true
+    },
+    {
+      "fold": "F24",
+      "phase": "refit",
+      "stored_scale": 0.00617444719514992,
+      "exact_integer_scale": 0.00617444719514992,
+      "equal": true
+    }
+  ]
+}

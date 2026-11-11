@@ -1,0 +1,17 @@
+{
+  "Stage6_complete": false,
+  "UTC": "2026-11-10T18:02:39.738099+00:00",
+  "already_finished_presentation": "presentation/FINAL_TABLES_V5/SCENARIO_RESULTS.md",
+  "code": "9e093b3f6a62",
+  "final_integrity_proof": "trading/track2/stage35/final_backtest_v5/audits/FINAL_FROZEN_AND_SOURCE_INTEGRITY_V5.json",
+  "financial_cases_completed_and_second_pass_verified": 24,
+  "financial_verdict_if_remaining_descriptive_checks_pass": "STAGE35_V5_FINANCIAL_BACKTEST_COMPLETE_EXPLORATORY",
+  "financial_writer_processes_terminated_receipt": "trading/track2/stage35/final_backtest_v5/recovery/20261110T124734Z/FINAL_PROCESS_TERMINATION_OBSERVATION.json",
+  "master": "trading/track2/stage35/final_backtest_v5/BACKTEST_RUN_MANIFEST_V5_9e093b3f6a62.json",
+  "master_sha256": "7dfa9eb90ec546101c170b8d67f8763c059ac403a16052e66aedf12c060c241b",
+  "reporting_helper_sha256": "05ce23c386ac7c6861770c4d828461b906520f93dc4bc3183ab6fde6c9f54d29",
+  "reporting_only_command": ".venv/bin/python trading/track2/stage35/final_backtest_v5/audits/ADDITIONAL_DESCRIPTIVE_TABLES_V5.py.txt",
+  "reporting_only_worker_known_PID": 72998,
+  "required_total": 24,
+  "safe_next_action": "Do not rerun any financial case. Observe existing descriptive worker; after its valid output, execute ASSEMBLE_FINAL_HANDOFF, FINALIZE_DOCUMENTATION_AND_INDEX, then BUILD_FINAL_CHILD_MANIFEST helpers. Preserve all existing receipts."
+}

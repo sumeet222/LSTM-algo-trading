@@ -1,0 +1,195 @@
+{
+  "procedural_not_sandbox_isolation": true,
+  "pid": 52086,
+  "cwd": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2",
+  "sys_path": [
+    "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code",
+    "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code",
+    "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python314.zip",
+    "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14",
+    "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload",
+    "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages"
+  ],
+  "modules": {
+    "__future__": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/__future__.py",
+    "_blake2": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_blake2.cpython-314-darwin.so",
+    "_collections_abc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_collections_abc.py",
+    "_distutils_hack": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/_distutils_hack/__init__.py",
+    "_frozen_importlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/_bootstrap.py",
+    "_frozen_importlib_external": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/_bootstrap_external.py",
+    "_hashlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_hashlib.cpython-314-darwin.so",
+    "_heapq": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_heapq.cpython-314-darwin.so",
+    "_json": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_json.cpython-314-darwin.so",
+    "_sitebuiltins": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_sitebuiltins.py",
+    "abc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/abc.py",
+    "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py",
+    "codecs": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/codecs.py",
+    "collections": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/collections/__init__.py",
+    "collections.abc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_collections_abc.py",
+    "contextlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py",
+    "copyreg": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/copyreg.py",
+    "datetime": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/datetime.py",
+    "difflib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/difflib.py",
+    "encodings": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/encodings/__init__.py",
+    "encodings.aliases": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/encodings/aliases.py",
+    "encodings.utf_8": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/encodings/utf_8.py",
+    "encodings.utf_8_sig": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/encodings/utf_8_sig.py",
+    "enum": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/enum.py",
+    "fcntl": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/fcntl.cpython-314-darwin.so",
+    "fnmatch": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/fnmatch.py",
+    "functools": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/functools.py",
+    "genericpath": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/genericpath.py",
+    "glob": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/glob.py",
+    "grp": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/grp.cpython-314-darwin.so",
+    "hashlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/hashlib.py",
+    "heapq": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/heapq.py",
+    "importlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py",
+    "importlib._abc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/_abc.py",
+    "importlib._bootstrap": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/_bootstrap.py",
+    "importlib._bootstrap_external": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/_bootstrap_external.py",
+    "importlib.abc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/abc.py",
+    "importlib.machinery": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/machinery.py",
+    "io": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/io.py",
+    "json": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py",
+    "json.decoder": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py",
+    "json.encoder": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py",
+    "json.scanner": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/scanner.py",
+    "keyword": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/keyword.py",
+    "linecache": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/linecache.py",
+    "ntpath": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/ntpath.py",
+    "operator": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/operator.py",
+    "os": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/os.py",
+    "os.path": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/posixpath.py",
+    "pathlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py",
+    "pathlib._os": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/_os.py",
+    "posixpath": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/posixpath.py",
+    "re": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/re/__init__.py",
+    "re._casefix": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/re/_casefix.py",
+    "re._compiler": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/re/_compiler.py",
+    "re._constants": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/re/_constants.py",
+    "re._parser": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/re/_parser.py",
+    "reprlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/reprlib.py",
+    "site": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site.py",
+    "sitecustomize": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/sitecustomize.py",
+    "stat": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/stat.py",
+    "types": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/types.py",
+    "zipimport": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zipimport.py"
+  },
+  "file_events": [
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/PREFIT_ACCEPTANCE.json",
+      "count": 2
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/executed_source/evaluation_prefit.py.txt",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/report_only_patch.diff",
+      "count": 2
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/report_source_transition.json",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/acceptance.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/contract.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/dataset.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/evaluation.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/features.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/geometry.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/inspect_inputs.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/model.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/prepare.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/profile_contract.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/run_experiment.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/run_gates.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/tests/test_evaluation.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/tests/test_evaluation_report_recovery.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/tests/test_feature_math_review.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/tests/test_frontiers_review.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/tests/test_model.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/tests/test_source_contract.py",
+      "count": 1
+    }
+  ]
+}

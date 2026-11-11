@@ -1,0 +1,62 @@
+{
+  "code": {
+    "src/lstm_data/trading/track2/final_directional_slate/__init__.py": "30dc101e4210d0d38ac3c0915fbeab46b148006b8dc31a7a909ec41eae09441e",
+    "src/lstm_data/trading/track2/final_directional_slate/allocation.py": "9ab6b08137a9d6936cfff90a394b8f0b241cb399bdb5bac2e0d8b862363a5da6",
+    "src/lstm_data/trading/track2/final_directional_slate/common.py": "4d526d9e3c2424d867539470b64eae70791f74701fbb8700deba8c3ca9fa9643",
+    "src/lstm_data/trading/track2/final_directional_slate/comparison.py": "c804970c82c82b3bfa9a063b84280069f8b0e1751143cc505acdc176b6ee8891",
+    "src/lstm_data/trading/track2/final_directional_slate/coverage.py": "73c7e51934b1c6e2f06bc078554b82bb2c1a9c1dc89377e090444c6e7272446d",
+    "src/lstm_data/trading/track2/final_directional_slate/engines.py": "e1b37b83d30682f796d3705f910c1dd768a4785eb3457c76fcd63190d50e16ff",
+    "src/lstm_data/trading/track2/final_directional_slate/ledger.py": "652fa7b28ea5e868f7da6e9d9f7856ce4620485a2a27fc574e786dcc1690180e",
+    "src/lstm_data/trading/track2/final_directional_slate/risk_inputs.py": "15ab28718457a163d64fcefc4a80118cc55e19b6dc25ee244b5c3244a65fd440",
+    "src/lstm_data/trading/track2/final_directional_slate/run.py": "173cbf13da2e778fc609136f84abcf338a285180dfdf8495e3de2d534a97afa9"
+  },
+  "commands": [
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/track2_final_directional_slate",
+        "tests/track2_rapid_v1",
+        "tests/track2_rapid_v2",
+        "tests/track2_rapid_v3",
+        "tests/track2_rapid_final_diag"
+      ],
+      "elapsed_seconds": 5.461557416012511,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "--select",
+        "E,F,I",
+        "src/lstm_data/trading/track2/final_directional_slate",
+        "tests/track2_final_directional_slate"
+      ],
+      "elapsed_seconds": 0.08175304089672863,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        ".venv/bin/pyright",
+        "--pythonpath",
+        ".venv/bin/python",
+        "src/lstm_data/trading/track2/final_directional_slate",
+        "tests/track2_final_directional_slate"
+      ],
+      "elapsed_seconds": 4.8219860419631,
+      "returncode": 0
+    }
+  ],
+  "receipt_files": {
+    "0.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "0.stdout": "b0ce1c18007aae5fac07aaf76110d3e6e68bace7d66bc0d3c4c599c85161dd6b",
+    "1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "1.stdout": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2.stdout": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+  },
+  "status": "PASS"
+}

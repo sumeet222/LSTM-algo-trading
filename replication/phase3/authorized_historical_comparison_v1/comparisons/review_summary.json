@@ -1,0 +1,160 @@
+{
+  "verdict": "MATERIAL_NUMERICAL_OR_METHODOLOGICAL_MISMATCH",
+  "issues": 12,
+  "severity_counts": {
+    "HIGH": 2,
+    "MEDIUM": 5,
+    "LOW": 3,
+    "INFORMATIONAL": 2
+  },
+  "headline": [
+    {
+      "year": "2021",
+      "metric": "mae",
+      "original": 0.006384710301760072,
+      "independent": 0.006384602252034846,
+      "delta": -1.0804972522607259e-07,
+      "relative_difference": -1.6923199349590936e-05,
+      "status": "NEAR"
+    },
+    {
+      "year": "2021",
+      "metric": "mse",
+      "original": 8.257578687077614e-05,
+      "independent": 8.257432574398646e-05,
+      "delta": -1.4611267896817454e-09,
+      "relative_difference": -1.7694373194024546e-05,
+      "status": "NEAR"
+    },
+    {
+      "year": "2021",
+      "metric": "spearman_ic",
+      "original": 0.32746071142796407,
+      "independent": 0.3273216098746888,
+      "delta": -0.00013910155327528928,
+      "relative_difference": -0.00042478852705323493,
+      "status": "NEAR"
+    },
+    {
+      "year": "2022",
+      "metric": "mae",
+      "original": 0.008314501580964804,
+      "independent": 0.008314598251453998,
+      "delta": 9.667048919345667e-08,
+      "relative_difference": 1.1626732913825382e-05,
+      "status": "NEAR"
+    },
+    {
+      "year": "2022",
+      "metric": "mse",
+      "original": 0.00014576497206830334,
+      "independent": 0.0001457657862122256,
+      "delta": 8.141439222547793e-10,
+      "relative_difference": 5.58531937201815e-06,
+      "status": "NEAR"
+    },
+    {
+      "year": "2022",
+      "metric": "spearman_ic",
+      "original": 0.3517644970956059,
+      "independent": 0.35159485530405243,
+      "delta": -0.00016964179155348758,
+      "relative_difference": -0.0004822595598878209,
+      "status": "NEAR"
+    },
+    {
+      "year": "2023",
+      "metric": "mae",
+      "original": 0.005981576476395204,
+      "independent": 0.0059815472180397514,
+      "delta": -2.925835545283112e-08,
+      "relative_difference": -4.891412083134254e-06,
+      "status": "NEAR"
+    },
+    {
+      "year": "2023",
+      "metric": "mse",
+      "original": 8.614824508377709e-05,
+      "independent": 8.61509825855315e-05,
+      "delta": 2.737501754413677e-09,
+      "relative_difference": 3.177663981142649e-05,
+      "status": "NEAR"
+    },
+    {
+      "year": "2023",
+      "metric": "spearman_ic",
+      "original": 0.32630073404332477,
+      "independent": 0.32603295228947476,
+      "delta": -0.0002677817538500049,
+      "relative_difference": -0.0008206593669950189,
+      "status": "NEAR"
+    },
+    {
+      "year": "2024",
+      "metric": "mae",
+      "original": 0.006343595656034047,
+      "independent": 0.006343665551225527,
+      "delta": 6.989519148008216e-08,
+      "relative_difference": 1.1018229292971668e-05,
+      "status": "NEAR"
+    },
+    {
+      "year": "2024",
+      "metric": "mse",
+      "original": 0.00011170366735422022,
+      "independent": 0.00011170249861198698,
+      "delta": -1.1687422332419496e-09,
+      "relative_difference": -1.0462881487460796e-05,
+      "status": "NEAR"
+    },
+    {
+      "year": "2024",
+      "metric": "spearman_ic",
+      "original": 0.3194179649200779,
+      "independent": 0.3194355741905067,
+      "delta": 1.760927042881999e-05,
+      "relative_difference": 5.5129242443285974e-05,
+      "status": "NEAR"
+    },
+    {
+      "year": "EQ",
+      "metric": "mae",
+      "original": 0.006756096003788532,
+      "independent": 0.0067561033181885305,
+      "delta": 7.31439999887562e-09,
+      "relative_difference": 1.0826370724711454e-06,
+      "status": "NEAR"
+    },
+    {
+      "year": "EQ",
+      "metric": "mse",
+      "original": 0.0001065481678442692,
+      "independent": 0.00010654839828843263,
+      "delta": 2.3044416342602597e-10,
+      "relative_difference": 2.1628167624885223e-06,
+      "status": "NEAR"
+    },
+    {
+      "year": "EQ",
+      "metric": "spearman_ic",
+      "original": 0.33123597687174317,
+      "independent": 0.3310962479146806,
+      "delta": -0.00013972895706254596,
+      "relative_difference": -0.0004218411248143192,
+      "status": "NEAR"
+    }
+  ],
+  "reference_files": 78,
+  "matched_metric_cells": 3912,
+  "missing_metric_cells": 1938,
+  "second_method_max_abs_difference": 1.3322676295501878e-15,
+  "all_table_max_abs_difference": 2.220446049250313e-15,
+  "new_findings": 11,
+  "reconfirmed_existing_limitations": 1,
+  "new_severity_counts": {
+    "HIGH": 2,
+    "MEDIUM": 5,
+    "LOW": 2,
+    "INFORMATIONAL": 2
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "description": "Actual post-run read-only verification/presentation commands; no new financial replay",
+  "commands": [
+    {
+      "cmd": ".venv/bin/python trading/track2/stage35/final_backtest_v5/recovery/20261110T124734Z/VERIFY_NEW_COMPLETIONS.py.txt",
+      "session_id": 91861,
+      "output": "{\"verified_complete\": 24, \"required_total\": 24, \"newly_verified\": [\"v5_impact_15\"], \"master_manifest_present\": true, \"no_new_financial_job\": true}\n",
+      "done": true,
+      "exit_code": 0
+    },
+    {
+      "cmd": ".venv/bin/python trading/track2/stage35/final_backtest_v5/audits/VERIFY_FINAL_IDENTITIES_V5.py.txt",
+      "session_id": 69120,
+      "output": "{\n  \"UTC\": \"2026-11-10T17:51:25.204436+00:00\",\n  \"elapsed_seconds\": 4.353257125010714,\n  \"counts\": {\n    \"protected\": 10410,\n    \"source_partitions\": 227\n  },\n  \"SHA256_and_mtime_unchanged\": true,\n  \"differences\": [],\n  \"current_code_fingerprint\": \"9e093b3f6a62\",\n  \"H0_sha256\": \"041ab50ddf33da31e02a1dcf714853330475fb7017b92c2e4c4b3751549e1d7e\",\n  \"new_market_requests_in_V5\": 0\n}\n",
+      "done": true,
+      "exit_code": 0
+    },
+    {
+      "cmd": ".venv/bin/python trading/track2/stage35/final_backtest_v5/audits/BUILD_FINAL_RESULT_TABLES_V5.py.txt",
+      "session_id": 64192,
+      "output": "Presented 192 account/scenario records and 768 annual rows; no new finance run.\n",
+      "done": true,
+      "exit_code": 0
+    },
+    {
+      "cmd": ".venv/bin/python trading/track2/stage35/final_backtest_v5/audits/ADDITIONAL_DESCRIPTIVE_TABLES_V5.py.txt",
+      "session_id": 69887,
+      "output": "Descriptive supplement complete: 24 completed scenarios; 2304 holding summaries; 0 unclosed holding records.\n",
+      "done": true,
+      "exit_code": 0
+    }
+  ]
+}

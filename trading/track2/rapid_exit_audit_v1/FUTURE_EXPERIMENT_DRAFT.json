@@ -1,0 +1,56 @@
+{
+  "S2C": "HOLD_NOT_EXECUTED",
+  "Stage6": "NOT_EXECUTED",
+  "absolute_net_cap": 1.0,
+  "all18_context": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09"
+  ],
+  "authorization": "PROPOSAL_ONLY_REQUIRES_SEPARATE_APPROVAL",
+  "candidate_for_single_next_test": "M04",
+  "control": "V3 M04 CONSERVATIVE H85 unchanged",
+  "entry_budget_per_session": 6,
+  "entry_headroom": 0.85,
+  "entry_slots_ET": [
+    "10:30",
+    "11:30",
+    "12:30"
+  ],
+  "falsification": "No improvement after added downside/carry/cost, or dependence on one half or top two names",
+  "fees_and_actions": "Original micro policy, receipt and raw-share next-valid source contract",
+  "final_baseline_selected": false,
+  "initial_cash_each": 100000,
+  "minimum_calendar_support": "52 eligible full weekly sessions and all applicable M04 origins",
+  "name_cap": 0.1,
+  "only_intervention": {
+    "consecutive_valid_checks": 2,
+    "missing_refresh": "reset streak",
+    "other_triggers": "Reversal, weakening, trail, mandatory risk and maximum unchanged",
+    "trigger": "EVENT_RESOLVED on received failure of frozen entry-day opening reference"
+  },
+  "period": "UNTOUCHED_OR_PROSPECTIVE_TO_BE_FIXED_BEFORE_OUTCOMES",
+  "primary_endpoints": [
+    "net_per_gross_RTH_dollar_year",
+    "net_per_external_turnover"
+  ],
+  "status": "NOT_EXECUTED",
+  "supporting_report_sha256": "5af0f9ec4ae437d55acbcd775e418bc8d5ede480a749bc2c28c015ace1cc9b0a",
+  "vintage_cap": 0.2,
+  "virtual_gross_cap": 1.0
+}

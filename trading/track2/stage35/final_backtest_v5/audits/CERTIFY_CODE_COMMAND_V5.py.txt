@@ -1,0 +1,16 @@
+import subprocess,time
+from lstm_data.trading.track2.stage35.final_backtest_v5.paths import ROOT,digest,publish
+from lstm_data.trading.track2.stage35.final_backtest_v5.release import code_scope,fingerprint
+code=code_scope();fp=fingerprint()
+scopes=['src/lstm_data/trading/track2/stage35/final_backtest_v5','tests/track2_stage35_v5']
+commands=[('ruff',['.venv/bin/ruff','check',*scopes,'--select','E,F,I'],'RUFF.txt'),('owned_types',['.venv/bin/pyright',*scopes,'--pythonpath','.venv/bin/python','--outputjson'],'OWNED_TYPES.json'),('pytest',['.venv/bin/python','-m','pytest','tests/track2_stage012','tests/track2_stage35','tests/track2_stage35_completion_v2','tests/track2_stage35_completion_v3','tests/track2_stage35_v4','tests/track2_stage35_v5','tests/test_hf20_s2c_ca.py','tests/test_hf20_mag_c3_io.py','-q'],'PYTEST.txt')]
+rows=[]
+for domain,args,name in commands:
+ path=ROOT/f'audits/{fp}_{name}';start=time.monotonic()
+ with path.open('w') as out:result=subprocess.run(args,stdout=out,stderr=subprocess.STDOUT)
+ rows.append({'domain':domain,'command':args,'path':str(path),'sha256':digest(path),'seconds':time.monotonic()-start,'returncode':result.returncode})
+ print(domain,result.returncode,round(time.monotonic()-start,1),flush=True)
+ if result.returncode:raise SystemExit(result.returncode)
+assert code==code_scope(),'CODE_CHANGED_DURING_CERTIFICATION'
+publish(ROOT/f'audits/ENGINEERING_ACCEPTANCE_V5_{fp}.json',{'code':code,'commands':rows})
+print('CERTIFIED',fp,flush=True)

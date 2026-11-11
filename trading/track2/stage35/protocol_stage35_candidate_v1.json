@@ -1,0 +1,76 @@
+{
+  "version": "TRACK2_STAGE35_CANDIDATE_V1",
+  "implementation_authorized": true,
+  "historical_economics_authorized": false,
+  "dynamic_rebalancing_enabled": false,
+  "limits": {
+    "gross": "1",
+    "net": "1",
+    "name": "0.1",
+    "vintage": "0.2",
+    "lot": "1",
+    "mark_age_minutes": 5,
+    "risk_clip_min": 0.5,
+    "risk_clip_max": 1.5,
+    "classical_window": 60,
+    "classical_minimum": 40,
+    "ewma_decay": 0.94
+  },
+  "original_signal_protocol": "trading/track2/stage012/protocol_signal_layer_v2.json",
+  "cost_scenarios": [
+    {
+      "name": "low",
+      "half_spread_bps": "1",
+      "impact_bps": "1",
+      "per_share": "0",
+      "minimum_per_external_order": "0",
+      "participation_prior_received_volume": ".01"
+    },
+    {
+      "name": "base",
+      "half_spread_bps": "5",
+      "impact_bps": "5",
+      "per_share": ".005",
+      "minimum_per_external_order": "1",
+      "participation_prior_received_volume": ".01"
+    },
+    {
+      "name": "high",
+      "half_spread_bps": "15",
+      "impact_bps": "15",
+      "per_share": ".01",
+      "minimum_per_external_order": "2",
+      "participation_prior_received_volume": ".01"
+    }
+  ],
+  "borrow_annual_stress": [
+    ".01",
+    ".05",
+    ".20"
+  ],
+  "funding_annual_stress": [
+    "0",
+    ".05",
+    ".10"
+  ],
+  "carry": "ACT365,actual calendar seconds;supplied interval-end mark,segmented supplied rate;not broker fee evidence",
+  "conditional_short_approval": null,
+  "internal_reference": "same-event synthetic observed reference available_at<=execution;bar-only HOLD",
+  "price_basis": "RAW_UNADJUSTED economics only;retrospective neural feature basis never executable",
+  "classical_risk_recipe": {
+    "horizon_minutes": 240,
+    "window": 60,
+    "minimum": 40,
+    "rolling": "median nonnegative matured absolute log returns",
+    "ewma": "RMS .94 decay,initialized first window magnitude squared",
+    "missing": "hard abstention,do not compress known missing",
+    "reference": "frozen2019 prefix b/floor;dimensionlessclip .5\u20131.5,not equivalence of risk statistics"
+  },
+  "order_partial_commission": "cumulative max(minimum,per_share*filledshares) less already paid;carry CommissionState for one order;new minute IOC order new id incurs own minimum",
+  "human_review": "NOT_APPROVED",
+  "null_control_interface": {
+    "enabled": false,
+    "proposed_seed": 35,
+    "scheme_for_stage6_review": "within fold/session/slot reassignment of magnitudes across currently eligible stocks;no permutation or financial trial generated"
+  }
+}

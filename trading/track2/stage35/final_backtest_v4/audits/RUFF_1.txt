@@ -1,0 +1,1459 @@
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:85:12
+   |
+83 |     buys=[k for k,q in remaining.items()if q>0]
+84 |     sells=[k for k,q in remaining.items()if q<0]
+85 |     legs=[];i=j=0
+   |            ^
+86 |     while i<len(buys) and j<len(sells):
+87 |         a,b=buys[i],sells[j];q=min(remaining[a],-remaining[b])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:87:29
+   |
+85 |     legs=[];i=j=0
+86 |     while i<len(buys) and j<len(sells):
+87 |         a,b=buys[i],sells[j];q=min(remaining[a],-remaining[b])
+   |                             ^
+88 |         legs.extend((Leg(a,q,reference,ZERO,True),Leg(b,-q,reference,ZERO,True)))
+89 |         remaining[a]-=q;remaining[b]+=q
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:89:24
+   |
+87 |         a,b=buys[i],sells[j];q=min(remaining[a],-remaining[b])
+88 |         legs.extend((Leg(a,q,reference,ZERO,True),Leg(b,-q,reference,ZERO,True)))
+89 |         remaining[a]-=q;remaining[b]+=q
+   |                        ^
+90 |         if not remaining[a]:i+=1
+91 |         if not remaining[b]:j+=1
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:90:28
+   |
+88 |         legs.extend((Leg(a,q,reference,ZERO,True),Leg(b,-q,reference,ZERO,True)))
+89 |         remaining[a]-=q;remaining[b]+=q
+90 |         if not remaining[a]:i+=1
+   |                            ^
+91 |         if not remaining[b]:j+=1
+92 |     target=sum(remaining.values(),ZERO)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:91:28
+   |
+89 |         remaining[a]-=q;remaining[b]+=q
+90 |         if not remaining[a]:i+=1
+91 |         if not remaining[b]:j+=1
+   |                            ^
+92 |     target=sum(remaining.values(),ZERO)
+93 |     if executed and (target*executed<=0 or abs(executed)>abs(target)):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:97:18
+   |
+95 |     if executed!=executed.to_integral_value() or not executed and fee:
+96 |         raise ValueError('PHYSICAL_WHOLE_FEE_CONTRACT')
+97 |     left=executed;fees=fee
+   |                  ^
+98 |     selected=[]
+99 |     for key,q in remaining.items():
+   |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:100:20
+    |
+ 98 |     selected=[]
+ 99 |     for key,q in remaining.items():
+100 |         if not left:break
+    |                    ^
+101 |         if not q:continue
+102 |         part=min(abs(left),abs(q))*(1 if left>0 else -1)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:101:17
+    |
+ 99 |     for key,q in remaining.items():
+100 |         if not left:break
+101 |         if not q:continue
+    |                 ^
+102 |         part=min(abs(left),abs(q))*(1 if left>0 else -1)
+103 |         selected.append((key,part));left-=part
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:103:36
+    |
+101 |         if not q:continue
+102 |         part=min(abs(left),abs(q))*(1 if left>0 else -1)
+103 |         selected.append((key,part));left-=part
+    |                                    ^
+104 |     if left:raise AssertionError('UNALLOCATED_EXTERNAL_SHARES')
+105 |     for n,(key,q)in enumerate(selected):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:104:12
+    |
+102 |         part=min(abs(left),abs(q))*(1 if left>0 else -1)
+103 |         selected.append((key,part));left-=part
+104 |     if left:raise AssertionError('UNALLOCATED_EXTERNAL_SHARES')
+    |            ^
+105 |     for n,(key,q)in enumerate(selected):
+106 |         part=(fee*abs(q/executed)).quantize(D('.01'),rounding=ROUND_DOWN) if n<len(selected)-1 else fees
+    |
+
+E501 Line too long (104 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:106:101
+    |
+104 |     if left:raise AssertionError('UNALLOCATED_EXTERNAL_SHARES')
+105 |     for n,(key,q)in enumerate(selected):
+106 |         part=(fee*abs(q/executed)).quantize(D('.01'),rounding=ROUND_DOWN) if n<len(selected)-1 else fees
+    |                                                                                                     ^^^^
+107 |         fees-=part;legs.append(Leg(key,q,external,part,False))
+108 |     if sum((leg.quantity for leg in legs),ZERO)!=executed:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:107:19
+    |
+105 |     for n,(key,q)in enumerate(selected):
+106 |         part=(fee*abs(q/executed)).quantize(D('.01'),rounding=ROUND_DOWN) if n<len(selected)-1 else fees
+107 |         fees-=part;legs.append(Leg(key,q,external,part,False))
+    |                   ^
+108 |     if sum((leg.quantity for leg in legs),ZERO)!=executed:
+109 |         raise AssertionError('PHYSICAL_VIRTUAL_FILL_CONSERVATION')
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:159:38
+    |
+157 |              'scenario':self.scenario.name,'previous':self.journal_hash,**fields}
+158 |         self.journal_hash=canonical(row)
+159 |         row['hash']=self.journal_hash;self.events.append(row)
+    |                                      ^
+160 |
+161 |     def claim_total(self) -> Decimal:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:165:33
+    |
+164 |     def nav(self) -> Decimal | None:
+165 |         if self.unpriced_special:return None
+    |                                 ^
+166 |         total=self.cash+self.claim_total()+sum(self.special_values.values(),ZERO)
+167 |         for j,q in enumerate(self.quantity):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:169:42
+    |
+167 |         for j,q in enumerate(self.quantity):
+168 |             if q:
+169 |                 if self.prices[j] is None:return None
+    |                                          ^
+170 |                 total+=D(int(q))*self.prices[j]
+171 |         return total
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:176:29
+    |
+174 |         total=ZERO
+175 |         for j,p in enumerate(self.prices):
+176 |             if p is not None:total+=D(str(self.abs_virtual[j]))*p
+    |                             ^
+177 |         return total
+    |
+
+E501 Line too long (101 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:180:101
+    |
+179 |     def restricted(self) -> Decimal:
+180 |         return sum((-D(int(q))*self.physical_basis[j]for j,q in enumerate(self.quantity)if q<0),ZERO)
+    |                                                                                                     ^
+181 |
+182 |     def refresh(self) -> None:
+    |
+
+E501 Line too long (101 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:188:101
+    |
+187 |     def reconcile(self) -> None:
+188 |         attributed=self.initial+self.archived_cash+sum((lot.cash for lot in self.lots.values()),ZERO)
+    |                                                                                                     ^
+189 |         residual=abs(self.cash-attributed)
+190 |         nontrade=self.archived_nontrade+sum((lot.nontrade for lot in self.lots.values()),ZERO)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:196:34
+    |
+194 |         for j,q in enumerate(self.quantity):
+195 |             virtual=sum((lot.quantity for lot in self.lots.values()if lot.ticker==j),ZERO)
+196 |             if virtual!=D(int(q)):raise AssertionError('SHARE_CONSERVATION')
+    |                                  ^
+197 |         for lot in self.lots.values():
+198 |             residual=max(residual,abs(lot.cash+lot.quantity*lot.basis-lot.realized-lot.nontrade))
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:200:24
+    |
+198 |             residual=max(residual,abs(lot.cash+lot.quantity*lot.basis-lot.realized-lot.nontrade))
+199 |         self.maximum_residual=max(self.maximum_residual,residual)
+200 |         if residual>EPS:raise AssertionError('UNBALANCED_LEDGER:'+str(residual))
+    |                        ^
+201 |
+202 |     def capacity(self,now: int) -> tuple[Decimal,Decimal,dict[int,Decimal],str]:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:204:23
+    |
+202 |     def capacity(self,now: int) -> tuple[Decimal,Decimal,dict[int,Decimal],str]:
+203 |         nav=self.nav()
+204 |         if nav is None:return ZERO,ZERO,{},'UNPRICED_SPECIAL'
+    |                       ^
+205 |         names={j:D(str(v))*self.prices[j]for j,v in enumerate(self.abs_virtual)
+206 |                if v and self.prices[j] is not None}
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:217:29
+    |
+215 |         for lot in self.lots.values():
+216 |             p=self.prices[lot.ticker]
+217 |             if p is not None:vintage[lot.origin]=vintage.get(lot.origin,ZERO)+(abs(lot.quantity)+abs(lot.pending))*p
+    |                             ^
+218 |         breach=(nav<=0 or gross>nav+EPS or any(v>D('.1')*nav+EPS for v in names.values())
+219 |                 or any(v>D('.2')*nav+EPS for v in vintage.values())or self.cash<self.restricted())
+    |
+
+E501 Line too long (116 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:217:101
+    |
+215 |         for lot in self.lots.values():
+216 |             p=self.prices[lot.ticker]
+217 |             if p is not None:vintage[lot.origin]=vintage.get(lot.origin,ZERO)+(abs(lot.quantity)+abs(lot.pending))*p
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+218 |         breach=(nav<=0 or gross>nav+EPS or any(v>D('.1')*nav+EPS for v in names.values())
+219 |                 or any(v>D('.2')*nav+EPS for v in vintage.values())or self.cash<self.restricted())
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:226:34
+    |
+224 |         """Integral units are exact raw-price microdollar seconds; no unseen endpoint label."""
+225 |         for j,q in enumerate(self.quantity):
+226 |             end=int(integrals[j]);old=self.borrow_anchor[j]
+    |                                  ^
+227 |             if end<old:raise ValueError('BORROW_INTEGRAL_REORDER')
+228 |             if q<0 and end>old:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:227:23
+    |
+225 |         for j,q in enumerate(self.quantity):
+226 |             end=int(integrals[j]);old=self.borrow_anchor[j]
+227 |             if end<old:raise ValueError('BORROW_INTEGRAL_REORDER')
+    |                       ^
+228 |             if q<0 and end>old:
+229 |                 charge=D(-int(q))*D(end-old)/SCALE*self.scenario.borrow/YEAR
+    |
+
+E501 Line too long (120 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:230:101
+    |
+228 |             if q<0 and end>old:
+229 |                 charge=D(-int(q))*D(end-old)/SCALE*self.scenario.borrow/YEAR
+230 |                 shorts=sorted((lot for lot in self.lots.values()if lot.ticker==j and lot.quantity<0),key=lambda l:l.key)
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+231 |                 denom=sum((-lot.quantity for lot in shorts),ZERO);left=charge
+232 |                 for n,lot in enumerate(shorts):
+    |
+
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:230:113
+    |
+228 |             if q<0 and end>old:
+229 |                 charge=D(-int(q))*D(end-old)/SCALE*self.scenario.borrow/YEAR
+230 |                 shorts=sorted((lot for lot in self.lots.values()if lot.ticker==j and lot.quantity<0),key=lambda l:l.key)
+    |                                                                                                                 ^
+231 |                 denom=sum((-lot.quantity for lot in shorts),ZERO);left=charge
+232 |                 for n,lot in enumerate(shorts):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:231:66
+    |
+229 |                 charge=D(-int(q))*D(end-old)/SCALE*self.scenario.borrow/YEAR
+230 |                 shorts=sorted((lot for lot in self.lots.values()if lot.ticker==j and lot.quantity<0),key=lambda l:l.key)
+231 |                 denom=sum((-lot.quantity for lot in shorts),ZERO);left=charge
+    |                                                                  ^
+232 |                 for n,lot in enumerate(shorts):
+233 |                     part=charge*(-lot.quantity)/denom if n<len(shorts)-1 else left
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:234:31
+    |
+232 |                 for n,lot in enumerate(shorts):
+233 |                     part=charge*(-lot.quantity)/denom if n<len(shorts)-1 else left
+234 |                     left-=part;lot.cash-=part;lot.nontrade-=part;lot.borrow+=part
+    |                               ^
+235 |                 self.cash-=charge;self.borrow_paid+=charge
+236 |             self.borrow_anchor[j]=end
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:234:46
+    |
+232 |                 for n,lot in enumerate(shorts):
+233 |                     part=charge*(-lot.quantity)/denom if n<len(shorts)-1 else left
+234 |                     left-=part;lot.cash-=part;lot.nontrade-=part;lot.borrow+=part
+    |                                              ^
+235 |                 self.cash-=charge;self.borrow_paid+=charge
+236 |             self.borrow_anchor[j]=end
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:234:65
+    |
+232 |                 for n,lot in enumerate(shorts):
+233 |                     part=charge*(-lot.quantity)/denom if n<len(shorts)-1 else left
+234 |                     left-=part;lot.cash-=part;lot.nontrade-=part;lot.borrow+=part
+    |                                                                 ^
+235 |                 self.cash-=charge;self.borrow_paid+=charge
+236 |             self.borrow_anchor[j]=end
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:235:34
+    |
+233 |                     part=charge*(-lot.quantity)/denom if n<len(shorts)-1 else left
+234 |                     left-=part;lot.cash-=part;lot.nontrade-=part;lot.borrow+=part
+235 |                 self.cash-=charge;self.borrow_paid+=charge
+    |                                  ^
+236 |             self.borrow_anchor[j]=end
+237 |         self.reconcile()
+    |
+
+E501 Line too long (131 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:245:101
+    |
+243 | …order.expiry:
+244 | …')
+245 | ….to_integral_value(rounding=ROUND_DOWN)*(1 if order.submitted_quantity>0 else -1)
+    |                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+246 | …
+247 | …io.fee*(order.cumulative_quantity+abs(q))).quantize(D('.01')) if q else order.paid_fee
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:246:40
+    |
+244 | …         raise ValueError('LATE_ENTRY_EXECUTION')
+245 | …     q=(abs(order.submitted_quantity)*fraction).to_integral_value(rounding=ROUND_DOWN)*(1 if order.submitted_quantity>0 else -1)
+246 | …     if not order.submitted_quantity:q=ZERO
+    |                                      ^
+247 | …     paid=max(self.scenario.minimum,self.scenario.fee*(order.cumulative_quantity+abs(q))).quantize(D('.01')) if q else order.paid_fee
+248 | …     fee=paid-order.paid_fee
+    |
+
+E501 Line too long (136 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:247:101
+    |
+245 | …o_integral_value(rounding=ROUND_DOWN)*(1 if order.submitted_quantity>0 else -1)
+246 | …
+247 | ….fee*(order.cumulative_quantity+abs(q))).quantize(D('.01')) if q else order.paid_fee
+    |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+248 | …
+249 | …elf.scenario.impact)/10000*(1 if q>0 else -1))
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:259:40
+    |
+257 |                     raise ValueError('ENTRY_OVERFILL')
+258 |                 lot.pending-=leg.quantity
+259 |                 if lot.entry_at is None:lot.entry_at=effective;lot.entry_price=leg.price
+    |                                        ^
+260 |             else:
+261 |                 if leg.quantity*lot.quantity>=0 or abs(leg.quantity)>abs(lot.quantity):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:259:63
+    |
+257 |                     raise ValueError('ENTRY_OVERFILL')
+258 |                 lot.pending-=leg.quantity
+259 |                 if lot.entry_at is None:lot.entry_at=effective;lot.entry_price=leg.price
+    |                                                               ^
+260 |             else:
+261 |                 if leg.quantity*lot.quantity>=0 or abs(leg.quantity)>abs(lot.quantity):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:265:38
+    |
+263 |                 if roles[lot.key]=='EXIT' and effective<lot.endpoint:
+264 |                     raise ValueError('FIXED_ENDPOINT_VIOLATION')
+265 |                 lot.exit_at=effective;lot.exit_price=leg.price
+    |                                      ^
+266 |             qty,basis,real=inventory(lot.quantity,lot.basis,leg.quantity,leg.price)
+267 |             lot.quantity=qty;lot.basis=basis;lot.realized+=real-leg.fee
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:267:29
+    |
+265 |                 lot.exit_at=effective;lot.exit_price=leg.price
+266 |             qty,basis,real=inventory(lot.quantity,lot.basis,leg.quantity,leg.price)
+267 |             lot.quantity=qty;lot.basis=basis;lot.realized+=real-leg.fee
+    |                             ^
+268 |             lot.cash-=leg.quantity*leg.price+leg.fee;lot.fees+=leg.fee
+269 |             if not leg.internal:lot.cost+=abs(leg.quantity)*abs(leg.price-raw_open)+leg.fee
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:267:45
+    |
+265 |                 lot.exit_at=effective;lot.exit_price=leg.price
+266 |             qty,basis,real=inventory(lot.quantity,lot.basis,leg.quantity,leg.price)
+267 |             lot.quantity=qty;lot.basis=basis;lot.realized+=real-leg.fee
+    |                                             ^
+268 |             lot.cash-=leg.quantity*leg.price+leg.fee;lot.fees+=leg.fee
+269 |             if not leg.internal:lot.cost+=abs(leg.quantity)*abs(leg.price-raw_open)+leg.fee
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:268:53
+    |
+266 |             qty,basis,real=inventory(lot.quantity,lot.basis,leg.quantity,leg.price)
+267 |             lot.quantity=qty;lot.basis=basis;lot.realized+=real-leg.fee
+268 |             lot.cash-=leg.quantity*leg.price+leg.fee;lot.fees+=leg.fee
+    |                                                     ^
+269 |             if not leg.internal:lot.cost+=abs(leg.quantity)*abs(leg.price-raw_open)+leg.fee
+270 |         j=order.ticker
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:269:32
+    |
+267 |             lot.quantity=qty;lot.basis=basis;lot.realized+=real-leg.fee
+268 |             lot.cash-=leg.quantity*leg.price+leg.fee;lot.fees+=leg.fee
+269 |             if not leg.internal:lot.cost+=abs(leg.quantity)*abs(leg.price-raw_open)+leg.fee
+    |                                ^
+270 |         j=order.ticker
+271 |         qty,basis,real=inventory(D(int(self.quantity[j])),self.physical_basis[j],q,external)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:272:40
+    |
+270 |         j=order.ticker
+271 |         qty,basis,real=inventory(D(int(self.quantity[j])),self.physical_basis[j],q,external)
+272 |         if qty!=qty.to_integral_value():raise AssertionError('PHYSICAL_FRACTIONAL_ORDINARY_STOCK')
+    |                                        ^
+273 |         self.quantity[j]=int(qty);self.physical_basis[j]=basis;self.physical_realized[j]+=real-fee
+274 |         self.cash-=q*external+fee
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:273:34
+    |
+271 |         qty,basis,real=inventory(D(int(self.quantity[j])),self.physical_basis[j],q,external)
+272 |         if qty!=qty.to_integral_value():raise AssertionError('PHYSICAL_FRACTIONAL_ORDINARY_STOCK')
+273 |         self.quantity[j]=int(qty);self.physical_basis[j]=basis;self.physical_realized[j]+=real-fee
+    |                                  ^
+274 |         self.cash-=q*external+fee
+275 |         self.commission+=fee;self.friction+=abs(q)*abs(external-raw_open)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:273:63
+    |
+271 |         qty,basis,real=inventory(D(int(self.quantity[j])),self.physical_basis[j],q,external)
+272 |         if qty!=qty.to_integral_value():raise AssertionError('PHYSICAL_FRACTIONAL_ORDINARY_STOCK')
+273 |         self.quantity[j]=int(qty);self.physical_basis[j]=basis;self.physical_realized[j]+=real-fee
+    |                                                               ^
+274 |         self.cash-=q*external+fee
+275 |         self.commission+=fee;self.friction+=abs(q)*abs(external-raw_open)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:275:29
+    |
+273 |         self.quantity[j]=int(qty);self.physical_basis[j]=basis;self.physical_realized[j]+=real-fee
+274 |         self.cash-=q*external+fee
+275 |         self.commission+=fee;self.friction+=abs(q)*abs(external-raw_open)
+    |                             ^
+276 |         order.paid_fee=paid;order.cumulative_quantity+=abs(q);order.status='OBSERVED'
+277 |         self.refresh();self.reconcile()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:276:28
+    |
+274 |         self.cash-=q*external+fee
+275 |         self.commission+=fee;self.friction+=abs(q)*abs(external-raw_open)
+276 |         order.paid_fee=paid;order.cumulative_quantity+=abs(q);order.status='OBSERVED'
+    |                            ^
+277 |         self.refresh();self.reconcile()
+278 |         self.record('FILL',now,order=order.key,ticker=j,decision=order.decision,effective=effective,
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:276:62
+    |
+274 |         self.cash-=q*external+fee
+275 |         self.commission+=fee;self.friction+=abs(q)*abs(external-raw_open)
+276 |         order.paid_fee=paid;order.cumulative_quantity+=abs(q);order.status='OBSERVED'
+    |                                                              ^
+277 |         self.refresh();self.reconcile()
+278 |         self.record('FILL',now,order=order.key,ticker=j,decision=order.decision,effective=effective,
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:277:23
+    |
+275 |         self.commission+=fee;self.friction+=abs(q)*abs(external-raw_open)
+276 |         order.paid_fee=paid;order.cumulative_quantity+=abs(q);order.status='OBSERVED'
+277 |         self.refresh();self.reconcile()
+    |                       ^
+278 |         self.record('FILL',now,order=order.key,ticker=j,decision=order.decision,effective=effective,
+279 |                     reference=raw_open,external=q,external_price=external,fee=fee,
+    |
+
+E501 Line too long (125 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:280:101
+    |
+278 |         self.record('FILL',now,order=order.key,ticker=j,decision=order.decision,effective=effective,
+279 |                     reference=raw_open,external=q,external_price=external,fee=fee,
+280 |                     legs=[{'lot':l.cohort_id,'q':l.quantity,'price':l.price,'fee':l.fee,'internal':l.internal}for l in legs])
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+281 |
+282 |     def credit(self,key: str,amount: Decimal,kind: str,at: int) -> None:
+    |
+
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:280:115
+    |
+278 |         self.record('FILL',now,order=order.key,ticker=j,decision=order.decision,effective=effective,
+279 |                     reference=raw_open,external=q,external_price=external,fee=fee,
+280 |                     legs=[{'lot':l.cohort_id,'q':l.quantity,'price':l.price,'fee':l.fee,'internal':l.internal}for l in legs])
+    |                                                                                                                   ^
+281 |
+282 |     def credit(self,key: str,amount: Decimal,kind: str,at: int) -> None:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:283:27
+    |
+282 |     def credit(self,key: str,amount: Decimal,kind: str,at: int) -> None:
+283 |         lot=self.lots[key];lot.cash+=amount;lot.nontrade+=amount;self.cash+=amount
+    |                           ^
+284 |         self.record(kind,at,lot=key,amount=amount)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:283:44
+    |
+282 |     def credit(self,key: str,amount: Decimal,kind: str,at: int) -> None:
+283 |         lot=self.lots[key];lot.cash+=amount;lot.nontrade+=amount;self.cash+=amount
+    |                                            ^
+284 |         self.record(kind,at,lot=key,amount=amount)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:283:65
+    |
+282 |     def credit(self,key: str,amount: Decimal,kind: str,at: int) -> None:
+283 |         lot=self.lots[key];lot.cash+=amount;lot.nontrade+=amount;self.cash+=amount
+    |                                                                 ^
+284 |         self.record(kind,at,lot=key,amount=amount)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:288:49
+    |
+286 |     def ex_dividend(self,event_id: str,j: int,amount: Decimal,due: int,at: int,truth: str) -> None:
+287 |         for lot in self.lots.values():
+288 |             if lot.ticker!=j or not lot.quantity:continue
+    |                                                 ^
+289 |             key=(event_id,lot.key)
+290 |             if key in self.claims:raise ValueError('DUPLICATE_DIVIDEND')
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:290:34
+    |
+288 |             if lot.ticker!=j or not lot.quantity:continue
+289 |             key=(event_id,lot.key)
+290 |             if key in self.claims:raise ValueError('DUPLICATE_DIVIDEND')
+    |                                  ^
+291 |             self.claims[key]=(lot.quantity*amount,due)
+292 |             self.record('DIVIDEND_EX',at,lot=lot.key,event=event_id,amount=lot.quantity*amount,due=due,truth=truth)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:298:41
+    |
+296 |         keys=[key for key,(_,due)in self.claims.items()if key[0]==event_id and due<=at]
+297 |         for key in keys:
+298 |             value,_=self.claims.pop(key);self.credit(key[1],value,'DIVIDEND_PAY',at);self.dividend_cash+=value
+    |                                         ^
+299 |         self.reconcile()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:298:85
+    |
+296 |         keys=[key for key,(_,due)in self.claims.items()if key[0]==event_id and due<=at]
+297 |         for key in keys:
+298 |             value,_=self.claims.pop(key);self.credit(key[1],value,'DIVIDEND_PAY',at);self.dividend_cash+=value
+    |                                                                                     ^
+299 |         self.reconcile()
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:302:20
+    |
+301 |     def split(self,j: int,ratio: Decimal,at: int) -> None:
+302 |         if ratio<=0:raise ValueError('SPLIT_RATIO')
+    |                    ^
+303 |         for lot in self.lots.values():
+304 |             if lot.ticker==j:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:305:36
+    |
+303 |         for lot in self.lots.values():
+304 |             if lot.ticker==j:
+305 |                 lot.quantity*=ratio;lot.pending*=ratio;lot.basis/=ratio
+    |                                    ^
+306 |                 if lot.quantity!=lot.quantity.to_integral_value():
+307 |                     raise ValueError('UNRESOLVED_SPLIT_CIL')
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:305:55
+    |
+303 |         for lot in self.lots.values():
+304 |             if lot.ticker==j:
+305 |                 lot.quantity*=ratio;lot.pending*=ratio;lot.basis/=ratio
+    |                                                       ^
+306 |                 if lot.quantity!=lot.quantity.to_integral_value():
+307 |                     raise ValueError('UNRESOLVED_SPLIT_CIL')
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:309:36
+    |
+307 |                     raise ValueError('UNRESOLVED_SPLIT_CIL')
+308 |         q=D(int(self.quantity[j]))*ratio
+309 |         if q!=q.to_integral_value():raise ValueError('UNRESOLVED_PHYSICAL_SPLIT_CIL')
+    |                                    ^
+310 |         self.quantity[j]=int(q);self.physical_basis[j]/=ratio
+311 |         if self.prices[j] is not None:self.prices[j]/=ratio
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:310:32
+    |
+308 |         q=D(int(self.quantity[j]))*ratio
+309 |         if q!=q.to_integral_value():raise ValueError('UNRESOLVED_PHYSICAL_SPLIT_CIL')
+310 |         self.quantity[j]=int(q);self.physical_basis[j]/=ratio
+    |                                ^
+311 |         if self.prices[j] is not None:self.prices[j]/=ratio
+312 |         for order in self.pending.values():
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:311:38
+    |
+309 |         if q!=q.to_integral_value():raise ValueError('UNRESOLVED_PHYSICAL_SPLIT_CIL')
+310 |         self.quantity[j]=int(q);self.physical_basis[j]/=ratio
+311 |         if self.prices[j] is not None:self.prices[j]/=ratio
+    |                                      ^
+312 |         for order in self.pending.values():
+313 |             if order.ticker==j:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:316:23
+    |
+314 |                 order.requests=tuple(Request(r.key,r.delta*ratio,r.role)for r in order.requests)
+315 |                 order.submitted_quantity*=ratio
+316 |         self.refresh();self.reconcile();self.record('SPLIT',at,ticker=j,ratio=ratio)
+    |                       ^
+317 |
+318 |     def compact(self,at: int) -> None:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:316:40
+    |
+314 |                 order.requests=tuple(Request(r.key,r.delta*ratio,r.role)for r in order.requests)
+315 |                 order.submitted_quantity*=ratio
+316 |         self.refresh();self.reconcile();self.record('SPLIT',at,ticker=j,ratio=ratio)
+    |                                        ^
+317 |
+318 |     def compact(self,at: int) -> None:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:322:79
+    |
+320 |         ordered={r.key for order in self.pending.values()for r in order.requests}
+321 |         for key,lot in list(self.lots.items()):
+322 |             if lot.quantity or lot.pending or key in claimed or key in ordered:continue
+    |                                                                               ^
+323 |             self.closed.append({'key':key,'ticker':lot.ticker,'origin':lot.origin,'endpoint':lot.endpoint,
+324 |                                 'direction':lot.direction,'entry_at':lot.entry_at,'exit_at':lot.exit_at,
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:327:41
+    |
+325 |                                 'cash_pnl':lot.cash,'fees':lot.fees,'cost':lot.cost,'borrow':lot.borrow,
+326 |                                 'funding':lot.funding,'closed_at':at})
+327 |             self.archived_cash+=lot.cash;self.archived_nontrade+=lot.nontrade
+    |                                         ^
+328 |             del self.lots[key]
+329 |         self.refresh();self.reconcile()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:329:23
+    |
+327 |             self.archived_cash+=lot.cash;self.archived_nontrade+=lot.nontrade
+328 |             del self.lots[key]
+329 |         self.refresh();self.reconcile()
+    |                       ^
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:37:51
+   |
+35 | class Market:
+36 |     def __init__(self,first: str='2021-01-01',last: str='2024-12-31'):
+37 |         if first<'2021-01-01' or last>'2024-12-31':raise ValueError('PRICE_PERIOD_SCOPE')
+   |                                                   ^
+38 |         self.first,self.last=first,last
+39 |         self.clock=MarketClock('2020-12-01','2025-01-10')
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:43:31
+   |
+41 |         self.parts={Path(r['path']).stem:r for r in receipts if r['family']=='minute'
+42 |                     and '2021-01'<=Path(r['path']).stem<='2024-12'}
+43 |         if len(self.parts)!=48:raise ValueError('RAW_SOURCE_COVERAGE')
+   |                               ^
+44 |         ogn=json.loads((ROOT/'sources/ogn_sip.json').read_text())
+45 |         self.ogn={minute(row['t']):row for row in ogn.get('bars',[])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:50:35
+   |
+49 |     def days(self):
+50 |         start_month=self.first[:7];end_month=self.last[:7]
+   |                                   ^
+51 |         columns=['ticker','timestamp','is_rth','open','high','low','close','volume']
+52 |         for month,item in sorted(self.parts.items()):
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:53:49
+   |
+51 |         columns=['ticker','timestamp','is_rth','open','high','low','close','volume']
+52 |         for month,item in sorted(self.parts.items()):
+53 |             if not start_month<=month<=end_month:continue
+   |                                                 ^
+54 |             path=Path(item['path'])
+55 |             if digest(path)!=item['sha256']:raise ValueError('RAW_SOURCE_HASH')
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:55:44
+   |
+53 |             if not start_month<=month<=end_month:continue
+54 |             path=Path(item['path'])
+55 |             if digest(path)!=item['sha256']:raise ValueError('RAW_SOURCE_HASH')
+   |                                            ^
+56 |             frame=pd.read_parquet(path,columns=columns,filters=[('is_rth','==',True),('ticker','in',list(SYMBOLS))])
+57 |             if frame.duplicated(['ticker','timestamp']).any():raise ValueError('DUPLICATE_RAW_MINUTE')
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:57:62
+   |
+55 |             if digest(path)!=item['sha256']:raise ValueError('RAW_SOURCE_HASH')
+56 |             frame=pd.read_parquet(path,columns=columns,filters=[('is_rth','==',True),('ticker','in',list(SYMBOLS))])
+57 |             if frame.duplicated(['ticker','timestamp']).any():raise ValueError('DUPLICATE_RAW_MINUTE')
+   |                                                              ^
+58 |             frame['date']=frame.timestamp.dt.tz_convert('America/New_York').dt.strftime('%Y-%m-%d')
+59 |             self.reads.append({'path':str(path),'sha256':item['sha256'],'projected_rows':len(frame)})
+   |
+
+E501 Line too long (102 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:57:101
+   |
+55 |             if digest(path)!=item['sha256']:raise ValueError('RAW_SOURCE_HASH')
+56 |             frame=pd.read_parquet(path,columns=columns,filters=[('is_rth','==',True),('ticker','in',list(SYMBOLS))])
+57 |             if frame.duplicated(['ticker','timestamp']).any():raise ValueError('DUPLICATE_RAW_MINUTE')
+   |                                                                                                     ^^
+58 |             frame['date']=frame.timestamp.dt.tz_convert('America/New_York').dt.strftime('%Y-%m-%d')
+59 |             self.reads.append({'path':str(path),'sha256':item['sha256'],'projected_rows':len(frame)})
+   |
+
+E501 Line too long (120 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:60:101
+   |
+58 |             frame['date']=frame.timestamp.dt.tz_convert('America/New_York').dt.strftime('%Y-%m-%d')
+59 |             self.reads.append({'path':str(path),'sha256':item['sha256'],'projected_rows':len(frame)})
+60 |             for date in self.clock.calendar.loc[month:str(pd.Timestamp(month+'-01')+pd.offsets.MonthEnd(0))[:10]].index:
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+61 |                 day=str(date)[:10]
+62 |                 if not self.first<=day<=self.last:continue
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:62:50
+   |
+60 |             for date in self.clock.calendar.loc[month:str(pd.Timestamp(month+'-01')+pd.offsets.MonthEnd(0))[:10]].index:
+61 |                 day=str(date)[:10]
+62 |                 if not self.first<=day<=self.last:continue
+   |                                                  ^
+63 |                 scheduled=self.clock.calendar.loc[date]
+64 |                 opened=pd.Timestamp(scheduled['open']);closed=pd.Timestamp(scheduled['close'])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:64:55
+   |
+62 |                 if not self.first<=day<=self.last:continue
+63 |                 scheduled=self.clock.calendar.loc[date]
+64 |                 opened=pd.Timestamp(scheduled['open']);closed=pd.Timestamp(scheduled['close'])
+   |                                                       ^
+65 |                 idx=pd.date_range(opened,closed,freq='min',inclusive='left')
+66 |                 sample=frame.loc[frame.date==day]
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:74:40
+   |
+72 |                        &(op>0)&(cl>0)&(vol>=0)&(lo>0)&(lo<=np.minimum(op,cl))&(hi>=np.maximum(op,cl)))
+73 |                 signal=V2/f'audits/signals_release/F{int(day[:4])-2000:02d}/{day}.parquet'
+74 |                 if not signal.is_file():raise ValueError('SOURCE_OPPORTUNITY_PARTITION_MISSING')
+   |                                        ^
+75 |                 signals=pd.read_parquet(signal)
+76 |                 if len(signals)!=20*len(self.clock.origins(day)):
+   |
+
+E501 Line too long (103 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:78:101
+   |
+76 |                 if len(signals)!=20*len(self.clock.origins(day)):
+77 |                     raise ValueError('CALENDAR_OPPORTUNITY_AXIS')
+78 |                 yield Day(day,idx.asi8//60_000_000_000,op,cl,vol,valid,signals,item['sha256'],self.ogn)
+   |                                                                                                     ^^^
+
+E501 Line too long (113 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/paths.py:20:101
+   |
+19 | def canonical(value: object) -> str:
+20 |     return hashlib.sha256(json.dumps(value,sort_keys=True,default=str,separators=(',',':')).encode()).hexdigest()
+   |                                                                                                     ^^^^^^^^^^^^^
+
+E501 Line too long (105 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:51:101
+   |
+49 |     protocol={
+50 |         'version':'HF20_TRACK2_OWNER_RESEARCH_V4','approval_date':'2026-11-09',
+51 |         'authority':'current user FINAL CODEX EXECUTION PROMPT;research-only conditional run authorized',
+   |                                                                                                     ^^^^^
+52 |         'period':['2021-01-01','2024-12-31'],'arms':ARMS,'populations':['matched','attainable'],
+53 |         'symbols':SYMBOLS,'initial_cash_per_account':'100000',
+   |
+
+E501 Line too long (124 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:62:101
+   |
+60 | …     'execution':'nextregularminute rawopen proxy;post aftercomplete+lag;prior receivedvolume1%',
+61 | …     'entry_expiry_minutes':10,'inference_seconds':0,'mark_age_minutes':5,
+62 | …     'allocation_time':'first as-of ready cross-section attempt;missing source typed abstention;no later old-lot resize',
+   |                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+63 | …     'fills':'submitted quantity capped/floored beforeevent;internal matched at ex-post raw reference;unknown bar holds,not retrocanc…
+64 | …     'fees':'adverse price rounded tocent;minimum cumulative per physicalorder;internal0',
+   |
+
+E501 Line too long (140 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:63:101
+   |
+61 | …0,'mark_age_minutes':5,
+62 | …tion attempt;missing source typed abstention;no later old-lot resize',
+63 | …oreevent;internal matched at ex-post raw reference;unknown bar holds,not retrocancel',
+   |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64 | …umulative per physicalorder;internal0',
+65 | …ysical net short ACT365;previous observed minute-price integral',
+   |
+
+E501 Line too long (119 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:65:101
+   |
+63 | …     'fills':'submitted quantity capped/floored beforeevent;internal matched at ex-post raw reference;unknown bar holds,not retrocanc…
+64 | …     'fees':'adverse price rounded tocent;minimum cumulative per physicalorder;internal0',
+65 | …     'borrow':'conditional academic availability;physical net short ACT365;previous observed minute-price integral',
+   |                                                                                                   ^^^^^^^^^^^^^^^^^^^
+66 | …     'cash':'short proceeds restricted inside cash once;unavoidable deficit liability,block newrisk',
+67 | …     'actions':'V3 observed confidence retained;unknownAMD/AMZN base0 recorded events;proxy separate sensitivity',
+   |
+
+E501 Line too long (104 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:66:101
+   |
+64 | …     'fees':'adverse price rounded tocent;minimum cumulative per physicalorder;internal0',
+65 | …     'borrow':'conditional academic availability;physical net short ACT365;previous observed minute-price integral',
+66 | …     'cash':'short proceeds restricted inside cash once;unavoidable deficit liability,block newrisk',
+   |                                                                                                   ^^^^
+67 | …     'actions':'V3 observed confidence retained;unknownAMD/AMZN base0 recorded events;proxy separate sensitivity',
+68 | …     'special':'MRK regular-way rights throughJune2;1OGN/10MRK;use actual availableOGN marks;fractioncash conditional reference and1/…
+   |
+
+E501 Line too long (117 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:67:101
+   |
+65 | …     'borrow':'conditional academic availability;physical net short ACT365;previous observed minute-price integral',
+66 | …     'cash':'short proceeds restricted inside cash once;unavoidable deficit liability,block newrisk',
+67 | …     'actions':'V3 observed confidence retained;unknownAMD/AMZN base0 recorded events;proxy separate sensitivity',
+   |                                                                                                   ^^^^^^^^^^^^^^^^^
+68 | …     'special':'MRK regular-way rights throughJune2;1OGN/10MRK;use actual availableOGN marks;fractioncash conditional reference and1/…
+69 | …     'whole_OGN':'automatic nexteligible rawopen liquidation after first mark,external costs;no alpha universe expansion',
+   |
+
+E501 Line too long (180 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:68:101
+   |
+66 | …icit liability,block newrisk',
+67 | …ecorded events;proxy separate sensitivity',
+68 | …al availableOGN marks;fractioncash conditional reference and1/5/10session payment;longtax95.23/4.77 only',
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+69 | …t mark,external costs;no alpha universe expansion',
+70 | …NAV interpolation',
+   |
+
+E501 Line too long (125 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:69:101
+   |
+67 | …     'actions':'V3 observed confidence retained;unknownAMD/AMZN base0 recorded events;proxy separate sensitivity',
+68 | …     'special':'MRK regular-way rights throughJune2;1OGN/10MRK;use actual availableOGN marks;fractioncash conditional reference and1/…
+69 | …     'whole_OGN':'automatic nexteligible rawopen liquidation after first mark,external costs;no alpha universe expansion',
+   |                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+70 | …     'unpriced':'retainclaims;block discretionary risk until marked;no NAV interpolation',
+71 | …     'cutoff':'calendar-only reject planned endpoint/exit marker beyond2024;retain all existing positions/claims',
+   |
+
+E501 Line too long (117 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:71:101
+   |
+69 |         'whole_OGN':'automatic nexteligible rawopen liquidation after first mark,external costs;no alpha universe expansion',
+70 |         'unpriced':'retainclaims;block discretionary risk until marked;no NAV interpolation',
+71 |         'cutoff':'calendar-only reject planned endpoint/exit marker beyond2024;retain all existing positions/claims',
+   |                                                                                                     ^^^^^^^^^^^^^^^^^
+72 |         'dynamic_rebalancing':False,'sectors':'only if trustworthy existing metadata;no new classification guess',
+73 |         'pilot_windows':[['2021-01-04','2021-01-08'],['2021-06-02','2021-06-11'],
+   |
+
+E501 Line too long (114 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:72:101
+   |
+70 |         'unpriced':'retainclaims;block discretionary risk until marked;no NAV interpolation',
+71 |         'cutoff':'calendar-only reject planned endpoint/exit marker beyond2024;retain all existing positions/claims',
+72 |         'dynamic_rebalancing':False,'sectors':'only if trustworthy existing metadata;no new classification guess',
+   |                                                                                                     ^^^^^^^^^^^^^^
+73 |         'pilot_windows':[['2021-01-04','2021-01-08'],['2021-06-02','2021-06-11'],
+74 |                          ['2022-08-24','2022-08-26'],['2024-05-09','2024-05-17'],
+   |
+
+E501 Line too long (108 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:77:101
+   |
+75 | …                      ['2024-11-27','2024-12-02']],
+76 | …     'scenarios':[asdict(s)for s in scenarios()],
+77 | …     'borrow_stress':'SHA256(seed20261109,symbol,session),reject<1%,recall1–1.2%;not profit-conditioned',
+   |                                                                                                   ^^^^^^^^
+78 | …     'financial_metrics':'daily observed NAV;252day Sharpe/Sortino;CAGR actualcalendar;MDD/Calmar;undefined if nonpositive/incomplete…
+79 | …     'statistics':'descriptive only;Stage6independent dependence-aware audit pending',
+   |
+
+E501 Line too long (182 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py:78:101
+   |
+76 | …
+77 | …ll1–1.2%;not profit-conditioned',
+78 | …actualcalendar;MDD/Calmar;undefined if nonpositive/incomplete;costaddback sameholdings not counterfactual',
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+79 | …udit pending',
+80 | …rue,
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/sources.py:30:21
+   |
+28 |             payload=response.content
+29 |         except requests.RequestException as exc:
+30 |             status=0;payload=type(exc).__name__.encode()
+   |                     ^
+31 |         path.write_bytes(payload)
+32 |         publish(receipt,{'url':url,'query':params,'retrieved_utc':at,'http':status,'sha256':digest(path),
+   |
+
+E501 Line too long (103 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/sources.py:33:101
+   |
+31 |         path.write_bytes(payload)
+32 |         publish(receipt,{'url':url,'query':params,'retrieved_utc':at,'http':status,'sha256':digest(path),
+33 |                          'path':str(path),'rights':'public issuer/SEC research;not PIT receipt proof'})
+   |                                                                                                     ^^^
+34 |         print(name,status,flush=True)
+35 |     if not key or not secret:
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/sources.py:53:16
+   |
+51 |                                   headers={**headers,'APCA-API-KEY-ID':key,'APCA-API-SECRET-KEY':secret},timeout=20)
+52 |             status=response.status_code
+53 |             try:payload=response.json()
+   |                ^
+54 |             except ValueError:payload={'http':status,'non_json_body':response.text[:500]}
+55 |         except requests.RequestException as exc:
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/sources.py:54:30
+   |
+52 |             status=response.status_code
+53 |             try:payload=response.json()
+54 |             except ValueError:payload={'http':status,'non_json_body':response.text[:500]}
+   |                              ^
+55 |         except requests.RequestException as exc:
+56 |             status=0;payload={'error_type':type(exc).__name__}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/sources.py:56:21
+   |
+54 |             except ValueError:payload={'http':status,'non_json_body':response.text[:500]}
+55 |         except requests.RequestException as exc:
+56 |             status=0;payload={'error_type':type(exc).__name__}
+   |                     ^
+57 |         sanitized=json.dumps(payload).replace(key,'<REDACTED>').replace(secret,'<REDACTED>')
+58 |         publish(path,json.loads(sanitized))
+   |
+
+E501 Line too long (106 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:60:101
+   |
+59 |     def validate(self) -> None:
+60 |         if sum((lot.entitlement for lot in self.lots),ZERO) != self.physical_whole+self.physical_fraction:
+   |                                                                                                     ^^^^^^
+61 |             raise AssertionError('OGN_ENTITLEMENT_CONSERVATION')
+62 |         if abs(sum((lot.whole_attribution for lot in self.lots),ZERO)-self.physical_whole)>D('1e-20'):
+   |
+
+E501 Line too long (102 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:62:101
+   |
+60 |         if sum((lot.entitlement for lot in self.lots),ZERO) != self.physical_whole+self.physical_fraction:
+61 |             raise AssertionError('OGN_ENTITLEMENT_CONSERVATION')
+62 |         if abs(sum((lot.whole_attribution for lot in self.lots),ZERO)-self.physical_whole)>D('1e-20'):
+   |                                                                                                     ^^
+63 |             raise AssertionError('OGN_WHOLE_ATTRIBUTION')
+64 |         if abs(sum((lot.fraction_attribution for lot in self.lots),ZERO)-self.physical_fraction)>D('1e-20'):
+   |
+
+E501 Line too long (108 > 100)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:64:101
+   |
+62 |         if abs(sum((lot.whole_attribution for lot in self.lots),ZERO)-self.physical_whole)>D('1e-20'):
+63 |             raise AssertionError('OGN_WHOLE_ATTRIBUTION')
+64 |         if abs(sum((lot.fraction_attribution for lot in self.lots),ZERO)-self.physical_fraction)>D('1e-20'):
+   |                                                                                                     ^^^^^^^^
+65 |             raise AssertionError('OGN_CIL_ATTRIBUTION')
+66 |         if self.physical_whole != self.physical_whole.to_integral_value():
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:82:37
+   |
+80 |             amount=ZERO
+81 |             if not self.whole_settled:
+82 |                 if self.mark is None:raise AssertionError('MARK')
+   |                                     ^
+83 |                 self.mark.validate(now)
+84 |                 amount += (lot.whole_attribution + sum(
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:87:46
+   |
+85 |                     (q for key,q in self.whole_fills if key==lot.cohort_id),ZERO))*self.mark.value
+86 |             if not self.cil_paid:
+87 |                 if self.cil_reference is None:raise AssertionError('CIL_MARK')
+   |                                              ^
+88 |                 self.cil_reference.validate(now)
+89 |                 amount += lot.fraction_attribution*self.cil_reference.value
+   |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:101:36
+    |
+ 99 | def distribution(positions: tuple[tuple[str,Decimal,Decimal],...], clock: MarketClock,
+100 |                  pay_sessions: int = 5) -> Distribution:
+101 |     if pay_sessions not in (1,5,10):raise ValueError('CIL_PAYMENT_SCENARIO')
+    |                                    ^
+102 |     entitlements=[(key,q/D(10),tax if q>0 else ZERO)for key,q,tax in sorted(positions)]
+103 |     net=sum((q for _,q,_ in entitlements),ZERO)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:108:12
+    |
+106 |     # Proportional signed virtual claims retain opposing gross until actual disposal.
+107 |     # Final residual belongs to stable last ID; account shares are rounded only ONCE.
+108 |     lots=[];left_whole=whole;left_fraction=fraction
+    |            ^
+109 |     for index,(key,q,tax) in enumerate(entitlements):
+110 |         w=q*whole/net if net else ZERO
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:108:29
+    |
+106 |     # Proportional signed virtual claims retain opposing gross until actual disposal.
+107 |     # Final residual belongs to stable last ID; account shares are rounded only ONCE.
+108 |     lots=[];left_whole=whole;left_fraction=fraction
+    |                             ^
+109 |     for index,(key,q,tax) in enumerate(entitlements):
+110 |         w=q*whole/net if net else ZERO
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:113:25
+    |
+111 |         f=q-w
+112 |         if index==len(entitlements)-1:
+113 |             w=left_whole;f=left_fraction
+    |                         ^
+114 |         left_whole-=w;left_fraction-=f
+115 |         lots.append(DistributionLot(key,q,w,f,tax,tax*D('.9523'),tax*D('.0477')))
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:114:22
+    |
+112 |         if index==len(entitlements)-1:
+113 |             w=left_whole;f=left_fraction
+114 |         left_whole-=w;left_fraction-=f
+    |                      ^
+115 |         lots.append(DistributionLot(key,q,w,f,tax,tax*D('.9523'),tax*D('.0477')))
+116 |     sessions=list(clock.calendar.loc['2021-06-03':].index)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:117:35
+    |
+115 |         lots.append(DistributionLot(key,q,w,f,tax,tax*D('.9523'),tax*D('.0477')))
+116 |     sessions=list(clock.calendar.loc['2021-06-03':].index)
+117 |     if len(sessions)<=pay_sessions:raise ValueError('CIL_CALENDAR_END')
+    |                                   ^
+118 |     day=str(sessions[pay_sessions])[:10]
+119 |     pay=clock.origins(day)[0]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:128:19
+    |
+126 |             cil_postclose: Decimal | None = None) -> Distribution:
+127 |     quote.validate(now)
+128 |     if quote.at<EX:raise ValueError('PRE_DISTRIBUTION_MARK')
+    |                   ^
+129 |     reference=state.cil_reference
+130 |     if reference is None:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:147:27
+    |
+145 |                  ) -> tuple[Distribution,tuple[tuple[str,Decimal],...],Decimal]:
+146 |     quote.validate(posted)
+147 |     if state.whole_settled:raise ValueError('DUPLICATE_OGN_DISPOSAL')
+    |                           ^
+148 |     reference = known_reference or state.mark
+149 |     if reference is None or reference.available>decision or not decision<quote.at:
+    |
+
+E501 Line too long (110 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:155:101
+    |
+153 |     deltas=tuple((key,-q)for key,q in sorted(remaining.items())if q)
+154 |     target=-sum(remaining.values(),ZERO)
+155 |     cap=abs(target) if external_capacity is None else external_capacity.to_integral_value(rounding=ROUND_DOWN)
+    |                                                                                                     ^^^^^^^^^^
+156 |     if cap < 0:raise ValueError("NEGATIVE_OGN_CAPACITY")
+157 |     net=min(abs(target),cap)*(1 if target>0 else -1) if target else ZERO
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:156:15
+    |
+154 |     target=-sum(remaining.values(),ZERO)
+155 |     cap=abs(target) if external_capacity is None else external_capacity.to_integral_value(rounding=ROUND_DOWN)
+156 |     if cap < 0:raise ValueError("NEGATIVE_OGN_CAPACITY")
+    |               ^
+157 |     net=min(abs(target),cap)*(1 if target>0 else -1) if target else ZERO
+158 |     if not deltas:return replace(state,whole_settled=True),(),ZERO
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:158:18
+    |
+156 |     if cap < 0:raise ValueError("NEGATIVE_OGN_CAPACITY")
+157 |     net=min(abs(target),cap)*(1 if target>0 else -1) if target else ZERO
+158 |     if not deltas:return replace(state,whole_settled=True),(),ZERO
+    |                  ^
+159 |     fee=(max(minimum,(previous_external_shares+abs(net))*per_share).quantize(D('.01'))
+160 |          - previous_fee) if net else ZERO
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:165:20
+    |
+163 |     legs=cross(deltas,quote.value,external,net,fee)
+164 |     amounts={lot.cohort_id:ZERO for lot in state.lots}
+165 |     for leg in legs:amounts[leg.cohort_id] += -leg.quantity*leg.price-leg.fee
+    |                    ^
+166 |     if abs(sum(amounts.values(),ZERO)-(-net*external-fee))>D('1e-18'):
+167 |         raise AssertionError('OGN_EXTERNAL_CASH_CONSERVATION')
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:169:20
+    |
+167 |         raise AssertionError('OGN_EXTERNAL_CASH_CONSERVATION')
+168 |     fills=state.whole_fills+tuple((leg.cohort_id,leg.quantity)for leg in legs)
+169 |     for leg in legs:remaining[leg.cohort_id] += leg.quantity
+    |                    ^
+170 |     complete=all(abs(q)<=D("1e-18")for q in remaining.values())
+171 |     return replace(state,whole_settled=complete,whole_fills=fills),tuple(sorted(amounts.items())),fee
+    |
+
+E501 Line too long (101 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:171:101
+    |
+169 |     for leg in legs:remaining[leg.cohort_id] += leg.quantity
+170 |     complete=all(abs(q)<=D("1e-18")for q in remaining.values())
+171 |     return replace(state,whole_settled=complete,whole_fills=fills),tuple(sorted(amounts.items())),fee
+    |                                                                                                     ^
+
+E501 Line too long (101 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:179:101
+    |
+177 |         raise ValueError('CIL_NOT_DUE_OR_UNPRICED_OR_DUPLICATE')
+178 |     state.cil_reference.validate(now)
+179 |     amounts=[(lot.cohort_id,lot.fraction_attribution*state.cil_reference.value)for lot in state.lots]
+    |                                                                                                     ^
+180 |     total=(state.physical_fraction*state.cil_reference.value).quantize(D('.01'),rounding=ROUND_HALF_EVEN)
+181 |     if amounts:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:183:30
+    |
+181 |     if amounts:
+182 |         residual=total-sum((v for _,v in amounts),ZERO)
+183 |         key,value=amounts[-1];amounts[-1]=(key,value+residual)
+    |                              ^
+184 |     if sum((v for _,v in amounts),ZERO)!=total:raise AssertionError('CIL_CASH_CONSERVATION')
+185 |     return replace(state,cil_paid=True),tuple(amounts),total
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py:184:47
+    |
+182 |         residual=total-sum((v for _,v in amounts),ZERO)
+183 |         key,value=amounts[-1];amounts[-1]=(key,value+residual)
+184 |     if sum((v for _,v in amounts),ZERO)!=total:raise AssertionError('CIL_CASH_CONSERVATION')
+    |                                               ^
+185 |     return replace(state,cil_paid=True),tuple(amounts),total
+    |
+
+E501 Line too long (115 > 100)
+  --> tests/track2_stage35_v4/test_special_and_book.py:41:101
+   |
+39 |     state=distribution((('one',D(mrk),D(1000)if mrk>0 else D(0)),),CLOCK)
+40 |     assert state.lots[0].entitlement==ogn
+41 |     assert state.lots[0].mrk_long_tax_basis+state.lots[0].ogn_long_tax_basis==state.lots[0].original_long_tax_basis
+   |                                                                                                     ^^^^^^^^^^^^^^^
+42 |     assert state.physical_whole==D(ogn).to_integral_value(rounding='ROUND_DOWN')
+43 |     assert entitled(EX-timedelta(days=5),None)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/track2_stage35_v4/test_special_and_book.py:54:14
+   |
+52 |     assert str(state.pay_at.date())==day
+53 |     assert state.values(EX) is None
+54 |     q=quote();state=observe(state,q,q.available)
+   |              ^
+55 |     with pytest.raises(ValueError):pay_cil(state,state.pay_at-timedelta(seconds=1))
+56 |     paid,amounts,total=pay_cil(state,state.pay_at)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/track2_stage35_v4/test_special_and_book.py:55:35
+   |
+53 |     assert state.values(EX) is None
+54 |     q=quote();state=observe(state,q,q.available)
+55 |     with pytest.raises(ValueError):pay_cil(state,state.pay_at-timedelta(seconds=1))
+   |                                   ^
+56 |     paid,amounts,total=pay_cil(state,state.pay_at)
+57 |     assert sum((v for _,v in amounts),D(0))==total==D('14.80')
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/track2_stage35_v4/test_special_and_book.py:59:35
+   |
+57 |     assert sum((v for _,v in amounts),D(0))==total==D('14.80')
+58 |     assert paid.cil_paid
+59 |     with pytest.raises(ValueError):pay_cil(paid,state.pay_at)
+   |                                   ^
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/track2_stage35_v4/test_special_and_book.py:65:14
+   |
+63 |     state=distribution((('a',D(100),D(10000)),('b',D(-100),D(0))),CLOCK)
+64 |     assert state.physical_whole==state.physical_fraction==0
+65 |     q=quote();state=observe(state,q,q.available)
+   |              ^
+66 |     state,_,fee=settle_whole(state,quote(EX+timedelta(minutes=4)),q.available,
+67 |                              EX+timedelta(minutes=7),known_reference=q)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/track2_stage35_v4/test_special_and_book.py:75:20
+   |
+73 | def test_postclose_37_cannot_price_morning_and_tax_does_not_value_asset():
+74 |     state=distribution((('a',D(100),D(10000)),),CLOCK)
+75 |     morning=quote();state=observe(state,morning,morning.available,D(37))
+   |                    ^
+76 |     assert state.values(morning.available) is None
+77 |     assert state.lots[0].ogn_long_tax_basis==477
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/track2_stage35_v4/test_special_and_book.py:87:21
+   |
+85 | def test_ogn_partial_and_known_order_reference_survives_later_marks():
+86 |     state=distribution((('a',D(100),D(10000)),),CLOCK)
+87 |     original=quote();state=observe(state,original,original.available)
+   |                     ^
+88 |     fillquote=quote(EX+timedelta(minutes=4),'36')
+89 |     later=quote(EX+timedelta(minutes=5),'35')
+   |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:102:75
+    |
+100 |     requests=tuple(Request(str(i),D(1),'ENTRY')for i in range(8))
+101 |     legs=integer_cross(requests,D(10),D('10.01'),D(8),D('.05'))
+102 |     assert all(l.quantity==l.quantity.to_integral_value()and l.fee>=0 for l in legs)
+    |                                                                           ^
+103 |     assert sum((l.fee for l in legs),D(0))==D('.05')
+104 |     partial=integer_cross(requests,D(10),D('10.01'),D(3),D(1))
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:103:27
+    |
+101 |     legs=integer_cross(requests,D(10),D('10.01'),D(8),D('.05'))
+102 |     assert all(l.quantity==l.quantity.to_integral_value()and l.fee>=0 for l in legs)
+103 |     assert sum((l.fee for l in legs),D(0))==D('.05')
+    |                           ^
+104 |     partial=integer_cross(requests,D(10),D('10.01'),D(3),D(1))
+105 |     assert sum((l.quantity for l in partial),D(0))==3
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:105:32
+    |
+103 |     assert sum((l.fee for l in legs),D(0))==D('.05')
+104 |     partial=integer_cross(requests,D(10),D('10.01'),D(3),D(1))
+105 |     assert sum((l.quantity for l in partial),D(0))==3
+    |                                ^
+106 |     assert all(l.quantity==1 for l in partial)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:106:34
+    |
+104 |     partial=integer_cross(requests,D(10),D('10.01'),D(3),D(1))
+105 |     assert sum((l.quantity for l in partial),D(0))==3
+106 |     assert all(l.quantity==1 for l in partial)
+    |                                  ^
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/track2_stage35_v4/test_special_and_book.py:111:23
+    |
+109 | def account_fixture():
+110 |     a=Account('EQUAL','attainable',Scenario())
+111 |     a.prices[0]=D(100);a.marks_at[0]=10
+    |                       ^
+112 |     a.lots={'long':Lot('long',0,0,240,10,1,10,D(1),pending=D(10)),
+113 |             'short':Lot('short',0,0,240,10,-1,-6,D(1),pending=D(-6))}
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/track2_stage35_v4/test_special_and_book.py:134:24
+    |
+133 | def test_future_price_changes_fill_not_preceding_quantity_and_no_retro_cancel():
+134 |     a=account_fixture();b=account_fixture()
+    |                        ^
+135 |     o=Order('same',0,1,2,(Request('long',D(10),'ENTRY'),Request('short',D(-6),'ENTRY')),D(4),0,10)
+136 |     a.fill(replace(o),D(100),5,2);b.fill(replace(o),D(100000),5,2)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/track2_stage35_v4/test_special_and_book.py:136:34
+    |
+134 |     a=account_fixture();b=account_fixture()
+135 |     o=Order('same',0,1,2,(Request('long',D(10),'ENTRY'),Request('short',D(-6),'ENTRY')),D(4),0,10)
+136 |     a.fill(replace(o),D(100),5,2);b.fill(replace(o),D(100000),5,2)
+    |                                  ^
+137 |     assert a.quantity[0]==b.quantity[0]==4
+138 |     assert b.cash<a.cash and b.capacity(10)[3]=='RISK_BREACH'
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/track2_stage35_v4/test_special_and_book.py:142:24
+    |
+141 | def test_ex_pay_once_and_archive_keeps_attribution():
+142 |     a=account_fixture();a.fill(Order('o',0,1,2,(Request('long',D(10),'ENTRY'),Request('short',D(-6),'ENTRY')),D(4),0,10),D(100),5,2)
+    |                        ^
+143 |     before=a.cash
+144 |     a.ex_dividend('div',0,D('.25'),100,50,'OBSERVED_UNCORROBORATED')
+    |
+
+Found 141 errors (5 fixed, 136 remaining).

@@ -1,0 +1,34 @@
+{
+  "commands": [
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "lstm_data.trading.track2.final_directional_slate.run",
+        "run",
+        "--population",
+        "MATCHED",
+        "--run-id",
+        "sizing-matched-20261110-r1"
+      ],
+      "population": "MATCHED",
+      "returncode": 0,
+      "seconds": 112.32470595813356
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "lstm_data.trading.track2.final_directional_slate.run",
+        "run",
+        "--population",
+        "ATTAINABLE",
+        "--run-id",
+        "sizing-attainable-20261110-r1"
+      ],
+      "population": "ATTAINABLE",
+      "returncode": 0,
+      "seconds": 105.58903895807452
+    }
+  ]
+}

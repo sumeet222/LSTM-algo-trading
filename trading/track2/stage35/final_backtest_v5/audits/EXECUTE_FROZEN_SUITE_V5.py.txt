@@ -1,0 +1,54 @@
+"""Orchestrate only the official gated CLI; no finance/source calculations here."""
+import concurrent.futures
+import json
+import os
+import re
+import shutil
+import subprocess
+import time
+from pathlib import Path
+from lstm_data.trading.track2.stage35.final_backtest_v5.paths import ROOT,digest,publish
+from lstm_data.trading.track2.stage35.final_backtest_v5.protocol import scenarios
+from lstm_data.trading.track2.stage35.final_backtest_v5.release import fingerprint
+
+fp=fingerprint()
+workers=min(8,os.cpu_count() or 1)
+plan=ROOT/f'audits/FROZEN_FINANCIAL_EXECUTION_PLAN_{fp}.json'
+publish(plan,{'code':fp,'baseline_version':'baseline_v5_r2','scenario_names':[s.name for s in scenarios()],
+              'workers':workers,'separate_accounts_and_outputs':True,'trading_parameters_unchanged':True,
+              'no_shared_mutable_account_state':True,'minimum_disk_headroom_bytes':2*2**30})
+
+def execute(kind,version,name=None):
+    args=['.venv/bin/python','-m','lstm_data.trading.track2.stage35.final_backtest_v5.run',kind,'--version',version]
+    if name is not None:args+=['--scenario',name]
+    path=ROOT/f'audits/{version}_COMMAND.txt';start=time.monotonic()
+    if shutil.disk_usage('.').free<2*2**30:
+        return {'scenario':name or 'baseline','status':'NOT_RUN_RESOURCE_HEADROOM','command':args}
+    with path.open('w') as out:result=subprocess.run(args,stdout=out,stderr=subprocess.STDOUT)
+    folder=ROOT/('BASELINE_FOUR_ARM_RESULTS' if kind=='baseline' else 'SENSITIVITY_RESULTS')/version
+    analysis=folder/'DESCRIPTIVE_ANALYSIS_V5.json'
+    done=result.returncode==0 and analysis.is_file()
+    receipt={'scenario':name or 'baseline','version':version,'command':args,'returncode':result.returncode,
+             'status':'COMPLETE_RECONCILED' if done else 'FAILED_OR_INCOMPLETE_NO_HEADLINE',
+             'elapsed_seconds':time.monotonic()-start,'command_receipt':str(path),
+             'command_sha256':digest(path),'output':str(folder),'analysis_present':analysis.is_file(),
+             'files':{str(f):digest(f) for f in folder.rglob('*') if f.is_file()}}
+    publish(ROOT/f'audits/RUN_COMPLETION_{version}.json',receipt)
+    print('RUN',receipt['scenario'],receipt['status'],round(receipt['elapsed_seconds'],1),flush=True)
+    return receipt
+
+baseline=execute('baseline','baseline_v5_r2')
+results=[baseline]
+if baseline['status']=='COMPLETE_RECONCILED':
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
+        pending=[pool.submit(execute,'sensitivities','v5_'+re.sub('[^a-zA-Z0-9]','_',s.name),s.name)
+                 for s in scenarios() if s.name!='baseline']
+        for future in concurrent.futures.as_completed(pending):results.append(future.result())
+else:
+    results += [{'scenario':s.name,'status':'NOT_RUN_BASELINE_NOT_CERTIFIED'}
+                for s in scenarios() if s.name!='baseline']
+report={'code':fp,'scenario_count':len(scenarios()),'runs':results,
+        'complete_scenarios':sum(r['status']=='COMPLETE_RECONCILED' for r in results),
+        'no_parameter_search':True,'Stage6_independent_audit_complete':False}
+publish(ROOT/f'BACKTEST_RUN_MANIFEST_V5_{fp}.json',report)
+print('SUITE_COMPLETE',report['complete_scenarios'],'of',report['scenario_count'],flush=True)

@@ -1,0 +1,504 @@
+"""Versioned pending-order replay; unchanged signal/accountant/arithmetic inherited.
+
+Only init/admission, attempt settlement, checkpoint namespace and run dispatch are
+versioned here. The original V4 driver is never patched or invoked with fake keys.
+"""
+
+import json
+import time
+from dataclasses import asdict
+from datetime import datetime, timedelta
+from decimal import Decimal
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+from ..completion_v3.tapes import load_actions, midnight
+from ..final_backtest_v4.driver import Driver as FrozenDriver
+from ..final_backtest_v4.driver import Store as FrozenStore
+from ..final_backtest_v4.driver import utc
+from ..final_backtest_v4.execution_calendar import ExecutionCalendar
+from ..final_backtest_v4.market import Day, Market, minute, stamp
+from ..final_backtest_v4.special import Distribution, OGNQuote, observe
+from .book import Account, Order
+from .execution import disposition
+from .paths import canonical, publish
+from .protocol import ARMS, POLICY, Scenario
+
+D = Decimal
+ZERO = D(0)
+
+
+class Store(FrozenStore):
+    def write(self, scenario: str, kind: str, rows: list[dict]) -> None:
+        super().write(scenario, kind, [{"V5_POLICY_VARIANT": POLICY, **row} for row in rows])
+
+
+class Driver(FrozenDriver):
+    def __init__(
+        self,
+        scenario_list: tuple[Scenario, ...],
+        first: str,
+        last: str,
+        output: Path,
+        diagnostic: bool = False,
+        admission: object = None,
+    ):
+        from .release import check_admission
+
+        check_admission(admission, first, last, diagnostic)
+        if admission is not None:
+            from .paths import ROOT
+
+            frozen = json.loads((ROOT / "FINAL_CONSOLIDATED_PROTOCOL_V5.json").read_text())
+            allowed = {canonical(row) for row in frozen["scenarios"]}
+            if any(canonical(asdict(s)) not in allowed for s in scenario_list):
+                raise PermissionError("UNAUTHORIZED_SCENARIO")
+        self.admission = admission
+        self.market = Market(first, last)
+        self.execution_calendar = ExecutionCalendar(self.market.clock)
+        self.scenarios = scenario_list
+        self.accounts = [
+            Account(arm, pop, s)
+            for s in scenario_list
+            for pop in ("matched", "attainable")
+            for arm in ARMS
+        ]
+        self.store = Store(output)
+        self.policy_counts: dict[str, int] = {}
+        self.first, self.last, self.diagnostic = first, last, diagnostic
+        self.special: dict[int, Distribution] = {}
+        self.special_pending: dict[int, tuple[int, int, OGNQuote, Decimal]] = {}
+        self.actions = load_actions()
+        self.due = []
+        for action in self.actions:
+            if action.action_type not in ("CASH_DIVIDEND", "SPLIT"):
+                continue
+            day = action.ex_date or action.effective_date
+            if day:
+                self.due.append(
+                    (minute(midnight(day)), 0 if action.action_type == "SPLIT" else 1, "EX", action)
+                )
+            if action.action_type == "CASH_DIVIDEND" and action.payable_date:
+                self.due.append((minute(midnight(action.payable_date)), 2, "PAY", action))
+        self.due.sort(key=lambda e: (e[0], e[1], e[3].event_id))
+        self.done_due = set()
+        self.integrals = np.zeros(20, dtype=object)
+        self.last_prices = np.zeros(20, float)
+        self.known_closes = np.full(20, np.nan)
+        self.known_marks = np.full(20, -1, dtype=np.int64)
+        self.known_volumes = np.full(20, np.nan)
+        self.cursor: int | None = None
+        self.days_completed = 0
+        self.opportunities = 0
+        self.issued_counts = {arm: 0 for arm in ARMS}
+        self.last_nav = {id(a): D(100000) for a in self.accounts}
+        self.daily = []
+        self.daily_incomplete_count = 0
+        self.risk_cache: dict[int, tuple] = {}
+        self.day_groups: dict[int, list[dict]] = {}
+        self.ogn_borrow_cursors: dict[int, int] = {}
+        self.last_completed: str | None = None
+        self.last_market_end: int | None = None
+
+    def count_policy(self, name: str) -> None:
+        self.policy_counts[name] = self.policy_counts.get(name, 0) + 1
+
+    def expire(self, a: Account, order: Order, now: int) -> None:
+        if order.expiry is None:
+            raise ValueError("EXIT_HAS_NO_ENTRY_EXPIRY")
+        if now < order.expiry + 1 + a.scenario.lag:
+            raise ValueError("EXPIRY_BEFORE_LAST_ELIGIBLE_BAR_RECEIPT")
+        del a.pending[order.ticker]
+        order.status = "EXPIRED_UNFILLED_BY_V5_SIMULATION"
+        a.record(
+            order.status,
+            now,
+            order=order.key,
+            ticker=order.ticker,
+            decision=order.decision,
+            deadline=order.expiry,
+            remaining_submitted=order.submitted_quantity,
+            remaining_requests=[asdict(r) for r in order.requests],
+            no_broker_cancellation_claim=True,
+        )
+        for req in order.requests:
+            if req.role == "ENTRY":
+                a.cancel_unsubmitted(req.key, now, "V5_SIMULATION_ENTRY_LIFETIME")
+        # Existing EXIT quantities are retained; inherited decision() creates a
+        # new prospective order, rather than secretly revising the old net order.
+        a.refresh()
+        a.reconcile()
+        self.count_policy("EXPIRED_MODELED_ENTRY_BATCH")
+
+    def attempt(self, a: Account, day: Day, i: int, order: Order, now: int, start: int) -> None:
+        outcome = disposition(order, start, now, a.scenario.lag, bool(day.valid[i, order.ticker]))
+        if outcome == "EXPIRE":
+            self.expire(a, order, now)
+            return
+        j = order.ticker
+        if outcome == "WAIT":
+            a.record(
+                "V5_PENDING_MISSING_BAR",
+                now,
+                order=order.key,
+                ticker=j,
+                intended_minute=order.effective,
+                attempted_minute=start,
+                submitted_quantity=order.submitted_quantity,
+                source_hash=day.source_hash,
+                no_broker_cancellation_claim=True,
+            )
+            order.status = "PENDING_NEXT_VALID_BAR"
+            self.count_policy("MISSING_SCHEDULED_ATTEMPT")
+            return
+        postponed = start - order.effective
+        before = {
+            "physical": int(a.quantity[j]),
+            "cash": a.cash,
+            "restricted": a.restricted(),
+            "gross": a.gross(),
+            "virtual": {r.key: a.lots[r.key].quantity for r in order.requests},
+        }
+        self.sync(a, now)
+        a.record(
+            "V5_QUALIFIED_BAR",
+            now,
+            order=order.key,
+            ticker=j,
+            intended_minute=order.effective,
+            effective=start,
+            delay_scheduled_or_wall_minutes=postponed,
+            raw_open=D(str(day.opens[i, j])),
+            source_hash=day.source_hash,
+            decision=order.decision,
+            prior_volume_available=order.prior_volume_available,
+            submitted_quantity=order.submitted_quantity,
+            before=before,
+        )
+        a.fill(order, D(str(day.opens[i, j])), now, start)
+        self.count_policy("POSTPONED_FILL" if postponed else "FIRST_ATTEMPT_FILL")
+        if order.status == "OBSERVED":
+            del a.pending[j]
+
+    def checkpoint(self, day: str) -> None:
+        from .checkpoint import seal, write_checkpoint
+
+        omitted = {
+            "market",
+            "store",
+            "risk_cache",
+            "day_groups",
+            "admission",
+            "daily",
+            "execution_calendar",
+            "actions",
+            "due",
+        }
+        body = {k: v for k, v in self.__dict__.items() if k not in omitted}
+        write_checkpoint(self.store.path / "checkpoints" / (day + ".json.gz"), seal(body))
+
+    @classmethod
+    def restart(cls, checkpoint_path: Path, output: Path, admission: object):
+        from .checkpoint import read_checkpoint, unseal
+        from .release import check_admission
+
+        body = unseal(read_checkpoint(checkpoint_path))
+        if not isinstance(body, dict):
+            raise ValueError("REPLAY_STATE_SCHEMA")
+        if not all(isinstance(k, str) for k in body):
+            raise ValueError("REPLAY_STATE_KEYS")
+        restored_fields = {str(k): v for k, v in body.items()}
+        first, last, diagnostic = (
+            restored_fields["first"],
+            restored_fields["last"],
+            restored_fields["diagnostic"],
+        )
+        if (
+            not isinstance(first, str)
+            or not isinstance(last, str)
+            or not isinstance(diagnostic, bool)
+        ):
+            raise ValueError("REPLAY_STATE_SCOPE_TYPES")
+        check_admission(admission, first, last, diagnostic)
+        restored = cls.__new__(cls)
+        restored.__dict__.update(restored_fields)
+        restored.admission = admission
+        completed = restored_fields.get("last_completed")
+        if not isinstance(completed, str):
+            raise ValueError("REPLAY_COMPLETED_DATE")
+        next_day = (datetime.fromisoformat(completed) + timedelta(days=1)).date().isoformat()
+        restored.market = Market(next_day, last)
+        restored.execution_calendar = ExecutionCalendar(restored.market.clock)
+        restored.actions = load_actions()
+        restored.due = []
+        for action in restored.actions:
+            if action.action_type not in ("CASH_DIVIDEND", "SPLIT"):
+                continue
+            day = action.ex_date or action.effective_date
+            if day:
+                restored.due.append(
+                    (minute(midnight(day)), 0 if action.action_type == "SPLIT" else 1, "EX", action)
+                )
+            if action.action_type == "CASH_DIVIDEND" and action.payable_date:
+                restored.due.append((minute(midnight(action.payable_date)), 2, "PAY", action))
+        restored.due.sort(key=lambda e: (e[0], e[1], e[3].event_id))
+        restored.store = Store(output, resume=True)
+        restored.risk_cache = {}
+        restored.day_groups = {}
+        restored.daily = []
+        for account in restored.accounts:
+            account.reconcile()
+        return restored
+
+    def run(self, stop_after: int | None = None) -> dict:
+        started = time.monotonic()
+        for day in self.market.days():
+            if self.last_completed is not None and day.date <= self.last_completed:
+                continue
+            self.opportunities += len(day.signals)
+            self.day_groups = {
+                minute(org): part.to_dict("records")
+                for org, part in day.signals.groupby("origin", sort=True)
+            }
+            self.risk_cache.clear()
+            self.before_day(day)
+            for i, start0 in enumerate(day.starts):
+                start = int(start0)
+                self.integrate_gap(start)
+                ibefore = self.integrals.copy()
+                valid = day.valid[i]
+                pricing = np.where(valid, day.opens[i], self.last_prices)
+                ticks = np.rint(pricing * 1000000).astype(np.int64)
+                self.integrals += ticks * 60
+                self.cursor = start + 1
+                self.last_prices = np.where(valid, day.closes[i], self.last_prices)
+                self.known_closes = np.where(valid, day.closes[i], self.known_closes)
+                self.known_marks = np.where(valid, start + 1, self.known_marks)
+                self.known_volumes = np.where(valid, day.volumes[i], self.known_volumes)
+                for n, a in enumerate(self.accounts):
+                    now = start + 1 + a.scenario.lag
+                    due = [(j, o) for j, o in a.pending.items() if o.effective <= start]
+                    if due:
+                        a.accrue(ibefore, now)
+                        a.accrue_funding(start)
+                        for j, order in due:
+                            self.attempt(a, day, i, order, now, start)
+                    special_active = n in self.special and (
+                        not self.special[n].whole_settled or self.special[n].cil_reference is None
+                    )
+                    if special_active:
+                        self.special_tick(n, day.ogn.get(start), start, now)
+                    if due or special_active:
+                        self.risk_cache.pop(n, None)
+                    state = self.risk_status(n)
+                    relevant = (
+                        bool(a.pending)
+                        or any(
+                            lot.pending or lot.quantity and now >= lot.endpoint + a.scenario.lag
+                            for lot in a.lots.values()
+                        )
+                        or any(
+                            org + a.scenario.lag <= now <= org + 9
+                            and org not in a.processed_origins
+                            for org in self.day_groups
+                        )
+                        or state == "RISK_BREACH"
+                    )
+                    if relevant:
+                        self.decision(a, day, now, self.integrals)
+                        self.risk_cache.pop(n, None)
+            end = int(day.starts[-1]) + 1
+            self.last_market_end = end
+            for n, a in enumerate(self.accounts):
+                now = end + a.scenario.lag
+                if (
+                    day.date == "2021-06-03"
+                    and n in self.special
+                    and a.scenario.cil_postclose is not None
+                ):
+                    state = self.special[n]
+                    if state.mark is not None:
+                        when = max(now, minute(pd.Timestamp("2021-06-03T20:02:00Z")))
+                        self.special[n] = observe(
+                            state,
+                            state.mark,
+                            utc(when),
+                            a.scenario.cil_postclose,
+                        )
+                        self.special_view(n, when)
+                for j, order in list(a.pending.items()):
+                    if order.expiry is not None and order.expiry <= end - 1:
+                        self.expire(a, order, now)
+                for org, group in self.day_groups.items():
+                    if org not in a.processed_origins:
+                        self.audit_origin(
+                            a, org, group, now, {}, "ACCOUNT_PENDING_OR_WINDOW_NOT_EXECUTABLE"
+                        )
+                        a.processed_origins.add(org)
+                self.sync(a, now)
+                a.accrue(self.integrals, now)
+                a.accrue_funding(end)
+                a.reconcile()
+                nav = a.nav()
+                status = (
+                    "NAV_INCOMPLETE"
+                    if nav is None
+                    or a.nav_incomplete
+                    or a.risk_hold
+                    or any(o.status == "UNRESOLVED_SOURCE_BAR" for o in a.pending.values())
+                    or any(a.quantity[j] and now - a.marks_at[j] > 5 for j in range(20))
+                    else "OBSERVED"
+                )
+                daily = {
+                    "date": day.date,
+                    "arm": a.arm,
+                    "population": a.population,
+                    "scenario": a.scenario.name,
+                    "asof_market_utc": stamp(end),
+                    "known_at_utc": stamp(
+                        max(
+                            now,
+                            end + 2
+                            if day.date == "2021-06-03" and a.scenario.cil_postclose
+                            else now,
+                        )
+                    ),
+                    "nav": nav if status == "OBSERVED" else None,
+                    "last_known_mark_equity": nav,
+                    "proxy_standalone_cumulative": a.proxy_total(),
+                    "physical_long_value": sum(
+                        (
+                            D(int(q)) * (a.prices[j] or ZERO)
+                            for j, q in enumerate(a.quantity)
+                            if q > 0
+                        ),
+                        ZERO,
+                    ),
+                    "physical_short_value": sum(
+                        (
+                            -D(int(q)) * (a.prices[j] or ZERO)
+                            for j, q in enumerate(a.quantity)
+                            if q < 0
+                        ),
+                        ZERO,
+                    ),
+                    "marked_net": sum(
+                        (D(int(q)) * (a.prices[j] or ZERO) for j, q in enumerate(a.quantity)), ZERO
+                    ),
+                    "cash": a.cash,
+                    "restricted_proceeds": a.restricted(),
+                    "claims": a.claim_total(),
+                    "special_value": sum(a.special_values.values(), ZERO),
+                    "gross": a.gross() + sum((abs(v) for v in a.special_values.values()), ZERO),
+                    "own_cash": a.cash - a.restricted(),
+                    "physical": a.quantity.tolist(),
+                    "status": status,
+                    "commission_cumulative": a.commission,
+                    "friction_cumulative": a.friction,
+                    "borrow_cumulative": a.borrow_paid,
+                    "funding_cumulative": a.funding_paid,
+                    "dividend_cash_cumulative": a.dividend_cash,
+                    "maximum_balance_residual": a.maximum_residual,
+                    "rejections_cumulative": dict(a.rejected),
+                    "journal_hash": a.journal_hash,
+                    "outstanding_lots": len(a.lots),
+                    "pending_orders": len(a.pending),
+                }
+                if status != "OBSERVED":
+                    self.daily_incomplete_count += 1
+                self.store.write(a.scenario.name, "daily", [daily])
+                self.daily.append(daily)
+                a.compact(now)
+                self.store.write(a.scenario.name, "events", a.events)
+                a.events = []
+                self.store.write(a.scenario.name, "cohorts", a.closed)
+                a.closed = []
+            self.days_completed += 1
+            self.last_completed = day.date
+            self.checkpoint(day.date)
+            if stop_after is not None and self.days_completed >= stop_after:
+                break
+            if not self.diagnostic and any(a.nav_incomplete for a in self.accounts):
+                # Preserve the complete received-day books and unresolved
+                # reservations; no later strategy day or headline is computed.
+                break
+            if self.days_completed % 10 == 0:
+                print(
+                    "days",
+                    self.days_completed,
+                    "elapsed",
+                    round(time.monotonic() - started, 1),
+                    flush=True,
+                )
+        end = self.last_market_end
+        if end is None:
+            raise ValueError("NO_MARKET_SESSION_IN_AUTHORIZED_SCOPE")
+        for a in self.accounts:
+            for lot in a.lots.values():
+                point = a.prices[lot.ticker]
+                known = (
+                    point is not None
+                    and not a.unpriced_special
+                    and not a.nav_incomplete
+                    and (not lot.quantity or end + a.scenario.lag - a.marks_at[lot.ticker] <= 5)
+                )
+                claims = sum(
+                    (v for (event, key), (v, due) in a.claims.items() if key == lot.key), ZERO
+                )
+                self.store.write(
+                    a.scenario.name,
+                    "terminal_lots",
+                    [
+                        {
+                            "arm": a.arm,
+                            "population": a.population,
+                            "key": lot.key,
+                            "ticker": lot.ticker,
+                            "origin": lot.origin,
+                            "endpoint": lot.endpoint,
+                            "quantity": lot.quantity,
+                            "entry_at": lot.entry_at,
+                            "entry_price": lot.entry_price,
+                            "pending": lot.pending,
+                            "cash": lot.cash,
+                            "ordinary_claims": claims,
+                            "special_claims": a.special_values.get(lot.key, ZERO),
+                            "marked_value": lot.quantity * point if point is not None else None,
+                            "total_attributable_equity": lot.cash
+                            + lot.quantity * point
+                            + claims
+                            + a.special_values.get(lot.key, ZERO)
+                            if known and point is not None
+                            else None,
+                            "snapshot_session": self.last_completed,
+                            "partial_snapshot": self.last_completed != self.last,
+                            "status": "MARKED_OPEN" if known else "UNRESOLVED",
+                            "fees": lot.fees,
+                            "cost": lot.cost,
+                            "borrow": lot.borrow,
+                            "funding": lot.funding,
+                        }
+                    ],
+                )
+        self.store.close()
+        summary = {
+            "V5_POLICY_VARIANT": POLICY,
+            "policy_counts": self.policy_counts,
+            "sessions": self.days_completed,
+            "opportunities": self.opportunities,
+            "accounts": len(self.accounts),
+            "elapsed_seconds": time.monotonic() - started,
+            "maximum_ledger_residual": str(
+                max((a.maximum_residual for a in self.accounts), default=ZERO)
+            ),
+            "terminal_pending_orders": sum(len(a.pending) for a in self.accounts),
+            "terminal_unpriced_special": sum(a.unpriced_special for a in self.accounts),
+            "unresolved": any(a.nav_incomplete for a in self.accounts)
+            or self.daily_incomplete_count > 0,
+            "daily_incomplete_records": self.daily_incomplete_count,
+            "diagnostic": self.diagnostic,
+        }
+        publish(self.store.path / ("RUN_RECEIPT_" + str(self.last_completed) + ".json"), summary)
+        return summary

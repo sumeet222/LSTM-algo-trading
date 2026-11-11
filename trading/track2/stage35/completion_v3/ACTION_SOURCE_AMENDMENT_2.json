@@ -1,0 +1,20 @@
+{
+  "version": "ACTION_SOURCE_AMENDMENT_2",
+  "reason": "Alpaca data API actual free HTTP200;process_date is payable date so2024 ex/post2024 payable may be missing fromend2024query. Nasdaq ignoreddatefilters;do notexpandNasdaq20;retainonly pre2025action rows.",
+  "action_only_boundary": {
+    "url": "https://data.alpaca.markets/v1/corporate-actions",
+    "symbols": "ALL20",
+    "start": "2025-01-01",
+    "end": "2025-03-31",
+    "keep": "ex/effective<=2024-12-31 only,including payable2025;no prices"
+  },
+  "issuer_urls": [
+    "https://investor.apple.com/dividend-history/default.aspx",
+    "https://www.merck.com/news/merck-announces-completion-of-organon-co-spinoff/",
+    "https://www.sec.gov/Archives/edgar/data/1821825/000119312521140380/d56612dex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/310158/000031015821000028/R9.htm"
+  ],
+  "no_post2024_stock_price_endpoints": true,
+  "parsed_data_cutoff": "2024-12-31 ex/effective;payable mayextend",
+  "future_provider_metadata": "quarantined unused;not a research feature"
+}

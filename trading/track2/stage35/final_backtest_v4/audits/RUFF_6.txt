@@ -1,0 +1,107 @@
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:307:32
+    |
+305 |                 shorts = sorted(
+306 |                     (lot for lot in self.lots.values() if lot.ticker == j and lot.quantity < 0),
+307 |                     key=lambda l: l.key,
+    |                                ^
+308 |                 )
+309 |                 denom = sum((-lot.quantity for lot in shorts), ZERO)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:421:21
+    |
+419 |                     "internal": l.internal,
+420 |                 }
+421 |                 for l in legs
+    |                     ^
+422 |             ],
+423 |         )
+    |
+
+F821 Undefined name `asdict`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:187:37
+    |
+185 |                     opened,
+186 |                     positions=positions,
+187 |                     tax_allocation=[asdict(item) for item in self.special[n].lots],
+    |                                     ^^^^^^
+188 |                     source="PRIMARY_FORM8937_REGULAR_WAY;CIL_REFERENCE_PAYMENT_CONDITIONAL",
+189 |                 )
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:247:54
+    |
+245 |                     for ts,row in sorted(self.market.ogn.items()):
+246 |                         if cursor<=ts<start:
+247 |                             previous=D(str(row["o"]));integral+=previous*60
+    |                                                      ^
+248 |                     if start>cursor and previous is None:
+249 |                         raise ValueError("UNPRICED_OGN_SHORT_CARRY")
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:253:79
+    |
+251 |                     charge=max(ZERO,-outstanding)*integral*a.scenario.borrow/YEAR
+252 |                     shorts=[lot for lot in state.lots if lot.whole_attribution<0]
+253 |                     denom=sum((-lot.whole_attribution for lot in shorts),ZERO);left=charge
+    |                                                                               ^
+254 |                     for index,lot in enumerate(shorts):
+255 |                         part=charge*(-lot.whole_attribution)/denom if index<len(shorts)-1 else left
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:256:35
+    |
+254 |                     for index,lot in enumerate(shorts):
+255 |                         part=charge*(-lot.whole_attribution)/denom if index<len(shorts)-1 else left
+256 |                         left-=part;a.credit(lot.cohort_id,-part,"OGN_PHYSICAL_SHORT_BORROW",now)
+    |                                   ^
+257 |                     a.borrow_paid+=charge
+258 |                     self.ogn_borrow_cursors[n]=start
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:125:80
+    |
+123 |     requests = tuple(Request(str(i), D(1), "ENTRY") for i in range(8))
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+    |                                                                                ^
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:126:27
+    |
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+    |                           ^
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:128:32
+    |
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |                                ^
+129 |     assert all(l.quantity == 1 for l in partial)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:129:36
+    |
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+129 |     assert all(l.quantity == 1 for l in partial)
+    |                                    ^
+
+Found 10 errors.

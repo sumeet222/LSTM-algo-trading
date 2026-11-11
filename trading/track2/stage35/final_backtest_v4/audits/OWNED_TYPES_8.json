@@ -1,0 +1,126 @@
+{
+    "version": "1.1.414",
+    "time": "1794245876402",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" cannot be assigned to parameter \"first\" of type \"str\" in function \"check_admission\"\n  Type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" is not assignable to type \"str\"\n    \"Account\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 551,
+                    "character": 35
+                },
+                "end": {
+                    "line": 551,
+                    "character": 48
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" cannot be assigned to parameter \"last\" of type \"str\" in function \"check_admission\"\n  Type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" is not assignable to type \"str\"\n    \"Account\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 551,
+                    "character": 50
+                },
+                "end": {
+                    "line": 551,
+                    "character": 62
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" cannot be assigned to parameter \"diagnostic\" of type \"bool\" in function \"check_admission\"\n  Type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" is not assignable to type \"bool\"\n    \"Account\" is not assignable to \"bool\"",
+            "range": {
+                "start": {
+                    "line": 551,
+                    "character": 64
+                },
+                "end": {
+                    "line": 551,
+                    "character": 82
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "No overloads for \"update\" match the provided arguments",
+            "range": {
+                "start": {
+                    "line": 553,
+                    "character": 8
+                },
+                "end": {
+                    "line": 553,
+                    "character": 38
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"dict[Unknown, Unknown] | dict[Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario, Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario]\" cannot be assigned to parameter \"m\" of type \"Iterable[tuple[str, Any]]\" in function \"update\"\n  Type \"dict[Unknown, Unknown] | dict[Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario, Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario]\" is not assignable to type \"Iterable[tuple[str, Any]]\"\n    \"dict[Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario, Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario]\" is not assignable to \"Iterable[tuple[str, Any]]\"\n      Type parameter \"_T_co@Iterable\" is covariant, but \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" is not a subtype of \"tuple[str, Any]\"\n        Type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" is not assignable to type \"tuple[str, Any]\"\n          \"Account\" is not assignable to \"tuple[str, Any]\"",
+            "range": {
+                "start": {
+                    "line": 553,
+                    "character": 33
+                },
+                "end": {
+                    "line": 553,
+                    "character": 37
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" cannot be assigned to parameter \"first\" of type \"str\" in function \"__init__\"\n  Type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" is not assignable to type \"str\"\n    \"Account\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 555,
+                    "character": 33
+                },
+                "end": {
+                    "line": 555,
+                    "character": 46
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" cannot be assigned to parameter \"last\" of type \"str\" in function \"__init__\"\n  Type \"Unknown | Decimal | datetime | ndarray[Unknown, Unknown] | dict[Unknown, Unknown] | Account | Distribution | DistributionLot | Lot | OGNQuote | Order | Request | Scenario\" is not assignable to type \"str\"\n    \"Account\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 555,
+                    "character": 48
+                },
+                "end": {
+                    "line": 555,
+                    "character": 60
+                }
+            },
+            "rule": "reportArgumentType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 13,
+        "errorCount": 7,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 4.71
+    }
+}
+

@@ -1,0 +1,184 @@
+{
+  "all_passed": true,
+  "performance_report": false,
+  "purpose": "authorized source-backed ledger reconciliation only",
+  "runs": [
+    {
+      "files": {
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-01-04/RUN_RECEIPT_2021-01-08.json": "55729b0dbfe64fa5dc0f384d84bccb3553cf6c19f79914e9eb99852add85147c",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-01-04/baseline/cohorts.jsonl.gz": "643915066beb6c83486a4d2f99214a6b5c862e752e5367be4c94c372c37dc2f1",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-01-04/baseline/daily.jsonl.gz": "d54f4ee3707222fcf10e71a51f9e4674e72c1e3aba34931aeb27bcad8765a48b",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-01-04/baseline/events.jsonl.gz": "d96bafae4de095574dd795b408d83a194259b00375cee0593f0c3a146dbaa3ab",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-01-04/baseline/terminal_lots.jsonl.gz": "caa9f02cf33a8e56ae4cddc9840f1197675bf5c72cdd713bb61e6d25ee336e75",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-01-04/checkpoints/2021-01-04.json.gz": "0d88bab288a71daca06928a55f8ccc60c9992a89d61e8e888a4eef4851919ff9",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-01-04/checkpoints/2021-01-05.json.gz": "e6efc366d9592a0e814df2f29dcef3de2788e866e50bc076bfba99fbd4361b0e",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-01-04/checkpoints/2021-01-06.json.gz": "86c9322eff4e21f0f722eab4a6f0576cc577ff7df680245ddb0459b60b9d0d98",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-01-04/checkpoints/2021-01-07.json.gz": "7f8b3c34248b1f7de4bdd49cc831304b979bb2486f15abc1a56698d6ec9227b0",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-01-04/checkpoints/2021-01-08.json.gz": "ef5f7430a053687b343400f47612bc2de3fac333609b6d4dbbdcb33ded5db414"
+      },
+      "passed": true,
+      "receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": true,
+        "elapsed_seconds": 40.21558445808478,
+        "maximum_ledger_residual": "1.2E-22",
+        "opportunities": 700,
+        "policy_counts": {
+          "FIRST_ATTEMPT_FILL": 4781
+        },
+        "sessions": 5,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "window": [
+        "2021-01-04",
+        "2021-01-08"
+      ]
+    },
+    {
+      "files": {
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/RUN_RECEIPT_2021-06-11.json": "c7145d3eae0d86caad0deb3694b6ab30ad00bb3ad6fc237f49e1538d0a55cb83",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/baseline/cohorts.jsonl.gz": "dcc22c7c8efa78b3d148e91a3aa92cbb3a170d2a66bd1092aecb5322cf84cc03",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/baseline/daily.jsonl.gz": "ec1226bbb781dd06950de1505e24a45719a7dfdfc2d1dc286dcf294fb13a5247",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/baseline/events.jsonl.gz": "8fc1b4efe8ce714df358296817c91ed0e0dd3e9fc511b9ede8f6a10e8a43c3a5",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/baseline/terminal_lots.jsonl.gz": "3edd650812cef6aafc6cb9b68fb589f6a440d2353410f9d43eaac94ae17525f1",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/checkpoints/2021-06-02.json.gz": "d097f57252c4c57ecaced69bdaf52b29006955881937f567e3284e433edd77ce",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/checkpoints/2021-06-03.json.gz": "91b8a203eed1facece1677e8411552f16a7c3a8bf7d02d2e4a829c9b16943ac2",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/checkpoints/2021-06-04.json.gz": "1cbcfe441878f5da352616470f7f45dddc9a571638a046750620099a924e97ab",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/checkpoints/2021-06-07.json.gz": "9f899c5fe22c26cb8074134abf041ebbbe192c2dd2fb1ce4759d9269a8e79e32",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/checkpoints/2021-06-08.json.gz": "29ccbc82d1535a2a78c75a0c970a4b47d7e77b800528ff8c0a4fdb0f4b6a4808",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/checkpoints/2021-06-09.json.gz": "2de49b1c8e52273bb3cd3dec73c3514124f51a3aa463b7f497747d779828277c",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/checkpoints/2021-06-10.json.gz": "cd5a7ea13900c026815a180ed4ce730dbbd9996c621f3e30f7ebc4afc81b2abc",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2021-06-02/checkpoints/2021-06-11.json.gz": "94182c50796402d227194fe6807c612df06b1a3596629d9d7cf36c5f3a672605"
+      },
+      "passed": true,
+      "receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": true,
+        "elapsed_seconds": 63.87274087499827,
+        "maximum_ledger_residual": "1.0368E-21",
+        "opportunities": 1120,
+        "policy_counts": {
+          "FIRST_ATTEMPT_FILL": 9066,
+          "MISSING_SCHEDULED_ATTEMPT": 2,
+          "POSTPONED_FILL": 2
+        },
+        "sessions": 8,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "window": [
+        "2021-06-02",
+        "2021-06-11"
+      ]
+    },
+    {
+      "files": {
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2022-08-24/RUN_RECEIPT_2022-08-26.json": "abeec5b2c0fbee71ad0c968a4ff0c7b2f32d4cad22fe5c7b16e0616d577d74d7",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2022-08-24/baseline/cohorts.jsonl.gz": "a8cd6d5b751ed715e20042c8ae5c9ad4635b541e8c3ad51db5d114baeddac318",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2022-08-24/baseline/daily.jsonl.gz": "946e497e480c07cf4b3f649af9851a32fa2be62892c1ef8903a80b9c0b0b7221",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2022-08-24/baseline/events.jsonl.gz": "c530e59955df5cbec14d978279a90d875cb61b7750aa8090d032fdc7acf8f26a",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2022-08-24/checkpoints/2022-08-24.json.gz": "5a3ab5f3968b6e5a9892c5c004911c9f573c66f92301ca2a11ec24ad82c45a30",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2022-08-24/checkpoints/2022-08-25.json.gz": "8a6e2089632cf2dec7006efbf76e44e4ca65ce4d1617f8d2fef392f05079d29b",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2022-08-24/checkpoints/2022-08-26.json.gz": "8014723ec30e28e96a65b246105ad61bcc0caa1bdd39a47421aa775584a4af38"
+      },
+      "passed": true,
+      "receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": true,
+        "elapsed_seconds": 31.066625624895096,
+        "maximum_ledger_residual": "4.546182E-22",
+        "opportunities": 420,
+        "policy_counts": {
+          "FIRST_ATTEMPT_FILL": 292
+        },
+        "sessions": 3,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "window": [
+        "2022-08-24",
+        "2022-08-26"
+      ]
+    },
+    {
+      "files": {
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/RUN_RECEIPT_2024-05-17.json": "520e791ad0d6a31f8fb61ed78b296bf44ff8549eb8bd4bc8415f8017bb5679c1",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/baseline/cohorts.jsonl.gz": "a18ffe6c10dc792dbec4e14ce0a4db15e2c43c1fcaa852b480f2182e1fb0b470",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/baseline/daily.jsonl.gz": "d642f2d60d143f37aa4371f9d04831d618d9a893914e3557944b560b709e8a10",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/baseline/events.jsonl.gz": "20e438881d3ed08c04273ed0c6aa2ba42d14e2588b66ea2c6a7c40941e88cd9b",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/baseline/terminal_lots.jsonl.gz": "3f682e832b1ddebc3bb11be5479da6acf8d51c6bbafb3eb67747e52b997b3dc1",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/checkpoints/2024-05-09.json.gz": "f5baa2121051af31e62a1a48d3464b87fdaa8489d8aa4e79f4bcf3f2c23b0c7c",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/checkpoints/2024-05-10.json.gz": "f286c1f5c3c816c2aaa749a314722766f449a589566a061a55cf0a5d57f50eeb",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/checkpoints/2024-05-13.json.gz": "1defd736c7eb549a86bcd560606c5554cf5d4fdde9f5653b25508156efaaf76d",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/checkpoints/2024-05-14.json.gz": "fe2a402de037c7785dbfffe40c23144a44e2e528b578b0f6060b3762be5fb9c1",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/checkpoints/2024-05-15.json.gz": "1a867d6090e7e64a27ec70a7904aed280f8e7bef51f4896f0f9a04c127ec3299",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/checkpoints/2024-05-16.json.gz": "961ed697b15f5b9a2d8d10b6b4064613021e10d44dfc585d918bdd0f925be563",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-05-09/checkpoints/2024-05-17.json.gz": "a3e65bd98d9440a529aaa85a1d40bbb20f4edc6d6a4d43f1096618625ce51712"
+      },
+      "passed": true,
+      "receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": true,
+        "elapsed_seconds": 36.074505290947855,
+        "maximum_ledger_residual": "1.48480E-22",
+        "opportunities": 980,
+        "policy_counts": {
+          "FIRST_ATTEMPT_FILL": 9259
+        },
+        "sessions": 7,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "window": [
+        "2024-05-09",
+        "2024-05-17"
+      ]
+    },
+    {
+      "files": {
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-11-27/RUN_RECEIPT_2024-12-02.json": "6ca8466d44eb9d50013d8eaaa4f2edc0c5894ade4496563539af1234ab973c11",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-11-27/baseline/cohorts.jsonl.gz": "4f4f50c9f14634ba7cd35ce9069a05f772d6caafd9246752deb72005ee7fb414",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-11-27/baseline/daily.jsonl.gz": "9fc66a026a1b9834e8643c4722519bfa03b9df23a1b9ca56cca848015f37fc8d",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-11-27/baseline/events.jsonl.gz": "221e765b90593f3328eb10eabbdd00bc5f2206490dadad2171e9709e9b7a7733",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-11-27/baseline/terminal_lots.jsonl.gz": "970776387f6f04077ec8c7f4ba9da87f8816ba01b2cb60e4c00e672ed21d1574",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-11-27/checkpoints/2024-11-27.json.gz": "888b57d52d22cbc18cf8a0347dafde24ea035b8a7a0ec290ca27f3daf2ebde10",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-11-27/checkpoints/2024-11-29.json.gz": "ee3c21f7d34df9e3bab35c0c25745495a07c5449de39225f4cc11252c53bb4dd",
+        "trading/track2/stage35/final_backtest_v5/PILOT_LEDGER_DIAGNOSTICS/pilot_v5_r3/2024-11-27/checkpoints/2024-12-02.json.gz": "ee6507378b682affba51b24f50b62f1953a57768616b2f4a8c1fb5dd8a8bd52c"
+      },
+      "passed": true,
+      "receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": true,
+        "elapsed_seconds": 42.184963499894366,
+        "maximum_ledger_residual": "3.4969E-23",
+        "opportunities": 360,
+        "policy_counts": {
+          "FIRST_ATTEMPT_FILL": 316
+        },
+        "sessions": 3,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "window": [
+        "2024-11-27",
+        "2024-12-02"
+      ]
+    }
+  ]
+}

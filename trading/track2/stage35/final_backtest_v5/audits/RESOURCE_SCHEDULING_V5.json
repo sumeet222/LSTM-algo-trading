@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-10T05:42:21.573274+00:00",
+  "cause": "8GB RAM / measured contention with8 workers",
+  "paused_owned_processes": {
+    "62148": "v5_impact_1",
+    "62149": "v5_fee_0",
+    "62150": "v5_fee_0_01",
+    "62151": "v5_impact_15"
+  },
+  "validated_commands": {
+    "62148": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_impact_1 --scenario impact_1",
+    "62149": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_fee_0 --scenario fee_0",
+    "62150": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_fee_0_01 --scenario fee_0.01",
+    "62151": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_impact_15 --scenario impact_15"
+  },
+  "parent_pid": 61526,
+  "active_limit": 4,
+  "financial_parameters_or_state_modified": false,
+  "resume_rule": "Resume these4unchanged processes once19other sensitivity jobs finish or active slots otherwise free; no scenario dropped",
+  "wall_elapsed_metadata_includes_pause": true
+}

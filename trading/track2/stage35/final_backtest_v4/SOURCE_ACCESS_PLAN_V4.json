@@ -1,0 +1,25 @@
+{
+  "OGN_market": {
+    "adjustment": "raw",
+    "endpoint": "https://data.alpaca.markets/v2/stocks/OGN/bars",
+    "feed": "sip;iex only if SIP unavailable",
+    "limit": 10000,
+    "max_pages": 2,
+    "max_requests": 4,
+    "period": [
+      "2021-06-03",
+      "2021-06-04"
+    ],
+    "timeframe": "1Min"
+  },
+  "market_sources": "existing canonical genuine-minute OOS2021\u201324 partitions from frozen V2 source receipts;projectRTH OHLCV,timestamp,ticker;read chronological month batches",
+  "max_external_requests": 12,
+  "no_performance_before_gates": true,
+  "no_post2024_prices": true,
+  "supplementary": "up to6 primary issuer/SEC/NYSE event documents if needed;record before request",
+  "timeout_seconds": 20,
+  "urls": [
+    "https://www.merck.com/wp-content/uploads/sites/124/2021/06/Form-8937.pdf",
+    "https://www.sec.gov/Archives/edgar/data/1821825/000119312521180652/d49288d8k.htm"
+  ]
+}

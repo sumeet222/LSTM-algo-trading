@@ -1,0 +1,570 @@
+{
+  "version": "STAGE35_COMPLETION_CHILD_V2",
+  "verdict": "STAGE35_PARTIAL_EVIDENCED_SOURCE_OR_POLICY_BLOCKER",
+  "self_excluded": true,
+  "parents": {
+    "trading/track2/stage012/stage012_manifest.json": "b0880d8fcbdfd00b9030fd6670167636fd8ae59c305e4ec8cecd891795b11817",
+    "trading/track2/stage012/stage012_completion_manifest_v1.json": "8fbda08f1684e1ba06e4dde1038c651d8095f9cf890e9d821becdd5a17d8b483",
+    "trading/track2/stage35/stage35_manifest.json": "ea9455ebeab9c61a4f3980d284c144da7020d0cdfbe74047f2648b0cb9ddf4da"
+  },
+  "files": [
+    {
+      "path": "reports/codex_sessions/2026-11-09_082800_track2_stage35_completion_v2.md",
+      "sha256": "8da79d0315d2b2b86d3c3b1a1787c30ddbd6e6a826d3dbb4dc5dd8967801d168",
+      "bytes": 9617
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/audit_completion.py",
+      "sha256": "f41c1a53fde876fe0c2517bb5c8fe42bca5d186548561c0a9fd1e587c73b7a8e",
+      "bytes": 5768
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/cache.py",
+      "sha256": "54310668c553360e0100a493476bf338fb132eb69cf56a11d0f408d44213e970",
+      "bytes": 14519
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/engine.py",
+      "sha256": "8419a701ccc8a73e15efa9001f7057d0d5ea2c9e761a30439afe011dd1dc3771",
+      "bytes": 12758
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/intents.py",
+      "sha256": "bcfdf62fb1bcc0b74d827f6bd0154d17631e9dc98621a44d5de966579afab37c",
+      "bytes": 2700
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/orchestration.py",
+      "sha256": "84d66227fa91d8d86c178a37230de5b7b7cee170725f4a5d85e8ab19ccb137bb",
+      "bytes": 10864
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/release.py",
+      "sha256": "4a9c435f5447713dca84fc8b1d7298cf8a23a8aa1e34f878426e6acd6b0cdd25",
+      "bytes": 3850
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/settlement.py",
+      "sha256": "cf63df7a541c61f80c97c04d5bf472e3a77f90fd0656200145bfdd197d6ff78e",
+      "bytes": 16859
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/signals.py",
+      "sha256": "fef921aeabcef1ddf11992ee7ba0c6d92672edc9f118a5c3b987aa22956e071c",
+      "bytes": 20864
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/source_audit.py",
+      "sha256": "081c9a0f9bd307c356ba2f96192970f8b9b6397ab25687dd7578a0df8bb881b8",
+      "bytes": 10851
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/synthetic_smoke.py",
+      "sha256": "cf7709be08ed82395a3c52d7d5775bec0d611b4d97791db2b049dc59efb919bb",
+      "bytes": 3516
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage35/completion_v2/tapes.py",
+      "sha256": "5a62c4007eada493f0cf43b8e459d28696a3b2b5c92283b20161d415d050109f",
+      "bytes": 9077
+    },
+    {
+      "path": "tests/track2_stage35_completion_v2/test_causal_cache.py",
+      "sha256": "c7967ad5efb7bcc3d0876f5bf86e44dcdc8cc8bfc501a5dea955fb87d8c1dadf",
+      "bytes": 3503
+    },
+    {
+      "path": "tests/track2_stage35_completion_v2/test_engine_and_release.py",
+      "sha256": "3359829aa860b1f03984cad41c569d0c4068ee7b17fb1add6c157423943e6cbc",
+      "bytes": 7749
+    },
+    {
+      "path": "tests/track2_stage35_completion_v2/test_orchestration_and_history.py",
+      "sha256": "2814a0cd52509e1fadc6cf6ec40f8b0f02138436618fcd18afb6b89c3f9ad849",
+      "bytes": 5770
+    },
+    {
+      "path": "tests/track2_stage35_completion_v2/test_settlement_v2.py",
+      "sha256": "b857ee42cdfe2e8f4e930ecb583f706daa7efd73cdfc6895dc016cf74b511857",
+      "bytes": 10578
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/BACKTEST_READINESS_GATE_V2.json",
+      "sha256": "ce8828adad5ffbf08f49cec1b606ce3dede5eaa5be5a984db1e40ca78fc6fc36",
+      "bytes": 122694
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/CLASSICAL_MATURED_CONTROLS_MANIFEST.json",
+      "sha256": "3f7fcbc60cebc9a651db01844f0b3ada09c424587909865442df628dc740e555",
+      "bytes": 739
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/EXECUTION_AND_INTERNAL_CROSS_CONVENTION_V2.md",
+      "sha256": "9ea86e47d7885d723f6f6f51c14b57327ae185f3054190fca62ce34081bcf5bf",
+      "bytes": 3725
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/EXTERNAL_ACTION_SOURCE_PLAN_V2.json",
+      "sha256": "c587aa3ed1cbd4ecffb71c3b3b68b442346c50106b65b3650bf2688f5a59afb0",
+      "bytes": 896
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/FINANCIAL_BACKTEST_RELEASE_PACKET.md",
+      "sha256": "5ffbb7035627c63285ff69e48e33d10c93d2063ccf81fcabf5a8ac760fea1c12",
+      "bytes": 2582
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/FULL_SIGNAL_CACHE_PARITY_AND_RESOURCE_REPORT.md",
+      "sha256": "b59f2501f3819d8979e0891a585f0981e1a024174ff09c0159938362aea0d394",
+      "bytes": 4243
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/FULL_SIGNAL_COVERAGE_REPORT.json",
+      "sha256": "b1b4e5df9aaeab9410f0845b2049fcdf1240add8d66321102601e60e63942f92",
+      "bytes": 381523
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/FULL_SIGNAL_EXPANSION_PLAN_V2.json",
+      "sha256": "948e0a8f03dfcc9f802d09b70ecd5ab043250ee9a54108cd17a4579864e8d79d",
+      "bytes": 452317
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/FULL_SIGNAL_EXPANSION_PLAN_V2.seal.json",
+      "sha256": "3444272bdc99f846271a178410fff688814449ba1da9d0f128186dad49c7d265",
+      "bytes": 200
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/HISTORICAL_ACTION_AND_CARRY_TAPE_MANIFEST.json",
+      "sha256": "83acce91532b6aea64477534bf82ed9d388ed92eef0947297ff3bc70f9bda228",
+      "bytes": 13991
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/HISTORICAL_RAW_ACTION_SOURCE_AUDIT.md",
+      "sha256": "a8330f4f0ab76bb9c35d6cb6599cf5c19bd53f3714fa21e5e6e92560268d6a1b",
+      "bytes": 3826
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/OPEN_ISSUES_STAGE35_COMPLETION_V2.md",
+      "sha256": "f10add665c00b2fdb7e943c426691698a2dd178ec8c1b9979524b19db660548c",
+      "bytes": 2864
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/RAW_ACTION_SHADOW_SOURCE_PLAN_V2.json",
+      "sha256": "abb765e33c9452eeb43fd0509e08f50792bfe6e51f9e34c0909068090523d81a",
+      "bytes": 1716
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/RAW_ACTION_SHADOW_SOURCE_PLAN_V2.seal.json",
+      "sha256": "b9a89f357213622aec66576f68028ac745e87bb1697321df0c8f5233161c88dc",
+      "bytes": 108
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/RELEASE_CODE_SCOPE_MANIFEST_V2.json",
+      "sha256": "f33cfec34d3fa400bf055221e9914ac9e7dd8cbf483938548b181dd4b3be228e",
+      "bytes": 117399
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/SESSION_REPORT_POINTER.json",
+      "sha256": "0b57ff12a0ecdddf75c3e8ffae81e35d3e129052e253114077abfcf8b3752c55",
+      "bytes": 169
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/SHORT_AVAILABILITY_AND_BORROW_SCENARIO_SPEC.md",
+      "sha256": "515e25c2093c573e0724b10d9d959f4ed6fc3317df780c84f7773bf4cf86b575",
+      "bytes": 1838
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/STAGE35_COMPLETION_DESIGN_V2.md",
+      "sha256": "6286c29fa5dad7afa4dfbbd0091fc31e053f6d122717cee24ba7672fa629ae86",
+      "bytes": 3530
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/STAGE35_COMPLETION_HUMAN_HANDOFF.md",
+      "sha256": "cf9b41b3c3d47b10b29c29e7eddbbc4dbf9e86a9547fe9f784a5d6f2bd0e7ed2",
+      "bytes": 13099
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/STAGE35_COMPLETION_TEST_MATRIX.md",
+      "sha256": "d7de387cc8c0d89ade257f4c4b53625ef7971d37b79a9d25cf74e3b6da21d996",
+      "bytes": 3527
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/TRADING_POLICY_CANDIDATE_V2.md",
+      "sha256": "d7fee5ad3a8ab5db0b8448af770a5a9de22cad2168761e9d0535e219c924e4a8",
+      "bytes": 3620
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/.gitignore",
+      "sha256": "b1db49666a1e0d07e26d1d7267ff1433b568825b95fe928eba9a6c2e652bcdeb",
+      "bytes": 56
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/CACHE_PARITY_V2.json",
+      "sha256": "e1ef6d843f9029ab44b98c460ba1d5694b1c65cb5cf611167a3b179d3a97c461",
+      "bytes": 3797
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/COMPONENTS_FINAL.txt",
+      "sha256": "80c786ceab7eb4ccc82b9b39c3a101233c0b7fef6c164d99e2f5778a10ac614a",
+      "bytes": 100
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/FINAL_COVERAGE_AND_INTEGRITY.json",
+      "sha256": "9e8bdf292a4a7d575994d7636ca54cda6a74a2db03bd824f829a8b87894f5d9b",
+      "bytes": 16918
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/FINAL_PROTECTED_INTEGRITY_RELEASE.json",
+      "sha256": "9e8bdf292a4a7d575994d7636ca54cda6a74a2db03bd824f829a8b87894f5d9b",
+      "bytes": 16918
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/GOLDEN_SYNTHETIC_FINAL_V2.json",
+      "sha256": "9bf907ef016cce73152e8c202ed6a0df3575d1644bc104e782c3ef98912a7010",
+      "bytes": 8445
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/GOLDEN_SYNTHETIC_RELEASE_V2.json",
+      "sha256": "e27ee2ea30f028946ccb0e11f1ac2bd7c622d09da85489fc60655250e96fd921",
+      "bytes": 8445
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/GOLDEN_SYNTHETIC_V2.json",
+      "sha256": "4f276f388944d4531ab1ee0af2c94714632b58303e3cfdf613c09e3fa1443deb",
+      "bytes": 8445
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/H0_inventory.json",
+      "sha256": "9048845ced40f2839955894de031326c63e91ba9205562d9a18cd6b0dca85422",
+      "bytes": 116965
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/HISTORICAL_SOURCE_SHADOW_BOUNDARY.json",
+      "sha256": "3c07bd4bee91fae7b2fef97a5d12b242f5703928103c372db9c101fd8a01f6b8",
+      "bytes": 3345
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/HISTORICAL_SOURCE_SHADOW_BOUNDARY_FINAL.json",
+      "sha256": "a3f0d702e0acb5b255fb32fd386f5ac67639ab7b74b644ab71251a66c5214a8a",
+      "bytes": 2245
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/NEW_TESTS_RELEASE_FINAL.txt",
+      "sha256": "3e78aa32bbf86967c911547d0b20ddea12731ae99d1fe9fadf55d5c92735ed22",
+      "bytes": 100
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/OWNED_TYPES_DELIVERY.json",
+      "sha256": "b6e27e8b6216fc1e6034cc77ea363275f865b87ee0d817dd0c6f05a01205a5d6",
+      "bytes": 252
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/OWNED_TYPES_HANDOFF_FINAL.json",
+      "sha256": "71b313b0a6780588dbd2cc0f404ba95975cca3417a485fc4d7d347f9169d6b69",
+      "bytes": 252
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/REPOSITORY_TYPES_DELIVERY.json",
+      "sha256": "9f2cbe9efc490c3fafea9bd233856c800ceb6e19b583e52b0d32a77e6814cc9d",
+      "bytes": 41992
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/RUFF_DELIVERY.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/RUFF_FINAL_STYLE.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/RUFF_HANDOFF_FINAL.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/SHADOW_FINAL.log",
+      "sha256": "a75ed675cc9c5ed6bb8431bfed04365d72e9c22281e713fd1a9d4196a13f7aed",
+      "bytes": 691
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/STATIC_OWNED_FINAL.json",
+      "sha256": "825dc5d593eeda91f5a97173abe345474a24f3909ef79ab83b96dd6c3c5be4bb",
+      "bytes": 253
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/TESTS_DELIVERY.txt",
+      "sha256": "6674f15b539a1196b2b3bf48acda674769f521c11b5791a1cde8b2abfa10021e",
+      "bytes": 191
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/TESTS_FINAL_ALL.txt",
+      "sha256": "0963c7bc836e0dc21a2af8174a6c82cae7af26e9defb9bb91e5023117745a95b",
+      "bytes": 191
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/TESTS_HANDOFF_FINAL.txt",
+      "sha256": "a302d9839b001dbece89cda03884938aaf028b16b697dce421adae08ddbaf3bd",
+      "bytes": 2805
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/TYPES_HANDOFF_FINAL.json",
+      "sha256": "de77ab239274455e4d015dbebc1aed1e9c8c4fd04abbc09b3b34438fb68f3a61",
+      "bytes": 42989
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/baseline_tests.txt",
+      "sha256": "9dcb2ccf6918cfcd922993f263141827fa2e08d6a45464658f0c4fa126afeb64",
+      "bytes": 180
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/cache/CACHE_READY.json",
+      "sha256": "36bb2908110e89f107866e9e87364e5c261bd621d9a5a7e2b799accabfe72b1d",
+      "bytes": 4310
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/cache/source_receipts.json",
+      "sha256": "7a9777adc2604d25667da7e05ddaf5366d5297ba796d8faa9ed69238415319bc",
+      "bytes": 68003
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/cache_build.log",
+      "sha256": "164d7583942aaa046a0615b6e56034528708ff168752f375403c452ef52b4b2d",
+      "bytes": 971
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/cache_command.json",
+      "sha256": "e820b5bfd9649aee3738a179454bf7493f2f56ef4270d5c35d1a2592ae308fdd",
+      "bytes": 341
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/combined_tests_final.txt",
+      "sha256": "562ba4b70cf7450f2f47ddb9f10c22212bba6dbbb4536cbfb671956e6f6c719f",
+      "bytes": 191
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/combined_tests_handoff.txt",
+      "sha256": "0213d78684dff4d70332b210ffc63534543ce772605b46a7d29021291184e913",
+      "bytes": 181
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/combined_tests_release.txt",
+      "sha256": "eb06abb46c5e7f696ff3aa147ec34f77a9b44af571dd67d951d31ee101d1f02d",
+      "bytes": 2674
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/coverage_audit.log",
+      "sha256": "a75ed675cc9c5ed6bb8431bfed04365d72e9c22281e713fd1a9d4196a13f7aed",
+      "bytes": 691
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/full_run_final/CLASSICAL_MATURED_CONTROLS_MANIFEST.json",
+      "sha256": "3f7fcbc60cebc9a651db01844f0b3ada09c424587909865442df628dc740e555",
+      "bytes": 739
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/full_run_final/FULL_SIGNAL_COVERAGE_REPORT.json",
+      "sha256": "f4d51b444359fc1e49e37ff8c9050a3af0962b83ae011ce59cff5de84ab41508",
+      "bytes": 387553
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/full_run_release/CLASSICAL_MATURED_CONTROLS_MANIFEST.json",
+      "sha256": "3f7fcbc60cebc9a651db01844f0b3ada09c424587909865442df628dc740e555",
+      "bytes": 739
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/full_run_release/FULL_SIGNAL_COVERAGE_REPORT.json",
+      "sha256": "c4fa1e09b7ebcd213cd5e6ee955286646e7b946c36c9134bf35102f329e5828c",
+      "bytes": 389562
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/full_signal.log",
+      "sha256": "7f206ca2928ab3ed9ba2a95a45fe11a98a1d97a03ccf25d7c77330cf78a63f0e",
+      "bytes": 2379
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/full_signal_final.log",
+      "sha256": "7f206ca2928ab3ed9ba2a95a45fe11a98a1d97a03ccf25d7c77330cf78a63f0e",
+      "bytes": 2379
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/full_signal_release.log",
+      "sha256": "7f206ca2928ab3ed9ba2a95a45fe11a98a1d97a03ccf25d7c77330cf78a63f0e",
+      "bytes": 2379
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/integrity_release.log",
+      "sha256": "a75ed675cc9c5ed6bb8431bfed04365d72e9c22281e713fd1a9d4196a13f7aed",
+      "bytes": 691
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/new_tests1.txt",
+      "sha256": "7c9aff35ef187b74b145fda742009b783f74d757f1e58b2ffd2b8f57e2aeb7c7",
+      "bytes": 99
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/new_tests2.txt",
+      "sha256": "52acb8a2e61509951d88ac10af896667ee7d1e0f296b3a1a1839594621cfa36c",
+      "bytes": 99
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/new_tests3.txt",
+      "sha256": "7adade6a79cd1e43adde3354866759e9976ccaac7ab816a8a7de8685abcdc5c3",
+      "bytes": 99
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/new_tests4.txt",
+      "sha256": "975342ab719aabf5f15adec82fc85bf5389ffa125765ecac94ae53b6ead0d6a4",
+      "bytes": 3795
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/new_tests5.txt",
+      "sha256": "37c5f5d3c02cdadd1f844ef959c6ac755ac15e40dae7909bb70fe46654bd0054",
+      "bytes": 2583
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/new_tests6.txt",
+      "sha256": "44896abd0b8e3d97830691c377e9423e9eade62012b3c0429da3a901bbe8f487",
+      "bytes": 99
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/new_tests7.txt",
+      "sha256": "2543fb8d4cd159030af85822a9cc7ffdf3824ea24a9f6b1df5911ddd20283e41",
+      "bytes": 100
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/new_tests8.txt",
+      "sha256": "830e1bda7b30633fbc59673d30497f66c6d9ab2b3776fe600fa9be39601a1a59",
+      "bytes": 100
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/new_tests9.txt",
+      "sha256": "ce2113aa4f6871c6bef8c9b6aa148d648814806c8f4eb1399cfdeba709b675da",
+      "bytes": 100
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/owned_types_final.json",
+      "sha256": "ab7bbabacb284faf21069ff433a1b2900088f9103e95f61bfe8d22946e843e0e",
+      "bytes": 253
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/owned_types_incremental.json",
+      "sha256": "d85251db73d2b8c4bea8ea0458e79f2723b2c36e7bfe5b4821124d60a81b5785",
+      "bytes": 252
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/owned_types_pre_release.json",
+      "sha256": "2a911b3e082b2c7068d394921aedbcdeefd1d8951da2f006d848c155f1120280",
+      "bytes": 853
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/parity.log",
+      "sha256": "d5a54ae07f36492b4c3586dd1ae23188330c7a2a921a171540873ddc1ef505b5",
+      "bytes": 1141
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/repository_types_final.json",
+      "sha256": "e5e5dc4d5d4575cbb868061570038b155ae6950fa2e2490ec8da3cb693787b23",
+      "bytes": 41992
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/repository_types_handoff.json",
+      "sha256": "9e300c96e1a70126465559bf8a8d90f50fb6176af0eaa40389e7446867130d82",
+      "bytes": 41992
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/repository_types_release.json",
+      "sha256": "04415a6c547d3c6be0f20fb02b8ddcee3c9a7b96ad21cfe8e10561611c273273",
+      "bytes": 41837
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/ruff_final.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/ruff_final_v2.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/ruff_release.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/signals/RUN_BINDING.json",
+      "sha256": "6b3292f007a0ac91b94dfd4cf250f98d87ccf8bac22636970640ce3bfdfa40a4",
+      "bytes": 635
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/signals_final/RUN_BINDING.json",
+      "sha256": "c16939866b296cc35a143d196b1c69ab5bbd2de7d578a6755f762d715992bc56",
+      "bytes": 635
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/signals_release/RUN_BINDING.json",
+      "sha256": "64817adb8457ab12545410d4f42419b730757a67580224c9e4841a37a140bc99",
+      "bytes": 635
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/source_audit.log",
+      "sha256": "a75ed675cc9c5ed6bb8431bfed04365d72e9c22281e713fd1a9d4196a13f7aed",
+      "bytes": 691
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/validation_release_v2/owned_types.json",
+      "sha256": "d38180411dc390ff65b568fd39785e83783dcbcb37b7f335375c2cf4cba44e4f",
+      "bytes": 252
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/validation_release_v2/pytest.txt",
+      "sha256": "2cbe521cb4acf216951826502ad78bfab4e72fcc42694cf1215eaf45919869b0",
+      "bytes": 192
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/validation_release_v2/repository_types.json",
+      "sha256": "d4e623041f332e7e03f39a7c8fd84d010bd54f7fc48292743c652331f3613073",
+      "bytes": 41992
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/validation_release_v2/ruff.txt",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/yahoo_dividend_probe.body",
+      "sha256": "0d24c98db98d3b4a87b9626a026e7d72c99754ab6bd88211a17bc372350b7d89",
+      "bytes": 23
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/audits/yahoo_dividend_probe.headers",
+      "sha256": "af8e01b48d679b4039f7be020ed8d8498afcfc181ee91db2b265fda1b5922296",
+      "bytes": 188
+    },
+    {
+      "path": "trading/track2/stage35/completion_v2/protocol_stage35_completion_v2.json",
+      "sha256": "d293a3289f2395f6f731e2b80be61e58729648f697d0b73dc4f08790824b0c2a",
+      "bytes": 1394
+    }
+  ],
+  "large_private_outputs": "local/ignored;cache arrays bound transitively by CACHE_READY;daily signals by final coverage report and receipts;raw8row fixture hash in source/action receipts",
+  "signal_report": "trading/track2/stage35/completion_v2/audits/full_run_release/FULL_SIGNAL_COVERAGE_REPORT.json",
+  "code_scope_sha256": "f33cfec34d3fa400bf055221e9914ac9e7dd8cbf483938548b181dd4b3be228e",
+  "gate_sha256": "ce8828adad5ffbf08f49cec1b606ce3dede5eaa5be5a984db1e40ca78fc6fc36",
+  "protected_objects_unchanged": 568,
+  "source_partitions_unchanged": 227,
+  "historical_financial_backtest_run": false,
+  "training_run": false,
+  "historical_data_mutation": false,
+  "session_report": {
+    "path": "reports/codex_sessions/2026-11-09_082800_track2_stage35_completion_v2.md",
+    "sha256": "8da79d0315d2b2b86d3c3b1a1787c30ddbd6e6a826d3dbb4dc5dd8967801d168"
+  }
+}

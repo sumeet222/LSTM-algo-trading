@@ -1,0 +1,277 @@
+{
+  "elapsed_seconds": 146.33149054087698,
+  "engine": {
+    "elapsed_seconds": 143.48062291601673,
+    "last_session": "2024-12-31",
+    "sessions": 1005
+  },
+  "output": {
+    "accounts": 13,
+    "bytes": 9807275,
+    "cohort_rows": 37391,
+    "days": 1005,
+    "exit_portions": 39686,
+    "files": {
+      "ACTUAL_EXIT_PORTIONS.parquet": "3694c9a6a9d869972248cb29843672867b5e73d2f5fa907b582d901cc62b338c",
+      "ANNUAL_AND_CAUSAL_DIAGNOSTICS.csv": "ad346f216472b6f22ef40562e6498727bfdbcab1d99c3248ea06db0db87fd5e2",
+      "COMPLETED_COHORTS.parquet": "168cba57868ca01313fe000363b7a84529d5025da4a1b39ddc16acb9c946fcdd",
+      "CONTROL_PARITY.json": "115c50808505eefd23106d1899857fe00c61f3bb94e2236eae60c386603cf002",
+      "DAILY_NAV.parquet": "4bc09ed875546a98f56bcde8360f79444f48ddfd7fa5f7b2692e02c598b806d7",
+      "EXIT_REASONS.csv": "025de9085740f3668ac06e20b1e520c67759dd4f169593e2ceb833caa4b59c43",
+      "FUNDED_TARGETED_RESULTS.csv": "c154794ae58c3d49185012d9d616a96cc432d5b45e67c4f218926af2198c052e",
+      "PHYSICAL_FILLS.parquet": "11931ab074c04dfe419ce54e59961fbd82e0ae816f4c97fd0704313354b3fe71",
+      "R01_ENTRY_RESERVES.csv": "836c8eed71e623f01da6a82daea770678f1e7ab1351e441a60f371f1ee7ba8b3",
+      "RISK_BREACH_SAMPLES.csv": "ebf199e5124d100d87113c557d91a2584999f90ff44d94cb02cf0168ee0d168c"
+    },
+    "physical_fill_rows": 75256,
+    "source_reads": [
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-01.parquet",
+        "rows": 147452,
+        "sha256": "336f2ce1e172d02fff978851168db63edc3b864de81e7a7765871d6f57b617e7"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-02.parquet",
+        "rows": 147508,
+        "sha256": "7fdcd313ef726dc10507e43bcea48ca48362a65b8ada711645b0a44e7af408e3"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-03.parquet",
+        "rows": 178169,
+        "sha256": "ce71a181a387be282cdb13b6eeba4d78db9782a69e1bd4cc7b0f255d97fcec4c"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-04.parquet",
+        "rows": 162782,
+        "sha256": "263c638663cd3070329518ec354e67b4536039982c3d26306b5fedb032dd64db"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-05.parquet",
+        "rows": 154977,
+        "sha256": "194b55a2e86c8cbad4d2621ac440153ee5dedacfa137e12eb1fbb20a53eea85a"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-06.parquet",
+        "rows": 169775,
+        "sha256": "47710016435ad7c56a2a32e11586c80a2d199de9cc2b6715bb23fb1813f083ed"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-07.parquet",
+        "rows": 162295,
+        "sha256": "0d6020fbf26877c3ce427b3d1a66144753713aef53d05da1eb2db7ea02ce9f32"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-08.parquet",
+        "rows": 169054,
+        "sha256": "93dbc751f683d7a297ae48935f76f239b96f4d1ab34d94a732ffd52d8d1343ce"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-09.parquet",
+        "rows": 162582,
+        "sha256": "81c8f676d38077a13bf1011ee1e0b45fb7a05c516b11f239bca85f3168ddcaf1"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-10.parquet",
+        "rows": 162315,
+        "sha256": "86d6bb90410b6177007740f9eb0ab13f99456ae7415317381080f3b13b3a3858"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-11.parquet",
+        "rows": 158950,
+        "sha256": "e081c3f1edd8fbab5604ad0ab5735118575f6ac38f60267fe9d3bac1a7891eab"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-12.parquet",
+        "rows": 170218,
+        "sha256": "10e45b409536232d5f951514088cf3eae6777cc0d7b237896b4cc66efa88d830"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-01.parquet",
+        "rows": 155531,
+        "sha256": "9c8fbaae7c16b1aa54ff49a23cfaf6e743d671cbb37e61c5db2391ff56ad2a75"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-02.parquet",
+        "rows": 147685,
+        "sha256": "fc7e35143602dc7a2dc42de23500fa4c658bb89e09d62fb4f51c44d2909b27c8"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-03.parquet",
+        "rows": 178425,
+        "sha256": "ab0214cd9823b0775c2739e7eaf51f3170e5b6d15dd0b453fa6309897f9b0891"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-04.parquet",
+        "rows": 155109,
+        "sha256": "d46c6f368c595070ca49a1ed71514e576189a9704a97d5b5f2f4aee8f8c3a410"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-05.parquet",
+        "rows": 163368,
+        "sha256": "5eb02e6008711fdc449154663b089921b1e721014f1a5b002e8c2bed4d5588e4"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-06.parquet",
+        "rows": 163053,
+        "sha256": "d88786b72d57e1489519440d4e054ee677e776001d595a30bd8fdfd1b6a643d3"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-07.parquet",
+        "rows": 155197,
+        "sha256": "a7029e4ffb5cc708d3aa0f30b33a095535b6bcb42511600149500e3b13d3aa2d"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-08.parquet",
+        "rows": 176727,
+        "sha256": "d65710d4ccd2fed61806a118ae29beb56a9fd7f765308e4c8a0782feb5f064eb"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-09.parquet",
+        "rows": 157148,
+        "sha256": "e8c08de290de1cdc10b305ee71e69f31e38622dd92e6144db6f393e0bb0699f0"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-10.parquet",
+        "rows": 163187,
+        "sha256": "338a2c538bdd73cbc9259c6f580f6866e72eb423dec481560dc94243c28c30bf"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-11.parquet",
+        "rows": 159263,
+        "sha256": "05d7155a90c2d1af1aeeac6a0ece547664a22daa1ffdd0d7cc08b78bc0d1b92f"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-12.parquet",
+        "rows": 162985,
+        "sha256": "af05228c002e9298a503187416b6992ff5aa2b7ad21c5aed0579768c011ece92"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-01.parquet",
+        "rows": 155075,
+        "sha256": "74b1c3361fa6e3a7d0850293440b8ad9010267ab040196b97c3dc1a6ed7dc305"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-02.parquet",
+        "rows": 147346,
+        "sha256": "5b1f185ac619db2369ac6786c3f0c5f5c085db0f4c96221482f4d32a279e074f"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-03.parquet",
+        "rows": 158645,
+        "sha256": "d693ed82124626d4fe569bd137e08059ff736d6fa371e9849b4018370b547c16"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-04.parquet",
+        "rows": 147103,
+        "sha256": "e6fef6cf6e776b2fe739562548d818f048cfe9688c2bcc7b9c91c883d8002372"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-05.parquet",
+        "rows": 170419,
+        "sha256": "f9cdcc773bd4f58df9d5e0d980fb8d466b0b3b525a3f35c54434e1e0188e7621"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-06.parquet",
+        "rows": 162821,
+        "sha256": "76e75ff95f16f8f208ea53a16c0955bd4201e70c668bf09c4009ccc2725344a6"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-07.parquet",
+        "rows": 151048,
+        "sha256": "0e59479d72a366c399e699550978341baca33c5a228da7e5018a5c4022730696"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-08.parquet",
+        "rows": 177595,
+        "sha256": "6717d368b56702159db8d9a552cce23ae3e7ae9d0a94fa26aebed4df52e9f54b"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-09.parquet",
+        "rows": 154117,
+        "sha256": "589942e52b41f1077ca80f14125ef7e304681ef4474b3ab141b7ec18f2af601d"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-10.parquet",
+        "rows": 169810,
+        "sha256": "dd6535568146716facefdd7cc65d90ae30a2b693d40c8a529ffbb43c725209a3"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-11.parquet",
+        "rows": 158834,
+        "sha256": "6f212c14e89607e031a3da0dc481c63da080973a15a13b3d8826437b6a0a7390"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2023-12.parquet",
+        "rows": 154671,
+        "sha256": "e684b5011fbb62af794c1757d8b4adab23dc60d45917e77bf9d52c0ef3116fcc"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-01.parquet",
+        "rows": 162686,
+        "sha256": "5fde2657140dcdddaf66fafa566c36e3de6d72fcdbdad43ee86b804477c5a4ce"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-02.parquet",
+        "rows": 154053,
+        "sha256": "5bb357848211488e17db95572ca792bd10457a89dc89503d54a229259433775c"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-03.parquet",
+        "rows": 154551,
+        "sha256": "62f068ac1fb6648f21f8bac7e4e9fbe44ed264878fc1c04f12d7eaca074d0569"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-04.parquet",
+        "rows": 169904,
+        "sha256": "d483ed84d604aa3488450c3391d6b57578e3b4533b973f85ab06ff07a1b3675a"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-05.parquet",
+        "rows": 169573,
+        "sha256": "10d8d9bad21a9e111f453429f60d7a733ed825395346c120f4bb976787e52326"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-06.parquet",
+        "rows": 147285,
+        "sha256": "7865ca62140136c95309603287a65e8783c8fffab497a2c66c24cbce7fcc3b7c"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-07.parquet",
+        "rows": 166845,
+        "sha256": "9ee732e54ac2d6d22da7513bd1f92da7a1ab8cb219385ab2ec081c61f4c38b64"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-08.parquet",
+        "rows": 170002,
+        "sha256": "2d0ea869ed994d9901a91afae1ca7a3838ce90b27d42c83d2678456d51850ab1"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-09.parquet",
+        "rows": 155298,
+        "sha256": "e8790ba30f2d167d48118bd5527f87d3d0b95a1ded9c0f2cf04904fdd97488c4"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-10.parquet",
+        "rows": 178229,
+        "sha256": "3847f6df481f89ebd6fc6f5bbcda08351ddb543e32399c887c1d666bb246cd2c"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-11.parquet",
+        "rows": 136841,
+        "sha256": "9dd9c17c3445b0eac430a53139a4bc5c5a2b32d030b350dfc03d803796643740"
+      },
+      {
+        "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-12.parquet",
+        "rows": 158246,
+        "sha256": "127922240fb382b66d134fc835d433b3b6a46dd97901aa68f554004acb77d25f"
+      }
+    ],
+    "status_counts": {
+      "COMPLETE": 13
+    }
+  },
+  "peak_RSS_bytes": 1339998208,
+  "registry": "62cc31bc422b7e6ff515558e0564175917781d7731bcaa401bb45d6726620db1",
+  "resume_from": null,
+  "status": "COMPLETE"
+}

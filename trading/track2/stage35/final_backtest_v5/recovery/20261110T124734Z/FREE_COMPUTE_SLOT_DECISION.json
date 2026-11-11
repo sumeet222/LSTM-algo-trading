@@ -1,0 +1,85 @@
+{
+  "UTC": "2026-11-10T15:57:58.806975+00:00",
+  "code": "9e093b3f6a62",
+  "active_worker_count": 3,
+  "paused_worker_count": 4,
+  "processes": [
+    {
+      "pid": 61526,
+      "ppid": 1352,
+      "state": "Ss",
+      "CPU": "0.0",
+      "RSS_KiB": 3488,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python trading/track2/stage35/final_backtest_v5/audits/EXECUTE_FROZEN_SUITE_V5.py.txt"
+    },
+    {
+      "pid": 62148,
+      "ppid": 61526,
+      "state": "T",
+      "CPU": "0.0",
+      "RSS_KiB": 1088,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_impact_1 --scenario impact_1"
+    },
+    {
+      "pid": 62149,
+      "ppid": 61526,
+      "state": "T",
+      "CPU": "0.0",
+      "RSS_KiB": 1088,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_fee_0 --scenario fee_0"
+    },
+    {
+      "pid": 62150,
+      "ppid": 61526,
+      "state": "T",
+      "CPU": "0.0",
+      "RSS_KiB": 1088,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_fee_0_01 --scenario fee_0.01"
+    },
+    {
+      "pid": 62151,
+      "ppid": 61526,
+      "state": "T",
+      "CPU": "0.0",
+      "RSS_KiB": 1088,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_impact_15 --scenario impact_15"
+    },
+    {
+      "pid": 62477,
+      "ppid": 1352,
+      "state": "Ss",
+      "CPU": "0.0",
+      "RSS_KiB": 4784,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python trading/track2/stage35/final_backtest_v5/audits/RESUME_RESOURCE_QUEUE_V5.py.txt"
+    },
+    {
+      "pid": 69364,
+      "ppid": 61526,
+      "state": "R",
+      "CPU": "100.0",
+      "RSS_KiB": 62656,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_known_mrk_cross_prohibition --scenario known_mrk_cross_prohibition"
+    },
+    {
+      "pid": 69646,
+      "ppid": 61526,
+      "state": "R",
+      "CPU": "99.6",
+      "RSS_KiB": 204704,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_fixed_borrow_reject_recall --scenario fixed_borrow_reject_recall"
+    },
+    {
+      "pid": 69731,
+      "ppid": 61526,
+      "state": "R",
+      "CPU": "100.3",
+      "RSS_KiB": 229776,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_joint_adverse --scenario joint_adverse"
+    }
+  ],
+  "all23_sensitivity_logs_exist": true,
+  "verified_complete_count": 17,
+  "maximum_computing_workers": 4,
+  "candidate": "oldest existing paused child by PID, only after live identity validation",
+  "signals_sent": false
+}

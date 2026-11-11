@@ -1,0 +1,653 @@
+{
+  "UTC": "2026-11-10T12:47:01.220196+00:00",
+  "code": "9e093b3f6a62",
+  "code_scope": {
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/__init__.py": "87885340e79eae254a33b31a037790cdf567f05b32c68913ff459ab910661aab",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/analysis.py": "8fe34c543b334ed0f171bb1ca51a98a707ef6d5733a9a668ae1f89c101546325",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/book.py": "8f91396b38638b041d38af3cff3a3bff9c2d982bdc8e8dff30585e9fe08399c7",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/checkpoint.py": "3615e40334b44bef953c26b610fc4208e8a652bc4e934b8582ccce7e155883fb",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/driver.py": "df8f690ab2dfb37cc2cf0f4d59d65ccd9ae1eff843019a89fd4932875c11c812",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/execution.py": "d453b1f32d618d79d77416d616a9ca9b353aa837c23b39d240bd64cb3e988d15",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/paths.py": "b69c7885e843f171c251e4cb5f849c4838af17a3e2781ff6e74faf32a72aaa13",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/protocol.py": "bb847d57cb845cea21534e49c3aa64179baebf1925b25f467cddbdcf5e0f8767",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/release.py": "bae317a884148b9afd6ecfb4aa50e75818f10d90cb8ed42e0cbdf5fb530cc638",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/run.py": "b5cea81a60465baf9014d09b182a78f186c49d3b6f722c55a8d1dc14656d68b6",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/special.py": "fe9e561c2f8d319e5750b4f3e6783301a1e5ad47d256aba683858a9b77877280",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/witness.py": "cf1d5dd2fbf8fd12425df753e7d60dfa8c2ad4953886d777035d300664621de5",
+    "tests/track2_stage35_v5/test_next_valid_execution.py": "ea695e6e2192e2dc19f27bfeee0aab80863ca3354ce2d5824cc520cec93cfbb2"
+  },
+  "elapsed_seconds": 20.887291916180402,
+  "errors": [],
+  "grid_SHA256": "c56c107ade8c07b2a26470af9216361920e054813284e6bc7cd1069cd04dfa99",
+  "grid_count": 24,
+  "new_backtest_or_source_read_launched": false,
+  "predecessor_prompt_file_found": false,
+  "proofs": {
+    "PILOT_CERTIFICATION_V5_9e093b3f6a62.json": {
+      "all_passed": true,
+      "file_hashes_verified": 50,
+      "mismatches": [],
+      "sha256": "3a55adac2a8d2f1df32d723cef43d08d8fae89cc40e0a2f151ff43a0eb06a7f8"
+    },
+    "RESTART_CERTIFICATION_V5_9e093b3f6a62.json": {
+      "all_passed": true,
+      "file_hashes_verified": 8,
+      "mismatches": [],
+      "sha256": "768c0364aa23125d9cec5565fa624189d814da228fd3bc160f94fbe91a9e014a"
+    }
+  },
+  "protected_SHA256_and_mtime_valid": true,
+  "protected_count": 10410,
+  "protocol_authority": "Owner V5 predecessor prompt retained in conversation and sealed project protocol; no inferred new terms",
+  "scenarios": [
+    {
+      "analysis_sha256": "31777ae88710de0c327a8a80f975e786c1810777a15b0bdca80a06f561e8303f",
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 1005,
+        "last_completed": "2024-12-31"
+      },
+      "completion_receipt": "trading/track2/stage35/final_backtest_v5/audits/RUN_COMPLETION_baseline_v5_r2.json",
+      "completion_receipt_sha256": "ede025244dc87221f2f642a674b0c34fc465feff6e64a7162a056b69cfe725a4",
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/BASELINE_FOUR_ARM_RESULTS/baseline_v5_r2/checkpoints/2024-12-31.json.gz",
+      "last_checkpoint_sha256": "134e0bf4645b95c3930ed64750e14ecdc6e72553e008f10a09b26388295c0df9",
+      "output": "trading/track2/stage35/final_backtest_v5/BASELINE_FOUR_ARM_RESULTS/baseline_v5_r2",
+      "output_hash_mismatches": [],
+      "output_hashes_verified": 1011,
+      "run_receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": false,
+        "elapsed_seconds": 2470.8765880840365,
+        "maximum_ledger_residual": "5.63E-21",
+        "opportunities": 140280,
+        "policy_counts": {
+          "EXPIRED_MODELED_ENTRY_BATCH": 2,
+          "FIRST_ATTEMPT_FILL": 603207,
+          "MISSING_SCHEDULED_ATTEMPT": 212,
+          "POSTPONED_FILL": 166
+        },
+        "sessions": 1005,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "scenario": "baseline",
+      "status": "COMPLETED_VERIFIED",
+      "version": "baseline_v5_r2"
+    },
+    {
+      "analysis_sha256": "eafbf0473b6b817e4aba4fba635716c42137d28effcdf144634acd8b97e676b9",
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 1005,
+        "last_completed": "2024-12-31"
+      },
+      "completion_receipt": "trading/track2/stage35/final_backtest_v5/audits/RUN_COMPLETION_v5_lag_1.json",
+      "completion_receipt_sha256": "10d7e5f4c8f3fdbfac62c4c22c08f79c2879604231903467f05490f83d0c7ac5",
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_lag_1/checkpoints/2024-12-31.json.gz",
+      "last_checkpoint_sha256": "c4da00526f3fc5aaff2b4c28e1260acafb07c2ea8fad6731775b012c10bc6eca",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_lag_1",
+      "output_hash_mismatches": [],
+      "output_hashes_verified": 1011,
+      "run_receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": false,
+        "elapsed_seconds": 4954.335487792036,
+        "maximum_ledger_residual": "3.164E-21",
+        "opportunities": 140280,
+        "policy_counts": {
+          "EXPIRED_MODELED_ENTRY_BATCH": 2,
+          "FIRST_ATTEMPT_FILL": 603814,
+          "MISSING_SCHEDULED_ATTEMPT": 157,
+          "POSTPONED_FILL": 104
+        },
+        "sessions": 1005,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "scenario": "lag_1",
+      "status": "COMPLETED_VERIFIED",
+      "version": "v5_lag_1"
+    },
+    {
+      "analysis_sha256": "7f4c735029c999950b45a4110bcbb027d72f6e580eb5296ec41f91203c7aaaa5",
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 1005,
+        "last_completed": "2024-12-31"
+      },
+      "completion_receipt": "trading/track2/stage35/final_backtest_v5/audits/RUN_COMPLETION_v5_lag_5.json",
+      "completion_receipt_sha256": "82f3327c26e96ae32d52dc920d8396a5df71d338c1fe8468f5eb7deb57eb97d1",
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_lag_5/checkpoints/2024-12-31.json.gz",
+      "last_checkpoint_sha256": "96bba698fe23023d22b9f3854db1e60d9e0c63bab08d4aea2dd2be2e56cda777",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_lag_5",
+      "output_hash_mismatches": [],
+      "output_hashes_verified": 1011,
+      "run_receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": false,
+        "elapsed_seconds": 4966.174377833027,
+        "maximum_ledger_residual": "2.74704E-21",
+        "opportunities": 140280,
+        "policy_counts": {
+          "EXPIRED_MODELED_ENTRY_BATCH": 2,
+          "FIRST_ATTEMPT_FILL": 601014,
+          "MISSING_SCHEDULED_ATTEMPT": 125,
+          "POSTPONED_FILL": 107
+        },
+        "sessions": 1005,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "scenario": "lag_5",
+      "status": "COMPLETED_VERIFIED",
+      "version": "v5_lag_5"
+    },
+    {
+      "analysis_sha256": "d643042dda21a76df61d5c746b0f67e04c5e2d0f583cae804588b4676521786e",
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 1005,
+        "last_completed": "2024-12-31"
+      },
+      "completion_receipt": "trading/track2/stage35/final_backtest_v5/audits/RUN_COMPLETION_v5_spread_1.json",
+      "completion_receipt_sha256": "306fabbe0f07ffd38af18b06fcaecfa645a9813918653ecb3aa1a967db82e545",
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_spread_1/checkpoints/2024-12-31.json.gz",
+      "last_checkpoint_sha256": "623f70ffc648eb5a075c9cb68ffbca528259eabed8fc7ca0a904f1006eb3b0fc",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_spread_1",
+      "output_hash_mismatches": [],
+      "output_hashes_verified": 1011,
+      "run_receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": false,
+        "elapsed_seconds": 5111.798835750204,
+        "maximum_ledger_residual": "5.1E-21",
+        "opportunities": 140280,
+        "policy_counts": {
+          "EXPIRED_MODELED_ENTRY_BATCH": 2,
+          "FIRST_ATTEMPT_FILL": 684942,
+          "MISSING_SCHEDULED_ATTEMPT": 258,
+          "POSTPONED_FILL": 193
+        },
+        "sessions": 1005,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "scenario": "spread_1",
+      "status": "COMPLETED_VERIFIED",
+      "version": "v5_spread_1"
+    },
+    {
+      "analysis_sha256": "07c7749a1d6097ec0c53ab7e490c9b257e09b799fadaddb543fc3f43b0a1a899",
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 1005,
+        "last_completed": "2024-12-31"
+      },
+      "completion_receipt": "trading/track2/stage35/final_backtest_v5/audits/RUN_COMPLETION_v5_spread_15.json",
+      "completion_receipt_sha256": "d9ab916b21dac2a63ebd2cada0eb11825331022c8e61d3495e2232c95cb8ff79",
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_spread_15/checkpoints/2024-12-31.json.gz",
+      "last_checkpoint_sha256": "32b2e9978f69150ccb47876a4e64e89c0307a41c9b6cf81f46379a93ebe42dd8",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_spread_15",
+      "output_hash_mismatches": [],
+      "output_hashes_verified": 1011,
+      "run_receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": false,
+        "elapsed_seconds": 4599.861732874997,
+        "maximum_ledger_residual": "3.4224E-21",
+        "opportunities": 140280,
+        "policy_counts": {
+          "EXPIRED_MODELED_ENTRY_BATCH": 2,
+          "FIRST_ATTEMPT_FILL": 469320,
+          "MISSING_SCHEDULED_ATTEMPT": 149,
+          "POSTPONED_FILL": 128
+        },
+        "sessions": 1005,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "scenario": "spread_15",
+      "status": "COMPLETED_VERIFIED",
+      "version": "v5_spread_15"
+    },
+    {
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 95,
+        "last_completed": "2021-05-19"
+      },
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_impact_1/checkpoints/2021-05-19.json.gz",
+      "last_checkpoint_sha256": "06d1e4aa48ab7336e775f16a2a9d8696725ce32c746f90c787a8829503962e3c",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_impact_1",
+      "scenario": "impact_1",
+      "status": "ACTIVE",
+      "version": "v5_impact_1",
+      "pid": 62148,
+      "process_state": "T",
+      "intentionally_resource_paused": true
+    },
+    {
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 94,
+        "last_completed": "2021-05-18"
+      },
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_impact_15/checkpoints/2021-05-18.json.gz",
+      "last_checkpoint_sha256": "9410fc465b640e37c019592f4dc1f94c542bef9cd1ed134513d09e7dae656aa1",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_impact_15",
+      "scenario": "impact_15",
+      "status": "ACTIVE",
+      "version": "v5_impact_15",
+      "pid": 62151,
+      "process_state": "T",
+      "intentionally_resource_paused": true
+    },
+    {
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 95,
+        "last_completed": "2021-05-19"
+      },
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_fee_0/checkpoints/2021-05-19.json.gz",
+      "last_checkpoint_sha256": "7a3b2f13fcf3756830195a5eac784518d900a9a97d4fd91af8fc962371663246",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_fee_0",
+      "scenario": "fee_0",
+      "status": "ACTIVE",
+      "version": "v5_fee_0",
+      "pid": 62149,
+      "process_state": "T",
+      "intentionally_resource_paused": true
+    },
+    {
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 95,
+        "last_completed": "2021-05-19"
+      },
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_fee_0_01/checkpoints/2021-05-19.json.gz",
+      "last_checkpoint_sha256": "1026f89f295dfebe7c6b063bfc7f60ed8e869fbf6e83a7e116edeaffffd7ad5d",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_fee_0_01",
+      "scenario": "fee_0.01",
+      "status": "ACTIVE",
+      "version": "v5_fee_0_01",
+      "pid": 62150,
+      "process_state": "T",
+      "intentionally_resource_paused": true
+    },
+    {
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 904,
+        "last_completed": "2024-08-07"
+      },
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_minimum_0/checkpoints/2024-08-07.json.gz",
+      "last_checkpoint_sha256": "7c2e84f9debf4a2a2cd7dcac4c13e66d648bc3f35d8dac8be2b0152d7344038d",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_minimum_0",
+      "scenario": "minimum_0",
+      "status": "ACTIVE",
+      "version": "v5_minimum_0",
+      "pid": 63554,
+      "process_state": "R",
+      "intentionally_resource_paused": false
+    },
+    {
+      "analysis_sha256": "2897a1ec70fedfb7f3ffe0b3d2fb9a99394c127e0131cf50d71193015ad16bb8",
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 1005,
+        "last_completed": "2024-12-31"
+      },
+      "completion_receipt": "trading/track2/stage35/final_backtest_v5/audits/RUN_COMPLETION_v5_minimum_2.json",
+      "completion_receipt_sha256": "28cc23f12fc2b064cf377f74b8450e2500b21dc0201216c586dab7ef6f08f4f9",
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_minimum_2/checkpoints/2024-12-31.json.gz",
+      "last_checkpoint_sha256": "b922e1cf86d4003465cd3899f77eab02ff7c809227b2b8ff49340e3d35b36c7c",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_minimum_2",
+      "output_hash_mismatches": [],
+      "output_hashes_verified": 1011,
+      "run_receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": false,
+        "elapsed_seconds": 3505.4370941671077,
+        "maximum_ledger_residual": "3.5167E-21",
+        "opportunities": 140280,
+        "policy_counts": {
+          "FIRST_ATTEMPT_FILL": 356220,
+          "MISSING_SCHEDULED_ATTEMPT": 98,
+          "POSTPONED_FILL": 98
+        },
+        "sessions": 1005,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "scenario": "minimum_2",
+      "status": "COMPLETED_VERIFIED",
+      "version": "v5_minimum_2"
+    },
+    {
+      "analysis_sha256": "926a43512bebb2b879fb22d9237149db390e984c4350bda0cf144f3aa6a5bf31",
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 1005,
+        "last_completed": "2024-12-31"
+      },
+      "completion_receipt": "trading/track2/stage35/final_backtest_v5/audits/RUN_COMPLETION_v5_borrow_0_01.json",
+      "completion_receipt_sha256": "050e5233178c0b7f3641d367341dd699b0f69c31aaf98808a882f2aaf5b4aea4",
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_borrow_0_01/checkpoints/2024-12-31.json.gz",
+      "last_checkpoint_sha256": "9b3fa545035e385c7bf9c8fa2e900e0170ff5672087d2c6b03bdbe3fb53d698e",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_borrow_0_01",
+      "output_hash_mismatches": [],
+      "output_hashes_verified": 1011,
+      "run_receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": false,
+        "elapsed_seconds": 4023.9983840419445,
+        "maximum_ledger_residual": "6.71747E-21",
+        "opportunities": 140280,
+        "policy_counts": {
+          "EXPIRED_MODELED_ENTRY_BATCH": 2,
+          "FIRST_ATTEMPT_FILL": 603045,
+          "MISSING_SCHEDULED_ATTEMPT": 210,
+          "POSTPONED_FILL": 164
+        },
+        "sessions": 1005,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "scenario": "borrow_0.01",
+      "status": "COMPLETED_VERIFIED",
+      "version": "v5_borrow_0_01"
+    },
+    {
+      "analysis_sha256": "7f4aeef564729bbc10f5abe0b7a0951d940fad5a7a4b40da213ebca477486501",
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 1005,
+        "last_completed": "2024-12-31"
+      },
+      "completion_receipt": "trading/track2/stage35/final_backtest_v5/audits/RUN_COMPLETION_v5_borrow_0_05.json",
+      "completion_receipt_sha256": "6554b12a34a90e55ae91ad542f25ac721a0d7a1998cd10fcd7186a836cd5e40d",
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_borrow_0_05/checkpoints/2024-12-31.json.gz",
+      "last_checkpoint_sha256": "f9131dedeac59a65d5341b8a8e9cf32e69cc31b27d023e2323953ec7b98b516f",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_borrow_0_05",
+      "output_hash_mismatches": [],
+      "output_hashes_verified": 1011,
+      "run_receipt": {
+        "V5_POLICY_VARIANT": "V5_NEXT_VALID_OBSERVED_BAR",
+        "accounts": 8,
+        "daily_incomplete_records": 0,
+        "diagnostic": false,
+        "elapsed_seconds": 4027.937471917132,
+        "maximum_ledger_residual": "4.48E-21",
+        "opportunities": 140280,
+        "policy_counts": {
+          "EXPIRED_MODELED_ENTRY_BATCH": 2,
+          "FIRST_ATTEMPT_FILL": 597207,
+          "MISSING_SCHEDULED_ATTEMPT": 210,
+          "POSTPONED_FILL": 165
+        },
+        "sessions": 1005,
+        "terminal_pending_orders": 0,
+        "terminal_unpriced_special": 0,
+        "unresolved": false
+      },
+      "scenario": "borrow_0.05",
+      "status": "COMPLETED_VERIFIED",
+      "version": "v5_borrow_0_05"
+    },
+    {
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 148,
+        "last_completed": "2021-08-04"
+      },
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_funding_0_05/checkpoints/2021-08-04.json.gz",
+      "last_checkpoint_sha256": "b4b4bcaacc49ee545c39ed036ef1eaf6816965264f6619d14458a447e06b7dd9",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_funding_0_05",
+      "scenario": "funding_0.05",
+      "status": "ACTIVE",
+      "version": "v5_funding_0_05",
+      "pid": 65079,
+      "process_state": "R",
+      "intentionally_resource_paused": false
+    },
+    {
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 38,
+        "last_completed": "2021-02-26"
+      },
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_funding_0_10/checkpoints/2021-02-26.json.gz",
+      "last_checkpoint_sha256": "9eac1d19c8a765fab8c42c4331ba197ad19ca5964f7f41b4590feeb8f9f3194b",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_funding_0_10",
+      "scenario": "funding_0.10",
+      "status": "ACTIVE",
+      "version": "v5_funding_0_10",
+      "pid": 65292,
+      "process_state": "R",
+      "intentionally_resource_paused": false
+    },
+    {
+      "checkpoint_checksum_valid": true,
+      "checkpoint_cursor": {
+        "days_completed": 19,
+        "last_completed": "2021-01-29"
+      },
+      "last_checkpoint": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_unknown_yield_0_015/checkpoints/2021-01-29.json.gz",
+      "last_checkpoint_sha256": "486115c651a4d8a410bbf56f8f27159a7625338ee054b68916781a3b7a037a6c",
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_unknown_yield_0_015",
+      "scenario": "unknown_yield_0.015",
+      "status": "ACTIVE",
+      "version": "v5_unknown_yield_0_015",
+      "pid": 65374,
+      "process_state": "R",
+      "intentionally_resource_paused": false
+    },
+    {
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_unknown_yield_0_03",
+      "scenario": "unknown_yield_0.03",
+      "status": "NOT_STARTED",
+      "version": "v5_unknown_yield_0_03"
+    },
+    {
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_cil_postclose_33_30",
+      "scenario": "cil_postclose_33.30",
+      "status": "NOT_STARTED",
+      "version": "v5_cil_postclose_33_30"
+    },
+    {
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_cil_postclose_40_70",
+      "scenario": "cil_postclose_40.70",
+      "status": "NOT_STARTED",
+      "version": "v5_cil_postclose_40_70"
+    },
+    {
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_cil_sessions_1",
+      "scenario": "cil_sessions_1",
+      "status": "NOT_STARTED",
+      "version": "v5_cil_sessions_1"
+    },
+    {
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_cil_sessions_10",
+      "scenario": "cil_sessions_10",
+      "status": "NOT_STARTED",
+      "version": "v5_cil_sessions_10"
+    },
+    {
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_known_mrk_cross_prohibition",
+      "scenario": "known_mrk_cross_prohibition",
+      "status": "NOT_STARTED",
+      "version": "v5_known_mrk_cross_prohibition"
+    },
+    {
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_fixed_borrow_reject_recall",
+      "scenario": "fixed_borrow_reject_recall",
+      "status": "NOT_STARTED",
+      "version": "v5_fixed_borrow_reject_recall"
+    },
+    {
+      "output": "trading/track2/stage35/final_backtest_v5/SENSITIVITY_RESULTS/v5_joint_adverse",
+      "scenario": "joint_adverse",
+      "status": "NOT_STARTED",
+      "version": "v5_joint_adverse"
+    }
+  ],
+  "source_SHA256_and_mtime_valid": true,
+  "source_partition_count": 227,
+  "process_snapshot": {
+    "utc": "2026-11-10T12:47:34.784355+00:00",
+    "owned_v5_processes": [
+      {
+        "pid": 61526,
+        "ppid": 1352,
+        "state": "Ss",
+        "elapsed": "08:09:05",
+        "cpu_percent": "0.0",
+        "rss_KiB": 1360,
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python trading/track2/stage35/final_backtest_v5/audits/EXECUTE_FROZEN_SUITE_V5.py.txt"
+      },
+      {
+        "pid": 62148,
+        "ppid": 61526,
+        "state": "T",
+        "elapsed": "07:25:12",
+        "cpu_percent": "0.0",
+        "rss_KiB": 1136,
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_impact_1 --scenario impact_1"
+      },
+      {
+        "pid": 62149,
+        "ppid": 61526,
+        "state": "T",
+        "elapsed": "07:25:12",
+        "cpu_percent": "0.0",
+        "rss_KiB": 1136,
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_fee_0 --scenario fee_0"
+      },
+      {
+        "pid": 62150,
+        "ppid": 61526,
+        "state": "T",
+        "elapsed": "07:25:12",
+        "cpu_percent": "0.0",
+        "rss_KiB": 1136,
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_fee_0_01 --scenario fee_0.01"
+      },
+      {
+        "pid": 62151,
+        "ppid": 61526,
+        "state": "T",
+        "elapsed": "07:25:12",
+        "cpu_percent": "0.0",
+        "rss_KiB": 1136,
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_impact_15 --scenario impact_15"
+      },
+      {
+        "pid": 62477,
+        "ppid": 1352,
+        "state": "Ss",
+        "elapsed": "07:03:58",
+        "cpu_percent": "0.0",
+        "rss_KiB": 5376,
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python trading/track2/stage35/final_backtest_v5/audits/RESUME_RESOURCE_QUEUE_V5.py.txt"
+      },
+      {
+        "pid": 63554,
+        "ppid": 61526,
+        "state": "R",
+        "elapsed": "05:09:57",
+        "cpu_percent": "94.2",
+        "rss_KiB": 96128,
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_minimum_0 --scenario minimum_0"
+      },
+      {
+        "pid": 65079,
+        "ppid": 61526,
+        "state": "R",
+        "elapsed": "16:28",
+        "cpu_percent": "95.4",
+        "rss_KiB": 86368,
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_funding_0_05 --scenario funding_0.05"
+      },
+      {
+        "pid": 65292,
+        "ppid": 61526,
+        "state": "R",
+        "elapsed": "05:32",
+        "cpu_percent": "94.6",
+        "rss_KiB": 209264,
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_funding_0_10 --scenario funding_0.10"
+      },
+      {
+        "pid": 65374,
+        "ppid": 61526,
+        "state": "R",
+        "elapsed": "03:00",
+        "cpu_percent": "95.8",
+        "rss_KiB": 196448,
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_unknown_yield_0_015 --scenario unknown_yield_0.015"
+      }
+    ],
+    "checkpoint_fields": [
+      "scenarios",
+      "accounts",
+      "policy_counts",
+      "first",
+      "last",
+      "diagnostic",
+      "special",
+      "special_pending",
+      "done_due",
+      "integrals",
+      "last_prices",
+      "known_closes",
+      "known_marks",
+      "known_volumes",
+      "cursor",
+      "days_completed",
+      "opportunities",
+      "issued_counts",
+      "last_nav",
+      "daily_incomplete_count",
+      "ogn_borrow_cursors",
+      "last_completed",
+      "last_market_end",
+      "_v5_producer_code"
+    ],
+    "producer_binding": {
+      "_v5_producer_code": "9e093b3f6a62"
+    },
+    "tracked_diff_stat": ""
+  },
+  "recovery_case": "A_EXISTING_AUTHORIZED_JOB_ACTIVE",
+  "next_safe_action": "Observe existing orchestrator only. Reuse verified completions; no duplicate backtest/pilot/source job; no input/code mutation. Existing resource guard retains its prior scheduling authority.",
+  "complete_study": false,
+  "transport_does_not_prove_process_failure": true,
+  "prechange_branch": "feat/track-a-data-intake",
+  "prechange_HEAD": "8061483cb65d03264a7836b8b882123f67cbe4ad",
+  "counts": {
+    "COMPLETED_VERIFIED": 8,
+    "ACTIVE": 8,
+    "NOT_STARTED": 8
+  }
+}

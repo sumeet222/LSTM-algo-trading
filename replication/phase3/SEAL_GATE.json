@@ -1,0 +1,66 @@
+{
+  "status": "STOP",
+  "authorization_to_unseal": false,
+  "reviewer_context": "fresh accountable Phase3 reviewer /root/phase3_reviewer; root administrative only",
+  "gate_created_utc": "2026-11-03T03:00:23.592083+00:00",
+  "verification_order": "Phase2 manifest external anchor, then all 233 file hashes and exact inventory; stopped at detected mismatch before admitted-source hashing or semantic audit",
+  "external_anchor": {
+    "sha256": "acee4b37613fc905ae2d1b3dd1624a8a19762bd3cdc42086fe6c474911f02410",
+    "provenance": "Prior root shasum tool stdout and assistant final before current Phase3 authorization, relayed by administrative root in conversation. This is retained conversational evidence, not an independent physical isolation guarantee.",
+    "status": "MATCH"
+  },
+  "manifest": {
+    "path": "replication/phase2/PHASE2_FROZEN_MANIFEST.json",
+    "bytes": 152521,
+    "observed_sha256": "acee4b37613fc905ae2d1b3dd1624a8a19762bd3cdc42086fe6c474911f02410",
+    "freeze_utc": "2026-11-03T00:59:03.141263+00:00",
+    "status": "COMPLETE_AND_FROZEN",
+    "scope": "independent MODELING-LAYER replication with audited INHERITED preprocessing",
+    "historical_comparison_performed": false,
+    "manifest_self_excluded": true
+  },
+  "phase2_inventory": {
+    "expected_files": 233,
+    "observed_files_excluding_manifest": 233,
+    "files_hashed": 233,
+    "matching_files": 232,
+    "missing_files": [],
+    "extra_files": [],
+    "mismatches": [
+      {
+        "path": "replication/phase2/.DS_Store",
+        "expected_bytes": 6148,
+        "observed_bytes": 6148,
+        "expected_sha256": "9aac4a413b64844a3421cc8559c0945311e9b54362c9935fde6a5e7464bde046",
+        "observed_sha256": "77ef9beb43df6065b818ee38da6557d23e082637bad735bc6e32c55099181b9a"
+      }
+    ]
+  },
+  "not_performed_after_stop": [
+    "Fresh hashing of 348 admitted pre-2025 sources",
+    "Reconciliation against input_manifest and postrun_input_immutability",
+    "Semantic inspection of prefit/import/postrun/source-transition/recovery/checkpoint receipts",
+    "Unsealing Phase1 or original results",
+    "Independent saved-output metric recomputation",
+    "C0-C6 historical comparisons",
+    "D06-D08 adjudication",
+    "Second-reviewer comparison"
+  ],
+  "access_boundaries": {
+    "original_results_opened": false,
+    "protected_2025_or_2026_market_files_enumerated_read_or_hashed": false,
+    "legacy_helpers_imported_or_executed": false,
+    "fits_refits_calibrations_threshold_fits_or_new_neural_forwards": 0,
+    "git_mutations_fetch_network_install": false,
+    "preexisting_files_modified": false
+  },
+  "disposition": "Manifest anchor valid but its complete frozen payload fails byte identity. User any-mismatch rule requires STOP even for .DS_Store. No claim is made about the cause or scientific impact, or about checks not performed. Do not modify/remove the file, regenerate the manifest, or unseal without explicit new human direction.",
+  "git_state_supplied_by_root": {
+    "branch": "feat/track-a-data-intake",
+    "head": "8061483cb65d03264a7836b8b882123f67cbe4ad",
+    "starting_status": "?? replication/",
+    "remote_fetch": "prohibited and not performed"
+  },
+  "session_report_exception": "Task explicitly permits only new replication/phase3 writes and only gate/blocker on failure. These gate/blocker files serve as the scoped session handoff; no reports/codex_sessions file or full-project static check was created/run.",
+  "verification_command": ".venv/bin/python -B - <<'PY'\nimport hashlib,json\nfrom pathlib import Path\np=Path('replication/phase2/PHASE2_FROZEN_MANIFEST.json')\nm=json.loads(p.read_text())\nprint('manifest_sha256',hashlib.sha256(p.read_bytes()).hexdigest())\nprint('keys',list(m))\nprint('file_count',len(m['files']))\nerrors=[]\nfor item in m['files']:\n f=p.parent/item['path']\n if not f.is_file(): errors.append({'path':item['path'],'error':'missing'}); continue\n data=f.read_bytes(); h=hashlib.sha256(data).hexdigest()\n if len(data)!=item['bytes'] or h!=item['sha256']: errors.append({'path':item['path'],'expected_sha256':item['sha256'],'observed_sha256':h,'expected_bytes':item['bytes'],'observed_bytes':len(data)})\nexpected={x['path'] for x in m['files']}\nactual={str(x.relative_to(p.parent)) for x in p.parent.rglob('*') if x.is_file() and x!=p}\nprint('errors',json.dumps(errors,indent=2))\nprint('extras',sorted(actual-expected)); print('missing_inventory',sorted(expected-actual))\nfor k,v in m.items():\n if k!='files': print(k, str(v)[:1800])\nPY"
+}

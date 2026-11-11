@@ -1,0 +1,14 @@
+.........F....                                                           [100%]
+=================================== FAILURES ===================================
+_____ test_sealed_policy_preserves_all24_arms_populations_and_source_axis ______
+
+    def test_sealed_policy_preserves_all24_arms_populations_and_source_axis():
+        frozen = freeze()
+        assert len(frozen["scenarios"]) == 24
+>       assert frozen["initial_cash_per_account"] == 100000
+E       AssertionError: assert '100000' == 100000
+
+tests/track2_stage35_v5/test_next_valid_execution.py:204: AssertionError
+=========================== short test summary info ============================
+FAILED tests/track2_stage35_v5/test_next_valid_execution.py::test_sealed_policy_preserves_all24_arms_populations_and_source_axis
+1 failed, 13 passed in 20.52s

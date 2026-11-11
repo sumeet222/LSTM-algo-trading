@@ -1,0 +1,30 @@
+{
+    "version": "1.1.414",
+    "time": "1794234944546",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/fallback.py",
+            "severity": "error",
+            "message": "Type \"frozenset[NaTType | date]\" is not assignable to return type \"frozenset[date]\"\n  \"frozenset[NaTType | date]\" is not assignable to \"frozenset[date]\"\n    Type parameter \"_T_co@frozenset\" is covariant, but \"NaTType | date\" is not a subtype of \"date\"\n      Type \"NaTType | date\" is not assignable to type \"date\"\n        \"NaTType\" is not assignable to \"date\"",
+            "range": {
+                "start": {
+                    "line": 31,
+                    "character": 11
+                },
+                "end": {
+                    "line": 31,
+                    "character": 79
+                }
+            },
+            "rule": "reportReturnType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 6,
+        "errorCount": 1,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 1.998
+    }
+}
+

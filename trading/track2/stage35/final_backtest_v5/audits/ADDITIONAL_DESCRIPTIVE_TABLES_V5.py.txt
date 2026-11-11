@@ -1,0 +1,123 @@
+"""Describe sealed run outputs only. No market replay, fitting or Stage6 inference."""
+from pathlib import Path
+from decimal import Decimal
+from collections import defaultdict
+from zoneinfo import ZoneInfo
+from datetime import datetime,timezone
+import csv,gzip,json,time
+import numpy as np
+from lstm_data.trading.track2.stage35.final_backtest_v5.paths import ROOT,digest,publish
+from lstm_data.trading.track2.stage35.final_backtest_v5.checkpoint import read_checkpoint,unseal
+
+start=time.monotonic();master=ROOT/'BACKTEST_RUN_MANIFEST_V5_9e093b3f6a62.json'
+manifest=json.loads(master.read_text());grid=json.loads((ROOT/'BACKTEST_SCENARIO_GRID_V5.json').read_text())
+parameters={s['name']:s for s in grid['scenarios']}
+out=ROOT/'presentation/ADDITIONAL_DESCRIPTIVE_TABLES_V5';out.mkdir(parents=True,exist_ok=False)
+annual=[];holding=[];balances=[];open_holding=[];actual_cash_attribution=[];econ={};sources={};D=Decimal
+ET=ZoneInfo('America/New_York');cost_fields=['commission_cumulative','friction_cumulative','borrow_cumulative','funding_cumulative','dividend_cash_cumulative','proxy_standalone_cumulative']
+
+for run in manifest['runs']:
+ if run['status']!='COMPLETE_RECONCILED':continue
+ name=run['scenario'];folder=Path(run['output'])/name
+ dates=defaultdict(list);duration=defaultdict(list);cash_by_actual=defaultdict(lambda: {"cohorts":0,"cash_attribution_USD":D(0),"commission_USD":D(0),"borrow_USD":D(0),"funding_USD":D(0),"standalone_proxy_USD":D(0)});closed=set();maximum=D(0);count=0
+ with gzip.open(folder/'daily.jsonl.gz','rt') as stream:
+  for line in stream:
+   x=json.loads(line);axis=(x['population'],x['arm']);dates[axis].append(x)
+   residual=D(x['nav'])-(D(x['cash'])+D(x['physical_long_value'])-D(x['physical_short_value'])+D(x['claims'])+D(x['special_value']))
+   maximum=max(maximum,abs(residual));count+=1
+   if abs(residual)>D('1e-8') or x['status']!='OBSERVED':raise ValueError('DAILY_BALANCE_OR_STATUS:'+name)
+ econ[name]={}
+ for axis,rows in dates.items():
+  rows.sort(key=lambda x:x['date'])
+  if len(rows)!=1005 or len({x['date'] for x in rows})!=1005:raise ValueError('MISSING_OR_DUPLICATE_ACCOUNT_DAY:'+name)
+  econ[name][axis]={x['date']:{k:x[k] for k in ['nav','cash','claims','restricted_proceeds','gross','physical','commission_cumulative','friction_cumulative','borrow_cumulative','funding_cumulative']} for x in rows}
+  previous={k:D(0) for k in cost_fields}
+  for year in [2021,2022,2023,2024]:
+   part=[x for x in rows if int(x['date'][:4])==year];last=part[-1]
+   row={'scenario':name,'population':axis[0],'arm':axis[1],'year':year,'sessions':len(part)}
+   row.update({k+'_annual_USD':str(D(last[k])-previous[k]) for k in cost_fields})
+   previous={k:D(last[k]) for k in cost_fields}
+   valid=[x for x in part if D(x['nav'])>0]
+   row['positive_NAV_ratio_observations']=len(valid);row['undefined_ratio_days']=len(part)-len(valid)
+   for field,label in [('gross','virtual_gross_NAV'),('marked_net','signed_physical_net_NAV'),('own_cash','available_own_cash_NAV')]:
+    vals=[D(x[field])/D(x['nav']) for x in valid]
+    row['mean_'+label]=str(sum(vals,D(0))/len(vals)) if vals else None
+   physical=[(D(x['physical_long_value'])+D(x['physical_short_value']))/D(x['nav']) for x in valid]
+   row['mean_physical_gross_NAV']=str(sum(physical,D(0))/len(physical)) if physical else None
+   row['ending_claims_USD']=last['claims'];row['ending_special_value_USD']=last['special_value'];row['ending_pending_orders']=last['pending_orders']
+   friction=D(row['friction_cumulative_annual_USD']);spread=D(parameters[name]['spread']);impact=D(parameters[name]['impact'])
+   row['allocated_modeled_spread_USD']=str(friction*spread/(spread+impact)) if spread+impact else None
+   row['allocated_modeled_impact_USD']=str(friction*impact/(spread+impact)) if spread+impact else None
+   annual.append(row)
+ balances.append({'scenario':name,'account_days':count,'maximum_daily_NAV_identity_residual_USD':str(maximum),'threshold_USD':'1e-8','passed':maximum<=D('1e-8')})
+ def observe(x,source):
+  axis=(x['population'],x['arm']);key=(*axis,x['key'])
+  if key in closed:return
+  closed.add(key)
+  if x.get('entry_at') is None:return
+  if x.get('exit_at') is None or D(str(x.get('quantity',0)))!=0:
+   open_holding.append({'scenario':name,'population':axis[0],'arm':axis[1],'key':x['key'],'status':'NO_COMPLETED_EXIT_OPEN_SHARES_OR_TIMESTAMP_MISSING','remaining_shares':str(x.get('quantity',0)),'last_exit_at':x.get('exit_at'),'source':source});return
+  enter=int(x['entry_at']);exit=int(x['exit_at']);minutes=exit-enter
+  if minutes<0:raise ValueError('EXIT_BEFORE_ENTRY:'+name)
+  actual=datetime.fromtimestamp(exit*60,timezone.utc).astimezone(ET).date()!=datetime.fromtimestamp(enter*60,timezone.utc).astimezone(ET).date()
+  nominal=datetime.fromtimestamp(int(x['endpoint'])*60,timezone.utc).astimezone(ET).date()!=datetime.fromtimestamp(int(x['origin'])*60,timezone.utc).astimezone(ET).date()
+  slot=datetime.fromtimestamp(int(x['origin'])*60,timezone.utc).astimezone(ET).strftime('%H:%M')
+  for category in ['ALL','ACTUAL_OVERNIGHT_'+str(actual),'NOMINAL_OVERNIGHT_'+str(nominal),'ORIGIN_'+slot]:duration[(*axis,category)].append(minutes)
+  a=cash_by_actual[(*axis,'ACTUAL_OVERNIGHT_'+str(actual))];a['cohorts']+=1
+  for field,source_field in [('cash_attribution_USD','cash_pnl' if source=='closed_cash_cohort' else 'cash'),('commission_USD','fees'),('borrow_USD','borrow'),('funding_USD','funding'),('standalone_proxy_USD','proxy_standalone' if source=='closed_cash_cohort' else 'proxy')]:a[field]+=D(str(x.get(source_field,0)))
+ with gzip.open(folder/'cohorts.jsonl.gz','rt') as stream:
+  for line in stream:observe(json.loads(line),'closed_cash_cohort')
+ terminal=folder/'terminal_lots.jsonl.gz'
+ if terminal.exists():
+  cp=Path(run['output'])/'checkpoints/2024-12-31.json.gz'
+  state=unseal(read_checkpoint(cp))
+  if state['_v5_producer_code']!=manifest['code']:raise ValueError('TERMINAL_CHECKPOINT_PRODUCER')
+  sources[str(cp)]=digest(cp)
+  for account in state['accounts']:
+   for lot in account.lots.values():
+    observe({'population':account.population,'arm':account.arm,**vars(lot)},'terminal_typed_checkpoint_exact_exit_or_open_state')
+ elif any(rows[-1]['outstanding_lots'] for rows in dates.values()):
+  raise ValueError('MISSING_NONFLAT_TERMINAL_LOT_EXPORT:'+name)
+ for axis,values in cash_by_actual.items():actual_cash_attribution.append({'scenario':name,'population':axis[0],'arm':axis[1],'actual_holding_class':axis[2],**{k:str(v) if isinstance(v,D) else v for k,v in values.items()},'unpaid_claims_included':False})
+ for axis,values in duration.items():
+  arr=np.array(values,dtype=np.int64)
+  holding.append({'scenario':name,'population':axis[0],'arm':axis[1],'category':axis[2],'count':len(values),'holding_wall_minutes_min':int(arr.min()),'median':float(np.median(arr)),'p95':float(np.percentile(arr,95)),'max':int(arr.max()),'independent_sample_claim':False})
+ for p in [folder/'daily.jsonl.gz',folder/'cohorts.jsonl.gz',folder/'terminal_lots.jsonl.gz']:
+  if p.exists():sources[str(p)]=digest(p)
+
+checks=[]
+for left,right,condition in [('spread_1','impact_1','same combined adverse price adjustment and all other execution inputs'),('baseline','funding_0.05','zero actual negative-cash funding accrual'),('baseline','funding_0.10','zero actual negative-cash funding accrual'),('baseline','unknown_yield_0.015','standalone proxy excluded from spending capital and funded NAV'),('baseline','unknown_yield_0.03','standalone proxy excluded from spending capital and funded NAV')]:
+ if left not in econ or right not in econ:checks.append({'left':left,'right':right,'status':'NOT_TESTED_MISSING_COMPLETED_CASE'});continue
+ if right.startswith('funding') and any(D(x['funding_cumulative'])!=0 for a in econ[right].values() for x in a.values()):
+  checks.append({'left':left,'right':right,'status':'NOT_APPLICABLE_NONZERO_FUNDING'});continue
+ differences=[]
+ for axis,days in econ[left].items():
+  for date,fields in days.items():
+   for k,v in fields.items():
+    other=econ[right][axis][date][k]
+    same=v==other if k=='physical' else abs(D(v)-D(other))<=D('1e-8')
+    if not same:differences.append({'account':axis,'date':date,'field':k,'left':v,'right':other})
+ checks.append({'left':left,'right':right,'condition':condition,'status':'PASS' if not differences else 'HOLD','difference_count':len(differences),'first_differences':differences[:3]})
+
+def table(name,rows):
+ rows=[{'V5_POLICY_VARIANT':'V5_NEXT_VALID_OBSERVED_BAR',**row} for row in rows]
+ rows=sorted(rows,key=lambda r:tuple(str(r.get(k,'')) for k in ['scenario','population','arm','year','category','key']))
+ keys=list(dict.fromkeys(k for row in rows for k in row))
+ with (out/name).open('w',newline='') as stream:
+  w=csv.DictWriter(stream,fieldnames=keys);w.writeheader();w.writerows(rows)
+
+table('ACTUAL_OVERNIGHT_CASH_ATTRIBUTION.csv',actual_cash_attribution);table('ANNUAL_COSTS_AND_EXPOSURES.csv',annual);table('ACTUAL_ECONOMIC_HOLDING_TIMES.csv',holding);table('OPEN_HOLDING_TIME_EXCEPTIONS.csv',open_holding)
+publish(out/'DAILY_BALANCE_AND_EQUIVALENCE_CHECKS.json',{'daily_balances':balances,'equivalence_checks':checks,'Stage6_independent_audit':False,'no_new_market_or_portfolio_replay':True})
+(out/'METHODS.md').write_text('''# Additional descriptive tables
+
+These are read-only transformations of sealed official run outputs, not new strategy experiments or an independent Stage 6 audit. No parameter is fitted or chosen from returns.
+
+Annual costs are differences of exact cumulative USD ledger amounts, not repeatedly summed cumulative balances. Available cash and physical/virtual exposure ratios are means over positive-NAV session observations. Signed dividend cash is distinct from the standalone unverified-yield adjustment. The spread/impact columns proportionally allocate the already charged total rounded modeled friction using declared bps: they sum to that same friction and are not two additional charges or measured NBBO components. Cent/tick rounding is allocated in the same proportion.
+
+Holding times use actual first modeled entry and final exit epoch minutes, including nights/weekends. Actual overnight means different America/New_York calendar dates. Nominal overnight is classified independently using original forecast origin/endpoint. These labels must not be silently interchanged. No-entry records are not trades. Priced terminal claims are retained. Their exact exit timestamp is read from the already sealed typed ending checkpoint because the compact terminal CSV/JSON export omits that field; no timestamp is inferred. A genuine remaining share position or lot without an exit is explicitly listed rather than receiving a fabricated exit. An absent optional terminal export is accepted only when ending daily records confirm zero outstanding lots. Quantiles are descriptive, not independent sampling statements. Actual overnight cash attribution groups the same completed stock holding intervals; it excludes any terminal unpaid ordinary/special claim values, which remain separately in terminal account/claim exports and the official full attribution. Cash amounts are not a second ledger booking. Standalone proxy is shown separately and is not factual dividend cash.
+
+Daily identity: NAV = cash (restricted proceeds included once) + physical long value − physical short liability + signed ordinary claims + special-action assets/liabilities. Fees/borrow/funding already debited in cash are not deducted a second time. Checks retain the 1e-8 USD threshold. Cross-scenario equivalences are mechanical implementation checks for identical economic parameters, not superiority or significance tests. Strict V4 remains financially NOT_COMPARABLE because of unresolved exact-minute orders.
+''')
+publish(out/'PROVENANCE.json',{'master':str(master),'master_sha256':digest(master),'inputs':sources,'elapsed_seconds':time.monotonic()-start,'files':{str(p):digest(p) for p in out.iterdir() if p.is_file()}})
+if any(c['status']=='HOLD' for c in checks):raise ValueError('CROSS_SCENARIO_MECHANICAL_EQUIVALENCE_HOLD')
+print('Descriptive supplement complete:',len(balances),'completed scenarios;',len(holding),'holding summaries;',len(open_holding),'unclosed holding records.')

@@ -1,0 +1,260 @@
+{
+  "provenance": "FABRICATED_PRICES_ONLY_NO_HISTORICAL_ECONOMICS",
+  "cash": "100696.500",
+  "restricted_proceeds_subset": "659.340",
+  "nav": "100036.500",
+  "lots": [
+    {
+      "cohort": {
+        "cohort_id": "a",
+        "ticker": "AAPL",
+        "requested": 10,
+        "budget": 1000,
+        "origin": "2024-01-08 15:30:00+00:00",
+        "endpoint": "2024-01-08 19:33:00+00:00",
+        "entry_deadline": "2024-01-08 15:40:00+00:00",
+        "basis": "RAW_UNADJUSTED",
+        "provenance": [
+          "FABRICATED_ONLY"
+        ],
+        "status": "CREATED",
+        "shares": 0,
+        "entered": 0,
+        "entry_at": null,
+        "entry_price": null,
+        "exit_at": null,
+        "exit_price": null,
+        "planned_exit_order_at": null,
+        "events": []
+      },
+      "quantity": "0",
+      "basis": "0",
+      "cash": "96.500",
+      "realized": "96.500",
+      "nontrade_cash": "0",
+      "accrual": "0",
+      "pending": "0",
+      "unit_factor": "1",
+      "closed": true
+    },
+    {
+      "cohort": {
+        "cohort_id": "b",
+        "ticker": "AAPL",
+        "requested": -6,
+        "budget": 600,
+        "origin": "2024-01-08 15:30:00+00:00",
+        "endpoint": "2024-01-08 19:33:00+00:00",
+        "entry_deadline": "2024-01-08 15:40:00+00:00",
+        "basis": "RAW_UNADJUSTED",
+        "provenance": [
+          "FABRICATED_ONLY"
+        ],
+        "status": "CREATED",
+        "shares": 0,
+        "entered": 0,
+        "entry_at": null,
+        "entry_price": null,
+        "exit_at": null,
+        "exit_price": null,
+        "planned_exit_order_at": null,
+        "events": []
+      },
+      "quantity": "-6",
+      "basis": "100",
+      "cash": "600",
+      "realized": "0",
+      "nontrade_cash": "0",
+      "accrual": "0",
+      "pending": "0",
+      "unit_factor": "1",
+      "closed": false
+    }
+  ],
+  "physical": [
+    {
+      "ticker": "AAPL",
+      "quantity": "-6",
+      "basis": "109.890",
+      "realized": "37.160",
+      "borrow_asof": "2024-01-08 19:36:00+00:00"
+    }
+  ],
+  "journal": [
+    {
+      "journal_id": "mark",
+      "event_time": "2024-01-08 15:32:00+00:00",
+      "observation_time": "2024-01-08 15:32:00+00:00",
+      "available_at": "2024-01-08 15:32:00+00:00",
+      "processed_at": "2024-01-08 15:32:00+00:00",
+      "cause": "MARK_READY",
+      "ticker": "AAPL",
+      "currency": "USD",
+      "basis": "RAW_UNADJUSTED",
+      "legs": [],
+      "amount": "0",
+      "before": "4aa2e25ba0a54827797eac752fec2552e8141ecb8d7b194036860e4b68a2d7fc",
+      "after": "5ec13a2ad5ba0239ea083dabb44473ee1a9dafcfc1de9b6f53217783a6ba5d45",
+      "reference": {
+        "at": "2024-01-08 15:32:00+00:00",
+        "available_at": "2024-01-08 15:32:00+00:00",
+        "value": "100",
+        "source_id": "FABRICATED_GOLDEN_V2",
+        "basis": "RAW_UNADJUSTED",
+        "kind": "SYNTHETIC",
+        "completed_at": null
+      },
+      "details": []
+    },
+    {
+      "journal_id": "reserve",
+      "event_time": "2024-01-08 15:32:00+00:00",
+      "observation_time": "2024-01-08 15:32:00+00:00",
+      "available_at": "2024-01-08 15:32:00+00:00",
+      "processed_at": "2024-01-08 15:32:00+00:00",
+      "cause": "RESERVE",
+      "ticker": "MULTI",
+      "currency": "USD",
+      "basis": "RAW_UNADJUSTED",
+      "legs": [],
+      "amount": "0",
+      "before": "5ec13a2ad5ba0239ea083dabb44473ee1a9dafcfc1de9b6f53217783a6ba5d45",
+      "after": "226558c7a3b67dbd8c983c97fa593969761ac2a92b6523cc28a2422f9a97aa97",
+      "reference": {
+        "at": "2024-01-08 15:32:00+00:00",
+        "available_at": "2024-01-08 15:32:00+00:00",
+        "value": "100",
+        "source_id": "FABRICATED_GOLDEN_V2",
+        "basis": "RAW_UNADJUSTED",
+        "kind": "SYNTHETIC",
+        "completed_at": null
+      },
+      "details": [
+        [
+          "definitions",
+          "(Cohort(cohort_id='a', ticker='AAPL', requested=10, budget=1000, origin=datetime.datetime(2024, 1, 8, 15, 30, tzinfo=datetime.timezone.utc), endpoint=datetime.datetime(2024, 1, 8, 19, 33, tzinfo=datetime.timezone.utc), entry_deadline=datetime.datetime(2024, 1, 8, 15, 40, tzinfo=datetime.timezone.utc), basis='RAW_UNADJUSTED', provenance=('FABRICATED_ONLY',), status='CREATED', shares=0, entered=0, entry_at=None, entry_price=None, exit_at=None, exit_price=None, planned_exit_order_at=None, events=()), Cohort(cohort_id='b', ticker='AAPL', requested=-6, budget=600, origin=datetime.datetime(2024, 1, 8, 15, 30, tzinfo=datetime.timezone.utc), endpoint=datetime.datetime(2024, 1, 8, 19, 33, tzinfo=datetime.timezone.utc), entry_deadline=datetime.datetime(2024, 1, 8, 15, 40, tzinfo=datetime.timezone.utc), basis='RAW_UNADJUSTED', provenance=('FABRICATED_ONLY',), status='CREATED', shares=0, entered=0, entry_at=None, entry_price=None, exit_at=None, exit_price=None, planned_exit_order_at=None, events=()))"
+        ],
+        [
+          "borrow_evidence",
+          "BorrowEvidence(state=<BorrowState.CONDITIONAL_SCENARIO: 'CONDITIONAL_SCENARIO'>, available_at=datetime.datetime(2024, 1, 8, 15, 32, tzinfo=datetime.timezone.utc), evidence_id='FABRICATED', annual_rate=Decimal('0.02'), reviewer_kind='SYNTHETIC_FIXTURE', ticker='*', max_shares=None, valid_until=None)"
+        ]
+      ]
+    },
+    {
+      "journal_id": "open:2024-01-08T15:33:00+00:00",
+      "event_time": "2024-01-08 15:33:00+00:00",
+      "observation_time": "2024-01-08 15:34:00+00:00",
+      "available_at": "2024-01-08 15:35:00+00:00",
+      "processed_at": "2024-01-08 15:35:00+00:00",
+      "cause": "OBSERVED_FILL",
+      "ticker": "AAPL",
+      "currency": "USD",
+      "basis": "RAW_UNADJUSTED",
+      "legs": [
+        {
+          "cohort_id": "a",
+          "quantity": "6",
+          "price": "100",
+          "fee": "0",
+          "internal": true
+        },
+        {
+          "cohort_id": "b",
+          "quantity": "-6",
+          "price": "100",
+          "fee": "0",
+          "internal": true
+        },
+        {
+          "cohort_id": "a",
+          "quantity": "4",
+          "price": "100.100",
+          "fee": "1",
+          "internal": false
+        }
+      ],
+      "amount": "-401.400",
+      "before": "226558c7a3b67dbd8c983c97fa593969761ac2a92b6523cc28a2422f9a97aa97",
+      "after": "de616f7fd91ef67fba92fe21221fd4bc1d6692971ce46ce1f9724c192d7837e7",
+      "reference": {
+        "at": "2024-01-08 15:33:00+00:00",
+        "available_at": "2024-01-08 15:35:00+00:00",
+        "value": "100",
+        "source_id": "FABRICATED_BAR",
+        "basis": "RAW_UNADJUSTED",
+        "kind": "SYNTHETIC",
+        "completed_at": "2024-01-08 15:34:00+00:00"
+      },
+      "details": [
+        [
+          "submitted_at",
+          "2024-01-08T15:32:00+00:00"
+        ],
+        [
+          "transfer",
+          "EX_POST_RAW_OPEN_NOT_PRETRADE_QUOTE"
+        ],
+        [
+          "account",
+          "account"
+        ],
+        [
+          "arm",
+          "S2C_RISK"
+        ]
+      ]
+    },
+    {
+      "journal_id": "old_long_close:2024-01-08T19:36:00+00:00",
+      "event_time": "2024-01-08 19:36:00+00:00",
+      "observation_time": "2024-01-08 19:37:00+00:00",
+      "available_at": "2024-01-08 19:38:00+00:00",
+      "processed_at": "2024-01-08 19:38:00+00:00",
+      "cause": "OBSERVED_FILL",
+      "ticker": "AAPL",
+      "currency": "USD",
+      "basis": "RAW_UNADJUSTED",
+      "legs": [
+        {
+          "cohort_id": "a",
+          "quantity": "-10",
+          "price": "109.890",
+          "fee": "1",
+          "internal": false
+        }
+      ],
+      "amount": "1097.900",
+      "before": "de616f7fd91ef67fba92fe21221fd4bc1d6692971ce46ce1f9724c192d7837e7",
+      "after": "d3a6fd46f26ee6567612d42128ece35f36b3b28e0259be7648df7b30622bbf33",
+      "reference": {
+        "at": "2024-01-08 19:36:00+00:00",
+        "available_at": "2024-01-08 19:38:00+00:00",
+        "value": "110",
+        "source_id": "FABRICATED_BAR_2",
+        "basis": "RAW_UNADJUSTED",
+        "kind": "SYNTHETIC",
+        "completed_at": "2024-01-08 19:37:00+00:00"
+      },
+      "details": [
+        [
+          "submitted_at",
+          "2024-01-08T19:35:00+00:00"
+        ],
+        [
+          "transfer",
+          "EX_POST_RAW_OPEN_NOT_PRETRADE_QUOTE"
+        ],
+        [
+          "account",
+          "account"
+        ],
+        [
+          "arm",
+          "S2C_RISK"
+        ]
+      ]
+    }
+  ],
+  "digest": "d3a6fd46f26ee6567612d42128ece35f36b3b28e0259be7648df7b30622bbf33",
+  "adjacent_hashes_pass": true
+}

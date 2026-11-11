@@ -1,0 +1,77 @@
+{
+  "code": {
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/__init__.py": "d21d06e42ca01d5ebdada1626ef739ba355e29c714abfed5b8438bc8ccc75cfb",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/analysis.py": "cfb9a4b0bf729ca192ae9a607202644e6b444fc277da4c4ce033c99bfd9c1b6c",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py": "8dd61466bd0ea64a1c6f40c76187181c8124a9211e0bda849486b21a1709223e",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/certification.py": "75ad0f3b9ef020b8fc92631ae95e7c189146e2434af415b0f13eaa9ed824005a",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/checkpoint.py": "642fba831b834838306ee052ac9b9b9ae4d6e00baaeded2963f3712acefbccfd",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py": "7990d5c044904ea3b10bbecb5faff3295321c6188763b47039d3c44c667a5e9a",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/execution_calendar.py": "60e4546b291de37c604dcc72a21d9c3197d0c89b8fb84bb93bfdbfbeb302b377",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/gap_sources.py": "9c473b6a8753b30e02edc1ab1571c59f8f9c03c2361398276f1cd8cf710df613",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py": "f89b723d99c9bb726cc82d5647da4334cc50625e855a07ef5fd369f26f0f9703",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/paths.py": "06afcc3d65a12189a7133c092a9f1655494c5a8249162a008fc1d80cff8d0e98",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py": "11a6e5cd1d44957097a8533b4c20837a87e06c01f9f360fb6378227a90064a06",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py": "4731548f4f6cda6fe48721b35182c2d4edaa0246b7ab0be5cbaf3d04509eb566",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py": "268057b12d987b6e39e0854ad89269dc241491103e2bb92cb2904540e5f15aea",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/run.py": "a8305364b072e159359e73e55533f60f7c3dfa0bb3055915ef6ed60115914a93",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/sources.py": "3b255cca32bd4e0ce96d97fc0abcf9fd85482b017456c67826a1f9c186d87a20",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py": "11f2c220652350a6c048468939b4ab2c4bfe55b988202efe83b7fa803aefd079",
+    "tests/track2_stage35_v4/test_gap_source_contract.py": "a397b5b914132b2e0ca7ecd242b5b9bb2afdd44a7280f50abd05acb27d205690",
+    "tests/track2_stage35_v4/test_replay_engine.py": "8758dd6051e4f213bc3debc17c12267eebe0f1b564e3b8dc3e9803c6ce0a5bb0",
+    "tests/track2_stage35_v4/test_special_and_book.py": "c0a147abc430fa234d399450f1a94e3ec686a5182789eb5b1d6211d718670566"
+  },
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "src/lstm_data/trading/track2/stage35/final_backtest_v4",
+        "tests/track2_stage35_v4",
+        "--select",
+        "E,F,I"
+      ],
+      "domain": "ruff",
+      "path": "trading/track2/stage35/final_backtest_v4/audits/0678923babf3_CERTIFIED_RUFF.txt",
+      "returncode": 0,
+      "seconds": 0.01690645795315504,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "command": [
+        ".venv/bin/pyright",
+        "src/lstm_data/trading/track2/stage35/final_backtest_v4",
+        "tests/track2_stage35_v4",
+        "--pythonpath",
+        ".venv/bin/python",
+        "--outputjson"
+      ],
+      "domain": "owned_types",
+      "path": "trading/track2/stage35/final_backtest_v4/audits/0678923babf3_CERTIFIED_OWNED_TYPES.json",
+      "returncode": 0,
+      "seconds": 6.345769834006205,
+      "sha256": "5748d8e2868634e4d7a750caa0e409de27bed6a2c5d2df64997c5aab84d0c844"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/track2_stage012",
+        "tests/track2_stage35",
+        "tests/track2_stage35_completion_v2",
+        "tests/track2_stage35_completion_v3",
+        "tests/track2_stage35_v4",
+        "tests/test_hf20_s2c_ca.py",
+        "tests/test_hf20_mag_c3_io.py",
+        "-q"
+      ],
+      "domain": "pytest",
+      "path": "trading/track2/stage35/final_backtest_v4/audits/0678923babf3_CERTIFIED_PYTEST.txt",
+      "returncode": 0,
+      "seconds": 64.91215608408675,
+      "sha256": "47bace26a38daa24ac36c74774ea9c8c90224986e230db3dd8b7ca163ece9958"
+    }
+  ],
+  "new_owned_type_errors": 0,
+  "new_owned_warnings": 0
+}

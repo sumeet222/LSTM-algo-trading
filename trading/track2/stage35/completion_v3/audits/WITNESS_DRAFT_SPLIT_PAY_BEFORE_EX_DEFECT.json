@@ -1,0 +1,397 @@
+{
+  "action_inventory_sha256": "58122842c19dc64fc46ed692fe6cf886c0cc36a1469170cea32b3a6b0fae388b",
+  "books": [
+    {
+      "claim_cash_only": "1.00",
+      "claims": [],
+      "journal": [
+        {
+          "after": "7b4d698e70cdd67ff63023f5211feaa03a9a476a5019793607dc4ac9bb51a34e",
+          "assumption_rule_id": ";RETROSPECTIVE_DATE_ONLY_EVENT_AVAILABILITY",
+          "available_at": "2024-05-10 04:00:00+00:00",
+          "before": "0626138a86e07eed31864bbd8034c4067388ef0ec30be5ed2d2803b288da7947",
+          "effective_at": "2024-05-10 04:00:00+00:00",
+          "event_id": "CA3:2b15fea9ed379953ba5d35a4:EFFECTIVE",
+          "kind": "CASH_DIVIDEND",
+          "payload_hash": "d378c3b9ba00a087bcc5fa38a703938c9b8f5db33c2d4b794cdeb6319dad52c0",
+          "posted_at": "2024-05-10 04:00:00+00:00",
+          "source_hash": "d378c3b9ba00a087bcc5fa38a703938c9b8f5db33c2d4b794cdeb6319dad52c0",
+          "truth": "VERIFIED_PRIMARY"
+        },
+        {
+          "after": "6d488758befd397c3c3e719982b83492080cddcedc73b8d11265d8db88d7b096",
+          "assumption_rule_id": ";RETROSPECTIVE_DATE_ONLY_EVENT_AVAILABILITY",
+          "available_at": "2024-05-16 04:00:00+00:00",
+          "before": "7b4d698e70cdd67ff63023f5211feaa03a9a476a5019793607dc4ac9bb51a34e",
+          "effective_at": "2024-05-16 04:00:00+00:00",
+          "event_id": "CA3:2b15fea9ed379953ba5d35a4:PAY",
+          "kind": "CASH_SETTLEMENT",
+          "payload_hash": "de973f23aa808b621856a919b064632cf8b6e0d6bab92a50d48b36f82ad816b5",
+          "posted_at": "2024-05-16 04:00:00+00:00",
+          "source_hash": "49d28cccb8668dfbf22ab78e77e135069240b4bce9a8e907534d304f7e51c17a",
+          "truth": "VERIFIED_PRIMARY"
+        }
+      ],
+      "mode": "SYNTHETIC_ENDOWED_SHARES_NO_TRADES",
+      "physical_share_sum": "4",
+      "settled_claims": [
+        {
+          "asset": "USD",
+          "assumption_rule_id": ";RETROSPECTIVE_DATE_ONLY_EVENT_AVAILABILITY",
+          "due_at": "2024-05-16 04:00:00+00:00",
+          "event_id": "CA3:2b15fea9ed379953ba5d35a4",
+          "lot_id": "endowed_long",
+          "signed_amount": "2.50",
+          "source_hash": "d378c3b9ba00a087bcc5fa38a703938c9b8f5db33c2d4b794cdeb6319dad52c0",
+          "symbol": "AAPL",
+          "truth": "VERIFIED_PRIMARY"
+        },
+        {
+          "asset": "USD",
+          "assumption_rule_id": ";RETROSPECTIVE_DATE_ONLY_EVENT_AVAILABILITY",
+          "due_at": "2024-05-16 04:00:00+00:00",
+          "event_id": "CA3:2b15fea9ed379953ba5d35a4",
+          "lot_id": "endowed_short",
+          "signed_amount": "-1.50",
+          "source_hash": "d378c3b9ba00a087bcc5fa38a703938c9b8f5db33c2d4b794cdeb6319dad52c0",
+          "symbol": "AAPL",
+          "truth": "VERIFIED_PRIMARY"
+        }
+      ],
+      "shares": [
+        {
+          "lot_id": "endowed_long",
+          "pending_unsubmitted": "0",
+          "shares": "10",
+          "symbol": "AAPL"
+        },
+        {
+          "lot_id": "endowed_short",
+          "pending_unsubmitted": "0",
+          "shares": "-6",
+          "symbol": "AAPL"
+        }
+      ],
+      "source_action": {
+        "accrual_rule": "SIGNED_SHARES_HELD_IMMEDIATELY_BEFORE_EX_DATE",
+        "action_type": "CASH_DIVIDEND",
+        "amount_per_share_raw_basis": "0.25",
+        "assumption_params": [],
+        "assumption_rule_id": "",
+        "confidence": "OBSERVED_NOT_PIT_CERTIFIED",
+        "currency": "USD",
+        "declared_at": "2024-05-02",
+        "disagreements": [],
+        "economic_basis": "RAW_COMMON_SHARE",
+        "effect_on_books": "EX_ACCRUAL_PAY_CASH_ONCE",
+        "effective_date": null,
+        "event_id": "CA3:2b15fea9ed379953ba5d35a4",
+        "ex_date": "2024-05-10",
+        "inferred_fields": [],
+        "original_payload_sha256": [
+          "b96c68c153c0387993585e5b0e6325574e86938f6ee67db6ceba2b889d8cca13",
+          "0f4454ab7821c1a729dd01b3cc88e3feca75b1a8a70454410f265245b4dd29eb",
+          "79c896b9fb39f1150a4b2b2afefe380f204640bf5656e2068699bb74040e84a5"
+        ],
+        "payable_date": "2024-05-16",
+        "proof_of_no_dividend_if_asserted": "",
+        "publication_available_at_or_unknown": null,
+        "record_date": "2024-05-13",
+        "security_id": "",
+        "source_refs": [
+          {
+            "endpoint": "https://investor.apple.com/dividend-history/default.aspx",
+            "locator": "Regular Cash table row 11",
+            "payload_sha256": "b96c68c153c0387993585e5b0e6325574e86938f6ee67db6ceba2b889d8cca13",
+            "priority": 1,
+            "published_date": null,
+            "retrieved_at": "2026-11-09T14:10:54.283675+00:00",
+            "source_id": "APPLE_ISSUER:boundary_apple_history"
+          },
+          {
+            "endpoint": "https://api.nasdaq.com/api/quote/AAPL/dividends",
+            "locator": "data.dividends.rows[10]",
+            "payload_sha256": "0f4454ab7821c1a729dd01b3cc88e3feca75b1a8a70454410f265245b4dd29eb",
+            "priority": 20,
+            "published_date": null,
+            "retrieved_at": "2026-11-09T14:04:39.163419+00:00",
+            "source_id": "NASDAQ:network_v2_nasdaq_probe"
+          },
+          {
+            "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+            "locator": "corporate_actions.cash_dividends[13]",
+            "payload_sha256": "79c896b9fb39f1150a4b2b2afefe380f204640bf5656e2068699bb74040e84a5",
+            "priority": 30,
+            "published_date": null,
+            "retrieved_at": "2026-11-09T14:04:38.808437+00:00",
+            "source_id": "ALPACA:network_v2_alpaca_0"
+          }
+        ],
+        "source_replay_receipt": "RETROSPECTIVE_COLLECTION;SIMULATED_AVAILABILITY_MUST_BE_SEPARATE",
+        "special": false,
+        "spinoff_distribution_terms": "",
+        "split_ratio_new_old": null,
+        "status": "VERIFIED_PRIMARY",
+        "sub_type": "ISSUER_REGULAR_CASH_NO_EXDATE",
+        "symbol": "AAPL"
+      },
+      "unresolved": []
+    },
+    {
+      "claim_cash_only": "0",
+      "claims": [],
+      "journal": [],
+      "mode": "SYNTHETIC_ENDOWED_SHARES_NO_TRADES",
+      "physical_share_sum": "4",
+      "settled_claims": [],
+      "shares": [
+        {
+          "lot_id": "endowed_long",
+          "pending_unsubmitted": "0",
+          "shares": "10",
+          "symbol": "TSLA"
+        },
+        {
+          "lot_id": "endowed_short",
+          "pending_unsubmitted": "0",
+          "shares": "-6",
+          "symbol": "TSLA"
+        }
+      ],
+      "source_action": {
+        "accrual_rule": "SIGNED_SHARES_HELD_IMMEDIATELY_BEFORE_EX_DATE",
+        "action_type": "SPLIT",
+        "amount_per_share_raw_basis": null,
+        "assumption_params": [],
+        "assumption_rule_id": "",
+        "confidence": "OBSERVED_NOT_PIT_CERTIFIED",
+        "currency": "USD",
+        "declared_at": null,
+        "disagreements": [],
+        "economic_basis": "RAW_COMMON_SHARE",
+        "effect_on_books": "EX_ACCRUAL_PAY_CASH_ONCE",
+        "effective_date": "2022-08-25",
+        "event_id": "CA3:fb6cdb99decad8712f8b0f13",
+        "ex_date": "2022-08-25",
+        "inferred_fields": [],
+        "original_payload_sha256": [
+          "d96b1d50f9709cd56b8549c53bff1ea0bcf019d6d98405f9d8cee7d597f51340",
+          "79c896b9fb39f1150a4b2b2afefe380f204640bf5656e2068699bb74040e84a5"
+        ],
+        "payable_date": "2022-08-24",
+        "proof_of_no_dividend_if_asserted": "",
+        "publication_available_at_or_unknown": null,
+        "record_date": "2022-08-17",
+        "security_id": "88160R101",
+        "source_refs": [
+          {
+            "endpoint": "https://ir.tesla.com/press-release/tesla-announces-three-one-stock-split",
+            "locator": "events[11]",
+            "payload_sha256": "d96b1d50f9709cd56b8549c53bff1ea0bcf019d6d98405f9d8cee7d597f51340",
+            "priority": 5,
+            "published_date": null,
+            "retrieved_at": "2026-10-22",
+            "source_id": "ORIGINAL_FACTS:TSLA"
+          },
+          {
+            "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+            "locator": "corporate_actions.forward_splits[2]",
+            "payload_sha256": "79c896b9fb39f1150a4b2b2afefe380f204640bf5656e2068699bb74040e84a5",
+            "priority": 30,
+            "published_date": null,
+            "retrieved_at": "2026-11-09T14:04:38.808437+00:00",
+            "source_id": "ALPACA:network_v2_alpaca_0"
+          }
+        ],
+        "source_replay_receipt": "RETROSPECTIVE_COLLECTION;SIMULATED_AVAILABILITY_MUST_BE_SEPARATE",
+        "special": false,
+        "spinoff_distribution_terms": "",
+        "split_ratio_new_old": "3",
+        "status": "VERIFIED_MULTI_SOURCE",
+        "sub_type": "",
+        "symbol": "TSLA"
+      },
+      "unresolved": []
+    },
+    {
+      "claim_cash_only": "0",
+      "claims": [
+        {
+          "asset": "OGN_UNPRICED",
+          "assumption_rule_id": ";RETROSPECTIVE_DATE_ONLY_EVENT_AVAILABILITY",
+          "due_at": null,
+          "event_id": "CA3:df58b932d6bcf25b35cf58aa",
+          "lot_id": "endowed_long",
+          "signed_amount": "1",
+          "source_hash": "73139957f3d27adba85e2f83549dfe0abf23cada44eac99db9f8053ee796a2de",
+          "symbol": "MRK",
+          "truth": "SPECIAL_ACTION_HOLD"
+        },
+        {
+          "asset": "OGN_UNPRICED",
+          "assumption_rule_id": ";RETROSPECTIVE_DATE_ONLY_EVENT_AVAILABILITY",
+          "due_at": null,
+          "event_id": "CA3:df58b932d6bcf25b35cf58aa",
+          "lot_id": "endowed_short",
+          "signed_amount": "-0.6",
+          "source_hash": "73139957f3d27adba85e2f83549dfe0abf23cada44eac99db9f8053ee796a2de",
+          "symbol": "MRK",
+          "truth": "SPECIAL_ACTION_HOLD"
+        }
+      ],
+      "journal": [
+        {
+          "after": "000129469cb848d12391ed36729277ab45768eb2966079ad2ea3332ea795b9fd",
+          "assumption_rule_id": ";RETROSPECTIVE_DATE_ONLY_EVENT_AVAILABILITY",
+          "available_at": "2021-06-03 04:00:00+00:00",
+          "before": "c8078638ce4d21b3336be9b1939398a55efd59926495c1fbd4fc8b6b98f7ff8e",
+          "effective_at": "2021-06-03 04:00:00+00:00",
+          "event_id": "CA3:df58b932d6bcf25b35cf58aa:EFFECTIVE",
+          "kind": "SPINOFF",
+          "payload_hash": "73139957f3d27adba85e2f83549dfe0abf23cada44eac99db9f8053ee796a2de",
+          "posted_at": "2021-06-03 04:00:00+00:00",
+          "source_hash": "73139957f3d27adba85e2f83549dfe0abf23cada44eac99db9f8053ee796a2de",
+          "truth": "SPECIAL_ACTION_HOLD"
+        }
+      ],
+      "mode": "SYNTHETIC_ENDOWED_SHARES_NO_TRADES",
+      "physical_share_sum": "4",
+      "settled_claims": [],
+      "shares": [
+        {
+          "lot_id": "endowed_long",
+          "pending_unsubmitted": "0",
+          "shares": "10",
+          "symbol": "MRK"
+        },
+        {
+          "lot_id": "endowed_short",
+          "pending_unsubmitted": "0",
+          "shares": "-6",
+          "symbol": "MRK"
+        }
+      ],
+      "source_action": {
+        "accrual_rule": "SIGNED_SHARES_HELD_IMMEDIATELY_BEFORE_EX_DATE",
+        "action_type": "SPINOFF",
+        "amount_per_share_raw_basis": null,
+        "assumption_params": [],
+        "assumption_rule_id": "",
+        "confidence": "TERMS_PRIMARY_VALUE_UNRESOLVED",
+        "currency": "USD",
+        "declared_at": "2021-05-07",
+        "disagreements": [],
+        "economic_basis": "RAW_COMMON_SHARE",
+        "effect_on_books": "SIGNED_OGN_ASSET_CLAIM;NO_INVENTED_VALUE_OR_CIL",
+        "effective_date": "2021-06-03",
+        "event_id": "CA3:df58b932d6bcf25b35cf58aa",
+        "ex_date": "2021-06-03",
+        "inferred_fields": [],
+        "original_payload_sha256": [
+          "4ab11986818b1f9a2210bc7aed4375b2b9e52449ebe087e981da471a14cae5b3",
+          "b5f34db6408ab63614ff9a20528f4af8f6b171b5cf6c79c3a13efb16dacadd87"
+        ],
+        "payable_date": "2021-06-02",
+        "proof_of_no_dividend_if_asserted": "",
+        "publication_available_at_or_unknown": null,
+        "record_date": "2021-05-17",
+        "security_id": "",
+        "source_refs": [
+          {
+            "endpoint": "https://www.merck.com/news/merck-announces-completion-of-organon-co-spinoff/",
+            "locator": "",
+            "payload_sha256": "4ab11986818b1f9a2210bc7aed4375b2b9e52449ebe087e981da471a14cae5b3",
+            "priority": 1,
+            "published_date": null,
+            "retrieved_at": "2026-11-09T14:10:54.562219+00:00",
+            "source_id": "MERCK_COMPLETION:boundary_mrk_completion"
+          },
+          {
+            "endpoint": "https://www.merck.com/news/merck-declares-record-date-and-dividend-for-the-organon-co-spinoff/",
+            "locator": "",
+            "payload_sha256": "b5f34db6408ab63614ff9a20528f4af8f6b171b5cf6c79c3a13efb16dacadd87",
+            "priority": 1,
+            "published_date": null,
+            "retrieved_at": "2026-11-09T14:23:51.609680+00:00",
+            "source_id": "MERCK_ISSUER:extra_mrk_declaration"
+          }
+        ],
+        "source_replay_receipt": "RETROSPECTIVE_COLLECTION;SIMULATED_AVAILABILITY_MUST_BE_SEPARATE",
+        "special": true,
+        "spinoff_distribution_terms": "1 OGN per 10 MRK; fractional cash terms/value unresolved",
+        "split_ratio_new_old": null,
+        "status": "SPECIAL_ACTION_HOLD",
+        "sub_type": "OGN_PER_MRK_0.1",
+        "symbol": "MRK"
+      },
+      "unresolved": [
+        "CA3:df58b932d6bcf25b35cf58aa:OGN_VALUE_CIL_UNKNOWN"
+      ]
+    }
+  ],
+  "dimensionless_allocations": [
+    {
+      "arm": "EQUAL",
+      "dimensionless_fraction": "0.1",
+      "reason": "ALLOCATED",
+      "ticker": "AAPL"
+    },
+    {
+      "arm": "EQUAL",
+      "dimensionless_fraction": "0.1",
+      "reason": "ALLOCATED",
+      "ticker": "COP"
+    },
+    {
+      "arm": "ROLLING_RISK",
+      "dimensionless_fraction": "0.097811549494",
+      "reason": "ALLOCATED",
+      "ticker": "AAPL"
+    },
+    {
+      "arm": "ROLLING_RISK",
+      "dimensionless_fraction": "0.1",
+      "reason": "ALLOCATED",
+      "ticker": "COP"
+    },
+    {
+      "arm": "EWMA_RISK",
+      "dimensionless_fraction": "0.1",
+      "reason": "ALLOCATED",
+      "ticker": "AAPL"
+    },
+    {
+      "arm": "EWMA_RISK",
+      "dimensionless_fraction": "0.090946313353",
+      "reason": "ALLOCATED",
+      "ticker": "COP"
+    },
+    {
+      "arm": "S2C_RISK",
+      "dimensionless_fraction": "0.1",
+      "reason": "ALLOCATED",
+      "ticker": "AAPL"
+    },
+    {
+      "arm": "S2C_RISK",
+      "dimensionless_fraction": "0.095812587732",
+      "reason": "ALLOCATED",
+      "ticker": "COP"
+    }
+  ],
+  "funded_account_created": false,
+  "historical_NAV_or_PnL_or_return_computed": false,
+  "historical_fills": 0,
+  "historical_orders": 0,
+  "mode": "ISOLATED_NONPERFORMANCE_CLAIM_SHARE_CONSISTENCY",
+  "model_forward_calls": 0,
+  "original_signal_rows_reused": 2,
+  "post2024_price_reads": 0,
+  "prior_financial_gate_refusal": "FINANCIAL_GATE_HOLD",
+  "quantity_origin": "synthetic endowments;no original strategy quantity or historical fill",
+  "raw_kind": "ACTUAL_HISTORICAL_NEVER_RELABELLED_SYNTHETIC",
+  "signal_partition_sha256": "35771345c5b2b60fc009499d6211ce752dfcc92b50235842bdff2c393b8629a2",
+  "source_partitions": 5,
+  "source_rows": 11,
+  "unpriced_special": "MRK OGN +1/-.6 illustrative asset claims;value/CIL unresolved"
+}

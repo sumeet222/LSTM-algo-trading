@@ -1,0 +1,54 @@
+{
+  "files": {
+    "ALL18_HISTORICAL_CONTEXT.csv": "dca12e5959da14b94dff184b9c7af56908cdfc6543370260100036672c2849fb",
+    "ARCHIVE_RECONCILIATION.csv": "6f9313268a1903a832db1452e614273dc8906cf33dfa6c3637f788ca4e0c4cd6",
+    "CANDIDATE_ATTRIBUTION.csv": "4a0578b8b5614ba54e6ad2f60487f45ab7c9315d161e98eca42ad159912e256b",
+    "CANDIDATE_DAILY_NAV.parquet": "b9a6c26ae66d970ea6c716cf1e7fe7a2aaa6ddfeec8e7a7e3da436ebc300b8bb",
+    "FIVE_ALGORITHM_FROZEN_SPEC.md": "657e733c4dec810732fde4e5f1389ba34caf6117921fb09f932e6bb0c8847dcb",
+    "FIVE_ALGORITHM_REGISTRY.json": "e1a9565b8ce31576d2cbdfe4fb7f4992bdccdaa2127b7afabf83fa6fd2b2d0e1",
+    "FIVE_CANDIDATE_FINANCIAL_COMPARISON.csv": "4693187982dc1a680897041034c9915da10329c9212c7d7832c2848cc6da2ddc",
+    "INPUTS_BEFORE.json": "97d7646b11f21f85d21c6b1f6acc8597fe848fafaccb5f47967fd904bbbc1b28",
+    "PROTECTED_BEFORE.json": "d309d078817361ef9d876418c20a30aaad9df3359c4e9663f1cbc392a493e820",
+    "REGISTRY_SEAL.json": "d911c51e9de4fbcc1ce288b4906e9dfa539544f7f889441eea0e5670501af70d",
+    "RUN_PLAN_AND_REUSE.md": "d35da5004d9ec719fedc8489e89f0b58afadfad243a8b08827d24e9be3e117a5",
+    "SELECTION_DECISION.md": "7288d3db674ee64a2a45ac2bb4a8b10bf490aec26dbdb00bb65d72e79aa5b069",
+    "SELECTION_RECEIPT.json": "0a4f5bee450b76f7e643c99d957c6e0416c8531eaa8b76d29c03e79887124f7b",
+    "SELECTION_SCORE_AUDIT.csv": "09ba98c538076a634fe9513c6155dad7cc0378abd020e1a3288a6e8b44e7d8a2",
+    "USER_INSTRUCTION_TRANSCRIPTION.md": "10d4c95227f24121d1049f2110caee27ec79c89f07d896bbeeadce27ae57fb5f",
+    "comparison.stderr": "a75ed675cc9c5ed6bb8431bfed04365d72e9c22281e713fd1a9d4196a13f7aed",
+    "comparison.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "new_funded_comparison_replays": 0,
+  "reused_accounts": 5,
+  "selection": {
+    "candidate_flags": {
+      "F1": "POSITIVE_EXPLORATORY_CONCENTRATED",
+      "F3": "POSITIVE_EXPLORATORY_CONCENTRATED",
+      "F4": "POSITIVE_EXPLORATORY_CONCENTRATED"
+    },
+    "comparison_sha256": "4693187982dc1a680897041034c9915da10329c9212c7d7832c2848cc6da2ddc",
+    "elapsed_seconds": 4.762907624943182,
+    "families": [
+      "R01",
+      "R07",
+      "M04"
+    ],
+    "registry_identity": "a5127aea1aeda93a92dd6584ca94dc3f81e7541f15ce2532ba5772a7931f8dab",
+    "robust_positive": false,
+    "score_audit_sha256": "09ba98c538076a634fe9513c6155dad7cc0378abd020e1a3288a6e8b44e7d8a2",
+    "scores": {
+      "F1": 0.9625,
+      "F2": 0.39999999999999997,
+      "F3": 0.5375,
+      "F4": 0.6,
+      "F5": 0.0
+    },
+    "selected": [
+      "F1",
+      "F4",
+      "F3"
+    ],
+    "status": "NO_ROBUST_POSITIVE_DIRECTIONAL_BASELINE"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,913 @@
+{
+  "V1_direction_and_cost_registry": {
+    "authorization_prompt_sha256": "314b98804bffed8bd578e254b873b97366a12697d3ed466af363b5630ebd584d",
+    "code": {
+      "src/lstm_data/trading/track2/rapid_v1/__init__.py": "a938a73c0d708f543fb9d4735da8d8bcbe6e0e43c4a5e1c3d2c96feaf3566573",
+      "src/lstm_data/trading/track2/rapid_v1/cli.py": "7aed0c6fb2621a1510342844dbf96e194b735850c32b59a988c48a48de99967b",
+      "src/lstm_data/trading/track2/rapid_v1/costs.py": "f107c0a70322d227ad917a0705f23d7584d07dc16227e7a83b232f40e084b76f",
+      "src/lstm_data/trading/track2/rapid_v1/diagnostics.py": "8ca6cfbad58a906657434d25969a8266da0430391df8db60639840975226b07f",
+      "src/lstm_data/trading/track2/rapid_v1/paths.py": "7b1055645e1e953439c5a9111ac85884d2ba21d0246d45e78285b2210d21cc4b",
+      "src/lstm_data/trading/track2/rapid_v1/portfolio.py": "a45de684a804828c3c25a15a09af0ba3840b2c5d53249f31c109136a00b3907b",
+      "src/lstm_data/trading/track2/rapid_v1/registry.py": "dc9fb23c2c6ecbf01147429d4e7fd193d5b076daf88e398260c9652a0f64ee21",
+      "src/lstm_data/trading/track2/rapid_v1/reporting.py": "09b7bc1cc8305616d5d7236625a646bfd9f92edf40874f6434bd3f404fd9781e",
+      "src/lstm_data/trading/track2/rapid_v1/runner.py": "e5ad646eaf7144024731e0728eb9202441c5150025382442ea4141b6ab53a3b4",
+      "src/lstm_data/trading/track2/rapid_v1/scheduler.py": "1f65df943d0797bb85b3ba87f5bb69b6048334de71a6afd2ad75276e1eb024bb",
+      "src/lstm_data/trading/track2/rapid_v1/shared_features.py": "cec88250a874c7677a9a37aadb90f344da7b8fec39dbb52a4ce8daf070db1ad7",
+      "src/lstm_data/trading/track2/rapid_v1/sources.py": "8dfe076de2cdb6d24fc7b3ccd5ad9e923718c63b4a95f7c80ef086c623befeb7",
+      "src/lstm_data/trading/track2/rapid_v1/state.py": "9b683ed989cbfb4546833a1d2c3345426c1903cf55521f4ca063be087a9d90ff",
+      "src/lstm_data/trading/track2/rapid_v1/strategies.py": "eb17466b06d9219fd9105b87b8a41ed47fe15b63f523f64659cf3e3f511fbf79",
+      "src/lstm_data/trading/track2/rapid_v1/verification.py": "053b17a4e17ed769783c792874f2b893a91b98d874b33009973c7659ab1560e1"
+    },
+    "controls": [
+      "LEGACY_V5_SIGN",
+      "NO_TRADE"
+    ],
+    "defaults": {
+      "abnormal_volume_rank_z": 1.0,
+      "allocation": "equal notional across current selected candidates;20%NAV vintage max,10%name,no redistribution after caps;pair beta-neutral split scaled jointly;V5 conservative .002NAV plus order minimum cash reserve",
+      "borrow_ACT365": 0.02,
+      "compression_quantile": 0.2,
+      "compute_minutes": 0,
+      "daily_trend_z": 0.5,
+      "entry_expiry_wall_minutes": 10,
+      "funding": 0,
+      "gross_fraction": 1,
+      "initial_USD": 100000,
+      "micro_fee_USD_per_share": 0.002,
+      "micro_minimum": 0,
+      "micro_order_cap": 6,
+      "micro_price_precision": "exact Decimal incremental print friction;fractional-cent USD commissions retained,not rounded to zero;retail V5 cent adverse tick rounding",
+      "minimum_peers": 12,
+      "name_fraction": 0.1,
+      "net_fraction": 1,
+      "new_vintage_fraction": 0.2,
+      "null": "opposite sign on same mature executable-outcome opportunities,descriptive only",
+      "overnight_divergence_z": 1.0,
+      "pair_atomic_policy": "both standing legs settle only on jointly valid same-minute bars within expiry;both caps/funding/minimums prevalidated;no one-sided fills",
+      "pair_beta_bounds": [
+        0.25,
+        4.0
+      ],
+      "pair_hedge_rounding_tolerance": 0.05,
+      "pair_min_R2": 0.3,
+      "pair_sessions": 60,
+      "pair_z": 2.0,
+      "parameter_rationale": "Fixed one-unit standardized move/gap/residual tests,2sd pair trigger,5bp noise buffer and12/20minimum peers are transparent candidate defaults,not fitted to returns. No threshold alternatives run.",
+      "participation_prior_volume_fraction": 0.01,
+      "range_buffer_fraction": 0.0005,
+      "receipt_minutes": 2,
+      "residual_reversal_z": 1.0,
+      "retail_fee_USD_per_share": 0.005,
+      "retail_impact_bps": 5,
+      "retail_min_external_notional": 2000,
+      "retail_minimum": 1,
+      "retail_order_cap": 5,
+      "retail_spread_bps": 5,
+      "same_clock_sessions": 20,
+      "special_disposal_fallback": "OGN newly distributed has no60day ADV: conservative5bp+5bp incremental cost;mode-specific per-share fees;CIL V5conditional terms unchanged",
+      "top_bottom": 2,
+      "version": "rapid-v1-defaults-1",
+      "warmup": "2020-01-01 through2020-12-31, no pre2021 trades",
+      "weekly_scan": "first calendar full390-minute session per ISOweek;10:30ET except R08 14:30ET;missing inputs do not defer",
+      "z_gap": 1.0,
+      "z_move": 1.0,
+      "z_volume": 1.5
+    },
+    "engineering_revision_reason": "Retain the typed summary mapping while clearing unsupported HOLD metrics",
+    "identity": "ff4a5e12c7536acaaeaa03dc5017f65c41bb33787260819958afed7adc098d11",
+    "initial_frozen_inventory_sha256": "ceca373a822d16eed4e5f3e1fff9416d4e23c91ca508add11c07354b8a7f4cab",
+    "initial_registry_sha256": "a341a79b7c6b203c2094049f587b74d0cdf990d08d7802b87555b0bf8027b57e",
+    "menu": "HF20_Track2_Directional_Strategy_Research_Menu_Micro_and_Retail_2026-11-10.md",
+    "menu_sha256": "a7f244fd6910382440084724a023adb90a304b64b0d3c066a029aa2d46ee982b",
+    "outcomes_seen_before_freeze": false,
+    "output_limits": {
+      "anomaly_rows_per_strategy": 100,
+      "strategy_hard_bytes": 26214400,
+      "target_total_bytes": 209715200,
+      "total_hard_bytes": 524288000
+    },
+    "prior_V5_manifest_sha256": "5b245b513cecf7e433927223891008572adbcf29118653b6a4a84a892abb10b6",
+    "schema": "rapid-v1-registry-1",
+    "scope": "Exploratory reused 2021-24 fixed survivors; conditional actions and shorts; assumed receipt and OHLCV proxy; no Stage 6.",
+    "strategies": [
+      {
+        "entry_cap": 6,
+        "formula": "sign received intraday r60 when abs(r60/sigma_past20slot)>=1",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "M01",
+        "menu_reference": "section4",
+        "minimum_external_notional": 0,
+        "mode": "MICRO_PRO",
+        "pair_atomic": false,
+        "slots": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "entry_cap": 6,
+        "formula": "negative M01 sign on the identical r60 standardized move>=1",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "M02",
+        "menu_reference": "section4",
+        "minimum_external_notional": 0,
+        "mode": "MICRO_PRO",
+        "pair_atomic": false,
+        "slots": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "entry_cap": 6,
+        "formula": "negative opening gap sign when abs(gap/past20gap_sd)>=1",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "M03",
+        "menu_reference": "section4",
+        "minimum_external_notional": 0,
+        "mode": "MICRO_PRO",
+        "pair_atomic": false,
+        "slots": [
+          0,
+          1
+        ]
+      },
+      {
+        "entry_cap": 6,
+        "formula": "gap sign, abs(gap_z)>=1, first-hour same sign and received volume above past20same-slot mean",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "M04",
+        "menu_reference": "section4",
+        "minimum_external_notional": 0,
+        "mode": "MICRO_PRO",
+        "pair_atomic": false,
+        "slots": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "entry_cap": 6,
+        "formula": "received price outside completed0930-1000 range by5bp",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "M05",
+        "menu_reference": "section4",
+        "minimum_external_notional": 0,
+        "mode": "MICRO_PRO",
+        "pair_atomic": false,
+        "slots": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "entry_cap": 6,
+        "formula": "r60 minus current leave-one-out mean,abs(past20same-slot residual_z)>=1;top/bottom2 raw residual,12peers",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "M06",
+        "menu_reference": "section4",
+        "minimum_external_notional": 0,
+        "mode": "MICRO_PRO",
+        "pair_atomic": false,
+        "slots": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "entry_cap": 6,
+        "formula": "previous20calendar-session same-clock next-half-hour mean/SE,abs(z)>=1",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "M07",
+        "menu_reference": "section4",
+        "minimum_external_notional": 0,
+        "mode": "MICRO_PRO",
+        "pair_atomic": false,
+        "slots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "entry_cap": 6,
+        "formula": "negative identical r60 sign with abs(z)>=1 and robust prior20same-slot volume_z>=1.5",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "M08",
+        "menu_reference": "section4",
+        "minimum_external_notional": 0,
+        "mode": "MICRO_PRO",
+        "pair_atomic": false,
+        "slots": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "entry_cap": 6,
+        "formula": "negative received opening-to-current intraday sign,abs(past20same-slot z)>=1",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "M09",
+        "menu_reference": "section4",
+        "minimum_external_notional": 0,
+        "mode": "MICRO_PRO",
+        "pair_atomic": false,
+        "slots": [
+          5,
+          6
+        ]
+      },
+      {
+        "entry_cap": 5,
+        "formula": "log(C[d-22]/C[d-126]);top2 positive,bottom2 negative",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "R01",
+        "menu_reference": "section5",
+        "minimum_external_notional": 2000,
+        "mode": "RETAIL_CONSERVATIVE",
+        "pair_atomic": false,
+        "slots": [
+          1
+        ]
+      },
+      {
+        "entry_cap": 5,
+        "formula": "sign log(MA20/MA60), abs(log ratio/(v60 sqrt20))>=.5",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "R02",
+        "menu_reference": "section5",
+        "minimum_external_notional": 2000,
+        "mode": "RETAIL_CONSERVATIVE",
+        "pair_atomic": false,
+        "slots": [
+          1
+        ]
+      },
+      {
+        "entry_cap": 5,
+        "formula": "received price outside strict completed prior20session high/low by5bp",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "R03",
+        "menu_reference": "section5",
+        "minimum_external_notional": 2000,
+        "mode": "RETAIL_CONSERVATIVE",
+        "pair_atomic": false,
+        "slots": [
+          1
+        ]
+      },
+      {
+        "entry_cap": 5,
+        "formula": "opposite log(C[d-1]/C[d-6]);long bottom2 negative,short top2 positive",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "R04",
+        "menu_reference": "section5",
+        "minimum_external_notional": 2000,
+        "mode": "RETAIL_CONSERVATIVE",
+        "pair_atomic": false,
+        "slots": [
+          1
+        ]
+      },
+      {
+        "entry_cap": 5,
+        "formula": "KO/PEP,XOM/CVX,BAC/WFC;past60log-price OLS beta[.25,4],R2>=.3,residual_sd>1e-4;abs(z)>=2;beta-neutral atomic legs",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "R05",
+        "menu_reference": "section5",
+        "minimum_external_notional": 2000,
+        "mode": "RETAIL_CONSERVATIVE",
+        "pair_atomic": true,
+        "slots": [
+          1
+        ]
+      },
+      {
+        "entry_cap": 5,
+        "formula": "past60stock/leave-one-out factor OLS,min50paired observations;last5residual sum/(past residual_sd sqrt5);reverse tails abs(z)>=1",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "R06",
+        "menu_reference": "section5",
+        "minimum_external_notional": 2000,
+        "mode": "RETAIL_CONSERVATIVE",
+        "pair_atomic": false,
+        "slots": [
+          1
+        ]
+      },
+      {
+        "entry_cap": 5,
+        "formula": "R03 breakout only when latest completed RV10 below prior60RV10 20th percentile",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "R07",
+        "menu_reference": "section5",
+        "minimum_external_notional": 2000,
+        "mode": "RETAIL_CONSERVATIVE",
+        "pair_atomic": false,
+        "slots": [
+          1
+        ]
+      },
+      {
+        "entry_cap": 5,
+        "formula": "prior10 ON and ID sums opposite with abs(ON/(past60ON_sd sqrt10))>=1 and ID likewise;follow ON sign",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "R08",
+        "menu_reference": "section5",
+        "minimum_external_notional": 2000,
+        "mode": "RETAIL_CONSERVATIVE",
+        "pair_atomic": false,
+        "slots": [
+          5
+        ]
+      },
+      {
+        "entry_cap": 5,
+        "formula": "last5completed robust log-volume anomalies using each day's own preceding60reference;top/bottom2 abs(mean_z)>=1",
+        "horizon_scheduled_XNYS_minutes": 240,
+        "id": "R09",
+        "menu_reference": "section5",
+        "minimum_external_notional": 2000,
+        "mode": "RETAIL_CONSERVATIVE",
+        "pair_atomic": false,
+        "slots": [
+          1
+        ]
+      }
+    ],
+    "support_and_basis": {
+      "ADV20_policy": "Observed genuine-volume lower bound,only days with>=98%scheduled valid bars;mean16+oflast20calendar sessions,split-normalized to current rawshare units. Missing volume cannot inflate ADV; lower ADV raises modeled impact. Not a claim of complete consolidated full-session volume.",
+      "M04_volume": "Cumulative observed opening-to-decision volume,compared with prior20same-clock cumulative volumes,not future daily total.",
+      "R06_factor": "Each current stock uses leave-one-out equal-weight daily-return factor,>=12available peers each day. Last60calendar sessions,min50paired fit;last5residuals complete.",
+      "RV10_minimum": 10,
+      "current_reference": "Full-hour slot uses exact received close of preceding minute;opening slot uses completed first minute,decision09:33ET. Gap uses that minute open. r60at10:30 uses0930open to1029close;later r60uses exact60minute-separated closes within session. No missing-slot compression.",
+      "daily20_minimum": 16,
+      "daily60_minimum": 48,
+      "daily_range_policy": "Strict all scheduled bars valid; incomplete day high/low unknown,breakout abstains if any of prior20daily ranges unknown",
+      "factor_regression60_minimum": 50,
+      "frozen_before_any_new_outcome": true,
+      "pair60_minimum": 60,
+      "pair_atomic": "Joint valid-bar fill or neither;no entry lifetime extension. Exit waits keep both inventory/carry. No prospective bar price for order acceptance.",
+      "past60_RV10_quantile_minimum": 48,
+      "quality_outcomes": "Unfunded observed-bar open-to-open price returns,split-normalized;special-distribution crossing flagged/censored for price-only quality while funded economics remain booked. Opposite-sign null uses identical eligible outcomes.",
+      "same_clock_half_hour20_minimum": 16,
+      "same_slot_minimum_support": 16,
+      "same_slot_window_actual_sessions": 20,
+      "signal_prices": "Causal split-genesis units: raw price times cumulative effective split ratio since2020-01; raw volumes divided by same factor. Future splits never rescale earlier feature rows. Price-only,not dividend-total-return adjusted.",
+      "support_rationale": "80%of fixed calendar windows is explicit causal support,not compression to last-valid days. Strict range extrema require full observed interval;ADVuses a declared conservative lower bound. Fixed before returns,not tuned."
+    }
+  },
+  "adapters": {
+    "M01": "own standardized r60",
+    "M02": "negative standardized r60, temporary shock normalization",
+    "M03": "distance to frozen prior close in initial gap units",
+    "M04": "progress relative to frozen entry-day open, no continued volume gate",
+    "M05": "entry opening range boundary re-entry or break failure",
+    "M06": "leave-one-out residual z and top-four hysteresis, minimum 12 peers",
+    "M07": "past matured same-clock z at the entry slot, trail at other legal slots",
+    "M08": "negative r60 z normalization without ongoing high-volume condition",
+    "M09": "distance to entry-day opening reference, first received next-day open",
+    "R01": "completed-session relative momentum and top-four hysteresis",
+    "R02": "completed 20/60 MA separation",
+    "R03": "frozen completed-channel breakout level",
+    "R04": "negative completed five-day ranking and top-four hysteresis",
+    "R05": "frozen past fitted beta, mean and spread sd, converged at abs(z)<=.5",
+    "R06": "completed residual z, frozen past-only hedge for trailing path",
+    "R07": "frozen channel breakout boundary, no continued compression gate",
+    "R08": "completed overnight/intraday divergence",
+    "R09": "completed volume anomaly rank with top-four hysteresis"
+  },
+  "admission": {
+    "end_cutoff": "Reject latest-entry maximum beyond 2024 by calendar.",
+    "max_entry_delay_minutes": 10,
+    "max_micro_scheduled_minutes": 780,
+    "max_retail_sessions": 10,
+    "receipt_minutes": 2
+  },
+  "bench_projection_ceiling_seconds": 1500,
+  "cache": "trading/track2/rapid_v1/cache/49a590a7d44f5900b67cf2faf37584b584a942807cca2fbab262250b80ea1f93",
+  "case_axis": [
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M01",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M01",
+      "unit": "max_scheduled_minutes",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.15",
+      "strategy": "M01",
+      "unit": "max_scheduled_minutes",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M02",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M02",
+      "unit": "max_scheduled_minutes",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.15",
+      "strategy": "M02",
+      "unit": "max_scheduled_minutes",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M03",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M03",
+      "unit": "max_scheduled_minutes",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.15",
+      "strategy": "M03",
+      "unit": "max_scheduled_minutes",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M04",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M04",
+      "unit": "max_scheduled_minutes",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.15",
+      "strategy": "M04",
+      "unit": "max_scheduled_minutes",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M05",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M05",
+      "unit": "max_scheduled_minutes",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.15",
+      "strategy": "M05",
+      "unit": "max_scheduled_minutes",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M06",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M06",
+      "unit": "max_scheduled_minutes",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.15",
+      "strategy": "M06",
+      "unit": "max_scheduled_minutes",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M07",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M07",
+      "unit": "max_scheduled_minutes",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.15",
+      "strategy": "M07",
+      "unit": "max_scheduled_minutes",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M08",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M08",
+      "unit": "max_scheduled_minutes",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.15",
+      "strategy": "M08",
+      "unit": "max_scheduled_minutes",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M09",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.10",
+      "strategy": "M09",
+      "unit": "max_scheduled_minutes",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 780,
+      "name_cap": "0.15",
+      "strategy": "M09",
+      "unit": "max_scheduled_minutes",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R01",
+      "unit": "max_sessions",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R01",
+      "unit": "max_sessions",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.15",
+      "strategy": "R01",
+      "unit": "max_sessions",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R02",
+      "unit": "max_sessions",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R02",
+      "unit": "max_sessions",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.15",
+      "strategy": "R02",
+      "unit": "max_sessions",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R03",
+      "unit": "max_sessions",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R03",
+      "unit": "max_sessions",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.15",
+      "strategy": "R03",
+      "unit": "max_sessions",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R04",
+      "unit": "max_sessions",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R04",
+      "unit": "max_sessions",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.15",
+      "strategy": "R04",
+      "unit": "max_sessions",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R05",
+      "unit": "max_sessions",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R05",
+      "unit": "max_sessions",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.15",
+      "strategy": "R05",
+      "unit": "max_sessions",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R06",
+      "unit": "max_sessions",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R06",
+      "unit": "max_sessions",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.15",
+      "strategy": "R06",
+      "unit": "max_sessions",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R07",
+      "unit": "max_sessions",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R07",
+      "unit": "max_sessions",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.15",
+      "strategy": "R07",
+      "unit": "max_sessions",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R08",
+      "unit": "max_sessions",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R08",
+      "unit": "max_sessions",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.15",
+      "strategy": "R08",
+      "unit": "max_sessions",
+      "variant": "HIGH_RISK"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R09",
+      "unit": "max_sessions",
+      "variant": "CONSERVATIVE"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.10",
+      "strategy": "R09",
+      "unit": "max_sessions",
+      "variant": "STANDARD"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.15",
+      "strategy": "R09",
+      "unit": "max_sessions",
+      "variant": "HIGH_RISK"
+    }
+  ],
+  "code_and_test_hashes": {
+    "src/lstm_data/trading/track2/rapid_v3_dynamic/__init__.py": "e9946ba8c692a193778a455f314cfe17be87a905d117fe7f949df1242d55f0c7",
+    "src/lstm_data/trading/track2/rapid_v3_dynamic/book.py": "4c99456e31a34da8aef848b9efdc46a24cb8c0e7f7a23675aaf86a80fb9cb188",
+    "src/lstm_data/trading/track2/rapid_v3_dynamic/cli.py": "f3851f4640914b72dfa8ad935fd6bcb83d505d703dc2c837d702a260fb7025a2",
+    "src/lstm_data/trading/track2/rapid_v3_dynamic/decisions.py": "f7764089e23001cb6b08a1d549ad620d8a3d8104c518d0339a0332fe1259dc55",
+    "src/lstm_data/trading/track2/rapid_v3_dynamic/engine.py": "25bd05eeea79530e343837708adff30479ab22181fea499f5b989312585157e0",
+    "src/lstm_data/trading/track2/rapid_v3_dynamic/offline.py": "b2c85678e8b74e3b721c7c7f053d22b6529241d06ab1e88ca8d113c30e5d4b22",
+    "src/lstm_data/trading/track2/rapid_v3_dynamic/policy.py": "fb98bbd41e68f9287733f6449f022ecdec6a9342b8a9e73c01893869f86afd64",
+    "src/lstm_data/trading/track2/rapid_v3_dynamic/report.py": "23c55caad95c7f25962a8882a07955692bea174bf65b09b540f93d4f70523cd0",
+    "src/lstm_data/trading/track2/rapid_v3_dynamic/state.py": "bad7f653c873ebcbb59300aed6c414516d1e26d20632903c9a6d17b3851d84c7",
+    "tests/track2_rapid_v3/test_dynamic.py": "898e4ebd1057778f988da2cf16ed8b5ab7e507c4bd3cb87676089c7e92c8dadc"
+  },
+  "hard_limits": {
+    "absolute_physical_net": 1,
+    "name_by_regime": {
+      "CONSERVATIVE": "0.10",
+      "HIGH_RISK": "0.15",
+      "STANDARD": "0.10"
+    },
+    "vintage": 0.2,
+    "virtual_gross": 1
+  },
+  "hard_run_size_bytes": 200000000,
+  "initial_cash_USD": 100000,
+  "mode_budgets": {
+    "MICRO_PRO": "6 physical new orders/session",
+    "RETAIL_CONSERVATIVE": "5 physical new orders/scan week"
+  },
+  "parent_boundary_sha256": "9319b8165f4e314284230ee892414d0dc5011d8eda8bf67565c8a84fe48a7de6",
+  "parent_initial_protected_sha256": "93d15ce04a9753c6e0562e4e7074d721231318a5e967c2ff5f04cfecbc7649ba",
+  "period": [
+    "2021-01-01",
+    "2024-12-31"
+  ],
+  "protocol_sha256": "14b6e8f46846454bfd5022113080cb5cf11d1a447c48c70cb9836aea6e006516",
+  "registry_identity": "7b91edd45848c301abe3d1f03da8ed7378f7c8ca708bf4f147d0bfd47ea123b1",
+  "schema": "HF20_RAPID_V3_FIXED_DYNAMIC_1",
+  "strategy_ids": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09"
+  ],
+  "tail_diagnostic": {
+    "from": "sealed actual exit legs only",
+    "horizons": [
+      60,
+      240,
+      "NEXT_FULL_SESSION"
+    ],
+    "net_funding": false,
+    "output_excluded_from_engine": true
+  }
+}

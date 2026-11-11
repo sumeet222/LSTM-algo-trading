@@ -1,0 +1,826 @@
+{
+  "status": "PASS",
+  "final_report": "trading/track2/stage35/completion_v2/audits/full_run_release/FULL_SIGNAL_COVERAGE_REPORT.json",
+  "report_sha256": "c4fa1e09b7ebcd213cd5e6ee955286646e7b946c36c9134bf35102f329e5828c",
+  "protected_objects": 568,
+  "protected_changed": [],
+  "source_partitions": 227,
+  "source_changed": [],
+  "totals": {
+    "rows": 140280,
+    "forecasts": 131111,
+    "equal": 128192,
+    "s2c": 128192,
+    "rolling": 87557,
+    "ewma": 87557,
+    "matched": 87557
+  },
+  "fold_ticker_coverage": [
+    {
+      "fold": "F21",
+      "ticker": "AAPL",
+      "opportunities": 1761,
+      "forecasts": 1761,
+      "input_missing": 0,
+      "s2c": 1733,
+      "rolling": 1621
+    },
+    {
+      "fold": "F21",
+      "ticker": "AMD",
+      "opportunities": 1761,
+      "forecasts": 1760,
+      "input_missing": 1,
+      "s2c": 1732,
+      "rolling": 1673
+    },
+    {
+      "fold": "F21",
+      "ticker": "AMZN",
+      "opportunities": 1761,
+      "forecasts": 1760,
+      "input_missing": 1,
+      "s2c": 1627,
+      "rolling": 0
+    },
+    {
+      "fold": "F21",
+      "ticker": "AVGO",
+      "opportunities": 1761,
+      "forecasts": 1761,
+      "input_missing": 0,
+      "s2c": 1621,
+      "rolling": 0
+    },
+    {
+      "fold": "F21",
+      "ticker": "BA",
+      "opportunities": 1761,
+      "forecasts": 1761,
+      "input_missing": 0,
+      "s2c": 1740,
+      "rolling": 1680
+    },
+    {
+      "fold": "F21",
+      "ticker": "BAC",
+      "opportunities": 1761,
+      "forecasts": 1761,
+      "input_missing": 0,
+      "s2c": 1740,
+      "rolling": 1680
+    },
+    {
+      "fold": "F21",
+      "ticker": "COP",
+      "opportunities": 1761,
+      "forecasts": 1705,
+      "input_missing": 56,
+      "s2c": 1684,
+      "rolling": 1523
+    },
+    {
+      "fold": "F21",
+      "ticker": "CSCO",
+      "opportunities": 1761,
+      "forecasts": 1649,
+      "input_missing": 112,
+      "s2c": 1614,
+      "rolling": 1261
+    },
+    {
+      "fold": "F21",
+      "ticker": "CVX",
+      "opportunities": 1761,
+      "forecasts": 1649,
+      "input_missing": 112,
+      "s2c": 1628,
+      "rolling": 1385
+    },
+    {
+      "fold": "F21",
+      "ticker": "JNJ",
+      "opportunities": 1761,
+      "forecasts": 1705,
+      "input_missing": 56,
+      "s2c": 1684,
+      "rolling": 1467
+    },
+    {
+      "fold": "F21",
+      "ticker": "KO",
+      "opportunities": 1761,
+      "forecasts": 1664,
+      "input_missing": 97,
+      "s2c": 1629,
+      "rolling": 1192
+    },
+    {
+      "fold": "F21",
+      "ticker": "MA",
+      "opportunities": 1761,
+      "forecasts": 1651,
+      "input_missing": 110,
+      "s2c": 1630,
+      "rolling": 707
+    },
+    {
+      "fold": "F21",
+      "ticker": "MRK",
+      "opportunities": 1761,
+      "forecasts": 1692,
+      "input_missing": 69,
+      "s2c": 1657,
+      "rolling": 1176
+    },
+    {
+      "fold": "F21",
+      "ticker": "MS",
+      "opportunities": 1761,
+      "forecasts": 1744,
+      "input_missing": 17,
+      "s2c": 1702,
+      "rolling": 1313
+    },
+    {
+      "fold": "F21",
+      "ticker": "PEP",
+      "opportunities": 1761,
+      "forecasts": 1761,
+      "input_missing": 0,
+      "s2c": 1740,
+      "rolling": 1267
+    },
+    {
+      "fold": "F21",
+      "ticker": "SBUX",
+      "opportunities": 1761,
+      "forecasts": 1705,
+      "input_missing": 56,
+      "s2c": 1684,
+      "rolling": 1454
+    },
+    {
+      "fold": "F21",
+      "ticker": "TSLA",
+      "opportunities": 1761,
+      "forecasts": 1631,
+      "input_missing": 130,
+      "s2c": 1610,
+      "rolling": 1138
+    },
+    {
+      "fold": "F21",
+      "ticker": "VZ",
+      "opportunities": 1761,
+      "forecasts": 1761,
+      "input_missing": 0,
+      "s2c": 1733,
+      "rolling": 1618
+    },
+    {
+      "fold": "F21",
+      "ticker": "WFC",
+      "opportunities": 1761,
+      "forecasts": 1759,
+      "input_missing": 2,
+      "s2c": 1738,
+      "rolling": 1524
+    },
+    {
+      "fold": "F21",
+      "ticker": "XOM",
+      "opportunities": 1761,
+      "forecasts": 1761,
+      "input_missing": 0,
+      "s2c": 1740,
+      "rolling": 1625
+    },
+    {
+      "fold": "F22",
+      "ticker": "AAPL",
+      "opportunities": 1754,
+      "forecasts": 1566,
+      "input_missing": 188,
+      "s2c": 1552,
+      "rolling": 1239
+    },
+    {
+      "fold": "F22",
+      "ticker": "AMD",
+      "opportunities": 1754,
+      "forecasts": 1565,
+      "input_missing": 189,
+      "s2c": 1551,
+      "rolling": 1190
+    },
+    {
+      "fold": "F22",
+      "ticker": "AMZN",
+      "opportunities": 1754,
+      "forecasts": 1565,
+      "input_missing": 189,
+      "s2c": 1551,
+      "rolling": 120
+    },
+    {
+      "fold": "F22",
+      "ticker": "AVGO",
+      "opportunities": 1754,
+      "forecasts": 1573,
+      "input_missing": 181,
+      "s2c": 1510,
+      "rolling": 0
+    },
+    {
+      "fold": "F22",
+      "ticker": "BA",
+      "opportunities": 1754,
+      "forecasts": 1573,
+      "input_missing": 181,
+      "s2c": 1559,
+      "rolling": 1177
+    },
+    {
+      "fold": "F22",
+      "ticker": "BAC",
+      "opportunities": 1754,
+      "forecasts": 1581,
+      "input_missing": 173,
+      "s2c": 1567,
+      "rolling": 1201
+    },
+    {
+      "fold": "F22",
+      "ticker": "COP",
+      "opportunities": 1754,
+      "forecasts": 1564,
+      "input_missing": 190,
+      "s2c": 1550,
+      "rolling": 1135
+    },
+    {
+      "fold": "F22",
+      "ticker": "CSCO",
+      "opportunities": 1754,
+      "forecasts": 1565,
+      "input_missing": 189,
+      "s2c": 1551,
+      "rolling": 1226
+    },
+    {
+      "fold": "F22",
+      "ticker": "CVX",
+      "opportunities": 1754,
+      "forecasts": 1564,
+      "input_missing": 190,
+      "s2c": 1550,
+      "rolling": 1221
+    },
+    {
+      "fold": "F22",
+      "ticker": "JNJ",
+      "opportunities": 1754,
+      "forecasts": 1565,
+      "input_missing": 189,
+      "s2c": 1551,
+      "rolling": 1177
+    },
+    {
+      "fold": "F22",
+      "ticker": "KO",
+      "opportunities": 1754,
+      "forecasts": 1565,
+      "input_missing": 189,
+      "s2c": 1544,
+      "rolling": 1158
+    },
+    {
+      "fold": "F22",
+      "ticker": "MA",
+      "opportunities": 1754,
+      "forecasts": 1565,
+      "input_missing": 189,
+      "s2c": 1551,
+      "rolling": 403
+    },
+    {
+      "fold": "F22",
+      "ticker": "MRK",
+      "opportunities": 1754,
+      "forecasts": 1549,
+      "input_missing": 205,
+      "s2c": 1535,
+      "rolling": 890
+    },
+    {
+      "fold": "F22",
+      "ticker": "MS",
+      "opportunities": 1754,
+      "forecasts": 1553,
+      "input_missing": 201,
+      "s2c": 1539,
+      "rolling": 967
+    },
+    {
+      "fold": "F22",
+      "ticker": "PEP",
+      "opportunities": 1754,
+      "forecasts": 1509,
+      "input_missing": 245,
+      "s2c": 1488,
+      "rolling": 1027
+    },
+    {
+      "fold": "F22",
+      "ticker": "SBUX",
+      "opportunities": 1754,
+      "forecasts": 1564,
+      "input_missing": 190,
+      "s2c": 1543,
+      "rolling": 1176
+    },
+    {
+      "fold": "F22",
+      "ticker": "TSLA",
+      "opportunities": 1754,
+      "forecasts": 1584,
+      "input_missing": 170,
+      "s2c": 1570,
+      "rolling": 1145
+    },
+    {
+      "fold": "F22",
+      "ticker": "VZ",
+      "opportunities": 1754,
+      "forecasts": 1565,
+      "input_missing": 189,
+      "s2c": 1551,
+      "rolling": 1166
+    },
+    {
+      "fold": "F22",
+      "ticker": "WFC",
+      "opportunities": 1754,
+      "forecasts": 1563,
+      "input_missing": 191,
+      "s2c": 1549,
+      "rolling": 1130
+    },
+    {
+      "fold": "F22",
+      "ticker": "XOM",
+      "opportunities": 1754,
+      "forecasts": 1565,
+      "input_missing": 189,
+      "s2c": 1551,
+      "rolling": 1166
+    },
+    {
+      "fold": "F23",
+      "ticker": "AAPL",
+      "opportunities": 1744,
+      "forecasts": 1536,
+      "input_missing": 208,
+      "s2c": 1508,
+      "rolling": 1036
+    },
+    {
+      "fold": "F23",
+      "ticker": "AMD",
+      "opportunities": 1744,
+      "forecasts": 1536,
+      "input_missing": 208,
+      "s2c": 1501,
+      "rolling": 1029
+    },
+    {
+      "fold": "F23",
+      "ticker": "AMZN",
+      "opportunities": 1744,
+      "forecasts": 1536,
+      "input_missing": 208,
+      "s2c": 1508,
+      "rolling": 1036
+    },
+    {
+      "fold": "F23",
+      "ticker": "AVGO",
+      "opportunities": 1744,
+      "forecasts": 1619,
+      "input_missing": 125,
+      "s2c": 1423,
+      "rolling": 0
+    },
+    {
+      "fold": "F23",
+      "ticker": "BA",
+      "opportunities": 1744,
+      "forecasts": 1550,
+      "input_missing": 194,
+      "s2c": 1522,
+      "rolling": 555
+    },
+    {
+      "fold": "F23",
+      "ticker": "BAC",
+      "opportunities": 1744,
+      "forecasts": 1536,
+      "input_missing": 208,
+      "s2c": 1508,
+      "rolling": 1090
+    },
+    {
+      "fold": "F23",
+      "ticker": "COP",
+      "opportunities": 1744,
+      "forecasts": 1675,
+      "input_missing": 69,
+      "s2c": 1647,
+      "rolling": 1184
+    },
+    {
+      "fold": "F23",
+      "ticker": "CSCO",
+      "opportunities": 1744,
+      "forecasts": 1675,
+      "input_missing": 69,
+      "s2c": 1633,
+      "rolling": 1156
+    },
+    {
+      "fold": "F23",
+      "ticker": "CVX",
+      "opportunities": 1744,
+      "forecasts": 1670,
+      "input_missing": 74,
+      "s2c": 1642,
+      "rolling": 1173
+    },
+    {
+      "fold": "F23",
+      "ticker": "JNJ",
+      "opportunities": 1744,
+      "forecasts": 1615,
+      "input_missing": 129,
+      "s2c": 1587,
+      "rolling": 1036
+    },
+    {
+      "fold": "F23",
+      "ticker": "KO",
+      "opportunities": 1744,
+      "forecasts": 1609,
+      "input_missing": 135,
+      "s2c": 1574,
+      "rolling": 1194
+    },
+    {
+      "fold": "F23",
+      "ticker": "MA",
+      "opportunities": 1744,
+      "forecasts": 1671,
+      "input_missing": 73,
+      "s2c": 1615,
+      "rolling": 117
+    },
+    {
+      "fold": "F23",
+      "ticker": "MRK",
+      "opportunities": 1744,
+      "forecasts": 1651,
+      "input_missing": 93,
+      "s2c": 1623,
+      "rolling": 1094
+    },
+    {
+      "fold": "F23",
+      "ticker": "MS",
+      "opportunities": 1744,
+      "forecasts": 1657,
+      "input_missing": 87,
+      "s2c": 1629,
+      "rolling": 1090
+    },
+    {
+      "fold": "F23",
+      "ticker": "PEP",
+      "opportunities": 1744,
+      "forecasts": 1671,
+      "input_missing": 73,
+      "s2c": 1643,
+      "rolling": 1055
+    },
+    {
+      "fold": "F23",
+      "ticker": "SBUX",
+      "opportunities": 1744,
+      "forecasts": 1614,
+      "input_missing": 130,
+      "s2c": 1600,
+      "rolling": 1095
+    },
+    {
+      "fold": "F23",
+      "ticker": "TSLA",
+      "opportunities": 1744,
+      "forecasts": 1615,
+      "input_missing": 129,
+      "s2c": 1587,
+      "rolling": 1215
+    },
+    {
+      "fold": "F23",
+      "ticker": "VZ",
+      "opportunities": 1744,
+      "forecasts": 1671,
+      "input_missing": 73,
+      "s2c": 1636,
+      "rolling": 1155
+    },
+    {
+      "fold": "F23",
+      "ticker": "WFC",
+      "opportunities": 1744,
+      "forecasts": 1665,
+      "input_missing": 79,
+      "s2c": 1637,
+      "rolling": 1078
+    },
+    {
+      "fold": "F23",
+      "ticker": "XOM",
+      "opportunities": 1744,
+      "forecasts": 1671,
+      "input_missing": 73,
+      "s2c": 1643,
+      "rolling": 1278
+    },
+    {
+      "fold": "F24",
+      "ticker": "AAPL",
+      "opportunities": 1755,
+      "forecasts": 1679,
+      "input_missing": 76,
+      "s2c": 1630,
+      "rolling": 1297
+    },
+    {
+      "fold": "F24",
+      "ticker": "AMD",
+      "opportunities": 1755,
+      "forecasts": 1679,
+      "input_missing": 76,
+      "s2c": 1644,
+      "rolling": 1398
+    },
+    {
+      "fold": "F24",
+      "ticker": "AMZN",
+      "opportunities": 1755,
+      "forecasts": 1679,
+      "input_missing": 76,
+      "s2c": 1644,
+      "rolling": 1400
+    },
+    {
+      "fold": "F24",
+      "ticker": "AVGO",
+      "opportunities": 1755,
+      "forecasts": 1679,
+      "input_missing": 76,
+      "s2c": 1483,
+      "rolling": 315
+    },
+    {
+      "fold": "F24",
+      "ticker": "BA",
+      "opportunities": 1755,
+      "forecasts": 1679,
+      "input_missing": 76,
+      "s2c": 1644,
+      "rolling": 1005
+    },
+    {
+      "fold": "F24",
+      "ticker": "BAC",
+      "opportunities": 1755,
+      "forecasts": 1679,
+      "input_missing": 76,
+      "s2c": 1644,
+      "rolling": 1516
+    },
+    {
+      "fold": "F24",
+      "ticker": "COP",
+      "opportunities": 1755,
+      "forecasts": 1624,
+      "input_missing": 131,
+      "s2c": 1582,
+      "rolling": 1324
+    },
+    {
+      "fold": "F24",
+      "ticker": "CSCO",
+      "opportunities": 1755,
+      "forecasts": 1679,
+      "input_missing": 76,
+      "s2c": 1644,
+      "rolling": 1460
+    },
+    {
+      "fold": "F24",
+      "ticker": "CVX",
+      "opportunities": 1755,
+      "forecasts": 1678,
+      "input_missing": 77,
+      "s2c": 1636,
+      "rolling": 1390
+    },
+    {
+      "fold": "F24",
+      "ticker": "JNJ",
+      "opportunities": 1755,
+      "forecasts": 1679,
+      "input_missing": 76,
+      "s2c": 1637,
+      "rolling": 1235
+    },
+    {
+      "fold": "F24",
+      "ticker": "KO",
+      "opportunities": 1755,
+      "forecasts": 1679,
+      "input_missing": 76,
+      "s2c": 1637,
+      "rolling": 1298
+    },
+    {
+      "fold": "F24",
+      "ticker": "MA",
+      "opportunities": 1755,
+      "forecasts": 1678,
+      "input_missing": 77,
+      "s2c": 1481,
+      "rolling": 0
+    },
+    {
+      "fold": "F24",
+      "ticker": "MRK",
+      "opportunities": 1755,
+      "forecasts": 1583,
+      "input_missing": 172,
+      "s2c": 1548,
+      "rolling": 979
+    },
+    {
+      "fold": "F24",
+      "ticker": "MS",
+      "opportunities": 1755,
+      "forecasts": 1570,
+      "input_missing": 185,
+      "s2c": 1529,
+      "rolling": 813
+    },
+    {
+      "fold": "F24",
+      "ticker": "PEP",
+      "opportunities": 1755,
+      "forecasts": 1679,
+      "input_missing": 76,
+      "s2c": 1630,
+      "rolling": 748
+    },
+    {
+      "fold": "F24",
+      "ticker": "SBUX",
+      "opportunities": 1755,
+      "forecasts": 1623,
+      "input_missing": 132,
+      "s2c": 1588,
+      "rolling": 1151
+    },
+    {
+      "fold": "F24",
+      "ticker": "TSLA",
+      "opportunities": 1755,
+      "forecasts": 1596,
+      "input_missing": 159,
+      "s2c": 1575,
+      "rolling": 1418
+    },
+    {
+      "fold": "F24",
+      "ticker": "VZ",
+      "opportunities": 1755,
+      "forecasts": 1623,
+      "input_missing": 132,
+      "s2c": 1595,
+      "rolling": 1254
+    },
+    {
+      "fold": "F24",
+      "ticker": "WFC",
+      "opportunities": 1755,
+      "forecasts": 1616,
+      "input_missing": 139,
+      "s2c": 1581,
+      "rolling": 1156
+    },
+    {
+      "fold": "F24",
+      "ticker": "XOM",
+      "opportunities": 1755,
+      "forecasts": 1623,
+      "input_missing": 132,
+      "s2c": 1595,
+      "rolling": 1516
+    }
+  ],
+  "H4_shared_keys": [
+    {
+      "ticker": "AAPL",
+      "origin": "2021-01-08 15:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "COP",
+      "origin": "2021-01-08 15:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "AAPL",
+      "origin": "2021-11-26 14:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "COP",
+      "origin": "2021-11-26 14:30:00+00:00",
+      "abs_difference": 2.6159501266553864e-09
+    },
+    {
+      "ticker": "AAPL",
+      "origin": "2022-01-10 15:30:00+00:00",
+      "abs_difference": 1.693998096310989e-09
+    },
+    {
+      "ticker": "COP",
+      "origin": "2022-01-10 15:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "AAPL",
+      "origin": "2022-11-25 14:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "COP",
+      "origin": "2022-11-25 14:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "AAPL",
+      "origin": "2023-01-09 15:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "COP",
+      "origin": "2023-01-09 15:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "AAPL",
+      "origin": "2023-11-24 14:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "COP",
+      "origin": "2023-11-24 14:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "AAPL",
+      "origin": "2024-01-08 15:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "COP",
+      "origin": "2024-01-08 15:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "AAPL",
+      "origin": "2024-11-29 14:30:00+00:00",
+      "abs_difference": 0.0
+    },
+    {
+      "ticker": "COP",
+      "origin": "2024-11-29 14:30:00+00:00",
+      "abs_difference": 0.0
+    }
+  ],
+  "archived_original_parity": "HISTORICAL_PREDICTION_PARITY_NOT_COMPARABLE",
+  "historical_financial_outputs": false,
+  "unique_opportunities": 140280,
+  "resume_identities": "64817adb8457ab12545410d4f42419b730757a67580224c9e4841a37a140bc99"
+}

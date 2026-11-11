@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "totals": {
+    "hourly_rows": 509140,
+    "canonical_rows": 33296542,
+    "canonical_rth": 28092143,
+    "quarantine_seen": 18
+  },
+  "specimens": 284,
+  "checks": 2272,
+  "cases": [
+    "empty_hour",
+    "missing_close_unfilled",
+    "missing_open",
+    "partial_volume",
+    "proxy_terminal",
+    "quarantine"
+  ],
+  "failures": [],
+  "schemas": {
+    "hourly": "ticker: large_string\nsource_month: large_string\nsource_revision: large_string\nsession_date_et: large_string\nhour_id: large_string\nhour_start_utc: timestamp[ns, tz=UTC]\nhour_end_utc: timestamp[ns, tz=UTC]\ncompleted_at_utc: timestamp[ns, tz=UTC]\nbin_length_minutes: int64\nexpected_minutes: int64\nis_stub: bool\ngenuine_minutes: int64\nexact_duplicate_minutes: int64\nambiguous_minutes: int64\nabsent_minutes: int64\ninvalid_minutes: int64\nfilled_minutes: int64\nunfilled_minutes: int64\nlongest_gap_minutes: int64\nopen_is_genuine: bool\nclose_is_genuine: bool\nfirst_observed_open: bool\nopening_minutes_missing: bool\nall_ohlc_genuine_or_complete: bool\nvolume_is_complete: bool\nobserved_volume_lower_bound: bool\npartial_hour: bool\nzero_observed_hours: bool\nraw_linkage_hash: large_string\nquality_tier: large_string\naction_uncertainty: bool\nissue_ids: large_string\nissue_reasons: large_string\nstrict_candidate: bool\nmoderate_candidate: bool\nbroad_candidate: bool\ntraining_eligibility_suggestion: large_string\nobserved_open: double\nobserved_close: double\nobserved_high: double\nobserved_low: double\nobserved_volume: double\nfirst_minute: timestamp[ns, tz=UTC]\nlast_minute: timestamp[ns, tz=UTC]\ngenuine_count: int64\nquarantine_count: int64\ngenuine_open: bool\ngenuine_close: bool\nopen: double\nclose: double\nhigh: double\nlow: double\nvolume: double\nobserved_volume_complete: bool\nhour_field_usable_open: bool\nhour_field_usable_close: bool\nhour_field_usable_high: bool\nhour_field_usable_low: bool\nhour_field_usable_complete_volume: bool\nextrema_complete: bool\nmissing_count: int64\nconflict_count: int64\nanomaly_event_ids: large_string\nuntrusted_fields: large_string\nproxy_count: int64\nclose_input_cap0: double\nclose_input_cap5: double\nhour_usable_price_endpoints: bool\nhour_proxy_price_usable: bool\naction_boundary: bool\nprice_basis_id: large_string\nprice_factor: double\nvolume_factor: double\nprice_adjustment_version: large_string\nis_rth: bool\nsource_quality_tier_018d: large_string\nsource_action_uncertainty_018d: bool\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 10120",
+    "canonical": "timestamp: timestamp[ns, tz=UTC]\nopen: double\nhigh: double\nlow: double\nclose: double\nvolume: double\nticker: large_string\nsource_row: int64\nraw_multiplicity: int64\nis_rth: bool\nis_genuine: bool\nis_imputed: bool\nsource_revision: large_string\nraw_linkage_hash: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1731"
+  }
+}

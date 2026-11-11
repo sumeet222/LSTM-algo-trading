@@ -1,0 +1,88 @@
+{
+  "UTC": "2026-11-10T14:16:58.069443+00:00",
+  "free_disk_GiB": 18.897838592529297,
+  "processes": [
+    {
+      "pid": 61526,
+      "parent": 1352,
+      "state": "Ss",
+      "CPU_percent": "0.0",
+      "RSS_KiB": 3408,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python trading/track2/stage35/final_backtest_v5/audits/EXECUTE_FROZEN_SUITE_V5.py.txt"
+    },
+    {
+      "pid": 62148,
+      "parent": 61526,
+      "state": "T",
+      "CPU_percent": "0.0",
+      "RSS_KiB": 1088,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_impact_1 --scenario impact_1"
+    },
+    {
+      "pid": 62149,
+      "parent": 61526,
+      "state": "T",
+      "CPU_percent": "0.0",
+      "RSS_KiB": 1088,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_fee_0 --scenario fee_0"
+    },
+    {
+      "pid": 62150,
+      "parent": 61526,
+      "state": "T",
+      "CPU_percent": "0.0",
+      "RSS_KiB": 1088,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_fee_0_01 --scenario fee_0.01"
+    },
+    {
+      "pid": 62151,
+      "parent": 61526,
+      "state": "T",
+      "CPU_percent": "0.0",
+      "RSS_KiB": 1088,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_impact_15 --scenario impact_15"
+    },
+    {
+      "pid": 62477,
+      "parent": 1352,
+      "state": "Ss",
+      "CPU_percent": "0.0",
+      "RSS_KiB": 8464,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python trading/track2/stage35/final_backtest_v5/audits/RESUME_RESOURCE_QUEUE_V5.py.txt"
+    },
+    {
+      "pid": 66165,
+      "parent": 61526,
+      "state": "R",
+      "CPU_percent": "96.6",
+      "RSS_KiB": 114144,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_unknown_yield_0_03 --scenario unknown_yield_0.03"
+    },
+    {
+      "pid": 67220,
+      "parent": 61526,
+      "state": "R",
+      "CPU_percent": "97.0",
+      "RSS_KiB": 160720,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_cil_postclose_33_30 --scenario cil_postclose_33.30"
+    },
+    {
+      "pid": 67534,
+      "parent": 61526,
+      "state": "R",
+      "CPU_percent": "96.5",
+      "RSS_KiB": 231568,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_cil_postclose_40_70 --scenario cil_postclose_40.70"
+    },
+    {
+      "pid": 67574,
+      "parent": 61526,
+      "state": "R",
+      "CPU_percent": "96.2",
+      "RSS_KiB": 237056,
+      "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_cil_sessions_1 --scenario cil_sessions_1"
+    }
+  ],
+  "read_only": true,
+  "signals_sent": false
+}

@@ -1,0 +1,14 @@
+{
+  "bar_eligibility": "published raw OHLCV meeting frozen positive/time/OHLCV checks; no odd-lot or quote reconstruction enabled",
+  "cap_residual": "not redistributed; whole shares toward zero; idle risk remains cash",
+  "data_gap_source": "original validated raw minute first; exact schema-failing/missing keys only consult the sealed SIP gap projection; no feature/control/sign recomputation",
+  "display_ordering": "source receipt frontier at minute timestamp; decision/submission display uses +1 microsecond; executable minute strictly subsequent",
+  "expense_reserve": "eligible_name_count * minimum_order_fee + 0.002 * markedNAV",
+  "materiality": "any actual unknown submitted stock fill blocks full financial certification; no return-based materiality cutoff",
+  "new_vintage_budget": "min(0.20*(NAV-expense_reserve), NAV-existing_virtual_gross, available_own_cash-expense_reserve)",
+  "original_sizing_target": "frozen; unsent remainder may expire or be cancelled on observed cap breach/recall; held shares never resized from a later forecast",
+  "parent_protocol_sha256": "8494de8ec40c0f378ba5056f665748f973e81cfe0fe8db75548e603f919aae5c",
+  "pending_state": "known future eligible order does not invalidate current NAV; unobservable submitted fill does",
+  "performance_tuning": false,
+  "source_absence": "never a pretrade universe gate; unobservable submitted execution retained with reservations and unknown NAV; no later-bar substitution"
+}

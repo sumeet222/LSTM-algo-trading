@@ -1,0 +1,1981 @@
+{
+  "checked": 395,
+  "all_unchanged": true,
+  "files": [
+    {
+      "path": "replication/EXPERIMENT_SPEC.md",
+      "sha256": "92d09d7f1bd2792383094cb280994c8255de142ec45bf1c99eb2a52d45712bbd",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/.DS_Store",
+      "sha256": "40e05edea1150c86288110905314a29852e327bf188df5a0d9413c52fc2a7c70",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/PHASE2_FROZEN_MANIFEST.json",
+      "sha256": "acee4b37613fc905ae2d1b3dd1624a8a19762bd3cdc42086fe6c474911f02410",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/PHASE2_HANDOFF.md",
+      "sha256": "e0738a28de308e0aaceec4f05367dfe1b8ea052a01dfd13315657cca3fb92d26",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/REPRODUCE.md",
+      "sha256": "a0aba09df0a68a79d5ecfd1627576900701ec52e070eb885347e3e0933348b88",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/SESSION_REPORT.md",
+      "sha256": "980ffdcdac3db911051df5ee0fe6323f2cb65062e95d5db080e7ca81e6c86863",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/F21_initial_recipe.json",
+      "sha256": "aff0559078fe4503250e91164285cdcdea36d3894f9e6880e78d9fcfac13b96b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/F21_refit_recipe.json",
+      "sha256": "e7f78b4708e638b2c0b0c10132d3d5ba85c1a5a12ebcebd5d3b493da65ed972a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/F22_initial_recipe.json",
+      "sha256": "2576468bd05e0dcc7f5a8fc7d670032f2dc38c2c63b3150918f5b993d2c1f6c2",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/F22_refit_recipe.json",
+      "sha256": "c852509f70dbf847cc5d97fcb6967b2b7f1041a4cfc60ae2d45691a3e4447c18",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/F23_initial_recipe.json",
+      "sha256": "ab8227cdadbb06e3bb44da4143db3f3448ac5eb3ecba06e125e6e584def3056d",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/F23_refit_recipe.json",
+      "sha256": "4f454977ba7d085d1e6d6422c016cea9fab7e39133c03293a71b198d512b7f24",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/F24_initial_recipe.json",
+      "sha256": "77f8c3616465442aa344c4608520cf64e2ec202777737cf9e85adcb03c55cd8f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/F24_refit_recipe.json",
+      "sha256": "d42b4b4160f18f7864068babea00ced85dd8a99e0862d36301b282929577546b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/grid.parquet",
+      "sha256": "fa516a6dbab0e38f6b8f177d8ec8b3ed06a60643e02038212a7792ea0bd2fa6d",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/origins.parquet",
+      "sha256": "d5d3f90e99b3037d8de1df5415dfd5251e8f8854e8039c27c35a83d08997d46c",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/checkpoint_reload.json",
+      "sha256": "7d80126ecaef5586cd367d7bbfe1723fdf58ea64e4531b6385bcaf8f249a56d3",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/completed.json",
+      "sha256": "b27272895ed9f6ac852ef6476c31f221a876586ed9754317c134cfd4e7d4fd25",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/metrics/clamping.csv",
+      "sha256": "cf85e6c6b5e53bd86f70879319312c2bec61d024ad532ce8126785eb78f19a71",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/metrics/events.csv",
+      "sha256": "24025c3969dc646a3fd19d150c5dd5b2e931b9abe2a6b4f183a743cdcdebcd65",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/metrics/ranks.csv",
+      "sha256": "b85202e11762d24c02128012d9b75f3a3fceb097e932f6384f0b2e1fffe57ec8",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/metrics/scalars.csv",
+      "sha256": "110a2a251fd0e0298bbae7d92663af10b5fa2d8451e04e075fee18333a85145e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/metrics/signed.csv",
+      "sha256": "72b52a9d479585a9d99d7aa58d80f1070ac94e1fb2cf8a5f5d4b468b8aa6dc3f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/replay_metrics/clamping.csv",
+      "sha256": "cf85e6c6b5e53bd86f70879319312c2bec61d024ad532ce8126785eb78f19a71",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/replay_metrics/events.csv",
+      "sha256": "24025c3969dc646a3fd19d150c5dd5b2e931b9abe2a6b4f183a743cdcdebcd65",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/replay_metrics/ranks.csv",
+      "sha256": "b85202e11762d24c02128012d9b75f3a3fceb097e932f6384f0b2e1fffe57ec8",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/replay_metrics/replay_receipt.json",
+      "sha256": "313680e35f8aab114dd2e67f126c4ce0f2d459c3c90a9c9dd216c6c1a42c5407",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/replay_metrics/scalars.csv",
+      "sha256": "110a2a251fd0e0298bbae7d92663af10b5fa2d8451e04e075fee18333a85145e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/replay_metrics/signed.csv",
+      "sha256": "72b52a9d479585a9d99d7aa58d80f1070ac94e1fb2cf8a5f5d4b468b8aa6dc3f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/report_recovery_v1/report_recovery_ledger.jsonl",
+      "sha256": "2cffab6ce6c93d1387939a11d259ab53089a0f391657262fa16421556bcdce3a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/roles.json",
+      "sha256": "c38abbaf094285c67f53225e0078b18bbcafe92d190edd4e1dfe573b08fcfd59",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/calibration.json",
+      "sha256": "9fe455e5a55734dfa90d2bb85791acc6e675a921880c65da6a2777770d861439",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/calibration_predictions.parquet",
+      "sha256": "428b5dc44249eb36a554eaf617e6f9ac8e4d08d6e06ee07e1e4c58f3d3dc2e37",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/initial/completed.json",
+      "sha256": "976c33a785870385f66135e5f58054ec60c2398d7a40e577ed29421b4f7722d8",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/initial/final_state.pt",
+      "sha256": "61c9ebeac459fa8ef8bcdce51905c36b9f203a00be4912f548314e63cbd8b4ff",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/initial/initial_state.pt",
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/initial/selected_state.pt",
+      "sha256": "d42b669ab1778673098bc6d02a7212b658115b54424e5999b624d08430f98571",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/initial/selector_state.json",
+      "sha256": "e633f42a518b9490c6948a4630777b4f48cf3ff6ccf96660d6abad07fe9d5f80",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/initial/started.json",
+      "sha256": "c85f1cd59387442fd1ef9cb2efac102f52d3b70fd0f6394350f54ed15a5066aa",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/initial/trace.jsonl",
+      "sha256": "19e65a222cb8cd90bd6631e7062f4c2fb575c6a0c1cf5658a2dc2f1037b8dced",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/oos_scores.parquet",
+      "sha256": "01c77c6420607a5c4dc29f8fb6b2aaec163b17429d1ff4d09743343384e39bac",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/refit/completed.json",
+      "sha256": "f705f9fb0ff9073032e640af27a1418b545a23296e00d6b30ca780245e1118b7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/refit/final_state.pt",
+      "sha256": "1c1853257cc22d3a6469f4efe71a2750ed1ca1a1a68bdb1a9aaa186542fffb44",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/refit/initial_state.pt",
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/refit/latest_refit_state.pt",
+      "sha256": "41f245d4cba68191c3e810013b0d1ae425376a62397108b29dfac8ce50901377",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/refit/started.json",
+      "sha256": "c6357f353f1cc903214f430a54b027a17d830951ff0656797ea8b49e5afef060",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F21/refit/trace.jsonl",
+      "sha256": "3fe2a61a5b5564a39d5501128f0bb423905ae0c82439df1f3a5a0403619d8654",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/calibration.json",
+      "sha256": "62d3e54b58a1ec044a65b52b14e56aced1c71c47d36de924c8084e7f29b24a51",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/calibration_predictions.parquet",
+      "sha256": "8496c4548815ba027dcbfca6bfcf5e809582b066dbf66ef472ff093de9bf48b1",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/initial/completed.json",
+      "sha256": "672e3a375ff4952699c9f2c9beda52eda409c6d5af74f887b4d2f38d5bf89b50",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/initial/final_state.pt",
+      "sha256": "ef1cef745fe65112367382f1e8befb9ab92baa119d7edf42b50d8af92ef0abf6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/initial/initial_state.pt",
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/initial/selected_state.pt",
+      "sha256": "68e9c8848326cc0218a253889ed10fc77e2d366a6307e1dc25ce8fadfeced847",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/initial/selector_state.json",
+      "sha256": "6f647bfd8673bd13e5dbe929b3073b4a156d7510669787bcb679247c64d7a4a1",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/initial/started.json",
+      "sha256": "c3e99ee54e06394d4c1a5568e2c9d2d8b7a430378104314a24a30aa6e72974f2",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/initial/trace.jsonl",
+      "sha256": "17e71725f0a7d4aa31af380ceb5415987503466c14f3dd7590d86be19308a6b1",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/oos_scores.parquet",
+      "sha256": "7883b6251675146af2d9310713e9054c6c39498b3818b6d7b23c148772803ffb",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/refit/completed.json",
+      "sha256": "a0acef0ea3a3babe3f3fcc46fd22de186b44c6432f67a88f797eede6c5ccdec7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/refit/final_state.pt",
+      "sha256": "be827599417abdb3d79b6e3261734f9fb26278c603169df4a97164fe968f514b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/refit/initial_state.pt",
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/refit/latest_refit_state.pt",
+      "sha256": "594438431cf027ad1218641ec20975fd1ce5542166200b46b98b07c5e547814e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/refit/started.json",
+      "sha256": "4d32244e0a66a41412e025cc6dfebb440c0d08701a086ae70fa780f94b368cf6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F22/refit/trace.jsonl",
+      "sha256": "d33d92152d4cf8eed85684530ec36891255adace64dd92918ab9f058c77d833d",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/calibration.json",
+      "sha256": "06d38bdbe241fd7f2ac22fa367de82a8a31351cab3ae26ee44a2e26bd076d0b6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/calibration_predictions.parquet",
+      "sha256": "9fc69cf8cb0fcdb0ebb86caf61ca9699af82827651f077a7b214cfb8290cbb81",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/initial/completed.json",
+      "sha256": "58a0198158362bd784f51a0038ce5f5a0bd5505177ae9977cc7e5a3b492a4f46",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/initial/final_state.pt",
+      "sha256": "ad85e9760d5ca71f171739376658674ffe4079da6140b9d702d5e51eedda245e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/initial/initial_state.pt",
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/initial/selected_state.pt",
+      "sha256": "823a81375a343d28c8ea9796ee52d87c45e94c78554a491f9778bc4ae476fdb6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/initial/selector_state.json",
+      "sha256": "7525e603b02df20476cc08d3437211f1e326a7e5ac11a3fc83c47d1ae8d36eb2",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/initial/started.json",
+      "sha256": "cd1cd9a24f5f9e48acd44633f02007dcff98107ffabcfa86ca6567889fe7a015",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/initial/trace.jsonl",
+      "sha256": "1f8233159d92dd2c648a938463ff70b6aad7cfc38a6e49ba65aae193504c0b64",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/oos_scores.parquet",
+      "sha256": "79d4e59773806cfcee1d3a315ee3d84a103d35ff0e12e00625dcf8b1656c9953",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/refit/completed.json",
+      "sha256": "64576d98730ebb6f274ae01c578196c1ca92459fd9e9a9c1b9b7ab911ca1dbab",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/refit/final_state.pt",
+      "sha256": "a834f988c1a52479a5fe3abca0129a74a7e6e989b854e1e7a0cbc57b52c806d5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/refit/initial_state.pt",
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/refit/latest_refit_state.pt",
+      "sha256": "c814f9420502b1b16e3e02dee8aaeeee059c161a5a0778680503090dad227b9a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/refit/started.json",
+      "sha256": "a665abf640e8a1889eb39e55f458cce9d14ff991c5ef5404df6af8fe8dc48625",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F23/refit/trace.jsonl",
+      "sha256": "1614b14f7ef26549eb5bb471d3828c1db7ed47e8bf01ae341a95ce2ba6d47f5c",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/calibration.json",
+      "sha256": "4aa752e9ee97c871a230087bc5a326fb3c3c2cd83d53d27cb05ec5c96c520c5f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/calibration_predictions.parquet",
+      "sha256": "2fdf1f8c5324ddc08e89c320ebd515686baa5cd8077b1404f5f3189f482dd204",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/initial/completed.json",
+      "sha256": "78e8a4310e49cf6fd27c474d1f53b0a3ae1fa5ac1bd495bcaa75caae6ed0c88e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/initial/final_state.pt",
+      "sha256": "bce4c97165ca940292b1776c4d6f01f7b91b7a0cfd54aac9e4425351f4f941f5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/initial/initial_state.pt",
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/initial/selected_state.pt",
+      "sha256": "a16f6f785423415d31d03536c643ee22f3084596dd39afb0cbc68289a96b0602",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/initial/selector_state.json",
+      "sha256": "154d777f77ee366fb2b646407fc5e1a61e8bb46007b318f4ee223eacbc8869c3",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/initial/started.json",
+      "sha256": "f2d06a87d98badb1b95aafd0f528a2bf9a44d91e6e3296bc6815bfe0ddd3fe9c",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/initial/trace.jsonl",
+      "sha256": "0c7afaa798b6f81821a157a78fcf91c9010ac68110825ee1f19826fdbe7e9326",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/oos_scores.parquet",
+      "sha256": "1e5756e23b121b7ce10cdb8871d47b0c35c142fa629d2d1bc4527db385a669fa",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/refit/completed.json",
+      "sha256": "3bcd46bcc1380dd33d378b4a7afc2cdcf7acd51e4294146e37bf1c974f5ad412",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/refit/final_state.pt",
+      "sha256": "4f055a94e43dea78c3465b51e6e992975747ca099d74f8979fbe8fde9616289e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/refit/initial_state.pt",
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/refit/latest_refit_state.pt",
+      "sha256": "40e89d22102deb798b455b3b69c530bbf200d8e2850c4686286e77f14caa3944",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/refit/started.json",
+      "sha256": "51e4aa8218474c5a5dbf60cc01fecd2b5f211b55f59139c1703942f010f407ed",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/F24/refit/trace.jsonl",
+      "sha256": "e0684e7a080eafcb8a0b3f8ee06e6801d5d437fee295a26c2170f77472963aaa",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/failure.json",
+      "sha256": "8480a2461fed340d4b1a76f57133dea6c2bee6b7193b3be1c5feac3f0d92c037",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/replication_ledger.jsonl",
+      "sha256": "ddcca9816907546ff0bb89a77d9b4b0e9c6df5f36e62a13d0f5f56a9608dc30a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/score_bundle/manifest.json",
+      "sha256": "66cfa249ca5227aa0ef25b3b8e9a1fcfe2a53237f85f00c7692b0b19d1b2d5f7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/run/score_bundle/scores.parquet",
+      "sha256": "854349bfd68efd29a0ae659232d6a86e5a186fc990ec0cfd96fcd541e50374b5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/artifacts/source_geometry.npz",
+      "sha256": "f776d06a4ac7f3ea9e000a19c14c0f950e6180ed259809fad56445cc27f714b5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/ACCEPTANCE_CHECKLIST.md",
+      "sha256": "c9932cc871ab656071533ecbe1bf8f39c294846a0dc8725aca9c759cd29c1386",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/AUDIT_MATRIX.csv",
+      "sha256": "2fa227003b028328372fb86d044895a3096b0edc4260aaf810803326c3b24cd5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/AUDIT_MATRIX.md",
+      "sha256": "d796d37b0f8706cbb1a8df0a03d661b60f92440259f4de41a019f88989938312",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/AUDIT_MATRIX_SUPPLEMENTAL.md",
+      "sha256": "c880637cac3c23158838185471b94a382188719c04713ba3b2d85a86cf09e424",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/CAUSAL_DEPENDENCIES.csv",
+      "sha256": "7ceac621892828bb908dda7a4dbb9cbda28f1e4255a7457c1c662d0cc63487af",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/EXECUTION_ORDER_NOTE.md",
+      "sha256": "3ece4c07fae118f52ed3e417d79d83cdea1207bf03f0a1ba0a1fbf131c9552df",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/FITTED_ARTIFACTS_BEFORE_REPORT_RECOVERY.json",
+      "sha256": "6cbaefd01a5386f9eed887a3b95827a5be81968be6654f2f08de7282f9c3280c",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/IMPLEMENTATION_CORRECTIONS.md",
+      "sha256": "d20ef4ae099b7d03ea81e317853e99f909354a71b92bf14577c464ce6c9d682c",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/IMPORT_LOCK.json",
+      "sha256": "84e16fcb68b5258c5234a99c858dd4931afb9ecc3f5db8f0911ea012a776e0fa",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/INHERITED_DATA_CONTRACT.md",
+      "sha256": "a899f7b9fd25d012d7cd4e127e56b837da76838c4866940222bcb1ffdb4fdc01",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/MODELING_VALIDITY_AUDIT.md",
+      "sha256": "7f6b33afe73d0780108bc50222f6aaf33514f0aa2b53c860c4c960e79dccb90b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/POSTRUN_INTEGRITY.json",
+      "sha256": "0790f435a482c003f5e244fef414f62a806a86626c060adaeaa00c53086c9768",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/PREFIT_ACCEPTANCE.json",
+      "sha256": "bed86ebd495c32ed2ce782f718aed8a1ca9d217eff12a35aa7fa22dcf7eddb0e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/acceptance_review.json",
+      "sha256": "e750b6d231ecf790bba067e777cbf0a48c2a845459be72276cb43388c4f29ae5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/acceptance_review.md",
+      "sha256": "ba52673ed05e7eb605366fa4d4a5bbe27a4f4e8a37a2bbcbcde1f2b8e5fd7a4a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/aggregation_witnesses.json",
+      "sha256": "b4fda72d262351579417a58958e18173e388e97bf408e616bc88d110f70dfaf6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/all_fold_preflight.json",
+      "sha256": "169825cb2196a05575995f614f7075735b6b3235d272abcbcd687b4223febf35",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/contract_execution.log",
+      "sha256": "b502b11b48c9c768adb4f025cd12a335c6971b3a64f434835351f950d40de0af",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/contract_execution_002.log",
+      "sha256": "292282390a58c067a37a8899926fbb2ca6568fa3b783785c23c5a5bf3ebf6de3",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/contract_execution_003.log",
+      "sha256": "ff3b77ec3ff9fafac4f4a816ad28c0dd87392f5584354799efccea96004ff561",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/data_contract_receipt.json",
+      "sha256": "db2907287b8db4c100cc958df940f176278fc62d2a7c71fa4bb065bddad76752",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/evaluation_gate.json",
+      "sha256": "fcd1c744c7537a5affd16bfd029870cb035aa69bacf3f71948f7b46dbd156fa9",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/evaluation_gate.md",
+      "sha256": "1f3fcdfc5265d62851c58e0fbda36a609280331e806cc998b587eeb3ee6009b6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/executed_source/evaluation_prefit.py.txt",
+      "sha256": "a3c24b306812afdfa7b00611d5335163a5a14820e5a86a6427df913a4a02f13d",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/fallback_incidence.csv",
+      "sha256": "8db461dc831e1b660a01416f07e9a6700a9d1b046ab5f0739a2998244ebec5ef",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/final_acceptance_review.json",
+      "sha256": "7a6cff106d53e259cb380288b6a51c587fe05b65f06fd2565f1e06b324c5c04b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/final_acceptance_review.md",
+      "sha256": "a9af54c9b693d39e2a9e216644613fbcc4eb8fe73b3ddac9300ca87d2354139a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/geometry_checks.json",
+      "sha256": "2a8391a183dcc8e306eca65b129da986cf4fb2d6b6f2dc9261bf812784bdb673",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/hardware_receipt.json",
+      "sha256": "0a6f07eab80e15698e799b3139a440d44168421456fd20a09a9e0d4dddcbd690",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/independent_data_review.md",
+      "sha256": "9e5971b112d834ac53be951f728d6ca080c41d6a6d38d6e48360ce1471d9a591",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/initial_schema.json",
+      "sha256": "3d92e9f581de41769f0d59147092a7886bbbd8dd421bf30f0ee5ff4950614df7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/input_manifest.json",
+      "sha256": "c9d57fbb64a7fcf43ae238e9e7cb4fc3e004e013f85916c19cb8c220182c1deb",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/model_gate.json",
+      "sha256": "fcf9355a567b005d5992e09a28a7870bbe6ade40472ccba12c804de77bd3b990",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/model_gate.md",
+      "sha256": "7ffa05f75c3a230ce01b1b60f8362ef012bd06e8db34eb5cebed662dfb4b8ab2",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/phase_parameter_frontier_check.json",
+      "sha256": "6e5f02b848930311d0a6096b24e3953215037ad9128ae6b30258e152f6ee3f3a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/phase_parameter_frontier_check.md",
+      "sha256": "2b42edc165874809ba9a3131154ea7ca6a1e5de172eb360ec8ff6089f4061329",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/postrun_check.py",
+      "sha256": "cc003b1ce1c4654a21d600db5c7fe0296b4fa58ad7c792339e832677ea6b853e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/postrun_input_immutability.json",
+      "sha256": "d4ef59e869d957470024e38e83a9b7cf064eae493850b7e2c35983a02a53f952",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/postrun_integrity_execution.log",
+      "sha256": "2f04d238e50fbe0a0fae64c12176a871943d6e20b397ce90827af4618fe7a5dc",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/preflight_execution_001.log",
+      "sha256": "a313b1bc94741986917ababa9e3d477806e23e4a338c1481f1443e3bd071a9a6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/preflight_execution_002.log",
+      "sha256": "a43c7f5285c9a35e4509c7d83259cb39932ce068a498a6684a2bbb17a3f3b5c6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/preflight_execution_003.log",
+      "sha256": "680e4ca4c3fb3f334cac8325968af3f01e41c5ba62deb3cc9d8884778eea7806",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/profile_contract.log",
+      "sha256": "cc980e1b438d6fdb6015697508995f44859f75f3f979f21bc984e9a5ed990b55",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48847.json",
+      "sha256": "34758458975f5abb2d9b1179f8fbabd5d00a28d0cac2afeabe8e72f136528c76",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48886.json",
+      "sha256": "3248cda9903cc6e774bb6d7170e47ad3da91570f2d5e64ae47e7365f43948c11",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48927.json",
+      "sha256": "ef7fede6e4d23926ae54a25c2e54d73c4136112820fa9dfb5fdef8b9cb5b1cdd",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48962.json",
+      "sha256": "ccf0f89a576127930e9ca62cf178459b09e3582e28afb1f466b9eb972d83d791",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48970.json",
+      "sha256": "e9f002e58b9c93c976927168fa36f12283c4c91168e1b07588a5fa3b8be1e374",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48988.json",
+      "sha256": "2ffbde4f3d199b8dc40f14c2aceaabbef7f458afd3fe60ba52fddf6d5777e669",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49009.json",
+      "sha256": "15260813a3ff5570891070d70d59b15e587e1724c8d24ba428a12b6f27ee2ba7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49018.json",
+      "sha256": "35b82df4eeb60d41dd255a5f03ea92d6d77397bcae18dc9c0af5ee388fd13152",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49084.json",
+      "sha256": "5fbb2c2b2ad9144fb0662381bfc36841825f6c69c97206c9e6da70f90e9e26a3",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49097.json",
+      "sha256": "50d9bf6a759c6286b5f061a5ed9aa63746afe06f567bbc631d43428c76a7e55e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49159.json",
+      "sha256": "fcfb475b86e41a6268cd270a1737ab985c8a0d2dfb3b4739c0deb331d2fb682d",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49168.json",
+      "sha256": "bbb262290b4964376fe4ea22876c6bbafe5697e636d7695904f8b5e570062083",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49189.json",
+      "sha256": "7e1561167d396461187acf8b6d69a9a5fce111212714c012c43b20b2c880c1bf",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49242.json",
+      "sha256": "21aa533f0b821760e389c593ea4ea3aacc6b53baae9b2696ecff304406465dab",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49467.json",
+      "sha256": "61f0130c27207a8eb3606381efe461d6b7a724007c5ffb407823cc1df3c401fb",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49477.json",
+      "sha256": "1d890e15b635c7c18811f2bb73ec5555b05fbcf9c6531eb5c33d39e1b93ed505",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49485.json",
+      "sha256": "de0d09f596abae03702530760455eb3a7d7e95a0cf5376465018353ab4601ed5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49547.json",
+      "sha256": "f7743f58dda17613318da3f45c811a6d27362b3c7c0c0de0185320e9b89132d1",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49569.json",
+      "sha256": "88fd90f4e729e99a36489c128e321f166ffab05a6280fab01fab0a891660dd87",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49669.json",
+      "sha256": "3880787020a068b181080afeb562ba1390494f3f4302a27a6934691822f0d0ad",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49737.json",
+      "sha256": "a5ac14010a8f622a49c6e931f070a8d732de8c275c23021917726072c85b235e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49748.json",
+      "sha256": "c504dff2000a213a8b9c77ea9e61e3e3eac1091d91a5e230016b5ebd2a6d6529",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49789.json",
+      "sha256": "594f4c1ff0c09c9a2c0fa92685dfcc66cc6e21c646fd354132b39348d20fcbf7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49811.json",
+      "sha256": "23da1cf7f5d40f496215230b55c4b9600ea23b78b428a72e85ab8136c39c20de",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49835.json",
+      "sha256": "60341a959d6995b0f6a6c600b095fe2bb42f6c61331961ebcb07ee55cd5fa1a5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49863.json",
+      "sha256": "274566771156112adc7d5a0382ebe347774f98cae8ef86409539bd6789093b7a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49887.json",
+      "sha256": "48154b60d693a924376c35e804617dce501394a7aca8d572bd0f60c6268f3dba",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49967.json",
+      "sha256": "2c36c88211013f0d190eafea7b16fa28207824ccfe9430dd5757d313eaeddbe8",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49976.json",
+      "sha256": "3ed03286769cbecd1114fdc22e64fcc0bf3d0302e7516f3c0fe53df55f4f9b26",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_50382.json",
+      "sha256": "56bcc8f3551b95834835d78cae489ab241bef642562497ffd6b379aaeeb67610",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_51977.json",
+      "sha256": "e661150c978b93f32cadad28043844f2160aad86c4ba3900dfb0fc1b6d1991fd",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52019.json",
+      "sha256": "ea9accfc6bc7b10871d9344aefffe3e4df3adc92bedd287638c6b819510d4dc8",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52038.json",
+      "sha256": "00587f17ecf71aaf5696df90c07b3b38ca92d1f1945ee81ad5618949384cb726",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52039.json",
+      "sha256": "2266c0868dbc13ce10f69df99b8b275a6000624caad4e4d36d90e8c8dee01ce5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52086.json",
+      "sha256": "71a3b392279cfccfe12188e531b0744d7aba7dd08b1ed8714553f7289e4aab4a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52103.json",
+      "sha256": "28cc79bec358999f22f3fa466fcd04e35e2f06529f7386c57ce63744049e77b7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52632.json",
+      "sha256": "b4ccc3e8cc21ef5d1b1f80543038bfcf534ece8b33ead4f41286aca251e55a2e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52700.json",
+      "sha256": "1f087132b925469e2c9589e51637a98fa68f8239f910848994c0fe2acc6b8168",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52884.json",
+      "sha256": "d6d84557400d91431c4e22839e7086a62633f55b27f092244322c4ac94ae3d88",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/pyright_evaluation.json",
+      "sha256": "6057b17881e83b31dc885e05d16f12d22dba8e93e67e00c4e8d5d06e70edcda2",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/pyright_model.json",
+      "sha256": "40e4f019b34b04acaa9803489828a6b8d127fc10f47f8671e8e816479d8db33b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/pyright_phase2.json",
+      "sha256": "7a895fd1da0ea076a057691cefaeca1135d559ef5418dfd2cac3543c8ba0b849",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/pyright_phase2_001.log",
+      "sha256": "5f751a2fbe7e66821f79a47a743d06b762f571275ad0a912e0a0f2ec12cf64b1",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/pyright_phase2_002.log",
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/pyright_phase2_final.log",
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/pyright_postrun.json",
+      "sha256": "712e54c917651cd24fba3bead4f267ced92f3497af52e28bab07eedcfa3ec31e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/pyright_postrun.log",
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/pyright_report_recovery.log",
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/pyright_report_recovery_final.log",
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/real_execution.log",
+      "sha256": "463434ff6d064df61f134934203c837972a9adb5c84d1ea07b7c8d31d8f363fc",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/report_only_patch.diff",
+      "sha256": "2682966a4d47aa10384e3b819cb71e1b7cc9cbfef23411d6a3f8408bdb17eff6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/report_recovery.py",
+      "sha256": "156b7660361f298a22d38dacdfed343c42a555e513d5fb743e85d5f64c42a52e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/report_recovery_execution.log",
+      "sha256": "e3990a56f4dca7fa9c3e14b1cd7667faa50de3a0d124dffc763cc3b18d58d075",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/report_source_transition.json",
+      "sha256": "9294f7021957a82b58f2938799463b5ce1f91108d7a494c73edd0f26e48407ad",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/role_counts.csv",
+      "sha256": "a2a0c5d5d162ca3137a6a68d03ca243b891757f5a271220c16ab4858e96ea7ed",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/selector_candidates.json",
+      "sha256": "8528b9017ea808ae981ea75df7bf8a1ede8522b73756c486a04b9eb02b6f8b68",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/source_counts.json",
+      "sha256": "8d75ade190582c962cce54592cbb19bbc2f8fc83dcf4e4a004a9582379ecfe9a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/synthetic_gates.json",
+      "sha256": "49a292b270e077d8a811b2ff82bd50def27952e5213faaedf844a00b784ce250",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/synthetic_gates_execution_001.log",
+      "sha256": "7010dde0f4df0eb83ac95fe578d5f357e6c80e5427b25ae204cefbe2bd0e0b75",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/audit/synthetic_gates_execution_002.log",
+      "sha256": "a5fcffe4104a8a96a6aa771a8a35090b80467912908a9e342427fb04bd38d7d0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/acceptance.py",
+      "sha256": "b379b518a859f531dcc0924c5dd21e100237935cdda44ce4b25180cbc6cb7823",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/boundary.py",
+      "sha256": "222bade62e8a51ce5490f38a6f38f90cba5fbee6e9bccbc39d440614af3b3bbd",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/contract.py",
+      "sha256": "556af3b42028e0c6d964bcf41c32081ebe0c97de91f45ee272c46713f7d1e763",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/dataset.py",
+      "sha256": "71d9c80f78855593d81ebd1b60bffd813a31d9c7460fa4bd14340245bd7949e9",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/evaluation.py",
+      "sha256": "4cdc7bb65215309b912c9300024176cfe0dca58e24eaf49fc834f79e9ea969ba",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/features.py",
+      "sha256": "a48720cbf321c6168b2dea3090175d1a215865fc09f3b31ed62d16e21662521a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/geometry.py",
+      "sha256": "32dad3f6291838d02bf1a29203732cacb4f3017680bb60b8613ec82750fc8837",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/inspect_inputs.py",
+      "sha256": "2b18a95f88357b4e008f5a61cc638ab393641a50d3c7d214222033680a72b590",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/model.py",
+      "sha256": "ab42cccea260701875d58945e9bc1f74258dea833e76d182ffb9c288b99bfb73",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/prepare.py",
+      "sha256": "8af50a480e7f7053ea543290919a2f931bc3c9ac0cdb5b029e99dbc7d2789147",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/profile_contract.py",
+      "sha256": "c1fccd741f639d8b9733e353c52c5ec93397c17b33baee8b64039cc096007f59",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/run_experiment.py",
+      "sha256": "74c5e5a5ddff3d9afa58fea89b8a114598f25abb2ca343ec03a7e95e9294f200",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/code/run_gates.py",
+      "sha256": "31a546d8e66873c8dad1cbbdaa7193202400f4249b5ba5bba1056263ea72c1f7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/requirements-phase2.txt",
+      "sha256": "8de78778a819313604b9eea7031e1df7a6b27aa76b24f79861c113d5aaed69b4",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/tests/test_evaluation.py",
+      "sha256": "d1abe7d5d0fb43eae4c0c8a8dadaad846a881aa55c42a8dc8c44c3c71670a0fe",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/tests/test_evaluation_report_recovery.py",
+      "sha256": "ffbe0fa82642ccaaa25d0bd7e6ece56b15caf10ad54db29305a2b53c3eb9261b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/tests/test_feature_math_review.py",
+      "sha256": "0203a93fd02de3d699c7f4fc8007ff27ef14e1dec556f5b84fdb7dd16aad7eac",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/tests/test_frontiers_review.py",
+      "sha256": "8fd7a1e31384ef07254bbf8f280b7301f86d44ddf57851d3e29b8860946448e3",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/tests/test_model.py",
+      "sha256": "5a6f093f1f288323940444af8391a2e8c04c2d4a2eb666a31255c85c30c02c27",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase2/tests/test_source_contract.py",
+      "sha256": "cb25066b6c452039cb5e1cfc8f691dfccfda05dd830402d9b992d5dcd583a908",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/.DS_Store",
+      "sha256": "31b89e7ea8e9c702aa67fa6e54888dc47cb8d56c42b3e8497781251ecac349a9",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/BLOCKER.md",
+      "sha256": "b1206f45946355f27115d030a1c82b0872c49d13780d8764c09a618fbf7276bf",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/METADATA_EXCEPTION_AUDIT.json",
+      "sha256": "51d9ba91f4334032fa68c327ba0b3f47523e3a66f05257c621b3b0e9ec72eebc",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/METADATA_EXCEPTION_AUDIT.md",
+      "sha256": "023ad459bb05542c552c2be761b5792c35c5690370b77023cfbff97d4a1f4ec6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/PROVENANCE_SPOTCHECK.json",
+      "sha256": "71057bce07ff668aee4a559b2bed1693433d3046fa8a41150bfc4b86b34e6216",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/QUALIFIED_GATE_WITNESS.md",
+      "sha256": "c091662676da02db6719e61fe8dd70815ca4e6a385504761d83288446c72b558",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/QUALIFIED_SEAL_GATE.json",
+      "sha256": "b94bcd9e667b31a8093f7d95e3caf2f2d47538994458f93b133cc69455173c67",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/QUALIFIED_SEAL_GATE.md",
+      "sha256": "e44ffd1b5bcc3a582985508c0911a5cb0bec9a0e72d72cf3a53d20442859aabf",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/SEAL_GATE.json",
+      "sha256": "b014bdd1f15ecf908375668dc04e7bb92d9e19315a6a3b9276b661ff8dffa7ff",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/SEAL_GATE.md",
+      "sha256": "c8ab3a1a858533645d5371ab210e63b04b0d57f5f05190566581f4bfe91b3920",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/STAGE_A_EXCEPTION_CHECKS.json",
+      "sha256": "e56a2dbcc81421e516e3b1908cfe2235ac29b9f6e3f6072854d457d4ee50fac5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/ARCHIVAL_REFERENCE_REGISTER.md",
+      "sha256": "0ad0bffdbe5a102c1abdbd77b7e1380e62d96b89ec452232aa5e9854c837f6c0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/CHAIN_COMPARISON.csv",
+      "sha256": "a55bb8276eb783ad8feaf936a5369f410d1a5c43a18c13d84529d3243182d4ad",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/CHAIN_COMPARISON.md",
+      "sha256": "722fb87fe4eff0461f306688c252e8d632403ce18fe2c3c433e54fd5d8f76100",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/EXISTING_DEVIATIONS_AND_LIMITATIONS.md",
+      "sha256": "0caeb249ae7f24b178ff4f7fcc54176936b2cf0907ea47224ad77e6743814f66",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/FORECAST_PARITY.csv",
+      "sha256": "7179d12181ce6e08a4cc52a533f5c0c24c0fcef2b832df4039992374bba2f6d2",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/FORECAST_PARITY.md",
+      "sha256": "e3d5f59e9541afd4090dc91fbaa2135cd572d7fb5a863f1aff75367cbebb2ed0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/NEW_ISSUES_REGISTER.csv",
+      "sha256": "4289f97e833b35619f51a3ab6d95feb9f6205cb6a12ff5bebaf424573f88f626",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/NEW_ISSUES_REGISTER.md",
+      "sha256": "0387a607b065ad063b9651a99fe65422ddb47563ae2e403899136c97189f3524",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/ORIGINAL_VS_INDEPENDENT_METRICS.csv",
+      "sha256": "8a754a337fd643b8e3266cb53038ec2643abc057e4168d0704bebe337250c5e8",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/ORIGINAL_VS_INDEPENDENT_METRICS.md",
+      "sha256": "9bf2ae5c647c96688a60b133737f7c16753ba9b114d256c20a458b75b330a1f2",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/PHASE3_EVIDENCE_MANIFEST.json",
+      "sha256": "8e69b7a51a565d446dde68df99103cd073fced21f791bfe2118be922a29584e8",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/PHASE3_FINAL_REVIEW.md",
+      "sha256": "55b82d3aeebcfde5a31725c376ab76e232f5b5b78b9853357e2cebd4714c3bae",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/PHASE3_HANDOFF.md",
+      "sha256": "571bcf65e3140c999d19ec2612ebf0ebd0ea96a94ecf88b5e532b4904df0a0bb",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/PRE_UNSEAL_WITNESS.json",
+      "sha256": "8732172b8d382e4708ee2d8985169d2baa08d577377975ce20c9b4d559db1c3a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/QUALIFIED_AUTHORIZATION_AND_SEAL_GATE.json",
+      "sha256": "e190f8e4d993b937e854ce7bb7113ed6bace666a21e0787bc3c6284f47e9a1be",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/QUALIFIED_AUTHORIZATION_AND_SEAL_GATE.md",
+      "sha256": "3b53f9bbf90256a25308bda0946f40b479a63c2133480184cee86f9dfe51efb0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/additional_checks.json",
+      "sha256": "bd4efa8ceeb172cad804cf0509a4683972f48bbd954191bd33541ebd595c1027",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/all16_feature_evidence.csv",
+      "sha256": "008468bc579f0d5f24787d63887aa9806a46dc83645c761587f1e2eb0d320823",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/all_frozen_metric_checks.csv",
+      "sha256": "cf58037e225e34edab0d924e0e1f28589d458bacca394b13f595113a59339e93",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/archival_inventory.json",
+      "sha256": "d0b63bd9696375118b09625346b145fa6aa1054235e8f125a41b2ca598900a1f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/auxiliary_normalization.csv",
+      "sha256": "ccedd1a9314159ce00b8201fc52b114e02ee6742f2364c0a072f6211b4c9cd9b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/calibration_differences.csv",
+      "sha256": "fbc9c2ea601fe23acf40cf75a45b5924b5b0a2f58d226aa86eabb35d66f88c9b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/checkpoint_parameter_differences.csv",
+      "sha256": "2f5f915ddd77a66c77c626e17ba7f9c30086eeea73ae99415135b57318e827ac",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/final_readonly_verification.json",
+      "sha256": "ed53379ac17549848079e20f65c2f342436d31c637181f99773ebf672b6e8062",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/first_difference_witnesses.csv",
+      "sha256": "a107d3732131d64e6fcb4e2254ade0c6b7f7aa1a81a6e681e4d184092ad454c5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/fresh_integrity_checks.json",
+      "sha256": "e88513e1a1f8f6e334e96b868a03270ec4452ef55318ddcb482794727c008aa0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/geometry_and_integer_checks.csv",
+      "sha256": "c0ac9a01fd9ccfaa2a83d0701b616899c06399f457e6f41529205e51742eb147",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/independent_metric_recomputation.csv",
+      "sha256": "4cef1ae6030093841dc5eb885e3fbc5e4c133ae3412f055f7075abd77fc28022",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/independent_second_arithmetic.csv",
+      "sha256": "d1dff13983b9cf4ee549b6be16cdcfe1007ce1478fc664ff791f6d978098181b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/initial_tensor_digest_checks.csv",
+      "sha256": "0aa48eddd615f38494b001e913031952d40334de2f00727f47ac10c39392f9db",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/pair_order_disagreements.csv",
+      "sha256": "6e5af5a6e3e0e76093826d6902b3822938c119e4e0ac386dd2a113dc829bedd6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/q2_first_difference_witness.json",
+      "sha256": "ede6971f9d7690926de51a0381c690737fb015169255aabd717f76b5f036a70d",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/q2_guard_witnesses.csv",
+      "sha256": "3280a4de93265d83cda657a2f11a42c367f5239049c77d3e059b70e7d1e94036",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/recipe_values.csv",
+      "sha256": "913331498887eec20dfb90f4f440ac64cd654d9d0aea04280ae30d4e151bc251",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/recomputed_primary.csv",
+      "sha256": "97556349cadba75d1787afdae8c0ff1cbca5f49db1d23150f5d300e805cd6e79",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/reference_reads.json",
+      "sha256": "c043d3cd721f16b438bbce3519a431b7b9272c22f89dea0ad1a3b346686e7711",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/review_summary.json",
+      "sha256": "10a8b04559d01ea2282cb9e61ef9ceecbc56f6cf82022b0f2e2d5a218c655acb",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/role_date_slot_checks.csv",
+      "sha256": "51441e88f125850bd02be6f64c70666e3c27e5112ce7970ecdce6f09f0c46e4e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/role_membership_exact.csv",
+      "sha256": "40fec717777905d0fad86914a87d919383fab567f5a0d397e87f44194f8de34c",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/selector_candidate_checks.csv",
+      "sha256": "3e0339b708139ed1dbcecaab0b4a4d8c7ba7b064251a78a7006dd4be77c40f24",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/comparisons/training_trace_differences.csv",
+      "sha256": "c1eeae7f5cba7df33fd5c2a0a0062eaec9cc0040415fb0cb2197cea452d8e8a3",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/tools/all_metric_audit.py",
+      "sha256": "11ee20c6804e87917dc3b02c60817b24726e7e4167627c3a4bc127778ae03f7d",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/tools/authorize_unseal.py",
+      "sha256": "a20ea9626913ff4890bd2ca8f29a440652ef744a4547e4b1406c003c814f828a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/tools/compare.py",
+      "sha256": "439c8953b7eb230d0dc039ff60848117e067179a9709b4fec97b1b49ab3ec587",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/tools/deep_checks.py",
+      "sha256": "0e950e22ee1ab981ca5b14d96990051fce29706b882ccd96e78e7f3f9dab9026",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/tools/final_readonly_check.py",
+      "sha256": "6104158f4dcd7b3c7efede37b916a54dca03bb4a7ed838b9ddd374a7b47fa426",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/tools/remaining_checks.py",
+      "sha256": "c34d40679e94dd3bfb96d12b5e99c1a47f7026a386332ce89666cd0e377754f5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/tools/review_io.py",
+      "sha256": "9fc7d28387fbec228540508cf5fd4490e21177c14fccb754ea90c43d7cc2be25",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/tools/seal_check.py",
+      "sha256": "eb267b4551032798b46c350b6c0f3f09896e3edab1c97e46d64469dc68d9e91a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/tools/weights_check.py",
+      "sha256": "46266b27910f296e4c7e0d0b63f324dd06f00f88a54bd6cc580696264af202a7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/authorized_historical_comparison_v1/tools/write_reports.py",
+      "sha256": "46d5030266a4809190274740e1c80218518154b19db6fa5b48f8b636c0b8dea1",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/stage_a_source_request_investigation_v1/HYPOTHESIS_AND_RISK_MATRIX.md",
+      "sha256": "5be44d7af20adccee8f1a5c7da31544539d5fd3d3da7565f21900452c12eeefc",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/stage_a_source_request_investigation_v1/PROVENANCE_EVENT_COUNTS.json",
+      "sha256": "a3bf040dfe83a08cf823b03ad3aab82e41cc873d59c9288f7db916d6d3c0f875",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/stage_a_source_request_investigation_v1/PROVENANCE_GAP_FINDINGS.md",
+      "sha256": "8421ea2794f2a99c28904bf2ccc204591f183f470da629cfb4870068adfdce6f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/stage_a_source_request_investigation_v1/SOURCE_READ_CALL_GRAPH.md",
+      "sha256": "11d39a7f762b50c9757c883d5704b8e9e6b9233a3c7d5d90e13bb5d009667897",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "replication/phase3/stage_a_source_request_investigation_v1/STAGE_A_PROVENANCE_HANDOFF.md",
+      "sha256": "5b234c6206ef762f5eacdcde6b7da77a859bc308179f1ee2c66a09b5061d0466",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F21/restricted_recipe.json",
+      "sha256": "dec98c8daaea2b1a041ab117df4024890d16b1039e699ba6d7d9ee5b7f8bd6de",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F22/restricted_recipe.json",
+      "sha256": "828f354b976ff6e5c9f39476e9eb18c5b25a36a8034a8181116fab0871536850",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F23/restricted_recipe.json",
+      "sha256": "7b998301c42b4f6c76260b520fc6eb553e60f032290dc2663912447eb7f6b1c9",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage1_session3_o1_2026-10-28/F24/restricted_recipe.json",
+      "sha256": "422ffd0d8289a1d21a3f32c235fe7a97cd6fe0bfc36e1ed9dc642e17631e417a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F21/calibration_coefficients.csv",
+      "sha256": "de6615e383dd1962891731738350e005d5013f6d49723effd2cd149fa01b003a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F21/phases.json",
+      "sha256": "9bd5127225b193ec01d3a4e23310995966d67bee30c40550362c475be8c31c56",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F21/restricted_final.pt",
+      "sha256": "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F22/calibration_coefficients.csv",
+      "sha256": "a03d0844bbff5da92f4670458e5bbebbbc172efee8e3d07907e0d129e52cec6e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F22/phases.json",
+      "sha256": "df2319c2f8f4807ffc8a6e03c50d62cdadbbb8d04cf5a820574b315bc85494f5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F22/restricted_final.pt",
+      "sha256": "32e945b22fd1323894039974155c7e48401af76aac98112ed7627708b8edbbd5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F23/calibration_coefficients.csv",
+      "sha256": "1e0d72753e829fe15b29a9110f7a77e18724fd1c71202e0e06c9292b09861209",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F23/phases.json",
+      "sha256": "53c4bf6573ae4cd1b1fc45d5b717ff2bfbf2e6841a151ef07c4d8b2ae5a31b8f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F23/restricted_final.pt",
+      "sha256": "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F24/calibration_coefficients.csv",
+      "sha256": "4a9504ddf2dda7d38e4373d593ae8b83d095630f7ea1cb1407e4053dca202307",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F24/phases.json",
+      "sha256": "e93d086b84096cbc37b14d1054b5dcbc56b7590a4f7082093e2fd208584bc229",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "reports/experiments/hf20_s9_mag_stage2_s2c_ca_2026-10-28/F24/restricted_final.pt",
+      "sha256": "ccab2dad08dabf7cb3aad9e05faed1699dbb5f95a739d6d5fc17a92426700852",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/hf20_mag_c3_io.py",
+      "sha256": "4c1d04100d36a7aba1d5be968e68f4fba68b452fb1586883fd800bbab68a8857",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/hf20_mag_designa.py",
+      "sha256": "d8f0afb5d9a15823b37a115e3fd38971f5244d757e12cd9f540d49c74333c837",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/hf20_s2c_ca.py",
+      "sha256": "b4860f3e459d6ae9eb8acde48ce7aae4608211ee69279f40efd24e761a184662",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/hf20_s4_clock.py",
+      "sha256": "99f812fc23b6c0caabb94177de6fdc3f5812cb4c054be06b526b9c1190bf8ec7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/hf20_stage2_bcd.py",
+      "sha256": "5966607cd74ae6b3fbd55dc174b0108de63cef810c96fcad8c5875835c280031",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/audit.py",
+      "sha256": "344064cec7e275c537658c3196938333dab2e761fd88b63d56a8603e84101a92",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/calendar_schedule.py",
+      "sha256": "4c65514f53b27a629f3f6c40b6808dea9e77923632c8b660100012232e96ffcf",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/cohort_state.py",
+      "sha256": "a2d320d6884785fc55466467a6c957ad0611bf4df35bfd47cbb32c7102155b00",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/contracts.py",
+      "sha256": "cd9d55c3bbf81d38963098faead56896610930af66fdb10f4270dfacffb4120b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/historical_input_only.py",
+      "sha256": "724a56206a970e93a159f29734bb550680bc95c2554afb08bb98fb1afe79eff8",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/historical_signal_smoke.py",
+      "sha256": "78124baded2355c7ab0393b79ef9695ef094c86ce3b41795b3457fd012b227d0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/historical_source_store.py",
+      "sha256": "5f25a3e58652ce3f48d8621ba2955a4a1063453eed356ab6c023575fc81e81db",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/intents.py",
+      "sha256": "2a5c57eab5c151911a9228db4a71bfac0445e506ed1334635f05272d4d342818",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/model_registry.py",
+      "sha256": "785b6edc431b8f0ee150054091da58eea6b12b3d7c3c3d16cd468b6663043dbc",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/order_netting.py",
+      "sha256": "b948005acd9d6410882d3b26e06c352e514f91bcd4bf68042c7740bbd3075628",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/original_feature_pure.py",
+      "sha256": "c787bf3f36fdaacf2a5e90ddc73c1cda0ddcfd0e9a6249ad27c3178f9eb5da31",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/policy.py",
+      "sha256": "8e3e2a9b639a90addf87bc510a8f94209dc6d781766b6e69844d740b0c3095b1",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/protocol.py",
+      "sha256": "777ae8408cea8c94176c9dd47000a9ad360039297b8a64e613de656da8611d04",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/risk_reference_prepare.py",
+      "sha256": "4ff57b3f64ef140869aeaa3fdcc3cd9b470e4a46bb4d60556f9809f49608ae9b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/risk_sizing.py",
+      "sha256": "50fb0f94ed12b2ec917649f50475cbd69546d2ff4f430372c8cfd1757720282a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/sign_scheduler.py",
+      "sha256": "f1f442af25f8dfbc6be2294491933727eace9501a7afaf5e03da2c7c6507ab5b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/signal_pipeline.py",
+      "sha256": "0f053eb047eaaa7ee53bc06aed7ca140492a7a16906fe66359f81b4239eef0aa",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/trend_direction.py",
+      "sha256": "51f33e5920e75a6b70ce446c93fbbae6fade529efcc8e95115091b7eb1e94479",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "tests/track2_stage012/test_completion_boundaries.py",
+      "sha256": "ab69ed15ee61db08bf0dc31edf1bd69cfee05e1b77f20d5244284d4d5644ac1d",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "tests/track2_stage012/test_historical_signal_receipts.py",
+      "sha256": "df735c1ed28211f22a25bc0921936c8d846d6ce9a000488a1eaea8491921167f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "tests/track2_stage012/test_stage012.py",
+      "sha256": "0f28d551072cf664af4b76393654f81738692a9866b44ef17c27277efd9b5d33",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/.DS_Store",
+      "sha256": "0d484509cefb7cbfac8a99e16098927ebafea02a828e579c22f005599e152be8",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/DATA_AVAILABILITY_CONTRACT.md",
+      "sha256": "898568b836d5329c2ce93f6d594a60f778b52e61997bc4c7af9a872cb1178aa0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/HISTORICAL_SIGNAL_DRYRUN_PLAN.json",
+      "sha256": "99b209cc66f832c468363aea58586c56dabcd0663471738eacd449475a234788",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/IMPLEMENTATION_NOTES.md",
+      "sha256": "6849e2421d7e6084606b3e1e942d9656b92090db64cfa6da73492f77b951ed64",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/INPUT_ONLY_FEATURE_LINEAGE.md",
+      "sha256": "5e30c406600f78cf00c571c4b90c8999b93551eb7c67cb8484e815005bdb5d8b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/OPEN_ISSUES.md",
+      "sha256": "e4e11c0357a37ab4025832d7d9aaa5e3939afb528a08cdd5dbd8959cb8a9dfcd",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/ORIGINAL_FOLD_PREFIX_CUTOFFS.json",
+      "sha256": "ab2fd2a112cd8afcbedbfb3e7bb35589d6705995b2dabcd101c42dc9d46d0c9c",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/OVERLAPPING_COHORT_POLICY.md",
+      "sha256": "473ac76c0c7b11f99a87a64e9b7badc520de0897bc8bf449d7b9113680ded895",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/RISK_REFERENCE_RECIPE.md",
+      "sha256": "20787234b701bc4f3028b0f87d6a99dfcb065556e2c6a395ca7293c8cfc9130e",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/S2C_INFERENCE_INTEGRATION.md",
+      "sha256": "d2ab2c06871e01d9b36980388f1f07b38a8e200b4a90a269bf837b9fe4dc98b2",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/SOURCE_AND_MODEL_REGISTRY.md",
+      "sha256": "a9045b8058a5b2ddb00c0522c2f7fdca552f7af95e509d856b797f7c0739ed90",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/STAGE012_COMPLETION_HANDOFF.md",
+      "sha256": "2b1b668a7702a4cea430ce8f92effcc0d4fea44c0eb29af85afee8763bc2feb6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/STAGE012_DELTA_PLAN_v1.md",
+      "sha256": "1207e2882c05a1f4f53c2b3b525e90e9eb84ab1f68834b1b410a924392d212ff",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/STAGE012_HANDOFF.md",
+      "sha256": "b11a994d2824f7dbab00088fe5d118d6795a6cb2de72915a08b532ca5dc0dde9",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/TRADING_PROTOCOL.md",
+      "sha256": "6b96bb7ab39022134ea69cfaf1e4ccd61177bc2da91986d8e99bccef62cece9a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/calendar_witness.json",
+      "sha256": "c5de54d1084eabcea31f4ee54ba8be0f43c82e1f8bb5f30b43ce1f958e35b73f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/G1_static_receipt.json",
+      "sha256": "7afe5a15e7d5e5490066347a3172bdb60e54426865227220146687d079bb6774",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/G1_synthetic.txt",
+      "sha256": "265a8fc5216c6a632fb1fb3caaf3cbb975a748b96a2bff3fab2d5c3a6c0775f7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/G1_synthetic_final.txt",
+      "sha256": "fcc1f817063845220e592935338711de9a6355b2663565d0b63a282b5b9ec9ce",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/G1_synthetic_v2.txt",
+      "sha256": "28f6706841381f3f92b4cc298e9cd7860703dbd79fff9870d12bac314af6265f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/action_facts_identity.json",
+      "sha256": "53704212284503eaa0e8b1b13fe13bbedd0b948b8e6222acb8cc90db78c916a7",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/calendar_witness.json",
+      "sha256": "c5de54d1084eabcea31f4ee54ba8be0f43c82e1f8bb5f30b43ce1f958e35b73f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/dryrun_plan_seal.json",
+      "sha256": "6d6ebdce1142e19436e93e34ddbd96c08cebd7d4f6e8aaa164b026ab8321b226",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_command_v1.json",
+      "sha256": "449852cb1f081831e0c23fe72032bd973c4150c6912842fb05eab51acc00648f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_execution_v1.log",
+      "sha256": "d1f1bda2b070a8686f0b618bf579d4058cab39da4939ab58da57d0ca9211788a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/RISK_REFERENCE_MANIFEST.json",
+      "sha256": "75a9c54c1c634a94bd94e84ef7a18f863bd939db33f267040325977ed4257d33",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/adversarial_historical_twins.json",
+      "sha256": "b93b34204d27c1cf1413811b246e4e436a7f848bedb4f463df30f5e0564ab6c9",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/completion.json",
+      "sha256": "0140674008a664fa20c0ce0df863b5ae0b1079ad6fa8cb20b9b95c76f21896a0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/feature_lineage.json",
+      "sha256": "96316bcbe7271f7547911b859f772840c010dc8813f2330a40f4a36251d02cd0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/forecast_diagnostics.json",
+      "sha256": "5bf5e41147b019d2b0bfc0c5b65f47d23589680cbb9570e2ba73ccddf5fdf959",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/original_forecast_parity.json",
+      "sha256": "7a171c7805d7594d51efb552ec7b117dba627534e113c9776121e6550ec72fec",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/risk_preparation_receipt.json",
+      "sha256": "a03a8a8b8cc66d1796e694e09e31ce449e6a44d4b51833b4ded4ab253f707279",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/session_sign_cache.json",
+      "sha256": "211dcd3a7674201859e43d2185df88e9e7c22e2fb4e29481e3f68deb3c8a2f29",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/signals_with_prefix_risk.json",
+      "sha256": "246973aea600f2a8964ae80651d10994c02a45aad9e2e3017a4afa4d15b4f333",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/signals_without_risk.json",
+      "sha256": "34332f95e61f6eec3642e63f00a0cb59852a8541ff304604a8729db7a1693ed5",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/source_reads.json",
+      "sha256": "1eab029d926312d20fa8e7e818285547b7db2726dfa1fc91c846d64e080ce958",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/original_dependency_closure_verified.json",
+      "sha256": "3b3e5027c52b055ce49054531be56ba00037bc4e5cd51ceb0858cf602ba2fb60",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/owned_tests_final.txt",
+      "sha256": "ffc49358f249debca3fffba0215b53a68f4a41de2f8275ac4ac80fdc09dc804b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/owned_tests_v1.txt",
+      "sha256": "b3b47436d4a97784a7931267331ecba592ef919ae6c2fbba4e4e19f9af195d05",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/owned_tests_v2.txt",
+      "sha256": "074c892e210797f8b0984576c98918773da2a04be024dfb1537912250baefb4b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/parity_followup.json",
+      "sha256": "47f575b6d73e435fb6224cc8ca053c59e7e70dc83f989fb7c6450d40074edb7a",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/prechange_inventory.json",
+      "sha256": "29f04c32253665dad2174961001c14686145948900e8287822e083eecd117497",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/predecessor_integrity_before_issue_append.json",
+      "sha256": "3353dbfff327f6478031bd61fafb784e382324f4f7f68242269034f92698753d",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/predecessor_integrity_final.json",
+      "sha256": "607ab1713d57514ac9990d193af97ad587d1f5a027caabb420ecfb3b00de4b17",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/regression_tests_v1.txt",
+      "sha256": "98f0f2c10b9d03a93e17a5c98ba3ed0190b92f3a6c6c258ab8c83eb2feb9dce9",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/source_identity_after.json",
+      "sha256": "7582c3e53b4ef6b98f7fe1d05f7e193d95e5811431b3eff76cf51d13b007ced4",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/static_final.json",
+      "sha256": "e18a9298ceefe4b37bd51948ebea35be586883cc6238600ae1e3bbf4abe0d3c0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/dependency_inventory.json",
+      "sha256": "e61cf0931f7b520fa1c5d86aa180093e301c4b831750ce8f53efc4a2b857f4f0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/historical_source_contract_refs.json",
+      "sha256": "b80a3f4f775f538377ccaf6848dae5e6e8b4a563b650e4b138218fc3f61f4f23",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/pytest.txt",
+      "sha256": "c3b4ef08f47e33aab6570c36e3c59b29bb5ed842c0cdcfc50a9cff6c558e83e8",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/pytest_completion.txt",
+      "sha256": "f479bab5a82ae259d7f9db9dc00a25b0ee9cc151f268a9fb7ff1abe58b76296d",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/pytest_final.txt",
+      "sha256": "671968794f4849b50b77d669362376d9c6fe9fdb9859853ec47a0f1eaef0a724",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/pytest_post_types.txt",
+      "sha256": "32c6725c124923c87d6a3572c98ce06a27173488e58ed4431f525749c0208b8c",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/regression_pytest.txt",
+      "sha256": "7ac4e172b193f2e39cd74ef5d601ad9f93bdfbab6500576814024467e329496f",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/source_identity_after.json",
+      "sha256": "2c8ba43255a75c78747b2549b9497a8c39b3ec776ed2fc3f6abbfa1c301fb3b6",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/source_identity_before.json",
+      "sha256": "a076cfd40c1ec5bf5d4f067921beb9c8dbe52812e40428bc875f2dc0bae060e0",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/audits/static_check_summary.json",
+      "sha256": "1dd63e5ba6d82a366d505c108994b6e784b640d581ed314eadc5de656d21cd5b",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/original_bundles.json",
+      "sha256": "26a509f602e7afb16f9ee234816f8c76b5f1a189817df3afe02cb84622675931",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/protocol.json",
+      "sha256": "f66a62f9e98fce4854f413ec2d5ba50cd94527a424e2feeaf2dc8c28caddbf19",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/protocol_signal_layer_v2.json",
+      "sha256": "f02308a1052cf504a2b4b2ebcbe9e137544c839bd87ea6d730b0cfc32647e7b1",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/stage012_completion_manifest_v1.json",
+      "sha256": "8fbda08f1684e1ba06e4dde1038c651d8095f9cf890e9d821becdd5a17d8b483",
+      "mtime_unchanged": true
+    },
+    {
+      "path": "trading/track2/stage012/stage012_manifest.json",
+      "sha256": "b0880d8fcbdfd00b9030fd6670167636fd8ae59c305e4ec8cecd891795b11817",
+      "mtime_unchanged": true
+    }
+  ]
+}

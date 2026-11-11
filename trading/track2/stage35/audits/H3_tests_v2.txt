@@ -1,0 +1,25 @@
+..............F...                                                       [100%]
+=================================== FAILURES ===================================
+__________________ test_execution_into_book_and_missing_exit ___________________
+
+    def test_execution_into_book_and_missing_exit():
+     from lstm_data.trading.track2.stage35.accounting import Book
+     from lstm_data.trading.track2.stage012.cohort_state import Cohort
+     from lstm_data.trading.track2.stage35.execution_model import apply_synthetic
+     clock=MarketClock('2024-01-01','2024-01-20');origin=datetime(2024,1,8,15,30,tzinfo=timezone.utc);w=window(clock,origin,origin)
+     c=Cohort('a','AAPL',10.,1000.,origin,clock.endpoint(origin),origin+timedelta(minutes=5),'RAW_UNADJUSTED',('synthetic',))
+     mark=Price(w.decision,w.decision,D(100),'synthetic');book=Book.funded(D(100000)).mark('mark','AAPL',mark,w.decision)
+     book=book.reserve('reserve',(c,),mark,w.decision)
+     bar=SyntheticBar(w.first_minute,w.first_minute+timedelta(minutes=3),D(100),D(1000),origin)
+     costs=CostScenario('synthetic',D(0),D(0),D(0),D(0))
+     book,outcome=apply_synthetic(book,clock,w,'AAPL',(('a',D(10)),),bar,costs,bar.available_at,'fill')
+>    assert outcome.status=='FILLED' and book.positions[0].quantity==10
+E    AssertionError: assert ('REJECTED' == 'FILLED'
+E      
+E      - FILLED
+E      + REJECTED)
+
+tests/track2_stage35/test_execution_and_gate.py:78: AssertionError
+=========================== short test summary info ============================
+FAILED tests/track2_stage35/test_execution_and_gate.py::test_execution_into_book_and_missing_exit
+1 failed, 17 passed in 6.20s

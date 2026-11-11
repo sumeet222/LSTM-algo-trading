@@ -1,0 +1,20 @@
+"""Read-only final protected/source verification; no original bytes written."""
+from pathlib import Path
+import datetime,json,time
+from lstm_data.trading.track2.stage35.final_backtest_v5.paths import ROOT,digest,publish
+from lstm_data.trading.track2.stage35.final_backtest_v5.release import BASELINE_MANIFEST_SHA256,code_scope,fingerprint
+start=time.monotonic();p=ROOT/'audits/H0_PROTECTED_V5.json'
+if digest(p)!=BASELINE_MANIFEST_SHA256:raise ValueError('H0_INVENTORY_DRIFT')
+body=json.loads(p.read_text());bad=[];counts={}
+for key in ('protected','source_partitions'):
+ rows=body[key];counts[key]=len(rows)
+ for row in rows:
+  q=Path(row['path']);exists=q.is_file()
+  sha=digest(q) if exists else None
+  mtime=q.stat().st_mtime_ns if exists else None
+  if sha!=row['sha256'] or mtime!=row['mtime_ns']:
+   bad.append({'path':str(q),'exists':exists,'sha256_before':row['sha256'],'sha256_after':sha,'mtime_ns_before':row['mtime_ns'],'mtime_ns_after':mtime})
+report={'UTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'elapsed_seconds':time.monotonic()-start,'counts':counts,'SHA256_and_mtime_unchanged':not bad,'differences':bad,'current_code_fingerprint':fingerprint(),'current_code':code_scope(),'H0_sha256':digest(p),'new_market_requests_in_V5':0}
+publish(ROOT/'audits/FINAL_FROZEN_AND_SOURCE_INTEGRITY_V5.json',report)
+print(json.dumps({k:v for k,v in report.items() if k!='current_code'},indent=2))
+if bad:raise ValueError('PROTECTED_SOURCE_SHA_OR_MTIME_DRIFT')

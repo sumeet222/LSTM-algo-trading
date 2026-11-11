@@ -1,0 +1,21 @@
+{
+  "frozen_before_any_new_outcome": true,
+  "same_slot_minimum_support": 16,
+  "same_slot_window_actual_sessions": 20,
+  "daily20_minimum": 16,
+  "daily60_minimum": 48,
+  "pair60_minimum": 60,
+  "factor_regression60_minimum": 50,
+  "same_clock_half_hour20_minimum": 16,
+  "RV10_minimum": 10,
+  "past60_RV10_quantile_minimum": 48,
+  "daily_range_policy": "Strict all scheduled bars valid; incomplete day high/low unknown,breakout abstains if any of prior20daily ranges unknown",
+  "ADV20_policy": "Observed genuine-volume lower bound,only days with>=98%scheduled valid bars;mean16+oflast20calendar sessions,split-normalized to current rawshare units. Missing volume cannot inflate ADV; lower ADV raises modeled impact. Not a claim of complete consolidated full-session volume.",
+  "signal_prices": "Causal split-genesis units: raw price times cumulative effective split ratio since2020-01; raw volumes divided by same factor. Future splits never rescale earlier feature rows. Price-only,not dividend-total-return adjusted.",
+  "current_reference": "Full-hour slot uses exact received close of preceding minute;opening slot uses completed first minute,decision09:33ET. Gap uses that minute open. r60at10:30 uses0930open to1029close;later r60uses exact60minute-separated closes within session. No missing-slot compression.",
+  "M04_volume": "Cumulative observed opening-to-decision volume,compared with prior20same-clock cumulative volumes,not future daily total.",
+  "R06_factor": "Each current stock uses leave-one-out equal-weight daily-return factor,>=12available peers each day. Last60calendar sessions,min50paired fit;last5residuals complete.",
+  "pair_atomic": "Joint valid-bar fill or neither;no entry lifetime extension. Exit waits keep both inventory/carry. No prospective bar price for order acceptance.",
+  "quality_outcomes": "Unfunded observed-bar open-to-open price returns,split-normalized;special-distribution crossing flagged/censored for price-only quality while funded economics remain booked. Opposite-sign null uses identical eligible outcomes.",
+  "support_rationale": "80%of fixed calendar windows is explicit causal support,not compression to last-valid days. Strict range extrema require full observed interval;ADVuses a declared conservative lower bound. Fixed before returns,not tuned."
+}

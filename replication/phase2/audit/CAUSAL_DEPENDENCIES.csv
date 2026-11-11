@@ -1,0 +1,16 @@
+datum,dependencies,frontier,use,caveat
+genuine_origin_price,minute open at09:30 or close(t-1minute),nominal t; assumed usable t+2,label only,known nominal/issue mismatch accepted
+"O,H,L,C,V,OC,B1,B2",source intervals end<=full-hour end,assumed end+2,features,inherited preprocessing/vintage not live certified
+hourly_RMS_M1_V1_V2_V3,current and preceding scheduled full hours,hour end+2,features,no three missing scheduled positions
+daily_D_U_M3_M4_Q2_T1_T2,preceding regular day15:30 and earlier regular days,strict prior date,features,"six full hours only, never current full day or stub"
+Q1,current V and previous20 same-slot occurrences,hour end+2,features,volume regimes compatible; no current denominator
+T3_T4_T5,same-stock past/current completed full-hour state,hour end+2,features,gap/basis reset and exact update warmups
+M2,prior regular same-context labels,endpoint+2 strictly before each historical09:30 lock,features,no same-day update; matured earlier OOS lawful dynamic state
+phase_recipe,union unique source-input-eligible training hours,"phase cutoff, no selector/cal/OOS fit",fitted transform,F09 future endpoint scoreability excluded from recipe fit union
+phase_scale_aux_weights,primary lawful training labels/masks,label maturity strictly before phase cutoff,training only,noNaN times0; phase-global Z and S/B
+CLOCK_category,exchange schedule,assumed known by issue,inference metadata,exceptional closure announcement vintage unverified
+main_target,"genuine Pt,Pe",e+2; strict role cutoff,label only,future endpoint complete20 selection accepted historical limitation
+signed_aux_targets,"Pt,true close,next open,Pe",e+2; strict role cutoff,training and diagnostics only,missing intermediates mask all3; no primary removal
+C3,own frozen-refit calibration forecasts and genuine A,all admitted calibration labels mature before next OOS,frozen decoder,same recipe/checkpoint; never OOS-fitted
+tail_thresholds,restricted-refit primary A,refit cutoff,evaluation only,weighted-left .95/.99; strict event membership
+actions_quarantines,fixed retrospective spec facts,historical announcement/revision times unknown,inherited endpoint/input correction,accepted retrospective convention; live assumption unverified

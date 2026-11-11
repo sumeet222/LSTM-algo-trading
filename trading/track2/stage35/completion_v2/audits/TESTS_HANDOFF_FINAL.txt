@@ -1,0 +1,57 @@
+........................................................................ [ 59%]
+...................F.............................                        [100%]
+=================================== FAILURES ===================================
+__ test_known_partial_remainder_expires_but_unknown_resting_is_not_cancelled ___
+
+    def test_known_partial_remainder_expires_but_unknown_resting_is_not_cancelled():
+        from lstm_data.trading.track2.stage35.common import D
+        from lstm_data.trading.track2.stage35.completion_v2.orchestration import (
+            expire_unsubmitted_remainders,
+        )
+    
+        clock = MarketClock("2024-01-01", "2024-02-01")
+        eng = ReplayEngine("account1", "S2C_RISK", initial(), clock)
+        o = replace(order(), external_capacity=D(2))
+        eng.add(o)
+        eng.process((ReplayEvent(T + timedelta(minutes=2), 1, "partial", "BAR", o, bar()),))
+        held = tuple(lot.quantity for lot in eng.book.lots)
+        cash = eng.book.cash
+>       assert expire_unsubmitted_remainders(eng, T + timedelta(minutes=8)) == ("a",)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/track2_stage35_completion_v2/test_engine_and_release.py:186: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = <lstm_data.trading.track2.stage35.completion_v2.engine.ReplayEngine object at 0x1165329f0>
+now = datetime.datetime(2024, 1, 8, 15, 41, tzinfo=datetime.timezone.utc)
+
+    def expire_unsubmitted_remainders(engine: ReplayEngine, now: datetime) -> tuple[str, ...]:
+        """Expiry cancels only KNOWN unsubmitted target remainder, never uncertain broker status."""
+        active = {r.cohort_id for order in engine.pending.values() for r in order.requests}
+        ids = tuple(
+            sorted(
+                lot.cohort.cohort_id
+                for lot in engine.book.lots
+                if lot.pending
+                and now > lot.cohort.entry_deadline
+                and lot.cohort.cohort_id not in active
+            )
+        )
+        if not ids:
+            return ()
+        updated = engine.book.status_event(
+            "EXPIRY:" + now.isoformat(),
+            now,
+            now,
+            "CANCEL_UNSUBMITTED_REMAINDER_EXPIRY",
+            "MULTI",
+            cancel_ids=ids,
+        )
+>       if not isinstance(updated, V2Book):
+                                   ^^^^^^
+E       NameError: name 'V2Book' is not defined
+
+src/lstm_data/trading/track2/stage35/completion_v2/orchestration.py:292: NameError
+=========================== short test summary info ============================
+FAILED tests/track2_stage35_completion_v2/test_engine_and_release.py::test_known_partial_remainder_expires_but_unknown_resting_is_not_cancelled
+1 failed, 120 passed in 80.99s (0:01:20)

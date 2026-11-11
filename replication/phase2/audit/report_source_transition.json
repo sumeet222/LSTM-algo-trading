@@ -1,0 +1,156 @@
+{
+  "status": "PATCH_TESTED_REPORT_RECOVERY_NOT_RUN",
+  "utc": "2026-11-03T00:45:09.794398+00:00",
+  "authorization": "Coordinator explicitly authorized minimal report-only correction; no neural restart or fitting.",
+  "old": {
+    "path": "code/evaluation.py",
+    "sha256": "a3c24b306812afdfa7b00611d5335163a5a14820e5a86a6427df913a4a02f13d",
+    "executed_snapshot": "audit/executed_source/evaluation_prefit.py.txt",
+    "snapshot_sha256": "a3c24b306812afdfa7b00611d5335163a5a14820e5a86a6427df913a4a02f13d",
+    "matches_original_prefit_lock": true
+  },
+  "new": {
+    "path": "code/evaluation.py",
+    "sha256": "4cdc7bb65215309b912c9300024176cfe0dca58e24eaf49fc834f79e9ea969ba"
+  },
+  "patch": {
+    "path": "audit/report_only_patch.diff",
+    "sha256": "2682966a4d47aa10384e3b819cb71e1b7cc9cbfef23411d6a3f8408bdb17eff6",
+    "exact_change": "Copy aux_supported boolean view before in-place per-stock intersection in signed_diagnostics."
+  },
+  "reason": "pandas 3 returns a read-only boolean NumPy view; per-stock selected &= ticker mask raised ValueError: output array is read-only.",
+  "failure_preservation": {
+    "original_execution_log": "audit/real_execution.log",
+    "original_failure_receipt": "artifacts/run/failure.json",
+    "changed_or_overwritten_by_this_patch": false
+  },
+  "scope": {
+    "training_code_unchanged": true,
+    "calibration_and_decoder_code_unchanged": true,
+    "other_prefit_locked_code_and_tests_unchanged": true,
+    "changed_scientific_formula": false,
+    "neural_fits_or_restarts": 0,
+    "real_scores_checkpoints_recipes_calibration_read_or_written": false,
+    "real_report_recovery_run_by_patch_author": false
+  },
+  "immutable_prefit_acceptance": {
+    "path": "audit/PREFIT_ACCEPTANCE.json",
+    "sha256": "bed86ebd495c32ed2ce782f718aed8a1ca9d217eff12a35aa7fa22dcf7eddb0e",
+    "modified": false,
+    "original_prefit_fixture_count": 64
+  },
+  "unchanged_prefit_code_and_tests": [
+    {
+      "path": "code/acceptance.py",
+      "sha256": "b379b518a859f531dcc0924c5dd21e100237935cdda44ce4b25180cbc6cb7823"
+    },
+    {
+      "path": "code/boundary.py",
+      "sha256": "222bade62e8a51ce5490f38a6f38f90cba5fbee6e9bccbc39d440614af3b3bbd"
+    },
+    {
+      "path": "code/contract.py",
+      "sha256": "556af3b42028e0c6d964bcf41c32081ebe0c97de91f45ee272c46713f7d1e763"
+    },
+    {
+      "path": "code/dataset.py",
+      "sha256": "71d9c80f78855593d81ebd1b60bffd813a31d9c7460fa4bd14340245bd7949e9"
+    },
+    {
+      "path": "code/features.py",
+      "sha256": "a48720cbf321c6168b2dea3090175d1a215865fc09f3b31ed62d16e21662521a"
+    },
+    {
+      "path": "code/geometry.py",
+      "sha256": "32dad3f6291838d02bf1a29203732cacb4f3017680bb60b8613ec82750fc8837"
+    },
+    {
+      "path": "code/inspect_inputs.py",
+      "sha256": "2b18a95f88357b4e008f5a61cc638ab393641a50d3c7d214222033680a72b590"
+    },
+    {
+      "path": "code/model.py",
+      "sha256": "ab42cccea260701875d58945e9bc1f74258dea833e76d182ffb9c288b99bfb73"
+    },
+    {
+      "path": "code/prepare.py",
+      "sha256": "8af50a480e7f7053ea543290919a2f931bc3c9ac0cdb5b029e99dbc7d2789147"
+    },
+    {
+      "path": "code/profile_contract.py",
+      "sha256": "c1fccd741f639d8b9733e353c52c5ec93397c17b33baee8b64039cc096007f59"
+    },
+    {
+      "path": "code/run_experiment.py",
+      "sha256": "74c5e5a5ddff3d9afa58fea89b8a114598f25abb2ca343ec03a7e95e9294f200"
+    },
+    {
+      "path": "code/run_gates.py",
+      "sha256": "31a546d8e66873c8dad1cbbdaa7193202400f4249b5ba5bba1056263ea72c1f7"
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "sha256": "d1abe7d5d0fb43eae4c0c8a8dadaad846a881aa55c42a8dc8c44c3c71670a0fe"
+    },
+    {
+      "path": "tests/test_feature_math_review.py",
+      "sha256": "0203a93fd02de3d699c7f4fc8007ff27ef14e1dec556f5b84fdb7dd16aad7eac"
+    },
+    {
+      "path": "tests/test_frontiers_review.py",
+      "sha256": "8fd7a1e31384ef07254bbf8f280b7301f86d44ddf57851d3e29b8860946448e3"
+    },
+    {
+      "path": "tests/test_model.py",
+      "sha256": "5a6f093f1f288323940444af8391a2e8c04c2d4a2eb666a31255c85c30c02c27"
+    },
+    {
+      "path": "tests/test_source_contract.py",
+      "sha256": "cb25066b6c452039cb5e1cfc8f691dfccfda05dd830402d9b992d5dcd583a908"
+    }
+  ],
+  "supplemental_regression": {
+    "path": "tests/test_evaluation_report_recovery.py",
+    "sha256": "ffbe0fa82642ccaaa25d0bd7e6ece56b15caf10ad54db29305a2b53c3eb9261b",
+    "timing": "Postfit, report-only supplemental regression; not counted as prefit evidence.",
+    "before_patch": {
+      "tests": 2,
+      "errors": 2,
+      "matching_failure": "ValueError: output array is read-only"
+    },
+    "after_patch": {
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "runtime_seconds": 0.133
+    },
+    "verified": [
+      "Read-only pandas boolean view",
+      "Per-stock weighted signed means/MSE/MAE/covariance/correlation",
+      "All twenty per-stock calls",
+      "Partially supported and entirely unsupported stock",
+      "Source dataframe exact immutability",
+      "All-stock diagnostics unchanged after per-stock calls"
+    ]
+  },
+  "existing_evaluation_regression": {
+    "tests": 13,
+    "passed": 13,
+    "failed": 0,
+    "runtime_seconds": 7.873
+  },
+  "static_check": {
+    "mode": "basic",
+    "config": "audit/pyright_evaluation.json",
+    "files": [
+      "code/evaluation.py",
+      "tests/test_evaluation.py",
+      "tests/test_evaluation_report_recovery.py"
+    ],
+    "errors": 0,
+    "warnings": 0,
+    "informations": 0,
+    "command": "{REPO_ROOT}/.venv/bin/python -I -m pyright --project {REPO_ROOT}/replication/phase2/audit/pyright_evaluation.json --pythonpath {REPO_ROOT}/.venv/bin/python {REPO_ROOT}/replication/phase2/code/evaluation.py {REPO_ROOT}/replication/phase2/tests/test_evaluation.py {REPO_ROOT}/replication/phase2/tests/test_evaluation_report_recovery.py"
+  },
+  "next_step": "Lead may run saved-output-only report recovery with complete before/after hashes of real scores/checkpoints/recipes/calibration; retain original failure and prefit lock."
+}

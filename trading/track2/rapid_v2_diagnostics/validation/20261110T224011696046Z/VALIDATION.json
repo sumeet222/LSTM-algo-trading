@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "pytest": {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/track2_rapid_v2",
+        "tests/track2_rapid_v1",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_wait_next_valid_and_nominal_lifetime",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_open_exit_remains_without_expiry_and_partial_fees_accumulate",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_later_open_cannot_rewrite_submission_or_predecision_state",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_actual_pre_spinoff_share_cases_exact_without_tolerance_waiver"
+      ],
+      "returncode": 1,
+      "seconds": 4.176606792025268,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "33b48dfced4407b064504622c481bd64090f350cfeab872442626ba3ba103991"
+    },
+    "ruff": {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "--select",
+        "E,F,I",
+        "src/lstm_data/trading/track2/rapid_v2_diagnostics",
+        "tests/track2_rapid_v2"
+      ],
+      "returncode": 0,
+      "seconds": 0.0539194168522954,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "types": {
+      "argv": [
+        ".venv/bin/pyright",
+        "--pythonpath",
+        ".venv/bin/python",
+        "--outputjson",
+        "src/lstm_data/trading/track2/rapid_v2_diagnostics",
+        "tests/track2_rapid_v2"
+      ],
+      "returncode": 1,
+      "seconds": 4.439433499937877,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8ba2e110ad47e5516793cb047311debda84a9341a5cbb3c34457b2d6910d0e62"
+    }
+  },
+  "registry": "bd22e284e798b3a9829ce0df2524ccf239a4c3c5e4a8c81eb1337bcd08d509d1",
+  "status": "HOLD"
+}

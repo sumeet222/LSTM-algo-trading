@@ -1,0 +1,51 @@
+{
+  "gate": "C modeling synthetic audits plus independent feature mathematics review",
+  "status": "PASS",
+  "tests_run": 35,
+  "model_tests": 25,
+  "feature_review_tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "runtime": {
+    "torch": "2.10.0",
+    "numpy": "2.5.3",
+    "device": "cpu",
+    "dtype": "float32",
+    "intraop_threads": 4,
+    "interop_threads": 1,
+    "deterministic_algorithms": true
+  },
+  "python": "3.14.6",
+  "initial_parameter_digest": "a4e9317aed2bce2f94a0611b21455269fc254dcf3e0d078c23eb0ab2c2956eae",
+  "hashes": {
+    "replication/EXPERIMENT_SPEC.md": "92d09d7f1bd2792383094cb280994c8255de142ec45bf1c99eb2a52d45712bbd",
+    "replication/phase2/code/model.py": "ab42cccea260701875d58945e9bc1f74258dea833e76d182ffb9c288b99bfb73",
+    "replication/phase2/code/dataset.py": "57e8408e34e8877b6c3624ea9a9945fb560c03af27813f9b7b14c2208d48ca7c",
+    "replication/phase2/code/features.py": "a48720cbf321c6168b2dea3090175d1a215865fc09f3b31ed62d16e21662521a",
+    "replication/phase2/tests/test_model.py": "5a6f093f1f288323940444af8391a2e8c04c2d4a2eb666a31255c85c30c02c27",
+    "replication/phase2/tests/test_feature_math_review.py": "0203a93fd02de3d699c7f4fc8007ff27ef14e1dec556f5b84fdb7dd16aad7eac",
+    "replication/phase2/audit/pyright_model.json": "40e4f019b34b04acaa9803489828a6b8d127fc10f47f8671e8e816479d8db33b"
+  },
+  "inputs": "Only synthetic generated arrays; no raw or historical outcomes opened",
+  "authority": "replication/EXPERIMENT_SPEC.md and current clean Phase 2 authorization",
+  "static_check": {
+    "config": "replication/phase2/audit/pyright_model.json",
+    "owned_model_features_tests_errors": 0,
+    "dependency_errors": {
+      "dataset.py": 3,
+      "geometry.py": 5
+    },
+    "total_errors": 8,
+    "warnings": 0,
+    "information": 0,
+    "handoff": "Reported to lead; dependency files not edited by modeling collaborator"
+  },
+  "feature_typing_followup": {
+    "scope": "features.py only; two real Wilder-state invariant assertions, no formulas changed",
+    "feature_tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "runtime_seconds": 0.144
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "UTC": "2026-11-10T16:33:04.550818+00:00",
+  "signal": "SIGCONT",
+  "pid": 62150,
+  "version": "v5_fee_0_01",
+  "existing_parent": 61526,
+  "before": {
+    "parent": 61526,
+    "state": "T",
+    "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities --version v5_fee_0_01 --scenario fee_0.01"
+  },
+  "active_workers_before": 2,
+  "maximum_active_workers_after": 4,
+  "resource_limit": 4,
+  "reason": "Previously authorized computing slot freed by verified scenario completion; continue oldest paused PID",
+  "new_process_or_backtest_launched": false,
+  "financial_code_or_inputs_changed": false,
+  "selection_based_on_financial_performance": false,
+  "code": "9e093b3f6a62",
+  "old_resource_guard_unmodified": true
+}

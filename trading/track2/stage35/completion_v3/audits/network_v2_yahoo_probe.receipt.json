@@ -1,0 +1,24 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "http": 401
+    }
+  ],
+  "endpoint": "https://query1.finance.yahoo.com/v7/finance/download/AAPL",
+  "http_status": 401,
+  "original_payload_sha256": "0e0d91f995785379194bebfd649fb9b44f606784077f3394210cc36bf3b97877",
+  "payload_path": "trading/track2/stage35/completion_v3/audits/payloads/network_v2_yahoo_probe.json",
+  "point_in_time": false,
+  "query": {
+    "events": "div",
+    "interval": "1d",
+    "period1": 1606780800,
+    "period2": 1735689600
+  },
+  "retrieval_utc": "2026-11-09T14:04:40.344369+00:00",
+  "rights": "provider public/research access only;no redistribution or PIT certification",
+  "source_id": "network_v2_yahoo_probe",
+  "status": "ACCESS_DENIED",
+  "stored_payload_sha256": "0ccff6c9ea7beb19a65b9b3b3c1772cb3183157b2eee6ecbfccd7bb2b8670cf8"
+}

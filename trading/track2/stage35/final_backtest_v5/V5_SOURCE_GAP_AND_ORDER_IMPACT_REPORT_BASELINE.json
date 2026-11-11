@@ -1,0 +1,3762 @@
+{
+  "daily_incomplete_records": 0,
+  "distinct_affected_account_orders": 168,
+  "distinct_order_relevant_ticker_minutes": 90,
+  "external_physical_fill_counts": {
+    "('attainable', 'EQUAL')": 68288,
+    "('attainable', 'EWMA_RISK')": 63500,
+    "('attainable', 'ROLLING_RISK')": 62513,
+    "('attainable', 'S2C_RISK')": 70979,
+    "('matched', 'EQUAL')": 66063,
+    "('matched', 'EWMA_RISK')": 63500,
+    "('matched', 'ROLLING_RISK')": 62513,
+    "('matched', 'S2C_RISK')": 64506
+  },
+  "investment_metrics_computed_by_this_source_impact_audit": false,
+  "missing_attempt_rows": 212,
+  "raw_source_cells_missing_after_supplement": 10374,
+  "resolutions": [
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "100089.8447085108066971080666",
+        "gross": "69831.5100",
+        "physical": 8,
+        "restricted": "35919.24753187234986876982060",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26854050|AVGO": "2",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26854290|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26854294,
+      "first_intended_minute": 26854293,
+      "order": "2021-01-21:26854292:16:2378",
+      "source_hash": "259892d014c69bead1d63bf1438f0ac9c3d42b11a3044966f89211d430d28890",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "101719.6593440908143074581437",
+        "gross": "67319.3200",
+        "physical": 10,
+        "restricted": "35692.32465881394146791673694",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26854050|AVGO": "2",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26854290|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26854294,
+      "first_intended_minute": 26854293,
+      "order": "2021-01-21:26854292:16:2377",
+      "source_hash": "259892d014c69bead1d63bf1438f0ac9c3d42b11a3044966f89211d430d28890",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "104015.6930265942161339421621",
+        "gross": "68922.3700",
+        "physical": 10,
+        "restricted": "36321.51642538626037393926528",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26860050|AVGO": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26861344,
+      "first_intended_minute": 26861343,
+      "order": "2021-01-26:26861342:16:2929",
+      "source_hash": "199713e0d45f1d39e849e341fd3312c1c73ce3b7e7840f240723a3f296ab76a2",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "100345.5499276823059360730602",
+        "gross": "69062.5700",
+        "physical": 10,
+        "restricted": "36407.80759901840671503921333",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26860110|AVGO": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26861404,
+      "first_intended_minute": 26861403,
+      "order": "2021-01-26:26861402:16:2967",
+      "source_hash": "199713e0d45f1d39e849e341fd3312c1c73ce3b7e7840f240723a3f296ab76a2",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "101378.4911047694672754946734",
+        "gross": "67744.4000",
+        "physical": 10,
+        "restricted": "34970.37101499956390729223877",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26860050|AVGO": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26861344,
+      "first_intended_minute": 26861343,
+      "order": "2021-01-26:26861342:16:2928",
+      "source_hash": "199713e0d45f1d39e849e341fd3312c1c73ce3b7e7840f240723a3f296ab76a2",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "97522.64210452022831050228354",
+        "gross": "67423.0400",
+        "physical": 11,
+        "restricted": "34573.45382825731647119472736",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26860110|AVGO": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26861404,
+      "first_intended_minute": 26861403,
+      "order": "2021-01-26:26861402:16:2966",
+      "source_hash": "199713e0d45f1d39e849e341fd3312c1c73ce3b7e7840f240723a3f296ab76a2",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "171301.3163388484322678843236",
+        "gross": "85637.5600",
+        "physical": -8,
+        "restricted": "75737.33956140492946860663788",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26870010|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26870014,
+      "first_intended_minute": 26870013,
+      "order": "2021-02-01:26870012:16:3786",
+      "source_hash": "348068b7c8daa566354f36b9bd8bd69c238a458ba0d79fa22f93658ea295b3e9",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "168424.2708478042009132420097",
+        "gross": "83477.4850",
+        "physical": -8,
+        "restricted": "73929.15745305047381498780817",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26870010|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26870014,
+      "first_intended_minute": 26870013,
+      "order": "2021-02-01:26870012:16:3785",
+      "source_hash": "348068b7c8daa566354f36b9bd8bd69c238a458ba0d79fa22f93658ea295b3e9",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "61417.35007616232876712328788",
+        "gross": "65424.1240",
+        "physical": 6,
+        "restricted": "16883.78238377141694994135430",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26874150|AVGO": "2",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26874390|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26874394,
+      "first_intended_minute": 26874393,
+      "order": "2021-02-04:26874392:16:4432",
+      "source_hash": "477ef68ae31593e86d6efee0d0ab1e65bde474c0d90a2622df87e726800486d6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "66067.45308816247336377473486",
+        "gross": "65660.7280",
+        "physical": 8,
+        "restricted": "19599.45780616484928787675052",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26874150|AVGO": "2",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26874390|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26874394,
+      "first_intended_minute": 26874393,
+      "order": "2021-02-04:26874392:16:4431",
+      "source_hash": "477ef68ae31593e86d6efee0d0ab1e65bde474c0d90a2622df87e726800486d6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "34217.58808972686453576864559",
+        "gross": "65928.0050",
+        "physical": 6,
+        "restricted": "3689.713289442622950819672131",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26880090|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26881384,
+      "first_intended_minute": 26881383,
+      "order": "2021-02-09:26881382:16:4928",
+      "source_hash": "37bd3784d7f8c98bf2fa7b70fa5f89cade93ad94118c6f058d78a53c02227c25",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "31771.00325332232876712328884",
+        "gross": "65908.4250",
+        "physical": 13,
+        "restricted": "2937.069806943027210884353741",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26880090|AVGO": "3"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26881384,
+      "first_intended_minute": 26881383,
+      "order": "2021-02-09:26881382:16:4927",
+      "source_hash": "37bd3784d7f8c98bf2fa7b70fa5f89cade93ad94118c6f058d78a53c02227c25",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "51198.23740859734398782344016",
+        "gross": "64396.330",
+        "physical": -4,
+        "restricted": "11380.91281947208720498994980",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26882790|AVGO": "-1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26883030|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26883034,
+      "first_intended_minute": 26883033,
+      "order": "2021-02-10:26883032:16:5270",
+      "source_hash": "62e822d518c37b620f172df8e6d966c92230dfe68bc171cc0816a525fea10bc4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "53830.68156606367579908675920",
+        "gross": "64773.710",
+        "physical": -8,
+        "restricted": "13179.58183653602543858047567",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26882790|AVGO": "-2",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26883030|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26883034,
+      "first_intended_minute": 26883033,
+      "order": "2021-02-10:26883032:16:5269",
+      "source_hash": "62e822d518c37b620f172df8e6d966c92230dfe68bc171cc0816a525fea10bc4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "100373.7380945154071537290718",
+        "gross": "59808.0950",
+        "physical": 5,
+        "restricted": "36670.06188056972932390643469",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26940690|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26941984,
+      "first_intended_minute": 26941983,
+      "order": "2021-03-23:26941982:16:10832",
+      "source_hash": "28b91722d3f83fb83f01e76460b22fc6ccfe7c7e484ef2a2b59d1ada9e434783",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "95163.22317935016742770167568",
+        "gross": "59743.8700",
+        "physical": 9,
+        "restricted": "35220.00201571117911597107917",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26940690|AVGO": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26941984,
+      "first_intended_minute": 26941983,
+      "order": "2021-03-23:26941982:16:10780",
+      "source_hash": "28b91722d3f83fb83f01e76460b22fc6ccfe7c7e484ef2a2b59d1ada9e434783",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "80780.45801781916666666666632",
+        "gross": "72889.8900",
+        "physical": 4,
+        "restricted": "31233.70522964366202794615669",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26963550|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26963554,
+      "first_intended_minute": 26963553,
+      "order": "2021-04-07:26963552:16:12863",
+      "source_hash": "ad1de69c15c31811ac1025eb2d891d28ffa6157a74bb551a447193a3abe8331d",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "73815.37641046331430745814266",
+        "gross": "69631.4020",
+        "physical": 4,
+        "restricted": "27382.82330203800188200453140",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26963550|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26963554,
+      "first_intended_minute": 26963553,
+      "order": "2021-04-07:26963552:16:12754",
+      "source_hash": "ad1de69c15c31811ac1025eb2d891d28ffa6157a74bb551a447193a3abe8331d",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "83191.81271064043759512937557",
+        "gross": "72801.5400",
+        "physical": 4,
+        "restricted": "31264.93282886929581039532945",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26964870|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26964874,
+      "first_intended_minute": 26964873,
+      "order": "2021-04-08:26964872:16:12992",
+      "source_hash": "70adbcb440f1036994454bd620823e9ddca8454a13e93396a9eac162269358fa",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "76381.83982220479071537290679",
+        "gross": "69348.7200",
+        "physical": 5,
+        "restricted": "28493.03892104460672212862434",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26964870|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26964874,
+      "first_intended_minute": 26964873,
+      "order": "2021-04-08:26964872:16:12883",
+      "source_hash": "70adbcb440f1036994454bd620823e9ddca8454a13e93396a9eac162269358fa",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "76059.13407431740867579908640",
+        "gross": "59249.3600",
+        "physical": 5,
+        "restricted": "25860.37205468504972969686398",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26965170|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26966464,
+      "first_intended_minute": 26966463,
+      "order": "2021-04-09:26966462:16:13293",
+      "source_hash": "e3b68957ade5c3d7e515ddd7bd65557c6d9e4d44398d37ab2075a4f46910a400",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "71641.27473140313926940639225",
+        "gross": "55121.0150",
+        "physical": 5,
+        "restricted": "22916.30046661720542078952246",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26965170|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26966464,
+      "first_intended_minute": 26966463,
+      "order": "2021-04-09:26966462:16:13184",
+      "source_hash": "e3b68957ade5c3d7e515ddd7bd65557c6d9e4d44398d37ab2075a4f46910a400",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "74188.58921021753044140030409",
+        "gross": "59457.8400",
+        "physical": 5,
+        "restricted": "24082.02874856808842341353880",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26966430|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26970604,
+      "first_intended_minute": 26970603,
+      "order": "2021-04-12:26970602:16:13388",
+      "source_hash": "611b6633b356dcb76c4cd715f796984e48a03ca53532e805376a644cd659fcf8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "69372.07946917719558599695559",
+        "gross": "58880.5400",
+        "physical": 4,
+        "restricted": "22198.18538928551564101969019",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26970570|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|26970810|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26970814,
+      "first_intended_minute": 26970813,
+      "order": "2021-04-12:26970812:16:13521",
+      "source_hash": "611b6633b356dcb76c4cd715f796984e48a03ca53532e805376a644cd659fcf8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "69834.40802018015601217655968",
+        "gross": "55180.5800",
+        "physical": 5,
+        "restricted": "21216.56319564447070409036177",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26966430|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26970604,
+      "first_intended_minute": 26970603,
+      "order": "2021-04-12:26970602:16:13279",
+      "source_hash": "611b6633b356dcb76c4cd715f796984e48a03ca53532e805376a644cd659fcf8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "65755.52080431702815829528113",
+        "gross": "55851.1500",
+        "physical": 5,
+        "restricted": "20045.96328418334609859695694",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26970570|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|26970810|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 26970814,
+      "first_intended_minute": 26970813,
+      "order": "2021-04-12:26970812:16:13412",
+      "source_hash": "611b6633b356dcb76c4cd715f796984e48a03ca53532e805376a644cd659fcf8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "97388.53141576440258751903104",
+        "gross": "60415.9100",
+        "physical": -6,
+        "restricted": "40153.87469885974521025055945",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27017010|MA": "-2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27021184,
+      "first_intended_minute": 27021183,
+      "order": "2021-05-17:27021182:18:15299",
+      "source_hash": "6286a5cd74a5e0fda7a7b0878f61ed778b0ead415d99e94e089bcd7e0a13dfa5",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "95682.37625037850076103500748",
+        "gross": "54911.0400",
+        "physical": -10,
+        "restricted": "36541.02880884061953475882764",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27017010|MA": "-2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27021184,
+      "first_intended_minute": 27021183,
+      "order": "2021-05-17:27021182:18:18611",
+      "source_hash": "6286a5cd74a5e0fda7a7b0878f61ed778b0ead415d99e94e089bcd7e0a13dfa5",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "88242.61725074397260273972594",
+        "gross": "51643.9000",
+        "physical": -5,
+        "restricted": "33016.22213950109529006657954",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27017010|MA": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27021184,
+      "first_intended_minute": 27021183,
+      "order": "2021-05-17:27021182:18:18483",
+      "source_hash": "6286a5cd74a5e0fda7a7b0878f61ed778b0ead415d99e94e089bcd7e0a13dfa5",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "51158.66550691789193302891920",
+        "gross": "52781.3900",
+        "physical": 3,
+        "restricted": "10169.82971255448141202893416",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27026910|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27026914,
+      "first_intended_minute": 27026913,
+      "order": "2021-05-21:27026912:16:19380",
+      "source_hash": "23e03466502ed8e6231385c8e952c2ab2a2b36508e02be4528fdb92ea69fa4b5",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "46080.30717914369101978691008",
+        "gross": "53469.5300",
+        "physical": 4,
+        "restricted": "11643.29228441586105902170062",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27026790|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27027030|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27027034,
+      "first_intended_minute": 27027033,
+      "order": "2021-05-21:27027032:16:19438",
+      "source_hash": "23e03466502ed8e6231385c8e952c2ab2a2b36508e02be4528fdb92ea69fa4b5",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "46803.25620642562404870624032",
+        "gross": "48893.1150",
+        "physical": 5,
+        "restricted": "8242.759351158850584517630304",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27026910|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27026914,
+      "first_intended_minute": 27026913,
+      "order": "2021-05-21:27026912:16:19253",
+      "source_hash": "23e03466502ed8e6231385c8e952c2ab2a2b36508e02be4528fdb92ea69fa4b5",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "40972.46768145488584474885830",
+        "gross": "49705.2400",
+        "physical": 7,
+        "restricted": "8878.070243635502776369130676",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27026790|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27027030|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27027034,
+      "first_intended_minute": 27027033,
+      "order": "2021-05-21:27027032:16:19311",
+      "source_hash": "23e03466502ed8e6231385c8e952c2ab2a2b36508e02be4528fdb92ea69fa4b5",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "71261.98144262158295281582940",
+        "gross": "52936.6600",
+        "physical": 3,
+        "restricted": "19725.39268248794138427477995",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27031230|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27031234,
+      "first_intended_minute": 27031233,
+      "order": "2021-05-24:27031232:16:19571",
+      "source_hash": "a60d093ed5690059b430d57e9e5eb451852ab59942cf2a703d1c5440cff24240",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "63367.66080258521308980213079",
+        "gross": "48651.8600",
+        "physical": 5,
+        "restricted": "15900.63473953986804662608081",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27031230|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27031234,
+      "first_intended_minute": 27031233,
+      "order": "2021-05-24:27031232:16:19444",
+      "source_hash": "a60d093ed5690059b430d57e9e5eb451852ab59942cf2a703d1c5440cff24240",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "70045.22572894673515981735149",
+        "gross": "65964.5500",
+        "physical": 4,
+        "restricted": "24486.11783007536949156151550",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27032670|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27032674,
+      "first_intended_minute": 27032673,
+      "order": "2021-05-25:27032672:16:19780",
+      "source_hash": "49bd674eda20947a807e6329f954e7d58c721663b9ec5a7094a76eb502e46ee8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "63052.72738610187975646879746",
+        "gross": "60001.1950",
+        "physical": 6,
+        "restricted": "20282.42228757583679919516893",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27032670|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27032674,
+      "first_intended_minute": 27032673,
+      "order": "2021-05-25:27032672:16:19653",
+      "source_hash": "49bd674eda20947a807e6329f954e7d58c721663b9ec5a7094a76eb502e46ee8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "72491.34369390291476407914731",
+        "gross": "61341.6400",
+        "physical": -4,
+        "restricted": "27725.83012145947410097596068",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27054270|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27054274,
+      "first_intended_minute": 27054273,
+      "order": "2021-06-09:27054272:16:21757",
+      "source_hash": "717ed3106760f340c6df7147358b1254af165d351d1bbf66d8bfdebfc6824f40",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "68551.94089892791856925418575",
+        "gross": "58415.8350",
+        "physical": -7,
+        "restricted": "25962.31999825394881155955413",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27054270|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27054274,
+      "first_intended_minute": 27054273,
+      "order": "2021-06-09:27054272:16:21630",
+      "source_hash": "717ed3106760f340c6df7147358b1254af165d351d1bbf66d8bfdebfc6824f40",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "88005.38175058469178082191749",
+        "gross": "48679.9900",
+        "physical": -4,
+        "restricted": "32106.83409745075463917525773",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27061290|AVGO": "-1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27061530|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27061534,
+      "first_intended_minute": 27061533,
+      "order": "2021-06-14:27061532:16:22272",
+      "source_hash": "4c235a71034e747ee1ec1669f65fe672f1a615c5b2464b6061ff0a176927e480",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "86993.78026454036149162861489",
+        "gross": "45803.2600",
+        "physical": -8,
+        "restricted": "31935.85778619167236966711561",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27061290|AVGO": "-2",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27061530|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27061534,
+      "first_intended_minute": 27061533,
+      "order": "2021-06-14:27061532:16:22145",
+      "source_hash": "4c235a71034e747ee1ec1669f65fe672f1a615c5b2464b6061ff0a176927e480",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "71712.09621090331430745814270",
+        "gross": "48397.7900",
+        "physical": 3,
+        "restricted": "23646.07946742128287877538083",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27061650|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27062944,
+      "first_intended_minute": 27062943,
+      "order": "2021-06-15:27062942:16:22422",
+      "source_hash": "b39bbf8f9bf07c4a7032e8ec666944fb41746b5743271ab3435110e1cc419cac",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "69886.98905782211567732115677",
+        "gross": "45141.3000",
+        "physical": 6,
+        "restricted": "22686.46458641153635478959304",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27061650|AVGO": "-2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27062944,
+      "first_intended_minute": 27062943,
+      "order": "2021-06-15:27062942:16:22295",
+      "source_hash": "b39bbf8f9bf07c4a7032e8ec666944fb41746b5743271ab3435110e1cc419cac",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "75876.98719979996575342465709",
+        "gross": "48340.1250",
+        "physical": 5,
+        "restricted": "26245.72453927219077415562030",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27063090|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27064384,
+      "first_intended_minute": 27064383,
+      "order": "2021-06-16:27064382:16:22587",
+      "source_hash": "ad209de64496512329ed58b90075af040445fdcad80e8e16e3aa952afa7004aa",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "76188.49733754794901065448968",
+        "gross": "48898.9850",
+        "physical": 4,
+        "restricted": "26462.76581728024443453580625",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27064170|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27064410|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27064414,
+      "first_intended_minute": 27064413,
+      "order": "2021-06-16:27064412:16:22603",
+      "source_hash": "ad209de64496512329ed58b90075af040445fdcad80e8e16e3aa952afa7004aa",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "69009.66231542793759512937599",
+        "gross": "44719.0050",
+        "physical": 10,
+        "restricted": "23081.48051687829017313016354",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27063090|AVGO": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27064384,
+      "first_intended_minute": 27064383,
+      "order": "2021-06-16:27064382:16:22460",
+      "source_hash": "ad209de64496512329ed58b90075af040445fdcad80e8e16e3aa952afa7004aa",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "70405.67603681998477929984785",
+        "gross": "45222.8200",
+        "physical": 8,
+        "restricted": "23573.67900809052049958816503",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27064170|AVGO": "2",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27064410|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27064414,
+      "first_intended_minute": 27064413,
+      "order": "2021-06-16:27064412:16:22476",
+      "source_hash": "ad209de64496512329ed58b90075af040445fdcad80e8e16e3aa952afa7004aa",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "95284.88909597380136986301318",
+        "gross": "61909.9450",
+        "physical": 0,
+        "restricted": "40276.03680740118029118981337",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27071490|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27071494,
+      "first_intended_minute": 27071493,
+      "order": "2021-06-21:27071492:16:23101",
+      "source_hash": "fa779672cca9191d6d3c06cf8cfbcafc87599becf4085305ad1c4a8195e8940a",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "82331.30233201311263318112647",
+        "gross": "55776.8000",
+        "physical": -1,
+        "restricted": "33358.62389076808737097674855",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27071490|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27071494,
+      "first_intended_minute": 27071493,
+      "order": "2021-06-21:27071492:16:22925",
+      "source_hash": "fa779672cca9191d6d3c06cf8cfbcafc87599becf4085305ad1c4a8195e8940a",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "31999.47852730985159817351543",
+        "gross": "47187.4500",
+        "physical": 4,
+        "restricted": "4801.024831810282494578477907",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27081450|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27081690|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27081694,
+      "first_intended_minute": 27081693,
+      "order": "2021-06-28:27081692:16:24219",
+      "source_hash": "a4502b40ba06d9df940d397770e28420cacb95ad90c9422ed6241a6293130fae",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "31156.65060341256468797564684",
+        "gross": "43169.3150",
+        "physical": 4,
+        "restricted": "4433.213774797828777450503867",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27081450|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27081690|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27081694,
+      "first_intended_minute": 27081693,
+      "order": "2021-06-28:27081692:16:24022",
+      "source_hash": "a4502b40ba06d9df940d397770e28420cacb95ad90c9422ed6241a6293130fae",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "57497.15505609297184170471781",
+        "gross": "45950.9900",
+        "physical": 3,
+        "restricted": "17186.68339493804590504920319",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27086010|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27086014,
+      "first_intended_minute": 27086013,
+      "order": "2021-07-01:27086012:16:24794",
+      "source_hash": "a36a1e1a94520261b8933e352270e670251934fb85d10db187ebdffbc6027ba2",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "51233.71833978852739726027391",
+        "gross": "43272.6750",
+        "physical": 3,
+        "restricted": "14731.80434463602250813060182",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27086010|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27086014,
+      "first_intended_minute": 27086013,
+      "order": "2021-07-01:27086012:16:24590",
+      "source_hash": "a36a1e1a94520261b8933e352270e670251934fb85d10db187ebdffbc6027ba2",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "63160.29484088211948249619971",
+        "gross": "51284.2150",
+        "physical": 0,
+        "restricted": "22864.93258103473588065371849",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27093330|MA": "-2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27094624,
+      "first_intended_minute": 27094623,
+      "order": "2021-07-07:27094622:18:20765",
+      "source_hash": "efb77fcd8e853c2cfb6dc1fa126b63f83b40c63594c5b60b488d18a4ee6ef70e",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "ROLLING_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "56985.14496013108828006088153",
+        "gross": "45375.9400",
+        "physical": 0,
+        "restricted": "19446.16404279648178666411486",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|ROLLING_RISK|27093330|MA": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27094624,
+      "first_intended_minute": 27094623,
+      "order": "2021-07-07:27094622:18:18471",
+      "source_hash": "efb77fcd8e853c2cfb6dc1fa126b63f83b40c63594c5b60b488d18a4ee6ef70e",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "59386.41307669814307458143107",
+        "gross": "47004.1700",
+        "physical": 1,
+        "restricted": "20143.92900730132718403474857",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27093330|MA": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27094624,
+      "first_intended_minute": 27094623,
+      "order": "2021-07-07:27094622:18:18408",
+      "source_hash": "efb77fcd8e853c2cfb6dc1fa126b63f83b40c63594c5b60b488d18a4ee6ef70e",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "60112.97321013005707762557006",
+        "gross": "47148.9250",
+        "physical": 5,
+        "restricted": "19281.71725008231895997112368",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27093330|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27094624,
+      "first_intended_minute": 27094623,
+      "order": "2021-07-07:27094622:16:25352",
+      "source_hash": "efb77fcd8e853c2cfb6dc1fa126b63f83b40c63594c5b60b488d18a4ee6ef70e",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "60580.83321013005707762557006",
+        "gross": "46661.2750",
+        "physical": 3,
+        "restricted": "19281.71725008231895997112368",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27093330|MA": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27094624,
+      "first_intended_minute": 27094623,
+      "order": "2021-07-07:27094622:18:25354",
+      "source_hash": "efb77fcd8e853c2cfb6dc1fa126b63f83b40c63594c5b60b488d18a4ee6ef70e",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "ROLLING_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "56985.14496013108828006088153",
+        "gross": "45375.9400",
+        "physical": 0,
+        "restricted": "19446.16404279648178666411486",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|ROLLING_RISK|27093330|MA": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27094624,
+      "first_intended_minute": 27094623,
+      "order": "2021-07-07:27094622:18:18471",
+      "source_hash": "efb77fcd8e853c2cfb6dc1fa126b63f83b40c63594c5b60b488d18a4ee6ef70e",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "51699.41511545316210045662080",
+        "gross": "43672.7150",
+        "physical": 5,
+        "restricted": "15427.01357744723788007680988",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27093330|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27094624,
+      "first_intended_minute": 27094623,
+      "order": "2021-07-07:27094622:16:25146",
+      "source_hash": "efb77fcd8e853c2cfb6dc1fa126b63f83b40c63594c5b60b488d18a4ee6ef70e",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "52167.27511545316210045662080",
+        "gross": "43188.0950",
+        "physical": 3,
+        "restricted": "15427.01357744723788007680988",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27093330|MA": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27094624,
+      "first_intended_minute": 27094623,
+      "order": "2021-07-07:27094622:18:25148",
+      "source_hash": "efb77fcd8e853c2cfb6dc1fa126b63f83b40c63594c5b60b488d18a4ee6ef70e",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "72679.10430956280441400304346",
+        "gross": "57606.8150",
+        "physical": 4,
+        "restricted": "28564.26612962518206165421820",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27103050|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27103055,
+      "first_intended_minute": 27103054,
+      "order": "2021-07-13:27103053:16:26007",
+      "source_hash": "2933007e90dd748898ef026c2e1e4e2d791d2cbd83ba92b28bf1544f25fcb9da",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "69483.13752128911339421613372",
+        "gross": "53126.5150",
+        "physical": 4,
+        "restricted": "27080.58795805420065339977495",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27103050|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27103055,
+      "first_intended_minute": 27103054,
+      "order": "2021-07-13:27103053:16:25801",
+      "source_hash": "2933007e90dd748898ef026c2e1e4e2d791d2cbd83ba92b28bf1544f25fcb9da",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "66093.65338563860350076103437",
+        "gross": "56786.8500",
+        "physical": 4,
+        "restricted": "27183.54709716577072886131374",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27104670|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27104674,
+      "first_intended_minute": 27104673,
+      "order": "2021-07-14:27104672:16:26292",
+      "source_hash": "1fd4840aed07a7703465ced21e3585229a76f84354a215b1d588991456798565",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "66432.67261137461948249619418",
+        "gross": "45933.5400",
+        "physical": 5,
+        "restricted": "22837.36244113650046191609414",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27103410|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27104704,
+      "first_intended_minute": 27104703,
+      "order": "2021-07-14:27104702:16:26309",
+      "source_hash": "1fd4840aed07a7703465ced21e3585229a76f84354a215b1d588991456798565",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "67005.89660189284627092846205",
+        "gross": "45913.9300",
+        "physical": 4,
+        "restricted": "22875.86244113650046191609414",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27104490|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27104730|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27104734,
+      "first_intended_minute": 27104733,
+      "order": "2021-07-14:27104732:16:26326",
+      "source_hash": "1fd4840aed07a7703465ced21e3585229a76f84354a215b1d588991456798565",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "63964.97107430071917808219161",
+        "gross": "51052.1300",
+        "physical": 4,
+        "restricted": "25677.95675364266056154111553",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27104670|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27104674,
+      "first_intended_minute": 27104673,
+      "order": "2021-07-14:27104672:16:26085",
+      "source_hash": "1fd4840aed07a7703465ced21e3585229a76f84354a215b1d588991456798565",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "63326.54201710928082191780805",
+        "gross": "41484.3450",
+        "physical": 5,
+        "restricted": "21259.85687433938859578033278",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27103410|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27104704,
+      "first_intended_minute": 27104703,
+      "order": "2021-07-14:27104702:16:26102",
+      "source_hash": "1fd4840aed07a7703465ced21e3585229a76f84354a215b1d588991456798565",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "63969.97780930243150684931488",
+        "gross": "41296.6450",
+        "physical": 4,
+        "restricted": "21255.02370451867672606796280",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27104490|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27104730|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27104734,
+      "first_intended_minute": 27104733,
+      "order": "2021-07-14:27104732:16:26119",
+      "source_hash": "1fd4840aed07a7703465ced21e3585229a76f84354a215b1d588991456798565",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "63283.71195345837138508371323",
+        "gross": "56217.7500",
+        "physical": 4,
+        "restricted": "24847.86146712903792243991691",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27106050|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27106054,
+      "first_intended_minute": 27106053,
+      "order": "2021-07-15:27106052:16:26445",
+      "source_hash": "cf8a603c2632f8176d6c5f2e99c35538bc3663533f7f719d5f389a432475b720",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "62290.00508395604642313546404",
+        "gross": "52032.3150",
+        "physical": 4,
+        "restricted": "24996.65219404659966462934197",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27106050|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27106054,
+      "first_intended_minute": 27106053,
+      "order": "2021-07-15:27106052:16:26238",
+      "source_hash": "cf8a603c2632f8176d6c5f2e99c35538bc3663533f7f719d5f389a432475b720",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "60253.20851008230593607305874",
+        "gross": "56404.8650",
+        "physical": -2,
+        "restricted": "23636.89844149422061293753446",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27111870|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27111874,
+      "first_intended_minute": 27111873,
+      "order": "2021-07-19:27111872:16:26853",
+      "source_hash": "363fd9aaee149728fd3a029dbed081cb982c9c83a112718eb5bef806d640dd66",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "57048.14325938694444444444426",
+        "gross": "52356.2350",
+        "physical": -1,
+        "restricted": "21544.01513476939389431214983",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27111870|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27111874,
+      "first_intended_minute": 27111873,
+      "order": "2021-07-19:27111872:16:26646",
+      "source_hash": "363fd9aaee149728fd3a029dbed081cb982c9c83a112718eb5bef806d640dd66",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "65365.51185796949391171993855",
+        "gross": "47018.1600",
+        "physical": -4,
+        "restricted": "23729.77168871003318300517359",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27117510|AVGO": "-1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27117750|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27117754,
+      "first_intended_minute": 27117753,
+      "order": "2021-07-23:27117752:16:27640",
+      "source_hash": "45ccf5e0d98efc6da4388243fbe4a69431cf9896e1f609e8a18f48c08fcb192f",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "59699.51742919324200913241978",
+        "gross": "42348.8500",
+        "physical": -4,
+        "restricted": "20747.00000000000000000000000",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27117750|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27117754,
+      "first_intended_minute": 27117753,
+      "order": "2021-07-23:27117752:16:27347",
+      "source_hash": "45ccf5e0d98efc6da4388243fbe4a69431cf9896e1f609e8a18f48c08fcb192f",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "47075.63080613339041095890355",
+        "gross": "41852.7090",
+        "physical": 4,
+        "restricted": "12177.26756558731981835124383",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27121770|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27122010|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27122014,
+      "first_intended_minute": 27122013,
+      "order": "2021-07-26:27122012:16:27826",
+      "source_hash": "e243c722cb648dccf7127adf26ac19b78c583699eab99b9a74db980975e49103",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "47075.60285975949391171993854",
+        "gross": "41928.6900",
+        "physical": 4,
+        "restricted": "12177.26756558731981835124383",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27121830|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27122070|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27122074,
+      "first_intended_minute": 27122073,
+      "order": "2021-07-26:27122072:16:27844",
+      "source_hash": "e243c722cb648dccf7127adf26ac19b78c583699eab99b9a74db980975e49103",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "39352.97584141621765601217630",
+        "gross": "41826.2400",
+        "physical": 7,
+        "restricted": "10201.61389982067199266733078",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27121770|AVGO": "2",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27122010|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27122014,
+      "first_intended_minute": 27122013,
+      "order": "2021-07-26:27122012:16:27537",
+      "source_hash": "e243c722cb648dccf7127adf26ac19b78c583699eab99b9a74db980975e49103",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "39235.67243422557838660578362",
+        "gross": "41215.0150",
+        "physical": 7,
+        "restricted": "10069.68669266813559123473356",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27121830|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27122070|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27122074,
+      "first_intended_minute": 27122073,
+      "order": "2021-07-26:27122072:16:27556",
+      "source_hash": "e243c722cb648dccf7127adf26ac19b78c583699eab99b9a74db980975e49103",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "44138.92244076972983257229781",
+        "gross": "41842.2100",
+        "physical": 1,
+        "restricted": "10996.93000000000000000000000",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27125010|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27126304,
+      "first_intended_minute": 27126303,
+      "order": "2021-07-29:27126302:16:28385",
+      "source_hash": "3ad706faba8245ce556845232427b6ce64f594cea0e8920bad101ce4636eacb0",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "41080.32941802451293759512912",
+        "gross": "41003.3450",
+        "physical": 1,
+        "restricted": "11281.93440000000000000000000",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27125010|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27126304,
+      "first_intended_minute": 27126303,
+      "order": "2021-07-29:27126302:16:28115",
+      "source_hash": "3ad706faba8245ce556845232427b6ce64f594cea0e8920bad101ce4636eacb0",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "58472.62129869387366818873616",
+        "gross": "40995.9550",
+        "physical": 5,
+        "restricted": "16174.41936640000000000000000",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27132030|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27133324,
+      "first_intended_minute": 27133323,
+      "order": "2021-08-03:27133322:16:28864",
+      "source_hash": "0e1c8624b8e6b5da98488bd0fee2836cafff3e19f2a80ab7a791daabd5850ef8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "52361.76935031943302891933008",
+        "gross": "39422.4000",
+        "physical": 5,
+        "restricted": "14893.60620254774161887998512",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27132030|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27133324,
+      "first_intended_minute": 27133323,
+      "order": "2021-08-03:27133322:16:28615",
+      "source_hash": "0e1c8624b8e6b5da98488bd0fee2836cafff3e19f2a80ab7a791daabd5850ef8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "54067.84714293892694063926888",
+        "gross": "42802.3300",
+        "physical": 5,
+        "restricted": "14031.23894283416058857930417",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27134910|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27136204,
+      "first_intended_minute": 27136203,
+      "order": "2021-08-05:27136202:16:29249",
+      "source_hash": "d205c8d0924865c7fa26a3ae7075a9227aa9fdc0d39a22cb48a81aa96f30b0b6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "68100.12238254889649923896449",
+        "gross": "42210.6400",
+        "physical": 5,
+        "restricted": "23475.12698143185301193780133",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27135090|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27136384,
+      "first_intended_minute": 27136383,
+      "order": "2021-08-05:27136382:16:29357",
+      "source_hash": "d205c8d0924865c7fa26a3ae7075a9227aa9fdc0d39a22cb48a81aa96f30b0b6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "67975.23320973084855403348504",
+        "gross": "41656.8150",
+        "physical": -4,
+        "restricted": "22943.63657587753950588244229",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27136230|MA": "-1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27136470|MA": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27136474,
+      "first_intended_minute": 27136473,
+      "order": "2021-08-05:27136472:18:29394",
+      "source_hash": "d205c8d0924865c7fa26a3ae7075a9227aa9fdc0d39a22cb48a81aa96f30b0b6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "46206.22424573716514459665117",
+        "gross": "41924.2750",
+        "physical": 5,
+        "restricted": "12835.24199866427983174649241",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27134910|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27136204,
+      "first_intended_minute": 27136203,
+      "order": "2021-08-05:27136202:16:29020",
+      "source_hash": "d205c8d0924865c7fa26a3ae7075a9227aa9fdc0d39a22cb48a81aa96f30b0b6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "56718.78347091920471841704687",
+        "gross": "40769.2300",
+        "physical": 5,
+        "restricted": "19307.87183397303977976999280",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27135090|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27136384,
+      "first_intended_minute": 27136383,
+      "order": "2021-08-05:27136382:16:29134",
+      "source_hash": "d205c8d0924865c7fa26a3ae7075a9227aa9fdc0d39a22cb48a81aa96f30b0b6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "54759.77022116632420091324170",
+        "gross": "39551.9500",
+        "physical": -3,
+        "restricted": "17542.75355164662407514432799",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27136230|MA": "-1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27136470|MA": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27136474,
+      "first_intended_minute": 27136473,
+      "order": "2021-08-05:27136472:18:29174",
+      "source_hash": "d205c8d0924865c7fa26a3ae7075a9227aa9fdc0d39a22cb48a81aa96f30b0b6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "56503.78219475398401826483968",
+        "gross": "41523.4800",
+        "physical": -1,
+        "restricted": "14132.72741985080670631737090",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27137910|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27142084,
+      "first_intended_minute": 27142083,
+      "order": "2021-08-09:27142082:16:29717",
+      "source_hash": "39099b1582f54daa68df3bb6605f657bdcd0c36c00dc99ab353a5bf5a7529db8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "52844.98441963759512937595083",
+        "gross": "41547.4700",
+        "physical": -3,
+        "restricted": "15093.15993588064536505389672",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27137970|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27142144,
+      "first_intended_minute": 27142143,
+      "order": "2021-08-09:27142142:16:29753",
+      "source_hash": "39099b1582f54daa68df3bb6605f657bdcd0c36c00dc99ab353a5bf5a7529db8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "53004.36131394859208523592043",
+        "gross": "39530.8700",
+        "physical": -1,
+        "restricted": "14184.58331648077367716184332",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27137910|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27142084,
+      "first_intended_minute": 27142083,
+      "order": "2021-08-09:27142082:16:29511",
+      "source_hash": "39099b1582f54daa68df3bb6605f657bdcd0c36c00dc99ab353a5bf5a7529db8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "50095.79395307862633181126293",
+        "gross": "39302.0600",
+        "physical": -3,
+        "restricted": "14903.58043830570371108958126",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27137970|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27142144,
+      "first_intended_minute": 27142143,
+      "order": "2021-08-09:27142142:16:29549",
+      "source_hash": "39099b1582f54daa68df3bb6605f657bdcd0c36c00dc99ab353a5bf5a7529db8",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 2,
+      "before": {
+        "cash": "74841.75656813945585996955808",
+        "gross": "52408.7950",
+        "physical": -4,
+        "restricted": "28455.88802858539101087061649",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27144990|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 2,
+      "effective": 27144995,
+      "first_intended_minute": 27144993,
+      "order": "2021-08-11:27144992:16:30131",
+      "source_hash": "1f7e87984bd29b8b7d765be292990b9bcc557677c2eb79c1cb0892fc9f7ae6a2",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 2,
+      "before": {
+        "cash": "67873.84905543829908675799041",
+        "gross": "52122.5100",
+        "physical": -4,
+        "restricted": "27340.99290707229408119126444",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27144990|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 2,
+      "effective": 27144995,
+      "first_intended_minute": 27144993,
+      "order": "2021-08-11:27144992:16:29947",
+      "source_hash": "1f7e87984bd29b8b7d765be292990b9bcc557677c2eb79c1cb0892fc9f7ae6a2",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "82432.85377455975646879756413",
+        "gross": "42233.2080",
+        "physical": -5,
+        "restricted": "27962.26117303153165121308360",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27156570|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27157864,
+      "first_intended_minute": 27157863,
+      "order": "2021-08-20:27157862:16:31433",
+      "source_hash": "7ad284ef5933d11cd41dda875b3e291864d6ecf791ec9dd0e204d3ba32a8f4ca",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "74815.16781905298325722983207",
+        "gross": "38565.9540",
+        "physical": -5,
+        "restricted": "25226.53981016635936758812623",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27156570|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27157864,
+      "first_intended_minute": 27157863,
+      "order": "2021-08-20:27157862:16:31304",
+      "source_hash": "7ad284ef5933d11cd41dda875b3e291864d6ecf791ec9dd0e204d3ba32a8f4ca",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "38058.56615581348934550989291",
+        "gross": "42368.8600",
+        "physical": 5,
+        "restricted": "10640.33183535993499320213678",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27168210|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27172384,
+      "first_intended_minute": 27172383,
+      "order": "2021-08-30:27172382:16:32565",
+      "source_hash": "264177c9e776a80191a63dcb251b3199a16dd79afa44d614a4076881cc0bce4e",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "32883.04740055997336377473328",
+        "gross": "39452.7750",
+        "physical": 5,
+        "restricted": "9142.212194211547082921745054",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27168210|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27172384,
+      "first_intended_minute": 27172383,
+      "order": "2021-08-30:27172382:16:32487",
+      "source_hash": "264177c9e776a80191a63dcb251b3199a16dd79afa44d614a4076881cc0bce4e",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 2,
+      "before": {
+        "cash": "50049.32598915175418569254138",
+        "gross": "37905.1300",
+        "physical": 5,
+        "restricted": "8694.508236578291224284032971",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27173850|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 2,
+      "effective": 27175145,
+      "first_intended_minute": 27175143,
+      "order": "2021-09-01:27175142:16:32853",
+      "source_hash": "aaaa3c4fc07e94e4eecddc2ff85699d222af0fb6ec879dd181d4ac7544d8af29",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 2,
+      "before": {
+        "cash": "41749.24915265696727549467237",
+        "gross": "36006.1750",
+        "physical": 5,
+        "restricted": "8437.890123725376451291115050",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27173850|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 2,
+      "effective": 27175145,
+      "first_intended_minute": 27175143,
+      "order": "2021-09-01:27175142:16:32793",
+      "source_hash": "aaaa3c4fc07e94e4eecddc2ff85699d222af0fb6ec879dd181d4ac7544d8af29",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "74971.38683615736681887366784",
+        "gross": "37796.4500",
+        "physical": -4,
+        "restricted": "27649.44914459615104961671205",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27185130|AVGO": "-1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27185370|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27185374,
+      "first_intended_minute": 27185373,
+      "order": "2021-09-08:27185372:16:33628",
+      "source_hash": "aa2eba932d8431e4bb9547515dc29dd0a31e21ee1bf23235682c0951a9a6bafc",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "63003.66672800964231354642276",
+        "gross": "35455.8300",
+        "physical": -4,
+        "restricted": "22986.57288700589935936531276",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27185130|AVGO": "-1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27185370|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27185374,
+      "first_intended_minute": 27185373,
+      "order": "2021-09-08:27185372:16:33617",
+      "source_hash": "aa2eba932d8431e4bb9547515dc29dd0a31e21ee1bf23235682c0951a9a6bafc",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "72963.30141873285007610350039",
+        "gross": "28258.1200",
+        "physical": -4,
+        "restricted": "20273.52645185023582279164914",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27185430|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27186724,
+      "first_intended_minute": 27186723,
+      "order": "2021-09-09:27186722:16:33740",
+      "source_hash": "9b6416aec3073c364273ecdca8c3be74aa4af3faa0a7162de4bb798cd25c139c",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "64618.38696622610730593607277",
+        "gross": "26880.9800",
+        "physical": -4,
+        "restricted": "18104.15770927803196965764916",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27185430|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27186724,
+      "first_intended_minute": 27186723,
+      "order": "2021-09-09:27186722:16:33736",
+      "source_hash": "9b6416aec3073c364273ecdca8c3be74aa4af3faa0a7162de4bb798cd25c139c",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 2,
+      "before": {
+        "cash": "91403.23107010691400304413965",
+        "gross": "35980.1100",
+        "physical": -4,
+        "restricted": "35534.05311973952068786267661",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27203850|AVGO": "-1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27204090|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 2,
+      "effective": 27204095,
+      "first_intended_minute": 27204093,
+      "order": "2021-09-21:27204092:16:35325",
+      "source_hash": "f4f3cc71b494c5aba195538c84cbe4da713fe6333cd4ed0b110344aee20d74ba",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 2,
+      "before": {
+        "cash": "83361.07391369832191780821878",
+        "gross": "33432.6050",
+        "physical": -4,
+        "restricted": "32972.02120385671034297457289",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27203850|AVGO": "-1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27204090|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 2,
+      "effective": 27204095,
+      "first_intended_minute": 27204093,
+      "order": "2021-09-21:27204092:16:35395",
+      "source_hash": "f4f3cc71b494c5aba195538c84cbe4da713fe6333cd4ed0b110344aee20d74ba",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "81914.23911824861491628614878",
+        "gross": "36049.28000",
+        "physical": -5,
+        "restricted": "29522.44162901905173474726141",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27204150|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27205444,
+      "first_intended_minute": 27205443,
+      "order": "2021-09-22:27205442:16:35469",
+      "source_hash": "9149ee5dbde9c6032dc7ed000cb5ed7afa27f84fe205ec197b550bd0a9417b05",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "72807.93476482567732115677284",
+        "gross": "34110.40500",
+        "physical": -5,
+        "restricted": "26530.74393598912577292986103",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27204150|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27205444,
+      "first_intended_minute": 27205443,
+      "order": "2021-09-22:27205442:16:35547",
+      "source_hash": "9149ee5dbde9c6032dc7ed000cb5ed7afa27f84fe205ec197b550bd0a9417b05",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "79334.47769364496955859969518",
+        "gross": "44377.0250",
+        "physical": -4,
+        "restricted": "29956.74726915089374910634870",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27206790|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27206794,
+      "first_intended_minute": 27206793,
+      "order": "2021-09-23:27206792:16:35613",
+      "source_hash": "e2b6df690d56679fb2d431525d3ef6a83dd5445f6aa92ac6fa1c8feebe34e209",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "75173.28356549017503805175005",
+        "gross": "44459.6100",
+        "physical": -4,
+        "restricted": "30047.54330733174193967940410",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27206910|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27206914,
+      "first_intended_minute": 27206913,
+      "order": "2021-09-23:27206912:16:35685",
+      "source_hash": "e2b6df690d56679fb2d431525d3ef6a83dd5445f6aa92ac6fa1c8feebe34e209",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "71448.57658805970319634703152",
+        "gross": "41512.5350",
+        "physical": -4,
+        "restricted": "26821.95705189758544423765780",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27206790|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27206794,
+      "first_intended_minute": 27206793,
+      "order": "2021-09-23:27206792:16:35699",
+      "source_hash": "e2b6df690d56679fb2d431525d3ef6a83dd5445f6aa92ac6fa1c8feebe34e209",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "70415.37239465768645357686412",
+        "gross": "41481.2600",
+        "physical": -4,
+        "restricted": "28655.08198320333650049096339",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27206910|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27206914,
+      "first_intended_minute": 27206913,
+      "order": "2021-09-23:27206912:16:35775",
+      "source_hash": "e2b6df690d56679fb2d431525d3ef6a83dd5445f6aa92ac6fa1c8feebe34e209",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "31317.85747974694824961948212",
+        "gross": "36105.71700",
+        "physical": -5,
+        "restricted": "6508.714534489591893329178841",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27208530|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27212704,
+      "first_intended_minute": 27212703,
+      "order": "2021-09-27:27212702:16:36099",
+      "source_hash": "df9aa414251d6c3a9a76cad4e40823113ce29cd56d278b49e2e09a4ce821412c",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "27915.67966305096270928462659",
+        "gross": "31104.46700",
+        "physical": -5,
+        "restricted": "5140.162882241089833353417248",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27208530|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27212704,
+      "first_intended_minute": 27212703,
+      "order": "2021-09-27:27212702:16:36204",
+      "source_hash": "df9aa414251d6c3a9a76cad4e40823113ce29cd56d278b49e2e09a4ce821412c",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "50887.20513490803272450532688",
+        "gross": "35084.7850",
+        "physical": -5,
+        "restricted": "15088.95321408621038859089803",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27215550|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27216844,
+      "first_intended_minute": 27216843,
+      "order": "2021-09-30:27216842:16:36584",
+      "source_hash": "8f7a026de6d1d511f00d87eb146fab23acb0e2fc291effa67d6cc6973c112817",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "45400.65117501223744292237393",
+        "gross": "30256.6350",
+        "physical": -5,
+        "restricted": "13092.28696651565886321341862",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27215550|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27216844,
+      "first_intended_minute": 27216843,
+      "order": "2021-09-30:27216842:16:36696",
+      "source_hash": "8f7a026de6d1d511f00d87eb146fab23acb0e2fc291effa67d6cc6973c112817",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "27007.24011599482115677321104",
+        "gross": "34480.7900",
+        "physical": 3,
+        "restricted": "3865.2594489176904305737728",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27227250|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27228544,
+      "first_intended_minute": 27228543,
+      "order": "2021-10-08:27228542:16:37869",
+      "source_hash": "112310ebc299c028d1688987e96b5fe1fb41089c6d1bb75c8daa4e6929b197c4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 2,
+      "before": {
+        "cash": "26449.60675467838280060882749",
+        "gross": "34591.2900",
+        "physical": 4,
+        "restricted": "3865.2594489176904305737728",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27228390|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27228630|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 2,
+      "effective": 27228635,
+      "first_intended_minute": 27228633,
+      "order": "2021-10-08:27228632:16:37905",
+      "source_hash": "112310ebc299c028d1688987e96b5fe1fb41089c6d1bb75c8daa4e6929b197c4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "26553.93808891125951293759460",
+        "gross": "34489.4500",
+        "physical": 4,
+        "restricted": "3865.2594489176904305737728",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27228450|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27228690|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27228694,
+      "first_intended_minute": 27228693,
+      "order": "2021-10-08:27228692:16:37923",
+      "source_hash": "112310ebc299c028d1688987e96b5fe1fb41089c6d1bb75c8daa4e6929b197c4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "25364.30877755441400304413954",
+        "gross": "29473.5950",
+        "physical": 3,
+        "restricted": "3599.565687225928480363586864",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27227250|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27228544,
+      "first_intended_minute": 27228543,
+      "order": "2021-10-08:27228542:16:37983",
+      "source_hash": "112310ebc299c028d1688987e96b5fe1fb41089c6d1bb75c8daa4e6929b197c4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 2,
+      "before": {
+        "cash": "24475.10661447317351598173468",
+        "gross": "29349.4100",
+        "physical": 4,
+        "restricted": "3330.444111864569107087629675",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27228390|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27228630|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 2,
+      "effective": 27228635,
+      "first_intended_minute": 27228633,
+      "order": "2021-10-08:27228632:16:38018",
+      "source_hash": "112310ebc299c028d1688987e96b5fe1fb41089c6d1bb75c8daa4e6929b197c4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "24630.82916203824200913241962",
+        "gross": "28965.2100",
+        "physical": 4,
+        "restricted": "3222.795481720025357777246800",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27228450|AVGO": "1",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27228690|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27228694,
+      "first_intended_minute": 27228693,
+      "order": "2021-10-08:27228692:16:38036",
+      "source_hash": "112310ebc299c028d1688987e96b5fe1fb41089c6d1bb75c8daa4e6929b197c4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "20367.84945741943302891933485",
+        "gross": "34447.8980",
+        "physical": 29,
+        "restricted": "2463.460822474739283466351751",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27245850|SBUX": "6"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27247144,
+      "first_intended_minute": 27247143,
+      "order": "2021-10-21:27247142:7:32401",
+      "source_hash": "7d97121549fabcf1abac3b4a5419b91c3e899589b54524041a108dfe25c88bb6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "ROLLING_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "18602.04210196597412480973975",
+        "gross": "31020.8050",
+        "physical": 25,
+        "restricted": "1953.867500000000000000000000",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|ROLLING_RISK|27245850|SBUX": "5"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27247144,
+      "first_intended_minute": 27247143,
+      "order": "2021-10-21:27247142:7:29317",
+      "source_hash": "7d97121549fabcf1abac3b4a5419b91c3e899589b54524041a108dfe25c88bb6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EWMA_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "18341.73518398108066971080374",
+        "gross": "33892.4460",
+        "physical": 25,
+        "restricted": "2381.816246357766028683186377",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EWMA_RISK|27245850|SBUX": "5"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27247144,
+      "first_intended_minute": 27247143,
+      "order": "2021-10-21:27247142:7:29683",
+      "source_hash": "7d97121549fabcf1abac3b4a5419b91c3e899589b54524041a108dfe25c88bb6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "19399.97328308035007610350121",
+        "gross": "33747.6940",
+        "physical": 24,
+        "restricted": "2383.199618256994391065915004",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27245850|SBUX": "4"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27247144,
+      "first_intended_minute": 27247143,
+      "order": "2021-10-21:27247142:7:29910",
+      "source_hash": "7d97121549fabcf1abac3b4a5419b91c3e899589b54524041a108dfe25c88bb6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "25844.93668665212328767123230",
+        "gross": "32053.2400",
+        "physical": 20,
+        "restricted": "1733.324504496734996898250752",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27245850|SBUX": "4"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27247144,
+      "first_intended_minute": 27247143,
+      "order": "2021-10-21:27247142:7:39518",
+      "source_hash": "7d97121549fabcf1abac3b4a5419b91c3e899589b54524041a108dfe25c88bb6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "ROLLING_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "18602.04210196597412480973975",
+        "gross": "31020.8050",
+        "physical": 25,
+        "restricted": "1953.867500000000000000000000",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|ROLLING_RISK|27245850|SBUX": "5"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27247144,
+      "first_intended_minute": 27247143,
+      "order": "2021-10-21:27247142:7:29317",
+      "source_hash": "7d97121549fabcf1abac3b4a5419b91c3e899589b54524041a108dfe25c88bb6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EWMA_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "18341.73518398108066971080374",
+        "gross": "33892.4460",
+        "physical": 25,
+        "restricted": "2381.816246357766028683186377",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EWMA_RISK|27245850|SBUX": "5"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27247144,
+      "first_intended_minute": 27247143,
+      "order": "2021-10-21:27247142:7:29683",
+      "source_hash": "7d97121549fabcf1abac3b4a5419b91c3e899589b54524041a108dfe25c88bb6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "23840.11884776828386605783806",
+        "gross": "26992.2570",
+        "physical": 13,
+        "restricted": "1515.500594632836147310732448",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27245850|SBUX": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27247144,
+      "first_intended_minute": 27247143,
+      "order": "2021-10-21:27247142:7:39655",
+      "source_hash": "7d97121549fabcf1abac3b4a5419b91c3e899589b54524041a108dfe25c88bb6",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "28075.74035405420471841704659",
+        "gross": "29175.4250",
+        "physical": 5,
+        "restricted": "6249.735769198385738265639327",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27247410|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27248704,
+      "first_intended_minute": 27248703,
+      "order": "2021-10-22:27248702:16:39924",
+      "source_hash": "b4ccf6981b1c66dae6da8a7d3d86475365393c8ead54a216fce1798ca72543c3",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "32787.11363970937975646879696",
+        "gross": "25940.4750",
+        "physical": 3,
+        "restricted": "8438.217616060638164133852116",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27277710|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27279004,
+      "first_intended_minute": 27279003,
+      "order": "2021-11-12:27279002:16:42753",
+      "source_hash": "075e8f76d3b5de1813c8759dcfc6d4f175268fa01f52fbe9dc5d8cefda694a87",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "47964.60531850034246575342398",
+        "gross": "25883.1450",
+        "physical": 4,
+        "restricted": "16053.99289856579760930966620",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27279150|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27283324,
+      "first_intended_minute": 27283323,
+      "order": "2021-11-15:27283322:16:42938",
+      "source_hash": "2d8376280b5dee00c0a69b6588933a8e2009dba169d12578fbd7a200b05ded29",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 2,
+      "before": {
+        "cash": "49069.41944946373668188736613",
+        "gross": "25307.8450",
+        "physical": 2,
+        "restricted": "16046.89573563865621933043839",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27283410|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 2,
+      "effective": 27283415,
+      "first_intended_minute": 27283413,
+      "order": "2021-11-15:27283412:16:42972",
+      "source_hash": "2d8376280b5dee00c0a69b6588933a8e2009dba169d12578fbd7a200b05ded29",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "47276.59934796974885844748786",
+        "gross": "25193.7900",
+        "physical": 5,
+        "restricted": "15776.31820234912888968144538",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27286350|AVGO": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27287644,
+      "first_intended_minute": 27287643,
+      "order": "2021-11-18:27287642:16:43496",
+      "source_hash": "e5eb9dd01ea6d3afbba301488c4169bea3181a9440bc184236977bbacb5afb27",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "54937.81993463189497716894905",
+        "gross": "29313.18000",
+        "physical": 0,
+        "restricted": "21410.38339324505794287788742",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27294810|AVGO": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27294814,
+      "first_intended_minute": 27294813,
+      "order": "2021-11-23:27294812:16:44045",
+      "source_hash": "ee463ca3eeb87aed408f1aac28cddfa9d1cf863b33abfdbe22cd66194477b15b",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "58874.73120102950913242009053",
+        "gross": "23402.1350",
+        "physical": -2,
+        "restricted": "21617.70638657545794581079795",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27306150|AVGO": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27306394,
+      "first_intended_minute": 27306393,
+      "order": "2021-12-01:27306392:16:44770",
+      "source_hash": "24bfffde9dde6736a60639783952d9457a96f1034b69b1ad7e7585eeafd947a4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "23834.67982029121765601218097",
+        "gross": "21893.5600",
+        "physical": 9,
+        "restricted": "2229.687789328646751730016131",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27316590|BA": "3"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27317884,
+      "first_intended_minute": 27317883,
+      "order": "2021-12-09:27317882:3:37410",
+      "source_hash": "8c196ef6e1edcbe800c3d7095db065922d8d8bcb7c197063df087e45fda7ea0a",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "ROLLING_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "22240.31403950262557077625421",
+        "gross": "19777.6550",
+        "physical": 10,
+        "restricted": "2154.977380246727930938457254",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|ROLLING_RISK|27316590|BA": "3"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27317884,
+      "first_intended_minute": 27317883,
+      "order": "2021-12-09:27317882:3:34163",
+      "source_hash": "8c196ef6e1edcbe800c3d7095db065922d8d8bcb7c197063df087e45fda7ea0a",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EWMA_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "23178.61923536156012176559829",
+        "gross": "20619.4850",
+        "physical": 8,
+        "restricted": "2157.677377244015014912847731",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EWMA_RISK|27316590|BA": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27317884,
+      "first_intended_minute": 27317883,
+      "order": "2021-12-09:27317882:3:34637",
+      "source_hash": "8c196ef6e1edcbe800c3d7095db065922d8d8bcb7c197063df087e45fda7ea0a",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "24107.14650311171993911719977",
+        "gross": "21009.7900",
+        "physical": 8,
+        "restricted": "2371.393404403866809881847475",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27316590|BA": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27317884,
+      "first_intended_minute": 27317883,
+      "order": "2021-12-09:27317882:3:34892",
+      "source_hash": "8c196ef6e1edcbe800c3d7095db065922d8d8bcb7c197063df087e45fda7ea0a",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "28721.68844681139269406392644",
+        "gross": "19602.2000",
+        "physical": 8,
+        "restricted": "2374.076682964285714285714286",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27316590|BA": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27317884,
+      "first_intended_minute": 27317883,
+      "order": "2021-12-09:27317882:3:45445",
+      "source_hash": "8c196ef6e1edcbe800c3d7095db065922d8d8bcb7c197063df087e45fda7ea0a",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "ROLLING_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "22240.31403950262557077625421",
+        "gross": "19777.6550",
+        "physical": 10,
+        "restricted": "2154.977380246727930938457254",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|ROLLING_RISK|27316590|BA": "3"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27317884,
+      "first_intended_minute": 27317883,
+      "order": "2021-12-09:27317882:3:34163",
+      "source_hash": "8c196ef6e1edcbe800c3d7095db065922d8d8bcb7c197063df087e45fda7ea0a",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EWMA_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "23178.61923536156012176559829",
+        "gross": "20619.4850",
+        "physical": 8,
+        "restricted": "2157.677377244015014912847731",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EWMA_RISK|27316590|BA": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27317884,
+      "first_intended_minute": 27317883,
+      "order": "2021-12-09:27317882:3:34637",
+      "source_hash": "8c196ef6e1edcbe800c3d7095db065922d8d8bcb7c197063df087e45fda7ea0a",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "26868.47725895800989345509817",
+        "gross": "15155.9600",
+        "physical": 5,
+        "restricted": "2083.934626679388283475901903",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27316590|BA": "1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27317884,
+      "first_intended_minute": 27317883,
+      "order": "2021-12-09:27317882:3:45634",
+      "source_hash": "8c196ef6e1edcbe800c3d7095db065922d8d8bcb7c197063df087e45fda7ea0a",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "15448.68739130966133942161781",
+        "gross": "25515.4200",
+        "physical": 4,
+        "restricted": "1727.971795989173817632631034",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27347970|PEP": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27348214,
+      "first_intended_minute": 27348213,
+      "order": "2021-12-30:27348212:5:39760",
+      "source_hash": "8609a36946939da0bc253e20411ef956ee0a6934cd41b9f57b31f31e9ee19fd4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "ROLLING_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "15189.50161059754185692541682",
+        "gross": "22743.0200",
+        "physical": 4,
+        "restricted": "1885.116861595689988652737769",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|ROLLING_RISK|27347970|PEP": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27348214,
+      "first_intended_minute": 27348213,
+      "order": "2021-12-30:27348212:5:36453",
+      "source_hash": "8609a36946939da0bc253e20411ef956ee0a6934cd41b9f57b31f31e9ee19fd4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EWMA_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "15202.25857757646118721460897",
+        "gross": "24610.8700",
+        "physical": 4,
+        "restricted": "2041.429560148201671287638818",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EWMA_RISK|27347970|PEP": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27348214,
+      "first_intended_minute": 27348213,
+      "order": "2021-12-30:27348212:5:36987",
+      "source_hash": "8609a36946939da0bc253e20411ef956ee0a6934cd41b9f57b31f31e9ee19fd4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "15467.24821031662100456621039",
+        "gross": "24350.8700",
+        "physical": 5,
+        "restricted": "1571.524402031777517644285066",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27347970|PEP": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27348214,
+      "first_intended_minute": 27348213,
+      "order": "2021-12-30:27348212:5:37235",
+      "source_hash": "8609a36946939da0bc253e20411ef956ee0a6934cd41b9f57b31f31e9ee19fd4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "19206.20509964290715372907100",
+        "gross": "24272.0750",
+        "physical": 8,
+        "restricted": "1466.101078937600000000000000",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27347970|PEP": "2",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27348210|PEP": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27348214,
+      "first_intended_minute": 27348213,
+      "order": "2021-12-30:27348212:5:48082",
+      "source_hash": "8609a36946939da0bc253e20411ef956ee0a6934cd41b9f57b31f31e9ee19fd4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "ROLLING_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "15189.50161059754185692541682",
+        "gross": "22743.0200",
+        "physical": 4,
+        "restricted": "1885.116861595689988652737769",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|ROLLING_RISK|27347970|PEP": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27348214,
+      "first_intended_minute": 27348213,
+      "order": "2021-12-30:27348212:5:36453",
+      "source_hash": "8609a36946939da0bc253e20411ef956ee0a6934cd41b9f57b31f31e9ee19fd4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EWMA_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "15202.25857757646118721460897",
+        "gross": "24610.8700",
+        "physical": 4,
+        "restricted": "2041.429560148201671287638818",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EWMA_RISK|27347970|PEP": "2"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27348214,
+      "first_intended_minute": 27348213,
+      "order": "2021-12-30:27348212:5:36987",
+      "source_hash": "8609a36946939da0bc253e20411ef956ee0a6934cd41b9f57b31f31e9ee19fd4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "18447.23678232520928462709191",
+        "gross": "18617.4950",
+        "physical": 7,
+        "restricted": "1152.113176683771616241757999",
+        "virtual": {
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27347970|PEP": "2",
+          "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27348210|PEP": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27348214,
+      "first_intended_minute": 27348213,
+      "order": "2021-12-30:27348212:5:48142",
+      "source_hash": "8609a36946939da0bc253e20411ef956ee0a6934cd41b9f57b31f31e9ee19fd4",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "13395.56102408417427701674739",
+        "gross": "9730.7400",
+        "physical": 4,
+        "restricted": "3706.390863445590880411326086",
+        "virtual": {
+          "32e945b22fd1323894039974155c7e48401af76aac98112ed7627708b8edbbd5|EQUAL|27621510|PEP": "1",
+          "32e945b22fd1323894039974155c7e48401af76aac98112ed7627708b8edbbd5|EQUAL|27621750|PEP": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27621754,
+      "first_intended_minute": 27621753,
+      "order": "2022-07-08:27621752:5:61738",
+      "source_hash": "a77e98e0ca804cff4c53d6b07a105ad852240178bba135c29d6521d38e7fa824",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "15899.40114381659817351598193",
+        "gross": "10503.3900",
+        "physical": 4,
+        "restricted": "3792.849208521382104475510387",
+        "virtual": {
+          "32e945b22fd1323894039974155c7e48401af76aac98112ed7627708b8edbbd5|EQUAL|27621510|PEP": "1",
+          "32e945b22fd1323894039974155c7e48401af76aac98112ed7627708b8edbbd5|EQUAL|27621750|PEP": "0"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27621754,
+      "first_intended_minute": 27621753,
+      "order": "2022-07-08:27621752:5:71209",
+      "source_hash": "a77e98e0ca804cff4c53d6b07a105ad852240178bba135c29d6521d38e7fa824",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EWMA_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "12131.84301694923896499238670",
+        "gross": "2479.9150",
+        "physical": -1,
+        "restricted": "2219.683526159627953745600805",
+        "virtual": {
+          "32e945b22fd1323894039974155c7e48401af76aac98112ed7627708b8edbbd5|EWMA_RISK|27688050|PEP": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27689344,
+      "first_intended_minute": 27689343,
+      "order": "2022-08-24:27689342:5:62966",
+      "source_hash": "f8180aee2ad4028d54a436a4657e48ffef579d31a859fd400cdbc549c733674d",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EWMA_RISK"
+      ],
+      "attempts": 1,
+      "before": {
+        "cash": "12131.84301694923896499238670",
+        "gross": "2479.9150",
+        "physical": -1,
+        "restricted": "2219.683526159627953745600805",
+        "virtual": {
+          "32e945b22fd1323894039974155c7e48401af76aac98112ed7627708b8edbbd5|EWMA_RISK|27688050|PEP": "-1"
+        }
+      },
+      "delay_wall_minutes": 1,
+      "effective": 27689344,
+      "first_intended_minute": 27689343,
+      "order": "2022-08-24:27689342:5:62966",
+      "source_hash": "f8180aee2ad4028d54a436a4657e48ffef579d31a859fd400cdbc549c733674d",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EQUAL"
+      ],
+      "attempts": 3,
+      "before": {
+        "cash": "9623.495512147165144596656610",
+        "gross": "2910.4250",
+        "physical": 0,
+        "restricted": "1750.687609148094692850457202",
+        "virtual": {
+          "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea|EQUAL|27909510|XOM": "0"
+        }
+      },
+      "delay_wall_minutes": 3,
+      "effective": 27909517,
+      "first_intended_minute": 27909514,
+      "order": "2023-01-24:27909513:14:69207",
+      "source_hash": "760efa37c2757d3dfce1630261d255c2873c297f01e3d9dd084e16adf7df263b",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EQUAL"
+      ],
+      "attempts": 4,
+      "before": {
+        "cash": "9732.765440132324961948254785",
+        "gross": "2930.5850",
+        "physical": -8,
+        "restricted": "1860.957609148094692850457202",
+        "virtual": {
+          "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea|EQUAL|27909510|VZ": "0"
+        }
+      },
+      "delay_wall_minutes": 4,
+      "effective": 27909518,
+      "first_intended_minute": 27909514,
+      "order": "2023-01-24:27909513:0:69201",
+      "source_hash": "760efa37c2757d3dfce1630261d255c2873c297f01e3d9dd084e16adf7df263b",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "ROLLING_RISK"
+      ],
+      "attempts": 4,
+      "before": {
+        "cash": "7421.490804107142313546421468",
+        "gross": "1632.8250",
+        "physical": -4,
+        "restricted": "1219.035746866506059390782673",
+        "virtual": {
+          "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea|ROLLING_RISK|27909510|VZ": "0"
+        }
+      },
+      "delay_wall_minutes": 4,
+      "effective": 27909518,
+      "first_intended_minute": 27909514,
+      "order": "2023-01-24:27909513:0:63089",
+      "source_hash": "760efa37c2757d3dfce1630261d255c2873c297f01e3d9dd084e16adf7df263b",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "EWMA_RISK"
+      ],
+      "attempts": 4,
+      "before": {
+        "cash": "9208.508325760437595129373272",
+        "gross": "2420.4550",
+        "physical": -6,
+        "restricted": "1856.340963899287920961825133",
+        "virtual": {
+          "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea|EWMA_RISK|27909510|VZ": "0"
+        }
+      },
+      "delay_wall_minutes": 4,
+      "effective": 27909518,
+      "first_intended_minute": 27909514,
+      "order": "2023-01-24:27909513:0:65491",
+      "source_hash": "760efa37c2757d3dfce1630261d255c2873c297f01e3d9dd084e16adf7df263b",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "matched",
+        "S2C_RISK"
+      ],
+      "attempts": 4,
+      "before": {
+        "cash": "8713.240221996860730593608314",
+        "gross": "2597.6450",
+        "physical": -4,
+        "restricted": "1640.504216662734348160140330",
+        "virtual": {
+          "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea|S2C_RISK|27909510|VZ": "0"
+        }
+      },
+      "delay_wall_minutes": 4,
+      "effective": 27909518,
+      "first_intended_minute": 27909514,
+      "order": "2023-01-24:27909513:0:65579",
+      "source_hash": "760efa37c2757d3dfce1630261d255c2873c297f01e3d9dd084e16adf7df263b",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 4,
+      "before": {
+        "cash": "9157.936181104117199391172408",
+        "gross": "1745.7300",
+        "physical": -6,
+        "restricted": "1329.849596942049016354777898",
+        "virtual": {
+          "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea|EQUAL|27909510|VZ": "0"
+        }
+      },
+      "delay_wall_minutes": 4,
+      "effective": 27909518,
+      "first_intended_minute": 27909514,
+      "order": "2023-01-24:27909513:0:84064",
+      "source_hash": "760efa37c2757d3dfce1630261d255c2873c297f01e3d9dd084e16adf7df263b",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EQUAL"
+      ],
+      "attempts": 7,
+      "broker_cancel_claim": false,
+      "deadline": 27909520,
+      "order": "2023-01-24:27909513:15:84068",
+      "remaining_requests": [
+        {
+          "delta": "1",
+          "key": "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea|EQUAL|27909510|WFC",
+          "role": "ENTRY"
+        }
+      ],
+      "remaining_submitted": "1",
+      "status": "EXPIRED_UNFILLED_BY_V5_SIMULATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "ROLLING_RISK"
+      ],
+      "attempts": 4,
+      "before": {
+        "cash": "7421.490804107142313546421468",
+        "gross": "1632.8250",
+        "physical": -4,
+        "restricted": "1219.035746866506059390782673",
+        "virtual": {
+          "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea|ROLLING_RISK|27909510|VZ": "0"
+        }
+      },
+      "delay_wall_minutes": 4,
+      "effective": 27909518,
+      "first_intended_minute": 27909514,
+      "order": "2023-01-24:27909513:0:63089",
+      "source_hash": "760efa37c2757d3dfce1630261d255c2873c297f01e3d9dd084e16adf7df263b",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "EWMA_RISK"
+      ],
+      "attempts": 4,
+      "before": {
+        "cash": "9208.508325760437595129373272",
+        "gross": "2420.4550",
+        "physical": -6,
+        "restricted": "1856.340963899287920961825133",
+        "virtual": {
+          "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea|EWMA_RISK|27909510|VZ": "0"
+        }
+      },
+      "delay_wall_minutes": 4,
+      "effective": 27909518,
+      "first_intended_minute": 27909514,
+      "order": "2023-01-24:27909513:0:65491",
+      "source_hash": "760efa37c2757d3dfce1630261d255c2873c297f01e3d9dd084e16adf7df263b",
+      "status": "QUALIFIED_LATER_OBSERVATION"
+    },
+    {
+      "account": [
+        "attainable",
+        "S2C_RISK"
+      ],
+      "attempts": 7,
+      "broker_cancel_claim": false,
+      "deadline": 27909520,
+      "order": "2023-01-24:27909513:15:79412",
+      "remaining_requests": [
+        {
+          "delta": "1",
+          "key": "17f5c9f5c1b012f62b9156cc334cde235dfafc671eb3813a7f22d8ccd605d8ea|S2C_RISK|27909510|WFC",
+          "role": "ENTRY"
+        }
+      ],
+      "remaining_submitted": "1",
+      "status": "EXPIRED_UNFILLED_BY_V5_SIMULATION"
+    }
+  ],
+  "scenario": "baseline",
+  "source_cells_are_not_failed_trade_counts": true,
+  "source_journal_sha256": "a5cbaf8da59c25096eaab76f6420277dcd9e00eb230056415b36c226bd980d2a",
+  "terminal_pending_orders": 0,
+  "terminal_unpriced_special_claims": 0,
+  "zero_external_reference_classification": {
+    "('attainable', 'EQUAL', 'INTERNAL_ONLY')": 22382,
+    "('attainable', 'EWMA_RISK', 'INTERNAL_ONLY')": 8340,
+    "('attainable', 'ROLLING_RISK', 'INTERNAL_ONLY')": 5781,
+    "('attainable', 'S2C_RISK', 'INTERNAL_ONLY')": 12419,
+    "('matched', 'EQUAL', 'INTERNAL_ONLY')": 10743,
+    "('matched', 'EWMA_RISK', 'INTERNAL_ONLY')": 8340,
+    "('matched', 'ROLLING_RISK', 'INTERNAL_ONLY')": 5781,
+    "('matched', 'S2C_RISK', 'INTERNAL_ONLY')": 7725
+  }
+}

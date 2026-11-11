@@ -1,0 +1,108 @@
+{
+  "pilots": {
+    "2021-06-02": {
+      "elapsed": 4.260792833985761,
+      "events": {
+        "DIVIDEND_EX": 6
+      },
+      "holds": [],
+      "maximum_residual_USD": "1.13E-21",
+      "period": [
+        "2021-06-02",
+        "2021-06-15"
+      ],
+      "sources": [
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-06.parquet",
+          "rows": 169775,
+          "sha256": "47710016435ad7c56a2a32e11586c80a2d199de9cc2b6715bb23fb1813f083ed"
+        }
+      ],
+      "status": {
+        "COMPLETE": 104,
+        "NO_TRADES": 4
+      }
+    },
+    "2022-08-23": {
+      "elapsed": 2.8464058339595795,
+      "events": {
+        "SPLIT": 108
+      },
+      "holds": [],
+      "maximum_residual_USD": "6E-22",
+      "period": [
+        "2022-08-23",
+        "2022-08-31"
+      ],
+      "sources": [
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-08.parquet",
+          "rows": 176727,
+          "sha256": "d65710d4ccd2fed61806a118ae29beb56a9fd7f765308e4c8a0782feb5f064eb"
+        }
+      ],
+      "status": {
+        "COMPLETE": 82,
+        "NO_TRADES": 26
+      }
+    },
+    "2024-05-09": {
+      "elapsed": 4.1680587499868125,
+      "events": {
+        "DIVIDEND_EX": 23,
+        "DIVIDEND_PAY": 1
+      },
+      "holds": [],
+      "maximum_residual_USD": "1.6E-21",
+      "period": [
+        "2024-05-09",
+        "2024-05-22"
+      ],
+      "sources": [
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-05.parquet",
+          "rows": 169573,
+          "sha256": "10d8d9bad21a9e111f453429f60d7a733ed825395346c120f4bb976787e52326"
+        }
+      ],
+      "status": {
+        "COMPLETE": 102,
+        "NO_TRADES": 6
+      }
+    },
+    "2024-11-25": {
+      "elapsed": 3.851273583015427,
+      "events": {
+        "DIVIDEND_EX": 23
+      },
+      "holds": [],
+      "maximum_residual_USD": "1.402778E-21",
+      "period": [
+        "2024-11-25",
+        "2024-12-06"
+      ],
+      "sources": [
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-11.parquet",
+          "rows": 136841,
+          "sha256": "9dd9c17c3445b0eac430a53139a4bc5c5a2b32d030b350dfc03d803796643740"
+        },
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-12.parquet",
+          "rows": 158246,
+          "sha256": "127922240fb382b66d134fc835d433b3b6a46dd97901aa68f554004acb77d25f"
+        }
+      ],
+      "status": {
+        "COMPLETE": 102,
+        "NO_TRADES": 6
+      }
+    }
+  },
+  "registry": "88731c7e0c5438378ea7cd5d56d0a5334f918a5d9cc997ce457d52a5e857d995",
+  "sealed_seeded_V1_witnesses": {
+    "trading/track2/rapid_v1/audits/MRK_OGN_SOURCE_ADAPTER_PARITY_V1.json": "b094d3b57a585eb24dfbeae889f0bc80a98d9789ab7083e527c15492ceb9ed43",
+    "trading/track2/rapid_v1/audits/RAW_SHARE_SPLIT_WITNESSES_V1.json": "88d13767e3b3ab4f32f7ce49fd7092732195bc7ae19bc1384918fbcd65474385"
+  },
+  "status": "PASS"
+}

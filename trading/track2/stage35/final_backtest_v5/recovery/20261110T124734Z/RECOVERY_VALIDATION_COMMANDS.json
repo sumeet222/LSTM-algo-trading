@@ -1,0 +1,88 @@
+[
+  {
+    "name": "RUFF",
+    "argv": [
+      ".venv/bin/ruff",
+      "check",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5",
+      "tests/track2_stage35_v5",
+      "--select",
+      "E,F,I"
+    ],
+    "returncode": 0,
+    "seconds": 0.1736626250203699,
+    "stdout": "trading/track2/stage35/final_backtest_v5/recovery/20261110T124734Z/RUFF.txt",
+    "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "stderr": "trading/track2/stage35/final_backtest_v5/recovery/20261110T124734Z/RUFF.stderr.txt",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "OWNED_TYPES",
+    "argv": [
+      ".venv/bin/pyright",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5",
+      "tests/track2_stage35_v5",
+      "--pythonpath",
+      ".venv/bin/python",
+      "--outputjson"
+    ],
+    "returncode": 0,
+    "seconds": 7.2964519169181585,
+    "stdout": "trading/track2/stage35/final_backtest_v5/recovery/20261110T124734Z/OWNED_TYPES.json",
+    "stdout_sha256": "67d54b6f77d31ebb1ba9d624b382ab404ec5afb9544b6d7635758cc43b7764c8",
+    "stderr": "trading/track2/stage35/final_backtest_v5/recovery/20261110T124734Z/OWNED_TYPES.stderr.txt",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "summary": {
+      "filesAnalyzed": 13,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 6.095
+    }
+  },
+  {
+    "name": "PYTEST",
+    "argv": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/track2_stage012",
+      "tests/track2_stage35",
+      "tests/track2_stage35_completion_v2",
+      "tests/track2_stage35_completion_v3",
+      "tests/track2_stage35_v4",
+      "tests/track2_stage35_v5",
+      "tests/test_hf20_s2c_ca.py",
+      "tests/test_hf20_mag_c3_io.py",
+      "-q"
+    ],
+    "returncode": 0,
+    "seconds": 193.34952845890075,
+    "stdout": "trading/track2/stage35/final_backtest_v5/recovery/20261110T124734Z/PYTEST.txt",
+    "stdout_sha256": "c18b7ca3773f540bcbdad4d313f73b0a7f04cdcf6946be0f6417c8e221710167",
+    "stderr": "trading/track2/stage35/final_backtest_v5/recovery/20261110T124734Z/PYTEST.stderr.txt",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "FULL_PYLANCE",
+    "argv": [
+      ".venv/bin/python",
+      "scripts/check_python_types.py",
+      "--pylance-dist",
+      "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+    ],
+    "returncode": 1,
+    "seconds": 439.5066833330784,
+    "stdout": "trading/track2/stage35/final_backtest_v5/recovery/20261110T124734Z/FULL_PYLANCE.json",
+    "stdout_sha256": "c73512bec7e58247b7d60317fc7a836a09be206b8bdf2de1a7e162feefaac7a2",
+    "stderr": "trading/track2/stage35/final_backtest_v5/recovery/20261110T124734Z/FULL_PYLANCE.stderr.txt",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "summary": {
+      "filesAnalyzed": 694,
+      "errorCount": 30,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 436.543
+    }
+  }
+]

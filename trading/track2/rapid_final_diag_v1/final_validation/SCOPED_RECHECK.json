@@ -1,0 +1,36 @@
+{
+  "commands": [
+    {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "--select",
+        "E,F,I",
+        "src/lstm_data/trading/track2/rapid_final_diag",
+        "src/lstm_data/trading/track2/rapid_final_diag_analysis.py",
+        "src/lstm_data/trading/track2/rapid_final_diag_supplement.py",
+        "src/lstm_data/trading/track2/rapid_final_diag_handoff.py",
+        "tests/track2_rapid_final_diag",
+        "tests/track2_rapid_final_analysis"
+      ],
+      "elapsed_seconds": 0.032254334073513746,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        ".venv/bin/pyright",
+        "--pythonpath",
+        ".venv/bin/python",
+        "src/lstm_data/trading/track2/rapid_final_diag",
+        "src/lstm_data/trading/track2/rapid_final_diag_analysis.py",
+        "src/lstm_data/trading/track2/rapid_final_diag_supplement.py",
+        "src/lstm_data/trading/track2/rapid_final_diag_handoff.py",
+        "tests/track2_rapid_final_diag",
+        "tests/track2_rapid_final_analysis"
+      ],
+      "elapsed_seconds": 9.117901249788702,
+      "returncode": 0
+    }
+  ],
+  "status": "PASS"
+}

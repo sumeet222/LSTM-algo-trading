@@ -1,0 +1,25 @@
+{
+  "schema": "HF20_R01_REFINEMENT_DRAFT_1",
+  "authorization": "PROPOSAL_ONLY",
+  "status": "NOT_EXECUTED",
+  "scope": "One untouched-period direction-only comparison. Freeze dates, market source and eligibility before any output.",
+  "arms": [
+    {"id": "H85_V3_UNCHANGED", "headroom": 0.85, "name_cap": 0.10, "status": "NOT_EXECUTED"},
+    {"id": "H100_V3_UNCHANGED", "headroom": 1.0, "name_cap": 0.10, "status": "NOT_EXECUTED"},
+    {"id": "H100_ONE_V20_VINTAGE_RESERVE", "headroom": 1.0, "name_cap": 0.10,
+     "volatility_multiple": 1.0, "vintage_cap": 0.20, "before_share_rounding": true,
+     "formula_document": "R01_REFINEMENT_DECISION.md", "status": "NOT_EXECUTED"}
+  ],
+  "first_interpretation_after_weekly_scans": 52,
+  "preserve": ["original_R01_entry_signal_and_weekly_scan", "dynamic_V3_exits",
+               "same_100000_USD_start", "short_collateral", "execution_and_costs",
+               "next_valid_raw_bar", "pending_reservations", "hard_cap_liquidation"],
+  "primary_metrics": ["vintage_forced_exits_per_candidate", "net_USD_per_marked_gross_RTH_dollar_year"],
+  "diagnostic_axes": ["chronological_halves", "side", "name", "top_two_name_omission_arithmetic",
+                      "turnover", "actual_holding", "decision_risk_reserve_ledger"],
+  "required_outcomes": ["guarded_fewer_vintage_forced_exits_than_H100",
+                        "guarded_higher_exposure_normalized_net_than_H100",
+                        "untouched_H85_net_positive_after_all_costs"],
+  "no_threshold_search": true,
+  "S2C_sizing": "NOT_EXECUTED"
+}

@@ -1,0 +1,29 @@
+import datetime,json,os,signal,subprocess,time
+from pathlib import Path
+parent=61526
+expected={62148:'v5_impact_1',62149:'v5_fee_0',62150:'v5_fee_0_01',62151:'v5_impact_15'}
+root=Path('trading/track2/stage35/final_backtest_v5/audits')
+empty_checks=0
+while True:
+    seen={}
+    for line in subprocess.check_output(['ps','-axo','pid,ppid,command'],text=True).splitlines():
+        parts=line.strip().split(None,2)
+        if len(parts)==3 and parts[0].isdigit() and parts[1].isdigit():
+            pid,ppid=int(parts[0]),int(parts[1]);cmd=parts[2]
+            if pid==parent or ppid==parent and 'lstm_data.trading.track2.stage35.final_backtest_v5.run sensitivities' in cmd:
+                seen[pid]=(ppid,cmd)
+    active=[pid for pid in seen if pid!=parent and pid not in expected]
+    completed=len(list(root.glob('RUN_COMPLETION_v5_*.json')))
+    empty_checks=empty_checks+1 if not active else 0
+    if parent not in seen or completed>=19 or empty_checks>=2:
+        resumed=[]
+        for pid,version in expected.items():
+            record=seen.get(pid)
+            if record and ('--version '+version+' ') in record[1]+' ':
+                os.kill(pid,signal.SIGCONT);resumed.append(pid)
+        receipt={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'resumed':resumed,
+                 'completed_other_sensitivities':completed,'reason':'Four active computation slots available; no financial parameters changed'}
+        (root/'RESOURCE_QUEUE_RESUMED_V5.json').write_text(json.dumps(receipt,indent=2)+'\n')
+        print(receipt,flush=True)
+        break
+    time.sleep(15)

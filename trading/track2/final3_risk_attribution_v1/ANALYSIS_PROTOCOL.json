@@ -1,0 +1,51 @@
+{
+  "CAGR": "actual first-last calendar days/365.25",
+  "ES": "negative mean of worst ceil(alpha*N) returns; stable date order breaks ties",
+  "SD_ddof": 1,
+  "Sortino": "sqrt252*mean/sqrt(mean(min(r,0)^2)), all sessions",
+  "USD_tolerance": "1e-7",
+  "VaR": "negative linear return quantile at .05/.01; positive means loss",
+  "annualization": 252,
+  "arms": [
+    "EQUAL",
+    "ROLLING_RISK",
+    "EWMA_RISK",
+    "S2C_RISK"
+  ],
+  "bootstrap": "NOT_RUN_OPTIONAL; paired48 monthly/four annual deltas; inference deferred Stage6",
+  "channel_rubric": "No composite. Full-period + all annual nonnegative = SUPPORTED_EXPLORATORY; conflicting = MIXED; nonpositive with no consistent gain = NO_EVIDENCE; absent = NOT_IDENTIFIABLE",
+  "daily_returns": "NAV_t/NAV_previous-1; initial100000",
+  "drawdown": "initial NAV included, recovery>=prior peak, underwater counts dd<0 observations",
+  "expected_accounts": 12,
+  "exposure_bins": [
+    0,
+    0.05,
+    0.1,
+    0.2,
+    0.4,
+    1.0,
+    "infinity"
+  ],
+  "future_prices_neural_trading_replays": 0,
+  "hard_bytes": 50000000,
+  "identity": "3955e126131da35b7297d7e03297efb494af2ca94ec3fd9362fcfa4b4f95940c",
+  "initial_NAV": 100000,
+  "low_support_descriptive_strata": 20,
+  "maximum_proxy_scale": 10,
+  "minimum_mean_gross_for_scaling": 1e-06,
+  "minimum_vol_for_scaling": 1e-12,
+  "normalization": "both constant control/S2C realized mean RTH gross and realized annual vol ratios",
+  "output_soft_bytes": 10000000,
+  "paired_tails": "control worst/best ceil(.05*N) and worst ceil(.01*N), same dates for S2C",
+  "policy_ids": {
+    "F1": "R01-A",
+    "F3": "M04-T480",
+    "F4": "R07-PERSIST"
+  },
+  "population": "MATCHED_ONLY_PRIMARY",
+  "scaled_proxy": "NONEXECUTABLE; multiply already-net daily returns; no orders or new fees",
+  "scaled_return_nonpositive_wealth": "REFUSE",
+  "scope": "READ_ONLY_SAVED_PORTFOLIO_RISK_1",
+  "sessions": 1005,
+  "zero_exposure_threshold": 1e-12
+}

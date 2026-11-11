@@ -1,0 +1,14 @@
+{
+  "measured_pilot_storage": {
+    "sessions_complete_at_measurement": 16,
+    "checkpoints_MiB": 17.09,
+    "events_MiB": 7.41,
+    "cohorts_MiB": 0.42,
+    "available_disk_GiB": 28.15
+  },
+  "before_full_financial_launch": true,
+  "engineering_storage_delta": "Lossless deterministic gzip daily typed checkpoints before full launch, preserving every state/day and restart; no economics or scenario change. Existing R1 raw checkpoints retained.",
+  "raw_market_dataset_copy": false,
+  "execution_plan": "Baseline first, then23 frozen sensitivity variants; independent accounts/processes only; no shared capital or mutable market state. Bounded worker count and disk headroom monitoring.",
+  "storage_threshold": "Keep2GiB reserve; preserve all completed journals and checkpoint if actual disk limit encountered, do not delete results or call completion."
+}

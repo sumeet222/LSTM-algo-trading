@@ -1,0 +1,55 @@
+{
+  "command_template": [
+    ".venv/bin/pyright",
+    "--project",
+    "<temporary exact config below>",
+    "--outputjson"
+  ],
+  "config": {
+    "include": [
+      "../../../../../../Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/final3_risk_attribution/metrics.py",
+      "../../../../../../Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/final3_risk_attribution/analysis.py",
+      "../../../../../../Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/final3_risk_attribution/io.py",
+      "../../../../../../Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/final3_risk_attribution/__init__.py",
+      "../../../../../../Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/final3_risk_attribution/cli.py",
+      "../../../../../../Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/final3_risk_attribution/saved.py",
+      "../../../../../../Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/final3_risk_attribution/supplement.py",
+      "../../../../../../Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/final3_risk_attribution/reporting.py",
+      "../../../../../../Users/pradeepgupta/Desktop/Quant /Projects/LSTM/tests/track2_final3_risk_attribution/test_analysis.py"
+    ],
+    "typeCheckingMode": "basic",
+    "pythonVersion": "3.14",
+    "venvPath": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM",
+    "venv": ".venv",
+    "extraPaths": [
+      "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src"
+    ],
+    "stubPath": "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist/bundled/stubs",
+    "typeshedPath": "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist/typeshed-fallback",
+    "executionEnvironments": [
+      {
+        "root": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM",
+        "extraPaths": [
+          "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src"
+        ]
+      }
+    ]
+  },
+  "expected_owned_files": 9,
+  "exit_code": 0,
+  "elapsed_seconds": 3.6383706249762326,
+  "result": {
+    "version": "1.1.414",
+    "time": "1794374877707",
+    "generalDiagnostics": [],
+    "summary": {
+      "filesAnalyzed": 9,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 3.05
+    }
+  },
+  "stderr": "",
+  "accepted": true
+}

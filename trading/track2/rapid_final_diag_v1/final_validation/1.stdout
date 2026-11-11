@@ -1,0 +1,47 @@
+F401 [*] `pathlib.Path` imported but unused
+  --> src/lstm_data/trading/track2/rapid_final_diag_supplement.py:8:21
+   |
+ 6 | import gzip
+ 7 | import json
+ 8 | from pathlib import Path
+   |                     ^^^^
+ 9 |
+10 | import numpy as np
+   |
+help: Remove unused import: `pathlib.Path`
+  |
+7 | import json
+  - from pathlib import Path
+8 |
+  |
+
+F401 [*] `.rapid_final_diag.provenance.load` imported but unused
+  --> src/lstm_data/trading/track2/rapid_final_diag_supplement.py:14:48
+   |
+13 | from .rapid_exit_audit.io import as_rows, column, table
+14 | from .rapid_final_diag.provenance import ROOT, load
+   |                                                ^^^^
+15 | from .rapid_v1.paths import digest, publish
+16 | from .rapid_v1.portfolio import CompactStats
+   |
+help: Remove unused import: `.rapid_final_diag.provenance.load`
+   |
+13 | from .rapid_exit_audit.io import as_rows, column, table
+   - from .rapid_final_diag.provenance import ROOT, load
+14 + from .rapid_final_diag.provenance import ROOT
+15 | from .rapid_v1.paths import digest, publish
+   |
+
+E501 Line too long (110 > 100)
+   --> src/lstm_data/trading/track2/rapid_final_diag_supplement.py:207:101
+    |
+205 |         {
+206 |             "status": "PASS",
+207 |             "reason": "Three special OGN rows omitted from regular-fill export; recovered exact saved events",
+    |                                                                                                     ^^^^^^^^^^
+208 |             "funded_performance_changed": False,
+209 |             "funded_replay_performed": False,
+    |
+
+Found 3 errors.
+[*] 2 fixable with `--fix`.

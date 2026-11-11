@@ -1,0 +1,805 @@
+{
+  "V1_boundary_sha256": "b9d90c83f5bcc30b7d3306f874a5c174f5c405994a04040330d0d2fe2361064f",
+  "V1_cache": "trading/track2/rapid_v1/cache/49a590a7d44f5900b67cf2faf37584b584a942807cca2fbab262250b80ea1f93",
+  "V1_content_sha256": "38dd11d07e5fb561befda4a780d8391a5743ff74eb2ebff801c66195b23535ba",
+  "V1_executed_registry_identity": "ff4a5e12c7536acaaeaa03dc5017f65c41bb33787260819958afed7adc098d11",
+  "V1_result_manifest_sha256": "7fe16983dbb7a77606020ce80dbd27fbc5253b53b3eb86d90ea1fe024281740f",
+  "authorized_period": [
+    "2021-01-01",
+    "2024-12-31"
+  ],
+  "code_and_test_hashes": {
+    "src/lstm_data/trading/track2/rapid_v2_diagnostics/__init__.py": "4061db4bd1660b70a2008ca532103f6f4016269a12da53ecca1acb6e571e938c",
+    "src/lstm_data/trading/track2/rapid_v2_diagnostics/allocation.py": "3bfd685cd68f14ebe74f99c96ef232e2bc56771dad5dd8428f23b1ece9873fb4",
+    "src/lstm_data/trading/track2/rapid_v2_diagnostics/book.py": "2187f827f7cef351783534be44b5cc74726adc9740adcf6a2cb3bf6b249e3e2b",
+    "src/lstm_data/trading/track2/rapid_v2_diagnostics/cli.py": "6346714ea9e08f80bcec8cb79e2e84918e5ee7a2820d7b58ae9f0769538e7117",
+    "src/lstm_data/trading/track2/rapid_v2_diagnostics/engine.py": "24a184b93c826de6ba19a8a9cb4c339244619308eaf00bd88faa61de2147fc8c",
+    "src/lstm_data/trading/track2/rapid_v2_diagnostics/report.py": "435250d334762fd281657e9bdc1f532f10b5ebf81d73e14139f7a67f9b7189a1",
+    "src/lstm_data/trading/track2/rapid_v2_diagnostics/state.py": "df62896c190ce31709c55dcd7bfa2ec2422dd37450b4f61bdd539174798e54a0",
+    "src/lstm_data/trading/track2/rapid_v2_diagnostics/variants.py": "4e18fe054dd2d2eb646eb558f381089ba464d08c3207bd9ad03a3518fa161c0b",
+    "tests/track2_rapid_v2/test_diagnostics.py": "ce747a0b0156b34e2ff66a6a33ea6f2cd23b026cb88ea50c7f7f20d8c37b5f9a"
+  },
+  "dependencies": {
+    "exchange_calendars": "4.13.2",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "pyarrow": "23.0.1"
+  },
+  "explicit_scope": {
+    "allocation": "Multiply eligible V1 vintage budget before rounding or name caps.",
+    "baseline_costs": "V1 mode-specific, no funded cost alternatives.",
+    "clock": "V1 causal receipt, entry expiry, order priorities and participation.",
+    "cost_alternative": "Arithmetic zero incremental price concession on fixed fills. Commission, carry and funding remain. No funded cost sweep.",
+    "exposure_year": "Causal gross dollar RTH minute sum divided by 252 x 390. Pending shares excluded from exposure, included in hard limits.",
+    "hold": "Required unresolved market/action or invalid NAV is a scoped HOLD. Unresolved pending orders and exposure remain explicit.",
+    "liquidation": "V1 hard limits and causal forced reduction remain in every case.",
+    "named_abstention": "FUTURE_SESSION_SLOT_UNAVAILABLE plus all V1 typed reasons.",
+    "output_limit_bytes": 200000000,
+    "prices": "V1 raw-share next valid executable open, V1 received submission mark, lag and concession models. Independent arrival and paid-cost attribution.",
+    "reporting": "All 108 cases, H100 matched against immutable V1 exports. USD residual <=1e-7, return metrics <=1e-12.",
+    "runtime_projection_limit_seconds": 1800,
+    "session_horizon": "Same ET nominal slot on Nth subsequent XNYS session, abstain if slot absent. No post-2024 observations."
+  },
+  "matrix": [
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "M01",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "M01",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "M01",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 60,
+      "strategy": "M01",
+      "unit": "minutes",
+      "variant": "T60"
+    },
+    {
+      "headroom": "1",
+      "horizon": 120,
+      "strategy": "M01",
+      "unit": "minutes",
+      "variant": "T120"
+    },
+    {
+      "headroom": "1",
+      "horizon": 480,
+      "strategy": "M01",
+      "unit": "minutes",
+      "variant": "T480"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "M02",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "M02",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "M02",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 60,
+      "strategy": "M02",
+      "unit": "minutes",
+      "variant": "T60"
+    },
+    {
+      "headroom": "1",
+      "horizon": 120,
+      "strategy": "M02",
+      "unit": "minutes",
+      "variant": "T120"
+    },
+    {
+      "headroom": "1",
+      "horizon": 480,
+      "strategy": "M02",
+      "unit": "minutes",
+      "variant": "T480"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "M03",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "M03",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "M03",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 60,
+      "strategy": "M03",
+      "unit": "minutes",
+      "variant": "T60"
+    },
+    {
+      "headroom": "1",
+      "horizon": 120,
+      "strategy": "M03",
+      "unit": "minutes",
+      "variant": "T120"
+    },
+    {
+      "headroom": "1",
+      "horizon": 480,
+      "strategy": "M03",
+      "unit": "minutes",
+      "variant": "T480"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "M04",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "M04",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "M04",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 60,
+      "strategy": "M04",
+      "unit": "minutes",
+      "variant": "T60"
+    },
+    {
+      "headroom": "1",
+      "horizon": 120,
+      "strategy": "M04",
+      "unit": "minutes",
+      "variant": "T120"
+    },
+    {
+      "headroom": "1",
+      "horizon": 480,
+      "strategy": "M04",
+      "unit": "minutes",
+      "variant": "T480"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "M05",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "M05",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "M05",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 60,
+      "strategy": "M05",
+      "unit": "minutes",
+      "variant": "T60"
+    },
+    {
+      "headroom": "1",
+      "horizon": 120,
+      "strategy": "M05",
+      "unit": "minutes",
+      "variant": "T120"
+    },
+    {
+      "headroom": "1",
+      "horizon": 480,
+      "strategy": "M05",
+      "unit": "minutes",
+      "variant": "T480"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "M06",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "M06",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "M06",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 60,
+      "strategy": "M06",
+      "unit": "minutes",
+      "variant": "T60"
+    },
+    {
+      "headroom": "1",
+      "horizon": 120,
+      "strategy": "M06",
+      "unit": "minutes",
+      "variant": "T120"
+    },
+    {
+      "headroom": "1",
+      "horizon": 480,
+      "strategy": "M06",
+      "unit": "minutes",
+      "variant": "T480"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "M07",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "M07",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "M07",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 60,
+      "strategy": "M07",
+      "unit": "minutes",
+      "variant": "T60"
+    },
+    {
+      "headroom": "1",
+      "horizon": 120,
+      "strategy": "M07",
+      "unit": "minutes",
+      "variant": "T120"
+    },
+    {
+      "headroom": "1",
+      "horizon": 480,
+      "strategy": "M07",
+      "unit": "minutes",
+      "variant": "T480"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "M08",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "M08",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "M08",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 60,
+      "strategy": "M08",
+      "unit": "minutes",
+      "variant": "T60"
+    },
+    {
+      "headroom": "1",
+      "horizon": 120,
+      "strategy": "M08",
+      "unit": "minutes",
+      "variant": "T120"
+    },
+    {
+      "headroom": "1",
+      "horizon": 480,
+      "strategy": "M08",
+      "unit": "minutes",
+      "variant": "T480"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "M09",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "M09",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "M09",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 60,
+      "strategy": "M09",
+      "unit": "minutes",
+      "variant": "T60"
+    },
+    {
+      "headroom": "1",
+      "horizon": 120,
+      "strategy": "M09",
+      "unit": "minutes",
+      "variant": "T120"
+    },
+    {
+      "headroom": "1",
+      "horizon": 480,
+      "strategy": "M09",
+      "unit": "minutes",
+      "variant": "T480"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "R01",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "R01",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "R01",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 1,
+      "strategy": "R01",
+      "unit": "sessions",
+      "variant": "D1"
+    },
+    {
+      "headroom": "1",
+      "horizon": 3,
+      "strategy": "R01",
+      "unit": "sessions",
+      "variant": "D3"
+    },
+    {
+      "headroom": "1",
+      "horizon": 5,
+      "strategy": "R01",
+      "unit": "sessions",
+      "variant": "D5"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "R02",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "R02",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "R02",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 1,
+      "strategy": "R02",
+      "unit": "sessions",
+      "variant": "D1"
+    },
+    {
+      "headroom": "1",
+      "horizon": 3,
+      "strategy": "R02",
+      "unit": "sessions",
+      "variant": "D3"
+    },
+    {
+      "headroom": "1",
+      "horizon": 5,
+      "strategy": "R02",
+      "unit": "sessions",
+      "variant": "D5"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "R03",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "R03",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "R03",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 1,
+      "strategy": "R03",
+      "unit": "sessions",
+      "variant": "D1"
+    },
+    {
+      "headroom": "1",
+      "horizon": 3,
+      "strategy": "R03",
+      "unit": "sessions",
+      "variant": "D3"
+    },
+    {
+      "headroom": "1",
+      "horizon": 5,
+      "strategy": "R03",
+      "unit": "sessions",
+      "variant": "D5"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "R04",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "R04",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "R04",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 1,
+      "strategy": "R04",
+      "unit": "sessions",
+      "variant": "D1"
+    },
+    {
+      "headroom": "1",
+      "horizon": 3,
+      "strategy": "R04",
+      "unit": "sessions",
+      "variant": "D3"
+    },
+    {
+      "headroom": "1",
+      "horizon": 5,
+      "strategy": "R04",
+      "unit": "sessions",
+      "variant": "D5"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "R05",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "R05",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "R05",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 1,
+      "strategy": "R05",
+      "unit": "sessions",
+      "variant": "D1"
+    },
+    {
+      "headroom": "1",
+      "horizon": 3,
+      "strategy": "R05",
+      "unit": "sessions",
+      "variant": "D3"
+    },
+    {
+      "headroom": "1",
+      "horizon": 5,
+      "strategy": "R05",
+      "unit": "sessions",
+      "variant": "D5"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "R06",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "R06",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "R06",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 1,
+      "strategy": "R06",
+      "unit": "sessions",
+      "variant": "D1"
+    },
+    {
+      "headroom": "1",
+      "horizon": 3,
+      "strategy": "R06",
+      "unit": "sessions",
+      "variant": "D3"
+    },
+    {
+      "headroom": "1",
+      "horizon": 5,
+      "strategy": "R06",
+      "unit": "sessions",
+      "variant": "D5"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "R07",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "R07",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "R07",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 1,
+      "strategy": "R07",
+      "unit": "sessions",
+      "variant": "D1"
+    },
+    {
+      "headroom": "1",
+      "horizon": 3,
+      "strategy": "R07",
+      "unit": "sessions",
+      "variant": "D3"
+    },
+    {
+      "headroom": "1",
+      "horizon": 5,
+      "strategy": "R07",
+      "unit": "sessions",
+      "variant": "D5"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "R08",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "R08",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "R08",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 1,
+      "strategy": "R08",
+      "unit": "sessions",
+      "variant": "D1"
+    },
+    {
+      "headroom": "1",
+      "horizon": 3,
+      "strategy": "R08",
+      "unit": "sessions",
+      "variant": "D3"
+    },
+    {
+      "headroom": "1",
+      "horizon": 5,
+      "strategy": "R08",
+      "unit": "sessions",
+      "variant": "D5"
+    },
+    {
+      "headroom": "1",
+      "horizon": 240,
+      "strategy": "R09",
+      "unit": "minutes",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 240,
+      "strategy": "R09",
+      "unit": "minutes",
+      "variant": "H85"
+    },
+    {
+      "headroom": "0.70",
+      "horizon": 240,
+      "strategy": "R09",
+      "unit": "minutes",
+      "variant": "H70"
+    },
+    {
+      "headroom": "1",
+      "horizon": 1,
+      "strategy": "R09",
+      "unit": "sessions",
+      "variant": "D1"
+    },
+    {
+      "headroom": "1",
+      "horizon": 3,
+      "strategy": "R09",
+      "unit": "sessions",
+      "variant": "D3"
+    },
+    {
+      "headroom": "1",
+      "horizon": 5,
+      "strategy": "R09",
+      "unit": "sessions",
+      "variant": "D5"
+    }
+  ],
+  "parent_integrity_sha256": "03ee038e1b1968e1fcc30a236ec640f672c660f03f18f5ad627b52fb18375acf",
+  "qualification": "Exploratory reused 2021-24. Retrospective source/actions, fixed survivors, assumed latency/borrow and OHLCV transaction proxy.",
+  "registry_identity": "bd22e284e798b3a9829ce0df2524ccf239a4c3c5e4a8c81eb1337bcd08d509d1",
+  "version": "RAPID_V2_FIXED_MATRIX_1"
+}

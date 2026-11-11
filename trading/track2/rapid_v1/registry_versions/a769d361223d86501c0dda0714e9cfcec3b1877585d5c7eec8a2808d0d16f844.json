@@ -1,0 +1,381 @@
+{
+  "authorization_prompt_sha256": "314b98804bffed8bd578e254b873b97366a12697d3ed466af363b5630ebd584d",
+  "code": {
+    "src/lstm_data/trading/track2/rapid_v1/__init__.py": "a938a73c0d708f543fb9d4735da8d8bcbe6e0e43c4a5e1c3d2c96feaf3566573",
+    "src/lstm_data/trading/track2/rapid_v1/cli.py": "7aed0c6fb2621a1510342844dbf96e194b735850c32b59a988c48a48de99967b",
+    "src/lstm_data/trading/track2/rapid_v1/costs.py": "f107c0a70322d227ad917a0705f23d7584d07dc16227e7a83b232f40e084b76f",
+    "src/lstm_data/trading/track2/rapid_v1/diagnostics.py": "8ca6cfbad58a906657434d25969a8266da0430391df8db60639840975226b07f",
+    "src/lstm_data/trading/track2/rapid_v1/paths.py": "7b1055645e1e953439c5a9111ac85884d2ba21d0246d45e78285b2210d21cc4b",
+    "src/lstm_data/trading/track2/rapid_v1/portfolio.py": "a45de684a804828c3c25a15a09af0ba3840b2c5d53249f31c109136a00b3907b",
+    "src/lstm_data/trading/track2/rapid_v1/registry.py": "dc9fb23c2c6ecbf01147429d4e7fd193d5b076daf88e398260c9652a0f64ee21",
+    "src/lstm_data/trading/track2/rapid_v1/reporting.py": "b461de69d4e053995aa1aabe4a101199f9b959f66e552fa448b95f768bb7d5ef",
+    "src/lstm_data/trading/track2/rapid_v1/runner.py": "e5ad646eaf7144024731e0728eb9202441c5150025382442ea4141b6ab53a3b4",
+    "src/lstm_data/trading/track2/rapid_v1/scheduler.py": "1f65df943d0797bb85b3ba87f5bb69b6048334de71a6afd2ad75276e1eb024bb",
+    "src/lstm_data/trading/track2/rapid_v1/shared_features.py": "cec88250a874c7677a9a37aadb90f344da7b8fec39dbb52a4ce8daf070db1ad7",
+    "src/lstm_data/trading/track2/rapid_v1/sources.py": "8dfe076de2cdb6d24fc7b3ccd5ad9e923718c63b4a95f7c80ef086c623befeb7",
+    "src/lstm_data/trading/track2/rapid_v1/state.py": "9b683ed989cbfb4546833a1d2c3345426c1903cf55521f4ca063be087a9d90ff",
+    "src/lstm_data/trading/track2/rapid_v1/strategies.py": "eb17466b06d9219fd9105b87b8a41ed47fe15b63f523f64659cf3e3f511fbf79",
+    "src/lstm_data/trading/track2/rapid_v1/verification.py": "053b17a4e17ed769783c792874f2b893a91b98d874b33009973c7659ab1560e1"
+  },
+  "controls": [
+    "LEGACY_V5_SIGN",
+    "NO_TRADE"
+  ],
+  "defaults": {
+    "abnormal_volume_rank_z": 1.0,
+    "allocation": "equal notional across current selected candidates;20%NAV vintage max,10%name,no redistribution after caps;pair beta-neutral split scaled jointly;V5 conservative .002NAV plus order minimum cash reserve",
+    "borrow_ACT365": 0.02,
+    "compression_quantile": 0.2,
+    "compute_minutes": 0,
+    "daily_trend_z": 0.5,
+    "entry_expiry_wall_minutes": 10,
+    "funding": 0,
+    "gross_fraction": 1,
+    "initial_USD": 100000,
+    "micro_fee_USD_per_share": 0.002,
+    "micro_minimum": 0,
+    "micro_order_cap": 6,
+    "micro_price_precision": "exact Decimal incremental print friction;fractional-cent USD commissions retained,not rounded to zero;retail V5 cent adverse tick rounding",
+    "minimum_peers": 12,
+    "name_fraction": 0.1,
+    "net_fraction": 1,
+    "new_vintage_fraction": 0.2,
+    "null": "opposite sign on same mature executable-outcome opportunities,descriptive only",
+    "overnight_divergence_z": 1.0,
+    "pair_atomic_policy": "both standing legs settle only on jointly valid same-minute bars within expiry;both caps/funding/minimums prevalidated;no one-sided fills",
+    "pair_beta_bounds": [
+      0.25,
+      4.0
+    ],
+    "pair_hedge_rounding_tolerance": 0.05,
+    "pair_min_R2": 0.3,
+    "pair_sessions": 60,
+    "pair_z": 2.0,
+    "parameter_rationale": "Fixed one-unit standardized move/gap/residual tests,2sd pair trigger,5bp noise buffer and12/20minimum peers are transparent candidate defaults,not fitted to returns. No threshold alternatives run.",
+    "participation_prior_volume_fraction": 0.01,
+    "range_buffer_fraction": 0.0005,
+    "receipt_minutes": 2,
+    "residual_reversal_z": 1.0,
+    "retail_fee_USD_per_share": 0.005,
+    "retail_impact_bps": 5,
+    "retail_min_external_notional": 2000,
+    "retail_minimum": 1,
+    "retail_order_cap": 5,
+    "retail_spread_bps": 5,
+    "same_clock_sessions": 20,
+    "special_disposal_fallback": "OGN newly distributed has no60day ADV: conservative5bp+5bp incremental cost;mode-specific per-share fees;CIL V5conditional terms unchanged",
+    "top_bottom": 2,
+    "version": "rapid-v1-defaults-1",
+    "warmup": "2020-01-01 through2020-12-31, no pre2021 trades",
+    "weekly_scan": "first calendar full390-minute session per ISOweek;10:30ET except R08 14:30ET;missing inputs do not defer",
+    "z_gap": 1.0,
+    "z_move": 1.0,
+    "z_volume": 1.5
+  },
+  "engineering_revision_reason": "Validation output binding, documentation and style fixes with identical formulas",
+  "identity": "a769d361223d86501c0dda0714e9cfcec3b1877585d5c7eec8a2808d0d16f844",
+  "initial_frozen_inventory_sha256": "ceca373a822d16eed4e5f3e1fff9416d4e23c91ca508add11c07354b8a7f4cab",
+  "initial_registry_sha256": "a341a79b7c6b203c2094049f587b74d0cdf990d08d7802b87555b0bf8027b57e",
+  "menu": "HF20_Track2_Directional_Strategy_Research_Menu_Micro_and_Retail_2026-11-10.md",
+  "menu_sha256": "a7f244fd6910382440084724a023adb90a304b64b0d3c066a029aa2d46ee982b",
+  "outcomes_seen_before_freeze": false,
+  "output_limits": {
+    "anomaly_rows_per_strategy": 100,
+    "strategy_hard_bytes": 26214400,
+    "target_total_bytes": 209715200,
+    "total_hard_bytes": 524288000
+  },
+  "prior_V5_manifest_sha256": "5b245b513cecf7e433927223891008572adbcf29118653b6a4a84a892abb10b6",
+  "schema": "rapid-v1-registry-1",
+  "scope": "Exploratory reused 2021-24 fixed survivors; conditional actions and shorts; assumed receipt and OHLCV proxy; no Stage 6.",
+  "strategies": [
+    {
+      "entry_cap": 6,
+      "formula": "sign received intraday r60 when abs(r60/sigma_past20slot)>=1",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "M01",
+      "menu_reference": "section4",
+      "minimum_external_notional": 0,
+      "mode": "MICRO_PRO",
+      "pair_atomic": false,
+      "slots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "entry_cap": 6,
+      "formula": "negative M01 sign on the identical r60 standardized move>=1",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "M02",
+      "menu_reference": "section4",
+      "minimum_external_notional": 0,
+      "mode": "MICRO_PRO",
+      "pair_atomic": false,
+      "slots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "entry_cap": 6,
+      "formula": "negative opening gap sign when abs(gap/past20gap_sd)>=1",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "M03",
+      "menu_reference": "section4",
+      "minimum_external_notional": 0,
+      "mode": "MICRO_PRO",
+      "pair_atomic": false,
+      "slots": [
+        0,
+        1
+      ]
+    },
+    {
+      "entry_cap": 6,
+      "formula": "gap sign, abs(gap_z)>=1, first-hour same sign and received volume above past20same-slot mean",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "M04",
+      "menu_reference": "section4",
+      "minimum_external_notional": 0,
+      "mode": "MICRO_PRO",
+      "pair_atomic": false,
+      "slots": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "entry_cap": 6,
+      "formula": "received price outside completed0930-1000 range by5bp",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "M05",
+      "menu_reference": "section4",
+      "minimum_external_notional": 0,
+      "mode": "MICRO_PRO",
+      "pair_atomic": false,
+      "slots": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "entry_cap": 6,
+      "formula": "r60 minus current leave-one-out mean,abs(past20same-slot residual_z)>=1;top/bottom2 raw residual,12peers",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "M06",
+      "menu_reference": "section4",
+      "minimum_external_notional": 0,
+      "mode": "MICRO_PRO",
+      "pair_atomic": false,
+      "slots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "entry_cap": 6,
+      "formula": "previous20calendar-session same-clock next-half-hour mean/SE,abs(z)>=1",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "M07",
+      "menu_reference": "section4",
+      "minimum_external_notional": 0,
+      "mode": "MICRO_PRO",
+      "pair_atomic": false,
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "entry_cap": 6,
+      "formula": "negative identical r60 sign with abs(z)>=1 and robust prior20same-slot volume_z>=1.5",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "M08",
+      "menu_reference": "section4",
+      "minimum_external_notional": 0,
+      "mode": "MICRO_PRO",
+      "pair_atomic": false,
+      "slots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "entry_cap": 6,
+      "formula": "negative received opening-to-current intraday sign,abs(past20same-slot z)>=1",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "M09",
+      "menu_reference": "section4",
+      "minimum_external_notional": 0,
+      "mode": "MICRO_PRO",
+      "pair_atomic": false,
+      "slots": [
+        5,
+        6
+      ]
+    },
+    {
+      "entry_cap": 5,
+      "formula": "log(C[d-22]/C[d-126]);top2 positive,bottom2 negative",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "R01",
+      "menu_reference": "section5",
+      "minimum_external_notional": 2000,
+      "mode": "RETAIL_CONSERVATIVE",
+      "pair_atomic": false,
+      "slots": [
+        1
+      ]
+    },
+    {
+      "entry_cap": 5,
+      "formula": "sign log(MA20/MA60), abs(log ratio/(v60 sqrt20))>=.5",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "R02",
+      "menu_reference": "section5",
+      "minimum_external_notional": 2000,
+      "mode": "RETAIL_CONSERVATIVE",
+      "pair_atomic": false,
+      "slots": [
+        1
+      ]
+    },
+    {
+      "entry_cap": 5,
+      "formula": "received price outside strict completed prior20session high/low by5bp",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "R03",
+      "menu_reference": "section5",
+      "minimum_external_notional": 2000,
+      "mode": "RETAIL_CONSERVATIVE",
+      "pair_atomic": false,
+      "slots": [
+        1
+      ]
+    },
+    {
+      "entry_cap": 5,
+      "formula": "opposite log(C[d-1]/C[d-6]);long bottom2 negative,short top2 positive",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "R04",
+      "menu_reference": "section5",
+      "minimum_external_notional": 2000,
+      "mode": "RETAIL_CONSERVATIVE",
+      "pair_atomic": false,
+      "slots": [
+        1
+      ]
+    },
+    {
+      "entry_cap": 5,
+      "formula": "KO/PEP,XOM/CVX,BAC/WFC;past60log-price OLS beta[.25,4],R2>=.3,residual_sd>1e-4;abs(z)>=2;beta-neutral atomic legs",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "R05",
+      "menu_reference": "section5",
+      "minimum_external_notional": 2000,
+      "mode": "RETAIL_CONSERVATIVE",
+      "pair_atomic": true,
+      "slots": [
+        1
+      ]
+    },
+    {
+      "entry_cap": 5,
+      "formula": "past60stock/leave-one-out factor OLS,min50paired observations;last5residual sum/(past residual_sd sqrt5);reverse tails abs(z)>=1",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "R06",
+      "menu_reference": "section5",
+      "minimum_external_notional": 2000,
+      "mode": "RETAIL_CONSERVATIVE",
+      "pair_atomic": false,
+      "slots": [
+        1
+      ]
+    },
+    {
+      "entry_cap": 5,
+      "formula": "R03 breakout only when latest completed RV10 below prior60RV10 20th percentile",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "R07",
+      "menu_reference": "section5",
+      "minimum_external_notional": 2000,
+      "mode": "RETAIL_CONSERVATIVE",
+      "pair_atomic": false,
+      "slots": [
+        1
+      ]
+    },
+    {
+      "entry_cap": 5,
+      "formula": "prior10 ON and ID sums opposite with abs(ON/(past60ON_sd sqrt10))>=1 and ID likewise;follow ON sign",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "R08",
+      "menu_reference": "section5",
+      "minimum_external_notional": 2000,
+      "mode": "RETAIL_CONSERVATIVE",
+      "pair_atomic": false,
+      "slots": [
+        5
+      ]
+    },
+    {
+      "entry_cap": 5,
+      "formula": "last5completed robust log-volume anomalies using each day's own preceding60reference;top/bottom2 abs(mean_z)>=1",
+      "horizon_scheduled_XNYS_minutes": 240,
+      "id": "R09",
+      "menu_reference": "section5",
+      "minimum_external_notional": 2000,
+      "mode": "RETAIL_CONSERVATIVE",
+      "pair_atomic": false,
+      "slots": [
+        1
+      ]
+    }
+  ],
+  "support_and_basis": {
+    "ADV20_policy": "Observed genuine-volume lower bound,only days with>=98%scheduled valid bars;mean16+oflast20calendar sessions,split-normalized to current rawshare units. Missing volume cannot inflate ADV; lower ADV raises modeled impact. Not a claim of complete consolidated full-session volume.",
+    "M04_volume": "Cumulative observed opening-to-decision volume,compared with prior20same-clock cumulative volumes,not future daily total.",
+    "R06_factor": "Each current stock uses leave-one-out equal-weight daily-return factor,>=12available peers each day. Last60calendar sessions,min50paired fit;last5residuals complete.",
+    "RV10_minimum": 10,
+    "current_reference": "Full-hour slot uses exact received close of preceding minute;opening slot uses completed first minute,decision09:33ET. Gap uses that minute open. r60at10:30 uses0930open to1029close;later r60uses exact60minute-separated closes within session. No missing-slot compression.",
+    "daily20_minimum": 16,
+    "daily60_minimum": 48,
+    "daily_range_policy": "Strict all scheduled bars valid; incomplete day high/low unknown,breakout abstains if any of prior20daily ranges unknown",
+    "factor_regression60_minimum": 50,
+    "frozen_before_any_new_outcome": true,
+    "pair60_minimum": 60,
+    "pair_atomic": "Joint valid-bar fill or neither;no entry lifetime extension. Exit waits keep both inventory/carry. No prospective bar price for order acceptance.",
+    "past60_RV10_quantile_minimum": 48,
+    "quality_outcomes": "Unfunded observed-bar open-to-open price returns,split-normalized;special-distribution crossing flagged/censored for price-only quality while funded economics remain booked. Opposite-sign null uses identical eligible outcomes.",
+    "same_clock_half_hour20_minimum": 16,
+    "same_slot_minimum_support": 16,
+    "same_slot_window_actual_sessions": 20,
+    "signal_prices": "Causal split-genesis units: raw price times cumulative effective split ratio since2020-01; raw volumes divided by same factor. Future splits never rescale earlier feature rows. Price-only,not dividend-total-return adjusted.",
+    "support_rationale": "80%of fixed calendar windows is explicit causal support,not compression to last-valid days. Strict range extrema require full observed interval;ADVuses a declared conservative lower bound. Fixed before returns,not tuned."
+  }
+}

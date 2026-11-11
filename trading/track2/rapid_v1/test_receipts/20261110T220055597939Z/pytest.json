@@ -1,0 +1,19 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/track2_rapid_v1",
+    "tests/track2_stage35_v5/test_next_valid_execution.py::test_wait_next_valid_and_nominal_lifetime",
+    "tests/track2_stage35_v5/test_next_valid_execution.py::test_open_exit_remains_without_expiry_and_partial_fees_accumulate",
+    "tests/track2_stage35_v5/test_next_valid_execution.py::test_later_open_cannot_rewrite_submission_or_predecision_state",
+    "tests/track2_stage35_v5/test_next_valid_execution.py::test_actual_calendar_later_observation_is_strictly_future_and_rth",
+    "tests/track2_stage35_v5/test_next_valid_execution.py::test_lossless_checkpoint_compression_is_atomic_deterministic_and_immutable",
+    "tests/track2_stage35_v5/test_next_valid_execution.py::test_actual_pre_spinoff_share_cases_exact_without_tolerance_waiver",
+    "-q"
+  ],
+  "returncode": 0,
+  "seconds": 4.248288459144533,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "c50cf94eb7ac013a9e28bd3480b9c381d63b7a8e3c46b1d9909a8bf7fd110c12"
+}

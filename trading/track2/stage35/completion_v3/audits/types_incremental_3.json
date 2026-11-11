@@ -1,0 +1,30 @@
+{
+    "version": "1.1.414",
+    "time": "1794235350569",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/tests/track2_stage35_completion_v3/test_event_and_book_integration.py",
+            "severity": "error",
+            "message": "Argument of type \"date | None\" cannot be assigned to parameter \"day\" of type \"date\" in function \"midnight\"\n  Type \"date | None\" is not assignable to type \"date\"\n    \"None\" is not assignable to \"date\"",
+            "range": {
+                "start": {
+                    "line": 118,
+                    "character": 18
+                },
+                "end": {
+                    "line": 118,
+                    "character": 32
+                }
+            },
+            "rule": "reportArgumentType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 13,
+        "errorCount": 1,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 2.495
+    }
+}
+

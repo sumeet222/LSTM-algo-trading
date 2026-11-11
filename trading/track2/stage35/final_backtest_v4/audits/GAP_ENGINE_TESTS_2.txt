@@ -1,0 +1,151 @@
+F..................................                                      [100%]
+=================================== FAILURES ===================================
+___________ test_gap_layer_only_populates_exact_original_missing_key ___________
+
+tmp_path = PosixPath('/private/var/folders/gv/w5vyh_657znbjwdrx__2m6h00000gp/T/pytest-of-pradeepgupta/pytest-344/test_gap_layer_only_populates_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x119c40050>
+
+    def test_gap_layer_only_populates_exact_original_missing_key(tmp_path, monkeypatch):
+        clock = MarketClock("2021-01-01", "2021-02-01")
+        start = pd.Timestamp(clock.origins("2021-01-04")[0])
+        dates = pd.date_range(start, periods=390, freq="min")
+        rows = [
+            dict(
+                ticker=s,
+                timestamp=t,
+                is_rth=True,
+                open=100.0,
+                high=101.0,
+                low=99.0,
+                close=100.0,
+                volume=1000.0,
+            )
+            for t in dates
+            for s in SYMBOLS
+            if not (t == start and s == "VZ")
+        ]
+        source = tmp_path / "canonical.parquet"
+        pd.DataFrame(rows).to_parquet(source, index=False)
+        extra = tmp_path / "selected.json"
+        quote = dict(symbol="VZ", t=start.isoformat(), o=99.0, h=102.0, l=98.0, c=101.0, v=1000.0)
+        extra.write_text(json.dumps({"basis": "RAW_SHARE", "bars": [quote]}))
+    
+        def instance():
+            result = market.Market.__new__(market.Market)
+            result.first = result.last = "2021-01-04"
+            result.clock = clock
+            result.reads = []
+            result.ogn = {}
+            result.parts = {"2021-01": {"path": str(source), "sha256": digest(source)}}
+            result.gap_entries = {"2021-01-04": {"path": str(extra), "projected_sha256": digest(extra)}}
+            return result
+    
+        monkeypatch.setattr(market, "V2", tmp_path)
+        folder = tmp_path / "audits/signals_release/F21"
+        folder.mkdir(parents=True)
+        # Source-only projection does not open signals, but existence is required by
+        # the shared calendar/source contract; contents are never a scored panel.
+        (folder / "2021-01-04.parquet").touch()
+>       day = next(instance().days(include_signals=False))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/track2_stage35_v4/test_gap_source_contract.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <lstm_data.trading.track2.stage35.final_backtest_v4.market.Market object at 0x119bad7f0>
+include_signals = False
+
+    def days(self, include_signals: bool = True):
+        start_month = self.first[:7]
+        end_month = self.last[:7]
+        columns = ["ticker", "timestamp", "is_rth", "open", "high", "low", "close", "volume"]
+        for month, item in sorted(self.parts.items()):
+            if not start_month <= month <= end_month:
+                continue
+            path = Path(item["path"])
+            if digest(path) != item["sha256"]:
+                raise ValueError("RAW_SOURCE_HASH")
+            frame = pd.read_parquet(
+                path,
+                columns=columns,
+                filters=[("is_rth", "==", True), ("ticker", "in", list(SYMBOLS))],
+            )
+            if frame.duplicated(["ticker", "timestamp"]).any():
+                raise ValueError("DUPLICATE_RAW_MINUTE")
+            frame["date"] = frame.timestamp.dt.tz_convert("America/New_York").dt.strftime(
+                "%Y-%m-%d"
+            )
+            self.reads.append(
+                {"path": str(path), "sha256": item["sha256"], "projected_rows": len(frame)}
+            )
+            for date in self.clock.calendar.loc[
+                month : str(pd.Timestamp(month + "-01") + pd.offsets.MonthEnd(0))[:10]
+            ].index:
+                day = str(date)[:10]
+                if not self.first <= day <= self.last:
+                    continue
+                scheduled = self.clock.calendar.loc[date]
+                opened = pd.Timestamp(scheduled["open"])
+                closed = pd.Timestamp(scheduled["close"])
+                idx = pd.date_range(opened, closed, freq="min", inclusive="left")
+                sample = frame.loc[frame.date == day]
+                arrays = []
+                for key in ("open", "close", "volume", "high", "low"):
+                    arrays.append(
+                        sample.pivot(index="timestamp", columns="ticker", values=key)
+                        .reindex(index=idx, columns=SYMBOLS)
+                        .to_numpy(float)
+                    )
+                op, cl, vol, hi, lo = arrays
+                valid = (
+                    np.isfinite(op)
+                    & np.isfinite(cl)
+                    & np.isfinite(vol)
+                    & np.isfinite(hi)
+                    & np.isfinite(lo)
+                    & (op > 0)
+                    & (cl > 0)
+                    & (vol >= 0)
+                    & (lo > 0)
+                    & (lo <= np.minimum(op, cl))
+                    & (hi >= np.maximum(op, cl))
+                )
+                source_hash = item["sha256"]
+                if day in self.gap_entries:
+                    receipt = self.gap_entries[day]
+                    extra_path = Path(receipt["path"])
+                    if digest(extra_path) != receipt["projected_sha256"]:
+                        raise ValueError("RAW_GAP_SUPPLEMENT_HASH")
+                    extra = json.loads(extra_path.read_text())
+                    if extra["basis"] != "RAW_SHARE":
+                        raise ValueError("RAW_GAP_BASIS")
+                    starts = idx.to_numpy(dtype="datetime64[ns]").astype(np.int64) // 60_000_000_000
+                    for row in extra["bars"]:
+                        t = minute(row["t"])
+                        i = int(np.searchsorted(starts, t))
+                        j = SYMBOLS.index(row["symbol"])
+                        if i >= len(starts) or int(starts[i]) != t or valid[i, j]:
+                            raise ValueError("SUPPLEMENT_OUT_OF_SCOPE_OR_OVERWRITES_VALID_SOURCE")
+                        values = np.asarray([row[k] for k in ("o", "h", "l", "c", "v")], float)
+                        o, h, low, c, v = values
+                        if not (
+                            np.isfinite(values).all()
+                            and min(o, h, low, c) > 0
+                            and v >= 0
+                            and low <= min(o, c)
+                            and h >= max(o, c)
+                        ):
+                            raise ValueError("INVALID_GAP_QUOTE")
+>                       op[i, j], cl[i, j], vol[i, j], hi[i, j], lo[i, j] = o, c, v, h, low
+                        ^^^^^^^^
+E                       ValueError: assignment destination is read-only
+
+src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py:151: ValueError
+----------------------------- Captured stderr call -----------------------------
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+=========================== short test summary info ============================
+FAILED tests/track2_stage35_v4/test_gap_source_contract.py::test_gap_layer_only_populates_exact_original_missing_key
+1 failed, 34 passed in 29.77s

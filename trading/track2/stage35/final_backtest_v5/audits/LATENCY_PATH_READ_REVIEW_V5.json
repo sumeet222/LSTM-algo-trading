@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "OGN_quote_available": "actual bar start +1+scenario.lag in V5 special_tick",
+    "control_ready": "inherited control_latest_available +scenario.lag\u22122 gate",
+    "feature_ready": "inherited ready timestamp +scenario.lag\u22122; latest input receipt gate",
+    "no_code_changed": true,
+    "prior_volume": "source-completed and received prior volume, frozen submitted quantity"
+  },
+  "code": "9e093b3f6a62",
+  "files": {
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py": "4622a1d2029363526cda459da4a4d8627f734a721c521d21410c256426411308",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v5/driver.py": "df8f690ab2dfb37cc2cf0f4d59d65ccd9ae1eff843019a89fd4932875c11c812"
+  },
+  "purpose": "Read-only timing-path inspection while frozen scenarios run; not a new numerical test or protocol change"
+}

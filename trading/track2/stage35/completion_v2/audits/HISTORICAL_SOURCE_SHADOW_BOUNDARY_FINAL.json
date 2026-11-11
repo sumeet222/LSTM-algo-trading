@@ -1,0 +1,73 @@
+{
+  "source": "ACTUAL_HISTORICAL_INPUT_AND_RAW_ACTION_FIXTURE",
+  "source_partition_sha256": "35771345c5b2b60fc009499d6211ce752dfcc92b50235842bdff2c393b8629a2",
+  "source_fixture": "RAW_ACTION_SOURCE_FIXTURES.json",
+  "action_manifest_sha256": "83acce91532b6aea64477534bf82ed9d388ed92eef0947297ff3bc70f9bda228",
+  "allocations": [
+    {
+      "ticker": "AAPL",
+      "arm": "EQUAL",
+      "absolute_capacity_fraction": "0.1",
+      "reason": "ALLOCATED",
+      "basis": "DIMENSIONLESS_NO_MARKET_EXECUTION_PRICE"
+    },
+    {
+      "ticker": "COP",
+      "arm": "EQUAL",
+      "absolute_capacity_fraction": "0.1",
+      "reason": "ALLOCATED",
+      "basis": "DIMENSIONLESS_NO_MARKET_EXECUTION_PRICE"
+    },
+    {
+      "ticker": "AAPL",
+      "arm": "S2C_RISK",
+      "absolute_capacity_fraction": "0.1",
+      "reason": "ALLOCATED",
+      "basis": "DIMENSIONLESS_NO_MARKET_EXECUTION_PRICE"
+    },
+    {
+      "ticker": "COP",
+      "arm": "S2C_RISK",
+      "absolute_capacity_fraction": "0.095812587732",
+      "reason": "ALLOCATED",
+      "basis": "DIMENSIONLESS_NO_MARKET_EXECUTION_PRICE"
+    },
+    {
+      "ticker": "AAPL",
+      "arm": "ROLLING_RISK",
+      "absolute_capacity_fraction": "0.097811549494",
+      "reason": "ALLOCATED",
+      "basis": "DIMENSIONLESS_NO_MARKET_EXECUTION_PRICE"
+    },
+    {
+      "ticker": "COP",
+      "arm": "ROLLING_RISK",
+      "absolute_capacity_fraction": "0.1",
+      "reason": "ALLOCATED",
+      "basis": "DIMENSIONLESS_NO_MARKET_EXECUTION_PRICE"
+    },
+    {
+      "ticker": "AAPL",
+      "arm": "EWMA_RISK",
+      "absolute_capacity_fraction": "0.1",
+      "reason": "ALLOCATED",
+      "basis": "DIMENSIONLESS_NO_MARKET_EXECUTION_PRICE"
+    },
+    {
+      "ticker": "COP",
+      "arm": "EWMA_RISK",
+      "absolute_capacity_fraction": "0.090946313353",
+      "reason": "ALLOCATED",
+      "basis": "DIMENSIONLESS_NO_MARKET_EXECUTION_PRICE"
+    }
+  ],
+  "financial_gate_refusal": "FINANCIAL_GATE_HOLD",
+  "orders": 0,
+  "fills": 0,
+  "positions": 0,
+  "cash_postings": 0,
+  "historical_NAV_or_PnL_computed": false,
+  "funded_account_created": false,
+  "financial_output_exists": false,
+  "limitation": "pure unit-fraction allocation only;cost/funding limits tested on separate fabricated economics"
+}

@@ -1,0 +1,895 @@
+{
+  "CONSERVATIVE": {
+    "bounded_action_examples": [
+      {
+        "amount": "-48.10",
+        "at": 26925420,
+        "due": 26962800,
+        "event": "CA3:101b4734281c93cc35d95e0c",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_CONSERVATIVE|26920290|6",
+        "truth": "OBSERVED_UNCORROBORATED"
+      },
+      {
+        "amount": "-48.10",
+        "at": 26962800,
+        "kind": "DIVIDEND_PAY",
+        "lot": "R01_CONSERVATIVE|26920290|6"
+      },
+      {
+        "at": 27045450,
+        "kind": "MRK_OGN_ENTITLEMENT",
+        "positions": [
+          [
+            "R01_CONSERVATIVE|27042630|6",
+            "-125",
+            "0"
+          ]
+        ],
+        "source": "PRIMARY_FORM8937_REGULAR_WAY;CIL_REFERENCE_PAYMENT_CONDITIONAL",
+        "tax_allocation": [
+          {
+            "cohort_id": "R01_CONSERVATIVE|27042630|6",
+            "entitlement": "-12.5",
+            "fraction_attribution": "-0.5",
+            "mrk_long_tax_basis": "0.0000",
+            "ogn_long_tax_basis": "0.0000",
+            "original_long_tax_basis": "0",
+            "whole_attribution": "-12"
+          }
+        ]
+      },
+      {
+        "amount": "19.78",
+        "at": 27116880,
+        "due": 27174480,
+        "event": "CA3:aa560249b1a4e604b34af206",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_CONSERVATIVE|27111750|1",
+        "truth": "OBSERVED_UNCORROBORATED"
+      },
+      {
+        "amount": "36.0",
+        "at": 27135600,
+        "due": 27174480,
+        "event": "CA3:9c91fed186e343f49b01fb60",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_CONSERVATIVE|27131910|15",
+        "truth": "OBSERVED_UNCORROBORATED"
+      },
+      {
+        "amount": "36.0",
+        "at": 27174480,
+        "kind": "DIVIDEND_PAY",
+        "lot": "R01_CONSERVATIVE|27131910|15"
+      },
+      {
+        "amount": "19.78",
+        "at": 27174480,
+        "kind": "DIVIDEND_PAY",
+        "lot": "R01_CONSERVATIVE|27111750|1"
+      },
+      {
+        "amount": "28.7",
+        "at": 27256560,
+        "due": 27282540,
+        "event": "CA3:e9e0b2965d887412621b4d68",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_CONSERVATIVE|27252870|9",
+        "truth": "OBSERVED_UNCORROBORATED"
+      }
+    ],
+    "bounded_event_examples": [
+      {
+        "count": 1,
+        "decision": 26839652,
+        "feature_lineage": "343358522038fd476fe324e358222999ef27206ae4c07f304995f0333405a060",
+        "kind": "REJECT",
+        "origin": 26839650,
+        "reason": "DUPLICATE_ACTIVE_SAME_SIGN",
+        "signs": [
+          1
+        ],
+        "source": "f03048aac8935401364c39667905a26b05f40f8b9a481521b28ff4acdc5ae6fc",
+        "strength": 2.1389828755332947,
+        "tickers": [
+          17
+        ]
+      },
+      {
+        "count": 1,
+        "decision": 26851172,
+        "feature_lineage": "a90c8c7fc4395a3aada7876f805339dc24c328af545dcdf369cae965e79f514b",
+        "kind": "REJECT",
+        "origin": 26851170,
+        "reason": "DUPLICATE_ACTIVE_SAME_SIGN",
+        "signs": [
+          1
+        ],
+        "source": "93d7996c7afdc924e5c8f347fee0fe0d0b150b8b81f3bc3a0a853547a30905b4",
+        "strength": 1.730818374751352,
+        "tickers": [
+          17
+        ]
+      },
+      {
+        "count": 1,
+        "decision": 26851172,
+        "feature_lineage": "a90c8c7fc4395a3aada7876f805339dc24c328af545dcdf369cae965e79f514b",
+        "kind": "REJECT",
+        "origin": 26851170,
+        "reason": "DUPLICATE_ACTIVE_SAME_SIGN",
+        "signs": [
+          -1
+        ],
+        "source": "93d7996c7afdc924e5c8f347fee0fe0d0b150b8b81f3bc3a0a853547a30905b4",
+        "strength": 0.32709218259065265,
+        "tickers": [
+          19
+        ]
+      },
+      {
+        "at": 26930318,
+        "kind": "OBSERVED_MARKED_CAP_BREACH",
+        "source": "38bf961d077ff5bd99a97eb3c996cf63b3e2a2e4d470ce7f25293e90e704f241"
+      },
+      {
+        "at": 26970682,
+        "kind": "OBSERVED_MARKED_CAP_BREACH",
+        "source": "cfda0e2823a02d42011964e241b1bc790c02d6bb3f1f39ebcfad156bb42a462c"
+      },
+      {
+        "at": 27022523,
+        "kind": "OBSERVED_MARKED_CAP_BREACH",
+        "source": "3086cdebe64bfe2366e5523c759f607d8a7b4fa69a9c9d0d87e8bd4551088c79"
+      },
+      {
+        "at": 27045450,
+        "kind": "MRK_OGN_ENTITLEMENT",
+        "positions": [
+          [
+            "R01_CONSERVATIVE|27042630|6",
+            "-125",
+            "0"
+          ]
+        ],
+        "source": "PRIMARY_FORM8937_REGULAR_WAY;CIL_REFERENCE_PAYMENT_CONDITIONAL",
+        "tax_allocation": [
+          {
+            "cohort_id": "R01_CONSERVATIVE|27042630|6",
+            "entitlement": "-12.5",
+            "fraction_attribution": "-0.5",
+            "mrk_long_tax_basis": "0.0000",
+            "ogn_long_tax_basis": "0.0000",
+            "original_long_tax_basis": "0",
+            "whole_attribution": "-12"
+          }
+        ]
+      },
+      {
+        "at": 27045453,
+        "available": 27045453,
+        "capacity": "60",
+        "effective": 27045454,
+        "kind": "OGN_WHOLE_ORDER",
+        "prior_volume": "6043",
+        "quantity": "12",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "amount": "-0.00006230593607305936073059360731",
+        "at": 27045457,
+        "kind": "OGN_PHYSICAL_SHORT_BORROW",
+        "lot": "R01_CONSERVATIVE|27042630|6",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "amount": "-412.84",
+        "at": 27045457,
+        "kind": "OGN_WHOLE_DISPOSAL",
+        "lot": "R01_CONSERVATIVE|27042630|6",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "at": 27045457,
+        "conditional_CIL": true,
+        "decision": 27045453,
+        "effective": 27045454,
+        "external_cash": "-412.84",
+        "external_delta": "12",
+        "fee": "1.00",
+        "kind": "OGN_EXTERNAL_DISPOSAL",
+        "raw_reference": "34.28",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "amount": "-17.10",
+        "at": 27055530,
+        "kind": "OGN_CIL_CONDITIONAL_PAYMENT",
+        "lot": "R01_CONSERVATIVE|27042630|6",
+        "source": "1dd234eadabb8124d89eccafd0d64dc15c5dac42f7da140f9641a810d9de42c1"
+      },
+      {
+        "at": 27574800,
+        "kind": "SPLIT",
+        "ratio": "20",
+        "source": "aafd6f832435ccd59e1ba74bfee152ab700d6773e7b96a50975d29cdc49eeed5",
+        "ticker": 13
+      },
+      {
+        "at": 27690000,
+        "kind": "SPLIT",
+        "ratio": "3",
+        "source": "78881bd79fd81dc8b8d8847e3624fade6e89be52cc399687835d7d9d4b0c775c",
+        "ticker": 17
+      },
+      {
+        "at": 28069367,
+        "attempted_minute": 28069364,
+        "intended_minute": 28069364,
+        "kind": "V5_PENDING_MISSING_BAR",
+        "no_broker_cancellation_claim": true,
+        "order": "2023-05-15:28069363:16:618",
+        "source": "bd99762754c68ab7a04b3ff938446169e42fca5ba8c4134d7acaa8bd649448ce",
+        "source_hash": "bd99762754c68ab7a04b3ff938446169e42fca5ba8c4134d7acaa8bd649448ce",
+        "submitted_quantity": "-2",
+        "ticker": 16
+      },
+      {
+        "count": 1,
+        "decision": 28109672,
+        "feature_lineage": "2f5e02310fa23651b447cf3b9b715faeaeaaf67177c21cc588f12cc85177f99f",
+        "kind": "REJECT",
+        "origin": 28109670,
+        "reason": "V3_SIGNAL_COOLDOWN",
+        "source": "e868cdb34eeb535d24df288d8506f43662758abaed736b0423b0cf8c24cc7511"
+      },
+      {
+        "at": 28683600,
+        "kind": "SPLIT",
+        "ratio": "10",
+        "source": "7388ac1d6e92fa50d0687e98687e5a455be97d6f49b7853316f1aa06b856b260",
+        "ticker": 16
+      },
+      {
+        "count": 4,
+        "decision": 28907460,
+        "feature_lineage": null,
+        "kind": "REJECT",
+        "origin": null,
+        "reason": "V3_MAXIMUM_HOLD_CALENDAR_CUTOFF",
+        "source": "a47e99af922b05b7e631d2cd9ae91fb4f9cc941e6dbc0a8412d1cc3f93b26031"
+      },
+      {
+        "count": 4,
+        "decision": 28907460,
+        "feature_lineage": null,
+        "kind": "REJECT",
+        "origin": null,
+        "reason": "V3_MAXIMUM_HOLD_CALENDAR_CUTOFF",
+        "source": "b8008e5fb1723861b6efd77a250a603835bf911ce939c89b125a0a4d61715ad5"
+      }
+    ],
+    "causes": {
+      "observed:NAME_CAP": 38,
+      "scheduled_or_late:NAME_CAP": 131
+    },
+    "events": {
+      "DIVIDEND_EX": 22,
+      "DIVIDEND_PAY": 22,
+      "EXIT_LEG_MISSING_SOURCE_DELAY": 1,
+      "EXTERNAL_PHYSICAL_FILLS": 1016,
+      "FILL": 1015,
+      "MRK_OGN_ENTITLEMENT": 1,
+      "OBSERVED_MARKED_CAP_BREACH": 38,
+      "OGN_CIL_CONDITIONAL_PAYMENT": 1,
+      "OGN_EXTERNAL_DISPOSAL": 1,
+      "OGN_PHYSICAL_SHORT_BORROW": 1,
+      "OGN_WHOLE_DISPOSAL": 1,
+      "OGN_WHOLE_ORDER": 1,
+      "ORDER": 1015,
+      "SPLIT": 3,
+      "TRAILING_EXIT_BEYOND_STOP_THRESHOLD": 221,
+      "V5_PENDING_MISSING_BAR": 1,
+      "V5_QUALIFIED_BAR": 1015
+    },
+    "rejects": {
+      "DUPLICATE_ACTIVE_SAME_SIGN": 325,
+      "V3_MAXIMUM_HOLD_CALENDAR_CUTOFF": 8,
+      "V3_SIGNAL_COOLDOWN": 1
+    },
+    "terminal_claims": []
+  },
+  "HIGH_RISK": {
+    "bounded_action_examples": [
+      {
+        "amount": "14.1",
+        "at": 27004560,
+        "due": 27042000,
+        "event": "CA3:eaa262b3c78d8aa8f26b147a",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_HIGH_RISK|27000870|15",
+        "truth": "OBSERVED_UNCORROBORATED"
+      },
+      {
+        "amount": "52.89",
+        "at": 27014640,
+        "due": 27042000,
+        "event": "CA3:f6404c1429bd91caaa359ac7",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_HIGH_RISK|27000870|1",
+        "truth": "OBSERVED_UNCORROBORATED"
+      },
+      {
+        "amount": "14.1",
+        "at": 27042000,
+        "kind": "DIVIDEND_PAY",
+        "lot": "R01_HIGH_RISK|27000870|15"
+      },
+      {
+        "amount": "52.89",
+        "at": 27042000,
+        "kind": "DIVIDEND_PAY",
+        "lot": "R01_HIGH_RISK|27000870|1"
+      },
+      {
+        "at": 27045450,
+        "kind": "MRK_OGN_ENTITLEMENT",
+        "positions": [
+          [
+            "R01_HIGH_RISK|27042630|6",
+            "-64",
+            "0"
+          ]
+        ],
+        "source": "PRIMARY_FORM8937_REGULAR_WAY;CIL_REFERENCE_PAYMENT_CONDITIONAL",
+        "tax_allocation": [
+          {
+            "cohort_id": "R01_HIGH_RISK|27042630|6",
+            "entitlement": "-6.4",
+            "fraction_attribution": "-0.4",
+            "mrk_long_tax_basis": "0.0000",
+            "ogn_long_tax_basis": "0.0000",
+            "original_long_tax_basis": "0",
+            "whole_attribution": "-6"
+          }
+        ]
+      },
+      {
+        "amount": "5.16",
+        "at": 27116880,
+        "due": 27174480,
+        "event": "CA3:aa560249b1a4e604b34af206",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_HIGH_RISK|27111750|1",
+        "truth": "OBSERVED_UNCORROBORATED"
+      },
+      {
+        "amount": "27.4",
+        "at": 27135600,
+        "due": 27174480,
+        "event": "CA3:9c91fed186e343f49b01fb60",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_HIGH_RISK|27131910|15",
+        "truth": "OBSERVED_UNCORROBORATED"
+      },
+      {
+        "amount": "27.4",
+        "at": 27174480,
+        "kind": "DIVIDEND_PAY",
+        "lot": "R01_HIGH_RISK|27131910|15"
+      }
+    ],
+    "bounded_event_examples": [
+      {
+        "count": 1,
+        "decision": 26839652,
+        "feature_lineage": "343358522038fd476fe324e358222999ef27206ae4c07f304995f0333405a060",
+        "kind": "REJECT",
+        "origin": 26839650,
+        "reason": "DUPLICATE_ACTIVE_SAME_SIGN",
+        "signs": [
+          1
+        ],
+        "source": "f03048aac8935401364c39667905a26b05f40f8b9a481521b28ff4acdc5ae6fc",
+        "strength": 2.1389828755332947,
+        "tickers": [
+          17
+        ]
+      },
+      {
+        "at": 26839702,
+        "kind": "OBSERVED_MARKED_CAP_BREACH",
+        "source": "f03048aac8935401364c39667905a26b05f40f8b9a481521b28ff4acdc5ae6fc"
+      },
+      {
+        "count": 1,
+        "decision": 26859812,
+        "feature_lineage": "04285cbd9d8ef938027d48d5658785eaec97c9fce39971984de74409b0e5904c",
+        "kind": "REJECT",
+        "origin": 26859810,
+        "reason": "DUPLICATE_ACTIVE_SAME_SIGN",
+        "signs": [
+          1
+        ],
+        "source": "e754833db267e0536b282b01ff2cd61c601d79d538b01319f676c201ae3b75b4",
+        "strength": 2.1990207994821582,
+        "tickers": [
+          17
+        ]
+      },
+      {
+        "count": 1,
+        "decision": 26869892,
+        "feature_lineage": "7d6f014b81e2f0fa2ef2d8a6a799d038eff7ba868d3b4281308ba981d6f58524",
+        "kind": "REJECT",
+        "origin": 26869890,
+        "reason": "DUPLICATE_ACTIVE_SAME_SIGN",
+        "signs": [
+          1
+        ],
+        "source": "aa6a9d2e71d3b880b3eca002da04a97da4b2eca65de4470d81e645a1112d0485",
+        "strength": 2.2356194707890507,
+        "tickers": [
+          17
+        ]
+      },
+      {
+        "at": 26869906,
+        "kind": "OBSERVED_MARKED_CAP_BREACH",
+        "source": "aa6a9d2e71d3b880b3eca002da04a97da4b2eca65de4470d81e645a1112d0485"
+      },
+      {
+        "at": 26892931,
+        "kind": "OBSERVED_MARKED_CAP_BREACH",
+        "source": "41a3624549e46a7dd12e68b9d0a5018f2c661e4cbfb75c310a891af31c25c3c9"
+      },
+      {
+        "at": 27045450,
+        "kind": "MRK_OGN_ENTITLEMENT",
+        "positions": [
+          [
+            "R01_HIGH_RISK|27042630|6",
+            "-64",
+            "0"
+          ]
+        ],
+        "source": "PRIMARY_FORM8937_REGULAR_WAY;CIL_REFERENCE_PAYMENT_CONDITIONAL",
+        "tax_allocation": [
+          {
+            "cohort_id": "R01_HIGH_RISK|27042630|6",
+            "entitlement": "-6.4",
+            "fraction_attribution": "-0.4",
+            "mrk_long_tax_basis": "0.0000",
+            "ogn_long_tax_basis": "0.0000",
+            "original_long_tax_basis": "0",
+            "whole_attribution": "-6"
+          }
+        ]
+      },
+      {
+        "at": 27045453,
+        "available": 27045453,
+        "capacity": "60",
+        "effective": 27045454,
+        "kind": "OGN_WHOLE_ORDER",
+        "prior_volume": "6043",
+        "quantity": "6",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "amount": "-0.00003115296803652968036529680365",
+        "at": 27045457,
+        "kind": "OGN_PHYSICAL_SHORT_BORROW",
+        "lot": "R01_HIGH_RISK|27042630|6",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "amount": "-206.92",
+        "at": 27045457,
+        "kind": "OGN_WHOLE_DISPOSAL",
+        "lot": "R01_HIGH_RISK|27042630|6",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "at": 27045457,
+        "conditional_CIL": true,
+        "decision": 27045453,
+        "effective": 27045454,
+        "external_cash": "-206.92",
+        "external_delta": "6",
+        "fee": "1.00",
+        "kind": "OGN_EXTERNAL_DISPOSAL",
+        "raw_reference": "34.28",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "amount": "-13.68",
+        "at": 27055530,
+        "kind": "OGN_CIL_CONDITIONAL_PAYMENT",
+        "lot": "R01_HIGH_RISK|27042630|6",
+        "source": "1dd234eadabb8124d89eccafd0d64dc15c5dac42f7da140f9641a810d9de42c1"
+      },
+      {
+        "at": 27574800,
+        "kind": "SPLIT",
+        "ratio": "20",
+        "source": "aafd6f832435ccd59e1ba74bfee152ab700d6773e7b96a50975d29cdc49eeed5",
+        "ticker": 13
+      },
+      {
+        "at": 27690000,
+        "kind": "SPLIT",
+        "ratio": "3",
+        "source": "78881bd79fd81dc8b8d8847e3624fade6e89be52cc399687835d7d9d4b0c775c",
+        "ticker": 17
+      },
+      {
+        "at": 28523025,
+        "attempted_minute": 28523022,
+        "intended_minute": 28523022,
+        "kind": "V5_PENDING_MISSING_BAR",
+        "no_broker_cancellation_claim": true,
+        "order": "2024-03-25:28523021:16:1028",
+        "source": "ea12a862ef880681fa516f35d7b68ff8c2f8b34647d898ba3f79b6973d35cf97",
+        "source_hash": "ea12a862ef880681fa516f35d7b68ff8c2f8b34647d898ba3f79b6973d35cf97",
+        "submitted_quantity": "-4",
+        "ticker": 16
+      },
+      {
+        "at": 28683600,
+        "kind": "SPLIT",
+        "ratio": "10",
+        "source": "7388ac1d6e92fa50d0687e98687e5a455be97d6f49b7853316f1aa06b856b260",
+        "ticker": 16
+      },
+      {
+        "count": 4,
+        "decision": 28906100,
+        "feature_lineage": null,
+        "kind": "REJECT",
+        "origin": null,
+        "reason": "V3_MAXIMUM_HOLD_CALENDAR_CUTOFF",
+        "source": "a47e99af922b05b7e631d2cd9ae91fb4f9cc941e6dbc0a8412d1cc3f93b26031"
+      },
+      {
+        "count": 4,
+        "decision": 28906100,
+        "feature_lineage": null,
+        "kind": "REJECT",
+        "origin": null,
+        "reason": "V3_MAXIMUM_HOLD_CALENDAR_CUTOFF",
+        "source": "b8008e5fb1723861b6efd77a250a603835bf911ce939c89b125a0a4d61715ad5"
+      }
+    ],
+    "causes": {
+      "observed:NAME_CAP": 20,
+      "observed:VINTAGE_CAP": 77,
+      "scheduled_or_late:NAME_CAP": 66,
+      "scheduled_or_late:VINTAGE_CAP": 299
+    },
+    "events": {
+      "DIVIDEND_EX": 21,
+      "DIVIDEND_PAY": 20,
+      "EXIT_LEG_MISSING_SOURCE_DELAY": 1,
+      "EXTERNAL_PHYSICAL_FILLS": 1240,
+      "FILL": 1239,
+      "MRK_OGN_ENTITLEMENT": 1,
+      "OBSERVED_MARKED_CAP_BREACH": 97,
+      "OGN_CIL_CONDITIONAL_PAYMENT": 1,
+      "OGN_EXTERNAL_DISPOSAL": 1,
+      "OGN_PHYSICAL_SHORT_BORROW": 1,
+      "OGN_WHOLE_DISPOSAL": 1,
+      "OGN_WHOLE_ORDER": 1,
+      "ORDER": 1239,
+      "SPLIT": 3,
+      "TRAILING_EXIT_BEYOND_STOP_THRESHOLD": 178,
+      "V5_PENDING_MISSING_BAR": 1,
+      "V5_QUALIFIED_BAR": 1239
+    },
+    "rejects": {
+      "DUPLICATE_ACTIVE_SAME_SIGN": 214,
+      "V3_MAXIMUM_HOLD_CALENDAR_CUTOFF": 8
+    },
+    "terminal_claims": [
+      {
+        "USD": "-34.02",
+        "due": 28938540,
+        "event": "CA3:b9b78e6fbdc5eba76a97cbec",
+        "lot": "R01_HIGH_RISK|28895970|6"
+      }
+    ]
+  },
+  "STANDARD": {
+    "bounded_action_examples": [
+      {
+        "amount": "14.0",
+        "at": 27004560,
+        "due": 27042000,
+        "event": "CA3:eaa262b3c78d8aa8f26b147a",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_STANDARD|27000870|15",
+        "truth": "OBSERVED_UNCORROBORATED"
+      },
+      {
+        "amount": "52.46",
+        "at": 27014640,
+        "due": 27042000,
+        "event": "CA3:f6404c1429bd91caaa359ac7",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_STANDARD|27000870|1",
+        "truth": "OBSERVED_UNCORROBORATED"
+      },
+      {
+        "amount": "14.0",
+        "at": 27042000,
+        "kind": "DIVIDEND_PAY",
+        "lot": "R01_STANDARD|27000870|15"
+      },
+      {
+        "amount": "52.46",
+        "at": 27042000,
+        "kind": "DIVIDEND_PAY",
+        "lot": "R01_STANDARD|27000870|1"
+      },
+      {
+        "at": 27045450,
+        "kind": "MRK_OGN_ENTITLEMENT",
+        "positions": [
+          [
+            "R01_STANDARD|27042630|6",
+            "-64",
+            "0"
+          ]
+        ],
+        "source": "PRIMARY_FORM8937_REGULAR_WAY;CIL_REFERENCE_PAYMENT_CONDITIONAL",
+        "tax_allocation": [
+          {
+            "cohort_id": "R01_STANDARD|27042630|6",
+            "entitlement": "-6.4",
+            "fraction_attribution": "-0.4",
+            "mrk_long_tax_basis": "0.0000",
+            "ogn_long_tax_basis": "0.0000",
+            "original_long_tax_basis": "0",
+            "whole_attribution": "-6"
+          }
+        ]
+      },
+      {
+        "amount": "27.2",
+        "at": 27135600,
+        "due": 27174480,
+        "event": "CA3:9c91fed186e343f49b01fb60",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_STANDARD|27131910|15",
+        "truth": "OBSERVED_UNCORROBORATED"
+      },
+      {
+        "amount": "27.2",
+        "at": 27174480,
+        "kind": "DIVIDEND_PAY",
+        "lot": "R01_STANDARD|27131910|15"
+      },
+      {
+        "amount": "32.2",
+        "at": 27256560,
+        "due": 27282540,
+        "event": "CA3:e9e0b2965d887412621b4d68",
+        "kind": "DIVIDEND_EX",
+        "lot": "R01_STANDARD|27252870|9",
+        "truth": "OBSERVED_UNCORROBORATED"
+      }
+    ],
+    "bounded_event_examples": [
+      {
+        "count": 1,
+        "decision": 26839652,
+        "feature_lineage": "343358522038fd476fe324e358222999ef27206ae4c07f304995f0333405a060",
+        "kind": "REJECT",
+        "origin": 26839650,
+        "reason": "DUPLICATE_ACTIVE_SAME_SIGN",
+        "signs": [
+          1
+        ],
+        "source": "f03048aac8935401364c39667905a26b05f40f8b9a481521b28ff4acdc5ae6fc",
+        "strength": 2.1389828755332947,
+        "tickers": [
+          17
+        ]
+      },
+      {
+        "at": 26839702,
+        "kind": "OBSERVED_MARKED_CAP_BREACH",
+        "source": "f03048aac8935401364c39667905a26b05f40f8b9a481521b28ff4acdc5ae6fc"
+      },
+      {
+        "count": 1,
+        "decision": 26859812,
+        "feature_lineage": "04285cbd9d8ef938027d48d5658785eaec97c9fce39971984de74409b0e5904c",
+        "kind": "REJECT",
+        "origin": 26859810,
+        "reason": "DUPLICATE_ACTIVE_SAME_SIGN",
+        "signs": [
+          1
+        ],
+        "source": "e754833db267e0536b282b01ff2cd61c601d79d538b01319f676c201ae3b75b4",
+        "strength": 2.1990207994821582,
+        "tickers": [
+          17
+        ]
+      },
+      {
+        "count": 1,
+        "decision": 26869892,
+        "feature_lineage": "7d6f014b81e2f0fa2ef2d8a6a799d038eff7ba868d3b4281308ba981d6f58524",
+        "kind": "REJECT",
+        "origin": 26869890,
+        "reason": "DUPLICATE_ACTIVE_SAME_SIGN",
+        "signs": [
+          1
+        ],
+        "source": "aa6a9d2e71d3b880b3eca002da04a97da4b2eca65de4470d81e645a1112d0485",
+        "strength": 2.2356194707890507,
+        "tickers": [
+          17
+        ]
+      },
+      {
+        "at": 26869906,
+        "kind": "OBSERVED_MARKED_CAP_BREACH",
+        "source": "aa6a9d2e71d3b880b3eca002da04a97da4b2eca65de4470d81e645a1112d0485"
+      },
+      {
+        "at": 26892931,
+        "kind": "OBSERVED_MARKED_CAP_BREACH",
+        "source": "41a3624549e46a7dd12e68b9d0a5018f2c661e4cbfb75c310a891af31c25c3c9"
+      },
+      {
+        "at": 27045450,
+        "kind": "MRK_OGN_ENTITLEMENT",
+        "positions": [
+          [
+            "R01_STANDARD|27042630|6",
+            "-64",
+            "0"
+          ]
+        ],
+        "source": "PRIMARY_FORM8937_REGULAR_WAY;CIL_REFERENCE_PAYMENT_CONDITIONAL",
+        "tax_allocation": [
+          {
+            "cohort_id": "R01_STANDARD|27042630|6",
+            "entitlement": "-6.4",
+            "fraction_attribution": "-0.4",
+            "mrk_long_tax_basis": "0.0000",
+            "ogn_long_tax_basis": "0.0000",
+            "original_long_tax_basis": "0",
+            "whole_attribution": "-6"
+          }
+        ]
+      },
+      {
+        "at": 27045453,
+        "available": 27045453,
+        "capacity": "60",
+        "effective": 27045454,
+        "kind": "OGN_WHOLE_ORDER",
+        "prior_volume": "6043",
+        "quantity": "6",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "amount": "-0.00003115296803652968036529680365",
+        "at": 27045457,
+        "kind": "OGN_PHYSICAL_SHORT_BORROW",
+        "lot": "R01_STANDARD|27042630|6",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "amount": "-206.92",
+        "at": 27045457,
+        "kind": "OGN_WHOLE_DISPOSAL",
+        "lot": "R01_STANDARD|27042630|6",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "at": 27045457,
+        "conditional_CIL": true,
+        "decision": 27045453,
+        "effective": 27045454,
+        "external_cash": "-206.92",
+        "external_delta": "6",
+        "fee": "1.00",
+        "kind": "OGN_EXTERNAL_DISPOSAL",
+        "raw_reference": "34.28",
+        "source": "0565b8b547c3ef46f63403aca4d3c0d0a47c77207c412b844e4df2b6a66d4435"
+      },
+      {
+        "amount": "-13.68",
+        "at": 27055530,
+        "kind": "OGN_CIL_CONDITIONAL_PAYMENT",
+        "lot": "R01_STANDARD|27042630|6",
+        "source": "1dd234eadabb8124d89eccafd0d64dc15c5dac42f7da140f9641a810d9de42c1"
+      },
+      {
+        "at": 27574800,
+        "kind": "SPLIT",
+        "ratio": "20",
+        "source": "aafd6f832435ccd59e1ba74bfee152ab700d6773e7b96a50975d29cdc49eeed5",
+        "ticker": 13
+      },
+      {
+        "at": 27690000,
+        "kind": "SPLIT",
+        "ratio": "3",
+        "source": "78881bd79fd81dc8b8d8847e3624fade6e89be52cc399687835d7d9d4b0c775c",
+        "ticker": 17
+      },
+      {
+        "at": 28482696,
+        "attempted_minute": 28482693,
+        "intended_minute": 28482693,
+        "kind": "V5_PENDING_MISSING_BAR",
+        "no_broker_cancellation_claim": true,
+        "order": "2024-02-26:28482692:16:1005",
+        "source": "027bcd2aa1f585efc07bf849cb96c144607e6434f97d1fe98153a16207d9dc6e",
+        "source_hash": "027bcd2aa1f585efc07bf849cb96c144607e6434f97d1fe98153a16207d9dc6e",
+        "submitted_quantity": "3",
+        "ticker": 16
+      },
+      {
+        "at": 28683600,
+        "kind": "SPLIT",
+        "ratio": "10",
+        "source": "7388ac1d6e92fa50d0687e98687e5a455be97d6f49b7853316f1aa06b856b260",
+        "ticker": 16
+      },
+      {
+        "count": 4,
+        "decision": 28906236,
+        "feature_lineage": null,
+        "kind": "REJECT",
+        "origin": null,
+        "reason": "V3_MAXIMUM_HOLD_CALENDAR_CUTOFF",
+        "source": "a47e99af922b05b7e631d2cd9ae91fb4f9cc941e6dbc0a8412d1cc3f93b26031"
+      },
+      {
+        "count": 4,
+        "decision": 28906236,
+        "feature_lineage": null,
+        "kind": "REJECT",
+        "origin": null,
+        "reason": "V3_MAXIMUM_HOLD_CALENDAR_CUTOFF",
+        "source": "b8008e5fb1723861b6efd77a250a603835bf911ce939c89b125a0a4d61715ad5"
+      }
+    ],
+    "causes": {
+      "observed:NAME_CAP": 49,
+      "observed:VINTAGE_CAP": 57,
+      "scheduled_or_late:NAME_CAP": 190,
+      "scheduled_or_late:VINTAGE_CAP": 229
+    },
+    "events": {
+      "DIVIDEND_EX": 20,
+      "DIVIDEND_PAY": 20,
+      "EXTERNAL_PHYSICAL_FILLS": 1254,
+      "FILL": 1253,
+      "MRK_OGN_ENTITLEMENT": 1,
+      "OBSERVED_MARKED_CAP_BREACH": 104,
+      "OGN_CIL_CONDITIONAL_PAYMENT": 1,
+      "OGN_EXTERNAL_DISPOSAL": 1,
+      "OGN_PHYSICAL_SHORT_BORROW": 1,
+      "OGN_WHOLE_DISPOSAL": 1,
+      "OGN_WHOLE_ORDER": 1,
+      "ORDER": 1253,
+      "SPLIT": 3,
+      "TRAILING_EXIT_BEYOND_STOP_THRESHOLD": 149,
+      "V5_PENDING_MISSING_BAR": 1,
+      "V5_QUALIFIED_BAR": 1253
+    },
+    "rejects": {
+      "DUPLICATE_ACTIVE_SAME_SIGN": 206,
+      "V3_MAXIMUM_HOLD_CALENDAR_CUTOFF": 8
+    },
+    "terminal_claims": []
+  }
+}

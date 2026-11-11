@@ -1,0 +1,28 @@
+{
+  "date": "2021-02-01",
+  "pages": [
+    {
+      "http": 200,
+      "page": 0,
+      "raw_response_sha256": "eda41bbc762a588340a7a7cd7173652bd2a7ad7d29a20fd77fc474f5ee5654ac",
+      "retrieved_utc": "2026-11-09T18:55:06.234564+00:00"
+    }
+  ],
+  "path": "trading/track2/stage35/final_backtest_v4/sources/gap_raw/2021-02-01.json",
+  "projected_sha256": "8054fd37a48b9692b6c74e24af3f961fd8f30d811751b4bb11daa83e0efca9ca",
+  "query": {
+    "adjustment": "raw",
+    "end": "2021-02-01T20:00:00+00:00",
+    "feed": "sip",
+    "limit": 10000,
+    "sort": "asc",
+    "start": "2021-02-01T15:18:00+00:00",
+    "symbols": "AMZN,AVGO,CSCO",
+    "timeframe": "1Min"
+  },
+  "retained": 20,
+  "scope": "projected source rows; original full response not retained; retrospective not PIT",
+  "selected": 27,
+  "status": "COMPLETE_RESPONSE",
+  "unresolved": 7
+}

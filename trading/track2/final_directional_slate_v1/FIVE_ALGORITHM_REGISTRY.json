@@ -1,0 +1,130 @@
+{
+  "acceptance": [
+    "all five financial bridges",
+    "1005 daily rows/control/source identity",
+    "all old hashes/mtimes unchanged",
+    "no future selection/control/sign leakage",
+    "source-backed g=1 policy parity",
+    "partial/fee/action/borrow invariants",
+    "four-arm common source counts",
+    "zero unpriced material terminal exposure",
+    "rank audit published before overlay",
+    "output<200MB"
+  ],
+  "comparison_code": {
+    "src/lstm_data/trading/track2/final_directional_slate/__init__.py": "30dc101e4210d0d38ac3c0915fbeab46b148006b8dc31a7a909ec41eae09441e",
+    "src/lstm_data/trading/track2/final_directional_slate/common.py": "c5e8801f117ff7b11b4b34c2402f5cf4367ee7bfc3b1fbf7bcef762ea4acc2dd",
+    "src/lstm_data/trading/track2/final_directional_slate/comparison.py": "dcbe92f0a31e9806226c99eafe0d13c29ab826d11d341a430c5d1f52bb9dda1d"
+  },
+  "cost_margin": "(gross_price+actions-total_cost)/total_cost",
+  "drawdown_score": "-abs(max_drawdown)",
+  "family_limit_R01": 1,
+  "identity": "a5127aea1aeda93a92dd6584ca94dc3f81e7541f15ce2532ba5772a7931f8dab",
+  "initial_USD": 100000,
+  "instruction_sha256": "10d4c95227f24121d1049f2110caee27ec79c89f07d896bbeeadce27ae57fb5f",
+  "instruction_source": "Current user conversation; normalized operative transcription",
+  "min_families": 2,
+  "minimum_closed_cohorts": 80,
+  "overlay": {
+    "allocation": "headroom_budget*g_i/sum(g_ready); name cap; no redistribution",
+    "arms": [
+      "EQUAL",
+      "ROLLING_RISK",
+      "EWMA_RISK",
+      "S2C_RISK"
+    ],
+    "attainable_equal": "reuse exact original candidate, no identical full rerun",
+    "batch": "12 primary books then <=9 secondary books, shared features/risk cache",
+    "classical": "last60 scheduled same-slot strictly matured moves, min40, no missing",
+    "ewma": "RMS .94 first-square initialization over exact same window",
+    "formula": "g=clip(b/max(scale,m_floor),.5,1.5)",
+    "horizon_mismatch": "short-term entry-risk proxy, not ten-session variance",
+    "magnitude_target": "nominal origin to240scheduled-minute absolute log return",
+    "null": "NOT_RUN unless existing approved module identified",
+    "primary": "MATCHED_4ARM",
+    "readiness": "No sign mask; EQUAL parent only, classical own mature input, S2C original input",
+    "scope": "ENTRY_ONLY; unchanged direction/exit/cost/risk; no neural inference",
+    "secondary": "ATTAINABLE"
+  },
+  "percentile": "(ascending average rank-1)/(n-1); one candidate=.5",
+  "period": [
+    "2021-01-01",
+    "2024-12-31"
+  ],
+  "policies": {
+    "F1": {
+      "case": "R01_CONTROL",
+      "change": "NONE",
+      "engine": "V3_DYNAMIC",
+      "family": "R01",
+      "headroom": ".85",
+      "horizon": 10,
+      "label": "R01-A",
+      "source": "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded",
+      "strategy": "R01",
+      "unit": "max_sessions"
+    },
+    "F2": {
+      "case": "R01_V20",
+      "change": "EXACT_V20_ENTRY_RESERVE",
+      "engine": "V3_DYNAMIC",
+      "family": "R01",
+      "headroom": "1",
+      "horizon": 10,
+      "label": "R01-B",
+      "source": "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded",
+      "strategy": "R01",
+      "unit": "max_sessions"
+    },
+    "F3": {
+      "case": "M04_T480",
+      "change": "NONE",
+      "engine": "V2_FIXED",
+      "family": "M04",
+      "headroom": "1",
+      "horizon": 480,
+      "label": "M04-T480",
+      "source": "trading/track2/rapid_v2_diagnostics/runs/rapid-v2-20261110-r1/results_20261110T225245268428Z",
+      "strategy": "M04",
+      "unit": "minutes"
+    },
+    "F4": {
+      "case": "R07_DAILY2",
+      "change": "TWO_DISTINCT_DAILY_EVENT_CHECKS",
+      "engine": "V3_DYNAMIC",
+      "family": "R07",
+      "headroom": ".85",
+      "horizon": 10,
+      "label": "R07-PERSIST",
+      "source": "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded",
+      "strategy": "R07",
+      "unit": "max_sessions"
+    },
+    "F5": {
+      "case": "M05_EVENT2",
+      "change": "TWO_DISTINCT_VALID_EVENT_CHECKS",
+      "engine": "V3_DYNAMIC",
+      "family": "M05",
+      "headroom": ".85",
+      "horizon": 780,
+      "label": "M05-PERSIST",
+      "source": "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded",
+      "strategy": "M05",
+      "unit": "max_scheduled_minutes"
+    }
+  },
+  "schema": "HF20_FIVE_USER_FROZEN_1",
+  "selection": "descending weighted within-five percentile; ties middle; then ID",
+  "source_inputs_sha256": "97d7646b11f21f85d21c6b1f6acc8597fe848fafaccb5f47967fd904bbbc1b28",
+  "spec_sha256": "657e733c4dec810732fde4e5f1389ba34caf6117921fb09f932e6bb0c8847dcb",
+  "target_families": 3,
+  "unsupported_metric": "RANKING_HOLD",
+  "weights": {
+    "cost_margin": 0.05,
+    "drawdown_score": 0.15,
+    "net_PnL_USD": 0.3,
+    "net_per_1M_RTH_gross_dollar_years_USD": 0.25,
+    "net_without_top_two": 0.1,
+    "positive_years": 0.15
+  }
+}

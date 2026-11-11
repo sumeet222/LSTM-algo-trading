@@ -1,0 +1,222 @@
+.......FFFF...F..............F.                                          [100%]
+=================================== FAILURES ===================================
+______________ test_settlement_transition[2024-05-13-2024-05-10] _______________
+
+record = '2024-05-13', ex = '2024-05-10'
+
+    @pytest.mark.parametrize('record,ex', [
+        ('2024-05-13', '2024-05-10'), ('2024-05-24', '2024-05-23'),
+        ('2024-05-28', '2024-05-24'), ('2024-05-29', '2024-05-29'),
+    ])
+    def test_settlement_transition(record, ex):
+>       assert ex_from_record(date.fromisoformat(record)) == date.fromisoformat(ex)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/track2_stage35_completion_v3/test_actions_and_fallback.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:61: in ex_from_record
+    if not ordinary or not settlement_day(record):
+                           ^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:48: in settlement_day
+    return day in trading_days() and bank_day(day)
+                  ^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:31: in trading_days
+    clock = MarketClock("2010-01-01", "2027-12-31")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage012/calendar_schedule.py:10: in __init__
+    self.calendar = sessions(start, stop)
+                    ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+start = '2010-01-01', stop = '2027-12-31'
+
+    def sessions(start: str, stop: str) -> pd.DataFrame:
+        """Authoritative XNYS intervals, including the closing stub and early closes."""
+        if stop >= "2026-01-01":
+>           raise ValueError("S4_CALENDAR_SCOPE")
+E           ValueError: S4_CALENDAR_SCOPE
+
+src/lstm_data/hf20_s4_clock.py:13: ValueError
+______________ test_settlement_transition[2024-05-24-2024-05-23] _______________
+
+record = '2024-05-24', ex = '2024-05-23'
+
+    @pytest.mark.parametrize('record,ex', [
+        ('2024-05-13', '2024-05-10'), ('2024-05-24', '2024-05-23'),
+        ('2024-05-28', '2024-05-24'), ('2024-05-29', '2024-05-29'),
+    ])
+    def test_settlement_transition(record, ex):
+>       assert ex_from_record(date.fromisoformat(record)) == date.fromisoformat(ex)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/track2_stage35_completion_v3/test_actions_and_fallback.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:61: in ex_from_record
+    if not ordinary or not settlement_day(record):
+                           ^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:48: in settlement_day
+    return day in trading_days() and bank_day(day)
+                  ^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:31: in trading_days
+    clock = MarketClock("2010-01-01", "2027-12-31")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage012/calendar_schedule.py:10: in __init__
+    self.calendar = sessions(start, stop)
+                    ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+start = '2010-01-01', stop = '2027-12-31'
+
+    def sessions(start: str, stop: str) -> pd.DataFrame:
+        """Authoritative XNYS intervals, including the closing stub and early closes."""
+        if stop >= "2026-01-01":
+>           raise ValueError("S4_CALENDAR_SCOPE")
+E           ValueError: S4_CALENDAR_SCOPE
+
+src/lstm_data/hf20_s4_clock.py:13: ValueError
+______________ test_settlement_transition[2024-05-28-2024-05-24] _______________
+
+record = '2024-05-28', ex = '2024-05-24'
+
+    @pytest.mark.parametrize('record,ex', [
+        ('2024-05-13', '2024-05-10'), ('2024-05-24', '2024-05-23'),
+        ('2024-05-28', '2024-05-24'), ('2024-05-29', '2024-05-29'),
+    ])
+    def test_settlement_transition(record, ex):
+>       assert ex_from_record(date.fromisoformat(record)) == date.fromisoformat(ex)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/track2_stage35_completion_v3/test_actions_and_fallback.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:61: in ex_from_record
+    if not ordinary or not settlement_day(record):
+                           ^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:48: in settlement_day
+    return day in trading_days() and bank_day(day)
+                  ^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:31: in trading_days
+    clock = MarketClock("2010-01-01", "2027-12-31")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage012/calendar_schedule.py:10: in __init__
+    self.calendar = sessions(start, stop)
+                    ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+start = '2010-01-01', stop = '2027-12-31'
+
+    def sessions(start: str, stop: str) -> pd.DataFrame:
+        """Authoritative XNYS intervals, including the closing stub and early closes."""
+        if stop >= "2026-01-01":
+>           raise ValueError("S4_CALENDAR_SCOPE")
+E           ValueError: S4_CALENDAR_SCOPE
+
+src/lstm_data/hf20_s4_clock.py:13: ValueError
+______________ test_settlement_transition[2024-05-29-2024-05-29] _______________
+
+record = '2024-05-29', ex = '2024-05-29'
+
+    @pytest.mark.parametrize('record,ex', [
+        ('2024-05-13', '2024-05-10'), ('2024-05-24', '2024-05-23'),
+        ('2024-05-28', '2024-05-24'), ('2024-05-29', '2024-05-29'),
+    ])
+    def test_settlement_transition(record, ex):
+>       assert ex_from_record(date.fromisoformat(record)) == date.fromisoformat(ex)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/track2_stage35_completion_v3/test_actions_and_fallback.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:61: in ex_from_record
+    if not ordinary or not settlement_day(record):
+                           ^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:48: in settlement_day
+    return day in trading_days() and bank_day(day)
+                  ^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:31: in trading_days
+    clock = MarketClock("2010-01-01", "2027-12-31")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage012/calendar_schedule.py:10: in __init__
+    self.calendar = sessions(start, stop)
+                    ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+start = '2010-01-01', stop = '2027-12-31'
+
+    def sessions(start: str, stop: str) -> pd.DataFrame:
+        """Authoritative XNYS intervals, including the closing stub and early closes."""
+        if stop >= "2026-01-01":
+>           raise ValueError("S4_CALENDAR_SCOPE")
+E           ValueError: S4_CALENDAR_SCOPE
+
+src/lstm_data/hf20_s4_clock.py:13: ValueError
+____________ test_missing_ex_and_pay_explicit_assumed_not_verified _____________
+
+    def test_missing_ex_and_pay_explicit_assumed_not_verified():
+>       inferred = complete_ordinary(event(ex_date=None, payable_date=None))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/track2_stage35_completion_v3/test_actions_and_fallback.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:91: in complete_ordinary
+    ex = ex_from_record(event.record_date)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:61: in ex_from_record
+    if not ordinary or not settlement_day(record):
+                           ^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:48: in settlement_day
+    return day in trading_days() and bank_day(day)
+                  ^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:31: in trading_days
+    clock = MarketClock("2010-01-01", "2027-12-31")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage012/calendar_schedule.py:10: in __init__
+    self.calendar = sessions(start, stop)
+                    ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+start = '2010-01-01', stop = '2027-12-31'
+
+    def sessions(start: str, stop: str) -> pd.DataFrame:
+        """Authoritative XNYS intervals, including the closing stub and early closes."""
+        if stop >= "2026-01-01":
+>           raise ValueError("S4_CALENDAR_SCOPE")
+E           ValueError: S4_CALENDAR_SCOPE
+
+src/lstm_data/hf20_s4_clock.py:13: ValueError
+___ test_recurrence_requires_payer_and_prior_support_and_respects_suspension ___
+
+    def test_recurrence_requires_payer_and_prior_support_and_respects_suspension():
+        a = event(ex_date=date(2023, 11, 10), event_id='old')
+        b = event(ex_date=date(2024, 2, 9), event_id='new')
+>       out = recurring_candidates('AAPL', (a, b), date(2024, 5, 1), date(2024, 11, 30),
+                                   interval_months=3, payer_evidence='two issuer declarations')
+
+tests/track2_stage35_completion_v3/test_actions_and_fallback.py:172: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:221: in recurring_candidates
+    while at not in trading_days():
+                    ^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage35/completion_v3/fallback.py:31: in trading_days
+    clock = MarketClock("2010-01-01", "2027-12-31")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/lstm_data/trading/track2/stage012/calendar_schedule.py:10: in __init__
+    self.calendar = sessions(start, stop)
+                    ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+start = '2010-01-01', stop = '2027-12-31'
+
+    def sessions(start: str, stop: str) -> pd.DataFrame:
+        """Authoritative XNYS intervals, including the closing stub and early closes."""
+        if stop >= "2026-01-01":
+>           raise ValueError("S4_CALENDAR_SCOPE")
+E           ValueError: S4_CALENDAR_SCOPE
+
+src/lstm_data/hf20_s4_clock.py:13: ValueError
+=========================== short test summary info ============================
+FAILED tests/track2_stage35_completion_v3/test_actions_and_fallback.py::test_settlement_transition[2024-05-13-2024-05-10]
+FAILED tests/track2_stage35_completion_v3/test_actions_and_fallback.py::test_settlement_transition[2024-05-24-2024-05-23]
+FAILED tests/track2_stage35_completion_v3/test_actions_and_fallback.py::test_settlement_transition[2024-05-28-2024-05-24]
+FAILED tests/track2_stage35_completion_v3/test_actions_and_fallback.py::test_settlement_transition[2024-05-29-2024-05-29]
+FAILED tests/track2_stage35_completion_v3/test_actions_and_fallback.py::test_missing_ex_and_pay_explicit_assumed_not_verified
+FAILED tests/track2_stage35_completion_v3/test_actions_and_fallback.py::test_recurrence_requires_payer_and_prior_support_and_respects_suspension
+6 failed, 25 passed in 3.26s

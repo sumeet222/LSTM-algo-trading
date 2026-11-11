@@ -1,0 +1,126 @@
+{
+    "version": "1.1.414",
+    "time": "1794234074185",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/fallback.py",
+            "severity": "error",
+            "message": "Type \"frozenset[NaTType | date]\" is not assignable to return type \"frozenset[date]\"\n  \"frozenset[NaTType | date]\" is not assignable to \"frozenset[date]\"\n    Type parameter \"_T_co@frozenset\" is covariant, but \"NaTType | date\" is not a subtype of \"date\"\n      Type \"NaTType | date\" is not assignable to type \"date\"\n        \"NaTType\" is not assignable to \"date\"",
+            "range": {
+                "start": {
+                    "line": 31,
+                    "character": 11
+                },
+                "end": {
+                    "line": 31,
+                    "character": 79
+                }
+            },
+            "rule": "reportReturnType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/fallback.py",
+            "severity": "error",
+            "message": "Operator \"<\" not supported for types \"NaTType | date\" and \"date\"\n  Operator \"<\" not supported for types \"NaTType\" and \"date\"",
+            "range": {
+                "start": {
+                    "line": 219,
+                    "character": 11
+                },
+                "end": {
+                    "line": 219,
+                    "character": 21
+                }
+            },
+            "rule": "reportOperatorIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/fallback.py",
+            "severity": "error",
+            "message": "Operator \">\" not supported for types \"NaTType | date\" and \"date\"\n  Operator \">\" not supported for types \"NaTType\" and \"date\"",
+            "range": {
+                "start": {
+                    "line": 219,
+                    "character": 25
+                },
+                "end": {
+                    "line": 219,
+                    "character": 34
+                }
+            },
+            "rule": "reportOperatorIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/fallback.py",
+            "severity": "error",
+            "message": "Operator \"<=\" not supported for types \"date\" and \"NaTType | date\"\n  Operator \"<=\" not supported for types \"date\" and \"NaTType\"",
+            "range": {
+                "start": {
+                    "line": 221,
+                    "character": 47
+                },
+                "end": {
+                    "line": 221,
+                    "character": 72
+                }
+            },
+            "rule": "reportOperatorIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/fallback.py",
+            "severity": "error",
+            "message": "Argument of type \"NaTType | date\" cannot be assigned to parameter \"anchor\" of type \"date | None\" in function \"identifier\"\n  Type \"NaTType | date\" is not assignable to type \"date | None\"\n    Type \"NaTType\" is not assignable to type \"date | None\"\n      \"NaTType\" is not assignable to \"date\"\n      \"NaTType\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 224,
+                    "character": 48
+                },
+                "end": {
+                    "line": 224,
+                    "character": 50
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/fallback.py",
+            "severity": "error",
+            "message": "Argument of type \"NaTType | date\" cannot be assigned to parameter \"ex_date\" of type \"date | None\" in function \"__init__\"\n  Type \"NaTType | date\" is not assignable to type \"date | None\"\n    Type \"NaTType\" is not assignable to type \"date | None\"\n      \"NaTType\" is not assignable to \"date\"\n      \"NaTType\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 227,
+                    "character": 12
+                },
+                "end": {
+                    "line": 227,
+                    "character": 14
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/fallback.py",
+            "severity": "error",
+            "message": "Argument of type \"NaTType | date\" cannot be assigned to parameter \"asof\" of type \"date\" in function \"carry_amount\"\n  Type \"NaTType | date\" is not assignable to type \"date\"\n    \"NaTType\" is not assignable to \"date\"",
+            "range": {
+                "start": {
+                    "line": 239,
+                    "character": 47
+                },
+                "end": {
+                    "line": 239,
+                    "character": 49
+                }
+            },
+            "rule": "reportArgumentType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 4,
+        "errorCount": 7,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 2.967
+    }
+}
+

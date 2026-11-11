@@ -1,0 +1,46 @@
+{
+  "version": "V3_ACTION_SOURCE_PLAN_1",
+  "range": [
+    "2021-01-01",
+    "2024-12-31"
+  ],
+  "boundary": "2020prefix and ex<=2024 with laterpay;no post2024 quotes",
+  "symbols": [
+    "VZ",
+    "COP",
+    "BAC",
+    "BA",
+    "AAPL",
+    "PEP",
+    "MRK",
+    "SBUX",
+    "CVX",
+    "MS",
+    "AMD",
+    "KO",
+    "JNJ",
+    "AMZN",
+    "XOM",
+    "WFC",
+    "AVGO",
+    "TSLA",
+    "MA",
+    "CSCO"
+  ],
+  "max_requests": 100,
+  "timeout": 20,
+  "retry_429": 1,
+  "backoff_seconds": 2,
+  "max_pages": 6,
+  "sources": {
+    "alpaca": "https://data.alpaca.markets/v1/corporate-actions?symbols=ALL20&start=2020-12-01&end=2024-12-31&data_quality=all&limit=1000",
+    "finnhub": "https://finnhub.io/api/v1/stock/dividend?symbol=AAPL&from=2021-01-01&to=2024-12-31",
+    "alpha_vantage": "https://www.alphavantage.co/query?function=DIVIDENDS&symbol=AAPL;only existing key,no price endpoint",
+    "nasdaq": "https://api.nasdaq.com/api/quote/AAPL/dividends?assetclass=stocks&fromdate=2021-01-01&todate=2024-12-31&limit=5000;probe before20,stop if ignoresdates",
+    "yahoo": "https://query1.finance.yahoo.com/v7/finance/download/AAPL?period1=1606780800&period2=1735689600&interval=1d&events=div"
+  },
+  "issuer_scope": "40 dated or historical dividend/action pages,record URL beforedownload;only<=2024 events retained;no currentquotes",
+  "credential_policy": "existing .env/env only,no values/logged auth,no brokerage calls",
+  "fallback": "explicit conditional ordinary A-F after bounded failures;special HOLD;no emptyfeed nonpayer assertion",
+  "no_performance": true
+}

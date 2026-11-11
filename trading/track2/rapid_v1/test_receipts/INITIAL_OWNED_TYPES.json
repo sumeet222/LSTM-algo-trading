@@ -1,0 +1,62 @@
+{
+    "version": "1.1.414",
+    "time": "1794345700973",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/runner.py",
+            "severity": "error",
+            "message": "Argument of type \"float\" cannot be assigned to parameter \"value\" of type \"int\" in function \"__setitem__\"\n  \"float\" is not assignable to \"int\"",
+            "range": {
+                "start": {
+                    "line": 577,
+                    "character": 12
+                },
+                "end": {
+                    "line": 577,
+                    "character": 48
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/scheduler.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"total_seconds\" for class \"NDArray[Any]\"\n  Attribute \"total_seconds\" is unknown",
+            "range": {
+                "start": {
+                    "line": 17,
+                    "character": 40
+                },
+                "end": {
+                    "line": 17,
+                    "character": 53
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/rapid_v1/shared_features.py",
+            "severity": "error",
+            "message": "Argument of type \"Timestamp | NaTType\" cannot be assigned to parameter \"origin\" of type \"Timestamp\" in function \"endpoint\"\n  Type \"Timestamp | NaTType\" is not assignable to type \"Timestamp\"\n    \"NaTType\" is not assignable to \"Timestamp\"",
+            "range": {
+                "start": {
+                    "line": 273,
+                    "character": 20
+                },
+                "end": {
+                    "line": 273,
+                    "character": 65
+                }
+            },
+            "rule": "reportArgumentType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 11,
+        "errorCount": 3,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 3.714
+    }
+}
+

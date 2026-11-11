@@ -1,0 +1,74 @@
+{
+  "code": {
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/__init__.py": "d21d06e42ca01d5ebdada1626ef739ba355e29c714abfed5b8438bc8ccc75cfb",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py": "64097052009026537ac17b8dd1c65b876fe7d01063d1d95f3079cbccc859347a",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/certification.py": "75ad0f3b9ef020b8fc92631ae95e7c189146e2434af415b0f13eaa9ed824005a",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/checkpoint.py": "393d3da6b080892763cb403f44ea82f7206d01f3c5eec17d97a88b6b8d4b8466",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py": "3e932a80904b49be3d3f25bfcc5a0ec2576d3e75219f7e253ffaf554277225c6",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/execution_calendar.py": "60e4546b291de37c604dcc72a21d9c3197d0c89b8fb84bb93bfdbfbeb302b377",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py": "6cd340312c79b063885ccb3682f198f253a1ea799b312e18df2fc4597fcb396a",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/paths.py": "06afcc3d65a12189a7133c092a9f1655494c5a8249162a008fc1d80cff8d0e98",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py": "11a6e5cd1d44957097a8533b4c20837a87e06c01f9f360fb6378227a90064a06",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py": "02f1d9c719b45a8b9abc798b0086aa4ba91731f1e42e1c3d810edb77c9ebd9d1",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py": "4f0ed63927c9e5446ba0d17b69b718d10b6d849abb97cb6740d25e97990653c5",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/run.py": "458c40d35e4ebe74112defec06ba7759d3c0b55923fcdccc04c4fd77d9dd37b6",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/sources.py": "3b255cca32bd4e0ce96d97fc0abcf9fd85482b017456c67826a1f9c186d87a20",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py": "11f2c220652350a6c048468939b4ab2c4bfe55b988202efe83b7fa803aefd079",
+    "tests/track2_stage35_v4/test_replay_engine.py": "91ef8183f320bbe866822fc0e68d4ffb545d1d9bea0298c87fb675e44891687d",
+    "tests/track2_stage35_v4/test_special_and_book.py": "ca7984f090c1ca8c3e228022246c425ae65653c1f6201d3899fac110d891ccfe"
+  },
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "src/lstm_data/trading/track2/stage35/final_backtest_v4",
+        "tests/track2_stage35_v4",
+        "--select",
+        "E,F,I"
+      ],
+      "domain": "ruff",
+      "path": "trading/track2/stage35/final_backtest_v4/audits/CERTIFIED_RUFF.txt",
+      "returncode": 0,
+      "seconds": 0.025658125057816505,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "command": [
+        ".venv/bin/pyright",
+        "src/lstm_data/trading/track2/stage35/final_backtest_v4",
+        "tests/track2_stage35_v4",
+        "--pythonpath",
+        ".venv/bin/python",
+        "--outputjson"
+      ],
+      "domain": "owned_types",
+      "path": "trading/track2/stage35/final_backtest_v4/audits/CERTIFIED_OWNED_TYPES.json",
+      "returncode": 0,
+      "seconds": 6.739033458055928,
+      "sha256": "66f961e35c9aba0b7c6239b2c44aa118e82c8e752f469986f4bd147747babc4e"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/track2_stage012",
+        "tests/track2_stage35",
+        "tests/track2_stage35_completion_v2",
+        "tests/track2_stage35_completion_v3",
+        "tests/track2_stage35_v4",
+        "tests/test_hf20_s2c_ca.py",
+        "tests/test_hf20_mag_c3_io.py",
+        "-q"
+      ],
+      "domain": "pytest",
+      "path": "trading/track2/stage35/final_backtest_v4/audits/CERTIFIED_PYTEST.txt",
+      "returncode": 0,
+      "seconds": 81.57781270798296,
+      "sha256": "c1fe752a0494039ee697ef1adc98f79483beca21022b47835b458d328a9c38b4"
+    }
+  ],
+  "new_owned_type_errors": 0,
+  "new_owned_warnings": 0
+}

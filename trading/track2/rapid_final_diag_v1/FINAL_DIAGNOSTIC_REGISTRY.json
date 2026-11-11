@@ -1,0 +1,194 @@
+{
+  "R01_additional_primary": "vintage-caused risk closures / original candidate intents",
+  "all18_retained": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09"
+  ],
+  "authority": "Owner final targeted diagnostics prompt 2026-11-10; research only",
+  "cache": "trading/track2/rapid_v1/cache/49a590a7d44f5900b67cf2faf37584b584a942807cca2fbab262250b80ea1f93",
+  "cases": [
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.1",
+      "strategy": "M04",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONTROL"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.1",
+      "strategy": "M04",
+      "unit": "max_scheduled_minutes",
+      "variant": "EVENT2"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.1",
+      "strategy": "R01",
+      "unit": "max_sessions",
+      "variant": "CONTROL"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.1",
+      "strategy": "R01",
+      "unit": "max_sessions",
+      "variant": "V20"
+    },
+    {
+      "headroom": "1",
+      "horizon": 10,
+      "name_cap": "0.1",
+      "strategy": "R01",
+      "unit": "max_sessions",
+      "variant": "H100"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.1",
+      "strategy": "M01",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONTROL"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.1",
+      "strategy": "M01",
+      "unit": "max_scheduled_minutes",
+      "variant": "WEAK2"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.1",
+      "strategy": "M05",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONTROL"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.1",
+      "strategy": "M05",
+      "unit": "max_scheduled_minutes",
+      "variant": "EVENT2"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.1",
+      "strategy": "M03",
+      "unit": "max_scheduled_minutes",
+      "variant": "CONTROL"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 780,
+      "name_cap": "0.1",
+      "strategy": "M03",
+      "unit": "max_scheduled_minutes",
+      "variant": "GAPCAP"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.1",
+      "strategy": "R07",
+      "unit": "max_sessions",
+      "variant": "CONTROL"
+    },
+    {
+      "headroom": "0.85",
+      "horizon": 10,
+      "name_cap": "0.1",
+      "strategy": "R07",
+      "unit": "max_sessions",
+      "variant": "DAILY2"
+    }
+  ],
+  "code_hashes": {
+    "src/lstm_data/trading/track2/rapid_final_diag/__init__.py": "2d5cdc8556ba347b0b424fae5603439fa304828ecc55bc7671b076e932a4e47d",
+    "src/lstm_data/trading/track2/rapid_final_diag/allocation.py": "b8b6d3e7fe35b5b1c07bf0826ab210d34bf1213f49e6c30fdb1182b900e58d38",
+    "src/lstm_data/trading/track2/rapid_final_diag/book.py": "4e5445f78ea88343c0e34bb55eaa3b348b32bfc519a78e2eeb2c6a3e2b934bd4",
+    "src/lstm_data/trading/track2/rapid_final_diag/cli.py": "acdb82cdbb8ad63705da1627c42ad0251904d052c8ca0e698b21386b7f030b6d",
+    "src/lstm_data/trading/track2/rapid_final_diag/engine.py": "cbb5a30f7aa8c1cec35842ff12e3783f026f294498b75c6fe4f89b890fa557e2",
+    "src/lstm_data/trading/track2/rapid_final_diag/policy.py": "05d5c4e2738a9d9786f591fe32c4e7b1cf439d937cbe21849b73867c38543ac5",
+    "src/lstm_data/trading/track2/rapid_final_diag/provenance.py": "ff422baa47706f200d635d7e46598504688b6adaae97de775009e45729e38cdd",
+    "src/lstm_data/trading/track2/rapid_final_diag/results.py": "74418adc84394fb5e1d32ecfc06086c75444c5a5709170e21c2173f8b7b7d5f9",
+    "src/lstm_data/trading/track2/rapid_final_diag/state.py": "4705f456541e531c59a17364dcfb83e6aa369fdf6eaf2c53183246d17341468d",
+    "tests/track2_rapid_final_diag/test_policies.py": "5f36e7f129bd0f7f95e44370359c6dc6a39bf280cfa2b2eda5599f3664d60e78"
+  },
+  "controls": {
+    "M01_CONTROL": "M01_CONSERVATIVE",
+    "M03_CONTROL": "M03_CONSERVATIVE",
+    "M04_CONTROL": "M04_CONSERVATIVE",
+    "M05_CONTROL": "M05_CONSERVATIVE",
+    "R01_CONTROL": "R01_CONSERVATIVE",
+    "R01_H100": "R01_STANDARD",
+    "R07_CONTROL": "R07_CONSERVATIVE"
+  },
+  "identity": "62cc31bc422b7e6ff515558e0564175917781d7731bcaa401bb45d6726620db1",
+  "input_seal_sha256": "0549d952c739d2b47691b565e047d6d1d30c8bd96424b056ef088feeff3eab69",
+  "invariants": [
+    "Other exits and original priority preempt confirmation",
+    "No change to entry formulas, schedules, costs or hard caps",
+    "No redistribution; whole-share rounding after common stress scaling",
+    "M01 no third confirmation invented",
+    "No new funded M06 or other IDs"
+  ],
+  "offline_forward_limit": 5,
+  "offline_horizons": [
+    60,
+    240,
+    "NEXT_FULL_SESSION"
+  ],
+  "offline_sample": "100 hash-smallest exit portions/treatment, after publication",
+  "output_hard_limit": 150000000,
+  "period": [
+    "2021-01-01",
+    "2024-12-31"
+  ],
+  "pilot_dates": [
+    "2024-11-18",
+    "2024-12-02"
+  ],
+  "primary": [
+    "net_PnL_USD",
+    "net_per_1M_RTH_gross_dollar_years_USD"
+  ],
+  "protocol_hash": "563b0a8ff48f9f6590d3ac37a27e4bbc2ba6851334da49723bc242976315b513",
+  "rules": {
+    "M01": "V3 already requires two micro weakening checks: faithful identity variant",
+    "M03": "At entry log trail min(2*v20, abs(gap/gap_z)); missing scale abstains",
+    "M04": "EVENT_RESOLVED two distinct eligible failures; reset missing/recovery",
+    "M05": "EVENT_RESOLVED: two distinct range failures; reset missing/recovery",
+    "R01": "H100 entry-only common maximal t from prescribed one-v20 inequality",
+    "R07": "EVENT_RESOLVED two distinct full-session daily10:30 failures"
+  },
+  "schema": "HF20_FINAL_TARGETED_DIAGNOSTICS_1",
+  "status": "SEALED_BEFORE_NEW_FUNDED_OUTCOMES",
+  "tail_diagnostic": "worst cohort, worst five, negative cohort sum; unoptimized",
+  "target": 100000000
+}

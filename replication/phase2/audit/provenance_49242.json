@@ -1,0 +1,2745 @@
+{
+  "procedural_not_sandbox_isolation": true,
+  "pid": 49242,
+  "cwd": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2",
+  "sys_path": [
+    "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code",
+    "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code",
+    "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python314.zip",
+    "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14",
+    "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload",
+    "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages"
+  ],
+  "modules": {
+    "__future__": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/__future__.py",
+    "_bisect": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_bisect.cpython-314-darwin.so",
+    "_blake2": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_blake2.cpython-314-darwin.so",
+    "_bz2": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_bz2.cpython-314-darwin.so",
+    "_collections_abc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_collections_abc.py",
+    "_colorize": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_colorize.py",
+    "_compat_pickle": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_compat_pickle.py",
+    "_csv": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_csv.cpython-314-darwin.so",
+    "_ctypes": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_ctypes.cpython-314-darwin.so",
+    "_cyutility": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/_cyutility.cpython-314-darwin.so",
+    "_decimal": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_decimal.cpython-314-darwin.so",
+    "_distutils_hack": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/_distutils_hack/__init__.py",
+    "_frozen_importlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/_bootstrap.py",
+    "_frozen_importlib_external": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/_bootstrap_external.py",
+    "_hashlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_hashlib.cpython-314-darwin.so",
+    "_heapq": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_heapq.cpython-314-darwin.so",
+    "_hmac": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_hmac.cpython-314-darwin.so",
+    "_interpreters": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_interpreters.cpython-314-darwin.so",
+    "_json": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_json.cpython-314-darwin.so",
+    "_lzma": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_lzma.cpython-314-darwin.so",
+    "_opcode_metadata": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_opcode_metadata.py",
+    "_osx_support": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_osx_support.py",
+    "_pickle": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_pickle.cpython-314-darwin.so",
+    "_posixsubprocess": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_posixsubprocess.cpython-314-darwin.so",
+    "_py_warnings": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_py_warnings.py",
+    "_pyrepl": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_pyrepl/__init__.py",
+    "_pyrepl.pager": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_pyrepl/pager.py",
+    "_queue": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_queue.cpython-314-darwin.so",
+    "_random": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_random.cpython-314-darwin.so",
+    "_sitebuiltins": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_sitebuiltins.py",
+    "_socket": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_socket.cpython-314-darwin.so",
+    "_statistics": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_statistics.cpython-314-darwin.so",
+    "_strptime": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_strptime.py",
+    "_struct": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_struct.cpython-314-darwin.so",
+    "_sysconfigdata__darwin_darwin": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_sysconfigdata__darwin_darwin.py",
+    "_uuid": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_uuid.cpython-314-darwin.so",
+    "_weakrefset": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_weakrefset.py",
+    "_zoneinfo": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_zoneinfo.cpython-314-darwin.so",
+    "_zstd": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_zstd.cpython-314-darwin.so",
+    "abc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/abc.py",
+    "annotationlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/annotationlib.py",
+    "ast": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/ast.py",
+    "base64": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/base64.py",
+    "binascii": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/binascii.cpython-314-darwin.so",
+    "bisect": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/bisect.py",
+    "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py",
+    "bz2": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/bz2.py",
+    "calendar": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/calendar.py",
+    "cmath": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/cmath.cpython-314-darwin.so",
+    "codecs": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/codecs.py",
+    "codeop": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/codeop.py",
+    "collections": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/collections/__init__.py",
+    "collections.abc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/_collections_abc.py",
+    "compression": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/compression/__init__.py",
+    "compression._common": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/compression/_common/__init__.py",
+    "compression._common._streams": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/compression/_common/_streams.py",
+    "compression.zstd": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/compression/zstd/__init__.py",
+    "compression.zstd._zstdfile": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/compression/zstd/_zstdfile.py",
+    "concurrent": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/__init__.py",
+    "concurrent.futures": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/__init__.py",
+    "concurrent.futures._base": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py",
+    "concurrent.futures.thread": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py",
+    "contextlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py",
+    "contextvars": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextvars.py",
+    "copy": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/copy.py",
+    "copyreg": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/copyreg.py",
+    "csv": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/csv.py",
+    "ctypes": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/ctypes/__init__.py",
+    "ctypes._endian": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/ctypes/_endian.py",
+    "dataclasses": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/dataclasses.py",
+    "dataset": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/dataset.py",
+    "datetime": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/datetime.py",
+    "dateutil": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/__init__.py",
+    "dateutil._common": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/_common.py",
+    "dateutil._version": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/_version.py",
+    "dateutil.easter": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/easter.py",
+    "dateutil.parser": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/parser/__init__.py",
+    "dateutil.parser._parser": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/parser/_parser.py",
+    "dateutil.parser.isoparser": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/parser/isoparser.py",
+    "dateutil.relativedelta": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/relativedelta.py",
+    "dateutil.tz": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/tz/__init__.py",
+    "dateutil.tz._common": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/tz/_common.py",
+    "dateutil.tz._factories": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/tz/_factories.py",
+    "dateutil.tz.tz": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/tz/tz.py",
+    "decimal": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/decimal.py",
+    "dis": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/dis.py",
+    "encodings": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/encodings/__init__.py",
+    "encodings.aliases": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/encodings/aliases.py",
+    "encodings.utf_8": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/encodings/utf_8.py",
+    "encodings.utf_8_sig": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/encodings/utf_8_sig.py",
+    "enum": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/enum.py",
+    "fcntl": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/fcntl.cpython-314-darwin.so",
+    "features": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/features.py",
+    "fnmatch": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/fnmatch.py",
+    "fractions": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/fractions.py",
+    "functools": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/functools.py",
+    "genericpath": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/genericpath.py",
+    "geometry": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/geometry.py",
+    "glob": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/glob.py",
+    "grp": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/grp.cpython-314-darwin.so",
+    "gzip": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/gzip.py",
+    "hashlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/hashlib.py",
+    "heapq": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/heapq.py",
+    "hmac": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/hmac.py",
+    "importlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py",
+    "importlib._abc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/_abc.py",
+    "importlib._bootstrap": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/_bootstrap.py",
+    "importlib._bootstrap_external": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/_bootstrap_external.py",
+    "importlib.abc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/abc.py",
+    "importlib.machinery": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/machinery.py",
+    "importlib.util": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/util.py",
+    "inspect": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/inspect.py",
+    "io": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/io.py",
+    "ipaddress": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/ipaddress.py",
+    "json": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py",
+    "json.decoder": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py",
+    "json.encoder": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py",
+    "json.scanner": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/scanner.py",
+    "keyword": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/keyword.py",
+    "linecache": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/linecache.py",
+    "locale": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/locale.py",
+    "logging": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py",
+    "lzma": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lzma.py",
+    "math": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/math.cpython-314-darwin.so",
+    "mmap": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/mmap.cpython-314-darwin.so",
+    "ntpath": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/ntpath.py",
+    "numbers": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/numbers.py",
+    "numpy": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__init__.py",
+    "numpy.__config__": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__config__.py",
+    "numpy._array_api_info": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_array_api_info.py",
+    "numpy._core": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__init__.py",
+    "numpy._core._add_newdocs": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_add_newdocs.py",
+    "numpy._core._add_newdocs_scalars": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_add_newdocs_scalars.py",
+    "numpy._core._asarray": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_asarray.py",
+    "numpy._core._dtype": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_dtype.py",
+    "numpy._core._dtype_ctypes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_dtype_ctypes.py",
+    "numpy._core._exceptions": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_exceptions.py",
+    "numpy._core._internal": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_internal.py",
+    "numpy._core._methods": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py",
+    "numpy._core._multiarray_umath": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-darwin.so",
+    "numpy._core._string_helpers": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_string_helpers.py",
+    "numpy._core._type_aliases": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_type_aliases.py",
+    "numpy._core._ufunc_config": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/_ufunc_config.py",
+    "numpy._core.arrayprint": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/arrayprint.py",
+    "numpy._core.einsumfunc": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/einsumfunc.py",
+    "numpy._core.fromnumeric": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/fromnumeric.py",
+    "numpy._core.function_base": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/function_base.py",
+    "numpy._core.getlimits": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/getlimits.py",
+    "numpy._core.memmap": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/memmap.py",
+    "numpy._core.multiarray": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/multiarray.py",
+    "numpy._core.numeric": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/numeric.py",
+    "numpy._core.numerictypes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/numerictypes.py",
+    "numpy._core.overrides": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/overrides.py",
+    "numpy._core.printoptions": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/printoptions.py",
+    "numpy._core.records": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/records.py",
+    "numpy._core.shape_base": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/shape_base.py",
+    "numpy._core.umath": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/umath.py",
+    "numpy._distributor_init": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_distributor_init.py",
+    "numpy._expired_attrs_2_0": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_expired_attrs_2_0.py",
+    "numpy._globals": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_globals.py",
+    "numpy._pytesttester": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_pytesttester.py",
+    "numpy._typing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__init__.py",
+    "numpy._typing._add_docstring": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/_add_docstring.py",
+    "numpy._typing._array_like": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/_array_like.py",
+    "numpy._typing._char_codes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/_char_codes.py",
+    "numpy._typing._dtype_like": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/_dtype_like.py",
+    "numpy._typing._nbit": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/_nbit.py",
+    "numpy._typing._nbit_base": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/_nbit_base.py",
+    "numpy._typing._nested_sequence": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/_nested_sequence.py",
+    "numpy._typing._scalars": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/_scalars.py",
+    "numpy._typing._shape": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/_shape.py",
+    "numpy._typing._ufunc": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/_ufunc.py",
+    "numpy._utils": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_utils/__init__.py",
+    "numpy._utils._conversions": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_utils/_conversions.py",
+    "numpy._utils._inspect": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_utils/_inspect.py",
+    "numpy.dtypes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/dtypes.py",
+    "numpy.exceptions": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/exceptions.py",
+    "numpy.lib": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__init__.py",
+    "numpy.lib._array_utils_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_array_utils_impl.py",
+    "numpy.lib._arraypad_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_arraypad_impl.py",
+    "numpy.lib._arraysetops_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_arraysetops_impl.py",
+    "numpy.lib._arrayterator_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_arrayterator_impl.py",
+    "numpy.lib._datasource": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_datasource.py",
+    "numpy.lib._format_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_format_impl.py",
+    "numpy.lib._function_base_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py",
+    "numpy.lib._histograms_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_histograms_impl.py",
+    "numpy.lib._index_tricks_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_index_tricks_impl.py",
+    "numpy.lib._iotools": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_iotools.py",
+    "numpy.lib._nanfunctions_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py",
+    "numpy.lib._npyio_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_npyio_impl.py",
+    "numpy.lib._polynomial_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_polynomial_impl.py",
+    "numpy.lib._scimath_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_scimath_impl.py",
+    "numpy.lib._shape_base_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_shape_base_impl.py",
+    "numpy.lib._stride_tricks_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_stride_tricks_impl.py",
+    "numpy.lib._twodim_base_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_twodim_base_impl.py",
+    "numpy.lib._type_check_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_type_check_impl.py",
+    "numpy.lib._ufunclike_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_ufunclike_impl.py",
+    "numpy.lib._utils_impl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_utils_impl.py",
+    "numpy.lib._version": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/_version.py",
+    "numpy.lib.array_utils": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/array_utils.py",
+    "numpy.lib.format": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/format.py",
+    "numpy.lib.introspect": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/introspect.py",
+    "numpy.lib.mixins": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/mixins.py",
+    "numpy.lib.npyio": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/npyio.py",
+    "numpy.lib.scimath": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/scimath.py",
+    "numpy.lib.stride_tricks": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/stride_tricks.py",
+    "numpy.linalg": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/linalg/__init__.py",
+    "numpy.linalg._linalg": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/linalg/_linalg.py",
+    "numpy.linalg._umath_linalg": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/linalg/_umath_linalg.cpython-314-darwin.so",
+    "numpy.ma": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/ma/__init__.py",
+    "numpy.ma.core": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/ma/core.py",
+    "numpy.ma.extras": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/ma/extras.py",
+    "numpy.matrixlib": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/matrixlib/__init__.py",
+    "numpy.matrixlib.defmatrix": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/matrixlib/defmatrix.py",
+    "numpy.random": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/__init__.py",
+    "numpy.random._bounded_integers": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/_bounded_integers.cpython-314-darwin.so",
+    "numpy.random._common": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/_common.cpython-314-darwin.so",
+    "numpy.random._generator": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/_generator.cpython-314-darwin.so",
+    "numpy.random._mt19937": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/_mt19937.cpython-314-darwin.so",
+    "numpy.random._pcg64": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/_pcg64.cpython-314-darwin.so",
+    "numpy.random._philox": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/_philox.cpython-314-darwin.so",
+    "numpy.random._pickle": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/_pickle.py",
+    "numpy.random._sfc64": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/_sfc64.cpython-314-darwin.so",
+    "numpy.random.bit_generator": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/bit_generator.cpython-314-darwin.so",
+    "numpy.random.mtrand": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/mtrand.cpython-314-darwin.so",
+    "numpy.typing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/typing/__init__.py",
+    "numpy.version": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/version.py",
+    "opcode": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/opcode.py",
+    "operator": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/operator.py",
+    "os": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/os.py",
+    "os.path": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/posixpath.py",
+    "pandas": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/__init__.py",
+    "pandas._config": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config/__init__.py",
+    "pandas._config.config": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config/config.py",
+    "pandas._config.dates": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config/dates.py",
+    "pandas._config.display": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config/display.py",
+    "pandas._config.localization": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config/localization.py",
+    "pandas._libs": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/__init__.py",
+    "pandas._libs._cyutility": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/_cyutility.cpython-314-darwin.so",
+    "pandas._libs.algos": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/algos.cpython-314-darwin.so",
+    "pandas._libs.arrays": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/arrays.cpython-314-darwin.so",
+    "pandas._libs.groupby": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/groupby.cpython-314-darwin.so",
+    "pandas._libs.hashing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/hashing.cpython-314-darwin.so",
+    "pandas._libs.hashtable": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/hashtable.cpython-314-darwin.so",
+    "pandas._libs.index": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/index.cpython-314-darwin.so",
+    "pandas._libs.indexing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/indexing.cpython-314-darwin.so",
+    "pandas._libs.internals": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/internals.cpython-314-darwin.so",
+    "pandas._libs.interval": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/interval.cpython-314-darwin.so",
+    "pandas._libs.join": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/join.cpython-314-darwin.so",
+    "pandas._libs.json": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/json.cpython-314-darwin.so",
+    "pandas._libs.lib": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/lib.cpython-314-darwin.so",
+    "pandas._libs.missing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/missing.cpython-314-darwin.so",
+    "pandas._libs.ops": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/ops.cpython-314-darwin.so",
+    "pandas._libs.ops_dispatch": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/ops_dispatch.cpython-314-darwin.so",
+    "pandas._libs.pandas_datetime": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/pandas_datetime.cpython-314-darwin.so",
+    "pandas._libs.pandas_parser": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/pandas_parser.cpython-314-darwin.so",
+    "pandas._libs.parsers": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/parsers.cpython-314-darwin.so",
+    "pandas._libs.properties": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/properties.cpython-314-darwin.so",
+    "pandas._libs.reshape": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/reshape.cpython-314-darwin.so",
+    "pandas._libs.sparse": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/sparse.cpython-314-darwin.so",
+    "pandas._libs.testing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/testing.cpython-314-darwin.so",
+    "pandas._libs.tslib": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslib.cpython-314-darwin.so",
+    "pandas._libs.tslibs": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/__init__.py",
+    "pandas._libs.tslibs.base": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/base.cpython-314-darwin.so",
+    "pandas._libs.tslibs.ccalendar": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/ccalendar.cpython-314-darwin.so",
+    "pandas._libs.tslibs.conversion": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/conversion.cpython-314-darwin.so",
+    "pandas._libs.tslibs.dtypes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/dtypes.cpython-314-darwin.so",
+    "pandas._libs.tslibs.fields": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/fields.cpython-314-darwin.so",
+    "pandas._libs.tslibs.nattype": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/nattype.cpython-314-darwin.so",
+    "pandas._libs.tslibs.np_datetime": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/np_datetime.cpython-314-darwin.so",
+    "pandas._libs.tslibs.offsets": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/offsets.cpython-314-darwin.so",
+    "pandas._libs.tslibs.parsing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/parsing.cpython-314-darwin.so",
+    "pandas._libs.tslibs.period": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/period.cpython-314-darwin.so",
+    "pandas._libs.tslibs.strptime": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/strptime.cpython-314-darwin.so",
+    "pandas._libs.tslibs.timedeltas": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/timedeltas.cpython-314-darwin.so",
+    "pandas._libs.tslibs.timestamps": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/timestamps.cpython-314-darwin.so",
+    "pandas._libs.tslibs.timezones": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/timezones.cpython-314-darwin.so",
+    "pandas._libs.tslibs.tzconversion": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/tzconversion.cpython-314-darwin.so",
+    "pandas._libs.tslibs.vectorized": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/vectorized.cpython-314-darwin.so",
+    "pandas._libs.window": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/window/__init__.py",
+    "pandas._libs.window.aggregations": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/window/aggregations.cpython-314-darwin.so",
+    "pandas._libs.window.indexers": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/window/indexers.cpython-314-darwin.so",
+    "pandas._libs.writers": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/writers.cpython-314-darwin.so",
+    "pandas._testing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/__init__.py",
+    "pandas._testing._io": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/_io.py",
+    "pandas._testing._warnings": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/_warnings.py",
+    "pandas._testing.asserters": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/asserters.py",
+    "pandas._testing.compat": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/compat.py",
+    "pandas._testing.contexts": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/contexts.py",
+    "pandas._typing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_typing.py",
+    "pandas._version_meson": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_version_meson.py",
+    "pandas.api": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/__init__.py",
+    "pandas.api.executors": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/executors/__init__.py",
+    "pandas.api.extensions": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/extensions/__init__.py",
+    "pandas.api.indexers": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/indexers/__init__.py",
+    "pandas.api.interchange": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/interchange/__init__.py",
+    "pandas.api.types": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/types/__init__.py",
+    "pandas.api.typing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/typing/__init__.py",
+    "pandas.arrays": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/arrays/__init__.py",
+    "pandas.compat": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/__init__.py",
+    "pandas.compat._constants": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/_constants.py",
+    "pandas.compat._optional": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/_optional.py",
+    "pandas.compat.numpy": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/numpy/__init__.py",
+    "pandas.compat.numpy.function": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/numpy/function.py",
+    "pandas.compat.pickle_compat": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/pickle_compat.py",
+    "pandas.compat.pyarrow": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/pyarrow.py",
+    "pandas.core": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__init__.py",
+    "pandas.core._numba": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/_numba/__init__.py",
+    "pandas.core._numba.executor": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/_numba/executor.py",
+    "pandas.core.accessor": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/accessor.py",
+    "pandas.core.algorithms": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/algorithms.py",
+    "pandas.core.api": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/api.py",
+    "pandas.core.apply": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/apply.py",
+    "pandas.core.array_algos": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/__init__.py",
+    "pandas.core.array_algos.datetimelike_accumulations": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/datetimelike_accumulations.py",
+    "pandas.core.array_algos.masked_accumulations": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/masked_accumulations.py",
+    "pandas.core.array_algos.masked_reductions": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/masked_reductions.py",
+    "pandas.core.array_algos.putmask": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/putmask.py",
+    "pandas.core.array_algos.quantile": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/quantile.py",
+    "pandas.core.array_algos.replace": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/replace.py",
+    "pandas.core.array_algos.take": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/take.py",
+    "pandas.core.array_algos.transforms": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/transforms.py",
+    "pandas.core.arraylike": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arraylike.py",
+    "pandas.core.arrays": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__init__.py",
+    "pandas.core.arrays._arrow_string_mixins": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/_arrow_string_mixins.py",
+    "pandas.core.arrays._mixins": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/_mixins.py",
+    "pandas.core.arrays._ranges": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/_ranges.py",
+    "pandas.core.arrays._utils": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/_utils.py",
+    "pandas.core.arrays.arrow": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/arrow/__init__.py",
+    "pandas.core.arrays.arrow.accessors": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/arrow/accessors.py",
+    "pandas.core.arrays.arrow.array": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/arrow/array.py",
+    "pandas.core.arrays.base": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/base.py",
+    "pandas.core.arrays.boolean": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/boolean.py",
+    "pandas.core.arrays.categorical": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/categorical.py",
+    "pandas.core.arrays.datetimelike": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/datetimelike.py",
+    "pandas.core.arrays.datetimes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/datetimes.py",
+    "pandas.core.arrays.floating": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/floating.py",
+    "pandas.core.arrays.integer": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/integer.py",
+    "pandas.core.arrays.interval": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/interval.py",
+    "pandas.core.arrays.masked": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/masked.py",
+    "pandas.core.arrays.numeric": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/numeric.py",
+    "pandas.core.arrays.numpy_": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/numpy_.py",
+    "pandas.core.arrays.period": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/period.py",
+    "pandas.core.arrays.sparse": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/sparse/__init__.py",
+    "pandas.core.arrays.sparse.accessor": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/sparse/accessor.py",
+    "pandas.core.arrays.sparse.array": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/sparse/array.py",
+    "pandas.core.arrays.string_": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/string_.py",
+    "pandas.core.arrays.string_arrow": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/string_arrow.py",
+    "pandas.core.arrays.timedeltas": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/timedeltas.py",
+    "pandas.core.base": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/base.py",
+    "pandas.core.col": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/col.py",
+    "pandas.core.common": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/common.py",
+    "pandas.core.computation": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__init__.py",
+    "pandas.core.computation.align": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/align.py",
+    "pandas.core.computation.api": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/api.py",
+    "pandas.core.computation.check": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/check.py",
+    "pandas.core.computation.common": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/common.py",
+    "pandas.core.computation.engines": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/engines.py",
+    "pandas.core.computation.eval": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/eval.py",
+    "pandas.core.computation.expr": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/expr.py",
+    "pandas.core.computation.expressions": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/expressions.py",
+    "pandas.core.computation.ops": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/ops.py",
+    "pandas.core.computation.parsing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/parsing.py",
+    "pandas.core.computation.pytables": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/pytables.py",
+    "pandas.core.computation.scope": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/scope.py",
+    "pandas.core.config_init": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/config_init.py",
+    "pandas.core.construction": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/construction.py",
+    "pandas.core.dtypes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__init__.py",
+    "pandas.core.dtypes.api": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/api.py",
+    "pandas.core.dtypes.astype": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/astype.py",
+    "pandas.core.dtypes.base": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/base.py",
+    "pandas.core.dtypes.cast": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/cast.py",
+    "pandas.core.dtypes.common": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/common.py",
+    "pandas.core.dtypes.concat": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/concat.py",
+    "pandas.core.dtypes.dtypes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/dtypes.py",
+    "pandas.core.dtypes.generic": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/generic.py",
+    "pandas.core.dtypes.inference": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/inference.py",
+    "pandas.core.dtypes.missing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/missing.py",
+    "pandas.core.flags": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/flags.py",
+    "pandas.core.frame": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/frame.py",
+    "pandas.core.generic": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/generic.py",
+    "pandas.core.groupby": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/__init__.py",
+    "pandas.core.groupby.base": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/base.py",
+    "pandas.core.groupby.categorical": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/categorical.py",
+    "pandas.core.groupby.generic": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/generic.py",
+    "pandas.core.groupby.groupby": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/groupby.py",
+    "pandas.core.groupby.grouper": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/grouper.py",
+    "pandas.core.groupby.indexing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/indexing.py",
+    "pandas.core.groupby.numba_": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/numba_.py",
+    "pandas.core.groupby.ops": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/ops.py",
+    "pandas.core.indexers": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexers/__init__.py",
+    "pandas.core.indexers.objects": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexers/objects.py",
+    "pandas.core.indexers.utils": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexers/utils.py",
+    "pandas.core.indexes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__init__.py",
+    "pandas.core.indexes.accessors": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/accessors.py",
+    "pandas.core.indexes.api": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/api.py",
+    "pandas.core.indexes.base": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/base.py",
+    "pandas.core.indexes.category": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/category.py",
+    "pandas.core.indexes.datetimelike": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/datetimelike.py",
+    "pandas.core.indexes.datetimes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/datetimes.py",
+    "pandas.core.indexes.extension": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/extension.py",
+    "pandas.core.indexes.frozen": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/frozen.py",
+    "pandas.core.indexes.interval": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/interval.py",
+    "pandas.core.indexes.multi": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/multi.py",
+    "pandas.core.indexes.period": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/period.py",
+    "pandas.core.indexes.range": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/range.py",
+    "pandas.core.indexes.timedeltas": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/timedeltas.py",
+    "pandas.core.indexing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexing.py",
+    "pandas.core.interchange": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/interchange/__init__.py",
+    "pandas.core.interchange.dataframe_protocol": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/interchange/dataframe_protocol.py",
+    "pandas.core.interchange.from_dataframe": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/interchange/from_dataframe.py",
+    "pandas.core.interchange.utils": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/interchange/utils.py",
+    "pandas.core.internals": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/__init__.py",
+    "pandas.core.internals.api": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/api.py",
+    "pandas.core.internals.blocks": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/blocks.py",
+    "pandas.core.internals.concat": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/concat.py",
+    "pandas.core.internals.construction": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/construction.py",
+    "pandas.core.internals.managers": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/managers.py",
+    "pandas.core.internals.ops": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/ops.py",
+    "pandas.core.methods": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/methods/__init__.py",
+    "pandas.core.methods.describe": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/methods/describe.py",
+    "pandas.core.methods.selectn": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/methods/selectn.py",
+    "pandas.core.missing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/missing.py",
+    "pandas.core.nanops": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/nanops.py",
+    "pandas.core.ops": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/__init__.py",
+    "pandas.core.ops.array_ops": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/array_ops.py",
+    "pandas.core.ops.common": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/common.py",
+    "pandas.core.ops.dispatch": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/dispatch.py",
+    "pandas.core.ops.docstrings": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/docstrings.py",
+    "pandas.core.ops.invalid": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/invalid.py",
+    "pandas.core.ops.mask_ops": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/mask_ops.py",
+    "pandas.core.ops.missing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/missing.py",
+    "pandas.core.resample": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/resample.py",
+    "pandas.core.reshape": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/__init__.py",
+    "pandas.core.reshape.api": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/api.py",
+    "pandas.core.reshape.concat": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/concat.py",
+    "pandas.core.reshape.encoding": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/encoding.py",
+    "pandas.core.reshape.melt": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/melt.py",
+    "pandas.core.reshape.merge": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/merge.py",
+    "pandas.core.reshape.pivot": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/pivot.py",
+    "pandas.core.reshape.tile": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/tile.py",
+    "pandas.core.roperator": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/roperator.py",
+    "pandas.core.sample": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/sample.py",
+    "pandas.core.series": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/series.py",
+    "pandas.core.shared_docs": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/shared_docs.py",
+    "pandas.core.sorting": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/sorting.py",
+    "pandas.core.strings": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/strings/__init__.py",
+    "pandas.core.strings.accessor": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/strings/accessor.py",
+    "pandas.core.strings.object_array": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/strings/object_array.py",
+    "pandas.core.tools": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools/__init__.py",
+    "pandas.core.tools.datetimes": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools/datetimes.py",
+    "pandas.core.tools.numeric": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools/numeric.py",
+    "pandas.core.tools.timedeltas": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools/timedeltas.py",
+    "pandas.core.tools.times": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools/times.py",
+    "pandas.core.util": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/util/__init__.py",
+    "pandas.core.util.hashing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/util/hashing.py",
+    "pandas.core.util.numba_": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/util/numba_.py",
+    "pandas.core.window": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/__init__.py",
+    "pandas.core.window.common": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/common.py",
+    "pandas.core.window.ewm": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/ewm.py",
+    "pandas.core.window.expanding": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/expanding.py",
+    "pandas.core.window.numba_": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/numba_.py",
+    "pandas.core.window.online": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/online.py",
+    "pandas.core.window.rolling": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/rolling.py",
+    "pandas.errors": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/errors/__init__.py",
+    "pandas.errors.cow": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/errors/cow.py",
+    "pandas.io": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__init__.py",
+    "pandas.io._util": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/_util.py",
+    "pandas.io.api": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/api.py",
+    "pandas.io.clipboards": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/clipboards.py",
+    "pandas.io.common": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/common.py",
+    "pandas.io.excel": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__init__.py",
+    "pandas.io.excel._base": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/_base.py",
+    "pandas.io.excel._calamine": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/_calamine.py",
+    "pandas.io.excel._odfreader": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/_odfreader.py",
+    "pandas.io.excel._odswriter": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/_odswriter.py",
+    "pandas.io.excel._openpyxl": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/_openpyxl.py",
+    "pandas.io.excel._pyxlsb": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/_pyxlsb.py",
+    "pandas.io.excel._util": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/_util.py",
+    "pandas.io.excel._xlrd": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/_xlrd.py",
+    "pandas.io.excel._xlsxwriter": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/_xlsxwriter.py",
+    "pandas.io.feather_format": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/feather_format.py",
+    "pandas.io.formats": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats/__init__.py",
+    "pandas.io.formats.console": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats/console.py",
+    "pandas.io.formats.format": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats/format.py",
+    "pandas.io.formats.info": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats/info.py",
+    "pandas.io.formats.printing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats/printing.py",
+    "pandas.io.html": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/html.py",
+    "pandas.io.iceberg": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/iceberg.py",
+    "pandas.io.json": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/json/__init__.py",
+    "pandas.io.json._json": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/json/_json.py",
+    "pandas.io.json._normalize": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/json/_normalize.py",
+    "pandas.io.json._table_schema": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/json/_table_schema.py",
+    "pandas.io.orc": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/orc.py",
+    "pandas.io.parquet": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parquet.py",
+    "pandas.io.parsers": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/__init__.py",
+    "pandas.io.parsers.arrow_parser_wrapper": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/arrow_parser_wrapper.py",
+    "pandas.io.parsers.base_parser": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/base_parser.py",
+    "pandas.io.parsers.c_parser_wrapper": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/c_parser_wrapper.py",
+    "pandas.io.parsers.python_parser": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/python_parser.py",
+    "pandas.io.parsers.readers": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/readers.py",
+    "pandas.io.pickle": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/pickle.py",
+    "pandas.io.pytables": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/pytables.py",
+    "pandas.io.sas": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/sas/__init__.py",
+    "pandas.io.sas.sasreader": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/sas/sasreader.py",
+    "pandas.io.spss": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/spss.py",
+    "pandas.io.sql": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/sql.py",
+    "pandas.io.stata": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/stata.py",
+    "pandas.io.xml": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/xml.py",
+    "pandas.plotting": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/plotting/__init__.py",
+    "pandas.plotting._core": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/plotting/_core.py",
+    "pandas.plotting._misc": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/plotting/_misc.py",
+    "pandas.testing": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/testing.py",
+    "pandas.tseries": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/tseries/__init__.py",
+    "pandas.tseries.api": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/tseries/api.py",
+    "pandas.tseries.frequencies": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/tseries/frequencies.py",
+    "pandas.tseries.offsets": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/tseries/offsets.py",
+    "pandas.util": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/__init__.py",
+    "pandas.util._decorators": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/_decorators.py",
+    "pandas.util._exceptions": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/_exceptions.py",
+    "pandas.util._print_versions": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/_print_versions.py",
+    "pandas.util._tester": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/_tester.py",
+    "pandas.util._validators": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/_validators.py",
+    "pandas.util.version": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/version/__init__.py",
+    "pathlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py",
+    "pathlib._os": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/_os.py",
+    "pickle": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pickle.py",
+    "pkgutil": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pkgutil.py",
+    "platform": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/platform.py",
+    "posixpath": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/posixpath.py",
+    "pprint": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pprint.py",
+    "pyarrow": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/__init__.py",
+    "pyarrow._azurefs": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/_azurefs.cpython-314-darwin.so",
+    "pyarrow._compute": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/_compute.cpython-314-darwin.so",
+    "pyarrow._compute_docstrings": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/_compute_docstrings.py",
+    "pyarrow._fs": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/_fs.cpython-314-darwin.so",
+    "pyarrow._gcsfs": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/_gcsfs.cpython-314-darwin.so",
+    "pyarrow._generated_version": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/_generated_version.py",
+    "pyarrow._hdfs": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/_hdfs.cpython-314-darwin.so",
+    "pyarrow._parquet": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/_parquet.cpython-314-darwin.so",
+    "pyarrow._s3fs": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/_s3fs.cpython-314-darwin.so",
+    "pyarrow.compute": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/compute.py",
+    "pyarrow.fs": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/fs.py",
+    "pyarrow.ipc": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/ipc.py",
+    "pyarrow.lib": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/lib.cpython-314-darwin.so",
+    "pyarrow.parquet": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/parquet/__init__.py",
+    "pyarrow.parquet.core": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/parquet/core.py",
+    "pyarrow.types": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/types.py",
+    "pyarrow.util": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/util.py",
+    "pyarrow.vendored": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/vendored/__init__.py",
+    "pyarrow.vendored.docscrape": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/vendored/docscrape.py",
+    "pydoc": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pydoc.py",
+    "queue": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/queue.py",
+    "random": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/random.py",
+    "re": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/re/__init__.py",
+    "re._casefix": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/re/_casefix.py",
+    "re._compiler": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/re/_compiler.py",
+    "re._constants": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/re/_constants.py",
+    "re._parser": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/re/_parser.py",
+    "reprlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/reprlib.py",
+    "secrets": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/secrets.py",
+    "select": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/select.cpython-314-darwin.so",
+    "selectors": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/selectors.py",
+    "shutil": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/shutil.py",
+    "signal": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/signal.py",
+    "site": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site.py",
+    "sitecustomize": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/sitecustomize.py",
+    "six": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/six.py",
+    "socket": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socket.py",
+    "stat": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/stat.py",
+    "statistics": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/statistics.py",
+    "string": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/string/__init__.py",
+    "struct": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/struct.py",
+    "subprocess": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py",
+    "sysconfig": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/sysconfig/__init__.py",
+    "tarfile": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tarfile.py",
+    "textwrap": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/textwrap.py",
+    "threading": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py",
+    "token": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/token.py",
+    "tokenize": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tokenize.py",
+    "traceback": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/traceback.py",
+    "types": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/types.py",
+    "typing": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/typing.py",
+    "unicodedata": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/unicodedata.cpython-314-darwin.so",
+    "urllib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/__init__.py",
+    "urllib.parse": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/parse.py",
+    "uuid": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/uuid.py",
+    "warnings": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/warnings.py",
+    "weakref": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/weakref.py",
+    "zipfile": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zipfile/__init__.py",
+    "zipfile._path": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zipfile/_path/__init__.py",
+    "zipfile._path.glob": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zipfile/_path/glob.py",
+    "zipimport": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zipimport.py",
+    "zlib": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/zlib.cpython-314-darwin.so",
+    "zoneinfo": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zoneinfo/__init__.py",
+    "zoneinfo._common": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zoneinfo/_common.py",
+    "zoneinfo._tzpath": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zoneinfo/_tzpath.py",
+    "zoneinfo._zoneinfo": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zoneinfo/_zoneinfo.py"
+  },
+  "file_events": [
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/__pycache__/six.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/__pycache__/_common.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/__pycache__/_version.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/__pycache__/easter.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/__pycache__/relativedelta.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/parser/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/parser/__pycache__/_parser.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/parser/__pycache__/isoparser.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/tz/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/tz/__pycache__/_common.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/tz/__pycache__/_factories.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/tz/__pycache__/tz.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/tz/__pycache__/win.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__pycache__/__config__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__pycache__/_array_api_info.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__pycache__/_distributor_init.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__pycache__/_expired_attrs_2_0.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__pycache__/_globals.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__pycache__/_pytesttester.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__pycache__/dtypes.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__pycache__/exceptions.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/__pycache__/version.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_add_newdocs.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_add_newdocs_scalars.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_asarray.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_dtype.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_dtype_ctypes.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_exceptions.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_internal.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_methods.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_string_helpers.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_type_aliases.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/_ufunc_config.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/arrayprint.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/einsumfunc.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/fromnumeric.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/function_base.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/getlimits.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/memmap.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/multiarray.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/numeric.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/numerictypes.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/overrides.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/printoptions.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/records.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/shape_base.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core/__pycache__/umath.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/_add_docstring.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/_array_like.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/_char_codes.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/_dtype_like.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/_nbit.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/_nbit_base.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/_nested_sequence.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/_scalars.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/_shape.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing/__pycache__/_ufunc.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_utils/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_utils/__pycache__/_conversions.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_utils/__pycache__/_inspect.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_array_utils_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_arraypad_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_arraysetops_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_arrayterator_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_datasource.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_format_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_function_base_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_histograms_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_index_tricks_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_iotools.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_nanfunctions_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_npyio_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_polynomial_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_scimath_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_shape_base_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_stride_tricks_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_twodim_base_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_type_check_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_ufunclike_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_utils_impl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/_version.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/array_utils.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/format.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/introspect.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/mixins.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/npyio.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/scimath.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib/__pycache__/stride_tricks.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/linalg/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/linalg/__pycache__/_linalg.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/ma/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/ma/__pycache__/core.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/ma/__pycache__/extras.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/matrixlib/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/matrixlib/__pycache__/defmatrix.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random/__pycache__/_pickle.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/typing/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/__pycache__/_typing.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/__pycache__/_version_meson.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/__pycache__/testing.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config/__pycache__/config.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config/__pycache__/dates.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config/__pycache__/display.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config/__pycache__/localization.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/window/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/__pycache__/_io.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/__pycache__/_warnings.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/__pycache__/asserters.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/__pycache__/compat.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing/__pycache__/contexts.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/executors/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/extensions/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/indexers/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/interchange/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/types/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api/typing/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/arrays/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/__pycache__/_constants.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/__pycache__/_optional.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/__pycache__/pickle_compat.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/__pycache__/pyarrow.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/numpy/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/numpy/__pycache__/function.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/accessor.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/algorithms.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/api.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/apply.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/arraylike.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/base.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/col.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/common.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/config_init.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/construction.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/flags.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/frame.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/generic.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/indexing.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/missing.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/nanops.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/resample.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/roperator.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/sample.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/series.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/shared_docs.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/__pycache__/sorting.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/_numba/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/_numba/__pycache__/executor.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/__pycache__/datetimelike_accumulations.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/__pycache__/masked_accumulations.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/__pycache__/masked_reductions.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/__pycache__/putmask.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/__pycache__/quantile.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/__pycache__/replace.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/__pycache__/take.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos/__pycache__/transforms.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/_arrow_string_mixins.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/_mixins.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/_ranges.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/_utils.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/base.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/boolean.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/categorical.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/datetimelike.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/datetimes.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/floating.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/integer.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/interval.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/masked.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/numeric.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/numpy_.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/period.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/string_.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/string_arrow.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/__pycache__/timedeltas.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/arrow/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/arrow/__pycache__/accessors.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/arrow/__pycache__/array.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/sparse/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/sparse/__pycache__/accessor.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/sparse/__pycache__/array.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/align.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/api.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/check.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/common.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/engines.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/eval.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/expr.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/expressions.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/ops.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/parsing.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/pytables.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation/__pycache__/scope.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/api.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/astype.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/base.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/cast.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/common.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/concat.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/dtypes.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/generic.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/inference.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes/__pycache__/missing.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/__pycache__/base.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/__pycache__/categorical.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/__pycache__/generic.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/__pycache__/groupby.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/__pycache__/grouper.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/__pycache__/indexing.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/__pycache__/numba_.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby/__pycache__/ops.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexers/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexers/__pycache__/objects.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexers/__pycache__/utils.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/accessors.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/api.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/base.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/category.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/datetimelike.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/datetimes.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/extension.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/frozen.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/interval.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/multi.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/period.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/range.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes/__pycache__/timedeltas.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/interchange/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/interchange/__pycache__/dataframe_protocol.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/interchange/__pycache__/from_dataframe.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/interchange/__pycache__/utils.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/__pycache__/api.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/__pycache__/blocks.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/__pycache__/concat.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/__pycache__/construction.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/__pycache__/managers.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals/__pycache__/ops.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/methods/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/methods/__pycache__/describe.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/methods/__pycache__/selectn.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/__pycache__/array_ops.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/__pycache__/common.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/__pycache__/dispatch.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/__pycache__/docstrings.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/__pycache__/invalid.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/__pycache__/mask_ops.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops/__pycache__/missing.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/__pycache__/api.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/__pycache__/concat.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/__pycache__/encoding.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/__pycache__/melt.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/__pycache__/merge.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/__pycache__/pivot.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape/__pycache__/tile.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/strings/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/strings/__pycache__/accessor.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/strings/__pycache__/object_array.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools/__pycache__/datetimes.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools/__pycache__/numeric.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools/__pycache__/timedeltas.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools/__pycache__/times.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/util/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/util/__pycache__/hashing.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/util/__pycache__/numba_.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/__pycache__/common.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/__pycache__/ewm.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/__pycache__/expanding.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/__pycache__/numba_.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/__pycache__/online.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window/__pycache__/rolling.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/errors/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/errors/__pycache__/cow.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/_util.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/api.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/clipboards.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/common.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/feather_format.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/html.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/iceberg.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/orc.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/parquet.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/pickle.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/pytables.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/spss.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/sql.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/stata.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/__pycache__/xml.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__pycache__/_base.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__pycache__/_calamine.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__pycache__/_odfreader.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__pycache__/_odswriter.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__pycache__/_openpyxl.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__pycache__/_pyxlsb.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__pycache__/_util.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__pycache__/_xlrd.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel/__pycache__/_xlsxwriter.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats/__pycache__/console.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats/__pycache__/format.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats/__pycache__/info.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats/__pycache__/printing.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/json/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/json/__pycache__/_json.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/json/__pycache__/_normalize.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/json/__pycache__/_table_schema.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/__pycache__/arrow_parser_wrapper.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/__pycache__/base_parser.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/__pycache__/c_parser_wrapper.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/__pycache__/python_parser.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers/__pycache__/readers.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/sas/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/sas/__pycache__/sasreader.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/plotting/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/plotting/__pycache__/_core.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/plotting/__pycache__/_misc.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/tseries/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/tseries/__pycache__/api.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/tseries/__pycache__/frequencies.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/tseries/__pycache__/offsets.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/__pycache__/_decorators.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/__pycache__/_exceptions.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/__pycache__/_print_versions.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/__pycache__/_tester.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/__pycache__/_validators.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util/version/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/__pycache__/_compute_docstrings.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/__pycache__/_generated_version.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/__pycache__/compute.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/__pycache__/fs.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/__pycache__/ipc.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/__pycache__/types.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/__pycache__/util.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/parquet/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/parquet/__pycache__/core.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/vendored/__pycache__/__init__.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/vendored/__pycache__/docscrape.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/__pycache__/dataset.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/__pycache__/dataset.cpython-314.pyc.4427990640",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/__pycache__/features.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/__pycache__/features.cpython-314.pyc.4522302064",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/__pycache__/geometry.cpython-314.pyc",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/dataset.py",
+      "count": 1
+    },
+    {
+      "event": "open",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/features.py",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/parser",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/dateutil/tz",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_core",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_typing",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/_utils",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/lib",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/linalg",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/ma",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/matrixlib",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/numpy/random",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_config",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/tslibs",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_libs/window",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/_testing",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/api",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/compat/numpy",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/_numba",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/array_algos",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/arrow",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/arrays/sparse",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/computation",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/dtypes",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/groupby",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexers",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/indexes",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/interchange",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/internals",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/methods",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/ops",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/reshape",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/strings",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/tools",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/util",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/core/window",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/errors",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/excel",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/formats",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/json",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/parsers",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/io/sas",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/plotting",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/tseries",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pandas/util",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/parquet",
+      "count": 1
+    },
+    {
+      "event": "os.listdir",
+      "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/.venv/lib/python3.14/site-packages/pyarrow/vendored",
+      "count": 1
+    }
+  ]
+}

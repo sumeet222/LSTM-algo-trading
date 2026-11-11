@@ -1,0 +1,36 @@
+{
+  "accounts": 13,
+  "bytes": 211278,
+  "cohort_rows": 330,
+  "days": 10,
+  "exit_portions": 309,
+  "files": {
+    "ACTUAL_EXIT_PORTIONS.parquet": "fcdae2b49ed60a8ccb723effeec9b990823ed13860b6707b1a035a73228e259a",
+    "ANNUAL_AND_CAUSAL_DIAGNOSTICS.csv": "c4fc681b5ac9417d8983f802797b5c539bd8a8638d34cfa7b500a0a1ee79b0d9",
+    "COMPLETED_COHORTS.parquet": "490769ffc2035671390c35f34cd95dc75667f2f263c6bb3dfc2af437d4967a61",
+    "CONTROL_PARITY.json": "3a4cf36e58096f3683c1c0e90453ea82fec38662b21595aaec3f020623acc3e8",
+    "DAILY_NAV.parquet": "aa879660df89d03a52f5e93e899bf770314470086266234c30675ca3b051d575",
+    "EXIT_REASONS.csv": "319a9d7ff84b314bd6dc0fb4a258b66f4ff1d254e11602c0468ee3f474db8099",
+    "FUNDED_TARGETED_RESULTS.csv": "8903a0646a5591e8ed43c918bf11d992fc89581a9bcc812b02ae3883bbabcad9",
+    "PHYSICAL_FILLS.parquet": "e20228ad3b96b03e91cdc3cc0ff975644eeb8c82cb297892386939783dfbb4c9",
+    "R01_ENTRY_RESERVES.csv": "a82ad0664ee8d84900e03ddf4abd1f9d808256a0f42bea2f35f20791304bfa0f",
+    "RISK_BREACH_SAMPLES.csv": "876fe107721e85ed1312682a5a079e66768c1b34def82c7435b9ccd1a250a121"
+  },
+  "physical_fill_rows": 627,
+  "source_reads": [
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-11.parquet",
+      "rows": 136841,
+      "sha256": "9dd9c17c3445b0eac430a53139a4bc5c5a2b32d030b350dfc03d803796643740"
+    },
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-12.parquet",
+      "rows": 158246,
+      "sha256": "127922240fb382b66d134fc835d433b3b6a46dd97901aa68f554004acb77d25f"
+    }
+  ],
+  "status_counts": {
+    "COMPLETE": 6,
+    "HOLD": 7
+  }
+}

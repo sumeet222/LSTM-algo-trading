@@ -1,0 +1,78 @@
+{
+    "version": "1.1.414",
+    "time": "1794282702860",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v5/analysis.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"year\" for class \"Index*\"\n  Attribute \"year\" is unknown",
+            "range": {
+                "start": {
+                    "line": 33,
+                    "character": 46
+                },
+                "end": {
+                    "line": 33,
+                    "character": 50
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v5/analysis.py",
+            "severity": "error",
+            "message": "\"Hashable\" is not iterable\n  \"__iter__\" method not defined",
+            "range": {
+                "start": {
+                    "line": 63,
+                    "character": 30
+                },
+                "end": {
+                    "line": 63,
+                    "character": 35
+                }
+            },
+            "rule": "reportGeneralTypeIssues"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v5/analysis.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"year\" for class \"DatetimeIndex\"\n  Attribute \"year\" is unknown",
+            "range": {
+                "start": {
+                    "line": 73,
+                    "character": 40
+                },
+                "end": {
+                    "line": 73,
+                    "character": 44
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v5/analysis.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Self@Index\" cannot be assigned to parameter \"dates\" of type \"DatetimeIndex\" in function \"metrics\"\n  Type \"Unknown | Index*\" is not assignable to type \"DatetimeIndex\"\n    \"Index*\" is not assignable to \"DatetimeIndex\"",
+            "range": {
+                "start": {
+                    "line": 76,
+                    "character": 31
+                },
+                "end": {
+                    "line": 76,
+                    "character": 42
+                }
+            },
+            "rule": "reportArgumentType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 12,
+        "errorCount": 4,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 3.038
+    }
+}
+

@@ -1,0 +1,11 @@
+# Availability and source contract
+
+UTC aware event_time <= interval_end <= available_at. A raw minute timestamp denotes interval START. Full-hour feature slots are completed hour ENDS; closing stubs never enter FT16. At opening the last full hour is normally the prior session15:30. Opening P_t is the genuine09:30 minute open, historically sourced from a bar completed09:31; it is not a same-day completed hour or an entry fill.
+
+Receipt=max(nominal+assumed wall delay, all dependency available_at); feature completion and inference duration follow. Order submission cannot precede decision. Executable observation denotes a strictly later valid minute START (nominal+3 for zero-duration nominal+2 decision). No quote or fill price is synthesized. Calendar eligibility is distinct from observed execution availability; missing entry observation cancels at the declared deadline, missing exit remains unresolved and must use a later genuinely available observation. Calendar arithmetic does not advance availability through closure. Exit decision is at or after the original endpoint, and execution strictly later.
+
+Dependency tuples must include every FT16 field, CLOCK/category ingredient, alpha reference and other input used. Completeness of supplier lineage is a trusted interface obligation, not established by tensor shape. The snapshot validator checks dimensions, finite values, masks, scheduled slots, past interval ends and basis; it cannot prove a producer did not hide an upstream future dependency. No target arrays, future completeness or F09 selection are accepted by issue().
+
+Authorized stores exist: adjusted hourly `data/processed/hf20_hf1m_long_v1_action_qa_v1/ta019b_action_qa_2026-10-22_201224/hourly/YYYY-MM.parquet`; genuine unadjusted minutes `data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/YYYY-MM.parquet`. Only2024-01 file existence was checked; no market values read this session. Original audit source manifests retain complete historical hashes. Do not glob beyond2024 or reinterpret adjusted feature prices as raw cash/share units.
+
+Historical split/quarantine decisions, fixed surviving universe and calendar vintage are retrospective limitations. No point-in-time live claim. Actual vendor receipt, stock-loan availability and action announcement time are unknown.

@@ -1,0 +1,24 @@
+import gzip,json
+from lstm_data.trading.track2.stage35.final_backtest_v4.driver import Driver
+from lstm_data.trading.track2.stage35.final_backtest_v4.paths import ROOT,publish
+from lstm_data.trading.track2.stage35.final_backtest_v4.protocol import Scenario
+from lstm_data.trading.track2.stage35.final_backtest_v4.release import create_release
+admission=create_release('source_restart_r1','diagnostic')
+folder=ROOT/'PILOT_LEDGER_DIAGNOSTICS/source_restart_r1'
+a=Driver((Scenario(),),'2021-01-04','2021-01-08',folder/'continuous',True,admission)
+a.run()
+b=Driver((Scenario(),),'2021-01-04','2021-01-08',folder/'resumed',True,admission)
+b.run(stop_after=2)
+b=Driver.restart(folder/'resumed/checkpoints/2021-01-05.json',folder/'resumed',admission)
+b.run()
+checks={}
+for kind in ('daily','events','cohorts'):
+ with gzip.open(folder/f'continuous/baseline/{kind}.jsonl.gz','rt') as f:one=f.read()
+ with gzip.open(folder/f'resumed/baseline/{kind}.jsonl.gz','rt') as f:two=f.read()
+ checks[kind]=one==two
+checks['cash']=all(x.cash==y.cash for x,y in zip(a.accounts,b.accounts,strict=True))
+checks['physical']=all((x.quantity==y.quantity).all() for x,y in zip(a.accounts,b.accounts,strict=True))
+checks['journal_hash']=all(x.journal_hash==y.journal_hash for x,y in zip(a.accounts,b.accounts,strict=True))
+assert all(checks.values()),checks
+publish(ROOT/'audits/ACTUAL_SOURCE_RESTART_V4.json',{'checks':checks,'window':['2021-01-04','2021-01-08'],'historical_reconciliation_only':True,'performance_metrics_computed':False,'terminal_snapshots_date_tagged':True})
+print(checks,flush=True)

@@ -1,0 +1,34 @@
+{
+  "alternative_policy_enabled": false,
+  "bar_payload_sha256": "a68bdd5b0448d31048084871396fe4effc5acbd2bf2b57a9a03aed6f2db67f1b",
+  "documentation": "https://docs.alpaca.markets/us/docs/market-data-faq#how-are-bars-aggregated",
+  "first_reported_trade_at": "2021-06-09T16:33:00.039Z",
+  "first_reported_trade_price_not_a_fill": 465.04,
+  "forbidden_shortcuts": [
+    "use16:34 as16:33",
+    "retro-cancel submitted order",
+    "treat unknown fill as zero exposure",
+    "declare first odd-lot price an approved fill"
+  ],
+  "headline_financial_results_computed": false,
+  "interpretation": "missing published OHLCV is not proof of no trades or broker cancellation; I odd-lot and average/derivative conditions do not establish the approved standard bar open",
+  "issue_id": "V4-PRICE-001",
+  "next_data_or_policy_action": "supply a validated raw bar for the exact minute, or separately review a versioned quote/trade-derived opening-price construction; no unilateral source-eligibility change",
+  "owner_backtest_authorization": "ALREADY_GRANTED;NOT_THE_BLOCKER",
+  "raw_trades_count": 18,
+  "returned_bar_times": [
+    "2021-06-09T16:34:00Z"
+  ],
+  "separate_rsa_signature_required": false,
+  "status": "HOLD_REQUIRED_RAW_MINUTE_OPEN_UNAVAILABLE",
+  "symbol": "AVGO",
+  "target_bar_present": false,
+  "target_minute_et": "2021-06-09T12:33:00-04:00",
+  "target_minute_utc": "2021-06-09T16:33:00Z",
+  "trade_condition_counts": {
+    "@|4|W": 1,
+    "@|F|I": 5,
+    "@|I": 12
+  },
+  "trade_payload_sha256": "5e05543fd9e64701793f3f27279cb558dfd37e57e7ed5cdeb34ea969bc0cf834"
+}

@@ -1,0 +1,34 @@
+invalid-syntax: Unexpected indentation
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:898:1
+    |
+896 |                 point = a.prices[lot.ticker]
+897 |                 known = point is not None and not a.unpriced_special and not a.nav_incomplete
+898 |                     and (not lot.quantity or end+a.scenario.lag-a.marks_at[lot.ticker] <= 5)
+    | ^^^^^^^^^^^^^^^^^^^^
+899 |                 claims = sum(
+900 |                     (v for (event, key), (v, due) in a.claims.items() if key == lot.key), ZERO
+    |
+
+invalid-syntax: Expected a statement
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:898:21
+    |
+896 |                 point = a.prices[lot.ticker]
+897 |                 known = point is not None and not a.unpriced_special and not a.nav_incomplete
+898 |                     and (not lot.quantity or end+a.scenario.lag-a.marks_at[lot.ticker] <= 5)
+    |                     ^^^
+899 |                 claims = sum(
+900 |                     (v for (event, key), (v, due) in a.claims.items() if key == lot.key), ZERO
+    |
+
+E501 Line too long (106 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:946:101
+    |
+944 |             "terminal_pending_orders": sum(len(a.pending) for a in self.accounts),
+945 |             "terminal_unpriced_special": sum(a.unpriced_special for a in self.accounts),
+946 |             "unresolved": any(a.nav_incomplete for a in self.accounts) or self.daily_incomplete_count > 0,
+    |                                                                                                     ^^^^^^
+947 |             "daily_incomplete_records": self.daily_incomplete_count,
+948 |             "diagnostic": self.diagnostic,
+    |
+
+Found 3 errors.

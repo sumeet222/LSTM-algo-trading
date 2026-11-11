@@ -1,0 +1,55 @@
+{
+  "gate": "D_evaluation_calibration_synthetic",
+  "status": "PASS",
+  "date": "2026-11-02",
+  "authority": "replication/EXPERIMENT_SPEC.md sections 14-15 and 17",
+  "authority_sha256": "92d09d7f1bd2792383094cb280994c8255de142ec45bf1c99eb2a52d45712bbd",
+  "code_sha256": "a3c24b306812afdfa7b00611d5335163a5a14820e5a86a6427df913a4a02f13d",
+  "tests_sha256": "d1abe7d5d0fb43eae4c0c8a8dadaad846a881aa55c42a8dc8c44c3c71670a0fe",
+  "static_config_sha256": "6057b17881e83b31dc885e05d16f12d22dba8e93e67e00c4e8d5d06e70edcda2",
+  "tests": {"run": 13, "passed": 13, "failed": 0, "runtime_seconds": 4.901},
+  "static_check": {
+    "tool": "pyright 1.1.414",
+    "mode": "basic",
+    "python_version": "3.14",
+    "config": "replication/phase2/audit/pyright_evaluation.json",
+    "errors": 0,
+    "warnings": 0,
+    "informations": 0,
+    "editor_problems_refresh": "Human confirmation pending; use repository .venv interpreter and basic severity."
+  },
+  "environment": {"python": "3.14.6", "numpy": "2.5.3", "pandas": "3.0.6", "pyarrow": "23.0.1"},
+  "verified": [
+    "Unclamped transformed residual q, float32 output promotion, float64 exponentials, RAW clamp and C3 post-multiplication clamp",
+    "Effective sessions 1.6 for category session masses 3:1 and fixed kappa 25",
+    "Contribution diagnostics without trimming",
+    "Strict maturity cutoff and finalization frontier",
+    "Frozen coefficients invariant to changed future OOS labels",
+    "Recipe and checkpoint identity mismatch rejection",
+    "Annual session-origin-stock hierarchy and equal-year ratio of mean predicted to mean observed",
+    "Conditional scalar inherited weights versus rebuilt category rank session means",
+    "Loss contribution and share reconstruction",
+    "Perfect and constant rank vectors, average ranks and fractional boundary ties",
+    "Strict tail events, top4 precision/recall and false-low ascending rank <=10.5",
+    "Signed supported-cell diagnostics with NaN exclusion and undefined zero variance",
+    "Full/category/stock/slot/calendar/tail/year and EQ report coverage",
+    "Full-key shuffled joins and label, duplicate, and twenty-name checks",
+    "New Parquet score bundle round-trip, frozen decoder identity, report-only replay and digest tamper rejection"
+  ],
+  "clean_boundary": {
+    "project_sources_read": ["replication/EXPERIMENT_SPEC.md", "new evaluation-owned files", "new boundary module through import only"],
+    "historical_implementation_or_results_read": false,
+    "raw_or_market_data_read": false,
+    "network_calls": 0,
+    "packages_installed": 0,
+    "model_fits": 0,
+    "git_changes": false,
+    "test_execution": "Existing .venv Python -I, clean /private/tmp cwd, explicit new phase2/code sys.path and boundary.install before third-party imports."
+  },
+  "limitations": [
+    "Synthetic Gate D is not an empirical reproduction receipt.",
+    "Caller must supply independently reconstructed roles, schedule metadata, checkpoint/recipe digests and restricted-refit tail populations.",
+    "C0 deciles, comparator differences and paired intervals remain pending separately authorized independent comparator predictions.",
+    "Parquet tests emitted sandbox sysctl cache/NEON probe warnings; storage and replay completed successfully."
+  ]
+}

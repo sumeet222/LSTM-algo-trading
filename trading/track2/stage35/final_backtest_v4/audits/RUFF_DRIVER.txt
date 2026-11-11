@@ -1,0 +1,888 @@
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:303:32
+    |
+301 |                 shorts = sorted(
+302 |                     (lot for lot in self.lots.values() if lot.ticker == j and lot.quantity < 0),
+303 |                     key=lambda l: l.key,
+    |                                ^
+304 |                 )
+305 |                 denom = sum((-lot.quantity for lot in shorts), ZERO)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:417:21
+    |
+415 |                     "internal": l.internal,
+416 |                 }
+417 |                 for l in legs
+    |                     ^
+418 |             ],
+419 |         )
+    |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:30:25
+   |
+28 | class Store:
+29 |     def __init__(self,path: Path):
+30 |         if path.exists():raise ValueError('APPEND_ONLY_RUN_OUTPUT')
+   |                         ^
+31 |         path.mkdir(parents=True)
+32 |         self.path=path
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:36:20
+   |
+35 |     def write(self,scenario: str,kind: str,rows: list[dict]) -> None:
+36 |         if not rows:return
+   |                    ^
+37 |         key=(scenario,kind)
+38 |         if key not in self.streams:
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:39:38
+   |
+37 |         key=(scenario,kind)
+38 |         if key not in self.streams:
+39 |             folder=self.path/scenario;folder.mkdir(exist_ok=True)
+   |                                      ^
+40 |             self.streams[key]=gzip.open(folder/(kind+'.jsonl.gz'),'wt',compresslevel=1)
+41 |         stream=self.streams[key]
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:42:24
+   |
+40 |             self.streams[key]=gzip.open(folder/(kind+'.jsonl.gz'),'wt',compresslevel=1)
+41 |         stream=self.streams[key]
+42 |         for row in rows:stream.write(json.dumps(row,sort_keys=True,default=str)+'\n')
+   |                        ^
+43 |
+44 |     def close(self) -> None:
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:45:44
+   |
+44 |     def close(self) -> None:
+45 |         for stream in self.streams.values():stream.close()
+   |                                            ^
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:62:67
+   |
+60 |         self.due=[]
+61 |         for action in self.actions:
+62 |             if action.action_type not in ('CASH_DIVIDEND','SPLIT'):continue
+   |                                                                   ^
+63 |             day=action.ex_date or action.effective_date
+64 |             if day:self.due.append((minute(midnight(day)),0 if action.action_type=='SPLIT' else 1,'EX',action))
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:64:19
+   |
+62 |             if action.action_type not in ('CASH_DIVIDEND','SPLIT'):continue
+63 |             day=action.ex_date or action.effective_date
+64 |             if day:self.due.append((minute(midnight(day)),0 if action.action_type=='SPLIT' else 1,'EX',action))
+   |                   ^
+65 |             if action.action_type=='CASH_DIVIDEND' and action.payable_date:
+66 |                 self.due.append((minute(midnight(action.payable_date)),2,'PAY',action))
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:84:57
+   |
+82 |         for j in range(20):
+83 |             if np.isfinite(self.known_closes[j]):
+84 |                 a.prices[j]=D(str(self.known_closes[j]));a.marks_at[j]=int(self.known_marks[j])
+   |                                                         ^
+85 |                 a.volume[j]=D(str(self.known_volumes[j]));a.volume_available[j]=int(self.known_marks[j])+a.scenario.lag
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:85:58
+   |
+83 |             if np.isfinite(self.known_closes[j]):
+84 |                 a.prices[j]=D(str(self.known_closes[j]));a.marks_at[j]=int(self.known_marks[j])
+85 |                 a.volume[j]=D(str(self.known_volumes[j]));a.volume_available[j]=int(self.known_marks[j])+a.scenario.lag
+   |                                                          ^
+86 |
+87 |     def integrate_gap(self,end: int) -> None:
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:88:31
+   |
+87 |     def integrate_gap(self,end: int) -> None:
+88 |         if self.cursor is None:self.cursor=end;return
+   |                               ^
+89 |         if end<self.cursor:raise ValueError('SOURCE_TIME_REORDER')
+90 |         seconds=(end-self.cursor)*60
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:88:47
+   |
+87 |     def integrate_gap(self,end: int) -> None:
+88 |         if self.cursor is None:self.cursor=end;return
+   |                                               ^
+89 |         if end<self.cursor:raise ValueError('SOURCE_TIME_REORDER')
+90 |         seconds=(end-self.cursor)*60
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:89:27
+   |
+87 |     def integrate_gap(self,end: int) -> None:
+88 |         if self.cursor is None:self.cursor=end;return
+89 |         if end<self.cursor:raise ValueError('SOURCE_TIME_REORDER')
+   |                           ^
+90 |         seconds=(end-self.cursor)*60
+91 |         ticks=np.rint(self.last_prices*1000000).astype(np.int64)
+   |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:99:49
+    |
+ 97 |         for at,_,kind,action in self.due:
+ 98 |             key=(action.event_id,kind)
+ 99 |             if key in self.done_due or at>opened:continue
+    |                                                 ^
+100 |             if at<minute(self.first+'T00:00:00Z'):
+101 |                 self.done_due.add(key);continue
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:101:39
+    |
+ 99 |             if key in self.done_due or at>opened:continue
+100 |             if at<minute(self.first+'T00:00:00Z'):
+101 |                 self.done_due.add(key);continue
+    |                                       ^
+102 |             self.integrate_gap(at)
+103 |             j=SYMBOLS.index(action.symbol)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:105:44
+    |
+103 |             j=SYMBOLS.index(action.symbol)
+104 |             for a in self.accounts:
+105 |                 a.accrue(self.integrals,at);a.accrue_funding(at)
+    |                                            ^
+106 |                 if kind=='PAY':a.pay_dividend(action.event_id,at)
+107 |                 elif action.action_type=='SPLIT':
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:106:31
+    |
+104 |             for a in self.accounts:
+105 |                 a.accrue(self.integrals,at);a.accrue_funding(at)
+106 |                 if kind=='PAY':a.pay_dividend(action.event_id,at)
+    |                               ^
+107 |                 elif action.action_type=='SPLIT':
+108 |                     if action.split_ratio_new_old is None:raise ValueError('SPLIT_TERMS')
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:108:58
+    |
+106 |                 if kind=='PAY':a.pay_dividend(action.event_id,at)
+107 |                 elif action.action_type=='SPLIT':
+108 |                     if action.split_ratio_new_old is None:raise ValueError('SPLIT_TERMS')
+    |                                                          ^
+109 |                     a.split(j,action.split_ratio_new_old,at)
+110 |                 else:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:111:76
+    |
+109 |                     a.split(j,action.split_ratio_new_old,at)
+110 |                 else:
+111 |                     if action.amount is None or action.payable_date is None:raise ValueError('ORDINARY_ACTION_UNRESOLVED')
+    |                                                                            ^
+112 |                     a.ex_dividend(action.event_id,j,action.amount,minute(midnight(action.payable_date)),at,action.status.value)
+113 |             if kind=='EX' and action.action_type=='SPLIT':
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:115:43
+    |
+113 |             if kind=='EX' and action.action_type=='SPLIT':
+114 |                 ratio=float(action.split_ratio_new_old or 1)
+115 |                 self.last_prices[j]/=ratio;self.known_closes[j]/=ratio
+    |                                           ^
+116 |             self.done_due.add(key)
+117 |         self.integrate_gap(opened)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:118:31
+    |
+116 |             self.done_due.add(key)
+117 |         self.integrate_gap(opened)
+118 |         for a in self.accounts:a.accrue(self.integrals,opened);a.accrue_funding(opened)
+    |                               ^
+119 |         if day.date=='2021-06-03':
+120 |             for n,a in enumerate(self.accounts):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:118:63
+    |
+116 |             self.done_due.add(key)
+117 |         self.integrate_gap(opened)
+118 |         for a in self.accounts:a.accrue(self.integrals,opened);a.accrue_funding(opened)
+    |                                                               ^
+119 |         if day.date=='2021-06-03':
+120 |             for n,a in enumerate(self.accounts):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:123:33
+    |
+121 |                 positions=tuple((lot.key,lot.quantity,max(ZERO,lot.quantity*lot.basis))
+122 |                                 for lot in a.lots.values()if lot.ticker==6 and lot.quantity)
+123 |                 if not positions:continue
+    |                                 ^
+124 |                 self.special[n]=distribution(positions,self.market.clock,a.scenario.cil_sessions)
+125 |                 a.unpriced_special=True
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:132:41
+    |
+130 |                 changed,amounts,total=pay_cil(state,state.pay_at)
+131 |                 a=self.accounts[n]
+132 |                 for key,value in amounts:a.credit(key,value,'OGN_CIL_CONDITIONAL_PAYMENT',opened)
+    |                                         ^
+133 |                 a.special_cash+=total;self.special[n]=changed
+134 |                 self.special_view(n,opened)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:133:38
+    |
+131 |                 a=self.accounts[n]
+132 |                 for key,value in amounts:a.credit(key,value,'OGN_CIL_CONDITIONAL_PAYMENT',opened)
+133 |                 a.special_cash+=total;self.special[n]=changed
+    |                                      ^
+134 |                 self.special_view(n,opened)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:137:27
+    |
+136 |     def special_view(self,n: int,now: int) -> None:
+137 |         a=self.accounts[n];state=self.special[n]
+    |                           ^
+138 |         values=state.values(pd.Timestamp(now*60_000_000_000,tz='UTC').to_pydatetime())
+139 |         a.unpriced_special=values is None
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:142:54
+    |
+140 |         if values is not None:
+141 |             a.special_values={key:value for key,value in values}
+142 |             if state.whole_settled and state.cil_paid:a.special_values={}
+    |                                                      ^
+143 |
+144 |     def special_tick(self,n: int,bar: dict | None,start: int,now: int) -> None:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:145:33
+    |
+144 |     def special_tick(self,n: int,bar: dict | None,start: int,now: int) -> None:
+145 |         if n not in self.special:return
+    |                                 ^
+146 |         a=self.accounts[n];state=self.special[n]
+147 |         if bar:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:146:27
+    |
+144 |     def special_tick(self,n: int,bar: dict | None,start: int,now: int) -> None:
+145 |         if n not in self.special:return
+146 |         a=self.accounts[n];state=self.special[n]
+    |                           ^
+147 |         if bar:
+148 |             at=pd.Timestamp(str(bar['t'])).to_pydatetime()
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:161:41
+    |
+159 |                     a.scenario.spread,a.scenario.impact,a.scenario.fee,a.scenario.minimum,
+160 |                     known_reference=reference,external_capacity=D(1000000))
+161 |                 for key,value in amounts:a.credit(key,value,'OGN_WHOLE_DISPOSAL',now)
+    |                                         ^
+162 |                 a.commission+=fee;a.special_cash+=sum((v for _,v in amounts),ZERO)
+163 |                 self.special[n]=state=changed;del self.special_pending[n]
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:162:34
+    |
+160 |                     known_reference=reference,external_capacity=D(1000000))
+161 |                 for key,value in amounts:a.credit(key,value,'OGN_WHOLE_DISPOSAL',now)
+162 |                 a.commission+=fee;a.special_cash+=sum((v for _,v in amounts),ZERO)
+    |                                  ^
+163 |                 self.special[n]=state=changed;del self.special_pending[n]
+164 |             state=observe(state,oq,pd.Timestamp(now*60_000_000_000,tz='UTC').to_pydatetime(),a.scenario.cil_postclose)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:163:46
+    |
+161 |                 for key,value in amounts:a.credit(key,value,'OGN_WHOLE_DISPOSAL',now)
+162 |                 a.commission+=fee;a.special_cash+=sum((v for _,v in amounts),ZERO)
+163 |                 self.special[n]=state=changed;del self.special_pending[n]
+    |                                              ^
+164 |             state=observe(state,oq,pd.Timestamp(now*60_000_000_000,tz='UTC').to_pydatetime(),a.scenario.cil_postclose)
+165 |             cq=OGNQuote(at+pd.Timedelta(minutes=1),at+pd.Timedelta(minutes=1),available,
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:180:31
+    |
+178 |     def decision(self,a: Account,day: Day,now: int,integral: np.ndarray) -> None:
+179 |         self.sync(a,now)
+180 |         a.accrue(integral,now);a.accrue_funding(int(day.starts[min(len(day.starts)-1,max(0,now-int(day.starts[0])-1-a.scenario.lag))]…
+    |                               ^
+181 |         # No later decision may rely on a not-yet-observed physical fill.
+182 |         if a.pending:return
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:182:21
+    |
+180 | …     a.accrue(integral,now);a.accrue_funding(int(day.starts[min(len(day.starts)-1,max(0,now-int(day.starts[0])-1-a.scenario.lag))])+…
+181 | …     # No later decision may rely on a not-yet-observed physical fill.
+182 | …     if a.pending:return
+    |                   ^
+183 | …     nav,free,names,status=a.capacity(now)
+184 | …     requests: dict[int,list[Request]]={}
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:187:33
+    |
+185 |         for lot in a.lots.values():
+186 |             if lot.pending and now>lot.deadline:
+187 |                 lot.pending=ZERO;a.reject('ENTRY_UNSUBMITTED_REMAINDER_EXPIRED')
+    |                                 ^
+188 |             if lot.quantity and (now>=lot.endpoint+a.scenario.lag or status=='RISK_BREACH'):
+189 |                 role='RISK_LIQUIDATION' if status=='RISK_BREACH' else 'EXIT'
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:194:68
+    |
+192 |         for origin,group in day.signals.groupby('origin',sort=True):
+193 |             org=minute(origin)
+194 |             if org in a.processed_origins or now<org+a.scenario.lag:continue
+    |                                                                    ^
+195 |             if now>org+9:
+196 |                 a.processed_origins.add(org);a.reject('ENTRY_WINDOW_EXPIRED',len(group));continue
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:196:45
+    |
+194 |             if org in a.processed_origins or now<org+a.scenario.lag:continue
+195 |             if now>org+9:
+196 |                 a.processed_origins.add(org);a.reject('ENTRY_WINDOW_EXPIRED',len(group));continue
+    |                                             ^
+197 |             ready=[]
+198 |             for _,row in group.iterrows():
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:196:89
+    |
+194 |             if org in a.processed_origins or now<org+a.scenario.lag:continue
+195 |             if now>org+9:
+196 |                 a.processed_origins.add(org);a.reject('ENTRY_WINDOW_EXPIRED',len(group));continue
+    |                                                                                         ^
+197 |             ready=[]
+198 |             for _,row in group.iterrows():
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:200:30
+    |
+198 |             for _,row in group.iterrows():
+199 |                 issued=max(org+a.scenario.lag,minute(row['issued_at'])+a.scenario.lag-2)
+200 |                 if now<issued:continue
+    |                              ^
+201 |                 if not bool(row['input_eligible']) or not np.isfinite(row['g_'+a.arm]) or int(row['direction'])==0:
+202 |                     a.reject('SIGNAL_OR_ARM_ABSTENTION');continue
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:202:57
+    |
+200 |                 if now<issued:continue
+201 |                 if not bool(row['input_eligible']) or not np.isfinite(row['g_'+a.arm]) or int(row['direction'])==0:
+202 |                     a.reject('SIGNAL_OR_ARM_ABSTENTION');continue
+    |                                                         ^
+203 |                 if a.population=='matched' and not bool(row['matched_four_arms']):
+204 |                     a.reject('NOT_MATCHED_INPUT_POPULATION');continue
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:204:61
+    |
+202 |                     a.reject('SIGNAL_OR_ARM_ABSTENTION');continue
+203 |                 if a.population=='matched' and not bool(row['matched_four_arms']):
+204 |                     a.reject('NOT_MATCHED_INPUT_POPULATION');continue
+    |                                                             ^
+205 |                 j=SYMBOLS.index(row['ticker'])
+206 |                 if a.prices[j] is None or now-a.marks_at[j]>5 or a.volume[j] is None:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:211:57
+    |
+209 | …     marker=self.market.clock.next_observation(pd.Timestamp((endpoint+a.scenario.lag)*60_000_000_000,tz='UTC').to_pydatetime())
+210 | …     if str(marker.date())>self.last:
+211 | …         a.reject('CALENDAR_TERMINAL_CUTOFF');continue
+    |                                               ^
+212 | …     if a.scenario.prohibit_mrk_cross and j==6 and org<minute(EX)<=endpoint:
+213 | …         a.reject('KNOWN_MRK_ACTION_CROSS_PROHIBITED');continue
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:213:66
+    |
+211 |                     a.reject('CALENDAR_TERMINAL_CUTOFF');continue
+212 |                 if a.scenario.prohibit_mrk_cross and j==6 and org<minute(EX)<=endpoint:
+213 |                     a.reject('KNOWN_MRK_ACTION_CROSS_PROHIBITED');continue
+    |                                                                  ^
+214 |                 if a.scenario.borrow_stress and int(row['direction'])<0:
+215 |                     draw=int(canonical(('20261109',row['ticker'],day.date)),16)%1000000
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:216:34
+    |
+214 |                 if a.scenario.borrow_stress and int(row['direction'])<0:
+215 |                     draw=int(canonical(('20261109',row['ticker'],day.date)),16)%1000000
+216 |                     if draw<10000:a.reject('CONDITIONAL_BORROW_REJECT_STRESS');continue
+    |                                  ^
+217 |                 ready.append((j,row))
+218 |             if not ready:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:216:79
+    |
+214 |                 if a.scenario.borrow_stress and int(row['direction'])<0:
+215 |                     draw=int(canonical(('20261109',row['ticker'],day.date)),16)%1000000
+216 |                     if draw<10000:a.reject('CONDITIONAL_BORROW_REJECT_STRESS');continue
+    |                                                                               ^
+217 |                 ready.append((j,row))
+218 |             if not ready:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:219:44
+    |
+217 |                 ready.append((j,row))
+218 |             if not ready:
+219 |                 if now<org+a.scenario.lag+1:continue
+    |                                            ^
+220 |                 a.processed_origins.add(org);a.reject('NO_EXECUTION_READY_CROSS_SECTION');continue
+221 |             if status!='READY' or a.unpriced_special:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:220:45
+    |
+218 |             if not ready:
+219 |                 if now<org+a.scenario.lag+1:continue
+220 |                 a.processed_origins.add(org);a.reject('NO_EXECUTION_READY_CROSS_SECTION');continue
+    |                                             ^
+221 |             if status!='READY' or a.unpriced_special:
+222 |                 a.processed_origins.add(org);a.reject(status,len(ready));continue
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:220:90
+    |
+218 |             if not ready:
+219 |                 if now<org+a.scenario.lag+1:continue
+220 |                 a.processed_origins.add(org);a.reject('NO_EXECUTION_READY_CROSS_SECTION');continue
+    |                                                                                          ^
+221 |             if status!='READY' or a.unpriced_special:
+222 |                 a.processed_origins.add(org);a.reject(status,len(ready));continue
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:222:45
+    |
+220 |                 a.processed_origins.add(org);a.reject('NO_EXECUTION_READY_CROSS_SECTION');continue
+221 |             if status!='READY' or a.unpriced_special:
+222 |                 a.processed_origins.add(org);a.reject(status,len(ready));continue
+    |                                             ^
+223 |             a.processed_origins.add(org)
+224 |             denominator=sum((D(str(row['g_'+a.arm]))for _,row in ready),ZERO)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:222:73
+    |
+220 |                 a.processed_origins.add(org);a.reject('NO_EXECUTION_READY_CROSS_SECTION');continue
+221 |             if status!='READY' or a.unpriced_special:
+222 |                 a.processed_origins.add(org);a.reject(status,len(ready));continue
+    |                                                                         ^
+223 |             a.processed_origins.add(org)
+224 |             denominator=sum((D(str(row['g_'+a.arm]))for _,row in ready),ZERO)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:229:29
+    |
+227 |             for j,row in sorted(ready,key=lambda pair:pair[0]):
+228 |                 p=a.prices[j]
+229 |                 if p is None:raise AssertionError('READY_PRICE')
+    |                             ^
+230 |                 amount=min(budget*D(str(row['g_'+a.arm]))/denominator,max(ZERO,D('.1')*nav-names.get(j,ZERO)))
+231 |                 q=(amount/p).to_integral_value(rounding=ROUND_DOWN)*D(int(row['direction']))
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:232:25
+    |
+230 |                 amount=min(budget*D(str(row['g_'+a.arm]))/denominator,max(ZERO,D('.1')*nav-names.get(j,ZERO)))
+231 |                 q=(amount/p).to_integral_value(rounding=ROUND_DOWN)*D(int(row['direction']))
+232 |                 if not q:a.reject('ROUNDING_OR_CAP_CASH');continue
+    |                         ^
+233 |                 key=f'{a.arm}|{org}|{row["ticker"]}'
+234 |                 if key in a.lots:raise ValueError('DUPLICATE_OR_DYNAMIC_RESIZE')
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:232:58
+    |
+230 |                 amount=min(budget*D(str(row['g_'+a.arm]))/denominator,max(ZERO,D('.1')*nav-names.get(j,ZERO)))
+231 |                 q=(amount/p).to_integral_value(rounding=ROUND_DOWN)*D(int(row['direction']))
+232 |                 if not q:a.reject('ROUNDING_OR_CAP_CASH');continue
+    |                                                          ^
+233 |                 key=f'{a.arm}|{org}|{row["ticker"]}'
+234 |                 if key in a.lots:raise ValueError('DUPLICATE_OR_DYNAMIC_RESIZE')
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:234:33
+    |
+232 |                 if not q:a.reject('ROUNDING_OR_CAP_CASH');continue
+233 |                 key=f'{a.arm}|{org}|{row["ticker"]}'
+234 |                 if key in a.lots:raise ValueError('DUPLICATE_OR_DYNAMIC_RESIZE')
+    |                                 ^
+235 |                 lot=Lot(key,j,org,minute(row['endpoint']),org+10,int(row['direction']),int(q),D(str(row['g_'+a.arm])),pending=q)
+236 |                 a.lots[key]=lot;requests.setdefault(j,[]).append(Request(key,q,'ENTRY'))
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:236:32
+    |
+234 |                 if key in a.lots:raise ValueError('DUPLICATE_OR_DYNAMIC_RESIZE')
+235 |                 lot=Lot(key,j,org,minute(row['endpoint']),org+10,int(row['direction']),int(q),D(str(row['g_'+a.arm])),pending=q)
+236 |                 a.lots[key]=lot;requests.setdefault(j,[]).append(Request(key,q,'ENTRY'))
+    |                                ^
+237 |             break
+238 |         a.refresh()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:244:55
+    |
+242 |         for j,group in sorted(requests.items()):
+243 |             if a.volume[j] is None or now-a.marks_at[j]>5:
+244 |                 a.reject('EXIT_OR_ENTRY_SOURCE_STALE');continue
+    |                                                       ^
+245 |             target=sum((r.delta for r in group),ZERO)
+246 |             cap=(a.volume[j]*D('.01')).to_integral_value(rounding=ROUND_DOWN)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:249:51
+    |
+247 |             submitted=min(abs(target),cap)*(1 if target>0 else -1) if target else ZERO
+248 |             expiry=min((a.lots[r.key].deadline for r in group if r.role=='ENTRY'),default=None)
+249 |             if expiry is not None and now+1>expiry:continue
+    |                                                   ^
+250 |             a.order_seq+=1;key=f'{day.date}:{now}:{j}:{a.order_seq}'
+251 |             a.pending[j]=Order(key,j,now,now+1,tuple(group),submitted,a.volume_available[j],expiry)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:250:27
+    |
+248 |             expiry=min((a.lots[r.key].deadline for r in group if r.role=='ENTRY'),default=None)
+249 |             if expiry is not None and now+1>expiry:continue
+250 |             a.order_seq+=1;key=f'{day.date}:{now}:{j}:{a.order_seq}'
+    |                           ^
+251 |             a.pending[j]=Order(key,j,now,now+1,tuple(group),submitted,a.volume_available[j],expiry)
+252 |             a.record('ORDER',now,order=key,ticker=j,effective=now+1,submitted=submitted,
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:259:30
+    |
+257 |     def risk_status(self,n: int) -> str:
+258 |         a=self.accounts[n]
+259 |         if a.unpriced_special:return "UNPRICED_SPECIAL"
+    |                              ^
+260 |         if n not in self.risk_cache:
+261 |             vintages={}
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:263:56
+    |
+261 |             vintages={}
+262 |             for lot in a.lots.values():
+263 |                 if not lot.quantity and not lot.pending:continue
+    |                                                        ^
+264 |                 vintages.setdefault(lot.origin,np.zeros(20,float))[lot.ticker] += float(abs(lot.quantity)+abs(lot.pending))
+265 |             matrix=np.stack(list(vintages.values())) if vintages else np.zeros((0,20),float)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:285:49
+    |
+283 |         started=time.monotonic()
+284 |         for day in self.market.days():
+285 |             self.opportunities+=len(day.signals);self.before_day(day)
+    |                                                 ^
+286 |             for i,start0 in enumerate(day.starts):
+287 |                 start=int(start0)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:293:41
+    |
+291 |                 pricing=np.where(valid,day.opens[i],self.last_prices)
+292 |                 ticks=np.rint(pricing*1000000).astype(np.int64)
+293 |                 self.integrals+=ticks*60;self.cursor=start+1
+    |                                         ^
+294 |                 self.last_prices=np.where(valid,day.closes[i],self.last_prices)
+295 |                 self.known_closes=np.where(valid,day.closes[i],self.known_closes)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:302:46
+    |
+300 |                     due=[(j,o)for j,o in a.pending.items()if o.effective<=start]
+301 |                     if due:
+302 |                         a.accrue(ibefore,now);a.accrue_funding(start)
+    |                                              ^
+303 |                         for j,o in due:
+304 |                             if valid[j]:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:306:83
+    |
+304 | …                     if valid[j]:
+305 | …                         if o.expiry is not None and start>o.expiry:
+306 | …                             a.reject('UNRESOLVED_EXPIRED_SUBMITTED_ORDER');a.nav_incomplete=True;continue
+    |                                                                             ^
+307 | …                         self.sync(a,now);a.fill(o,D(str(day.opens[i,j])),now,start)
+308 | …                         if o.status=='OBSERVED':del a.pending[j]
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:306:105
+    |
+304 | …                     if valid[j]:
+305 | …                         if o.expiry is not None and start>o.expiry:
+306 | …                             a.reject('UNRESOLVED_EXPIRED_SUBMITTED_ORDER');a.nav_incomplete=True;continue
+    |                                                                                                   ^
+307 | …                         self.sync(a,now);a.fill(o,D(str(day.opens[i,j])),now,start)
+308 | …                         if o.status=='OBSERVED':del a.pending[j]
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:307:49
+    |
+305 | …                         if o.expiry is not None and start>o.expiry:
+306 | …                             a.reject('UNRESOLVED_EXPIRED_SUBMITTED_ORDER');a.nav_incomplete=True;continue
+307 | …                         self.sync(a,now);a.fill(o,D(str(day.opens[i,j])),now,start)
+    |                                           ^
+308 | …                         if o.status=='OBSERVED':del a.pending[j]
+309 | …                     else:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:308:56
+    |
+306 | …                             a.reject('UNRESOLVED_EXPIRED_SUBMITTED_ORDER');a.nav_incomplete=True;continue
+307 | …                         self.sync(a,now);a.fill(o,D(str(day.opens[i,j])),now,start)
+308 | …                         if o.status=='OBSERVED':del a.pending[j]
+    |                                                  ^
+309 | …                     else:
+310 | …                         o.status='UNRESOLVED_SOURCE_BAR';a.reject('UNOBSERVABLE_SUBMITTED_FILL')
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:310:65
+    |
+308 |                                 if o.status=='OBSERVED':del a.pending[j]
+309 |                             else:
+310 |                                 o.status='UNRESOLVED_SOURCE_BAR';a.reject('UNOBSERVABLE_SUBMITTED_FILL')
+    |                                                                 ^
+311 |                     if n in self.special:self.special_tick(n,day.ogn.get(start),start,now)
+312 |                     # Exact marked checks after EVERY received minute. No future raw bar enters a decision.
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:311:41
+    |
+309 |                             else:
+310 |                                 o.status='UNRESOLVED_SOURCE_BAR';a.reject('UNOBSERVABLE_SUBMITTED_FILL')
+311 |                     if n in self.special:self.special_tick(n,day.ogn.get(start),start,now)
+    |                                         ^
+312 |                     # Exact marked checks after EVERY received minute. No future raw bar enters a decision.
+313 |                     self.sync(a,now)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:319:32
+    |
+317 | …                       or any(minute(org)+a.scenario.lag<=now<=minute(org)+9 and minute(org)not in a.processed_origins for org in se…
+318 | …                       or state=='RISK_BREACH')
+319 | …             if relevant:self.decision(a,day,now,self.integrals)
+    |                          ^
+320 | …     end=int(day.starts[-1])+1
+321 | …     for n,a in enumerate(self.accounts):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:329:45
+    |
+327 | …             self.special[n]=observe(state,state.mark,pd.Timestamp(when*60_000_000_000,tz='UTC').to_pydatetime(),a.scenario.cil_post…
+328 | …             self.special_view(n,when)
+329 | …     a.accrue(self.integrals,now);a.accrue_funding(end);a.reconcile()
+    |                                   ^
+330 | …     nav=a.nav();status='NAV_INCOMPLETE' if nav is None or a.nav_incomplete or a.pending else 'OBSERVED'
+331 | …     daily={'date':day.date,'arm':a.arm,'population':a.population,'scenario':a.scenario.name,
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:329:67
+    |
+327 | …             self.special[n]=observe(state,state.mark,pd.Timestamp(when*60_000_000_000,tz='UTC').to_pydatetime(),a.scenario.cil_post…
+328 | …             self.special_view(n,when)
+329 | …     a.accrue(self.integrals,now);a.accrue_funding(end);a.reconcile()
+    |                                                         ^
+330 | …     nav=a.nav();status='NAV_INCOMPLETE' if nav is None or a.nav_incomplete or a.pending else 'OBSERVED'
+331 | …     daily={'date':day.date,'arm':a.arm,'population':a.population,'scenario':a.scenario.name,
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:330:28
+    |
+328 | …             self.special_view(n,when)
+329 | …     a.accrue(self.integrals,now);a.accrue_funding(end);a.reconcile()
+330 | …     nav=a.nav();status='NAV_INCOMPLETE' if nav is None or a.nav_incomplete or a.pending else 'OBSERVED'
+    |                  ^
+331 | …     daily={'date':day.date,'arm':a.arm,'population':a.population,'scenario':a.scenario.name,
+332 | …            'asof_market_utc':stamp(end),'known_at_utc':stamp(max(now,end+2 if day.date=='2021-06-03' and a.scenario.cil_postclose e…
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:341:66
+    |
+339 |                        'rejections_cumulative':dict(a.rejected),'journal_hash':a.journal_hash,
+340 |                        'outstanding_lots':len(a.lots),'pending_orders':len(a.pending)}
+341 |                 self.store.write(a.scenario.name,'daily',[daily]);self.daily.append(daily)
+    |                                                                  ^
+342 |                 a.compact(now)
+343 |                 self.store.write(a.scenario.name,'events',a.events);a.events=[]
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:343:68
+    |
+341 |                 self.store.write(a.scenario.name,'daily',[daily]);self.daily.append(daily)
+342 |                 a.compact(now)
+343 |                 self.store.write(a.scenario.name,'events',a.events);a.events=[]
+    |                                                                    ^
+344 |                 self.store.write(a.scenario.name,'cohorts',a.closed);a.closed=[]
+345 |             self.days_completed+=1
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:344:69
+    |
+342 |                 a.compact(now)
+343 |                 self.store.write(a.scenario.name,'events',a.events);a.events=[]
+344 |                 self.store.write(a.scenario.name,'cohorts',a.closed);a.closed=[]
+    |                                                                     ^
+345 |             self.days_completed+=1
+346 |             if self.days_completed%10==0:print('days',self.days_completed,'elapsed',round(time.monotonic()-started,1),flush=True)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:346:41
+    |
+344 |                 self.store.write(a.scenario.name,'cohorts',a.closed);a.closed=[]
+345 |             self.days_completed+=1
+346 |             if self.days_completed%10==0:print('days',self.days_completed,'elapsed',round(time.monotonic()-started,1),flush=True)
+    |                                         ^
+347 |         self.store.close()
+348 |         summary={'sessions':self.days_completed,'opportunities':self.opportunities,
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:125:80
+    |
+123 |     requests = tuple(Request(str(i), D(1), "ENTRY") for i in range(8))
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+    |                                                                                ^
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:126:27
+    |
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+    |                           ^
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:128:32
+    |
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |                                ^
+129 |     assert all(l.quantity == 1 for l in partial)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:129:36
+    |
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+129 |     assert all(l.quantity == 1 for l in partial)
+    |                                    ^
+
+Found 84 errors (2 fixed, 82 remaining).

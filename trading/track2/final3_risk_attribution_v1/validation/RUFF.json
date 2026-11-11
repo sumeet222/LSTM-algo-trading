@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/ruff",
+    "check",
+    "--select",
+    "E,F,I",
+    "src/lstm_data/trading/track2/final3_risk_attribution",
+    "tests/track2_final3_risk_attribution"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 0.061516374815255404,
+  "stdout": "F401 [*] `.io.csv_rows` imported but unused\n  --> src/lstm_data/trading/track2/final3_risk_attribution/supplement.py:13:5\n   |\n11 |     ROOT,\n12 |     col,\n13 |     csv_rows,\n   |     ^^^^^^^^\n14 |     load,\n15 |     publish,\n   |\nhelp: Remove unused import: `.io.csv_rows`\n   |\n12 |     col,\n   -     csv_rows,\n13 |     load,\n   |\n\nFound 1 error.\n[*] 1 fixable with `--fix`.\n",
+  "stderr": "",
+  "python": "3.14.6"
+}

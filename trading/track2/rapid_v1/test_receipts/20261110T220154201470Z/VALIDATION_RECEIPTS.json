@@ -1,0 +1,74 @@
+{
+  "code": {
+    "src/lstm_data/trading/track2/rapid_v1/__init__.py": "a938a73c0d708f543fb9d4735da8d8bcbe6e0e43c4a5e1c3d2c96feaf3566573",
+    "src/lstm_data/trading/track2/rapid_v1/cli.py": "7aed0c6fb2621a1510342844dbf96e194b735850c32b59a988c48a48de99967b",
+    "src/lstm_data/trading/track2/rapid_v1/costs.py": "f107c0a70322d227ad917a0705f23d7584d07dc16227e7a83b232f40e084b76f",
+    "src/lstm_data/trading/track2/rapid_v1/diagnostics.py": "8ca6cfbad58a906657434d25969a8266da0430391df8db60639840975226b07f",
+    "src/lstm_data/trading/track2/rapid_v1/paths.py": "7b1055645e1e953439c5a9111ac85884d2ba21d0246d45e78285b2210d21cc4b",
+    "src/lstm_data/trading/track2/rapid_v1/portfolio.py": "a45de684a804828c3c25a15a09af0ba3840b2c5d53249f31c109136a00b3907b",
+    "src/lstm_data/trading/track2/rapid_v1/registry.py": "dc9fb23c2c6ecbf01147429d4e7fd193d5b076daf88e398260c9652a0f64ee21",
+    "src/lstm_data/trading/track2/rapid_v1/reporting.py": "09b7bc1cc8305616d5d7236625a646bfd9f92edf40874f6434bd3f404fd9781e",
+    "src/lstm_data/trading/track2/rapid_v1/runner.py": "e5ad646eaf7144024731e0728eb9202441c5150025382442ea4141b6ab53a3b4",
+    "src/lstm_data/trading/track2/rapid_v1/scheduler.py": "1f65df943d0797bb85b3ba87f5bb69b6048334de71a6afd2ad75276e1eb024bb",
+    "src/lstm_data/trading/track2/rapid_v1/shared_features.py": "cec88250a874c7677a9a37aadb90f344da7b8fec39dbb52a4ce8daf070db1ad7",
+    "src/lstm_data/trading/track2/rapid_v1/sources.py": "8dfe076de2cdb6d24fc7b3ccd5ad9e923718c63b4a95f7c80ef086c623befeb7",
+    "src/lstm_data/trading/track2/rapid_v1/state.py": "9b683ed989cbfb4546833a1d2c3345426c1903cf55521f4ca063be087a9d90ff",
+    "src/lstm_data/trading/track2/rapid_v1/strategies.py": "eb17466b06d9219fd9105b87b8a41ed47fe15b63f523f64659cf3e3f511fbf79",
+    "src/lstm_data/trading/track2/rapid_v1/verification.py": "053b17a4e17ed769783c792874f2b893a91b98d874b33009973c7659ab1560e1"
+  },
+  "commands": [
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/track2_rapid_v1",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_wait_next_valid_and_nominal_lifetime",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_open_exit_remains_without_expiry_and_partial_fees_accumulate",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_later_open_cannot_rewrite_submission_or_predecision_state",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_actual_calendar_later_observation_is_strictly_future_and_rth",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_lossless_checkpoint_compression_is_atomic_deterministic_and_immutable",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_actual_pre_spinoff_share_cases_exact_without_tolerance_waiver",
+        "-q"
+      ],
+      "returncode": 0,
+      "seconds": 4.7341660829260945,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "73442e85c459203dc5157dd281e9cfacc6057f0e31d8955badde18f6b8144d24"
+    },
+    {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "src/lstm_data/trading/track2/rapid_v1",
+        "tests/track2_rapid_v1",
+        "--select",
+        "E,F,I"
+      ],
+      "returncode": 0,
+      "seconds": 0.03311716695316136,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "argv": [
+        ".venv/bin/pyright",
+        "src/lstm_data/trading/track2/rapid_v1",
+        "tests/track2_rapid_v1",
+        "--pythonpath",
+        ".venv/bin/python",
+        "--outputjson"
+      ],
+      "returncode": 0,
+      "seconds": 9.203450917033479,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "284c6510071bed9f20192ad00ec656070f40236900e64571457f43d5cf686c68"
+    }
+  ],
+  "registry": "ff4a5e12c7536acaaeaa03dc5017f65c41bb33787260819958afed7adc098d11",
+  "status": "PASS",
+  "test_sources": {
+    "tests/track2_rapid_v1/test_account.py": "e1ac057d108491a17dc9c667611e548d57c9d831939aa2cb88e4e13d80b4605c",
+    "tests/track2_rapid_v1/test_research.py": "f38841c518bc2aff7d23db1801985ea877c0790537c6207bae355b384d50886f"
+  }
+}

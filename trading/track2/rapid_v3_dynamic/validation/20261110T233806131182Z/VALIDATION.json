@@ -1,0 +1,55 @@
+{
+  "checks": {
+    "pytest": {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/track2_rapid_v3",
+        "tests/track2_rapid_v2",
+        "tests/track2_rapid_v1",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_wait_next_valid_and_nominal_lifetime",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_open_exit_remains_without_expiry_and_partial_fees_accumulate",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_later_open_cannot_rewrite_submission_or_predecision_state",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_actual_pre_spinoff_share_cases_exact_without_tolerance_waiver",
+        "tests/track2_stage35_v4/test_special_and_book.py",
+        "tests/track2_stage35_completion_v3/test_event_and_book_integration.py::test_friday_monday_physical_net_short_borrow"
+      ],
+      "returncode": 0,
+      "seconds": 8.376336000161245,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5c20de15b4024ac8d786ac113648cde97ce33f42cc5dd859b5f398a0b64f03fc"
+    },
+    "ruff": {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "--select",
+        "E,F,I",
+        "src/lstm_data/trading/track2/rapid_v3_dynamic",
+        "tests/track2_rapid_v3"
+      ],
+      "returncode": 0,
+      "seconds": 0.10683574993163347,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "types": {
+      "argv": [
+        ".venv/bin/pyright",
+        "--pythonpath",
+        ".venv/bin/python",
+        "--outputjson",
+        "src/lstm_data/trading/track2/rapid_v3_dynamic",
+        "tests/track2_rapid_v3"
+      ],
+      "returncode": 0,
+      "seconds": 13.548686292022467,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d086bef2ee6de0e7bc837e4c291e8c409eedd33b8f9576a8ee2e6e813c502c3a"
+    }
+  },
+  "registry": "4fdb94a1f6d65ea553b5e124d501216a77c572eb7bfa6476157b6c5c0034d7e0",
+  "status": "PASS"
+}

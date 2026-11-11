@@ -1,0 +1,266 @@
+{
+  "status": "PASS_FOR_SEAL_READINESS_WITH_DISCLOSED_RESIDUALS",
+  "updated_utc": "2026-11-03T00:57:18.213647+00:00",
+  "reviewer": "/root/clean_phase2/acceptance_reviewer",
+  "authority": "Full EXPERIMENT_SPEC plus authorized inherited modeling scope and explicitly authorized report-only source transition",
+  "final_manifest_verified": false,
+  "final_manifest_status": "NOT_YET_CREATED; this review is readiness, not attestation to a future seal",
+  "neural_phases": 8,
+  "neural_retries": 0,
+  "original_report_failures": 1,
+  "authorized_report_retries": 1,
+  "postrun_integrity": "PASS",
+  "source_transition": {
+    "old_evaluation_sha256": "a3c24b306812afdfa7b00611d5335163a5a14820e5a86a6427df913a4a02f13d",
+    "new_evaluation_sha256": "4cdc7bb65215309b912c9300024176cfe0dca58e24eaf49fc834f79e9ea969ba",
+    "exact_change": "owned .copy() of boolean auxiliary-support view before per-stock in-place intersection",
+    "other17prefit_locked_files": "UNCHANGED",
+    "original_prefit_evidence": "UNCHANGED",
+    "fitted_artifacts_80": "DIRECTLY_HASH_VERIFIED_UNCHANGED"
+  },
+  "selectors": [
+    {
+      "fold": "F21",
+      "initial_epochs": 18,
+      "qualified_selected_epoch": 8,
+      "refit_epochs": 8,
+      "trace_reconstructed": "EXACT"
+    },
+    {
+      "fold": "F22",
+      "initial_epochs": 23,
+      "qualified_selected_epoch": 13,
+      "refit_epochs": 13,
+      "trace_reconstructed": "EXACT"
+    },
+    {
+      "fold": "F23",
+      "initial_epochs": 32,
+      "qualified_selected_epoch": 22,
+      "refit_epochs": 22,
+      "trace_reconstructed": "EXACT"
+    },
+    {
+      "fold": "F24",
+      "initial_epochs": 27,
+      "qualified_selected_epoch": 17,
+      "refit_epochs": 17,
+      "trace_reconstructed": "EXACT"
+    }
+  ],
+  "score_population_checks": {
+    "OOS_rows": 80260,
+    "OOS_origins": 4013,
+    "OOS_sessions": 793,
+    "all8calibration_OOS_populations": "Exact new role keys, ticker order, origin/date/slot/category/entry/exit/maturity, A/ R/aux masks/triples, hierarchy weights and dtypes independently checked",
+    "metadata_additional": [
+      {
+        "fold": "F21",
+        "role": "calibration",
+        "rows": 5660,
+        "origin_metadata": "EXACT"
+      },
+      {
+        "fold": "F21",
+        "role": "oos",
+        "rows": 19100,
+        "origin_metadata": "EXACT"
+      },
+      {
+        "fold": "F22",
+        "role": "calibration",
+        "rows": 4900,
+        "origin_metadata": "EXACT"
+      },
+      {
+        "fold": "F22",
+        "role": "oos",
+        "rows": 23600,
+        "origin_metadata": "EXACT"
+      },
+      {
+        "fold": "F23",
+        "role": "calibration",
+        "rows": 5160,
+        "origin_metadata": "EXACT"
+      },
+      {
+        "fold": "F23",
+        "role": "oos",
+        "rows": 17740,
+        "origin_metadata": "EXACT"
+      },
+      {
+        "fold": "F24",
+        "role": "calibration",
+        "rows": 3260,
+        "origin_metadata": "EXACT"
+      },
+      {
+        "fold": "F24",
+        "role": "oos",
+        "rows": 19820,
+        "origin_metadata": "EXACT"
+      }
+    ]
+  },
+  "calibration": {
+    "all4": "Independently recomputed q/global/category moments/effective-session factors exactly from saved calibration arrays; maturity frontiers and recipe/checkpoint digests pass; all stored RAW/C3 outputs redecode exactly",
+    "fitting_calls_by_reviewer": 0
+  },
+  "replay": {
+    "checkpoint_reload": "Eight calibration/OOS checks across four reloaded refit checkpoints EXACT per completed receipt",
+    "metric_files": {
+      "scalars": {
+        "rows": 440,
+        "years": {
+          "2021": 88,
+          "2022": 88,
+          "2023": 88,
+          "2024": 88,
+          "EQ": 88
+        },
+        "sha256": "110a2a251fd0e0298bbae7d92663af10b5fa2d8451e04e075fee18333a85145e",
+        "replay": "BYTE_EXACT"
+      },
+      "ranks": {
+        "rows": 120,
+        "years": {
+          "2021": 24,
+          "2022": 24,
+          "2023": 24,
+          "2024": 24,
+          "EQ": 24
+        },
+        "sha256": "b85202e11762d24c02128012d9b75f3a3fceb097e932f6384f0b2e1fffe57ec8",
+        "replay": "BYTE_EXACT"
+      },
+      "events": {
+        "rows": 60,
+        "years": {
+          "2021": 12,
+          "2022": 12,
+          "2023": 12,
+          "2024": 12,
+          "EQ": 12
+        },
+        "sha256": "24025c3969dc646a3fd19d150c5dd5b2e931b9abe2a6b4f183a743cdcdebcd65",
+        "replay": "BYTE_EXACT"
+      },
+      "signed": {
+        "rows": 315,
+        "years": {
+          "2021": 63,
+          "2022": 63,
+          "2023": 63,
+          "2024": 63,
+          "EQ": 63
+        },
+        "sha256": "72b52a9d479585a9d99d7aa58d80f1070ac94e1fb2cf8a5f5d4b468b8aa6dc3f",
+        "replay": "BYTE_EXACT"
+      },
+      "clamping": {
+        "rows": 8026,
+        "years": {
+          "2021": 1910,
+          "2022": 2360,
+          "2023": 1774,
+          "2024": 1982
+        },
+        "sha256": "cf85e6c6b5e53bd86f70879319312c2bec61d024ad532ce8126785eb78f19a71",
+        "replay": "BYTE_EXACT"
+      }
+    },
+    "independent_EQ_and_category_sum_invariants": "PASS",
+    "recovery": {
+      "status": "REPORT_RECOVERY_COMPLETE",
+      "neural_fit_calls": 0,
+      "calibration_fit_calls": 0,
+      "threshold_fit_calls": 0,
+      "checkpoints_reloaded": 4,
+      "checkpoint_predictions": "EXACT",
+      "metric_replay": "EXACT",
+      "protected_files_unchanged": 80,
+      "elapsed_seconds": 478.6243834589841,
+      "peak_rss_bytes": 648118272,
+      "original_run_failure": "../run/failure.json",
+      "source_transition": "../../audit/report_source_transition.json"
+    }
+  },
+  "immutability": {
+    "admitted_inputs": 348,
+    "source_rehash": "Postrun receipt/code reviewed; all348 sizes/hashes equal prefit manifest; original market files not reopened by this reviewer",
+    "protected_fitted_files": 80,
+    "actual_runtime_pid": 49976,
+    "actual_recovery_pid": 52103,
+    "both_runtime_pids_in_import_lock": true,
+    "runtime_ledger_open_events": 182,
+    "recovery_ledger_open_events": 8,
+    "import_lock_modules": 2219,
+    "original_project_imports": 0,
+    "import_scope": "Python module origins/project audit events, explicit admitted data requests; postrun on-disk module hashes, old executed source separately bound; not exhaustive native/syscall or physical isolation"
+  },
+  "resources": {
+    "status": "PASS",
+    "new_output_bytes_before_final_documents_and_manifest": 55772664,
+    "new_output_limit_bytes": 2500000000,
+    "report_recovery_peak_rss_bytes": 648118272,
+    "successful_fold_peak_rss_bytes": 823427072,
+    "prefit_peak_rss_bytes": 1285996544,
+    "failed_original_process_total_peak": "NOT-VERIFIABLE; final reporting failure happened after last fold resource receipt",
+    "process_memory_intent_bytes": 2000000000,
+    "project_total_size": "NOT-VERIFIABLE under no global/protected path inventory boundary"
+  },
+  "static": {
+    "command": "../../.venv/bin/pyright --project audit/pyright_postrun.json --pythonpath ../../.venv/bin/python",
+    "result": "0 errors, 0 warnings, 0 informations",
+    "scope": "all new code/tests plus report_recovery.py and postrun_check.py",
+    "editor_refresh": "human-confirmed only; not verified"
+  },
+  "retained_failures": [
+    "literal OOS raw forward call order precedes C3 fit; dependency isolation supported, exact prose order FAIL retained",
+    "synthetic exact-rational weighted-left boundary FAIL retained; all8actual tail thresholds/scales match exact integer oracle and0membership changes",
+    "original per-stock signed-report invocation FAILED; authorized one-line fix and one saved-output-only recovery recorded"
+  ],
+  "accepted_limits": [
+    "inherited upstream QA/aggregation",
+    "nominal t versus assumed t+2 issuance",
+    "retrospective action/quarantine/calendar vintage",
+    "fixed survivor universe and F09 future-endpoint scoreability",
+    "overlapping/exploratory repeated years",
+    "historical binary/live/rights provenance unverified",
+    "comparator/C0/paired intervals deferred",
+    "original failed reporting-process final peakRSS and globalproject size unverified"
+  ],
+  "handoff_session_readiness": "Drafts reviewed complete in substance; final status/checklist closeout remains lead/evaluation writer action before sealing. Coordinator owns Git metadata, no original repository inspection by reviewer.",
+  "seal_method_review": "postrun_check.freeze waits until writers end, emits current provenance then unregisters atexit writer, inventories all pre-existing Phase2 files and348 admitted input identities, creates new manifest without self-hash, chmod read-only, rereads/hash-verifies every inventory entry, returns manifest own SHA256 externally. Method adequate; actual seal not yet attested.",
+  "blockers": [],
+  "remaining_actions": [
+    "Finish documentary status/checklist closeout against these observed receipts",
+    "Stop all Phase2 writers",
+    "Create final non-self-hashing manifest and externally verify its returned SHA256 and all inventory entries",
+    "Do not unseal historical outputs or start further fits in this implementing context"
+  ],
+  "evidence_sha256": {
+    "audit/POSTRUN_INTEGRITY.json": "0790f435a482c003f5e244fef414f62a806a86626c060adaeaa00c53086c9768",
+    "audit/postrun_input_immutability.json": "d4ef59e869d957470024e38e83a9b7cf064eae493850b7e2c35983a02a53f952",
+    "audit/IMPORT_LOCK.json": "84e16fcb68b5258c5234a99c858dd4931afb9ecc3f5db8f0911ea012a776e0fa",
+    "audit/PREFIT_ACCEPTANCE.json": "bed86ebd495c32ed2ce782f718aed8a1ca9d217eff12a35aa7fa22dcf7eddb0e",
+    "audit/report_source_transition.json": "9294f7021957a82b58f2938799463b5ce1f91108d7a494c73edd0f26e48407ad",
+    "audit/report_only_patch.diff": "2682966a4d47aa10384e3b819cb71e1b7cc9cbfef23411d6a3f8408bdb17eff6",
+    "audit/executed_source/evaluation_prefit.py.txt": "a3c24b306812afdfa7b00611d5335163a5a14820e5a86a6427df913a4a02f13d",
+    "audit/FITTED_ARTIFACTS_BEFORE_REPORT_RECOVERY.json": "6cbaefd01a5386f9eed887a3b95827a5be81968be6654f2f08de7282f9c3280c",
+    "audit/acceptance_review.json": "e750b6d231ecf790bba067e777cbf0a48c2a845459be72276cb43388c4f29ae5",
+    "audit/EXECUTION_ORDER_NOTE.md": "3ece4c07fae118f52ed3e417d79d83cdea1207bf03f0a1ba0a1fbf131c9552df",
+    "artifacts/run/failure.json": "8480a2461fed340d4b1a76f57133dea6c2bee6b7193b3be1c5feac3f0d92c037",
+    "artifacts/run/replication_ledger.jsonl": "ddcca9816907546ff0bb89a77d9b4b0e9c6df5f36e62a13d0f5f56a9608dc30a",
+    "artifacts/run/score_bundle/manifest.json": "66cfa249ca5227aa0ef25b3b8e9a1fcfe2a53237f85f00c7692b0b19d1b2d5f7",
+    "artifacts/report_recovery_v1/completed.json": "b27272895ed9f6ac852ef6476c31f221a876586ed9754317c134cfd4e7d4fd25",
+    "artifacts/report_recovery_v1/checkpoint_reload.json": "7d80126ecaef5586cd367d7bbfe1723fdf58ea64e4531b6385bcaf8f249a56d3",
+    "artifacts/report_recovery_v1/replay_metrics/replay_receipt.json": "313680e35f8aab114dd2e67f126c4ce0f2d459c3c90a9c9dd216c6c1a42c5407",
+    "audit/pyright_report_recovery_final.log": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+    "audit/postrun_check.py": "cc003b1ce1c4654a21d600db5c7fe0296b4fa58ad7c792339e832677ea6b853e",
+    "audit/report_recovery.py": "156b7660361f298a22d38dacdfed343c42a555e513d5fb743e85d5f64c42a52e"
+  },
+  "access": "Only full spec andNEWPhase2 files, no original source/tests/configs/reports/data, no network/Git, no model constructed/fit/interrupted; only final acceptance review files written in this closure turn"
+}

@@ -1,0 +1,43 @@
+{
+  "AVGO_witness": "2021-06-09 16:33/16:34 UTC; compare preJune9 replay from V5June8 checkpoint, never edit old post-order state",
+  "acceptance_thresholds": {
+    "frozen_hash_or_mtime_drift": 0,
+    "ledger_abs_residual": "1e-8",
+    "owned_types_errors_warnings": 0,
+    "pilot_incomplete_daily": 0,
+    "pilot_pending_terminal": 0,
+    "pilot_unpriced_special_terminal": 0,
+    "pilot_windows": 5
+  },
+  "full_scope": "1005sessions140280opportunities all20 all7validslots, no F09/label gate; all24scenarios only after certified pilots",
+  "new_HTTP_requests_planned": 0,
+  "no_post2024_market_prices": true,
+  "pilot_windows": [
+    [
+      "2021-01-04",
+      "2021-01-08"
+    ],
+    [
+      "2021-06-02",
+      "2021-06-11"
+    ],
+    [
+      "2022-08-24",
+      "2022-08-26"
+    ],
+    [
+      "2024-05-09",
+      "2024-05-17"
+    ],
+    [
+      "2024-11-27",
+      "2024-12-02"
+    ]
+  ],
+  "predecessor_child_sha256": "8070933378fd6ed3af4fa0617523729de3a3010756560c837b9a09d427809b53",
+  "read_projection": "V4Market fixed schema ticker,timestamp,is_rth,open,high,low,close,volume; original source hashes+source supplement receipts verified at admission",
+  "runtime_control": "No parameter tuning; stop performance publication on material unresolved accounting/execution/marks. Preserve failed receipts and actual progress.",
+  "scope": "Existing V4 original raw canonical 48OOS partitions, sealed exact-gap SIP supplement, cached original signals/controls, V3 actions and V4 OGN; all2021\u20132024. No network acquisition currently needed.",
+  "source_basis": "RAW_SHARE before adjust_prices; exact old QA/quarantine retained; sources retrospective and entitlements not livePIT proof",
+  "source_rights": "Existing authorized local research only; vendor payloads stay ignored/private; no redistribution assurance"
+}

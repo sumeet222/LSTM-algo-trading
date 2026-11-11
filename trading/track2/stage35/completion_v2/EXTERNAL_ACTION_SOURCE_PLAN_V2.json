@@ -1,0 +1,17 @@
+{
+  "approved_before_access": true,
+  "scope": "pre2025 action-only evidence;no current quotes",
+  "requests": [
+    {
+      "url": "https://www.apple.com/newsroom/2024/05/apple-reports-second-quarter-results/",
+      "purpose": "bounded2024 announcement,amount,record/pay dates;ex-date must be explicit elseunknown"
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v7/finance/download/AAPL?period1=1277942400&period2=1735689600&interval=1d&events=div",
+      "purpose": "dividend-only CSV2010-07..2024-12,one probe;stop if auth/429;never chart current-price metadata"
+    }
+  ],
+  "limits": "2 requests,no credentials/accounts;no post2024 quotes",
+  "licensing": "publicly accessible issuer evidence;Yahoo access/redistribution rights not certified;no bulk financial download",
+  "fallback": "existing verified split facts;no invented ex/pay date;source gap blocksfinancialrelease"
+}

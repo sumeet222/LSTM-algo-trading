@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "actual_effective_UTC": "2021-06-09T16:34:00Z",
+      "available_posted_UTC": "2021-06-09T16:37:00Z",
+      "cash_delta": "928.00",
+      "commission": "1.00",
+      "external_price": "464.50",
+      "label": "LEGACY_EQUAL",
+      "missing_minute_UTC": "2021-06-09T16:33:00Z",
+      "physical_after": -10,
+      "physical_before": -8,
+      "raw_price": "464.965",
+      "restricted_delta": "929.000",
+      "scope": "Identical-intent kernel parity; V5 portfolio and default $2000 retail selection differ.",
+      "signed_request": -2,
+      "source": "1dd234eadabb8124d89eccafd0d64dc15c5dac42f7da140f9641a810d9de42c1"
+    },
+    {
+      "actual_effective_UTC": "2021-06-09T16:34:00Z",
+      "available_posted_UTC": "2021-06-09T16:37:00Z",
+      "cash_delta": "1392.50",
+      "commission": "1.00",
+      "external_price": "464.50",
+      "label": "LEGACY_S2C",
+      "missing_minute_UTC": "2021-06-09T16:33:00Z",
+      "physical_after": -13,
+      "physical_before": -10,
+      "raw_price": "464.965",
+      "restricted_delta": "1393.500000000000000000000000",
+      "scope": "Identical-intent kernel parity; V5 portfolio and default $2000 retail selection differ.",
+      "signed_request": -3,
+      "source": "1dd234eadabb8124d89eccafd0d64dc15c5dac42f7da140f9641a810d9de42c1"
+    }
+  ],
+  "sha256": "5b1789bf80a1c34bd0d6a1d815df3541900889f5aa14aaf9e317d4662354d269",
+  "source_reads": [
+    {
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-06.parquet",
+      "rows": 169775,
+      "sha256": "47710016435ad7c56a2a32e11586c80a2d199de9cc2b6715bb23fb1813f083ed"
+    }
+  ],
+  "status": "PASS"
+}

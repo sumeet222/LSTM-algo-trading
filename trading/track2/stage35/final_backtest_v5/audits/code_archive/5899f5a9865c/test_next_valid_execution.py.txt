@@ -1,0 +1,328 @@
+"""Synthetic execution-policy witnesses; real-source certification is separate."""
+
+import gzip
+import json
+from dataclasses import replace
+from decimal import Decimal
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import pytest
+
+from lstm_data.trading.track2.stage012.calendar_schedule import MarketClock
+from lstm_data.trading.track2.stage012.model_registry import SYMBOLS
+from lstm_data.trading.track2.stage35.final_backtest_v4.market import Day, minute
+from lstm_data.trading.track2.stage35.final_backtest_v5 import driver, release
+from lstm_data.trading.track2.stage35.final_backtest_v5.book import Account, Lot, Order, Request
+from lstm_data.trading.track2.stage35.final_backtest_v5.checkpoint import seal, unseal
+from lstm_data.trading.track2.stage35.final_backtest_v5.execution import disposition
+from lstm_data.trading.track2.stage35.final_backtest_v5.protocol import (
+    ARMS,
+    POLICY,
+    Scenario,
+    freeze,
+)
+
+D = Decimal
+
+
+class FabricatedMarket:
+    def __init__(self, first, last):
+        self.clock = MarketClock("2020-12-01", "2022-01-01")
+        self.ogn = {}
+        self.first = first
+        self.last = last
+
+    def days(self):
+        for date in pd.date_range(self.first, self.last):
+            day = str(date.date())
+            origins = self.clock.origins(day)
+            if not origins:
+                continue
+            starts = np.arange(minute(origins[0]), minute(origins[0]) + 390)
+            values = np.full((390, 20), 100.0)
+            records = []
+            for origin in origins:
+                for i, ticker in enumerate(SYMBOLS):
+                    row: dict[str, object] = dict(
+                        origin=origin,
+                        endpoint=self.clock.endpoint(origin),
+                        ticker=ticker,
+                        input_eligible=True,
+                        direction=1 if i % 2 else -1,
+                        checkpoint_hash="FABRICATED_MODEL",
+                        issued_at=origin + pd.Timedelta(minutes=2),
+                        matched_four_arms=True,
+                    )
+                    for arm in ARMS:
+                        row["g_" + arm] = 1.0
+                    records.append(row)
+            yield Day(
+                day,
+                starts,
+                values,
+                values,
+                np.full((390, 20), 100000.0),
+                np.ones((390, 20), bool),
+                pd.DataFrame(records),
+                "FABRICATED_SOURCE",
+                {},
+            )
+
+
+@pytest.mark.parametrize("lag", [1, 2, 5])
+def test_wait_next_valid_and_nominal_lifetime(lag):
+    o = Order("o", 0, 100 + lag, 101 + lag, (), D(-2), 100, 110)
+    assert disposition(o, o.effective, o.effective + 1 + lag, lag, False) == "WAIT"
+    assert disposition(o, o.effective + 1, o.effective + 2 + lag, lag, True) == "EXECUTE"
+    assert disposition(o, 110, 111 + lag, lag, True) == "EXECUTE"
+    assert disposition(o, 111, 112 + lag, lag, True) == "EXPIRE"
+    with pytest.raises(ValueError):
+        disposition(o, o.effective, o.effective + lag, lag, True)
+    with pytest.raises(ValueError):
+        disposition(replace(o, decision=o.effective), o.effective, 200, lag, True)
+    with pytest.raises(ValueError):
+        disposition(replace(o, prior_volume_available=o.decision + 1), o.effective, 200, lag, True)
+
+
+def stub(monkeypatch, market):
+    monkeypatch.setattr(driver, "Market", market)
+    monkeypatch.setattr(driver, "load_actions", lambda: ())
+    # Only a fabricated hardcoded reader remains; no historical reader survives.
+    monkeypatch.setattr(release, "check_admission", lambda *args: None)
+
+
+class MissingMarket(FabricatedMarket):
+    def days(self):
+        for day in super().days():
+            valid = day.valid.copy()
+            valid[4:7, 0] = False
+            yield replace(day, valid=valid)
+
+
+def test_real_replay_missing_minutes_advance_actual_time_and_record_hash(tmp_path, monkeypatch):
+    stub(monkeypatch, MissingMarket)
+    engine = driver.Driver((Scenario(),), "2021-01-04", "2021-01-05", tmp_path / "next")
+    result = engine.run()
+    assert not result["unresolved"]
+    assert result["policy_counts"]["POSTPONED_FILL"] > 0
+    with gzip.open(tmp_path / "next/baseline/events.jsonl.gz", "rt") as f:
+        rows = [json.loads(s) for s in f]
+    postponed = [
+        r for r in rows if r["kind"] == "V5_QUALIFIED_BAR" and r["delay_scheduled_or_wall_minutes"]
+    ]
+    assert postponed and all(r["effective"] > r["intended_minute"] for r in postponed)
+    assert all(r["source_hash"] == "FABRICATED_SOURCE" for r in postponed)
+    assert all(r["V5_POLICY_VARIANT"] == POLICY for r in rows)
+    for row in rows:
+        expected = row.pop("hash")
+        assert driver.canonical(row) == expected
+
+
+def test_before_avgo_analogue_restart_is_byte_equal(tmp_path, monkeypatch):
+    stub(monkeypatch, MissingMarket)
+    whole = driver.Driver((Scenario(),), "2021-01-04", "2021-01-05", tmp_path / "whole")
+    whole.run()
+    cut = driver.Driver((Scenario(),), "2021-01-04", "2021-01-05", tmp_path / "cut")
+    cut.run(stop_after=1)
+    resumed = driver.Driver.restart(
+        tmp_path / "cut/checkpoints/2021-01-04.json.gz", tmp_path / "cut", None
+    )
+    resumed.run()
+    assert [a.journal_hash for a in whole.accounts] == [a.journal_hash for a in resumed.accounts]
+    for kind in ("events", "daily", "cohorts"):
+        with gzip.open(tmp_path / f"whole/baseline/{kind}.jsonl.gz", "rt") as f:
+            a = f.read()
+        with gzip.open(tmp_path / f"cut/baseline/{kind}.jsonl.gz", "rt") as f:
+            b = f.read()
+        assert a == b
+
+
+class NoEntryMarket(FabricatedMarket):
+    def days(self):
+        for day in super().days():
+            valid = day.valid.copy()
+            valid[4:13, 0] = False
+            yield replace(day, valid=valid)
+
+
+def test_all_bars_absent_through_deadline_is_model_expiry_not_broker_claim(tmp_path, monkeypatch):
+    stub(monkeypatch, NoEntryMarket)
+    engine = driver.Driver((Scenario(),), "2021-01-04", "2021-01-04", tmp_path / "expiry")
+    result = engine.run()
+    assert result["policy_counts"]["EXPIRED_MODELED_ENTRY_BATCH"] > 0
+    assert not result["unresolved"]
+    with gzip.open(tmp_path / "expiry/baseline/events.jsonl.gz", "rt") as f:
+        rows = [json.loads(s) for s in f]
+    assert any(
+        r["kind"] == "EXPIRED_UNFILLED_BY_V5_SIMULATION" and r["no_broker_cancellation_claim"]
+        for r in rows
+    )
+    opening = minute("2021-01-04T14:30:00Z")
+    assert not any(
+        r["kind"] == "FILL" and r["ticker"] == 0 and r["effective"] <= opening + 13 for r in rows
+    )
+
+
+def test_open_exit_remains_without_expiry_and_partial_fees_accumulate():
+    a = Account("EQUAL", "fabricated", Scenario())
+    a.lots["x"] = Lot("x", 0, 0, 240, 10, -1, -4, D(1), pending=D(-4))
+    a.prices[0] = D(100)
+    a.refresh()
+    o = Order("partial", 0, 2, 3, (Request("x", D(-4), "ENTRY"),), D(-4), 2, 10)
+    a.fill(o, D(100), 6, 3, D(".5"))
+    a.fill(o, D(100), 7, 4)
+    assert a.quantity[0] == -4 and a.commission == 1 and o.paid_fee == 1
+    assert a.restricted() > 0 and a.cash - a.restricted() < a.initial
+    exit_order = Order("exit", 0, 243, 244, (Request("x", D(4), "EXIT"),), D(4), 242, None)
+    assert disposition(exit_order, 10000, 10003, 2, False) == "WAIT"
+    assert disposition(exit_order, 10001, 10004, 2, True) == "EXECUTE"
+    assert a.quantity[0] == -4 and a.nav() is not None
+    a.reconcile()
+    restored = unseal(seal(a))
+    assert isinstance(restored, Account) and restored.cash == a.cash
+
+
+def test_later_open_cannot_rewrite_submission_or_predecision_state():
+    prior = []
+    after = []
+    for price in (D(100), D(10000)):
+        a = Account("EQUAL", "fabricated", Scenario())
+        a.prices[0] = D(100)
+        a.marks_at[0] = 2
+        a.lots["x"] = Lot("x", 0, 0, 240, 10, 1, 4, D(1), pending=D(4))
+        a.refresh()
+        o = Order("same", 0, 2, 3, (Request("x", D(4), "ENTRY"),), D(4), 2, 10)
+        prior.append((seal(a), seal(o)))
+        assert disposition(o, 3, 6, 2, False) == "WAIT"
+        a.fill(o, price, 7, 4)
+        after.append(a.cash)
+        a.reconcile()
+    assert prior[0] == prior[1] and after[0] != after[1]
+
+
+def test_driver_without_real_admission_never_reads_historical_market(tmp_path, monkeypatch):
+    def forbidden(*args):
+        raise AssertionError("must not read source")
+
+    monkeypatch.setattr(driver, "Market", forbidden)
+    monkeypatch.setattr(release, "ROOT", tmp_path)
+    with pytest.raises(PermissionError):
+        driver.Driver((Scenario(),), "2021-01-04", "2021-01-05", tmp_path / "performance")
+    assert not (tmp_path / "performance").exists()
+
+
+def test_sealed_policy_preserves_all24_arms_populations_and_source_axis():
+    frozen = freeze()
+    assert len(frozen["scenarios"]) == 24
+    assert D(frozen["initial_cash_per_account"]) == 100000
+    old = Path("trading/track2/stage35/final_backtest_v4")
+    witness = json.loads((old / "MATERIAL_PRICE_BLOCKER_V4.json").read_text())
+    assert not witness["target_bar_present"] and witness["raw_trades_count"] == 18
+    source = json.loads((old / "RAW_SOURCE_AND_SIGNAL_PREFLIGHT_V4.json").read_text())
+    assert source["totals"]["forecasts"] == 131111 and source["totals"]["matched"] == 87557
+
+
+@pytest.mark.parametrize("d", ["2012-10-26", "2018-12-04", "2024-03-08", "2024-11-29"])
+def test_actual_calendar_later_observation_is_strictly_future_and_rth(d):
+    from lstm_data.trading.track2.stage35.final_backtest_v4.execution_calendar import (
+        ExecutionCalendar,
+    )
+
+    clock = MarketClock("2012-01-01", "2025-01-10")
+    c = ExecutionCalendar(clock)
+    at = minute(d + "T20:59:00Z")
+    following = c.next(at)
+    assert following > at
+    assert minute(clock.next_observation(driver.utc(at))) == following
+
+
+def test_fabricated_metrics_do_not_depend_on_global_2021_start():
+    from lstm_data.trading.track2.stage35.final_backtest_v5.analysis import metrics
+
+    result = metrics(np.array([100000.0, 101000.0]), pd.date_range("2024-01-02", periods=2))
+    assert result["days"] == 2 and result["cumulative_return"] > 0
+    assert result["CAGR"] > 1
+    assert result["maximum_drawdown_duration_sessions"] == 0
+    assert metrics(np.array([np.nan]), pd.date_range("2024-01-02", periods=1))["status"].startswith(
+        "UNDEFINED"
+    )
+
+
+def test_edited_pass_json_without_current_proofs_cannot_admit(tmp_path, monkeypatch):
+    from lstm_data.trading.track2.stage35.final_backtest_v5.paths import canonical
+
+    monkeypatch.setattr(release, "ROOT", tmp_path)
+    monkeypatch.setattr(release, "freeze", lambda: {"pilot_windows": []})
+    folder = tmp_path / "forged"
+    folder.mkdir()
+    binding = {
+        "files": {},
+        "owner": {
+            "period": ["2021-01-01", "2024-12-31"],
+            "arms": list(ARMS),
+            "live_or_paper": False,
+        },
+    }
+    (folder / "RESEARCH_AUTHORIZATION_AND_BINDING_V5.json").write_text(json.dumps(binding))
+    (folder / "RESEARCH_BACKTEST_READINESS_V5.json").write_text(
+        json.dumps(
+            {
+                "binding_sha256": canonical(binding),
+                "overall": "PASS",
+                "gates": {"G_EXECUTION": "PASS"},
+            }
+        )
+    )
+    with pytest.raises(PermissionError):
+        release.check_admission(
+            release.Admission(folder, canonical(binding), "financial"),
+            "2021-01-01",
+            "2024-12-31",
+            False,
+        )
+    assert list((tmp_path / "audits").glob("rejection_*.json"))
+
+
+def test_multiyear_microdollar_seconds_do_not_overflow_64bit(tmp_path, monkeypatch):
+    stub(monkeypatch, FabricatedMarket)
+    engine = driver.Driver((Scenario(),), "2021-01-04", "2021-01-05", tmp_path / "large")
+    largest = int(np.iinfo(np.int64).max)
+    engine.integrals[0] = largest - 10
+    engine.last_prices[0] = 100
+    engine.cursor = 1
+    engine.integrate_gap(2)
+    assert int(engine.integrals[0]) == largest - 10 + 100 * 1000000 * 60
+    restored = unseal(seal(engine.integrals))
+    assert isinstance(restored, np.ndarray)
+    assert int(restored[0]) > largest
+    assert (restored == engine.integrals).all()
+
+
+def test_protected_scope_cannot_be_rebased_by_editing_h0_json(tmp_path, monkeypatch):
+    monkeypatch.setattr(release, "ROOT", tmp_path)
+    (tmp_path / "audits").mkdir()
+    (tmp_path / "audits/H0_PROTECTED_V5.json").write_text(
+        json.dumps({"protected": [], "source_partitions": []})
+    )
+    with pytest.raises(ValueError, match="MANIFEST_REBASED"):
+        release.protected_files()
+
+
+def test_lossless_checkpoint_compression_is_atomic_deterministic_and_immutable(tmp_path):
+    from lstm_data.trading.track2.stage35.final_backtest_v5.checkpoint import (
+        read_checkpoint,
+        write_checkpoint,
+    )
+
+    state = seal({"a": [D(".123"), 2**70, "MARKED_PENDING_NOT_UNKNOWN"]})
+    one = tmp_path / "one.json.gz"
+    two = tmp_path / "two.json.gz"
+    write_checkpoint(one, state)
+    write_checkpoint(two, state)
+    assert one.read_bytes() == two.read_bytes()
+    assert read_checkpoint(one) == state
+    write_checkpoint(one, state)
+    with pytest.raises(ValueError, match="IMMUTABLE_CHECKPOINT"):
+        write_checkpoint(one, seal({"altered": True}))

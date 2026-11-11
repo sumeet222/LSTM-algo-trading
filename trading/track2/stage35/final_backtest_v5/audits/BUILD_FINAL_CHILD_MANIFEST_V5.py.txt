@@ -1,0 +1,23 @@
+"""Content-bind new V5 work only after writers stop; no source mutation."""
+from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
+import datetime,json,os,subprocess,time
+from lstm_data.trading.track2.stage35.final_backtest_v5.paths import ROOT,digest,publish
+from lstm_data.trading.track2.stage35.final_backtest_v5.release import fingerprint
+start=time.monotonic();target=ROOT/'FINAL_CONTENT_MANIFEST_V5.json';seal=ROOT/'FINAL_CONTENT_MANIFEST_V5.sha256'
+if target.exists() or seal.exists():raise FileExistsError('FINAL_MANIFEST_ALREADY_SEALED')
+m_path=ROOT/'BACKTEST_RUN_MANIFEST_V5_9e093b3f6a62.json';m=json.loads(m_path.read_text())
+if m['complete_scenarios']!=24 or fingerprint()!=m['code']:raise ValueError('NOT_FINAL_CURRENT_STUDY')
+roots=[ROOT,Path('src/lstm_data/trading/track2/stage35/final_backtest_v5'),Path('tests/track2_stage35_v5')]
+files=set()
+for root in roots:
+ files.update(p for p in root.rglob('*') if p.is_file() and not any(s in p.parts for s in ('__pycache__','.pytest_cache','.ruff_cache')) and p.suffix!='.pyc' and not p.name.endswith('.tmp') and p not in (target,seal))
+files.update([Path('reports/codex_sessions/2026-11-10_track2_v5_next_valid_bar.md'),Path('reports/codex_sessions/2026-11-10_124734_track2_v5_transport_recovery.md')])
+def record(p):
+ before=p.stat();h=digest(p);after=p.stat()
+ if (before.st_size,before.st_mtime_ns)!=(after.st_size,after.st_mtime_ns):raise ValueError('ACTIVE_WRITER:'+str(p))
+ return {'path':str(p),'bytes':after.st_size,'mtime_ns':after.st_mtime_ns,'sha256':h}
+with ThreadPoolExecutor(max_workers=4) as pool:rows=list(pool.map(record,sorted(files)))
+manifest={'schema':'hf20-track2-v5-final-child-v1','UTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'verdict':'STAGE35_V5_FINANCIAL_BACKTEST_COMPLETE_EXPLORATORY','code_fingerprint':fingerprint(),'git_HEAD':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'self_exclusion':[str(target),str(seal)],'excluded_ephemeral':['__pycache__','.pytest_cache','.ruff_cache','*.pyc','*.tmp'],'parent_protected_inventory':str(ROOT/'audits/H0_PROTECTED_V5.json'),'parent_protected_inventory_sha256':digest(ROOT/'audits/H0_PROTECTED_V5.json'),'final_protected_source_proof_sha256':digest(ROOT/'audits/FINAL_FROZEN_AND_SOURCE_INTEGRITY_V5.json'),'study_master_sha256':digest(m_path),'files':rows,'file_count':len(rows),'total_bytes':sum(x['bytes'] for x in rows),'elapsed_seconds':time.monotonic()-start,'large_vendor_and_financial_payloads':'intentionally local/ignored; indexed by bytes and SHA256, not blanket Git additions','Stage6_independent_complete':False}
+publish(target,manifest);seal.write_text(digest(target)+'  '+target.name+'\n')
+print(json.dumps({'manifest':str(target),'sha256':digest(target),'files':len(rows),'bytes':manifest['total_bytes'],'elapsed_seconds':manifest['elapsed_seconds']},indent=2))

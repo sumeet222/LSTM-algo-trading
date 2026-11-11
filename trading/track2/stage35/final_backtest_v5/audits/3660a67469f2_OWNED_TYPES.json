@@ -1,0 +1,30 @@
+{
+    "version": "1.1.414",
+    "time": "1794282753978",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v5/analysis.py",
+            "severity": "error",
+            "message": "Argument of type \"int | float\" cannot be assigned to parameter \"year\" of type \"int | None\" in function \"__new__\"\n  Type \"int | float\" is not assignable to type \"int | None\"\n    Type \"float\" is not assignable to type \"int | None\"\n      \"float\" is not assignable to \"int\"\n      \"float\" is not assignable to \"None\"",
+            "range": {
+                "start": {
+                    "line": 33,
+                    "character": 37
+                },
+                "end": {
+                    "line": 33,
+                    "character": 69
+                }
+            },
+            "rule": "reportArgumentType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 12,
+        "errorCount": 1,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 7.596
+    }
+}
+

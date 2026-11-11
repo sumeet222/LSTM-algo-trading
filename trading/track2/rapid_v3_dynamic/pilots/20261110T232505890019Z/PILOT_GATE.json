@@ -1,0 +1,148 @@
+{
+  "AVGO_sha256": "c1d4e230d6dc78df0a554b0b30cae7e8f5f430d764844e94c3d2f623c925f8cb",
+  "action_windows": [
+    {
+      "actions": {
+        "DIVIDEND_EX": 28,
+        "MRK_OGN_ENTITLEMENT": 9,
+        "OGN_CIL_CONDITIONAL_PAYMENT": 9,
+        "OGN_EXTERNAL_DISPOSAL": 9,
+        "OGN_PHYSICAL_SHORT_BORROW": 3,
+        "OGN_WHOLE_DISPOSAL": 9,
+        "OGN_WHOLE_ORDER": 9
+      },
+      "census": {
+        "COMPLETE": 48,
+        "NO_TRADES": 6
+      },
+      "first": "2021-05-24",
+      "holds": [],
+      "last": "2021-06-21",
+      "maximum_residual": "2.4E-21",
+      "seconds": 4.792048749979585,
+      "source": [
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-05.parquet",
+          "rows": 154977,
+          "sha256": "194b55a2e86c8cbad4d2621ac440153ee5dedacfa137e12eb1fbb20a53eea85a"
+        },
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-06.parquet",
+          "rows": 169775,
+          "sha256": "47710016435ad7c56a2a32e11586c80a2d199de9cc2b6715bb23fb1813f083ed"
+        }
+      ]
+    },
+    {
+      "actions": {
+        "DIVIDEND_EX": 17,
+        "DIVIDEND_PAY": 13,
+        "SPLIT": 54
+      },
+      "census": {
+        "COMPLETE": 48,
+        "NO_TRADES": 6
+      },
+      "first": "2022-08-15",
+      "holds": [],
+      "last": "2022-09-12",
+      "maximum_residual": "1.91572E-21",
+      "seconds": 5.151761666173115,
+      "source": [
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-08.parquet",
+          "rows": 176727,
+          "sha256": "d65710d4ccd2fed61806a118ae29beb56a9fd7f765308e4c8a0782feb5f064eb"
+        },
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-09.parquet",
+          "rows": 157148,
+          "sha256": "e8c08de290de1cdc10b305ee71e69f31e38622dd92e6144db6f393e0bb0699f0"
+        }
+      ]
+    },
+    {
+      "actions": {
+        "DIVIDEND_EX": 54,
+        "DIVIDEND_PAY": 31
+      },
+      "census": {
+        "COMPLETE": 51,
+        "NO_TRADES": 3
+      },
+      "first": "2024-05-06",
+      "holds": [],
+      "last": "2024-06-03",
+      "maximum_residual": "1.60137E-21",
+      "seconds": 4.913572292076424,
+      "source": [
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-05.parquet",
+          "rows": 169573,
+          "sha256": "10d8d9bad21a9e111f453429f60d7a733ed825395346c120f4bb976787e52326"
+        },
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-06.parquet",
+          "rows": 147285,
+          "sha256": "7865ca62140136c95309603287a65e8783c8fffab497a2c66c24cbce7fcc3b7c"
+        }
+      ]
+    },
+    {
+      "actions": {
+        "DIVIDEND_EX": 37,
+        "DIVIDEND_PAY": 19
+      },
+      "census": {
+        "COMPLETE": 54
+      },
+      "first": "2024-11-18",
+      "holds": [],
+      "last": "2024-12-16",
+      "maximum_residual": "8.0779E-22",
+      "seconds": 4.983639084035531,
+      "source": [
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-11.parquet",
+          "rows": 136841,
+          "sha256": "9dd9c17c3445b0eac430a53139a4bc5c5a2b32d030b350dfc03d803796643740"
+        },
+        {
+          "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-12.parquet",
+          "rows": 158246,
+          "sha256": "127922240fb382b66d134fc835d433b3b6a46dd97901aa68f554004acb77d25f"
+        }
+      ]
+    }
+  ],
+  "benchmark": {
+    "elapsed": 4.893439749954268,
+    "last_session": "2021-01-29",
+    "sessions": 19
+  },
+  "dynamic_census": {
+    "COMPLETE": 42,
+    "NO_TRADES": 12
+  },
+  "holds": [],
+  "legacy": {
+    "USD_tolerance": "1E-7",
+    "V1_manifest_sha256": "481ed346d5cd28ff8ee55988a195b82bf63345ac7834bd39a830965f3184d712",
+    "counts": {
+      "MICRO_PRO_early": 309,
+      "MICRO_PRO_orders": 1850,
+      "RETAIL_CONSERVATIVE_early": 4,
+      "RETAIL_CONSERVATIVE_orders": 168
+    },
+    "maximum_daily_USD_difference": 0.0,
+    "maximum_summary_difference": 6.52278231427772e-12,
+    "return_tolerance": 1e-12,
+    "status": "PASS"
+  },
+  "peak_RSS_bytes": 812597248,
+  "projected_full_seconds": 258.8372078265284,
+  "registry": "7b91edd45848c301abe3d1f03da8ed7378f7c8ca708bf4f147d0bfd47ea123b1",
+  "restart_hash": "14050208a11b8b5b1b82b20461e7929358036479a3c3b7d6586b611db6305df4",
+  "status": "PASS",
+  "tests_sha256": "80a7cc104072485847a9b88417efbc28ed9c56792cc5b18b7dd12d42eafce210"
+}

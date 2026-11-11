@@ -1,0 +1,62 @@
+{
+    "version": "1.1.414",
+    "time": "1794236791555",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/certify.py",
+            "severity": "error",
+            "message": "No overloads for \"update\" match the provided arguments",
+            "range": {
+                "start": {
+                    "line": 161,
+                    "character": 4
+                },
+                "end": {
+                    "line": 220,
+                    "character": 5
+                }
+            },
+            "rule": "reportCallIssue"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/certify.py",
+            "severity": "error",
+            "message": "Argument of type \"dict[str, dict[str, Unknown] | dict[str, str]]\" cannot be assigned to parameter \"m\" of type \"Iterable[tuple[str, dict[str, str]]]\" in function \"update\"\n  \"Literal['G_ACTION_FACTS']\" is not assignable to \"tuple[str, dict[str, str]]\"\n  \"Literal['G_ACTION_CONDITIONAL']\" is not assignable to \"tuple[str, dict[str, str]]\"\n  \"Literal['G_PRICE_BASIS']\" is not assignable to \"tuple[str, dict[str, str]]\"\n  \"Literal['G_ACCOUNTING']\" is not assignable to \"tuple[str, dict[str, str]]\"\n  \"Literal['G_EXECUTION']\" is not assignable to \"tuple[str, dict[str, str]]\"\n  \"Literal['G_SHORT']\" is not assignable to \"tuple[str, dict[str, str]]\"\n  \"Literal['G_REPOSITORY']\" is not assignable to \"tuple[str, dict[str, str]]\"\n  \"Literal['G_HUMAN']\" is not assignable to \"tuple[str, dict[str, str]]\"",
+            "range": {
+                "start": {
+                    "line": 162,
+                    "character": 8
+                },
+                "end": {
+                    "line": 219,
+                    "character": 9
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/completion_v3/certify.py",
+            "severity": "error",
+            "message": "Expected 2 positional arguments",
+            "range": {
+                "start": {
+                    "line": 250,
+                    "character": 8
+                },
+                "end": {
+                    "line": 257,
+                    "character": 9
+                }
+            },
+            "rule": "reportCallIssue"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 20,
+        "errorCount": 3,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 3.111
+    }
+}
+

@@ -1,0 +1,19 @@
+{
+  "analysis_receipt_sha256": "bc396974e59273a65596647a5a9dfa14a7bf76f9e3df28410f158860e688a285",
+  "checkpoint_sha256": "98ff09f8ca93b4e63d167eea34781c4fd32c41725032d8942102cc0200bd32bb",
+  "files": {
+    "CONCENTRATION.csv": "34e89b9b674bdb7f881809a4764d365c3d9cc306c37c41a56422b864b0b5e922",
+    "ORDER_NOTIONAL_BANDS.csv": "bec4edce4c7369fead3be8c80d2e1b1ecf134ab2d0ff267d8d8184aef4a0c0de",
+    "PHYSICAL_COST_DIAGNOSTICS_COMPLETE.csv": "02307846c717ce881165b3db979581b8f8514572853f9e2079e6c49ad8dd8c40",
+    "PHYSICAL_ORDERS_RECONCILIATION.csv": "2173d78e4f1b1ddb732647c934c30b544ce6d38af48e98dd488f2fcd89378bd7",
+    "R01_STRESS_INEQUALITY_CHECKS.csv": "a462f298c29eb2ad7f0ec8312de2e7e74b21e6e95feb6adde93cf40696031021",
+    "RECOVERED_OGN_PHYSICAL_ROWS.parquet": "864aea225d7071f837b1db53afb08917e2600636dc2315a511a00308228581d9",
+    "VINTAGE_RISK_PER_OPPORTUNITY.csv": "da79ad76b9b9a27758b585d1c0067ed357d8b530747c04a0ad53afd332d4632a"
+  },
+  "funded_manifest_sha256": "c80fab961f9fc944e39e4bece1e3e12f6cf129308f2584906095c2002dc64cee",
+  "funded_performance_changed": false,
+  "funded_replay_performed": false,
+  "reason": "Three special OGN rows omitted from regular-fill export; recovered exact saved events",
+  "recovered_rows": 3,
+  "status": "PASS"
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2021-03-01",
+  "pages": [
+    {
+      "http": 200,
+      "page": 0,
+      "raw_response_sha256": "9ca2f7b54b26ac9c747d13eaa4f217496e5fd8c06cbca5ed9cf16036c6f714f4",
+      "retrieved_utc": "2026-11-09T18:55:21.221417+00:00"
+    }
+  ],
+  "path": "trading/track2/stage35/final_backtest_v4/sources/gap_raw/2021-03-01.json",
+  "projected_sha256": "7a6e58afe6af4a4451c99d5abee3f5347a3107b72ecb081bc0307e4aa305722f",
+  "query": {
+    "adjustment": "raw",
+    "end": "2021-03-01T21:00:00+00:00",
+    "feed": "sip",
+    "limit": 10000,
+    "sort": "asc",
+    "start": "2021-03-01T14:30:00+00:00",
+    "symbols": "MRK,MS,AMZN,AVGO,TSLA,MA",
+    "timeframe": "1Min"
+  },
+  "retained": 347,
+  "scope": "projected source rows; original full response not retained; retrospective not PIT",
+  "selected": 349,
+  "status": "COMPLETE_RESPONSE",
+  "unresolved": 2
+}

@@ -1,0 +1,44 @@
+{
+  "performance_metrics_computed": false,
+  "rows": [
+    {
+      "arm": "EQUAL",
+      "decision_minute": 27054272,
+      "earliest_effective_minute": 27054273,
+      "known_physical_shares": -8,
+      "order_id": "2021-06-09:27054272:16:1003",
+      "population": "attainable",
+      "requests": [
+        {
+          "cohort": "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|EQUAL|27054270|AVGO",
+          "role": "ENTRY",
+          "signed_delta": "-2"
+        }
+      ],
+      "status": "UNRESOLVED_SOURCE_BAR",
+      "submitted_signed_shares": "-2",
+      "symbol": "AVGO",
+      "unknown_nav": true
+    },
+    {
+      "arm": "S2C_RISK",
+      "decision_minute": 27054272,
+      "earliest_effective_minute": 27054273,
+      "known_physical_shares": -10,
+      "order_id": "2021-06-09:27054272:16:1003",
+      "population": "attainable",
+      "requests": [
+        {
+          "cohort": "aeed339f34c8639e1bdfd479f5f4f0a29b6ee86c7e29b2cb7a673ff7790d3697|S2C_RISK|27054270|AVGO",
+          "role": "ENTRY",
+          "signed_delta": "-3"
+        }
+      ],
+      "status": "UNRESOLVED_SOURCE_BAR",
+      "submitted_signed_shares": "-3",
+      "symbol": "AVGO",
+      "unknown_nav": true
+    }
+  ],
+  "source_checkpoint": "trading/track2/stage35/final_backtest_v4/PILOT_LEDGER_DIAGNOSTICS/pilot_r6/2021-06-02/checkpoints/2021-06-11.json"
+}

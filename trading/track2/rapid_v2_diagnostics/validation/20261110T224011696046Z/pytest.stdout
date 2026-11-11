@@ -1,0 +1,33 @@
+.............F..................................                         [100%]
+=================================== FAILURES ===================================
+____________ test_mixed_partial_fill_order_fee_and_forced_notional _____________
+
+    def test_mixed_partial_fill_order_fee_and_forced_notional():
+        a = Ledger("R01_H100", "RETAIL_CONSERVATIVE", Scenario())
+        a.prices[0] = D(100)
+        a.marks_at[0] = 10
+        a.lots["long"] = Lot("long", 0, 8, 250, 18, 1, 250, D(1), pending=D(250))
+        a.lots["short"] = Lot("short", 0, 8, 250, 18, -1, -50, D(1), pending=D(-50))
+        a.refresh()
+        o = Order(
+            "pair",
+            0,
+            12,
+            13,
+            (Request("long", D(250), "ENTRY"), Request("short", D(-50), "ENTRY")),
+            D(200),
+            12,
+            18,
+        )
+        a.pending[0] = o
+        a.cost_references[o.key] = CostReference(a.population, available_at=12)
+        a.record("ORDER", 12, ticker=0)
+        a.fill(o, D(100), 16, 13, D(".5"))
+        assert a.commission == D(1)
+>       assert a.quantity[0] == 100 and a.abs_virtual[0] == 200
+E       assert (np.int64(100) == 100 and np.float64(300.0) == 200)
+
+tests/track2_rapid_v2/test_diagnostics.py:187: AssertionError
+=========================== short test summary info ============================
+FAILED tests/track2_rapid_v2/test_diagnostics.py::test_mixed_partial_fill_order_fee_and_forced_notional
+1 failed, 47 passed in 3.36s

@@ -1,0 +1,408 @@
+{
+  "status": "PASS",
+  "description": "Captured after reporting failure, before saved-output-only report retry; no neural refit authorized",
+  "recipe_hashes_match_prefit": 8,
+  "score_bundle_hash_matches_original_manifest": true,
+  "files": [
+    {
+      "path": "artifacts/F21_initial_recipe.json",
+      "bytes": 163469,
+      "sha256": "aff0559078fe4503250e91164285cdcdea36d3894f9e6880e78d9fcfac13b96b"
+    },
+    {
+      "path": "artifacts/F21_refit_recipe.json",
+      "bytes": 168545,
+      "sha256": "e7f78b4708e638b2c0b0c10132d3d5ba85c1a5a12ebcebd5d3b493da65ed972a"
+    },
+    {
+      "path": "artifacts/F22_initial_recipe.json",
+      "bytes": 179508,
+      "sha256": "2576468bd05e0dcc7f5a8fc7d670032f2dc38c2c63b3150918f5b993d2c1f6c2"
+    },
+    {
+      "path": "artifacts/F22_refit_recipe.json",
+      "bytes": 186324,
+      "sha256": "c852509f70dbf847cc5d97fcb6967b2b7f1041a4cfc60ae2d45691a3e4447c18"
+    },
+    {
+      "path": "artifacts/F23_initial_recipe.json",
+      "bytes": 199131,
+      "sha256": "ab8227cdadbb06e3bb44da4143db3f3448ac5eb3ecba06e125e6e584def3056d"
+    },
+    {
+      "path": "artifacts/F23_refit_recipe.json",
+      "bytes": 205391,
+      "sha256": "4f454977ba7d085d1e6d6422c016cea9fab7e39133c03293a71b198d512b7f24"
+    },
+    {
+      "path": "artifacts/F24_initial_recipe.json",
+      "bytes": 217583,
+      "sha256": "77f8c3616465442aa344c4608520cf64e2ec202777737cf9e85adcb03c55cd8f"
+    },
+    {
+      "path": "artifacts/F24_refit_recipe.json",
+      "bytes": 223914,
+      "sha256": "d42b4b4160f18f7864068babea00ced85dd8a99e0862d36301b282929577546b"
+    },
+    {
+      "path": "artifacts/grid.parquet",
+      "bytes": 495052,
+      "sha256": "fa516a6dbab0e38f6b8f177d8ec8b3ed06a60643e02038212a7792ea0bd2fa6d"
+    },
+    {
+      "path": "artifacts/origins.parquet",
+      "bytes": 1173630,
+      "sha256": "d5d3f90e99b3037d8de1df5415dfd5251e8f8854e8039c27c35a83d08997d46c"
+    },
+    {
+      "path": "artifacts/roles.json",
+      "bytes": 1654670,
+      "sha256": "c38abbaf094285c67f53225e0078b18bbcafe92d190edd4e1dfe573b08fcfd59"
+    },
+    {
+      "path": "artifacts/run/F21/calibration.json",
+      "bytes": 1606,
+      "sha256": "9fe455e5a55734dfa90d2bb85791acc6e675a921880c65da6a2777770d861439"
+    },
+    {
+      "path": "artifacts/run/F21/calibration_predictions.parquet",
+      "bytes": 338976,
+      "sha256": "428b5dc44249eb36a554eaf617e6f9ac8e4d08d6e06ee07e1e4c58f3d3dc2e37"
+    },
+    {
+      "path": "artifacts/run/F21/initial/completed.json",
+      "bytes": 357,
+      "sha256": "976c33a785870385f66135e5f58054ec60c2398d7a40e577ed29421b4f7722d8"
+    },
+    {
+      "path": "artifacts/run/F21/initial/final_state.pt",
+      "bytes": 29679,
+      "sha256": "61c9ebeac459fa8ef8bcdce51905c36b9f203a00be4912f548314e63cbd8b4ff"
+    },
+    {
+      "path": "artifacts/run/F21/initial/initial_state.pt",
+      "bytes": 29771,
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411"
+    },
+    {
+      "path": "artifacts/run/F21/initial/selected_state.pt",
+      "bytes": 29849,
+      "sha256": "d42b669ab1778673098bc6d02a7212b658115b54424e5999b624d08430f98571"
+    },
+    {
+      "path": "artifacts/run/F21/initial/selector_state.json",
+      "bytes": 164,
+      "sha256": "e633f42a518b9490c6948a4630777b4f48cf3ff6ccf96660d6abad07fe9d5f80"
+    },
+    {
+      "path": "artifacts/run/F21/initial/started.json",
+      "bytes": 483,
+      "sha256": "c85f1cd59387442fd1ef9cb2efac102f52d3b70fd0f6394350f54ed15a5066aa"
+    },
+    {
+      "path": "artifacts/run/F21/initial/trace.jsonl",
+      "bytes": 4268,
+      "sha256": "19e65a222cb8cd90bd6631e7062f4c2fb575c6a0c1cf5658a2dc2f1037b8dced"
+    },
+    {
+      "path": "artifacts/run/F21/oos_scores.parquet",
+      "bytes": 1507212,
+      "sha256": "01c77c6420607a5c4dc29f8fb6b2aaec163b17429d1ff4d09743343384e39bac"
+    },
+    {
+      "path": "artifacts/run/F21/refit/completed.json",
+      "bytes": 181,
+      "sha256": "f705f9fb0ff9073032e640af27a1418b545a23296e00d6b30ca780245e1118b7"
+    },
+    {
+      "path": "artifacts/run/F21/refit/final_state.pt",
+      "bytes": 29679,
+      "sha256": "1c1853257cc22d3a6469f4efe71a2750ed1ca1a1a68bdb1a9aaa186542fffb44"
+    },
+    {
+      "path": "artifacts/run/F21/refit/initial_state.pt",
+      "bytes": 29771,
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411"
+    },
+    {
+      "path": "artifacts/run/F21/refit/latest_refit_state.pt",
+      "bytes": 29905,
+      "sha256": "41f245d4cba68191c3e810013b0d1ae425376a62397108b29dfac8ce50901377"
+    },
+    {
+      "path": "artifacts/run/F21/refit/started.json",
+      "bytes": 483,
+      "sha256": "c6357f353f1cc903214f430a54b027a17d830951ff0656797ea8b49e5afef060"
+    },
+    {
+      "path": "artifacts/run/F21/refit/trace.jsonl",
+      "bytes": 1793,
+      "sha256": "3fe2a61a5b5564a39d5501128f0bb423905ae0c82439df1f3a5a0403619d8654"
+    },
+    {
+      "path": "artifacts/run/F22/calibration.json",
+      "bytes": 1610,
+      "sha256": "62d3e54b58a1ec044a65b52b14e56aced1c71c47d36de924c8084e7f29b24a51"
+    },
+    {
+      "path": "artifacts/run/F22/calibration_predictions.parquet",
+      "bytes": 290650,
+      "sha256": "8496c4548815ba027dcbfca6bfcf5e809582b066dbf66ef472ff093de9bf48b1"
+    },
+    {
+      "path": "artifacts/run/F22/initial/completed.json",
+      "bytes": 360,
+      "sha256": "672e3a375ff4952699c9f2c9beda52eda409c6d5af74f887b4d2f38d5bf89b50"
+    },
+    {
+      "path": "artifacts/run/F22/initial/final_state.pt",
+      "bytes": 29679,
+      "sha256": "ef1cef745fe65112367382f1e8befb9ab92baa119d7edf42b50d8af92ef0abf6"
+    },
+    {
+      "path": "artifacts/run/F22/initial/initial_state.pt",
+      "bytes": 29771,
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411"
+    },
+    {
+      "path": "artifacts/run/F22/initial/selected_state.pt",
+      "bytes": 29849,
+      "sha256": "68e9c8848326cc0218a253889ed10fc77e2d366a6307e1dc25ce8fadfeced847"
+    },
+    {
+      "path": "artifacts/run/F22/initial/selector_state.json",
+      "bytes": 166,
+      "sha256": "6f647bfd8673bd13e5dbe929b3073b4a156d7510669787bcb679247c64d7a4a1"
+    },
+    {
+      "path": "artifacts/run/F22/initial/started.json",
+      "bytes": 483,
+      "sha256": "c3e99ee54e06394d4c1a5568e2c9d2d8b7a430378104314a24a30aa6e72974f2"
+    },
+    {
+      "path": "artifacts/run/F22/initial/trace.jsonl",
+      "bytes": 5466,
+      "sha256": "17e71725f0a7d4aa31af380ceb5415987503466c14f3dd7590d86be19308a6b1"
+    },
+    {
+      "path": "artifacts/run/F22/oos_scores.parquet",
+      "bytes": 1860824,
+      "sha256": "7883b6251675146af2d9310713e9054c6c39498b3818b6d7b23c148772803ffb"
+    },
+    {
+      "path": "artifacts/run/F22/refit/completed.json",
+      "bytes": 183,
+      "sha256": "a0acef0ea3a3babe3f3fcc46fd22de186b44c6432f67a88f797eede6c5ccdec7"
+    },
+    {
+      "path": "artifacts/run/F22/refit/final_state.pt",
+      "bytes": 29679,
+      "sha256": "be827599417abdb3d79b6e3261734f9fb26278c603169df4a97164fe968f514b"
+    },
+    {
+      "path": "artifacts/run/F22/refit/initial_state.pt",
+      "bytes": 29771,
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411"
+    },
+    {
+      "path": "artifacts/run/F22/refit/latest_refit_state.pt",
+      "bytes": 29905,
+      "sha256": "594438431cf027ad1218641ec20975fd1ce5542166200b46b98b07c5e547814e"
+    },
+    {
+      "path": "artifacts/run/F22/refit/started.json",
+      "bytes": 483,
+      "sha256": "4d32244e0a66a41412e025cc6dfebb440c0d08701a086ae70fa780f94b368cf6"
+    },
+    {
+      "path": "artifacts/run/F22/refit/trace.jsonl",
+      "bytes": 2928,
+      "sha256": "d33d92152d4cf8eed85684530ec36891255adace64dd92918ab9f058c77d833d"
+    },
+    {
+      "path": "artifacts/run/F23/calibration.json",
+      "bytes": 1607,
+      "sha256": "06d38bdbe241fd7f2ac22fa367de82a8a31351cab3ae26ee44a2e26bd076d0b6"
+    },
+    {
+      "path": "artifacts/run/F23/calibration_predictions.parquet",
+      "bytes": 304157,
+      "sha256": "9fc69cf8cb0fcdb0ebb86caf61ca9699af82827651f077a7b214cfb8290cbb81"
+    },
+    {
+      "path": "artifacts/run/F23/initial/completed.json",
+      "bytes": 360,
+      "sha256": "58a0198158362bd784f51a0038ce5f5a0bd5505177ae9977cc7e5a3b492a4f46"
+    },
+    {
+      "path": "artifacts/run/F23/initial/final_state.pt",
+      "bytes": 29679,
+      "sha256": "ad85e9760d5ca71f171739376658674ffe4079da6140b9d702d5e51eedda245e"
+    },
+    {
+      "path": "artifacts/run/F23/initial/initial_state.pt",
+      "bytes": 29771,
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411"
+    },
+    {
+      "path": "artifacts/run/F23/initial/selected_state.pt",
+      "bytes": 29849,
+      "sha256": "823a81375a343d28c8ea9796ee52d87c45e94c78554a491f9778bc4ae476fdb6"
+    },
+    {
+      "path": "artifacts/run/F23/initial/selector_state.json",
+      "bytes": 166,
+      "sha256": "7525e603b02df20476cc08d3437211f1e326a7e5ac11a3fc83c47d1ae8d36eb2"
+    },
+    {
+      "path": "artifacts/run/F23/initial/started.json",
+      "bytes": 483,
+      "sha256": "cd1cd9a24f5f9e48acd44633f02007dcff98107ffabcfa86ca6567889fe7a015"
+    },
+    {
+      "path": "artifacts/run/F23/initial/trace.jsonl",
+      "bytes": 7608,
+      "sha256": "1f8233159d92dd2c648a938463ff70b6aad7cfc38a6e49ba65aae193504c0b64"
+    },
+    {
+      "path": "artifacts/run/F23/oos_scores.parquet",
+      "bytes": 1408799,
+      "sha256": "79d4e59773806cfcee1d3a315ee3d84a103d35ff0e12e00625dcf8b1656c9953"
+    },
+    {
+      "path": "artifacts/run/F23/refit/completed.json",
+      "bytes": 183,
+      "sha256": "64576d98730ebb6f274ae01c578196c1ca92459fd9e9a9c1b9b7ab911ca1dbab"
+    },
+    {
+      "path": "artifacts/run/F23/refit/final_state.pt",
+      "bytes": 29679,
+      "sha256": "a834f988c1a52479a5fe3abca0129a74a7e6e989b854e1e7a0cbc57b52c806d5"
+    },
+    {
+      "path": "artifacts/run/F23/refit/initial_state.pt",
+      "bytes": 29771,
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411"
+    },
+    {
+      "path": "artifacts/run/F23/refit/latest_refit_state.pt",
+      "bytes": 29905,
+      "sha256": "c814f9420502b1b16e3e02dee8aaeeee059c161a5a0778680503090dad227b9a"
+    },
+    {
+      "path": "artifacts/run/F23/refit/started.json",
+      "bytes": 483,
+      "sha256": "a665abf640e8a1889eb39e55f458cce9d14ff991c5ef5404df6af8fe8dc48625"
+    },
+    {
+      "path": "artifacts/run/F23/refit/trace.jsonl",
+      "bytes": 4944,
+      "sha256": "1614b14f7ef26549eb5bb471d3828c1db7ed47e8bf01ae341a95ce2ba6d47f5c"
+    },
+    {
+      "path": "artifacts/run/F24/calibration.json",
+      "bytes": 1609,
+      "sha256": "4aa752e9ee97c871a230087bc5a326fb3c3c2cd83d53d27cb05ec5c96c520c5f"
+    },
+    {
+      "path": "artifacts/run/F24/calibration_predictions.parquet",
+      "bytes": 195402,
+      "sha256": "2fdf1f8c5324ddc08e89c320ebd515686baa5cd8077b1404f5f3189f482dd204"
+    },
+    {
+      "path": "artifacts/run/F24/initial/completed.json",
+      "bytes": 360,
+      "sha256": "78e8a4310e49cf6fd27c474d1f53b0a3ae1fa5ac1bd495bcaa75caae6ed0c88e"
+    },
+    {
+      "path": "artifacts/run/F24/initial/final_state.pt",
+      "bytes": 29679,
+      "sha256": "bce4c97165ca940292b1776c4d6f01f7b91b7a0cfd54aac9e4425351f4f941f5"
+    },
+    {
+      "path": "artifacts/run/F24/initial/initial_state.pt",
+      "bytes": 29771,
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411"
+    },
+    {
+      "path": "artifacts/run/F24/initial/selected_state.pt",
+      "bytes": 29849,
+      "sha256": "a16f6f785423415d31d03536c643ee22f3084596dd39afb0cbc68289a96b0602"
+    },
+    {
+      "path": "artifacts/run/F24/initial/selector_state.json",
+      "bytes": 166,
+      "sha256": "154d777f77ee366fb2b646407fc5e1a61e8bb46007b318f4ee223eacbc8869c3"
+    },
+    {
+      "path": "artifacts/run/F24/initial/started.json",
+      "bytes": 481,
+      "sha256": "f2d06a87d98badb1b95aafd0f528a2bf9a44d91e6e3296bc6815bfe0ddd3fe9c"
+    },
+    {
+      "path": "artifacts/run/F24/initial/trace.jsonl",
+      "bytes": 6427,
+      "sha256": "0c7afaa798b6f81821a157a78fcf91c9010ac68110825ee1f19826fdbe7e9326"
+    },
+    {
+      "path": "artifacts/run/F24/oos_scores.parquet",
+      "bytes": 1574437,
+      "sha256": "1e5756e23b121b7ce10cdb8871d47b0c35c142fa629d2d1bc4527db385a669fa"
+    },
+    {
+      "path": "artifacts/run/F24/refit/completed.json",
+      "bytes": 183,
+      "sha256": "3bcd46bcc1380dd33d378b4a7afc2cdcf7acd51e4294146e37bf1c974f5ad412"
+    },
+    {
+      "path": "artifacts/run/F24/refit/final_state.pt",
+      "bytes": 29679,
+      "sha256": "4f055a94e43dea78c3465b51e6e992975747ca099d74f8979fbe8fde9616289e"
+    },
+    {
+      "path": "artifacts/run/F24/refit/initial_state.pt",
+      "bytes": 29771,
+      "sha256": "77fc2fb21457ff705031a789884a8d8d56764297f247c322d3ff5562d807b411"
+    },
+    {
+      "path": "artifacts/run/F24/refit/latest_refit_state.pt",
+      "bytes": 29905,
+      "sha256": "40e89d22102deb798b455b3b69c530bbf200d8e2850c4686286e77f14caa3944"
+    },
+    {
+      "path": "artifacts/run/F24/refit/started.json",
+      "bytes": 482,
+      "sha256": "51e4aa8218474c5a5dbf60cc01fecd2b5f211b55f59139c1703942f010f407ed"
+    },
+    {
+      "path": "artifacts/run/F24/refit/trace.jsonl",
+      "bytes": 3818,
+      "sha256": "e0684e7a080eafcb8a0b3f8ee06e6801d5d437fee295a26c2170f77472963aaa"
+    },
+    {
+      "path": "artifacts/run/failure.json",
+      "bytes": 110,
+      "sha256": "8480a2461fed340d4b1a76f57133dea6c2bee6b7193b3be1c5feac3f0d92c037"
+    },
+    {
+      "path": "artifacts/run/replication_ledger.jsonl",
+      "bytes": 55848,
+      "sha256": "ddcca9816907546ff0bb89a77d9b4b0e9c6df5f36e62a13d0f5f56a9608dc30a"
+    },
+    {
+      "path": "artifacts/run/score_bundle/manifest.json",
+      "bytes": 8971,
+      "sha256": "66cfa249ca5227aa0ef25b3b8e9a1fcfe2a53237f85f00c7692b0b19d1b2d5f7"
+    },
+    {
+      "path": "artifacts/run/score_bundle/scores.parquet",
+      "bytes": 6405593,
+      "sha256": "854349bfd68efd29a0ae659232d6a86e5a186fc990ec0cfd96fcd541e50374b5"
+    },
+    {
+      "path": "artifacts/source_geometry.npz",
+      "bytes": 17224181,
+      "sha256": "f776d06a4ac7f3ea9e000a19c14c0f950e6180ed259809fad56445cc27f714b5"
+    }
+  ]
+}

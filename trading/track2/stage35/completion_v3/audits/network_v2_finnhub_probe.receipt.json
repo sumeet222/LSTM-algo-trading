@@ -1,0 +1,23 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "http": 401
+    }
+  ],
+  "endpoint": "https://finnhub.io/api/v1/stock/dividend",
+  "http_status": 401,
+  "original_payload_sha256": "f2906267f693bd6aaa3cbe886b1530adff776082a85e4b7a6b69db55900a7174",
+  "payload_path": "trading/track2/stage35/completion_v3/audits/payloads/network_v2_finnhub_probe.json",
+  "point_in_time": false,
+  "query": {
+    "from": "2021-01-01",
+    "symbol": "AAPL",
+    "to": "2024-12-31"
+  },
+  "retrieval_utc": "2026-11-09T14:04:38.976362+00:00",
+  "rights": "provider public/research access only;no redistribution or PIT certification",
+  "source_id": "network_v2_finnhub_probe",
+  "status": "ACCESS_DENIED",
+  "stored_payload_sha256": "cfe8b0370a250d3d31ca533c4838bf138286ea84ecd92a27dcfff3f52a68562e"
+}

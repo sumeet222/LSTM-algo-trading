@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "strategy_id": "track2-stage012-v1",
+  "human_approved": {
+    "track": 2,
+    "longs_and_shorts": true,
+    "origins_et": [
+      "09:30",
+      "10:30",
+      "11:30",
+      "12:30",
+      "13:30",
+      "14:30",
+      "15:30"
+    ],
+    "calendar": "XNYS",
+    "timezone": "America/New_York",
+    "horizon_scheduled_minutes": 240,
+    "holding": "fixed",
+    "dynamic_rebalancing_enabled": false,
+    "model": "original S2C C-A C3 F21-F24",
+    "no_training": true,
+    "no_backtest": true,
+    "market_data_stop": "2024-12-31",
+    "stock_order": [
+      "VZ",
+      "COP",
+      "BAC",
+      "BA",
+      "AAPL",
+      "PEP",
+      "MRK",
+      "SBUX",
+      "CVX",
+      "MS",
+      "AMD",
+      "KO",
+      "JNJ",
+      "AMZN",
+      "XOM",
+      "WFC",
+      "AVGO",
+      "TSLA",
+      "MA",
+      "CSCO"
+    ]
+  },
+  "proposed_defaults": {
+    "sign_lookback_sessions": 5,
+    "reference": "genuine prior-session 15:30 versus five sessions before that session",
+    "stale_sessions_limit": 0,
+    "magnitude_ratio_clip": [
+      0.5,
+      1.5
+    ],
+    "gross_nav_cap": 1.0,
+    "net_nav_cap": 1.0,
+    "name_gross_nav_cap": 0.1,
+    "new_vintage_gross_nav_cap": 0.2,
+    "latency_wall_minutes": 2,
+    "latency_stress_minutes": [
+      1,
+      2,
+      5
+    ],
+    "entry_deadline_wall_minutes": 5,
+    "short_own_capital_reserve_ratio": 1.0,
+    "capacity_policy": "reject, retain cash; never resize held cohorts",
+    "exit_policy": "decision at endpoint, strict subsequent minute start; missing observations unresolved until later valid event"
+  },
+  "blocked_parameters": {},
+  "planned_baselines": [
+    "same five-session sign constant size",
+    "rolling volatility",
+    "EWMA",
+    "S2C inverse magnitude",
+    "negative control permutations"
+  ],
+  "data_contract": {
+    "hourly_basis": "split-consistent adjusted OHLC, reported-volume regimes",
+    "minute_basis": "genuine unadjusted; never cash/share interchangeable",
+    "receipt": "assumed, not measured",
+    "missing_full_hour_slots": "preserve all48; archived fallback only; otherwise abstain",
+    "future_labels": "never issuance selection",
+    "borrow": "unknown; reject executable short reservation unless explicitly synthetic available"
+  },
+  "stage3_enabled": false,
+  "parent_protocol_sha256": "f66a62f9e98fce4854f413ec2d5ba50cd94527a424e2feeaf2dc8c28caddbf19",
+  "implemented_signal_layer": {
+    "historical_producer": "original_input_only, inherited retrospective source basis",
+    "risk_recipe": "TRACK2_PREFIX_MEDIAN_V1",
+    "prefix_window": [
+      "2019-01-02",
+      "2019-06-28"
+    ],
+    "minimum_count": 40,
+    "floor_absolute": 1e-06,
+    "floor_fraction": 0.25,
+    "manifest": "trading/track2/stage012/audits/completion_v1/historical_run_v1/RISK_REFERENCE_MANIFEST.json",
+    "manifest_payload_checksum": "5c453193572a2e428c561249c842c90a3d36041736183195f3e1dc6a350b6681",
+    "session_sign": "first eligible decision, immutable incl abstention",
+    "scope_status": "SIGNAL_LAYER_ONLY_NO_ECONOMICS",
+    "actual_receipts_verified": false
+  },
+  "downstream_holds": [
+    "T2-003",
+    "T2-004",
+    "T2-005",
+    "T2-006",
+    "T2-007",
+    "T2-009",
+    "T2-010"
+  ]
+}

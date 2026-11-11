@@ -1,0 +1,48 @@
+"""Read existing completed outputs; never run simulations or alter their files."""
+from pathlib import Path
+from decimal import Decimal
+from collections import Counter
+import datetime,gzip,json
+from lstm_data.trading.track2.stage35.final_backtest_v5.paths import ROOT,digest,publish
+from lstm_data.trading.track2.stage35.final_backtest_v5.release import fingerprint
+from lstm_data.trading.track2.stage35.final_backtest_v5.checkpoint import read_checkpoint,unseal
+R=ROOT/'recovery/20261110T124734Z'
+G=json.loads((R/'V5_TRANSPORT_RECOVERY_INVENTORY_20261110T124734Z.json').read_text())
+if fingerprint()!=G['code']:raise ValueError('RECOVERY_CODE_DRIFT')
+known={row['version']:row for row in G['scenarios'] if row['status']=='COMPLETED_VERIFIED'}
+for p in R.glob('VERIFIED_COMPLETION_*.json'):
+ row=json.loads(p.read_text());known[row['version']]=row
+new=[]
+for p in sorted((ROOT/'audits').glob('RUN_COMPLETION_*.json')):
+ rec=json.loads(p.read_text());version=rec['version']
+ if version in known:
+  if digest(p)!=known[version]['completion_receipt_sha256']:raise ValueError('COMPLETED_RECEIPT_DRIFT:'+version)
+  continue
+ if rec['status']!='COMPLETE_RECONCILED' or rec['returncode']!=0:raise ValueError('FAILED_SCENARIO:'+version)
+ bad=[f for f,h in rec['files'].items() if not Path(f).is_file() or digest(Path(f))!=h]
+ if bad:raise ValueError('OUTPUT_HASH_DRIFT:'+str(bad[:3]))
+ folder=Path(rec['output']);end=json.loads((folder/'RUN_RECEIPT_2024-12-31.json').read_text())
+ if (end['sessions'],end['opportunities'],end['accounts'])!=(1005,140280,8) or end['unresolved'] or end['terminal_pending_orders'] or end['terminal_unpriced_special'] or end['daily_incomplete_records'] or Decimal(end['maximum_ledger_residual'])>Decimal('1e-8'):
+  raise ValueError('ENDING_STATE_NOT_CERTIFIED:'+version)
+ state=unseal(read_checkpoint(folder/'checkpoints/2024-12-31.json.gz'))
+ if state['_v5_producer_code']!=G['code'] or state['last_completed']!='2024-12-31':raise ValueError('CHECKPOINT_PRODUCER_OR_CURSOR:'+version)
+ count=Counter();previous_fees={};maximum=Decimal(0);terminal=[];neg_own=0
+ for daily in folder.glob('*/daily.jsonl.gz'):
+  with gzip.open(daily,'rt') as stream:
+   for line in stream:
+    x=json.loads(line);axis=(x['population'],x['arm']);count[axis]+=1
+    if x['status']!='OBSERVED':raise ValueError('INCOMPLETE_NAV:'+version)
+    cash=Decimal(x['cash']);restricted=Decimal(x['restricted_proceeds'])
+    rhs=cash+Decimal(x['physical_long_value'])-Decimal(x['physical_short_value'])+Decimal(x['claims'])+Decimal(x['special_value'])
+    maximum=max(maximum,abs(Decimal(x['nav'])-rhs))
+    if maximum>Decimal('1e-8'):raise ValueError('DAILY_NAV_IDENTITY:'+version)
+    if restricted<0 or Decimal(x['own_cash'])>cash-restricted+Decimal('1e-8'):raise ValueError('SPENDABLE_CASH_CREATED:'+version)
+    neg_own+=int(Decimal(x['own_cash'])<0)
+    fee=Decimal(x['commission_cumulative'])
+    if fee<previous_fees.get(axis,Decimal(0)):raise ValueError('COMMISSION_REVERSED:'+version)
+    previous_fees[axis]=fee
+    if x['date']=='2024-12-31':terminal.append({k:x[k] for k in ['population','arm','nav','cash','restricted_proceeds','claims','special_value','gross','marked_net','pending_orders','outstanding_lots','status','physical']})
+ if len(count)!=8 or any(n!=1005 for n in count.values()) or len(terminal)!=8:raise ValueError('ACCOUNT_DAY_COVERAGE:'+version)
+ row={'version':version,'scenario':rec['scenario'],'status':'COMPLETED_VERIFIED','completion_receipt':str(p),'completion_receipt_sha256':digest(p),'output_hashes_verified':len(rec['files']),'ending_checkpoint_sha256':digest(folder/'checkpoints/2024-12-31.json.gz'),'code':G['code'],'daily_NAV_identity_maximum_residual_USD':str(maximum),'daily_records':sum(count.values()),'negative_own_cash_daily_records':neg_own,'terminal_states':terminal,'method':'Second-pass mechanical output/hash/account identity verification, not independent Stage6 audit','source_market_or_model_replay':False}
+ publish(R/('VERIFIED_COMPLETION_'+version+'.json'),row);known[version]=row;new.append(version)
+print(json.dumps({'verified_complete':len(known),'required_total':24,'newly_verified':new,'master_manifest_present':(ROOT/'BACKTEST_RUN_MANIFEST_V5_9e093b3f6a62.json').exists(),'no_new_financial_job':True}))

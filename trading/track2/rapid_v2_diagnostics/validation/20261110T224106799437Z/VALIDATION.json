@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "pytest": {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/track2_rapid_v2",
+        "tests/track2_rapid_v1",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_wait_next_valid_and_nominal_lifetime",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_open_exit_remains_without_expiry_and_partial_fees_accumulate",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_later_open_cannot_rewrite_submission_or_predecision_state",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_actual_pre_spinoff_share_cases_exact_without_tolerance_waiver"
+      ],
+      "returncode": 0,
+      "seconds": 3.8657189588993788,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "99b45fd779edea72dc22bd2a8e3d4a467dc883e992a649f3bebd8673d2a66b9f"
+    },
+    "ruff": {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "--select",
+        "E,F,I",
+        "src/lstm_data/trading/track2/rapid_v2_diagnostics",
+        "tests/track2_rapid_v2"
+      ],
+      "returncode": 0,
+      "seconds": 0.05187345901504159,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "types": {
+      "argv": [
+        ".venv/bin/pyright",
+        "--pythonpath",
+        ".venv/bin/python",
+        "--outputjson",
+        "src/lstm_data/trading/track2/rapid_v2_diagnostics",
+        "tests/track2_rapid_v2"
+      ],
+      "returncode": 0,
+      "seconds": 5.137619915883988,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "281c7ce7b735744a6f467e487df8ddd0dca1569b1f889c8388f23659fd2de448"
+    }
+  },
+  "registry": "88731c7e0c5438378ea7cd5d56d0a5334f918a5d9cc997ce457d52a5e857d995",
+  "status": "PASS"
+}

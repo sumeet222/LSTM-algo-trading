@@ -1,0 +1,30 @@
+{
+    "version": "1.1.414",
+    "time": "1794235645527",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/tests/track2_stage35_completion_v3/test_release_and_historical_witness.py",
+            "severity": "error",
+            "message": "Argument of type \"list[str]\" cannot be assigned to parameter \"value\" of type \"str\" in function \"__setitem__\"\n  \"list[str]\" is not assignable to \"str\"",
+            "range": {
+                "start": {
+                    "line": 27,
+                    "character": 4
+                },
+                "end": {
+                    "line": 27,
+                    "character": 32
+                }
+            },
+            "rule": "reportArgumentType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 16,
+        "errorCount": 1,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 6.265
+    }
+}
+

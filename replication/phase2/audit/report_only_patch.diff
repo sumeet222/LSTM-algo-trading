@@ -1,0 +1,11 @@
+--- audit/executed_source/evaluation_prefit.py.txt
++++ code/evaluation.py
+@@ -563,7 +563,7 @@
+         raise ValueError("signed diagnostics require supported triples and all three signed predictions")
+     if not rows["aux_supported"].isin([True, False]).to_numpy(dtype=bool).all():
+         raise ValueError("aux_supported must be boolean")
+-    selected = rows["aux_supported"].to_numpy(dtype=bool)
++    selected = rows["aux_supported"].to_numpy(dtype=bool).copy()
+     if stock is not None:
+         if stock not in STOCKS:
+             raise ValueError("unknown diagnostic stock")

@@ -1,0 +1,80 @@
+{
+  "UTC": "2026-11-10T17:53:48.352038+00:00",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short",
+        "--branch"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n?? replication/\n?? reports/codex_sessions/2026-11-08_180500_track2_stage012_infrastructure.md\n?? reports/codex_sessions/2026-11-09_005156_track2_signal_layer_completion.md\n?? reports/codex_sessions/2026-11-09_032258_track2_stage35_partial_gate.md\n?? reports/codex_sessions/2026-11-09_082800_track2_stage35_completion_v2.md\n?? reports/codex_sessions/2026-11-09_151724_track2_stage35_completion_v3.md\n?? reports/codex_sessions/2026-11-09_204000_track2_final_backtest_v4_hold.md\n?? reports/codex_sessions/2026-11-10_124734_track2_v5_transport_recovery.md\n?? reports/codex_sessions/2026-11-10_track2_v5_next_valid_bar.md\n?? src/lstm_data/trading/\n?? tests/track2_stage012/\n?? tests/track2_stage35/\n?? tests/track2_stage35_completion_v2/\n?? tests/track2_stage35_completion_v3/\n?? tests/track2_stage35_v4/\n?? tests/track2_stage35_v5/\n?? trading/\n"
+    },
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "feat/track-a-data-intake\n"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "8061483cb65d03264a7836b8b882123f67cbe4ad\n"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--stat"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "HEAD...@{upstream}"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "0\t0\n"
+    }
+  ],
+  "execution_fingerprint": "9e093b3f6a62",
+  "findings": [],
+  "literal_scan_patterns": [
+    "credential_literal",
+    "developer_absolute_path"
+  ],
+  "network_fetch_in_recovery": false,
+  "new_execution_source_test_files_scanned": 13,
+  "no_commit_push_stash_reset_clean_pull_or_merge": true,
+  "reporting_helpers": "one-off command receipts and read-only output projections; no financial rerun",
+  "tracked_diff_empty": true,
+  "upstream_comparison": "local tracking refs; no claim about un-fetched remote changes"
+}

@@ -1,0 +1,549 @@
+{
+  "all18_context_retained": true,
+  "execution": {
+    "CPU_seconds": "NOT_MEASURED",
+    "S2C_activity": false,
+    "Stage6": false,
+    "analysis_wall_seconds": 14.36249041580595,
+    "engine_wall_seconds": 143.48062291601673,
+    "final_baselines_selected": false,
+    "funded_peak_RSS_bytes": 1339998208,
+    "funded_scans": 48,
+    "funded_wall_seconds": 146.33149054087698,
+    "no_tuning_rerun": true,
+    "offline_sample": {
+      "actual_portions": 449,
+      "fixed_reference_targets": 1347,
+      "valid": 1347,
+      "weighted_population_inference": false
+    },
+    "pilot_wall_seconds": 6.4784063750412315
+  },
+  "files": {
+    "reports/codex_sessions/2026-11-10_213801_track2_final_targeted_diagnostics.md": {
+      "bytes": 10155,
+      "sha256": "2558f2a09625e86b22a7b9be78df5c37c67152383d2b4670a47eb6079903afe7"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag/__init__.py": {
+      "bytes": 73,
+      "sha256": "2d5cdc8556ba347b0b424fae5603439fa304828ecc55bc7671b076e932a4e47d"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag/allocation.py": {
+      "bytes": 8490,
+      "sha256": "b8b6d3e7fe35b5b1c07bf0826ab210d34bf1213f49e6c30fdb1182b900e58d38"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag/book.py": {
+      "bytes": 2467,
+      "sha256": "4e5445f78ea88343c0e34bb55eaa3b348b32bfc519a78e2eeb2c6a3e2b934bd4"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag/cli.py": {
+      "bytes": 8573,
+      "sha256": "acdb82cdbb8ad63705da1627c42ad0251904d052c8ca0e698b21386b7f030b6d"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag/engine.py": {
+      "bytes": 5096,
+      "sha256": "cbb5a30f7aa8c1cec35842ff12e3783f026f294498b75c6fe4f89b890fa557e2"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag/policy.py": {
+      "bytes": 4491,
+      "sha256": "05d5c4e2738a9d9786f591fe32c4e7b1cf439d937cbe21849b73867c38543ac5"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag/provenance.py": {
+      "bytes": 3639,
+      "sha256": "ff422baa47706f200d635d7e46598504688b6adaae97de775009e45729e38cdd"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag/results.py": {
+      "bytes": 7299,
+      "sha256": "74418adc84394fb5e1d32ecfc06086c75444c5a5709170e21c2173f8b7b7d5f9"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag/state.py": {
+      "bytes": 1785,
+      "sha256": "4705f456541e531c59a17364dcfb83e6aa369fdf6eaf2c53183246d17341468d"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag_analysis.py": {
+      "bytes": 15522,
+      "sha256": "25ffd16ca8a01f6198eb897d015113af460beb800d86e371c067abfc4eaf7e85"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag_handoff.py": {
+      "bytes": 25715,
+      "sha256": "3b52f2eb063f11ce3fe8e9da620e851c833f0e24ff4fffe2db82c33c8b09f6a8"
+    },
+    "src/lstm_data/trading/track2/rapid_final_diag_supplement.py": {
+      "bytes": 9674,
+      "sha256": "a68bc9ddb196bd1b24f63ba5507aae2cd3139e460678e59a238827fbb08354f3"
+    },
+    "tests/track2_rapid_final_analysis/test_published.py": {
+      "bytes": 5297,
+      "sha256": "cebe35c0ee17cbdf0af451ee5deb2f17cce776acda79347ba0e557781da0fb16"
+    },
+    "tests/track2_rapid_final_diag/test_policies.py": {
+      "bytes": 7165,
+      "sha256": "5f36e7f129bd0f7f95e44370359c6dc6a39bf280cfa2b2eda5599f3664d60e78"
+    },
+    "trading/track2/rapid_final_diag_v1/ALL18_CONTEXT_AND_FINAL_DIAGNOSTIC_MATRIX.csv": {
+      "bytes": 1362,
+      "sha256": "b8894059787fb03fb4925e329d6f01831cd86e2198ce9da450fa2d35e6c47751"
+    },
+    "trading/track2/rapid_final_diag_v1/ANALYSIS_REPRODUCE.md": {
+      "bytes": 3009,
+      "sha256": "861d2ee821d8be098e38cda8527f09c4ca081723e47aeb7bd4172f1b8cc01af9"
+    },
+    "trading/track2/rapid_final_diag_v1/AVGO_KERNEL_PARITY.json": {
+      "bytes": 1692,
+      "sha256": "c1d4e230d6dc78df0a554b0b30cae7e8f5f430d764844e94c3d2f623c925f8cb"
+    },
+    "trading/track2/rapid_final_diag_v1/ENVIRONMENT_RECEIPT.json": {
+      "bytes": 351,
+      "sha256": "d1946116f3580fe59ec7fe53d078c103e96eff202764d1c1fc8e7b44095a4a26"
+    },
+    "trading/track2/rapid_final_diag_v1/EXECUTION_COST_AND_TAIL_DIAGNOSTICS.md": {
+      "bytes": 3382,
+      "sha256": "e8d0a26e2b9ae8eaf9ecabaa8d4ab7f12bc9bcd68524cc42398bdd3fcaa69539"
+    },
+    "trading/track2/rapid_final_diag_v1/EXIT_COUNTING_AND_TRIGGER_SEMANTICS.md": {
+      "bytes": 2510,
+      "sha256": "be62e25ddfecba0a181e93458e4761e1543c89a53647d1b83052ca444e78a4b3"
+    },
+    "trading/track2/rapid_final_diag_v1/FINAL_DIAGNOSTICS_HANDOFF.md": {
+      "bytes": 2607,
+      "sha256": "bd1c106a60e4aa4c5be075304b058a107a768b2ba923f8929db9a96c5746d82f"
+    },
+    "trading/track2/rapid_final_diag_v1/FINAL_DIAGNOSTIC_REGISTRY.json": {
+      "bytes": 6068,
+      "sha256": "38748905a0a6cd969c4f6e9b9b734fadc3315f63d37268df212422c9afb5ac32"
+    },
+    "trading/track2/rapid_final_diag_v1/FINAL_RUN_STATUS.json": {
+      "bytes": 606,
+      "sha256": "f14b515b387c7806aa3d286765dd2d37b8c713f3c3ea39314f243755382efddf"
+    },
+    "trading/track2/rapid_final_diag_v1/FUNDED_TARGETED_RESULTS.csv": {
+      "bytes": 16887,
+      "sha256": "c154794ae58c3d49185012d9d616a96cc432d5b45e67c4f218926af2198c052e"
+    },
+    "trading/track2/rapid_final_diag_v1/INPUTS_AFTER_RECEIPT.json": {
+      "bytes": 155,
+      "sha256": "b65d23205f24e51d5173cf46823afd2fab87d19f12f041ff1cf2354b91c0b512"
+    },
+    "trading/track2/rapid_final_diag_v1/INPUTS_BEFORE.json": {
+      "bytes": 78108,
+      "sha256": "0549d952c739d2b47691b565e047d6d1d30c8bd96424b056ef088feeff3eab69"
+    },
+    "trading/track2/rapid_final_diag_v1/ISSUES_AND_LIMITATIONS.md": {
+      "bytes": 2146,
+      "sha256": "af56239a1b099794a63824f36a8f7692eeb9e118f6c27e3440e5edffb7b05cd1"
+    },
+    "trading/track2/rapid_final_diag_v1/M06_EXISTING_NONFUNDED_CONTEXT.csv": {
+      "bytes": 4621,
+      "sha256": "1800334f848f16ed3afebcbd229d0d32dbc132d6c5a3e79c869a8503a3cbe638"
+    },
+    "trading/track2/rapid_final_diag_v1/M06_PRIOR_RAW_POST_EXIT_CONTEXT.csv": {
+      "bytes": 2942,
+      "sha256": "b0e3f8694165a02e7ad958b1932e1eb3107460ded7a922a4396b5325f875839a"
+    },
+    "trading/track2/rapid_final_diag_v1/MECHANISM_DECISIONS.csv": {
+      "bytes": 847,
+      "sha256": "709e4635fbee9f84bb688077e8a737d247d6256fddc2974e5e8d118b82b185da"
+    },
+    "trading/track2/rapid_final_diag_v1/MECHANISM_DECISION_TABLE.md": {
+      "bytes": 8549,
+      "sha256": "d7af8bb98340c26acf13a6304fae97b61989963fb938233543df2669fe301551"
+    },
+    "trading/track2/rapid_final_diag_v1/NEXT_STAGE_FINAL_DIRECTIONAL_ALGORITHM_DESIGN_HANDOFF.md": {
+      "bytes": 2535,
+      "sha256": "4507ee0b6971dbd0000c3e4ecf212685fd4a75f81e6f9c81b95e1401bac168d8"
+    },
+    "trading/track2/rapid_final_diag_v1/PILOT_GATE.json": {
+      "bytes": 2056,
+      "sha256": "60cacee3417b6da917c7c2a624c986ff15f8213b6824196a9c23bd9866ae833c"
+    },
+    "trading/track2/rapid_final_diag_v1/PROSPECTIVE_CONFIRMATION_REQUIREMENTS.md": {
+      "bytes": 653,
+      "sha256": "a97e4fb8f79acd3658ff3c7a6f783efa7c22fac76cbffde7392f3edf25bfd86b"
+    },
+    "trading/track2/rapid_final_diag_v1/PROTECTED_AFTER.json": {
+      "bytes": 2208,
+      "sha256": "321a13a00d9523bcd0a13fdc49291c41bb34510d39ed28dfa03c86df9ceee1bd"
+    },
+    "trading/track2/rapid_final_diag_v1/PROTECTED_BEFORE.json": {
+      "bytes": 2208,
+      "sha256": "692c9d9b716c6dc814b9eca3a79a6f6fefac41ac0a7706534fe3b4824a86196d"
+    },
+    "trading/track2/rapid_final_diag_v1/R01_ENTRY_RESERVE_EXAMPLES.csv": {
+      "bytes": 2222,
+      "sha256": "d93166bfc8c1c655f846021ef0128a3f56ade0e5c48fd1ef5fac6da369c68230"
+    },
+    "trading/track2/rapid_final_diag_v1/R01_V20_ENTRY_RESERVE_DIAGNOSTICS.md": {
+      "bytes": 3287,
+      "sha256": "dd518efae4171f77967de8933d0394660db18f2f282942f21196ebef7851370a"
+    },
+    "trading/track2/rapid_final_diag_v1/REGISTRY_SEAL.json": {
+      "bytes": 83,
+      "sha256": "7269dd752e5a92dfd92a3c8cd10ff152fc4459ed4fb80c0ad85b0ad73c75055f"
+    },
+    "trading/track2/rapid_final_diag_v1/REPORT_BUILD_RECEIPT.json": {
+      "bytes": 2706,
+      "sha256": "fc395722d463d0947b42a096255352037d17b8843044db958e3e638f0f072b05"
+    },
+    "trading/track2/rapid_final_diag_v1/SESSION_REPORT_REFERENCE.json": {
+      "bytes": 174,
+      "sha256": "2cb9a1f4dd34758801e4b81269ee1a66c615a360f03276bae9ae85a9fc56a589"
+    },
+    "trading/track2/rapid_final_diag_v1/SOURCE_AND_CONTROL_BINDINGS.md": {
+      "bytes": 3541,
+      "sha256": "563b0a8ff48f9f6590d3ac37a27e4bbc2ba6851334da49723bc242976315b513"
+    },
+    "trading/track2/rapid_final_diag_v1/VALIDATION_AND_INTEGRITY.md": {
+      "bytes": 3581,
+      "sha256": "410800fbbec530609ce1a89f51811408acb316163410b47a5cca58a442f5a781"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis.stderr": {
+      "bytes": 691,
+      "sha256": "a75ed675cc9c5ed6bb8431bfed04365d72e9c22281e713fd1a9d4196a13f7aed"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/ALL18_CONTEXT_AND_FINAL_DIAGNOSTIC_MATRIX.csv": {
+      "bytes": 1362,
+      "sha256": "b8894059787fb03fb4925e329d6f01831cd86e2198ce9da450fa2d35e6c47751"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/ANALYSIS_RECEIPT.json": {
+      "bytes": 1423,
+      "sha256": "bc396974e59273a65596647a5a9dfa14a7bf76f9e3df28410f158860e688a285"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/COHORT_ACCOUNT_RECONCILIATION.csv": {
+      "bytes": 1932,
+      "sha256": "86f3e6ff25a1ab934379d1e631385135f58d16c1b71cf2fa9be857e4d11ce6b9"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/COHORT_ATTRIBUTION.csv": {
+      "bytes": 46022,
+      "sha256": "5e791790b4d84d0476e12214ffef9c6a03ae20c087936fa2cdab7ee2e4d4e452"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/COHORT_TAILS.csv": {
+      "bytes": 2347,
+      "sha256": "f6ef1258f2fc65b7f2bd9482eb753cc3158a3395cdabfd4c06f8d4323fc37127"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/OFFLINE_CHANGED_EXIT_EXTENSIONS.csv": {
+      "bytes": 34070,
+      "sha256": "49a26764e6d8542f999c55e55a86f58a25c927c3403fe93008a269305e93f884"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/OFFLINE_CHANGED_EXIT_SAMPLE.parquet": {
+      "bytes": 222717,
+      "sha256": "0f5798a75370f964254bb9f794436ad04f6c032fe5999c9ad7723a5daaff3570"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/OFFLINE_SELECTION_BEFORE_MARKS.json": {
+      "bytes": 375,
+      "sha256": "5167436d366dd9f3daf0b9d0681aad3aa3fdaefb9c80e2410376b6b5fff6970c"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/OFFLINE_SOURCE_RECEIPT.json": {
+      "bytes": 12114,
+      "sha256": "b033ba5eb52a63d8337d84a8f90f9955ddb1422dc14f710ab3eae7081a5deb8c"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/PAIRED_OPPORTUNITY_AND_EXIT_DIVERGENCE.csv": {
+      "bytes": 3975839,
+      "sha256": "34ad44daeb622bee12b61561ee9589347637e68e704bd119d352324d3a5d5b9f"
+    },
+    "trading/track2/rapid_final_diag_v1/analysis_01/PHYSICAL_COST_DIAGNOSTICS.csv": {
+      "bytes": 2176,
+      "sha256": "9a102d7253aed086979f6b7ad8da9a1b16590c1a5f08674a33fc54fafba5f1e8"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/0.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/0.stdout": {
+      "bytes": 179,
+      "sha256": "87fbf7e8b62e9a027be34800ce92a95e6b28fe8b4c6d6714c72165f451e66bb5"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/1.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/1.stdout": {
+      "bytes": 1619,
+      "sha256": "d10dea5b8f092f578e7acdc356cae930d3695fc2b5e76539e03b70cfd904b996"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/2.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/2.stdout": {
+      "bytes": 37,
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/3.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/3.stdout": {
+      "bytes": 51987,
+      "sha256": "c5c337042008a49516a2fffd489d27a65c7d36b2b62847fe143d1e10b0cdd5ed"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/RECEIPT.json": {
+      "bytes": 1831,
+      "sha256": "04ed29bf1b32e12f785a489d805f932b2f1a902efd14b4469404d794ce1658f4"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/SCOPED_RECHECK.json": {
+      "bytes": 1115,
+      "sha256": "dcc037ece6de24f7fc3aa7fe416577b344d214e42c8251a7f29849fa320d14a6"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/recheck0.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/recheck0.stdout": {
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/recheck1.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/final_validation/recheck1.stdout": {
+      "bytes": 37,
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+    },
+    "trading/track2/rapid_final_diag_v1/full.stderr": {
+      "bytes": 691,
+      "sha256": "a75ed675cc9c5ed6bb8431bfed04365d72e9c22281e713fd1a9d4196a13f7aed"
+    },
+    "trading/track2/rapid_final_diag_v1/full.stdout": {
+      "bytes": 599,
+      "sha256": "2454ac2011beeaf3851e06676214f3a11b9d9a14320d315a66850e37c5094e55"
+    },
+    "trading/track2/rapid_final_diag_v1/full_type.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/full_type.stdout": {
+      "bytes": 51790,
+      "sha256": "6045d491a36e7cf3cae2c5a8af4a0fbd81c4873eb98c450be2a0517e3a4a26d9"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot.stderr": {
+      "bytes": 691,
+      "sha256": "a75ed675cc9c5ed6bb8431bfed04365d72e9c22281e713fd1a9d4196a13f7aed"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/ACTUAL_EXIT_PORTIONS.parquet": {
+      "bytes": 21832,
+      "sha256": "fcdae2b49ed60a8ccb723effeec9b990823ed13860b6707b1a035a73228e259a"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/ANNUAL_AND_CAUSAL_DIAGNOSTICS.csv": {
+      "bytes": 51981,
+      "sha256": "c4fc681b5ac9417d8983f802797b5c539bd8a8638d34cfa7b500a0a1ee79b0d9"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/COMPLETED_COHORTS.parquet": {
+      "bytes": 52703,
+      "sha256": "490769ffc2035671390c35f34cd95dc75667f2f263c6bb3dfc2af437d4967a61"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/CONTROL_PARITY.json": {
+      "bytes": 40,
+      "sha256": "3a4cf36e58096f3683c1c0e90453ea82fec38662b21595aaec3f020623acc3e8"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/DAILY_NAV.parquet": {
+      "bytes": 19994,
+      "sha256": "aa879660df89d03a52f5e93e899bf770314470086266234c30675ca3b051d575"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/EXIT_REASONS.csv": {
+      "bytes": 6419,
+      "sha256": "319a9d7ff84b314bd6dc0fb4a258b66f4ff1d254e11602c0468ee3f474db8099"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/FUNDED_MANIFEST.json": {
+      "bytes": 1721,
+      "sha256": "806e31d0bd9756b4f3724e1b54b73189d8a2339b6f0ff05a505dc8883c385cb4"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/FUNDED_TARGETED_RESULTS.csv": {
+      "bytes": 13641,
+      "sha256": "8903a0646a5591e8ed43c918bf11d992fc89581a9bcc812b02ae3883bbabcad9"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/PHYSICAL_FILLS.parquet": {
+      "bytes": 39263,
+      "sha256": "e20228ad3b96b03e91cdc3cc0ff975644eeb8c82cb297892386939783dfbb4c9"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/R01_ENTRY_RESERVES.csv": {
+      "bytes": 3175,
+      "sha256": "a82ad0664ee8d84900e03ddf4abd1f9d808256a0f42bea2f35f20791304bfa0f"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot/RISK_BREACH_SAMPLES.csv": {
+      "bytes": 2230,
+      "sha256": "876fe107721e85ed1312682a5a079e66768c1b34def82c7435b9ccd1a250a121"
+    },
+    "trading/track2/rapid_final_diag_v1/pilot_restart.json.gz": {
+      "bytes": 80536,
+      "sha256": "b3d963b1eccb995f884cc730f036135a78260b59399b2d163499b99cdd150293"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/RUN_RECEIPT.json": {
+      "bytes": 14079,
+      "sha256": "c78105389c4ce367ae436e9a4c23f0df4dd252917a29ddf017895dd742e646ca"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/ACTUAL_EXIT_PORTIONS.parquet": {
+      "bytes": 1440365,
+      "sha256": "3694c9a6a9d869972248cb29843672867b5e73d2f5fa907b582d901cc62b338c"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/ANNUAL_AND_CAUSAL_DIAGNOSTICS.csv": {
+      "bytes": 132227,
+      "sha256": "ad346f216472b6f22ef40562e6498727bfdbcab1d99c3248ea06db0db87fd5e2"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/COMPLETED_COHORTS.parquet": {
+      "bytes": 3343392,
+      "sha256": "168cba57868ca01313fe000363b7a84529d5025da4a1b39ddc16acb9c946fcdd"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/CONTROL_PARITY.json": {
+      "bytes": 3937,
+      "sha256": "115c50808505eefd23106d1899857fe00c61f3bb94e2236eae60c386603cf002"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/DAILY_NAV.parquet": {
+      "bytes": 839079,
+      "sha256": "4bc09ed875546a98f56bcde8360f79444f48ddfd7fa5f7b2692e02c598b806d7"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/EXIT_REASONS.csv": {
+      "bytes": 15915,
+      "sha256": "025de9085740f3668ac06e20b1e520c67759dd4f169593e2ceb833caa4b59c43"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/FUNDED_MANIFEST.json": {
+      "bytes": 13216,
+      "sha256": "c80fab961f9fc944e39e4bece1e3e12f6cf129308f2584906095c2002dc64cee"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/FUNDED_TARGETED_RESULTS.csv": {
+      "bytes": 16887,
+      "sha256": "c154794ae58c3d49185012d9d616a96cc432d5b45e67c4f218926af2198c052e"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/PHYSICAL_FILLS.parquet": {
+      "bytes": 3682728,
+      "sha256": "11931ab074c04dfe419ce54e59961fbd82e0ae816f4c97fd0704313354b3fe71"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/R01_ENTRY_RESERVES.csv": {
+      "bytes": 203220,
+      "sha256": "836c8eed71e623f01da6a82daea770678f1e7ab1351e441a60f371f1ee7ba8b3"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/funded/RISK_BREACH_SAMPLES.csv": {
+      "bytes": 129525,
+      "sha256": "ebf199e5124d100d87113c557d91a2584999f90ff44d94cb02cf0168ee0d168c"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/process.lock": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/states/2021-12-31.json.gz": {
+      "bytes": 5720975,
+      "sha256": "98ff09f8ca93b4e63d167eea34781c4fd32c41725032d8942102cc0200bd32bb"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/states/2022-12-30.json.gz": {
+      "bytes": 11148573,
+      "sha256": "e2264e7680d4166b352062fb58acd64d98e23301aba4c1f1926d5e4c16900b3c"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/states/2023-12-29.json.gz": {
+      "bytes": 16672265,
+      "sha256": "f7524a16ab97c663ca2086a37391a28ec35d34ac742ec1048b41c68f953c694f"
+    },
+    "trading/track2/rapid_final_diag_v1/runs/final-diag-20261110-r1/states/2024-12-31.json.gz": {
+      "bytes": 22007510,
+      "sha256": "18a2f701080a90d3881935e7707737806950abc1a2b77ec0353fcd13e61a6119"
+    },
+    "trading/track2/rapid_final_diag_v1/supplement.stderr": {
+      "bytes": 691,
+      "sha256": "a75ed675cc9c5ed6bb8431bfed04365d72e9c22281e713fd1a9d4196a13f7aed"
+    },
+    "trading/track2/rapid_final_diag_v1/supplement.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/supplement_01/CONCENTRATION.csv": {
+      "bytes": 1374,
+      "sha256": "34e89b9b674bdb7f881809a4764d365c3d9cc306c37c41a56422b864b0b5e922"
+    },
+    "trading/track2/rapid_final_diag_v1/supplement_01/ORDER_NOTIONAL_BANDS.csv": {
+      "bytes": 3411,
+      "sha256": "bec4edce4c7369fead3be8c80d2e1b1ecf134ab2d0ff267d8d8184aef4a0c0de"
+    },
+    "trading/track2/rapid_final_diag_v1/supplement_01/PHYSICAL_COST_DIAGNOSTICS_COMPLETE.csv": {
+      "bytes": 3122,
+      "sha256": "02307846c717ce881165b3db979581b8f8514572853f9e2079e6c49ad8dd8c40"
+    },
+    "trading/track2/rapid_final_diag_v1/supplement_01/PHYSICAL_ORDERS_RECONCILIATION.csv": {
+      "bytes": 2082,
+      "sha256": "2173d78e4f1b1ddb732647c934c30b544ce6d38af48e98dd488f2fcd89378bd7"
+    },
+    "trading/track2/rapid_final_diag_v1/supplement_01/R01_STRESS_INEQUALITY_CHECKS.csv": {
+      "bytes": 16561,
+      "sha256": "a462f298c29eb2ad7f0ec8312de2e7e74b21e6e95feb6adde93cf40696031021"
+    },
+    "trading/track2/rapid_final_diag_v1/supplement_01/RECOVERED_OGN_PHYSICAL_ROWS.parquet": {
+      "bytes": 10480,
+      "sha256": "864aea225d7071f837b1db53afb08917e2600636dc2315a511a00308228581d9"
+    },
+    "trading/track2/rapid_final_diag_v1/supplement_01/SUPPLEMENT_MANIFEST.json": {
+      "bytes": 1267,
+      "sha256": "3c0b08e382a474c8a2527db40c417d2ba60fa38694b7f1ebc5c85007a79f7963"
+    },
+    "trading/track2/rapid_final_diag_v1/supplement_01/VINTAGE_RISK_PER_OPPORTUNITY.csv": {
+      "bytes": 733,
+      "sha256": "da79ad76b9b9a27758b585d1c0067ed357d8b530747c04a0ad53afd332d4632a"
+    },
+    "trading/track2/rapid_final_diag_v1/validation/0.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/validation/0.stdout": {
+      "bytes": 99,
+      "sha256": "df7f429c12621977825db796648ad94548c87b607cd20a982fce5ffc4e6c51e7"
+    },
+    "trading/track2/rapid_final_diag_v1/validation/1.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/validation/1.stdout": {
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "trading/track2/rapid_final_diag_v1/validation/2.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_final_diag_v1/validation/2.stdout": {
+      "bytes": 37,
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+    },
+    "trading/track2/rapid_final_diag_v1/validation/RECEIPT.json": {
+      "bytes": 903,
+      "sha256": "0e45bac79c68af4859bff04526b3c66e82e56c1e9cc8cf440e7edff8afe65a5d"
+    }
+  },
+  "funded_census": {
+    "COMPLETE": 13,
+    "M01_identity": true,
+    "exact_controls": 7,
+    "treatments": 6
+  },
+  "funded_compact_outputs_bytes": 9807275,
+  "gates": {
+    "G_ACCOUNTING": "PASS_WITH_ORIGINAL_CONDITIONAL_ACTION_BORROW_ASSUMPTIONS",
+    "G_CAUSAL_EXECUTION": "PASS_SCOPED_TESTS_AND_SOURCE_PILOT",
+    "G_CONTROL_PARITY": "PASS_7x1005",
+    "G_INPUT_INTEGRITY": "PASS",
+    "G_OWNED_RUFF_TYPES": "PASS_ZERO_ERRORS",
+    "G_OWNED_TESTS": "PASS_78",
+    "G_PHYSICAL_EXPORT": "PASS_AFTER_EXACT_CHECKPOINT_OGN_SUPPLEMENT",
+    "G_REPOSITORY_FULL_TYPES": "HOLD_32_LEGACY_FILE_DIAGNOSTICS",
+    "G_SEALED_PROTOCOL": "PASS",
+    "G_STORAGE": "PASS_UNDER_100MB",
+    "G_UNTOUCHED_CONFIRMATION": "NOT_PERFORMED"
+  },
+  "git_head": "8061483cb65d03264a7836b8b882123f67cbe4ad",
+  "immediate_frozen_input_files": 357,
+  "input_seal_sha256": "0549d952c739d2b47691b565e047d6d1d30c8bd96424b056ef088feeff3eab69",
+  "old_scientific_files_and_mtimes_unchanged": true,
+  "protected_checks": 35496,
+  "registry_file_sha256": "38748905a0a6cd969c4f6e9b9b734fadc3315f63d37268df212422c9afb5ac32",
+  "registry_identity": "62cc31bc422b7e6ff515558e0564175917781d7731bcaa401bb45d6726620db1",
+  "result_tree_bytes_before_manifest": 70290966,
+  "result_tree_bytes_including_manifest": 70316189,
+  "schema": "HF20_FINAL_TARGETED_DIAGNOSTICS_CONTENT_1",
+  "self_excluded": true,
+  "shared_year_end_checkpoint_bytes": 55549323,
+  "verdict": "COMPLETE_EXPLORATORY_WITH_DISCLOSED_GLOBAL_TYPE_QUALIFICATION"
+}

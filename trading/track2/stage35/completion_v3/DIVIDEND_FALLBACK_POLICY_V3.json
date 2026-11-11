@@ -1,0 +1,102 @@
+{
+  "A": "supported values immutable",
+  "B": {
+    "2024_05_28_record": "2024-05-24 ex",
+    "from_2024_05_29": "same valid record business day",
+    "nonbusiness_or_special": "HOLD",
+    "ordinary_only": true,
+    "pre_2024_05_29": "previous joint XNYS/banking business day",
+    "stress_business_days": [
+      -1,
+      1
+    ]
+  },
+  "C": {
+    "bank_roll": "next banking business day",
+    "missing_pay_lag_calendar_days": 30,
+    "stress": [
+      14,
+      45
+    ]
+  },
+  "D": {
+    "allowed_cadence_months": [
+      1,
+      3
+    ],
+    "last_verified_prior_regular_amount_only": true,
+    "max_age_payout_intervals": 2,
+    "split_conversion": "verified effective split in contemporaneous raw-share units",
+    "stress": [
+      0,
+      1,
+      1.5
+    ],
+    "suspension": "HOLD"
+  },
+  "E": {
+    "maximum_missing_events": 2,
+    "minimum_verified_prior_events": 2,
+    "no_future_events_or_imputed_chaining": true,
+    "payer_and_cadence_proof_required": true
+  },
+  "F": {
+    "annual_rate": 0.015,
+    "book_as_cash_action": false,
+    "standalone_sensitivity_only": true,
+    "stress": [
+      0,
+      0.03
+    ],
+    "suppress_if_any_supported_distribution_in_security_year": true,
+    "verified_nonpayers_excluded": true
+  },
+  "G": "material special terms/valuation/CIL unresolved=>HOLD;ordinary rules forbidden",
+  "authorized_period": [
+    "2021-01-01",
+    "2024-12-31"
+  ],
+  "availability": "retrospective collection not PIT; modeled date-only effective-day midnight assumption distinct from actual receipt",
+  "borrow": {
+    "annual_rate": 0.02,
+    "day_count": "ACT/365 physical net short;no verifiedlocates",
+    "mode": "CONDITIONAL_ACADEMIC_SHORT",
+    "stresses": [
+      0.01,
+      0.05
+    ]
+  },
+  "economic_ledger": "RAW_COMMON_SHARE only",
+  "execution": {
+    "commission_per_share": 0.005,
+    "cumulative_min_per_order": 1,
+    "dynamic_rebalance": false,
+    "entry_expiry_minutes": 10,
+    "half_spread_bps": 5,
+    "impact_bps": 5,
+    "participation_prior_received_volume": 0.01,
+    "receipt_scenarios_minutes": [
+      1,
+      2,
+      5
+    ]
+  },
+  "funding": {
+    "base": 0,
+    "stresses": [
+      0.05,
+      0.1
+    ]
+  },
+  "historical_financial_backtest_run": false,
+  "human_financial_approval": "NOT_APPROVED",
+  "model": "original S2-C unchanged",
+  "scenarios": [
+    "OBSERVED_ACTION_BASE",
+    "CONDITIONAL_ORDINARY_IMPUTED",
+    "LOW_DIVIDEND_SENSITIVITY",
+    "HIGH_DIVIDEND_SENSITIVITY",
+    "UNRESOLVED"
+  ],
+  "version": "ORDINARY_DIVIDEND_V3_1"
+}

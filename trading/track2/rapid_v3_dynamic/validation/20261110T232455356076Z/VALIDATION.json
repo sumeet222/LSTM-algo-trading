@@ -1,0 +1,55 @@
+{
+  "checks": {
+    "pytest": {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/track2_rapid_v3",
+        "tests/track2_rapid_v2",
+        "tests/track2_rapid_v1",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_wait_next_valid_and_nominal_lifetime",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_open_exit_remains_without_expiry_and_partial_fees_accumulate",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_later_open_cannot_rewrite_submission_or_predecision_state",
+        "tests/track2_stage35_v5/test_next_valid_execution.py::test_actual_pre_spinoff_share_cases_exact_without_tolerance_waiver",
+        "tests/track2_stage35_v4/test_special_and_book.py",
+        "tests/track2_stage35_completion_v3/test_event_and_book_integration.py::test_friday_monday_physical_net_short_borrow"
+      ],
+      "returncode": 0,
+      "seconds": 3.942154166987166,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a91d7e85217b4254f9f9a802e2ca8eb582d3d02ce30df0d3dc6a2cad1a68e338"
+    },
+    "ruff": {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "--select",
+        "E,F,I",
+        "src/lstm_data/trading/track2/rapid_v3_dynamic",
+        "tests/track2_rapid_v3"
+      ],
+      "returncode": 0,
+      "seconds": 0.05389933311380446,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "types": {
+      "argv": [
+        ".venv/bin/pyright",
+        "--pythonpath",
+        ".venv/bin/python",
+        "--outputjson",
+        "src/lstm_data/trading/track2/rapid_v3_dynamic",
+        "tests/track2_rapid_v3"
+      ],
+      "returncode": 0,
+      "seconds": 4.193991707870737,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "250f58de61e6c0a13888f03a5f3e030ea72eb2919bc81cdc3b4d8696c532700c"
+    }
+  },
+  "registry": "7b91edd45848c301abe3d1f03da8ed7378f7c8ca708bf4f147d0bfd47ea123b1",
+  "status": "PASS"
+}

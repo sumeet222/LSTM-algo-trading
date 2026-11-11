@@ -1,0 +1,75 @@
+{
+  "code": {
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/__init__.py": "d21d06e42ca01d5ebdada1626ef739ba355e29c714abfed5b8438bc8ccc75cfb",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/analysis.py": "805b2f75ebc854ffb79e7a3e9a7b9738a65ec10e3dbc1579a1a74b33a7683337",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py": "20cf6de837746048b3ac615cdd72ab636a390a2cf4bb614516e7c6bbdd8701f8",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/certification.py": "75ad0f3b9ef020b8fc92631ae95e7c189146e2434af415b0f13eaa9ed824005a",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/checkpoint.py": "642fba831b834838306ee052ac9b9b9ae4d6e00baaeded2963f3712acefbccfd",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py": "d7372ef5f0e140b8a9f2636c6e5e39e3e97a855ded304e247f09291d409cba20",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/execution_calendar.py": "60e4546b291de37c604dcc72a21d9c3197d0c89b8fb84bb93bfdbfbeb302b377",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py": "0c0fe49d6d6071c56715aac46a65366e3cf4b5910aaddbe8f6aabfbd48a0d855",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/paths.py": "06afcc3d65a12189a7133c092a9f1655494c5a8249162a008fc1d80cff8d0e98",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py": "11a6e5cd1d44957097a8533b4c20837a87e06c01f9f360fb6378227a90064a06",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py": "02f1d9c719b45a8b9abc798b0086aa4ba91731f1e42e1c3d810edb77c9ebd9d1",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py": "1a6e32dec4d9b39f2c889b4f2e0d9dfe66d896e41c935d28656ca1e2e14203fe",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/run.py": "b9cdbbddb105aeb6ff714e1239a0919d660d1136d8fd2fe03792a5db57def49c",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/sources.py": "3b255cca32bd4e0ce96d97fc0abcf9fd85482b017456c67826a1f9c186d87a20",
+    "src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py": "11f2c220652350a6c048468939b4ab2c4bfe55b988202efe83b7fa803aefd079",
+    "tests/track2_stage35_v4/test_replay_engine.py": "fdf75ea28c96e390e6e3cfec23a727133a744108e1a05789031ea3ddb1cd3749",
+    "tests/track2_stage35_v4/test_special_and_book.py": "48977f7f7cefd0c0e3b1158cd2a3c383e0617ad4e5786092a95b71189c2f32cb"
+  },
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "src/lstm_data/trading/track2/stage35/final_backtest_v4",
+        "tests/track2_stage35_v4",
+        "--select",
+        "E,F,I"
+      ],
+      "domain": "ruff",
+      "path": "trading/track2/stage35/final_backtest_v4/audits/92ff7279748e_CERTIFIED_RUFF.txt",
+      "returncode": 0,
+      "seconds": 0.025806500110775232,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "command": [
+        ".venv/bin/pyright",
+        "src/lstm_data/trading/track2/stage35/final_backtest_v4",
+        "tests/track2_stage35_v4",
+        "--pythonpath",
+        ".venv/bin/python",
+        "--outputjson"
+      ],
+      "domain": "owned_types",
+      "path": "trading/track2/stage35/final_backtest_v4/audits/92ff7279748e_CERTIFIED_OWNED_TYPES.json",
+      "returncode": 0,
+      "seconds": 6.352421083021909,
+      "sha256": "33db24bc3ba3cf8ae9236e1aa942d428790b2da8397dc377fb3356ca07a95ad6"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/track2_stage012",
+        "tests/track2_stage35",
+        "tests/track2_stage35_completion_v2",
+        "tests/track2_stage35_completion_v3",
+        "tests/track2_stage35_v4",
+        "tests/test_hf20_s2c_ca.py",
+        "tests/test_hf20_mag_c3_io.py",
+        "-q"
+      ],
+      "domain": "pytest",
+      "path": "trading/track2/stage35/final_backtest_v4/audits/92ff7279748e_CERTIFIED_PYTEST.txt",
+      "returncode": 0,
+      "seconds": 54.13234708295204,
+      "sha256": "6ad3ea5fe94d52a82b7fb8d7c97345ddabfe172f8ee0789f99e6fc817e4ac3b5"
+    }
+  ],
+  "new_owned_type_errors": 0,
+  "new_owned_warnings": 0
+}

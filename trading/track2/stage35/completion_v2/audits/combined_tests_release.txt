@@ -1,0 +1,51 @@
+........................................................................ [ 63%]
+...............F.........................                                [100%]
+=================================== FAILURES ===================================
+_____________ test_mechanical_split_order_units_and_rate_segments ______________
+
+    def test_mechanical_split_order_units_and_rate_segments():
+        from test_settlement_v2 import quote
+    
+        from lstm_data.trading.track2.stage35.common import D
+        from lstm_data.trading.track2.stage35.completion_v2.settlement import split_order_units
+    
+        clock = MarketClock("2024-01-01", "2024-02-01")
+        old = order()
+        adjusted = split_order_units(old, D(2), T - timedelta(seconds=20), T - timedelta(days=1))
+        assert old.net == 4 and adjusted.net == 8 and adjusted.reference_price == 50
+        with pytest.raises(ValueError, match="UNRESOLVED"):
+            split_order_units(old, D(2), T - timedelta(seconds=20), T)
+        eng = ReplayEngine("account1", "S2C_RISK", initial((("a", -6),)), clock)
+        o = order((("a", -6),))
+        eng.add(o)
+        eng.process((ReplayEvent(T + timedelta(minutes=2), 1, "short", "BAR", o, bar()),))
+        end = T + timedelta(days=1)
+        eng.process(
+            (ReplayEvent(end, 0, "rate", "RATE", reference=quote(end), ticker="AAPL", rate=D(".05")),)
+        )
+        first = sum(x.accrual for x in eng.book.lots)
+        next_day = end + timedelta(days=1)
+        eng.process(
+            (
+                ReplayEvent(
+                    next_day,
+                    0,
+                    "rate_segment_mark",
+                    "MARK",
+                    reference=quote(next_day, "150"),
+                    ticker="AAPL",
+                ),
+            )
+        )
+        second = sum(x.accrual for x in eng.book.lots)
+        assert first == -D(600) * D(".02") / D(365)
+>       assert second == first - D(600) * D(".05") / D(365)
+E       AssertionError: assert (Decimal('-0.1150684931506849315068493151') - Decimal('-0.03287671232876712328767123288')) == ((-Decimal('600') * Decimal('0.05')) / Decimal('365'))
+E        +  where Decimal('600') = <class 'decimal.Decimal'>(600)
+E        +  and   Decimal('0.05') = <class 'decimal.Decimal'>('.05')
+E        +  and   Decimal('365') = <class 'decimal.Decimal'>(365)
+
+tests/track2_stage35_completion_v2/test_engine_and_release.py:130: AssertionError
+=========================== short test summary info ============================
+FAILED tests/track2_stage35_completion_v2/test_engine_and_release.py::test_mechanical_split_order_units_and_rate_segments
+1 failed, 112 passed in 94.19s (0:01:34)

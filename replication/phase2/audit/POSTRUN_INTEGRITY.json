@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "utc": "2026-11-03T00:54:02.103190+00:00",
+  "prefit": {
+    "status": "PASS_WITH_EXPLICIT_REPORT_ONLY_TRANSITION",
+    "code_test_files": 18,
+    "evidence_files": 8,
+    "report_only_changed_files": [
+      "code/evaluation.py"
+    ],
+    "transition": "report_source_transition.json",
+    "original_prefit_lock_unchanged": true
+  },
+  "run": {
+    "status": "PASS_AFTER_REPORT_ONLY_RECOVERY",
+    "real_phases": 8,
+    "neural_retries": 0,
+    "report_failures": 1,
+    "audited_report_retries": 1,
+    "phase_order": [
+      [
+        "F21",
+        "initial"
+      ],
+      [
+        "F21",
+        "refit"
+      ],
+      [
+        "F22",
+        "initial"
+      ],
+      [
+        "F22",
+        "refit"
+      ],
+      [
+        "F23",
+        "initial"
+      ],
+      [
+        "F23",
+        "refit"
+      ],
+      [
+        "F24",
+        "initial"
+      ],
+      [
+        "F24",
+        "refit"
+      ]
+    ],
+    "phases": [
+      {
+        "fold": "F21",
+        "initial_epochs": 18,
+        "selected_epochs": 8,
+        "refit_epochs": 8,
+        "initial_digest": "a4e9317aed2bce2f94a0611b21455269fc254dcf3e0d078c23eb0ab2c2956eae",
+        "refit_final_digest": "3fa93b41499e5f8d7f30cff8d290125d75b3ac68941518b4d979312152fdae21"
+      },
+      {
+        "fold": "F22",
+        "initial_epochs": 23,
+        "selected_epochs": 13,
+        "refit_epochs": 13,
+        "initial_digest": "a4e9317aed2bce2f94a0611b21455269fc254dcf3e0d078c23eb0ab2c2956eae",
+        "refit_final_digest": "cc54d12d6342b08839f04ae7cef52225c80f86589b2043ab350520ebe1d45c4c"
+      },
+      {
+        "fold": "F23",
+        "initial_epochs": 32,
+        "selected_epochs": 22,
+        "refit_epochs": 22,
+        "initial_digest": "a4e9317aed2bce2f94a0611b21455269fc254dcf3e0d078c23eb0ab2c2956eae",
+        "refit_final_digest": "7723ca088e790df4f12b58f79906b0d6d9c23ac65c5fa11e7a83abb3247211ba"
+      },
+      {
+        "fold": "F24",
+        "initial_epochs": 27,
+        "selected_epochs": 17,
+        "refit_epochs": 17,
+        "initial_digest": "a4e9317aed2bce2f94a0611b21455269fc254dcf3e0d078c23eb0ab2c2956eae",
+        "refit_final_digest": "56ff1483f94bd219fb92e17135e4972147982de8143c5fc3f8d3ec317b3aafb9"
+      }
+    ],
+    "metric_replay": "EXACT",
+    "reload": "EXACT",
+    "protected_files_unchanged": 80,
+    "successful_fold_peak_rss_bytes": 823427072,
+    "failed_original_process_total_peak": "NOT-VERIFIABLE after exit; successful fold peak and recovery peak retained",
+    "completion": {
+      "status": "REPORT_RECOVERY_COMPLETE",
+      "neural_fit_calls": 0,
+      "calibration_fit_calls": 0,
+      "threshold_fit_calls": 0,
+      "checkpoints_reloaded": 4,
+      "checkpoint_predictions": "EXACT",
+      "metric_replay": "EXACT",
+      "protected_files_unchanged": 80,
+      "elapsed_seconds": 478.6243834589841,
+      "peak_rss_bytes": 648118272,
+      "original_run_failure": "../run/failure.json",
+      "source_transition": "../../audit/report_source_transition.json"
+    }
+  },
+  "resources": {
+    "status": "PASS",
+    "new_output_bytes_before_final_documents_and_manifest": 55772664,
+    "new_output_limit_bytes": 2500000000,
+    "report_recovery_peak_rss_bytes": 648118272,
+    "successful_fold_peak_rss_bytes": 823427072,
+    "prefit_peak_rss_bytes": 1285996544,
+    "failed_original_process_total_peak": "NOT-VERIFIABLE; final reporting failure happened after last fold resource receipt",
+    "process_memory_intent_bytes": 2000000000,
+    "project_total_size": "NOT-VERIFIABLE under no global/protected path inventory boundary"
+  },
+  "inputs": "postrun_input_immutability.json",
+  "imports": "IMPORT_LOCK.json"
+}

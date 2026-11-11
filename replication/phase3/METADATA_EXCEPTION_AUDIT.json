@@ -1,0 +1,35 @@
+{
+  "utc": "2026-11-03T12:37:23.826421+00:00",
+  "authorized_exception": "Only SHA256 mismatch for replication/phase2/.DS_Store; no other file or provenance exception",
+  "manifest_expected": {
+    "path": ".DS_Store",
+    "bytes": 6148,
+    "sha256": "9aac4a413b64844a3421cc8559c0945311e9b54362c9935fde6a5e7464bde046"
+  },
+  "prior_failed_gate_observed_sha256": "77ef9beb43df6065b818ee38da6557d23e082637bad735bc6e32c55099181b9a",
+  "continuation_observed": {
+    "path": ".DS_Store",
+    "bytes": 6148,
+    "sha256": "40e05edea1150c86288110905314a29852e327bf188df5a0d9413c52fc2a7c70",
+    "match": false
+  },
+  "scientific_dependency_disposition": "NO_SUBSTANTIVE_DEPENDENCY_FOUND_IN_BOUNDED_TEXT_AND_RECORDED_EVENTS",
+  "evidence": [
+    "No .DS_Store dependency in Phase2 scientific source read paths or configs/manifests used as scientific inputs.",
+    "No .DS_Store file event or imported-module origin in any of the 39 provenance receipts.",
+    "postrun_check.py freeze uses PHASE.rglob to inventory all files, explaining metadata inclusion; generic hashing is an audit dependency, not a scientific input.",
+    "Actual model/recovery geometry reads use explicit grid.parquet, origins.parquet, source_geometry.npz paths."
+  ],
+  "limitations": [
+    "Procedural/text evidence; not exhaustive OS/native access proof.",
+    "The file differs both from freeze and original failed-gate observation; no reviewer write occurred and cause/timing are not established.",
+    "Separate native-reader provenance gap blocks unsealing despite this narrow metadata finding."
+  ],
+  "untouched_prior_phase3": {
+    "SEAL_GATE.json": "b014bdd1f15ecf908375668dc04e7bb92d9e19315a6a3b9276b661ff8dffa7ff",
+    "SEAL_GATE.md": "c8ab3a1a858533645d5371ab210e63b04b0d57f5f05190566581f4bfe91b3920",
+    "BLOCKER.md": "b1206f45946355f27115d030a1c82b0872c49d13780d8764c09a618fbf7276bf"
+  },
+  "phase2_manifest_sha256": "acee4b37613fc905ae2d1b3dd1624a8a19762bd3cdc42086fe6c474911f02410",
+  "no_legacy_import_or_model_execution": true
+}

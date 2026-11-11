@@ -1,0 +1,45 @@
+{
+  "version": "TRACK2_STAGE35_COMPLETION_V2",
+  "entry_expiry_wall_minutes": 10,
+  "receipt_wall_minutes": 2,
+  "inference_seconds": 0,
+  "latency_stress_minutes": [
+    1,
+    2,
+    5
+  ],
+  "half_spread_bps": 5,
+  "impact_bps": 5,
+  "per_share_usd": ".005",
+  "minimum_per_external_order_usd": "1",
+  "participation_prior_received_volume": ".01",
+  "borrow_mode": "CONDITIONAL_ACADEMIC_SHORT",
+  "borrow_annual": ".02",
+  "borrow_stress": [
+    ".01",
+    ".02",
+    ".05"
+  ],
+  "cash_financing": "no discretionary leverage;unavoidable gap deficit is a flagged liability,not free capital",
+  "mark_age_wall_minutes": 5,
+  "vintage_nav": ".2",
+  "name_gross_nav": ".1",
+  "gross_nav": "1",
+  "net_nav": "1",
+  "clip": [
+    ".5",
+    "1.5"
+  ],
+  "internal_transfer": "ex-post raw bar-open accounting after valid pre-event instructions;zero external fee for internal legs",
+  "liquidation": "on hard marked cap breach:block increasing risk;stable ticker/cohort closeout intents submitted after receipt,next eligible minute;failed closeout unresolved",
+  "rolling_window": 60,
+  "minimum_control_support": 40,
+  "ewma_decay": ".94",
+  "ewma_initialization": "old Stage35:earliest window squared magnitude then .94 recurrence,weights sum1 including initial residual",
+  "dynamic_resize": false,
+  "financial_release_authorized": false,
+  "source_period": [
+    "2010-07",
+    "2024-12"
+  ]
+}

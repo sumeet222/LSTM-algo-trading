@@ -1,0 +1,126 @@
+{
+    "version": "1.1.414",
+    "time": "1794245611626",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"datetime | NaTType\" cannot be assigned to parameter \"complete\" of type \"datetime\" in function \"__init__\"\n  Type \"datetime | NaTType\" is not assignable to type \"datetime\"\n    \"NaTType\" is not assignable to \"datetime\"",
+            "range": {
+                "start": {
+                    "line": 225,
+                    "character": 16
+                },
+                "end": {
+                    "line": 225,
+                    "character": 44
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"datetime | NaTType\" cannot be assigned to parameter \"available\" of type \"datetime\" in function \"__init__\"\n  Type \"datetime | NaTType\" is not assignable to type \"datetime\"\n    \"NaTType\" is not assignable to \"datetime\"",
+            "range": {
+                "start": {
+                    "line": 226,
+                    "character": 16
+                },
+                "end": {
+                    "line": 226,
+                    "character": 25
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"datetime | NaTType\" cannot be assigned to parameter \"at\" of type \"datetime\" in function \"__init__\"\n  Type \"datetime | NaTType\" is not assignable to type \"datetime\"\n    \"NaTType\" is not assignable to \"datetime\"",
+            "range": {
+                "start": {
+                    "line": 286,
+                    "character": 16
+                },
+                "end": {
+                    "line": 286,
+                    "character": 44
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"datetime | NaTType\" cannot be assigned to parameter \"complete\" of type \"datetime\" in function \"__init__\"\n  Type \"datetime | NaTType\" is not assignable to type \"datetime\"\n    \"NaTType\" is not assignable to \"datetime\"",
+            "range": {
+                "start": {
+                    "line": 287,
+                    "character": 16
+                },
+                "end": {
+                    "line": 287,
+                    "character": 44
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+            "severity": "error",
+            "message": "Argument of type \"datetime | NaTType\" cannot be assigned to parameter \"available\" of type \"datetime\" in function \"__init__\"\n  Type \"datetime | NaTType\" is not assignable to type \"datetime\"\n    \"NaTType\" is not assignable to \"datetime\"",
+            "range": {
+                "start": {
+                    "line": 288,
+                    "character": 16
+                },
+                "end": {
+                    "line": 288,
+                    "character": 25
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Any | Series\" cannot be assigned to parameter \"x\" of type \"ConvertibleToInt\" in function \"__new__\"\n  Type \"Unknown | Any | Series\" is not assignable to type \"ConvertibleToInt\"\n    Type \"Series\" is not assignable to type \"ConvertibleToInt\"\n      \"Series\" is not assignable to \"str\"\n      \"Series\" is incompatible with protocol \"Buffer\"\n        \"__buffer__\" is not present\n      \"Series\" is incompatible with protocol \"SupportsInt\"\n        \"__int__\" is not present\n      \"Series\" is incompatible with protocol \"SupportsIndex\"\n  ...",
+            "range": {
+                "start": {
+                    "line": 45,
+                    "character": 31
+                },
+                "end": {
+                    "line": 45,
+                    "character": 68
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py",
+            "severity": "error",
+            "message": "Argument of type \"Unknown | Any | Series\" cannot be assigned to parameter \"x\" of type \"ConvertibleToInt\" in function \"__new__\"\n  Type \"Unknown | Any | Series\" is not assignable to type \"ConvertibleToInt\"\n    Type \"Series\" is not assignable to type \"ConvertibleToInt\"\n      \"Series\" is not assignable to \"str\"\n      \"Series\" is incompatible with protocol \"Buffer\"\n        \"__buffer__\" is not present\n      \"Series\" is incompatible with protocol \"SupportsInt\"\n        \"__int__\" is not present\n      \"Series\" is incompatible with protocol \"SupportsIndex\"",
+            "range": {
+                "start": {
+                    "line": 45,
+                    "character": 31
+                },
+                "end": {
+                    "line": 45,
+                    "character": 68
+                }
+            },
+            "rule": "reportArgumentType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 11,
+        "errorCount": 7,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 4.7
+    }
+}
+

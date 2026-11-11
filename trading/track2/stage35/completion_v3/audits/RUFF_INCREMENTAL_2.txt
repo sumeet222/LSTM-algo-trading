@@ -1,0 +1,182 @@
+E501 Line too long (106 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/book_bridge.py:77:101
+   |
+75 |             amount = sum(by_lot.values(), ZERO)
+76 |             if amount < 0 and book.cash - book.restricted() < -amount:
+77 |                 new = replace(book, unresolved=book.unresolved + (action.event_id + ':PAY_FUNDING_HOLD',))
+   |                                                                                                     ^^^^^^
+78 |                 amount = ZERO
+79 |             else:
+   |
+
+E501 Line too long (110 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/book_bridge.py:81:101
+   |
+79 |             else:
+80 |                 lots = tuple(replace(lot, cash=lot.cash + by_lot.get(lot.cohort.cohort_id, ZERO),
+81 |                                      nontrade_cash=lot.nontrade_cash + by_lot.get(lot.cohort.cohort_id, ZERO),
+   |                                                                                                     ^^^^^^^^^^
+82 |                                      accrual=lot.accrual - by_lot.get(lot.cohort.cohort_id, ZERO))
+83 |                              for lot in book.lots)
+   |
+
+E501 Line too long (101 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/book_bridge.py:90:101
+   |
+88 |         if action.amount is None or action.special:
+89 |             raise ValueError('ORDINARY_CASH_AMOUNT_REQUIRED')
+90 |         by_lot = {lot.cohort.cohort_id: lot.quantity * action.amount for lot in held if lot.quantity}
+   |                                                                                                     ^
+91 |         amount = sum(by_lot.values(), ZERO)
+92 |         lots = tuple(replace(lot, accrual=lot.accrual + by_lot.get(lot.cohort.cohort_id, ZERO))
+   |
+
+E501 Line too long (112 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/book_bridge.py:96:101
+   |
+94 |         if action.payable_date:
+95 |             due = midnight(action.payable_date)
+96 |             claims = tuple(CashClaim(action.event_id, key, value, due) for key, value in sorted(by_lot.items()))
+   |                                                                                                     ^^^^^^^^^^^^
+97 |             new = replace(book, lots=lots, claims=book.claims + claims,
+98 |                           action_keys=book.action_keys + (action.event_id + ':EX',))
+   |
+
+E501 Line too long (111 > 100)
+   --> src/lstm_data/trading/track2/stage35/completion_v3/book_bridge.py:100:101
+    |
+ 98 |                           action_keys=book.action_keys + (action.event_id + ':EX',))
+ 99 |         else:
+100 |             undated = tuple(UndatedClaim(action.event_id, key, value) for key, value in sorted(by_lot.items()))
+    |                                                                                                     ^^^^^^^^^^^
+101 |             new = replace(book, lots=lots, undated_claims=book.undated_claims + undated,
+102 |                           action_keys=book.action_keys + (action.event_id + ':EX',),
+    |
+
+E501 Line too long (102 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/engine.py:37:101
+   |
+35 |                 break
+36 |             for position in sorted(self.book.positions, key=lambda p: p.ticker):
+37 |                 if position.quantity < 0 and position.borrow_asof and position.borrow_asof < boundary:
+   |                                                                                                     ^^
+38 |                     self.book = carry_to(self.book, position.ticker, boundary,
+39 |                                          self.rates.get(position.ticker, D('.02')), boundary,
+   |
+
+E501 Line too long (102 > 100)
+   --> src/lstm_data/trading/track2/stage35/completion_v3/inventory.py:256:101
+    |
+254 |                         sources,
+255 |                         effective_date=date(year, 1, 1),
+256 |                         proof_of_no_dividend_if_asserted=f"SEC common-stock nonpayment covers {year}",
+    |                                                                                                     ^^
+257 |                         effect_on_books="NO_ORDINARY_CASH_EVENT",
+258 |                     )
+    |
+
+E501 Line too long (101 > 100)
+   --> src/lstm_data/trading/track2/stage35/completion_v3/inventory.py:274:101
+    |
+272 |                         "not_a_cash_action": True,
+273 |                         "book_into_action_ledger": False,
+274 |                         "reason": "empty Alpaca; issuer/SEC evidence insufficient for verified zero",
+    |                                                                                                     ^
+275 |                         "overlap_policy": "suppress entire security/year if any supported cash event or verified zero",
+276 |                         "affected_interval": [f"{year}-01-01", f"{year}-12-31"],
+    |
+
+E501 Line too long (119 > 100)
+   --> src/lstm_data/trading/track2/stage35/completion_v3/inventory.py:275:101
+    |
+273 |                         "book_into_action_ledger": False,
+274 |                         "reason": "empty Alpaca; issuer/SEC evidence insufficient for verified zero",
+275 |                         "overlap_policy": "suppress entire security/year if any supported cash event or verified zero",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^
+276 |                         "affected_interval": [f"{year}-01-01", f"{year}-12-31"],
+277 |                         "source_attempts": ["ALPACA", "issuer FAQ", "FY2024 SEC"],
+    |
+
+E501 Line too long (105 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/raw_source.py:59:101
+   |
+57 |     observations.sort(key=lambda obs: (obs.available, obs.ticker))
+58 |     write_once(root / 'audits/RAW_SOURCE_FIXTURES_V3.json', {
+59 |         'plan_sha256': seal['sha256'], 'reads': reads, 'observations': [asdict(o) for o in observations],
+   |                                                                                                     ^^^^^
+60 |         'missing': missing, 'projected_rows': len(observations),
+61 |         'economic_trades': 0, 'financial_wealth_computed': False,
+   |
+
+E501 Line too long (120 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/raw_source.py:76:101
+   |
+74 |         'oos_minute_partitions': len(partitions), 'partitions': partitions,
+75 |         'certification_scope': 'source lineage and immutable bytes;11 projected value checks only',
+76 |         'raw_basis': 'ORIGINAL_OBSERVED_PRE_ADJUST_PRICES', 'model_hourly_basis': 'SPLIT_ADJUSTED_FORBIDDEN_FOR_LEDGER',
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+77 |         'source_quarantine_sha256': digest(Path(plan['quarantine'])),
+78 |         'prior_quarantine_policy': 'unchanged;retrospective QA not live-available knowledge',
+   |
+
+E501 Line too long (105 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/release.py:39:101
+   |
+37 |                                        'CONDITIONAL_APPROVED_IMPLEMENTATION_SCENARIO'):
+38 |             raise PermissionError('V3_REQUIRED_GATE_HOLD:' + name)
+39 |         if entry.get('status') != 'PASS' and name not in human.get('acknowledged_conditional_gates', []):
+   |                                                                                                     ^^^^^
+40 |             raise PermissionError('V3_EXPLICIT_CONDITIONAL_ACKNOWLEDGEMENT_REQUIRED:' + name)
+41 |     if gate.get('binding') != binding or any(k not in binding for k in BINDINGS):
+   |
+
+E501 Line too long (104 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/release.py:55:101
+   |
+53 |     for name, expected in files.items():
+54 |         p = Path(name)
+55 |         if p.is_absolute() or '..' in p.parts or hashlib.sha256(p.read_bytes()).hexdigest() != expected:
+   |                                                                                                     ^^^^
+56 |             raise PermissionError('V3_BOUND_FILE_CHANGED:' + name)
+57 |     message = canonical({'binding': binding, 'human': human, 'gates': gate['gates']})
+   |
+
+E501 Line too long (106 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/release.py:66:101
+   |
+64 |     if result.returncode:
+65 |         raise PermissionError('V3_EXTERNAL_SIGNATURE_INVALID')
+66 |     return VerifiedRelease(hashlib.sha256(canonical(binding)).hexdigest(), human['approval_id'], key_hash)
+   |                                                                                                     ^^^^^^
+
+E501 Line too long (104 > 100)
+  --> src/lstm_data/trading/track2/stage35/completion_v3/tapes.py:43:101
+   |
+41 |             disagreements=tuple(row['disagreements']),
+42 |             proof_of_no_dividend_if_asserted=row['proof_of_no_dividend_if_asserted'],
+43 |             inferred_fields=tuple(row['inferred_fields']), assumption_rule_id=row['assumption_rule_id'],
+   |                                                                                                     ^^^^
+44 |             assumption_params=tuple(tuple(v) for v in row['assumption_params']),
+45 |             confidence=row['confidence'], accrual_rule=row['accrual_rule'],
+   |
+
+E501 Line too long (132 > 100)
+   --> src/lstm_data/trading/track2/stage35/completion_v3/tapes.py:135:101
+    |
+133 |         'tape_sha256': digest(path), 'payment_events_past2024': sum(
+134 |             event.kind == 'CASH_SETTLEMENT' and event.effective_at.year > 2024 for event in events),
+135 |         'prices_past2024': False, 'carry_policy': 'automatic active physical shorts only;ACT365;known prior mark and rate required',
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+136 |         'carry_without_active_accounts': 'NOT_INSTANTIATED_NO_PORTFOLIO',
+137 |         'actual_publication_receipts': 'UNKNOWN;not replaced by modeled availability',
+    |
+
+E501 Line too long (103 > 100)
+   --> tests/track2_stage35_completion_v3/test_event_and_book_integration.py:127:101
+    |
+125 |     b = endowed((D(6), D(-10))).carry('AAPL', T, end, D(100), T, end, rate, 'fake-source')
+126 |     assert b.carry_expense_only == D(4)*100*rate*D(3)/365
+127 |     assert endowed().carry('AAPL', T, end, D(100), T, end, rate, 'fake-source').carry_expense_only == 0
+    |                                                                                                     ^^^
+
+Found 19 errors (2 fixed, 17 remaining).

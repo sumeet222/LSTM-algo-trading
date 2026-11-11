@@ -1,0 +1,21 @@
+"""Render sealed baseline only; no new financial simulation or parameter choice."""
+import json
+from pathlib import Path
+import pandas as pd
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+from lstm_data.trading.track2.stage35.final_backtest_v5.paths import ROOT,digest,publish
+p=ROOT/'presentation/BASELINE_DAILY_NAV_WIDE_V5.parquet'
+f=pd.read_parquet(p)
+colors={'EQUAL':'#1f77b4','ROLLING_RISK':'#ff7f0e','EWMA_RISK':'#2ca02c','S2C_RISK':'#d62728'}
+fig=make_subplots(rows=1,cols=2,subplot_titles=['Matched input-ready opportunities','Each arm: attainable opportunities'],shared_yaxes=True)
+for column,population in enumerate(['matched','attainable'],1):
+ for arm,color in colors.items():
+  fig.add_trace(go.Scatter(x=f.index,y=f[(population,arm)],name=arm,legendgroup=arm,showlegend=column==1,line={'color':color},hovertemplate='%{x|%Y-%m-%d}<br>NAV USD %{y:,.2f}<extra>'+arm+'</extra>'),row=1,col=column)
+fig.update_layout(title={'text':'HF20 V5 baseline: conditional exploratory net NAV<br><sup>$100,000 per account; costs included; fixed survivor panel; Stage 6 independent audit pending</sup>','x':0.03},template='plotly_white',height=520,width=1200,margin={'t':110,'b':90},legend={'orientation':'h','y':-0.14},hovermode='x unified')
+fig.update_yaxes(title_text='USD net NAV',row=1,col=1);fig.update_xaxes(title_text='Observed XNYS session')
+output=ROOT/'presentation/BASELINE_NET_NAV_FINAL_V5.html'
+if output.exists():raise FileExistsError(output)
+fig.write_html(output,include_plotlyjs=True,full_html=True)
+publish(ROOT/'presentation/BASELINE_NET_NAV_FINAL_V5_PROVENANCE.json',{'source':str(p),'source_sha256':digest(p),'output':str(output),'output_sha256':digest(output),'cosmetic_delta':'Consistent arm colors across both panels; earlier HTML retained.','new_financial_simulation':False})
+print(output)

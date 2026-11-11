@@ -1,0 +1,35 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/run.py", line 85, in <module>
+    main()
+    ~~~~^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/run.py", line 76, in main
+    pilot(args.version)
+    ~~~~~^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/run.py", line 24, in pilot
+    result = engine.run()
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py", line 794, in run
+    self.checkpoint(day.date)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py", line 593, in checkpoint
+    publish(self.store.path / "checkpoints" / (day + ".json"), seal(body))
+                                                               ~~~~^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/checkpoint.py", line 78, in seal
+    encoded = encode(value)
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/checkpoint.py", line 37, in encode
+    return {"mapping": [[encode(k), encode(v)] for k, v in value.items()]}
+                                    ~~~~~~^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/checkpoint.py", line 40, in encode
+    return {"sequence": type(value).__name__, "items": [encode(v) for v in items]}
+                                                        ~~~~~~^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/checkpoint.py", line 34, in encode
+    "fields": {f.name: encode(getattr(value, f.name)) for f in fields(value)},
+                       ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/lstm_data/trading/track2/stage35/final_backtest_v4/checkpoint.py", line 43, in encode
+    raise TypeError("UNSUPPORTED_CHECKPOINT_VALUE:" + type(value).__name__)
+TypeError: UNSUPPORTED_CHECKPOINT_VALUE:date

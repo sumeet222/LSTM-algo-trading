@@ -1,0 +1,93 @@
+{
+  "columns": [
+    "ticker",
+    "timestamp",
+    "is_rth",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume"
+  ],
+  "endowed_quantities": "synthetic +10/-6,not originalstrategy or historical fills",
+  "keys": [
+    {
+      "at": "2020-08-28T19:59:00Z",
+      "symbol": "AAPL"
+    },
+    {
+      "at": "2020-08-31T13:30:00Z",
+      "symbol": "AAPL"
+    },
+    {
+      "at": "2021-06-02T19:59:00Z",
+      "symbol": "MRK"
+    },
+    {
+      "at": "2021-06-03T13:30:00Z",
+      "symbol": "MRK"
+    },
+    {
+      "at": "2022-08-24T19:59:00Z",
+      "symbol": "TSLA"
+    },
+    {
+      "at": "2022-08-25T13:30:00Z",
+      "symbol": "TSLA"
+    },
+    {
+      "at": "2024-05-09T19:59:00Z",
+      "symbol": "AAPL"
+    },
+    {
+      "at": "2024-05-10T13:30:00Z",
+      "symbol": "AAPL"
+    },
+    {
+      "at": "2024-05-16T13:30:00Z",
+      "symbol": "AAPL"
+    },
+    {
+      "at": "2024-05-10T13:30:00Z",
+      "symbol": "BA"
+    },
+    {
+      "at": "2024-01-08T14:30:00Z",
+      "symbol": "COP"
+    }
+  ],
+  "mode": "ISOLATED_NONPERFORMANCE_SOURCE_AND_CLAIM_SHARE_CONSISTENCY",
+  "no_trade_cash_or_cost_basis_or_NAV_or_return": true,
+  "price_outputs": "OHLC validity and split-unit diagnostics only;no wealth valuation",
+  "quarantine": "reports/data_audit/ta019b_action_qa_2026-10-22_201224/unresolved_event_ledger_v3.json",
+  "raw_receipt": "bar completion+2 wall minutes;1/2/5 synthetic stress",
+  "sources": [
+    {
+      "mtime_ns": 1792706056822702436,
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2020-08.parquet",
+      "sha256": "57e50b4db0f9c36cc111f50fd56e6883aed1a0b7b29b382d20cfda46104bcf93"
+    },
+    {
+      "mtime_ns": 1792706403932788358,
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2021-06.parquet",
+      "sha256": "47710016435ad7c56a2a32e11586c80a2d199de9cc2b6715bb23fb1813f083ed"
+    },
+    {
+      "mtime_ns": 1792706954836039100,
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2022-08.parquet",
+      "sha256": "d65710d4ccd2fed61806a118ae29beb56a9fd7f765308e4c8a0782feb5f064eb"
+    },
+    {
+      "mtime_ns": 1792707595072514601,
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-01.parquet",
+      "sha256": "5fde2657140dcdddaf66fafa566c36e3de6d72fcdbdad43ee86b804477c5a4ce"
+    },
+    {
+      "mtime_ns": 1792707756235586151,
+      "path": "data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/2024-05.parquet",
+      "sha256": "10d8d9bad21a9e111f453429f60d7a733ed825395346c120f4bb976787e52326"
+    }
+  ],
+  "strict_V2_gate": "remains closed;no ReleasedPrice forgery",
+  "version": "BOUNDED_RAW_CLAIM_SHARE_V3"
+}

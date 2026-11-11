@@ -1,0 +1,458 @@
+{
+  "USD_tolerance": "1e-7",
+  "accounts": 12,
+  "all_new_files_bytes_with_code_test_session": 1274460,
+  "analysis_elapsed_seconds": 10.55764349992387,
+  "analysis_peak_RSS_bytes_macOS": 199262208,
+  "available_metrics": "COMPLETE_DESCRIPTIVE",
+  "code": {
+    "src/lstm_data/trading/track2/final3_risk_attribution/__init__.py": {
+      "bytes": 86,
+      "sha256": "3b57aa35009c2b759cc861dfdbb7ebcd5fede5ebd78c65a4210e95a9616f98b0"
+    },
+    "src/lstm_data/trading/track2/final3_risk_attribution/analysis.py": {
+      "bytes": 36480,
+      "sha256": "5dbc6acb4ac93870cff1eaf5b63f5facc0ae2568c6246e3e9902f04eae935528"
+    },
+    "src/lstm_data/trading/track2/final3_risk_attribution/cli.py": {
+      "bytes": 3448,
+      "sha256": "6c2412015936d3e30bd45e996217b9d9ed9b002a8e0070b22426163ab299137c"
+    },
+    "src/lstm_data/trading/track2/final3_risk_attribution/io.py": {
+      "bytes": 8706,
+      "sha256": "ec6ecdf0fdea1e22964b7622aeb52f09750be1aa92c59fdca68fc662d499a5db"
+    },
+    "src/lstm_data/trading/track2/final3_risk_attribution/metrics.py": {
+      "bytes": 7680,
+      "sha256": "21f9ae57424da9672947bd494ffe9a7b812150ccd9740c55d5cd3d1d73331993"
+    },
+    "src/lstm_data/trading/track2/final3_risk_attribution/reporting.py": {
+      "bytes": 16908,
+      "sha256": "5cc8b68ef8fa67fa5c7f9695b2bf7a35011110afc4abd08e66a5e14ea0b70694"
+    },
+    "src/lstm_data/trading/track2/final3_risk_attribution/saved.py": {
+      "bytes": 11471,
+      "sha256": "b967092876d2f72f6bb7de204e039d05a8780b383e6f12e058be63f7e4cdab9a"
+    },
+    "src/lstm_data/trading/track2/final3_risk_attribution/supplement.py": {
+      "bytes": 5619,
+      "sha256": "58a0ff7402cda6e8ad1cf0e0d07f0e58abbc6dc3c58646fafae9032e9bf1ace2"
+    }
+  },
+  "cohorts": 8029,
+  "environment": {
+    "git_HEAD": "8061483cb65d03264a7836b8b882123f67cbe4ad",
+    "git_branch": "feat/track-a-data-intake",
+    "python": "3.14.6"
+  },
+  "files": {
+    "trading/track2/final3_risk_attribution_v1/ANALYSIS_PROTOCOL.json": {
+      "bytes": 1934,
+      "sha256": "fdb45a5e5c191ad6c2d5f1cfdb409eac3268bd238f67e12e98bbf8ad86fd1005"
+    },
+    "trading/track2/final3_risk_attribution_v1/ANALYSIS_REPRODUCE.md": {
+      "bytes": 3557,
+      "sha256": "95297bf7ab3ea28dbeab61bda3c45de8789806fee6a7d5469241d0fe876277d7"
+    },
+    "trading/track2/final3_risk_attribution_v1/ATTAINABLE_REFERENCE_ONLY.csv": {
+      "bytes": 1032,
+      "sha256": "2c920a1d2b5566bce9afe634f4a3eebf83f789984a4c4918edfb1a3db38c902a"
+    },
+    "trading/track2/final3_risk_attribution_v1/COMPARISON_OF_3_POLICIES.md": {
+      "bytes": 2789,
+      "sha256": "83fa351604e44dfddf9229344ae83f2d3c5ad4b357116f8be7372257c598eccd"
+    },
+    "trading/track2/final3_risk_attribution_v1/COMPLETION_HANDOFF.md": {
+      "bytes": 1600,
+      "sha256": "28a6c32f47e8a38570cdf8f62b38f36f14c679c49c79dfe5c670bf92c473f641"
+    },
+    "trading/track2/final3_risk_attribution_v1/CONCENTRATION_AND_ECONOMIC_LIMITATIONS.md": {
+      "bytes": 3035,
+      "sha256": "2e3f8f767bddf8479f433a13d07c7c3a4eabe5dc06afa3cc674ee703bfc60507"
+    },
+    "trading/track2/final3_risk_attribution_v1/INPUT_AND_ACCOUNT_BINDINGS.md": {
+      "bytes": 3175,
+      "sha256": "c31e869d09bbf0d929a9b47474b5af39bb8b3466795581c76609b47996e522ab"
+    },
+    "trading/track2/final3_risk_attribution_v1/METRIC_DEFINITIONS.md": {
+      "bytes": 9563,
+      "sha256": "508fe6f211459c076b4ffb5b6629d2be66f2d733662c8b73ce5bd1cdee07effc"
+    },
+    "trading/track2/final3_risk_attribution_v1/OWNED_TYPE_CHECK_CORRECTION.md": {
+      "bytes": 968,
+      "sha256": "3511236888964b98560ca7ff379046fa29db95f074f8ec57970f89c50bb60df8"
+    },
+    "trading/track2/final3_risk_attribution_v1/RECONCILIATION_AND_VALIDATION.md": {
+      "bytes": 4563,
+      "sha256": "8d8aa448db0d5e29d8890008a41677628d68cec8aac6bf83aa433e08d5ed9d3e"
+    },
+    "trading/track2/final3_risk_attribution_v1/REPORT_RECEIPT.json": {
+      "bytes": 123,
+      "sha256": "bf1fc2b0d1fe27ed0b85346277fd71b9b07c856faa6ad2c1165f45bdfe99cc06"
+    },
+    "trading/track2/final3_risk_attribution_v1/SOURCE_REGISTER_AFTER.json": {
+      "bytes": 16725,
+      "sha256": "9dfac26ac7e78ce9198ecb6db6fcf5c07143969c4337e31f64f37c023562061d"
+    },
+    "trading/track2/final3_risk_attribution_v1/SOURCE_REGISTER_BEFORE.json": {
+      "bytes": 16709,
+      "sha256": "44c514936ea8ca4b7ccde044a24e22c6a14e6acce649ad2977f75b0bbc232630"
+    },
+    "trading/track2/final3_risk_attribution_v1/WHAT_DID_S2C_IMPROVE.md": {
+      "bytes": 8488,
+      "sha256": "3657508416d76ba0afdb1b47ec65384f80cb6e5ad95fd7b46c416d6435c4e5c0"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/ACCOUNT_BINDINGS.json": {
+      "bytes": 45963,
+      "sha256": "30e1280c264e7500194abd87bf5c558944f46151890acdc7056d28541a350d1d"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/ACCOUNT_RECONCILIATION.csv": {
+      "bytes": 3563,
+      "sha256": "f0de2dedbfdd3aa4252b72a8fd25ae6fcfa61fac1810a0e36a9a2bd187f4b4d6"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/ANALYSIS_RECEIPT.json": {
+      "bytes": 806,
+      "sha256": "7df18176072c4fbd3ce6b35691930faeab1b0fa09ba0cc13cf4de192d53e21d8"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/ANNUAL_AND_STOCK_CONTEXT.csv": {
+      "bytes": 184650,
+      "sha256": "67e397f1fef41628569929fe422e0df169f941feafed8bd4809dcf416b79fc6c"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/ANNUAL_NAV_RISK.csv": {
+      "bytes": 42519,
+      "sha256": "c78e64c3dc653a6a4491f5b3e3987bb24c1ecd0db5f381107d3d02e4552ef784"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/ANNUAL_PHYSICAL_EXECUTION.csv": {
+      "bytes": 5420,
+      "sha256": "427b29c0f27e4ce463d812ab4a44a9814234010adbe1482066831c3586f822ec"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/CHANNEL_ASSESSMENTS.csv": {
+      "bytes": 9489,
+      "sha256": "6807233fb1c81e16d3e1c918178d7d7e0efb70ca19a56e8609f6a9b1986dfe6d"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/COHORT_WIN_LOSS_CONCENTRATION.csv": {
+      "bytes": 8309,
+      "sha256": "4d3c7818861fd16a3e39ac6c135cbd47a5bb5bbecb8178a33e255e302920d069"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/COMMON_CONTROL_TOP_TWO_NAME_OMISSION.csv": {
+      "bytes": 785,
+      "sha256": "cc3256c4679b4f0db3bdab05b4ad3f986279b1e439894b0a452e4b6d3e62aef4"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/COST_CAPITAL_ATTRIBUTION.csv": {
+      "bytes": 8676,
+      "sha256": "13ae76294e1b4b25439297af621e8bcaa7a8e19d1fb042359fd9daf567459311"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/DAILY_CAPITAL_DESCRIPTORS.parquet": {
+      "bytes": 313622,
+      "sha256": "595fae94e08b86a5656d02ba4420c72ffef5f8e5b120507cf4a7042ce7ff0eca"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/DERIVED_PARITY_CHECKS.csv": {
+      "bytes": 488,
+      "sha256": "cefbf128383868155549af779a92f7e433c41420a06dab45e4934baf8cd2e2aa"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/EXIT_RISK_AND_HOLDING_CONTEXT.csv": {
+      "bytes": 9611,
+      "sha256": "96c4897d6a580afaac82b92490b4a3086d85df75b31068d6455644c2d041c60e"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/EXPOSURE_BIN_DESCRIPTORS.csv": {
+      "bytes": 7240,
+      "sha256": "0d4f7fc25e3c5043108260369fa8dd5414a0701018616288ccb8092b892456fe"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/FUNDED_OPPORTUNITY_OVERLAP.csv": {
+      "bytes": 1475,
+      "sha256": "260f06b2ec47eab151cbfc009dfe997831e230f7768f612ff93fd85731924375"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/MATCHED_OPPORTUNITY_COUNTS.csv": {
+      "bytes": 814,
+      "sha256": "853fba3aad4650cd7c5de632993f16ea1343d7c0b9b57776502e4869510a1718"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/MATCHED_PORTFOLIO_RISK_TABLE.csv": {
+      "bytes": 16231,
+      "sha256": "5098efd89cd7bb4a92d3a154add50c3e0756138e9b6b52b7dd409c7ce697280b"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/NONEXECUTABLE_EXPOSURE_AND_VOL_NORMALIZATION.csv": {
+      "bytes": 8790,
+      "sha256": "d9895138f3a5001b5a27faae15a186afebfd54c1cdf71cc5c7e11d175be2faee"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/PAIRED_CONTROL_DRAWDOWN_INTERVALS.csv": {
+      "bytes": 4265,
+      "sha256": "9cdaa3501f3362f2d706aabceee7b9babfe7e0cb824af0aaaf47dc44ddc82c45"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/PAIRED_CONTROL_TAIL_DATES.csv": {
+      "bytes": 6607,
+      "sha256": "bcc00b41e0f5db90cf938a4e96fe5d7ca0783dfea7739ed928dda455040fb167"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/PAIRED_DAILY_DIFFERENCES.parquet": {
+      "bytes": 140164,
+      "sha256": "a33151c61c9f05af1ac20e53fd613bfb1c52433c9c05164c0ac9a811c03da3b9"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/PAIRED_MONTHLY_AND_ANNUAL.csv": {
+      "bytes": 91989,
+      "sha256": "f1a812d02c96de9166b2cc30eb1a53ae9b11126237a600fdbdbe1e539fb5257e"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/PAIRED_PRICE_ACTION_COST_BRIDGE.csv": {
+      "bytes": 1743,
+      "sha256": "e027fe9be538ae29fb2d84b1a7706576d9ea40206aaeb08ca8cf13adf2e39adc"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/S2C_PAIRWISE_RISK_DELTAS.csv": {
+      "bytes": 40618,
+      "sha256": "117d58ac87cc3986dd8a9f33387b5e4301e03051b33b211096c6ffe444092845"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/START.json": {
+      "bytes": 918,
+      "sha256": "78bbb0cedbb8ac582404ed853e5f01dbcc8dddb90233ff5afc8448299ede9096"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/SUPPLEMENT_RECEIPT.json": {
+      "bytes": 164,
+      "sha256": "e21c2e88b618b78a0b2aefae4f826298316e2f8598334e689c68c673273fff38"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/TAIL_DRAWDOWN_EPISODES.csv": {
+      "bytes": 6135,
+      "sha256": "6e37e95e52765bcfe2ead3578ef6d095423378a8b5d47890a4a6f17d1dfd7fbd"
+    },
+    "trading/track2/final3_risk_attribution_v1/runs/analysis_01/WORST_TAIL_DAYS.csv": {
+      "bytes": 43466,
+      "sha256": "b924eb209042cfc27129986ac2214193c3a3072aacd619cb3e24f955768cf6ba"
+    },
+    "trading/track2/final3_risk_attribution_v1/validation/FULL_PYLANCE_RAW.txt": {
+      "bytes": 53478,
+      "sha256": "c28a02afd8bafa9b1161d85c651ac33e706e4cc4c0e76e6643b3e051c048c937"
+    },
+    "trading/track2/final3_risk_attribution_v1/validation/OWNED_PYLANCE_FINAL.json": {
+      "bytes": 1717,
+      "sha256": "c906bdad77e6c1219a459f1951276c4513400f615b827fd807b59c1980d159a6"
+    },
+    "trading/track2/final3_risk_attribution_v1/validation/OWNED_PYLANCE_FINAL_02.json": {
+      "bytes": 2476,
+      "sha256": "37ed0173914d7369b03e827b82ee7d19b6fffbfc34c22751bf63d386b97db826"
+    },
+    "trading/track2/final3_risk_attribution_v1/validation/OWNED_PYRIGHT.json": {
+      "bytes": 996,
+      "sha256": "967203cca00f13205c783aa521c43fc05c49b86b8cbfb45d88e9c3df200ae52c"
+    },
+    "trading/track2/final3_risk_attribution_v1/validation/OWNED_PYRIGHT_02.json": {
+      "bytes": 350,
+      "sha256": "cff77d7ab6465c16293243e36f5fd20fbbfc6d734ba5699276c282e7ee347a93"
+    },
+    "trading/track2/final3_risk_attribution_v1/validation/PYTEST.json": {
+      "bytes": 335,
+      "sha256": "9792f9adb17ce21f3264fd7e30d025351a3f61f576d6e4a7ae3f321a10f6f2b3"
+    },
+    "trading/track2/final3_risk_attribution_v1/validation/PYTEST_FINAL.json": {
+      "bytes": 315,
+      "sha256": "cf784a7f44675d5b89e4bc9cf4391b0cea3481f5e7794e49a36665fe4763d408"
+    },
+    "trading/track2/final3_risk_attribution_v1/validation/RUFF.json": {
+      "bytes": 699,
+      "sha256": "128d22b7aaa5c9835e7a159d079575201ad246c145d3b6651adba823e45c3036"
+    },
+    "trading/track2/final3_risk_attribution_v1/validation/RUFF_02.json": {
+      "bytes": 301,
+      "sha256": "af7cca7717516ee4c7360201b220d8a690c3f5e8c48827c327853ada56caa382"
+    },
+    "trading/track2/final3_risk_attribution_v1/validation/RUFF_FINAL.json": {
+      "bytes": 302,
+      "sha256": "c1937d48f4409b1dd0d33f425cd6893b60b0bca70cb1868324005ae35379cb78"
+    }
+  },
+  "global_typecheck_seconds": 184.383,
+  "input_scope": "relevant saved inputs and existing model/protocol anchors only; no all-model/source rehash claim",
+  "interpretation": "exploratory repeatedly inspected survivor universe; no new selection or Stage6",
+  "missing_fields": [
+    "per-stock marked exposure",
+    "physical gross/long-short exposure",
+    "name/vintage utilization",
+    "exact RTH invested time",
+    "complete daily action journal",
+    "exact source mark receipt timestamps",
+    "daily live buying power after all reservations"
+  ],
+  "new_funded_neural_or_market_source_runs": 0,
+  "output_bytes_including_manifest": 1160725,
+  "paired_comparisons": 9,
+  "physical_fill_rows": 16758,
+  "population": "MATCHED_ONLY_PRIMARY",
+  "protocol_identity": "3955e126131da35b7297d7e03297efb494af2ca94ec3fd9362fcfa4b4f95940c",
+  "reconciliation_max_abs_USD": "2E-11",
+  "runtime_scope": "main saved-account aggregation only; discovery, supplement, tests and report drafting separate",
+  "self_hash_excluded": true,
+  "session_report": {
+    "path": "reports/codex_sessions/2026-11-11_track2_final3_risk_attribution.md",
+    "sha256": "6ec8c95e0a25e672fccbe32ac7a5b47019fbec786e34b6003b210e33f7bc0bd5"
+  },
+  "sessions_each": 1005,
+  "source_files_after": [
+    {
+      "mtime_ns": 1794370294086456032,
+      "path": "trading/track2/final_directional_slate_v1/analysis_03/COMBINED_DAILY_NAV.parquet",
+      "sha256": "09b2f52b2fac6d750512a1564b6f7d0fd38ec7651e74c2c5acb53475adc6b20c",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794370294822050196,
+      "path": "trading/track2/final_directional_slate_v1/analysis_03/ANALYSIS_MANIFEST.json",
+      "sha256": "46450fbd507384920b7345bf01c24f6f201d625e4b5715a9350bf7bf0fbdb3ae",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794370294045470964,
+      "path": "trading/track2/final_directional_slate_v1/FOUR_ARM_S2C_SIZING_RESULTS.csv",
+      "sha256": "e7d9bc2d26ba707ebea52aef6ab64033ea3ff2d078e9e61776a841b0a4bf66ca",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794368856455970749,
+      "path": "trading/track2/final_directional_slate_v1/FIVE_ALGORITHM_REGISTRY.json",
+      "sha256": "e1a9565b8ce31576d2cbdfe4fb7f4992bdccdaa2127b7afabf83fa6fd2b2d0e1",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794368856456388193,
+      "path": "trading/track2/final_directional_slate_v1/REGISTRY_SEAL.json",
+      "sha256": "d911c51e9de4fbcc1ce288b4906e9dfa539544f7f889441eea0e5670501af70d",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794369696754334648,
+      "path": "trading/track2/final_directional_slate_v1/OVERLAY_RUN_REGISTRY.json",
+      "sha256": "405b23e7090c26dde20eae73c0905c90eaadce67a9b3ac1896d0ec3016901b39",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794368863524360358,
+      "path": "trading/track2/final_directional_slate_v1/SELECTION_RECEIPT.json",
+      "sha256": "0a4f5bee450b76f7e643c99d957c6e0416c8531eaa8b76d29c03e79887124f7b",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794370294112875897,
+      "path": "trading/track2/final_directional_slate_v1/S2C_MATCHED_VS_ATTAINABLE.csv",
+      "sha256": "0d38efbc2b1f34a07b6f4f4aaff2cd6f2fad413671f114afea7d60e2d5e547e1",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794371295661699139,
+      "path": "trading/track2/final_directional_slate_v1/FIXED_POLICY_RISK_CAUSE_SUPPORT.csv",
+      "sha256": "68f991dcf2c0b17554fe6345bfa72c84c99443f449a5ad081a576134506e747c",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794371747202457706,
+      "path": "trading/track2/final_directional_slate_v1/EXPORT_SCHEMA_AND_COUNTING.md",
+      "sha256": "be13f2447030b1b9c475ab608a07392cf82323b38c4a5fadd580b16c9a933f9f",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794371747202624201,
+      "path": "trading/track2/final_directional_slate_v1/VALIDATION_AND_REPRODUCE.md",
+      "sha256": "ad9d7d873f2a754f4f07f8a2b9dc9a5ab385d238a73e91ca4c096ebc91340365",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794371747202078135,
+      "path": "trading/track2/final_directional_slate_v1/FINAL_DIRECTIONAL_AND_SIZING_HANDOFF.md",
+      "sha256": "4948b2302b3d8deee9b61819a7fa343eb4df0d9cea9fada01f18651b7d42dbfc",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794370294346668774,
+      "path": "trading/track2/final_directional_slate_v1/analysis_03/PAIRED_FUNDED_PATH_DIVERGENCE.csv",
+      "sha256": "e28e7d8ddd6e1ecd27e50f113e6117d29142cf74a905c0e44a7da16f2b5078e9",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794370294047300905,
+      "path": "trading/track2/final_directional_slate_v1/analysis_03/CONCENTRATION_AND_TAILS.csv",
+      "sha256": "255b9a5d6cf73641ba4abc81e097aa71204569e26c3684a3edd99522e5c5b795",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794370294051374942,
+      "path": "trading/track2/final_directional_slate_v1/analysis_03/ANNUAL_NAV_AND_COSTS.csv",
+      "sha256": "8b53217b76ba0f8a9dd187af14d87dde2160c83fb9d0155ac1ea9eb39e9f6605",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794369860557622470,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/RUN_RECEIPT.json",
+      "sha256": "578b2a544c45128e16796b77fce4d5607ea509a641a16f22efe9f1e9f50b62a2",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794369860543025810,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/OUTPUT_MANIFEST.json",
+      "sha256": "f9b5d35ae6c5e7722e8479d29560a736a2d64c8126e4f993d5f0abe4459a88dc",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794369860191333396,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/RESULTS.csv",
+      "sha256": "e5490d6507a55d9945b971fd27853f35ffaff5f1313c3d0f6ad30dcb94be158d",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794369860319013742,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/DAILY_NAV.parquet",
+      "sha256": "ade5bb19a4c914c41eb9a2b56f0e7a4d003e9dab01eea1a30e646f69bf663ae8",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794369860409869930,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/COHORTS.parquet",
+      "sha256": "0cb709466543f1f6f0c68e36204c5b2f44831bcab3575555c2026e9b07c76fef",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794369860525429413,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/PHYSICAL_FILLS.parquet",
+      "sha256": "9645a9e792b715b26337c5bf7113fb4b9a0fd6366bb7bbee08a7c040083856d6",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794369860191865462,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/EXIT_REASONS.csv",
+      "sha256": "084e05cdd814ed03babbd4e373fb4be3669ab8eb11b4b2e4fe6cae011b21280a",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794369860196402276,
+      "path": "trading/track2/final_directional_slate_v1/runs/sizing-matched-20261110-r1/results/ATTRIBUTION.csv",
+      "sha256": "c2fe5ddf8668922d0b041f9b2cea6f4ec1611c68e63aa4ee6e5da82356e9207c",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794372013665775063,
+      "path": "trading/track2/final_directional_slate_v1/FINAL_SLATE_CONTENT_MANIFEST.json",
+      "sha256": "8633f549c91e1d7df3531ffc164fffdf7a550b3780a129ae5e2bd77e18d2f580",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794178377292597277,
+      "path": "trading/track2/stage012/original_bundles.json",
+      "sha256": "26a509f602e7afb16f9ee234816f8c76b5f1a189817df3afe02cb84622675931",
+      "unchanged": true
+    },
+    {
+      "mtime_ns": 1794179062458991816,
+      "path": "trading/track2/stage012/SOURCE_AND_MODEL_REGISTRY.md",
+      "sha256": "a9045b8058a5b2ddb00c0522c2f7fdca552f7af95e509d856b797f7c0739ed90",
+      "unchanged": true
+    }
+  ],
+  "status": "PARTIAL_WITH_EXPLICIT_MISSING_FIELDS",
+  "tests": {
+    "tests/track2_final3_risk_attribution/test_analysis.py": "8b550467d3c492228b3c90f3f01c58a2d166d2ec5096a047b695f685a78f480f"
+  },
+  "validation": {
+    "Ruff_E_F_I": "PASS",
+    "authoritative_receipts": [
+      "validation/PYTEST_FINAL.json",
+      "validation/RUFF_FINAL.json",
+      "validation/OWNED_PYLANCE_FINAL_02.json"
+    ],
+    "global_type_status": "HOLD_INHERITED_32_ERRORS; 27 replication,3 Plotly tests,2 frozen R01",
+    "owned_basic_Pylance": "9 files, zero errors/warnings",
+    "pytest": "16 PASS, no skips",
+    "rejected_receipt": "validation/OWNED_PYLANCE_FINAL.json analyzed zero files; not accepted"
+  }
+}

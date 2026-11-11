@@ -1,0 +1,204 @@
+{
+  "kind": "PURE_SYNTHETIC_ACCOUNTING_ONLY",
+  "market_source_reads": 0,
+  "first": {
+    "cash": "99599",
+    "nav": "99999",
+    "physical_shares": "4",
+    "virtual_gross": "1600.0"
+  },
+  "final_cash": "100699",
+  "final_nav": "100039",
+  "restricted_proceeds": "660",
+  "book": {
+    "initial_cash": "100000",
+    "cash": "100699",
+    "lots": [
+      {
+        "cohort": {
+          "cohort_id": "new",
+          "ticker": "AAPL",
+          "requested": -6.0,
+          "budget": 600.0,
+          "origin": "2024-01-08 15:30:00+00:00",
+          "endpoint": "2024-01-08 19:30:00+00:00",
+          "entry_deadline": "2024-01-08 15:35:00+00:00",
+          "basis": "RAW_UNADJUSTED",
+          "provenance": [
+            "SYNTHETIC_ONLY"
+          ],
+          "status": "CREATED",
+          "shares": 0,
+          "entered": 0,
+          "entry_at": null,
+          "entry_price": null,
+          "exit_at": null,
+          "exit_price": null,
+          "planned_exit_order_at": null,
+          "events": []
+        },
+        "quantity": "-6",
+        "basis": "100",
+        "cash": "600",
+        "realized": "0",
+        "nontrade_cash": "0",
+        "accrual": "0",
+        "pending": "0.0",
+        "unit_factor": "1",
+        "closed": false
+      },
+      {
+        "cohort": {
+          "cohort_id": "old",
+          "ticker": "AAPL",
+          "requested": 10.0,
+          "budget": 1000.0,
+          "origin": "2024-01-08 15:30:00+00:00",
+          "endpoint": "2024-01-08 19:30:00+00:00",
+          "entry_deadline": "2024-01-08 15:35:00+00:00",
+          "basis": "RAW_UNADJUSTED",
+          "provenance": [
+            "SYNTHETIC_ONLY"
+          ],
+          "status": "CREATED",
+          "shares": 0,
+          "entered": 0,
+          "entry_at": null,
+          "entry_price": null,
+          "exit_at": null,
+          "exit_price": null,
+          "planned_exit_order_at": null,
+          "events": []
+        },
+        "quantity": "0",
+        "basis": "0",
+        "cash": "99",
+        "realized": "99",
+        "nontrade_cash": "0",
+        "accrual": "0",
+        "pending": "0",
+        "unit_factor": "1",
+        "closed": true
+      }
+    ],
+    "positions": [
+      {
+        "ticker": "AAPL",
+        "quantity": "-6",
+        "basis": "110",
+        "realized": "39",
+        "borrow_asof": "2024-01-08 19:33:00+00:00"
+      }
+    ],
+    "marks": [
+      [
+        "AAPL",
+        {
+          "at": "2024-01-08 19:33:00+00:00",
+          "available_at": "2024-01-08 19:33:00+00:00",
+          "value": "110",
+          "source_id": "SYNTHETIC_GOLDEN_NOT_MARKET_DATA",
+          "basis": "RAW_UNADJUSTED",
+          "kind": "SYNTHETIC",
+          "completed_at": null
+        }
+      ]
+    ],
+    "journal": [
+      {
+        "journal_id": "mark",
+        "event_time": "2024-01-08 15:32:58+00:00",
+        "observation_time": "2024-01-08 15:32:58+00:00",
+        "available_at": "2024-01-08 15:32:58+00:00",
+        "processed_at": "2024-01-08 15:32:58+00:00",
+        "cause": "MARK_READY",
+        "ticker": "AAPL",
+        "currency": "USD",
+        "basis": "RAW_UNADJUSTED",
+        "legs": [],
+        "amount": "0",
+        "before": "184ddd7408a4fedd76a2725935b198c09cff30b7b7ec37b729f26d655c52dbd8",
+        "after": "d4c04076dd3fdd677492a44fd90c0507b5c5b1aa0b9effd12bcacf0cac44b245"
+      },
+      {
+        "journal_id": "reserve",
+        "event_time": "2024-01-08 15:32:59+00:00",
+        "observation_time": "2024-01-08 15:32:59+00:00",
+        "available_at": "2024-01-08 15:32:59+00:00",
+        "processed_at": "2024-01-08 15:32:59+00:00",
+        "cause": "RESERVE",
+        "ticker": "MULTI",
+        "currency": "USD",
+        "basis": "RAW_UNADJUSTED",
+        "legs": [],
+        "amount": "0",
+        "before": "e62b5f5d5c8f3299f2839092a795be9b710848993ea9293b9d55b39110946ee1",
+        "after": "075b4ba756c65f654d6b8c5dbe2d3225dadc41b7dfeba57f114be98386a7a5f0"
+      },
+      {
+        "journal_id": "cross",
+        "event_time": "2024-01-08 15:33:00+00:00",
+        "observation_time": "2024-01-08 15:33:00+00:00",
+        "available_at": "2024-01-08 15:33:00+00:00",
+        "processed_at": "2024-01-08 15:33:00+00:00",
+        "cause": "FIXED_FILL",
+        "ticker": "AAPL",
+        "currency": "USD",
+        "basis": "RAW_UNADJUSTED",
+        "legs": [
+          {
+            "cohort_id": "old",
+            "quantity": "6",
+            "price": "100",
+            "fee": "0",
+            "internal": true
+          },
+          {
+            "cohort_id": "new",
+            "quantity": "-6",
+            "price": "100",
+            "fee": "0",
+            "internal": true
+          },
+          {
+            "cohort_id": "old",
+            "quantity": "4",
+            "price": "100",
+            "fee": "1",
+            "internal": false
+          }
+        ],
+        "amount": "-401",
+        "before": "5c5917941ef550a33ce80bcb4393c1e96ebd27e38e373510f9c856757849c643",
+        "after": "bf281a3b61fece55e401b86848dd2308d34d41a16143e2b62db11de0318f228f"
+      },
+      {
+        "journal_id": "old_exit",
+        "event_time": "2024-01-08 19:33:00+00:00",
+        "observation_time": "2024-01-08 19:33:00+00:00",
+        "available_at": "2024-01-08 19:33:00+00:00",
+        "processed_at": "2024-01-08 19:33:00+00:00",
+        "cause": "FIXED_FILL",
+        "ticker": "AAPL",
+        "currency": "USD",
+        "basis": "RAW_UNADJUSTED",
+        "legs": [
+          {
+            "cohort_id": "old",
+            "quantity": "-10",
+            "price": "110",
+            "fee": "0",
+            "internal": false
+          }
+        ],
+        "amount": "1100",
+        "before": "dcab7d70e46520545dcc793813d27eb40255f03f3787f9be8e4b6fd06dc48892",
+        "after": "5d212f2d6a4445c878ebec4bab9cbdbcd279b27216a456fc2f1dd0f508aabf37"
+      }
+    ],
+    "unresolved": [],
+    "claims": [],
+    "action_keys": []
+  },
+  "state_checksum": "f5eef529a15b1c250cc2d92e5bc35ebc7128326b90c74634ca29f1668a9f8ac1"
+}

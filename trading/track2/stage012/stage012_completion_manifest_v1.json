@@ -1,0 +1,262 @@
+{
+  "verdict": "STAGE012_SIGNAL_LAYER_COMPLETE_WITH_DOWNSTREAM_HOLDS",
+  "repository_validation": "HOLD:27 inherited replication diagnostics;0 owned errors",
+  "parent_manifest": {
+    "path": "trading/track2/stage012/stage012_manifest.json",
+    "sha256": "b0880d8fcbdfd00b9030fd6670167636fd8ae59c305e4ec8cecd891795b11817"
+  },
+  "self_excluded": true,
+  "excluded": [
+    "__pycache__"
+  ],
+  "authorized_predecessor_changes": [
+    {
+      "path": "trading/track2/stage012/OPEN_ISSUES.md",
+      "old_sha256": "950f40e0a801529ff121f9dba5b946824b0144fd42a248e9107e7e646dd71bc9",
+      "new_sha256": "e4e11c0357a37ab4025832d7d9aaa5e3939afb528a08cdd5dbd8959cb8a9dfcd",
+      "reason": "append-only issue disposition history authorized by continuation"
+    }
+  ],
+  "files": [
+    {
+      "path": "reports/codex_sessions/2026-11-09_005156_track2_signal_layer_completion.md",
+      "sha256": "f4a8637baf6a0dadc6ab1ce596c17d7ba7630cdea0a6892a305d0ad2061ba3a1",
+      "bytes": 15947
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/historical_input_only.py",
+      "sha256": "724a56206a970e93a159f29734bb550680bc95c2554afb08bb98fb1afe79eff8",
+      "bytes": 9764
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/historical_signal_smoke.py",
+      "sha256": "78124baded2355c7ab0393b79ef9695ef094c86ce3b41795b3457fd012b227d0",
+      "bytes": 9858
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/historical_source_store.py",
+      "sha256": "5f25a3e58652ce3f48d8621ba2955a4a1063453eed356ab6c023575fc81e81db",
+      "bytes": 3649
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/original_feature_pure.py",
+      "sha256": "c787bf3f36fdaacf2a5e90ddc73c1cda0ddcfd0e9a6249ad27c3178f9eb5da31",
+      "bytes": 2716
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/risk_reference_prepare.py",
+      "sha256": "4ff57b3f64ef140869aeaa3fdcc3cd9b470e4a46bb4d60556f9809f49608ae9b",
+      "bytes": 4604
+    },
+    {
+      "path": "src/lstm_data/trading/track2/stage012/sign_scheduler.py",
+      "sha256": "f1f442af25f8dfbc6be2294491933727eace9501a7afaf5e03da2c7c6507ab5b",
+      "bytes": 4555
+    },
+    {
+      "path": "tests/track2_stage012/test_completion_boundaries.py",
+      "sha256": "ab69ed15ee61db08bf0dc31edf1bd69cfee05e1b77f20d5244284d4d5644ac1d",
+      "bytes": 10459
+    },
+    {
+      "path": "tests/track2_stage012/test_historical_signal_receipts.py",
+      "sha256": "df735c1ed28211f22a25bc0921936c8d846d6ce9a000488a1eaea8491921167f",
+      "bytes": 1651
+    },
+    {
+      "path": "trading/track2/stage012/HISTORICAL_SIGNAL_DRYRUN_PLAN.json",
+      "sha256": "99b209cc66f832c468363aea58586c56dabcd0663471738eacd449475a234788",
+      "bytes": 162803
+    },
+    {
+      "path": "trading/track2/stage012/INPUT_ONLY_FEATURE_LINEAGE.md",
+      "sha256": "5e30c406600f78cf00c571c4b90c8999b93551eb7c67cb8484e815005bdb5d8b",
+      "bytes": 6528
+    },
+    {
+      "path": "trading/track2/stage012/OPEN_ISSUES.md",
+      "sha256": "e4e11c0357a37ab4025832d7d9aaa5e3939afb528a08cdd5dbd8959cb8a9dfcd",
+      "bytes": 4201
+    },
+    {
+      "path": "trading/track2/stage012/ORIGINAL_FOLD_PREFIX_CUTOFFS.json",
+      "sha256": "ab2fd2a112cd8afcbedbfb3e7bb35589d6705995b2dabcd101c42dc9d46d0c9c",
+      "bytes": 2403
+    },
+    {
+      "path": "trading/track2/stage012/RISK_REFERENCE_RECIPE.md",
+      "sha256": "20787234b701bc4f3028b0f87d6a99dfcb065556e2c6a395ca7293c8cfc9130e",
+      "bytes": 1386
+    },
+    {
+      "path": "trading/track2/stage012/STAGE012_COMPLETION_HANDOFF.md",
+      "sha256": "2b1b668a7702a4cea430ce8f92effcc0d4fea44c0eb29af85afee8763bc2feb6",
+      "bytes": 17276
+    },
+    {
+      "path": "trading/track2/stage012/STAGE012_DELTA_PLAN_v1.md",
+      "sha256": "1207e2882c05a1f4f53c2b3b525e90e9eb84ab1f68834b1b410a924392d212ff",
+      "bytes": 1487
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/G1_static_receipt.json",
+      "sha256": "7afe5a15e7d5e5490066347a3172bdb60e54426865227220146687d079bb6774",
+      "bytes": 221
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/G1_synthetic.txt",
+      "sha256": "265a8fc5216c6a632fb1fb3caaf3cbb975a748b96a2bff3fab2d5c3a6c0775f7",
+      "bytes": 98
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/G1_synthetic_final.txt",
+      "sha256": "fcc1f817063845220e592935338711de9a6355b2663565d0b63a282b5b9ec9ce",
+      "bytes": 99
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/G1_synthetic_v2.txt",
+      "sha256": "28f6706841381f3f92b4cc298e9cd7860703dbd79fff9870d12bac314af6265f",
+      "bytes": 99
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/action_facts_identity.json",
+      "sha256": "53704212284503eaa0e8b1b13fe13bbedd0b948b8e6222acb8cc90db78c916a7",
+      "bytes": 213
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/calendar_witness.json",
+      "sha256": "c5de54d1084eabcea31f4ee54ba8be0f43c82e1f8bb5f30b43ce1f958e35b73f",
+      "bytes": 12094
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/dryrun_plan_seal.json",
+      "sha256": "6d6ebdce1142e19436e93e34ddbd96c08cebd7d4f6e8aaa164b026ab8321b226",
+      "bytes": 237
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_command_v1.json",
+      "sha256": "449852cb1f081831e0c23fe72032bd973c4150c6912842fb05eab51acc00648f",
+      "bytes": 344
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_execution_v1.log",
+      "sha256": "d1f1bda2b070a8686f0b618bf579d4058cab39da4939ab58da57d0ca9211788a",
+      "bytes": 2306
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/RISK_REFERENCE_MANIFEST.json",
+      "sha256": "75a9c54c1c634a94bd94e84ef7a18f863bd939db33f267040325977ed4257d33",
+      "bytes": 527027
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/adversarial_historical_twins.json",
+      "sha256": "b93b34204d27c1cf1413811b246e4e436a7f848bedb4f463df30f5e0564ab6c9",
+      "bytes": 527
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/completion.json",
+      "sha256": "0140674008a664fa20c0ce0df863b5ae0b1079ad6fa8cb20b9b95c76f21896a0",
+      "bytes": 261
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/feature_lineage.json",
+      "sha256": "96316bcbe7271f7547911b859f772840c010dc8813f2330a40f4a36251d02cd0",
+      "bytes": 326686
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/forecast_diagnostics.json",
+      "sha256": "5bf5e41147b019d2b0bfc0c5b65f47d23589680cbb9570e2ba73ccddf5fdf959",
+      "bytes": 6888
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/original_forecast_parity.json",
+      "sha256": "7a171c7805d7594d51efb552ec7b117dba627534e113c9776121e6550ec72fec",
+      "bytes": 354
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/risk_preparation_receipt.json",
+      "sha256": "a03a8a8b8cc66d1796e694e09e31ce449e6a44d4b51833b4ded4ab253f707279",
+      "bytes": 441
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/session_sign_cache.json",
+      "sha256": "211dcd3a7674201859e43d2185df88e9e7c22e2fb4e29481e3f68deb3c8a2f29",
+      "bytes": 3901
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/signals_with_prefix_risk.json",
+      "sha256": "246973aea600f2a8964ae80651d10994c02a45aad9e2e3017a4afa4d15b4f333",
+      "bytes": 46847
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/signals_without_risk.json",
+      "sha256": "34332f95e61f6eec3642e63f00a0cb59852a8541ff304604a8729db7a1693ed5",
+      "bytes": 47378
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/historical_run_v1/source_reads.json",
+      "sha256": "1eab029d926312d20fa8e7e818285547b7db2726dfa1fc91c846d64e080ce958",
+      "bytes": 50028
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/original_dependency_closure_verified.json",
+      "sha256": "3b3e5027c52b055ce49054531be56ba00037bc4e5cd51ceb0858cf602ba2fb60",
+      "bytes": 165036
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/owned_tests_final.txt",
+      "sha256": "ffc49358f249debca3fffba0215b53a68f4a41de2f8275ac4ac80fdc09dc804b",
+      "bytes": 100
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/owned_tests_v1.txt",
+      "sha256": "b3b47436d4a97784a7931267331ecba592ef919ae6c2fbba4e4e19f9af195d05",
+      "bytes": 100
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/owned_tests_v2.txt",
+      "sha256": "074c892e210797f8b0984576c98918773da2a04be024dfb1537912250baefb4b",
+      "bytes": 110
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/parity_followup.json",
+      "sha256": "47f575b6d73e435fb6224cc8ca053c59e7e70dc83f989fb7c6450d40074edb7a",
+      "bytes": 436
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/prechange_inventory.json",
+      "sha256": "29f04c32253665dad2174961001c14686145948900e8287822e083eecd117497",
+      "bytes": 74080
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/predecessor_integrity_before_issue_append.json",
+      "sha256": "3353dbfff327f6478031bd61fafb784e382324f4f7f68242269034f92698753d",
+      "bytes": 52123
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/predecessor_integrity_final.json",
+      "sha256": "607ab1713d57514ac9990d193af97ad587d1f5a027caabb420ecfb3b00de4b17",
+      "bytes": 66146
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/regression_tests_v1.txt",
+      "sha256": "98f0f2c10b9d03a93e17a5c98ba3ed0190b92f3a6c6c258ab8c83eb2feb9dce9",
+      "bytes": 98
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/source_identity_after.json",
+      "sha256": "7582c3e53b4ef6b98f7fe1d05f7e193d95e5811431b3eff76cf51d13b007ced4",
+      "bytes": 55720
+    },
+    {
+      "path": "trading/track2/stage012/audits/completion_v1/static_final.json",
+      "sha256": "e18a9298ceefe4b37bd51948ebea35be586883cc6238600ae1e3bbf4abe0d3c0",
+      "bytes": 39877
+    },
+    {
+      "path": "trading/track2/stage012/protocol_signal_layer_v2.json",
+      "sha256": "f02308a1052cf504a2b4b2ebcbe9e137544c839bd87ea6d730b0cfc32647e7b1",
+      "bytes": 3209
+    }
+  ]
+}

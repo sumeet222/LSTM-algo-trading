@@ -1,0 +1,1194 @@
+{
+  "version": "1.1.414",
+  "time": "1794315632122",
+  "generalDiagnostics": [
+    {
+      "file": "replication/phase2/audit/postrun_check.py",
+      "severity": "error",
+      "message": "Import \"boundary\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 5,
+          "character": 7
+        },
+        "end": {
+          "line": 5,
+          "character": 15
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/audit/report_recovery.py",
+      "severity": "error",
+      "message": "Import \"boundary\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 5,
+          "character": 7
+        },
+        "end": {
+          "line": 5,
+          "character": 15
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/audit/report_recovery.py",
+      "severity": "error",
+      "message": "Import \"dataset\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 13,
+          "character": 7
+        },
+        "end": {
+          "line": 13,
+          "character": 14
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/audit/report_recovery.py",
+      "severity": "error",
+      "message": "Import \"features\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 14,
+          "character": 7
+        },
+        "end": {
+          "line": 14,
+          "character": 15
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/audit/report_recovery.py",
+      "severity": "error",
+      "message": "Import \"model\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 15,
+          "character": 7
+        },
+        "end": {
+          "line": 15,
+          "character": 12
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/audit/report_recovery.py",
+      "severity": "error",
+      "message": "Import \"evaluation\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 16,
+          "character": 7
+        },
+        "end": {
+          "line": 16,
+          "character": 17
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/audit/report_recovery.py",
+      "severity": "error",
+      "message": "Import \"geometry\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 17,
+          "character": 5
+        },
+        "end": {
+          "line": 17,
+          "character": 13
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/audit/report_recovery.py",
+      "severity": "error",
+      "message": "Cannot access attribute \"asi8\" for class \"DatetimeIndex\"\n\u00a0\u00a0Attribute \"asi8\" is unknown",
+      "range": {
+        "start": {
+          "line": 51,
+          "character": 96
+        },
+        "end": {
+          "line": 51,
+          "character": 100
+        }
+      },
+      "rule": "reportAttributeAccessIssue"
+    },
+    {
+      "file": "replication/phase2/code/dataset.py",
+      "severity": "error",
+      "message": "No overloads for \"stack\" match the provided arguments",
+      "range": {
+        "start": {
+          "line": 104,
+          "character": 105
+        },
+        "end": {
+          "line": 104,
+          "character": 122
+        }
+      },
+      "rule": "reportCallIssue"
+    },
+    {
+      "file": "replication/phase2/code/dataset.py",
+      "severity": "error",
+      "message": "Argument of type \"Series[Any]\" cannot be assigned to parameter \"arrays\" of type \"Sequence[ArrayLike]\" in function \"stack\"\n\u00a0\u00a0\"Series[Any]\" is not assignable to \"Sequence[ArrayLike]\"",
+      "range": {
+        "start": {
+          "line": 104,
+          "character": 114
+        },
+        "end": {
+          "line": 104,
+          "character": 121
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "replication/phase2/tests/test_evaluation.py",
+      "severity": "error",
+      "message": "Import \"boundary\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 4,
+          "character": 7
+        },
+        "end": {
+          "line": 4,
+          "character": 15
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_evaluation.py",
+      "severity": "error",
+      "message": "Import \"evaluation\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 17,
+          "character": 7
+        },
+        "end": {
+          "line": 17,
+          "character": 17
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_evaluation.py",
+      "severity": "error",
+      "message": "Operator \"+=\" not supported for types \"Scalar\" and \"float\"\n\u00a0\u00a0Operator \"+\" not supported for types \"str\" and \"float\"\n\u00a0\u00a0Operator \"+\" not supported for types \"bytes\" and \"float\"\n\u00a0\u00a0Operator \"+\" not supported for types \"date\" and \"float\"\n\u00a0\u00a0Operator \"+\" not supported for types \"datetime\" and \"float\"\n\u00a0\u00a0Operator \"+\" not supported for types \"timedelta\" and \"float\"\n\u00a0\u00a0Operator \"+\" not supported for types \"datetime64[Any]\" and \"float\"\n\u00a0\u00a0Operator \"+\" not supported for types \"timedelta64[Any]\" and \"float\"\n\u00a0\u00a0Operator \"+\" not supported for types \"Timestamp\" and \"float\"\n  ...",
+      "range": {
+        "start": {
+          "line": 273,
+          "character": 8
+        },
+        "end": {
+          "line": 273,
+          "character": 33
+        }
+      },
+      "rule": "reportOperatorIssue"
+    },
+    {
+      "file": "replication/phase2/tests/test_evaluation_report_recovery.py",
+      "severity": "error",
+      "message": "Import \"boundary\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 7,
+          "character": 7
+        },
+        "end": {
+          "line": 7,
+          "character": 15
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_evaluation_report_recovery.py",
+      "severity": "error",
+      "message": "Import \"evaluation\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 16,
+          "character": 7
+        },
+        "end": {
+          "line": 16,
+          "character": 17
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_feature_math_review.py",
+      "severity": "error",
+      "message": "Import \"dataset\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 10,
+          "character": 5
+        },
+        "end": {
+          "line": 10,
+          "character": 12
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_feature_math_review.py",
+      "severity": "error",
+      "message": "Import \"features\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 11,
+          "character": 7
+        },
+        "end": {
+          "line": 11,
+          "character": 15
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_frontiers_review.py",
+      "severity": "error",
+      "message": "Import \"boundary\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 3,
+          "character": 7
+        },
+        "end": {
+          "line": 3,
+          "character": 15
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_frontiers_review.py",
+      "severity": "error",
+      "message": "Import \"dataset\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 12,
+          "character": 7
+        },
+        "end": {
+          "line": 12,
+          "character": 14
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_frontiers_review.py",
+      "severity": "error",
+      "message": "Import \"features\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 13,
+          "character": 7
+        },
+        "end": {
+          "line": 13,
+          "character": 15
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_frontiers_review.py",
+      "severity": "error",
+      "message": "Import \"geometry\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 14,
+          "character": 7
+        },
+        "end": {
+          "line": 14,
+          "character": 15
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_model.py",
+      "severity": "error",
+      "message": "Import \"model\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 15,
+          "character": 7
+        },
+        "end": {
+          "line": 15,
+          "character": 12
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_source_contract.py",
+      "severity": "error",
+      "message": "Import \"boundary\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 4,
+          "character": 7
+        },
+        "end": {
+          "line": 4,
+          "character": 15
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_source_contract.py",
+      "severity": "error",
+      "message": "Import \"contract\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 9,
+          "character": 5
+        },
+        "end": {
+          "line": 9,
+          "character": 13
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase2/tests/test_source_contract.py",
+      "severity": "error",
+      "message": "Import \"geometry\" could not be resolved",
+      "range": {
+        "start": {
+          "line": 10,
+          "character": 5
+        },
+        "end": {
+          "line": 10,
+          "character": 13
+        }
+      },
+      "rule": "reportMissingImports"
+    },
+    {
+      "file": "replication/phase3/authorized_historical_comparison_v1/tools/compare.py",
+      "severity": "error",
+      "message": "\"Never\" is not iterable",
+      "range": {
+        "start": {
+          "line": 102,
+          "character": 15
+        },
+        "end": {
+          "line": 102,
+          "character": 32
+        }
+      },
+      "rule": "reportGeneralTypeIssues"
+    },
+    {
+      "file": "replication/phase3/authorized_historical_comparison_v1/tools/deep_checks.py",
+      "severity": "error",
+      "message": "Cannot access attribute \"isoformat\" for class \"NAType\"\n\u00a0\u00a0Attribute \"isoformat\" is unknown",
+      "range": {
+        "start": {
+          "line": 10,
+          "character": 51
+        },
+        "end": {
+          "line": 10,
+          "character": 60
+        }
+      },
+      "rule": "reportAttributeAccessIssue"
+    },
+    {
+      "file": "tests/test_target_range_history.py",
+      "severity": "error",
+      "message": "Cannot access attribute \"meta\" for class \"Figure\"\n\u00a0\u00a0Attribute \"meta\" is unknown",
+      "range": {
+        "start": {
+          "line": 142,
+          "character": 29
+        },
+        "end": {
+          "line": 142,
+          "character": 33
+        }
+      },
+      "rule": "reportAttributeAccessIssue"
+    },
+    {
+      "file": "tests/test_target_range_history.py",
+      "severity": "error",
+      "message": "Cannot access attribute \"meta\" for class \"Figure\"\n\u00a0\u00a0Attribute \"meta\" is unknown",
+      "range": {
+        "start": {
+          "line": 143,
+          "character": 29
+        },
+        "end": {
+          "line": 143,
+          "character": 33
+        }
+      },
+      "rule": "reportAttributeAccessIssue"
+    },
+    {
+      "file": "tests/test_target_range_history.py",
+      "severity": "error",
+      "message": "Cannot access attribute \"annotations\" for class \"Figure\"\n\u00a0\u00a0Attribute \"annotations\" is unknown",
+      "range": {
+        "start": {
+          "line": 148,
+          "character": 70
+        },
+        "end": {
+          "line": 148,
+          "character": 81
+        }
+      },
+      "rule": "reportAttributeAccessIssue"
+    }
+  ],
+  "summary": {
+    "filesAnalyzed": 694,
+    "errorCount": 30,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 436.543
+  },
+  "validation_profile": {
+    "mode": "basic",
+    "interpreter": ".venv",
+    "pylance_dist_version": "ms-python.vscode-pylance-2026.4.1",
+    "owned_files": [
+      "replication/phase2/audit/postrun_check.py",
+      "replication/phase2/audit/report_recovery.py",
+      "replication/phase2/code/acceptance.py",
+      "replication/phase2/code/boundary.py",
+      "replication/phase2/code/contract.py",
+      "replication/phase2/code/dataset.py",
+      "replication/phase2/code/evaluation.py",
+      "replication/phase2/code/features.py",
+      "replication/phase2/code/geometry.py",
+      "replication/phase2/code/inspect_inputs.py",
+      "replication/phase2/code/model.py",
+      "replication/phase2/code/prepare.py",
+      "replication/phase2/code/profile_contract.py",
+      "replication/phase2/code/run_experiment.py",
+      "replication/phase2/code/run_gates.py",
+      "replication/phase2/tests/test_evaluation.py",
+      "replication/phase2/tests/test_evaluation_report_recovery.py",
+      "replication/phase2/tests/test_feature_math_review.py",
+      "replication/phase2/tests/test_frontiers_review.py",
+      "replication/phase2/tests/test_model.py",
+      "replication/phase2/tests/test_source_contract.py",
+      "replication/phase3/authorized_historical_comparison_v1/tools/all_metric_audit.py",
+      "replication/phase3/authorized_historical_comparison_v1/tools/authorize_unseal.py",
+      "replication/phase3/authorized_historical_comparison_v1/tools/compare.py",
+      "replication/phase3/authorized_historical_comparison_v1/tools/deep_checks.py",
+      "replication/phase3/authorized_historical_comparison_v1/tools/final_readonly_check.py",
+      "replication/phase3/authorized_historical_comparison_v1/tools/remaining_checks.py",
+      "replication/phase3/authorized_historical_comparison_v1/tools/review_io.py",
+      "replication/phase3/authorized_historical_comparison_v1/tools/seal_check.py",
+      "replication/phase3/authorized_historical_comparison_v1/tools/weights_check.py",
+      "replication/phase3/authorized_historical_comparison_v1/tools/write_reports.py",
+      "src/lstm_data/trading/__init__.py",
+      "src/lstm_data/trading/track2/__init__.py",
+      "src/lstm_data/trading/track2/stage012/__init__.py",
+      "src/lstm_data/trading/track2/stage012/audit.py",
+      "src/lstm_data/trading/track2/stage012/calendar_schedule.py",
+      "src/lstm_data/trading/track2/stage012/cohort_state.py",
+      "src/lstm_data/trading/track2/stage012/contracts.py",
+      "src/lstm_data/trading/track2/stage012/historical_input_only.py",
+      "src/lstm_data/trading/track2/stage012/historical_signal_smoke.py",
+      "src/lstm_data/trading/track2/stage012/historical_source_store.py",
+      "src/lstm_data/trading/track2/stage012/intents.py",
+      "src/lstm_data/trading/track2/stage012/model_registry.py",
+      "src/lstm_data/trading/track2/stage012/order_netting.py",
+      "src/lstm_data/trading/track2/stage012/original_feature_pure.py",
+      "src/lstm_data/trading/track2/stage012/policy.py",
+      "src/lstm_data/trading/track2/stage012/protocol.py",
+      "src/lstm_data/trading/track2/stage012/risk_reference_prepare.py",
+      "src/lstm_data/trading/track2/stage012/risk_sizing.py",
+      "src/lstm_data/trading/track2/stage012/sign_scheduler.py",
+      "src/lstm_data/trading/track2/stage012/signal_pipeline.py",
+      "src/lstm_data/trading/track2/stage012/trend_direction.py",
+      "src/lstm_data/trading/track2/stage35/__init__.py",
+      "src/lstm_data/trading/track2/stage35/accounting.py",
+      "src/lstm_data/trading/track2/stage35/arms.py",
+      "src/lstm_data/trading/track2/stage35/borrow_financing.py",
+      "src/lstm_data/trading/track2/stage35/common.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/__init__.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/audit_completion.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/cache.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/engine.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/intents.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/orchestration.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/release.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/settlement.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/signals.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/source_audit.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/synthetic_smoke.py",
+      "src/lstm_data/trading/track2/stage35/completion_v2/tapes.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/__init__.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/acquire.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/actions.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/book_bridge.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/certify.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/conditional.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/engine.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/event_ledger.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/fallback.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/inventory.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/raw_source.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/release.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/restart.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/restart_schema.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/tapes.py",
+      "src/lstm_data/trading/track2/stage35/completion_v3/witness.py",
+      "src/lstm_data/trading/track2/stage35/corporate_actions.py",
+      "src/lstm_data/trading/track2/stage35/execution_clock.py",
+      "src/lstm_data/trading/track2/stage35/execution_model.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/__init__.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/analysis.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/certification.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/checkpoint.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/execution_calendar.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/gap_sources.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/market.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/paths.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/preflight.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/protocol.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/run.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/sources.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v4/special.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/__init__.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/analysis.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/book.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/checkpoint.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/driver.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/execution.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/paths.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/protocol.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/release.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/run.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/special.py",
+      "src/lstm_data/trading/track2/stage35/final_backtest_v5/witness.py",
+      "src/lstm_data/trading/track2/stage35/gate.py",
+      "src/lstm_data/trading/track2/stage35/intents.py",
+      "src/lstm_data/trading/track2/stage35/internal_cross.py",
+      "src/lstm_data/trading/track2/stage35/policy_config.py",
+      "src/lstm_data/trading/track2/stage35/portfolio_allocator.py",
+      "src/lstm_data/trading/track2/stage35/signal_expansion.py",
+      "src/lstm_data/trading/track2/stage35/synthetic_smoke.py",
+      "tests/track2_stage012/test_completion_boundaries.py",
+      "tests/track2_stage012/test_historical_signal_receipts.py",
+      "tests/track2_stage012/test_stage012.py",
+      "tests/track2_stage35/test_accounting.py",
+      "tests/track2_stage35/test_execution_and_gate.py",
+      "tests/track2_stage35/test_integrity_and_coverage.py",
+      "tests/track2_stage35/test_strategy.py",
+      "tests/track2_stage35_completion_v2/test_causal_cache.py",
+      "tests/track2_stage35_completion_v2/test_engine_and_release.py",
+      "tests/track2_stage35_completion_v2/test_orchestration_and_history.py",
+      "tests/track2_stage35_completion_v2/test_settlement_v2.py",
+      "tests/track2_stage35_completion_v3/test_acquisition_and_inventory.py",
+      "tests/track2_stage35_completion_v3/test_actions_and_fallback.py",
+      "tests/track2_stage35_completion_v3/test_event_and_book_integration.py",
+      "tests/track2_stage35_completion_v3/test_release_and_historical_witness.py",
+      "tests/track2_stage35_v4/test_gap_source_contract.py",
+      "tests/track2_stage35_v4/test_replay_engine.py",
+      "tests/track2_stage35_v4/test_special_and_book.py",
+      "tests/track2_stage35_v5/test_next_valid_execution.py",
+      "apps/track_a_dashboard.py",
+      "reports/data_audit/p0_p1_close_2026-10-10_230214/source_intake.py",
+      "reports/diagnostics/hf20_ranking_readonly_dossier_2026-10-25_202831/tools/audit.py",
+      "reports/diagnostics/hf20_ranking_readonly_dossier_2026-10-25_202831/tools/components.py",
+      "reports/diagnostics/hf20_ranking_readonly_dossier_2026-10-25_202831/tools/supplement.py",
+      "reports/diagnostics/hf20_ranking_readonly_dossier_2026-10-25_202831/tools/test_audit.py",
+      "reports/diagnostics/hf20_ranking_readonly_dossier_2026-10-25_202831/tools/verify.py",
+      "reports/experiments/hf20_s9_mag_stage1_session1_d0_2026-10-27/replay_d0.py",
+      "scripts/audit_hf20_inputs.py",
+      "scripts/audit_hf20_two_pairs.py",
+      "scripts/build_ta009_review_packet.py",
+      "scripts/check_dm_quantile_components.py",
+      "scripts/check_dm_quantile_intervals.py",
+      "scripts/check_hf20_loader.py",
+      "scripts/check_hf20_training_release.py",
+      "scripts/check_python_types.py",
+      "scripts/p021a_tail_analysis.py",
+      "scripts/p021b_transformed_tail.py",
+      "scripts/p021c_magnitude_range.py",
+      "scripts/prepare_dm_quantile.py",
+      "scripts/prepare_hf1m_training.py",
+      "scripts/prepare_hf20_replication.py",
+      "scripts/prepare_hf20_training.py",
+      "scripts/prepare_objective_screen.py",
+      "scripts/prepare_objective_screen_repair.py",
+      "scripts/release_dm_quantile_view.py",
+      "scripts/render_hf20_rankings.py",
+      "scripts/render_hf20_s4.py",
+      "scripts/render_s5_s9_complete_views.py",
+      "scripts/run_broad_screen.py",
+      "scripts/run_hf20_replication.py",
+      "scripts/run_hf20_two_pairs.py",
+      "scripts/run_universe_screen.py",
+      "scripts/seal_objective_screen.py",
+      "scripts/summarize_hf20_s4.py",
+      "scripts/summarize_s5_s9_saved_outputs.py",
+      "scripts/supplement_objective_screen.py",
+      "scripts/update_hf1m_viewer_bindings.py",
+      "scripts/update_hf20_viewer_bindings.py",
+      "scripts/verify_dm_quantile_final.py",
+      "scripts/verify_objective_audit.py",
+      "src/lstm_data/__init__.py",
+      "src/lstm_data/aggregation.py",
+      "src/lstm_data/alignment.py",
+      "src/lstm_data/alpaca.py",
+      "src/lstm_data/audit.py",
+      "src/lstm_data/baseline_audit.py",
+      "src/lstm_data/baseline_authority.py",
+      "src/lstm_data/baseline_benchmarks.py",
+      "src/lstm_data/baseline_cache.py",
+      "src/lstm_data/baseline_fit.py",
+      "src/lstm_data/baseline_fixtures.py",
+      "src/lstm_data/baseline_inputs.py",
+      "src/lstm_data/baseline_random.py",
+      "src/lstm_data/baseline_ridge.py",
+      "src/lstm_data/batch_telemetry.py",
+      "src/lstm_data/branch_replication_authority.py",
+      "src/lstm_data/branch_replication_comparison.py",
+      "src/lstm_data/branch_replication_diagnostics.py",
+      "src/lstm_data/branch_replication_engine.py",
+      "src/lstm_data/branch_replication_followup.py",
+      "src/lstm_data/branch_replication_metrics.py",
+      "src/lstm_data/branch_replication_rehearsal.py",
+      "src/lstm_data/branch_replication_release.py",
+      "src/lstm_data/branch_replication_run.py",
+      "src/lstm_data/branch_replication_source.py",
+      "src/lstm_data/branch_replication_spec.py",
+      "src/lstm_data/branch_replication_states.py",
+      "src/lstm_data/broad_screen.py",
+      "src/lstm_data/calendar.py",
+      "src/lstm_data/candidate_acquisition.py",
+      "src/lstm_data/candidate_quality.py",
+      "src/lstm_data/candle_cleanup.py",
+      "src/lstm_data/cli.py",
+      "src/lstm_data/clocks.py",
+      "src/lstm_data/config.py",
+      "src/lstm_data/controlled_authority.py",
+      "src/lstm_data/controlled_batch.py",
+      "src/lstm_data/controlled_loss.py",
+      "src/lstm_data/controlled_review.py",
+      "src/lstm_data/corporate_actions.py",
+      "src/lstm_data/course.py",
+      "src/lstm_data/directed_peers.py",
+      "src/lstm_data/directed_ridge.py",
+      "src/lstm_data/directed_ridge_audit.py",
+      "src/lstm_data/directed_ridge_fixture.py",
+      "src/lstm_data/dm_quantile_authority.py",
+      "src/lstm_data/dm_quantile_cases.py",
+      "src/lstm_data/dm_quantile_collective.py",
+      "src/lstm_data/dm_quantile_diagnostics.py",
+      "src/lstm_data/dm_quantile_loss.py",
+      "src/lstm_data/dm_quantile_run.py",
+      "src/lstm_data/dm_quantile_supplement.py",
+      "src/lstm_data/e5_audit.py",
+      "src/lstm_data/e5_deep_audit.py",
+      "src/lstm_data/e5_fixture_v2.py",
+      "src/lstm_data/e5_health_diagnosis.py",
+      "src/lstm_data/e5_lifecycle_audit.py",
+      "src/lstm_data/engineering_profile.py",
+      "src/lstm_data/fast_inventory.py",
+      "src/lstm_data/fast_screen.py",
+      "src/lstm_data/four_model_diagnostics.py",
+      "src/lstm_data/ft0_audit.py",
+      "src/lstm_data/ft0_tensor.py",
+      "src/lstm_data/ft0_transforms.py",
+      "src/lstm_data/fullpeer.py",
+      "src/lstm_data/fullpeer_sp3_audit.py",
+      "src/lstm_data/greedy_screen.py",
+      "src/lstm_data/hf1m_action_audit.py",
+      "src/lstm_data/hf1m_action_docs.py",
+      "src/lstm_data/hf1m_action_masks.py",
+      "src/lstm_data/hf1m_action_release.py",
+      "src/lstm_data/hf1m_action_review.py",
+      "src/lstm_data/hf1m_action_source.py",
+      "src/lstm_data/hf1m_ft16_audit.py",
+      "src/lstm_data/hf1m_ft16_fit.py",
+      "src/lstm_data/hf1m_ft16_loader.py",
+      "src/lstm_data/hf1m_ft16_math.py",
+      "src/lstm_data/hf1m_ft16_oracles.py",
+      "src/lstm_data/hf1m_ft16_prepare.py",
+      "src/lstm_data/hf1m_ft16_quality.py",
+      "src/lstm_data/hf1m_ft16_report.py",
+      "src/lstm_data/hf1m_ft16_source.py",
+      "src/lstm_data/hf1m_training_authority.py",
+      "src/lstm_data/hf1m_training_data.py",
+      "src/lstm_data/hf1m_training_diagnostics.py",
+      "src/lstm_data/hf1m_training_recovery.py",
+      "src/lstm_data/hf1m_training_report.py",
+      "src/lstm_data/hf1m_training_run.py",
+      "src/lstm_data/hf20_classical.py",
+      "src/lstm_data/hf20_classical_math.py",
+      "src/lstm_data/hf20_classical_report.py",
+      "src/lstm_data/hf20_classical_rv.py",
+      "src/lstm_data/hf20_diagnostic_math.py",
+      "src/lstm_data/hf20_diagnostic_report.py",
+      "src/lstm_data/hf20_evidence.py",
+      "src/lstm_data/hf20_features.py",
+      "src/lstm_data/hf20_horizon_authority.py",
+      "src/lstm_data/hf20_horizon_closeout.py",
+      "src/lstm_data/hf20_horizon_data.py",
+      "src/lstm_data/hf20_horizon_diagnostics.py",
+      "src/lstm_data/hf20_horizon_math.py",
+      "src/lstm_data/hf20_horizon_preflight.py",
+      "src/lstm_data/hf20_horizon_report.py",
+      "src/lstm_data/hf20_horizon_resource_continue.py",
+      "src/lstm_data/hf20_horizon_resources.py",
+      "src/lstm_data/hf20_horizon_run.py",
+      "src/lstm_data/hf20_loader.py",
+      "src/lstm_data/hf20_mag_c3_io.py",
+      "src/lstm_data/hf20_mag_designa.py",
+      "src/lstm_data/hf20_mag_designa_continue.py",
+      "src/lstm_data/hf20_mag_hybrid.py",
+      "src/lstm_data/hf20_mag_hybrid_report.py",
+      "src/lstm_data/hf20_mag_o1.py",
+      "src/lstm_data/hf20_mag_rank.py",
+      "src/lstm_data/hf20_mag_rank_report.py",
+      "src/lstm_data/hf20_matched.py",
+      "src/lstm_data/hf20_matched_garch.py",
+      "src/lstm_data/hf20_matched_math.py",
+      "src/lstm_data/hf20_matched_report.py",
+      "src/lstm_data/hf20_matched_verify.py",
+      "src/lstm_data/hf20_minute_bc.py",
+      "src/lstm_data/hf20_minute_inputs.py",
+      "src/lstm_data/hf20_minute_report.py",
+      "src/lstm_data/hf20_oracles.py",
+      "src/lstm_data/hf20_overnight_specialist.py",
+      "src/lstm_data/hf20_postrun_diagnostics.py",
+      "src/lstm_data/hf20_prepare.py",
+      "src/lstm_data/hf20_rank_visual_html.py",
+      "src/lstm_data/hf20_rank_visual_report.py",
+      "src/lstm_data/hf20_rank_visuals.py",
+      "src/lstm_data/hf20_ranking.py",
+      "src/lstm_data/hf20_ranking_authority.py",
+      "src/lstm_data/hf20_ranking_case_audit.py",
+      "src/lstm_data/hf20_ranking_continue.py",
+      "src/lstm_data/hf20_ranking_continue_report.py",
+      "src/lstm_data/hf20_ranking_data.py",
+      "src/lstm_data/hf20_ranking_diagnostics.py",
+      "src/lstm_data/hf20_ranking_pair_guard.py",
+      "src/lstm_data/hf20_ranking_run.py",
+      "src/lstm_data/hf20_recent_analysis.py",
+      "src/lstm_data/hf20_recent_linear.py",
+      "src/lstm_data/hf20_replication_authority.py",
+      "src/lstm_data/hf20_replication_report.py",
+      "src/lstm_data/hf20_replication_review.py",
+      "src/lstm_data/hf20_replication_run.py",
+      "src/lstm_data/hf20_s2c_ca.py",
+      "src/lstm_data/hf20_s2d_gap.py",
+      "src/lstm_data/hf20_s3c_price_report.py",
+      "src/lstm_data/hf20_s3c_priceonly.py",
+      "src/lstm_data/hf20_s4_authority.py",
+      "src/lstm_data/hf20_s4_clock.py",
+      "src/lstm_data/hf20_s4_closeout.py",
+      "src/lstm_data/hf20_s4_data.py",
+      "src/lstm_data/hf20_s4_diagnostics.py",
+      "src/lstm_data/hf20_s4_epoch.py",
+      "src/lstm_data/hf20_s4_fit.py",
+      "src/lstm_data/hf20_s4_opening.py",
+      "src/lstm_data/hf20_s4_preflight.py",
+      "src/lstm_data/hf20_s4_prepare.py",
+      "src/lstm_data/hf20_s4_rehearsal.py",
+      "src/lstm_data/hf20_s4_run.py",
+      "src/lstm_data/hf20_s4_visuals.py",
+      "src/lstm_data/hf20_s4_witnesses.py",
+      "src/lstm_data/hf20_s5s9.py",
+      "src/lstm_data/hf20_s5s9_metrics.py",
+      "src/lstm_data/hf20_s5s9_prepare.py",
+      "src/lstm_data/hf20_s5s9_report.py",
+      "src/lstm_data/hf20_s5s9_run.py",
+      "src/lstm_data/hf20_s5s9_visual.py",
+      "src/lstm_data/hf20_source.py",
+      "src/lstm_data/hf20_stage2_bcd.py",
+      "src/lstm_data/hf20_strict999.py",
+      "src/lstm_data/hf20_strict999_audit.py",
+      "src/lstm_data/hf20_strict999_fit.py",
+      "src/lstm_data/hf20_strict999_model.py",
+      "src/lstm_data/hf20_strict999_report.py",
+      "src/lstm_data/hf20_strict999_verify.py",
+      "src/lstm_data/hf20_targets.py",
+      "src/lstm_data/hf20_targets_repair.py",
+      "src/lstm_data/hf20_targets_repair_report.py",
+      "src/lstm_data/hf20_targets_report.py",
+      "src/lstm_data/hf20_training_authority.py",
+      "src/lstm_data/hf20_training_data.py",
+      "src/lstm_data/hf20_training_review.py",
+      "src/lstm_data/hf20_training_run.py",
+      "src/lstm_data/hf20_transforms.py",
+      "src/lstm_data/hf_hourly.py",
+      "src/lstm_data/hf_hourly_audit.py",
+      "src/lstm_data/hf_hourly_diagnostics.py",
+      "src/lstm_data/hf_hourly_feasibility.py",
+      "src/lstm_data/hf_hourly_report.py",
+      "src/lstm_data/hf_hourly_source.py",
+      "src/lstm_data/hf_minute_boundary.py",
+      "src/lstm_data/hf_minute_boundary_io.py",
+      "src/lstm_data/hf_minute_long.py",
+      "src/lstm_data/hf_minute_long_io.py",
+      "src/lstm_data/hf_minute_long_qa.py",
+      "src/lstm_data/hf_minute_long_report.py",
+      "src/lstm_data/hf_minute_long_review.py",
+      "src/lstm_data/hf_minute_preflight.py",
+      "src/lstm_data/hf_minute_preflight_report.py",
+      "src/lstm_data/hourly_proxy.py",
+      "src/lstm_data/labels.py",
+      "src/lstm_data/ledger.py",
+      "src/lstm_data/m2.py",
+      "src/lstm_data/magnitude_range_audit.py",
+      "src/lstm_data/market_features.py",
+      "src/lstm_data/market_source.py",
+      "src/lstm_data/market_tensor.py",
+      "src/lstm_data/nb1_authority.py",
+      "src/lstm_data/nb1_experiment.py",
+      "src/lstm_data/nb1_inputs.py",
+      "src/lstm_data/nb1_review.py",
+      "src/lstm_data/neural_artifacts.py",
+      "src/lstm_data/neural_audit.py",
+      "src/lstm_data/neural_data.py",
+      "src/lstm_data/neural_engine.py",
+      "src/lstm_data/neural_health.py",
+      "src/lstm_data/neural_lifecycle.py",
+      "src/lstm_data/neural_market.py",
+      "src/lstm_data/neural_market_audit.py",
+      "src/lstm_data/neural_models.py",
+      "src/lstm_data/normalization_audit.py",
+      "src/lstm_data/normalization_oracles.py",
+      "src/lstm_data/normalization_population.py",
+      "src/lstm_data/normalization_report.py",
+      "src/lstm_data/normalization_stats.py",
+      "src/lstm_data/objective_screen_attribution.py",
+      "src/lstm_data/objective_screen_audit.py",
+      "src/lstm_data/objective_screen_authority.py",
+      "src/lstm_data/objective_screen_diagnostics.py",
+      "src/lstm_data/objective_screen_loss.py",
+      "src/lstm_data/objective_screen_metrics.py",
+      "src/lstm_data/objective_screen_recovery.py",
+      "src/lstm_data/objective_screen_report.py",
+      "src/lstm_data/objective_screen_run.py",
+      "src/lstm_data/objective_screen_source.py",
+      "src/lstm_data/objective_screen_verify.py",
+      "src/lstm_data/operator_artifacts.py",
+      "src/lstm_data/optimization_screen.py",
+      "src/lstm_data/optimization_screen_audit.py",
+      "src/lstm_data/optimization_screen_authority.py",
+      "src/lstm_data/optimization_screen_closeout.py",
+      "src/lstm_data/optimization_screen_collective.py",
+      "src/lstm_data/optimization_screen_diagnostics.py",
+      "src/lstm_data/optimization_screen_preflight.py",
+      "src/lstm_data/optimization_screen_prepare.py",
+      "src/lstm_data/optimization_screen_recovery_authority.py",
+      "src/lstm_data/optimization_screen_recovery_diagnostics.py",
+      "src/lstm_data/optimization_screen_recovery_preflight.py",
+      "src/lstm_data/optimization_screen_recovery_run.py",
+      "src/lstm_data/optimization_screen_recovery_supplement.py",
+      "src/lstm_data/optimization_screen_run.py",
+      "src/lstm_data/optimization_screen_supplement.py",
+      "src/lstm_data/optimization_screen_tolerances.py",
+      "src/lstm_data/optimization_screen_workflow_rehearsal.py",
+      "src/lstm_data/p2_closure.py",
+      "src/lstm_data/p3_accounting.py",
+      "src/lstm_data/p3_audit.py",
+      "src/lstm_data/p3_domain.py",
+      "src/lstm_data/p3_engine.py",
+      "src/lstm_data/p3_events.py",
+      "src/lstm_data/p3_execution.py",
+      "src/lstm_data/p3_financing.py",
+      "src/lstm_data/p3_policy.py",
+      "src/lstm_data/p3_replay.py",
+      "src/lstm_data/p3_risk.py",
+      "src/lstm_data/panel_state_audit.py",
+      "src/lstm_data/peer_inputs.py",
+      "src/lstm_data/peer_neural.py",
+      "src/lstm_data/peer_ridge.py",
+      "src/lstm_data/peer_screen_authority.py",
+      "src/lstm_data/peer_screen_control.py",
+      "src/lstm_data/peer_screen_data.py",
+      "src/lstm_data/peer_screen_diagnostics.py",
+      "src/lstm_data/peer_screen_engine.py",
+      "src/lstm_data/peer_screen_mechanisms.py",
+      "src/lstm_data/peer_screen_metrics.py",
+      "src/lstm_data/peer_screen_models.py",
+      "src/lstm_data/peer_screen_rehearsal.py",
+      "src/lstm_data/peer_screen_release.py",
+      "src/lstm_data/peer_screen_run.py",
+      "src/lstm_data/peer_screen_source.py",
+      "src/lstm_data/peer_screen_spec.py",
+      "src/lstm_data/pilot.py",
+      "src/lstm_data/pilot_postrun.py",
+      "src/lstm_data/pretraining_g3.py",
+      "src/lstm_data/pretraining_market.py",
+      "src/lstm_data/pretraining_oracles.py",
+      "src/lstm_data/pretraining_policy.py",
+      "src/lstm_data/pretraining_source.py",
+      "src/lstm_data/pretraining_store.py",
+      "src/lstm_data/pretraining_tables.py",
+      "src/lstm_data/pretraining_transforms.py",
+      "src/lstm_data/real_batch_authority.py",
+      "src/lstm_data/real_batch_baseline.py",
+      "src/lstm_data/real_batch_data.py",
+      "src/lstm_data/real_batch_review.py",
+      "src/lstm_data/real_bridge_audit.py",
+      "src/lstm_data/real_bridge_authority.py",
+      "src/lstm_data/real_bridge_data.py",
+      "src/lstm_data/real_bridge_run.py",
+      "src/lstm_data/real_multimodel_batch.py",
+      "src/lstm_data/regime_diagnostics.py",
+      "src/lstm_data/regime_peer_audit.py",
+      "src/lstm_data/remediation.py",
+      "src/lstm_data/remediation_overlay.py",
+      "src/lstm_data/remediation_plan.py",
+      "src/lstm_data/remediation_secondary.py",
+      "src/lstm_data/remediation_transport.py",
+      "src/lstm_data/ridge_extension.py",
+      "src/lstm_data/source_completion.py",
+      "src/lstm_data/spatial_operator.py",
+      "src/lstm_data/spy_actions.py",
+      "src/lstm_data/spy_completion.py",
+      "src/lstm_data/spy_qa.py",
+      "src/lstm_data/state_screen_authority.py",
+      "src/lstm_data/state_screen_cases.py",
+      "src/lstm_data/state_screen_control.py",
+      "src/lstm_data/state_screen_data.py",
+      "src/lstm_data/state_screen_diagnostics.py",
+      "src/lstm_data/state_screen_engine.py",
+      "src/lstm_data/state_screen_mechanisms.py",
+      "src/lstm_data/state_screen_metrics.py",
+      "src/lstm_data/state_screen_models.py",
+      "src/lstm_data/state_screen_rehearsal.py",
+      "src/lstm_data/state_screen_release.py",
+      "src/lstm_data/state_screen_run.py",
+      "src/lstm_data/state_screen_source.py",
+      "src/lstm_data/state_screen_spec.py",
+      "src/lstm_data/stock_features.py",
+      "src/lstm_data/stock_source.py",
+      "src/lstm_data/store.py",
+      "src/lstm_data/temporal_screen_authority.py",
+      "src/lstm_data/temporal_screen_diagnostics.py",
+      "src/lstm_data/temporal_screen_engine.py",
+      "src/lstm_data/temporal_screen_mechanisms.py",
+      "src/lstm_data/temporal_screen_metrics.py",
+      "src/lstm_data/temporal_screen_models.py",
+      "src/lstm_data/temporal_screen_rehearsal.py",
+      "src/lstm_data/temporal_screen_release.py",
+      "src/lstm_data/temporal_screen_run.py",
+      "src/lstm_data/temporal_screen_source.py",
+      "src/lstm_data/temporal_screen_spec.py",
+      "src/lstm_data/universe_screen.py",
+      "src/lstm_data/universe_screen_audit.py",
+      "src/lstm_data/universe_screen_source.py",
+      "src/lstm_data/validation.py",
+      "src/lstm_data/visualization/__init__.py",
+      "src/lstm_data/visualization/branch_replication_ui.py",
+      "src/lstm_data/visualization/controlled.py",
+      "src/lstm_data/visualization/controlled_ui.py",
+      "src/lstm_data/visualization/definitions.py",
+      "src/lstm_data/visualization/dm_quantile_ui.py",
+      "src/lstm_data/visualization/figures.py",
+      "src/lstm_data/visualization/hf1m_long.py",
+      "src/lstm_data/visualization/hf1m_long_ui.py",
+      "src/lstm_data/visualization/hf20.py",
+      "src/lstm_data/visualization/hf20_replication_ui.py",
+      "src/lstm_data/visualization/hf20_ui.py",
+      "src/lstm_data/visualization/history.py",
+      "src/lstm_data/visualization/launch.py",
+      "src/lstm_data/visualization/loaders.py",
+      "src/lstm_data/visualization/metrics.py",
+      "src/lstm_data/visualization/nb1_ui.py",
+      "src/lstm_data/visualization/normalization_ui.py",
+      "src/lstm_data/visualization/objective_screen.py",
+      "src/lstm_data/visualization/objective_screen_ui.py",
+      "src/lstm_data/visualization/optimization_screen_ui.py",
+      "src/lstm_data/visualization/peer_screen_ui.py",
+      "src/lstm_data/visualization/range_ui.py",
+      "src/lstm_data/visualization/state_screen_ui.py",
+      "src/lstm_data/visualization/target_ranges.py",
+      "src/lstm_data/visualization/temporal_screen_ui.py",
+      "src/lstm_data/wf2_replication.py",
+      "src/lstm_data/wf2_review.py",
+      "tests/conftest.py",
+      "tests/test_aggregation.py",
+      "tests/test_alpaca.py",
+      "tests/test_baseline_benchmarks.py",
+      "tests/test_baseline_integration.py",
+      "tests/test_baseline_momentum.py",
+      "tests/test_baseline_random.py",
+      "tests/test_baseline_ridge.py",
+      "tests/test_branch_replication.py",
+      "tests/test_branch_replication_release.py",
+      "tests/test_broad_screen.py",
+      "tests/test_calendar_alignment.py",
+      "tests/test_candidate_quality.py",
+      "tests/test_candle_cleanup.py",
+      "tests/test_clocks.py",
+      "tests/test_controlled_interventions.py",
+      "tests/test_controlled_review.py",
+      "tests/test_controlled_visualization.py",
+      "tests/test_corporate_actions.py",
+      "tests/test_directed_peers.py",
+      "tests/test_directed_ridge.py",
+      "tests/test_dm_quantile.py",
+      "tests/test_dm_quantile_diagnostics.py",
+      "tests/test_dm_quantile_visualization.py",
+      "tests/test_e5_fixture_v2.py",
+      "tests/test_e5_lifecycle_audit.py",
+      "tests/test_e5_neural.py",
+      "tests/test_evidence.py",
+      "tests/test_fast_screen.py",
+      "tests/test_four_model_diagnostics.py",
+      "tests/test_ft0_transforms.py",
+      "tests/test_fullpeer_sp3.py",
+      "tests/test_greedy_screen.py",
+      "tests/test_hf1m_action_audit.py",
+      "tests/test_hf1m_action_source.py",
+      "tests/test_hf1m_ft16.py",
+      "tests/test_hf1m_long_visualization.py",
+      "tests/test_hf1m_training.py",
+      "tests/test_hf20_classical.py",
+      "tests/test_hf20_horizon_closeout.py",
+      "tests/test_hf20_horizon_execution.py",
+      "tests/test_hf20_horizon_resources.py",
+      "tests/test_hf20_horizons.py",
+      "tests/test_hf20_mag_c3_io.py",
+      "tests/test_hf20_mag_designa.py",
+      "tests/test_hf20_mag_designa_continue.py",
+      "tests/test_hf20_mag_hybrid.py",
+      "tests/test_hf20_mag_o1.py",
+      "tests/test_hf20_mag_rank.py",
+      "tests/test_hf20_matched.py",
+      "tests/test_hf20_minute_inputs.py",
+      "tests/test_hf20_minute_report.py",
+      "tests/test_hf20_overnight_specialist.py",
+      "tests/test_hf20_postrun_diagnostics.py",
+      "tests/test_hf20_pretraining.py",
+      "tests/test_hf20_ranking.py",
+      "tests/test_hf20_ranking_continue.py",
+      "tests/test_hf20_ranking_pair_guard.py",
+      "tests/test_hf20_recent_linear.py",
+      "tests/test_hf20_replication.py",
+      "tests/test_hf20_s2c_ca.py",
+      "tests/test_hf20_s2d_gap.py",
+      "tests/test_hf20_s3c_priceonly.py",
+      "tests/test_hf20_s4_readonly.py",
+      "tests/test_hf20_s5s9.py",
+      "tests/test_hf20_stage2_bcd.py",
+      "tests/test_hf20_strict999.py",
+      "tests/test_hf20_targets.py",
+      "tests/test_hf20_targets_repair.py",
+      "tests/test_hf20_training.py",
+      "tests/test_hf20_visualization.py",
+      "tests/test_hf_hourly.py",
+      "tests/test_hf_minute_boundary.py",
+      "tests/test_hf_minute_long.py",
+      "tests/test_hf_minute_preflight.py",
+      "tests/test_hourly_proxy.py",
+      "tests/test_labels.py",
+      "tests/test_m2.py",
+      "tests/test_magnitude_range_audit.py",
+      "tests/test_market_features.py",
+      "tests/test_market_source.py",
+      "tests/test_nb1_experiment.py",
+      "tests/test_neural_artifacts.py",
+      "tests/test_neural_engine.py",
+      "tests/test_neural_gate.py",
+      "tests/test_neural_health.py",
+      "tests/test_neural_integration.py",
+      "tests/test_neural_lifecycle.py",
+      "tests/test_neural_market.py",
+      "tests/test_normalization_audit.py",
+      "tests/test_objective_screen.py",
+      "tests/test_objective_screen_diagnostics.py",
+      "tests/test_objective_screen_recovery.py",
+      "tests/test_objective_screen_visualization.py",
+      "tests/test_optimization_screen.py",
+      "tests/test_optimization_screen_closeout.py",
+      "tests/test_optimization_screen_diagnostics.py",
+      "tests/test_optimization_screen_recovery.py",
+      "tests/test_optimization_screen_visualization.py",
+      "tests/test_p2_handoff.py",
+      "tests/test_p2_market_closure.py",
+      "tests/test_p3_accounting.py",
+      "tests/test_p3_audit.py",
+      "tests/test_p3_exceptions.py",
+      "tests/test_p3_financing.py",
+      "tests/test_p3_policy.py",
+      "tests/test_panel_state_audit.py",
+      "tests/test_peer_inputs.py",
+      "tests/test_peer_screen.py",
+      "tests/test_peer_screen_ui.py",
+      "tests/test_pilot_postrun.py",
+      "tests/test_pretraining_candidate.py",
+      "tests/test_real_bridge.py",
+      "tests/test_real_multimodel_batch.py",
+      "tests/test_regime_diagnostics.py",
+      "tests/test_remediation_overlay.py",
+      "tests/test_remediation_plan.py",
+      "tests/test_remediation_secondary.py",
+      "tests/test_remediation_transport.py",
+      "tests/test_source_completion.py",
+      "tests/test_spy_completion.py",
+      "tests/test_spy_policy_v3.py",
+      "tests/test_spy_qa.py",
+      "tests/test_state_screen.py",
+      "tests/test_stock_features.py",
+      "tests/test_stock_source.py",
+      "tests/test_store_cli.py",
+      "tests/test_target_range_history.py",
+      "tests/test_temporal_screen.py",
+      "tests/test_temporal_screen_ui.py",
+      "tests/test_universe_screen.py",
+      "tests/test_universe_screen_source.py",
+      "tests/test_validation_course.py",
+      "tests/test_visualization_readonly.py",
+      "tests/test_wf2_replication.py"
+    ]
+  }
+}

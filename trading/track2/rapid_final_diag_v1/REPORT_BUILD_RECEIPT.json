@@ -1,0 +1,81 @@
+{
+  "funded_manifest_sha256": "c80fab961f9fc944e39e4bece1e3e12f6cf129308f2584906095c2002dc64cee",
+  "mechanisms": [
+    {
+      "actual_distinct_policy_change": true,
+      "both_primary_endpoints_improved": false,
+      "control": "M04_CONTROL",
+      "decision": "FALSIFIED_IN_THIS_SAMPLE",
+      "final_algorithm_selected": false,
+      "net_change_USD": -1497.0407730296406,
+      "normalized_net_change_per_1M_gross_year": -28626.09988221508,
+      "status": "COMPLETE",
+      "test_id": "F-M04",
+      "treatment": "M04_EVENT2"
+    },
+    {
+      "actual_distinct_policy_change": true,
+      "both_primary_endpoints_improved": true,
+      "control": "R01_H100",
+      "decision": "MECHANISM_SUPPORTED_EXPLORATORY",
+      "final_algorithm_selected": false,
+      "net_change_USD": 8620.515637049346,
+      "normalized_net_change_per_1M_gross_year": 186778.98171164782,
+      "status": "COMPLETE",
+      "test_id": "F-R01",
+      "treatment": "R01_V20"
+    },
+    {
+      "actual_distinct_policy_change": false,
+      "both_primary_endpoints_improved": false,
+      "control": "M01_CONTROL",
+      "decision": "LOW_SUPPORT",
+      "final_algorithm_selected": false,
+      "net_change_USD": 0.0,
+      "normalized_net_change_per_1M_gross_year": 0.0,
+      "status": "COMPLETE",
+      "test_id": "F-M01",
+      "treatment": "M01_WEAK2"
+    },
+    {
+      "actual_distinct_policy_change": true,
+      "both_primary_endpoints_improved": true,
+      "control": "M05_CONTROL",
+      "decision": "MECHANISM_SUPPORTED_EXPLORATORY",
+      "final_algorithm_selected": false,
+      "net_change_USD": 2358.491047813619,
+      "normalized_net_change_per_1M_gross_year": 52874.7982032726,
+      "status": "COMPLETE",
+      "test_id": "F-M05",
+      "treatment": "M05_EVENT2"
+    },
+    {
+      "actual_distinct_policy_change": true,
+      "both_primary_endpoints_improved": false,
+      "control": "M03_CONTROL",
+      "decision": "FALSIFIED_IN_THIS_SAMPLE",
+      "final_algorithm_selected": false,
+      "net_change_USD": -1546.4679472765965,
+      "normalized_net_change_per_1M_gross_year": -112032.89369020064,
+      "status": "COMPLETE",
+      "test_id": "F-M03",
+      "treatment": "M03_GAPCAP"
+    },
+    {
+      "actual_distinct_policy_change": true,
+      "both_primary_endpoints_improved": true,
+      "control": "R07_CONTROL",
+      "decision": "LOW_SUPPORT",
+      "final_algorithm_selected": false,
+      "net_change_USD": 328.40378645859585,
+      "normalized_net_change_per_1M_gross_year": 30126.811501724296,
+      "status": "COMPLETE",
+      "test_id": "F-R07",
+      "treatment": "R07_DAILY2"
+    }
+  ],
+  "no_S2C": true,
+  "no_Stage6": true,
+  "no_final_selection": true,
+  "status": "COMPLETE"
+}

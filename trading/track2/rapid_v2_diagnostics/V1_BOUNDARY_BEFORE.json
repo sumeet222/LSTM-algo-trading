@@ -1,0 +1,1028 @@
+{
+  "P2_register_verified_entries": 16,
+  "V1_content_sha256": "38dd11d07e5fb561befda4a780d8391a5743ff74eb2ebff801c66195b23535ba",
+  "V1_executed_registry": "ff4a5e12c7536acaaeaa03dc5017f65c41bb33787260819958afed7adc098d11",
+  "V1_feature_cache": "trading/track2/rapid_v1/cache/49a590a7d44f5900b67cf2faf37584b584a942807cca2fbab262250b80ea1f93",
+  "V1_result_manifest_sha256": "7fe16983dbb7a77606020ce80dbd27fbc5253b53b3eb86d90ea1fe024281740f",
+  "V1_root": "trading/track2/rapid_v1",
+  "files": {
+    "src/lstm_data/trading/track2/rapid_v1/__init__.py": {
+      "mtime_ns": 1794344052112859780,
+      "sha256": "a938a73c0d708f543fb9d4735da8d8bcbe6e0e43c4a5e1c3d2c96feaf3566573"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/cli.py": {
+      "mtime_ns": 1794348013709047271,
+      "sha256": "7aed0c6fb2621a1510342844dbf96e194b735850c32b59a988c48a48de99967b"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/costs.py": {
+      "mtime_ns": 1794345591679726624,
+      "sha256": "f107c0a70322d227ad917a0705f23d7584d07dc16227e7a83b232f40e084b76f"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/diagnostics.py": {
+      "mtime_ns": 1794347913971446126,
+      "sha256": "8ca6cfbad58a906657434d25969a8266da0430391df8db60639840975226b07f"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/paths.py": {
+      "mtime_ns": 1794344052147429332,
+      "sha256": "7b1055645e1e953439c5a9111ac85884d2ba21d0246d45e78285b2210d21cc4b"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/portfolio.py": {
+      "mtime_ns": 1794347694070602336,
+      "sha256": "a45de684a804828c3c25a15a09af0ba3840b2c5d53249f31c109136a00b3907b"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/registry.py": {
+      "mtime_ns": 1794347913990913338,
+      "sha256": "dc9fb23c2c6ecbf01147429d4e7fd193d5b076daf88e398260c9652a0f64ee21"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/reporting.py": {
+      "mtime_ns": 1794348049764833136,
+      "sha256": "09b7bc1cc8305616d5d7236625a646bfd9f92edf40874f6434bd3f404fd9781e"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/runner.py": {
+      "mtime_ns": 1794347971592304382,
+      "sha256": "e5ad646eaf7144024731e0728eb9202441c5150025382442ea4141b6ab53a3b4"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/scheduler.py": {
+      "mtime_ns": 1794345884649069183,
+      "sha256": "1f65df943d0797bb85b3ba87f5bb69b6048334de71a6afd2ad75276e1eb024bb"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/shared_features.py": {
+      "mtime_ns": 1794347756544733799,
+      "sha256": "cec88250a874c7677a9a37aadb90f344da7b8fec39dbb52a4ce8daf070db1ad7"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/sources.py": {
+      "mtime_ns": 1794347694070433383,
+      "sha256": "8dfe076de2cdb6d24fc7b3ccd5ad9e923718c63b4a95f7c80ef086c623befeb7"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/state.py": {
+      "mtime_ns": 1794347971592720243,
+      "sha256": "9b683ed989cbfb4546833a1d2c3345426c1903cf55521f4ca063be087a9d90ff"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/strategies.py": {
+      "mtime_ns": 1794345591680246103,
+      "sha256": "eb17466b06d9219fd9105b87b8a41ed47fe15b63f523f64659cf3e3f511fbf79"
+    },
+    "src/lstm_data/trading/track2/rapid_v1/verification.py": {
+      "mtime_ns": 1794347756545685059,
+      "sha256": "053b17a4e17ed769783c792874f2b893a91b98d874b33009973c7659ab1560e1"
+    },
+    "tests/track2_rapid_v1/test_account.py": {
+      "mtime_ns": 1794348111614537663,
+      "sha256": "e1ac057d108491a17dc9c667611e548d57c9d831939aa2cb88e4e13d80b4605c"
+    },
+    "tests/track2_rapid_v1/test_research.py": {
+      "mtime_ns": 1794347913990925254,
+      "sha256": "f38841c518bc2aff7d23db1801985ea877c0790537c6207bae355b384d50886f"
+    },
+    "trading/track2/rapid_v1/.gitignore": {
+      "mtime_ns": 1794343865701088946,
+      "sha256": "565347c335087f661843e47b57760ec9256ef5dc78ad638d1366c6a657a6de68"
+    },
+    "trading/track2/rapid_v1/DESIGN_DEFAULTS_V1.json": {
+      "mtime_ns": 1794343865700941243,
+      "sha256": "389f90793178e287cdbf218ba1efe63a4911fb66bffb6a8144b71f208b46f567"
+    },
+    "trading/track2/rapid_v1/DIAGNOSTICS_AND_FAILURE_MODES.md": {
+      "mtime_ns": 1794348887559670501,
+      "sha256": "feebfc582314becc581bad5d2c8a17019fe1d2fc8e76f228639bd20899a274ae"
+    },
+    "trading/track2/rapid_v1/EXPERIMENT_REGISTRY.json": {
+      "mtime_ns": 1794347974788963858,
+      "sha256": "a341a79b7c6b203c2094049f587b74d0cdf990d08d7802b87555b0bf8027b57e"
+    },
+    "trading/track2/rapid_v1/OPTIONAL_SIZING_PREVIEW.md": {
+      "mtime_ns": 1794348500289256720,
+      "sha256": "edf40904bc1d4a6b4284b0c24c3321bf31d969932a6ca057f82a4e96a22caad9"
+    },
+    "trading/track2/rapid_v1/POLICY_AND_ASSUMPTIONS.md": {
+      "mtime_ns": 1794347971602257127,
+      "sha256": "fb35cbc5c09dc8560b8de8888f41cb093d9e3a41ff1ede83604f4906f49b6b13"
+    },
+    "trading/track2/rapid_v1/RAPID_CONTENT_MANIFEST_V1.json": {
+      "mtime_ns": 1794348982519083486,
+      "sha256": "38dd11d07e5fb561befda4a780d8391a5743ff74eb2ebff801c66195b23535ba"
+    },
+    "trading/track2/rapid_v1/RAPID_V1_SCREEN_HANDOFF.md": {
+      "mtime_ns": 1794348887551468901,
+      "sha256": "c70b5e6366b75e6d59df5dbd937a19b4b07388079d7aa373ca8caa9e76537e90"
+    },
+    "trading/track2/rapid_v1/REPRODUCE.md": {
+      "mtime_ns": 1794348500285433371,
+      "sha256": "0742962660c97cd8f0f932abd91638112b4c2f2f5e25ad2a458008402102416f"
+    },
+    "trading/track2/rapid_v1/REUSE_AND_RUNTIME_PLAN.md": {
+      "mtime_ns": 1794343865700726793,
+      "sha256": "83c73ecad7d990c1335e09b62df3fc72f7532b63d6b88608348b2baed7e24fef"
+    },
+    "trading/track2/rapid_v1/SOURCE_AND_SUPPORT_DEFAULTS_V1.json": {
+      "mtime_ns": 1794344757910279431,
+      "sha256": "06b91f31439db559ca306e52104432f6fac33a39e6c71b9482ab8e0689c89f45"
+    },
+    "trading/track2/rapid_v1/VALIDATION_MATRIX.md": {
+      "mtime_ns": 1794348500292464962,
+      "sha256": "4f0a94c2dbc142b9eb23fb3ead08f44b1c172fc66d79aaa3bcb6d77fce532d11"
+    },
+    "trading/track2/rapid_v1/analyze_screen.py": {
+      "mtime_ns": 1794348549068754476,
+      "sha256": "9cd59148e855d27065b1f587de116371781f2fef0c2305284a8a3bb6205f23f2"
+    },
+    "trading/track2/rapid_v1/audits/ACCOUNTANT_EXTRACTION_RECEIPT.json": {
+      "mtime_ns": 1794344144080988085,
+      "sha256": "cb56cf3a692ee724354b22b8742a214440ad98f173888308a40fa130f404f19f"
+    },
+    "trading/track2/rapid_v1/audits/FROZEN_BOUNDARY_BASELINE.json": {
+      "mtime_ns": 1794343934017854990,
+      "sha256": "ceca373a822d16eed4e5f3e1fff9416d4e23c91ca508add11c07354b8a7f4cab"
+    },
+    "trading/track2/rapid_v1/audits/INITIAL_WORKTREE_AND_POLICY_FREEZE.json": {
+      "mtime_ns": 1794343866054187927,
+      "sha256": "8d75b2080b05440e9d4354cfd7f5a0b97cec7df99e75600f591ded9147567bdb"
+    },
+    "trading/track2/rapid_v1/audits/MRK_OGN_SOURCE_ADAPTER_PARITY_V1.json": {
+      "mtime_ns": 1794348412974591138,
+      "sha256": "b094d3b57a585eb24dfbeae889f0bc80a98d9789ab7083e527c15492ceb9ed43"
+    },
+    "trading/track2/rapid_v1/audits/RAW_SHARE_SPLIT_WITNESSES_V1.json": {
+      "mtime_ns": 1794348688862827860,
+      "sha256": "88d13767e3b3ab4f32f7ce49fd7092732195bc7ae19bc1384918fbcd65474385"
+    },
+    "trading/track2/rapid_v1/audits/REAL_SOURCE_RESTART_JAN2021.json": {
+      "mtime_ns": 1794348179232402022,
+      "sha256": "6ff568624f4be95353cbe27ce83203ec4ab4b4f2bb2f48002e884daab48146a8"
+    },
+    "trading/track2/rapid_v1/cache/49a590a7d44f5900b67cf2faf37584b584a942807cca2fbab262250b80ea1f93/features.npz": {
+      "mtime_ns": 1794348016682460518,
+      "sha256": "8c1c927f64e895abf8f383f86f18ccf02fd10c4b0e63df1a3c323be21558e69e"
+    },
+    "trading/track2/rapid_v1/cache/49a590a7d44f5900b67cf2faf37584b584a942807cca2fbab262250b80ea1f93/manifest.json": {
+      "mtime_ns": 1794348016695954975,
+      "sha256": "97bc27a34d728894a8d06efc0acd563dfb6b1ddcfa82f68e67d6815ab2dc8214"
+    },
+    "trading/track2/rapid_v1/registry_versions/a769d361223d86501c0dda0714e9cfcec3b1877585d5c7eec8a2808d0d16f844.json": {
+      "mtime_ns": 1794348016428186431,
+      "sha256": "cd3ca13abe1debb7bcafe1c5bfb4062533ca7ff73cf2af18e9f4ca0643bf1160"
+    },
+    "trading/track2/rapid_v1/registry_versions/ff4a5e12c7536acaaeaa03dc5017f65c41bb33787260819958afed7adc098d11.json": {
+      "mtime_ns": 1794348052785035540,
+      "sha256": "e4ed2fc3502e4113998d7a111cd7a00af66f150671ba2ccfec44934bee988d8e"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/RUN_COMPLETION_20261110T220903192401Z.json": {
+      "mtime_ns": 1794348543193781835,
+      "sha256": "a1e57b381e79d21c8bc892707667fcff8892c2f4813695c7213e1f780179d716"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/analysis/FINAL_ANALYSIS_MANIFEST.json": {
+      "mtime_ns": 1794348982089341548,
+      "sha256": "9e07eaa5a08f962852457bcc91ec70294de7e120c46e0bf4298492734969c20b"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/CONTEXT_CONTROLS.json": {
+      "mtime_ns": 1794348530607219909,
+      "sha256": "aec8909d0f8ea7195b7215550d246be9853f10db9b63fa960b916c8eb299b509"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/DIAGNOSTICS_AND_FAILURE_MODES.md": {
+      "mtime_ns": 1794348530604389740,
+      "sha256": "3ca3c7dfd459dcc4272c05f498a7e5508f356c497a1127d56b9cfb6d5171f870"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/EXECUTION_AND_RESOURCE_REPORT.json": {
+      "mtime_ns": 1794348530611956191,
+      "sha256": "c5cfc9f0b291b4747cd6f70f7b300a969c7780da617e11d69048485719de4aaa"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/EXPERIMENT_REGISTRY.json": {
+      "mtime_ns": 1794348530601600069,
+      "sha256": "e4ed2fc3502e4113998d7a111cd7a00af66f150671ba2ccfec44934bee988d8e"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/LOSING_TRADE_EXAMPLES.json": {
+      "mtime_ns": 1794348530603901170,
+      "sha256": "d54bffde1ee0ad7b8e987fee821968060432d4df587681e3c8653884b11ac4a9"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M01/config.json": {
+      "mtime_ns": 1794348524073258065,
+      "sha256": "08f74eef1b4afb88f56f286d9415dafd37f69e7ab4cca8ac7b06a6d7d09afa11"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M01/cost_breakdown.csv": {
+      "mtime_ns": 1794348524564503668,
+      "sha256": "d3e38f3198ca53559475b9cd3170df968915dfd17414e8fada086256350ac0b4"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M01/daily_nav.parquet": {
+      "mtime_ns": 1794348524120526303,
+      "sha256": "fe8b3c656c63fbed03abcdd78c5e61693379993aaaff28ce83fd19c6e39aa8a5"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M01/diagnostics.json": {
+      "mtime_ns": 1794348524075100929,
+      "sha256": "0a3323e5399ab88ccd5df26ce9377035bc5c456da4b58fe4326061a3387a912a"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M01/physical_orders.parquet": {
+      "mtime_ns": 1794348524495876663,
+      "sha256": "6b7c6326480ba5ac465aeb5ea9f4c002747cbf84fa107f8bc2f0dbd0e9a8a9b6"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M01/signal_counts.csv": {
+      "mtime_ns": 1794348524563322160,
+      "sha256": "c0e5a28a1fd876e93a70957407ca8b33dcfbb5e8452eaff5fb1d0fa46e85c784"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M01/summary.json": {
+      "mtime_ns": 1794348524073894922,
+      "sha256": "345a66ceb9fe3d1e3d2031650a7ad61947311ce0b48aedb8135435f0a8657db9"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M01/terminal_state.json": {
+      "mtime_ns": 1794348524564763203,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M01/trades.parquet": {
+      "mtime_ns": 1794348524326267406,
+      "sha256": "f50b1f2350d653986c364b4aa94eef65dfd570ce10e5828a5f38c96fcbb5f5a3"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M02/config.json": {
+      "mtime_ns": 1794348524792795255,
+      "sha256": "b20d477fffc17547c004f3fb5877fa43af625af3dff9659e9ec33dc3af1ac773"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M02/cost_breakdown.csv": {
+      "mtime_ns": 1794348525149283359,
+      "sha256": "c91a817cacc4423445bdceb564ba46a7379addb591d21a87524dc788f6993093"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M02/daily_nav.parquet": {
+      "mtime_ns": 1794348524807622374,
+      "sha256": "3222e60f81de11bbdefabc6b7eec024906565ec215adea14779b194b7d8e5eaa"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M02/diagnostics.json": {
+      "mtime_ns": 1794348524793914140,
+      "sha256": "520f01ef3fe746bfa72410f9a5dbaeb0106efddd2f916f1fbe671716cecc4141"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M02/physical_orders.parquet": {
+      "mtime_ns": 1794348525087305332,
+      "sha256": "2b81d3c33cf817e6a7dc261bda9b6c95d5cfaf17a9d47c123fd5703ce647d936"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M02/signal_counts.csv": {
+      "mtime_ns": 1794348525147913065,
+      "sha256": "6a000cfdb951b90ac8673a47e3e4ac621b345c9148cd9d721bb661c7d83d3d2d"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M02/summary.json": {
+      "mtime_ns": 1794348524793284283,
+      "sha256": "8d170a1edf665e13ebf0747cac501e110efd472a04761991d6073890d92be78e"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M02/terminal_state.json": {
+      "mtime_ns": 1794348525149526811,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M02/trades.parquet": {
+      "mtime_ns": 1794348524945044297,
+      "sha256": "ce78b066d52b348d027603a53e5a261441ab5cba4c0ab581246783214c22017d"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M03/config.json": {
+      "mtime_ns": 1794348525278745717,
+      "sha256": "c4a9b89b639477809825bb5838448e04ac20a18b928a7d14b5879a52e0391b9c"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M03/cost_breakdown.csv": {
+      "mtime_ns": 1794348525550932179,
+      "sha256": "d197c0f54c6078d75d40aaa15c7255ffaaf812c7e6ec71a80112c450fac55a4c"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M03/daily_nav.parquet": {
+      "mtime_ns": 1794348525293087267,
+      "sha256": "aef4d44ec18c6590459ec95bcbe6f8a57ce89e8dec3fcbe059a7aab044714357"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M03/diagnostics.json": {
+      "mtime_ns": 1794348525280050763,
+      "sha256": "554c7e7ae648a51ad1a1bfd2e21eebfc25a56ac080e0996ca40b08f9fbafe8fe"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M03/physical_orders.parquet": {
+      "mtime_ns": 1794348525491200587,
+      "sha256": "d5d1637704a0591f97c14cd12f9ddb04ebf1afe92f9ccf1d5c191445c9375d80"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M03/signal_counts.csv": {
+      "mtime_ns": 1794348525549833793,
+      "sha256": "1d3f790a236f17be5adfef85c9f8dd5fa49645ec5f82d18cdb0ba31792fcf6d2"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M03/summary.json": {
+      "mtime_ns": 1794348525279184204,
+      "sha256": "3b6d6b54e0b474fccf6fa40b992d738f89d6c0e2e15f8b1361fcd955924ef90c"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M03/terminal_state.json": {
+      "mtime_ns": 1794348525551181589,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M03/trades.parquet": {
+      "mtime_ns": 1794348525389925261,
+      "sha256": "cba7e3c7ba416f7efeab690d241965ed77d6d74bdd1367914f02bf282720d074"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M04/config.json": {
+      "mtime_ns": 1794348525632015371,
+      "sha256": "fc33f1192553099a012d75370147e8c60fb1b78820193a8e044445e4b0301e20"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M04/cost_breakdown.csv": {
+      "mtime_ns": 1794348525813154966,
+      "sha256": "dddb433eaeb23b2ddb2f416c1121d4690b6d6af5c5989bdfc774090f1cb04ce8"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M04/daily_nav.parquet": {
+      "mtime_ns": 1794348525646992612,
+      "sha256": "51dd455e896f4a9dad9a78a7a3247da46cf927597c76468c488b8c74a909305f"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M04/diagnostics.json": {
+      "mtime_ns": 1794348525633742905,
+      "sha256": "ee789c9644bb0a8045c9b05f76d34db2d1566f5660aec91a131f994b0105acd1"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M04/physical_orders.parquet": {
+      "mtime_ns": 1794348525750803491,
+      "sha256": "04c80259b6bb421223cc272393b59fbc63b1b8d24393aa03f78d164e1f15d78b"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M04/signal_counts.csv": {
+      "mtime_ns": 1794348525812352406,
+      "sha256": "c964ad3b954b0ddd57d71576aefea881c2612866639bc78aa2950fe4c7693e1a"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M04/summary.json": {
+      "mtime_ns": 1794348525632425818,
+      "sha256": "c85685e58a1210b90c0bbaba78949ae28b1419b5291cda5fbfb51b6ac0666382"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M04/terminal_state.json": {
+      "mtime_ns": 1794348525813384835,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M04/trades.parquet": {
+      "mtime_ns": 1794348525697323013,
+      "sha256": "4f0212ac3afed11cd6c609877ab097e722e5ac9619a94672b47ba01154c3e3e8"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M05/config.json": {
+      "mtime_ns": 1794348525986626113,
+      "sha256": "0a3a4de05c3291de2681261785aa919acb7030f6e57f9f8835c0bb5a17e77b89"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M05/cost_breakdown.csv": {
+      "mtime_ns": 1794348526334012935,
+      "sha256": "09a7d84ebc7c8d0e5326904c50fdfa525215539c2eec8a753c82c545a3061d9f"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M05/daily_nav.parquet": {
+      "mtime_ns": 1794348526000723961,
+      "sha256": "98bc2aea04b62f5f1099cd2af6d69d6209490ec0242005203cd50fa0928f975d"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M05/diagnostics.json": {
+      "mtime_ns": 1794348525987659917,
+      "sha256": "2f9f97287e049818312fba740d5f45878c43c25e547cf6e4671f2b2e17de5459"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M05/physical_orders.parquet": {
+      "mtime_ns": 1794348526270901481,
+      "sha256": "50af84dc1d57b8652937a7fb4167c8a99326d0b37b859de3ee07ae759bf05dcd"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M05/signal_counts.csv": {
+      "mtime_ns": 1794348526332763762,
+      "sha256": "4db13afe09d84ba14c429c676185a56c0052285ffb85e6d837c28640f7df3a3a"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M05/summary.json": {
+      "mtime_ns": 1794348525987078475,
+      "sha256": "69de7b72349768ddf6ed05c5e32d180be104cc98062aa7374cec4f0230c86438"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M05/terminal_state.json": {
+      "mtime_ns": 1794348526334271427,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M05/trades.parquet": {
+      "mtime_ns": 1794348526131551030,
+      "sha256": "64004b72370f3efbee379e1efdf128650a91f9492df3cc8a441d16098929df83"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M06/config.json": {
+      "mtime_ns": 1794348526511704837,
+      "sha256": "2aa87fb19c03603ea4a1580c1c562509279c8fdcdb6bc29279942579a41b8f2b"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M06/cost_breakdown.csv": {
+      "mtime_ns": 1794348526879345583,
+      "sha256": "4c7625d5335feb2ec6ff6c9c962b833033018451bcad48b62045cc21270306c1"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M06/daily_nav.parquet": {
+      "mtime_ns": 1794348526526387752,
+      "sha256": "6bf65645fad7f260de609a7c8cea73c07b49e6ec5f50d2ab92830fe5f2d71eed"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M06/diagnostics.json": {
+      "mtime_ns": 1794348526512989925,
+      "sha256": "4fd4c30af82f1e1a6925a115f81edf62f8e4416b55988f121def904a74115e39"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M06/physical_orders.parquet": {
+      "mtime_ns": 1794348526807982988,
+      "sha256": "2dfd396d828ef4ce4f89bc50b88821a343a52671afbd519efda0396909801b96"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M06/signal_counts.csv": {
+      "mtime_ns": 1794348526878255072,
+      "sha256": "736480543289b5813d2ab5493b3efc245cbc7782f89071726be54ed9b1b5d2b4"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M06/summary.json": {
+      "mtime_ns": 1794348526512149783,
+      "sha256": "e01f22523a610204503184b14cfa826ba32cd87ed46b71347092217d00815274"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M06/terminal_state.json": {
+      "mtime_ns": 1794348526879708531,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M06/trades.parquet": {
+      "mtime_ns": 1794348526662643916,
+      "sha256": "cf4f87f9cd65367a606adb683170cd649fda2ccb9b817db8607eba445d535c19"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M07/config.json": {
+      "mtime_ns": 1794348527823068684,
+      "sha256": "023afbcfbf2f4cd19533b26fc88ad548eb006e92dd08266640602c985d8229b1"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M07/cost_breakdown.csv": {
+      "mtime_ns": 1794348528596988367,
+      "sha256": "6e882180bfbd8ae5a6dbf4a3a0c4fe9078dc1ee80a58a1aba987128abbc8b967"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M07/daily_nav.parquet": {
+      "mtime_ns": 1794348527849162608,
+      "sha256": "4a0d651182e8e706bcddb3e6c4835f7d8c3c08090ca826affd3861443e77755d"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M07/diagnostics.json": {
+      "mtime_ns": 1794348527825235664,
+      "sha256": "88e288d423ba4539aee7a8a4a585e828cb9497b248293358afaa84d76a824501"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M07/physical_orders.parquet": {
+      "mtime_ns": 1794348528498708914,
+      "sha256": "c87e3010d3e77287f382dc1d7a03ed7bf3889eda549d0b9fd2fa79e060777f18"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M07/signal_counts.csv": {
+      "mtime_ns": 1794348528595098004,
+      "sha256": "884fd08ab6b310f54fe07ffedf5739d79e0d05df3fa1a706b966a53843b770ff"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M07/summary.json": {
+      "mtime_ns": 1794348527823881286,
+      "sha256": "2c190f11aa873a1f8ee6abdaa9157ec3bd76a413f6d3a5d5d23b7ccf52653e5c"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M07/terminal_state.json": {
+      "mtime_ns": 1794348528597407022,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M07/trades.parquet": {
+      "mtime_ns": 1794348528024537117,
+      "sha256": "bdc2b5250394d1d6d21af77e2e64ad0096f23f35eab6e14a66986fb12ceb8404"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M08/config.json": {
+      "mtime_ns": 1794348528736973300,
+      "sha256": "413b9a97c79d4e18e45c86b180a1908df4c332aed28c5eafdc742f077641c881"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M08/cost_breakdown.csv": {
+      "mtime_ns": 1794348529014955264,
+      "sha256": "8aa4a3dd7ee84f771fb839d9d61eb6a4d402e1da423abb82e54bdaa86c464b0b"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M08/daily_nav.parquet": {
+      "mtime_ns": 1794348528752481109,
+      "sha256": "c6d7316e96ab7d789e71ce43b8fe928c377b8560a9d13669bd3e69d476890e86"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M08/diagnostics.json": {
+      "mtime_ns": 1794348528738429634,
+      "sha256": "612f5fe20f1a0d0c40af59b539427734c19cf2c2f04d6caf8a169ee1ee42f53b"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M08/physical_orders.parquet": {
+      "mtime_ns": 1794348528948456906,
+      "sha256": "a58d154b607da25c6accf9e96b19da4092bb285c431ed95a2f26873e25789e0b"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M08/signal_counts.csv": {
+      "mtime_ns": 1794348529013529971,
+      "sha256": "95224fc8591bfab27e6eecd62e8f8f187ff6a01cec8a24afafbfc0ebc36d6ed9"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M08/summary.json": {
+      "mtime_ns": 1794348528737471286,
+      "sha256": "3b9d9a15e3a13893dbcfad6518ed12a92e9b034e57a5b5d01321bfba63fbae3a"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M08/terminal_state.json": {
+      "mtime_ns": 1794348529015223340,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M08/trades.parquet": {
+      "mtime_ns": 1794348528849474515,
+      "sha256": "d377bf0d0c5537e225762550327082103e13777b7816d0a0d0deef4ed13c52b1"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M09/config.json": {
+      "mtime_ns": 1794348529138890612,
+      "sha256": "3c840cd888c3a068a36b917a24d4c3fe018f1e9f8f003a7b99188cc8c044b991"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M09/cost_breakdown.csv": {
+      "mtime_ns": 1794348529456966310,
+      "sha256": "04436b81b1ab469a4a74e881e5508957ebc8d287bdf15071b7ee4af4911b48f7"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M09/daily_nav.parquet": {
+      "mtime_ns": 1794348529153922768,
+      "sha256": "b85dfabecbb6bdc9ebdc29e1c102741e51eb6936ca9f848704bf394d8cd0eb68"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M09/diagnostics.json": {
+      "mtime_ns": 1794348529139874751,
+      "sha256": "3d13ec04ad636b7b6cfd71897c88e98807818f8e36c3aa09e7d635f6035c0ce1"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M09/physical_orders.parquet": {
+      "mtime_ns": 1794348529394020019,
+      "sha256": "c91f2b1e0bc4b4a82b8bc3f792d744d3f386cc0ae721dacc44241903fb9e5401"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M09/signal_counts.csv": {
+      "mtime_ns": 1794348529455714221,
+      "sha256": "2124ee76f6cc17d6d7f2431ccfc6355f1df771821d19e8a16bf59553ed04b762"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M09/summary.json": {
+      "mtime_ns": 1794348529139323100,
+      "sha256": "dc549abc25d990748421f2886027db6db6415d4581d644cf1680c4ff4c08e6ff"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M09/terminal_state.json": {
+      "mtime_ns": 1794348529457664374,
+      "sha256": "2b63f44cbe3e547b6aec4c4c81ff7371e2b140260414c8d62516b07ae547c6f4"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/M09/trades.parquet": {
+      "mtime_ns": 1794348529272032823,
+      "sha256": "155256b1f71ff8053e58b144c7ed55510c02b80ca0340847be64e9ec0e86eb93"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/POLICY_AND_ASSUMPTIONS.md": {
+      "mtime_ns": 1794348530605921779,
+      "sha256": "fb35cbc5c09dc8560b8de8888f41cb093d9e3a41ff1ede83604f4906f49b6b13"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R01/config.json": {
+      "mtime_ns": 1794348529529104841,
+      "sha256": "a59879e2751f0976d233f3f8d173f255e74dc7afd35737670208a2c95ef514b8"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R01/cost_breakdown.csv": {
+      "mtime_ns": 1794348529641948004,
+      "sha256": "2186908097938b6d531a98c8b01d79e57b10c7f098fb38bba586220fe56387df"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R01/daily_nav.parquet": {
+      "mtime_ns": 1794348529543018070,
+      "sha256": "50398a84698b4227d21ccee04af30f3d896ce1f591ce9b19833eeb7ad4dd23e8"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R01/diagnostics.json": {
+      "mtime_ns": 1794348529530127520,
+      "sha256": "df4812b3afc54d7d01df9a1ec480ac3f5b29665efa9504c695701df374f85771"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R01/physical_orders.parquet": {
+      "mtime_ns": 1794348529586063678,
+      "sha256": "1638213c09d65905d5ca36378abc7b7071a9a7c79d15ce846165fcba5c695e68"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R01/signal_counts.csv": {
+      "mtime_ns": 1794348529640477630,
+      "sha256": "3b07c714121427a1d3b48d533709ee58ef61934f29a2d0acaba195d50cb91f32"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R01/summary.json": {
+      "mtime_ns": 1794348529529546870,
+      "sha256": "24180e2f2d628e8424eb63e18ce92dce531b11db35c4717c73f31498d49ecd90"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R01/terminal_state.json": {
+      "mtime_ns": 1794348529642321619,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R01/trades.parquet": {
+      "mtime_ns": 1794348529566121912,
+      "sha256": "40e0347c275d38ce3042e8b539f370d94911bcf7f413abb546061fdb3b432816"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R02/config.json": {
+      "mtime_ns": 1794348529673522772,
+      "sha256": "311a757a68bf0b21d652dd26553c37fde1a975e9fd77ee55140743f6621dde08"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R02/cost_breakdown.csv": {
+      "mtime_ns": 1794348529791974860,
+      "sha256": "7b026ea2b57ed4ecb5bc62feeebbc8987ca0897691c432d605c07216f256935d"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R02/daily_nav.parquet": {
+      "mtime_ns": 1794348529687375503,
+      "sha256": "11e08efa02ff468aba2c2b766c46f48795b13d5d08b68fe9dc6245f32b64fb0e"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R02/diagnostics.json": {
+      "mtime_ns": 1794348529674468371,
+      "sha256": "9f72f88f8d7c8a568350b37ecdff720969340543dc6478cb1a4f53221a92fe62"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R02/physical_orders.parquet": {
+      "mtime_ns": 1794348529736926426,
+      "sha256": "4c1d753ed5e2dfb92a40dc10318ca25900d3e9c899036b83d76c9c494620a7b6"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R02/signal_counts.csv": {
+      "mtime_ns": 1794348529790071872,
+      "sha256": "e8b91e3597bca15fb39892ea64f8e263948f81e9b269304b2bd2bb0e615d635b"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R02/summary.json": {
+      "mtime_ns": 1794348529673964218,
+      "sha256": "e0e1e34b2a33f2bc50c93af9b28d05e6f45a2f94580fc2d7ffe19bdd9942f9ce"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R02/terminal_state.json": {
+      "mtime_ns": 1794348529792213186,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R02/trades.parquet": {
+      "mtime_ns": 1794348529711759934,
+      "sha256": "185f8c8b21e10f91b2eecadcc709956fa2cb0299dff2f172432fef3fe38f1a85"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R03/config.json": {
+      "mtime_ns": 1794348529815742267,
+      "sha256": "cbb7472fa0d11875a42a93f8216579388ad8e8cc7a8e03580c23d6c9696219ef"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R03/cost_breakdown.csv": {
+      "mtime_ns": 1794348529903543310,
+      "sha256": "e569a79672da0c25a6fba34582335f4fd84b21b4fe054d1c02b08d001b89d04a"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R03/daily_nav.parquet": {
+      "mtime_ns": 1794348529829003348,
+      "sha256": "1f9f04c6375705e800c3f1eb60212a57ce5e07ed3ab08a3238de488902613477"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R03/diagnostics.json": {
+      "mtime_ns": 1794348529816653116,
+      "sha256": "819b1ccccb6687ec1066260b580cc9212b3791da350b12280ec681dc53cf2d39"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R03/physical_orders.parquet": {
+      "mtime_ns": 1794348529847612235,
+      "sha256": "57af5a3bd7154333f292622188917438b1092f2f0c065b9b95823ff05ce7ca75"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R03/signal_counts.csv": {
+      "mtime_ns": 1794348529902465340,
+      "sha256": "3c7482358d17708f89e5c1d47dc0075d26254fe203fd68f7fe272da5825a7e98"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R03/summary.json": {
+      "mtime_ns": 1794348529816160880,
+      "sha256": "32027aa4de548242b2026e4b793dee170c3497bb3eef0bd8d1e762f6a58363e8"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R03/terminal_state.json": {
+      "mtime_ns": 1794348529903793219,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R03/trades.parquet": {
+      "mtime_ns": 1794348529838867400,
+      "sha256": "ea950cca95cfc055061aae70f3d7f56dc6e777d2d6d95a9570083894acfca9ac"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R04/config.json": {
+      "mtime_ns": 1794348529926397576,
+      "sha256": "97f8934e113e8d4448f941762df1a8224103268e8f7c7a61999928998a79df57"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R04/cost_breakdown.csv": {
+      "mtime_ns": 1794348530035074150,
+      "sha256": "5a820b7dafd442253e281fb09cd324491cd535021c1aea66121a9758a326da99"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R04/daily_nav.parquet": {
+      "mtime_ns": 1794348529939776820,
+      "sha256": "b5effc1b0994a9790a12c1548299f437762408b47173bd4f5245b6a3cd9c499f"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R04/diagnostics.json": {
+      "mtime_ns": 1794348529927326633,
+      "sha256": "3db85ee1a1f9429eff1d03a413bd595362d7494f39af283322df3938a0acc9e5"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R04/physical_orders.parquet": {
+      "mtime_ns": 1794348529978148895,
+      "sha256": "065fdeeaf0cd72fd2cb1782383988a7175bfdc3833322ccf2b90639e635137cb"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R04/signal_counts.csv": {
+      "mtime_ns": 1794348530033662482,
+      "sha256": "7099e5af4df63bf8508369401ca36f79bed7d59dd29c0f258c23c14c8de0e880"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R04/summary.json": {
+      "mtime_ns": 1794348529926836063,
+      "sha256": "7aabf2a6faf6c24943641270d2df16ff0c4b1edbdffce7d0d96312e1dfc54aa1"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R04/terminal_state.json": {
+      "mtime_ns": 1794348530035296727,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R04/trades.parquet": {
+      "mtime_ns": 1794348529959592881,
+      "sha256": "54fd04ca8b2c6c2a166da1cd11b2998f28123743831f87dd63c0ebc71351c53f"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R05/config.json": {
+      "mtime_ns": 1794348530054738465,
+      "sha256": "9120cf0f676bd33693f73c3a0fd0472ecd6c3255e1cf583f9082f6969917ffd6"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R05/cost_breakdown.csv": {
+      "mtime_ns": 1794348530136981500,
+      "sha256": "f074e8e4b5c0c09be1a6fa2ca3c9ff0cb8e7e6d2b93325a6f8ea65fd5a625afc"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R05/daily_nav.parquet": {
+      "mtime_ns": 1794348530067693138,
+      "sha256": "439e9d44f0e6ba7cc1b09e4ebf641bbfd3d89e6c859372a2ef58c618fbb8b083"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R05/diagnostics.json": {
+      "mtime_ns": 1794348530055611607,
+      "sha256": "9736ac424127b2e4179eb296b277f67e3e776b7ab5e33aeee4fdab7b8c7a65e7"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R05/physical_orders.parquet": {
+      "mtime_ns": 1794348530080338528,
+      "sha256": "f60b478aaa68ff2c17f17c1430074735b0f8fc7540e4bbe2f23117ec6e6d5063"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R05/signal_counts.csv": {
+      "mtime_ns": 1794348530136193897,
+      "sha256": "a034909cb1af1e8be253d99575f15e303880ce967381fa3c3a5141de18826e48"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R05/summary.json": {
+      "mtime_ns": 1794348530055136620,
+      "sha256": "6ee8baa292190b0a75ec64a4e8f5d731bc76d1a1c8d596252ccc6767ee729fe8"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R05/terminal_state.json": {
+      "mtime_ns": 1794348530137201410,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R05/trades.parquet": {
+      "mtime_ns": 1794348530074659856,
+      "sha256": "6d98484ce8802be87698c8d0ab6177118985eb11a878341ff4d5d0ec45cfff0b"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R06/config.json": {
+      "mtime_ns": 1794348530157169467,
+      "sha256": "81c3924e4358ad641a56bac84edc67c3c3231617f0c87c6fcf40ac2e112d44cc"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R06/cost_breakdown.csv": {
+      "mtime_ns": 1794348530266779639,
+      "sha256": "625b4d465f39856bed14d186b739b3d988341851000bda79c009425e049a02bb"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R06/daily_nav.parquet": {
+      "mtime_ns": 1794348530170408173,
+      "sha256": "49c59f2b4a0cd0104dc01f99e7a7628f645e9dcb8cf075c42a812196176679ac"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R06/diagnostics.json": {
+      "mtime_ns": 1794348530158233936,
+      "sha256": "4852bb868a39c94f34cbb89cfe4da51ba87c44ee37afcba1e1e8cffaf3c2e5b1"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R06/physical_orders.parquet": {
+      "mtime_ns": 1794348530207296582,
+      "sha256": "3da8e2b3c5dfbf294cbc8b239c615a3dd41f4d0659637b5ef095336874ca8b6d"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R06/signal_counts.csv": {
+      "mtime_ns": 1794348530265481176,
+      "sha256": "4a46a07eda8b14147dc17fc134b12ee318dd7f181ed0ac2da65b3414bfadbf85"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R06/summary.json": {
+      "mtime_ns": 1794348530157573289,
+      "sha256": "67f3bb634f5ef0ec8d6cb881547717406fd9ce2873640b1915a685e755b6c94d"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R06/terminal_state.json": {
+      "mtime_ns": 1794348530267034923,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R06/trades.parquet": {
+      "mtime_ns": 1794348530189457214,
+      "sha256": "a45be1f39a067213683434ce51e72d26b682f62ad0689ec64a26b5eeb82f7102"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R07/config.json": {
+      "mtime_ns": 1794348530285700309,
+      "sha256": "542b2dd87ff5fbb366fe055d126ef812d6afe64502985882380b49237827baa9"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R07/cost_breakdown.csv": {
+      "mtime_ns": 1794348530367448941,
+      "sha256": "5ec5fcf79bb3f93182497d0341864a0d0ea6932b3e53716d5fcbeb3375a6d347"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R07/daily_nav.parquet": {
+      "mtime_ns": 1794348530298792436,
+      "sha256": "1b8cd1b7e603a1d4c9640147883c3aa7047897472feab22b8da0f40df7b06c49"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R07/diagnostics.json": {
+      "mtime_ns": 1794348530286617658,
+      "sha256": "0e1d47263024c18db8e90cadb39b875154e517e7727ae2f145a344739105c443"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R07/physical_orders.parquet": {
+      "mtime_ns": 1794348530310015659,
+      "sha256": "719b6f017c7059e62e1cb52400fbecb07c217f7e0501478e8c9733e674448e32"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R07/signal_counts.csv": {
+      "mtime_ns": 1794348530366571675,
+      "sha256": "5dc563b0398da320b440fe91a3635187f663a15458b7b47ad888aea45d3048f0"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R07/summary.json": {
+      "mtime_ns": 1794348530286115755,
+      "sha256": "01b2305eeba6eafb19949754f7a8844130d83db3f04fd7a9236730368bb880c2"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R07/terminal_state.json": {
+      "mtime_ns": 1794348530367681935,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R07/trades.parquet": {
+      "mtime_ns": 1794348530304776141,
+      "sha256": "a2cbe148e8f6bb33d43d435d34fef66554e3023323f138433d1cfbee3e3ddc27"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R08/config.json": {
+      "mtime_ns": 1794348530381867656,
+      "sha256": "54f8288a323f8bcd75bc05a51a03d5e377560702d7cdda3e6d084f6a2c778917"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R08/cost_breakdown.csv": {
+      "mtime_ns": 1794348530468700185,
+      "sha256": "1e85718a03cf9785960100ba513c047cbd9ece9494b66c6d98e127ceb38090c4"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R08/daily_nav.parquet": {
+      "mtime_ns": 1794348530395444811,
+      "sha256": "04e5c0fe1f82d57eb003d6859037c8c7165da793d47e710aeab93684719bcaae"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R08/diagnostics.json": {
+      "mtime_ns": 1794348530382920793,
+      "sha256": "8d9622866315893e67b791cfbfcb9c5a2d0a462d1f78f97c9476bdfcc2ba9a8c"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R08/physical_orders.parquet": {
+      "mtime_ns": 1794348530411873802,
+      "sha256": "c9ed1ad4368d1b067557e693327d55806d8d4fb02ba498b124fb81dcf3451a7e"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R08/signal_counts.csv": {
+      "mtime_ns": 1794348530467812252,
+      "sha256": "7ff71d0b8e72b83186e84c72ee5ffe96b215ce6de1ac7271ded707f327ed4c26"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R08/summary.json": {
+      "mtime_ns": 1794348530382343392,
+      "sha256": "7ab297fe854115c62431a39e4df9133f1de117d1cf4e00cef00d57e92e458725"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R08/terminal_state.json": {
+      "mtime_ns": 1794348530468957511,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R08/trades.parquet": {
+      "mtime_ns": 1794348530404107898,
+      "sha256": "15188208c743167d7e0a4d76a95b8ed40fdfa14d5b201fc9420dd4ca12ffefa4"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R09/config.json": {
+      "mtime_ns": 1794348530487528816,
+      "sha256": "d87b7ce74ef5cabfa57c8b28d0e3f61ce0ed1835ac9f50b977ebda8e7e0f33fc"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R09/cost_breakdown.csv": {
+      "mtime_ns": 1794348530589161840,
+      "sha256": "7bca3bed6dc974bd040c2a9e7b3bf02202af33fc4028c3c4d100cba4b27b4ae0"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R09/daily_nav.parquet": {
+      "mtime_ns": 1794348530500573528,
+      "sha256": "615c502732b609f7149bedca2c0e1e060e10fb3820ac516e391af176addc8f98"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R09/diagnostics.json": {
+      "mtime_ns": 1794348530488446873,
+      "sha256": "07f40fa0270574641b6c687f84858b2bfa200cef8297d9fba038ee00b0162d6d"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R09/physical_orders.parquet": {
+      "mtime_ns": 1794348530529312585,
+      "sha256": "6709763aa09a4f26c0d26c5ea51da15d35b81b96b2c2247db8d4bcf620372aa0"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R09/signal_counts.csv": {
+      "mtime_ns": 1794348530587977499,
+      "sha256": "7875fc607b8978c4cd121e2b4b2c891a9ee6aa3dffe885ee4c03ec2930d0824b"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R09/summary.json": {
+      "mtime_ns": 1794348530487931013,
+      "sha256": "0c4cfbae2c4428925d49219475a907297f1dbdbf0a00cb2c593e11d1c4e99c93"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R09/terminal_state.json": {
+      "mtime_ns": 1794348530589416124,
+      "sha256": "0dd4e0a4842854fa863aec8c9cd7c20e1548cf253b74923d03ce687b26d2e059"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/R09/trades.parquet": {
+      "mtime_ns": 1794348530515221861,
+      "sha256": "89a7b8a3d4ebf281395d6ea49dbcd245922bca90f28b6e3640664e18f8b45d1e"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/REUSE_AND_RUNTIME_PLAN.md": {
+      "mtime_ns": 1794348530605109844,
+      "sha256": "83c73ecad7d990c1335e09b62df3fc72f7532b63d6b88608348b2baed7e24fef"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/SHARED_FEATURE_CACHE_MANIFEST.json": {
+      "mtime_ns": 1794348530602154053,
+      "sha256": "97bc27a34d728894a8d06efc0acd563dfb6b1ddcfa82f68e67d6815ab2dc8214"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/SIGNAL_QUALITY_18.csv": {
+      "mtime_ns": 1794348530600988753,
+      "sha256": "561309fd101b82676b7cc3c23f3e1ceee956033e55ec29692a40351829d535f3"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/SUMMARY_18_STRATEGIES.csv": {
+      "mtime_ns": 1794348530599381924,
+      "sha256": "5aca889d1361330e7ceba66a1ea4e55443aec0e3b57a278fce147fafb412939f"
+    },
+    "trading/track2/rapid_v1/runs/rapid-v1-defaults-20261110-r1/results/manifest.json": {
+      "mtime_ns": 1794348530639766816,
+      "sha256": "7fe16983dbb7a77606020ce80dbd27fbc5253b53b3eb86d90ea1fe024281740f"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220018789277Z/VALIDATION_RECEIPTS.json": {
+      "mtime_ns": 1794348027755782454,
+      "sha256": "8ff59937edeffc592c61f32aa48333ba7ec086b6d30d4748a45051f240c2762c"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220018789277Z/pytest.json": {
+      "mtime_ns": 1794348022406337067,
+      "sha256": "47c8da3be649aac7eea6f1a858a6dfbb6bab7c61d9bd6022554970a2b297203f"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220018789277Z/pytest.stderr.txt": {
+      "mtime_ns": 1794348022405747253,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220018789277Z/pytest.stdout.txt": {
+      "mtime_ns": 1794348022405621508,
+      "sha256": "159c3db64283fbae1a9f11775c04e4f1a3929748fcf8fb54677953802bcd9841"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220018789277Z/ruff.json": {
+      "mtime_ns": 1794348022428811051,
+      "sha256": "e4829216850d4fe140cae3f84f5b3c32b7510814cffe851019a734fe6eca69f9"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220018789277Z/ruff.stderr.txt": {
+      "mtime_ns": 1794348022428361608,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220018789277Z/ruff.stdout.txt": {
+      "mtime_ns": 1794348022428258987,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220018789277Z/types.json": {
+      "mtime_ns": 1794348027753714316,
+      "sha256": "97460cc76975c8476bcf18b4a46f707b8857db6205f64712ce4c0053781b9939"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220018789277Z/types.stderr.txt": {
+      "mtime_ns": 1794348027753061588,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220018789277Z/types.stdout.txt": {
+      "mtime_ns": 1794348027752953800,
+      "sha256": "b136a5011ce8dadb764b135491254d07531ea3f3efe1d4e28d0115cdbd161a7b"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220055597939Z/VALIDATION_RECEIPTS.json": {
+      "mtime_ns": 1794348065671277757,
+      "sha256": "540224047f214263b270ce48019e102b349d3a49190ecda5aa21da463be351c4"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220055597939Z/pytest.json": {
+      "mtime_ns": 1794348059847186914,
+      "sha256": "627a35b46b05f325667336b2e16ff03458fecd3f759fbadd4dfaf488f0192abf"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220055597939Z/pytest.stderr.txt": {
+      "mtime_ns": 1794348059846299028,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220055597939Z/pytest.stdout.txt": {
+      "mtime_ns": 1794348059846147533,
+      "sha256": "c50cf94eb7ac013a9e28bd3480b9c381d63b7a8e3c46b1d9909a8bf7fd110c12"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220055597939Z/ruff.json": {
+      "mtime_ns": 1794348059931402962,
+      "sha256": "a429c92fd05e2245aa6a09d7aa13ac62462a5b7f05d24be3162fa698d2c58822"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220055597939Z/ruff.stderr.txt": {
+      "mtime_ns": 1794348059930934686,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220055597939Z/ruff.stdout.txt": {
+      "mtime_ns": 1794348059930844731,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220055597939Z/types.json": {
+      "mtime_ns": 1794348065669114080,
+      "sha256": "362a9961a8e212ad739c16e58043c0949a4c2eb57f8285c2665605bc3542d318"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220055597939Z/types.stderr.txt": {
+      "mtime_ns": 1794348065668461686,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220055597939Z/types.stdout.txt": {
+      "mtime_ns": 1794348065668346107,
+      "sha256": "ea4440ee321eba95878781d90817702ce088042d06ec896ec9070ff0b9fa03ec"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220154201470Z/VALIDATION_RECEIPTS.json": {
+      "mtime_ns": 1794348128177359715,
+      "sha256": "31231c65f85cd72414bd74e0139841fc498c0263be9eb4b8d15c063aa9d4db4c"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220154201470Z/pytest.json": {
+      "mtime_ns": 1794348118936423981,
+      "sha256": "b076f3b0b9e72f8a6a6919e4b408a162c57543918fc0662f1af7b2de5612019b"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220154201470Z/pytest.stderr.txt": {
+      "mtime_ns": 1794348118935758837,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220154201470Z/pytest.stdout.txt": {
+      "mtime_ns": 1794348118935609925,
+      "sha256": "73442e85c459203dc5157dd281e9cfacc6057f0e31d8955badde18f6b8144d24"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220154201470Z/ruff.json": {
+      "mtime_ns": 1794348118970171748,
+      "sha256": "2912803692ea3d31f17e41000aef1c261cdb8334068aa1269525aef02b27f9b7"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220154201470Z/ruff.stderr.txt": {
+      "mtime_ns": 1794348118969671098,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220154201470Z/ruff.stdout.txt": {
+      "mtime_ns": 1794348118969564477,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220154201470Z/types.json": {
+      "mtime_ns": 1794348128174240196,
+      "sha256": "3c4d06024382846fd583fa79aae07cf1c79c36f5ad9d2352c38211297cda19c5"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220154201470Z/types.stderr.txt": {
+      "mtime_ns": 1794348128173315478,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/20261110T220154201470Z/types.stdout.txt": {
+      "mtime_ns": 1794348128173193149,
+      "sha256": "284c6510071bed9f20192ad00ec656070f40236900e64571457f43d5cf686c68"
+    },
+    "trading/track2/rapid_v1/test_receipts/INITIAL_OWNED_TYPES.json": {
+      "mtime_ns": 1794345700974846080,
+      "sha256": "8e53ee6bc22c4faf844030f4a056b02a3ff78fb4575fdf9fa996b722a5b0d1d4"
+    },
+    "trading/track2/rapid_v1/test_receipts/full_repo_20261110/pylance_basic.returncode.txt": {
+      "mtime_ns": 1794348423576490252,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    "trading/track2/rapid_v1/test_receipts/full_repo_20261110/pylance_basic.stderr.txt": {
+      "mtime_ns": 1794348272264987025,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/full_repo_20261110/pylance_basic.stdout.json": {
+      "mtime_ns": 1794348423566536952,
+      "sha256": "cddcd71ffac8ea4cce2897bfff447fb0db66642d069de3da06b74d9882381dd6"
+    },
+    "trading/track2/rapid_v1/test_receipts/full_repo_20261110/pylance_basic_final.returncode.txt": {
+      "mtime_ns": 1794348668941761955,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    "trading/track2/rapid_v1/test_receipts/full_repo_20261110/pylance_basic_final.stderr.txt": {
+      "mtime_ns": 1794348549163593277,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/full_repo_20261110/pylance_basic_final.stdout.json": {
+      "mtime_ns": 1794348668931603077,
+      "sha256": "9834af4a931a93badfc67f584c5025a18558eae9f31e6285592bee904f96a30f"
+    },
+    "trading/track2/rapid_v1/test_receipts/full_repo_20261110/pyright.stderr.txt": {
+      "mtime_ns": 1794348068464599514,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trading/track2/rapid_v1/test_receipts/full_repo_20261110/pyright.stdout.json": {
+      "mtime_ns": 1794348221337605633,
+      "sha256": "2f8dbd2dc95105cf15605aad8f880697e4866ec27addc1242c32d0907254d348"
+    }
+  },
+  "git_head": "8061483cb65d03264a7836b8b882123f67cbe4ad",
+  "git_status": "## feat/track-a-data-intake...origin/feat/track-a-data-intake\n?? HF20_Track2_Directional_Strategy_Research_Menu_Micro_and_Retail_2026-11-10.md\n?? HF20_Track2_Rapid_Backtest_Engine_All18_Micro_Retail_Codex_Prompt_2026-11-10.md\n?? replication/\n?? reports/codex_sessions/2026-11-08_180500_track2_stage012_infrastructure.md\n?? reports/codex_sessions/2026-11-09_005156_track2_signal_layer_completion.md\n?? reports/codex_sessions/2026-11-09_032258_track2_stage35_partial_gate.md\n?? reports/codex_sessions/2026-11-09_082800_track2_stage35_completion_v2.md\n?? reports/codex_sessions/2026-11-09_151724_track2_stage35_completion_v3.md\n?? reports/codex_sessions/2026-11-09_204000_track2_final_backtest_v4_hold.md\n?? reports/codex_sessions/2026-11-10_124734_track2_v5_transport_recovery.md\n?? reports/codex_sessions/2026-11-10_171400_track2_rapid_v1_all18.md\n?? reports/codex_sessions/2026-11-10_track2_v5_next_valid_bar.md\n?? src/lstm_data/trading/\n?? tests/track2_rapid_v1/\n?? tests/track2_stage012/\n?? tests/track2_stage35/\n?? tests/track2_stage35_completion_v2/\n?? tests/track2_stage35_completion_v3/\n?? tests/track2_stage35_v4/\n?? tests/track2_stage35_v5/\n?? trading/\n"
+}

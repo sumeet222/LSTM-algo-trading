@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETE_SOURCE_ONLY",
+  "policy": "last60 scheduled matured slot movements,min40,strict known missingness;oldStage35 recurrence .94",
+  "reference_sha256": "5c453193572a2e428c561249c842c90a3d36041736183195f3e1dc6a350b6681",
+  "source_hash": "459068b05ba3283b2efe339146f4e1e0f527bdb5e9c8504ec9611c4c7b15407f",
+  "counts": {
+    "rows": 140280,
+    "forecasts": 131111,
+    "equal": 128192,
+    "s2c": 128192,
+    "rolling": 87557,
+    "ewma": 87557,
+    "matched": 87557
+  },
+  "storage": "control columns in daily signal-only partitions",
+  "frontier": "endpoint+2minutes STRICTLY beforedecision",
+  "own_universe_vs_matched": "separate columns;EQUAL/S2C not gated oncontrols",
+  "future_targets_in_signal_output": false
+}

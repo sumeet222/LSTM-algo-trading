@@ -1,0 +1,66 @@
+{
+  "MRK_source": "be56dad86011dc507fe8279c7910e813d1538371d2c196377abbdd487664738e",
+  "OGN_source": "f3cb7627b3147fff7b5b5cbcc7fd9f4306b137e0495c66fa81ca793a57b7814b",
+  "rows": [
+    {
+      "CIL_paid": true,
+      "OGN_fill": {
+        "commission": "0.008",
+        "decision": 27045453,
+        "effective": 27045454,
+        "external_price": "34.24",
+        "impact": "0.08",
+        "order_id": "OGN:27045453",
+        "posted": 27045457,
+        "print_slippage": "0.08",
+        "raw_open": "34.28",
+        "shares": "-4",
+        "source": "SEALED_OGN_SIP;CONDITIONAL_DISTRIBUTION_POLICY",
+        "status": "SPECIAL_OBSERVED",
+        "strategy_id": "M01",
+        "ticker": 20
+      },
+      "balance_residual": "0",
+      "borrow": "0",
+      "entitlement": {
+        "fraction": "0.3",
+        "whole": "4"
+      },
+      "no_price_before_receipt": true,
+      "seed_MRK_shares": "43",
+      "signed_special_cash": "147.212",
+      "strategy": "M01"
+    },
+    {
+      "CIL_paid": true,
+      "OGN_fill": {
+        "commission": "1.00",
+        "decision": 27045453,
+        "effective": 27045454,
+        "external_price": "34.32",
+        "impact": "0.08",
+        "order_id": "OGN:27045453",
+        "posted": 27045457,
+        "print_slippage": "0.08",
+        "raw_open": "34.28",
+        "shares": "4",
+        "source": "SEALED_OGN_SIP;CONDITIONAL_DISTRIBUTION_POLICY",
+        "status": "SPECIAL_OBSERVED",
+        "strategy_id": "R01",
+        "ticker": 20
+      },
+      "balance_residual": "2E-22",
+      "borrow": "1.560465734398782343987823440",
+      "entitlement": {
+        "fraction": "-0.3",
+        "whole": "-4"
+      },
+      "no_price_before_receipt": true,
+      "seed_MRK_shares": "-43",
+      "signed_special_cash": "-148.54",
+      "strategy": "R01"
+    }
+  ],
+  "scope": "Seeded bounded share/fee/claim witness, separate from funded strategy selection",
+  "status": "PASS"
+}

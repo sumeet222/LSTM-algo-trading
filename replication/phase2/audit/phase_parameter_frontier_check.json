@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "timing": "Supplemental post-prefit completeness audit while real fits were already running. NOT part of prefit64.",
+  "started_utc": "2026-11-02T23:49:38.067587+00:00",
+  "completed_utc": "2026-11-02T23:49:38.085828+00:00",
+  "no_model_constructed_or_fit": true,
+  "no_inference_or_input_access": true,
+  "no_real_data_or_outcomes_accessed": true,
+  "frozen_code_tests_unchanged": true,
+  "hashes_before": {
+    "replication/phase2/code/model.py": "ab42cccea260701875d58945e9bc1f74258dea833e76d182ffb9c288b99bfb73",
+    "replication/phase2/code/features.py": "a48720cbf321c6168b2dea3090175d1a215865fc09f3b31ed62d16e21662521a",
+    "replication/phase2/tests/test_model.py": "5a6f093f1f288323940444af8391a2e8c04c2d4a2eb666a31255c85c30c02c27",
+    "replication/phase2/tests/test_frontiers_review.py": "8fd7a1e31384ef07254bbf8f280b7301f86d44ddf57851d3e29b8860946448e3",
+    "replication/phase2/tests/test_evaluation.py": "d1abe7d5d0fb43eae4c0c8a8dadaad846a881aa55c42a8dc8c44c3c71670a0fe"
+  },
+  "hashes_after": {
+    "replication/phase2/code/model.py": "ab42cccea260701875d58945e9bc1f74258dea833e76d182ffb9c288b99bfb73",
+    "replication/phase2/code/features.py": "a48720cbf321c6168b2dea3090175d1a215865fc09f3b31ed62d16e21662521a",
+    "replication/phase2/tests/test_model.py": "5a6f093f1f288323940444af8391a2e8c04c2d4a2eb666a31255c85c30c02c27",
+    "replication/phase2/tests/test_frontiers_review.py": "8fd7a1e31384ef07254bbf8f280b7301f86d44ddf57851d3e29b8860946448e3",
+    "replication/phase2/tests/test_evaluation.py": "d1abe7d5d0fb43eae4c0c8a8dadaad846a881aa55c42a8dc8c44c3c71670a0fe"
+  },
+  "existing_coverage_review": {
+    "test_frontiers_review.py::test_future_source_and_labels_leave_prior_features_and_phase_recipe_invariant": "Future source/R perturbation checks prior features and recipe, not target scale or auxiliary weights.",
+    "test_evaluation.py::test_future_oos_labels_cannot_change_frozen_coefficients": "Future A perturbation checks frozen C3 and decoded forecasts, not target scale or auxiliary weights.",
+    "test_model.py": "Scale arithmetic, auxiliary hierarchy and inference label/mask invariance are covered separately; no direct external-future perturbation of phase scale/weights found."
+  },
+  "fixture": {
+    "lawful_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "external_future_indices": [
+      4,
+      5,
+      6
+    ],
+    "sessions": [
+      "A",
+      "B",
+      "B",
+      "C",
+      "D",
+      "D",
+      "E"
+    ],
+    "future_R_before": 0.005,
+    "future_R_after": "1000000 through 1000059",
+    "future_mask_after": false,
+    "future_auxiliary_after": "NaN"
+  },
+  "expected": {
+    "s": 0.02,
+    "S": 3,
+    "S_N": 2,
+    "Z": 0.875,
+    "auxiliary_origin_masses": [
+      0,
+      0.14285714285714285,
+      0.2857142857142857,
+      0.5714285714285714
+    ],
+    "weight_max_absolute_change": 0,
+    "phase_arrays_unchanged": true
+  },
+  "actual": {
+    "s_before": 0.02,
+    "s_after": 0.02,
+    "S_before": 3,
+    "S_after": 3,
+    "S_N_before": 2,
+    "S_N_after": 2,
+    "Z_before": 0.875,
+    "Z_after": 0.875,
+    "origin_masses_before": [
+      0.0,
+      0.14285714285714285,
+      0.28571428571428575,
+      0.5714285714285715
+    ],
+    "origin_masses_after": [
+      0.0,
+      0.14285714285714285,
+      0.28571428571428575,
+      0.5714285714285715
+    ],
+    "weight_max_absolute_change": 0.0,
+    "weights_hash_before": "06dca967ca38073b4fdd82b00bbc28a0ce302de16e9539140631a036d9e21a27",
+    "weights_hash_after": "06dca967ca38073b4fdd82b00bbc28a0ce302de16e9539140631a036d9e21a27",
+    "phase_arrays_unchanged": true,
+    "weights_bitwise_identical": true
+  },
+  "deliberately_unlawful_unsliced_synthetic_sensitivity_control": {
+    "s_before": 0.01,
+    "s_after": 0.04,
+    "Z_before": 0.9374999999999998,
+    "Z_after": 0.4375,
+    "purpose": "Demonstrate that the changed external cells affect estimators if wrongly admitted; no fit performed."
+  },
+  "limitation": "Fixed lawful slice verifies estimator input isolation. It does not replace role-generation, maturity, real-run or causal-vintage tests.",
+  "exact_executed_source": "from datetime import datetime, timezone\nimport hashlib\nimport json\nfrom pathlib import Path\nimport sys\nroot = Path(sys.argv[1]).resolve()\nsys.path.insert(0, str(root / \"replication/phase2/code\"))\nimport boundary\nboundary.install()\nimport numpy as np\nimport model\nstarted = datetime.now(timezone.utc).isoformat()\nfiles = [\"replication/phase2/code/model.py\", \"replication/phase2/code/features.py\",\n         \"replication/phase2/tests/test_model.py\", \"replication/phase2/tests/test_frontiers_review.py\",\n         \"replication/phase2/tests/test_evaluation.py\"]\nhashes_before = {name: hashlib.sha256((root/name).read_bytes()).hexdigest() for name in files}\nsessions = np.array([\"A\", \"B\", \"B\", \"C\", \"D\", \"D\", \"E\"])\nlawful = np.array([0, 1, 2, 3], dtype=np.int64)\nfuture = np.array([4, 5, 6], dtype=np.int64)\nreturns = np.repeat(np.array([.01, .02, .02, .04, .005, .005, .005])[:, None], 20, axis=1)\novernight = np.array([False, True, True, True, True, True, True])\nmask = np.ones((7, 20), dtype=np.bool_)\nmask[0] = False\nmask[1, 10:] = False\nauxiliary = np.repeat((returns/3)[..., None], 3, axis=2)\nauxiliary[~mask] = np.nan\ndef forbidden_inputs(indices):\n    raise AssertionError(\"No windows or inference permitted in this parameter-only check.\")\ndef snapshot():\n    role_sessions = sessions[lawful].tolist()\n    scale = model.fit_scale(returns[lawful], role_sessions)\n    phase = model.PhaseData(role_sessions, returns[lawful], overnight[lawful],\n                            auxiliary[lawful], mask[lawful], forbidden_inputs, scale)\n    weights = model.auxiliary_weights(phase.sessions, phase.overnight, phase.auxiliary_mask)\n    return phase, weights\nbefore_phase, before = snapshot()\nunsliced_s_before = model.fit_scale(returns, sessions.tolist())\nunsliced_z_before = model.auxiliary_weights(sessions.tolist(), overnight, mask).mass\nreturns[future] = 1_000_000 + np.arange(60, dtype=np.float64).reshape(3, 20)\nmask[future] = False\nauxiliary[future] = np.nan\nafter_phase, after = snapshot()\nunsliced_s_after = model.fit_scale(returns, sessions.tolist())\nunsliced_z_after = model.auxiliary_weights(sessions.tolist(), overnight, mask).mass\nexpected_weights = np.zeros((4, 20), dtype=np.float64)\nexpected_weights[1, :10] = 1/70\nexpected_weights[2] = 1/70\nexpected_weights[3] = 1/35\nassert before_phase.scale == after_phase.scale == .02\nassert before.mass == after.mass == 7/8\nassert before.sessions == after.sessions == 3\nassert before.overnight_sessions == after.overnight_sessions == 2\nnp.testing.assert_array_equal(before_phase.signed_returns, after_phase.signed_returns)\nnp.testing.assert_array_equal(before_phase.auxiliary_returns, after_phase.auxiliary_returns)\nnp.testing.assert_array_equal(before_phase.auxiliary_mask, after_phase.auxiliary_mask)\nnp.testing.assert_array_equal(before.base, after.base)\nnp.testing.assert_array_equal(before.values, after.values)\nnp.testing.assert_allclose(before.values, expected_weights, atol=1e-15, rtol=1e-15)\nassert unsliced_s_before != unsliced_s_after\nassert unsliced_z_before != unsliced_z_after\nhashes_after = {name: hashlib.sha256((root/name).read_bytes()).hexdigest() for name in files}\nassert hashes_before == hashes_after\ncompleted = datetime.now(timezone.utc).isoformat()\nreceipt = {\n    \"status\": \"PASS\",\n    \"timing\": \"Supplemental post-prefit completeness audit while real fits were already running. NOT part of prefit64.\",\n    \"started_utc\": started, \"completed_utc\": completed,\n    \"no_model_constructed_or_fit\": True, \"no_inference_or_input_access\": True,\n    \"no_real_data_or_outcomes_accessed\": True,\n    \"frozen_code_tests_unchanged\": True,\n    \"hashes_before\": hashes_before, \"hashes_after\": hashes_after,\n    \"existing_coverage_review\": {\n        \"test_frontiers_review.py::test_future_source_and_labels_leave_prior_features_and_phase_recipe_invariant\":\n        \"Future source/R perturbation checks prior features and recipe, not target scale or auxiliary weights.\",\n        \"test_evaluation.py::test_future_oos_labels_cannot_change_frozen_coefficients\":\n        \"Future A perturbation checks frozen C3 and decoded forecasts, not target scale or auxiliary weights.\",\n        \"test_model.py\":\n        \"Scale arithmetic, auxiliary hierarchy and inference label/mask invariance are covered separately; no direct external-future perturbation of phase scale/weights found.\"\n    },\n    \"fixture\": {\"lawful_indices\": lawful.tolist(), \"external_future_indices\": future.tolist(),\n                \"sessions\": sessions.tolist(), \"future_R_before\": .005,\n                \"future_R_after\": \"1000000 through 1000059\",\n                \"future_mask_after\": False, \"future_auxiliary_after\": \"NaN\"},\n    \"expected\": {\"s\": .02, \"S\": 3, \"S_N\": 2, \"Z\": .875,\n                 \"auxiliary_origin_masses\": [0, 1/7, 2/7, 4/7],\n                 \"weight_max_absolute_change\": 0, \"phase_arrays_unchanged\": True},\n    \"actual\": {\"s_before\": before_phase.scale, \"s_after\": after_phase.scale,\n               \"S_before\": before.sessions, \"S_after\": after.sessions,\n               \"S_N_before\": before.overnight_sessions, \"S_N_after\": after.overnight_sessions,\n               \"Z_before\": before.mass, \"Z_after\": after.mass,\n               \"origin_masses_before\": before.values.sum(axis=1).tolist(),\n               \"origin_masses_after\": after.values.sum(axis=1).tolist(),\n               \"weight_max_absolute_change\": float(np.max(np.abs(before.values-after.values))),\n               \"weights_hash_before\": hashlib.sha256(before.values.tobytes()).hexdigest(),\n               \"weights_hash_after\": hashlib.sha256(after.values.tobytes()).hexdigest(),\n               \"phase_arrays_unchanged\": True, \"weights_bitwise_identical\": True},\n    \"deliberately_unlawful_unsliced_synthetic_sensitivity_control\": {\n        \"s_before\": unsliced_s_before, \"s_after\": unsliced_s_after,\n        \"Z_before\": unsliced_z_before, \"Z_after\": unsliced_z_after,\n        \"purpose\": \"Demonstrate that the changed external cells affect estimators if wrongly admitted; no fit performed.\"\n    },\n    \"limitation\": \"Fixed lawful slice verifies estimator input isolation. It does not replace role-generation, maturity, real-run or causal-vintage tests.\",\n    \"exact_executed_source\": audit_source\n}\naudit = root/\"replication/phase2/audit\"\nwith (audit/\"phase_parameter_frontier_check.json\").open(\"x\", encoding=\"utf-8\") as stream:\n    json.dump(receipt, stream, indent=2, allow_nan=False)\n    stream.write(\"\\n\")\nsummary = [\n    \"# Supplemental phase-parameter frontier check\", \"\",\n    \"**PASS. This post-prefit completeness verification ran while real fits were already running. It was NOT part of the prefit64 fixtures.**\", \"\",\n    \"Existing inspected fixtures perturb future labels for feature/recipe frontiers and frozen calibration. No direct before/after external-future perturbation of phase target scale and auxiliary weights was found.\", \"\",\n    \"Only synthetic parameter arrays were used. No model was constructed, fit or evaluated, no real data/outcomes were opened, and no numerical code or test file was edited.\", \"\",\n    \"| Quantity | Expected | Before | After |\", \"|---|---:|---:|---:|\",\n    f\"| s_phase | .02 | {before_phase.scale} | {after_phase.scale} |\",\n    f\"| S | 3 | {before.sessions} | {after.sessions} |\",\n    f\"| S_N | 2 | {before.overnight_sessions} | {after.overnight_sessions} |\",\n    f\"| Z | .875 | {before.mass} | {after.mass} |\",\n    \"| Maximum auxiliary-weight change | 0 | 0 | 0 |\", \"\",\n    \"Expected supported origin masses are [0,1/7,2/7,4/7]. All phase labels, masks, base weights and normalized weights are unchanged; normalized weights are byte-identical. Future R changes from .005 to 1,000,000 through 1,000,059; future support is removed and auxiliary labels become NaN. Only lawful indices [0,1,2,3] enter estimators.\", \"\",\n    f\"A deliberately unsliced synthetic sensitivity control changes s from {unsliced_s_before} to {unsliced_s_after} and Z from {unsliced_z_before} to {unsliced_z_after}. This confirms the perturbation matters if future rows are wrongly admitted. No model fit is involved.\", \"\",\n    \"This checks admitted-role API isolation. It does not replace role-generation/maturity tests or retrospectively change the prefit fixture count.\", \"\",\n    f\"Executed UTC: {started} through {completed}. JSON contains expected/actual results, exact executed source and identical before/after frozen source hashes.\", \"\",\n    \"Reproduction: from a clean directory use the existing interpreter with -I, define audit_source as this source text and execute it with the repository path as argv[1]. Output creation is exclusive and will refuse to overwrite this completed receipt.\", \"\",\n    chr(96)*3+\"python\", audit_source.rstrip(), chr(96)*3\n]\nwith (audit/\"phase_parameter_frontier_check.md\").open(\"x\", encoding=\"utf-8\") as stream:\n    stream.write(\"\\n\".join(summary)+\"\\n\")\nprint(json.dumps({\"status\":\"PASS\",\"s\":before_phase.scale,\"Z\":before.mass,\"weight_change\":0.0,\n                  \"unsliced_s\":[unsliced_s_before,unsliced_s_after],\n                  \"unsliced_Z\":[unsliced_z_before,unsliced_z_after],\n                  \"frozen_files_unchanged\":True,\"timing\":\"post-prefit, not part of64\"}))\n"
+}

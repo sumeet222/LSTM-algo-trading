@@ -1,0 +1,95 @@
+{
+  "mode": "REAL_SOURCE_SIGNAL_AND_DIMENSIONLESS_SHADOW_ONLY",
+  "signal_partition_sha256": "35771345c5b2b60fc009499d6211ce752dfcc92b50235842bdff2c393b8629a2",
+  "source_fixture": "RAW_ACTION_SOURCE_FIXTURES.json",
+  "candidate_weights": [
+    {
+      "ticker": "COP",
+      "arm": "EQUAL",
+      "direction": -1,
+      "shadow_nav_fraction": 0.1,
+      "magnitude_c3": 0.007839395056660911,
+      "control_latest_available": "2024-01-05T19:32:00+00:00",
+      "issued_at": "2024-01-08 15:32:00+00:00",
+      "first_entry_marker": "2024-01-08 15:33:00+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "arm": "EQUAL",
+      "direction": -1,
+      "shadow_nav_fraction": 0.1,
+      "magnitude_c3": 0.005998482144854215,
+      "control_latest_available": "2024-01-05T19:32:00+00:00",
+      "issued_at": "2024-01-08 15:32:00+00:00",
+      "first_entry_marker": "2024-01-08 15:33:00+00:00"
+    },
+    {
+      "ticker": "COP",
+      "arm": "S2C_RISK",
+      "direction": -1,
+      "shadow_nav_fraction": 0.09581258773243176,
+      "magnitude_c3": 0.007839395056660911,
+      "control_latest_available": "2024-01-05T19:32:00+00:00",
+      "issued_at": "2024-01-08 15:32:00+00:00",
+      "first_entry_marker": "2024-01-08 15:33:00+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "arm": "S2C_RISK",
+      "direction": -1,
+      "shadow_nav_fraction": 0.1,
+      "magnitude_c3": 0.005998482144854215,
+      "control_latest_available": "2024-01-05T19:32:00+00:00",
+      "issued_at": "2024-01-08 15:32:00+00:00",
+      "first_entry_marker": "2024-01-08 15:33:00+00:00"
+    },
+    {
+      "ticker": "COP",
+      "arm": "ROLLING_RISK",
+      "direction": -1,
+      "shadow_nav_fraction": 0.1,
+      "magnitude_c3": 0.007839395056660911,
+      "control_latest_available": "2024-01-05T19:32:00+00:00",
+      "issued_at": "2024-01-08 15:32:00+00:00",
+      "first_entry_marker": "2024-01-08 15:33:00+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "arm": "ROLLING_RISK",
+      "direction": -1,
+      "shadow_nav_fraction": 0.0978115494943768,
+      "magnitude_c3": 0.005998482144854215,
+      "control_latest_available": "2024-01-05T19:32:00+00:00",
+      "issued_at": "2024-01-08 15:32:00+00:00",
+      "first_entry_marker": "2024-01-08 15:33:00+00:00"
+    },
+    {
+      "ticker": "COP",
+      "arm": "EWMA_RISK",
+      "direction": -1,
+      "shadow_nav_fraction": 0.09094631335349852,
+      "magnitude_c3": 0.007839395056660911,
+      "control_latest_available": "2024-01-05T19:32:00+00:00",
+      "issued_at": "2024-01-08 15:32:00+00:00",
+      "first_entry_marker": "2024-01-08 15:33:00+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "arm": "EWMA_RISK",
+      "direction": -1,
+      "shadow_nav_fraction": 0.1,
+      "magnitude_c3": 0.005998482144854215,
+      "control_latest_available": "2024-01-05T19:32:00+00:00",
+      "issued_at": "2024-01-08 15:32:00+00:00",
+      "first_entry_marker": "2024-01-08 15:33:00+00:00"
+    }
+  ],
+  "capital_instantiated": false,
+  "orders": 0,
+  "fills": 0,
+  "positions": 0,
+  "cash_postings": 0,
+  "simulator_boundary": "REFUSED_FINANCIAL_RELEASE_NO_LEDGER_INSTANTIATED",
+  "action_feed": "HISTORICAL_ACTION_AND_CARRY_TAPE_MANIFEST.json;incomplete=>HOLD",
+  "convention": "prior 15:31 minute completes15:32/received15:33,not available15:32 decision;pretrade volume must come from earlier received minute"
+}

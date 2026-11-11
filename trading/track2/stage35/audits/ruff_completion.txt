@@ -1,0 +1,34 @@
+E501 Line too long (121 > 100)
+  --> src/lstm_data/trading/track2/stage35/signal_expansion.py:80:101
+   |
+78 |     sources = []
+79 |     for month in pd.period_range("2010-07", "2024-11", freq="M").astype(str):
+80 |         name = f"data/processed/hf20_hf1m_long_v1_action_qa_v1/ta019b_action_qa_2026-10-22_201224/hourly/{month}.parquet"
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^
+81 |         sources.append({"path": name, "sha256": by_path[name]["sha256"], "role": "hourly_replay"})
+82 |     for month in sorted(
+   |
+
+E501 Line too long (132 > 100)
+  --> src/lstm_data/trading/track2/stage35/signal_expansion.py:85:101
+   |
+83 |         {t.astimezone(ZoneInfo("America/New_York")).strftime("%Y-%m") for t in keys}
+84 |     ):
+85 |         name = f"data/processed/hf20_hf1m_long_v1/776328445b7ac6e7815ef3a483e9c8ded1eb6d56/qa_v2/canonical_observed/{month}.parquet"
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+86 |         sources.append({"path": name, "sha256": by_path[name]["sha256"], "role": "m2_source"})
+87 |     payload = {
+   |
+
+E501 Line too long (141 > 100)
+  --> src/lstm_data/trading/track2/stage35/signal_expansion.py:97:101
+   |
+95 | …
+96 | …
+97 | …CausalFeatureAudit OR keyed abstention;no prices/orders/fills/positions/financial PnL",
+   |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+98 | …
+99 | …n")
+   |
+
+Found 3 errors.

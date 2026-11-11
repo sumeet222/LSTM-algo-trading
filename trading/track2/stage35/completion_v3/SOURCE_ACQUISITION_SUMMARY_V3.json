@@ -1,0 +1,240 @@
+{
+  "attempts_including_environment_failures": 28,
+  "network_action_budget": 100,
+  "new_prices_downloaded": 0,
+  "original_full_signal_recomputed": false,
+  "receipts": [
+    {
+      "attempts": 1,
+      "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+      "http": 0,
+      "receipt": "trading/track2/stage35/completion_v3/audits/alpaca_0.receipt.json",
+      "source_id": "alpaca_0",
+      "status": "SOURCE_UNAVAILABLE"
+    },
+    {
+      "attempts": 0,
+      "endpoint": "https://www.alphavantage.co/query",
+      "http": null,
+      "receipt": "trading/track2/stage35/completion_v3/audits/av_probe.receipt.json",
+      "source_id": "alpha_vantage",
+      "status": "ACCESS_NOT_CONFIGURED"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/boundary_alpaca_2025pay.receipt.json",
+      "source_id": "boundary_alpaca_2025pay",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://investor.apple.com/dividend-history/default.aspx",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/boundary_apple_history.receipt.json",
+      "source_id": "boundary_apple_history",
+      "status": "ACCESS_DENIED"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.merck.com/news/merck-announces-completion-of-organon-co-spinoff/",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/boundary_mrk_completion.receipt.json",
+      "source_id": "boundary_mrk_completion",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.sec.gov/Archives/edgar/data/1821825/000119312521140380/d56612dex991.htm",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/boundary_mrk_terms.receipt.json",
+      "source_id": "boundary_mrk_terms",
+      "status": "NOT_AVAILABLE_FREE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.sec.gov/Archives/edgar/data/12927/000001292723000007/ba-20221231.htm",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/corrected_primary_ba_2022.receipt.json",
+      "source_id": "corrected_primary_ba_2022",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://ir.amd.com/resources/investor-faqs",
+      "http": 404,
+      "receipt": "trading/track2/stage35/completion_v3/audits/extra_amd_faq.receipt.json",
+      "source_id": "extra_amd_faq",
+      "status": "SOURCE_UNAVAILABLE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://ir.aboutamazon.com/faqs/default.aspx",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/extra_amzn_faq.receipt.json",
+      "source_id": "extra_amzn_faq",
+      "status": "ACCESS_DENIED"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.sec.gov/Archives/edgar/data/12927/000001292723000009/ba-20221231.htm",
+      "http": 404,
+      "receipt": "trading/track2/stage35/completion_v3/audits/extra_ba_2022.receipt.json",
+      "source_id": "extra_ba_2022",
+      "status": "SOURCE_UNAVAILABLE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.conocophillips.com/news-media/story/conocophillips-announces-third-quarter-2024-results-increases-quarterly-ordinary-dividend-and-existing-share-repurchase-authorization/",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/extra_cop_2024_fixed.receipt.json",
+      "source_id": "extra_cop_2024_fixed",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.merck.com/news/merck-declares-record-date-and-dividend-for-the-organon-co-spinoff/",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/extra_mrk_declaration.receipt.json",
+      "source_id": "extra_mrk_declaration",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://ir.aboutamazon.com/faqs/",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/final_primary_amzn_faq.receipt.json",
+      "source_id": "final_primary_amzn_faq",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://investors.boeing.com/files/doc_financials/2021/ar/The-Boeing-Company-2021-Annual-Report.pdf",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/final_primary_ba_2021.receipt.json",
+      "source_id": "final_primary_ba_2021",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://finnhub.io/api/v1/stock/dividend",
+      "http": 0,
+      "receipt": "trading/track2/stage35/completion_v3/audits/finnhub_probe.receipt.json",
+      "source_id": "finnhub_probe",
+      "status": "SOURCE_UNAVAILABLE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.investor.jnj.com/investor-news/news-details/2023/Johnson--Johnson-Launches-Exchange-Offer-for-Separation-of-Kenvue-Inc/default.aspx",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/jnj_alternate_exchange.receipt.json",
+      "source_id": "jnj_alternate_exchange",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://api.nasdaq.com/api/quote/AAPL/dividends",
+      "http": 0,
+      "receipt": "trading/track2/stage35/completion_v3/audits/nasdaq_probe.receipt.json",
+      "source_id": "nasdaq_probe",
+      "status": "SOURCE_UNAVAILABLE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://data.alpaca.markets/v1/corporate-actions",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/network_v2_alpaca_0.receipt.json",
+      "source_id": "network_v2_alpaca_0",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://finnhub.io/api/v1/stock/dividend",
+      "http": 401,
+      "receipt": "trading/track2/stage35/completion_v3/audits/network_v2_finnhub_probe.receipt.json",
+      "source_id": "network_v2_finnhub_probe",
+      "status": "ACCESS_DENIED"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://api.nasdaq.com/api/quote/AAPL/dividends",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/network_v2_nasdaq_probe.receipt.json",
+      "source_id": "network_v2_nasdaq_probe",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://query1.finance.yahoo.com/v7/finance/download/AAPL",
+      "http": 401,
+      "receipt": "trading/track2/stage35/completion_v3/audits/network_v2_yahoo_probe.receipt.json",
+      "source_id": "network_v2_yahoo_probe",
+      "status": "ACCESS_DENIED"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000012/amd-20241228.htm",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/primary_amd_policy.receipt.json",
+      "source_id": "primary_amd_policy",
+      "status": "NOT_AVAILABLE_FREE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.htm",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/primary_amzn_policy.receipt.json",
+      "source_id": "primary_amzn_policy",
+      "status": "NOT_AVAILABLE_FREE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.sec.gov/Archives/edgar/data/12927/000001292725000015/ba-20241231.htm",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/primary_ba_policy.receipt.json",
+      "source_id": "primary_ba_policy",
+      "status": "NOT_AVAILABLE_FREE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.broadcom.com/company/news/financial-releases/62226",
+      "http": 0,
+      "receipt": "trading/track2/stage35/completion_v3/audits/primary_broadcom_2024.receipt.json",
+      "source_id": "primary_broadcom_2024",
+      "status": "SOURCE_UNAVAILABLE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.conocophillips.com/news-media/story/conocophillips-announces-third-quarter-2024-results/",
+      "http": 404,
+      "receipt": "trading/track2/stage35/completion_v3/audits/primary_cop_distribution.receipt.json",
+      "source_id": "primary_cop_distribution",
+      "status": "SOURCE_UNAVAILABLE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.jnj.com/media-center/press-releases/johnson-johnson-launches-exchange-offer-for-separation-of-kenvue-inc",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/primary_jnj_exchange.receipt.json",
+      "source_id": "primary_jnj_exchange",
+      "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://www.sec.gov/Archives/edgar/data/1318605/000162828025003063/tsla-20241231.htm",
+      "http": 200,
+      "receipt": "trading/track2/stage35/completion_v3/audits/primary_tsla_policy.receipt.json",
+      "source_id": "primary_tsla_policy",
+      "status": "NOT_AVAILABLE_FREE"
+    },
+    {
+      "attempts": 1,
+      "endpoint": "https://query1.finance.yahoo.com/v7/finance/download/AAPL",
+      "http": 0,
+      "receipt": "trading/track2/stage35/completion_v3/audits/yahoo_probe.receipt.json",
+      "source_id": "yahoo_probe",
+      "status": "SOURCE_UNAVAILABLE"
+    }
+  ]
+}

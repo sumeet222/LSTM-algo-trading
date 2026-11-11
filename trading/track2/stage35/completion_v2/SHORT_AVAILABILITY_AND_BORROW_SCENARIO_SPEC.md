@@ -1,0 +1,9 @@
+# Short availability and carrying, V2
+
+CONDITIONAL_ACADEMIC_SHORT is approved as an implementation scenario by the current human prompt. Treat eligible stocks as conditionally borrowable, with explicit2% annual cost and1%/5% stresses, never observed fee/locate claims. These simplifying research rates are not empirical averages. STRICT_LOCATE separately rejects without a verified ticker/quantity/expiry/receipt provider; an arbitrary evidence ID does not pass.
+
+Only physical net-short marked notional incurs the ACT/365 calendar charge. The previous known mark applies until the next mark/trade/rate/action boundary, including weekends/holidays. Charge is apportioned among virtual shorts once; virtual long offsets reduce physical borrow. Rate-change and unknown-rate cases are explicit. Missing mark/recall/buy-in execution stays unresolved, not zero fee or a guaranteed cover.
+
+Cash includes restricted sale proceeds once. They cannot be redeployed; pending virtual gross consumes own capacity even at zero net physical shares. Short dividends are signed payable claims, paid only on documented dates; splits change share units. Unknown action economics cannot be treated as ordinary dividends/splits. Stress rejection/recall/buy-in requests may be supplied before any results, with stable deterministic IDs; no historical scenario selection or performance sweep ran. The fixed_short_stress interface requires explicit seed and rejection/recall probabilities; no baseline probability is silently selected. Its unit fixture probabilities are synthetic stresses only. Freeze a separately reviewed historical stress recipe before financial use.
+
+This scenario approval does not release the signed financial gate. No actual historical locate/fee inventory, exchange quotes, broker financing schedule or live deployability is certified.

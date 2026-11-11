@@ -1,0 +1,235 @@
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:206:33
+    |
+204 |             if q:
+205 |                 point=self.prices[j]
+206 |                 if point is None:return None
+    |                                 ^
+207 |                 total += D(int(q))*point
+208 |         return total
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:258:39
+    |
+256 |         for j,v in enumerate(self.abs_virtual):
+257 |             point=self.prices[j]
+258 |             if v and point is not None:names[j]=D(str(v))*point
+    |                                       ^
+259 |         names[20]=sum((abs(v)for v in self.special_values.values()),ZERO)
+260 |         gross = sum(names.values(),ZERO)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:305:32
+    |
+303 |                 shorts = sorted(
+304 |                     (lot for lot in self.lots.values() if lot.ticker == j and lot.quantity < 0),
+305 |                     key=lambda l: l.key,
+    |                                ^
+306 |                 )
+307 |                 denom = sum((-lot.quantity for lot in shorts), ZERO)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:419:21
+    |
+417 |                     "internal": l.internal,
+418 |                 }
+419 |                 for l in legs
+    |                     ^
+420 |             ],
+421 |         )
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:476:29
+    |
+474 |         self.physical_basis[j] /= ratio
+475 |         point=self.prices[j]
+476 |         if point is not None:self.prices[j]=point/ratio
+    |                             ^
+477 |         for order in self.pending.values():
+478 |             if order.ticker == j:
+    |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:40:47
+   |
+38 |         expected=json.loads((V2/'FULL_SIGNAL_COVERAGE_REPORT.json').read_text())
+39 |         if observed['totals']['forecasts']==expected['totals']['forecasts']:
+40 |             statuses['G_SIGNAL_CAUSAL']='PASS';statuses['G_CONTROL']='PASS'
+   |                                               ^
+41 |         if observed['totals']['sessions']==expected['sessions']:
+42 |             statuses['G_DATA_COVERAGE']='PASS'
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:46:49
+   |
+44 |     if document.exists() and json.loads(document.read_text()).get('primary_terms_verified'):
+45 |         statuses['G_ACTION_FACTS_OR_CONDITIONAL']='PASS_CONDITIONAL'
+46 |         statuses['G_MRK_OGN']='PASS_CONDITIONAL';statuses['G_PRICE_BASIS']='PASS_CONDITIONAL'
+   |                                                 ^
+47 |     tests=ROOT/'audits/ENGINEERING_ACCEPTANCE_V4.json'
+48 |     if tests.exists():
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:51:41
+   |
+49 |         checked=json.loads(tests.read_text())
+50 |         for gate in ('G_ACCOUNTING','G_EXECUTION','G_RISK','G_REPRODUCIBILITY'):
+51 |             if checked.get(gate)=='PASS':statuses[gate]='PASS'
+   |                                         ^
+52 |     if mode=='financial':
+53 |         pilot=ROOT/'audits/PILOT_CERTIFICATION_V4.json'
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:63:46
+   |
+62 | def create_release(version: str,mode: str) -> Admission:
+63 |     if mode not in ('diagnostic','financial'):raise ValueError('RESEARCH_MODE')
+   |                                              ^
+64 |     if not version.replace('_','').isalnum():raise ValueError('RELEASE_VERSION')
+65 |     h0=json.loads((ROOT/'audits/H0_PROTECTED_V4.json').read_text())
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:64:45
+   |
+62 | def create_release(version: str,mode: str) -> Admission:
+63 |     if mode not in ('diagnostic','financial'):raise ValueError('RESEARCH_MODE')
+64 |     if not version.replace('_','').isalnum():raise ValueError('RELEASE_VERSION')
+   |                                             ^
+65 |     h0=json.loads((ROOT/'audits/H0_PROTECTED_V4.json').read_text())
+66 |     files={row['path']:row['sha256']for row in h0['protected']}
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:71:43
+   |
+69 |     for base in (Path('src/lstm_data/trading/track2'),Path('tests/track2_stage35_v4')):
+70 |         for p in base.rglob('*.py'):
+71 |             if '__pycache__'not in p.parts:files[str(p)]=digest(p)
+   |                                           ^
+72 |     for p in (ROOT/'sources').glob('*'):
+73 |         if p.is_file():files[str(p)]=digest(p)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:73:23
+   |
+71 |             if '__pycache__'not in p.parts:files[str(p)]=digest(p)
+72 |     for p in (ROOT/'sources').glob('*'):
+73 |         if p.is_file():files[str(p)]=digest(p)
+   |                       ^
+74 |     for name in ('FINAL_CONSOLIDATED_PROTOCOL.json','RAW_SOURCE_AND_SIGNAL_PREFLIGHT_V4.json',
+75 |                  'MRK_OGN_SOURCE_AND_ACCOUNTING_MANIFEST_V4.json','audits/ENGINEERING_ACCEPTANCE_V4.json'):
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:77:22
+   |
+75 |                  'MRK_OGN_SOURCE_AND_ACCOUNTING_MANIFEST_V4.json','audits/ENGINEERING_ACCEPTANCE_V4.json'):
+76 |         p=ROOT/name
+77 |         if p.exists():files[str(p)]=digest(p)
+   |                      ^
+78 |     pilot=ROOT/'audits/PILOT_CERTIFICATION_V4.json'
+79 |     if mode=='financial' and pilot.exists():files[str(pilot)]=digest(pilot)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:79:44
+   |
+77 |         if p.exists():files[str(p)]=digest(p)
+78 |     pilot=ROOT/'audits/PILOT_CERTIFICATION_V4.json'
+79 |     if mode=='financial' and pilot.exists():files[str(pilot)]=digest(pilot)
+   |                                            ^
+80 |     owner={'approved_scope':'research-only conditional exploratory backtest',
+81 |            'approval_provenance':'current user FINAL CODEX EXECUTION PROMPT dated2026-11-09',
+   |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:99:48
+    |
+ 97 | def check_admission(value: object,first: str,last: str,diagnostic: bool) -> None:
+ 98 |     if not isinstance(value,Admission):
+ 99 |         rejection('MISSING_RESEARCH_ADMISSION');raise PermissionError('MISSING_RESEARCH_ADMISSION')
+    |                                                ^
+100 |     folder=value.release_path
+101 |     binding=json.loads((folder/'RESEARCH_AUTHORIZATION_AND_BINDING_V4.json').read_text())
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:117:51
+    |
+115 |         reason='MANDATORY_RESEARCH_GATE_HOLD'
+116 |     source_names={str(p)for p in Path('src/lstm_data/trading/track2').rglob('*.py')if'__pycache__'not in p.parts}
+117 |     if not source_names.issubset(binding['files']):reason='UNBOUND_EXECUTING_CODE'
+    |                                                   ^
+118 |     if reason is None:
+119 |         for name,expected in binding['files'].items():
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:122:51
+    |
+120 |             path=Path(name)
+121 |             if path.is_absolute() or '..'in path.parts or not path.is_file() or digest(path)!=expected:
+122 |                 reason='BOUND_INPUT_CHANGED:'+name;break
+    |                                                   ^
+123 |     if reason:
+124 |         rejection(reason);raise PermissionError(reason)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/release.py:124:26
+    |
+122 |                 reason='BOUND_INPUT_CHANGED:'+name;break
+123 |     if reason:
+124 |         rejection(reason);raise PermissionError(reason)
+    |                          ^
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:125:80
+    |
+123 |     requests = tuple(Request(str(i), D(1), "ENTRY") for i in range(8))
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+    |                                                                                ^
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:126:27
+    |
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+    |                           ^
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:128:32
+    |
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |                                ^
+129 |     assert all(l.quantity == 1 for l in partial)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:129:36
+    |
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+129 |     assert all(l.quantity == 1 for l in partial)
+    |                                    ^
+
+Found 23 errors (1 fixed, 22 remaining).

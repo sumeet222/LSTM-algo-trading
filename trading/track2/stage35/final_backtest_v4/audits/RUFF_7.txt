@@ -1,0 +1,138 @@
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:308:32
+    |
+306 |                 shorts = sorted(
+307 |                     (lot for lot in self.lots.values() if lot.ticker == j and lot.quantity < 0),
+308 |                     key=lambda l: l.key,
+    |                                ^
+309 |                 )
+310 |                 denom = sum((-lot.quantity for lot in shorts), ZERO)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:332:51
+    |
+330 |         self, order: Order, raw_open: Decimal, now: int, effective: int, fraction: Decimal = D(1)
+331 |     ) -> None:
+332 |         if not raw_open.is_finite() or raw_open<=0:raise ValueError("INVALID_EXECUTION_PRICE")
+    |                                                   ^
+333 |         if not order.decision < effective or not ZERO <= fraction <= 1:
+334 |             raise ValueError("FILL_ORDER_CLOCK_OR_PARTIAL")
+    |
+
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:432:21
+    |
+430 |                     "internal": l.internal,
+431 |                 }
+432 |                 for l in legs
+    |                     ^
+433 |             ],
+434 |         )
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:449:52
+    |
+447 |         payload=canonical((j,amount,due))
+448 |         if effect in self.action_effects:
+449 |             if self.action_effects[effect]!=payload:raise ValueError("CORRECTED_ACTION_REPLAY_REQUIRED")
+    |                                                    ^
+450 |             return
+451 |         if not amount.is_finite() or amount<0:raise ValueError("INVALID_DIVIDEND")
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:451:46
+    |
+449 |             if self.action_effects[effect]!=payload:raise ValueError("CORRECTED_ACTION_REPLAY_REQUIRED")
+450 |             return
+451 |         if not amount.is_finite() or amount<0:raise ValueError("INVALID_DIVIDEND")
+    |                                              ^
+452 |         self.action_effects[effect]=payload
+453 |         for lot in self.lots.values():
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:472:50
+    |
+471 |     def pay_dividend(self, event_id: str, at: int) -> None:
+472 |         if event_id+":PAY" in self.action_effects:return
+    |                                                  ^
+473 |         self.action_effects[event_id+":PAY"]=canonical(at)
+474 |         keys = [key for key, (_, due) in self.claims.items() if key[0] == event_id and due <= at]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:482:45
+    |
+481 |     def split(self, j: int, ratio: Decimal, at: int) -> None:
+482 |         if not ratio.is_finite() or ratio<=0:raise ValueError("SPLIT_RATIO")
+    |                                             ^
+483 |         effect=f"SPLIT:{j}:{at}"
+484 |         if effect in self.action_effects:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:485:61
+    |
+483 |         effect=f"SPLIT:{j}:{at}"
+484 |         if effect in self.action_effects:
+485 |             if self.action_effects[effect]!=canonical(ratio):raise ValueError("CORRECTED_SPLIT_REPLAY_REQUIRED")
+    |                                                             ^
+486 |             return
+487 |         for lot in self.lots.values():
+    |
+
+F821 Undefined name `asdict`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/driver.py:187:37
+    |
+185 |                     opened,
+186 |                     positions=positions,
+187 |                     tax_allocation=[asdict(item) for item in self.special[n].lots],
+    |                                     ^^^^^^
+188 |                     source="PRIMARY_FORM8937_REGULAR_WAY;CIL_REFERENCE_PAYMENT_CONDITIONAL",
+189 |                 )
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:125:80
+    |
+123 |     requests = tuple(Request(str(i), D(1), "ENTRY") for i in range(8))
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+    |                                                                                ^
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:126:27
+    |
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+    |                           ^
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:128:32
+    |
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |                                ^
+129 |     assert all(l.quantity == 1 for l in partial)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:129:36
+    |
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+129 |     assert all(l.quantity == 1 for l in partial)
+    |                                    ^
+
+Found 14 errors (1 fixed, 13 remaining).

@@ -1,0 +1,24 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "http": 200
+    }
+  ],
+  "endpoint": "https://api.nasdaq.com/api/quote/AAPL/dividends",
+  "http_status": 200,
+  "original_payload_sha256": "0f4454ab7821c1a729dd01b3cc88e3feca75b1a8a70454410f265245b4dd29eb",
+  "payload_path": "trading/track2/stage35/completion_v3/audits/payloads/network_v2_nasdaq_probe.json",
+  "point_in_time": false,
+  "query": {
+    "assetclass": "stocks",
+    "fromdate": "2021-01-01",
+    "limit": 5000,
+    "todate": "2024-12-31"
+  },
+  "retrieval_utc": "2026-11-09T14:04:39.163419+00:00",
+  "rights": "provider public/research access only;no redistribution or PIT certification",
+  "source_id": "network_v2_nasdaq_probe",
+  "status": "RESPONSE_RECEIVED_NOT_COMPLETENESS_PROOF",
+  "stored_payload_sha256": "81b6ee98d6b0ba2eed92c322df2b75b1c94c5355b1e7922010f4082a6e0e8ce1"
+}

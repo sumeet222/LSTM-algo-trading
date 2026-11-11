@@ -1,0 +1,63 @@
+{
+  "G_ACCOUNTING": {
+    "individual_net_distributions": "NOT_IDENTIFIABLE_FROM_AVAILABLE_EXPORTS",
+    "individual_raw_cohort_reconstruction": "31 supported,23 unavailable",
+    "original_all54_cash_identity": "PASS",
+    "status": "PARTIAL"
+  },
+  "G_CANDIDATE_REVIEW": {
+    "R01": "DELTA_ONLY",
+    "additional": [
+      "M01",
+      "M03",
+      "M05"
+    ],
+    "all18_retained": true,
+    "mandatory": [
+      "M04",
+      "R07"
+    ],
+    "status": "PASS"
+  },
+  "G_CAUSAL_SEPARATION": {
+    "future_module": "offline.py",
+    "online_modules_modified": false,
+    "status": "PASS"
+  },
+  "G_CONFOUNDS": {
+    "confirmed_alpha": false,
+    "independent_account_dollars_combined": false,
+    "risk_forced": "INFEASIBLE_UNDER_REALIZED_RISK",
+    "status": "PASS"
+  },
+  "G_EXIT_COUNT": {
+    "actual_exit_portions": 158118,
+    "all54_accounts": true,
+    "partial_internal_external_separation": true,
+    "references": 474354,
+    "status": "PASS"
+  },
+  "G_INPUT_INTEGRITY": {
+    "R01_V1_V2_V3_sealed_content_entries": 281,
+    "V1_V2_additional_boundary": 323,
+    "protected_objects": 35496,
+    "status": "PASS"
+  },
+  "G_OWNED_TESTS": {
+    "full_repository_existing_errors": 30,
+    "new_audit_errors": 0,
+    "pytest_passed": 20,
+    "ruff": "PASS",
+    "status": "PASS",
+    "targeted_types": "PASS"
+  },
+  "G_PRICE_AND_CALENDAR": {
+    "cutoff": 70,
+    "missing": 0,
+    "over5minute_limit": 0,
+    "source_months": 48,
+    "status": "PASS",
+    "unsupported_special": 175,
+    "valid": 474109
+  }
+}

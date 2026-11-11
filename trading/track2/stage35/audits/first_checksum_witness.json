@@ -1,0 +1,10 @@
+{
+  "issue": "S35-005",
+  "severity": "HIGH",
+  "first_witness": "golden_synthetic_v1.json last Journal.after != final state_checksum",
+  "before_after_field": "5d212f2d6a4445c878ebec4bab9cbdbcd279b27216a456fc2f1dd0f508aabf37",
+  "returned_state_checksum": "f5eef529a15b1c250cc2d92e5bc35ebc7128326b90c74634ca29f1668a9f8ac1",
+  "root_cause": "state digest included journal IDs appended AFTER after-hash calculation",
+  "fix": "economic-state digest excludes journal;append-only journal retained and full artifact content hashed;test after==state and adjacent before/after chain",
+  "status": "FIX_IMPLEMENTED_RETEST_PENDING"
+}

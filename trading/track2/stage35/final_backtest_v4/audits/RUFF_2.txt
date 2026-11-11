@@ -1,0 +1,172 @@
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:301:32
+    |
+299 |                 shorts = sorted(
+300 |                     (lot for lot in self.lots.values() if lot.ticker == j and lot.quantity < 0),
+301 |                     key=lambda l: l.key,
+    |                                ^
+302 |                 )
+303 |                 denom = sum((-lot.quantity for lot in shorts), ZERO)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:383:24
+    |
+381 |         order.cumulative_quantity += abs(q)
+382 |         filled={r.key:ZERO for r in order.requests}
+383 |         for leg in legs:filled[leg.cohort_id] += leg.quantity
+    |                        ^
+384 |         order.requests=tuple(Request(r.key,r.delta-filled[r.key],r.role)for r in order.requests
+385 |                              if r.delta-filled[r.key])
+    |
+
+E741 Ambiguous variable name: `l`
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:409:21
+    |
+407 |                     "internal": l.internal,
+408 |                 }
+409 |                 for l in legs
+    |                     ^
+410 |             ],
+411 |         )
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:510:38
+    |
+508 |     def accrue_funding(self, effective: int) -> None:
+509 |         if self.funding_at is None:
+510 |             self.funding_at=effective;return
+    |                                      ^
+511 |         if effective<self.funding_at:raise ValueError('FUNDING_CLOCK_REORDER')
+512 |         deficit=max(ZERO,self.restricted()-self.cash)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:511:37
+    |
+509 |         if self.funding_at is None:
+510 |             self.funding_at=effective;return
+511 |         if effective<self.funding_at:raise ValueError('FUNDING_CLOCK_REORDER')
+    |                                     ^
+512 |         deficit=max(ZERO,self.restricted()-self.cash)
+513 |         charge=deficit*self.scenario.funding*D((effective-self.funding_at)*60)/YEAR
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:515:22
+    |
+513 |         charge=deficit*self.scenario.funding*D((effective-self.funding_at)*60)/YEAR
+514 |         self.funding_at=effective
+515 |         if not charge:return
+    |                      ^
+516 |         weights={lot.key:abs(lot.quantity)*(self.prices[lot.ticker]or ZERO)
+517 |                  for lot in self.lots.values()if lot.quantity}
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:518:41
+    |
+516 |         weights={lot.key:abs(lot.quantity)*(self.prices[lot.ticker]or ZERO)
+517 |                  for lot in self.lots.values()if lot.quantity}
+518 |         denom=sum(weights.values(),ZERO);left=charge
+    |                                         ^
+519 |         if weights:
+520 |             for n,(key,w)in enumerate(sorted(weights.items())):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:522:27
+    |
+520 |             for n,(key,w)in enumerate(sorted(weights.items())):
+521 |                 part=charge*w/denom if n<len(weights)-1 else left
+522 |                 left-=part;lot=self.lots[key]
+    |                           ^
+523 |                 lot.cash-=part;lot.nontrade-=part;lot.funding+=part
+524 |         else:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:523:31
+    |
+521 |                 part=charge*w/denom if n<len(weights)-1 else left
+522 |                 left-=part;lot=self.lots[key]
+523 |                 lot.cash-=part;lot.nontrade-=part;lot.funding+=part
+    |                               ^
+524 |         else:
+525 |             self.archived_cash-=charge;self.archived_nontrade-=charge
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:523:50
+    |
+521 |                 part=charge*w/denom if n<len(weights)-1 else left
+522 |                 left-=part;lot=self.lots[key]
+523 |                 lot.cash-=part;lot.nontrade-=part;lot.funding+=part
+    |                                                  ^
+524 |         else:
+525 |             self.archived_cash-=charge;self.archived_nontrade-=charge
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:525:39
+    |
+523 |                 lot.cash-=part;lot.nontrade-=part;lot.funding+=part
+524 |         else:
+525 |             self.archived_cash-=charge;self.archived_nontrade-=charge
+    |                                       ^
+526 |         self.cash-=charge;self.funding_paid+=charge
+527 |         self.reconcile()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py:526:26
+    |
+524 |         else:
+525 |             self.archived_cash-=charge;self.archived_nontrade-=charge
+526 |         self.cash-=charge;self.funding_paid+=charge
+    |                          ^
+527 |         self.reconcile()
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:125:80
+    |
+123 |     requests = tuple(Request(str(i), D(1), "ENTRY") for i in range(8))
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+    |                                                                                ^
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:126:27
+    |
+124 |     legs = integer_cross(requests, D(10), D("10.01"), D(8), D(".05"))
+125 |     assert all(l.quantity == l.quantity.to_integral_value() and l.fee >= 0 for l in legs)
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+    |                           ^
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:128:32
+    |
+126 |     assert sum((l.fee for l in legs), D(0)) == D(".05")
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+    |                                ^
+129 |     assert all(l.quantity == 1 for l in partial)
+    |
+
+E741 Ambiguous variable name: `l`
+   --> tests/track2_stage35_v4/test_special_and_book.py:129:36
+    |
+127 |     partial = integer_cross(requests, D(10), D("10.01"), D(3), D(1))
+128 |     assert sum((l.quantity for l in partial), D(0)) == 3
+129 |     assert all(l.quantity == 1 for l in partial)
+    |                                    ^
+
+Found 16 errors.

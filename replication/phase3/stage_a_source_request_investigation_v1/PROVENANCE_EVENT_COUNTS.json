@@ -1,0 +1,2077 @@
+{
+  "status": "STOP_AWAITING_HUMAN_DECISION",
+  "classification": "B_CAUSE_UNRESOLVED_WITH_BOUNDED_POSITIVE_LINEAGE_SUPPORT",
+  "created_utc": "2026-11-03T13:20:50.211178+00:00",
+  "scope": "Read-only text/receipt forensic investigation; no native data reads or pipeline code execution",
+  "counts_definition": "event_records counts each saved event/path row once; event_count_field_sums adds its stored count. The recorder aggregates repeated identical event/path keys; neither statistic counts native syscalls.",
+  "source_filter": "Exact absolute paths derived from348 literal approved hourly/canonical entries in frozen audit/input_manifest.json; no generic /data/ substring. No files at those source paths were opened.",
+  "receipt_count": 39,
+  "all_event_records": {
+    "open": 30241,
+    "os.listdir": 3766,
+    "DENIED:open": 2,
+    "os.scandir": 27
+  },
+  "all_event_count_field_sums": {
+    "open": 30966,
+    "os.listdir": 3774,
+    "DENIED:open": 2,
+    "os.scandir": 53
+  },
+  "admitted_source_event_records": {
+    "open": 710
+  },
+  "admitted_source_count_field_sums": {
+    "open": 710
+  },
+  "phase2_artifact_event_records": {
+    "open": 275,
+    "os.scandir": 17
+  },
+  "phase2_artifact_count_field_sums": {
+    "open": 879,
+    "os.scandir": 34
+  },
+  "admitted_data_request_records": 0,
+  "admitted_data_request_count_field_sum": 0,
+  "receipts": [
+    {
+      "pid": 48847,
+      "file": "audit/provenance_48847.json",
+      "role_assessment": "Schema inspection footprint; inferred, no argv in receipt",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:24:05.102564+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 375,
+        "os.listdir": 56
+      },
+      "event_count_field_sums": {
+        "open": 375,
+        "os.listdir": 56
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": [
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/initial_schema.json",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "pid": 48886,
+      "file": "audit/provenance_48886.json",
+      "role_assessment": "Contract first failed attempt; inferred from July opens and matching log metadata",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:26:31.393174+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 374,
+        "os.listdir": 54
+      },
+      "event_count_field_sums": {
+        "open": 374,
+        "os.listdir": 54
+      },
+      "admitted_source_event_records": {
+        "open": 2
+      },
+      "admitted_source_count_field_sums": {
+        "open": 2
+      },
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 48927,
+      "file": "audit/provenance_48927.json",
+      "role_assessment": "Contract interrupted second attempt; inferred from12 source opens and log metadata",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:30:47.603432+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 397,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 397,
+        "os.listdir": 60
+      },
+      "admitted_source_event_records": {
+        "open": 12
+      },
+      "admitted_source_count_field_sums": {
+        "open": 12
+      },
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 48962,
+      "file": "audit/provenance_48962.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:28:41.168797+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 387,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 388,
+        "os.listdir": 58
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 48970,
+      "file": "audit/provenance_48970.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:28:46.991911+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 1660,
+        "os.listdir": 215
+      },
+      "event_count_field_sums": {
+        "open": 1668,
+        "os.listdir": 215
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 48988,
+      "file": "audit/provenance_48988.json",
+      "role_assessment": "Profiling candidate; inferred only from log metadata proximity, not proven",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:29:08.392016+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 385,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 385,
+        "os.listdir": 58
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49009,
+      "file": "audit/provenance_49009.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:29:26.557090+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 1660,
+        "os.listdir": 215
+      },
+      "event_count_field_sums": {
+        "open": 1668,
+        "os.listdir": 215
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49018,
+      "file": "audit/provenance_49018.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:30:02.160923+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 371,
+        "os.listdir": 54
+      },
+      "event_count_field_sums": {
+        "open": 371,
+        "os.listdir": 54
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49084,
+      "file": "audit/provenance_49084.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:30:22.090334+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 1659,
+        "os.listdir": 215
+      },
+      "event_count_field_sums": {
+        "open": 1666,
+        "os.listdir": 215
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49097,
+      "file": "audit/provenance_49097.json",
+      "role_assessment": "Completed contract footprint:348 source opens and contract-output events",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:34:38.953891+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 728,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 728,
+        "os.listdir": 58
+      },
+      "admitted_source_event_records": {
+        "open": 348
+      },
+      "admitted_source_count_field_sums": {
+        "open": 348
+      },
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": [
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/aggregation_witnesses.json",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/data_contract_receipt.json",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/input_manifest.json",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "pid": 49159,
+      "file": "audit/provenance_49159.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:30:59.270732+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 1662,
+        "os.listdir": 215
+      },
+      "event_count_field_sums": {
+        "open": 1671,
+        "os.listdir": 215
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49168,
+      "file": "audit/provenance_49168.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:31:18.551115+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 385,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 385,
+        "os.listdir": 58
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49189,
+      "file": "audit/provenance_49189.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:31:56.120401+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 8,
+        "os.listdir": 2
+      },
+      "event_count_field_sums": {
+        "open": 8,
+        "os.listdir": 2
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49242,
+      "file": "audit/provenance_49242.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:32:49.988619+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 372,
+        "os.listdir": 54
+      },
+      "event_count_field_sums": {
+        "open": 372,
+        "os.listdir": 54
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49467,
+      "file": "audit/provenance_49467.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:35:03.331097+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 379,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 380,
+        "os.listdir": 58
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49477,
+      "file": "audit/provenance_49477.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:34:57.254986+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 378,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 381,
+        "os.listdir": 58
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49485,
+      "file": "audit/provenance_49485.json",
+      "role_assessment": "Fresh geometry builder/preflight001 footprint:contract receipt, source_counts and geometry outputs",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:35:37.870004+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 1161,
+        "os.listdir": 172
+      },
+      "event_count_field_sums": {
+        "open": 1162,
+        "os.listdir": 172
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {
+        "open": 5
+      },
+      "phase2_artifact_count_field_sums": {
+        "open": 5
+      },
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": [
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/grid.parquet",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/origins.parquet",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/source_geometry.npz",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/data_contract_receipt.json",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/geometry_checks.json",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/source_counts.json",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "pid": 49547,
+      "file": "audit/provenance_49547.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:36:09.820457+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 1947,
+        "os.listdir": 260
+      },
+      "event_count_field_sums": {
+        "open": 1960,
+        "os.listdir": 260
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49569,
+      "file": "audit/provenance_49569.json",
+      "role_assessment": "Preflight002 saved-geometry load footprint; source_counts/contract read absent",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:37:03.155555+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 1163,
+        "os.listdir": 170
+      },
+      "event_count_field_sums": {
+        "open": 1172,
+        "os.listdir": 170
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {
+        "open": 12
+      },
+      "phase2_artifact_count_field_sums": {
+        "open": 20
+      },
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": [
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/grid.parquet",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/origins.parquet",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/source_geometry.npz",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/all_fold_preflight.json",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/geometry_checks.json",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "pid": 49669,
+      "file": "audit/provenance_49669.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:37:11.217649+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 376,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 376,
+        "os.listdir": 58
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49737,
+      "file": "audit/provenance_49737.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:37:31.506948+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 379,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 381,
+        "os.listdir": 58
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49748,
+      "file": "audit/provenance_49748.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:38:14.784516+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 380,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 380,
+        "os.listdir": 59
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49789,
+      "file": "audit/provenance_49789.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:38:25.542177+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 8
+      },
+      "event_count_field_sums": {
+        "open": 9
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49811,
+      "file": "audit/provenance_49811.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:39:07.170236+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 4
+      },
+      "event_count_field_sums": {
+        "open": 4
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49835,
+      "file": "audit/provenance_49835.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:39:33.701375+00:00",
+      "recorded_argv": null,
+      "main_module": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/run_gates.py",
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "DENIED:open": 1,
+        "open": 1963,
+        "os.listdir": 261
+      },
+      "event_count_field_sums": {
+        "DENIED:open": 1,
+        "open": 1968,
+        "os.listdir": 264
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [
+        {
+          "event": "DENIED:open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/FORBIDDEN_BOUNDARY_PROBE",
+          "count": 1
+        }
+      ],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49863,
+      "file": "audit/provenance_49863.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:40:15.698292+00:00",
+      "recorded_argv": null,
+      "main_module": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/run_gates.py",
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "DENIED:open": 1,
+        "open": 1964,
+        "os.listdir": 261
+      },
+      "event_count_field_sums": {
+        "DENIED:open": 1,
+        "open": 1968,
+        "os.listdir": 263
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [
+        {
+          "event": "DENIED:open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/src/FORBIDDEN_BOUNDARY_PROBE",
+          "count": 1
+        }
+      ],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 49887,
+      "file": "audit/provenance_49887.json",
+      "role_assessment": "Preflight003 saved-geometry load footprint; source_counts/contract read absent",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:40:52.554504+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 1161,
+        "os.listdir": 170
+      },
+      "event_count_field_sums": {
+        "open": 1170,
+        "os.listdir": 170
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {
+        "open": 12
+      },
+      "phase2_artifact_count_field_sums": {
+        "open": 20
+      },
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": [
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/grid.parquet",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/origins.parquet",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/source_geometry.npz",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/all_fold_preflight.json",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/geometry_checks.json",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "pid": 49967,
+      "file": "audit/provenance_49967.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:41:27.718209+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 29,
+        "os.scandir": 2
+      },
+      "event_count_field_sums": {
+        "open": 35,
+        "os.scandir": 2
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": [
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/all_fold_preflight.json",
+          "count": 2
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/data_contract_receipt.json",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/geometry_checks.json",
+          "count": 2
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/input_manifest.json",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "pid": 49976,
+      "file": "audit/provenance_49976.json",
+      "role_assessment": "Training footprint:182 ledger opens and one geometry open each",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-03T00:40:02.882812+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 2014,
+        "os.listdir": 258
+      },
+      "event_count_field_sums": {
+        "open": 2459,
+        "os.listdir": 258
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {
+        "open": 60
+      },
+      "phase2_artifact_count_field_sums": {
+        "open": 498
+      },
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": [
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/grid.parquet",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/origins.parquet",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/run/replication_ledger.jsonl",
+          "count": 182
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/source_geometry.npz",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "pid": 50382,
+      "file": "audit/provenance_50382.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-02T23:49:38.176659+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 866,
+        "os.listdir": 126
+      },
+      "event_count_field_sums": {
+        "open": 872,
+        "os.listdir": 126
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 51977,
+      "file": "audit/provenance_51977.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-03T00:42:59.232373+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 3
+      },
+      "event_count_field_sums": {
+        "open": 4
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 52019,
+      "file": "audit/provenance_52019.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-03T00:43:48.687451+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 368,
+        "os.listdir": 53
+      },
+      "event_count_field_sums": {
+        "open": 369,
+        "os.listdir": 53
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 52038,
+      "file": "audit/provenance_52038.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-03T00:44:06.002709+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 373,
+        "os.listdir": 57
+      },
+      "event_count_field_sums": {
+        "open": 373,
+        "os.listdir": 57
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 52039,
+      "file": "audit/provenance_52039.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-03T00:44:13.723055+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 384,
+        "os.listdir": 58
+      },
+      "event_count_field_sums": {
+        "open": 384,
+        "os.listdir": 58
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 52086,
+      "file": "audit/provenance_52086.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-03T00:45:09.798593+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 23
+      },
+      "event_count_field_sums": {
+        "open": 25
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 52103,
+      "file": "audit/provenance_52103.json",
+      "role_assessment": "Report recovery footprint:8 recovery ledger opens;geometry opens include protection hashing",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-03T00:53:49.102816+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 2041,
+        "os.listdir": 260
+      },
+      "event_count_field_sums": {
+        "open": 2178,
+        "os.listdir": 260
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {
+        "open": 94
+      },
+      "phase2_artifact_count_field_sums": {
+        "open": 227
+      },
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": [
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/grid.parquet",
+          "count": 3
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/origins.parquet",
+          "count": 3
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/report_recovery_v1/report_recovery_ledger.jsonl",
+          "count": 8
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/run/replication_ledger.jsonl",
+          "count": 2
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/source_geometry.npz",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "pid": 52632,
+      "file": "audit/provenance_52632.json",
+      "role_assessment": "Not a positively identified source-preparation run; role unknown from bounded evidence",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-03T00:52:56.895848+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 1
+      },
+      "event_count_field_sums": {
+        "open": 2
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": []
+    },
+    {
+      "pid": 52700,
+      "file": "audit/provenance_52700.json",
+      "role_assessment": "Postrun integrity hashing footprint",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-03T00:54:02.110324+00:00",
+      "recorded_argv": null,
+      "main_module": null,
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 2422,
+        "os.scandir": 25
+      },
+      "event_count_field_sums": {
+        "open": 2465,
+        "os.scandir": 51
+      },
+      "admitted_source_event_records": {
+        "open": 348
+      },
+      "admitted_source_count_field_sums": {
+        "open": 348
+      },
+      "phase2_artifact_event_records": {
+        "open": 92,
+        "os.scandir": 17
+      },
+      "phase2_artifact_count_field_sums": {
+        "open": 109,
+        "os.scandir": 34
+      },
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": [
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/grid.parquet",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/origins.parquet",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/run/replication_ledger.jsonl",
+          "count": 2
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/artifacts/source_geometry.npz",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/all_fold_preflight.json",
+          "count": 2
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/geometry_checks.json",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/input_manifest.json",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "pid": 52884,
+      "file": "audit/provenance_52884.json",
+      "role_assessment": "Freeze process, explicit __main__ postrun_check.py",
+      "recorded_start_utc": null,
+      "recorded_end_utc": null,
+      "observed_receipt_mtime_utc": "2026-11-03T00:59:03.001832+00:00",
+      "recorded_argv": null,
+      "main_module": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/postrun_check.py",
+      "registration_time": null,
+      "registration_evidence": "Built-in events and boundary module origin present; exact registration timestamp not recorded",
+      "event_records": {
+        "open": 31
+      },
+      "event_count_field_sums": {
+        "open": 33
+      },
+      "admitted_source_event_records": {},
+      "admitted_source_count_field_sums": {},
+      "phase2_artifact_event_records": {},
+      "phase2_artifact_count_field_sums": {},
+      "boundary_module_aliases": {
+        "boundary": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/code/boundary.py"
+      },
+      "denied_events": [],
+      "unadmitted_repository_data_events": [],
+      "forbidden_module_names": [],
+      "pertinent_artifact_events": [
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/all_fold_preflight.json",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/geometry_checks.json",
+          "count": 1
+        },
+        {
+          "event": "open",
+          "path": "/Users/pradeepgupta/Desktop/Quant /Projects/LSTM/replication/phase2/audit/input_manifest.json",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "evidence_identities": [
+    {
+      "path": "replication/phase2/audit/provenance_48847.json",
+      "sha256": "34758458975f5abb2d9b1179f8fbabd5d00a28d0cac2afeabe8e72f136528c76",
+      "bytes": 179834,
+      "mtime_utc_observed": "2026-11-02T23:24:05.102564+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48886.json",
+      "sha256": "3248cda9903cc6e774bb6d7170e47ad3da91570f2d5e64ae47e7365f43948c11",
+      "bytes": 173832,
+      "mtime_utc_observed": "2026-11-02T23:26:31.393174+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48927.json",
+      "sha256": "ef7fede6e4d23926ae54a25c2e54d73c4136112820fa9dfb5fdef8b9cb5b1cdd",
+      "bytes": 182905,
+      "mtime_utc_observed": "2026-11-02T23:30:47.603432+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48962.json",
+      "sha256": "ccf0f89a576127930e9ca62cf178459b09e3582e28afb1f466b9eb972d83d791",
+      "bytes": 182867,
+      "mtime_utc_observed": "2026-11-02T23:28:41.168797+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48970.json",
+      "sha256": "e9f002e58b9c93c976927168fa36f12283c4c91168e1b07588a5fa3b8be1e374",
+      "bytes": 669733,
+      "mtime_utc_observed": "2026-11-02T23:28:46.991911+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_48988.json",
+      "sha256": "2ffbde4f3d199b8dc40f14c2aceaabbef7f458afd3fe60ba52fddf6d5777e669",
+      "bytes": 182556,
+      "mtime_utc_observed": "2026-11-02T23:29:08.392016+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49009.json",
+      "sha256": "15260813a3ff5570891070d70d59b15e587e1724c8d24ba428a12b6f27ee2ba7",
+      "bytes": 669733,
+      "mtime_utc_observed": "2026-11-02T23:29:26.557090+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49018.json",
+      "sha256": "35b82df4eeb60d41dd255a5f03ea92d6d77397bcae18dc9c0af5ee388fd13152",
+      "bytes": 174954,
+      "mtime_utc_observed": "2026-11-02T23:30:02.160923+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49084.json",
+      "sha256": "5fbb2c2b2ad9144fb0662381bfc36841825f6c69c97206c9e6da70f90e9e26a3",
+      "bytes": 669545,
+      "mtime_utc_observed": "2026-11-02T23:30:22.090334+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49097.json",
+      "sha256": "50d9bf6a759c6286b5f061a5ed9aa63746afe06f567bbc631d43428c76a7e55e",
+      "bytes": 258782,
+      "mtime_utc_observed": "2026-11-02T23:34:38.953891+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49159.json",
+      "sha256": "fcfb475b86e41a6268cd270a1737ab985c8a0d2dfb3b4739c0deb331d2fb682d",
+      "bytes": 669908,
+      "mtime_utc_observed": "2026-11-02T23:30:59.270732+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49168.json",
+      "sha256": "bbb262290b4964376fe4ea22876c6bbafe5697e636d7695904f8b5e570062083",
+      "bytes": 182556,
+      "mtime_utc_observed": "2026-11-02T23:31:18.551115+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49189.json",
+      "sha256": "7e1561167d396461187acf8b6d69a9a5fce111212714c012c43b20b2c880c1bf",
+      "bytes": 19595,
+      "mtime_utc_observed": "2026-11-02T23:31:56.120401+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49242.json",
+      "sha256": "21aa533f0b821760e389c593ea4ea3aacc6b53baae9b2696ecff304406465dab",
+      "bytes": 173515,
+      "mtime_utc_observed": "2026-11-02T23:32:49.988619+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49467.json",
+      "sha256": "61f0130c27207a8eb3606381efe461d6b7a724007c5ffb407823cc1df3c401fb",
+      "bytes": 179547,
+      "mtime_utc_observed": "2026-11-02T23:35:03.331097+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49477.json",
+      "sha256": "1d890e15b635c7c18811f2bb73ec5555b05fbcf9c6531eb5c33d39e1b93ed505",
+      "bytes": 179359,
+      "mtime_utc_observed": "2026-11-02T23:34:57.254986+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49485.json",
+      "sha256": "de0d09f596abae03702530760455eb3a7d7e95a0cf5376465018353ab4601ed5",
+      "bytes": 483431,
+      "mtime_utc_observed": "2026-11-02T23:35:37.870004+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49547.json",
+      "sha256": "f7743f58dda17613318da3f45c811a6d27362b3c7c0c0de0185320e9b89132d1",
+      "bytes": 787574,
+      "mtime_utc_observed": "2026-11-02T23:36:09.820457+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49569.json",
+      "sha256": "88fd90f4e729e99a36489c128e321f166ffab05a6280fab01fab0a891660dd87",
+      "bytes": 482613,
+      "mtime_utc_observed": "2026-11-02T23:37:03.155555+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49669.json",
+      "sha256": "3880787020a068b181080afeb562ba1390494f3f4302a27a6934691822f0d0ad",
+      "bytes": 179032,
+      "mtime_utc_observed": "2026-11-02T23:37:11.217649+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49737.json",
+      "sha256": "a5ac14010a8f622a49c6e931f070a8d732de8c275c23021917726072c85b235e",
+      "bytes": 179550,
+      "mtime_utc_observed": "2026-11-02T23:37:31.506948+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49748.json",
+      "sha256": "c504dff2000a213a8b9c77ea9e61e3e3eac1091d91a5e230016b5ebd2a6d6529",
+      "bytes": 179722,
+      "mtime_utc_observed": "2026-11-02T23:38:14.784516+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49789.json",
+      "sha256": "594f4c1ff0c09c9a2c0fa92685dfcc66cc6e21c646fd354132b39348d20fcbf7",
+      "bytes": 10022,
+      "mtime_utc_observed": "2026-11-02T23:38:25.542177+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49811.json",
+      "sha256": "23da1cf7f5d40f496215230b55c4b9600ea23b78b428a72e85ab8136c39c20de",
+      "bytes": 9391,
+      "mtime_utc_observed": "2026-11-02T23:39:07.170236+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49835.json",
+      "sha256": "60341a959d6995b0f6a6c600b095fe2bb42f6c61331961ebcb07ee55cd5fa1a5",
+      "bytes": 794367,
+      "mtime_utc_observed": "2026-11-02T23:39:33.701375+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49863.json",
+      "sha256": "274566771156112adc7d5a0382ebe347774f98cae8ef86409539bd6789093b7a",
+      "bytes": 794885,
+      "mtime_utc_observed": "2026-11-02T23:40:15.698292+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49887.json",
+      "sha256": "48154b60d693a924376c35e804617dce501394a7aca8d572bd0f60c6268f3dba",
+      "bytes": 482269,
+      "mtime_utc_observed": "2026-11-02T23:40:52.554504+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49967.json",
+      "sha256": "2c36c88211013f0d190eafea7b16fa28207824ccfe9430dd5757d313eaeddbe8",
+      "bytes": 14018,
+      "mtime_utc_observed": "2026-11-02T23:41:27.718209+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_49976.json",
+      "sha256": "3ed03286769cbecd1114fdc22e64fcc0bf3d0302e7516f3c0fe53df55f4f9b26",
+      "bytes": 800718,
+      "mtime_utc_observed": "2026-11-03T00:40:02.882812+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_50382.json",
+      "sha256": "56bcc8f3551b95834835d78cae489ab241bef642562497ffd6b379aaeeb67610",
+      "bytes": 358403,
+      "mtime_utc_observed": "2026-11-02T23:49:38.176659+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_51977.json",
+      "sha256": "e661150c978b93f32cadad28043844f2160aad86c4ba3900dfb0fc1b6d1991fd",
+      "bytes": 9267,
+      "mtime_utc_observed": "2026-11-03T00:42:59.232373+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52019.json",
+      "sha256": "ea9accfc6bc7b10871d9344aefffe3e4df3adc92bedd287638c6b819510d4dc8",
+      "bytes": 172736,
+      "mtime_utc_observed": "2026-11-03T00:43:48.687451+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52038.json",
+      "sha256": "00587f17ecf71aaf5696df90c07b3b38ca92d1f1945ee81ad5618949384cb726",
+      "bytes": 176481,
+      "mtime_utc_observed": "2026-11-03T00:44:06.002709+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52039.json",
+      "sha256": "2266c0868dbc13ce10f69df99b8b275a6000624caad4e4d36d90e8c8dee01ce5",
+      "bytes": 182363,
+      "mtime_utc_observed": "2026-11-03T00:44:13.723055+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52086.json",
+      "sha256": "71a3b392279cfccfe12188e531b0744d7aba7dd08b1ed8714553f7289e4aab4a",
+      "bytes": 13026,
+      "mtime_utc_observed": "2026-11-03T00:45:09.798593+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52103.json",
+      "sha256": "28cc79bec358999f22f3fa466fcd04e35e2f06529f7386c57ce63744049e77b7",
+      "bytes": 807632,
+      "mtime_utc_observed": "2026-11-03T00:53:49.102816+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52632.json",
+      "sha256": "b4ccc3e8cc21ef5d1b1f80543038bfcf534ece8b33ead4f41286aca251e55a2e",
+      "bytes": 8926,
+      "mtime_utc_observed": "2026-11-03T00:52:56.895848+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52700.json",
+      "sha256": "1f087132b925469e2c9589e51637a98fa68f8239f910848994c0fe2acc6b8168",
+      "bytes": 476937,
+      "mtime_utc_observed": "2026-11-03T00:54:02.110324+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/provenance_52884.json",
+      "sha256": "d6d84557400d91431c4e22839e7086a62633f55b27f092244322c4ac94ae3d88",
+      "bytes": 13911,
+      "mtime_utc_observed": "2026-11-03T00:59:03.001832+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/code/boundary.py",
+      "sha256": "222bade62e8a51ce5490f38a6f38f90cba5fbee6e9bccbc39d440614af3b3bbd",
+      "bytes": 3785,
+      "mtime_utc_observed": "2026-11-02T23:41:02.070674+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/code/contract.py",
+      "sha256": "556af3b42028e0c6d964bcf41c32081ebe0c97de91f45ee272c46713f7d1e763",
+      "bytes": 10242,
+      "mtime_utc_observed": "2026-11-02T23:30:33.002365+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/code/dataset.py",
+      "sha256": "71d9c80f78855593d81ebd1b60bffd813a31d9c7460fa4bd14340245bd7949e9",
+      "bytes": 11210,
+      "mtime_utc_observed": "2026-11-02T23:39:57.082235+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/code/inspect_inputs.py",
+      "sha256": "2b18a95f88357b4e008f5a61cc638ab393641a50d3c7d214222033680a72b590",
+      "bytes": 939,
+      "mtime_utc_observed": "2026-11-02T23:24:02.889038+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/code/prepare.py",
+      "sha256": "8af50a480e7f7053ea543290919a2f931bc3c9ac0cdb5b029e99dbc7d2789147",
+      "bytes": 5116,
+      "mtime_utc_observed": "2026-11-02T23:36:13.350105+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/code/run_experiment.py",
+      "sha256": "74c5e5a5ddff3d9afa58fea89b8a114598f25abb2ca343ec03a7e95e9294f200",
+      "bytes": 8840,
+      "mtime_utc_observed": "2026-11-02T23:39:15.496541+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/postrun_check.py",
+      "sha256": "cc003b1ce1c4654a21d600db5c7fe0296b4fa58ad7c792339e832677ea6b853e",
+      "bytes": 11671,
+      "mtime_utc_observed": "2026-11-03T00:47:26.345191+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/report_recovery.py",
+      "sha256": "156b7660361f298a22d38dacdfed343c42a555e513d5fb743e85d5f64c42a52e",
+      "bytes": 4832,
+      "mtime_utc_observed": "2026-11-03T00:45:11.822027+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/IMPORT_LOCK.json",
+      "sha256": "84e16fcb68b5258c5234a99c858dd4931afb9ecc3f5db8f0911ea012a776e0fa",
+      "bytes": 739959,
+      "mtime_utc_observed": "2026-11-03T00:54:02.095233+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/input_manifest.json",
+      "sha256": "c9d57fbb64a7fcf43ae238e9e7cb4fc3e004e013f85916c19cb8c220182c1deb",
+      "bytes": 105968,
+      "mtime_utc_observed": "2026-11-02T23:34:38.899273+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/postrun_input_immutability.json",
+      "sha256": "d4ef59e869d957470024e38e83a9b7cf064eae493850b7e2c35983a02a53f952",
+      "bytes": 85734,
+      "mtime_utc_observed": "2026-11-03T00:54:02.091604+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/PREFIT_ACCEPTANCE.json",
+      "sha256": "bed86ebd495c32ed2ce782f718aed8a1ca9d217eff12a35aa7fa22dcf7eddb0e",
+      "bytes": 3618,
+      "mtime_utc_observed": "2026-11-02T23:41:27.715522+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/report_source_transition.json",
+      "sha256": "9294f7021957a82b58f2938799463b5ce1f91108d7a494c73edd0f26e48407ad",
+      "bytes": 6020,
+      "mtime_utc_observed": "2026-11-03T00:45:09.795611+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/initial_schema.json",
+      "sha256": "3d92e9f581de41769f0d59147092a7886bbbd8dd421bf30f0ee5ff4950614df7",
+      "bytes": 10022,
+      "mtime_utc_observed": "2026-11-02T23:24:04.977066+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/source_counts.json",
+      "sha256": "8d75ade190582c962cce54592cbb19bbc2f8fc83dcf4e4a004a9582379ecfe9a",
+      "bytes": 18098,
+      "mtime_utc_observed": "2026-11-02T23:35:29.275102+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/data_contract_receipt.json",
+      "sha256": "db2907287b8db4c100cc958df940f176278fc62d2a7c71fa4bb065bddad76752",
+      "bytes": 3006,
+      "mtime_utc_observed": "2026-11-02T23:34:38.903441+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/aggregation_witnesses.json",
+      "sha256": "b4fda72d262351579417a58958e18173e388e97bf408e616bc88d110f70dfaf6",
+      "bytes": 364692,
+      "mtime_utc_observed": "2026-11-02T23:34:38.903171+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/geometry_checks.json",
+      "sha256": "2a8391a183dcc8e306eca65b129da986cf4fb2d6b6f2dc9261bf812784bdb673",
+      "bytes": 4676,
+      "mtime_utc_observed": "2026-11-02T23:40:11.473938+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/independent_data_review.md",
+      "sha256": "9e5971b112d834ac53be951f728d6ca080c41d6a6d38d6e48360ce1471d9a591",
+      "bytes": 7534,
+      "mtime_utc_observed": "2026-11-02T23:39:26.462799+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/IMPLEMENTATION_CORRECTIONS.md",
+      "sha256": "d20ef4ae099b7d03ea81e317853e99f909354a71b92bf14577c464ce6c9d682c",
+      "bytes": 1973,
+      "mtime_utc_observed": "2026-11-02T23:35:20.001948+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/INHERITED_DATA_CONTRACT.md",
+      "sha256": "a899f7b9fd25d012d7cd4e127e56b837da76838c4866940222bcb1ffdb4fdc01",
+      "bytes": 2456,
+      "mtime_utc_observed": "2026-11-02T23:34:38.903631+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/contract_execution.log",
+      "sha256": "b502b11b48c9c768adb4f025cd12a335c6971b3a64f434835351f950d40de0af",
+      "bytes": 1219,
+      "mtime_utc_observed": "2026-11-02T23:26:31.299741+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/contract_execution_002.log",
+      "sha256": "292282390a58c067a37a8899926fbb2ca6568fa3b783785c23c5a5bf3ebf6de3",
+      "bytes": 2713,
+      "mtime_utc_observed": "2026-11-02T23:30:47.550272+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/contract_execution_003.log",
+      "sha256": "ff3b77ec3ff9fafac4f4a816ad28c0dd87392f5584354799efccea96004ff561",
+      "bytes": 6599,
+      "mtime_utc_observed": "2026-11-02T23:34:38.904747+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/preflight_execution_001.log",
+      "sha256": "a313b1bc94741986917ababa9e3d477806e23e4a338c1481f1443e3bd071a9a6",
+      "bytes": 1624,
+      "mtime_utc_observed": "2026-11-02T23:35:37.732392+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/preflight_execution_002.log",
+      "sha256": "a43c7f5285c9a35e4509c7d83259cb39932ce068a498a6684a2bbb17a3f3b5c6",
+      "bytes": 3655,
+      "mtime_utc_observed": "2026-11-02T23:37:03.006021+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/preflight_execution_003.log",
+      "sha256": "680e4ca4c3fb3f334cac8325968af3f01e41c5ba62deb3cc9d8884778eea7806",
+      "bytes": 3654,
+      "mtime_utc_observed": "2026-11-02T23:40:52.421246+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/audit/profile_contract.log",
+      "sha256": "cc980e1b438d6fdb6015697508995f44859f75f3f979f21bc984e9a5ed990b55",
+      "bytes": 820,
+      "mtime_utc_observed": "2026-11-02T23:30:02.112664+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/REPRODUCE.md",
+      "sha256": "a0aba09df0a68a79d5ecfd1627576900701ec52e070eb885347e3e0933348b88",
+      "bytes": 6930,
+      "mtime_utc_observed": "2026-11-03T00:55:04.456623+00:00",
+      "manifest_match": true
+    },
+    {
+      "path": "replication/phase2/SESSION_REPORT.md",
+      "sha256": "980ffdcdac3db911051df5ee0fe6323f2cb65062e95d5db080e7ca81e6c86863",
+      "bytes": 10900,
+      "mtime_utc_observed": "2026-11-03T00:58:48.910993+00:00",
+      "manifest_match": true
+    }
+  ],
+  "prior_phase3_identities": [
+    {
+      "path": "replication/phase3/SEAL_GATE.json",
+      "sha256": "b014bdd1f15ecf908375668dc04e7bb92d9e19315a6a3b9276b661ff8dffa7ff",
+      "bytes": 4513
+    },
+    {
+      "path": "replication/phase3/SEAL_GATE.md",
+      "sha256": "c8ab3a1a858533645d5371ab210e63b04b0d57f5f05190566581f4bfe91b3920",
+      "bytes": 3060
+    },
+    {
+      "path": "replication/phase3/BLOCKER.md",
+      "sha256": "b1206f45946355f27115d030a1c82b0872c49d13780d8764c09a618fbf7276bf",
+      "bytes": 1556
+    },
+    {
+      "path": "replication/phase3/STAGE_A_EXCEPTION_CHECKS.json",
+      "sha256": "e56a2dbcc81421e516e3b1908cfe2235ac29b9f6e3f6072854d457d4ee50fac5",
+      "bytes": 147447
+    },
+    {
+      "path": "replication/phase3/PROVENANCE_SPOTCHECK.json",
+      "sha256": "71057bce07ff668aee4a559b2bed1693433d3046fa8a41150bfc4b86b34e6216",
+      "bytes": 9729
+    },
+    {
+      "path": "replication/phase3/METADATA_EXCEPTION_AUDIT.json",
+      "sha256": "51d9ba91f4334032fa68c327ba0b3f47523e3a66f05257c621b3b0e9ec72eebc",
+      "bytes": 2016
+    },
+    {
+      "path": "replication/phase3/METADATA_EXCEPTION_AUDIT.md",
+      "sha256": "023ad459bb05542c552c2be761b5792c35c5690370b77023cfbff97d4a1f4ec6",
+      "bytes": 1932
+    },
+    {
+      "path": "replication/phase3/QUALIFIED_SEAL_GATE.json",
+      "sha256": "b94bcd9e667b31a8093f7d95e3caf2f2d47538994458f93b133cc69455173c67",
+      "bytes": 7655
+    },
+    {
+      "path": "replication/phase3/QUALIFIED_SEAL_GATE.md",
+      "sha256": "e44ffd1b5bcc3a582985508c0911a5cb0bec9a0e72d72cf3a53d20442859aabf",
+      "bytes": 4913
+    },
+    {
+      "path": "replication/phase3/QUALIFIED_GATE_WITNESS.md",
+      "sha256": "c091662676da02db6719e61fe8dd70815ca4e6a385504761d83288446c72b558",
+      "bytes": 1662
+    }
+  ],
+  "phase2_manifest_sha256": "acee4b37613fc905ae2d1b3dd1624a8a19762bd3cdc42086fe6c474911f02410",
+  "lineage_consistency_checks": {
+    "input_manifest_hourly_rows": 509140,
+    "input_manifest_canonical_rows": 33296542,
+    "witness_assertions": 2272,
+    "witness_specimens": 284,
+    "witness_independent_saved_arithmetic_pass": 2272,
+    "witness_stored_pass_flags": 2272,
+    "source_count_months": 174,
+    "source_count_months_match_hourly_manifest": true,
+    "source_full_hour_rows": 436140,
+    "endpoint_reference_rows": 1298303,
+    "geometry_role_checks": 20,
+    "geometry_saved_expected_equals_actual": 20,
+    "limit": "These check saved content and independent review evidence, not a new data-level reconstruction or contemporaneous native-read attestation."
+  },
+  "warnings": [
+    "Mtime observations are mutable metadata, not authenticated process times or proof of a late edit.",
+    "A diagnostic summary command stopped with AttributeError on source_counts list; corrected type-aware read completed; no source writes or pipeline execution occurred.",
+    "No phase2 data or geometry artifact bytes were opened by this investigation; their prior integrity verification is cited separately."
+  ]
+}

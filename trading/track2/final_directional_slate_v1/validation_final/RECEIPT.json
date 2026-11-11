@@ -1,0 +1,69 @@
+{
+  "commands": [
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/track2_final_directional_slate",
+        "tests/track2_final_directional_results",
+        "tests/track2_rapid_v1",
+        "tests/track2_rapid_v2",
+        "tests/track2_rapid_v3",
+        "tests/track2_rapid_final_diag"
+      ],
+      "elapsed_seconds": 6.690200624987483,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        ".venv/bin/ruff",
+        "check",
+        "--select",
+        "E,F,I",
+        "src/lstm_data/trading/track2/final_directional_slate",
+        "src/lstm_data/trading/track2/final_directional_slate_analysis.py",
+        "tests/track2_final_directional_slate",
+        "tests/track2_final_directional_results"
+      ],
+      "elapsed_seconds": 0.029522332828491926,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        ".venv/bin/pyright",
+        "--pythonpath",
+        ".venv/bin/python",
+        "src/lstm_data/trading/track2/final_directional_slate",
+        "src/lstm_data/trading/track2/final_directional_slate_analysis.py",
+        "tests/track2_final_directional_slate",
+        "tests/track2_final_directional_results"
+      ],
+      "elapsed_seconds": 3.8621007909532636,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/check_python_types.py",
+        "--pylance-dist",
+        "/Users/pradeepgupta/.vscode/extensions/ms-python.vscode-pylance-2026.4.1/dist"
+      ],
+      "elapsed_seconds": 138.44077162491158,
+      "returncode": 1
+    }
+  ],
+  "files": {
+    "0.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "0.stdout": "8224dc30ba2ef2ef4239fcc0192cf2d213098ea3d5e83f84204e6e3e8cf1017b",
+    "1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "1.stdout": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2.stdout": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+    "3.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "3.stdout": "6194d9b61db39fb2c9a2139d3d481396316207a7d7f54077e9a7746e95f7d798"
+  },
+  "full_repository_status": "HOLD_LEGACY_DIAGNOSTICS",
+  "scoped_status": "PASS"
+}

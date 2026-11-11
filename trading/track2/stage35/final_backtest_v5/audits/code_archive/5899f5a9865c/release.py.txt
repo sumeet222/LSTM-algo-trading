@@ -1,0 +1,258 @@
+"""V5 owner-authorized research release; independent proof and exact byte checks.
+
+Never writes V4 or admits by flag. V4 facts are inherited as immutable evidence;
+V5 code-bound tests/pilots and current protected identities are mandatory.
+"""
+
+import importlib.metadata
+import json
+import re
+import sys
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+
+from ..final_backtest_v4.release import proof_status as inherited_proof
+from .execution import disposition
+from .paths import ROOT, V4, canonical, digest, publish
+from .protocol import ARMS, freeze
+
+BASELINE_MANIFEST_SHA256 = "041ab50ddf33da31e02a1dcf714853330475fb7017b92c2e4c4b3751549e1d7e"
+
+
+@dataclass(frozen=True)
+class Admission:
+    release_path: Path
+    binding_sha256: str
+    mode: str
+
+
+def code_scope() -> dict[str, str]:
+    return {
+        str(p): digest(p)
+        for base in (
+            Path("src/lstm_data/trading/track2/stage35/final_backtest_v5"),
+            Path("tests/track2_stage35_v5"),
+        )
+        for p in sorted(base.glob("*.py"))
+    }
+
+
+def fingerprint() -> str:
+    return canonical(code_scope())[:12]
+
+
+def rejection(reason: str) -> None:
+    name = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%f")
+    publish(
+        ROOT / f"audits/rejection_{name}.json",
+        {"reason": reason, "performance_output_created": False},
+    )
+
+
+def protected_files() -> dict[str, str]:
+    manifest = ROOT / "audits/H0_PROTECTED_V5.json"
+    if digest(manifest) != BASELINE_MANIFEST_SHA256:
+        raise ValueError("H0_PROTECTED_MANIFEST_REBASED")
+    body = json.loads(manifest.read_text())
+    result = {}
+    for row in body["protected"]:
+        p = Path(row["path"])
+        if not p.is_file() or p.stat().st_mtime_ns != row["mtime_ns"] or digest(p) != row["sha256"]:
+            raise ValueError("FROZEN_SHA_OR_MTIME_DRIFT:" + str(p))
+        result[str(p)] = row["sha256"]
+    for row in body["source_partitions"]:
+        if digest(Path(row["path"])) != row["sha256"]:
+            raise ValueError("ORIGINAL_SOURCE_DRIFT:" + row["path"])
+        result[row["path"]] = row["sha256"]
+    return result
+
+
+def proof_status(mode: str) -> dict:
+    freeze()
+    original = inherited_proof("diagnostic")
+    statuses = {k: v for k, v in original.items() if k != "G_ACTION_FACTS_OR_CONDITIONAL"}
+    statuses["G_CORPORATE_ACTIONS_CONDITIONAL"] = original["G_ACTION_FACTS_OR_CONDITIONAL"]
+    statuses["G_AUTHORIZED_SCOPE"] = "PASS_OWNER_V5_PROMPT_RESEARCH_ONLY_NO_RSA"
+    for name in ("G_ACCOUNTING", "G_EXECUTION", "G_REPRODUCIBILITY", "G_RISK"):
+        statuses[name] = "HOLD_V5_CODE_TEST_EVIDENCE"
+    receipt = ROOT / ("audits/ENGINEERING_ACCEPTANCE_V5_" + fingerprint() + ".json")
+    if receipt.is_file():
+        checked = json.loads(receipt.read_text())
+        commands = checked["commands"]
+        valid = checked["code"] == code_scope() and {c["domain"] for c in commands} == {
+            "pytest",
+            "ruff",
+            "owned_types",
+        }
+        valid = valid and all(
+            c["returncode"] == 0
+            and Path(c["path"]).is_file()
+            and digest(Path(c["path"])) == c["sha256"]
+            for c in commands
+        )
+        if valid:
+            tests = next(c for c in commands if c["domain"] == "pytest")
+            found = re.search(r"(\d+) passed", Path(tests["path"]).read_text())
+            types = next(c for c in commands if c["domain"] == "owned_types")
+            typed = json.loads(Path(types["path"]).read_text())["summary"]
+            valid = found is not None and int(found[1]) >= 240 and typed["errorCount"] == 0
+            valid = valid and typed["warningCount"] == 0
+        if valid:
+            # A live pure negative/positive witness is not supplied by JSON flags.
+            from decimal import Decimal
+
+            from ..final_backtest_v4.book import Order
+
+            order = Order("proof", 0, 100, 101, (), Decimal(1), 100, 110)
+            assert disposition(order, 101, 104, 2, False) == "WAIT"
+            assert disposition(order, 102, 105, 2, True) == "EXECUTE"
+            assert disposition(order, 111, 114, 2, True) == "EXPIRE"
+            for name in ("G_ACCOUNTING", "G_EXECUTION", "G_REPRODUCIBILITY", "G_RISK"):
+                statuses[name] = "PASS"
+    if mode == "financial":
+        proof = ROOT / ("audits/PILOT_CERTIFICATION_V5_" + fingerprint() + ".json")
+        valid = False
+        if proof.is_file():
+            rows = json.loads(proof.read_text())["runs"]
+            valid = [r["window"] for r in rows] == freeze()["pilot_windows"]
+            for row in rows:
+                s = row["receipt"]
+                valid = valid and (
+                    float(s["maximum_ledger_residual"]) <= 1e-8
+                    and s["terminal_pending_orders"] == 0
+                    and s["terminal_unpriced_special"] == 0
+                    and not s["unresolved"]
+                    and s["daily_incomplete_records"] == 0
+                    and bool(row["files"])
+                    and all(
+                        Path(k).is_file() and digest(Path(k)) == v for k, v in row["files"].items()
+                    )
+                )
+        restart = ROOT / ("audits/RESTART_CERTIFICATION_V5_" + fingerprint() + ".json")
+        if not restart.is_file():
+            valid = False
+        else:
+            replay = json.loads(restart.read_text())
+            valid = valid and replay["all_passed"] and all(replay["checks"].values())
+            valid = (
+                valid
+                and bool(replay["files"])
+                and all(
+                    Path(p).is_file() and digest(Path(p)) == h for p, h in replay["files"].items()
+                )
+            )
+        if not valid:
+            statuses["G_EXECUTION"] = "HOLD_V5_PILOT_NOT_CERTIFIED"
+            statuses["G_ACCOUNTING"] = "HOLD_V5_PILOT_NOT_CERTIFIED"
+    return statuses
+
+
+def create_release(version: str, mode: str) -> Admission:
+    if mode not in ("diagnostic", "financial") or not version.replace("_", "").isalnum():
+        raise ValueError("RESEARCH_SCOPE_OR_VERSION")
+    freeze()
+    files = protected_files()
+    for base in (Path("src/lstm_data/trading/track2"), Path("tests/track2_stage35_v5")):
+        for p in base.rglob("*.py"):
+            files[str(p)] = digest(p)
+    for n in (
+        "execution_policy_v5.json",
+        "FINAL_CONSOLIDATED_PROTOCOL_V5.json",
+        "FINAL_CONSOLIDATED_PROTOCOL_V5.seal.json",
+        "BACKTEST_SCENARIO_GRID_V5.json",
+        "SOURCE_ACCESS_PLAN_V5.json",
+        "audits/RESOURCE_PLAN_V5.json",
+        "audits/H0_PROTECTED_V5.json",
+    ):
+        files[str(ROOT / n)] = digest(ROOT / n)
+    for p in (ROOT / "audits").glob("*CERTIFICATION_V5*.json"):
+        files[str(p)] = digest(p)
+    tests = ROOT / ("audits/ENGINEERING_ACCEPTANCE_V5_" + fingerprint() + ".json")
+    if tests.is_file():
+        files[str(tests)] = digest(tests)
+    for p in (Path("pyproject.toml"), V4 / "ENVIRONMENT_V4.json"):
+        files[str(p)] = digest(p)
+    binding = {
+        "mode": mode,
+        "files": files,
+        "policy": "V5_NEXT_VALID_OBSERVED_BAR",
+        "owner": {
+            "provenance": "Current V5 owner prompt; existing 2021–2024 research approval",
+            "period": ["2021-01-01", "2024-12-31"],
+            "arms": list(ARMS),
+            "live_or_paper": False,
+            "RSA_or_new_chat_required": False,
+        },
+    }
+    gates = proof_status(mode)
+    folder = ROOT / "releases" / version
+    publish(folder / "RESEARCH_AUTHORIZATION_AND_BINDING_V5.json", binding)
+    publish(
+        folder / "RESEARCH_BACKTEST_READINESS_V5.json",
+        {
+            "binding_sha256": canonical(binding),
+            "mode": mode,
+            "gates": gates,
+            "overall": "PASS_CONDITIONAL_RESEARCH"
+            if all(v.startswith("PASS") for v in gates.values())
+            else "HOLD",
+            "inherited_repository_type_errors": 27,
+        },
+    )
+    return Admission(folder, canonical(binding), mode)
+
+
+def check_admission(value: object, first: str, last: str, diagnostic: bool) -> None:
+    try:
+        if not isinstance(value, Admission):
+            raise ValueError("MISSING_V5_RESEARCH_ADMISSION")
+        if not "2021-01-01" <= first <= last <= "2024-12-31":
+            raise ValueError("WRONG_RESEARCH_PERIOD")
+        if diagnostic != (value.mode == "diagnostic"):
+            raise ValueError("WRONG_RESEARCH_MODE")
+        if diagnostic and [first, last] not in freeze()["pilot_windows"]:
+            raise ValueError("UNDECLARED_PILOT_WINDOW")
+        binding = json.loads(
+            (value.release_path / "RESEARCH_AUTHORIZATION_AND_BINDING_V5.json").read_text()
+        )
+        report = json.loads(
+            (value.release_path / "RESEARCH_BACKTEST_READINESS_V5.json").read_text()
+        )
+        if (
+            canonical(binding) != value.binding_sha256
+            or report["binding_sha256"] != value.binding_sha256
+        ):
+            raise ValueError("BINDING_DRIFT")
+        owner = binding["owner"]
+        if (
+            owner["period"] != ["2021-01-01", "2024-12-31"]
+            or owner["arms"] != list(ARMS)
+            or owner["live_or_paper"]
+        ):
+            raise ValueError("OWNER_SCOPE_DRIFT")
+        environment = json.loads((V4 / "ENVIRONMENT_V4.json").read_text())
+        installed = dict(
+            sorted(
+                (d.metadata["Name"], d.version)
+                for d in importlib.metadata.distributions()
+                if d.metadata["Name"]
+            )
+        )
+        if installed != environment["packages"] or sys.version != environment["python"]:
+            raise ValueError("DEPENDENCY_ENVIRONMENT_DRIFT")
+        required = protected_files()
+        if any(binding["files"].get(k) != v for k, v in required.items()):
+            raise ValueError("OMITTED_OR_REBASED_PROTECTED_SCOPE")
+        if not set(code_scope()).issubset(binding["files"]):
+            raise ValueError("UNBOUND_V5_EXECUTING_CODE")
+        current = proof_status(value.mode)
+        if current != report["gates"] or not all(v.startswith("PASS") for v in current.values()):
+            raise ValueError("MANDATORY_V5_RESEARCH_GATE_HOLD")
+        for n, expected in binding["files"].items():
+            p = Path(n)
+            if p.is_absolute() or ".." in p.parts or not p.is_file() or digest(p) != expected:
+                raise ValueError("BOUND_BYTE_DRIFT:" + n)
+    except (OSError, ValueError, KeyError, TypeError, AssertionError) as exc:
+        rejection(str(exc))
+        raise PermissionError("V5_ADMISSION_REFUSED:" + str(exc)) from exc

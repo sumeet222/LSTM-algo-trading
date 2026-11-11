@@ -1,0 +1,56 @@
+E501 Line too long (102 > 100)
+   --> src/lstm_data/trading/track2/stage35/completion_v3/inventory.py:256:101
+    |
+254 |                         sources,
+255 |                         effective_date=date(year, 1, 1),
+256 |                         proof_of_no_dividend_if_asserted=f"SEC common-stock nonpayment covers {year}",
+    |                                                                                                     ^^
+257 |                         effect_on_books="NO_ORDINARY_CASH_EVENT",
+258 |                     )
+    |
+
+E501 Line too long (101 > 100)
+   --> src/lstm_data/trading/track2/stage35/completion_v3/inventory.py:274:101
+    |
+272 |                         "not_a_cash_action": True,
+273 |                         "book_into_action_ledger": False,
+274 |                         "reason": "empty Alpaca; issuer/SEC evidence insufficient for verified zero",
+    |                                                                                                     ^
+275 |                         "overlap_policy": "suppress entire security/year if any supported cash event or verified zero",
+276 |                         "affected_interval": [f"{year}-01-01", f"{year}-12-31"],
+    |
+
+E501 Line too long (119 > 100)
+   --> src/lstm_data/trading/track2/stage35/completion_v3/inventory.py:275:101
+    |
+273 |                         "book_into_action_ledger": False,
+274 |                         "reason": "empty Alpaca; issuer/SEC evidence insufficient for verified zero",
+275 |                         "overlap_policy": "suppress entire security/year if any supported cash event or verified zero",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^
+276 |                         "affected_interval": [f"{year}-01-01", f"{year}-12-31"],
+277 |                         "source_attempts": ["ALPACA", "issuer FAQ", "FY2024 SEC"],
+    |
+
+E501 Line too long (103 > 100)
+   --> src/lstm_data/trading/track2/stage35/completion_v3/raw_source.py:118:101
+    |
+116 |             "oos_minute_partitions": len(partitions),
+117 |             "partitions": partitions,
+118 |             "certification_scope": "source lineage and immutable bytes;11 projected value checks only",
+    |                                                                                                     ^^^
+119 |             "raw_basis": "ORIGINAL_OBSERVED_PRE_ADJUST_PRICES",
+120 |             "model_hourly_basis": "SPLIT_ADJUSTED_FORBIDDEN_FOR_LEDGER",
+    |
+
+E501 Line too long (110 > 100)
+   --> src/lstm_data/trading/track2/stage35/completion_v3/tapes.py:205:101
+    |
+203 |             ),
+204 |             "prices_past2024": False,
+205 |             "carry_policy": "automatic active physical shorts only;ACT365;known prior mark and rate required",
+    |                                                                                                     ^^^^^^^^^^
+206 |             "carry_without_active_accounts": "NOT_INSTANTIATED_NO_PORTFOLIO",
+207 |             "actual_publication_receipts": "UNKNOWN;not replaced by modeled availability",
+    |
+
+Found 6 errors (1 fixed, 5 remaining).

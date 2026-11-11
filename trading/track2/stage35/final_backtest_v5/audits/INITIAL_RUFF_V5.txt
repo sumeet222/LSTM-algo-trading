@@ -1,0 +1,118 @@
+E501 Line too long (103 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v5/release.py:131:101
+    |
+129 |         files[str(p)] = digest(p)
+130 |     binding = {"mode": mode, "files": files, "policy": "V5_NEXT_VALID_OBSERVED_BAR",
+131 |                "owner": {"provenance": "Current V5 owner prompt; existing 2021–2024 research approval",
+    |                                                                                                     ^^^
+132 |                          "period": ["2021-01-01", "2024-12-31"], "arms": list(ARMS),
+133 |                          "live_or_paper": False, "RSA_or_new_chat_required": False}}
+    |
+
+E501 Line too long (109 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v5/release.py:154:101
+    |
+152 |         if diagnostic and [first, last] not in freeze()["pilot_windows"]:
+153 |             raise ValueError("UNDECLARED_PILOT_WINDOW")
+154 |         binding = json.loads((value.release_path / "RESEARCH_AUTHORIZATION_AND_BINDING_V5.json").read_text())
+    |                                                                                                     ^^^^^^^^^
+155 |         report = json.loads((value.release_path / "RESEARCH_BACKTEST_READINESS_V5.json").read_text())
+156 |         if canonical(binding) != value.binding_sha256 or report["binding_sha256"] != value.binding_sha256:
+    |
+
+E501 Line too long (101 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v5/release.py:155:101
+    |
+153 |             raise ValueError("UNDECLARED_PILOT_WINDOW")
+154 |         binding = json.loads((value.release_path / "RESEARCH_AUTHORIZATION_AND_BINDING_V5.json").read_text())
+155 |         report = json.loads((value.release_path / "RESEARCH_BACKTEST_READINESS_V5.json").read_text())
+    |                                                                                                     ^
+156 |         if canonical(binding) != value.binding_sha256 or report["binding_sha256"] != value.binding_sha256:
+157 |             raise ValueError("BINDING_DRIFT")
+    |
+
+E501 Line too long (106 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v5/release.py:156:101
+    |
+154 |         binding = json.loads((value.release_path / "RESEARCH_AUTHORIZATION_AND_BINDING_V5.json").read_text())
+155 |         report = json.loads((value.release_path / "RESEARCH_BACKTEST_READINESS_V5.json").read_text())
+156 |         if canonical(binding) != value.binding_sha256 or report["binding_sha256"] != value.binding_sha256:
+    |                                                                                                     ^^^^^^
+157 |             raise ValueError("BINDING_DRIFT")
+158 |         owner = binding["owner"]
+    |
+
+E501 Line too long (116 > 100)
+   --> src/lstm_data/trading/track2/stage35/final_backtest_v5/release.py:159:101
+    |
+157 |             raise ValueError("BINDING_DRIFT")
+158 |         owner = binding["owner"]
+159 |         if owner["period"] != ["2021-01-01", "2024-12-31"] or owner["arms"] != list(ARMS) or owner["live_or_paper"]:
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+160 |             raise ValueError("OWNER_SCOPE_DRIFT")
+161 |         environment = json.loads((V4 / "ENVIRONMENT_V4.json").read_text())
+    |
+
+E501 Line too long (109 > 100)
+   --> tests/track2_stage35_v5/test_next_valid_execution.py:110:101
+    |
+108 |     with gzip.open(tmp_path / "next/baseline/events.jsonl.gz", "rt") as f:
+109 |         rows = [json.loads(s) for s in f]
+110 |     postponed = [r for r in rows if r["kind"] == "V5_QUALIFIED_BAR" and r["delay_scheduled_or_wall_minutes"]]
+    |                                                                                                     ^^^^^^^^^
+111 |     assert postponed and all(r["effective"] > r["intended_minute"] for r in postponed)
+112 |     assert all(r["source_hash"] == "FABRICATED_SOURCE" for r in postponed)
+    |
+
+E501 Line too long (105 > 100)
+   --> tests/track2_stage35_v5/test_next_valid_execution.py:125:101
+    |
+123 |     cut = driver.Driver((Scenario(),), "2021-01-04", "2021-01-05", tmp_path / "cut")
+124 |     cut.run(stop_after=1)
+125 |     resumed = driver.Driver.restart(tmp_path / "cut/checkpoints/2021-01-04.json", tmp_path / "cut", None)
+    |                                                                                                     ^^^^^
+126 |     resumed.run()
+127 |     assert [a.journal_hash for a in whole.accounts] == [a.journal_hash for a in resumed.accounts]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/track2_stage35_v5/test_next_valid_execution.py:129:80
+    |
+127 |     assert [a.journal_hash for a in whole.accounts] == [a.journal_hash for a in resumed.accounts]
+128 |     for kind in ("events", "daily", "cohorts"):
+129 |         with gzip.open(tmp_path / f"whole/baseline/{kind}.jsonl.gz", "rt") as f: a = f.read()
+    |                                                                                ^
+130 |         with gzip.open(tmp_path / f"cut/baseline/{kind}.jsonl.gz", "rt") as f: b = f.read()
+131 |         assert a == b
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/track2_stage35_v5/test_next_valid_execution.py:130:78
+    |
+128 |     for kind in ("events", "daily", "cohorts"):
+129 |         with gzip.open(tmp_path / f"whole/baseline/{kind}.jsonl.gz", "rt") as f: a = f.read()
+130 |         with gzip.open(tmp_path / f"cut/baseline/{kind}.jsonl.gz", "rt") as f: b = f.read()
+    |                                                                              ^
+131 |         assert a == b
+    |
+
+E501 Line too long (116 > 100)
+   --> tests/track2_stage35_v5/test_next_valid_execution.py:150:101
+    |
+148 |     with gzip.open(tmp_path / "expiry/baseline/events.jsonl.gz", "rt") as f:
+149 |         rows = [json.loads(s) for s in f]
+150 |     assert any(r["kind"] == "EXPIRED_UNFILLED_BY_V5_SIMULATION" and r["no_broker_cancellation_claim"] for r in rows)
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+151 |     opening = minute("2021-01-04T14:30:00Z")
+152 |     assert not any(r["kind"] == "FILL" and r["ticker"] == 0 and r["effective"] <= opening + 13 for r in rows)
+    |
+
+E501 Line too long (109 > 100)
+   --> tests/track2_stage35_v5/test_next_valid_execution.py:152:101
+    |
+150 |     assert any(r["kind"] == "EXPIRED_UNFILLED_BY_V5_SIMULATION" and r["no_broker_cancellation_claim"] for r in rows)
+151 |     opening = minute("2021-01-04T14:30:00Z")
+152 |     assert not any(r["kind"] == "FILL" and r["ticker"] == 0 and r["effective"] <= opening + 13 for r in rows)
+    |                                                                                                     ^^^^^^^^^
+
+Found 16 errors (5 fixed, 11 remaining).

@@ -1,0 +1,164 @@
+{
+  "status": "STOP",
+  "authorization_to_unseal": false,
+  "utc": "2026-11-03T12:37:23.826421+00:00",
+  "prior_failed_gate_preserved": true,
+  "single_exception": "Metadata-only .DS_Store mismatch accepted for bounded dependency review; no other exception authorized",
+  "manifest_anchor_status": "MATCH",
+  "structural_hash_checks_status": "PASS_EXCEPT_SINGLE_AUTHORIZED_PATH",
+  "native_reader_provenance_status": "UNRESOLVED_SUBSTANTIVE_CLAIM_DISCREPANCY",
+  "blocking_finding": {
+    "claim": "IMPORT_LOCK scope states: Explicit admitted-data requests cover native-reader entry points.",
+    "code": "boundary.data_path records admitted_data_request; contract.py, dataset.py source preparation and inspect_inputs.py route source reads through it.",
+    "observed": "All 39 bound provenance receipts contain zero admitted_data_request event entries.",
+    "event_entry_counts": {
+      "open": 30241,
+      "os.listdir": 3766,
+      "DENIED:open": 2,
+      "os.scandir": 27
+    },
+    "repository_market_event_entries": {
+      "open": 710,
+      "os.listdir": 0,
+      "admitted_data_request": 0
+    },
+    "market_open_entries_by_pid": {
+      "48886": 2,
+      "48927": 12,
+      "49097": 348,
+      "52700": 348
+    },
+    "why_opens_do_not_resolve": "postrun_check.py accepts any allowed-path event and verify_inputs hashes all348 files. Contract also hashes sources. These opens do not separately bind native-reader calls.",
+    "training_recovery": "PIDs49976 and52103 record explicit saved geometry artifact opens and Phase2 module origins. Their frozen callsites use load_fresh_geometry, which does not call data_path. That explains no explicit requests there but not during earlier source preparation.",
+    "classification": "Evidence gap/unsupported runtime coverage claim, not proof of forbidden import, protected access or numerical error.",
+    "stop_rule": "Any additional substantive integrity/provenance discrepancy is outside the sole metadata exception."
+  },
+  "completed_checks": {
+    "other_phase2_file_hashes": 232,
+    "all_admitted_input_hashes": 348,
+    "expected_phase2_file_inventory": 233,
+    "extra_or_missing": 0,
+    "prefit_source_transition": "Only evaluation mask-copy change, exact original snapshot and prefit evidence hashes verified",
+    "run": "Exactly8 ordered phase start/completion pairs; one report-only failure after four fold completions; selected/refit durations and trace counts consistent; fresh optimizer receipts",
+    "protected_artifact_hashes": 80,
+    "replayed_tables_byte_identical": 5,
+    "reload": "Eight recorded exact checks bound to four current checkpoint hashes; no new forward run",
+    "recorded_forbidden_import_or_market_events": 0,
+    "denied": "Only2 intentional forbidden-boundary probes",
+    "prior_failure_files": "All3 match external previously returned hashes"
+  },
+  "checks_not_completed": [
+    "Complete import/native-reader coverage confirmation due blocking gap",
+    "Historical unseal and all C0-C6 comparisons",
+    "Independent saved-score metrics arithmetic",
+    "D07 exact integer-oracle recomputation",
+    "Full D08 dependency adjudication beyond bounded source inspection"
+  ],
+  "independent_spot_reviewer": "/root/phase3_reviewer/stagea_spot, fresh context, read-only; confirmed absence of explicit request events and scientific metadata dependency evidence. Accountable reviewer independently reproduced zero-event finding.",
+  "scope_limit": "Independent modeling-layer replication with audited inherited preprocessing; procedural isolation. No raw-to-results, live/causal/trading, historical parity or comparator claim.",
+  "referenced_phase2_digests": [
+    {
+      "path": "code/boundary.py",
+      "bytes": 3785,
+      "sha256": "222bade62e8a51ce5490f38a6f38f90cba5fbee6e9bccbc39d440614af3b3bbd"
+    },
+    {
+      "path": "code/dataset.py",
+      "bytes": 11210,
+      "sha256": "71d9c80f78855593d81ebd1b60bffd813a31d9c7460fa4bd14340245bd7949e9"
+    },
+    {
+      "path": "code/contract.py",
+      "bytes": 10242,
+      "sha256": "556af3b42028e0c6d964bcf41c32081ebe0c97de91f45ee272c46713f7d1e763"
+    },
+    {
+      "path": "code/inspect_inputs.py",
+      "bytes": 939,
+      "sha256": "2b18a95f88357b4e008f5a61cc638ab393641a50d3c7d214222033680a72b590"
+    },
+    {
+      "path": "code/run_experiment.py",
+      "bytes": 8840,
+      "sha256": "74c5e5a5ddff3d9afa58fea89b8a114598f25abb2ca343ec03a7e95e9294f200"
+    },
+    {
+      "path": "audit/report_recovery.py",
+      "bytes": 4832,
+      "sha256": "156b7660361f298a22d38dacdfed343c42a555e513d5fb743e85d5f64c42a52e"
+    },
+    {
+      "path": "audit/postrun_check.py",
+      "bytes": 11671,
+      "sha256": "cc003b1ce1c4654a21d600db5c7fe0296b4fa58ad7c792339e832677ea6b853e"
+    },
+    {
+      "path": "audit/IMPORT_LOCK.json",
+      "bytes": 739959,
+      "sha256": "84e16fcb68b5258c5234a99c858dd4931afb9ecc3f5db8f0911ea012a776e0fa"
+    },
+    {
+      "path": "audit/PREFIT_ACCEPTANCE.json",
+      "bytes": 3618,
+      "sha256": "bed86ebd495c32ed2ce782f718aed8a1ca9d217eff12a35aa7fa22dcf7eddb0e"
+    },
+    {
+      "path": "audit/POSTRUN_INTEGRITY.json",
+      "bytes": 3665,
+      "sha256": "0790f435a482c003f5e244fef414f62a806a86626c060adaeaa00c53086c9768"
+    },
+    {
+      "path": "audit/report_source_transition.json",
+      "bytes": 6020,
+      "sha256": "9294f7021957a82b58f2938799463b5ce1f91108d7a494c73edd0f26e48407ad"
+    },
+    {
+      "path": "audit/provenance_48886.json",
+      "bytes": 173832,
+      "sha256": "3248cda9903cc6e774bb6d7170e47ad3da91570f2d5e64ae47e7365f43948c11"
+    },
+    {
+      "path": "audit/provenance_48927.json",
+      "bytes": 182905,
+      "sha256": "ef7fede6e4d23926ae54a25c2e54d73c4136112820fa9dfb5fdef8b9cb5b1cdd"
+    },
+    {
+      "path": "audit/provenance_49097.json",
+      "bytes": 258782,
+      "sha256": "50d9bf6a759c6286b5f061a5ed9aa63746afe06f567bbc631d43428c76a7e55e"
+    },
+    {
+      "path": "audit/provenance_49976.json",
+      "bytes": 800718,
+      "sha256": "3ed03286769cbecd1114fdc22e64fcc0bf3d0302e7516f3c0fe53df55f4f9b26"
+    },
+    {
+      "path": "audit/provenance_52103.json",
+      "bytes": 807632,
+      "sha256": "28cc79bec358999f22f3fa466fcd04e35e2f06529f7386c57ce63744049e77b7"
+    },
+    {
+      "path": "audit/provenance_52700.json",
+      "bytes": 476937,
+      "sha256": "1f087132b925469e2c9589e51637a98fa68f8239f910848994c0fe2acc6b8168"
+    }
+  ],
+  "evidence_bindings": {
+    "STAGE_A_EXCEPTION_CHECKS.json": "e56a2dbcc81421e516e3b1908cfe2235ac29b9f6e3f6072854d457d4ee50fac5",
+    "PROVENANCE_SPOTCHECK.json": "71057bce07ff668aee4a559b2bed1693433d3046fa8a41150bfc4b86b34e6216",
+    "METADATA_EXCEPTION_AUDIT.json": "51d9ba91f4334032fa68c327ba0b3f47523e3a66f05257c621b3b0e9ec72eebc",
+    "METADATA_EXCEPTION_AUDIT.md": "023ad459bb05542c552c2be761b5792c35c5690370b77023cfbff97d4a1f4ec6"
+  },
+  "prior_phase3_hashes": {
+    "SEAL_GATE.json": "b014bdd1f15ecf908375668dc04e7bb92d9e19315a6a3b9276b661ff8dffa7ff",
+    "SEAL_GATE.md": "c8ab3a1a858533645d5371ab210e63b04b0d57f5f05190566581f4bfe91b3920",
+    "BLOCKER.md": "b1206f45946355f27115d030a1c82b0872c49d13780d8764c09a618fbf7276bf"
+  },
+  "write_and_execution_boundary": "Only new additive Phase3 evidence files written. No existing gate, Phase2 file, historical file or protected market file modified. No original results opened; no fits/calibration/threshold fitting/new neural forwards, project-helper imports, network, installs, Git mutation or fetch.",
+  "git_state_from_root": {
+    "branch": "feat/track-a-data-intake",
+    "head": "8061483cb65d03264a7836b8b882123f67cbe4ad",
+    "status": "?? replication/",
+    "tracked_and_cached_diff_quiet": true
+  }
+}

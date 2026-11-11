@@ -1,0 +1,73 @@
+"""Present sealed official outputs only; no new simulation, fitting or selection."""
+from pathlib import Path
+import ast
+import csv
+import gzip
+import json
+from lstm_data.trading.track2.stage35.final_backtest_v5.paths import ROOT, digest, publish
+from lstm_data.trading.track2.stage012.model_registry import SYMBOLS
+
+manifest=ROOT/'BACKTEST_RUN_MANIFEST_V5_9e093b3f6a62.json'
+body=json.loads(manifest.read_text())
+out=ROOT/'presentation/FINAL_TABLES_V5'
+out.mkdir(parents=True,exist_ok=False)
+metrics=[];annual=[];contrasts=[];status=[];attribution=[];yield_overlay=[];delays=[];coverage=[];terminal=[]
+for run in body['runs']:
+    status.append({k:run.get(k) for k in ('scenario','status','returncode','elapsed_seconds','output')})
+    if run['status']!='COMPLETE_RECONCILED':continue
+    analysis_path=Path(run['output'])/'DESCRIPTIVE_ANALYSIS_V5.json'
+    result=json.loads(analysis_path.read_text())
+    for key,m in result['metrics'].items():
+        scenario,population,arm=key.split('/')
+        base={'scenario':scenario,'population':population,'arm':arm}
+        flat={**base,**{k:v for k,v in m.items() if not isinstance(v,(dict,list))},**m['costs_USD']}
+        metrics.append(flat)
+        if 'standalone_adjusted_metrics_not_buying_power' in m:
+            yield_overlay.append({**base,'standalone_adjustment_USD':m['standalone_dividend_yield_adjustment_USD'],**m['standalone_adjusted_metrics_not_buying_power']})
+        for year,values in m['annual'].items():annual.append({**base,'year':year,**values})
+    for key,values in result['paired_contrasts'].items():
+        scenario,population,contrast=key.split('/')
+        contrasts.append({'scenario':scenario,'population':population,'contrast':contrast,**values})
+    for path in Path(run['output']).glob('*/EXECUTION_AND_ATTRIBUTION_SUMMARY.json'):
+        summary=json.loads(path.read_text())
+        for key,count in summary['fallback_delay_minutes_histogram'].items():
+            population,arm,minutes=ast.literal_eval(key)
+            delays.append({'scenario':path.parent.name,'population':population,'arm':arm,'actual_minus_original_intended_UTC_minutes':minutes,'qualified_reference_observations':count,'not_all_are_external_fills':True})
+        with gzip.open(path.parent/'daily.jsonl.gz','rt') as stream:
+            for line in stream:
+                d=json.loads(line)
+                if d['date']=='2024-12-31':
+                    terminal.append({k:v for k,v in d.items() if k not in ['physical','rejections_cumulative']})
+        rec=json.loads((Path(run['output'])/'RUN_RECEIPT_2024-12-31.json').read_text())
+        coverage.append({'scenario':path.parent.name,**{k:v for k,v in rec.items() if not isinstance(v,dict)},**rec['policy_counts']})
+        for key,values in summary['closed_cohort_attribution'].items():
+            population,arm,dimension,value=ast.literal_eval(key)
+            attribution.append({'scenario':path.parent.name,'population':population,'arm':arm,'dimension':dimension,'value':SYMBOLS[int(value)] if dimension=='ticker' else value,**values,'win_fraction':values['wins']/values['count'] if values['count'] else None})
+
+def table(name,rows):
+    rows=[{'V5_POLICY_VARIANT':'V5_NEXT_VALID_OBSERVED_BAR',**row} for row in rows]
+    keys=list(dict.fromkeys(k for row in rows for k in row))
+    with (out/name).open('w',newline='') as f:
+        writer=csv.DictWriter(f,fieldnames=keys);writer.writeheader();writer.writerows(rows)
+
+table('SCENARIO_STATUS.csv',status)
+table('ALL_SCENARIO_ACCOUNT_METRICS.csv',metrics)
+table('ANNUAL_METRICS.csv',annual)
+table('PAIRED_S2C_CONTRASTS.csv',contrasts)
+table('COHORT_ATTRIBUTION.csv',attribution)
+table('STANDALONE_DIVIDEND_YIELD_ADJUSTMENTS.csv',yield_overlay)
+table('QUALIFIED_REFERENCE_DELAY_MINUTES.csv',delays)
+table('EXECUTION_COVERAGE_AND_RESIDUALS.csv',coverage)
+table('TERMINAL_CASH_HOLDINGS_AND_CLAIMS.csv',terminal)
+lines=['# V5 exploratory scenario results','','These tables present the sealed, preregistered runs. No parameter or sample was selected using results. All accounts began with $100,000. Currency is USD; returns below are percentages. Source confidence, conditional borrowing, assumed costs/latency and fixed-survivor limitations apply. Stage 6 independent audit is pending.','','| Scenario | Status | Matched EQUAL | Matched ROLLING | Matched EWMA | Matched S2C | Attainable EQUAL | Attainable S2C |','|---|---|---:|---:|---:|---:|---:|---:|']
+for run in sorted(body['runs'],key=lambda r: (r['scenario']!='baseline',r['scenario'])):
+    selected={(m['population'],m['arm']):m for m in metrics if m['scenario']==run['scenario']}
+    cells=[]
+    for axis in [('matched','EQUAL'),('matched','ROLLING_RISK'),('matched','EWMA_RISK'),('matched','S2C_RISK'),('attainable','EQUAL'),('attainable','S2C_RISK')]:
+        item=selected.get(axis);cells.append(f"{item['cumulative_return']*100:.4f}%" if item and 'cumulative_return' in item else 'N/A')
+    lines.append('| '+run['scenario']+' | '+run['status']+' | '+' | '.join(cells)+' |')
+lines+=['','The attainable rolling/EWMA eligible populations equal their matched populations under this frozen control support contract. Attainable EQUAL/S2C use additional valid opportunities; contrasts to the classical arms there combine eligibility with sizing. Matched contrasts isolate sizing conditional on the common input-ready population, although funding, risk caps and whole-share rounding can still cause different fills.','','`ALL_SCENARIO_ACCOUNT_METRICS.csv` includes net returns, daily Sharpe/Sortino, drawdown/duration, costs, turnover and mean gross/available cash. `ANNUAL_METRICS.csv` is annual continuous-account performance; portfolios are not reset each January. `PAIRED_S2C_CONTRASTS.csv` contains descriptive paired differences without significance claims. `COHORT_ATTRIBUTION.csv` breaks actual cohort outcomes down by ticker, origin slot, sign, overnight and entry year; do not sum across dimensions (they are alternate views of the same cohorts). Win fractions refer to these closed-cohort cash attributions, not independent trials.','','Gross cost addback holds actual net-run positions fixed and is not a frictionless portfolio rerun. Costs change subsequent cash, quantities and eligibility; scenario total profitability need not be monotonic even though costs are adverse on identical fills. Annualization uses 252 observed sessions and calendar-year CAGR conventions, with zero risk-free rate and zero MAR. Sector/beta metadata are not established; no unsupported sector attribution is reported.','',f"Completed sealed scenarios: {body['complete_scenarios']}/{body['scenario_count']}. All failure/not-run receipts, if present, remain part of the study."]
+lines+=['','The main scenario table is funded account NAV. Yield-proxy cases intentionally keep the approximation outside spending capital: `STANDALONE_DIVIDEND_YIELD_ADJUSTMENTS.csv` reports their separate adjusted descriptive metrics. It must not be read as verified dividend cash or as capital available for future orders. `TERMINAL_CASH_HOLDINGS_AND_CLAIMS.csv` preserves priced unpaid entitlements even when physical shares are flat. `QUALIFIED_REFERENCE_DELAY_MINUTES.csv` uses actual later UTC minute minus original intended UTC minute (wall minutes, including closures); qualified reference observations include internal-only or zero-external events and are not all external market fills. Actual missing-attempt/expiry counts and maximum residuals are in `EXECUTION_COVERAGE_AND_RESIDUALS.csv`.']
+(out/'SCENARIO_RESULTS.md').write_text('\n'.join(lines)+'\n')
+publish(out/'TABLE_PROVENANCE.json',{'parent_manifest':str(manifest),'parent_sha256':digest(manifest),'no_new_financial_simulation_or_selection':True,'files':{str(p):digest(p) for p in out.iterdir() if p.is_file()}})
+print('Presented',len(metrics),'account/scenario records and',len(annual),'annual rows; no new finance run.')

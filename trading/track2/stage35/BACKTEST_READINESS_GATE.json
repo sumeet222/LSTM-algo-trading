@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "overall": "HOLD",
+  "verdict": "STAGE3_5_PARTIAL_WITH_EXPLICIT_HOLDS",
+  "historical_backtest_run": false,
+  "historical_runner_activated": false,
+  "human_approval_required": true,
+  "gates": {
+    "G_ACCOUNTING": {
+      "status": "HOLD",
+      "engineering": "synthetic conservation passed;bar-only internal reference and action-source policies unapproved",
+      "issues": [
+        "T2-003",
+        "T2-004",
+        "S35-007"
+      ]
+    },
+    "G_EXECUTION": {
+      "status": "HOLD",
+      "scope": "synthetic chronology/partial/cancel/unresolved tests only;historical engine inactive",
+      "historical_execution_verified": false,
+      "reason": "synthetic boundaries tested;bar-only contemporaneous references and proposed gap-fill/risk decisions not financially certified",
+      "issues": [
+        "S35-001",
+        "S35-006"
+      ]
+    },
+    "G_PRICE_BASIS": {
+      "status": "HOLD",
+      "reason": "raw historical vendor/action effective and payment-date contract not certified;synthetic raw actions only",
+      "issues": [
+        "T2-004",
+        "T2-007",
+        "S35-002"
+      ]
+    },
+    "G_SHORT": {
+      "status": "HOLD",
+      "mode": "CERTIFIED_OBSERVED",
+      "actual_locate_evidence": false,
+      "conditional_scenario_approved": false,
+      "issues": [
+        "T2-006"
+      ]
+    },
+    "G_RISK": {
+      "status": "HOLD",
+      "scope": "synthetic marked gross/net/name/vintage,pending/cash cap tests;mark breach freezes new entries;no automaticresize",
+      "historical_allocation_run": false,
+      "reason": "synthetic allocator/caps pass;classical source panel and due-event integration not financially certified",
+      "issues": [
+        "S35-003",
+        "S35-007"
+      ]
+    },
+    "G_PROVENANCE": {
+      "status": "PASS",
+      "protected_objects": 395,
+      "source_partitions": 200,
+      "historical_signal_keys": 16,
+      "economic_history_reads": 0
+    },
+    "G_HUMAN": {
+      "status": "NOT_APPROVED",
+      "reviewer_kind": null,
+      "external_approval_id": null,
+      "created_by": "codex",
+      "reason": "current prompt authorizes implementation only;no financial approval inferred"
+    },
+    "G_REPOSITORY": {
+      "status": "PASS",
+      "scope": "owned-code only",
+      "owned_errors": 0,
+      "inherited_errors": 27,
+      "repository_status": "HOLD_T2-010",
+      "editor_confirmation": "PENDING_HUMAN"
+    }
+  },
+  "tests": {
+    "combined_passed": 87,
+    "stage012_passed": 52,
+    "stage35_passed": 26,
+    "neural_regression_passed": 9,
+    "ruff": "PASS",
+    "full_basic_files": 626
+  }
+}

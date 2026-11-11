@@ -1,0 +1,12 @@
+{
+  "source": "src/lstm_data/trading/track2/stage35/final_backtest_v4/book.py",
+  "source_sha256": "8dd61466bd0ea64a1c6f40c76187181c8124a9211e0bda849486b21a1709223e",
+  "original_method_sha256": "e6e0dbe0333a01593875234086a805f5c22450dfcaca3081d41f7569465aff20",
+  "replacement_prelude": "        reference = self.cost_references.get(order.key)\n        if reference is None:\n            raise ValueError(\"MISSING_FROZEN_COST_REFERENCE\")\n        external, fee, paid, h, jrate = reference.quote(\n            raw_open, q, order.cumulative_quantity, order.paid_fee, order.decision\n        )\n",
+  "additional_receipt_fields": [
+    "cost_h",
+    "cost_j"
+  ],
+  "unaltered_remainder": true,
+  "reason": "Micro fees must retain .002USD/share without cent-to-zero rounding; micro price friction is exact declared incremental-print proxy. V5 cent-rounded retail branch is parity-tested."
+}

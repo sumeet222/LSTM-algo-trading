@@ -1,0 +1,13 @@
+# Existing deviations and limitations — preserved
+
+The following remain separate from P3N001–P3N012. No old FAIL or STOP was rewritten.
+
+- **Accepted metadata qualification:** only literal phase2/.DS_Store can differ. Original expected, first observed, continuation observed and current observed hashes are retained in prior reports and the new gate.232 substantive payloads match; not233-file byte parity. No repair/restore/chmod.
+- **Accepted Classification B:**39 receipts have zero admitted_data_request despite final boundary.data_path insertion. Preparation-time body/module identity and exhaustive native reads are unknown.348 identities,2272 saved aggregation assertions and geometry/consumption evidence support bounded lineage, not complete native-read logging. Postrun path aggregation overstated coverage. No invented events or retroactive PASS.
+- **D01 / starred issuance mismatch:** nominal t target versus assumed t+2 availability;09:30 reference from minute-open bar. Preserved, not live-tradable proof.
+- **D02–D05:** independent prefit coding corrections, not historical defects/neural retries. Original correction log retained. No new fit was run here.
+- **D06:** original final signed-report run failed on a pandas read-only boolean view after8 fitting phases. Original failure, executed evaluator snapshot, one-line.copy diff, source transition,80 unchanged fitted files,4 checkpoint/8 role reload receipts and5 byte-identical replay pairs verified. One report-only recovery, zero neural/calibration/threshold retries. No claim of an error-free original report run.
+- **D07:** synthetic600 equal-mass weighted-left boundary FAIL remains. Separate integer-weight arithmetic on saved role targets reproduces all8 phase scales and8 actual tail thresholds exactly; actual threshold membership is unchanged. The generalized edge is not patched or relabeled PASS.
+- **D08:** PROCEDURAL_ORDER_DIFFERENCE_WITH_SUPPORTED_DEPENDENCY_EQUIVALENCE. run_experiment.py83–95 computes raw OOS forwards before C3; predict_heads uses eval/inference mode, onlyX/CLOCK, no optimizer or dropout draws. fit_c3 consumes calibration table only, decoded OOS follows coefficient freezing. Saved coefficient arithmetic agrees. No literal-order PASS and no unrecorded live execution claim.
+
+Inherited minute cleaning, corporate actions/quarantines/hourly aggregation, survivor-name economic history, fixed retrospective source vintage, F09 future-complete20 selection, calendar announcement/receipt proxies, overlapping targets, repeated development-year inspection and incomplete historical binaries remain limitations. The study predicts price-only absolute endpoint magnitudes; no execution costs/portfolio/trading P&L is evaluated.
